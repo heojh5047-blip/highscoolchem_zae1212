@@ -6,3 +6,42 @@ table.cm311-map3{width:100%}
 table.cm311-map3 td,table.cm311-sub td{font-size:22px}
 tr.cm311-cur td{background:#FFF8D6}
 table.cm311-sub{width:100%}
+table.cm311-irr{width:100%}
+table.cm311-irr td{font-size:22px;padding:2px 10px}
+table.cm311-irr td.l{font-size:22px}
+ol.cm311-ox li{margin-top:22px;font-size:23px}
+ol.cm311-ox li:first-child{margin-top:4px}
+ol.cm311-ox .blank{min-width:180px}
+table.cm311-feat{width:100%}
+table.cm311-feat td{font-size:22px;line-height:1.6}
+.card.cm311-bub{border-radius:22px;min-height:230px}
+.cm311-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cm311-s4 .stage p{font-size:19px;line-height:1.5}
+.cm311-s4 .stage svg{width:100%}
+table.cm311-var{width:100%}
+table.cm311-var th{width:130px}
+table.cm311-res{width:100%}
+table.cm311-res td{text-align:center;font-size:21px}
+table.cm311-res .blank{min-width:56px}
+table.cm311-mapt{width:100%}
+table.cm311-mapt td{text-align:center;font-size:22px}
+table.cm311-mapt .blank{min-width:170px}
+.cm311-map{display:flex;align-items:center;gap:14px}
+.cm311-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 18px;font-size:21px;line-height:1.55}
+.cm311-node.cm311-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm311-node.cm311-main p{margin-top:6px}
+.cm311-node.cm311-dim{flex:0 0 200px;border-style:dashed;color:var(--muted)}
+.cm311-arr{font-size:28px;color:var(--muted)}
+.cm311-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.cm311-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.cm311-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm311-seg .btn.cm311-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.cm311-read{width:100%}
+table.cm311-read th{font-size:19px;padding:5px 10px;text-align:left}
+table.cm311-read td{font-size:21px;width:170px;padding:5px 10px;text-align:center}
+output.kind.cm311-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.cm311-log{width:100%}
+table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:center}
+table.cm311-map3 td,table.cm311-map3 th{padding:4px 10px}
+table.cm311-read td{width:215px}
+.cm311-node.cm311-dim{flex:0 0 180px}

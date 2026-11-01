@@ -1,0 +1,57 @@
+/* 3-1 화학 반응과 엔탈피 — 덱 전용 (모두 .em31- 접두어) */
+
+/* 발열(따뜻함)·흡열(차가움) 바탕 */
+.card.em31-warm{background:#FDE2E4;border-color:#F2B8BE}
+.card.em31-cold{background:#E3EEFB;border-color:#B8CFEA}
+
+/* 분류 표 */
+table.em31-sort{width:100%}
+table.em31-sort td{text-align:center}
+table.em31-sort td.l{text-align:left}
+table.em31-sort .blank{min-width:90px}
+
+/* 기호 칸 */
+.em31-sym{background:#fff;border:2px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center;min-height:150px;display:flex;flex-direction:column;justify-content:center}
+
+/* ○× 점검 */
+ol.em31-ox li{margin-top:20px}
+ol.em31-ox li:first-child{margin-top:0}
+
+/* 표 */
+table.em31-fuel,table.em31-res,table.em31-var{width:100%}
+table.em31-fuel td,table.em31-res td{text-align:center}
+table.em31-var th{width:130px}
+table.em31-res .blank{min-width:64px}
+table.em31-q td{text-align:center}
+
+/* 결론 도출 답 */
+p.em31-a{color:#1B5E3F;margin-top:4px}
+.answer.em31-left{text-align:left}
+.blank.em31-wide{min-width:260px}
+
+/* 4열 단계 카드 */
+.em31-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.em31-s4 .stage p{font-size:19px;line-height:1.55}
+
+/* 개념 지도 */
+.em31-map{display:flex;align-items:stretch;gap:14px}
+.em31-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:21px;line-height:1.5}
+.em31-node.em31-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em31-node.em31-dim{flex:0 0 200px;border-style:dashed;color:var(--muted)}
+table.em31-sum{width:100%}
+table.em31-sum th{width:210px}
+
+/* 실험실 */
+.em31-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.em31-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 11px;font-size:19px}
+.em31-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em31-seg .btn.em31-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em31-seg .small{margin:0 2px 0 4px}
+table.em31-read{width:100%}
+table.em31-read th{font-size:19px;padding:4px 8px;text-align:left}
+table.em31-read td{font-size:20px;width:200px;padding:4px 8px;text-align:center}
+output.kind.em31-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.em31-log{width:100%}
+table.em31-log th,table.em31-log td{font-size:19px;padding:3px 6px;text-align:center}
+table.em31-log tr.em31-bad td{color:#B42318}
+.formula.em31-fs{font-size:22px;padding:8px 10px}

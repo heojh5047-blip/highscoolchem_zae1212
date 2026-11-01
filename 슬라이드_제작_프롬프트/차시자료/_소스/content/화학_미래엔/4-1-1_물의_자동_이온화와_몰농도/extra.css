@@ -1,0 +1,48 @@
+/* 4-1-1 물의 자동 이온화와 몰농도 — 덱 전용 (모두 .cm411- 접두어) */
+.cover h1.cm411-h1{font-size:100px}
+table.cm411-port{width:100%}
+table.cm411-port th{width:170px}
+table.cm411-units{width:100%}
+table.cm411-units th{width:70px}
+table.cm411-units tr.cm411-cur td,table.cm411-units tr.cm411-cur th{background:#FFF8D6}
+table.cm411-kwt{width:100%}
+table.cm411-kwt td{text-align:center}
+table.cm411-kwt th{width:190px}
+ol.cm411-ox li{margin-top:22px}
+ol.cm411-ox li:first-child{margin-top:0}
+ol.cm411-ox .blank{min-width:56px;text-align:center}
+table.cm411-chk{width:100%}
+table.cm411-chk td{text-align:center;font-size:22px}
+table.cm411-chk .blank{min-width:150px}
+table.cm411-var{width:100%}
+table.cm411-var th{width:110px}
+table.cm411-res{width:100%}
+table.cm411-res td{text-align:center}
+table.cm411-res .blank{min-width:110px}
+table.cm411-sheet{width:100%}
+table.cm411-sheet td{text-align:center}
+p.cm411-a{color:#1B5E3F;margin-top:4px}
+.answer.cm411-left{text-align:left}
+/* 개념 지도 */
+.cm411-map{display:flex;align-items:center;gap:12px}
+.cm411-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:21px;line-height:1.55}
+.cm411-node.cm411-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm411-node.cm411-dim{flex:0 0 170px;border-style:dashed;color:var(--muted)}
+.cm411-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.cm411-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.cm411-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 11px;font-size:19px}
+.cm411-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm411-seg .btn:disabled{opacity:.35;cursor:not-allowed}
+.cm411-seg .btn.cm411-act{background:var(--field);color:#fff;border-color:var(--field)}
+.cm411-seg .btn.cm411-act:disabled{background:#9DB8A9;border-color:#9DB8A9}
+.cm411-seg .small{margin:0 2px 0 4px}
+.cm411-mis{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;font-size:19px;margin-bottom:8px}
+.cm411-mis label{white-space:nowrap}
+table.cm411-read,table.cm411-read2{width:100%}
+table.cm411-read th,table.cm411-read2 th{font-size:19px;padding:5px 10px;text-align:left}
+table.cm411-read td{font-size:21px;width:230px;padding:5px 10px;text-align:center}
+table.cm411-read2 td{font-size:20px;width:220px;padding:5px 8px;text-align:center}
+output.kind.cm411-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.cm411-log{width:100%}
+table.cm411-log th,table.cm411-log td{font-size:19px;padding:3px 6px;text-align:center}

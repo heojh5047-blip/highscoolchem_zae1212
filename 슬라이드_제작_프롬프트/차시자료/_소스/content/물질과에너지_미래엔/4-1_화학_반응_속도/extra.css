@@ -1,0 +1,50 @@
+/* 4-1 화학 반응 속도 — 덱 전용 (모두 .em41- 접두어) */
+
+/* 4열 카드 */
+.em41-s4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.em41-s4 .stage p{font-size:19px;line-height:1.5}
+.em41-s4 .stage p.key{font-size:19px;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* 대단원 도입: 소단원 카드 */
+.em41-units{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.em41-unit{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;font-weight:700;line-height:1.4}
+.em41-unit .small{display:block;font-weight:400;margin-top:4px}
+.em41-unit.em41-on{border-color:var(--field);background:#EAF6EF}
+.em41-n{display:block;font-size:28px;color:var(--field)}
+ol.em41-goals li{font-size:20px;line-height:1.45}
+ol.em41-goals li+li{margin-top:2px}
+.em41-unit{padding:8px 14px}
+
+/* 표 */
+table.em41-avg td,table.em41-res td{text-align:center}
+table.em41-avg .blank{min-width:110px}
+table.em41-res .blank{min-width:120px}
+table.em41-var th{width:120px}
+ol.em41-ox li{margin-top:22px}
+ol.em41-ox li:first-child{margin-top:8px}
+ol.em41-ox .blank{min-width:170px}
+
+p.em41-a{color:#1B5E3F;margin-top:4px}
+.answer.em41-left{text-align:left}
+.blank.em41-wide{min-width:240px}
+
+/* 개념 지도 */
+.em41-map{display:flex;align-items:stretch;gap:16px}
+.em41-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.55}
+.em41-hub{flex:0 0 130px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border-color:var(--ink)}
+.em41-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em41-main p{font-size:21px;margin-top:10px}
+.em41-side{flex:0 0 250px;display:flex;flex-direction:column;gap:12px}
+.em41-dim{border-style:dashed;color:var(--muted);flex:1 1 0;display:flex;align-items:center}
+
+/* 실험실 */
+.em41-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.em41-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.em41-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em41-seg .btn.em41-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em41-seg .small{margin-right:4px}
+table.em41-read th{font-size:19px;padding:5px 10px}
+table.em41-read td{font-size:20px;width:200px;padding:5px 8px;text-align:center}
+p.em41-ctrl{margin-top:6px}
+output.kind.em41-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.em41-log th,table.em41-log td{font-size:19px;padding:3px 6px;text-align:center}

@@ -1,0 +1,44 @@
+/* 2-1 산화와 환원 — 덱 전용 (모두 .rm21- 접두어) */
+.rm21-ox{color:#C2410C;font-weight:700}
+.rm21-rd{color:#0E7490;font-weight:700}
+.rm21-eq{font-size:19px;line-height:1.5}
+table.rm21-toc{width:100%}
+table.rm21-toc td{font-size:22px;padding:6px 10px}
+table.rm21-toc tr.rm21-now td{background:#FFF6D6}
+table.rm21-rule{width:100%}
+table.rm21-rule td{font-size:20px;padding:5px 8px;text-align:center}
+table.rm21-rule td.l{text-align:left}
+table.rm21-grid{width:100%}
+table.rm21-grid td,table.rm21-grid th{text-align:center;font-size:22px}
+table.rm21-grid .blank{min-width:50px}
+table.rm21-oxt{width:100%}
+table.rm21-oxt td{text-align:center;font-size:23px}
+table.rm21-oxt .blank{min-width:70px}
+table.rm21-def{width:100%}
+table.rm21-def td,table.rm21-def th{text-align:center;font-size:23px}
+table.rm21-ch,table.rm21-chk{width:100%}
+table.rm21-ch td,table.rm21-chk td{text-align:center;font-size:21px}
+ol.rm21-ox-list li{margin-top:22px}
+ol.rm21-ox-list li:first-child{margin-top:0}
+.answer.rm21-left{text-align:left}
+.rm21-s5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.rm21-s5 .stage p{font-size:19px;line-height:1.55}
+/* 개념 지도 */
+.rm21-map{display:flex;gap:16px;align-items:stretch}
+.rm21-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
+.rm21-node.rm21-main{flex:1 1 0;border-color:#C2410C;background:#FFF7F2}
+.rm21-node.rm21-main p{margin-top:8px}
+.rm21-side{flex:0 0 250px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.rm21-node.rm21-dim{border-style:dashed;color:var(--muted)}
+/* 실험실 */
+.rm21-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.rm21-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.rm21-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm21-seg .btn.rm21-act{background:var(--field);color:#fff;border-color:var(--field)}
+.rm21-seg .small{margin:0 4px 0 0;min-width:52px}
+table.rm21-read{width:100%}
+table.rm21-read th{font-size:19px;padding:6px 10px;text-align:left}
+table.rm21-read td{font-size:21px;width:230px;padding:6px 10px;text-align:center}
+output.kind.rm21-msg{margin-top:8px;line-height:1.45;font-size:19px}
+table.rm21-log{width:100%}
+table.rm21-log th,table.rm21-log td{font-size:19px;padding:3px 8px;text-align:center}
