@@ -18,7 +18,7 @@ window.DECK_LABS = {
     let st={phase:0, t:0, a:1, b:3, res:null}, log=[];
 
     // 칸 배치: 5열 × 4행, 칸 112 × 62
-    const cell=i=>[76+(i%5)*112, 80+Math.floor(i/5)*64];
+    let y0=80; const cell=i=>[76+(i%5)*112, y0+Math.floor(i/5)*64]; const top=n=>{ y0=164-(Math.ceil(n/5)-1)*32; };
     function layout(kind,x,y){
       if(kind==='N2') return {N:[[x-D2/2,y],[x+D2/2,y]],H:[]};
       if(kind==='H2') return {N:[],H:[[x-DH/2,y],[x+DH/2,y]]};
@@ -34,11 +34,11 @@ window.DECK_LABS = {
       const r=compute(); st.res=r; st.a=r.a; st.b=r.b;
       O('a').textContent=r.a+'개'; O('b').textContent=r.b+'개';
       // 반응 전
-      let nS=[], hS=[], c=0;
+      let nS=[], hS=[], c=0; top(r.a+r.b);
       for(let i=0;i<r.a;i++){ const L=layout('N2',...cell(c++)); nS.push(...L.N); }
       for(let i=0;i<r.b;i++){ const L=layout('H2',...cell(c++)); hS.push(...L.H); }
       // 반응 후
-      let nE=[], hE=[]; c=0;
+      let nE=[], hE=[]; c=0; top(r.nh3+r.n2+r.h2);
       for(let i=0;i<r.nh3;i++){ const L=layout('NH3',...cell(c++)); nE.push(...L.N); hE.push(...L.H); }
       for(let i=0;i<r.n2;i++){ const L=layout('N2',...cell(c++)); nE.push(...L.N); }
       for(let i=0;i<r.h2;i++){ const L=layout('H2',...cell(c++)); hE.push(...L.H); }
@@ -59,8 +59,8 @@ window.DECK_LABS = {
       const done=st.phase===2;
       Ov('st').textContent=done?'반응 후':st.phase===1?'반응하는 중…':'반응 전';
       API.place(Ov('st'),18,4);
-      Ov('cnt').textContent=`N 원자 ${2*r.a}개 · H 원자 ${2*r.b}개`+(done?' (반응 전과 같다)':'');
-      API.place(Ov('cnt'),330,6);
+      Ov('cnt').textContent=`원자 수 N ${2*r.a}개 · H ${2*r.b}개`+(done?' (전 = 후)':'');
+      API.place(Ov('cnt'),300,6);
       O('nh3').textContent=done? r.nh3+'개' : '?';
       let left=[]; if(r.n2) left.push(`질소 분자 ${r.n2}개`); if(r.h2) left.push(`수소 분자 ${r.h2}개`);
       O('msg').textContent = !done ? '「반응시키기」를 눌러 원자가 어떻게 다시 결합하는지 보자.'
