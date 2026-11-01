@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>화학과 현대 과학·기술·사회</title>
+<meta name="deck-id" content="화학_미래엔/1-1-1_화학과_현대_과학_기술_사회">
+<!--
+  SLIDE HARNESS · Ⅰ-1-1 화학과 현대 과학·기술·사회 (고등 화학, 미래엔 13–17쪽)
+  ─────────────────────────────────────────────────────────────
+  하우스 규칙 (docs/슬라이드_제작도구_가이드라인_화학.md)
+   T1 어절 단위 줄바꿈 (keep-all + keepWords)   T2 수식·화학식 줄바꿈 금지 (+ WORD JOINER)
+   T3 여러 식·반응식은 세로로                     T4 표 칸은 한 줄   T5 flex 요소에 텍스트 직접 금지
+   M1 모든 기호 LaTeX(그림 라벨 포함)            M2 단위 곱은 \cdot  M3 단위는 해당 양에만   M9 수와 단위 사이 한 칸
+   C1 화학식·이온·반응식은 \ce{}(mhchem) — H2O·Na+를 본문 글자로 쓰지 않음   C2 상태 기호 (s)(l)(g)(aq)
+   C3 비가역 ->, 가역 <=>                        C5 반응식은 원자 수·전하 보존(검산)   C7 농도 [\ce{A}], K·Q·K_\mathrm{w}
+   D1 회로(전기 분해·화학 전지): 극 라벨·접합점 ●  D2 화살표에 무엇의 이동인지 라벨(전자, 이온, 열)
+   D3 대칭 분자 → 대칭 그림   D4 축 라벨 기호 [단위]   D5 id 고유   D6 전자는 전자 껍질 위   D8 라벨 잘림 금지
+   D7 (+)·양이온·δ+ plus#D7263D  (−)·음이온·전자·δ− minus#1F6FD1  산화 ox#C2410C 환원 rd#0E7490  강조#FFE45C
+      원자 칠은 data-atom(HARNESS_ATOM) — 그림에는 hex 대신 색 이름(HARNESS_COL)
+   D21 입자 모형: 원소마다 같은 색·크기, 반응 전후 원자 수 보존   D22 루이스 전자점식   D23 분자 구조·결합각
+   D24 쌍극자 모멘트 화살표(+ 꼬리, 전기음성도 큰 쪽으로)          D26 에너지 도표(ΔH, Ea)
+   S1 그림+설명은 같은 단계(data-g)              S2 연습 문제는 한 장에 하나 + 판서 공간
+   S3 과정은 단계별 그림 카드                    S5 개념 전에 '왜 필요한가' 연결 슬라이드
+   S9 실험 슬라이드에 안전 수칙·폐수 처리        S10 현상(거시) → 입자(미시) → 화학식(기호)
+   S12 성취기준 <탐구 활동>은 필수 — 실험실 + 탐구 슬라이드로 이행
+  조작키
+   → / 스페이스 / 클릭 : 다음 단계·슬라이드      ← : 이전      Home / End
+   O 목차   F 전체 화면   P 판서 펜   X 판서 지우기   B 화면 가리기   D 자동 점검(?audit)   H 도움말
+  작성 빠른 참조
+   <section class="slide" data-sec="머리띠 왼쪽" data-title="목차 제목">
+   .step (같은 data-g 값은 함께 공개) · <mark>핵심 정의</mark> · .formula · .answer · .board(판서 공간)
+   화학식    $\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$  $\ce{SO4^2-}$  $[\ce{H3O+}]$  $\Delta H=-92\ \text{kJ}$
+   SVG 라벨  <text class="tex" x y data-tex="\ce{H2O}"|data-mix="$\ce{Na+}$ 이온||둘째 줄" data-size data-anchor fill data-halo>
+   SVG 부품  <g data-atom="x,y,r,원소[,라벨|-][,d]">  <g data-arw="x1,y1,x2,y2,색,굵기[,d]">  <g data-chg="x,y,r,+|-|P|M|N[,d]">
+             <g data-pm="부호,크기,x:y x:y[,색]">   <svg data-circuit='{"parts":[["wire",…],["bat",…],["node",…],["sw",…],["meter",…]]}'>
+   실험실    <div class="lab" data-lab="이름"> + window.DECK_LABS.이름(root, API)
+  인터넷이 없는 교실: KaTeX(cdn.jsdelivr.net)를 못 불러오면 수식이 원문으로 보입니다. 미리 한 번 열어 확인하세요.
+  이 파일은 차시자료/_소스 에서 빌드되었습니다. 고칠 때는 _소스/content 의 내용을 고치고 tools/build.py 를 다시 실행하세요.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/mhchem.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+/* ── 토큰 ── */
+:root{
+  --ink:#16233D; --muted:#5B6B7F; --plus:#D7263D; --minus:#1F6FD1; --field:#2E9E6A; --bfield:#7B4FC8; --equi:#E08A2C; --ans:#D7263D; --hl:#FFE45C;
+  --grid:#E2E7EC; --paper:#FBFCFD; --line:#C9D3DD; --soft:#F1F5F9;
+  --font:'IBM Plex Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#0E1626;font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* ── 무대 / 슬라이드 ── */
+#viewport{position:fixed;inset:0;overflow:hidden;touch-action:none}
+#deck{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:50% 50%;background:var(--paper);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.slide{position:absolute;inset:0;display:none;padding:78px 84px 64px;overflow:hidden;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px;
+  word-break:keep-all;overflow-wrap:normal;line-break:strict}
+.slide.active{display:block}
+.slide.measure{display:block;opacity:0;pointer-events:none;z-index:-1}
+.band{position:absolute;left:84px;right:84px;top:26px;display:flex;justify-content:space-between;align-items:baseline;font-size:16px;color:var(--muted)}
+.band .pg{font-variant-numeric:tabular-nums;font-weight:500}
+.cover .band .sec{visibility:hidden}
+
+/* ── 조판 ── */
+.w{white-space:nowrap}
+.katex{white-space:nowrap;font-size:1.08em}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+h2{font-size:40px;margin:0 0 22px}
+h2 .no{display:inline-block;width:46px;height:46px;line-height:46px;margin-right:14px;border-radius:12px;background:var(--ink);color:#fff;font-size:26px;text-align:center;vertical-align:4px}
+h2 .tag{display:inline-block;margin-right:14px;padding:5px 14px;border-radius:999px;background:var(--field);color:#fff;font-size:20px;line-height:1.3;vertical-align:7px;letter-spacing:0}
+h2 .tag.alt{background:var(--equi)} h2 .tag.q{background:var(--minus)} h2 .tag.ex{background:var(--plus)} h2 .tag.ink{background:var(--ink)}
+h3{font-size:24px;margin:0 0 10px}
+h3 .small{font-weight:400}
+p,li{font-size:24px;line-height:1.6;margin:0}
+ul,ol{margin:0;padding-left:1.3em}
+li+li{margin-top:6px}
+li::marker{color:var(--muted)}
+.small,.small p,.small li{font-size:19px;line-height:1.55;color:var(--muted)}
+.f22,.f22 p,.f22 li{font-size:22px;line-height:1.6}
+.f21,.f21 p,.f21 li{font-size:21px;line-height:1.55}
+b,strong{font-weight:700}
+mark{background-color:transparent;background-image:linear-gradient(var(--hl),var(--hl));background-repeat:no-repeat;background-size:100% 46%;background-position:0 90%;color:inherit;padding:0 1px}
+.c-plus{color:var(--plus)} .c-minus{color:var(--minus)} .c-field{color:var(--field)} .c-muted{color:var(--muted)} .c-equi{color:var(--equi)} .c-bfield{color:var(--bfield)} .c-ink{color:var(--ink)}
+.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt28{margin-top:28px}
+.center{text-align:center}
+
+/* ── 레이아웃 ── */
+.row{display:flex;gap:28px;align-items:flex-start}
+.row.stretch{align-items:stretch}
+.col{flex:1 1 0;min-width:0}
+.col.stack{display:flex;flex-direction:column}
+.card{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 20px}
+.card.q{border-left:6px solid var(--minus)}
+.card.tip{background:#F4FAF6;border-color:#BFE0CD}
+.note{background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--field);border-radius:10px;padding:10px 16px;font-size:19px;line-height:1.55}
+.note p,.note li{font-size:19px;line-height:1.55}
+.note.puzzle{border-left-color:#E9C93A;background:#FFFBEA}
+.note.q{border-left-color:var(--minus)}
+.note.big,.note.big p{font-size:21px}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stages.c2{grid-template-columns:1fr 1fr}
+.stage{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px}
+.stage h3{font-size:23px;margin-bottom:6px}
+.stage p,.stage li{font-size:19px;line-height:1.55}
+.stage p.key{font-size:21px}
+.stage svg{display:block;width:100%;height:auto;margin:4px 0 8px}
+.pane{border-radius:16px;padding:12px 14px 14px;border:1.5px solid var(--line);background:#fff}
+.pane.plus{background:#FDF1F3;border-color:#F2C6CD}
+.pane.minus{background:#EEF4FC;border-color:#C5D8F2}
+.pane.grav{background:#F4F5F7}
+.pane.elec{background:#F1F8F4;border-color:#C6E3D2}
+.pane svg{display:block;width:100%;height:auto}
+/* 위 .stage/.pane/.cappanel svg 규칙이 KaTeX 근호·화살표 svg(height:inherit)까지 덮어 √가 사라지던 것 — KaTeX 자체 값으로 되돌림 */
+.stage .katex svg,.pane .katex svg,.cappanel .katex svg{display:block;position:absolute;width:100%;height:inherit;margin:0}
+.ph{display:inline-block;font-size:18px;font-weight:700;padding:3px 12px;border-radius:999px;background:#fff;border:1.5px solid currentColor}
+svg{overflow:hidden}
+svg.fig{display:block;margin:0 auto;max-width:100%;height:auto}
+svg.framed{border-radius:12px;background:#FFFFFF;border:1.5px solid #D5EADF}
+
+/* ── 공식 / 정답 / 판서 ── */
+.formula{display:block;width:fit-content;max-width:100%;margin:16px auto 20px;padding:14px 32px;background:#fff;border:2px solid var(--ink);border-radius:14px;text-align:center;font-size:34px;line-height:1.3}
+.formula .katex{font-size:1em}
+.formula .unit{display:block;margin-top:8px;font-size:19px;color:var(--muted);line-height:1.6}
+.formula .unit .katex{font-size:1.08em}
+.formula.sm{font-size:28px;padding:10px 26px}
+.answer{display:block;width:fit-content;max-width:100%;margin:16px auto 0;padding:12px 28px;background:#FFF8D6;border:2px solid #E9C93A;border-radius:12px;text-align:center;font-size:24px;line-height:1.55}
+.answer .small{color:#5A5130}
+.answers{display:flex;justify-content:center;gap:20px;margin-top:16px}
+.answers .answer{margin:0}
+.board{border:2px dashed #CFD8E1;border-radius:14px;background:rgba(255,255,255,.55);position:relative;min-height:120px}
+.board::after{content:'풀이 공간';position:absolute;right:12px;bottom:8px;font-size:14px;color:#AEB9C5}
+.col.stack .board{flex:1 1 auto}
+.blank{display:inline-block;min-width:96px;border-bottom:2.5px solid var(--ink);text-align:center;padding:0 6px;line-height:1.3;color:var(--plus);font-weight:700}
+
+/* ── 단계 공개 ── */
+.step{opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+.step.on{opacity:1;visibility:visible}
+@media (prefers-reduced-motion:reduce){.step{transition:none}}
+/* ── 움직임 (가이드 6.4) — 정지 모드(html.still)·인쇄에서는 모두 꺼짐 ── */
+@keyframes fxRise{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+@keyframes fxLeft{from{opacity:0;translate:-28px 0}to{opacity:1;translate:0 0}}
+@keyframes fxSweep{from{background-size:0% 46%}to{background-size:100% 46%}}
+html:not(.still) .slide.active > :not(.band):not(.step){animation:fxRise .55s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0) * 90ms)}
+html:not(.still) .slide.active > h2:not(.step){animation-name:fxLeft}
+html:not(.still) .slide.active mark{animation:fxSweep .8s .45s cubic-bezier(.4,.1,.2,1) backwards}
+html:not(.still) .slide.active .step.on mark{animation:fxSweep .7s .2s cubic-bezier(.4,.1,.2,1) backwards}
+html:not(.still) .step:not(svg *){translate:0 12px;transition:opacity .4s ease,visibility .4s,translate .45s cubic-bezier(.2,.7,.2,1)}
+html:not(.still) .step.on:not(svg *){translate:0 0}
+
+/* ── 질문 강조 (가이드 6.5) · 다시 움직이는 그림 ── */
+@keyframes askPulse{0%,100%{box-shadow:0 0 0 3px rgba(255,214,0,.45)}50%{box-shadow:0 0 0 9px rgba(255,214,0,.75)}}
+@keyframes askBlank{0%,100%{background-color:rgba(255,228,92,.35)}50%{background-color:rgba(255,214,0,.95)}}
+@keyframes askSvg{0%,100%{stroke-width:2.5px}50%{stroke-width:6px}}
+.ask:not(rect){background-color:rgba(255,240,170,.55);box-shadow:0 0 0 3px rgba(255,214,0,.45);border-radius:8px;animation:askPulse 1s ease-in-out 3}
+.blank.ask{animation:askBlank .8s ease-in-out 3;border-radius:4px}
+rect.ask{stroke:#E0A800;fill:#FFF3B0;animation:askSvg .8s ease-in-out 3}
+svg[data-replay]{cursor:pointer}
+html.still [data-flow]{display:none}   /* 흐름 표시(움직임 때만 보이는 덧그림) */
+@media print{[data-flow]{display:none}}
+html.still .ask{animation:none}
+
+
+/* ── 표 ── */
+table{border-collapse:collapse;width:100%;background:#fff}
+th,td{border:1.5px solid var(--line);padding:9px 14px;text-align:center;font-size:21px;line-height:1.45}
+th{background:var(--soft);font-weight:700}
+td.l,th.l{text-align:left}
+table.tight td{font-size:20px;letter-spacing:-.02em}
+
+/* ── 칩 / 흐름 ── */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chips.col1{flex-direction:column;align-items:flex-start;gap:8px}
+.chk{font:500 21px var(--font);color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:999px;padding:7px 18px 7px 14px;cursor:pointer;text-align:left}
+.chk::before{content:'';display:inline-block;width:18px;height:18px;margin-right:10px;border:2px solid var(--muted);border-radius:5px;vertical-align:-2px;box-sizing:border-box}
+.chk.on{border-color:var(--field);background:#EAF6EF}
+.chk.on::before{background:var(--field);border-color:var(--field);box-shadow:inset 0 0 0 3px #fff}
+.chips.sm .chk{font-size:18px;padding:5px 14px 5px 12px}
+.flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fnode{padding:10px 18px;border-radius:12px;background:#fff;border:1.5px solid var(--line);font-size:21px;font-weight:500}
+.fnode.hl{border-color:var(--field);background:#EAF6EF}
+.farr{font-size:24px;color:var(--muted)}
+.std{background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--ink);border-radius:10px;padding:14px 18px;font-size:22px;line-height:1.6}
+.std .code{display:inline-block;margin-right:10px;padding:1px 10px;border-radius:6px;background:var(--ink);color:#fff;font-size:18px;font-weight:700;vertical-align:2px}
+ol.goals{padding-left:1.4em}
+ol.goals li{margin-top:14px}
+
+/* ── 문제 ── */
+.bogi{position:relative;border:1.5px solid var(--line);border-radius:12px;padding:16px 18px 10px;margin-top:20px;background:#fff}
+.bogi::before{content:'보기';position:absolute;top:-13px;left:14px;padding:0 8px;background:var(--paper);font-size:16px;font-weight:700;color:var(--muted)}
+.bogi p{font-size:21px;line-height:1.6;padding-left:1.4em;text-indent:-1.4em}
+.choices{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:14px;font-size:21px}
+
+/* ── 표지 ── */
+.cover .cover-text{position:absolute;left:84px;top:140px;width:600px}
+.cover .kicker{font-size:22px;color:var(--muted);font-weight:500}
+.cover h1{font-size:120px;line-height:1.08;margin:20px 0 28px;letter-spacing:-.02em}
+.cover h1 .acc{color:var(--field)}
+.cover .sub{font-size:26px}
+.cover .meta{font-size:19px;color:var(--muted);margin-top:14px}
+.cover .cover-fig{position:absolute;right:56px;top:96px;width:540px;height:540px;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 56%,transparent 71%);mask-image:radial-gradient(circle at 50% 50%,#000 56%,transparent 71%)}
+
+/* ── SVG 속 LaTeX 라벨 ── */
+.texlab{display:inline-block;white-space:nowrap;line-height:1.25;font-family:var(--font);color:inherit}
+.texlab .ln{display:block}
+.texlab.c .ln{text-align:center}
+.texlab.r .ln{text-align:right}
+.texlab.halo{background:rgba(251,252,253,.9);border-radius:4px;padding:0 3px}
+.texlab .katex{font-size:1.08em}
+.probe{display:inline-block;width:0;height:0;vertical-align:baseline}
+.texmeasure{position:absolute;left:-20000px;top:0;visibility:hidden;white-space:nowrap}
+foreignObject.texfo{overflow:visible}
+
+/* ── 실험실 ── */
+.lab{display:flex;gap:28px;align-items:flex-start}
+.lab-ctl{flex:0 0 380px}
+.lab-fig{position:relative;flex:0 0 auto;background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
+.lab-fig svg{display:block}
+.ctl{margin-bottom:12px}
+.ctl .lbl{display:flex;justify-content:space-between;align-items:baseline;font-size:21px}
+.ctl output{font-weight:700;font-variant-numeric:tabular-nums;font-size:22px}
+.ctl input[type=range]{width:100%;height:30px;margin:2px 0 0;accent-color:var(--ink);cursor:pointer}
+.res{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:10px 18px 12px;margin-top:4px}
+.res .big{font-size:38px;font-weight:700;line-height:1.3}
+.res .big output{font-variant-numeric:tabular-nums}
+output.kind{display:block;font-size:21px;font-weight:700}
+.kind.rep{color:var(--plus)} .kind.att{color:var(--minus)}
+.btn{font:600 18px var(--font);color:#fff;background:var(--ink);border:0;border-radius:10px;padding:8px 14px;cursor:pointer}
+.refrow output{font-size:21px;font-weight:700;margin-left:10px}
+.ov{position:absolute;white-space:nowrap;font-size:19px;line-height:1.2;pointer-events:none;transform:translate(-50%,0)}
+.ov.mid{transform:translate(-50%,-50%)}
+.ov.white{color:#fff;font-weight:700}
+.ov.halo{background:rgba(255,255,255,.92);padding:0 5px;border-radius:4px}
+table.readout th{font-size:19px;font-weight:500;background:#fff;text-align:left;padding:8px 12px}
+table.readout td{font-size:24px;font-weight:700;width:118px;padding:8px 10px}
+table.readout tr.hl th,table.readout tr.hl td{background:#FFF8D6}
+
+/* ── 하네스 UI ── */
+#ink{position:absolute;left:0;top:0;width:1280px;height:720px;z-index:5;pointer-events:none;touch-action:none}
+body.pen #ink{pointer-events:auto;cursor:crosshair}
+#hud{position:fixed;left:0;bottom:0;height:4px;width:0;background:var(--field);z-index:30;transition:width .3s}
+#nav{position:fixed;right:12px;bottom:12px;display:flex;gap:6px;z-index:31;opacity:0;transition:opacity .3s}
+body.ui #nav,#nav:hover,#nav:focus-within{opacity:1}
+#nav button,#penbar button{font:600 14px var(--font);color:#fff;background:rgba(22,35,61,.9);border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+#penbar{position:fixed;top:12px;left:50%;transform:translateX(-50%);display:none;gap:6px;align-items:center;z-index:32;background:rgba(22,35,61,.92);padding:6px;border-radius:12px}
+body.pen #penbar{display:flex}
+#penbar .sw{width:30px;height:30px;padding:0;border-radius:50%;border:3px solid transparent}
+#penbar .sw.on,#penbar .er.on{border:3px solid #fff}
+.ui-overlay{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;background:rgba(9,15,28,.6)}
+.ui-overlay.open{display:flex}
+.panel{background:#fff;color:var(--ink);border-radius:16px;padding:22px 26px;width:min(720px,92vw);max-height:86vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.panel h3{margin-bottom:12px}
+#toc ol{padding:0;margin:0;list-style:none;columns:2;column-gap:18px}
+#toc li{font-size:16px;line-height:1.35;margin:0;padding:6px 10px;border-radius:8px;cursor:pointer;break-inside:avoid}
+#toc li:hover{background:var(--soft)}
+#toc li.cur{background:#EAF6EF;font-weight:700}
+#toc li .n{display:inline-block;min-width:26px;color:var(--muted);font-variant-numeric:tabular-nums}
+#help td,#help th{font-size:16px;padding:6px 10px;text-align:left}
+kbd{display:inline-block;min-width:24px;padding:1px 7px;border:1.5px solid var(--line);border-bottom-width:3px;border-radius:6px;font:600 14px var(--font);text-align:center;background:#fff}
+#audit .it{font-size:15px;line-height:1.45;padding:7px 10px;border-radius:8px;cursor:pointer;border-bottom:1px solid var(--soft)}
+#audit .it:hover{background:var(--soft)}
+#audit .rule{display:inline-block;min-width:34px;margin-right:8px;padding:0 6px;border-radius:5px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;text-align:center}
+#audit .ok{font-size:16px;color:var(--field);font-weight:700}
+.flash{outline:3px solid var(--plus)!important;outline-offset:2px}
+#black{position:fixed;inset:0;background:#000;z-index:45;display:none}
+body.black #black{display:block}
+
+/* ── 인쇄: 모든 단계 펼침, 한 쪽에 한 슬라이드 ── */
+@media print{
+  @page{size:1280px 720px;margin:0}
+  html,body{overflow:visible;height:auto;background:#fff}
+  #viewport{position:static;overflow:visible}
+  #deck{position:static;transform:none!important;width:1280px;height:auto;box-shadow:none}
+  .slide{position:relative;display:block!important;width:1280px;height:720px;break-after:page;page-break-after:always;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #deck > .slide:last-child{break-after:auto;page-break-after:auto}
+  .step{opacity:1!important;visibility:visible!important;transition:none}
+  #ink,#nav,#hud,.ui-overlay,#penbar,#black{display:none!important}
+}
+
+/* ── 회로도 · 축전기 패널 (엔진 추가분) ── */
+.cappanel{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:6px 8px}
+.cappanel svg{display:block;width:100%;height:auto}
+
+/* ── 간격 유틸리티는 항상 마지막에 (다른 규칙의 margin-top 보다 우선) ── */
+.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt28{margin-top:28px}
+
+/* 실험실 수치 표시의 수식(M1): 본문 수식(1.21em)보다 작게, 줄 높이를 늘리지 않게 */
+.lab output .katex,.lab [data-o] .katex{font-size:1.05em;line-height:1}
+
+/* 정답 강조(S9): "→ …" 정답 단계의 답 부분 */
+.ans{color:var(--ans);font-weight:700}
+.ans .katex{color:inherit}
+
+/*EXTRA:BEGIN*/
+/* 1-1-1 화학과 현대 과학·기술·사회 — 덱 전용 (모두 .cm111- 접두어) */
+.cover h1.cm111-h1{font-size:100px}
+
+/* 표 */
+table.cm111-pf,table.cm111-sub,table.cm111-fib,table.cm111-new,table.cm111-sum,table.cm111-rub{width:100%}
+table.cm111-pf td:first-child{width:90px;text-align:center}
+table.cm111-sub tr.cm111-cur td{background:#FFF8D6}
+table.cm111-sub td:first-child{width:330px}
+table.cm111-sub td:last-child{width:170px;text-align:center}
+table.cm111-fib td:first-child{width:180px;text-align:center}
+table.cm111-new td{width:50%}
+table.cm111-sum th,table.cm111-sum td{font-size:21px;padding:6px 10px}
+table.cm111-sum td:first-child{width:140px;text-align:center}
+table.cm111-role{width:100%}
+table.cm111-role td{text-align:center}
+table.cm111-rub td:first-child{width:90px;text-align:center}
+table.cm111-log{width:100%}
+table.cm111-log th,table.cm111-log td{font-size:19px;padding:4px 8px;text-align:center}
+
+/* 거시–미시–기호 3열 */
+.cm111-mms{display:grid;grid-template-columns:300px 400px 1fr;gap:16px}
+.cm111-mms .stage svg{margin:2px auto 6px}
+.formula.cm111-eq{font-size:22px;padding:12px 8px}
+.formula.cm111-eq2{font-size:20px;padding:8px 6px;margin:6px 0}
+
+/* 남은 과제 카드 */
+.card.cm111-warn{border-color:var(--equi)}
+.card.cm111-opt{min-height:120px}
+
+/* ○× */
+ol.cm111-ox li{margin-top:22px}
+ol.cm111-ox li:first-child{margin-top:0}
+ol.cm111-ox .blank{min-width:90px}
+
+/* 조사·발표 */
+ul.cm111-ul{margin:8px 0 0 22px}
+ul.cm111-ul li{font-size:21px;line-height:1.55;margin-top:4px}
+.cm111-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cm111-s4 .stage p{font-size:19px;line-height:1.55}
+.cm111-news{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cm111-nc{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;font-size:21px}
+.cm111-nc p{font-size:19px;line-height:1.5;margin-top:4px}
+.answer.cm111-left{text-align:left}
+
+/* 실험실 */
+.cm111-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.cm111-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 14px;font-size:19px}
+.cm111-seg .btn.cm111-act{background:var(--field);color:#fff;border-color:var(--field)}
+
+/* 개념 지도 */
+.cm111-map{display:flex;align-items:center;gap:14px}
+.cm111-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.5}
+.cm111-node.cm111-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm111-node.cm111-dim{border-style:dashed;color:var(--muted)}
+.cm111-side{flex:0 0 300px;display:flex;flex-direction:column;gap:10px}
+.cm111-arr{font-size:28px;color:var(--muted)}
+
+/*EXTRA:END*/
+</style>
+</head>
+<body>
+<div id="viewport"><div id="deck">
+<canvas id="ink"></canvas>
+<!--SLIDES:BEGIN-->
+<!-- 화학_미래엔 1-1-1 화학과 현대 과학·기술·사회 — 그림 좌표는 scratchpad 화학_미래엔_1-1-1/gen.py 로 계산해 넣었다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 화학의 언어" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 화학의 언어 › 1. 생활 속 화학과 물질의 양 › 01</div>
+    <h1 class="cm111-h1">화학과<br>현대 과학·<br><span class="acc">기술·사회</span></h1>
+    <p class="sub">화학은 인류의 어떤 문제를 해결해 왔을까?</p>
+    <p class="meta">고등학교 화학 (미래엔) 13–17쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="질소 원자 하나에 수소 원자 세 개가 결합한 암모니아 공-막대 모형"><circle cx="270" cy="270" r="250" fill="#EEF3F8"/><line x1="270" y1="200" x2="360.8" y2="236.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="270" y1="200" x2="98.8" y2="265.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="270" y1="200" x2="350.4" y2="298.6" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="49.9,20.3" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="360.8,236.9,27,H"></g></g><g data-anim="move" data-from="-94.1,36.2" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="98.8,265.9,27,H"></g></g><g data-atom="270,200,36,N"></g><g data-anim="move" data-from="44.2,54.2" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="350.4,298.6,27,H"></g></g><text class="tex" x="270" y="430" data-mix="암모니아 $\ce{NH3}$" data-size="26" data-anchor="middle" data-weight="700"></text><text class="tex" x="270" y="462" data-mix="공기 속 질소로 만든 비료의 원료" data-size="21" data-anchor="middle" fill="#5B6B7F"></text></svg>
+</section>
+
+<!-- ════════ 2. 대단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅰ. 화학의 언어 · 도입" data-title="단원 도입: 화학의 언어">
+  <h2><span class="tag ink">단원 도입</span>Ⅰ. 화학의 언어</h2>
+  <p class="f22">화학자들은 원소 기호, 화학식, 화학 반응식, 몰이라는 <b>공통의 언어</b>로 물질과 그 변화를 이야기한다. 이 단원에서는 화학이 우리 삶에 얼마나 쓸모 있는지 알아보고, 화학의 언어인 <b>몰</b>과 <b>화학 반응식</b>으로 물질의 양과 반응의 양적 관계를 나타내 본다.</p>
+  <h3 class="mt12">단원 지도</h3>
+  <svg class="fig" viewBox="0 0 1112 200" style="width:1112px" aria-label="대단원 Ⅰ의 중단원과 소단원 지도, 오늘은 첫 소단원"><text class="tex" x="230" y="26" data-mix="1. 생활 속 화학과 물질의 양" data-size="19" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text><path d="M70 44 V36 H390 V44" fill="none" stroke="#2E9E6A" stroke-width="2.5"/><text class="tex" x="710" y="26" data-mix="2. 화학 반응식" data-size="19" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><path d="M550 44 V36 H870 V44" fill="none" stroke="#9FB0C2" stroke-width="2.5"/><line x1="40" y1="60" x2="1072" y2="60" stroke="#C9D3DD" stroke-width="6" stroke-linecap="round"/><path d="M40 60 H120" stroke="#2E9E6A" stroke-width="6" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1" data-delay=".3"/><circle cx="120" cy="60" r="14" fill="#2E9E6A"/><text class="tex" x="120" y="110" data-mix="01 화학과 현대||과학·기술·사회" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><text class="tex" x="120" y="182" data-mix="13–17쪽" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="340" cy="60" r="11" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/><text class="tex" x="340" y="110" data-mix="02 몰과||물질의 양" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="340" y="182" data-mix="18–26쪽" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="600" cy="60" r="11" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="4"/><text class="tex" x="600" y="110" data-mix="01 화학 반응식의||의미" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="600" y="182" data-mix="31–35쪽" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="820" cy="60" r="11" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="4"/><text class="tex" x="820" y="110" data-mix="02 화학 반응의||양적 관계" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="820" y="182" data-mix="36–40쪽" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="1010" cy="60" r="11" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="4"/><text class="tex" x="1010" y="110" data-mix="대단원 마무리||과학 역량·프로젝트" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="1010" y="182" data-mix="44–49쪽" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><rect x="142" y="47" width="58" height="26" rx="13" fill="#FFE45C"/><text class="tex" x="171" y="66" data-mix="오늘" data-size="18" data-anchor="middle" data-weight="700"></text></svg>
+  <div class="row mt8">
+    <div class="col"><div class="card q"><p class="f21"><b>핵심 아이디어</b> 몰은 화학 반응에 참여하는 물질의 양을 나타내는 단위로, 과학·공학·의학 등에서 <b>표준화된 소통의 도구</b>로 활용된다.</p></div></div>
+    <div class="col" style="flex:0 0 400px"><div class="note puzzle"><b>왜 '언어'일까?</b> $\ce{H2O}$라고 쓰면 세계 어느 나라 과학자든 같은 물질을 떠올린다.</div></div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 연계·포트폴리오 ════════ -->
+<section class="slide" data-sec="Ⅰ. 화학의 언어 · 도입" data-title="학습 연계와 포트폴리오">
+  <h2><span class="tag ink">단원 도입</span>학습 연계와 포트폴리오</h2>
+  <h3>학습 연계</h3>
+  <div class="flow">
+    <div class="fnode"><b>중학교 과학</b><br><span class="small">물질의 구성<br>화학 반응의 규칙성</span></div><div class="farr">→</div>
+    <div class="fnode"><b>통합과학1</b><br><span class="small">물질과 규칙성</span></div><div class="farr">→</div>
+    <div class="fnode hl"><b>화학</b><br><span class="small">Ⅰ. 화학의 언어<br>(지금 배우는 단원)</span></div><div class="farr">→</div>
+    <div class="fnode"><b>물질과 에너지</b><br><span class="small">용액의 성질</span></div><div class="farr">→</div>
+    <div class="fnode"><b>화학 반응의 세계</b><br><span class="small">산 염기 평형</span></div>
+  </div>
+  <div class="row mt16">
+    <div class="col">
+      <h3>이 단원의 포트폴리오에 모을 것</h3>
+      <table class="tight cm111-pf">
+        <tr><th>소단원</th><th>모을 것</th></tr>
+        <tr><td>1-01</td><td class="l">화학이 기여한 사례 조사·발표 자료 <b>(오늘)</b></td></tr>
+        <tr><td>1-02</td><td class="l">몰 환산 카드 (입자 수·질량·기체의 부피)</td></tr>
+        <tr><td>2-01</td><td class="l">화학 반응식 쓰기 카드</td></tr>
+        <tr><td>2-02</td><td class="l">화학 반응의 양적 관계 실험 보고서</td></tr>
+      </table>
+      <p class="small mt8">포트폴리오는 배운 것을 모아 두고 스스로 성장을 돌아보는 기록이다. 단원이 끝날 때 다시 펼쳐 본다.</p>
+    </div>
+    <div class="col" style="flex:0 0 400px">
+      <h3>이 단원에서 궁금한 것에 ✓</h3>
+      <div class="chips col1"><button class="chk">화학은 우리 삶에서 무슨 일을 할까?</button><button class="chk">눈에 안 보이는 원자를 어떻게 셀까?</button><button class="chk">화학 반응식은 어떻게 쓸까?</button><button class="chk">반응하는 물질의 양은 어떤 관계일까?</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅰ-1. 생활 속 화학과 물질의 양 · 도입" data-title="단원 도입: 생활 속 화학과 물질의 양">
+  <h2><span class="tag ink">단원 도입</span>1. 생활 속 화학과 물질의 양</h2>
+  <div class="card q"><p class="f22">우리 주변의 물건은 화학과 어떤 관계가 있을까? 그리고 셀 수 없이 작은 원자와 분자의 양은 어떻게 나타낼까?</p></div>
+  <div class="row mt16">
+    <div class="col">
+      <table class="tight cm111-sub">
+        <tr><th>소단원</th><th>배울 것</th><th>쪽</th></tr>
+        <tr class="cm111-cur"><td>01 화학과 현대 과학·기술·사회</td><td class="l">화학이 인류의 문제를 해결한 사례를 조사·발표하기</td><td><b>13–17 (오늘)</b></td></tr>
+        <tr><td>02 몰과 물질의 양</td><td class="l">입자 수·질량·기체의 부피를 몰로 나타내기</td><td>18–26</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="row mt16">
+    <div class="col" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 560 204" style="width:540px" aria-label="빵, 옷, 집, 스마트폰과 각각에 쓰인 화학: 질소 비료, 합성 섬유, 철과 시멘트, 반도체와 전지"><circle cx="70" cy="64" r="56" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><path d="M32 88 V60 Q32 36 70 36 Q108 36 108 60 V88 Z" fill="#F3D9A4" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><path d="M52 54 l8 -8 M68 54 l8 -8 M84 54 l8 -8" stroke="#B9873A" stroke-width="2.5" stroke-linecap="round"/><text class="tex" x="70" y="148" data-mix="빵" data-size="20" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="0.50"><rect x="12" y="160" width="116" height="34" rx="17" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="70" y="184" data-mix="질소 비료" data-size="19" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text></g><circle cx="210" cy="64" r="56" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><path d="M196 34 L170 48 L180 66 L188 62 V96 H232 V62 L240 66 L250 48 L224 34 Q210 46 196 34 Z" fill="#CFE3F7" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><path d="M188 74 H232" stroke="#6E9CCB" stroke-width="3"/><text class="tex" x="210" y="148" data-mix="옷" data-size="20" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="0.85"><rect x="152" y="160" width="116" height="34" rx="17" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="210" y="184" data-mix="합성 섬유" data-size="19" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text></g><circle cx="350" cy="64" r="56" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><path d="M310 62 L350 30 L390 62" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><rect x="320" y="58" width="60" height="40" fill="#E9EEF3" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><rect x="330" y="68" width="14" height="14" fill="#BFE0F5" stroke="#16233D" stroke-width="1.8"/><rect x="354" y="72" width="14" height="26" fill="#C9A27A" stroke="#16233D" stroke-width="1.8"/><text class="tex" x="350" y="148" data-mix="집" data-size="20" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="1.20"><rect x="292" y="160" width="116" height="34" rx="17" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="350" y="184" data-mix="철·시멘트" data-size="19" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text></g><circle cx="490" cy="64" r="56" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><rect x="470" y="32" width="40" height="68" rx="7" fill="#3A3F47" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><rect x="475" y="39" width="30" height="50" rx="2" fill="#BFE0F5"/><circle cx="490" cy="95" r="2.5" fill="#FFFFFF"/><text class="tex" x="490" y="148" data-mix="스마트폰" data-size="20" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="1.55"><rect x="432" y="160" width="116" height="34" rx="17" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="490" y="184" data-mix="반도체·전지" data-size="19" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text></g></svg></div>
+    <div class="col"><div class="note big">매일 쓰는 물건 하나하나에 화학이 들어 있다. 오늘은 화학이 <b>어떤 문제를 어떻게 해결했는지</b> 사례를 찾아본다.</div></div>
+  </div>
+</section>
+
+<!-- ════════ 5. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 화학과 현대 과학·기술·사회" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12화학01-01]</span>화학이 현대 과학·기술·사회의 발전에 기여한 사례를 조사·발표하며 화학에 흥미와 호기심을 가질 수 있다.</div>
+  <ol class="goals mt12">
+    <li>화학이 <b>식량·의류·주거</b> 문제를 해결하는 데 기여한 사례를 설명할 수 있다.</li>
+    <li>화학이 <b>건강·에너지·환경·첨단 기술</b> 등 현대 과학·기술·사회의 발전에 기여한 사례를 설명할 수 있다.</li>
+    <li>화학이 기여한 사례를 <b>조사·발표</b>하며 화학을 배워야 하는 까닭을 말할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">생각 열기</div><div class="farr">→</div>
+    <div class="fnode hl">식량 · 의류 · 주거</div><div class="farr">→</div>
+    <div class="fnode hl">건강 · 에너지 · 환경 · 첨단 소재</div><div class="farr">→</div>
+    <div class="fnode">조사·발표</div><div class="farr">→</div>
+    <div class="fnode">확인 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 6. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 화학과 현대 과학·기술·사회 · 도입" data-title="생각 열기: 화학이 없는 물건?">
+  <h2><span class="tag">생각 열기</span>화학이 쓰이지 않은 물건이 있을까?</h2>
+  <p class="f22">오늘 아침부터 지금까지 쓴 물건을 떠올려 보자.</p>
+  <svg class="fig" viewBox="0 0 1112 180" style="width:1112px" aria-label="빵, 운동복, 칫솔, 감기약, 스마트폰, 버스 그림"><g data-anim="pop" data-o="90,70" data-dur=".7" data-delay="0.20" data-ease="back"><circle cx="90" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><path d="M52 94 V66 Q52 42 90 42 Q128 42 128 66 V94 Z" fill="#F3D9A4" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><path d="M72 60 l8 -8 M88 60 l8 -8 M104 60 l8 -8" stroke="#B9873A" stroke-width="2.5" stroke-linecap="round"/></g><text class="tex" x="90" y="166" data-mix="빵" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="276,70" data-dur=".7" data-delay="0.35" data-ease="back"><circle cx="276" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><path d="M262 40 L236 54 L246 72 L254 68 V102 H298 V68 L306 72 L316 54 L290 40 Q276 52 262 40 Z" fill="#CFE3F7" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><path d="M254 80 H298" stroke="#6E9CCB" stroke-width="3"/></g><text class="tex" x="276" y="166" data-mix="운동복" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="462,70" data-dur=".7" data-delay="0.50" data-ease="back"><circle cx="462" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><rect x="422" y="76" width="64" height="12" rx="6" fill="#9ED7C3" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><rect x="478" y="58" width="26" height="18" rx="3" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><path d="M483 58 V46 M491 58 V46 M499 58 V46" stroke="#6E9CCB" stroke-width="3" stroke-linecap="round"/></g><text class="tex" x="462" y="166" data-mix="칫솔" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="648,70" data-dur=".7" data-delay="0.65" data-ease="back"><circle cx="648" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><g transform="rotate(-35 648 72)"><rect x="612" y="58" width="72" height="28" rx="14" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><path d="M648 58 H670 A14 14 0 0 1 670 86 H648 Z" fill="#F4A7B4" stroke="#16233D" stroke-width="2.5"/></g></g><text class="tex" x="648" y="166" data-mix="감기약" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="834,70" data-dur=".7" data-delay="0.80" data-ease="back"><circle cx="834" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><rect x="814" y="38" width="40" height="68" rx="7" fill="#3A3F47" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><rect x="819" y="45" width="30" height="50" rx="2" fill="#BFE0F5"/><circle cx="834" cy="101" r="2.5" fill="#FFFFFF"/></g><text class="tex" x="834" y="166" data-mix="스마트폰" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="1020,70" data-dur=".7" data-delay="0.95" data-ease="back"><circle cx="1020" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/><rect x="980" y="46" width="80" height="46" rx="8" fill="#FBE3B0" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><rect x="987" y="53" width="66" height="16" rx="2" fill="#BFE0F5" stroke="#16233D" stroke-width="1.8"/><circle cx="998" cy="94" r="8" fill="#16233D"/><circle cx="1042" cy="94" r="8" fill="#16233D"/></g><text class="tex" x="1020" y="166" data-mix="버스" data-size="21" data-anchor="middle" data-weight="700"></text></svg>
+  <p class="f22 mt8"><b>Q</b> 이 가운데 화학이 만든 물질이나 화학 기술이 쓰이지 않은 것이 있을까?</p>
+  <div class="card tip step mt8"><p class="f21"><b>없다.</b> 빵의 밀은 질소 비료로 길렀고, 운동복은 합성 섬유, 칫솔은 플라스틱, 감기약은 합성 의약품이다. 스마트폰은 반도체와 전지로, 버스는 철로 만든 차체와 연료로 움직인다.</p></div>
+  <div class="answer step">→ 화학은 우리 삶 곳곳에서 <b>인류의 문제를 해결</b>해 왔다.</div>
+</section>
+
+<!-- ════════ 7. 연결: 화학은 무엇을 연구할까 ════════ -->
+<section class="slide" data-sec="01 화학과 현대 과학·기술·사회 · 도입" data-title="화학은 무엇을 연구할까?">
+  <h2><span class="tag alt">연결</span>화학은 무엇을 연구할까?</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22"><mark>화학은 물질의 구성, 구조, 성질과 변화를 연구하는 학문이다.</mark></p>
+      <p class="f22 mt12">화학자는 물질을 이루는 원자와 분자를 이해하여 <b>새로운 물질</b>을 만들고, <b>새로운 반응</b>을 찾아낸다.</p>
+      <p class="f22 mt16"><b>Q</b> 인구가 늘고 생활이 바뀔 때마다 인류가 먼저 부딪힌 문제는 무엇이었을까?</p>
+      <div class="answer step">먹고, 입고, 사는 문제 — <b>식량·의류·주거</b></div>
+      <p class="f21 step mt8">→ 화학이 먼저 해결한 의식주 문제부터 살펴보자.</p>
+    </div>
+    <div class="col" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 600 392" style="width:560px" aria-label="가운데 화학에서 식량, 의류, 주거, 건강, 에너지, 환경, 첨단 기술로 뻗어 나가는 화살표"><g data-arw="300,114,300,74,field,3"></g><rect x="240" y="24" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="300" y="54" data-mix="식량" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="364.1,144.9,425.2,130.5,field,3"></g><rect x="400.3" y="80.5" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="460.3" y="110.5" data-mix="의류" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="379.9,214.2,433.9,214.3,field,3"></g><rect x="439.9" y="207.4" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="499.9" y="237.4" data-mix="주거" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="335.6,269.9,375.5,303.1,field,3"></g><rect x="328.9" y="309.1" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="388.9" y="339.1" data-mix="건강" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="264.4,269.9,224.5,303.1,field,3"></g><rect x="151.1" y="309.1" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="211.1" y="339.1" data-mix="에너지" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="220.1,214.2,166.1,214.3,field,3"></g><rect x="40.1" y="207.4" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="100.1" y="237.4" data-mix="환경" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="235.9,144.9,174.8,130.5,field,3"></g><rect x="79.7" y="80.5" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="139.7" y="110.5" data-mix="첨단 기술" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="300,196" data-dur=".8" data-ease="back"><circle cx="300" cy="196" r="74" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="3"/><text class="tex" x="300" y="192" data-mix="화학" data-size="30" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text><text class="tex" x="300" y="222" data-mix="새 물질·새 반응" data-size="18" data-anchor="middle" fill="#1B5E3F"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 8. 식량 문제 ════════ -->
+<section class="slide" data-sec="01 · 화학과 식량 문제" data-title="식량 문제와 질소">
+  <h2><span class="no">1</span>화학과 식량 문제</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">18세기 이후 세계 인구가 빠르게 늘면서 식량이 부족해졌다. 식물이 자라는 데 꼭 필요한 <b>질소</b>는 공기의 약 78 %(부피)를 차지하지만, 식물은 공기 중의 질소 $\ce{N2}$를 직접 쓰지 못한다.</p>
+      <p class="f22 mt8">거름이나 천연 비료(칠레 초석 등)만으로는 늘어나는 인구를 먹여 살리기 어려웠다.</p>
+      <p class="f22 mt12"><b>Q</b> 공기 속 질소를 식물이 쓸 수 있는 물질로 바꿀 수는 없을까?</p>
+    </div>
+    <div class="col" style="flex:0 0 550px"><svg class="fig" viewBox="0 0 560 312" style="width:540px" aria-label="공기 속 질소 분자와 산소 분자, 식물은 공기 중의 질소를 직접 쓰지 못한다"><rect x="16" y="40" width="300" height="230" rx="16" fill="#F4F8FC" stroke="#9FC3DD" stroke-width="2.5" stroke-dasharray="8 6"/><text class="tex" x="166" y="28" data-mix="공기" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="move" data-from="10,-6" data-rep="alt" data-dur="1.4" data-ease="io"><g data-atom="61.5,92,24,N"></g><g data-atom="98.5,92,24,N"></g></g><g data-anim="move" data-from="-8,8" data-rep="alt" data-dur="1.6" data-ease="io"><g data-atom="211.5,84,24,N"></g><g data-atom="248.5,84,24,N"></g></g><g data-anim="move" data-from="6,8" data-rep="alt" data-dur="1.8" data-ease="io"><g data-atom="139.5,150,24,O"></g><g data-atom="176.5,150,24,O"></g></g><g data-anim="move" data-from="-10,-5" data-rep="alt" data-dur="2.0" data-ease="io"><g data-atom="57.5,218,24,N"></g><g data-atom="94.5,218,24,N"></g></g><g data-anim="move" data-from="8,-8" data-rep="alt" data-dur="2.2" data-ease="io"><g data-atom="229.5,214,24,N"></g><g data-atom="266.5,214,24,N"></g></g><text class="tex" x="166" y="300" data-mix="질소 $\ce{N2}$ 약 78 %, 산소 $\ce{O2}$ 약 21 % (부피)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><path d="M470 262 V150" stroke="#2E9E6A" stroke-width="5" stroke-linecap="round"/><path d="M470 200 Q424 186 412 150 Q456 160 470 200 Z" fill="#9BD86F" stroke="#2E9E6A" stroke-width="2.5"/><path d="M470 176 Q516 160 526 122 Q482 134 470 176 Z" fill="#9BD86F" stroke="#2E9E6A" stroke-width="2.5"/><path d="M410 262 H530" stroke="#8C6A4A" stroke-width="6" stroke-linecap="round"/><text class="tex" x="470" y="300" data-mix="식물" data-size="21" data-anchor="middle" data-weight="700"></text><g data-arw="326,150,396,150,muted,3,d"></g><g stroke="#D7263D" stroke-width="5" stroke-linecap="round"><line x1="346" y1="128" x2="376" y2="158"/><line x1="376" y1="128" x2="346" y2="158"/></g><text class="tex" x="361" y="196" data-mix="직접||못 씀" data-size="19" data-anchor="middle" fill="#D7263D" data-weight="700"></text></svg></div>
+  </div>
+  <div class="card tip step mt8"><p class="f21">1909년 독일의 <b>하버</b>가 질소와 수소로 <b>암모니아</b>를 합성하는 방법을 개발하였고, <b>보슈</b>가 이를 공장에서 대량으로 생산하는 공정을 완성하였다(1913년 공장 가동). 이것을 <b>하버·보슈 공정</b>이라고 한다.</p></div>
+</section>
+
+<!-- ════════ 9. 하버·보슈 공정 ════════ -->
+<section class="slide" data-sec="01 · 화학과 식량 문제" data-title="하버·보슈 공정">
+  <h2><span class="no">1</span>하버·보슈 공정 — 공기에서 암모니아를</h2>
+  <div class="cm111-mms">
+    <div class="stage"><h3>① 공장에서 보면</h3><svg class="fig" viewBox="0 0 330 312" style="width:262px" aria-label="질소와 수소를 넣으면 철 촉매가 든 고온 고압 반응 탑에서 암모니아가 나오는 모식도"><rect x="110" y="70" width="110" height="200" rx="40" fill="#E9EEF3" stroke="#16233D" stroke-width="3"/><rect x="126" y="140" width="78" height="70" rx="6" fill="#C7743D" fill-opacity=".35" stroke="#874A20" stroke-width="2" stroke-dasharray="5 4"/><text class="tex" x="165" y="182" data-mix="철 촉매" data-size="23" data-anchor="middle" fill="#874A20" data-weight="700"></text><g data-arw="20,110,104,110,ink,3"></g><text class="tex" x="48" y="96" data-mix="$\ce{N2}$, $\ce{H2}$" data-size="23" data-anchor="middle"></text><g data-arw="226,230,310,230,ink,3"></g><text class="tex" x="270" y="216" data-mix="$\ce{NH3}$" data-size="23" data-anchor="middle"></text><text class="tex" x="165" y="46" data-mix="높은 온도·높은 압력" data-size="23" data-anchor="middle" fill="#D7263D" data-weight="700"></text><path d="M150 70 q6 -10 0 -18 M180 70 q6 -10 0 -18" fill="none" stroke="#D7263D" stroke-width="2.5" stroke-linecap="round" data-anim="fade" data-rep="alt" data-dur="1"/><text class="tex" x="165" y="302" data-mix="반응 탑 (모식도)" data-size="23" data-anchor="middle" fill="#5B6B7F"></text></svg><p>질소와 수소를 높은 온도와 압력에서 철 촉매와 만나게 한다.</p></div>
+    <div class="stage step" data-g="h2"><h3>② 입자로 보면</h3><svg class="fig" viewBox="0 0 370 306" style="width:366px" aria-label="질소 분자 1개와 수소 분자 3개가 반응해 암모니아 분자 2개가 되는 입자 모형"><g data-atom="43.5,60,24,N"></g><g data-atom="80.5,60,24,N"></g><g data-atom="154,60,18,H"></g><g data-atom="182,60,18,H"></g><g data-atom="224,60,18,H"></g><g data-atom="252,60,18,H"></g><g data-atom="294,60,18,H"></g><g data-atom="322,60,18,H"></g><text class="tex" x="116" y="70" data-tex="+" data-size="28" data-anchor="middle" fill="#16233D"></text><g data-arw="185,96,185,164,ink,3"></g><g data-anim="move" data-from="24,-189" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="130,249,18,H"></g></g><g data-anim="move" data-from="80.6,-139.5" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="101.4,199.5,18,H"></g></g><g data-anim="move" data-from="65.4,-139.5" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="158.6,199.5,18,H"></g></g><g data-anim="move" data-from="-86.5,-156" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="130,216,24,N"></g></g><g data-anim="move" data-from="2,-189" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="250,249,18,H"></g></g><g data-anim="move" data-from="72.6,-139.5" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="221.4,199.5,18,H"></g></g><g data-anim="move" data-from="43.4,-139.5" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="278.6,199.5,18,H"></g></g><g data-anim="move" data-from="-169.5,-156" data-dur="1.4" data-delay="0.5" data-ease="soft" data-on="g:h2"><g data-atom="250,216,24,N"></g></g><text class="tex" x="190" y="224" data-tex="+" data-size="28" data-anchor="middle" fill="#16233D"></text><text class="tex" x="185" y="294" data-mix="원자 수: $\mathrm{N}$ 2개, $\mathrm{H}$ 6개 (반응 전 = 후)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg><p>원자는 없어지지 않고 <b>다시 결합</b>하여 새 분자가 된다.</p></div>
+    <div class="stage step" data-g="h3"><h3>③ 기호로 쓰면</h3>
+      <div class="formula sm cm111-eq">$\ce{N2(g) + 3H2(g) ->[\text{고온, 고압, 촉매}] 2NH3(g)}$</div>
+      <p class="mt12">이런 식을 <b>화학 반응식</b>이라고 한다.</p>
+      <p class="small">화학 반응식을 쓰는 방법은 「2. 화학 반응식」에서 배운다.</p>
+    </div>
+  </div>
+  <div class="answer step mt8">공기 속 질소를 암모니아로 바꾸어 <b>질소 비료</b>를 대량으로 만들 수 있게 되었다.</div>
+</section>
+
+<!-- ════════ 10. 질소 비료와 식량 생산 ════════ -->
+<section class="slide" data-sec="01 · 화학과 식량 문제" data-title="질소 비료와 식량 생산">
+  <h2><span class="no">1</span>질소 비료와 식량 생산</h2>
+  <div class="flow">
+    <div class="fnode">암모니아<br>$\ce{NH3}$</div><div class="farr">→</div>
+    <div class="fnode hl">질소 비료<br><span class="small">질산 암모늄 $\ce{NH4NO3}$, 요소 $\ce{CO(NH2)2}$</span></div><div class="farr">→</div>
+    <div class="fnode">농작물<br>수확량 증가</div><div class="farr">→</div>
+    <div class="fnode">늘어난 인구를<br>먹여 살림</div>
+  </div>
+  <div class="row mt16">
+    <div class="col">
+      <div class="card step"><h3 class="c-field">화학이 해결한 것</h3><p class="f21">오늘날 세계 인구의 <b>약 절반</b>이 하버·보슈 공정으로 만든 비료 덕분에 식량을 얻는다고 추정된다.</p></div>
+    </div>
+    <div class="col">
+      <div class="card cm111-warn step"><h3 class="c-equi">남은 과제</h3><p class="f21">비료를 지나치게 쓰면 남은 질소 화합물이 강과 바다로 흘러가 <b>수질 오염</b>을 일으킨다. → 필요한 만큼만 쓰는 방법과 친환경 비료를 연구한다.</p></div>
+    </div>
+  </div>
+  <div class="note mt16">화학은 농약, 비닐하우스 필름(플라스틱), 식품 포장재와 보존제로도 식량 문제 해결을 돕는다.</div>
+</section>
+
+<!-- ════════ 11. 모의실험: 암모니아 합성 ════════ -->
+<section class="slide" data-sec="01 · 모의실험" data-title="모의실험: 암모니아 합성 입자 모형">
+  <h2><span class="tag">모의실험</span>암모니아 합성 입자 모형</h2>
+  <div class="lab" data-lab="cm111nh3">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <p class="small">질소 분자와 수소 분자 수를 정하고 「반응시키기」를 눌러, 원자가 어떻게 다시 결합하는지 관찰하자.</p>
+      <div class="ctl"><div class="lbl"><span>질소 분자 $\ce{N2}$ 수</span><output data-o="a"></output></div><input type="range" min="1" max="4" step="1" value="1" data-i="a" aria-label="질소 분자 수"></div>
+      <div class="ctl"><div class="lbl"><span>수소 분자 $\ce{H2}$ 수</span><output data-o="b"></output></div><input type="range" min="1" max="12" step="1" value="3" data-i="b" aria-label="수소 분자 수"></div>
+      <div class="cm111-seg"><button class="btn cm111-act" data-act="go">반응시키기</button><button class="btn" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <div class="res"><div class="small">생긴 암모니아 분자</div><div class="big"><output data-o="nh3"></output></div><output class="kind" data-o="msg"></output></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:300px">
+        <svg viewBox="0 0 600 300" width="600" height="300" aria-label="질소 분자와 수소 분자의 원자들이 다시 결합하여 암모니아 분자가 되는 입자 상자"></svg>
+        <div class="ov" data-ov="st" style="font-size:20px;font-weight:700;transform:none"></div>
+        <div class="ov" data-ov="cnt" style="font-size:19px;color:#5B6B7F;transform:none"></div>
+      </div>
+      <table class="tight cm111-log mt8"><thead><tr><th>처음 $\ce{N2}$</th><th>처음 $\ce{H2}$</th><th>생긴 $\ce{NH3}$</th><th>남은 분자</th><th>원자 수(전 = 후)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 의류 문제 ════════ -->
+<section class="slide" data-sec="01 · 화학과 의류 문제" data-title="합성 섬유">
+  <h2><span class="no">2</span>화학과 의류 문제 — 합성 섬유</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">면, 양털, 비단 같은 <b>천연 섬유</b>는 생산량이 기후와 땅의 넓이에 따라 제한되고, 쉽게 해지거나 줄어드는 단점이 있었다.</p>
+      <p class="f22 mt8 step" data-g="c1">1930년대에 미국의 <b>캐러더스</b>가 최초의 합성 섬유인 <b>나일론</b>을 개발하였다. 석탄, 물, 공기에서 얻은 원료로 만든 나일론은 '거미줄보다 가늘고 강철보다 강한 섬유'로 소개되었다.</p>
+    </div>
+    <div class="col step" data-g="c1" style="flex:0 0 510px"><svg class="fig" viewBox="0 0 536 296" style="width:500px" aria-label="두 종류의 작은 분자가 번갈아 이어져 긴 사슬 모양 분자가 되는 모식도"><path d="M60 138 L122 162 L184 138 L246 162 L308 138 L370 162 L432 138 L494 162" fill="none" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round" data-anim="fade" data-dur=".5" data-delay="1.5"/><g data-anim="move" data-from="-30,-90" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="60" cy="138" r="22" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2.5"/></g><g data-anim="move" data-from="20,70" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="122" cy="162" r="22" fill="#FBDDBF" stroke="#D08A47" stroke-width="2.5"/></g><g data-anim="move" data-from="-40,80" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="184" cy="138" r="22" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2.5"/></g><g data-anim="move" data-from="30,-86" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="246" cy="162" r="22" fill="#FBDDBF" stroke="#D08A47" stroke-width="2.5"/></g><g data-anim="move" data-from="-20,92" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="308" cy="138" r="22" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2.5"/></g><g data-anim="move" data-from="36,-70" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="370" cy="162" r="22" fill="#FBDDBF" stroke="#D08A47" stroke-width="2.5"/></g><g data-anim="move" data-from="-26,76" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="432" cy="138" r="22" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2.5"/></g><g data-anim="move" data-from="24,-94" data-dur="1.3" data-delay=".3" data-ease="soft"><circle cx="494" cy="162" r="22" fill="#FBDDBF" stroke="#D08A47" stroke-width="2.5"/></g><text class="tex" x="268" y="52" data-mix="작은 분자(단위체) 여러 개가" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="268" y="236" data-mix="→ 길게 이어진 사슬 모양 분자" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><circle cx="150" cy="276" r="11" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><text class="tex" x="168" y="283" data-mix="단위체 A" data-size="19" data-anchor="start" fill="#5B6B7F"></text><circle cx="310" cy="276" r="11" fill="#FBDDBF" stroke="#D08A47" stroke-width="2"/><text class="tex" x="328" y="283" data-mix="단위체 B" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg></div>
+  </div>
+  <table class="tight mt12 cm111-fib step">
+    <tr><th>합성 섬유</th><th>특징</th><th>쓰임</th></tr>
+    <tr><td>나일론</td><td class="l">질기고 가볍다</td><td class="l">스타킹, 밧줄, 낙하산</td></tr>
+    <tr><td>폴리에스터</td><td class="l">구김이 적고 빨리 마른다</td><td class="l">운동복, 교복</td></tr>
+    <tr><td>아크릴</td><td class="l">가볍고 따뜻하다</td><td class="l">스웨터, 담요</td></tr>
+  </table>
+  <p class="small mt8">오늘날에는 비는 막고 땀은 내보내는 방수·투습 섬유, 방탄 섬유 같은 기능성 섬유도 화학으로 만든다.</p>
+</section>
+
+<!-- ════════ 13. 철의 제련 ════════ -->
+<section class="slide" data-sec="01 · 화학과 주거 문제" data-title="철의 제련">
+  <h2><span class="no">3</span>화학과 주거 문제 — 철의 제련</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px"><svg class="fig" viewBox="0 0 470 414" style="width:430px" aria-label="위에서 철광석과 코크스, 석회석을 넣고 아래에서 뜨거운 공기를 불어 넣어 바닥에 쇳물이 고이는 용광로 모식도"><path d="M150 70 L120 330 Q120 372 160 372 H300 Q340 372 340 330 L310 70 Z" fill="#EEF2F6" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><path d="M124 300 H336 L340 330 Q340 372 300 372 H160 Q120 372 120 330 Z" fill="#F29A4A" stroke="none"/><path d="M126 276 H334 L337 300 H123 Z" fill="#B9A8A0"/><path d="M150 70 L120 330 Q120 372 160 372 H300 Q340 372 340 330 L310 70 Z" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><circle cx="180" cy="110" r="10" fill="#A5452B" stroke="#16233D" stroke-width="1.2"/><circle cx="230" cy="100" r="10" fill="#3A3F47" stroke="#16233D" stroke-width="1.2"/><circle cx="280" cy="115" r="10" fill="#D9D2C5" stroke="#16233D" stroke-width="1.2"/><circle cx="200" cy="150" r="10" fill="#A5452B" stroke="#16233D" stroke-width="1.2"/><circle cx="255" cy="145" r="10" fill="#3A3F47" stroke="#16233D" stroke-width="1.2"/><circle cx="170" cy="195" r="10" fill="#D9D2C5" stroke="#16233D" stroke-width="1.2"/><circle cx="225" cy="190" r="10" fill="#A5452B" stroke="#16233D" stroke-width="1.2"/><circle cx="285" cy="200" r="10" fill="#3A3F47" stroke="#16233D" stroke-width="1.2"/><circle cx="195" cy="240" r="10" fill="#D9D2C5" stroke="#16233D" stroke-width="1.2"/><circle cx="260" cy="238" r="10" fill="#A5452B" stroke="#16233D" stroke-width="1.2"/><g data-arw="230,20,230,62,ink,3"></g><text class="tex" x="250" y="30" data-mix="철광석·코크스·석회석" data-size="19" data-anchor="start"></text><g data-arw="40,262,116,262,plus,3"></g><g data-arw="420,262,344,262,plus,3"></g><text class="tex" x="60" y="226" data-mix="뜨거운||공기" data-size="19" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="400" y="226" data-mix="뜨거운||공기" data-size="19" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="230" y="294" data-mix="슬래그" data-size="19" data-anchor="middle" fill="#16233D"></text><text class="tex" x="230" y="344" data-mix="쇳물(철)" data-size="21" data-anchor="middle" fill="#16233D" data-weight="700"></text><path d="M340 352 H392 V384" fill="none" stroke="#F29A4A" stroke-width="10" stroke-linecap="round"/><g data-anim="move" data-from="0,-26" data-rep="loop" data-dur="1.2" data-ease="in"><circle cx="392" cy="398" r="7" fill="#F29A4A"/></g><g data-arw="320,96,392,70,muted,3"></g><text class="tex" x="396" y="62" data-mix="기체" data-size="19" data-anchor="start" fill="#5B6B7F"></text><text class="tex" x="230" y="404" data-mix="용광로 (모식도)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+    <div class="col">
+      <p class="f22">철광석의 주성분인 산화 철(III) $\ce{Fe2O3}$를 코크스(탄소)와 함께 용광로에 넣고 뜨거운 공기를 불어 넣으면, 산화 철에서 <b>산소가 떨어져 나가</b> 철을 얻는다. 이것을 <b>철의 제련</b>이라고 한다.</p>
+      <p class="f21 mt12 step" data-g="f1">① 코크스가 타서 일산화 탄소가 생긴다.</p>
+      <div class="formula sm step" data-g="f1">$\ce{2C(s) + O2(g) -> 2CO(g)}$</div>
+      <p class="f21 step" data-g="f2">② 일산화 탄소가 산화 철(III)의 산소를 빼앗는다.</p>
+      <div class="formula sm step" data-g="f2">$\ce{Fe2O3(s) + 3CO(g) -> 2Fe(l) + 3CO2(g)}$</div>
+      <div class="answer step">값싸고 단단한 철을 대량으로 얻어 건물의 뼈대(철근, 철골), 다리, 기계를 만들게 되었다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 건축 재료 ════════ -->
+<section class="slide" data-sec="01 · 화학과 주거 문제" data-title="건축 재료와 화학">
+  <h2><span class="no">3</span>건축 재료와 화학</h2>
+  <div class="stages">
+    <div class="stage"><h3>시멘트·콘크리트</h3><svg viewBox="0 0 300 180" aria-label="철근 콘크리트 건물"><g data-anim="pop" data-o="150,150" data-dur=".8" data-delay=".3" data-ease="back"><rect x="70" y="30" width="160" height="120" fill="#D9DDE2" stroke="#16233D" stroke-width="2.5"/><rect x="88" y="46" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="134" y="46" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="180" y="46" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="88" y="80" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="134" y="80" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="180" y="80" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="88" y="114" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="134" y="114" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><rect x="180" y="114" width="28" height="20" fill="#BFE0F5" stroke="#16233D" stroke-width="1.5"/><path d="M70 150 H230" stroke="#16233D" stroke-width="3"/><g stroke="#874A20" stroke-width="2.5" stroke-dasharray="6 5"><line x1="78" y1="34" x2="78" y2="146"/><line x1="222" y1="34" x2="222" y2="146"/></g></g><text class="tex" x="150" y="168" data-mix="철근(점선)이 든 콘크리트" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg><p>석회석(탄산 칼슘 $\ce{CaCO3}$)을 가열해 얻은 산화 칼슘 $\ce{CaO}$이 시멘트의 원료가 된다.</p>
+      <div class="formula sm cm111-eq2">$\ce{CaCO3(s) ->[\Delta] CaO(s) + CO2(g)}$</div>
+      <p>콘크리트에 철근을 넣어 높은 건물을 짓는다.</p></div>
+    <div class="stage"><h3>유리</h3><svg viewBox="0 0 300 180" aria-label="빛이 들어오는 유리창"><g data-anim="pop" data-o="150,90" data-dur=".8" data-delay=".5" data-ease="back"><rect x="80" y="20" width="140" height="130" fill="#E3F1FA" stroke="#16233D" stroke-width="3"/><line x1="150" y1="20" x2="150" y2="150" stroke="#16233D" stroke-width="3"/><line x1="80" y1="85" x2="220" y2="85" stroke="#16233D" stroke-width="3"/><path d="M96 40 l26 -14 M170 46 l26 -14" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/></g><g data-arw="30,30,74,60,equi,3"></g><text class="tex" x="36" y="22" data-mix="빛" data-size="19" data-anchor="middle" fill="#E08A2C" data-weight="700"></text><text class="tex" x="150" y="168" data-mix="모래가 원료인 유리" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg><p>모래(이산화 규소)를 녹여 만든 유리창은 바람을 막고 빛을 들인다.</p></div>
+    <div class="stage"><h3>플라스틱</h3><svg viewBox="0 0 300 180" aria-label="플라스틱 수도관과 단열재"><g data-anim="pop" data-o="150,90" data-dur=".8" data-delay=".7" data-ease="back"><rect x="30" y="40" width="160" height="34" rx="6" fill="#CFE3F7" stroke="#16233D" stroke-width="2.5"/><ellipse cx="190" cy="57" rx="10" ry="17" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><rect x="60" y="96" width="200" height="50" rx="4" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><circle cx="78" cy="112" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="100" cy="130" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="122" cy="112" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="144" cy="130" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="166" cy="112" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="188" cy="130" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="210" cy="112" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="232" cy="130" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/><circle cx="254" cy="112" r="7" fill="none" stroke="#9FB0C2" stroke-width="1.8"/></g><text class="tex" x="150" y="168" data-mix="수도관·단열재" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg><p>수도관, 창틀, 단열재 — 가볍고 녹슬거나 썩지 않는다.</p></div>
+  </div>
+  <div class="answer step mt12">화학이 만든 건축 재료로 많은 사람이 <b>튼튼하고 따뜻한 집</b>에서 살게 되었다.</div>
+</section>
+
+<!-- ════════ 15. 확인하기 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 의식주와 화학" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>의식주 문제와 화학</h2>
+  <p class="f22">옳은 것은 ○, 옳지 않은 것은 ×로 표시하시오.</p>
+  <ol class="cm111-ox mt12">
+    <li class="f22">공기 중의 질소 $\ce{N2}$는 식물이 직접 흡수해 쓸 수 있다. <span class="blank"><span class="step">× — 암모니아 등으로 바꾸어야 쓸 수 있다</span></span></li>
+    <li class="f22">하버·보슈 공정은 질소와 수소로 암모니아를 대량 생산하는 공정이다. <span class="blank"><span class="step">○</span></span></li>
+    <li class="f22">나일론은 누에고치에서 얻는 천연 섬유이다. <span class="blank"><span class="step">× — 최초의 합성 섬유</span></span></li>
+    <li class="f22">철의 제련에서 산화 철(III)은 산소를 잃고 철이 된다. <span class="blank"><span class="step">○</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 16. 연결: 현대 사회의 문제 ════════ -->
+<section class="slide" data-sec="01 · 화학과 현대 사회" data-title="현대 사회의 새로운 문제">
+  <h2><span class="tag alt">연결</span>현대 사회의 새로운 문제</h2>
+  <p class="f22">의식주 문제를 풀어 가면서 인류는 새로운 문제를 만났다.</p>
+  <table class="tight mt12 cm111-new">
+    <tr><th>새로운 문제</th><th>화학의 역할</th></tr>
+    <tr><td class="l">질병, 짧은 수명</td><td class="l step" data-g="n1">④ 의약품을 합성한다</td></tr>
+    <tr><td class="l">에너지 부족, 지구 온난화</td><td class="l step" data-g="n1">⑤ 새로운 연료와 전지를 만든다</td></tr>
+    <tr><td class="l">쓰레기, 환경 오염</td><td class="l step" data-g="n1">⑥ 친환경 물질과 처리 기술을 찾는다</td></tr>
+    <tr><td class="l">더 빠르고 작은 기기</td><td class="l step" data-g="n1">⑦ 반도체와 신소재를 만든다</td></tr>
+  </table>
+  <p class="f22 mt16"><b>Q</b> 이런 문제는 화학 혼자 풀 수 있을까?</p>
+  <div class="answer step">생명 과학, 물리학, 공학, 의학과 <b>함께</b> 푼다. 화학은 그 바탕이 되는 <b>물질</b>을 만든다.</div>
+</section>
+
+<!-- ════════ 17. 건강 ════════ -->
+<section class="slide" data-sec="01 · 화학과 현대 사회" data-title="화학과 건강: 의약품">
+  <h2><span class="no">4</span>화학과 건강 — 의약품</h2>
+  <svg class="fig" viewBox="0 0 1110 168" style="width:1110px" aria-label="의약품 연표: 버드나무 껍질, 1897 아스피린 합성, 1928 페니실린 발견, 1940년대 대량 생산, 오늘날 백신"><path d="M40 70 H1070" stroke="#5B6B7F" stroke-width="4" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.4" data-delay=".2"/><g data-anim="pop" data-o="80,70" data-dur=".6" data-delay="0.40" data-ease="back"><circle cx="80" cy="70" r="13" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/></g><text class="tex" x="80" y="40" data-mix="옛날" data-size="21" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text><text class="tex" x="80" y="118" data-mix="버드나무 껍질||열·통증 완화" data-size="20" data-anchor="middle"></text><g data-anim="pop" data-o="300,70" data-dur=".6" data-delay="0.65" data-ease="back"><circle cx="300" cy="70" r="13" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/></g><text class="tex" x="300" y="40" data-mix="1897" data-size="21" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text><text class="tex" x="300" y="118" data-mix="아스피린 합성||(호프만)" data-size="20" data-anchor="middle"></text><g data-anim="pop" data-o="520,70" data-dur=".6" data-delay="0.90" data-ease="back"><circle cx="520" cy="70" r="13" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/></g><text class="tex" x="520" y="40" data-mix="1928" data-size="21" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text><text class="tex" x="520" y="118" data-mix="페니실린 발견||(플레밍)" data-size="20" data-anchor="middle"></text><g data-anim="pop" data-o="750,70" data-dur=".6" data-delay="1.15" data-ease="back"><circle cx="750" cy="70" r="13" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/></g><text class="tex" x="750" y="40" data-mix="1940년대" data-size="21" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text><text class="tex" x="750" y="118" data-mix="페니실린||대량 생산" data-size="20" data-anchor="middle"></text><g data-anim="pop" data-o="990,70" data-dur=".6" data-delay="1.40" data-ease="back"><circle cx="990" cy="70" r="13" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/></g><text class="tex" x="990" y="40" data-mix="오늘날" data-size="21" data-anchor="middle" fill="#1B5E3F" data-weight="700"></text><text class="tex" x="990" y="118" data-mix="백신·||항바이러스제" data-size="20" data-anchor="middle"></text></svg>
+  <div class="row mt12">
+    <div class="col"><div class="card"><h3>합성 의약품</h3><p class="f21">자연에서 얻은 물질의 구조를 밝히고, 효과는 높이고 부작용은 줄인 물질을 만든다. 예: 버드나무 껍질의 살리실산 → 위에 부담이 적은 아스피린</p></div></div>
+    <div class="col"><div class="card"><h3>소독과 위생</h3><p class="f21">소독용 에탄올, 수돗물 염소 소독, 비누와 세제는 감염병을 크게 줄였다.</p></div></div>
+  </div>
+  <div class="answer step mt12">→ 화학은 질병을 치료하고 인류의 <b>평균 수명</b>을 늘리는 데 기여하였다.</div>
+</section>
+
+<!-- ════════ 18. 에너지 ════════ -->
+<section class="slide" data-sec="01 · 화학과 현대 사회" data-title="화학과 에너지">
+  <h2><span class="no">5</span>화학과 에너지</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <h3>화석 연료의 연소</h3>
+      <svg class="fig" viewBox="0 0 400 258" style="width:400px" aria-label="메테인 분자 1개와 산소 분자 2개가 반응해 이산화 탄소 분자 1개와 물 분자 2개가 되는 입자 모형"><g data-atom="83.3,83.3,18,H"></g><g data-atom="36.7,83.3,18,H"></g><g data-atom="36.7,36.7,18,H"></g><g data-atom="83.3,36.7,18,H"></g><g data-atom="60,60,24,C"></g><g data-atom="163.5,60,24,O"></g><g data-atom="200.5,60,24,O"></g><g data-atom="293.5,60,24,O"></g><g data-atom="330.5,60,24,O"></g><text class="tex" x="118" y="70" data-tex="+" data-size="28" data-anchor="middle" fill="#16233D"></text><text class="tex" x="247" y="70" data-tex="+" data-size="28" data-anchor="middle" fill="#16233D"></text><g data-arw="200,94,200,140,ink,3"></g><text class="tex" x="216" y="124" data-mix="연소" data-size="19" data-anchor="start" fill="#5B6B7F"></text><g data-anim="move" data-from="110.5,-126" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="53,186,24,O"></g></g><g data-anim="move" data-from="73.5,-126" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="127,186,24,O"></g></g><g data-anim="move" data-from="-30,-126" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="90,186,24,C"></g></g><g data-anim="move" data-from="-115.6,-114.9" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="198.9,198.2,18,H"></g></g><g data-anim="move" data-from="-214.4,-114.9" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="251.1,198.2,18,H"></g></g><g data-anim="move" data-from="68.5,-118" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="225,178,24,O"></g></g><g data-anim="move" data-from="-289.2,-161.5" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="325.9,198.2,18,H"></g></g><g data-anim="move" data-from="-294.8,-161.5" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="378.1,198.2,18,H"></g></g><g data-anim="move" data-from="-21.5,-118" data-dur="1.4" data-delay="0.6" data-ease="soft"><g data-atom="352,178,24,O"></g></g><text class="tex" x="166" y="178" data-tex="+" data-size="28" data-anchor="middle" fill="#16233D"></text><text class="tex" x="288" y="178" data-tex="+" data-size="28" data-anchor="middle" fill="#16233D"></text><text class="tex" x="200" y="246" data-mix="$\mathrm{C}$ 1, $\mathrm{H}$ 4, $\mathrm{O}$ 4 (반응 전 = 후)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg>
+      <div class="formula sm cm111-eq">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$</div>
+      <p class="f21">나오는 열로 전기를 만들고 자동차를 움직이지만, 이산화 탄소 $\ce{CO2}$가 늘어 <b class="c-plus">지구 온난화</b>의 원인이 된다.</p>
+    </div>
+    <div class="col">
+      <h3>새로운 에너지</h3>
+      <div class="card step" data-g="e1"><p class="f21"><b>수소 연료 전지</b> 수소와 산소가 반응하여 전기를 만들고 물만 생긴다.</p><div class="formula sm cm111-eq2">$\ce{2H2(g) + O2(g) -> 2H2O(l)}$</div></div>
+      <div class="card step mt8" data-g="e2"><p class="f21"><b>리튬 이온 전지</b> 전기를 저장하여 여러 번 충전해 쓴다(2019년 노벨 화학상).</p></div>
+      <div class="card step mt8" data-g="e2"><p class="f21"><b>태양 전지</b> 규소 $\ce{Si}$ 같은 물질로 햇빛을 전기로 바꾼다.</p></div>
+      <div class="answer step mt12">화학은 에너지를 얻는 새로운 물질과 반응을 찾아 <b>지속가능한 에너지</b> 문제 해결에 기여한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 환경 ════════ -->
+<section class="slide" data-sec="01 · 화학과 현대 사회" data-title="화학과 환경">
+  <h2><span class="no">6</span>화학과 환경</h2>
+  <div class="stages">
+    <div class="stage"><h3>플라스틱 쓰레기</h3><svg viewBox="0 0 300 156" aria-label="썩지 않는 플라스틱에서 미생물이 분해하는 생분해성 플라스틱으로"><path d="M60 20 h20 v14 q14 8 14 24 v52 q0 8 -8 8 h-32 q-8 0 -8 -8 v-52 q0 -16 14 -24 Z" fill="#DDEEF8" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><g data-arw="128,62,172,62,field,3"></g><g data-anim="pop" data-o="230,62" data-dur=".7" data-delay=".4" data-ease="back"><path d="M230 112 Q190 92 196 40 Q246 36 262 76 Q268 100 230 112 Z" fill="#9BD86F" stroke="#2E9E6A" stroke-width="2.5"/><path d="M230 112 Q222 76 208 52" fill="none" stroke="#2E9E6A" stroke-width="2"/></g><text class="tex" x="70" y="140" data-mix="썩지 않음" data-size="19" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="230" y="140" data-mix="미생물이 분해" data-size="19" data-anchor="middle" fill="#1B5E3F"></text></svg><p>옥수수 녹말 같은 원료로 만들어 미생물이 분해할 수 있는 <b>생분해성 플라스틱</b>을 개발한다.</p></div>
+    <div class="stage"><h3>오존층 파괴</h3><svg viewBox="0 0 300 156" aria-label="프레온 가스 스프레이에서 대체 물질 사용으로 오존층을 보호"><rect x="48" y="40" width="40" height="72" rx="8" fill="#E9EEF3" stroke="#16233D" stroke-width="2.5"/><rect x="58" y="24" width="20" height="16" fill="#9FB0C2" stroke="#16233D" stroke-width="2"/><path d="M92 30 l14 -6 M92 36 l16 0 M92 42 l14 6" stroke="#9FB0C2" stroke-width="2.5" stroke-linecap="round"/><g data-arw="128,62,172,62,field,3"></g><g data-anim="pop" data-o="230,62" data-dur=".7" data-delay=".6" data-ease="back"><circle cx="230" cy="62" r="40" fill="#BFE0F5" stroke="#16233D" stroke-width="2.5"/><path d="M204 46 q14 -10 26 0 q10 10 0 20 q-16 6 -26 -6 Z M238 74 q12 -4 18 6 q-6 12 -20 6 Z" fill="#9BD86F" stroke="#2E9E6A" stroke-width="1.6"/><circle cx="230" cy="62" r="50" fill="none" stroke="#7FB3E0" stroke-width="4" stroke-dasharray="4 4"/></g><text class="tex" x="70" y="140" data-mix="프레온 가스" data-size="19" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="230" y="140" data-mix="오존층 보호" data-size="19" data-anchor="middle" fill="#1B5E3F"></text></svg><p>오존층을 파괴하는 프레온 가스(CFC)의 사용을 금지하고(1987년 몬트리올 의정서) <b>대체 물질</b>을 개발하였다.</p></div>
+    <div class="stage"><h3>이산화 탄소 증가</h3><svg viewBox="0 0 300 156" aria-label="공장 굴뚝의 이산화 탄소를 모아 저장하고 활용"><rect x="50" y="56" width="40" height="64" fill="#D9DDE2" stroke="#16233D" stroke-width="2.5"/><path d="M60 52 q-10 -14 4 -22 q14 -8 10 -22 M80 52 q10 -12 0 -24" fill="none" stroke="#8C99A6" stroke-width="3" stroke-linecap="round"/><g data-arw="128,62,172,62,field,3"></g><g data-anim="pop" data-o="230,62" data-dur=".7" data-delay=".8" data-ease="back"><rect x="204" y="28" width="52" height="84" rx="14" fill="#E6F4EC" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="230" y="78" data-mix="$\ce{CO2}$" data-size="20" data-anchor="middle" data-weight="700"></text></g><text class="tex" x="70" y="140" data-mix="$\ce{CO2}$ 배출" data-size="19" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="230" y="140" data-mix="포집·활용" data-size="19" data-anchor="middle" fill="#1B5E3F"></text></svg><p>공장에서 나오는 $\ce{CO2}$를 모아 저장하거나 다른 물질의 원료로 쓰는 <b>포집·활용 기술</b>을 연구한다.</p></div>
+  </div>
+  <div class="note puzzle step mt12"><b>생각해 보기</b> 환경 문제의 원인이 된 물질도 화학이 만들었다. 그 문제를 줄이는 물질과 기술을 찾는 것도 화학의 몫이다.</div>
+</section>
+
+<!-- ════════ 20. 첨단 소재 ════════ -->
+<section class="slide" data-sec="01 · 화학과 현대 사회" data-title="화학과 첨단 소재">
+  <h2><span class="no">7</span>화학과 첨단 소재</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px"><svg class="fig" viewBox="0 0 384 356" style="width:384px" aria-label="탄소 원자가 육각형 그물 모양으로 연결된 그래핀 모형"><g data-anim="fade" data-dur="1" data-delay=".2"><line x1="118.5" y1="98" x2="70" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="98" x2="118.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="98" x2="167" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="70" y1="126" x2="21.5" y2="98" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="70" y1="126" x2="70" y2="182" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="21.5" y1="98" x2="21.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="21.5" y1="42" x2="70" y2="14" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="70" y1="14" x2="118.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="42" x2="167" y2="14" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="98" x2="167" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="98" x2="215.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="98" x2="264" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="167" y1="126" x2="167" y2="182" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="167" y1="14" x2="215.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="42" x2="264" y2="14" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="312.5" y1="98" x2="264" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="312.5" y1="98" x2="312.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="312.5" y1="98" x2="361" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="264" y1="126" x2="264" y2="182" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="264" y1="14" x2="312.5" y2="42" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="167" y1="182" x2="118.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="167" y1="182" x2="215.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="210" x2="70" y2="182" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="210" x2="118.5" y2="266" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="70" y1="182" x2="21.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="264" y1="182" x2="215.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="264" y1="182" x2="312.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="210" x2="215.5" y2="266" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="361" y1="182" x2="312.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="361" y1="182" x2="361" y2="126" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="312.5" y1="210" x2="312.5" y2="266" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="266" x2="70" y2="294" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="118.5" y1="266" x2="167" y2="294" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="70" y1="294" x2="21.5" y2="266" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="21.5" y1="266" x2="21.5" y2="210" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="266" x2="167" y2="294" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="215.5" y1="266" x2="264" y2="294" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/><line x1="312.5" y1="266" x2="264" y2="294" stroke="#9AA5B1" stroke-width="6" stroke-linecap="round"/></g><g data-atom="118.5,98,24,C,-"></g><g data-atom="70,126,24,C,-"></g><g data-atom="21.5,98,24,C,-"></g><g data-atom="21.5,42,24,C,-"></g><g data-atom="70,14,24,C,-"></g><g data-atom="118.5,42,24,C,-"></g><g data-atom="215.5,98,24,C,-"></g><g data-atom="167,126,24,C,-"></g><g data-atom="167,14,24,C,-"></g><g data-atom="215.5,42,24,C,-"></g><g data-atom="312.5,98,24,C,-"></g><g data-atom="264,126,24,C,-"></g><g data-atom="264,14,24,C,-"></g><g data-atom="312.5,42,24,C,-"></g><g data-atom="167,182,24,C,-"></g><g data-atom="118.5,210,24,C,-"></g><g data-atom="70,182,24,C,-"></g><g data-atom="264,182,24,C,-"></g><g data-atom="215.5,210,24,C,-"></g><g data-atom="361,182,24,C,-"></g><g data-atom="312.5,210,24,C,-"></g><g data-atom="361,126,24,C,-"></g><g data-atom="118.5,266,24,C,-"></g><g data-atom="70,294,24,C,-"></g><g data-atom="21.5,266,24,C,-"></g><g data-atom="21.5,210,24,C,-"></g><g data-atom="215.5,266,24,C,-"></g><g data-atom="167,294,24,C,-"></g><g data-atom="312.5,266,24,C,-"></g><g data-atom="264,294,24,C,-"></g><g data-atom="150,330,24,C,-"></g><text class="tex" x="182" y="337" data-mix="탄소 원자" data-size="20" data-anchor="start"></text></svg>
+      <p class="f21"><b>그래핀</b> 탄소 원자가 육각형 그물 모양으로 연결된 한 층 두께의 물질 — 매우 얇고 단단하며 전기가 잘 통한다.</p>
+    </div>
+    <div class="col">
+      <div class="card step" data-g="g1"><h3>반도체</h3><p class="f21">순도가 매우 높은 규소 $\ce{Si}$로 만든 반도체 칩 → 컴퓨터, 스마트폰</p></div>
+      <div class="card step mt8" data-g="g2"><h3>디스플레이</h3><p class="f21">전기를 받으면 빛을 내는 유기 물질(OLED) → 얇고 휘어지는 화면</p></div>
+      <div class="card step mt8" data-g="g3"><h3>신소재</h3><p class="f21">탄소 나노 튜브, 가볍고 강한 합금 → 우주 항공, 의료 기기</p></div>
+    </div>
+  </div>
+  <div class="answer step mt8">화학이 만든 새로운 물질이 <b>정보 통신·첨단 산업</b> 발전의 바탕이 된다.</div>
+</section>
+
+<!-- ════════ 21. 정리 표 ════════ -->
+<section class="slide" data-sec="01 · 화학과 현대 사회" data-title="정리: 화학이 기여한 사례">
+  <h2><span class="tag ink">정리</span>화학이 기여한 사례</h2>
+  <table class="tight cm111-sum">
+    <tr><th>분야</th><th>인류의 문제</th><th>화학의 해결</th><th>대표 물질·기술</th></tr>
+    <tr><td>① 식량</td><td class="l">식량 부족</td><td class="l step" data-g="r1">질소 비료 대량 생산</td><td class="l step" data-g="r1">하버·보슈 공정, $\ce{NH3}$</td></tr>
+    <tr><td>② 의류</td><td class="l">천연 섬유 부족</td><td class="l step" data-g="r2">합성 섬유</td><td class="l step" data-g="r2">나일론, 폴리에스터</td></tr>
+    <tr><td>③ 주거</td><td class="l">튼튼한 집</td><td class="l step" data-g="r3">철의 제련, 건축 재료</td><td class="l step" data-g="r3">철, 시멘트, 유리</td></tr>
+    <tr><td>④ 건강</td><td class="l">질병</td><td class="l step" data-g="r4">의약품 합성</td><td class="l step" data-g="r4">아스피린, 페니실린</td></tr>
+    <tr><td>⑤ 에너지</td><td class="l">화석 연료 고갈·온난화</td><td class="l step" data-g="r5">새로운 연료·전지</td><td class="l step" data-g="r5">수소 연료 전지, 리튬 이온 전지</td></tr>
+    <tr><td>⑥ 환경</td><td class="l">환경 오염</td><td class="l step" data-g="r6">친환경 물질·기술</td><td class="l step" data-g="r6">생분해성 플라스틱</td></tr>
+    <tr><td>⑦ 첨단 기술</td><td class="l">더 빠르고 작은 기기</td><td class="l step" data-g="r7">신소재</td><td class="l step" data-g="r7">반도체, 그래핀</td></tr>
+  </table>
+</section>
+
+<!-- ════════ 22. 확인하기: 화학 물질은 해롭다? ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="화학 물질은 모두 해로울까?">
+  <h2><span class="tag q">확인하기</span>'화학 물질'은 모두 몸에 해로울까?</h2>
+  <div class="row">
+    <div class="col"><div class="card cm111-opt"><h3>(가)</h3><p class="f22">화학 물질은 해롭고, 천연 물질은 안전하다.</p></div></div>
+    <div class="col"><div class="card cm111-opt"><h3>(나)</h3><p class="f22">물질이 해로운지는 물질의 종류, 양, 쓰는 방법에 따라 다르다.</p></div></div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 내 생각은 (가)와 (나) 가운데 어느 것에 가까운가? 그 까닭은?</p>
+  <div class="card tip step mt8"><p class="f21">물, 소금, 비타민도 모두 화학 물질이다. 천연 물질 가운데에도 복어 독처럼 아주 위험한 것이 있고, 합성 물질도 알맞게 쓰면 의약품처럼 생명을 구한다.</p></div>
+  <div class="answer step">(나) — 막연히 두려워하기보다 물질의 성질을 알고 <b>과학적으로 판단</b>하여 안전하게 쓴다.</div>
+  <p class="small step mt8">생활 화학 제품을 쓸 때는 제품의 성분과 사용 방법, 주의 사항 표시를 먼저 확인한다.</p>
+</section>
+
+<!-- ════════ 23. 조사·발표 ① ════════ -->
+<section class="slide" data-sec="01 · 조사·발표" data-title="조사·발표 ① 주제 정하기">
+  <h2><span class="tag">조사·발표</span>화학이 기여한 사례 조사하기 ① 주제와 역할</h2>
+  <div class="std"><span class="code">[12화학01-01]</span>화학이 현대 과학·기술·사회의 발전에 기여한 사례를 <b>조사·발표</b>하며 화학에 흥미와 호기심을 가질 수 있다.</div>
+  <div class="row mt12">
+    <div class="col">
+      <h3>목표</h3>
+      <p class="f21">화학이 현대 과학·기술·사회의 발전에 기여한 사례 하나를 골라 조사하고, 모둠별로 발표할 수 있다.</p>
+      <h3 class="mt12">관심 분야에 ✓</h3>
+      <div class="chips"><button class="chk">식량</button><button class="chk">의류</button><button class="chk">주거</button><button class="chk">의약품</button><button class="chk">에너지</button><button class="chk">환경</button><button class="chk">반도체·신소재</button><button class="chk">우주 항공</button></div>
+      <table class="tight mt12 cm111-role"><tr><th>자료 조사</th><td>2명</td><th>자료 만들기</th><td>1명</td><th>발표</th><td>1명</td></tr></table>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <div class="note q"><b>조사할 때 지킬 것</b>
+        <ul class="cm111-ul">
+          <li>믿을 만한 자료(공공 기관, 학회, 과학 잡지)를 쓴다.</li>
+          <li>자료마다 출처(만든 곳, 날짜)를 적는다.</li>
+          <li>생성형 인공지능의 답은 다른 자료로 반드시 확인한다.</li>
+          <li>그림·사진은 저작권을 지켜 쓴다.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 조사·발표 ② ════════ -->
+<section class="slide" data-sec="01 · 조사·발표" data-title="조사·발표 ② 과정과 발표 틀">
+  <h2><span class="tag">조사·발표</span>화학이 기여한 사례 조사하기 ② 과정</h2>
+  <div class="cm111-s4">
+    <div class="stage" data-anim="pop" data-o="0,0" data-dur=".6" data-delay=".2" data-ease="back"><h3>① 주제 정하기</h3><p>인류의 문제 하나와 그 문제를 푼 물질이나 기술 하나를 고른다.</p></div>
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay=".45" data-ease="back"><h3>② 자료 조사</h3><p>언제, 누가, 어떤 물질·반응으로, 무엇이 바뀌었는지 찾는다.</p></div>
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay=".7" data-ease="back"><h3>③ 자료 만들기</h3><p>포스터, 슬라이드, 카드 뉴스 가운데 하나로 아래 4칸 틀에 맞춰 만든다.</p></div>
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay=".95" data-ease="back"><h3>④ 발표·평가</h3><p>3분 동안 발표하고 질문을 하나 이상 받는다. 동료 평가를 한다.</p></div>
+  </div>
+  <h3 class="mt16">발표 틀 (4칸)</h3>
+  <div class="flow cm111-frame">
+    <div class="fnode">인류의 문제</div><div class="farr">→</div>
+    <div class="fnode hl">화학의 해결<br><span class="small">물질·반응</span></div><div class="farr">→</div>
+    <div class="fnode">사회에 미친 영향</div><div class="farr">→</div>
+    <div class="fnode">남은 과제와<br>나의 생각</div>
+  </div>
+</section>
+
+<!-- ════════ 25. 조사·발표 ③ ════════ -->
+<section class="slide" data-sec="01 · 조사·발표" data-title="조사·발표 ③ 예시와 평가">
+  <h2><span class="tag">조사·발표</span>화학이 기여한 사례 조사하기 ③ 예시와 평가</h2>
+  <div class="row">
+    <div class="col">
+      <h3>예시 결과 — 카드 뉴스 「리튬 이온 전지」</h3>
+      <div class="cm111-news">
+        <div class="cm111-nc"><b>문제</b><p>전기를 저장해 들고 다니기 어려웠다.</p></div>
+        <div class="cm111-nc step"><b>화학의 해결</b><p>리튬 이온이 두 전극 사이를 오가며 충전·방전되는 가볍고 오래가는 전지</p></div>
+        <div class="cm111-nc step"><b>영향</b><p>스마트폰, 노트북, 전기 자동차가 널리 쓰인다.</p></div>
+        <div class="cm111-nc step"><b>남은 과제</b><p>화재 위험, 리튬 자원 부족 → 더 안전한 전지와 재활용 연구</p></div>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <h3>평가 기준</h3>
+      <table class="tight cm111-rub">
+        <tr><th>항목</th><th>잘함의 모습</th></tr>
+        <tr><td>정확성</td><td class="l">물질·반응을 바르게 설명한다</td></tr>
+        <tr><td>기여</td><td class="l">사회가 어떻게 바뀌었는지 밝힌다</td></tr>
+        <tr><td>출처</td><td class="l">믿을 만한 자료와 출처를 밝힌다</td></tr>
+        <tr><td>전달</td><td class="l">시간을 지키고 질문에 답한다</td></tr>
+      </table>
+      <h3 class="mt12">동료 평가</h3>
+      <div class="chips"><button class="chk">새로 알게 된 점</button><button class="chk">더 궁금한 점</button><button class="chk">칭찬할 점</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 소단원 마무리 ════════ -->
+<section class="slide" data-sec="01 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>화학과 함께하는 하루</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>창의력 키우기</h3>
+        <p class="f21">'화학이 사라진 하루'를 상상하여 짧은 글이나 네 컷 만화로 표현해 보자.</p>
+        <p class="small mt8">예: 아침에 입을 옷이 거의 없고, 스마트폰이 켜지지 않으며, 감기약도 없다…</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>디지털 소양 키우기</h3>
+        <p class="f21">공공 기관 누리집이나 과학 기사에서 최근에 발표된 새로운 화학 물질이나 기술을 하나 찾아, 출처와 함께 온라인 협업 게시판에 올려 보자.</p>
+        <p class="small mt8">정보를 쓰기 전에 만든 곳과 날짜를 확인하여 믿을 만한지 따져 본다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>하버·보슈 공정</h2>
+  <p class="f22">다음은 하버·보슈 공정의 화학 반응식이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+  <div class="formula sm">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$</div>
+  <div class="row">
+    <div class="col">
+      <div class="bogi"><p>ㄱ. 공기 중의 질소를 원료로 쓴다.</p><p>ㄴ. 생성물인 암모니아는 질소 비료의 원료가 된다.</p><p>ㄷ. 이 공정의 개발로 천연 섬유를 대신하는 합성 섬유를 얻었다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 380px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">ㄷ: 합성 섬유(나일론)는 의류 문제를 해결한 사례이다.</span></div>
+</section>
+
+<!-- ════════ 28. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>문제와 화학의 기여 짝 짓기</h2>
+  <p class="f22">인류의 문제 (가)–(라)와 그 문제를 해결하는 데 기여한 화학 ㉠–㉣을 바르게 짝 지으시오.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 570 290" style="width:540px" aria-label="왼쪽 인류의 문제 네 가지와 오른쪽 화학의 기여 네 가지를 잇는 문제"><rect x="10" y="16" width="200" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="110" y="47" data-mix="(가) 식량 부족" data-size="20" data-anchor="middle"></text><circle cx="214" cy="39" r="5" fill="#16233D"/><rect x="10" y="86" width="200" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="110" y="117" data-mix="(나) 튼튼한 건물" data-size="20" data-anchor="middle"></text><circle cx="214" cy="109" r="5" fill="#16233D"/><rect x="10" y="156" width="200" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="110" y="187" data-mix="(다) 질병 치료" data-size="20" data-anchor="middle"></text><circle cx="214" cy="179" r="5" fill="#16233D"/><rect x="10" y="226" width="200" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="110" y="257" data-mix="(라) 전기 저장" data-size="20" data-anchor="middle"></text><circle cx="214" cy="249" r="5" fill="#16233D"/><rect x="350" y="16" width="210" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="455" y="47" data-mix="㉠ 아스피린 합성" data-size="20" data-anchor="middle"></text><circle cx="346" cy="39" r="5" fill="#16233D"/><rect x="350" y="86" width="210" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="455" y="117" data-mix="㉡ 리튬 이온 전지" data-size="20" data-anchor="middle"></text><circle cx="346" cy="109" r="5" fill="#16233D"/><rect x="350" y="156" width="210" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="455" y="187" data-mix="㉢ 암모니아 합성" data-size="20" data-anchor="middle"></text><circle cx="346" cy="179" r="5" fill="#16233D"/><rect x="350" y="226" width="210" height="46" rx="10" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="2"/><text class="tex" x="455" y="257" data-mix="㉣ 철의 제련" data-size="20" data-anchor="middle"></text><circle cx="346" cy="249" r="5" fill="#16233D"/><g class="step" data-g="m1" data-anim="draw" data-on="step" data-dur="1"><line x1="219" y1="39" x2="341" y2="179" stroke="#2E9E6A" stroke-width="3.5" stroke-linecap="round"/><line x1="219" y1="109" x2="341" y2="249" stroke="#2E9E6A" stroke-width="3.5" stroke-linecap="round"/><line x1="219" y1="179" x2="341" y2="39" stroke="#2E9E6A" stroke-width="3.5" stroke-linecap="round"/><line x1="219" y1="249" x2="341" y2="109" stroke="#2E9E6A" stroke-width="3.5" stroke-linecap="round"/></g></svg></div>
+    <div class="col stack"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step" data-g="m1">(가)–㉢, (나)–㉣, (다)–㉠, (라)–㉡</div>
+</section>
+
+<!-- ════════ 29. 확인 문제 03 서술형 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 03 (서술형)">
+  <h2><span class="tag q">확인 문제 03</span>서술형</h2>
+  <div class="row stretch" style="height:250px">
+    <div class="col stack">
+      <p class="f22">플라스틱은 가볍고 썩지 않아 생활을 편리하게 만들었지만, 썩지 않는 성질 때문에 환경 문제를 일으킨다. 화학이 해결한 문제와 새로 생긴 문제를 함께 생각하여, <b>플라스틱 문제를 줄이기 위한 화학의 역할</b>을 서술하시오.</p>
+      <div class="board mt8"></div>
+    </div>
+  </div>
+  <div class="answer step cm111-left"><b>예시 답안</b> 플라스틱은 값싸고 가벼워 포장·건축·의료에 널리 쓰였지만, 잘 분해되지 않아 쓰레기와 미세 플라스틱 문제가 생겼다. 화학은 미생물이 분해할 수 있는 생분해성 플라스틱을 개발하고, 버린 플라스틱을 분해해 다시 원료로 쓰는 재활용 기술을 연구하여 이 문제를 줄일 수 있다.<br><span class="small">채점 요소: 편리한 성질 1 · 생긴 문제 1 · 화학의 해결 방안(물질·기술) 1</span></div>
+</section>
+
+<!-- ════════ 30. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 화학과 현대 과학·기술·사회 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>Ⅰ. 화학의 언어 — 개념 지도</h2>
+  <div class="cm111-map">
+    <div class="cm111-node cm111-main">
+      <b>01 화학의 유용성</b>
+      <p class="f21 mt8" data-q>식량: 하버·보슈 공정으로 ❶ <span class="blank"><span class="step">암모니아</span></span>를 대량 합성 → 질소 비료</p>
+      <p class="f21" data-q>의류: ❷ <span class="blank"><span class="step">나일론</span></span> 같은 합성 섬유</p>
+      <p class="f21" data-q>주거: 철의 ❸ <span class="blank"><span class="step">제련</span></span>, 시멘트·유리·플라스틱</p>
+      <p class="f21" data-q>현대 사회: 의약품, 새로운 에너지, 친환경 물질, ❹ <span class="blank"><span class="step">반도체</span></span>·신소재</p>
+    </div>
+    <div class="cm111-arr">→</div>
+    <div class="cm111-side">
+      <div class="cm111-node cm111-dim">02 몰과 물질의 양<br><span class="small">(다음 시간)</span></div>
+      <div class="cm111-node cm111-dim">2-01 화학 반응식</div>
+      <div class="cm111-node cm111-dim">2-02 화학 반응의 양적 관계</div>
+    </div>
+  </div>
+  <p class="f22 mt16" data-q>화학은 물질의 구성, 구조, 성질과 ❺ <span class="blank"><span class="step">변화</span></span>를 연구하여 인류의 문제를 해결한다.</p>
+</section>
+
+<!-- ════════ 31. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 화학과 현대 과학·기술·사회 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 화학이 식량·의류·주거 문제를 해결한 사례를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 화학이 기여한 사례를 조사하고 출처를 밝혀 발표하였다.</button>
+    <button class="chk">[가치·태도] 화학이 사회에 미치는 영향을 균형 있게 생각하고 화학에 흥미를 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 하버·보슈 공정은 어떤 문제를 해결했나? <span class="step">→ <span class="ans">공기 중의 질소로 암모니아를 합성</span>해 질소 비료를 대량 생산 — 식량 문제</span></p>
+    <p class="f21 mt8"><b>Q</b> 나일론은 의류 문제 해결에 어떻게 기여했나? <span class="step">→ 질기고 값싼 합성 섬유를 대량으로 만들게 했다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 화학 제품을 쓸 때 가져야 할 태도는? <span class="step">→ 성질·양·사용법을 알고 안전하게 쓰며 환경에 미치는 영향까지 생각한다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 쌀 한 숟가락 속 쌀알, 물 한 컵 속 물 분자는 어떻게 셀까? — 02 몰과 물질의 양</div>
+</section>
+<!--SLIDES:END-->
+</div></div>
+
+<script>/* 색 이름(D7, 가이드 2.4): 그림·부품·실험실은 hex 대신 이 이름을 쓴다. 새 색은 여기에 이름을 더한다 */
+window.HARNESS_COL={ink:'#16233D',plus:'#D7263D',minus:'#1F6FD1',field:'#2E9E6A',equi:'#E08A2C',grav:'#8C99A6',muted:'#5B6B7F',white:'#FFFFFF',bfield:'#7B4FC8',ox:'#C2410C',rd:'#0E7490'};
+/* 원자 모형 색(화학, 가이드 2.4·D21): data-atom이 쓴다. 바꾸려면 window.HARNESS_ATOM={O:['칠','테'],…} (엔진 기본값은 harness.js의 ATOM) */</script>
+<div id="hud"></div>
+<div id="nav">
+  <button data-a="prev" title="이전 (←)" aria-label="이전">◀</button>
+  <button data-a="next" title="다음 (→)" aria-label="다음">▶</button>
+  <button data-a="toc" title="목차 (O)">목차</button>
+  <button data-a="pen" title="판서 펜 (P)">펜</button>
+  <button data-a="fs" title="전체 화면 (F)">전체 화면</button>
+  <button data-a="help" title="도움말 (H)" aria-label="도움말">?</button>
+</div>
+<div id="penbar">
+  <button class="sw on" data-c="#D7263D" style="background:#D7263D" aria-label="빨강 펜"></button>
+  <button class="sw" data-c="#1F6FD1" style="background:#1F6FD1" aria-label="파랑 펜"></button>
+  <button class="sw" data-c="#16233D" style="background:#16233D" aria-label="검정 펜"></button>
+  <button class="sw" data-c="#2E9E6A" style="background:#2E9E6A" aria-label="초록 펜"></button>
+  <button class="er" data-c="erase">지우개</button>
+  <button data-a="clear">모두 지우기 (X)</button>
+  <button data-a="penoff">펜 끄기 (P)</button>
+</div>
+<div id="toc" class="ui-overlay"><div class="panel"><h3>목차</h3><ol></ol></div></div>
+<div id="help" class="ui-overlay"><div class="panel">
+  <h3>조작 방법</h3>
+  <table>
+    <tr><th>다음 단계 / 슬라이드</th><td><kbd>→</kbd> <kbd>스페이스</kbd> 짧게 클릭(끌기·길게 누르기는 넘기지 않음), 터치는 옆으로 밀기</td></tr>
+    <tr><th>이전</th><td><kbd>←</kbd></td></tr>
+    <tr><th>처음 / 끝</th><td><kbd>Home</kbd> <kbd>End</kbd></td></tr>
+    <tr><th>목차</th><td><kbd>O</kbd></td></tr>
+    <tr><th>전체 화면</th><td><kbd>F</kbd></td></tr>
+    <tr><th>판서 펜 켜기·끄기 / 지우기</th><td><kbd>P</kbd> / <kbd>X</kbd> — 스타일러스 펜은 P 없이 바로 필기(지우개 끝으로 지움)</td></tr>
+    <tr><th>화면 가리기</th><td><kbd>B</kbd></td></tr>
+    <tr><th>자동 점검</th><td><kbd>D</kbd> (주소 뒤에 ?audit)</td></tr>
+    <tr><th>인쇄·PDF (모든 단계 펼침)</th><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td></tr>
+  </table>
+</div></div>
+<div id="audit" class="ui-overlay"><div class="panel"><h3>자동 점검</h3><div class="list"></div></div></div>
+<div id="black"></div>
+
+<script>
+/* ════════════════ 이 차시의 실험실 ════════════════ */
+/*LABS:BEGIN*/
+/* 1-1-1 화학과 현대 과학·기술·사회 — 실험실
+   cm111nh3 : 암모니아 합성 입자 모형 (덱이 더한 모의실험, 필수 탐구 아님)
+     · 질소 분자 a(1–4)개, 수소 분자 b(1–12)개 → 반응 횟수 k = min(a, ⌊b/3⌋)
+       생긴 NH3 = 2k, 남은 N2 = a − k, 남은 H2 = b − 3k  (N: 2a = 2k + 2(a−k), H: 2b = 6k + 2(b−3k))
+     · 원자 하나하나(N 최대 8, H 최대 24)를 처음에 만들어 두고, 반응 전 자리 → 반응 후 자리로 옮긴다(원자 수 보존).
+     · 「반응시키기」 → 1.6초 동안 이동(API.loop), 「기록」 → 표에 행이 쌓임(최근 5행), 「초기화」. */
+window.DECK_LABS = {
+  cm111nh3(root, API){
+    const $=s=>root.querySelector(s), O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`), I=k=>root.querySelector(`[data-i="${k}"]`);
+    const svg=$('svg');
+    API.mk('rect',{x:8,y:36,width:584,height:256,rx:16,fill:'#F4F8FC',stroke:'#9FC3DD','stroke-width':2.5},svg);
+    const g=API.mk('g',{},svg);
+    const RN=24, RH=18, D2=37, DH=28, DX=33;
+    const mkAtom=(el,r)=>{ const a=API.mk('g',{style:'display:none'},g); API.atom(a,0,0,r,el); return {el,g:a,s:[0,0],e:[0,0]}; };
+    const Hs=[], Ns=[];
+    for(let i=0;i<24;i++) Hs.push(mkAtom('H',RH));      // H를 먼저 만들어 N 뒤에 그려지게
+    for(let i=0;i<8;i++) Ns.push(mkAtom('N',RN));
+    let st={phase:0, t:0, a:1, b:3, res:null}, log=[];
+
+    // 칸 배치: 5열 × 4행, 칸 112 × 62
+    const cell=i=>[76+(i%5)*112, 80+Math.floor(i/5)*64];
+    function layout(kind,x,y){
+      if(kind==='N2') return {N:[[x-D2/2,y],[x+D2/2,y]],H:[]};
+      if(kind==='H2') return {N:[],H:[[x-DH/2,y],[x+DH/2,y]]};
+      const H=[90,210,330].map(d=>[x+DX*Math.cos(d*Math.PI/180), y+DX*Math.sin(d*Math.PI/180)]);
+      return {N:[[x,y]],H};
+    }
+    function compute(){
+      const a=+I('a').value, b=+I('b').value, k=Math.min(a,Math.floor(b/3));
+      return {a,b,k,nh3:2*k,n2:a-k,h2:b-3*k};
+    }
+    function place(list,pts,key){ pts.forEach((p,i)=>{ list[i][key]=p; }); }
+    function setup(){
+      const r=compute(); st.res=r; st.a=r.a; st.b=r.b;
+      O('a').textContent=r.a+'개'; O('b').textContent=r.b+'개';
+      // 반응 전
+      let nS=[], hS=[], c=0;
+      for(let i=0;i<r.a;i++){ const L=layout('N2',...cell(c++)); nS.push(...L.N); }
+      for(let i=0;i<r.b;i++){ const L=layout('H2',...cell(c++)); hS.push(...L.H); }
+      // 반응 후
+      let nE=[], hE=[]; c=0;
+      for(let i=0;i<r.nh3;i++){ const L=layout('NH3',...cell(c++)); nE.push(...L.N); hE.push(...L.H); }
+      for(let i=0;i<r.n2;i++){ const L=layout('N2',...cell(c++)); nE.push(...L.N); }
+      for(let i=0;i<r.h2;i++){ const L=layout('H2',...cell(c++)); hE.push(...L.H); }
+      if(nS.length!==nE.length||hS.length!==hE.length) console.error('[cm111nh3] 원자 수 불일치');
+      Ns.forEach((A,i)=>{ A.on=i<nS.length; if(A.on){ A.s=nS[i]; A.e=nE[i]; } });
+      Hs.forEach((A,i)=>{ A.on=i<hS.length; if(A.on){ A.s=hS[i]; A.e=hE[i]; } });
+      st.phase=0; st.t=0; draw();
+    }
+    const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+    function draw(){
+      const r=st.res, u=st.phase===2?1:st.phase===1?ease(st.t):0;
+      Ns.concat(Hs).forEach(A=>{
+        A.g.style.display=A.on?'':'none';
+        if(!A.on) return;
+        const x=A.s[0]+(A.e[0]-A.s[0])*u, y=A.s[1]+(A.e[1]-A.s[1])*u;
+        A.g.setAttribute('transform',`translate(${x.toFixed(1)},${y.toFixed(1)})`);
+      });
+      const done=st.phase===2;
+      Ov('st').textContent=done?'반응 후':st.phase===1?'반응하는 중…':'반응 전';
+      API.place(Ov('st'),18,4);
+      Ov('cnt').textContent=`N 원자 ${2*r.a}개 · H 원자 ${2*r.b}개`+(done?' (반응 전과 같다)':'');
+      API.place(Ov('cnt'),330,6);
+      O('nh3').textContent=done? r.nh3+'개' : '?';
+      let left=[]; if(r.n2) left.push(`질소 분자 ${r.n2}개`); if(r.h2) left.push(`수소 분자 ${r.h2}개`);
+      O('msg').textContent = !done ? '「반응시키기」를 눌러 원자가 어떻게 다시 결합하는지 보자.'
+        : r.k===0 ? '수소 분자가 3개보다 적어 암모니아가 생기지 않았다. 질소 분자 1개에는 수소 분자 3개가 필요하다.'
+        : left.length===0 ? `질소 분자 1개와 수소 분자 3개가 반응하는 비율에 딱 맞아, 남은 분자 없이 암모니아 ${r.nh3}개가 생겼다.`
+        : `암모니아 ${r.nh3}개가 생기고 ${left.join(', ')}가 남았다. 원자는 없어지지 않고 남은 분자로 그대로 있다.`;
+    }
+    function renderLog(){
+      O('log').innerHTML=log.slice(-5).map(r=>`<tr><td>${r.a}</td><td>${r.b}</td><td>${r.nh3}</td><td>${[r.n2?'질소 '+r.n2:'', r.h2?'수소 '+r.h2:''].filter(Boolean).join(', ')||'없음'}</td><td>N ${2*r.a} = ${2*r.a} · H ${2*r.b} = ${2*r.b}</td></tr>`).join('')
+        || '<tr><td colspan="5" class="c-muted">반응시킨 뒤 「기록」을 누르면 여기에 쌓인다.</td></tr>';
+    }
+    root.querySelectorAll('input[type=range]').forEach(i=>i.addEventListener('input',setup));
+    root.querySelector('[data-act="go"]').addEventListener('click',()=>{ if(st.phase===2) { st.phase=0; } st.phase=1; st.t=0; draw(); });
+    root.querySelector('[data-act="rec"]').addEventListener('click',()=>{
+      if(st.phase!==2){ O('msg').textContent='먼저 「반응시키기」를 눌러 반응을 끝낸 뒤 기록하자.'; return; }
+      log.push(Object.assign({},st.res)); renderLog();
+    });
+    root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ I('a').value=1; I('b').value=3; log=[]; renderLog(); setup(); });
+    API.loop(root,dt=>{ if(st.phase!==1) return; st.t+=dt/1.6; if(st.t>=1){ st.t=1; st.phase=2; } draw(); });
+    renderLog(); setup();
+  }
+};
+/*LABS:END*/
+</script>
+<script>
+/* ════════════════ SLIDE HARNESS ENGINE ════════════════ */
+(function(){
+'use strict';
+const W=1280,H=720;
+const deck=document.getElementById('deck');
+const slides=[...deck.querySelectorAll(':scope > section.slide')];
+const N=slides.length;
+// 편집 모드(편집기 iframe 안, window.__EDIT_MODE): 부품 그리기·KaTeX 전에 원문 그대로의 요소에 번호를 붙인다.
+// 규칙: 슬라이드 i(1부터) 자신 data-eid="i-0", 그 안의 모든 요소를 문서 순서로 "i-1", "i-2", … — 편집기는 같은 원문을 DOMParser로 읽어 같은 규칙으로 대응시킨다.
+const EDIT=!!window.__EDIT_MODE;
+function editPost(m){ try{ if(window.parent!==window) window.parent.postMessage(m,'*'); }catch(e){} }
+if(EDIT) slides.forEach((s,i)=>{ s.setAttribute('data-eid',(i+1)+'-0'); s.querySelectorAll('*').forEach((e,k)=>e.setAttribute('data-eid',(i+1)+'-'+(k+1))); });
+const SVGNS='http://www.w3.org/2000/svg', XHTML='http://www.w3.org/1999/xhtml';
+const COL=window.HARNESS_COL||{ink:'#16233D',plus:'#D7263D',minus:'#1F6FD1',field:'#2E9E6A',equi:'#E08A2C',grav:'#8C99A6',muted:'#5B6B7F',white:'#FFFFFF',bfield:'#7B4FC8',ox:'#C2410C',rd:'#0E7490'};   // 색 표는 harness-ui.html(HARNESS_COL)
+const colOf=v=>(v!=null&&COL[String(v).trim()])||v;                       // 'bfield' 같은 이름 → hex (hex는 그대로)
+const params=new URLSearchParams(location.search);
+const hud=document.getElementById('hud');
+let cur=0, scale=1;
+const shown=new Array(N).fill(0);
+const showHooks=[];
+
+/* ─────────── 1. CORE ─────────── */
+function fit(){ scale=Math.min(innerWidth/W,innerHeight/H); deck.style.transform=`translate(-50%,-50%) scale(${scale})`; }
+function groups(s){
+  if(s._g) return s._g;
+  const g=[],m=new Map();
+  s.querySelectorAll('.step').forEach(e=>{ const k=e.dataset.g; if(k){ if(m.has(k)){ m.get(k).push(e); return; } const a=[e]; m.set(k,a); g.push(a); } else g.push([e]); });
+  return (s._g=g);
+}
+function paint(i){ groups(slides[i]).forEach((a,k)=>a.forEach(e=>{ const was=e.classList.contains('on'), on=k<shown[i]; e.classList.toggle('on',on); if(on&&!was&&window.__fxReveal) window.__fxReveal(e); })); }
+function show(i,mode){
+  i=Math.max(0,Math.min(N-1,i|0));
+  slides[cur].classList.remove('active');
+  cur=i; const s=slides[i];
+  if(mode==='all') shown[i]=groups(s).length; else if(mode==='reset') shown[i]=0;
+  groups(s).forEach(a=>{ a._asked=false; a._asking=false; }); s.querySelectorAll('.ask').forEach(x=>x.classList.remove('ask'));
+  s.classList.add('active'); paint(i);
+  hud.style.width=((i+1)/N*100)+'%';
+  try{ history.replaceState(null,'','#'+(i+1)); }catch(e){}
+  redrawInk(); tocMark(); showHooks.forEach(f=>f(s,i));
+}
+function next(){ const g=groups(slides[cur]); if(shown[cur]<g.length){ const a=g[shown[cur]]; if(!a._asked&&askable(a)){ a._asked=true; askOn(a,true); return; } askOn(a,false); shown[cur]++; paint(cur); } else if(cur<N-1) show(cur+1,'reset'); }
+function prev(){ const g=groups(slides[cur]), a=g[shown[cur]]; if(a&&a._asking){ askOn(a,false); a._asked=false; return; } if(shown[cur]>0){ shown[cur]--; paint(cur); const b=g[shown[cur]]; if(b) b._asked=false; } else if(cur>0) show(cur-1,'all'); }
+
+// 머리띠(단원 · 쪽 번호)
+slides.forEach((s,i)=>{ const b=document.createElement('div'); b.className='band'; const a=document.createElement('span'); a.className='sec'; a.textContent=s.dataset.sec||''; const p=document.createElement('span'); p.className='pg'; p.textContent=(i+1)+' / '+N; b.append(a,p); s.prepend(b); });
+
+// 목차
+const tocList=document.querySelector('#toc ol');
+slides.forEach((s,i)=>{ const li=document.createElement('li'); const n=document.createElement('span'); n.className='n'; n.textContent=i+1; const t=document.createElement('span'); t.textContent=s.dataset.title||((s.querySelector('h2,h1')||{}).textContent||'').trim(); li.append(n,t); li.addEventListener('click',()=>{ closeOverlays(); show(i,'reset'); }); tocList.appendChild(li); });
+function tocMark(){ [...tocList.children].forEach((li,i)=>li.classList.toggle('cur',i===cur)); }
+function toggle(id){ const o=document.getElementById(id); const open=!o.classList.contains('open'); closeOverlays(); if(open) o.classList.add('open'); }
+function closeOverlays(){ document.querySelectorAll('.ui-overlay.open').forEach(o=>o.classList.remove('open')); }
+document.querySelectorAll('.ui-overlay').forEach(o=>o.addEventListener('click',e=>{ if(e.target===o) closeOverlays(); }));
+
+function fullscreen(){ if(!document.fullscreenElement){ const r=document.documentElement.requestFullscreen; if(r) r.call(document.documentElement).catch(()=>{}); } else if(document.exitFullscreen) document.exitFullscreen(); }
+
+// 키보드
+document.addEventListener('keydown',e=>{
+  if(EDIT) return;   // 편집 모드: 넘기기는 편집기가 Harness.show로
+  const t=e.target, k=e.key;
+  if(t.matches && t.matches('input[type=range]') && /^Arrow/.test(k)) return;
+  if(t.matches && t.matches('input:not([type=range]),textarea,select')) return;
+  if(t.closest && t.closest('button') && (k===' '||k==='Enter')) return;
+  if(e.ctrlKey||e.metaKey||e.altKey) return;
+  if(k==='Escape'){ closeOverlays(); setPen(false); document.body.classList.remove('black'); return; }
+  switch(k){
+    case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': case 'Enter': e.preventDefault(); next(); break;
+    case 'ArrowLeft': case 'ArrowUp': case 'PageUp': case 'Backspace': e.preventDefault(); prev(); break;
+    case 'Home': show(0,'reset'); break;
+    case 'End': show(N-1,'all'); break;
+    case 'o': case 'O': toggle('toc'); break;
+    case 'f': case 'F': fullscreen(); break;
+    case 'p': case 'P': setPen(!penOn); break;
+    case 'x': case 'X': clearInk(); break;
+    case 'b': case 'B': document.body.classList.toggle('black'); break;
+    case 'd': case 'D': runAudit(true); break;
+    case 'h': case 'H': case '?': toggle('help'); break;
+  }
+});
+
+// 클릭 · 밀기 (가이드 6.1): 넘기기는 click이 아니라 pointerdown → pointerup 으로 판단한다.
+//   넘기지 않는 경우: 6px(터치 10px) 넘게 움직임 · 500ms 넘게 누름 · 글자가 선택됨 · 펜 입력 · 조작 요소(INTERACTIVE) 위
+//   스와이프(옆으로 60px 넘게)는 터치에만. click 넘기기는 없앴다(한 번 눌러 두 번 넘어가지 않게).
+const viewport=document.getElementById('viewport');
+const INTERACTIVE='a,button,input,select,textarea,label,output,svg,canvas,img,.lab,.chk';
+const CHROME='#nav,#penbar,#hud,.ui-overlay,a,button,input,select,textarea,label';   // 펜으로도 눌러 쓰는 화면 조작부
+const PEN_MOUSE=params.get('pen')==='mouse';                                          // 개발용: 마우스를 펜처럼(?pen=mouse)
+const isPen=e=>e.pointerType==='pen'||(PEN_MOUSE&&e.pointerType==='mouse');
+let tap=null, penDown=0;
+viewport.addEventListener('pointerdown',e=>{
+  if(EDIT||isPen(e)||(e.pointerType==='touch'&&penDown)) return;
+  if(e.pointerType==='mouse'&&e.button!==0) return;
+  tap={id:e.pointerId,type:e.pointerType,x:e.clientX,y:e.clientY,t:performance.now(),target:e.target,far:0};
+});
+viewport.addEventListener('pointermove',e=>{ if(tap&&e.pointerId===tap.id) tap.far=Math.max(tap.far,Math.hypot(e.clientX-tap.x,e.clientY-tap.y)); });
+viewport.addEventListener('pointercancel',e=>{ if(tap&&e.pointerId===tap.id) tap=null; });
+viewport.addEventListener('pointerup',e=>{
+  if(!tap||e.pointerId!==tap.id) return; const t=tap; tap=null;
+  if(EDIT||penOn||(t.type==='touch'&&penDown)) return;
+  const dx=e.clientX-t.x, dy=e.clientY-t.y, dt=performance.now()-t.t;
+  if(t.type==='touch'&&Math.abs(dx)>60&&Math.abs(dx)>1.5*Math.abs(dy)&&!(t.target.closest&&t.target.closest('input,.lab,svg,canvas'))){ if(dx<0) next(); else prev(); return; }
+  if(Math.max(t.far,Math.hypot(dx,dy))>(t.type==='touch'?10:6)||dt>500) return;
+  const sel=window.getSelection&&getSelection(); if(sel&&!sel.isCollapsed&&String(sel).trim()) return;
+  if(t.target.closest&&t.target.closest(INTERACTIVE)){ const fig=t.target.closest('svg'); if(fig&&!fig.closest('.lab')&&window.__replayFig){ const top=fig.ownerSVGElement||fig; window.__replayFig(top); } return; }
+  next();
+});
+document.addEventListener('click',e=>{ const c=e.target.closest('.chk'); if(c) c.classList.toggle('on'); const b=e.target.closest('button'); if(b) setTimeout(()=>b.blur(),0); });
+deck.addEventListener('contextmenu',e=>e.preventDefault());   // 무대에서 길게 누름·펜 옆 단추로 메뉴가 뜨지 않게
+let uiT; addEventListener('mousemove',()=>{ document.body.classList.add('ui'); clearTimeout(uiT); uiT=setTimeout(()=>document.body.classList.remove('ui'),2500); });
+
+document.getElementById('nav').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; const a=b.dataset.a; if(a==='prev') prev(); else if(a==='next') next(); else if(a==='toc') toggle('toc'); else if(a==='pen') setPen(!penOn); else if(a==='fs') fullscreen(); else if(a==='help') toggle('help'); });
+
+// 판서 펜 (가이드 6.2): 펜(pointerType 'pen')은 P 키 없이 바로 쓴다. 마우스·터치는 P(펜 켜기)일 때만.
+//   압력 → 굵기, 펜 지우개 끝(buttons & 32) → 지우개, 펜이 닿아 있는 동안 터치 무시, getCoalescedEvents로 촘촘하게.
+//   획은 무대 좌표(1280×720)로 저장하므로 창 크기·확대와 무관하다.
+const ink=document.getElementById('ink'), ictx=ink.getContext('2d'), DPR=2;
+ink.width=W*DPR; ink.height=H*DPR; ictx.setTransform(DPR,0,0,DPR,0,0);
+let penOn=false, penColor=COL.plus, drawing=null, drawId=null;
+const strokes=slides.map(()=>[]);
+function setPen(v){ penOn=!!v; document.body.classList.toggle('pen',penOn); }
+function pt(e){ const r=deck.getBoundingClientRect(), pr=e.pointerType==='mouse'||!e.pressure?.5:e.pressure; return [(e.clientX-r.left)*W/r.width,(e.clientY-r.top)*H/r.height,pr]; }
+const widthOf=(s,p)=>s.c==='erase'?30:4*(0.45+1.1*(p[2]==null?.5:p[2]));   // 압력 0.5 ≈ 4px
+function penStyle(s){ if(s.c==='erase'){ ictx.globalCompositeOperation='destination-out'; } else { ictx.globalCompositeOperation='source-over'; ictx.strokeStyle=s.c; } ictx.lineCap='round'; ictx.lineJoin='round'; }
+function seg(s,a,b){ ictx.lineWidth=widthOf(s,b); ictx.beginPath(); ictx.moveTo(a[0],a[1]); ictx.lineTo(b[0]+(a===b?.01:0),b[1]); ictx.stroke(); }
+function drawStroke(s){ penStyle(s); const p=s.p; seg(s,p[0],p[0]); for(let i=1;i<p.length;i++) seg(s,p[i-1],p[i]); ictx.globalCompositeOperation='source-over'; }
+function redrawInk(){ ictx.globalCompositeOperation='source-over'; ictx.clearRect(0,0,W,H); strokes[cur].forEach(drawStroke); ictx.globalCompositeOperation='source-over'; }
+function clearInk(){ strokes[cur]=[]; redrawInk(); }
+function endStroke(e){ if(drawId!==e.pointerId) return; if(isPen(e)) penDown=Math.max(0,penDown-1); drawing=null; drawId=null; ictx.globalCompositeOperation='source-over'; }
+// 캡처 단계에서 먼저 받는다: 펜은 슬라이드 요소(그림·실험실) 위에서도 바로 필기
+viewport.addEventListener('pointerdown',e=>{
+  if(EDIT) return;
+  if(e.pointerType==='touch'&&penDown){ e.preventDefault(); e.stopPropagation(); return; }   // 손바닥 무시
+  const pen=isPen(e);
+  if(!pen&&!(penOn&&e.target===ink)) return;
+  if(e.target.closest&&e.target.closest(CHROME)) return;                                    // 단추·슬라이더는 펜으로도 누른다
+  if(!deck.contains(e.target)) return;
+  e.preventDefault(); e.stopPropagation();
+  if(pen) penDown++;
+  try{ viewport.setPointerCapture(e.pointerId); }catch(_){}   // 이미 끝난 포인터 등
+  const erase=(e.buttons&32)||penColor==='erase';
+  drawing={c:erase?'erase':penColor,p:[pt(e)]}; drawId=e.pointerId; strokes[cur].push(drawing); drawStroke(drawing);
+},true);
+viewport.addEventListener('pointermove',e=>{
+  if(e.pointerType==='touch'&&penDown&&drawId!==e.pointerId){ e.stopPropagation(); return; }
+  if(!drawing||e.pointerId!==drawId) return;
+  e.preventDefault();
+  const evs=e.getCoalescedEvents?e.getCoalescedEvents():[e];
+  penStyle(drawing);
+  (evs.length?evs:[e]).forEach(ev=>{ const p=pt(ev), l=drawing.p[drawing.p.length-1]; drawing.p.push(p); seg(drawing,l,p); });
+  ictx.globalCompositeOperation='source-over';
+},true);
+['pointerup','pointercancel','lostpointercapture'].forEach(ev=>viewport.addEventListener(ev,endStroke,true));
+document.getElementById('penbar').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; if(b.dataset.c){ penColor=b.dataset.c; document.querySelectorAll('#penbar [data-c]').forEach(x=>x.classList.toggle('on',x===b)); } else if(b.dataset.a==='clear') clearInk(); else if(b.dataset.a==='penoff') setPen(false); });
+
+addEventListener('resize',fit);
+fit();
+const h0=parseInt(location.hash.slice(1),10);
+show(isNaN(h0)?0:h0-1,'reset');
+
+/* ─────────── 2. COMPONENTS ─────────── */
+function mk(tag,attrs,parent){ const e=document.createElementNS(SVGNS,tag); for(const k in attrs) e.setAttribute(k,/^(fill|stroke|stop-color|color)$/.test(k)?colOf(attrs[k]):attrs[k]); if(parent) parent.appendChild(e); return e; }
+function head(g,x,y,ux,uy,hs,color){ const L=hs*1.6, Wd=hs*.78, bx=x-ux*L, by=y-uy*L, px=-uy, py=ux; return mk('polygon',{points:`${(x).toFixed(1)},${(y).toFixed(1)} ${(bx+px*Wd).toFixed(1)},${(by+py*Wd).toFixed(1)} ${(bx-px*Wd).toFixed(1)},${(by-py*Wd).toFixed(1)}`,fill:color},g); }
+function arrow(g,x1,y1,x2,y2,color,w,dash){ w=w||3; const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy)||1, ux=dx/len, uy=dy/len, hs=3+w*1.6, cut=hs*1.6*.8; const a={x1,y1,x2:x2-ux*cut,y2:y2-uy*cut,stroke:color,'stroke-width':w,'stroke-linecap':dash?'butt':'round'}; if(dash) a['stroke-dasharray']='7 5'; mk('line',a,g).classList.add('arw-l'); head(g,x2,y2,ux,uy,hs,color).classList.add('arw-h'); }
+const CH={'+':[COL.plus,'#A51B2E'],'-':[COL.minus,'#16539E'],P:[COL.plus,'#A51B2E'],M:[COL.minus,'#16539E'],N:['#A7B3BF','#7E8B98']};
+function charge(g,x,y,r,sign,dashed){
+  const [f,s]=CH[sign]||CH.N;
+  const c=mk('circle',{cx:x,cy:y,r,fill:f,stroke:s,'stroke-width':Math.max(1.5,r*.07)},g);
+  if(dashed){ c.setAttribute('fill-opacity','.22'); c.setAttribute('stroke-dasharray','5 4'); }
+  else if(sign==='+'||sign==='-') mk('circle',{cx:x-r*.32,cy:y-r*.36,r:r*.3,fill:'#fff','fill-opacity':.25},g);   // P·M·N은 라벨이 들어가므로 광택 생략
+  const a=r*.48, t=Math.max(2.4,r*.14), sc=dashed?s:'#fff';
+  if(sign==='+'||sign==='-') mk('rect',{x:x-a,y:y-t/2,width:2*a,height:t,rx:t/3,fill:sc},g);
+  if(sign==='+') mk('rect',{x:x-t/2,y:y-a,width:t,height:2*a,rx:t/3,fill:sc},g);
+}
+// 원자 모형 (화학, 가이드 5.0·D21): <g data-atom="x,y,r,원소[,라벨|-][,d]"> — 원소별 고정 색(HARNESS_ATOM), 원소 기호 LaTeX 라벨
+//  라벨 생략 시 원소 기호(\mathrm{O}), "-"면 라벨 없음, 그 밖의 값은 LaTeX(예: \mathrm{O}^{\delta-}). d면 점선(이전 위치·빈자리)
+const ATOM=Object.assign({H:['#F4F6F8','#8C99A6'],C:['#3A3F47','#1C1F24'],N:['#4F6BD8','#2F4AA8'],O:['#E5533D','#A8321F'],F:['#9BD86F','#5E9B37'],Cl:['#4CAF50','#2E7D32'],Br:['#A5452B','#6E2A18'],I:['#7E3FA3','#552870'],S:['#E8C547','#A88A1E'],P:['#F09A3E','#B0661A'],Na:['#8E5BD0','#5E3A96'],K:['#A06CD5','#6C4596'],Li:['#C08BE6','#8456A8'],Mg:['#3FA36B','#256B44'],Ca:['#7FA08C','#4E6B5A'],Al:['#B9A8A0','#7D6E66'],Be:['#B8A9D9','#7B6BA6'],B:['#E7A15E','#A86A2C'],Si:['#C9B48A','#8E7A52'],Fe:['#C7743D','#874A20'],Cu:['#C8803A','#8A5221'],Zn:['#8FA3B8','#5C6F82'],Ag:['#C9CED6','#8A919C'],He:['#D9F2F2','#7FB3B3'],Ne:['#C7E3F7','#6F9FC4'],Ar:['#BFD9E6','#6E95A8'],X:['#C9D3DD','#7E8B98']},window.HARNESS_ATOM||{});
+function atom(g,x,y,r,el,label,dashed){
+  const [f,s]=ATOM[el]||ATOM.X;
+  const c=mk('circle',{cx:x,cy:y,r,fill:f,stroke:s,'stroke-width':Math.max(1.2,r*.06)},g);
+  if(dashed){ c.setAttribute('fill-opacity','.25'); c.setAttribute('stroke-dasharray','5 4'); }
+  else mk('ellipse',{cx:x-r*.33,cy:y-r*.38,rx:r*.34,ry:r*.24,fill:'#fff','fill-opacity':.32},g);
+  if(label==='-') return c;
+  const hex=f.replace('#',''), lum=(0.299*parseInt(hex.substr(0,2),16)+0.587*parseInt(hex.substr(2,2),16)+0.114*parseInt(hex.substr(4,2),16))/255;
+  const size=Math.round(Math.min(r*(label?0.7:el&&el.length>1?0.78:0.92),36));
+  texText(g,x,y+size*.36,label||('\\mathrm{'+el+'}'),{size,anchor:'middle',fill:dashed?COL.muted:lum<.55?'#FFFFFF':COL.ink,weight:700});
+  return c;
+}
+function vfield(g,c){ const color=COL[c.color]||c.color||COL.field, w=c.w||2.6; c.rings.forEach(([r,L,n,rot])=>{ for(let j=0;j<n;j++){ const a=2*Math.PI*j/n+(rot||0)*Math.PI/180, ux=Math.cos(a), uy=Math.sin(a); if(c.s>0) arrow(g,c.x+ux*r,c.y+uy*r,c.x+ux*(r+L),c.y+uy*(r+L),color,w); else arrow(g,c.x+ux*(r+L),c.y+uy*(r+L),c.x+ux*r,c.y+uy*r,color,w); } }); }
+
+// 전기력선 (5.3: (+)는 앞으로, (−)는 뒤로 추적 → 대칭 보장)
+function fieldAt(ch,x,y){ let ex=0,ey=0; for(const c of ch){ const dx=x-c.x, dy=y-c.y, r2=dx*dx+dy*dy, r=Math.sqrt(r2), f=c.q/(r2*r); ex+=f*dx; ey+=f*dy; } return [ex,ey]; }
+function trace(ch,x,y,dir,B,hR,self){
+  const pts=[[x,y]]; let pdx=0,pdy=0,end={type:'out'};
+  for(let k=0;k<8000;k++){
+    let dmin=1e9,imin=-1; for(let i=0;i<ch.length;i++){ const d=Math.hypot(x-ch[i].x,y-ch[i].y); if(d<dmin){ dmin=d; imin=i; } }
+    if(imin!==self && dmin<hR){ end={type:'hit',idx:imin}; pts.push([ch[imin].x,ch[imin].y]); break; }
+    if(x<B.x0||x>B.x1||y<B.y0||y>B.y1) break;
+    const ds=Math.min(10,Math.max(.8,dmin*.06));
+    let [ax,ay]=fieldAt(ch,x,y), m=Math.hypot(ax,ay); if(!m){ end={type:'stall'}; break; } ax=ax/m*dir; ay=ay/m*dir;
+    let [bx,by]=fieldAt(ch,x+ax*ds*.5,y+ay*ds*.5); m=Math.hypot(bx,by); if(!m){ end={type:'stall'}; break; } bx=bx/m*dir; by=by/m*dir;
+    if(k>0 && bx*pdx+by*pdy<-.3){ end={type:'stall'}; break; }
+    x+=bx*ds; y+=by*ds; pdx=bx; pdy=by; pts.push([x,y]);
+  }
+  return {pts,end};
+}
+function fieldLines(svg,cfg){
+  const vb=svg.viewBox.baseVal, ch=cfg.charges, per=cfg.perUnit||16, sR=cfg.startR||30, hR=cfg.hitR||28, M=200;
+  const B={x0:vb.x-M,y0:vb.y-M,x1:vb.x+vb.width+M,y1:vb.y+vb.height+M};
+  const lines=[];
+  ch.forEach((c,ci)=>{ const n=Math.round(per*Math.abs(c.q)), dir=c.q>0?1:-1;
+    for(let j=0;j<n;j++){ const th=2*Math.PI*j/n+Math.PI/n; const tr=trace(ch,c.x+sR*Math.cos(th),c.y+sR*Math.sin(th),dir,B,hR,ci);
+      if(dir<0 && tr.end.type==='hit' && ch[tr.end.idx].q>0) continue;   // 이미 (+)에서 그린 선
+      tr.pts.unshift([c.x,c.y]); lines.push(tr); } });
+  const g=mk('g',{class:'fieldlines'}); svg.insertBefore(g,svg.firstChild);
+  const FC=COL[cfg.color]||cfg.color||COL.field;   // 선 색(기본 전기장 초록, 자기력선은 "color":"#7B4FC8" 등)
+  lines.forEach(L=>mk('path',{d:'M'+L.pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L'),fill:'none',stroke:FC,'stroke-width':cfg.w||2.2,'stroke-linejoin':'round'},g));
+  lines.forEach(L=>{
+    const cum=[0]; for(let i=1;i<L.pts.length;i++) cum.push(cum[i-1]+Math.hypot(L.pts[i][0]-L.pts[i-1][0],L.pts[i][1]-L.pts[i-1][1]));
+    const tot=cum[cum.length-1];
+    const at=L.end.type==='hit' ? (tot<260?[tot/2]:[60,tot-60]) : [60];
+    at.forEach(s=>{ let i=1; while(i<cum.length-1 && cum[i]<s) i++; const f=(s-cum[i-1])/((cum[i]-cum[i-1])||1); const x=L.pts[i-1][0]+(L.pts[i][0]-L.pts[i-1][0])*f, y=L.pts[i-1][1]+(L.pts[i][1]-L.pts[i-1][1])*f;
+      if(x<vb.x+8||x>vb.x+vb.width-8||y<vb.y+8||y>vb.y+vb.height-8) return;
+      let [ex,ey]=fieldAt(ch,x,y); const m=Math.hypot(ex,ey); if(!m) return; ex/=m; ey/=m; head(g,x+ex*7,y+ey*7,ex,ey,7,FC); });
+  });
+  if(cfg.draw){ const cg=mk('g',{},svg); ch.forEach(c=>charge(cg,c.x,c.y,cfg.r||22,c.q>0?'+':'-')); }
+  return g;   // 실험실에서 다시 그릴 때 g.remove() 후 API.fieldLines(svg,cfg)
+}
+
+// SVG 속 LaTeX 라벨을 만드는 도우미 (texSVG 단계에서 foreignObject + KaTeX로 바뀜)
+function texText(parent,x,y,tex,o){
+  o=o||{};
+  const t=mk('text',{class:'tex',x:(+x).toFixed(1),y:(+y).toFixed(1),'data-size':o.size||22,'data-anchor':o.anchor||'start'},parent);
+  t.setAttribute(o.mix?'data-mix':'data-tex',tex);
+  if(o.fill) t.setAttribute('fill',COL[o.fill]||o.fill);
+  if(o.weight) t.setAttribute('data-weight',o.weight);
+  if(o.halo) t.setAttribute('data-halo','1');
+  return t;
+}
+
+// 회로도 (5.2): <svg viewBox data-circuit='{"parts":[…],"stroke":3}'>
+//  ["wire",[[x,y],…]]                      꺾은선
+//  ["R",[x1,y1],[x2,y2],"R_1",{side,L,A,peaks,color,labelColor,size}]   지그재그 저항. 라벨: 가로면 위, 세로면 왼쪽 (D1)
+//  ["C",[x1,y1],[x2,y2],"C",{side,gap,plate,…}]                        축전기(평행한 두 판). 라벨 규칙은 R과 같음
+//  ["bat",[x,y],{"dir":"h"|"v","pos":"right"|"left"|"up"|"down","label":"V","signs":true,"signSize":14}]
+//        긴 판(+)이 pos 쪽. 라벨은 항상 오른쪽 아래 (D1). 도선은 x±8(가로) 또는 y±8(세로)까지 그린다
+//  ["node",[x,y]]  접합점 ●      ["term",[x,y],"a",{"side":"left"}]  단자 ○ + 라벨
+//  ["sw",[x1,y1],[x2,y2],true|false]  스위치(닫힘/열림)
+//  ["bulb",[x,y],{"r":14,"on":true,"label":"L_1"}]  전구 기호 ⊗ (도선은 x±r 또는 y±r까지)
+//  ["meter",[x,y],"A"|"V"|"G",{"r":16}]  전류계·전압계·검류계 (도선은 원 둘레까지)
+//  ["ac",[x,y],{"r":18,"label":"V"}]  교류 전원 ○ 안에 사인 곡선 (도선은 원 둘레까지). 라벨은 오른쪽 아래 (D1)
+//  ["L",[x1,y1],[x2,y2],"L",{loops:4,side,color,…}]  코일(인덕터): 반원 고리. 라벨 규칙은 R과 같음(가로면 위, 세로면 왼쪽)
+//  ["D",[x1,y1],[x2,y2],"D",{led:true,fill:true}]  다이오드: p1 = (+)쪽(애노드) → p2 = 막대 쪽(캐소드). led면 빛 화살표 2개. 라벨 규칙은 R과 같음
+//  ["npn",[x,y],{"r":26,"type":"npn"|"pnp","labels":true}]  트랜지스터(베이스 왼쪽, 컬렉터 위, 이미터 아래).
+//        단자: B (x−r−18, y), C (x+0.45r, y−r−18), E (x+0.45r, y+r+18) — 도선을 이 점까지 잇는다
+//  ["arrow",[x1,y1],[x2,y2],{"color":"plus","w":3,"label":"I","lx":…,"ly":…}]  전류 등 화살표
+//  ["label",[x,y],"I",{size,anchor,fill,mix,weight,halo}]  임의 LaTeX(mix:true면 글+$수식$)
+function renderCircuit(svg,cfg){
+  const sw=cfg.stroke||3, ink=COL[cfg.color]||cfg.color||COL.ink, LS=cfg.labelSize||22;
+  const g=mk('g',{class:'circuit',fill:'none',stroke:ink,'stroke-width':sw,'stroke-linecap':'round','stroke-linejoin':'round'});
+  svg.insertBefore(g,svg.firstChild);
+  const line=(x1,y1,x2,y2,w,col)=>mk('line',{x1:(+x1).toFixed(1),y1:(+y1).toFixed(1),x2:(+x2).toFixed(1),y2:(+y2).toFixed(1),'stroke-width':w||sw,stroke:col||ink},g);
+  const lab=(x,y,t,o,anchor)=>texText(svg,x,y,t,{size:o.size||LS,anchor,fill:o.labelColor});
+  (cfg.parts||[]).forEach(p=>{ try{
+    const kind=p[0];
+    if(kind==='wire'){ mk('path',{d:'M'+p[1].map(q=>q[0]+' '+q[1]).join(' L')},g); }
+    else if(kind==='R'||kind==='C'||kind==='L'||kind==='D'){
+      const [x1,y1]=p[1],[x2,y2]=p[2],t=p[3],o=p[4]||{};
+      const dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1,ux=dx/len,uy=dy/len,nx=-uy,ny=ux,mx=(x1+x2)/2,my=(y1+y2)/2,horiz=Math.abs(dx)>=Math.abs(dy);
+      const col=COL[o.color]||o.color||ink; let ext;
+      if(kind==='R'){
+        const L=o.L||Math.min(64,len*.62), A=o.A||9, n=o.peaks||6, s0=len/2-L/2;
+        let d=`M${x1} ${y1} L${(x1+ux*s0).toFixed(1)} ${(y1+uy*s0).toFixed(1)}`;
+        for(let i=0;i<n;i++){ const s=s0+L*(i+.5)/n, a=(i%2?-A:A); d+=` L${(x1+ux*s+nx*a).toFixed(1)} ${(y1+uy*s+ny*a).toFixed(1)}`; }
+        d+=` L${(x1+ux*(s0+L)).toFixed(1)} ${(y1+uy*(s0+L)).toFixed(1)} L${x2} ${y2}`;
+        mk('path',{d,stroke:col},g); ext=A;
+      } else if(kind==='L'){   // 코일: 바깥쪽(nx,ny 반대쪽)으로 볼록한 반원 n개
+        const n=o.loops||4, L=o.L||Math.min(n*18,len*.7), s0=len/2-L/2, rr=L/n/2, side=o.bulge==='in'?1:-1;
+        let d=`M${x1} ${y1} L${(x1+ux*s0).toFixed(1)} ${(y1+uy*s0).toFixed(1)}`;
+        for(let i=0;i<n;i++){ const s=s0+L*(i+1)/n; d+=` A${rr.toFixed(1)} ${rr.toFixed(1)} 0 0 ${side>0?0:1} ${(x1+ux*s).toFixed(1)} ${(y1+uy*s).toFixed(1)}`; }
+        d+=` L${x2} ${y2}`;
+        mk('path',{d,stroke:col},g); ext=rr+2;
+      } else if(kind==='D'){   // 다이오드: 삼각형(애노드→캐소드 방향) + 캐소드 막대
+        const T=o.T||24, H=o.H||14, bxs=len/2-T/2, txs=len/2+T/2, P=(s,k)=>[(x1+ux*s+nx*k).toFixed(1),(y1+uy*s+ny*k).toFixed(1)].join(',');
+        line(x1,y1,x1+ux*bxs,y1+uy*bxs); line(x1+ux*txs,y1+uy*txs,x2,y2);
+        mk('polygon',{points:[P(bxs,H),P(bxs,-H),P(txs,0)].join(' '),fill:o.fill===false?'#fff':col,stroke:col},g);
+        line(x1+ux*txs+nx*H,y1+uy*txs+ny*H,x1+ux*txs-nx*H,y1+uy*txs-ny*H,sw,col);
+        if(o.led){ const ag=mk('g',{},svg), sgn=o.ledSide==='in'?1:-1;   // 빛 화살표: 막대 반대쪽(바깥)으로 비스듬히
+          [-6,8].forEach(dd=>{ const sx=x1+ux*(len/2+dd)+nx*sgn*(H+3), sy=y1+uy*(len/2+dd)+ny*sgn*(H+3), vx=(ux+nx*sgn)*.7071, vy=(uy+ny*sgn)*.7071; arrow(ag,sx,sy,sx+vx*26,sy+vy*26,COL[o.ledColor]||o.ledColor||'#E08A2C',2.6); }); }
+        ext=H+(o.led?26:0);
+      } else {
+        const gap=o.gap||12, hp=o.plate||18, s1=len/2-gap/2, s2=len/2+gap/2;
+        line(x1,y1,x1+ux*s1,y1+uy*s1); line(x1+ux*s2,y1+uy*s2,x2,y2);
+        [s1,s2].forEach(s=>{ const cx=x1+ux*s, cy=y1+uy*s; line(cx+nx*hp,cy+ny*hp,cx-nx*hp,cy-ny*hp,sw*1.3,col); });
+        ext=hp;
+      }
+      if(t!=null && t!==''){
+        const side=o.side||(horiz?'above':'left'), s=o.size||LS, gp=8;
+        if(side==='above') lab(mx,my-ext-gp,t,o,'middle');
+        else if(side==='below') lab(mx,my+ext+gp+s*.85,t,o,'middle');
+        else if(side==='left') lab(mx-ext-gp-2,my+s*.35,t,o,'end');
+        else lab(mx+ext+gp+2,my+s*.35,t,o,'start');
+      }
+    }
+    else if(kind==='bat'){
+      const [x,y]=p[1], o=p[2]||{}, v=(o.dir||'h')==='v', pos=o.pos||(v?'up':'right'), LL=o.long||20, SS=o.short||11, col=COL[o.color]||o.color||ink;
+      let lx,ly;
+      if(!v){ lx=pos==='left'?x-8:x+8; const sx=pos==='left'?x+8:x-8; line(lx,y-LL,lx,y+LL,sw,col); line(sx,y-SS,sx,y+SS,sw*2,col); }
+      else { ly=pos==='down'?y+8:y-8; const sy=pos==='down'?y-8:y+8; line(x-LL,ly,x+LL,ly,sw,col); line(x-SS,sy,x+SS,sy,sw*2,col); }
+      if(o.signs){   // 극 표시: 글꼴 대신 굵은 선(축전기 패널과 같은 방식). 크기 o.signSize(기본 14)
+        const S=(o.signSize||14)/2, plus=(cx,cy)=>{ line(cx-S,cy,cx+S,cy,3,COL.plus); line(cx,cy-S,cx,cy+S,3,COL.plus); }, minus=(cx,cy)=>line(cx-S,cy,cx+S,cy,3,COL.minus);
+        if(!v){ const sx=pos==='left'?x+8:x-8, d=pos==='left'?-1:1; plus(lx+d*(8+S),y-LL+S); minus(sx-d*(8+S),y-LL+S); }
+        else { const sy=pos==='down'?y-8:y+8; plus(x-LL-8-S,ly); minus(x-SS-8-S,sy); }
+      }
+      if(o.label!=null && o.label!==''){ const s=o.size||LS; if(!v) lab(x+12,y+LL+s*.95,o.label,o,'start'); else lab(x+LL+8,y+8+s*.95,o.label,o,'start'); }
+    }
+    else if(kind==='node'){ const [x,y]=p[1]; mk('circle',{cx:x,cy:y,r:(p[2]&&p[2].r)||5,fill:ink,stroke:'none'},g); }
+    else if(kind==='term'){
+      const [x,y]=p[1], t=p[2], o=p[3]||{}, s=o.size||LS, side=o.side||'left';
+      mk('circle',{cx:x,cy:y,r:6,fill:'#fff'},g);
+      if(t){ if(side==='left') lab(x-12,y+s*.35,t,o,'end'); else if(side==='right') lab(x+12,y+s*.35,t,o,'start'); else if(side==='top'||side==='above') lab(x,y-12,t,o,'middle'); else lab(x,y+12+s*.8,t,o,'middle'); }
+    }
+    else if(kind==='sw'){
+      const [x1,y1]=p[1],[x2,y2]=p[2], closed=!!p[3], o=p[4]||{}, dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy);
+      let ex=x2, ey=y2;
+      if(!closed){ const a=Math.atan2(dy,dx)-(o.angle||30)*Math.PI/180; ex=x1+Math.cos(a)*len; ey=y1+Math.sin(a)*len; }
+      line(x1,y1,ex,ey);
+      [[x1,y1],[x2,y2]].forEach(q=>mk('circle',{cx:q[0],cy:q[1],r:4,fill:'#fff'},g));
+    }
+    else if(kind==='bulb'){
+      const [x,y]=p[1], o=p[2]||{}, r=o.r||14, k=r*.7071;
+      if(o.on) mk('circle',{cx:x,cy:y,r:r*1.9,fill:'#FFE45C',opacity:.6,stroke:'none'},g);
+      mk('circle',{cx:x,cy:y,r,fill:'#fff'},g); line(x-k,y-k,x+k,y+k,sw*.8); line(x-k,y+k,x+k,y-k,sw*.8);
+      if(o.label) lab(x,y-r*(o.on?1.9:1)-6,o.label,o,'middle');
+    }
+    else if(kind==='meter'){
+      const [x,y]=p[1], o=p[3]||{}, r=o.r||16;
+      mk('circle',{cx:x,cy:y,r,fill:'#fff'},g);
+      texText(svg,x,y+r*.42,'\\mathrm{'+(p[2]||'A')+'}',{size:o.size||Math.round(r*1.15),anchor:'middle'});
+    }
+    else if(kind==='npn'){
+      const [x,y]=p[1], o=p[2]||{}, r=o.r||26, bx=x-r*.3, cx=x+r*.45, pnp=o.type==='pnp';
+      mk('circle',{cx:x,cy:y,r,fill:'#fff'},g);
+      line(x-r-18,y,bx,y); line(bx,y-r*.5,bx,y+r*.5,sw*1.4);
+      line(bx,y-r*.22,cx,y-r*.72); line(cx,y-r*.72,cx,y-r-18);
+      line(bx,y+r*.22,cx,y+r*.72); line(cx,y+r*.72,cx,y+r+18);
+      const ex=cx-bx, ey=r*.5, el=Math.hypot(ex,ey), ux=ex/el, uy=ey/el;   // 이미터 화살: npn은 바깥으로, pnp는 안으로
+      if(!pnp) head(g,bx+ex*.78,y+r*.22+ey*.78,ux,uy,5.5,ink); else head(g,bx+ex*.3,y+r*.22+ey*.3,-ux,-uy,5.5,ink);
+      if(o.labels){ const s=o.size||Math.round(LS*.9); lab(x-r-14,y-8,'\\mathrm{B}',o,'end'); lab(cx+8,y-r-4,'\\mathrm{C}',o,'start'); lab(cx+8,y+r+s*.8,'\\mathrm{E}',o,'start'); }   // 단자 이름은 로마체
+    }
+    else if(kind==='ac'){
+      const [x,y]=p[1], o=p[2]||{}, r=o.r||18, a=r*.62;
+      mk('circle',{cx:x,cy:y,r,fill:'#fff'},g);
+      mk('path',{d:`M${x-a} ${y} C${x-a*.6} ${y-a*1.1} ${x-a*.1} ${y-a*1.1} ${x} ${y} S${x+a*.6} ${y+a*1.1} ${x+a} ${y}`,'stroke-width':sw*.8},g);
+      if(o.label!=null && o.label!==''){ const s=o.size||LS; lab(x+r*.75+4,y+r+s*.8,o.label,o,'start'); }
+    }
+    else if(kind==='arrow'){
+      const [x1,y1]=p[1],[x2,y2]=p[2], o=p[3]||{}, col=COL[o.color]||o.color||COL.ink;
+      const ag=mk('g',{},svg); arrow(ag,x1,y1,x2,y2,col,o.w||3,o.dash);
+      if(o.label){ const s=o.size||LS, hz=Math.abs(x2-x1)>=Math.abs(y2-y1);
+        const lx=o.lx!=null?o.lx:(x1+x2)/2+(hz?0:10), ly=o.ly!=null?o.ly:(y1+y2)/2+(hz?-10:s*.35);
+        texText(svg,lx,ly,o.label,{size:s,anchor:o.anchor||(hz?'middle':'start'),fill:o.labelColor||o.color,mix:o.mix}); }
+    }
+    else if(kind==='label'){ const [x,y]=p[1], o=p[3]||{}; texText(svg,x,y,p[2],{size:o.size||LS,anchor:o.anchor,fill:o.fill,mix:o.mix,weight:o.weight,halo:o.halo}); }
+    else console.error('[circuit] 알 수 없는 부품: '+kind);
+  }catch(e){ console.error('[circuit] 부품 오류',p,e); } });
+}
+
+// 축전기 단계 패널 (5.4): <div class="cappanel" data-cfg='{"bat":1,"sw":1,"q":0.5,"cur":"up","bulb":1,"v":0,"zero":0}'>
+//  bat 전지 있음(충전 회로)/없음(방전 회로) · sw 스위치 닫힘 1/열림 0 · q 충전 정도 0–1 (판의 ± 개수, 판 사이 전기장 화살표 수)
+//  cur "up"(충전)/"down"(방전) 전류 화살표 · bulb 키가 있으면 전구, 1이면 켜짐 · v 판 사이 V 표시 · zero "0 V" 표시
+function capPanel(div,c){
+  const svg=mk('svg',{viewBox:'0 0 300 250',role:'img','aria-label':(c.bat?'전지와 연결된':'전지 없이 전구와 연결된')+' 축전기 회로'}); div.appendChild(svg);
+  const g=mk('g',{fill:'none',stroke:COL.ink,'stroke-width':3,'stroke-linecap':'round','stroke-linejoin':'round'},svg);
+  const ln=(x1,y1,x2,y2,w,col)=>mk('line',{x1,y1,x2,y2,'stroke-width':w||3,stroke:col||COL.ink},g);
+  const L=62,R=226,T=34,B=216,PT=94,PB=156,HW=42;
+  ln(L,T,L,PT); ln(L,PB,L,B); ln(L-HW,PT,L+HW,PT,4.5); ln(L-HW,PB,L+HW,PB,4.5);
+  ln(L,T,122,T); ln(170,T,R,T);
+  const open=!c.sw, a=-30*Math.PI/180; ln(122,T,open?122+Math.cos(a)*48:170,open?T+Math.sin(a)*48:T);
+  [[122,T],[170,T]].forEach(q=>mk('circle',{cx:q[0],cy:q[1],r:4,fill:'#fff'},g));
+  ln(L,B,R,B);
+  const hasBulb=('bulb' in c), comps=[]; if(c.bat) comps.push('bat'); if(hasBulb) comps.push('bulb');
+  const ys=comps.length===2?[92,162]:[125];
+  let yPrev=T;
+  comps.forEach((k,i)=>{ const y=ys[i];
+    if(k==='bat'){ ln(R,yPrev,R,y-8); ln(R-20,y-8,R+20,y-8,3); ln(R-11,y+8,R+11,y+8,6); yPrev=y+8; }
+    else { const r=14, k2=r*.7071; ln(R,yPrev,R,y-r); if(c.bulb==1) mk('circle',{cx:R,cy:y,r:r*1.9,fill:'#FFE45C',opacity:.6,stroke:'none'},g); mk('circle',{cx:R,cy:y,r,fill:'#fff'},g); ln(R-k2,y-k2,R+k2,y+k2,2.4); ln(R-k2,y+k2,R+k2,y-k2,2.4); yPrev=y+r; }
+  });
+  ln(R,yPrev,R,B);
+  const q=clamp(+c.q||0,0,1), n=Math.round(q*5), m=Math.round(q*3), sz=12, t=3;
+  for(let i=0;i<n;i++){ const x=L-HW+8+(2*HW-16)*(n===1?.5:i/(n-1));
+    mk('rect',{x:x-sz/2,y:PT+11-t/2,width:sz,height:t,rx:1,fill:COL.plus,stroke:'none'},g); mk('rect',{x:x-t/2,y:PT+11-sz/2,width:t,height:sz,rx:1,fill:COL.plus,stroke:'none'},g);
+    mk('rect',{x:x-sz/2,y:PB-11-t/2,width:sz,height:t,rx:1,fill:COL.minus,stroke:'none'},g); }
+  for(let j=0;j<m;j++){ const x=L-HW+18+(2*HW-36)*(m===1?.5:j/(m-1)); arrow(g,x,PT+21,x,PB-19,COL.field,2.4); }
+  if(c.v) texText(svg,L+HW+10,(PT+PB)/2+9,'V',{size:26});
+  else if(c.zero) texText(svg,L+HW+10,(PT+PB)/2+9,'0\\ \\text{V}',{size:24});
+  if(c.cur && c.sw){ const up=c.cur==='up', x=R+32; arrow(g,x,up?176:78,x,up?78:176,COL.ink,3); texText(svg,x+9,135,'I',{size:26}); }
+}
+
+// 지면에 수직인 자기장 표시: <g data-bgrid="x,y,w,h,간격,in|out[,색,크기]">  in = ×(들어가는 방향), out = ⊙(나오는 방향)
+function bgrid(g,a){
+  const x0=+a[0], y0=+a[1], w=+a[2], h=+a[3], gap=+a[4]||32, dir=(a[5]||'in').trim(), col=(a[6]&&a[6].trim())?(COL[a[6].trim()]||a[6].trim()):COL.muted, s=+(a[7]||gap*.22);
+  const nx=Math.max(1,Math.floor(w/gap)), ny=Math.max(1,Math.floor(h/gap)), ox=x0+(w-(nx-1)*gap)/2, oy=y0+(h-(ny-1)*gap)/2;
+  for(let i=0;i<nx;i++) for(let j=0;j<ny;j++){ const cx=ox+i*gap, cy=oy+j*gap;
+    if(dir==='out'){ mk('circle',{cx,cy,r:s*1.15,fill:'none',stroke:col,'stroke-width':1.6},g); mk('circle',{cx,cy,r:s*.32,fill:col},g); }
+    else { mk('line',{x1:cx-s,y1:cy-s,x2:cx+s,y2:cy+s,stroke:col,'stroke-width':2,'stroke-linecap':'round'},g); mk('line',{x1:cx-s,y1:cy+s,x2:cx+s,y2:cy-s,stroke:col,'stroke-width':2,'stroke-linecap':'round'},g); } }
+}
+deck.querySelectorAll('[fill],[stroke],[stop-color]').forEach(e=>['fill','stroke','stop-color'].forEach(k=>{ const v=e.getAttribute(k); if(v&&COL[v]) e.setAttribute(k,COL[v]); }));   // fill="bfield" 등(D7)
+deck.querySelectorAll('[data-bgrid]').forEach(g=>{ try{ bgrid(g,g.dataset.bgrid.split(',')); }catch(e){ console.error('[bgrid] 오류',g,e); } });
+// <g class="step" data-circuit='…'>로 단계 공개 회로도 가능
+deck.querySelectorAll('svg[data-circuit], g[data-circuit]').forEach(svg=>{ try{ renderCircuit(svg,JSON.parse(svg.dataset.circuit)); }catch(e){ console.error('[circuit] JSON 오류',svg,e); } });
+deck.querySelectorAll('svg[data-field]').forEach(svg=>fieldLines(svg,JSON.parse(svg.dataset.field)));
+deck.querySelectorAll('.cappanel[data-cfg]').forEach(d=>{ try{ capPanel(d,JSON.parse(d.dataset.cfg)); }catch(e){ console.error('[cappanel] 오류',d,e); } });
+deck.querySelectorAll('[data-vfield]').forEach(g=>vfield(g,JSON.parse(g.dataset.vfield)));
+deck.querySelectorAll('[data-arw]').forEach(g=>{ const a=g.dataset.arw.split(',').map(s=>s.trim()); arrow(g,+a[0],+a[1],+a[2],+a[3],COL[a[4]]||a[4],a[5]?+a[5]:3,a[6]==='d'); });
+deck.querySelectorAll('[data-chg]').forEach(g=>{ const a=g.dataset.chg.split(',').map(s=>s.trim()); charge(g,+a[0],+a[1],+a[2],a[3],a[4]==='d'); });
+deck.querySelectorAll('[data-atom]').forEach(g=>{ try{ const a=g.dataset.atom.split(',').map(s=>s.trim()); const d=a[4]==='d'||a[5]==='d'; atom(g,+a[0],+a[1],+a[2],a[3],a[4]==='d'?'':(a[4]||''),d); }catch(e){ console.error('[atom] 오류',g,e); } });
+deck.querySelectorAll('[data-pm]').forEach(g=>{ const a=g.dataset.pm.split(','); const sign=a[0].trim(), sz=+a[1], col=colOf(a[3]&&a[3].trim())||(sign==='+'?COL.plus:COL.minus), t=Math.max(2.2,sz*.24);
+  a[2].trim().split(/\s+/).forEach(p=>{ const [x,y]=p.split(':').map(Number); mk('rect',{x:x-sz/2,y:y-t/2,width:sz,height:t,rx:t/3,fill:col},g); if(sign==='+') mk('rect',{x:x-t/2,y:y-sz/2,width:t,height:sz,rx:t/3,fill:col},g); }); });
+
+// 실험실
+function signed(v){ return v>0?'+'+v:v<0?'−'+(-v):'0'; }
+function fmtN(v){ if(v===0) return '0'; if(v>=100) return v.toFixed(0); if(v>=10) return v.toFixed(1); if(v>=1) return v.toFixed(2); return v.toFixed(3); }
+function gcd(a,b){ return b?gcd(b,a%b):a; }
+function niceRatio(x){ if(!isFinite(x)) return '—'; for(let d=1;d<=36;d++){ const n=Math.round(x*d); if(n>0 && Math.abs(n/d-x)<1e-9){ const g=gcd(n,d); return d/g===1?(n/g)+'배':(n/g)+'/'+(d/g)+'배'; } } return x.toFixed(2)+'배'; }
+function clamp(v,a,b){ return Math.max(a,Math.min(b,v)); }
+function place(e,x,y,vis){ e.style.left=x+'px'; e.style.top=y+'px'; e.style.display=vis===false?'none':''; }
+const LABS={
+  coulomb(root){
+    const $=s=>root.querySelector(s), O=k=>$(`[data-o="${k}"]`), V=k=>$(`[data-ov="${k}"]`);
+    const iq1=$('[data-i="q1"]'), iq2=$('[data-i="q2"]'), ir=$('[data-i="r"]'), g=mk('g',{},$('svg'));
+    let ref=null;
+    const Fof=()=>90*Math.abs(iq1.value*iq2.value)/(ir.value*ir.value);   // k·(μC)²/(cm)² = 90 N
+    function draw(){
+      const q1=+iq1.value, q2=+iq2.value, r=+ir.value, F=Fof();
+      O('q1').textContent=signed(q1)+' μC'; O('q2').textContent=signed(q2)+' μC'; O('r').textContent=r+' cm';
+      O('F').textContent=fmtN(F)+' N';
+      const kd=O('kind'); kd.className='kind '+(F===0?'':q1*q2>0?'rep':'att');
+      kd.textContent=F===0?'전하량이 0이면 전기력이 없다':q1*q2>0?'척력: 서로 밀어낸다':'인력: 서로 끌어당긴다';
+      O('ratio').textContent=ref===null?'':ref===0?'기준이 0 N':'기준의 '+niceRatio(F/ref);
+      while(g.firstChild) g.removeChild(g.firstChild);
+      const cx=340, y=150, x1=cx-r*8, x2=cx+r*8, R=24;
+      mk('line',{x1:12,y1:y,x2:668,y2:y,stroke:'#D5DDE5','stroke-width':2,'stroke-dasharray':'6 6'},g);
+      mk('line',{x1,y1:272,x2,y2:272,stroke:COL.muted,'stroke-width':1.5},g);
+      [x1,x2].forEach(x=>mk('line',{x1:x,y1:263,x2:x,y2:281,stroke:COL.muted,'stroke-width':1.5},g));
+      charge(g,x1,y,R,q1>0?'P':q1<0?'M':'N'); charge(g,x2,y,R,q2>0?'P':q2<0?'M':'N');
+      place(V('b1'),x1,y); place(V('b2'),x2,y); place(V('r'),cx,272);
+      if(F>0){
+        const d=q1*q2>0?-1:1, L=clamp(16+22*Math.log10(F/.05),20,92);
+        mk('line',{x1,y1:104,x2:x1,y2:y-R,stroke:COL.ink,'stroke-width':1.2,'stroke-dasharray':'2 3'},g);
+        mk('line',{x1:x2,y1:y+R,x2:x2,y2:196,stroke:COL.ink,'stroke-width':1.2,'stroke-dasharray':'2 3'},g);
+        arrow(g,x1,96,x1+d*L,96,COL.ink,3.5); arrow(g,x2,204,x2-d*L,204,COL.ink,3.5);
+        place(V('l1'),clamp(x1+d*L/2,105,575),60); place(V('l2'),clamp(x2-d*L/2,105,575),216);
+      } else { place(V('l1'),0,0,false); place(V('l2'),0,0,false); }
+    }
+    [iq1,iq2,ir].forEach(i=>i.addEventListener('input',draw));
+    $('[data-b="ref"]').addEventListener('click',()=>{ ref=Fof(); draw(); });
+    draw();
+  },
+  potential(root){
+    const $=s=>root.querySelector(s), O=k=>$(`[data-o="${k}"]`), V=k=>$(`[data-ov="${k}"]`);
+    const ih=$('[data-i="h"]'), iq=$('[data-i="q"]'), g=mk('g',{},$('svg'));
+    const f=v=>Number.isInteger(v)?String(v):v.toFixed(1);
+    function draw(){
+      const h=+ih.value, q=+iq.value, Vv=2*h, Wv=q*Vv;           // 12 V / 6 cm = 2 V/cm
+      O('h').textContent=h.toFixed(1)+' cm'; O('q').textContent='+'+q+' C';
+      O('W').textContent=f(Wv)+' J'; O('U').textContent=f(Wv)+' J'; O('V').textContent=f(Vv)+' V'; O('Vt').textContent=f(Vv)+' V';
+      while(g.firstChild) g.removeChild(g.firstChild);
+      const cx=230, cy=340-50*h, R=12+4*q;
+      mk('line',{x1:cx+R+4,y1:cy,x2:440,y2:cy,stroke:COL.muted,'stroke-width':1.5,'stroke-dasharray':'5 5'},g);
+      mk('polygon',{points:`452,${cy} 440,${cy-7} 440,${cy+7}`,fill:COL.ink},g);
+      charge(g,cx,cy,R,'+');
+      const ya=clamp(cy-20,50,292), xa=cx-R-18;
+      arrow(g,xa,ya,xa,ya+40,COL.ink,3.5);
+      place(V('F'),xa-8,ya+20); place(V('Vt'),412,cy-6);
+    }
+    [ih,iq].forEach(i=>i.addEventListener('input',draw));
+    draw();
+  }
+};
+// 차시별 실험실: 내용 파일의 window.DECK_LABS = { 이름(root, API){…} } 를 함께 등록한다.
+const readyHooks=[];
+const API={mk,arrow,head,charge,atom,ATOM,vfield,fieldAt,trace,fieldLines,texText,bgrid:(g,x,y,w,h,gap,dir,col,size)=>bgrid(g,[x,y,w,h,gap,dir,col||'',size||'']),signed,fmtN,niceRatio,clamp,place,COL,SVGNS,
+  // 슬라이드가 보일 때만 도는 애니메이션 반복. fn(dt초, t초). 멈추는 함수를 돌려준다.
+  loop(root,fn){ const slide=root.closest('.slide'); let last=0, raf=0, stop=false;
+    const tick=ts=>{ if(stop) return; raf=requestAnimationFrame(tick); if(!slide||!slide.classList.contains('active')){ last=0; return; } const dt=last?Math.min(.05,(ts-last)/1000):0; last=ts; try{ fn(dt,ts/1000); }catch(e){ console.error(e); stop=true; } };
+    raf=requestAnimationFrame(tick); return ()=>{ stop=true; cancelAnimationFrame(raf); }; },
+  onShow(fn){ showHooks.push(fn); },          // fn(slide, index) — 슬라이드가 보일 때마다
+  ready(fn){ readyHooks.push(fn); },          // KaTeX·texSVG·keepWords가 끝난 뒤 한 번
+  tex(t){ return tex2html(t); },               // LaTeX 문자열 → HTML (KaTeX가 아직 없으면 간이 표시)
+  isActive(root){ const s=root.closest('.slide'); return !!(s&&s.classList.contains('active')); }
+};
+Object.assign(LABS, window.DECK_LABS||{});
+deck.querySelectorAll('.lab[data-lab]').forEach(r=>{ const fn=LABS[r.dataset.lab]; if(!fn){ console.error('[lab] 등록되지 않은 실험실: '+r.dataset.lab); return; } try{ fn(r,API); }catch(e){ console.error('[lab '+r.dataset.lab+']',e); } });
+// 첫 show()는 실험실 등록 전에 불렸으므로, 지금 보이는 슬라이드에 대해 표시 훅을 한 번 불러 준다.
+showHooks.forEach(f=>{ try{ f(slides[cur],cur); }catch(e){ console.error(e); } });
+
+
+/* ─────────── 움직임 (가이드 6.4) ─────────── */
+// 정지 모드: 캡처·점검(도구가 window.__STILL을 넣음)·?still·?audit·편집기·'동작 줄이기' 설정 → 움직임 없이 그린 그대로.
+//   그림은 언제나 '그린 모습 = 마지막 모습'이다. 움직임은 그 모습에서 출발값(data-from)을 거꾸로 거슬러 와서 끝난다.
+// 자동(모든 덱): ① 슬라이드가 보일 때 본문 덩어리가 차례로 떠오름(h2는 왼쪽에서) ② 형광펜(mark)이 그어짐
+//   ③ 그림 속 화살표(data-arw)가 꼬리에서 머리로 자라남 ④ 단계 공개: 글은 떠오르고, 그림(SVG) 단계는 선이 그려지고, 정답(.ans)은 한 번 튐
+// 내용이 정하는 그림 움직임: SVG 요소에 data-anim
+//   rot  data-from="각(°)" data-o="cx,cy"  — 각만큼 돌려 놓은 데서 그린 모습으로 (시계 방향 +)
+//   move data-from="dx,dy"                 — 그만큼 옮긴 데서
+//   scale data-from="배율" 또는 "가로배율,세로배율"(예 "1,0" = 세로로 자라남) data-o="cx,cy"
+//   fade · draw(선 그리기) · pop(작게서 튀어나옴, data-o)
+//   spin data-o="cx,cy" data-speed="°/s"   — 계속 돎 · dash data-speed="px/s" — 점선이 흐름(전류·흐름 표시)
+//   공통: data-dur(초, 기본 1.2) data-delay(초) data-rep="once|alt|loop|damp|swing"(기본 once; swing = 그린 모습을 가운데로 ±출발값 사이를 계속 흔들림(dur = 반 주기); alt = 그린 모습↔출발값 왕복, damp = 양쪽으로 흔들리며 줄어 그린 모습에 섬 — dur는 반 번 흔들리는 시간)
+//         data-ease="io|out|lin|in|soft|back|bounce"(기본 io; in = 정지에서 등가속, out = 등감속해 정지, soft = 부드럽게 멈춤) data-on="step"(가까운 .step이 켜질 때 시작; 기본은 슬라이드가 보일 때)
+const STILL=(!!window.__STILL&&!params.has('motion'))||params.has('still')||params.has('audit')||EDIT||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+document.documentElement.classList.toggle('still',STILL);
+const EASE={lin:t=>t,io:t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,out:t=>1-(1-t)*(1-t),in:t=>t*t,   // in = 정지에서 등가속(낙하), out = 등감속해 정지(제동)
+  soft:t=>1-Math.pow(1-t,3), sine:t=>(1-Math.cos(Math.PI*t))/2,   // sine = 단진동 모양(alt와 함께 진동·정상파)
+  back:t=>{ const c=1.70158; return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2); },
+  bounce:t=>{ const n=7.5625,d=2.75; if(t<1/d) return n*t*t; if(t<2/d) return n*(t-=1.5/d)*t+.75; if(t<2.5/d) return n*(t-=2.25/d)*t+.9375; return n*(t-=2.625/d)*t+.984375; }};
+// 본문 덩어리에 차례 번호(떠오르는 순서)
+slides.forEach(s=>{ let k=0; [...s.children].forEach(c=>{ if(!c.classList.contains('band')) c.style.setProperty('--i',k++); }); });
+function strokeLen(e){ try{ return e.getTotalLength(); }catch(_){ return 0; } }
+function drawStroke(e,delay,dur){
+  if(STILL||!e.animate) return; const L=strokeLen(e); if(!L||e.getAttribute('stroke-dasharray')) return fadeIn(e,delay,dur);
+  e.animate([{strokeDasharray:L+' '+L,strokeDashoffset:L},{strokeDasharray:L+' '+L,strokeDashoffset:0}],{duration:dur*1000,delay:delay*1000,easing:'cubic-bezier(.3,.6,.3,1)',fill:'backwards'});
+}
+function fadeIn(e,delay,dur){ if(!STILL&&e.animate) e.animate([{opacity:0},{opacity:parseFloat(getComputedStyle(e).opacity)||1}],{duration:dur*1000,delay:delay*1000,fill:'backwards'}); }
+function growArrows(root,delay){
+  root.querySelectorAll('[data-arw]').forEach((g,k)=>{ const st=g.closest('.step'); if(st&&!st.classList.contains('on')&&!root.matches('.step')) return;
+    if(g.closest('[data-anim]')&&!root.matches('[data-anim]')) return;   // 움직이는 묶음 안의 화살표는 그 움직임을 따름
+    const own=g.dataset.delay!=null&&g.dataset.delay!==''?+g.dataset.delay:null;   // 화살표 자체의 data-delay(초) — 광선 draw 끝에 맞출 때
+    const d=own!=null?delay+own:delay+Math.min(k,8)*.08; g.querySelectorAll('.arw-l').forEach(l=>drawStroke(l,d,.55)); g.querySelectorAll('.arw-h').forEach(h=>fadeIn(h,d+.4,.2)); });
+}
+window.__fxReveal=e=>{
+  if(STILL) return;
+  const inSvg=e.ownerSVGElement&&e.tagName.toLowerCase()!=='svg';
+  if(inSvg){ const parts=[...e.querySelectorAll('path,line,polyline,circle,ellipse,rect')].filter(x=>!x.closest('[data-arw]')&&x.getAttribute('stroke')&&x.getAttribute('stroke')!=='none');
+    if(['path','line','polyline'].includes(e.tagName)) parts.push(e);
+    parts.slice(0,30).forEach(x=>drawStroke(x,0,.6)); growArrows(e,0); }
+  else growArrows(e,.1);
+  const ans=e.matches('.ans')?[e]:[...e.querySelectorAll('.ans')];
+  ans.forEach(a=>a.animate&&a.animate([{backgroundColor:'rgba(255,228,92,0)'},{backgroundColor:'rgba(255,228,92,.95)'},{backgroundColor:'rgba(255,228,92,0)'}],{duration:900,delay:250,easing:'ease-out'}));
+  ANIMS.forEach(a=>{ if((a.onStep&&a.e.closest('.step')===e)||(a.onG&&e.dataset.g===a.onG&&a.slide===e.closest('.slide'))) a._t0=null; });   // 단계가 막 켜짐 → 그 단계의 그림 움직임 시작
+};
+const ANIMS=[...deck.querySelectorAll('[data-anim]')].map(e=>{ const d=e.dataset, num=(v,def)=>v==null||v===''?def:+v, pair=v=>(v||'0,0').split(',').map(Number);
+  return {e,type:d.anim,from:d.from,o:pair(d.o),dur:num(d.dur,1.2),delay:num(d.delay,0),rep:d.rep||'once',ease:EASE[d.ease]||EASE.io,speed:num(d.speed,d.anim==='spin'?40:30),
+    onStep:d.on==='step'&&!!e.closest('.step'),onG:(d.on||'').startsWith('g:')?d.on.slice(2):null,base:e.getAttribute('transform')||'',slide:e.closest('.slide'),len:0,op:parseFloat(getComputedStyle(e).opacity)||1}; });   // op = 그린 모습의 불투명도(opacity 속성 유지)
+const nz=v=>Math.abs(v)<.001?(v<0?-.001:.001):v;   // 0 배율만 피함(음수 = 뒤집힘 허용: 정상파 "1,-1")
+function applyAnim(a,p){   // p: 0 = 출발값, 1 = 그린 모습 · spin/dash는 경과 시간
+  const e=a.e, q=1-p, [cx,cy]=a.o;
+  let tf='';
+  switch(a.type){
+    case 'rot': tf=`rotate(${(+a.from||0)*q} ${cx} ${cy})`; break;
+    case 'move': { const [dx,dy]=(a.from||'0,0').split(',').map(Number); tf=`translate(${dx*q} ${dy*q})`; break; }
+    case 'scale': { const f=String(a.from||'1').split(',').map(Number), fx=f[0], fy=f.length>1?f[1]:f[0], sx=1+(fx-1)*q, sy=1+(fy-1)*q; tf=`translate(${cx} ${cy}) scale(${nz(sx)} ${nz(sy)}) translate(${-cx} ${-cy})`; break; }
+    case 'pop': { const s=Math.max(.001,p); tf=`translate(${cx} ${cy}) scale(${s}) translate(${-cx} ${-cy})`; break; }
+    case 'fade': e.style.opacity=p*a.op; break;
+    case 'draw': { if(!a.parts){ const tg=e.tagName.toLowerCase(); a.parts=(tg==='g'||tg==='a')?[...e.querySelectorAll('path,line,polyline,polygon,circle,ellipse,rect')].filter(x=>{ const cs=getComputedStyle(x); return cs.stroke&&cs.stroke!=='none'; }):[e];   // <g>에 걸면 안의 선들을 함께 그림
+        a.parts=a.parts.map(x=>({x,dashed:!!(x.getAttribute('stroke-dasharray')||getComputedStyle(x).strokeDasharray!=='none'&&getComputedStyle(x).strokeDasharray),len:strokeLen(x)||1,op:parseFloat(getComputedStyle(x).opacity)||1}));
+        a.dashed=a.parts.some(r=>r.dashed); }
+      for(const r of a.parts){ if(r.dashed){ r.x.style.opacity=p*r.op; continue; }   // 점선은 그리기 대신 나타남(점선 모양 유지)
+        r.x.style.strokeDasharray=r.len+' '+r.len; r.x.style.strokeDashoffset=r.len*q; }
+      break; }
+  }
+  if(a.type!=='fade'&&a.type!=='draw') e.setAttribute('transform',(tf+' '+a.base).trim());
+}
+function resetAnim(a){ if(a.type==='fade') a.e.style.opacity=''; if(a.type==='draw') (a.parts||[]).forEach(r=>{ r.x.style.opacity=''; r.x.style.strokeDasharray=''; r.x.style.strokeDashoffset=''; }); if(a.type!=='dash') a.e.setAttribute('transform',a.base); if(!a.base) a.e.removeAttribute('transform'); if(a.type==='dash') a.e.style.strokeDashoffset=''; }
+if(!STILL&&ANIMS.length){
+  showHooks.push(s=>{ const now=performance.now()/1000; ANIMS.forEach(a=>{ if(a.slide===s){ a._t0=a.onG?(a.slide.querySelector('.step.on[data-g="'+a.onG+'"]')?now:undefined):a.onStep?(a.e.closest('.step')&&a.e.closest('.step').classList.contains('on')?now:undefined):now; if(a._t0!==undefined&&a.type!=='spin'&&a.type!=='dash') applyAnim(a,0); } }); });
+  const tick=()=>{ requestAnimationFrame(tick); const now=performance.now()/1000;
+    for(const a of ANIMS){ if(!a.slide.classList.contains('active')) continue;
+      if(a._t0===null) a._t0=now;                       // 단계가 막 켜짐
+      if(a._t0===undefined){ continue; }
+      const t=now-a._t0-a.delay;
+      if(a.type==='spin'){ if(t>=0) a.e.setAttribute('transform',`rotate(${(t*a.speed)%360} ${a.o[0]} ${a.o[1]}) ${a.base}`.trim()); continue; }
+      if(a.type==='dash'){ a.e.style.strokeDashoffset=-(Math.max(0,t)*a.speed); continue; }
+      if(t<0){ applyAnim(a,0); continue; }
+      if(a.rep==='swing'){ applyAnim(a,1-Math.cos(Math.PI*t/a.dur)); continue; }   // 그린 모습을 가운데로 양쪽 끝(±출발값)까지 계속 흔들림(진자·용수철)
+      if(a.rep==='damp'){ const u=t/a.dur, q=Math.cos(Math.PI*u)*Math.exp(-u/2.2); applyAnim(a,u>2&&Math.abs(q)<.004?1:1-q); continue; }   // 감쇠 왕복: 양쪽으로 흔들리며 줄어 그린 모습에 섬
+      let u=t/a.dur;
+      if(a.rep==='once') u=Math.min(1,u);
+      else if(a.rep==='loop') u=u%1;
+      else { u=u%2; u=u>1?2-u:u; }                       // alt: 왕복
+      applyAnim(a,a.ease(u));
+    } };
+  requestAnimationFrame(tick);
+  // 단계로 숨겨 둔 그림 움직임은 처음엔 출발값(보이지 않으니 상관없음) — 켜질 때 시작
+  ANIMS.forEach(a=>{ if(a.onStep||a.onG) a._t0=undefined; });
+}
+if(!STILL) showHooks.push(s=>growArrows(s,.35));
+if(!STILL){ try{ growArrows(slides[cur],.35); ANIMS.forEach(a=>{ if(a.slide===slides[cur]&&!a.onStep&&!a.onG) a._t0=performance.now()/1000; }); }catch(e){ console.error(e); } }
+
+/* ─────────── 질문 먼저, 답은 다음 누름에 (가이드 6.5) ─────────── */
+// 다음 단계가 '답'이면 한 번 누를 때 질문(빈칸·질문 문장·개념 지도 빈칸 상자)을 강조만 하고, 다음 누름에 답을 연다.
+// 답으로 보는 단계: .blank 안의 단계 · .ans/.answer(를 품은) 단계 · '→'로 시작하는 단계 · SVG에서 점선 빈칸 상자 위의 글 단계 · data-ask가 있는 단계.
+// 빼기: 단계에 data-ask="no". 평가 문항(.pf-key 안 — 풀이 공간 단계가 이미 있음)과 도구·편집 모드는 하지 않는다.
+var ASK_OFF=(!!window.__STILL&&!params.has('motion'))||params.has('audit')||EDIT;
+function svgBlankBox(e){
+  const svg=e.ownerSVGElement; if(!svg) return null;
+  let bb; try{ bb=e.getBBox(); }catch(_){ return null; } if(!bb||(!bb.width&&!bb.height)) return null;
+  const cx=bb.x+bb.width/2, cy=bb.y+bb.height/2;
+  for(const r of svg.querySelectorAll('rect')){ if(r===e||e.contains(r)) continue;
+    const d=r.getAttribute('stroke-dasharray')||(r.style&&r.style.strokeDasharray); if(!d&&!r.classList.contains('blank')) continue;
+    const x=+r.getAttribute('x'), y=+r.getAttribute('y'), w=+r.getAttribute('width'), h=+r.getAttribute('height');
+    if(cx>=x-4&&cx<=x+w+4&&cy>=y-4&&cy<=y+h+4) return r; }
+  return null;
+}
+function isAnswerEl(e){
+  if(e.dataset&&e.dataset.ask==='no') return false;
+  if(e.closest&&e.closest('.pf-key')) return false;
+  if(e.dataset&&e.dataset.ask!==undefined) return true;
+  if(e.ownerSVGElement) return !!svgBlankBox(e);
+  if(e.closest('.blank')) return true;
+  if(e.matches('.ans,.answer')||e.querySelector('.ans,.answer')) return true;
+  const tx=e.textContent||''; return /^\s*→/.test(tx)&&!/[?？]\s*$/.test(tx.trim());   // '→ …?'는 질문
+}
+function askArea(x){ const b=x.getBoundingClientRect(), D=deck.getBoundingClientRect(); return D.width&&D.height?b.width*b.height/(D.width*D.height):0; }
+function askHidden(x){ return !!(x.closest('.step:not(.on)')||getComputedStyle(x).visibility==='hidden'); }
+function askIsQ(x){ return x.hasAttribute('data-q')||/[?？]|^\s*Q/.test(x.textContent||''); }   // 질문 문장: '?'·'Q…' 또는 data-q
+function askQuestionIn(c){ const qs=[...c.querySelectorAll('p,li,h3,td,.card,.note,[data-q]')].filter(q=>!askHidden(q)&&askIsQ(q)&&askArea(q)<=.3); return qs.length?qs[qs.length-1]:null; }
+function askQ(x){ if(!x||askHidden(x)||x.classList.contains('band')) return null; if((x.matches('p,li,h2,h3,.card,.note')||x.hasAttribute('data-q'))&&askIsQ(x)&&askArea(x)<=.3) return x; return askQuestionIn(x); }   // 질문 문장만(그림·빈 칸 제외)
+function askMarked(e){   // 답 앞쪽에서 가장 가까운 data-q — 그 사이에 '?' 질문이 먼저 있으면 그 질문이 우선(null → 보통 찾기)
+  const own=e.closest('[data-q]'); if(own&&own!==e&&!askHidden(own)) return own;
+  for(let anc=e; anc&&!anc.classList.contains('slide'); anc=anc.parentElement)
+    for(let q=anc.previousElementSibling; q; q=q.previousElementSibling){
+      if(askHidden(q)) continue;
+      const m=q.hasAttribute('data-q')?q:[...q.querySelectorAll('[data-q]')].filter(x=>!askHidden(x)).pop();
+      if(m) return m;
+      if(/[?？]/.test(q.textContent||'')) return null; }
+  return null;
+}
+function askFit(c){ if(!c||c.classList.contains('slide')||askHidden(c)) return null; return askArea(c)<=.3?c:askQuestionIn(c); }   // 너무 크면 그 안의 질문 줄만
+function askTargets(a){
+  const out=new Set();
+  a.forEach(e=>{ if(!isAnswerEl(e)) return;
+    if(e.ownerSVGElement){ const r=svgBlankBox(e); if(r&&!askHidden(r)) out.add(r); return; }
+    const bl=e.closest('.blank'); if(bl){ if(!askHidden(bl)) out.add(bl); return; }
+    let c=askMarked(e);
+    if(c) ; else if(/^inline/.test(getComputedStyle(e).display)) c=askFit(e.parentElement&&e.parentElement.closest('p,li,td,th,dd,h3,.card,.note,div'));
+    else { let p=e.previousElementSibling;
+      while(p&&!c){ if(!p.classList.contains('step')&&!p.classList.contains('band')) c=askFit(p); p=c?p:p.previousElementSibling; }
+      if(!c) c=askFit(e.parentElement&&e.parentElement.closest('.card,.note,.stage'));
+      for(let anc=e.parentElement; !c&&anc&&!anc.classList.contains('slide'); anc=anc.parentElement)   // 답 묶음 첫 답: 바깥 앞쪽의 질문 문장
+        for(let q=anc.previousElementSibling; q&&!c; q=q.previousElementSibling) c=askQ(q); }
+    if(c) out.add(c);
+  });
+  return [...out];
+}
+function askable(a){ return !ASK_OFF&&a.some(isAnswerEl)&&askTargets(a).length>0; }   // 강조할 질문을 못 찾으면 바로 답(헛누름 없음)
+function askOn(a,on){
+  if(on){ a._asking=true; a._askEls=askTargets(a); a._askEls.forEach(x=>{ x.classList.remove('ask'); void x.getBoundingClientRect(); x.classList.add('ask'); }); }
+  else { a._asking=false; (a._askEls||[]).forEach(x=>x.classList.remove('ask')); a._askEls=null; }
+}
+
+/* ─────────── 움직이는 그림을 누르면 다시 움직임 ─────────── */
+window.__replayFig=svg=>{
+  if(STILL) return false;
+  const now=performance.now()/1000; let any=false;
+  ANIMS.forEach(a=>{ if(!svg.contains(a.e)) return; const st=a.e.closest('.step'); if(a.onStep&&!(st&&st.classList.contains('on'))) return;
+    if(a.type==='spin'||a.type==='dash') return; a._t0=now; applyAnim(a,0); any=true; });
+  if(svg.querySelector('[data-arw]')){ growArrows(svg,0); any=true; }
+  return any;
+};
+ANIMS.forEach(a=>{ const s=a.e.ownerSVGElement; if(s) s.setAttribute('data-replay',''); });
+/* ─────────── 편집 모드: 클릭 = 요소 고르기 (window.__EDIT_MODE일 때만) ─────────── */
+// 부모 창으로: {type:'ready',N} · {type:'pick',slide(0부터),eid} · {type:'show',slide(0부터)}
+// 부모 창에서: {type:'show',slide,mode('all'|'reset')} · {type:'select',eid} · {type:'audit'} → 답 {type:'audit',issues:[{slide(1부터),rule,msg,eid}]}
+//   (같은 출처 iframe이면 Harness.show·Harness.audit를 직접 불러도 된다)
+if(EDIT){
+  const st=document.createElement('style');
+  st.textContent='#nav,#hud{display:none!important} #deck [data-eid]{cursor:pointer} .eid-pick{outline:3px solid #FFB000!important;outline-offset:2px}';
+  document.head.appendChild(st);
+  let picked=null;
+  const mark=el=>{ if(picked) picked.classList.remove('eid-pick'); picked=el||null; if(picked) picked.classList.add('eid-pick'); };
+  addEventListener('click',e=>{
+    const el=e.target&&e.target.closest&&e.target.closest('#deck [data-eid]');
+    if(!el) return;
+    e.preventDefault(); e.stopPropagation();
+    mark(el); editPost({type:'pick',slide:slides.indexOf(el.closest('#deck > section.slide')),eid:el.getAttribute('data-eid')});
+  },true);
+  showHooks.push((s,i)=>{ if(picked && !s.contains(picked)) mark(null); editPost({type:'show',slide:i}); });
+  addEventListener('message',e=>{
+    const m=e.data; if(e.source!==window.parent || !m || typeof m!=='object') return;
+    if(m.type==='show') show(m.slide|0, m.mode==='reset'?'reset':'all');
+    else if(m.type==='select'){ const el=/^\d+-\d+$/.test(m.eid||'')?deck.querySelector('[data-eid="'+m.eid+'"]'):null; if(el){ const i=slides.indexOf(el.closest('#deck > section.slide')); if(i>=0 && i!==cur) show(i,'all'); } mark(el); }
+    else if(m.type==='audit'){ const r=runAudit(false)||[]; editPost({type:'audit',issues:r.map(x=>{ const h=x.el&&x.el.closest?x.el.closest('[data-eid]'):null; return {slide:x.slide,rule:x.rule,msg:x.msg,eid:h?h.getAttribute('data-eid'):null}; })}); }
+  });
+}
+
+/* ─────────── 4. texSVG: SVG <text class="tex"> → foreignObject + KaTeX ─────────── */
+function esc(s){ return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function tex2html(t){ if(window.katex){ try{ return katex.renderToString(t,{throwOnError:false}); }catch(e){} } return '<i>'+esc(t)+'</i>'; }
+function mix2html(s){ return s.split(/(\$[^$]+\$)/).map(p=>(p.length>1&&p[0]==='$'&&p[p.length-1]==='$')?tex2html(p.slice(1,-1)):esc(p)).join(''); }
+let texItems=[];
+function fontsReady(){
+  if(!document.fonts) return Promise.resolve();
+  const loads=['22px KaTeX_Main','italic 22px KaTeX_Math','700 22px KaTeX_Main'].map(f=>document.fonts.load(f).catch(()=>{}));
+  return Promise.race([Promise.all(loads).then(()=>document.fonts.ready),new Promise(r=>setTimeout(r,3000))]);
+}
+async function texSVG(){
+  const ts=[...deck.querySelectorAll('svg text.tex')]; if(!ts.length) return;
+  const box=document.createElement('div'); box.className='texmeasure'; document.body.appendChild(box);
+  texItems=ts.map(t=>{
+    const size=+(t.dataset.size||20), anchor=t.dataset.anchor||'start';
+    const cls='texlab'+(anchor==='middle'?' c':anchor==='end'?' r':'')+(t.dataset.halo!=null?' halo':'');
+    const lines=t.dataset.tex!=null?[tex2html(t.dataset.tex)]:(t.dataset.mix||'').split('||').map(mix2html);
+    const inner=lines.map((h,i)=>'<span class="ln">'+h+(i===0?'<span class="probe"></span>':'')+'</span>').join('');
+    const m=document.createElement('span'); m.className=cls; m.style.fontSize=size+'px'; if(t.dataset.weight) m.style.fontWeight=t.dataset.weight; m.innerHTML=inner;
+    box.appendChild(m); box.appendChild(document.createElement('br'));
+    const fo=document.createElementNS(SVGNS,'foreignObject'); fo.setAttribute('class','texfo'+(t.classList.contains('step')?' step':'')); if(t.dataset.g) fo.dataset.g=t.dataset.g; if(t.dataset.overlap) fo.dataset.overlap=t.dataset.overlap; if(t.dataset.eid) fo.dataset.eid=t.dataset.eid;
+    const d=document.createElementNS(XHTML,'div'); d.className=cls; d.style.fontSize=size+'px'; if(t.dataset.weight) d.style.fontWeight=t.dataset.weight; d.style.color=t.getAttribute('fill')||COL.ink;
+    d.innerHTML=inner.replace('<span class="probe"></span>',''); fo.appendChild(d);
+    t.replaceWith(fo);
+    return {fo,m,x:+t.getAttribute('x'),y:+t.getAttribute('y'),anchor};
+  });
+  void box.offsetHeight;
+  await fontsReady();
+  layoutTex();
+  if(document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone',()=>{ clearTimeout(layoutTex.t); layoutTex.t=setTimeout(layoutTex,60); });
+  slides.forEach(s=>{ delete s._g; }); paint(cur);
+}
+function layoutTex(){
+  texItems.forEach(it=>{ const r=it.m.getBoundingClientRect(), p=it.m.querySelector('.probe').getBoundingClientRect();
+    const w=r.width, h=r.height, b=p.top-r.top, x0=it.anchor==='middle'?it.x-w/2:it.anchor==='end'?it.x-w:it.x;
+    it.fo.setAttribute('x',(x0-1).toFixed(1)); it.fo.setAttribute('y',(it.y-b-1).toFixed(1)); it.fo.setAttribute('width',(w+2).toFixed(1)); it.fo.setAttribute('height',(h+2).toFixed(1)); });
+}
+
+/* ─────────── 5. keepWords: 어절 단위 보정 (T1, T2) ─────────── */
+function keepWords(root){
+  const SKIP='svg,.katex,button,output,canvas,script,style,textarea,select,.w,.band .pg';
+  const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){ if(!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT; const p=n.parentElement; return (!p||p.closest(SKIP))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT; }});
+  const nodes=[]; while(tw.nextNode()) nodes.push(tw.currentNode);
+  const WJ='⁠';
+  // WORD JOINER는 inline-block(수식 .katex 안의 .base, 빈칸 .blank) 경계에서는 줄바꿈을 막지 못한다 → 그 요소와 붙은 낱말을 span.w(nowrap)로 함께 감싼다
+  const ATOM='.katex,.blank';
+  const atom=e=>!!(e && e.nodeType===1 && !e.closest('.lab') && (e.matches(ATOM) || (e.tagName==='SPAN' && e.children.length===1 && e.firstElementChild.classList.contains('katex'))));   // 자동 렌더는 <span><span class="katex">…</span></span>
+  const glued=e=>!!(e && e.nodeType===1 && e.classList.contains('w') && e.dataset.glue==='1');
+  nodes.forEach(n=>{
+    let v=n.nodeValue; const pv=n.previousSibling, nx=n.nextSibling;
+    const glueL=/^\S/.test(v) && (atom(pv)||glued(pv)), glueR=/\S$/.test(v) && atom(nx);
+    if(/^\S/.test(v) && pv && pv.nodeType===1 && pv.tagName!=='BR') v=WJ+v;
+    if(/\S$/.test(v) && nx && nx.nodeType===1 && nx.tagName!=='BR') v=v+WJ;
+    const toks=v.split(/(\s+)/).filter(Boolean), frag=document.createDocumentFragment();
+    let host=null;
+    toks.forEach((tok,k)=>{
+      if(/^\s+$/.test(tok)){ frag.appendChild(document.createTextNode(tok)); return; }
+      if(k===0 && glueL && glued(pv)){ pv.appendChild(document.createTextNode(tok)); host=pv; }
+      else { const s=document.createElement('span'); s.className='w'; if(k===0 && glueL){ s.dataset.glue='1'; s.appendChild(pv); } s.appendChild(document.createTextNode(tok)); frag.appendChild(s); host=s; }
+      if(k===toks.length-1 && glueR){ host.dataset.glue='1'; host.appendChild(nx); }
+    });
+    n.replaceWith(frag);
+  });
+}
+
+/* ─────────── 6. AUDIT ─────────── */
+function desc(e){ const t=(e.textContent||'').replace(/⁠/g,'').replace(/\s+/g,' ').trim().slice(0,28); return '<'+e.tagName.toLowerCase()+(e.classList&&e.classList.length?'.'+[...e.classList].filter(c=>c!=='on').join('.'):'')+'> '+t; }
+function runAudit(open){
+  const issues=[], add=(i,rule,msg,el)=>issues.push({slide:i+1,rule,msg,el});
+  const ids={}; document.querySelectorAll('[id]').forEach(e=>{ ids[e.id]=(ids[e.id]||0)+1; });
+  Object.keys(ids).forEach(k=>{ if(ids[k]>1) add(-1,'D5',`id "${k}" 중복 ${ids[k]}개`); });
+  if(!window.katex) add(-1,'M1','KaTeX를 불러오지 못함 (인터넷 연결 확인) — 수식이 원문으로 보입니다');
+  slides.forEach((s,i)=>{
+    const act=s.classList.contains('active'); if(!act) s.classList.add('measure');
+    const steps=groups(s).flat(), was=steps.map(e=>e.classList.contains('on')); steps.forEach(e=>e.classList.add('on'));
+    const sr=s.getBoundingClientRect(), k=sr.width/W, safe={l:sr.left+24*k,r:sr.right-24*k,t:sr.top+56*k,b:sr.bottom-40*k};
+    const flagged=[];
+    s.querySelectorAll('*').forEach(e=>{
+      if(e.closest('.band')||e.closest('[data-audit="skip"]')) return;
+      if(e instanceof SVGElement && !(e instanceof SVGSVGElement)) return;
+      if(e.closest('foreignObject')) return;
+      if(e.closest('.katex') && !e.classList.contains('katex')) return;
+      if(flagged.some(f=>f.contains(e))) return;
+      const r=e.getBoundingClientRect(); if(r.width<1&&r.height<1) return;
+      if(r.left<safe.l-1||r.right>safe.r+1||r.top<safe.t-1||r.bottom>safe.b+1){ flagged.push(e); add(i,'D8','영역 밖으로 넘침: '+desc(e),e); }
+    });
+    s.querySelectorAll('.formula,td,th,.answer,.note,.card,.stage,.chk').forEach(e=>{ if(e.scrollWidth>e.clientWidth+2) add(i,'T4','칸 안 넘침: '+desc(e),e); });
+    s.querySelectorAll('.katex').forEach(e=>{ if(!e.closest('svg') && e.getClientRects().length>1) add(i,'T2','수식 줄바꿈: '+desc(e),e); });
+    s.querySelectorAll('.katex-error').forEach(e=>add(i,'M1','KaTeX 오류: '+(e.getAttribute('title')||e.textContent),e));
+    s.querySelectorAll('svg').forEach(svg=>{ const R=svg.getBoundingClientRect(); svg.querySelectorAll('foreignObject.texfo > div').forEach(d=>{ const r=d.getBoundingClientRect(); if(r.width<1&&r.height<1) return; if(r.left<R.left-1||r.right>R.right+1||r.top<R.top-1||r.bottom>R.bottom+1) add(i,'D8','그림 라벨 잘림: '+desc(d),d); }); });
+    // D8 그림 라벨끼리 겹침(일부러 겹친 라벨 — 단계에서 덮어쓰는 라벨, 자석 N/S처럼 붙인 글자 — 은 data-overlap="ok"로 뺀다): 같은 SVG 안 라벨 사각형이 가로·세로 모두 3px(무대 기준) 넘게 겹치면 경고 (KaTeX 상자는 위아래가 넉넉해 3px까지는 봐줌)
+    s.querySelectorAll('svg').forEach(svg=>{ if(svg.closest('[data-audit="skip"]')) return;
+      const labs=[...svg.querySelectorAll('foreignObject.texfo > div')].filter(d=>d.closest('svg')===svg && !d.closest('[data-overlap="ok"]')).map(d=>({d,r:d.getBoundingClientRect()})).filter(x=>x.r.width>=1&&x.r.height>=1&&getComputedStyle(x.d).visibility!=='hidden');
+      const txt=d=>{ const c=d.cloneNode(true); c.querySelectorAll('.katex-mathml').forEach(z=>z.remove()); return (c.textContent||'').replace(/⁠/g,'').replace(/\s+/g,' ').trim().slice(0,14); };
+      for(let a=0;a<labs.length;a++) for(let b=a+1;b<labs.length;b++){ const A=labs[a].r,B=labs[b].r;
+        const ox=(Math.min(A.right,B.right)-Math.max(A.left,B.left))/k, oy=(Math.min(A.bottom,B.bottom)-Math.max(A.top,B.top))/k;
+        if(ox>3&&oy>3) add(i,'D8',`그림 라벨 겹침: "${txt(labs[a].d)}" ↔ "${txt(labs[b].d)}" (${ox.toFixed(0)}×${oy.toFixed(0)}px)`,labs[a].d); } });
+    // 3.2 글자 크기: 그림 라벨이 화면(무대 1280×720 기준)에서 실제로 보이는 크기 — 16px 미만이면 경고(권장 18px 이상)
+    { const small=[]; s.querySelectorAll('svg text, svg foreignObject.texfo > div').forEach(t=>{
+        if(t.closest('.katex')||t.closest('[data-audit="skip"]')) return;
+        const fo=t.tagName.toLowerCase()==='div'; if(!fo&&t.closest('foreignObject')) return;
+        if(!(t.textContent||'').replace(/⁠/g,'').trim()) return;
+        const r=t.getBoundingClientRect(); if(r.width<1&&r.height<1) return;
+        const m=(fo?t.parentNode:t).getScreenCTM(); if(!m) return;
+        const px=parseFloat(getComputedStyle(t).fontSize)*Math.hypot(m.a,m.b)/k; if(px<15.95) small.push({t,px}); });
+      if(small.length){ small.sort((a,b)=>a.px-b.px); add(i,'3.2',`그림 라벨 ${small.length}개가 화면에서 16px 미만(가장 작은 것 ${small[0].px.toFixed(1)}px — 16px 이상, 권장 18px): `+small.slice(0,3).map(x=>{ const c=x.t.cloneNode(true); c.querySelectorAll('.katex-mathml').forEach(z=>z.remove()); return '"'+(c.textContent||'').replace(/⁠/g,'').replace(/\s+/g,' ').trim().slice(0,14)+'"'; }).join(', '),small[0].t); } }
+    const tw=document.createTreeWalker(s,NodeFilter.SHOW_TEXT); while(tw.nextNode()){ const n=tw.currentNode; if(n.parentElement.closest('.katex-mathml')) continue; if(/[₀-₉⁰-⁹]/.test(n.nodeValue)) add(i,'M1','유니코드 첨자: '+n.nodeValue.trim().slice(0,24),n.parentElement); }
+    { const tw2=document.createTreeWalker(s,NodeFilter.SHOW_TEXT), FORM=/(?<![A-Za-z])(?:[A-Z][a-z]?\d*){1,8}(?:\((?:aq|s|l|g)\))?[+\-−]?(?![A-Za-z0-9])/g;   // C1 화학식·이온을 \ce{} 밖 본문 글자로 씀(H2O, Na+, CO2(g))
+      while(tw2.nextNode()){ const n=tw2.currentNode, pe=n.parentElement; if(!pe||pe.closest('.katex,.katex-mathml,script,style,output,textarea,[data-audit="skip"],.band')) continue;
+        const v=n.nodeValue.replace(/⁠/g,''), hit=(v.match(FORM)||[]).find(t=>/[A-Za-z]\d/.test(t)||/[A-Za-z)][+\-−]$/.test(t)); if(hit) add(i,'C1',`화학식·이온을 \\ce{} 밖 글자로 씀("${hit}"): `+v.trim().slice(0,24),pe); } }
+    s.querySelectorAll('annotation').forEach(a=>{ if(a.textContent.indexOf('·')>=0) add(i,'M2','수식 안 가운뎃점(·): '+a.textContent,a.closest('.katex')); });
+    s.querySelectorAll('*').forEach(e=>{ if(e instanceof SVGElement||e.closest('.katex')||e.closest('foreignObject')) return; const d=getComputedStyle(e).display; if(!/flex|grid/.test(d)) return;
+      for(const c of e.childNodes){ if((c.nodeType===3&&c.nodeValue.replace(/⁠/g,'').trim())||(c.nodeType===1&&c.classList.contains('w'))){ add(i,'T5','flex·grid 요소에 텍스트 직접 포함: '+desc(e),e); break; } } });
+    // S9 정답 강조 누락: "→"로 시작하고 바로 뒤가 굵은 글씨나 수식인 정답 단계에 .ans가 없음 (tools/ans_mark.py로 변환)
+    s.querySelectorAll('.step').forEach(e=>{ if(e.matches('.answer')||e.closest('.answer')||e.querySelector('.ans')) return;
+      const norm=x=>(x||'').replace(/[\s⁠ ]/g,''), plain=x=>{ const c=x.cloneNode(true); c.querySelectorAll('.katex-mathml').forEach(z=>z.remove()); return c.textContent; };
+      const t=norm(plain(e)); if(t[0]!=='→') return;
+      const cand=[...e.querySelectorAll('b,strong,.katex')].find(x=>!x.closest('.katex-mathml')&&!(x.matches('b,strong')&&x.closest('.katex'))); if(!cand||(cand.matches('b,strong')&&cand.className)) return;   // 색 클래스 굵은 글씨(O/X 색 구분)는 이미 강조됨
+      const ct=norm(plain(cand)); if(ct && t.slice(1).startsWith(ct.slice(0,Math.min(4,ct.length)))) add(i,'S9','정답 강조 누락(→ 뒤 답에 .ans 없음): '+desc(e),e); });
+    if(s.querySelectorAll('.answer').length>1 && !s.querySelector('.board') && s.dataset.tpl!=='check') add(i,'S2','정답이 2개 이상인데 판서 공간이 없음 (제안)');
+    steps.forEach((e,j)=>e.classList.toggle('on',was[j])); if(!act) s.classList.remove('measure');
+  });
+  window.__audit=issues.map(x=>({slide:x.slide,rule:x.rule,msg:x.msg}));
+  console.log('[AUDIT] '+issues.length+'건 '+JSON.stringify(window.__audit));
+  const list=document.querySelector('#audit .list'); list.innerHTML='';
+  if(!issues.length){ const ok=document.createElement('div'); ok.className='ok'; ok.textContent='점검 0건 — 문제가 발견되지 않았습니다.'; list.appendChild(ok); }
+  issues.forEach(x=>{ const d=document.createElement('div'); d.className='it'; const r=document.createElement('span'); r.className='rule'; r.textContent=x.rule; d.append(r,document.createTextNode((x.slide>0?x.slide+'번: ':'전체: ')+x.msg));
+    d.addEventListener('click',()=>{ if(x.slide>0){ closeOverlays(); show(x.slide-1,'all'); if(x.el){ x.el.classList.add('flash'); setTimeout(()=>x.el.classList.remove('flash'),2200); } } }); list.appendChild(d); });
+  if(open){ closeOverlays(); document.getElementById('audit').classList.add('open'); }
+  return issues;
+}
+
+/* ─────────── 파이프라인: KaTeX → texSVG → keepWords → (audit) ─────────── */
+async function pipeline(){
+  if(window.renderMathInElement){ try{ renderMathInElement(deck,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false,ignoredTags:['script','noscript','style','textarea','pre','code','option','output']}); }catch(e){ console.error(e); } }
+  await texSVG();
+  keepWords(deck);
+  readyHooks.forEach(f=>{ try{ f(); }catch(e){ console.error(e); } });
+  // 본문 웹 글꼴까지 다 불러온 뒤 준비 완료(점검·캡처가 글꼴 바뀌기 전 줄바꿈으로 재지 않게, 최대 3초)
+  if(document.fonts) await Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,3000))]);
+  window.__ready=true;
+  if(EDIT) editPost({type:'ready',N});
+  if(params.has('audit')) setTimeout(()=>runAudit(true),300);
+}
+if(document.readyState==='complete') pipeline(); else addEventListener('load',pipeline);
+
+window.Harness={show,next,prev,audit:runAudit,inkStrokes:i=>strokes[i==null?cur:i],onShow:f=>showHooks.push(f),N,cur:()=>cur,steps:i=>groups(slides[i]).length};
+})();
+</script>
+</body>
+</html>
