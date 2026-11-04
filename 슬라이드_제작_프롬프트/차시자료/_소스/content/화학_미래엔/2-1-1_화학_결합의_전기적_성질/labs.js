@@ -45,7 +45,7 @@ window.DECK_LABS = {
       Ov('ax').innerHTML=API.tex('t')+' [분]'; Ov('ay').innerHTML=API.tex('V')+' [mL]';
     }
     function placeLabels(ymax){
-      API.place(Ov('lp'),XL-16,BB+2); API.place(Ov('lm'),XR-16,BB+2);
+      API.place(Ov('lp'),XL-W-26,BB-20); API.place(Ov('lm'),XR+W+28,BB-20);
       API.place(Ov('ax'),GX+GW-34,GY+20); API.place(Ov('ay'),GX+8,GY-GH-38);
       API.place(Ov('t0'),GX-6,GY+4); API.place(Ov('t10'),GX+GW-10,GY+4);
       Ov('y20').textContent=ymax; Ov('y10').textContent=ymax/2;
@@ -75,7 +75,7 @@ window.DECK_LABS = {
       API.mk('circle',{cx:px(c.t),cy:py(c.o),r:9,fill:'none',stroke:PLUS,'stroke-width':1.5,'stroke-dasharray':'3 3'},gP);
       // 범례
       API.mk('circle',{cx:GX+20,cy:GY-GH+4,r:6,fill:MINUS},gP); API.mk('rect',{x:GX+14.5,y:GY-GH+20.5,width:11,height:11,fill:PLUS},gP);
-      API.place(Ov('gm'),GX+32,GY-GH-8); API.place(Ov('gp'),GX+32,GY-GH+15);
+      API.place(Ov('gm'),GX+76,GY-GH+4); API.place(Ov('gp'),GX+76,GY-GH+26);
     }
 
     function update(){
