@@ -1,13 +1,13 @@
 /* 2-1 경이로운 물의 성질 — 실험실
    em21heat : 같은 열을 받을 때 온도 변화 비교(비열) — 선택 실험실
-     · 물질(물 4.18, 에탄올 2.44, 식용유 2.00 J/(g·°C)), 질량 100 g, 가열 장치 50 W, 처음 온도 20.0 °C
+     · 물질(물 4.2, 에탄올 2.5 — 교과서 47쪽, 식용유 2.0 J/(g·°C)), 질량 100 g, 가열 장치 50 W, 처음 온도 20.0 °C
      · q = 50 t, Δt = q/(c·100) + 측정 오차(고정 시드, ±0.2 °C), 계산 비열 c = q/(100 Δt)
      · 「측정 기록」→ 표에 행이 쌓이고(최근 5행) 그래프에 점이 찍힌다. 「초기화」. */
 window.DECK_LABS = {
   em21heat(root, API){
     const $=s=>root.querySelector(s), O=k=>root.querySelector(`[data-o="${k}"]`), I=k=>root.querySelector(`[data-i="${k}"]`);
     const svg=$('svg');
-    const SUB={w:{nm:'물',c:4.18,fill:'#DDEEF8',col:'#1F6FD1'}, e:{nm:'에탄올',c:2.44,fill:'#F4F6F8',col:'#E08A2C'}, o:{nm:'식용유',c:2.00,fill:'#F6E3A1',col:'#7B4FC8'}};
+    const SUB={w:{nm:'물',c:4.2,fill:'#DDEEF8',col:'#1F6FD1'}, e:{nm:'에탄올',c:2.5,fill:'#F4F6F8',col:'#E08A2C'}, o:{nm:'식용유',c:2.00,fill:'#F6E3A1',col:'#7B4FC8'}};
     const P=50, M=100, T0=20;
     const gx0=290, gx1=580, gy0=250, gy1=30;
     const GX=t=>gx0+(gx1-gx0)*t/240, GY=T=>gy0-(gy0-gy1)*(T-20)/60;
@@ -23,7 +23,7 @@ window.DECK_LABS = {
     [0,120,240].forEach(t=>{ API.texText(base,GX(t),gy0+24,String(t),{size:18,anchor:'middle',fill:'#5B6B7F'}); });
     API.texText(base,GX(180),gy0+24,'$t$ [s]',{size:19,anchor:'middle',mix:true});
     API.texText(base,gx0+6,gy1-12,'온도 [°C]',{size:19,mix:true});
-    [['w',0],['e',1],['o',2]].forEach(([k,i])=>{ const x=gx0+110+i*62; API.mk('circle',{cx:x,cy:gy1+12,r:6,fill:SUB[k].col},base); API.texText(base,x+10,gy1+18,SUB[k].nm,{size:18,mix:true}); });
+    [['w',0],['e',1],['o',2]].forEach(([k,i])=>{ const x=gx0+86+i*72; API.mk('circle',{cx:x,cy:gy1+12,r:6,fill:SUB[k].col},base); API.texText(base,x+10,gy1+18,SUB[k].nm,{size:18,mix:true}); });
     const g=API.mk('g',{},svg);
     let bub=[];
     function cur(){ const t=+I('t').value, s=SUB[st.s], q=P*t, dth=q/(s.c*M), dt=t? Math.max(.1,dth+noise(st.s,t)) : 0; return {t,s,q,dt,T:T0+dt,c:t? q/(M*dt):null}; }
@@ -34,7 +34,7 @@ window.DECK_LABS = {
       root.querySelectorAll('[data-s]').forEach(b=>b.classList.toggle('on',b.dataset.s===st.s));
       O('msg').textContent = !r.t ? '가열 시간을 늘려 보자.' :
         st.s==='w' ? '물은 비열이 커서 같은 열을 받아도 온도가 가장 천천히 오른다.' :
-        `${r.s.nm}은(는) 같은 시간 가열하면 물보다 온도 변화가 약 ${(4.18/r.s.c).toFixed(1)}배 크다 → 비열이 물보다 작다.`;
+        `${r.s.nm}${st.s==='e'?'은':'는'} 같은 시간 가열하면 물보다 온도 변화가 약 ${(4.2/r.s.c).toFixed(1)}배 크다 → 비열이 물보다 작다.`;
       while(g.firstChild) g.removeChild(g.firstChild);
       // 비커·액체
       const lv=150;
