@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":3,"severity":"high","rule":"T5","problem":"개념 지도 노드가 flex 요소에 글자를 직접 넣어 낱말 사이 띄어쓰기가 사라짐","fix":"노드 내용을 span으로 감쌈"},
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 반응식이 그림 폭을 넘어 양 끝이 잘림","fix":"라벨 크기 26 → 21"},
+{"slide":9,"severity":"medium","rule":"3.2","problem":"입자 모형 원자 라벨이 8px로 너무 작음, (가) 라벨 잘림","fix":"원자 라벨을 빼고 A·B 범례, (가) 라벨을 왼쪽 안으로"},
+{"slide":21,"severity":"medium","rule":"T4","problem":"(나) 반응식 두 개와 ㉠ 정답 반응식이 칸을 넘침","fix":"두 줄로 나누고 글자 24px, 오른쪽 열 380px"},
+{"slide":24,"severity":"medium","rule":"T4","problem":"예시 반응식이 카드를 넘침","fix":"두 줄 + 24px"},
+{"slide":20,"severity":"low","rule":"D8","problem":"저울 숫자가 표시창 아래로 내려감","fix":"표시창 키우고 위치·색(노랑) 조정"},
+{"slide":14,"severity":"low","rule":"D8","problem":"눈금 '5'와 가로축 라벨 겹침","fix":"축 라벨을 축 끝 위로"},
+{"slide":11,"severity":"low","rule":"D8","problem":"A(s) 라벨이 고체 그림과 겹침","fix":"라벨 위로"}
+],"summary":"전체 캡처 모음 2회 확인. 자동 점검 0건 후 겹침·잘림 없음. 문항 장은 그림 + 풀이 공간 + 가운데 정답 꼴을 지킴."}
