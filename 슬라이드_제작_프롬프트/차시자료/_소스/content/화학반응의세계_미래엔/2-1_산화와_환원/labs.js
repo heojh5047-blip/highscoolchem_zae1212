@@ -13,14 +13,14 @@ window.DECK_LABS = {
     const SOL={Mg:'MgSO4',Zn:'ZnSO4',Cu:'CuSO4',Ag:'AgNO3'};
     const PLATE={Mg:'#BFE3CC',Zn:'#C9D3DD',Cu:'#E6C29C',Ag:'#E3E6EA'};
     const ION=s=>s+(Q[s]===2?'^2+':'+');
-    const KMAX=4, CX=395, CY=150, CR=118, SX=290, RA=15, RI=13;
+    const KMAX=4, CX=412, CY=168, CR=112, SX=318, RA=15, RI=13;
     let st={m:'Zn',s:'Cu'}, P=null, log=[];
     // 고정 시드 난수
     let seed=7; const rnd=()=>{ seed=(seed*16807)%2147483647; return seed/2147483647; };
     const clip=API.mk('clipPath',{id:'clip-rm21-lab'},API.mk('defs',{},svg)); API.mk('circle',{cx:CX,cy:CY,r:CR},clip);
     const reacts=()=>st.m!==st.s && ACT[st.m]>ACT[st.s];
     const inZoom=(x,y)=>Math.hypot(x-CX,y-CY)<CR-RI-4 && x>SX+RI+20;
-    function freePos(){ for(let i=0;i<200;i++){ const x=SX+40+rnd()*200, y=CY-100+rnd()*200; if(inZoom(x,y)) return [x,y]; } return [420,150]; }
+    function freePos(){ for(let i=0;i<200;i++){ const x=SX+36+rnd()*170, y=CY-100+rnd()*200; if(inZoom(x,y)) return [x,y]; } return [420,150]; }
     function init(){
       seed=7;
       const rows=[]; for(let y=CY-90;y<=CY+90;y+=30) rows.push(y);
@@ -50,12 +50,12 @@ window.DECK_LABS = {
       const mk=(t,a)=>API.mk(t,a,g);
       // 비커
       const op=solColor();
-      mk('rect',{x:22,y:130,width:166,height:158,rx:8,fill:'#DDEEF8'});
-      if(op>0) mk('rect',{x:22,y:130,width:166,height:158,rx:8,fill:'#3E8ED0','fill-opacity':op});
-      mk('path',{d:'M14 90 H20 V280 Q20 290 30 290 H180 Q190 290 190 280 V90 H196',fill:'none',stroke:'#7E8B98','stroke-width':3});
-      mk('rect',{x:85,y:60,width:40,height:220,rx:3,fill:PLATE[st.m],stroke:'#7E8B98','stroke-width':2});
+      mk('rect',{x:22,y:145,width:166,height:143,rx:8,fill:'#DDEEF8'});
+      if(op>0) mk('rect',{x:22,y:145,width:166,height:143,rx:8,fill:'#3E8ED0','fill-opacity':op});
+      mk('path',{d:'M14 110 H20 V280 Q20 290 30 290 H180 Q190 290 190 280 V110 H196',fill:'none',stroke:'#7E8B98','stroke-width':3});
+      mk('rect',{x:85,y:100,width:40,height:180,rx:3,fill:PLATE[st.m],stroke:'#7E8B98','stroke-width':2});
       const nd=P.dep.length;
-      for(let i=0;i<nd*2;i++){ const y=150+i*14, x=i%2?128:82; if(y<276) mk('circle',{cx:x,cy:y,r:5.5,fill:API.ATOM[st.s][0],stroke:API.ATOM[st.s][1],'stroke-width':1.2}); }
+      for(let i=0;i<nd*2;i++){ const y=165+i*14, x=i%2?128:82; if(y<276) mk('circle',{cx:x,cy:y,r:5.5,fill:API.ATOM[st.s][0],stroke:API.ATOM[st.s][1],'stroke-width':1.2}); }
       mk('line',{x1:125,y1:170,x2:CX-CR*.93,y2:CY-CR*.37,stroke:'#5B6B7F','stroke-width':1.5});
       mk('line',{x1:125,y1:200,x2:CX-CR*.93,y2:CY+CR*.37,stroke:'#5B6B7F','stroke-width':1.5});
       // 확대 원
@@ -71,7 +71,7 @@ window.DECK_LABS = {
       P.ions.filter(o=>o.kind!=='go').forEach(ionG); P.fly.forEach(f=>ionG(f.o));
       P.fly.forEach(f=>{ if(f.t<.6){ const u=f.t/.6; API.mk('circle',{cx:f.ex+(f.o.x-f.ex)*u,cy:f.ey+(f.o.y-f.ey)*u,r:5,fill:'#1F6FD1'},z); } });
       mk('circle',{cx:CX,cy:CY,r:CR,fill:'none',stroke:'#5B6B7F','stroke-width':3});
-      O('ne').textContent = reacts()? `잃은 전자 ${P.ne}개 = 얻은 전자 ${P.ne}개` : '0개';
+      O('ne').textContent = reacts()? `잃은 ${P.ne}개 = 얻은 ${P.ne}개` : '0개';
     }
     function update(){
       root.querySelectorAll('[data-m]').forEach(b=>b.classList.toggle('on',b.dataset.m===st.m));
@@ -93,7 +93,7 @@ window.DECK_LABS = {
       API.place(eq,6,4);
       const leg=Ov('leg'), dot=(c,ring)=>`<span style="display:inline-block;width:13px;height:13px;border-radius:50%;background:${c};border:2px solid ${ring};vertical-align:-1px"></span>`;
       leg.innerHTML=`${dot(API.ATOM[m][0],API.ATOM[m][1])} ${API.tex(`\\ce{${m}}`)} &nbsp;${dot(API.ATOM[s][0],'#D7263D')} ${API.tex(`\\ce{${ION(s)}}`)} &nbsp;${dot('#C9D3DD','#8C99A6')} 음이온 · 빨간 테 = 양이온`;
-      API.place(leg,214,276);
+      API.place(leg,200,280);
       draw();
     }
     root.querySelectorAll('[data-m]').forEach(b=>b.addEventListener('click',()=>{ st.m=b.dataset.m; update(); }));

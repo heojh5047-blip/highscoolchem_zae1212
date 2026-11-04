@@ -21,8 +21,11 @@ table.rm21-ch td,table.rm21-chk td{text-align:center;font-size:21px}
 ol.rm21-ox-list li{margin-top:22px}
 ol.rm21-ox-list li:first-child{margin-top:0}
 .answer.rm21-left{text-align:left}
-.rm21-s5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.rm21-s5 .stage p{font-size:19px;line-height:1.55}
+.rm21-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rm21-s4 .stage p{font-size:19px;line-height:1.7}
+table.rm21-goal{width:100%}
+table.rm21-goal th{width:120px;font-size:21px}
+table.rm21-goal td{font-size:21px;padding:10px 12px}
 /* 개념 지도 */
 .rm21-map{display:flex;gap:16px;align-items:stretch}
 .rm21-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
