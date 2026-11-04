@@ -1,9 +1,9 @@
 /* 4-1-1 물의 자동 이온화와 몰농도 — 실험실
    cm411kw  : [H3O+]와 [OH-]의 시소 (25 °C, Kw = 1.0×10^-14) — [H3O+] = 1.0×10^-k M, [OH-] = 1.0×10^-(14-k) M
    cm411std : 표준 용액 만들기 (필수 탐구 화04-탐2 「적절한 실험 도구를 사용하여 표준 용액 만들기」)
-     · 용질 NaCl 58.5 / 포도당 C6H12O6 180 / CuSO4·5H2O 249.5 g/mol, 목표 몰농도 0.05–0.50 M, 부피 플라스크 100·250·500 mL
-     · 7단계: 계산 → 달기(0.01 g 반올림) → 녹이기 → 옮기기 → 씻은 물 → 표선 → 섞기 → 농도 측정
-     · 잘못된 조작: 씻은 물 생략(용질 4 % 남음), 표선 넘김(부피 +3 %), 위에서 봄(부피 −1 %), 흔들지 않음(측정값 ±8 %)
+     · 용질 NaCl 58.5 / 포도당 C6H12O6 180 / NaOH 40 g/mol, 목표 몰농도 0.05–0.50 M, 부피 플라스크 100·250·500 mL·1 L
+     · 7단계: 계산 → 달기(0.01 g 반올림) → 녹이기 → 옮기기 → 씻은 물 → 표시선 → 섞기 → 농도 측정
+     · 잘못된 조작: 헹군 물 생략(용질 4 % 남음), 표시선 넘김(부피 +3 %), 위에서 봄(부피 −1 %), 흔들지 않음(측정값 ±8 %)
      · 측정값 = 실제 몰농도 × (1 + ε), ε 고정 시드 ±0.4 %. 「측정 기록」 → 표 누적(최근 5행), 「초기화」 */
 window.DECK_LABS = {
   cm411kw(root, API){
@@ -14,8 +14,8 @@ window.DECK_LABS = {
     API.mk('line',{x1:X0,y1:Y0,x2:X0,y2:YB,stroke:API.COL.muted,'stroke-width':2},base);
     for(let e=0;e<=14;e++){ const y=Y0+e*U; API.mk('line',{x1:X0-(e%2?4:8),y1:y,x2:X0,y2:y,stroke:API.COL.muted,'stroke-width':2},base);
       if(e%2===0) API.texText(base,X0-12,y+7,`10^{${e?'-'+e:'0'}}`,{size:18,anchor:'end',fill:API.COL.muted}); }
-    API.mk('line',{x1:X0,y1:Y0+7*U,x2:400,y2:Y0+7*U,stroke:API.COL.muted,'stroke-width':1.6,'stroke-dasharray':'6 5'},base);
-    API.texText(base,402,Y0+7*U+6,'\\text{중성}',{size:18,anchor:'start',fill:API.COL.muted});
+    API.mk('line',{x1:X0,y1:Y0+7*U,x2:380,y2:Y0+7*U,stroke:API.COL.muted,'stroke-width':1.6,'stroke-dasharray':'6 5'},base);
+    API.texText(base,384,Y0+7*U+6,'\\text{중성}',{size:18,anchor:'start',fill:API.COL.muted});
     API.texText(base,210,YB+26,'[\\ce{H3O+}]',{size:20,anchor:'middle',fill:API.COL.plus});
     API.texText(base,330,YB+26,'[\\ce{OH-}]',{size:20,anchor:'middle',fill:API.COL.minus});
     // 비커
@@ -43,7 +43,7 @@ window.DECK_LABS = {
     function bars(){ barH.setAttribute('y',YB-hH*U); barH.setAttribute('height',hH*U); barO.setAttribute('y',YB-hO*U); barO.setAttribute('height',hO*U); }
     I('k').addEventListener('input',draw);
     root.querySelectorAll('[data-s]').forEach(b=>b.addEventListener('click',()=>{ I('k').value=b.dataset.s; draw(); }));
-    draw(); hH=14-k; hO=k; bars();
+    draw(); hH=14-k; hO=k; bars(); API.ready(()=>draw());
     API.loop(root,dt=>{ const tH=14-k, tO=k; if(Math.abs(hH-tH)<.005&&Math.abs(hO-tO)<.005) return;
       const a=Math.min(1,dt*6); hH+=(tH-hH)*a; hO+=(tO-hO)*a; bars(); });
     if(window.__STILL){ hH=14-k; hO=k; bars(); }
@@ -53,9 +53,9 @@ window.DECK_LABS = {
   cm411std(root, API){
     const $=s=>root.querySelector(s), O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`), I=k=>root.querySelector(`[data-i="${k}"]`), E=k=>root.querySelector(`[data-e="${k}"]`);
     const svg=$('svg');
-    const SOL={NaCl:{tex:'\\ce{NaCl}',mm:58.5,col:'#DDEEF8'},Glc:{tex:'\\ce{C6H12O6}',mm:180,col:'#DDEEF8'},Cu:{tex:'\\ce{CuSO4*5H2O}',mm:249.5,col:'#3E8ED0'}};
-    const STEPS=['처음','① 질량 계산','② 저울로 달기','③ 비커에서 녹이기','④ 부피 플라스크로 옮기기','⑤ 씻은 물 옮기기','⑥ 표선까지 물 채우기','⑦ 마개 닫고 섞기'];
-    let st={u:'NaCl',V:250,step:0,meas:null,lvl:0,seed:1}, log=[];
+    const SOL={NaCl:{tex:'\\ce{NaCl}',mm:58.5,col:'#DDEEF8'},Glc:{tex:'\\ce{C6H12O6}',mm:180,col:'#DDEEF8'},NaOH:{tex:'\\ce{NaOH}',mm:40,col:'#DDEEF8'}};
+    const STEPS=['처음','① 질량 계산','② 저울로 달기','③ 비커에서 녹이기','④ 부피 플라스크로 옮기기','⑤ 헹군 물 붓기','⑥ 표시선까지 물 채우기','⑦ 마개 닫고 섞기'];
+    let st={u:'NaCl',V:1000,step:0,meas:null,lvl:0,seed:1}, log=[];
     // 고정 시드 난수
     function rnd(){ let t=(st.seed+=0x6D2B79F5); t=Math.imul(t^t>>>15,t|1); t^=t+Math.imul(t^t>>>7,t|61); return ((t^t>>>14)>>>0)/4294967296; }
     // 부피 플라스크 모양
@@ -68,16 +68,16 @@ window.DECK_LABS = {
     const dotsG=API.mk('g',{},liqG);
     API.mk('path',{d:fd,fill:'none',stroke:'#7E8B98','stroke-width':2.6,'stroke-linejoin':'round'},svg);
     API.mk('line',{x1:FX-HW-6,y1:MARK,x2:FX+HW+6,y2:MARK,stroke:API.COL.ink,'stroke-width':2},svg);
-    API.texText(svg,FX+HW+10,MARK+6,'\\text{표선}',{size:18,anchor:'start'});
+    API.texText(svg,FX+HW+10,MARK+6,'\\text{표시선}',{size:18,anchor:'start'});
     const top=API.mk('g',{},svg);
     const vol=()=>st.V, mm=()=>SOL[st.u].mm, Mt=()=>+I('M').value;
     const calc=()=>Mt()*vol()/1000*mm(), weighed=()=>Math.round(calc()*100)/100;
     function real(){ const loss=E('wash').checked?.04:0, dv=(E('over').checked?.03:0)-(E('above').checked?.01:0);
       return weighed()/mm()*(1-loss)/(vol()/1000*(1+dv)); }
-    function target(){ // 단계별 액면 (플라스크 부피 비율 0–1, 1 = 표선)
+    function target(){ // 단계별 액면 (플라스크 부피 비율 0–1, 1 = 표시선)
       const s=st.step; if(s<4) return 0; if(s===4) return .45; if(s===5) return E('wash').checked?.45:.6;
       return 1+(E('over').checked?.10:0)-(E('above').checked?.05:0); }
-    const yOf=f=>{ // 0 = 바닥, 1 = 표선 (부피 대신 높이로 단순화)
+    const yOf=f=>{ // 0 = 바닥, 1 = 표시선 (부피 대신 높이로 단순화)
       const yBulbTop=cy-R*.75; if(f<=.8) return FB-(FB-yBulbTop)*f/.8; return yBulbTop-(yBulbTop-MARK)*(f-.8)/.2; };
     function scene(){
       g.innerHTML=''; top.innerHTML=''; const s=st.step, u=SOL[st.u];
@@ -100,7 +100,7 @@ window.DECK_LABS = {
       if(s===5&&!E('wash').checked){ API.mk('rect',{x:330,y:40,width:40,height:52,rx:8,fill:'#EEF6FB',stroke:'#7E8B98','stroke-width':2.2},top);
         API.mk('path',{d:'M350,40 V28 H378 L392,40',fill:'none',stroke:'#7E8B98','stroke-width':3,'stroke-linecap':'round'},top);
         API.mk('path',{d:'M394,42 Q410,40 424,22',fill:'none',stroke:'#9FC3DD','stroke-width':3,'stroke-dasharray':'5 4'},top); }
-      if(s===5&&E('wash').checked) API.texText(top,350,80,'\\text{씻은 물 생략}',{size:18,anchor:'middle',fill:API.COL.plus});
+      if(s===5&&E('wash').checked) API.texText(top,350,80,'\\text{헹군 물 생략}',{size:18,anchor:'middle',fill:API.COL.plus});
       if(s===6){ API.mk('rect',{x:FX-6,y:2,width:12,height:30,rx:3,fill:'#FFFFFF',stroke:'#7E8B98','stroke-width':2},top);
         if(E('above').checked){ API.mk('path',{d:'M352,72 Q368,60 384,72 Q368,84 352,72 Z',fill:'#FFFFFF',stroke:API.COL.ink,'stroke-width':2},top); API.mk('line',{x1:388,y1:76,x2:FX-HW,y2:MARK,stroke:API.COL.muted,'stroke-width':1.4,'stroke-dasharray':'4 4'},top); }
         else { API.mk('path',{d:`M352,${MARK} Q368,${MARK-12} 384,${MARK} Q368,${MARK+12} 352,${MARK} Z`,fill:'#FFFFFF',stroke:API.COL.ink,'stroke-width':2},top); API.mk('line',{x1:388,y1:MARK,x2:FX-HW-8,y2:MARK,stroke:API.COL.muted,'stroke-width':1.4,'stroke-dasharray':'4 4'},top); } }
@@ -123,10 +123,10 @@ window.DECK_LABS = {
     }
     function lvl(){ const y=yOf(st.lvl); liq.setAttribute('y',y); liq.setAttribute('height',FB-y+2); liqTop.setAttribute('y',y); liqTop.setAttribute('height',Math.max(0,(FB-y)*.45)); }
     function msgFor(){
-      const err=[]; if(E('wash').checked) err.push('씻은 물을 넣지 않아 비커에 용질이 남았다(용질의 양 감소)');
-      if(E('over').checked) err.push('표선을 넘겨 용액의 부피가 커졌다'); if(E('above').checked) err.push('표선을 위에서 보아 물이 덜 채워졌다(부피 감소)');
+      const err=[]; if(E('wash').checked) err.push('비커를 헹군 물을 넣지 않아 비커에 용질이 남았다(용질의 양 감소)');
+      if(E('over').checked) err.push('표시선을 넘겨 용액의 부피가 커졌다'); if(E('above').checked) err.push('표시선을 위에서 보아 물이 덜 채워졌다(부피 감소)');
       const d=(real()/Mt()-1)*100;
-      let m = err.length? err.join(', ')+` → 몰농도가 목표보다 ${d<0?'작다':'크다'}.` : '바른 조작 — 목표 몰농도와 거의 같다(측정 오차 수준).';
+      let m = err.length? err.join(', ')+` → 몰농도가 목표보다 ${d<0?'작다':'크다'}.` : (E('mix').checked?'용질의 양과 부피는 맞게 정했다.':'바른 조작 — 목표 몰농도와 거의 같다(측정 오차 수준).');
       if(E('mix').checked) m+=' 흔들지 않아 위아래 농도가 달라 잴 때마다 값이 크게 달라진다.';
       return m; }
     function reset(){ st.step=0; st.meas=null; st.lvl=0; lvl(); scene(); O('msg').textContent='목표를 정하고 「다음 단계 ▶」로 표준 용액을 만들어 보자. 잘못된 조작을 골라 비교할 수도 있다.'; }
@@ -140,17 +140,17 @@ window.DECK_LABS = {
     function renderLog(){ const tb=O('log'); tb.innerHTML=''; log.forEach(r=>{ const tr=document.createElement('tr');
       tr.innerHTML=`<td>${API.tex(r.tex)}</td><td>${r.M}</td><td>${r.w}</td><td>${r.op}</td><td>${r.m}</td><td>${r.e}</td>`; tb.appendChild(tr); }); }
     $('[data-act="rec"]').addEventListener('click',()=>{ if(st.meas==null) return;
-      const ops=[['wash','씻은 물 ×'],['over','표선 넘김'],['above','위에서 봄'],['mix','안 흔듦']].filter(([k])=>E(k).checked).map(x=>x[1]);
+      const ops=[['wash','헹군 물 ×'],['over','표시선 넘김'],['above','위에서 봄'],['mix','안 흔듦']].filter(([k])=>E(k).checked).map(x=>x[1]);
       const e=(st.meas/Mt()-1)*100;
       log.push({tex:SOL[st.u].tex,M:Mt().toFixed(2)+' M',w:weighed().toFixed(2)+' g',op:ops.join(', ')||'바름',m:st.meas.toPrecision(3)+' M',e:(e>=0?'+':'−')+Math.abs(e).toFixed(1)+' %'});
       if(log.length>5) log.shift(); renderLog(); });
-    $('[data-act="reset"]').addEventListener('click',()=>{ log=[]; renderLog(); st.u='NaCl'; st.V=250; I('M').value=.1; st.seed=1;
+    $('[data-act="reset"]').addEventListener('click',()=>{ log=[]; renderLog(); st.u='NaCl'; st.V=1000; I('M').value=.1; st.seed=1;
       ['wash','over','above','mix'].forEach(k=>E(k).checked=false); reset(); });
     root.querySelectorAll('[data-u]').forEach(b=>b.addEventListener('click',()=>{ st.u=b.dataset.u; reset(); }));
     root.querySelectorAll('[data-v]').forEach(b=>b.addEventListener('click',()=>{ st.V=+b.dataset.v; reset(); }));
     I('M').addEventListener('input',reset);
     ['wash','over','above','mix'].forEach(k=>E(k).addEventListener('change',()=>{ scene(); if(st.meas!=null) O('msg').textContent=msgFor(); }));
-    reset();
+    reset(); API.ready(()=>scene());
     API.loop(root,dt=>{ const t=target(); if(Math.abs(st.lvl-t)<.002) return; st.lvl+=(t-st.lvl)*Math.min(1,dt*3); lvl(); });
   }
 };

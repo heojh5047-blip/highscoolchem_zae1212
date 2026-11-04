@@ -46,3 +46,16 @@ table.cm411-read2 td{font-size:20px;width:220px;padding:5px 8px;text-align:cente
 output.kind.cm411-msg{margin-top:6px;line-height:1.45;font-size:19px}
 table.cm411-log{width:100%}
 table.cm411-log th,table.cm411-log td{font-size:19px;padding:3px 6px;text-align:center}
+.cm411-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cm411-s4 .stage p{font-size:19px;line-height:1.5}
+table.cm411-plan{width:100%}
+table.cm411-plan td{text-align:center}
+table.cm411-plan .blank{min-width:60px}
+table.cm411-goal th{width:120px}
+table.cm411-prep{width:100%}
+table.cm411-prep td{text-align:center}
+table.cm411-prep .blank{min-width:80px}
+ol.cm411-opt{list-style:none;padding-left:0}
+ol.cm411-opt li{margin-top:10px}
+.blank.cm411-wide{min-width:220px}
+.formula.cm411-fs{font-size:22px;padding:8px 10px}
