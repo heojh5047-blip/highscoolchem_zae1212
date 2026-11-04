@@ -1,0 +1,26 @@
+<!-- ════════ 28. 실험실 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="실험실: 작용기와 성질">
+  <h2><span class="tag">탐구</span>작용기와 성질 실험실</h2>
+  <div class="lab" data-lab="rm31fg">
+    <div class="lab-ctl" style="flex-basis:470px">
+      <div class="rm31-seg"><button class="btn" data-f="none">알케인</button><button class="btn on" data-f="OH">알코올</button><button class="btn" data-f="CHO">알데하이드</button><button class="btn" data-f="COOH">카복실산</button></div>
+      <div class="ctl"><div class="lbl"><span>탄소 수</span><output data-o="n"></output></div><input type="range" min="1" max="6" step="1" value="2" data-i="n" aria-label="탄소 수"></div>
+      <table class="readout rm31-read">
+        <tr><th>이름</th><td><output data-o="name"></output></td></tr>
+        <tr><th>분자식 · 시성식</th><td><span data-x="mf"></span></td></tr>
+        <tr class="hl"><th>끓는점 · 상태(25 °C)</th><td><output data-o="bp"></output></td></tr>
+      </table>
+      <div class="rm31-seg mt8"><button class="btn rm31-act" data-act="water">물에 넣고 흔들기</button><button class="btn rm31-act" data-act="btb">BTB 용액</button><button class="btn rm31-act" data-act="soda">탄산수소 나트륨</button></div>
+      <div class="rm31-seg"><button class="btn rm31-rec" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind rm31-msg" data-o="msg"></output>
+      <table class="tight rm31-log mt8"><thead><tr><th>화합물</th><th>끓는점</th><th>용해성</th><th>액성</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+    <div class="lab-fig" style="width:620px;height:500px">
+      <svg viewBox="0 0 620 500" width="620" height="500" aria-label="구조식, 물이 든 시험관, 탄소 수에 따른 끓는점 그래프"></svg>
+      <div class="ov" data-ov="fg" style="font-size:20px;font-weight:700;color:#E08A2C"></div>
+      <div class="ov" data-ov="tube" style="font-size:19px;color:#5B6B7F"></div>
+      <div class="ov" data-ov="gas" style="font-size:19px;color:#5B6B7F"></div>
+    </div>
+  </div>
+</section>
+
