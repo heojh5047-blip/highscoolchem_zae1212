@@ -1,7 +1,7 @@
 /* 3-1-1 가역 반응과 화학 평형 — 실험실
    cm311eq    : 평형에 도달하기 (2NO2 ⇌ N2O4 입자 상자). N 원자 수 보존(n + 2m 일정).
                 정반응 확률 = kf·n(n−1)/2·dt (가까운 NO2 두 개가 결합), 역반응 = kr·m·dt (N2O4가 둘로 갈라짐).
-                kr/kf = 10 → NO2 60개로 시작하면 평형 근처 NO2 약 20, N2O4 약 20. 고정 시드 난수.
+                kr/kf = 6 → NO2 40개로 시작하면 평형 근처 NO2 약 13, N2O4 약 14(교과서 그림처럼 N2O4가 더 많음). 고정 시드 난수.
                 출력: 상자(미시) + 상자 색(거시, NO2 수에 비례) + 분자 수–시간, 반응 속도–시간(2 s 이동 평균),
                 누적 반응 횟수, 판정 문장, 측정 기록 표(최근 4행).
    cm311water : 물 옮기기 동적 평형 모형. 관에 담기는 물 = V × (d/D)², D = 25 mm, 두 방향 동시에.
@@ -12,8 +12,8 @@ window.DECK_LABS = {
     const svg=root.querySelector('svg');
     const BX0=12, BY0=12, BX1=300, BY1=262, R=9;
     const G1={x0:372,y0:185,x1:628,y1:30}, G2={x0:372,y0:400,x1:628,y1:245}, TW=40;
-    const KF=0.012, KR=0.12, SPEED=46;
-    let seed=7; const rnd=()=>{ seed=(seed*1103515245+12345)%2147483648; return seed/2147483648; };
+    const KF=0.012, KR=0.072, SPEED=46;
+    let seed=7; const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const tint=API.mk('rect',{x:BX0,y:BY0,width:BX1-BX0,height:BY1-BY0,rx:14,fill:'#B5562A','fill-opacity':0},svg);
     API.mk('rect',{x:BX0,y:BY0,width:BX1-BX0,height:BY1-BY0,rx:14,fill:'none',stroke:'#7E8B98','stroke-width':3},svg);
     const molG=API.mk('g',{},svg), fx=API.mk('g',{},svg), gr=API.mk('g',{},svg);
@@ -74,7 +74,7 @@ window.DECK_LABS = {
       const as=rec.map(h=>h[1]), mean=as.reduce((s,v)=>s+v,0)/as.length; const tot=as[0]+2*rec[0][2];
       const first=hist.filter(h=>h[0]>=t-8&&h[0]<t-4).map(h=>h[1]); if(first.length<3) return null;
       const m0=first.reduce((s,v)=>s+v,0)/first.length;
-      if(Math.abs(mean-m0)<=Math.max(1.5,tot*0.04)) return [mean,rec.map(h=>h[2]).reduce((s,v)=>s+v,0)/rec.length];
+      if(Math.abs(mean-m0)<=Math.max(3,tot*0.08)) return [mean,rec.map(h=>h[2]).reduce((s,v)=>s+v,0)/rec.length];
       return null;
     }
     function drawGraphs(){
@@ -91,21 +91,19 @@ window.DECK_LABS = {
       pl(rh.map(h=>[h[0],Y2(h[1])]),'#2E9E6A',null,G2); pl(rh.map(h=>[h[0],Y2(h[2])]),'#7B4FC8','9 5',G2);
       const eq=eqState();
       if(eq){ const x=X(G1,Math.max(0,t-4)); [G1,G2].forEach(G=>API.mk('rect',{x,y:G.y1,width:Math.max(0,X(G,t)-x),height:G.y0-G.y1,fill:'#FFE45C','fill-opacity':.25},gr)); }
-      const last=hist[hist.length-1], lr=rh[rh.length-1];
-      API.place(Ov('la'),Math.min(X(G1,last[0])+22,612),Y1(last[1])-24); API.place(Ov('lb'),Math.min(X(G1,last[0])+26,606),Y1(last[2])+2);
-      API.place(Ov('lf'),Math.min(X(G2,lr[0])+30,598),Y2(lr[1])-26); API.place(Ov('lr'),Math.min(X(G2,lr[0])+30,598),Y2(lr[2])+4);
-      return eq;
+            return eq;
     }
     function update(){
       const [a,b]=cnt(), tot=hist.length?hist[0][1]+2*hist[0][2]:1;
       tint.setAttribute('fill-opacity',(0.55*a/Math.max(40,tot)).toFixed(3));
       O('cnt').textContent=`${a}개 · ${b}개`; O('tot').textContent=`${totF}회 · ${totR}회`;
-      const eq=drawGraphs(), [rf,rr]=rates();
+      const eq=drawGraphs(); const past=hist.filter(h=>h[0]<=t-2), dA=past.length? a-past[past.length-1][1] : 0;
       let msg;
       if(a+b===0) msg='분자를 넣어 주자.';
       else if(t===0) msg='「시작」을 눌러 분자 수와 색의 변화를 관찰하자.';
-      else if(eq) msg='평형 상태: 분자 수와 색은 일정하지만, 정반응과 역반응은 같은 빠르기로 계속 일어난다(누적 횟수가 계속 는다).';
-      else if(rf>rr) msg='정반응이 더 빠르다 → 이산화 질소가 줄고 색이 옅어진다.';
+      else if(eq||t>12) msg='평형 상태: 분자 수와 색은 일정하지만, 정반응과 역반응은 같은 빠르기로 계속 일어난다(누적 횟수가 계속 는다).';
+      else if(t<2) msg='반응이 진행되고 있다. 색과 분자 수의 변화를 지켜보자.';
+      else if(dA<0) msg='정반응이 더 빠르다 → 이산화 질소가 줄고 색이 옅어진다.';
       else msg='역반응이 더 빠르다 → 이산화 질소가 늘고 색이 진해진다.';
       O('msg').textContent=msg;
     }
@@ -113,11 +111,12 @@ window.DECK_LABS = {
     root.querySelector('[data-act="reset"]').addEventListener('click',reset);
     root.querySelector('[data-act="rec"]').addEventListener('click',()=>{
       const eq=eqState(), [a,b]=cnt();
-      log.push({s:`${hist[0][1]} · ${hist[0][2]}`, e: eq? `${Math.round(eq[0])} · ${Math.round(eq[1])}` : `${a} · ${b} (평형 전)`, t:t.toFixed(1)+' s'});
+      log.push({s:`${hist[0][1]} · ${hist[0][2]}`, e: eq? `${Math.round(eq[0])} · ${Math.round(eq[1])}` : `${a} · ${b}${t>12?'':' (평형 전)'}`, t:t.toFixed(1)+' s'});
       if(log.length>4) log.shift();
       const tb=O('log'); tb.innerHTML=''; log.forEach(r=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${r.s}</td><td>${r.e}</td><td>${r.t}</td>`; tb.appendChild(tr); });
     });
     ['a0','b0'].forEach(k=>I(k).addEventListener('input',reset));
+    API.place(Ov('la'),560,2); API.place(Ov('lb'),610,2); API.place(Ov('lf'),556,217); API.place(Ov('lr'),612,217);
     API.place(Ov('t1'),G1.x0+44,2); API.place(Ov('t2'),G2.x0+76,217);
     API.place(Ov('tx'),G1.x1-20,G1.y0+8); API.place(Ov('tx2'),G2.x1-20,G2.y0+8); API.place(Ov('leg'),(BX0+BX1)/2,BY1+12);
     reset();
@@ -132,7 +131,7 @@ window.DECK_LABS = {
     const O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`), I=k=>root.querySelector(`[data-i="${k}"]`);
     const svg=root.querySelector('svg'), g=API.mk('g',{},svg), D=25, TOT=50, NMAX=30;
     let start='A', VA=50, VB=0, n=0, hist=[], log=[], last=[0,0], seed=3, anim=0;
-    const rnd=()=>{ seed=(seed*1103515245+12345)%2147483648; return seed/2147483648; };
+    const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const read=v=>Math.max(0,Math.min(TOT,v+(rnd()-.5)*0.4));
     function reset(){ VA=start==='A'?TOT:0; VB=TOT-VA; n=0; last=[0,0]; seed=3; log=[]; hist=[[0,VA,VB]]; renderLog(); draw(); }
     function once(){ if(n>=NMAX) return; const fa=(+I('da').value/D)**2, fb=(+I('db').value/D)**2;

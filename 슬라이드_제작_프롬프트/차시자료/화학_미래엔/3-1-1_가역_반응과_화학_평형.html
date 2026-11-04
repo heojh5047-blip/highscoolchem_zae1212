@@ -345,6 +345,12 @@ table.cm311-read td{font-size:21px;width:170px;padding:5px 10px;text-align:cente
 output.kind.cm311-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
 table.cm311-log{width:100%}
 table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:center}
+table.cm311-map3 td,table.cm311-map3 th{padding:4px 10px}
+table.cm311-read td{width:215px}
+.cm311-node.cm311-dim{flex:0 0 180px}
+.cm311-eqc{border-color:#E0C44A;background:#FFFCEB}
+.choices.cm311-col{display:flex;flex-direction:column;gap:10px}
+.choices.cm311-col span{font-size:21px}
 
 /*EXTRA:END*/
 </style>
@@ -369,13 +375,13 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
 <!-- ════════ 2. 대단원 도입 ════════ -->
 <section class="slide" data-sec="Ⅲ. 화학 평형 · 도입" data-title="대단원 도입: 화학 평형">
   <h2><span class="tag ink">대단원 도입</span>Ⅲ. 화학 평형</h2>
-  <p class="f22">우리 몸속과 자연, 산업 현장에는 정반응과 역반응이 함께 일어나는 반응이 많다. 이 단원에서는 가역 반응이 <b>평형</b>에 도달하는 모습과 그 특징을 알아보고, 조건을 바꾸면 평형이 어떻게 <b>이동</b>하는지 탐구한다.</p>
-  <div class="std mt8"><span class="code">핵심 아이디어</span>가역 반응이 평형에 도달하게 되는 것은 생명 현상을 이해하는 핵심 원리이며 산업에서 중요하게 쓰인다.</div>
+  <div class="std"><span class="code">이 단원의 핵심 아이디어</span>화학 반응이 진행될 때 정반응 속도와 역반응 속도가 같아지면 <b>화학 평형</b>에 도달한다.</div>
+  <p class="f21 mt8">이 단원에서는 다양한 생명 현상을 이해하는 핵심 원리이며 산업에서 중요하게 쓰이는 화학 평형을 알아본다.</p>
   <svg class="fig mt12" viewBox="0 0 1112 220" style="width:1112px" aria-label="폐와 몸의 조직 사이에서 산소와 결합하고 내놓는 적혈구, 녹고 다시 쌓이는 석회 동굴, 암모니아 합성 공장">
     <rect x="8" y="4" width="352" height="212" rx="14" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="184" y="34" data-mix="생명 현상" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="380" y="4" width="352" height="212" rx="14" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="556" y="34" data-mix="자연" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="752" y="4" width="352" height="212" rx="14" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="928" y="34" data-mix="산업" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="26" y="60" width="96" height="86" rx="12" fill="#FDE2E4" stroke="#E7A3AC" stroke-width="2"/><rect x="242" y="60" width="96" height="86" rx="12" fill="#FBEFD9" stroke="#E2BE85" stroke-width="2"/><text class="tex" x="74" y="110" data-mix="폐" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><text class="tex" x="290" y="110" data-mix="몸의 조직" data-size="19" data-anchor="middle" data-weight="700" fill="#16233D"></text><path d="M124 86 H240" stroke="#D7263D" stroke-width="2" stroke-dasharray="6 5" fill="none"/><path d="M240 124 H124" stroke="#7B4FC8" stroke-width="2" stroke-dasharray="6 5" fill="none"/><g data-anim="move" data-from="-74,0" data-dur="1.6" data-delay=".5" data-ease="soft"><ellipse cx="182" cy="86" rx="20" ry="13" fill="#E05A5A" stroke="#A63434" stroke-width="2"/><ellipse cx="182" cy="86" rx="9" ry="5" fill="#C94848"/><g data-atom="205,68,9,O,-"></g><g data-atom="217,68,9,O,-"></g></g><ellipse cx="182" cy="124" rx="20" ry="13" fill="#E05A5A" stroke="#A63434" stroke-width="2"/><ellipse cx="182" cy="124" rx="9" ry="5" fill="#C94848"/><text class="tex" x="182" y="184" data-mix="헤모글로빈 + 산소 $\ce{&lt;=&gt;}$||산소 헤모글로빈" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><path d="M398 52 H714 V200 H398 Z" fill="#E7E0D2"/><path d="M428 196 Q440 92 556 84 Q672 92 684 196 Z" fill="#FBFAF6" stroke="#B9AB90" stroke-width="2"/><path d="M491 92 L500 132 L509 92 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M521 92 L530 148 L539 92 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M561 92 L570 126 L579 92 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M603 92 L612 140 L621 92 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M518 196 L530 166 L542 196 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M600 196 L612 174 L624 196 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M468 196 L480 178 L492 196 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><g data-anim="move" data-from="0,-20" data-dur="1" data-delay=".6" data-rep="loop" data-ease="in"><ellipse cx="530" cy="160" rx="3.5" ry="5" fill="#6FA8DC"/></g><text class="tex" x="556" y="74" data-mix="녹고 다시 쌓인다" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><rect x="792" y="110" width="110" height="80" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><rect x="814" y="60" width="18" height="50" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><rect x="920" y="96" width="44" height="94" rx="20" fill="#E3EEFB" stroke="#16233D" stroke-width="2.5"/><rect x="980" y="126" width="80" height="64" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><path d="M902 150 H920 M964 150 H980" stroke="#16233D" stroke-width="3"/><g data-anim="move" data-from="0,14" data-dur="1.4" data-delay=".3" data-ease="out"><circle cx="823" cy="48" r="7" fill="#C9D3DD"/><circle cx="834" cy="38" r="9" fill="#DDE3EA"/></g><text class="tex" x="928" y="202" data-mix="$\ce{N2 + 3H2 &lt;=&gt; 2NH3}$" data-size="19" data-anchor="middle" fill="#16233D"></text><text class="tex" x="1020" y="116" data-mix="암모니아" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
   </svg>
-  <div class="card q mt12"><p class="f21" data-q><b>이야기해 보자</b> 세 그림에서 '되돌아가는 반응'은 어디에 있을까?</p>
-    <p class="f21 step cm311-a">→ 헤모글로빈은 산소와 결합했다가 다시 내놓고, 석회암은 녹았다가 다시 쌓이며, 질소와 수소가 만든 암모니아는 다시 분해된다.</p></div>
+  <div class="card q mt12"><p class="f21" data-q><b>Q</b> 염전에서는 바닷물의 물을 햇볕에 증발시켜 소금을 얻는다. 바닷물을 유리병에 담아 <b>밀폐</b>한 뒤 햇볕이 잘 드는 곳에 두면, 염전에서처럼 소금을 얻을 수 있을까?</p>
+    <p class="f21 step cm311-a">→ 얻기 어렵다. 밀폐된 병 속에서는 물이 증발하는 만큼 수증기가 다시 응축하여 물의 양이 일정하게 유지된다. 그 까닭을 이 단원에서 알아보자.</p></div>
 </section>
 
 <!-- ════════ 3. 단원의 흐름 ════════ -->
@@ -390,14 +396,14 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
     <tr><td class="l">02 온도 변화와 화학 평형 이동</td><td>120쪽</td></tr>
     <tr><td class="l">03 일상생활 속의 화학 평형 이동</td><td>124쪽</td></tr>
   </table>
-  <h3 class="mt16">학습 연계</h3>
+  <h3 class="mt12">학습 연계</h3>
   <div class="flow">
     <div class="fnode"><b>중학교 과학</b><br><span class="small">화학 반응의 규칙성</span></div><div class="farr">→</div>
     <div class="fnode"><b>통합과학2</b><br><span class="small">변화와 다양성</span></div><div class="farr">→</div>
     <div class="fnode hl"><b>화학</b><br><span class="small">Ⅲ. 화학 평형 (지금)</span></div><div class="farr">→</div>
     <div class="fnode"><b>물질과 에너지 · 화학 반응의 세계</b><br><span class="small">화학 변화의 자발성 · 산 염기 평형</span></div>
   </div>
-  <div class="note mt16"><b>포트폴리오</b> 단원을 배우며 생활 속 가역 반응과 평형의 예를 모아 보자. 사례마다 사진(또는 그림), 반응식, 평형과의 관계를 한 줄로 정리한다.</div>
+  <div class="note mt12"><b>포트폴리오</b> 이 단원을 배우며 나만의 특기를 발휘한 포트폴리오를 만들어 보자. — 108쪽 화학과 나의 미래 · 126쪽 생활 속 과학 이야기 · 134–135쪽 프로젝트</div>
 </section>
 
 <!-- ════════ 4. 중단원 도입 ════════ -->
@@ -405,8 +411,9 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
   <h2><span class="tag ink">중단원 도입</span>1. 화학 평형</h2>
   <div class="row">
     <div class="col">
-      <div class="card q"><p class="f22" data-q><b>핵심 질문</b> 마개를 닫은 탄산음료 병 속에서는 왜 거품이 더 생기지 않을까? 반응이 멈춘 것처럼 보이는 상태에서 입자들은 무엇을 하고 있을까?</p></div>
-      <table class="tight mt16 cm311-sub">
+      <div class="card q"><p class="f22" data-q>온도에 따라 색이 변하는 장미에 입김을 불면, 입김이 닿은 곳의 색이 변했다가 시간이 지나면 원래 색으로 되돌아온다. <b>Q</b> 우리 주변에 이렇게 변했다가 되돌아오는 것이 있을까?</p></div>
+      <div class="row mt12" style="align-items:center"><div class="col" style="flex:0 0 250px"><p class="f21"><b>이전 학습 내용</b> 아는 것에 ✓</p></div><div class="col"><div class="chips"><button class="chk">화학 변화</button><button class="chk">반응물</button><button class="chk">생성물</button><button class="chk">화학 반응식</button></div></div></div>
+      <table class="tight mt12 cm311-sub">
         <tr><th style="width:290px">소단원</th><th>배울 내용</th><th style="width:118px">쪽</th></tr>
         <tr class="cm311-cur"><td class="l">01 가역 반응과 화학 평형</td><td class="l">가역 반응과 동적 평형, 평형 상태의 특징</td><td><b>97 (오늘)</b></td></tr>
         <tr><td class="l">02 화학 평형과 평형 상수</td><td class="l">농도 자료로 평형 상수의 의미 설명</td><td>102</td></tr>
@@ -414,8 +421,8 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
       </table>
     </div>
     <div class="col" style="flex:0 0 330px">
-      <svg class="fig" viewBox="0 0 330 360" style="width:300px" aria-label="마개를 닫은 탄산음료 병, 액체 속 이산화 탄소가 빠져나오고 다시 녹아 들어감">
-        <path d="M70 52 H110 V82 Q140 96 140 130 V300 Q140 316 124 316 H56 Q40 316 40 300 V130 Q40 96 70 82 Z" fill="#EAF6EE" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M41 160 H139 V300 Q139 315 124 315 H56 Q41 315 41 300 Z" fill="#CFE8D6"/><rect x="64" y="34" width="52" height="22" rx="4" fill="#2E9E6A" stroke="#1E6B48" stroke-width="2"/><circle cx="70" cy="250" r="5" fill="#FFFFFF" stroke="#7FB894" stroke-width="1.5"/><circle cx="104" cy="214" r="5" fill="#FFFFFF" stroke="#7FB894" stroke-width="1.5"/><circle cx="84" cy="186" r="5" fill="#FFFFFF" stroke="#7FB894" stroke-width="1.5"/><circle cx="118" cy="272" r="5" fill="#FFFFFF" stroke="#7FB894" stroke-width="1.5"/><g data-anim="move" data-from="0,40" data-dur="1.4" data-delay=".3" data-rep="loop" data-ease="lin"><circle cx="94" cy="230" r="5" fill="#FFFFFF" stroke="#7FB894" stroke-width="1.5"/></g><g data-arw="166,180,166,118,field,3"></g><g data-arw="196,118,196,180,bfield,3"></g><text class="tex" x="214" y="110" data-mix="빠져나옴" data-size="18" data-anchor="start" fill="#2E9E6A"></text><text class="tex" x="214" y="196" data-mix="녹아 들어감" data-size="18" data-anchor="start" fill="#7B4FC8"></text><text class="tex" x="90" y="348" data-mix="마개 닫은 탄산음료" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      <svg class="fig" viewBox="0 0 330 360" style="width:300px" aria-label="입김이 닿은 꽃잎의 색이 변하는 장미">
+        <path d="M150 330 C146 280 156 240 150 190" fill="none" stroke="#2E7D4F" stroke-width="6" stroke-linecap="round"/><path d="M150 270 C118 262 104 240 102 226 C126 228 144 246 150 270 Z" fill="#4CAF50"/><path d="M151 248 C180 236 196 216 198 202 C172 206 156 226 151 248 Z" fill="#4CAF50"/><circle cx="150" cy="128" r="40" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/><circle cx="116" cy="146" r="34" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/><circle cx="184" cy="146" r="34" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/><circle cx="128" cy="176" r="32" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/><circle cx="172" cy="176" r="32" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/><circle cx="150" cy="156" r="30" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/><g data-anim="fade" data-dur="1" data-delay=".9" data-rep="alt"><circle cx="116" cy="146" r="34" fill="#5B7FD6" stroke="#3A57A8" stroke-width="2"/><circle cx="128" cy="176" r="32" fill="#5B7FD6" stroke="#3A57A8" stroke-width="2"/></g><path d="M262 96 Q232 112 214 132" fill="none" stroke="#9FC3DD" stroke-width="5" stroke-dasharray="8 6" stroke-linecap="round"/><path d="M270 128 Q240 140 222 156" fill="none" stroke="#9FC3DD" stroke-width="5" stroke-dasharray="8 6" stroke-linecap="round"/><text class="tex" x="266" y="80" data-mix="입김" data-size="20" data-anchor="middle" data-weight="700" fill="#1F6FD1"></text><text class="tex" x="150" y="356" data-mix="온도에 따라 색이 변하는 장미" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
       </svg>
     </div>
   </div>
@@ -426,168 +433,127 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
   <h2>학습 목표</h2>
   <div class="std"><span class="code">[12화학03-01]</span>가역 반응에서 나타나는 화학 평형 상태의 특징을 설명할 수 있다.</div>
   <ol class="goals mt12">
-    <li><b>가역 반응</b>과 <b>비가역 반응</b>을 구분하고 예를 들 수 있다.</li>
-    <li><b>동적 평형</b>을 정반응 속도와 역반응 속도로 설명할 수 있다.</li>
-    <li>화학 평형 상태의 특징을 <b>눈에 보이는 특징</b>과 <b>입자 수준의 동적 평형</b>으로 나누어 설명할 수 있다.</li>
+    <li>가역 반응에서 나타나는 <b>화학 평형 상태의 특징</b>을 설명할 수 있다.</li>
+    <li>우리 주변에서 일어나는 <b>가역 반응</b>과 <b>비가역 반응</b>에 흥미와 호기심을 가질 수 있다.</li>
   </ol>
-  <h3 class="mt28">오늘의 흐름</h3>
+  <h3 class="mt16">오늘의 흐름</h3>
   <div class="flow">
-    <div class="fnode">한 방향 반응</div><div class="farr">→</div>
-    <div class="fnode hl">가역 반응</div><div class="farr">→</div>
-    <div class="fnode">비가역 반응</div><div class="farr">→</div>
+    <div class="fnode">해 보기</div><div class="farr">→</div>
+    <div class="fnode hl">가역·비가역 반응</div><div class="farr">→</div>
     <div class="fnode hl">동적 평형</div><div class="farr">→</div>
-    <div class="fnode">화학 평형</div><div class="farr">→</div>
-    <div class="fnode">탐구: 모형</div>
+    <div class="fnode">모의실험</div><div class="farr">→</div>
+    <div class="fnode hl">화학 평형</div>
   </div>
-  <div class="note mt28"><b>중학교와 연결</b> 중학교에서는 화학 반응식을 반응물 → 생성물 한 방향으로만 썼다. 오늘은 생성물이 다시 반응물로 돌아가는 반응을 알아본다.</div>
+  <div class="card mt20"><h3>중단원 학습 목표 (1. 화학 평형)</h3>
+    <p class="f21"><b>지식·이해</b> 가역 반응에서 나타나는 화학 평형 상태의 특징과 평형 상수의 의미를 설명할 수 있다.</p>
+    <p class="f21"><b>과정·기능</b> 화학 반응에서 반응물과 생성물의 농도비의 규칙성을 추론할 수 있다.</p>
+    <p class="f21"><b>가치·태도</b> 평형 상수와 반응 지수를 비교해 반응의 진행 방향을 예측하여 화학 평형의 유용성을 깨달을 수 있다.</p></div>
 </section>
 
 <!-- ════════ 6. 생각 열기 ════════ -->
-<section class="slide" data-sec="01 가역 반응과 화학 평형 · 도입" data-title="생각 열기: 석회 동굴">
-  <h2><span class="tag">생각 열기</span>석회암을 녹인 물이 다시 돌을 만든다?</h2>
+<section class="slide" data-sec="01 가역 반응과 화학 평형 · 도입" data-title="생각 열기: 변색 렌즈 안경">
+  <h2><span class="tag">생각 열기</span>야외에서는 선글라스, 실내에서는 안경!</h2>
   <div class="row">
-    <div class="col" style="flex:0 0 520px">
-      <svg class="fig" viewBox="0 0 520 330" style="width:520px" aria-label="석회암 지대 아래의 동굴 단면, 천장의 종유석과 바닥의 석순, 떨어지는 물방울">
-        <rect x="0" y="40" width="520" height="290" fill="#E7E0D2"/><path d="M0 40 H520" stroke="#7FB06A" stroke-width="6"/><path d="M120 44 Q134 80 116 118" fill="none" stroke="#6FA8DC" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M330 44 Q344 80 326 118" fill="none" stroke="#6FA8DC" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M430 44 Q444 80 426 118" fill="none" stroke="#6FA8DC" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M60 310 Q70 140 260 128 Q450 140 460 310 Z" fill="#FBFAF6" stroke="#B9AB90" stroke-width="2.5"/><path d="M158 136 L170 194 L182 136 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M203 136 L215 220 L227 136 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M250 136 L262 180 L274 136 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M298 136 L310 208 L322 136 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M348 136 L360 176 L372 136 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M199 310 L215 260 L231 310 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M294 310 L310 270 L326 310 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M134 310 L150 284 L166 310 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><path d="M379 310 L395 280 L411 310 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.8"/><g data-anim="move" data-from="0,-60" data-dur="1.1" data-delay=".5" data-rep="loop" data-ease="in"><ellipse cx="215" cy="232" rx="4.5" ry="6.5" fill="#6FA8DC"/></g><text class="tex" x="460" y="92" data-mix="빗물" data-size="19" data-anchor="middle" data-halo="1" fill="#1F6FD1"></text><text class="tex" x="80" y="92" data-mix="석회암" data-size="19" data-anchor="middle" data-halo="1" fill="#5B6B7F"></text><text class="tex" x="330" y="236" data-mix="종유석" data-size="19" data-anchor="start" data-halo="1" fill="#16233D"></text><text class="tex" x="150" y="272" data-mix="석순" data-size="19" data-anchor="end" data-halo="1" fill="#16233D"></text>
-      </svg>
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 250" style="width:560px" aria-label="햇빛 아래에서 렌즈가 어두워진 안경과 실내에서 투명한 안경"><rect x="0" y="0" width="270" height="250" rx="16" fill="#FFF6D6"/><rect x="290" y="0" width="270" height="250" rx="16" fill="#EEF2F6"/><circle cx="226" cy="44" r="22" fill="#F2C230"/><path d="M256.0 44.0 L268.0 44.0" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M247.21320343559643 65.21320343559643 L255.698484809835 73.698484809835" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M226.0 74.0 L226.0 86.0" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M204.78679656440357 65.21320343559643 L196.301515190165 73.698484809835" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M196.0 44.00000000000001 L184.0 44.00000000000001" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M204.78679656440357 22.786796564403577 L196.301515190165 14.301515190165006" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M226.0 14.0 L226.0 2.0" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><path d="M247.21320343559643 22.78679656440357 L255.69848480983498 14.301515190164999" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/><g data-anim="fade" data-dur="1.2" data-delay=".5"><ellipse cx="75" cy="140" rx="50" ry="38" fill="#3A3F47" fill-opacity="0.75" stroke="#16233D" stroke-width="5"/><ellipse cx="195" cy="140" rx="50" ry="38" fill="#3A3F47" fill-opacity="0.75" stroke="#16233D" stroke-width="5"/><path d="M125 134 Q135 122 145 134" fill="none" stroke="#16233D" stroke-width="5"/><path d="M25 130 L-5 118 M245 130 L275 118" stroke="#16233D" stroke-width="5" stroke-linecap="round"/></g><ellipse cx="365" cy="140" rx="50" ry="38" fill="#DDEEF8" fill-opacity="0.35" stroke="#16233D" stroke-width="5"/><ellipse cx="485" cy="140" rx="50" ry="38" fill="#DDEEF8" fill-opacity="0.35" stroke="#16233D" stroke-width="5"/><path d="M415 134 Q425 122 435 134" fill="none" stroke="#16233D" stroke-width="5"/><path d="M315 130 L285 118 M535 130 L565 118" stroke="#16233D" stroke-width="5" stroke-linecap="round"/><text class="tex" x="135" y="226" data-mix="야외: 선글라스" data-size="21" data-anchor="middle" data-weight="700" fill="#16233D"></text><text class="tex" x="425" y="226" data-mix="실내: 안경" data-size="21" data-anchor="middle" data-weight="700" fill="#16233D"></text></svg>
     </div>
     <div class="col">
-      <p class="f22">이산화 탄소가 녹은 빗물이 석회암 지대에 스며들면 석회암이 녹아 동굴이 생긴다. 그런데 그 동굴 천장에는 다시 돌고드름(<b>종유석</b>)이 자라고, 바닥에는 돌기둥(<b>석순</b>)이 쌓인다.</p>
-      <p class="f22 mt12" data-q><b>Q</b> 석회암을 녹인 물이 다시 돌을 만드는 까닭은 무엇일까?</p>
-      <div class="card mt8"><p class="f21"><b>(가)</b> 녹는 반응과 쌓이는 반응은 서로 관계없는 다른 반응이다.</p></div>
-      <div class="card mt8"><p class="f21"><b>(나)</b> 같은 반응이 조건에 따라 앞으로도, 거꾸로도 일어난다.</p></div>
+      <p class="f22">변색 렌즈 안경은 햇빛을 받으면 렌즈의 색이 어둡게 변해 선글라스 역할을 하고, 실내에서는 색이 없어져 안경으로 쓴다.</p>
+      <p class="f22 mt12" data-q><b>Q</b> 장소에 따라 렌즈의 색이 변하는 까닭은 무엇일까?</p>
     </div>
   </div>
-  <div class="answer step mt12"><b>(나)</b> — 같은 반응이 양쪽 방향으로 일어난다. 이런 반응을 <b>가역 반응</b>이라고 한다.</div>
+  <div class="answer step mt16">렌즈 속 물질이 햇빛을 받으면 색을 띠는 물질로 변하고, 햇빛이 없으면 다시 원래 물질로 되돌아간다. → 조건에 따라 <b>양쪽 방향</b>으로 일어나는 반응</div>
 </section>
 
 <!-- ════════ 7. 연결 ════════ -->
-<section class="slide" data-sec="01 가역 반응과 화학 평형 · 도입" data-title="지금까지 본 반응은 한 방향">
-  <h2><span class="tag alt">연결</span>지금까지 본 반응은 한 방향이었다</h2>
+<section class="slide" data-sec="01 · 가역 반응과 비가역 반응" data-title="되돌아갈 수 있는 반응, 없는 반응">
+  <h2><span class="tag alt">연결</span>원래 모습으로 되돌아갈 수 있을까?</h2>
   <div class="row">
-    <div class="col" style="flex:0 0 560px">
-      <svg class="fig" viewBox="0 0 560 250" style="width:560px" aria-label="수소 분자 두 개와 산소 분자 한 개가 반응하여 물 분자 두 개가 되는 입자 모형">
-        <rect x="6" y="10" width="220" height="200" rx="16" fill="#F7F9FB" stroke="#C9D3DD" stroke-width="2"/><rect x="334" y="10" width="220" height="200" rx="16" fill="#F7F9FB" stroke="#C9D3DD" stroke-width="2"/><g data-atom="54,62,18,H,-"></g><g data-atom="78,62,18,H,-"></g><g data-atom="148,160,18,H,-"></g><g data-atom="172,160,18,H,-"></g><g data-atom="135,72,24,O,-"></g><g data-atom="165,72,24,O,-"></g><g data-anim="move" data-from="-369.7,-18.4" data-dur="1.4" data-delay=".6" data-ease="io"><g data-atom="423.7,80.4,18,H,-"></g></g><g data-anim="move" data-from="-298.3,-18.4" data-dur="1.4" data-delay=".6" data-ease="io"><g data-atom="376.3,80.4,18,H,-"></g></g><g data-anim="move" data-from="-361.7,1.6" data-dur="1.4" data-delay=".6" data-ease="io"><g data-atom="509.7,158.4,18,H,-"></g></g><g data-anim="move" data-from="-290.3,1.6" data-dur="1.4" data-delay=".6" data-ease="io"><g data-atom="462.3,158.4,18,H,-"></g></g><g data-anim="move" data-from="-265,10" data-dur="1.4" data-delay=".6" data-ease="io"><g data-atom="400,62,24,O,-"></g></g><g data-anim="move" data-from="-321,-68" data-dur="1.4" data-delay=".6" data-ease="io"><g data-atom="486,140,24,O,-"></g></g><g data-arw="244,110,316,110,ink,3"></g><text class="tex" x="116" y="238" data-mix="반응 전: $\ce{H2}$ 2개, $\ce{O2}$ 1개" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="444" y="238" data-mix="반응 후: $\ce{H2O}$ 2개" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
-      </svg>
-      <div class="formula sm mt8">$\ce{2H2 + O2 -> 2H2O}$<div class="unit">원자 수: $\mathrm{H}$ 4 = 4, $\mathrm{O}$ 2 = 2</div></div>
+    <div class="col" style="flex:0 0 540px">
+      <svg class="fig" viewBox="0 0 540 280" style="width:540px" aria-label="소금물을 증발 접시에서 가열해 소금을 얻는 모습과 메테인이 타는 불꽃"><path d="M86 150 H154 M90 122 L80 202 M150 122 L160 202" stroke="#5B6B7F" stroke-width="3"/><path d="M98 230 H142 L136 202 H104 Z" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><path d="M120 202 Q108 186 120 162 Q132 186 120 202 Z" fill="#F2A541" stroke="#E08A2C" stroke-width="1.5"/><path d="M50 110 Q120 154 190 110 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M76.6 116 Q120 140 163.4 116 Q120 106 76.6 116 Z" fill="#F4F6F8" stroke="#7E8B98" stroke-width="1.2"/><rect x="96" y="108" width="9" height="9" fill="#FFFFFF" stroke="#8C99A6" stroke-width="1.2" transform="rotate(20 96 108)"/><rect x="112" y="112" width="9" height="9" fill="#FFFFFF" stroke="#8C99A6" stroke-width="1.2" transform="rotate(20 112 112)"/><rect x="130" y="110" width="9" height="9" fill="#FFFFFF" stroke="#8C99A6" stroke-width="1.2" transform="rotate(20 130 110)"/><rect x="146" y="106" width="9" height="9" fill="#FFFFFF" stroke="#8C99A6" stroke-width="1.2" transform="rotate(20 146 106)"/><text class="tex" x="120" y="262" data-mix="소금물 → 증발 → 소금" data-size="20" data-anchor="middle" fill="#16233D"></text><path d="M350 230 H470" stroke="#16233D" stroke-width="3"/><path d="M410 226 Q370 190 392 150 Q398 172 408 164 Q402 130 424 108 Q420 150 436 170 Q448 200 410 226 Z" fill="#F2A541" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="410" y="262" data-mix="메테인의 연소" data-size="20" data-anchor="middle" fill="#16233D"></text></svg>
     </div>
     <div class="col">
-      <p class="f22">중학교에서 수소와 산소가 반응하여 물이 생기는 반응을 반응물 → 생성물 한 방향으로 나타냈다.</p>
-      <p class="f22 mt12" data-q><b>Q</b> 생성물인 물이 저절로 다시 수소와 산소로 돌아갈 수 있을까?</p>
-      <div class="card tip step mt12" data-g="a1"><p class="f21">보통 조건에서는 거의 일어나지 않는다. 물을 수소와 산소로 나누려면 전기 분해처럼 에너지를 따로 넣어 주어야 한다.</p></div>
-      <div class="answer step mt12" data-g="a2">→ 그런데 어떤 반응은 생성물이 쉽게 반응물로 되돌아간다. 반응의 <b>방향</b>을 나누어 생각해 보자.</div>
+      <p class="f22">소금을 물에 녹인 뒤 물을 증발시키면 다시 소금이 석출된다.</p>
+      <p class="f22 mt8">메테인($\ce{CH4}$)이 연소하여 생긴 이산화 탄소와 물은 다시 메테인과 산소가 되기 매우 어렵다.</p>
+      <div class="formula sm mt12">$\ce{CH4(g) + 2O2(g) -&gt; CO2(g) + 2H2O(l)}$</div>
+      <p class="f22 mt12" data-q><b>Q</b> 화학 반응 가운데 원래 모습으로 되돌아갈 수 있는 반응과 없는 반응을 어떻게 구분할까? → 해 보기로 관찰하자.</p>
     </div>
   </div>
 </section>
 
-<!-- ════════ 8. 가역 반응 ════════ -->
+<!-- ════════ 8. 해 보기 ════════ -->
+<section class="slide" data-sec="01 · 해 보기" data-title="해 보기: 황산 구리(II)와 설탕의 변화">
+  <h2><span class="tag">해 보기</span>황산 구리(II)와 설탕의 변화 관찰하기 <span class="small c-muted">실험 영상</span></h2>
+  <p class="small">탐구 능력 | 의사 결정 능력 · 준비물: 황산 구리(II) 오수화물, 백설탕, 증발 접시, 가열 장치, 스포이트, 비커, 물</p>
+  <div class="cm311-s4 mt8"><div class="stage"><h3>1</h3><svg viewBox="0 0 260 266" style="height:170px" aria-label="황산 구리(II) 오수화물을 증발 접시에서 가열"><path d="M96 130 H164 M100 102 L90 182 M160 102 L170 182" stroke="#5B6B7F" stroke-width="3"/><path d="M108 210 H152 L146 182 H114 Z" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><path d="M130 182 Q118 166 130 142 Q142 166 130 182 Z" fill="#F2A541" stroke="#E08A2C" stroke-width="1.5"/><path d="M60 90 Q130 134 200 90 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M86.6 96 Q130 120 173.4 96 Q130 86 86.6 96 Z" fill="#3E8ED0" stroke="#7E8B98" stroke-width="1.2"/><text class="tex" x="130" y="252" data-mix="파란색 → ?" data-size="30" data-anchor="middle" fill="#16233D"></text></svg><p>증발 접시에 파란색 황산 구리(II) 오수화물을 담고 색이 변할 때까지 가열한다.</p></div><div class="stage"><h3>2</h3><svg viewBox="0 0 260 266" style="height:170px" aria-label="흰색 가루에 물을 떨어뜨림"><path d="M60 150 Q130 194 200 150 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M86.6 156 Q130 180 173.4 156 Q130 146 86.6 156 Z" fill="#F4F6F8" stroke="#7E8B98" stroke-width="1.2"/><rect x="123" y="54" width="14" height="30" rx="6" fill="#E08A2C"/><path d="M125 84 H135 L132 116 H128 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><g data-anim="move" data-from="0,-14" data-dur=".9" data-delay=".5" data-rep="loop" data-ease="in"><ellipse cx="130" cy="132" rx="4" ry="5.5" fill="#6FA8DC"/></g><text class="tex" x="130" y="252" data-mix="물을 넣으면?" data-size="30" data-anchor="middle" fill="#16233D"></text></svg><p>1의 증발 접시에 물을 떨어뜨리고 색 변화를 관찰한다.</p></div><div class="stage"><h3>3</h3><svg viewBox="0 0 260 266" style="height:170px" aria-label="백설탕을 증발 접시에서 가열"><path d="M96 130 H164 M100 102 L90 182 M160 102 L170 182" stroke="#5B6B7F" stroke-width="3"/><path d="M108 210 H152 L146 182 H114 Z" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><path d="M130 182 Q118 166 130 142 Q142 166 130 182 Z" fill="#F2A541" stroke="#E08A2C" stroke-width="1.5"/><path d="M60 90 Q130 134 200 90 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M86.6 96 Q130 120 173.4 96 Q130 86 86.6 96 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="1.2"/><text class="tex" x="130" y="252" data-mix="흰색 → ?" data-size="30" data-anchor="middle" fill="#16233D"></text></svg><p>증발 접시에 백설탕을 담고 색이 변할 때까지 가열한다.</p></div><div class="stage"><h3>4</h3><svg viewBox="0 0 260 266" style="height:170px" aria-label="갈색으로 변한 설탕에 물을 떨어뜨림"><path d="M60 150 Q130 194 200 150 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M86.6 156 Q130 180 173.4 156 Q130 146 86.6 156 Z" fill="#7A4A22" stroke="#7E8B98" stroke-width="1.2"/><rect x="123" y="54" width="14" height="30" rx="6" fill="#E08A2C"/><path d="M125 84 H135 L132 116 H128 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><g data-anim="move" data-from="0,-14" data-dur=".9" data-delay=".5" data-rep="loop" data-ease="in"><ellipse cx="130" cy="132" rx="4" ry="5.5" fill="#6FA8DC"/></g><text class="tex" x="130" y="252" data-mix="물을 넣으면?" data-size="30" data-anchor="middle" fill="#16233D"></text></svg><p>3의 증발 접시에 물을 떨어뜨리고 색 변화를 관찰한다.</p></div></div>
+  <div class="note q mt12"><b>안전</b> 실험복·보안경·실험용 고무장갑을 착용하고, 가열 장치는 안전 장갑을 끼고 다룬다. 남은 황산 구리(II) 오수화물은 고체 폐기물 수집 용기에 버린다.</div>
+</section>
+
+<!-- ════════ 9. 가역 반응 ════════ -->
 <section class="slide" data-sec="01 · 가역 반응과 비가역 반응" data-title="가역 반응">
   <h2><span class="no">1</span>가역 반응</h2>
-  <p class="f22"><mark>정반응과 역반응이 모두 일어날 수 있는 반응</mark>을 <b>가역 반응</b>이라고 하고, 화살표 $\ce{&lt;=&gt;}$로 나타낸다.</p>
-  <div class="row mt12">
-    <div class="col" style="flex:0 0 560px">
-      <svg class="fig" viewBox="0 0 560 290" style="width:560px" aria-label="이산화 질소 분자 두 개가 결합하여 사산화 이질소가 되는 정반응과 그 역반응">
-        <g data-atom="40.2,83.3,24,O"></g><g data-atom="99.8,83.3,24,O"></g><g data-atom="70,96,24,N"></g><g data-atom="99.8,198.7,24,O"></g><g data-atom="40.2,198.7,24,O"></g><g data-atom="70,186,24,N"></g><text class="tex" x="70" y="150" data-mix="+" data-size="28" data-anchor="middle" fill="#16233D"></text><path d="M160 134 H320 l-11 -7" fill="none" stroke="#2E9E6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M320 148 H160 l11 7" fill="none" stroke="#7B4FC8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text class="tex" x="240" y="124" data-mix="정반응" data-size="20" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="240" y="176" data-mix="역반응" data-size="20" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text><g data-anim="pop" data-o="440,141" data-dur=".9" data-delay=".8" data-ease="back"><g data-atom="407.4,169.6,24,O"></g><g data-atom="407.4,112.4,24,O"></g><g data-atom="472.6,112.4,24,O"></g><g data-atom="472.6,169.6,24,O"></g><g data-atom="422.6,141,24,N"></g><g data-atom="457.4,141,24,N"></g></g><text class="tex" x="70" y="272" data-mix="$\ce{2NO2}$ (적갈색)" data-size="20" data-anchor="middle" fill="#B5562A"></text><text class="tex" x="440" y="272" data-mix="$\ce{N2O4}$ (무색)" data-size="20" data-anchor="middle" fill="#16233D"></text>
-      </svg>
-      <div class="formula sm">$\ce{2NO2(g) &lt;=&gt; N2O4(g)}$</div>
-    </div>
-    <div class="col">
-      <div class="card"><h3>용어</h3>
-        <p class="f21"><b class="c-field">정반응</b> 반응물이 생성물로 되는 반응 (화학 반응식의 왼쪽 → 오른쪽)</p>
-        <p class="f21 mt8"><b style="color:#7B4FC8">역반응</b> 생성물이 다시 반응물로 되는 반응 (오른쪽 → 왼쪽)</p>
-        <p class="f21 mt8"><b>가역 반응</b> 정반응과 역반응이 모두 일어나는 반응</p>
-      </div>
-      <div class="note step mt12">가역 반응식에서도 왼쪽을 반응물, 오른쪽을 생성물이라고 부르지만, <b>두 방향의 반응이 모두</b> 일어난다.</div>
-    </div>
-  </div>
-  <p class="small mt8">그림 범례: $\mathrm{N}$ 파란 공, $\mathrm{O}$ 빨간 공</p>
-</section>
-
-<!-- ════════ 9. 해 보기: 황산 구리 ════════ -->
-<section class="slide" data-sec="01 · 해 보기" data-title="해 보기: 황산 구리(II) 오수화물">
-  <h2><span class="tag">해 보기</span>황산 구리(II) 오수화물의 색 변화</h2>
-  <div class="stages c2">
-    <div class="stage"><h3>① 푸른색 결정을 가열한다</h3>
-      <svg viewBox="0 0 300 272" style="height:250px" aria-label="기울인 시험관 속 흰색 가루를 알코올램프로 가열, 입구에 물방울"><g transform="rotate(-10 150 70)"><path d="M55 52 H227 A18 18 0 0 1 227 88 H55" fill="#FFFFFF" fill-opacity=".6" stroke="#7E8B98" stroke-width="3"/><path d="M175 86 Q185 72 205 74 Q225 72 235 82 A18 18 0 0 1 227 87 Z" fill="#F4F6F8" stroke="#7E8B98" stroke-width="1"/><g data-anim="fade" data-dur=".6" data-delay="1.4"><ellipse cx="73" cy="83" rx="3.5" ry="3" fill="#6FA8DC"/></g><g data-anim="fade" data-dur=".6" data-delay="1.9"><ellipse cx="89" cy="83" rx="3.5" ry="3" fill="#6FA8DC"/></g><g data-anim="fade" data-dur=".6" data-delay="2.3"><ellipse cx="107" cy="83" rx="3.5" ry="3" fill="#6FA8DC"/></g></g><path d="M170 190 H230 L222 146 H178 Z" fill="#EEF2F6" stroke="#16233D" stroke-width="2.5"/><rect x="196" y="134" width="8" height="12" fill="#8C99A6"/><path d="M200 134 Q186 118 200 96 Q214 118 200 134 Z" fill="#F2A541" stroke="#E08A2C" stroke-width="1.5"/><text class="tex" x="150" y="262" data-mix="흰색 가루 + 입구에 물방울" data-size="19" data-anchor="middle" fill="#16233D"></text></svg></div>
-    <div class="stage"><h3>② 식힌 흰색 가루에 물을 떨어뜨린다</h3>
-      <svg viewBox="0 0 300 272" style="height:250px" aria-label="스포이트로 물을 떨어뜨리자 다시 푸른색이 된 시험관"><g transform="rotate(90 140 138)"><path d="M45 120 H217 A18 18 0 0 1 217 156 H45" fill="#FFFFFF" fill-opacity=".6" stroke="#7E8B98" stroke-width="3"/><path d="M165 154 Q175 140 195 142 Q215 140 225 150 A18 18 0 0 1 217 155 Z" fill="#3E8ED0" stroke="#7E8B98" stroke-width="1"/></g><rect x="133" y="2" width="14" height="34" rx="6" fill="#E08A2C"/><path d="M135 36 H145 L142 76 H138 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><g data-anim="move" data-from="0,-22" data-dur=".9" data-delay=".5" data-rep="loop" data-ease="in"><ellipse cx="140" cy="92" rx="4" ry="5.5" fill="#6FA8DC"/></g><text class="tex" x="150" y="262" data-mix="다시 푸른색, 시험관이 따뜻해짐" data-size="19" data-anchor="middle" fill="#16233D"></text></svg></div>
-  </div>
-  <div class="formula sm mt12 step" data-g="c1">$\ce{CuSO4*5H2O(s) &lt;=&gt; CuSO4(s) + 5H2O(g)}$
-    <div class="unit"><span class="c-field"><b>정반응</b>(가열): 푸른색 → 흰색</span> &nbsp;·&nbsp; <span style="color:#7B4FC8"><b>역반응</b>(물 첨가): 흰색 → 푸른색</span></div></div>
-  <div class="note q mt12"><b>안전</b> 보안경·실험용 장갑을 쓰고, 시험관 입구는 사람이 없는 쪽으로 약간 아래로 향하게 한다(생긴 물이 뜨거운 바닥으로 흘러 시험관이 깨지지 않게). 남은 황산 구리(II)는 중금속 폐액통에 모은다.</div>
-</section>
-
-<!-- ════════ 10. 염화 코발트 종이 ════════ -->
-<section class="slide" data-sec="01 · 가역 반응과 비가역 반응" data-title="가역 반응의 예: 염화 코발트 종이">
-  <h2><span class="no">1</span>가역 반응의 예 ① 염화 코발트 종이</h2>
-  <p class="f22">염화 코발트(II) 종이는 마르면 <b>푸른색</b>이고, 물을 흡수하면 <b>붉은색</b>이 된다. 붉어진 종이를 말리면 다시 푸른색이 된다.</p>
-  <div class="row mt12">
-    <div class="col" style="flex:0 0 560px">
-      <svg class="fig" viewBox="0 0 560 240" style="width:560px" aria-label="푸른 염화 코발트 종이가 물을 흡수하면 붉게, 가열하면 다시 푸르게 변함"><rect x="30" y="50" width="150" height="110" rx="6" fill="#3B6FD8" stroke="#2A4F9E" stroke-width="2"/><g data-anim="fade" data-dur="1.2" data-delay=".6"><rect x="380" y="50" width="150" height="110" rx="6" fill="#E46A9A" stroke="#B0436F" stroke-width="2"/></g><path d="M214 98 H346 l-11 -7" fill="none" stroke="#2E9E6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M346 112 H214 l11 7" fill="none" stroke="#7B4FC8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text class="tex" x="280" y="88" data-mix="물 흡수 (입김)" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="280" y="139" data-mix="가열 (드라이어)" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text><text class="tex" x="105" y="196" data-mix="푸른색" data-size="20" data-anchor="middle" data-weight="700" fill="#2A4F9E"></text><text class="tex" x="455" y="196" data-mix="붉은색" data-size="20" data-anchor="middle" data-weight="700" fill="#B0436F"></text><text class="tex" x="105" y="224" data-mix="$\ce{CoCl2}$" data-size="20" data-anchor="middle" fill="#16233D"></text><text class="tex" x="455" y="224" data-mix="$\ce{CoCl2*6H2O}$" data-size="20" data-anchor="middle" fill="#16233D"></text></svg>
-    </div>
-    <div class="col">
-      <p class="f22" data-q><b>Q</b> 같은 종이를 여러 번 쓸 수 있는 까닭은 무엇일까?</p>
-      <div class="answer step mt12" data-g="k1">정반응과 역반응이 모두 일어나는 <b>가역 반응</b>이기 때문이다.</div>
-      <p class="small mt16">쓰임: 습도 표시 카드, 제습제의 습도 표시</p>
-    </div>
-  </div>
-  <div class="formula sm mt12 step" data-g="k1">$\ce{CoCl2(s) + 6H2O(l) &lt;=&gt; CoCl2*6H2O(s)}$
-    <div class="unit">푸른색 &nbsp;⇄&nbsp; 붉은색</div></div>
-  <div class="note q mt12"><b>안전</b> 염화 코발트(II)는 몸에 해로우므로 맨손으로 만지지 않고, 쓴 종이는 지정된 폐기물 통에 버린다.</div>
-</section>
-
-<!-- ════════ 11. 석회 동굴 ════════ -->
-<section class="slide" data-sec="01 · 가역 반응과 비가역 반응" data-title="가역 반응의 예: 석회 동굴">
-  <h2><span class="no">1</span>가역 반응의 예 ② 석회 동굴</h2>
   <div class="row">
-    <div class="col" style="flex:0 0 440px">
-      <svg class="fig" viewBox="0 0 440 280" style="width:440px" aria-label="석회 동굴 단면, 종유석과 석순"><rect x="0" y="-0.2" width="439.9" height="245.3" fill="#E7E0D2"/><path d="M0 -0.2 H439.9" stroke="#7FB06A" stroke-width="5.1"/><path d="M101.5 3.2 Q113.4 33.7 98.1 65.8" fill="none" stroke="#6FA8DC" stroke-width="2.1" stroke-dasharray="5.1 4.2"/><path d="M279.2 3.2 Q291 33.7 275.8 65.8" fill="none" stroke="#6FA8DC" stroke-width="2.1" stroke-dasharray="5.1 4.2"/><path d="M363.8 3.2 Q375.6 33.7 360.4 65.8" fill="none" stroke="#6FA8DC" stroke-width="2.1" stroke-dasharray="5.1 4.2"/><path d="M50.8 228.3 Q59.2 84.4 220 74.3 Q380.7 84.4 389.2 228.3 Z" fill="#FBFAF6" stroke="#B9AB90" stroke-width="2.1"/><path d="M133.7 81.1 L143.8 130.1 L154 81.1 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M171.7 81.1 L181.9 152.1 L192 81.1 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M211.5 81.1 L221.7 118.3 L231.8 81.1 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M252.1 81.1 L262.3 142 L272.4 81.1 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M294.4 81.1 L304.6 114.9 L314.7 81.1 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M168.4 228.3 L181.9 186 L195.4 228.3 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M248.7 228.3 L262.3 194.4 L275.8 228.3 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M113.4 228.3 L126.9 206.3 L140.4 228.3 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><path d="M320.6 228.3 L334.2 202.9 L347.7 228.3 Z" fill="#CDBF9F" stroke="#9C8F78" stroke-width="1.5"/><g data-anim="move" data-from="0,-50.8" data-dur="1.1" data-delay=".5" data-rep="loop" data-ease="in"><ellipse cx="181.9" cy="162.3" rx="3.8" ry="5.5" fill="#6FA8DC"/></g><text class="tex" x="389.2" y="43.8" data-mix="빗물" data-size="19" data-anchor="middle" data-halo="1" fill="#1F6FD1"></text><text class="tex" x="67.7" y="43.8" data-mix="석회암" data-size="19" data-anchor="middle" data-halo="1" fill="#5B6B7F"></text><text class="tex" x="279.2" y="165.7" data-mix="종유석" data-size="19" data-anchor="start" data-halo="1" fill="#16233D"></text><text class="tex" x="126.9" y="196.1" data-mix="석순" data-size="19" data-anchor="end" data-halo="1" fill="#16233D"></text></svg>
+    <div class="col" style="flex:0 0 540px">
+      <p class="f21" data-q><b>Q</b> 해 보기 결과, 가열 전 상태로 되돌아갈 수 있는 것은?</p>
+      <svg class="fig mt8 step" data-g="v1" viewBox="0 0 540 196" style="width:520px" aria-label="파란색 황산 구리(II) 오수화물은 가열하면 흰색, 물을 떨어뜨리면 다시 파란색"><rect x="20" y="40" width="130" height="80" rx="10" fill="#3E8ED0" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="85" y="150" data-mix="$\ce{CuSO4*5H2O}$||파란색" data-size="20" data-anchor="middle" fill="#16233D"></text><g data-anim="fade" data-dur="1" data-delay=".6"><rect x="390" y="40" width="130" height="80" rx="10" fill="#F4F6F8" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="455" y="150" data-mix="$\ce{CuSO4}$||흰색" data-size="20" data-anchor="middle" fill="#16233D"></text></g><path d="M180 73 H360 l-11 -7" fill="none" stroke="#2E9E6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M360 87 H180 l11 7" fill="none" stroke="#7B4FC8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text class="tex" x="270" y="63" data-mix="가열 (물이 빠져나감)" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="270" y="114" data-mix="물을 떨어뜨림" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg>
+      <p class="f21 step" data-g="v1">→ <span class="ans">황산 구리(II) 오수화물</span>: 가열하면 물 분자가 빠져나가 흰색이 되고, 물을 떨어뜨리면 다시 파란색이 된다.</p>
     </div>
     <div class="col">
-      <div class="card"><p class="f21"><b class="c-field">정반응</b> 이산화 탄소가 녹은 물이 석회암(탄산 칼슘)을 녹인다 → <b>석회 동굴</b>이 생긴다.</p></div>
-      <div class="card mt12"><p class="f21"><b style="color:#7B4FC8">역반응</b> 석회암이 녹은 물이 동굴 천장에서 물과 이산화 탄소를 잃으며 다시 탄산 칼슘이 쌓인다 → <b>종유석·석순</b>이 생긴다.</p></div>
+      <p class="f21 step" data-g="v2">반응물이 생성물로 되는 반응을 <b class="c-field">정반응</b>, 생성물이 반응물로 되는 반응을 <b style="color:#7B4FC8">역반응</b>이라고 한다.</p>
+      <p class="f21 mt8 step" data-g="v2"><mark>반응 조건에 따라 정반응과 역반응이 모두 일어날 수 있는 반응</mark>을 <b>가역 반응</b>이라고 하며, 하나의 반응식으로 나타낸다.</p>
+      <p class="small mt8 step" data-g="v2">화살표: 정반응 $\ce{-&gt;}$, 역반응 $\ce{&lt;-}$, 가역 반응 $\ce{&lt;=&gt;}$</p>
     </div>
   </div>
-  <p class="f22 mt12" data-q><b>Q</b> 두 과정을 하나의 반응식으로 나타내면?</p>
-  <div class="formula step mt8">$\ce{CaCO3(s) + H2O(l) + CO2(g) &lt;=&gt; Ca(HCO3)2(aq)}$
-    <div class="unit">탄산 칼슘 + 물 + 이산화 탄소 &nbsp;⇄&nbsp; 탄산수소 칼슘</div></div>
+  <div class="formula sm mt8 step" data-g="v3">$\ce{CuSO4*5H2O(s) &lt;=&gt; CuSO4(s) + 5H2O(l)}$<div class="unit">파란색 &nbsp;⇄&nbsp; 흰색</div></div>
+  <p class="small mt8">수화물: 물 분자를 포함한 화합물. 황산 구리(II) 오수화물은 물 분자 5개를 포함한 황산 구리(II)이다.</p>
 </section>
 
-<!-- ════════ 12. 비가역 반응 ════════ -->
+<!-- ════════ 10. 비가역 반응 ════════ -->
 <section class="slide" data-sec="01 · 가역 반응과 비가역 반응" data-title="비가역 반응">
   <h2><span class="no">1</span>비가역 반응</h2>
-  <p class="f22"><mark>한쪽 방향으로만 일어나는 반응, 즉 역반응이 거의 일어나지 않는 반응</mark>을 <b>비가역 반응</b>이라고 한다.</p>
-  <table class="tight mt12 cm311-irr">
-    <tr><th style="width:170px">현상</th><th style="width:300px">예</th><th>화학 반응식</th></tr>
-    <tr><td><svg class="fig" viewBox="0 0 160 100" style="width:150px" aria-label="불꽃"><path d="M50 92 H110" stroke="#16233D" stroke-width="3"/><path d="M80 90 Q56 64 72 40 Q76 56 84 50 Q80 30 94 16 Q92 44 104 58 Q110 76 80 90 Z" fill="#F2A541" stroke="#E08A2C" stroke-width="2"/><path d="M80 88 Q70 74 78 62 Q84 72 88 66 Q92 80 80 88 Z" fill="#FFE45C"/></svg></td><td class="l"><b>연소</b><br><span class="small">메테인이 타며 많은 열을 낸다</span></td><td>$\ce{CH4(g) + 2O2(g) -&gt; CO2(g) + 2H2O(l)}$</td></tr>
-    <tr><td><svg class="fig" viewBox="0 0 160 100" style="width:150px" aria-label="흰색 앙금이 생긴 시험관"><path d="M66 8 V78 A14 14 0 0 0 94 78 V8" fill="#EAF2FA" stroke="#7E8B98" stroke-width="2.5"/><path d="M67 70 V78 A13 13 0 0 0 93 78 V70 Z" fill="#FFFFFF" stroke="#B8C2CC" stroke-width="1"/><circle cx="74" cy="74" r="2.6" fill="#B8C2CC"/><circle cx="84" cy="80" r="2.6" fill="#B8C2CC"/><circle cx="88" cy="72" r="2.6" fill="#B8C2CC"/><circle cx="78" cy="84" r="2.6" fill="#B8C2CC"/><circle cx="80" cy="67" r="2.6" fill="#B8C2CC"/></svg></td><td class="l"><b>앙금 생성</b><br><span class="small">흰색 앙금(염화 은)이 생긴다</span></td><td>$\ce{NaCl(aq) + AgNO3(aq) -&gt; AgCl(s) + NaNO3(aq)}$</td></tr>
-    <tr><td><svg class="fig" viewBox="0 0 160 100" style="width:150px" aria-label="마그네슘 리본에서 기포가 생기는 시험관"><path d="M66 8 V78 A14 14 0 0 0 94 78 V8" fill="#EAF2FA" stroke="#7E8B98" stroke-width="2.5"/><rect x="74" y="66" width="12" height="22" fill="#B9B9B9" stroke="#8C99A6" stroke-width="1.5"/><g data-anim="move" data-from="0,40" data-dur="1.3" data-delay=".3" data-rep="loop" data-ease="lin"><circle cx="76" cy="40" r="3.5" fill="#FFFFFF" stroke="#7E8B98" stroke-width="1.3"/><circle cx="86" cy="28" r="3.5" fill="#FFFFFF" stroke="#7E8B98" stroke-width="1.3"/><circle cx="80" cy="18" r="3.5" fill="#FFFFFF" stroke="#7E8B98" stroke-width="1.3"/></g></svg></td><td class="l"><b>기체 발생</b><br><span class="small">수소 기체가 빠져나간다</span></td><td>$\ce{Mg(s) + 2HCl(aq) -&gt; MgCl2(aq) + H2(g)}$</td></tr>
-  </table>
-  <p class="f22 mt12" data-q><b>Q</b> 세 반응에서 역반응이 거의 일어나지 않는 까닭은?</p>
-  <div class="answer step mt8">생성물이 반응하는 곳을 빠져나가거나(기체·앙금), 매우 안정하여 <b>역반응이 거의 일어나지 않는다.</b></div>
+  <svg class="fig" viewBox="0 0 600 190" style="width:600px" aria-label="흰색 설탕을 가열하면 갈색이 되고, 물을 넣어도 흰색으로 돌아가지 않음"><path d="M20 70 Q90 114 160 70 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M46.6 76 Q90 100 133.4 76 Q90 66 46.6 76 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="1.2"/><text class="tex" x="90" y="150" data-mix="설탕 (흰색)" data-size="20" data-anchor="middle" fill="#16233D"></text><g data-arw="170,80,220,80,ink,3"></g><text class="tex" x="195" y="62" data-mix="가열" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><path d="M230 70 Q300 114 370 70 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M256.6 76 Q300 100 343.4 76 Q300 66 256.6 76 Z" fill="#7A4A22" stroke="#7E8B98" stroke-width="1.2"/><text class="tex" x="300" y="150" data-mix="가열한 설탕 (갈색)" data-size="20" data-anchor="middle" fill="#16233D"></text><g data-arw="380,80,430,80,ink,3"></g><text class="tex" x="405" y="62" data-mix="물" data-size="18" data-anchor="middle" fill="#1F6FD1"></text><path d="M450 70 Q510 114 570 70 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M472.8 76 Q510 100 547.2 76 Q510 66 472.8 76 Z" fill="#7A4A22" stroke="#7E8B98" stroke-width="1.2"/><text class="tex" x="510" y="150" data-mix="가열한 설탕 + 물" data-size="20" data-anchor="middle" fill="#16233D"></text><text class="tex" x="510" y="178" data-mix="여전히 갈색" data-size="20" data-anchor="middle" data-weight="700" fill="#D7263D"></text></svg>
+  <p class="f22 mt8">흰색 설탕을 가열하면 높은 온도에서 물이 빠져나가고 설탕 분자의 결합 구조가 깨지면서 여러 화합물이 생겨 갈색으로 변한다.</p>
+  <p class="f22 mt8" data-q><b>Q</b> 빠져나간 물을 다시 넣어 주면 흰색 설탕으로 돌아갈까?</p>
+  <div class="answer step mt8">돌아가지 않는다. 이처럼 <mark>한 방향으로만 일어나는 반응</mark>을 <b>비가역 반응</b>이라고 한다.</div>
 </section>
 
-<!-- ════════ 13. 확인하기 ════════ -->
-<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 가역 반응일까?" data-tpl="check">
-  <h2><span class="tag q">확인하기</span>가역 반응일까, 비가역 반응일까?</h2>
+<!-- ════════ 11. 우리 주변 ════════ -->
+<section class="slide" data-sec="01 · 가역 반응과 비가역 반응" data-title="우리 주변의 가역 반응과 비가역 반응">
+  <h2><span class="no">1</span>우리 주변의 가역 반응과 비가역 반응</h2>
+  <div class="row">
+    <div class="col">
+      <h3 class="c-field">가역 반응</h3>
+      <div class="card"><p class="f21"><b>석회 동굴의 생성</b></p><p class="f21">$\ce{CaCO3(s) + H2O(l) + CO2(g) &lt;=&gt; Ca(HCO3)2(aq)}$</p>
+        <p class="small">정반응: 석회암이 녹아 동굴 생성 · 역반응: 종유석·석순 생성</p></div>
+      <div class="card mt12"><p class="f21"><b>암모니아의 합성</b></p><p class="f21">$\ce{N2(g) + 3H2(g) &lt;=&gt; 2NH3(g)}$</p></div>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <h3>비가역 반응</h3>
+      <div class="card"><p class="f21"><b>메테인의 연소</b></p><p class="f21">$\ce{CH4(g) + 2O2(g) -&gt; CO2(g) + 2H2O(l)}$</p></div>
+      <div class="card mt12"><p class="f21"><b>마그네슘과 염산의 반응</b></p><p class="f21">$\ce{Mg(s) + 2HCl(aq) -&gt; MgCl2(aq) + H2(g)}$</p><p class="small">수소 기체가 생성되어 빠져나간다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 확인하기 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 가역 반응과 비가역 반응" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>가역 반응과 비가역 반응</h2>
   <ol class="cm311-ox">
-    <li>염화 코발트 종이에 입김을 불면 붉게 변하고, 말리면 다시 푸르게 된다. <span class="blank"><span class="step">가역 반응</span></span></li>
-    <li>종이가 타서 재와 연기가 된다. <span class="blank"><span class="step">비가역 반응 (연소)</span></span></li>
-    <li>염화 나트륨 수용액에 질산 은 수용액을 넣으면 흰색 앙금이 생긴다. <span class="blank"><span class="step">비가역 반응 (앙금 생성)</span></span></li>
-    <li>물을 끓이면 수증기가 되고, 수증기를 식히면 다시 물이 된다. <span class="blank"><span class="step">두 방향으로 일어나는 변화 (상태 변화)</span></span></li>
+    <li>반응물이 생성물로 되는 반응을 (<span class="blank"><span class="step">정반응</span></span>)(이)라 하고, 생성물이 반응물로 되는 반응을 (<span class="blank"><span class="step">역반응</span></span>)(이)라고 한다.</li>
+    <li>반응 조건에 따라 정반응과 역반응이 모두 일어날 수 있는 반응을 (<span class="blank"><span class="step">가역</span></span>) 반응이라 하고, 한 방향으로만 일어나는 반응을 (<span class="blank"><span class="step">비가역</span></span>) 반응이라고 한다.</li>
   </ol>
-  <div class="note mt28">4번은 화학 반응이 아닌 물리 변화이지만, 가역 반응처럼 <b>두 방향</b>으로 일어난다. 다음에 이 변화로 '평형'을 알아본다.</div>
+  <div class="note mt28"><b>더 생각하기</b> 물을 끓이면 수증기가 되고, 수증기를 식히면 다시 물이 된다. 이 상태 변화도 두 방향으로 일어난다. 다음에는 이 변화로 '평형'을 알아본다.</div>
 </section>
 
 <!-- ════════ 14. 연결: 닫힌 용기 ════════ -->
-<section class="slide" data-sec="01 · 동적 평형" data-title="닫힌 용기 속 물은 증발을 멈췄을까?">
-  <h2><span class="tag alt">연결</span>닫힌 용기 속 물은 증발을 멈춘 것일까?</h2>
+<section class="slide" data-sec="01 · 화학 평형" data-title="닫힌 용기 속 물은 증발을 멈췄을까?">
+  <h2><span class="no">2</span>밀폐된 병 속의 물은 증발을 멈춘 것일까?</h2>
   <div class="row">
     <div class="col" style="flex:0 0 480px">
       <svg class="fig" viewBox="0 0 470 260" style="width:470px" aria-label="뚜껑 없는 비커는 물이 줄고, 마개 닫은 용기는 수면이 일정함"><path d="M40 40 V200 Q40 214 54 214 H186 Q200 214 200 200 V40" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="42" y="150" width="156" height="62" rx="10" fill="#DDEEF8"/><path d="M42 150 H198" stroke="#9FC3DD" stroke-width="2"/><path d="M42 110 H198" stroke="#9FC3DD" stroke-width="2" stroke-dasharray="6 5"/><text class="tex" x="120" y="104" data-mix="처음 수면" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="move" data-from="0,30" data-dur="1.6" data-delay=".3" data-rep="loop" data-ease="out"><g data-atom="98.3,66.4,7,H,-"></g><g data-atom="81.7,66.4,7,H,-"></g><g data-atom="90,60,10,O,-"></g><g data-atom="160.3,27.8,7,H,-"></g><g data-atom="149.6,40.5,7,H,-"></g><g data-atom="150,30,10,O,-"></g></g><text class="tex" x="120" y="246" data-mix="뚜껑 없는 비커: 물이 줄어든다" data-size="19" data-anchor="middle" fill="#16233D"></text><rect x="260" y="40" width="180" height="174" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="324" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="262" y="120" width="176" height="92" rx="16" fill="#DDEEF8"/><path d="M262 120 H438" stroke="#9FC3DD" stroke-width="2"/><text class="tex" x="350" y="246" data-mix="마개 닫은 용기: 수면 일정" data-size="19" data-anchor="middle" fill="#16233D"></text></svg>
     </div>
     <div class="col">
-      <p class="f22">뚜껑 없는 비커의 물은 점점 줄어들지만, 마개를 닫은 용기의 물은 며칠이 지나도 수면의 높이가 변하지 않는다.</p>
+      <p class="f22">물이 든 병의 뚜껑을 닫아 밀폐하면 병 속의 물은 처음에는 줄어들지만, 오랜 시간이 지나면 <b>일정하게 유지</b>된다.</p>
       <p class="f22 mt12" data-q><b>Q</b> 닫힌 용기에서 물이 줄지 않는 것은 물 분자가 더 이상 증발하지 않기 때문일까?</p>
       <div class="card mt8"><p class="f21"><b>(가)</b> 증발이 멈추었다.</p></div>
       <div class="card mt8"><p class="f21"><b>(나)</b> 증발은 계속되지만, 같은 수만큼 응축된다.</p></div>
@@ -597,92 +563,36 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
 </section>
 
 <!-- ════════ 15. 상평형 ════════ -->
-<section class="slide" data-sec="01 · 동적 평형" data-title="동적 평형: 상평형">
+<section class="slide" data-sec="01 · 화학 평형" data-title="동적 평형: 상평형">
   <h2><span class="no">2</span>동적 평형 — 물과 수증기</h2>
-  <div class="stages"><div class="stage"><h3>① 처음</h3><svg viewBox="0 0 300 244" style="height:200px" aria-label="밀폐 용기 속 물과 수증기 분자, 증발과 응축 화살표"><rect x="20" y="40" width="180" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="84" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="22" y="150" width="176" height="58" rx="16" fill="#DDEEF8"/><path d="M22 150 H198" stroke="#9FC3DD" stroke-width="2"/><g data-atom="54.3,174.9,7,H,-"></g><g data-atom="37.9,177.8,7,H,-"></g><g data-atom="45,170,10,O,-"></g><g data-atom="82,199.7,7,H,-"></g><g data-atom="67.6,191.4,7,H,-"></g><g data-atom="78,190,10,O,-"></g><g data-atom="120.4,169.4,7,H,-"></g><g data-atom="106,177.7,7,H,-"></g><g data-atom="110,168,10,O,-"></g><g data-atom="147.1,199.8,7,H,-"></g><g data-atom="130.7,196.9,7,H,-"></g><g data-atom="140,192,10,O,-"></g><g data-atom="172.4,182.5,7,H,-"></g><g data-atom="161.7,169.8,7,H,-"></g><g data-atom="172,172,10,O,-"></g><g data-atom="69.7,192,7,H,-"></g><g data-atom="61.4,206.4,7,H,-"></g><g data-atom="60,196,10,O,-"></g><g data-atom="167.8,189.9,7,H,-"></g><g data-atom="164.9,206.3,7,H,-"></g><g data-atom="160,197,10,O,-"></g><g data-anim="move" data-from="0,26" data-dur="1.2" data-delay=".4" data-ease="out"><g data-atom="83.1,93.3,7,H,-"></g><g data-atom="83.1,109.9,7,H,-"></g><g data-atom="76.6,101.6,10,O,-"></g></g><g data-arw="228,170,228,110,field,3.5"></g><g data-arw="266,110,266,116,bfield,3.5"></g><text class="tex" x="228" y="232" data-mix="증발" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="270" y="232" data-mix="응축" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">증발 속도 &gt; 응축 속도</p></div><div class="stage"><h3>② 시간이 지나면</h3><svg viewBox="0 0 300 244" style="height:200px" aria-label="밀폐 용기 속 물과 수증기 분자, 증발과 응축 화살표"><rect x="20" y="40" width="180" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="84" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="22" y="150" width="176" height="58" rx="16" fill="#DDEEF8"/><path d="M22 150 H198" stroke="#9FC3DD" stroke-width="2"/><g data-atom="54.3,174.9,7,H,-"></g><g data-atom="37.9,177.8,7,H,-"></g><g data-atom="45,170,10,O,-"></g><g data-atom="82,199.7,7,H,-"></g><g data-atom="67.6,191.4,7,H,-"></g><g data-atom="78,190,10,O,-"></g><g data-atom="120.4,169.4,7,H,-"></g><g data-atom="106,177.7,7,H,-"></g><g data-atom="110,168,10,O,-"></g><g data-atom="147.1,199.8,7,H,-"></g><g data-atom="130.7,196.9,7,H,-"></g><g data-atom="140,192,10,O,-"></g><g data-atom="172.4,182.5,7,H,-"></g><g data-atom="161.7,169.8,7,H,-"></g><g data-atom="172,172,10,O,-"></g><g data-atom="69.7,192,7,H,-"></g><g data-atom="61.4,206.4,7,H,-"></g><g data-atom="60,196,10,O,-"></g><g data-atom="167.8,189.9,7,H,-"></g><g data-atom="164.9,206.3,7,H,-"></g><g data-atom="160,197,10,O,-"></g><g data-anim="move" data-from="0,26" data-dur="1.2" data-delay=".4" data-ease="out"><g data-atom="134.3,104.7,7,H,-"></g><g data-atom="134.3,121.3,7,H,-"></g><g data-atom="127.8,113,10,O,-"></g><g data-atom="58.7,100.7,7,H,-"></g><g data-atom="42.8,105.6,7,H,-"></g><g data-atom="48.9,97,10,O,-"></g><g data-atom="169.8,118.1,7,H,-"></g><g data-atom="160.5,104.4,7,H,-"></g><g data-atom="170.5,107.6,10,O,-"></g><g data-atom="154.6,79,7,H,-"></g><g data-atom="165,66.1,7,H,-"></g><g data-atom="164.8,76.6,10,O,-"></g></g><g data-arw="228,170,228,110,field,3.5"></g><g data-arw="266,110,266,144,bfield,3.5"></g><text class="tex" x="228" y="232" data-mix="증발" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="270" y="232" data-mix="응축" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">수증기가 늘어 응축 속도가 커진다</p></div><div class="stage"><h3>③ 평형</h3><svg viewBox="0 0 300 244" style="height:200px" aria-label="밀폐 용기 속 물과 수증기 분자, 증발과 응축 화살표"><rect x="20" y="40" width="180" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="84" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="22" y="150" width="176" height="58" rx="16" fill="#DDEEF8"/><path d="M22 150 H198" stroke="#9FC3DD" stroke-width="2"/><g data-atom="54.3,174.9,7,H,-"></g><g data-atom="37.9,177.8,7,H,-"></g><g data-atom="45,170,10,O,-"></g><g data-atom="82,199.7,7,H,-"></g><g data-atom="67.6,191.4,7,H,-"></g><g data-atom="78,190,10,O,-"></g><g data-atom="120.4,169.4,7,H,-"></g><g data-atom="106,177.7,7,H,-"></g><g data-atom="110,168,10,O,-"></g><g data-atom="147.1,199.8,7,H,-"></g><g data-atom="130.7,196.9,7,H,-"></g><g data-atom="140,192,10,O,-"></g><g data-atom="172.4,182.5,7,H,-"></g><g data-atom="161.7,169.8,7,H,-"></g><g data-atom="172,172,10,O,-"></g><g data-atom="69.7,192,7,H,-"></g><g data-atom="61.4,206.4,7,H,-"></g><g data-atom="60,196,10,O,-"></g><g data-atom="167.8,189.9,7,H,-"></g><g data-atom="164.9,206.3,7,H,-"></g><g data-atom="160,197,10,O,-"></g><g data-anim="move" data-from="0,26" data-dur="1.2" data-delay=".4" data-ease="out"><g data-atom="81.6,117.5,7,H,-"></g><g data-atom="81.6,134.1,7,H,-"></g><g data-atom="75.2,125.8,10,O,-"></g><g data-atom="66.1,88.1,7,H,-"></g><g data-atom="50.3,92.9,7,H,-"></g><g data-atom="56.3,84.4,10,O,-"></g><g data-atom="177.2,92.6,7,H,-"></g><g data-atom="167.9,78.9,7,H,-"></g><g data-atom="177.9,82.1,10,O,-"></g><g data-atom="120.1,99,7,H,-"></g><g data-atom="130.6,86.1,7,H,-"></g><g data-atom="130.4,96.6,10,O,-"></g><g data-atom="90.1,67.5,7,H,-"></g><g data-atom="105.5,73.7,7,H,-"></g><g data-atom="95.4,76.6,10,O,-"></g><g data-atom="102.3,100.6,7,H,-"></g><g data-atom="100.8,117.2,7,H,-"></g><g data-atom="95.2,108.3,10,O,-"></g></g><g data-arw="228,170,228,110,field,3.5"></g><g data-arw="266,110,266,170,bfield,3.5"></g><text class="tex" x="228" y="232" data-mix="증발" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="270" y="232" data-mix="응축" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">증발 속도 = 응축 속도</p></div></div>
+  <div class="stages"><div class="stage"><h3>① 처음</h3><svg viewBox="0 0 300 244" style="height:200px" aria-label="밀폐 용기 속 물과 수증기 분자, 증발과 응축 화살표"><rect x="20" y="40" width="180" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="84" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="22" y="150" width="176" height="58" rx="16" fill="#DDEEF8"/><path d="M22 150 H198" stroke="#9FC3DD" stroke-width="2"/><g data-atom="54.3,174.9,7,H,-"></g><g data-atom="37.9,177.8,7,H,-"></g><g data-atom="45,170,10,O,-"></g><g data-atom="82,199.7,7,H,-"></g><g data-atom="67.6,191.4,7,H,-"></g><g data-atom="78,190,10,O,-"></g><g data-atom="120.4,169.4,7,H,-"></g><g data-atom="106,177.7,7,H,-"></g><g data-atom="110,168,10,O,-"></g><g data-atom="147.1,199.8,7,H,-"></g><g data-atom="130.7,196.9,7,H,-"></g><g data-atom="140,192,10,O,-"></g><g data-atom="172.4,182.5,7,H,-"></g><g data-atom="161.7,169.8,7,H,-"></g><g data-atom="172,172,10,O,-"></g><g data-atom="69.7,192,7,H,-"></g><g data-atom="61.4,206.4,7,H,-"></g><g data-atom="60,196,10,O,-"></g><g data-atom="167.8,189.9,7,H,-"></g><g data-atom="164.9,206.3,7,H,-"></g><g data-atom="160,197,10,O,-"></g><g data-anim="move" data-from="0,26" data-dur="1.2" data-delay=".4" data-ease="out"><g data-atom="83.1,93.3,7,H,-"></g><g data-atom="83.1,109.9,7,H,-"></g><g data-atom="76.6,101.6,10,O,-"></g></g><g data-arw="228,170,228,110,field,3.5"></g><g data-arw="266,110,266,116,bfield,3.5"></g><text class="tex" x="222" y="234" data-mix="증발" data-size="23" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="274" y="234" data-mix="응축" data-size="23" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">증발 속도 &gt; 응축 속도</p></div><div class="stage"><h3>② 시간이 지나면</h3><svg viewBox="0 0 300 244" style="height:200px" aria-label="밀폐 용기 속 물과 수증기 분자, 증발과 응축 화살표"><rect x="20" y="40" width="180" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="84" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="22" y="150" width="176" height="58" rx="16" fill="#DDEEF8"/><path d="M22 150 H198" stroke="#9FC3DD" stroke-width="2"/><g data-atom="54.3,174.9,7,H,-"></g><g data-atom="37.9,177.8,7,H,-"></g><g data-atom="45,170,10,O,-"></g><g data-atom="82,199.7,7,H,-"></g><g data-atom="67.6,191.4,7,H,-"></g><g data-atom="78,190,10,O,-"></g><g data-atom="120.4,169.4,7,H,-"></g><g data-atom="106,177.7,7,H,-"></g><g data-atom="110,168,10,O,-"></g><g data-atom="147.1,199.8,7,H,-"></g><g data-atom="130.7,196.9,7,H,-"></g><g data-atom="140,192,10,O,-"></g><g data-atom="172.4,182.5,7,H,-"></g><g data-atom="161.7,169.8,7,H,-"></g><g data-atom="172,172,10,O,-"></g><g data-atom="69.7,192,7,H,-"></g><g data-atom="61.4,206.4,7,H,-"></g><g data-atom="60,196,10,O,-"></g><g data-atom="167.8,189.9,7,H,-"></g><g data-atom="164.9,206.3,7,H,-"></g><g data-atom="160,197,10,O,-"></g><g data-anim="move" data-from="0,26" data-dur="1.2" data-delay=".4" data-ease="out"><g data-atom="134.3,104.7,7,H,-"></g><g data-atom="134.3,121.3,7,H,-"></g><g data-atom="127.8,113,10,O,-"></g><g data-atom="58.7,100.7,7,H,-"></g><g data-atom="42.8,105.6,7,H,-"></g><g data-atom="48.9,97,10,O,-"></g><g data-atom="169.8,118.1,7,H,-"></g><g data-atom="160.5,104.4,7,H,-"></g><g data-atom="170.5,107.6,10,O,-"></g><g data-atom="154.6,79,7,H,-"></g><g data-atom="165,66.1,7,H,-"></g><g data-atom="164.8,76.6,10,O,-"></g></g><g data-arw="228,170,228,110,field,3.5"></g><g data-arw="266,110,266,144,bfield,3.5"></g><text class="tex" x="222" y="234" data-mix="증발" data-size="23" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="274" y="234" data-mix="응축" data-size="23" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">수증기가 늘어 응축 속도가 커진다</p></div><div class="stage"><h3>③ 평형</h3><svg viewBox="0 0 300 244" style="height:200px" aria-label="밀폐 용기 속 물과 수증기 분자, 증발과 응축 화살표"><rect x="20" y="40" width="180" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="84" y="26" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><rect x="22" y="150" width="176" height="58" rx="16" fill="#DDEEF8"/><path d="M22 150 H198" stroke="#9FC3DD" stroke-width="2"/><g data-atom="54.3,174.9,7,H,-"></g><g data-atom="37.9,177.8,7,H,-"></g><g data-atom="45,170,10,O,-"></g><g data-atom="82,199.7,7,H,-"></g><g data-atom="67.6,191.4,7,H,-"></g><g data-atom="78,190,10,O,-"></g><g data-atom="120.4,169.4,7,H,-"></g><g data-atom="106,177.7,7,H,-"></g><g data-atom="110,168,10,O,-"></g><g data-atom="147.1,199.8,7,H,-"></g><g data-atom="130.7,196.9,7,H,-"></g><g data-atom="140,192,10,O,-"></g><g data-atom="172.4,182.5,7,H,-"></g><g data-atom="161.7,169.8,7,H,-"></g><g data-atom="172,172,10,O,-"></g><g data-atom="69.7,192,7,H,-"></g><g data-atom="61.4,206.4,7,H,-"></g><g data-atom="60,196,10,O,-"></g><g data-atom="167.8,189.9,7,H,-"></g><g data-atom="164.9,206.3,7,H,-"></g><g data-atom="160,197,10,O,-"></g><g data-anim="move" data-from="0,26" data-dur="1.2" data-delay=".4" data-ease="out"><g data-atom="81.6,117.5,7,H,-"></g><g data-atom="81.6,134.1,7,H,-"></g><g data-atom="75.2,125.8,10,O,-"></g><g data-atom="66.1,88.1,7,H,-"></g><g data-atom="50.3,92.9,7,H,-"></g><g data-atom="56.3,84.4,10,O,-"></g><g data-atom="177.2,92.6,7,H,-"></g><g data-atom="167.9,78.9,7,H,-"></g><g data-atom="177.9,82.1,10,O,-"></g><g data-atom="120.1,99,7,H,-"></g><g data-atom="130.6,86.1,7,H,-"></g><g data-atom="130.4,96.6,10,O,-"></g><g data-atom="90.1,67.5,7,H,-"></g><g data-atom="105.5,73.7,7,H,-"></g><g data-atom="95.4,76.6,10,O,-"></g><g data-atom="102.3,100.6,7,H,-"></g><g data-atom="100.8,117.2,7,H,-"></g><g data-atom="95.2,108.3,10,O,-"></g></g><g data-arw="228,170,228,110,field,3.5"></g><g data-arw="266,110,266,170,bfield,3.5"></g><text class="tex" x="222" y="234" data-mix="증발" data-size="23" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="274" y="234" data-mix="응축" data-size="23" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">증발 속도 = 응축 속도</p></div></div>
   <p class="small mt8">화살표 길이 = 속도(1초 동안 증발하거나 응축하는 분자 수). 물 분자 모형: $\mathrm{O}$ 빨간 공, $\mathrm{H}$ 흰 공</p>
-  <p class="f22 mt8 step" data-g="d1"><mark>정반응 속도와 역반응 속도가 같아서 겉으로는 변화가 없어 보이지만, 실제로는 두 반응이 계속 일어나는 상태</mark>를 <b>동적 평형</b>이라고 한다.</p>
-  <p class="f22 mt8 step" data-g="d2">물과 수증기 사이의 동적 평형을 <b>상평형</b>이라고 한다: $\ce{H2O(l) &lt;=&gt; H2O(g)}$</p>
+  <p class="f22 mt8 step" data-g="d1">이처럼 <mark>정반응 속도와 역반응 속도가 같아서 겉으로는 변화가 일어나지 않는 것처럼 보이는 상태</mark>를 <b>동적 평형</b>이라고 한다.</p>
+  <p class="f21 mt8 step" data-g="d2"><b>상평형</b> 물과 수증기가 공존하는 것처럼, 물질의 상태 가운데 두 가지 이상이 동적 평형을 유지하는 것: $\ce{H2O(l) &lt;=&gt; H2O(g)}$</p>
 </section>
 
-<!-- ════════ 16. 용해 평형 ════════ -->
-<section class="slide" data-sec="01 · 동적 평형" data-title="동적 평형: 용해 평형">
-  <h2><span class="no">2</span>동적 평형 — 설탕의 용해 평형</h2>
-  <div class="row">
-    <div class="col" style="flex:0 0 640px"><div class="stages c2"><div class="stage"><h3>① 녹는 중</h3><svg viewBox="0 0 300 244" style="height:190px" aria-label="설탕 결정과 녹은 설탕 분자, 용해와 석출 화살표"><path d="M30 30 V196 Q30 212 46 212 H194 Q210 212 210 196 V30" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="32" y="66" width="176" height="144" rx="14" fill="#DDEEF8" fill-opacity=".7"/><path d="M32 66 H208" stroke="#9FC3DD" stroke-width="2"/><rect x="80" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="96" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="112" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="128" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="144" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="88" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="104" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="120" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="136" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="96" y="166" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="112" y="166" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="128" y="166" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><g data-anim="move" data-from="0,30" data-dur="1.2" data-delay=".4" data-ease="out"><polygon points="121.8,135.5 114,140 106.3,135.5 106.3,126.5 114,122 121.8,126.5" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="190.7,127.6 182.9,132.1 175.1,127.6 175.1,118.6 182.9,114.1 190.7,118.6" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="82.8,131.5 75,136 67.2,131.5 67.2,122.5 75,118 82.8,122.5" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="147.8,155.1 140,159.6 132.2,155.1 132.2,146.1 140,141.6 147.8,146.1" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/></g><g data-arw="236,178,236,118,field,3.5"></g><g data-arw="272,160,272,178,bfield,3.5"></g><text class="tex" x="236" y="232" data-mix="용해" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="276" y="232" data-mix="석출" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">용해 속도 &gt; 석출 속도</p></div><div class="stage"><h3>② 포화 용액</h3><svg viewBox="0 0 300 244" style="height:190px" aria-label="설탕 결정과 녹은 설탕 분자, 용해와 석출 화살표"><path d="M30 30 V196 Q30 212 46 212 H194 Q210 212 210 196 V30" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="32" y="66" width="176" height="144" rx="14" fill="#DDEEF8" fill-opacity=".7"/><path d="M32 66 H208" stroke="#9FC3DD" stroke-width="2"/><rect x="88" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="104" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="120" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="136" y="194" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="96" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="112" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><rect x="128" y="180" width="16" height="14" rx="2" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.5"/><g data-anim="move" data-from="0,30" data-dur="1.2" data-delay=".4" data-ease="out"><polygon points="125.1,143.7 117.3,148.2 109.5,143.7 109.5,134.7 117.3,130.2 125.1,134.7" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="153.1,100.5 145.3,105 137.5,100.5 137.5,91.5 145.3,87 153.1,91.5" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="57.4,120 49.6,124.5 41.8,120 41.8,111 49.6,106.5 57.4,111" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="95.8,156.6 88,161.1 80.2,156.6 80.2,147.6 88,143.1 95.8,147.6" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="156.6,139 148.8,143.5 141,139 141,130 148.8,125.5 156.6,130" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="64.4,157.3 56.6,161.8 48.8,157.3 48.8,148.3 56.6,143.8 64.4,148.3" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="105,122.5 97.2,127 89.4,122.5 89.4,113.5 97.2,109 105,113.5" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="199.9,168 192.1,172.5 184.3,168 184.3,159 192.1,154.5 199.9,159" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/><polygon points="111.9,91.1 104.1,95.6 96.4,91.1 96.4,82.1 104.1,77.6 111.9,82.1" fill="#F3E9C6" stroke="#B59A4A" stroke-width="1.6"/></g><g data-arw="236,178,236,128,field,3.5"></g><g data-arw="272,128,272,178,bfield,3.5"></g><text class="tex" x="236" y="232" data-mix="용해" data-size="19" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="276" y="232" data-mix="석출" data-size="19" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p class="key">용해 속도 = 석출 속도</p></div></div>
-      <p class="small mt8">네모 = 설탕 결정, 육각형 = 녹은 설탕 분자, 화살표 길이 = 속도</p></div>
+<!-- ════════ 15. 해 보기: 동적 평형 해석 ════════ -->
+<section class="slide" data-sec="01 · 해 보기" data-title="해 보기: 동적 평형 상태 해석하기">
+  <h2><span class="tag">해 보기</span>가역 반응에서 동적 평형 상태 해석하기 <span class="small c-muted">모의실험</span></h2>
+  <p class="f21">적갈색 이산화 질소($\ce{NO2}$)가 반응하여 무색 사산화 이질소($\ce{N2O4}$)를 생성하는 반응은 가역적이다: $\ce{2NO2(g) &lt;=&gt; N2O4(g)}$. 일정한 온도에서 각 기체를 뚜껑 있는 유리병에 넣고 닫아 두었다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 580px"><svg class="fig" viewBox="0 0 580 250" style="width:560px" aria-label="(가) 적갈색 이산화 질소 병은 색이 옅어지고, (나) 무색 사산화 이질소 병은 색이 진해짐"><rect x="20" y="40" width="70" height="140" rx="10" fill="#B5562A" fill-opacity="0.85" stroke="#7E8B98" stroke-width="3"/><rect x="28" y="20" width="54" height="22" rx="4" fill="#3A3F47"/><g data-arw="106,110,156,110,field,4"></g><rect x="172" y="40" width="70" height="140" rx="10" fill="#C77A4E" fill-opacity=".55" stroke="#7E8B98" stroke-width="3"/><rect x="180" y="20" width="54" height="22" rx="4" fill="#3A3F47"/><text class="tex" x="55" y="206" data-mix="$\ce{NO2(g)}$" data-size="20" data-anchor="middle" fill="#16233D"></text><rect x="330" y="40" width="70" height="140" rx="10" fill="#FFFFFF" fill-opacity="0" stroke="#7E8B98" stroke-width="3"/><rect x="338" y="20" width="54" height="22" rx="4" fill="#3A3F47"/><g data-arw="416,110,466,110,field,4"></g><rect x="482" y="40" width="70" height="140" rx="10" fill="#D79A72" fill-opacity=".55" stroke="#7E8B98" stroke-width="3"/><rect x="490" y="20" width="54" height="22" rx="4" fill="#3A3F47"/><text class="tex" x="365" y="206" data-mix="$\ce{N2O4(g)}$" data-size="20" data-anchor="middle" fill="#16233D"></text><text class="tex" x="10" y="24" data-mix="(가)" data-size="20" data-anchor="start" data-weight="700"></text><text class="tex" x="320" y="24" data-mix="(나)" data-size="20" data-anchor="start" data-weight="700"></text><text class="tex" x="130" y="240" data-mix="색이 점점 옅어지다가 일정" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="440" y="240" data-mix="색이 점점 진해지다가 일정" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
     <div class="col">
-      <p class="f22">설탕을 물에 계속 넣으면 어느 순간 더 녹지 않는 것처럼 보인다(포화 용액).</p>
-      <p class="f22 mt12 step" data-g="s1">용질이 녹는 속도와 석출되는 속도가 같은 동적 평형을 <b>용해 평형</b>이라고 한다.</p>
-      <div class="formula sm mt8 step" data-g="s1">$\ce{C12H22O11(s) &lt;=&gt; C12H22O11(aq)}$</div>
+      <p class="f21"><b>Q</b> 1. (가)에서 색이 점점 옅어지고, (나)에서 색이 점점 진해지는 까닭은?</p>
+      <p class="f21 step cm311-a">→ (가) $\ce{NO2}$가 결합해 $\ce{N2O4}$가 생기는 <b>정반응</b>이 우세하다. (나) $\ce{N2O4}$가 분해되어 $\ce{NO2}$가 생기는 <b>역반응</b>이 우세하다.</p>
+      <p class="f21 mt12"><b>Q</b> 2. 시간이 충분히 흐른 뒤 색이 일정하게 유지되는 까닭은?</p>
+      <p class="f21 step cm311-a">→ 정반응 속도와 역반응 속도가 <span class="ans">같아져</span> 두 기체의 농도가 일정하게 유지되기 때문이다.</p>
     </div>
   </div>
-  <div class="note puzzle mt12 step" data-g="s2"><b>증거</b> 포화 용액에 모서리가 깨진 설탕 결정을 넣어 두면, 질량은 변하지 않지만 결정의 <b>모양이 바뀐다</b>. → 녹는 것과 석출되는 것이 계속 일어난다.</div>
-</section>
-
-<!-- ════════ 17. 화학 평형 ════════ -->
-<section class="slide" data-sec="01 · 화학 평형" data-title="화학 평형: 2NO₂ ⇌ N₂O₄">
-  <h2><span class="no">3</span>화학 평형 — $\ce{2NO2(g) &lt;=&gt; N2O4(g)}$</h2>
-  <p class="f22">적갈색 이산화 질소($\ce{NO2}$)를 밀폐 용기에 넣고 두면, 색이 점점 옅어지다가 어느 순간부터 <b>더 이상 변하지 않는다</b>.</p>
-  <div class="stages mt8"><div class="stage"><h3>① 처음</h3><svg viewBox="0 0 300 272" style="height:212px" aria-label="밀폐 용기 속 이산화 질소와 사산화 이질소 분자, 정반응과 역반응의 빠르기"><rect x="30" y="30" width="240" height="170" rx="18" fill="#B5562A" fill-opacity="0.5"/><rect x="30" y="30" width="240" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="124" y="16" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><g data-atom="97.4,126.5,12,O,-"></g><g data-atom="97.4,156.3,12,O,-"></g><g data-atom="91,141.4,12,N,-"></g><g data-atom="187.8,124.6,12,O,-"></g><g data-atom="158.2,121,12,O,-"></g><g data-atom="173.8,116.5,12,N,-"></g><g data-atom="52.8,116.7,12,O,-"></g><g data-atom="60,87.8,12,O,-"></g><g data-atom="62.6,103.8,12,N,-"></g><g data-atom="153.4,56.9,12,O,-"></g><g data-atom="181.2,67.6,12,O,-"></g><g data-atom="165,68.2,12,N,-"></g><g data-atom="115.5,54.8,12,O,-"></g><g data-atom="101.5,81.1,12,O,-"></g><g data-atom="103,65,12,N,-"></g><g data-atom="246.2,160.9,12,O,-"></g><g data-atom="221.7,143.8,12,O,-"></g><g data-atom="237.6,147.2,12,N,-"></g><g data-atom="214.9,110.3,12,O,-"></g><g data-atom="234.8,88.2,12,O,-"></g><g data-atom="229.5,103.5,12,N,-"></g><g data-atom="183.4,161.7,12,O,-"></g><g data-atom="202.9,184.3,12,O,-"></g><g data-atom="188.4,177.2,12,N,-"></g><g data-atom="149.5,173.6,12,O,-"></g><g data-atom="124.8,190.3,12,O,-"></g><g data-atom="133.6,176.7,12,N,-"></g><g data-atom="126,122.9,12,O,-"></g><g data-atom="112.5,96.4,12,O,-"></g><g data-atom="124.9,106.8,12,N,-"></g><g data-atom="196.5,60.6,12,O,-"></g><g data-atom="224.5,50.4,12,O,-"></g><g data-atom="212.7,61.4,12,N,-"></g><g data-atom="66.6,160.8,12,O,-"></g><g data-atom="73.3,189.8,12,O,-"></g><g data-atom="63.8,176.7,12,N,-"></g><text class="tex" x="20" y="232" data-mix="정반응" data-size="19" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><g data-arw="96,226,246,226,field,3.5"></g><text class="tex" x="20" y="262" data-mix="역반응" data-size="19" data-anchor="start" data-weight="700" fill="#7B4FC8"></text><text class="tex" x="100" y="262" data-mix="거의 없음" data-size="18" data-anchor="start" fill="#5B6B7F"></text></svg><p class="key">적갈색이 진하다 · $\ce{NO2}$ 12개</p></div><div class="stage"><h3>② 시간이 지나면</h3><svg viewBox="0 0 300 272" style="height:212px" aria-label="밀폐 용기 속 이산화 질소와 사산화 이질소 분자, 정반응과 역반응의 빠르기"><rect x="30" y="30" width="240" height="170" rx="18" fill="#B5562A" fill-opacity="0.34"/><rect x="30" y="30" width="240" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="124" y="16" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><g data-atom="237,61.7,12,O,-"></g><g data-atom="237,91.5,12,O,-"></g><g data-atom="230.6,76.6,12,N,-"></g><g data-atom="80.2,185.9,12,O,-"></g><g data-atom="50.6,182.3,12,O,-"></g><g data-atom="66.2,177.8,12,N,-"></g><g data-atom="84.7,87.2,12,O,-"></g><g data-atom="91.9,58.2,12,O,-"></g><g data-atom="94.4,74.2,12,N,-"></g><g data-atom="165,89.5,12,O,-"></g><g data-atom="192.8,100.2,12,O,-"></g><g data-atom="176.7,100.8,12,N,-"></g><g data-atom="180.4,159.8,12,O,-"></g><g data-atom="166.4,186.1,12,O,-"></g><g data-atom="167.8,170,12,N,-"></g><g data-atom="225.7,143.3,12,O,-"></g><g data-atom="201.3,126.2,12,O,-"></g><g data-atom="217.1,129.6,12,N,-"></g><g data-atom="102.3,159,12,O,-"></g><g data-atom="122.3,136.9,12,O,-"></g><g data-atom="117,152.2,12,N,-"></g><g data-atom="65.6,107.3,12,O,-"></g><g data-atom="85.2,129.9,12,O,-"></g><g data-atom="70.6,122.8,12,N,-"></g><g data-atom="127.7,55.1,12,O,-"></g><g data-atom="153.4,42.6,12,O,-"></g><g data-atom="167.7,71.9,12,O,-"></g><g data-atom="142,84.4,12,O,-"></g><g data-atom="143.9,55.7,12,N,-"></g><g data-atom="151.5,71.3,12,N,-"></g><g data-atom="126.3,88.5,12,O,-"></g><g data-atom="151.8,101.4,12,O,-"></g><g data-atom="137,130.5,12,O,-"></g><g data-atom="111.5,117.5,12,O,-"></g><g data-atom="135.6,101.7,12,N,-"></g><g data-atom="127.7,117.2,12,N,-"></g><text class="tex" x="20" y="232" data-mix="정반응" data-size="19" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><g data-arw="96,226,196,226,field,3.5"></g><text class="tex" x="20" y="262" data-mix="역반응" data-size="19" data-anchor="start" data-weight="700" fill="#7B4FC8"></text><g data-arw="136,256,96,256,bfield,3.5"></g></svg><p class="key">색이 옅어진다 · $\ce{NO2}$ 8개, $\ce{N2O4}$ 2개</p></div><div class="stage"><h3>③ 평형</h3><svg viewBox="0 0 300 272" style="height:212px" aria-label="밀폐 용기 속 이산화 질소와 사산화 이질소 분자, 정반응과 역반응의 빠르기"><rect x="30" y="30" width="240" height="170" rx="18" fill="#B5562A" fill-opacity="0.26"/><rect x="30" y="30" width="240" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="124" y="16" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><g data-anim="move" data-from="3,-3" data-rep="swing" data-dur=".9"><g data-atom="193.7,144.2,12,O,-"></g><g data-atom="193.7,174,12,O,-"></g><g data-atom="187.4,159.1,12,N,-"></g><g data-atom="108.2,185.9,12,O,-"></g><g data-atom="78.6,182.3,12,O,-"></g><g data-atom="94.1,177.8,12,N,-"></g><g data-atom="129.9,175.1,12,O,-"></g><g data-atom="137.1,146.2,12,O,-"></g><g data-atom="139.7,162.2,12,N,-"></g><g data-atom="224.2,62.4,12,O,-"></g><g data-atom="252.1,73.1,12,O,-"></g><g data-atom="235.9,73.6,12,N,-"></g><g data-atom="204.7,102.2,12,O,-"></g><g data-atom="190.7,128.6,12,O,-"></g><g data-atom="192.1,112.4,12,N,-"></g><g data-atom="128.1,109.8,12,O,-"></g><g data-atom="103.7,92.7,12,O,-"></g><g data-atom="119.5,96,12,N,-"></g><g data-atom="76.8,49.9,12,O,-"></g><g data-atom="95.9,71.2,12,O,-"></g><g data-atom="71.7,93,12,O,-"></g><g data-atom="52.6,71.7,12,O,-"></g><g data-atom="80.7,65.6,12,N,-"></g><g data-atom="67.8,77.3,12,N,-"></g><g data-atom="59.7,129.3,12,O,-"></g><g data-atom="65.2,101.2,12,O,-"></g><g data-atom="97.2,107.4,12,O,-"></g><g data-atom="91.7,135.5,12,O,-"></g><g data-atom="69.9,116.7,12,N,-"></g><g data-atom="87,120,12,N,-"></g><g data-atom="154.8,53.6,12,O,-"></g><g data-atom="180.5,41.1,12,O,-"></g><g data-atom="194.8,70.4,12,O,-"></g><g data-atom="169.1,83,12,O,-"></g><g data-atom="171,54.2,12,N,-"></g><g data-atom="178.6,69.8,12,N,-"></g></g><text class="tex" x="20" y="232" data-mix="정반응" data-size="19" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><g data-arw="96,226,166,226,field,3.5"></g><text class="tex" x="20" y="262" data-mix="역반응" data-size="19" data-anchor="start" data-weight="700" fill="#7B4FC8"></text><g data-arw="166,256,96,256,bfield,3.5"></g></svg><p class="key">색이 일정하다 · $\ce{NO2}$ 6개, $\ce{N2O4}$ 3개</p></div></div>
-  <p class="small mt8">$\mathrm{N}$ 원자 수: $12=8+2\times2=6+3\times2$ (보존) · 모형: $\mathrm{N}$ 파란 공, $\mathrm{O}$ 빨간 공 · 화살표 길이 = 반응 속도</p>
-  <div class="answer step mt8">색이 변하지 않아도 $\ce{NO2}$ 두 개가 결합하는 반응과 $\ce{N2O4}$가 분해되는 반응은 <b>같은 속도로 계속</b> 일어난다.</div>
-</section>
-
-<!-- ════════ 18. 그래프 ════════ -->
-<section class="slide" data-sec="01 · 화학 평형" data-title="농도와 반응 속도 그래프">
-  <h2><span class="no">3</span>평형에 도달하는 과정을 그래프로</h2>
-  <div class="row">
-    <div class="col" style="flex:0 0 580px">
-      <svg class="fig" viewBox="0 0 560 230" style="width:560px" aria-label="이산화 질소 농도는 줄고 사산화 이질소 농도는 늘다가 t1 이후 일정한 농도-시간 그래프"><rect x="277.9" y="20" width="258.1" height="172" fill="#FFE45C" fill-opacity=".25"/><path d="M277.9 20 V192" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><g data-arw="64,192,550,192,ink,2"></g><g data-arw="64,192,64,10,ink,2"></g><text class="tex" x="277.9" y="216" data-mix="$t_1$" data-size="20" data-anchor="middle"></text><text class="tex" x="542" y="218" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="406.9" y="42" data-mix="평형" data-size="19" data-anchor="middle" data-weight="700" fill="#8A6D00"></text><text class="tex" x="56" y="26" data-mix="농도" data-size="19" data-anchor="end" fill="#16233D"></text><path d="M64 42 L69.9 52.9 L75.8 61.9 L81.7 69.5 L87.6 75.8 L93.5 81.2 L99.4 85.9 L105.3 89.8 L111.2 93.2 L117.1 96.2 L123 98.7 L128.9 100.9 L134.8 102.9 L140.7 104.5 L146.6 106 L152.5 107.3 L158.4 108.5 L164.3 109.5 L170.2 110.3 L176.1 111.1 L182 111.8 L187.9 112.4 L193.8 112.9 L199.7 113.4 L205.6 113.8 L211.5 114.2 L217.4 114.5 L223.3 114.8 L229.2 115 L235.1 115.3 L241 115.5 L246.9 115.6 L252.8 115.8 L258.7 115.9 L264.6 116 L270.5 116.2 L276.4 116.3 L282.3 116.3 L288.2 116.4 L294.1 116.5 L300 116.5 L305.9 116.6 L311.8 116.6 L317.7 116.7 L323.6 116.7 L329.5 116.7 L335.4 116.8 L341.3 116.8 L347.2 116.8 L353.1 116.8 L359 116.9 L364.9 116.9 L370.8 116.9 L376.7 116.9 L382.6 116.9 L388.5 116.9 L394.4 116.9 L400.3 116.9 L406.2 116.9 L412.1 117 L418 117 L423.9 117 L429.8 117 L435.7 117 L441.6 117 L447.5 117 L453.4 117 L459.3 117 L465.2 117 L471.1 117 L477 117 L482.9 117 L488.8 117 L494.7 117 L500.6 117 L506.5 117 L512.4 117 L518.3 117 L524.2 117 L530.1 117 L536 117" fill="none" stroke="#B5562A" stroke-width="4" data-anim="draw" data-dur="1.6" data-delay=".3"/><path d="M64 192 L69.9 186.5 L75.8 182 L81.7 178.3 L87.6 175.1 L93.5 172.4 L99.4 170.1 L105.3 168.1 L111.2 166.4 L117.1 164.9 L123 163.6 L128.9 162.5 L134.8 161.6 L140.7 160.7 L146.6 160 L152.5 159.3 L158.4 158.8 L164.3 158.3 L170.2 157.8 L176.1 157.4 L182 157.1 L187.9 156.8 L193.8 156.5 L199.7 156.3 L205.6 156.1 L211.5 155.9 L217.4 155.8 L223.3 155.6 L229.2 155.5 L235.1 155.4 L241 155.3 L246.9 155.2 L252.8 155.1 L258.7 155 L264.6 155 L270.5 154.9 L276.4 154.9 L282.3 154.8 L288.2 154.8 L294.1 154.8 L300 154.7 L305.9 154.7 L311.8 154.7 L317.7 154.7 L323.6 154.6 L329.5 154.6 L335.4 154.6 L341.3 154.6 L347.2 154.6 L353.1 154.6 L359 154.6 L364.9 154.6 L370.8 154.6 L376.7 154.5 L382.6 154.5 L388.5 154.5 L394.4 154.5 L400.3 154.5 L406.2 154.5 L412.1 154.5 L418 154.5 L423.9 154.5 L429.8 154.5 L435.7 154.5 L441.6 154.5 L447.5 154.5 L453.4 154.5 L459.3 154.5 L465.2 154.5 L471.1 154.5 L477 154.5 L482.9 154.5 L488.8 154.5 L494.7 154.5 L500.6 154.5 L506.5 154.5 L512.4 154.5 L518.3 154.5 L524.2 154.5 L530.1 154.5 L536 154.5" fill="none" stroke="#16233D" stroke-width="3.5" stroke-dasharray="12 6" data-anim="draw" data-dur="1.6" data-delay=".3"/><text class="tex" x="532" y="107" data-mix="$[\ce{NO2}]$" data-size="20" data-anchor="end" fill="#B5562A"></text><text class="tex" x="532" y="180.5" data-mix="$[\ce{N2O4}]$" data-size="20" data-anchor="end" fill="#16233D"></text></svg>
-      <svg class="fig mt8" viewBox="0 0 560 230" style="width:560px" aria-label="정반응 속도는 줄고 역반응 속도는 늘어 t1에서 같아지는 반응 속도-시간 그래프"><rect x="277.9" y="20" width="258.1" height="172" fill="#FFE45C" fill-opacity=".25"/><path d="M277.9 20 V192" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><g data-arw="64,192,550,192,ink,2"></g><g data-arw="64,192,64,10,ink,2"></g><text class="tex" x="277.9" y="216" data-mix="$t_1$" data-size="20" data-anchor="middle"></text><text class="tex" x="542" y="218" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="406.9" y="42" data-mix="평형" data-size="19" data-anchor="middle" data-weight="700" fill="#8A6D00"></text><text class="tex" x="56" y="26" data-mix="반응 속도" data-size="19" data-anchor="end" fill="#16233D"></text><path d="M64 42 L69.9 63 L75.8 79.2 L81.7 91.9 L87.6 102.1 L93.5 110.2 L99.4 116.9 L105.3 122.4 L111.2 126.9 L117.1 130.8 L123 134 L128.9 136.7 L134.8 139 L140.7 141 L146.6 142.7 L152.5 144.2 L158.4 145.5 L164.3 146.6 L170.2 147.5 L176.1 148.4 L182 149.1 L187.9 149.8 L193.8 150.3 L199.7 150.8 L205.6 151.2 L211.5 151.6 L217.4 152 L223.3 152.2 L229.2 152.5 L235.1 152.7 L241 152.9 L246.9 153.1 L252.8 153.3 L258.7 153.4 L264.6 153.5 L270.5 153.7 L276.4 153.7 L282.3 153.8 L288.2 153.9 L294.1 154 L300 154 L305.9 154.1 L311.8 154.1 L317.7 154.2 L323.6 154.2 L329.5 154.2 L335.4 154.3 L341.3 154.3 L347.2 154.3 L353.1 154.3 L359 154.4 L364.9 154.4 L370.8 154.4 L376.7 154.4 L382.6 154.4 L388.5 154.4 L394.4 154.4 L400.3 154.4 L406.2 154.4 L412.1 154.5 L418 154.5 L423.9 154.5 L429.8 154.5 L435.7 154.5 L441.6 154.5 L447.5 154.5 L453.4 154.5 L459.3 154.5 L465.2 154.5 L471.1 154.5 L477 154.5 L482.9 154.5 L488.8 154.5 L494.7 154.5 L500.6 154.5 L506.5 154.5 L512.4 154.5 L518.3 154.5 L524.2 154.5 L530.1 154.5 L536 154.5" fill="none" stroke="#2E9E6A" stroke-width="4" data-anim="draw" data-dur="1.6" data-delay=".3"/><path d="M64 192 L69.9 186.5 L75.8 182 L81.7 178.3 L87.6 175.1 L93.5 172.4 L99.4 170.1 L105.3 168.1 L111.2 166.4 L117.1 164.9 L123 163.6 L128.9 162.5 L134.8 161.6 L140.7 160.7 L146.6 160 L152.5 159.3 L158.4 158.8 L164.3 158.3 L170.2 157.8 L176.1 157.4 L182 157.1 L187.9 156.8 L193.8 156.5 L199.7 156.3 L205.6 156.1 L211.5 155.9 L217.4 155.8 L223.3 155.6 L229.2 155.5 L235.1 155.4 L241 155.3 L246.9 155.2 L252.8 155.1 L258.7 155 L264.6 155 L270.5 154.9 L276.4 154.9 L282.3 154.8 L288.2 154.8 L294.1 154.8 L300 154.7 L305.9 154.7 L311.8 154.7 L317.7 154.7 L323.6 154.6 L329.5 154.6 L335.4 154.6 L341.3 154.6 L347.2 154.6 L353.1 154.6 L359 154.6 L364.9 154.6 L370.8 154.6 L376.7 154.5 L382.6 154.5 L388.5 154.5 L394.4 154.5 L400.3 154.5 L406.2 154.5 L412.1 154.5 L418 154.5 L423.9 154.5 L429.8 154.5 L435.7 154.5 L441.6 154.5 L447.5 154.5 L453.4 154.5 L459.3 154.5 L465.2 154.5 L471.1 154.5 L477 154.5 L482.9 154.5 L488.8 154.5 L494.7 154.5 L500.6 154.5 L506.5 154.5 L512.4 154.5 L518.3 154.5 L524.2 154.5 L530.1 154.5 L536 154.5" fill="none" stroke="#7B4FC8" stroke-width="4" stroke-dasharray="12 6" data-anim="draw" data-dur="1.6" data-delay=".3"/><text class="tex" x="123.6" y="99" data-mix="정반응 속도" data-size="19" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="143.8" y="207" data-mix="역반응 속도" data-size="19" data-anchor="start" data-weight="700" fill="#7B4FC8"></text></svg>
-    </div>
-    <div class="col">
-      <p class="f21">밀폐 용기에 $\ce{NO2(g)}$만 넣었을 때 <span class="small">(눈금 없는 정성 그래프)</span></p>
-      <p class="f21 mt12"><b>Q1</b> $t_1$ 이후 두 물질의 농도는?</p>
-      <p class="f21 step cm311-a">→ 각각 <b>일정</b>하다. 두 농도가 같지는 않다.</p>
-      <p class="f21 mt12"><b>Q2</b> $t_1$ 이후 정반응 속도와 역반응 속도는?</p>
-      <p class="f21 step cm311-a">→ <b>같다</b>.</p>
-      <p class="f21 mt12"><b>Q3</b> $t_1$ 이후 반응은 멈추었을까?</p>
-      <p class="f21 step cm311-a">→ 아니다. 두 반응이 같은 속도로 <b>계속</b> 일어난다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 19. 특징 ════════ -->
-<section class="slide" data-sec="01 · 화학 평형" data-title="화학 평형 상태의 특징">
-  <h2><span class="no">3</span>화학 평형 상태의 특징</h2>
-  <p class="f22">가역 반응에서 <mark>정반응 속도와 역반응 속도가 같아 반응물과 생성물의 농도가 일정하게 유지되는 상태</mark>를 <b>화학 평형 상태</b>라고 한다.</p>
-  <table class="tight mt16 cm311-feat">
-    <tr><th style="width:250px">보는 수준</th><th>평형 상태의 특징</th></tr>
-    <tr><td><b>거시적</b><br><span class="small">눈으로 관찰</span></td><td class="l">· 색, 농도 같은 성질이 일정하다 → 겉으로는 반응이 멈춘 것처럼 보인다.<br><span class="step" data-g="f1">· 닫힌 용기에서 반응물 쪽에서 출발해도, 생성물 쪽에서 출발해도 평형에 도달한다.</span></td></tr>
-    <tr><td><b>미시적</b><br><span class="small">입자 수준</span></td><td class="l"><span class="step" data-g="f2">· 정반응과 역반응이 <b>같은 속도로 계속</b> 일어난다 → <b>동적 평형</b><br>· 반응물과 생성물이 함께 존재한다.</span></td></tr>
-  </table>
-  <div class="note q mt16 step" data-g="f3"><b>주의</b> 평형 상태에서 반응물과 생성물의 농도는 <b>일정</b>하지만 <b>같은</b> 것은 아니다. 또 화학 평형은 물질이 드나들지 않는 <b>닫힌 계</b>에서 이루어진다.</div>
-</section>
-
-<!-- ════════ 20. 확인하기 오개념 ════════ -->
-<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 친구들의 생각">
-  <h2><span class="tag q">확인하기</span>평형에 대한 친구들의 생각</h2>
-  <p class="f22" data-q><b>Q</b> 밀폐 용기 속 $\ce{2NO2(g) &lt;=&gt; N2O4(g)}$ 반응이 평형에 도달했다. 옳게 말한 친구는 누구일까?</p>
-  <div class="row mt12">
-    <div class="col"><div class="card cm311-bub"><h3>학생 A</h3><p class="f21">"평형에 도달하면 반응이 멈춰."</p>
-      <p class="f21 step c-plus" data-g="m2">× 반응은 계속된다. 두 속도가 같아 농도가 변하지 않을 뿐이다.</p></div></div>
-    <div class="col"><div class="card cm311-bub"><h3>학생 B</h3><p class="f21">"평형에서는 반응물과 생성물의 농도가 같아져."</p>
-      <p class="f21 step c-plus" data-g="m2">× 농도는 일정할 뿐 같지 않다.</p></div></div>
-    <div class="col"><div class="card cm311-bub"><h3>학생 C</h3><p class="f21">"평형에서도 정반응과 역반응이 같은 속도로 계속 일어나."</p>
-      <p class="f21 step cm311-a" data-g="m2">○ 동적 평형이다.</p></div></div>
-  </div>
-  <div class="answer step mt16" data-g="m1">옳게 말한 친구: <b>학생 C</b></div>
 </section>
 
 <!-- ════════ 21. 실험실: 평형 도달 ════════ -->
-<section class="slide" data-sec="01 · 화학 평형" data-title="실험실: 평형에 도달하기">
-  <h2><span class="tag">실험실</span>평형에 도달하기 — $\ce{2NO2 &lt;=&gt; N2O4}$</h2>
+<section class="slide" data-sec="01 · 해 보기" data-title="모의실험: 평형에 도달하기">
+  <h2><span class="tag">해 보기</span>모의실험: 평형에 도달하기 — $\ce{2NO2 &lt;=&gt; N2O4}$</h2>
   <div class="lab" data-lab="cm311eq">
     <div class="lab-ctl" style="flex:0 0 430px">
-      <div class="ctl"><div class="lbl"><span>처음 $\ce{NO2}$ 분자 수</span><output data-o="a0"></output></div><input type="range" min="0" max="60" step="4" value="60" data-i="a0" aria-label="처음 이산화 질소 분자 수"></div>
-      <div class="ctl"><div class="lbl"><span>처음 $\ce{N2O4}$ 분자 수</span><output data-o="b0"></output></div><input type="range" min="0" max="30" step="2" value="0" data-i="b0" aria-label="처음 사산화 이질소 분자 수"></div>
+      <div class="ctl"><div class="lbl"><span>처음 $\ce{NO2}$ 분자 수</span><output data-o="a0"></output></div><input type="range" min="0" max="40" step="4" value="40" data-i="a0" aria-label="처음 이산화 질소 분자 수"></div>
+      <div class="ctl"><div class="lbl"><span>처음 $\ce{N2O4}$ 분자 수</span><output data-o="b0"></output></div><input type="range" min="0" max="20" step="2" value="0" data-i="b0" aria-label="처음 사산화 이질소 분자 수"></div>
       <div class="cm311-seg"><button class="btn cm311-act" data-act="run">시작</button><button class="btn" data-act="reset">처음부터</button><button class="btn" data-act="rec">측정 기록</button></div>
       <table class="readout cm311-read">
         <tr><th>분자 수 $\ce{NO2}$ · $\ce{N2O4}$</th><td><output data-o="cnt"></output></td></tr>
@@ -708,37 +618,72 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
   </div>
 </section>
 
-<!-- ════════ 22. 탐구 목표 ════════ -->
-<section class="slide" data-sec="01 · 탐구" data-title="탐구: 동적 평형 모형 (목표·준비)">
-  <h2><span class="tag">탐구</span>동적 평형 모형 만들기</h2>
+<!-- ════════ 17. 화학 평형 ════════ -->
+<section class="slide" data-sec="01 · 화학 평형" data-title="화학 평형: 2NO₂ ⇌ N₂O₄">
+  <h2><span class="no">3</span>화학 평형 — $\ce{2NO2(g) &lt;=&gt; N2O4(g)}$</h2>
+  <p class="f21">일정한 온도에서 밀폐 용기에 (가) $\ce{NO2}$만 넣으면 정반응이 우세하여 색이 연해지고, (나) $\ce{N2O4}$만 넣으면 역반응이 우세하여 색이 진해진다. 두 경우 모두 시간이 지나면 색이 일정해진다.</p>
+  <div class="stages mt8"><div class="stage"><h3>(가) 초기 상태</h3><svg viewBox="0 0 300 272" style="height:212px" aria-label="밀폐 용기 속 이산화 질소와 사산화 이질소 분자"><rect x="30" y="30" width="240" height="170" rx="18" fill="#B5562A" fill-opacity="0.5"/><rect x="30" y="30" width="240" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="124" y="16" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><g data-atom="97.4,126.5,12,O,-"></g><g data-atom="97.4,156.3,12,O,-"></g><g data-atom="91,141.4,12,N,-"></g><g data-atom="187.8,124.6,12,O,-"></g><g data-atom="158.2,121,12,O,-"></g><g data-atom="173.8,116.5,12,N,-"></g><g data-atom="52.8,116.7,12,O,-"></g><g data-atom="60,87.8,12,O,-"></g><g data-atom="62.6,103.8,12,N,-"></g><g data-atom="153.4,56.9,12,O,-"></g><g data-atom="181.2,67.6,12,O,-"></g><g data-atom="165,68.2,12,N,-"></g><g data-atom="115.5,54.8,12,O,-"></g><g data-atom="101.5,81.1,12,O,-"></g><g data-atom="103,65,12,N,-"></g><g data-atom="246.2,160.9,12,O,-"></g><g data-atom="221.7,143.8,12,O,-"></g><g data-atom="237.6,147.2,12,N,-"></g><g data-atom="214.9,110.3,12,O,-"></g><g data-atom="234.8,88.2,12,O,-"></g><g data-atom="229.5,103.5,12,N,-"></g><g data-atom="183.4,161.7,12,O,-"></g><g data-atom="202.9,184.3,12,O,-"></g><g data-atom="188.4,177.2,12,N,-"></g><g data-atom="149.5,173.6,12,O,-"></g><g data-atom="124.8,190.3,12,O,-"></g><g data-atom="133.6,176.7,12,N,-"></g><g data-atom="126,122.9,12,O,-"></g><g data-atom="112.5,96.4,12,O,-"></g><g data-atom="124.9,106.8,12,N,-"></g><g data-atom="196.5,60.6,12,O,-"></g><g data-atom="224.5,50.4,12,O,-"></g><g data-atom="212.7,61.4,12,N,-"></g><g data-atom="66.6,160.8,12,O,-"></g><g data-atom="73.3,189.8,12,O,-"></g><g data-atom="63.8,176.7,12,N,-"></g><text class="tex" x="14" y="234" data-mix="정반응" data-size="23" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><g data-arw="96,226,246,226,field,3.5"></g><text class="tex" x="14" y="264" data-mix="역반응" data-size="23" data-anchor="start" data-weight="700" fill="#7B4FC8"></text><text class="tex" x="100" y="264" data-mix="거의 없음" data-size="22" data-anchor="start" fill="#5B6B7F"></text></svg><p class="key">$\ce{NO2}$ 12개 · 적갈색</p></div><div class="stage cm311-eqc"><h3>→ 평형 상태 ←</h3><svg viewBox="0 0 300 272" style="height:212px" aria-label="밀폐 용기 속 이산화 질소와 사산화 이질소 분자"><rect x="30" y="30" width="240" height="170" rx="18" fill="#B5562A" fill-opacity="0.2"/><rect x="30" y="30" width="240" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="124" y="16" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><g data-anim="move" data-from="3,-3" data-rep="swing" data-dur=".9"><g data-atom="199.9,69,12,O,-"></g><g data-atom="199.9,98.8,12,O,-"></g><g data-atom="193.5,83.9,12,N,-"></g><g data-atom="112.1,139,12,O,-"></g><g data-atom="82.5,135.4,12,O,-"></g><g data-atom="98.1,130.9,12,N,-"></g><g data-atom="164.6,152.9,12,O,-"></g><g data-atom="192.1,160.8,12,O,-"></g><g data-atom="183.1,192.2,12,O,-"></g><g data-atom="155.6,184.3,12,O,-"></g><g data-atom="176.2,164.2,12,N,-"></g><g data-atom="171.4,180.9,12,N,-"></g><g data-atom="245.8,89.1,12,O,-"></g><g data-atom="256,115.8,12,O,-"></g><g data-atom="225.6,127.5,12,O,-"></g><g data-atom="215.3,100.8,12,O,-"></g><g data-atom="243.8,105.2,12,N,-"></g><g data-atom="227.5,111.4,12,N,-"></g><g data-atom="211.6,66.9,12,O,-"></g><g data-atom="226.8,42.6,12,O,-"></g><g data-atom="254.4,59.9,12,O,-"></g><g data-atom="239.3,84.2,12,O,-"></g><g data-atom="225.7,58.8,12,N,-"></g><g data-atom="240.4,68,12,N,-"></g><g data-atom="51.7,159.3,12,O,-"></g><g data-atom="80.2,156.8,12,O,-"></g><g data-atom="83.1,189.3,12,O,-"></g><g data-atom="54.6,191.8,12,O,-"></g><g data-atom="66.7,165.6,12,N,-"></g><g data-atom="68.2,183,12,N,-"></g><g data-atom="86.4,43.6,12,O,-"></g><g data-atom="105.6,64.9,12,O,-"></g><g data-atom="81.3,86.7,12,O,-"></g><g data-atom="62.2,65.5,12,O,-"></g><g data-atom="90.3,59.4,12,N,-"></g><g data-atom="77.4,71,12,N,-"></g></g><text class="tex" x="14" y="234" data-mix="정반응" data-size="23" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><g data-arw="96,226,156,226,field,3.5"></g><text class="tex" x="14" y="264" data-mix="역반응" data-size="23" data-anchor="start" data-weight="700" fill="#7B4FC8"></text><g data-arw="156,256,96,256,bfield,3.5"></g></svg><p class="key">$\ce{NO2}$ 2개, $\ce{N2O4}$ 5개 · 색 일정</p></div><div class="stage"><h3>(나) 초기 상태</h3><svg viewBox="0 0 300 272" style="height:212px" aria-label="밀폐 용기 속 이산화 질소와 사산화 이질소 분자"><rect x="30" y="30" width="240" height="170" rx="18" fill="#B5562A" fill-opacity="0"/><rect x="30" y="30" width="240" height="170" rx="18" fill="none" stroke="#7E8B98" stroke-width="3"/><rect x="124" y="16" width="52" height="20" rx="4" fill="#C9B79C" stroke="#8C7A5E" stroke-width="2"/><g data-atom="159.8,157.1,12,O,-"></g><g data-atom="159.8,128.5,12,O,-"></g><g data-atom="192.4,128.5,12,O,-"></g><g data-atom="192.4,157.1,12,O,-"></g><g data-atom="167.4,142.8,12,N,-"></g><g data-atom="184.8,142.8,12,N,-"></g><g data-atom="209.2,78.8,12,O,-"></g><g data-atom="232.1,61.5,12,O,-"></g><g data-atom="251.7,87.6,12,O,-"></g><g data-atom="228.8,104.8,12,O,-"></g><g data-atom="225.2,76.2,12,N,-"></g><g data-atom="235.7,90.1,12,N,-"></g><g data-atom="64.2,137.6,12,O,-"></g><g data-atom="91.7,145.5,12,O,-"></g><g data-atom="82.8,176.9,12,O,-"></g><g data-atom="55.3,169,12,O,-"></g><g data-atom="75.9,148.9,12,N,-"></g><g data-atom="71.1,165.6,12,N,-"></g><g data-atom="130.7,84.7,12,O,-"></g><g data-atom="141,111.5,12,O,-"></g><g data-atom="110.5,123.1,12,O,-"></g><g data-atom="100.3,96.4,12,O,-"></g><g data-atom="128.7,100.8,12,N,-"></g><g data-atom="112.5,107.1,12,N,-"></g><g data-atom="141.4,72.8,12,O,-"></g><g data-atom="156.6,48.5,12,O,-"></g><g data-atom="184.3,65.8,12,O,-"></g><g data-atom="169.1,90.1,12,O,-"></g><g data-atom="155.5,64.7,12,N,-"></g><g data-atom="170.2,73.9,12,N,-"></g><g data-atom="217.8,120.8,12,O,-"></g><g data-atom="246.3,118.4,12,O,-"></g><g data-atom="249.2,150.8,12,O,-"></g><g data-atom="220.7,153.3,12,O,-"></g><g data-atom="232.7,127.2,12,N,-"></g><g data-atom="234.3,144.5,12,N,-"></g><text class="tex" x="14" y="234" data-mix="정반응" data-size="23" data-anchor="start" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="100" y="234" data-mix="거의 없음" data-size="22" data-anchor="start" fill="#5B6B7F"></text><text class="tex" x="14" y="264" data-mix="역반응" data-size="23" data-anchor="start" data-weight="700" fill="#7B4FC8"></text><g data-arw="246,256,96,256,bfield,3.5"></g></svg><p class="key">$\ce{N2O4}$ 6개 · 무색</p></div></div>
+  <p class="small mt8">$\mathrm{N}$ 원자 수: $12=2+5\times2=6\times2$ (보존) · 모형: $\mathrm{N}$ 파란 공, $\mathrm{O}$ 빨간 공 · 화살표 길이 = 반응 속도</p>
+  <div class="answer step mt8">평형 상태에서도 정반응과 역반응은 <b>같은 속도로 계속</b> 일어난다(동적 평형).</div>
+</section>
+
+<!-- ════════ 18. 그래프 ════════ -->
+<section class="slide" data-sec="01 · 화학 평형" data-title="시간에 따른 농도 변화">
+  <h2><span class="no">3</span>시간에 따른 농도 변화</h2>
   <div class="row">
-    <div class="col">
-      <h3>목표</h3>
-      <p class="f22">물 옮기기 모형으로, 겉보기 변화가 없는 상태에서도 두 방향의 이동이 계속됨을 확인하고 동적 평형을 설명할 수 있다.</p>
-      <h3 class="mt16">준비물</h3>
-      <p class="f21">100 mL 눈금실린더 2개(A, B), 안지름이 다른 유리관 2개(굵은 관, 가는 관), 물, 비커, 활동지</p>
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 240" style="width:520px" aria-label="이산화 질소만 넣었을 때 농도-시간 그래프"><rect x="285.2" y="20" width="250.8" height="182" fill="#FFE45C" fill-opacity=".25"/><path d="M285.2 20 V202" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><g data-arw="64,202,550,202,ink,2"></g><g data-arw="64,202,64,10,ink,2"></g><text class="tex" x="285.2" y="226" data-mix="$t_1$" data-size="20" data-anchor="middle"></text><text class="tex" x="542" y="228" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="56" y="224" data-mix="0" data-size="18" data-anchor="end" fill="#16233D"></text><text class="tex" x="410.6" y="42" data-mix="화학 평형" data-size="19" data-anchor="middle" data-weight="700" fill="#8A6D00"></text><text class="tex" x="76" y="24" data-mix="농도" data-size="19" data-anchor="start" fill="#16233D"></text><path d="M64 26 L69.9 59.9 L75.8 82.6 L81.7 98.6 L87.6 110.6 L93.5 119.8 L99.4 127 L105.3 132.8 L111.2 137.6 L117.1 141.6 L123 144.9 L128.9 147.6 L134.8 150 L140.7 152.1 L146.6 153.8 L152.5 155.3 L158.4 156.7 L164.3 157.8 L170.2 158.8 L176.1 159.7 L182 160.5 L187.9 161.2 L193.8 161.8 L199.7 162.3 L205.6 162.8 L211.5 163.3 L217.4 163.6 L223.3 164 L229.2 164.3 L235.1 164.5 L241 164.8 L246.9 165 L252.8 165.2 L258.7 165.3 L264.6 165.5 L270.5 165.6 L276.4 165.8 L282.3 165.9 L288.2 166 L294.1 166 L300 166.1 L305.9 166.2 L311.8 166.3 L317.7 166.3 L323.6 166.4 L329.5 166.4 L335.4 166.4 L341.3 166.5 L347.2 166.5 L353.1 166.5 L359 166.6 L364.9 166.6 L370.8 166.6 L376.7 166.6 L382.6 166.7 L388.5 166.7 L394.4 166.7 L400.3 166.7 L406.2 166.7 L412.1 166.7 L418 166.7 L423.9 166.7 L429.8 166.7 L435.7 166.7 L441.6 166.7 L447.5 166.8 L453.4 166.8 L459.3 166.8 L465.2 166.8 L471.1 166.8 L477 166.8 L482.9 166.8 L488.8 166.8 L494.7 166.8 L500.6 166.8 L506.5 166.8 L512.4 166.8 L518.3 166.8 L524.2 166.8 L530.1 166.8 L536 166.8" fill="none" stroke="#B5562A" stroke-width="4" data-anim="draw" data-dur="1.6" data-delay=".3"/><path d="M64 202 L69.9 185 L75.8 173.7 L81.7 165.7 L87.6 159.7 L93.5 155.1 L99.4 151.5 L105.3 148.6 L111.2 146.2 L117.1 144.2 L123 142.6 L128.9 141.2 L134.8 140 L140.7 139 L146.6 138.1 L152.5 137.3 L158.4 136.7 L164.3 136.1 L170.2 135.6 L176.1 135.1 L182 134.7 L187.9 134.4 L193.8 134.1 L199.7 133.8 L205.6 133.6 L211.5 133.4 L217.4 133.2 L223.3 133 L229.2 132.9 L235.1 132.7 L241 132.6 L246.9 132.5 L252.8 132.4 L258.7 132.3 L264.6 132.3 L270.5 132.2 L276.4 132.1 L282.3 132.1 L288.2 132 L294.1 132 L300 131.9 L305.9 131.9 L311.8 131.9 L317.7 131.8 L323.6 131.8 L329.5 131.8 L335.4 131.8 L341.3 131.8 L347.2 131.7 L353.1 131.7 L359 131.7 L364.9 131.7 L370.8 131.7 L376.7 131.7 L382.6 131.7 L388.5 131.7 L394.4 131.7 L400.3 131.7 L406.2 131.6 L412.1 131.6 L418 131.6 L423.9 131.6 L429.8 131.6 L435.7 131.6 L441.6 131.6 L447.5 131.6 L453.4 131.6 L459.3 131.6 L465.2 131.6 L471.1 131.6 L477 131.6 L482.9 131.6 L488.8 131.6 L494.7 131.6 L500.6 131.6 L506.5 131.6 L512.4 131.6 L518.3 131.6 L524.2 131.6 L530.1 131.6 L536 131.6" fill="none" stroke="#16233D" stroke-width="3.5" stroke-dasharray="12 6" data-anim="draw" data-dur="1.6" data-delay=".3"/><text class="tex" x="532" y="122.6" data-mix="$[\ce{N2O4}]$" data-size="20" data-anchor="end" fill="#16233D"></text><text class="tex" x="532" y="158.8" data-mix="$[\ce{NO2}]$" data-size="20" data-anchor="end" fill="#B5562A"></text><text class="tex" x="214" y="24" data-mix="$\ce{NO2}$만 넣었을 때" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg>
+      <svg class="fig mt8" viewBox="0 0 560 240" style="width:520px" aria-label="사산화 이질소만 넣었을 때 농도-시간 그래프"><rect x="285.2" y="20" width="250.8" height="182" fill="#FFE45C" fill-opacity=".25"/><path d="M285.2 20 V202" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><g data-arw="64,202,550,202,ink,2"></g><g data-arw="64,202,64,10,ink,2"></g><text class="tex" x="285.2" y="226" data-mix="$t_1$" data-size="20" data-anchor="middle"></text><text class="tex" x="542" y="228" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="56" y="224" data-mix="0" data-size="18" data-anchor="end" fill="#16233D"></text><text class="tex" x="410.6" y="42" data-mix="화학 평형" data-size="19" data-anchor="middle" data-weight="700" fill="#8A6D00"></text><text class="tex" x="76" y="24" data-mix="농도" data-size="19" data-anchor="start" fill="#16233D"></text><path d="M64 202 L69.9 199.9 L75.8 197.8 L81.7 195.8 L87.6 193.9 L93.5 192 L99.4 190.2 L105.3 188.4 L111.2 186.8 L117.1 185.2 L123 183.7 L128.9 182.3 L134.8 181 L140.7 179.8 L146.6 178.7 L152.5 177.6 L158.4 176.6 L164.3 175.8 L170.2 174.9 L176.1 174.2 L182 173.5 L187.9 172.9 L193.8 172.3 L199.7 171.7 L205.6 171.3 L211.5 170.8 L217.4 170.4 L223.3 170.1 L229.2 169.8 L235.1 169.5 L241 169.2 L246.9 169 L252.8 168.7 L258.7 168.6 L264.6 168.4 L270.5 168.2 L276.4 168.1 L282.3 167.9 L288.2 167.8 L294.1 167.7 L300 167.6 L305.9 167.5 L311.8 167.5 L317.7 167.4 L323.6 167.3 L329.5 167.3 L335.4 167.2 L341.3 167.2 L347.2 167.2 L353.1 167.1 L359 167.1 L364.9 167.1 L370.8 167 L376.7 167 L382.6 167 L388.5 167 L394.4 166.9 L400.3 166.9 L406.2 166.9 L412.1 166.9 L418 166.9 L423.9 166.9 L429.8 166.9 L435.7 166.9 L441.6 166.9 L447.5 166.9 L453.4 166.9 L459.3 166.8 L465.2 166.8 L471.1 166.8 L477 166.8 L482.9 166.8 L488.8 166.8 L494.7 166.8 L500.6 166.8 L506.5 166.8 L512.4 166.8 L518.3 166.8 L524.2 166.8 L530.1 166.8 L536 166.8" fill="none" stroke="#B5562A" stroke-width="4" data-anim="draw" data-dur="1.6" data-delay=".3"/><path d="M64 114 L69.9 115 L75.8 116.1 L81.7 117.1 L87.6 118.1 L93.5 119 L99.4 119.9 L105.3 120.8 L111.2 121.6 L117.1 122.4 L123 123.1 L128.9 123.8 L134.8 124.5 L140.7 125.1 L146.6 125.7 L152.5 126.2 L158.4 126.7 L164.3 127.1 L170.2 127.5 L176.1 127.9 L182 128.3 L187.9 128.6 L193.8 128.9 L199.7 129.1 L205.6 129.4 L211.5 129.6 L217.4 129.8 L223.3 130 L229.2 130.1 L235.1 130.3 L241 130.4 L246.9 130.5 L252.8 130.6 L258.7 130.7 L264.6 130.8 L270.5 130.9 L276.4 131 L282.3 131 L288.2 131.1 L294.1 131.1 L300 131.2 L305.9 131.2 L311.8 131.3 L317.7 131.3 L323.6 131.3 L329.5 131.4 L335.4 131.4 L341.3 131.4 L347.2 131.4 L353.1 131.4 L359 131.5 L364.9 131.5 L370.8 131.5 L376.7 131.5 L382.6 131.5 L388.5 131.5 L394.4 131.5 L400.3 131.5 L406.2 131.5 L412.1 131.5 L418 131.6 L423.9 131.6 L429.8 131.6 L435.7 131.6 L441.6 131.6 L447.5 131.6 L453.4 131.6 L459.3 131.6 L465.2 131.6 L471.1 131.6 L477 131.6 L482.9 131.6 L488.8 131.6 L494.7 131.6 L500.6 131.6 L506.5 131.6 L512.4 131.6 L518.3 131.6 L524.2 131.6 L530.1 131.6 L536 131.6" fill="none" stroke="#16233D" stroke-width="3.5" stroke-dasharray="12 6" data-anim="draw" data-dur="1.6" data-delay=".3"/><text class="tex" x="532" y="122.6" data-mix="$[\ce{N2O4}]$" data-size="20" data-anchor="end" fill="#16233D"></text><text class="tex" x="532" y="158.8" data-mix="$[\ce{NO2}]$" data-size="20" data-anchor="end" fill="#B5562A"></text><text class="tex" x="214" y="24" data-mix="$\ce{N2O4}$만 넣었을 때" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg>
     </div>
-    <div class="col" style="flex:0 0 520px">
-      <table class="tight cm311-var">
-        <tr><th>조작 변인</th><td class="l">유리관의 굵기, 처음 물을 넣는 쪽</td></tr>
-        <tr><th>종속 변인</th><td class="l">두 눈금실린더 속 물의 부피</td></tr>
-        <tr><th>통제 변인</th><td class="l">전체 물의 양(50 mL), 관을 바닥까지 넣는 방법</td></tr>
-      </table>
-      <div class="note q mt16"><b>안전</b> 보안경을 쓰고, 끝을 불에 다듬은 유리관을 쓴다. 깨진 유리는 깨진 유리 전용 통에 버린다. 쏟은 물은 바로 닦는다. 물만 쓰므로 실험 뒤 물은 개수대에 버린다.</div>
+    <div class="col">
+      <p class="small">위: $\ce{NO2}$만 넣었을 때 · 아래: $\ce{N2O4}$만 넣었을 때 (눈금 없는 정성 그래프)</p>
+      <p class="f21 mt12"><b>Q</b> ① $t_1$ 이후 두 물질의 농도는?</p>
+      <p class="f21 step cm311-a">→ 각각 <span class="ans">일정</span>하다. 두 농도가 같지는 않다.</p>
+      <p class="f21 mt12"><b>Q</b> ② $t_1$ 이후 정반응 속도와 역반응 속도는?</p>
+      <p class="f21 step cm311-a">→ <span class="ans">같다</span>.</p>
+      <p class="f21 mt12"><b>Q</b> ③ 두 경우의 평형 상태를 비교하면?</p>
+      <p class="f21 step cm311-a">→ 어느 쪽에서 출발해도 <span class="ans">화학 평형</span>에 도달한다.</p>
     </div>
   </div>
 </section>
 
-<!-- ════════ 23. 탐구 과정 ════════ -->
-<section class="slide" data-sec="01 · 탐구" data-title="탐구: 과정">
-  <h2><span class="tag">탐구</span>과정</h2>
-  <div class="cm311-s4"><div class="stage"><h3>①</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="물 50 mL가 든 눈금실린더 A와 빈 B"><rect x="47.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="59.0" y="125" width="42" height="85" fill="#BFDDF2"/><path d="M57.0 40 V210 H103.0 V40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M93.0 193 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 176 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 159 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 142 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 125 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 108 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 91 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 74 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 57 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="80" y="242" data-mix="A" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="167.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><path d="M177.0 40 V210 H223.0 V40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M213.0 193 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 176 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 159 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 142 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 125 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 108 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 91 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 74 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 57 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="242" data-mix="B" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><text class="tex" x="80" y="30" data-mix="50 mL" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg><p>눈금실린더 A에 물 50 mL를 넣고, B는 비워 둔다.</p></div><div class="stage"><h3>②</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="A에 굵은 관, B에 가는 관을 넣음"><rect x="47.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="59.0" y="125" width="42" height="85" fill="#BFDDF2"/><path d="M57.0 40 V210 H103.0 V40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M93.0 193 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 176 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 159 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 142 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 125 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 108 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 91 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 74 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 57 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="80" y="242" data-mix="A" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="167.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><path d="M177.0 40 V210 H223.0 V40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M213.0 193 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 176 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 159 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 142 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 125 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 108 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 91 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 74 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 57 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="242" data-mix="B" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="74.0" y="10" width="12" height="198" fill="#FFFFFF" fill-opacity=".5" stroke="#7E8B98" stroke-width="2"/><rect x="196.5" y="10" width="7" height="198" fill="#FFFFFF" fill-opacity=".5" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="80" y="6" data-mix="굵은 관" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="212" y="6" data-mix="가는 관" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg><p>굵은 관은 A에, 가는 관은 B에 바닥까지 넣고 윗구멍을 손가락으로 막아 동시에 들어 올린다.</p></div><div class="stage"><h3>③</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="굵은 관의 물은 B로, 가는 관의 물은 A로 옮김"><rect x="47.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="59.0" y="138.6" width="42" height="71.4" fill="#BFDDF2"/><path d="M57.0 40 V210 H103.0 V40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M93.0 193 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 176 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 159 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 142 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 125 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 108 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 91 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 74 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 57 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="80" y="242" data-mix="A" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="167.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="179.0" y="196.4" width="42" height="13.6" fill="#BFDDF2"/><path d="M177.0 40 V210 H223.0 V40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M213.0 193 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 176 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 159 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 142 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 125 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 108 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 91 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 74 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 57 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="242" data-mix="B" data-size="20" data-anchor="middle" data-weight="700" fill="#16233D"></text><g data-anim="move" data-from="-60,0" data-dur="1.2" data-delay=".4" data-ease="io"><rect x="134.0" y="30" width="12" height="80" fill="#FFFFFF" fill-opacity=".5" stroke="#7E8B98" stroke-width="2"/><g data-arw="152,60,182,60,field,3"></g></g><g data-arw="176,130,104,130,bfield,3"></g><text class="tex" x="140" y="24" data-mix="A → B" data-size="18" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="140" y="156" data-mix="B → A" data-size="18" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p>굵은 관의 물은 B로, 가는 관의 물은 A로 동시에 옮긴다.</p></div><div class="stage"><h3>④</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="옮긴 횟수에 따른 부피 그래프"><path d="M40 30 V200 H260" fill="none" stroke="#16233D" stroke-width="2"/><path d="M44 40 L65 85.8 L86 113.6 L107 130.6 L128 141.1 L149 147.5 L201.5 154.6 L254 156.8" fill="none" stroke="#16233D" stroke-width="3"/><path d="M44 200 L65 154.2 L86 126.4 L107 109.4 L128 98.9 L149 92.5 L201.5 85.4 L254 83.2" fill="none" stroke="#0E7490" stroke-width="3" stroke-dasharray="9 5"/><text class="tex" x="250" y="224" data-mix="횟수" data-size="18" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="48" y="26" data-mix="부피" data-size="18" data-anchor="start" fill="#5B6B7F"></text></svg><p>②–③을 되풀이하며 A, B의 부피를 기록하고 그래프로 나타낸다.</p></div></div>
-  <p class="small mt12">관 속에 담기는 물의 양은 눈금실린더 속 물의 높이에 비례한다. 물이 많은 쪽에서 더 많이 퍼 올려진다.</p>
+<!-- ════════ 19. 특징 ════════ -->
+<section class="slide" data-sec="01 · 화학 평형" data-title="화학 평형의 특징">
+  <h2><span class="no">3</span>화학 평형의 특징</h2>
+  <p class="f22">가역 반응에서 <mark>정반응 속도와 역반응 속도가 같아 반응물과 생성물의 농도가 변하지 않고 일정하게 유지되는 상태</mark>를 <b>화학 평형</b>이라고 한다.</p>
+  <table class="tight mt12 cm311-feat">
+    <tr><th style="width:250px">보는 수준</th><th>화학 평형의 특징</th></tr>
+    <tr><td><b>거시적</b><br><span class="small">눈으로 관찰</span></td><td class="l">· 반응물의 농도와 생성물의 농도가 일정하게 유지된다(색 일정).<br>· 겉으로는 변화를 관찰할 수 없어 반응이 정지한 것처럼 보인다.</td></tr>
+    <tr><td><b>미시적</b><br><span class="small">입자 수준</span></td><td class="l"><span class="step" data-g="f2">· 정반응 속도와 역반응 속도가 같은 <b>동적 평형</b> 상태이다 — 두 반응은 계속 일어난다.</span></td></tr>
+  </table>
+  <div class="note mt12 step" data-g="f3"><b>평형 농도</b> 화학 평형 상태에서 반응물과 생성물의 농도. 온도·압력 같은 외부 조건이 일정하면 변하지 않는다. 평형 농도는 <b>일정</b>하지만 반응물과 생성물이 <b>같은</b> 것은 아니다.</div>
+</section>
+
+<!-- ════════ 20. 확인하기 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 화학 평형" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>화학 평형</h2>
+  <ol class="cm311-ox">
+    <li>가역 반응에서 반응물과 생성물의 농도가 변하지 않고 일정하게 유지되는 상태를 (<span class="blank"><span class="step">화학 평형</span></span>)(이)라고 한다.</li>
+    <li>화학 평형 상태에서 정반응 속도와 역반응 속도가 같다. (○, ×) <span class="blank"><span class="step">○</span></span></li>
+  </ol>
+  <h3 class="mt28">더 생각하기 — 친구의 말이 옳을까?</h3>
+  <ol class="cm311-ox" start="3">
+    <li>"평형에 도달하면 반응이 멈춰." <span class="blank"><span class="step">× — 두 반응이 같은 속도로 계속 일어난다.</span></span></li>
+    <li>"평형에서는 반응물과 생성물의 농도가 같아져." <span class="blank"><span class="step">× — 농도는 일정할 뿐 같지 않다.</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 21. 모형 활동: 과정 ════════ -->
+<section class="slide" data-sec="01 · 모형 활동" data-title="모형 활동: 물 옮기기 (과정)">
+  <h2><span class="tag">모형 활동</span>물 옮기기로 동적 평형 모형 만들기</h2>
+  <p class="f21"><b>목표</b> 겉보기 변화가 없어도 두 방향의 이동이 계속됨을 확인한다. <span class="small">준비물: 100 mL 눈금실린더 2개, 굵기가 다른 유리관 2개, 물</span></p>
+  <div class="cm311-s4 mt8"><div class="stage"><h3>①</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="물 50 mL가 든 눈금실린더 A와 빈 B"><rect x="47.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="59.0" y="130" width="42" height="80" fill="#BFDDF2"/><path d="M57.0 50 V210 H103.0 V50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M93.0 194 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 178 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 162 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 146 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 130 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 114 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 98 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 82 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 66 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="80" y="244" data-mix="A" data-size="24" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="167.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><path d="M177.0 50 V210 H223.0 V50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M213.0 194 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 178 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 162 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 146 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 130 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 114 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 98 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 82 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 66 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="244" data-mix="B" data-size="24" data-anchor="middle" data-weight="700" fill="#16233D"></text><text class="tex" x="80" y="38" data-mix="50 mL" data-size="24" data-anchor="middle" fill="#5B6B7F"></text></svg><p>눈금실린더 A에 물 50 mL를 넣고, B는 비워 둔다.</p></div><div class="stage"><h3>②</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="A에 굵은 관, B에 가는 관을 넣음"><rect x="47.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="59.0" y="130" width="42" height="80" fill="#BFDDF2"/><path d="M57.0 50 V210 H103.0 V50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M93.0 194 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 178 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 162 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 146 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 130 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 114 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 98 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 82 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 66 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="80" y="244" data-mix="A" data-size="24" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="167.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><path d="M177.0 50 V210 H223.0 V50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M213.0 194 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 178 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 162 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 146 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 130 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 114 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 98 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 82 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 66 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="244" data-mix="B" data-size="24" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="74.0" y="36" width="12" height="172" fill="#FFFFFF" fill-opacity=".5" stroke="#7E8B98" stroke-width="2"/><rect x="196.5" y="36" width="7" height="172" fill="#FFFFFF" fill-opacity=".5" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="80" y="28" data-mix="굵은 관" data-size="24" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="200" y="28" data-mix="가는 관" data-size="24" data-anchor="middle" fill="#5B6B7F"></text></svg><p>굵은 관은 A에, 가는 관은 B에 바닥까지 넣고 윗구멍을 손가락으로 막아 동시에 들어 올린다.</p></div><div class="stage"><h3>③</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="굵은 관의 물은 B로, 가는 관의 물은 A로 옮김"><rect x="47.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="59.0" y="142.8" width="42" height="67.2" fill="#BFDDF2"/><path d="M57.0 50 V210 H103.0 V50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M93.0 194 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 178 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 162 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 146 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 130 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 114 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 98 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 82 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M93.0 66 H103.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="80" y="244" data-mix="A" data-size="24" data-anchor="middle" data-weight="700" fill="#16233D"></text><rect x="167.0" y="210" width="66" height="8" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="179.0" y="197.2" width="42" height="12.8" fill="#BFDDF2"/><path d="M177.0 50 V210 H223.0 V50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><path d="M213.0 194 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 178 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 162 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 146 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 130 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 114 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 98 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 82 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><path d="M213.0 66 H223.0" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="244" data-mix="B" data-size="24" data-anchor="middle" data-weight="700" fill="#16233D"></text><g data-anim="move" data-from="-60,0" data-dur="1.2" data-delay=".4" data-ease="io"><rect x="134.0" y="44" width="12" height="76" fill="#FFFFFF" fill-opacity=".5" stroke="#7E8B98" stroke-width="2"/><g data-arw="152,70,182,70,field,3"></g></g><g data-arw="176,150,104,150,bfield,3"></g><text class="tex" x="140" y="32" data-mix="A → B" data-size="24" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text><text class="tex" x="140" y="180" data-mix="B → A" data-size="24" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text></svg><p>굵은 관의 물은 B로, 가는 관의 물은 A로 동시에 옮긴다.</p></div><div class="stage"><h3>④</h3><svg viewBox="0 0 280 250" style="height:180px" aria-label="옮긴 횟수에 따른 부피 그래프"><path d="M40 30 V200 H260" fill="none" stroke="#16233D" stroke-width="2"/><path d="M44 40 L65 85.8 L86 113.6 L107 130.6 L128 141.1 L149 147.5 L201.5 154.6 L254 156.8" fill="none" stroke="#16233D" stroke-width="3"/><path d="M44 200 L65 154.2 L86 126.4 L107 109.4 L128 98.9 L149 92.5 L201.5 85.4 L254 83.2" fill="none" stroke="#0E7490" stroke-width="3" stroke-dasharray="9 5"/><text class="tex" x="260" y="232" data-mix="횟수" data-size="24" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="50" y="28" data-mix="부피" data-size="24" data-anchor="start" fill="#5B6B7F"></text></svg><p>②–③을 되풀이하며 A, B의 부피를 기록하고 그래프로 나타낸다.</p></div></div>
+  <div class="note q mt8"><b>안전</b> 보안경, 끝을 다듬은 유리관 사용. 깨진 유리는 전용 통에, 물은 개수대에 버린다.</div>
 </section>
 
 <!-- ════════ 24. 실험실: 물 옮기기 ════════ -->
-<section class="slide" data-sec="01 · 탐구" data-title="실험실: 물 옮기기 모형">
-  <h2><span class="tag">탐구</span>물 옮기기 모형 실험실</h2>
+<section class="slide" data-sec="01 · 모형 활동" data-title="실험실: 물 옮기기 모형">
+  <h2><span class="tag">모형 활동</span>물 옮기기 모형 실험실</h2>
   <div class="lab" data-lab="cm311water">
     <div class="lab-ctl" style="flex:0 0 440px">
       <div class="ctl"><div class="lbl"><span>A에 넣는 관 지름</span><output data-o="da"></output></div><input type="range" min="4" max="12" step="1" value="10" data-i="da" aria-label="A에 넣는 관 지름"></div>
@@ -748,7 +693,7 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
       <table class="readout cm311-read">
         <tr><th>옮긴 횟수</th><td><output data-o="n"></output></td></tr>
         <tr><th>부피 A · B</th><td><output data-o="v"></output></td></tr>
-        <tr class="hl"><th>이번에 옮긴 양 A→B · B→A</th><td><output data-o="mv"></output></td></tr>
+        <tr class="hl"><th>이번 회 A→B · B→A</th><td><output data-o="mv"></output></td></tr>
       </table>
       <output class="kind cm311-msg" data-o="msg"></output>
     </div>
@@ -768,8 +713,8 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
 </section>
 
 <!-- ════════ 25. 결과 ════════ -->
-<section class="slide" data-sec="01 · 탐구" data-title="탐구: 결과 및 정리">
-  <h2><span class="tag">탐구</span>결과 및 정리</h2>
+<section class="slide" data-sec="01 · 모형 활동" data-title="모형 활동: 결과 및 정리">
+  <h2><span class="tag">모형 활동</span>결과 및 정리</h2>
   <p class="f21">예: 굵은 관 지름 10 mm, 가는 관 6 mm, 눈금실린더 안지름 25 mm (실험실 값으로 채워도 된다)</p>
   <table class="tight mt8 cm311-res">
     <tr><th>옮긴 횟수</th><td>0</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>15</td><td>20</td></tr>
@@ -779,17 +724,17 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
   <div class="row mt12">
     <div class="col" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 560 270" style="width:540px" aria-label="옮긴 횟수에 따라 A는 줄고 B는 늘다가 일정해지는 부피 그래프"><g data-arw="70,210,530,210,ink,2"></g><g data-arw="70,210,70,14,ink,2"></g><path d="M66 174 H74" stroke="#16233D" stroke-width="2"/><text class="tex" x="60" y="180" data-mix="10" data-size="18" data-anchor="end" fill="#16233D"></text><path d="M66 138 H74" stroke="#16233D" stroke-width="2"/><text class="tex" x="60" y="144" data-mix="20" data-size="18" data-anchor="end" fill="#16233D"></text><path d="M66 102 H74" stroke="#16233D" stroke-width="2"/><text class="tex" x="60" y="108" data-mix="30" data-size="18" data-anchor="end" fill="#16233D"></text><path d="M66 66 H74" stroke="#16233D" stroke-width="2"/><text class="tex" x="60" y="72" data-mix="40" data-size="18" data-anchor="end" fill="#16233D"></text><path d="M66 30 H74" stroke="#16233D" stroke-width="2"/><text class="tex" x="60" y="36" data-mix="50" data-size="18" data-anchor="end" fill="#16233D"></text><path d="M70 206 V214" stroke="#16233D" stroke-width="2"/><text class="tex" x="70" y="234" data-mix="0" data-size="18" data-anchor="middle" fill="#16233D"></text><path d="M180 206 V214" stroke="#16233D" stroke-width="2"/><text class="tex" x="180" y="234" data-mix="5" data-size="18" data-anchor="middle" fill="#16233D"></text><path d="M290 206 V214" stroke="#16233D" stroke-width="2"/><text class="tex" x="290" y="234" data-mix="10" data-size="18" data-anchor="middle" fill="#16233D"></text><path d="M400 206 V214" stroke="#16233D" stroke-width="2"/><text class="tex" x="400" y="234" data-mix="15" data-size="18" data-anchor="middle" fill="#16233D"></text><path d="M510 206 V214" stroke="#16233D" stroke-width="2"/><text class="tex" x="510" y="234" data-mix="20" data-size="18" data-anchor="middle" fill="#16233D"></text><text class="tex" x="530" y="262" data-mix="옮긴 횟수" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="80" y="22" data-mix="부피 [mL]" data-size="19" data-anchor="start" fill="#16233D"></text><g class="step" data-g="r1"><path d="M70 30 L114 81.5 L158 112.8 L202 131.9 L246 143.8 L290 151 L400 158.9 L510 161.4" fill="none" stroke="#16233D" stroke-width="3"/><circle cx="70" cy="30" r="5" fill="#16233D"/><circle cx="114" cy="81.5" r="5" fill="#16233D"/><circle cx="158" cy="112.8" r="5" fill="#16233D"/><circle cx="202" cy="131.9" r="5" fill="#16233D"/><circle cx="246" cy="143.8" r="5" fill="#16233D"/><circle cx="290" cy="151" r="5" fill="#16233D"/><circle cx="400" cy="158.9" r="5" fill="#16233D"/><circle cx="510" cy="161.4" r="5" fill="#16233D"/><path d="M70 210 L114 158.5 L158 127.2 L202 108.1 L246 96.2 L290 89 L400 81.1 L510 78.6" fill="none" stroke="#0E7490" stroke-width="3" stroke-dasharray="9 5"/><rect x="65" y="205" width="10" height="10" fill="#0E7490"/><rect x="109" y="153.5" width="10" height="10" fill="#0E7490"/><rect x="153" y="122.2" width="10" height="10" fill="#0E7490"/><rect x="197" y="103.1" width="10" height="10" fill="#0E7490"/><rect x="241" y="91.2" width="10" height="10" fill="#0E7490"/><rect x="285" y="84" width="10" height="10" fill="#0E7490"/><rect x="395" y="76.1" width="10" height="10" fill="#0E7490"/><rect x="505" y="73.6" width="10" height="10" fill="#0E7490"/><text class="tex" x="520" y="167.4" data-mix="A" data-size="20" data-anchor="start" data-weight="700" fill="#16233D"></text><text class="tex" x="520" y="84.6" data-mix="B" data-size="20" data-anchor="start" data-weight="700" fill="#0E7490"></text></g></svg></div>
     <div class="col">
-      <p class="f21"><b>Q1</b> 15회 이후 A, B의 부피는 어떻게 되는가?</p>
-      <p class="f21 step cm311-a" data-g="r2">→ 거의 <b>일정</b>하다.</p>
-      <p class="f21 mt12"><b>Q2</b> 그때도 물을 옮기고 있는가?</p>
+      <p class="f21"><b>Q</b> ① 15회 이후 A, B의 부피는 어떻게 되는가?</p>
+      <p class="f21 step cm311-a" data-g="r2">→ 거의 <span class="ans">일정</span>하다.</p>
+      <p class="f21 mt12"><b>Q</b> ② 그때도 물을 옮기고 있는가?</p>
       <p class="f21 step cm311-a" data-g="r3">→ 그렇다. A → B로 옮기는 양과 B → A로 옮기는 양이 <b>같아졌다</b>(각각 약 2.1 mL).</p>
     </div>
   </div>
 </section>
 
 <!-- ════════ 26. 결론 ════════ -->
-<section class="slide" data-sec="01 · 탐구" data-title="탐구: 결론 도출">
-  <h2><span class="tag">탐구</span>결론 도출</h2>
+<section class="slide" data-sec="01 · 모형 활동" data-title="모형 활동: 결론 도출">
+  <h2><span class="tag">모형 활동</span>결론 도출</h2>
   <div class="row">
     <div class="col" style="flex:0 0 470px">
       <table class="tight cm311-mapt">
@@ -814,84 +759,87 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
   </div>
 </section>
 
-<!-- ════════ 27. 확인 문제 01 ════════ -->
-<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
-  <h2><span class="tag q">확인 문제 01</span>가역 반응 고르기</h2>
-  <p class="f22">다음은 몇 가지 현상이다. 가역 반응과 관련된 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
-  <div class="row mt8">
-    <div class="col">
-      <div class="bogi"><p>ㄱ. 황산 구리(II) 오수화물을 가열하면 흰색이 되고, 여기에 물을 떨어뜨리면 다시 푸른색이 된다.</p><p>ㄴ. 메테인이 연소하여 이산화 탄소와 물이 생성된다.</p><p>ㄷ. 석회 동굴 천장에 종유석이 자란다.</p></div>
-      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
-    </div>
-    <div class="col stack" style="flex:0 0 380px"><div class="board" style="min-height:230px"></div></div>
-  </div>
-  <div class="answer step mt12"><b>정답 ③ ㄱ, ㄷ</b> <span class="small">ㄷ: 석회 동굴 생성 반응의 역반응 · ㄴ: 연소는 비가역 반응</span></div>
-</section>
-
-<!-- ════════ 28. 확인 문제 02 ════════ -->
-<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
-  <h2><span class="tag q">확인 문제 02</span>평형에 도달하는 그래프</h2>
-  <p class="f22">그림은 밀폐 용기에 $\ce{NO2(g)}$를 넣었을 때, 반응 $\ce{2NO2(g) &lt;=&gt; N2O4(g)}$에서 시간에 따른 농도를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
-  <div class="row mt8">
-    <div class="col" style="flex:0 0 520px"><svg class="fig" viewBox="0 0 560 230" style="width:500px" aria-label="이산화 질소와 사산화 이질소 농도가 t1 이후 일정한 그래프"><rect x="277.9" y="20" width="258.1" height="172" fill="#FFE45C" fill-opacity=".25"/><path d="M277.9 20 V192" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><g data-arw="64,192,550,192,ink,2"></g><g data-arw="64,192,64,10,ink,2"></g><text class="tex" x="277.9" y="216" data-mix="$t_1$" data-size="20" data-anchor="middle"></text><text class="tex" x="542" y="218" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="406.9" y="42" data-mix="평형" data-size="19" data-anchor="middle" data-weight="700" fill="#8A6D00"></text><text class="tex" x="56" y="26" data-mix="농도" data-size="19" data-anchor="end" fill="#16233D"></text><path d="M64 42 L69.9 52.9 L75.8 61.9 L81.7 69.5 L87.6 75.8 L93.5 81.2 L99.4 85.9 L105.3 89.8 L111.2 93.2 L117.1 96.2 L123 98.7 L128.9 100.9 L134.8 102.9 L140.7 104.5 L146.6 106 L152.5 107.3 L158.4 108.5 L164.3 109.5 L170.2 110.3 L176.1 111.1 L182 111.8 L187.9 112.4 L193.8 112.9 L199.7 113.4 L205.6 113.8 L211.5 114.2 L217.4 114.5 L223.3 114.8 L229.2 115 L235.1 115.3 L241 115.5 L246.9 115.6 L252.8 115.8 L258.7 115.9 L264.6 116 L270.5 116.2 L276.4 116.3 L282.3 116.3 L288.2 116.4 L294.1 116.5 L300 116.5 L305.9 116.6 L311.8 116.6 L317.7 116.7 L323.6 116.7 L329.5 116.7 L335.4 116.8 L341.3 116.8 L347.2 116.8 L353.1 116.8 L359 116.9 L364.9 116.9 L370.8 116.9 L376.7 116.9 L382.6 116.9 L388.5 116.9 L394.4 116.9 L400.3 116.9 L406.2 116.9 L412.1 117 L418 117 L423.9 117 L429.8 117 L435.7 117 L441.6 117 L447.5 117 L453.4 117 L459.3 117 L465.2 117 L471.1 117 L477 117 L482.9 117 L488.8 117 L494.7 117 L500.6 117 L506.5 117 L512.4 117 L518.3 117 L524.2 117 L530.1 117 L536 117" fill="none" stroke="#B5562A" stroke-width="4"/><path d="M64 192 L69.9 186.5 L75.8 182 L81.7 178.3 L87.6 175.1 L93.5 172.4 L99.4 170.1 L105.3 168.1 L111.2 166.4 L117.1 164.9 L123 163.6 L128.9 162.5 L134.8 161.6 L140.7 160.7 L146.6 160 L152.5 159.3 L158.4 158.8 L164.3 158.3 L170.2 157.8 L176.1 157.4 L182 157.1 L187.9 156.8 L193.8 156.5 L199.7 156.3 L205.6 156.1 L211.5 155.9 L217.4 155.8 L223.3 155.6 L229.2 155.5 L235.1 155.4 L241 155.3 L246.9 155.2 L252.8 155.1 L258.7 155 L264.6 155 L270.5 154.9 L276.4 154.9 L282.3 154.8 L288.2 154.8 L294.1 154.8 L300 154.7 L305.9 154.7 L311.8 154.7 L317.7 154.7 L323.6 154.6 L329.5 154.6 L335.4 154.6 L341.3 154.6 L347.2 154.6 L353.1 154.6 L359 154.6 L364.9 154.6 L370.8 154.6 L376.7 154.5 L382.6 154.5 L388.5 154.5 L394.4 154.5 L400.3 154.5 L406.2 154.5 L412.1 154.5 L418 154.5 L423.9 154.5 L429.8 154.5 L435.7 154.5 L441.6 154.5 L447.5 154.5 L453.4 154.5 L459.3 154.5 L465.2 154.5 L471.1 154.5 L477 154.5 L482.9 154.5 L488.8 154.5 L494.7 154.5 L500.6 154.5 L506.5 154.5 L512.4 154.5 L518.3 154.5 L524.2 154.5 L530.1 154.5 L536 154.5" fill="none" stroke="#16233D" stroke-width="3.5" stroke-dasharray="12 6"/><text class="tex" x="532" y="107" data-mix="$[\ce{NO2}]$" data-size="20" data-anchor="end" fill="#B5562A"></text><text class="tex" x="532" y="180.5" data-mix="$[\ce{N2O4}]$" data-size="20" data-anchor="end" fill="#16233D"></text></svg></div>
-    <div class="col">
-      <div class="bogi"><p>ㄱ. $t_1$ 이후 정반응 속도와 역반응 속도가 같다.</p><p>ㄴ. $t_1$ 이후 $\ce{NO2}$와 $\ce{N2O4}$의 농도는 같다.</p><p>ㄷ. $t_1$ 이후 용기 속 기체의 색이 일정하다.</p></div>
-      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄴ</span><span>④ ㄱ, ㄷ</span><span>⑤ ㄴ, ㄷ</span></div>
-      <div class="board mt8" style="min-height:60px"></div>
-    </div>
-  </div>
-  <div class="answer step mt8"><b>정답 ④ ㄱ, ㄷ</b> <span class="small">ㄴ: 평형에서 농도는 일정하지만 같지 않다.</span></div>
-</section>
-
-<!-- ════════ 29. 확인 문제 03 ════════ -->
-<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 03 (서술형)">
-  <h2><span class="tag q">확인 문제 03</span>서술형</h2>
-  <div class="row stretch" style="height:250px">
-    <div class="col stack">
-      <p class="f22">마개를 닫은 용기에 물을 넣고 오래 두었더니 수면의 높이가 더 이상 변하지 않았다. 이 상태를 <b>동적 평형</b>이라고 하는 까닭을 <b>증발 속도</b>와 <b>응축 속도</b>를 사용하여 서술하시오.</p>
-      <div class="board mt8"></div>
-    </div>
-  </div>
-  <div class="answer step cm311-left"><b>예시 답안</b> 수면의 높이가 일정하여 겉으로는 변화가 없어 보이지만, 물의 증발과 수증기의 응축은 계속 일어나고 있으며 증발 속도와 응축 속도가 같기 때문이다.<br><span class="small">채점 요소: ① 겉보기 변화 없음 ② 증발과 응축이 계속 일어남 ③ 두 속도가 같음</span></div>
-</section>
-
-<!-- ════════ 30. 소단원 마무리 ════════ -->
+<!-- ════════ 25. 소단원 마무리 ════════ -->
 <section class="slide" data-sec="01 · 소단원 마무리" data-title="소단원 마무리">
-  <h2><span class="tag">소단원 마무리</span>몸으로, 화면으로 평형 나타내기</h2>
+  <h2><span class="tag">소단원 마무리</span>창의력 키우기 · 디지털 소양 키우기</h2>
   <div class="row">
     <div class="col">
       <div class="card"><h3>창의력 키우기</h3>
-        <p class="f21">가역 반응과 동적 평형을 몸으로 나타내는 놀이를 만들어 보자.</p>
-        <p class="f21 mt8">예: 두 모둠이 공을 같은 빠르기로 주고받으면 모둠마다 가진 공의 수가 일정하게 유지된다.</p>
-        <p class="small mt8">놀이에서 반응물·생성물·정반응·역반응·평형이 각각 무엇인지 정리하자.</p>
+        <p class="f21" data-q>일상생활에서 가역 반응과 비가역 반응의 예를 찾아보자.</p>
+        <p class="f21 mt8 step cm311-a">예) 가역: 변색 렌즈, 온도에 따라 색이 변하는 장미, 염화 코발트 종이(습도 표시), 석회 동굴<br>비가역: 종이·가스의 연소, 달걀 삶기, 철의 녹슮</p>
       </div>
     </div>
     <div class="col">
       <div class="card"><h3>디지털 소양 키우기</h3>
-        <p class="f21">온라인 모의실험(또는 오늘의 실험실)에서 처음 조건을 바꾸어 가며 평형에 도달하는 그래프를 저장하자.</p>
-        <p class="f21 mt8">여러 그래프의 공통점을 한 문단으로 써서 모둠 게시판에 공유하자.</p>
-        <p class="small mt8">다른 사람의 화면이나 자료를 쓸 때는 출처를 밝힌다.</p>
+        <p class="f21" data-q>화학 반응이 화학 평형에 도달했는지 알 수 있는 방법을 조사한 뒤, 가역 반응 실험 영상을 찾아보고 그 반응이 화학 평형에 도달했는지 판단해 보자.</p>
+        <p class="f21 mt8 step cm311-a">예) 닫힌 용기에서 색·압력·농도 같은 성질이 시간이 지나도 더 이상 변하지 않으면 평형에 도달한 것이다.</p>
+        <p class="small mt8">영상이나 자료를 쓸 때는 출처를 밝힌다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ 31. 스스로 정리 ════════ -->
-<section class="slide" data-sec="01 가역 반응과 화학 평형 · 마무리" data-title="스스로 정리">
-  <h2><span class="tag ink">스스로 정리</span>1. 화학 평형 — 개념 지도</h2>
+<!-- ════════ 26. 중단원 마무리 01 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 01">
+  <h2><span class="tag q">중단원 마무리 01</span>가역 반응</h2>
+  <p class="f22">가역 반응에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+  <div class="row mt8">
+    <div class="col">
+      <div class="bogi"><p>ㄱ. 정반응과 역반응이 모두 일어난다.</p><p>ㄴ. 가역 반응은 $\ce{&lt;=&gt;}$를 사용해 하나의 화학 반응식으로 나타낼 수 있다.</p><p>ㄷ. 메테인의 연소 반응은 가역 반응이다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 380px"><div class="board" style="min-height:230px"></div></div>
+  </div>
+  <div class="answer step mt12"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">ㄷ: 메테인의 연소는 한 방향으로만 일어나는 비가역 반응이다.</span></div>
+</section>
+
+<!-- ════════ 27. 중단원 마무리 02 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 02">
+  <h2><span class="tag q">중단원 마무리 02</span>밀폐 용기 속 $\ce{NO2}$의 변화</h2>
+  <p class="f21">다음은 $\ce{NO2(g)}$가 반응하여 $\ce{N2O4(g)}$를 생성하는 반응이다. $\ce{2NO2(g) &lt;=&gt; N2O4(g)}$ (적갈색 → 무색)<br>일정한 온도에서 밀폐된 용기에 $\ce{NO2(g)}$를 넣었을 때 일어나는 변화에 대한 설명으로 <b>옳지 않은</b> 것은? (단, 용기의 부피는 일정하다.)</p>
+  <div class="row mt8">
+    <div class="col">
+      <div class="choices cm311-col">
+        <span>① 용기 내부의 색이 점점 옅어진다.</span>
+        <span>② $\ce{NO2(g)}$의 농도는 처음보다 감소한다.</span>
+        <span>③ 용기 내부의 전체 기체 분자 수가 처음보다 감소한다.</span>
+        <span>④ 시간이 지나도 $\ce{NO2(g)}$가 생성되는 반응은 일어나지 않는다.</span>
+        <span>⑤ 시간이 충분히 흐른 후 용기 내부의 색이 일정하게 유지된다.</span>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 360px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+  <div class="answer step mt8"><b>정답 ④</b> <span class="small">역반응($\ce{N2O4}$ 분해 → $\ce{NO2}$ 생성)도 계속 일어나 평형에서는 정반응 속도와 같다. ③: $\ce{NO2}$ 2개가 $\ce{N2O4}$ 1개가 되므로 분자 수가 준다.</span></div>
+</section>
+
+<!-- ════════ 28. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01 (서술형)">
+  <h2><span class="tag q">확인 문제 01</span>서술형</h2>
+  <div class="row stretch" style="height:250px">
+    <div class="col stack">
+      <p class="f22">물이 든 병의 뚜껑을 닫아 오래 두었더니 물의 양이 더 이상 변하지 않았다. 이 상태를 <b>동적 평형</b>이라고 하는 까닭을 <b>증발 속도</b>와 <b>응축 속도</b>를 사용하여 서술하시오.</p>
+      <div class="board mt8"></div>
+    </div>
+  </div>
+  <div class="answer step cm311-left"><b>예시 답안</b> 물의 양이 일정하여 겉으로는 변화가 없어 보이지만, 물의 증발과 수증기의 응축은 계속 일어나고 있으며 증발 속도와 응축 속도가 같기 때문이다.<br><span class="small">채점 요소: ① 겉보기 변화 없음 ② 증발과 응축이 계속 일어남 ③ 두 속도가 같음</span></div>
+</section>
+
+<!-- ════════ 29. 함께 풀어 보기 ════════ -->
+<section class="slide" data-sec="01 가역 반응과 화학 평형 · 마무리" data-title="함께 풀어 보기">
+  <h2><span class="tag ink">함께 풀어 보기</span>1. 화학 평형 — 핵심 내용 정리</h2>
   <div class="cm311-map">
-    <div class="cm311-node cm311-main"><b>01 가역 반응과 화학 평형</b> <span class="small">(오늘)</span>
-      <p class="f21 mt8" data-q>정반응과 역반응이 모두 일어나는 반응: ❶ <span class="blank"><span class="step">가역 반응</span></span></p>
-      <p class="f21" data-q>역반응이 거의 일어나지 않는 반응: ❷ <span class="blank"><span class="step">비가역 반응</span></span></p>
-      <p class="f21" data-q>겉보기 변화는 없지만 두 반응이 계속 일어나는 상태: ❸ <span class="blank"><span class="step">동적 평형</span></span></p>
-      <p class="f21" data-q>물과 수증기 ❹ <span class="blank"><span class="step">상평형</span></span>, 포화 용액 ❺ <span class="blank"><span class="step">용해 평형</span></span></p>
-      <p class="f21" data-q>화학 평형: ❻ <span class="blank"><span class="step">정반응 속도</span></span> = 역반응 속도, 농도가 ❼ <span class="blank"><span class="step">일정</span></span>하다.</p>
+    <div class="cm311-node cm311-main"><b>1 가역 반응과 화학 평형</b> <span class="small">(97쪽 · 오늘)</span>
+      <p class="f21 mt8" data-q>(1) ① 가역 반응: <span class="blank"><span class="step">정반응</span></span>와/과 <span class="blank"><span class="step">역반응</span></span>이/가 모두 일어날 수 있는 반응</p>
+      <p class="f21">② 비가역 반응: 한 방향으로만 일어나는 반응</p>
+      <p class="f21" data-q>(2) <span class="blank"><span class="step">화학 평형</span></span>: 가역 반응에서 반응물과 생성물의 농도가 일정하게 유지되어 겉으로는 변화가 일어나지 않는 것처럼 보이는 동적 평형 상태</p>
+      <p class="small mt8">덧붙임: 밀폐된 병 속 물과 수증기처럼 두 가지 이상의 상태가 동적 평형을 유지하는 것 = 상평형</p>
     </div>
     <div class="cm311-arr">→</div>
-    <div class="cm311-node cm311-dim">02 화학 평형과 평형 상수<br><span class="small">(다음 시간)</span></div>
+    <div class="cm311-node cm311-dim">2 화학 평형과 평형 상수<br><span class="small">(102쪽)</span></div>
     <div class="cm311-arr">→</div>
-    <div class="cm311-node cm311-dim">03 화학 반응의 진행 방향 예측<br><span class="small">반응 지수</span></div>
+    <div class="cm311-node cm311-dim">3 화학 반응의 진행 방향 예측<br><span class="small">(106쪽)</span></div>
   </div>
+  <p class="small mt12">교과서 「함께 풀어 보기」의 빈칸 1–3이 이 소단원 몫이다. 핵심 내용으로 간단한 문제를 만들어 친구들과 함께 풀어 보자.</p>
 </section>
 
 <!-- ════════ 32. 스스로 점검하기 ════════ -->
@@ -905,7 +853,7 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
   <div class="card mt16">
     <p class="f21"><b>Q</b> 평형 상태에서 반응이 멈추었다는 말이 틀린 까닭은? <span class="step">→ 정반응과 역반응이 같은 속도로 계속 일어나기 때문이다.</span></p>
     <p class="f21 mt8"><b>Q</b> 평형 상태에서 '일정한 것'과 '같은 것'은? <span class="step">→ 농도는 일정하고, 정반응 속도와 역반응 속도는 같다.</span></p>
-    <p class="f21 mt8"><b>Q</b> 비가역 반응의 예 두 가지는? <span class="step">→ 연소, 앙금 생성 (기체 발생)</span></p>
+    <p class="f21 mt8"><b>Q</b> 비가역 반응의 예 두 가지는? <span class="step">→ 메테인의 연소, 마그네슘과 염산의 반응 (설탕 가열)</span></p>
   </div>
   <div class="note puzzle mt16"><b>다음 시간</b> 평형 상태에서 반응물과 생성물의 농도 사이에는 어떤 규칙이 있을까? 처음 넣은 양을 바꾸어도 변하지 않는 값을 찾아보자.</div>
 </section>
@@ -957,7 +905,7 @@ window.HARNESS_COL={ink:'#16233D',plus:'#D7263D',minus:'#1F6FD1',field:'#2E9E6A'
 /* 3-1-1 가역 반응과 화학 평형 — 실험실
    cm311eq    : 평형에 도달하기 (2NO2 ⇌ N2O4 입자 상자). N 원자 수 보존(n + 2m 일정).
                 정반응 확률 = kf·n(n−1)/2·dt (가까운 NO2 두 개가 결합), 역반응 = kr·m·dt (N2O4가 둘로 갈라짐).
-                kr/kf = 10 → NO2 60개로 시작하면 평형 근처 NO2 약 20, N2O4 약 20. 고정 시드 난수.
+                kr/kf = 6 → NO2 40개로 시작하면 평형 근처 NO2 약 13, N2O4 약 14(교과서 그림처럼 N2O4가 더 많음). 고정 시드 난수.
                 출력: 상자(미시) + 상자 색(거시, NO2 수에 비례) + 분자 수–시간, 반응 속도–시간(2 s 이동 평균),
                 누적 반응 횟수, 판정 문장, 측정 기록 표(최근 4행).
    cm311water : 물 옮기기 동적 평형 모형. 관에 담기는 물 = V × (d/D)², D = 25 mm, 두 방향 동시에.
@@ -968,8 +916,8 @@ window.DECK_LABS = {
     const svg=root.querySelector('svg');
     const BX0=12, BY0=12, BX1=300, BY1=262, R=9;
     const G1={x0:372,y0:185,x1:628,y1:30}, G2={x0:372,y0:400,x1:628,y1:245}, TW=40;
-    const KF=0.012, KR=0.12, SPEED=46;
-    let seed=7; const rnd=()=>{ seed=(seed*1103515245+12345)%2147483648; return seed/2147483648; };
+    const KF=0.012, KR=0.072, SPEED=46;
+    let seed=7; const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const tint=API.mk('rect',{x:BX0,y:BY0,width:BX1-BX0,height:BY1-BY0,rx:14,fill:'#B5562A','fill-opacity':0},svg);
     API.mk('rect',{x:BX0,y:BY0,width:BX1-BX0,height:BY1-BY0,rx:14,fill:'none',stroke:'#7E8B98','stroke-width':3},svg);
     const molG=API.mk('g',{},svg), fx=API.mk('g',{},svg), gr=API.mk('g',{},svg);
@@ -1030,7 +978,7 @@ window.DECK_LABS = {
       const as=rec.map(h=>h[1]), mean=as.reduce((s,v)=>s+v,0)/as.length; const tot=as[0]+2*rec[0][2];
       const first=hist.filter(h=>h[0]>=t-8&&h[0]<t-4).map(h=>h[1]); if(first.length<3) return null;
       const m0=first.reduce((s,v)=>s+v,0)/first.length;
-      if(Math.abs(mean-m0)<=Math.max(1.5,tot*0.04)) return [mean,rec.map(h=>h[2]).reduce((s,v)=>s+v,0)/rec.length];
+      if(Math.abs(mean-m0)<=Math.max(3,tot*0.08)) return [mean,rec.map(h=>h[2]).reduce((s,v)=>s+v,0)/rec.length];
       return null;
     }
     function drawGraphs(){
@@ -1047,21 +995,19 @@ window.DECK_LABS = {
       pl(rh.map(h=>[h[0],Y2(h[1])]),'#2E9E6A',null,G2); pl(rh.map(h=>[h[0],Y2(h[2])]),'#7B4FC8','9 5',G2);
       const eq=eqState();
       if(eq){ const x=X(G1,Math.max(0,t-4)); [G1,G2].forEach(G=>API.mk('rect',{x,y:G.y1,width:Math.max(0,X(G,t)-x),height:G.y0-G.y1,fill:'#FFE45C','fill-opacity':.25},gr)); }
-      const last=hist[hist.length-1], lr=rh[rh.length-1];
-      API.place(Ov('la'),Math.min(X(G1,last[0])+22,612),Y1(last[1])-24); API.place(Ov('lb'),Math.min(X(G1,last[0])+26,606),Y1(last[2])+2);
-      API.place(Ov('lf'),Math.min(X(G2,lr[0])+30,598),Y2(lr[1])-26); API.place(Ov('lr'),Math.min(X(G2,lr[0])+30,598),Y2(lr[2])+4);
-      return eq;
+            return eq;
     }
     function update(){
       const [a,b]=cnt(), tot=hist.length?hist[0][1]+2*hist[0][2]:1;
       tint.setAttribute('fill-opacity',(0.55*a/Math.max(40,tot)).toFixed(3));
       O('cnt').textContent=`${a}개 · ${b}개`; O('tot').textContent=`${totF}회 · ${totR}회`;
-      const eq=drawGraphs(), [rf,rr]=rates();
+      const eq=drawGraphs(); const past=hist.filter(h=>h[0]<=t-2), dA=past.length? a-past[past.length-1][1] : 0;
       let msg;
       if(a+b===0) msg='분자를 넣어 주자.';
       else if(t===0) msg='「시작」을 눌러 분자 수와 색의 변화를 관찰하자.';
-      else if(eq) msg='평형 상태: 분자 수와 색은 일정하지만, 정반응과 역반응은 같은 빠르기로 계속 일어난다(누적 횟수가 계속 는다).';
-      else if(rf>rr) msg='정반응이 더 빠르다 → 이산화 질소가 줄고 색이 옅어진다.';
+      else if(eq||t>12) msg='평형 상태: 분자 수와 색은 일정하지만, 정반응과 역반응은 같은 빠르기로 계속 일어난다(누적 횟수가 계속 는다).';
+      else if(t<2) msg='반응이 진행되고 있다. 색과 분자 수의 변화를 지켜보자.';
+      else if(dA<0) msg='정반응이 더 빠르다 → 이산화 질소가 줄고 색이 옅어진다.';
       else msg='역반응이 더 빠르다 → 이산화 질소가 늘고 색이 진해진다.';
       O('msg').textContent=msg;
     }
@@ -1069,11 +1015,12 @@ window.DECK_LABS = {
     root.querySelector('[data-act="reset"]').addEventListener('click',reset);
     root.querySelector('[data-act="rec"]').addEventListener('click',()=>{
       const eq=eqState(), [a,b]=cnt();
-      log.push({s:`${hist[0][1]} · ${hist[0][2]}`, e: eq? `${Math.round(eq[0])} · ${Math.round(eq[1])}` : `${a} · ${b} (평형 전)`, t:t.toFixed(1)+' s'});
+      log.push({s:`${hist[0][1]} · ${hist[0][2]}`, e: eq? `${Math.round(eq[0])} · ${Math.round(eq[1])}` : `${a} · ${b}${t>12?'':' (평형 전)'}`, t:t.toFixed(1)+' s'});
       if(log.length>4) log.shift();
       const tb=O('log'); tb.innerHTML=''; log.forEach(r=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${r.s}</td><td>${r.e}</td><td>${r.t}</td>`; tb.appendChild(tr); });
     });
     ['a0','b0'].forEach(k=>I(k).addEventListener('input',reset));
+    API.place(Ov('la'),560,2); API.place(Ov('lb'),610,2); API.place(Ov('lf'),556,217); API.place(Ov('lr'),612,217);
     API.place(Ov('t1'),G1.x0+44,2); API.place(Ov('t2'),G2.x0+76,217);
     API.place(Ov('tx'),G1.x1-20,G1.y0+8); API.place(Ov('tx2'),G2.x1-20,G2.y0+8); API.place(Ov('leg'),(BX0+BX1)/2,BY1+12);
     reset();
@@ -1088,7 +1035,7 @@ window.DECK_LABS = {
     const O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`), I=k=>root.querySelector(`[data-i="${k}"]`);
     const svg=root.querySelector('svg'), g=API.mk('g',{},svg), D=25, TOT=50, NMAX=30;
     let start='A', VA=50, VB=0, n=0, hist=[], log=[], last=[0,0], seed=3, anim=0;
-    const rnd=()=>{ seed=(seed*1103515245+12345)%2147483648; return seed/2147483648; };
+    const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const read=v=>Math.max(0,Math.min(TOT,v+(rnd()-.5)*0.4));
     function reset(){ VA=start==='A'?TOT:0; VB=TOT-VA; n=0; last=[0,0]; seed=3; log=[]; hist=[[0,VA,VB]]; renderLog(); draw(); }
     function once(){ if(n>=NMAX) return; const fa=(+I('da').value/D)**2, fb=(+I('db').value/D)**2;

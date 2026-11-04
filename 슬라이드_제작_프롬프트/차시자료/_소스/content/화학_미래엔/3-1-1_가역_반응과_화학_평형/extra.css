@@ -45,3 +45,6 @@ table.cm311-log th,table.cm311-log td{font-size:19px;padding:3px 8px;text-align:
 table.cm311-map3 td,table.cm311-map3 th{padding:4px 10px}
 table.cm311-read td{width:215px}
 .cm311-node.cm311-dim{flex:0 0 180px}
+.cm311-eqc{border-color:#E0C44A;background:#FFFCEB}
+.choices.cm311-col{display:flex;flex-direction:column;gap:10px}
+.choices.cm311-col span{font-size:21px}
