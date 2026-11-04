@@ -26,12 +26,11 @@ window.DECK_LABS = {
       if(f==='none') h=2*n+2; else if(f==='OH'){ h=2*n+2; o=1; } else if(f==='CHO'){ h=2*n; o=1; } else { h=2*n; o=2; }
       return `C${sub(n)}H${h}`+(o?`O${sub(o)}`:'');
     }
-    function cond(f,n){ // 간단한 구조식
-      const tail={none:'H',OH:'OH',CHO:'CHO',COOH:'COOH'}[f];
-      const k = f==='CHO'||f==='COOH' ? n-1 : n;  // 작용기 밖 탄소 수
-      if(k===0) return tail==='H'?'CH4':'H'+tail;
-      if(f==='none'){ if(n===1) return 'CH4'; const mid=n-2; return 'CH3'+(mid===0?'':mid<=2?'CH2'.repeat(mid):`(CH2)${mid}`)+'CH3'; }
-      const mid=k-1; return 'CH3'+(mid===0?'':mid<=1?'CH2'.repeat(mid):`(CH2)${mid}`)+tail;
+    function cond(f,n){ // 시성식 (교과서 꼴: C2H5OH, CH3CHO, CH3COOH)
+      const R=k=>k===0?'H':k===1?'CH3':`C${k}H${2*k+1}`;
+      if(f==='none') return mf(f,n);
+      if(f==='OH') return R(n)+'OH';
+      return R(n-1)+(f==='CHO'?'CHO':'COOH');
     }
     function struct(f,n){ // 구조식 원자 좌표·결합
       const d=62, extra={none:1,OH:2,CHO:1,COOH:2}[f], w=d*(n+extra), x0=(620-w)/2, y0=128;
@@ -86,7 +85,7 @@ window.DECK_LABS = {
       bub.forEach(b=>API.mk('circle',{cx:b.x,cy:b.y,r:b.r,fill:'#fff','fill-opacity':.7,stroke:'#7E8B98','stroke-width':1.2},gB));
     }
     // 그래프
-    const GX=262, GY=262, GW=330, GH=190, lo=-200, hi=250;
+    const GX=300, GY=262, GW=300, GH=180, lo=-200, hi=250;
     const gx=n=>GX+(n-1)/5*GW, gy=v=>GY+(hi-v)/(hi-lo)*GH;
     const axisG=API.mk('g',{},svg);
     [-200,-100,0,100,200].forEach(v=>{ API.mk('line',{x1:GX,y1:gy(v),x2:GX+GW,y2:gy(v),stroke:'#E2E7EC','stroke-width':1.5},axisG); API.texText(axisG,GX-8,gy(v)+6,'$'+v+'$',{size:17,anchor:'end',fill:MUT,mix:true}); });
@@ -95,9 +94,9 @@ window.DECK_LABS = {
     API.mk('line',{x1:GX,y1:GY+GH,x2:GX+GW,y2:GY+GH,stroke:MUT,'stroke-width':2},axisG);
     API.mk('line',{x1:GX,y1:gy(25),x2:GX+GW,y2:gy(25),stroke:EQ,'stroke-width':1.8,'stroke-dasharray':'6 5'},axisG);
     API.texText(axisG,GX+GW,gy(25)-6,'$25\\ {}^\\circ\\text{C}$',{size:17,anchor:'end',fill:EQ,mix:true});
-    API.texText(axisG,GX-30,GY-14,'끓는점 [°C]',{size:18,anchor:'start',fill:MUT,mix:true});
+    API.texText(axisG,GX-40,GY-14,'끓는점 [°C]',{size:18,anchor:'start',fill:MUT,mix:true});
     API.texText(axisG,GX+GW/2,GY+GH+46,'탄소 수',{size:18,anchor:'middle',fill:MUT,mix:true});
-    ['none','OH','CHO','COOH'].forEach((f,i)=>{ const x=20+i*150, y=490; marker(axisG,x,y-6,f); API.texText(axisG,x+12,y,SER[f].t,{size:17,anchor:'start',fill:MUT,mix:true}); });
+    ['none','OH','CHO','COOH'].forEach((f,i)=>{ const x=160, y=300+i*30; marker(axisG,x,y-6,f); API.texText(axisG,x+12,y,SER[f].t,{size:17,anchor:'start',fill:MUT,mix:true}); });
     function marker(g,x,y,f){ const c=SER[f].c, m=SER[f].m, r=6;
       if(m==='c') API.mk('circle',{cx:x,cy:y,r,fill:c},g);
       else if(m==='s') API.mk('rect',{x:x-r,y:y-r,width:2*r,height:2*r,fill:c},g);
@@ -151,6 +150,7 @@ window.DECK_LABS = {
       if(!on&&!bub.length) return;
       if(on && rnd()<dt*9) bub.push({x:TX-20+rnd()*40, y:BOT-14, r:2.5+rnd()*3});
       bub.forEach(b=>{ b.y-=dt*(55+b.r*8); }); bub=bub.filter(b=>b.y>TT+4); drawBub(); });
+    API.ready(()=>{ pool.forEach(d=>{ d.dataset.el=''; }); update(false); });
     update();
   }
 };

@@ -65,3 +65,19 @@ table.rm31-read td{font-size:21px;width:auto;padding:5px 10px;text-align:center}
 output.kind.rm31-msg{display:block;margin-top:4px;line-height:1.4;font-size:19px;min-height:54px}
 table.rm31-log{width:100%}
 table.rm31-log th,table.rm31-log td{font-size:19px;padding:3px 6px;text-align:center}
+
+/* 교과서 대조 뒤 추가 */
+.rm31-chips{display:flex;flex-wrap:wrap;gap:8px}
+.rm31-chips > span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-size:20px}
+.rm31-g3s{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rm31-g3s .stage{padding:6px 12px}
+.rm31-g3s .stage h3{font-size:21px;margin-bottom:0}
+.rm31-g3s .stage svg{height:120px;margin:0 auto}
+.rm31-g3s .stage p.key{margin:0}
+.rm31-g2s .stage svg{height:112px;margin:0 auto}
+table.rm31-goal th{width:120px;font-size:20px}
+table.rm31-goal td{font-size:20px}
+table.rm31-ex{width:100%}
+table.rm31-ex th,table.rm31-ex td{font-size:20px}
+.rm31-hl{background:#FFF8D6}
+.rm31-fsm .katex{font-size:.78em}
