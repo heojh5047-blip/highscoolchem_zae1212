@@ -44,7 +44,11 @@ p.em41-a{color:#1B5E3F;margin-top:4px}
 .em41-seg .btn.em41-act{background:var(--field);color:#fff;border-color:var(--field)}
 .em41-seg .small{margin-right:4px}
 table.em41-read th{font-size:19px;padding:5px 10px}
-table.em41-read td{font-size:20px;width:200px;padding:5px 8px;text-align:center}
+table.em41-read td{font-size:19px;width:220px;padding:5px 8px;text-align:center}
 p.em41-ctrl{margin-top:6px}
 output.kind.em41-msg{margin-top:6px;line-height:1.45;font-size:19px}
 table.em41-log th,table.em41-log td{font-size:19px;padding:3px 6px;text-align:center}
+table.em41-ugoal th{width:120px;font-size:19px;padding:5px 10px}
+table.em41-ugoal td{font-size:19px;padding:5px 10px;line-height:1.4}
+.mt4{margin-top:4px}
+.blank.em41-wide2{min-width:700px;text-align:left}
