@@ -39,3 +39,5 @@ p.em11-fix{margin:0 0 6px}
 table.em11-log{width:100%;margin-top:4px}
 table.em11-log th,table.em11-log td{font-size:19px;padding:3px 6px;text-align:center}
 output.kind.em11-msg{display:block;margin-top:8px;line-height:1.45;font-size:19px}
+table.em11-goal th{width:130px}
+table.em11-goal td{font-size:20px}

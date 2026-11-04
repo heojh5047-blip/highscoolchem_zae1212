@@ -1,0 +1,40 @@
+{
+ "findings": [
+  {
+   "slide": 22,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "과정 카드 그림 라벨 15.2px.",
+   "fix": "반영: 라벨 20–22로."
+  },
+  {
+   "slide": 23,
+   "severity": "low",
+   "rule": "T5",
+   "problem": "체크 상자 label에 글자 직접 포함.",
+   "fix": "반영: span으로 감쌈."
+  },
+  {
+   "slide": 17,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "아래 보조 문장 넘침.",
+   "fix": "반영: 오른쪽 열로 옮김."
+  },
+  {
+   "slide": 15,
+   "severity": "low",
+   "rule": "D7",
+   "problem": "두 타이어 그림이 같아 보여 '기온이 낮아짐'이 드러나지 않음.",
+   "fix": "반영: 저온 바탕과 눈 표시."
+  },
+  {
+   "slide": 5,
+   "severity": "low",
+   "rule": "실험실",
+   "problem": "압력계에 눈금 숫자가 없음 — 결과 수치로 대신.",
+   "fix": "기각: 결과 상자에 P가 크게 나오므로 그대로."
+  }
+ ],
+ "summary": "자동 점검 0건, 전체 캡처 두 번 확인."
+}
