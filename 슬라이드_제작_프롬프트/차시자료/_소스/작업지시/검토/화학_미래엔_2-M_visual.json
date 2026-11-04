@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":7,"severity":"high","rule":"3.2","problem":"(나) 염화 나트륨 전기 분해 그림 라벨이 화면에서 9.6px","fix":"2-1-1 그림의 viewBox를 내용 부분으로 잘라(90 10 390 360) 360px로 키우고 (가)도 잘라 240px — 오른쪽 열 616px"},
+{"slide":8,"severity":"medium","rule":"D8","problem":"전기음성도 표 원소 기호와 값 겹침(4px), '같은 족' 라벨 오른쪽 잘림","fix":"칸 높이 66, 값 기준선 아래로, 족 경향 문장을 표 아래 둘째 줄로"},
+{"slide":9,"severity":"medium","rule":"D8·3.2","problem":"정답 상자가 무대 아래로 넘침, H 라벨 14px","fix":"정답을 오른쪽 열로 옮기고 viewBox 500으로 줄여 배율 0.94"},
+{"slide":10,"severity":"medium","rule":"3.2","problem":"수직선 라벨 14.4px","fix":"viewBox 520, 라벨 21"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"분류도 오른쪽 '아니요' 잘림","fix":"그림 전체를 왼쪽으로 옮김(가지 끝 30·220·350·540)"},
+{"slide":12,"severity":"low","rule":"T5·3.2","problem":"선택지 inline-flex 글자, H 라벨 15.9px","fix":"선택지를 일반 글로, 그림 열 640px"},
+{"slide":14,"severity":"medium","rule":"D8","problem":"정답 상자 넘침","fix":"정답을 왼쪽 열 아래(빈 공간)로"},
+{"slide":21,"severity":"low","rule":"T5·S2","problem":"물질 목록 flex 글자, 판서 공간 없음","fix":"가운데 정렬 일반 문단, 그림 아래 판서 공간"},
+{"slide":22,"severity":"medium","rule":"D8","problem":"세탁 단계 카드가 아래로 넘침","fix":"카드 그림 250px 가운데, 본문 한 구절 줄임"},
+{"slide":13,"severity":"low","rule":"D22","problem":"Cl:Be:Cl 루이스 전자점식이 빽빽함","fix":"Cl 간격 68로 넓힘"},
+{"slide":15,"severity":"low","rule":"D8","problem":"비교 그림 '굽은 형' 라벨에 합 화살표가 닿음","fix":"화살표 짧게, 라벨 오른쪽 아래로"}
+],"summary":"첫 렌더 자동 점검 27건(라벨 크기·겹침·넘침) → 모두 고쳐 0건. 전체 캡처 모음 2회(완성 직후·최종) 확인. 움직임 data-anim 37곳(09 전기장 그림의 분자 8개 회전 포함 — 한 현상이라 유지)."}
