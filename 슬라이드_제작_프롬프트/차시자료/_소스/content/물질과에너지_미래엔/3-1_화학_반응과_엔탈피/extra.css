@@ -55,3 +55,5 @@ table.em31-log{width:100%}
 table.em31-log th,table.em31-log td{font-size:19px;padding:3px 6px;text-align:center}
 table.em31-log tr.em31-bad td{color:#B42318}
 .formula.em31-fs{font-size:22px;padding:8px 10px}
+.blank.em31-eq{min-width:640px;text-align:left}
+table.em31-t3 th,table.em31-t3 td{font-size:20px;padding:4px 8px;line-height:1.4}

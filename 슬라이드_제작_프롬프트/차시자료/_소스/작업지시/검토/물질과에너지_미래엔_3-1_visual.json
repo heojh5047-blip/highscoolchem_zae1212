@@ -1,0 +1,9 @@
+{"findings":[
+{"slide":9,"severity":"medium","rule":"D8","problem":"발열 도표의 '생성물' 라벨이 가로축 라벨 '반응의 진행'과 겹친다.","fix":"생성물 라벨을 선 위로(반영)"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"정답 상자가 아래 여백을 넘는다.","fix":"도입 문장을 한 줄로 줄임(반영)"},
+{"slide":23,"severity":"medium","rule":"D8","problem":"조사 표와 스스로 평가하기 카드가 아래로 넘친다.","fix":"표 글자 20px, 행 하나 합침(반영)"},
+{"slide":12,"severity":"low","rule":"D8","problem":"44.0 kJ 치수선이 H2O(g) 라벨을 지난다.","fix":"치수선을 생성물 선 왼쪽으로(반영)"},
+{"slide":3,"severity":"low","rule":"T1","problem":"단원 연계 흐름의 셋째 칸이 다음 줄로 떨어진다.","fix":"'물질과 에너지 Ⅲ'으로 줄임(반영)"},
+{"slide":1,"severity":"low","rule":"D8","problem":"'열 방출' 라벨이 버너·화살표와 닿는다.","fix":"라벨을 아래로(반영)"},
+{"slide":21,"severity":"low","rule":"5.11","problem":"실험실 단위 부피당 값이 '3.37×10^4'처럼 글자 지수로 보인다.","fix":"쉼표 표기 33,732로(반영)"}
+],"summary":"29장 전체 캡처 모음을 두 번 보았다. 넘침·겹침을 고친 뒤 자동 점검 0건. 그림 라벨 18px 이상, 정답 가운데 정렬 확인."}

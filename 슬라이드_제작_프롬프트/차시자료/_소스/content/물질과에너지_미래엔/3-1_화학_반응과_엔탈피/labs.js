@@ -18,7 +18,7 @@ window.DECK_LABS = {
     const svg=$('svg'), fig=$('.lab-fig'), g=API.mk('g',{},svg), W=620, X0=84, Y0=226, YT=34;
     let st={f:'C8H18', unit:'g'}, log=[];
     const val=k=>{ const F=FUEL[k], pg=F.H/F.M; return {g:pg, L:pg*F.d, co2:F.nC*44/F.H*1000}; };
-    const sci=v=> v>=1000? (v/10**Math.floor(Math.log10(v))).toFixed(2)+'×10^'+Math.floor(Math.log10(v)) : v>=100? v.toFixed(0) : v.toFixed(1);
+    const sci=v=> v>=1000? Math.round(v).toLocaleString('en-US') : v>=100? v.toFixed(0) : v.toFixed(1);
     const names={};
     function label(k){ if(!names[k]){ const d=document.createElement('div'); d.className='ov mid'; d.style.cssText='font-size:19px;line-height:1.25;text-align:center'; fig.appendChild(d); names[k]=d; }
       names[k].innerHTML=API.tex(FUEL[k].tex)+'<br>'+FUEL[k].name; return names[k]; }
