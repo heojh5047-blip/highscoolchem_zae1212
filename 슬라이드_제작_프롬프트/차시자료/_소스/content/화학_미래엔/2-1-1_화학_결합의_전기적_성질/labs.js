@@ -83,27 +83,27 @@ window.DECK_LABS = {
       O('v').textContent=cur.v.toFixed(1)+' V'; O('t').textContent=cur.t+'분';
       O('i').textContent=(cur.cur*1000).toFixed(cur.cur<0.01?1:0)+' mA';
       O('vm').textContent=cur.h.toFixed(1)+' mL'; O('vp').textContent=cur.o.toFixed(1)+' mL';
-      O('r').textContent=cur.o>=0.5? (cur.h/cur.o).toFixed(1)+' : 1' : '—';
+      O('r').textContent=cur.o>=0.5? '1 : '+(cur.h/cur.o).toFixed(1) : '—';
       root.querySelectorAll('[data-e]').forEach(b=>b.classList.toggle('on',+b.dataset.e===st.e));
       let m;
       if(!st.e) m='전류가 거의 흐르지 않아 기체가 거의 생기지 않는다 — 전해질이 필요하다.';
       else if(cur.t===0) m='시간을 늘려 전류를 흘려 보자. 기포는 어느 전극에서 더 많이 생길까?';
       else if(cur.full) m='(−)극 관이 가득 찼다. 전압이나 시간을 줄여 보자.';
-      else m='(−)극 기체 부피가 (+)극의 약 2배이다 — 수소 : 산소 ≈ 2 : 1. 전압을 바꾸어도 부피비는 그대로이다.';
+      else m='(−)극 기체 부피가 (+)극의 약 2배이다 — 산소 : 수소 ≈ 1 : 2. 전압을 바꾸어도 부피비는 그대로이다.';
       O('msg').textContent=m;
       draw();
     }
 
     function renderLog(){ const tb=O('log'); tb.innerHTML='';
       log.slice(-4).forEach(r=>{ const tr=document.createElement('tr');
-        tr.innerHTML=`<td>${r.e?'황산 나트륨':'증류수'}</td><td>${r.v.toFixed(1)} V</td><td>${r.t}분</td><td>${r.h.toFixed(1)} mL</td><td>${r.o.toFixed(1)} mL</td><td>${r.o>=0.5?(r.h/r.o).toFixed(1)+' : 1':'—'}</td>`; tb.appendChild(tr); }); }
+        tr.innerHTML=`<td>${r.e?'황산 나트륨':'증류수'}</td><td>${r.v.toFixed(1)} V</td><td>${r.t}분</td><td>${r.o.toFixed(1)} mL</td><td>${r.h.toFixed(1)} mL</td><td>${r.o>=0.5?'1 : '+(r.h/r.o).toFixed(1):'—'}</td>`; tb.appendChild(tr); }); }
 
     root.querySelectorAll('[data-e]').forEach(b=>b.addEventListener('click',()=>{ st.e=+b.dataset.e; update(); }));
     ['v','t'].forEach(k=>I(k).addEventListener('input',update));
     root.querySelector('[data-act="rec"]').addEventListener('click',()=>{ log.push({e:st.e,v:cur.v,t:cur.t,h:cur.h,o:cur.o}); if(log.length>30) log.shift(); renderLog(); draw(); });
     root.querySelector('[data-act="h2"]').addEventListener('click',()=>{ O('msg').textContent= cur.h>=2? "성냥불을 대니 '펑' 소리를 내며 탄다 → (−)극 기체는 수소이다." : '기체가 너무 적어 확인하기 어렵다. 시간을 늘려 보자.'; });
     root.querySelector('[data-act="o2"]').addEventListener('click',()=>{ O('msg').textContent= cur.o>=2? '꺼져 가던 향불이 다시 타오른다 → (+)극 기체는 산소이다.' : '기체가 너무 적어 확인하기 어렵다. 시간을 늘려 보자.'; });
-    root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ log=[]; st.e=1; I('v').value=6; I('t').value=0; renderLog(); update(); });
+    root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ log=[]; st.e=1; I('v').value=9; I('t').value=0; renderLog(); update(); });
 
     base(); update();
     // 기포·전자 흐름 (보일 때만)
