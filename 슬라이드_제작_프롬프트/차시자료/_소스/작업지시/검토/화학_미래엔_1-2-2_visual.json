@@ -1,0 +1,11 @@
+{"findings":[
+{"slide":12,"severity":"high","rule":"D8","problem":"목표·준비물·안전 줄이 안전 영역 아래로 넘침","fix":"준비물을 .small로, 도움 자료를 왼쪽 열로 옮기고 안전 문장을 줄임"},
+{"slide":15,"severity":"medium","rule":"D8","problem":"보완 카드 4장이 3+1로 줄바꿈되어 아래 메모가 넘침","fix":".cm122-st4를 4열 grid로, 메모 문장 줄임"},
+{"slide":19,"severity":"medium","rule":"D8","problem":"가로축 라벨이 viewBox 아래에서 잘리고, '염산 적게(HCl 5 mmol)' 라벨이 꺾이는 점 라벨과 겹침","fix":"viewBox 높이 344, 라벨을 '염산 적게'로 줄여 평평한 선 아래로, 꺾이는 점 라벨을 더 아래로"},
+{"slide":14,"severity":"medium","rule":"D8","problem":"'가지 달린 삼각 플라스크' 라벨이 플라스크 바닥·리본 라벨과 겹침","fix":"viewBox 높이 316, 플라스크 라벨을 바닥 아래로, 염산·리본 지시선 위치 조정"},
+{"slide":16,"severity":"low","rule":"T5","problem":"체크박스 label 안 글자가 flex 직속 텍스트","fix":"글자를 span으로 감쌈"},
+{"slide":16,"severity":"low","rule":"T4","problem":"측정값 칸 '1.67 mmol'이 두 줄로 꺾임, 눈금 '100'이 주사기 끝판과 겹침","fix":"readout td nowrap, '100' 라벨을 조금 왼쪽으로"},
+{"slide":18,"severity":"low","rule":"S2","problem":"정답 2개 이상인데 판서 공간 없음(정리 장)","fix":"정리·결론 장이라 data-tpl=\"check\"로 지정"},
+{"slide":25,"severity":"low","rule":"C3","problem":"계수 문자 반응식에서 화살표 양옆 간격이 붙음","fix":"\\ \\ce{->}\\ 로 간격"},
+{"slide":1,"severity":"low","rule":"D8","problem":"표지 장치 그림의 피스톤 손잡이가 배경 원 밖으로 나감","fix":"장치 축척 0.86으로 줄이고 옮김"}
+],"summary":"전체 28장을 sheet 모음 두 번(완성 직후·최종)과 실험실 원본 캡처로 봄. 위 지적 반영 후 자동 점검 0건·콘솔 오류 0건. 원자 색·반지름(H 18·O 24, 입자 상자 0.75배) 1-2-1과 같고, 반응 전후 원자 수 보존 움직임(S5·S8) 확인. 남은 것: S13 오른쪽 열·S25 풀이 줄이 다소 빽빽하나 읽기에 지장 없음."}
