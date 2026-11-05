@@ -171,7 +171,7 @@ figs['s9'] = (
 def dish(cx, by, w=200):
     return f'<ellipse cx="{cx}" cy="{by}" rx="{w/2}" ry="16" fill="#F4F8FC" stroke="#7E8B98" stroke-width="2.5"/>'
 figs['s10'] = (
-    '<svg class="fig" viewBox="0 0 500 270" style="width:480px" aria-label="탄소 1 몰 12 g과 마그네슘 1 몰 24.3 g — 원자 수는 같고 질량은 다르다">'
+    '<svg class="fig" viewBox="0 18 500 226" style="width:420px" aria-label="탄소 1 몰 12 g과 마그네슘 1 몰 24.3 g — 원자 수는 같고 질량은 다르다">'
     + dish(120, 150) + '<path d="M70 150 Q120 98 170 150 Z" fill="#3A3F47" stroke="#1C1F24" stroke-width="2"/>' +
     dish(380, 150) + ''.join(f'<path d="M{316+i*14} 152 q10 -{38+(i%3)*8} 22 -{12+(i%2)*6}" fill="none" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/>' for i in range(8)) +
     T(120, 200, '탄소 $\\ce{C}$ 1 몰', 22, weight=700) + T(120, 230, '12 g', 22) +

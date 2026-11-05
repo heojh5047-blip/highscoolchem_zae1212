@@ -47,3 +47,8 @@ table.cm112-log th,table.cm112-log td{font-size:19px;padding:3px 6px;text-align:
 .cm112-side{flex:0 0 210px;display:flex;flex-direction:column;gap:10px}
 .cm112-arr{font-size:28px;color:var(--muted)}
 .cm112-fig{display:flex;justify-content:center}
+
+/* (추가) 아보가드로수 정의 카드, 몰질량 장 아래 추가 상식 */
+.cm112-avo{padding:10px 16px}
+.cm112-avo h3{font-size:21px;margin-bottom:4px}
+.note.cm112-fw{line-height:1.5}
