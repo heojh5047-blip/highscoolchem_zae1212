@@ -1,0 +1,38 @@
+/* 4-2-2 중화 적정 — 덱 전용 (모두 .cm422- 접두어) */
+.cover h1.cm422-h1{font-size:120px}
+.cm422-steps{display:flex;flex-direction:column;gap:10px}
+.cm422-steps .fnode{font-size:21px;text-align:left;padding:8px 14px}
+.blank.cm422-b{min-width:80px;text-align:center}
+.blank.cm422-b2{min-width:200px;text-align:center}
+.blank.cm422-wide{min-width:280px;text-align:center}
+table.cm422-var th{width:130px;font-size:20px}
+table.cm422-var td{font-size:20px}
+.cm422-talk{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cm422-talk .card{padding:12px 16px}
+.cm422-say{font-weight:700;background:#F4F7FA;border-radius:14px;padding:6px 12px}
+.cm422-center{text-align:center}
+table.cm422-res{width:100%}
+table.cm422-res td{text-align:center}
+table.cm422-res th{font-size:20px}
+table.cm422-res .blank{min-width:90px}
+table.cm422-err{width:100%}
+table.cm422-err td{font-size:20px}
+table.cm422-err td:last-child{text-align:center}
+table.cm422-err .blank{min-width:100px}
+.cm422-proc p{line-height:1.5}
+.cm422-node{background:#fff;border:2px dashed var(--line);border-radius:14px;padding:8px 14px;font-size:20px;color:var(--muted)}
+/* 실험실 */
+.cm422-seg{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:7px}
+.cm422-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 10px;font-size:19px}
+.cm422-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm422-seg .btn.cm422-act{background:var(--field);color:#fff;border-color:var(--field)}
+.cm422-seg .btn.cm422-add{background:#EEF4FC;border-color:#C5D8F2}
+.cm422-seg .small{margin:0 2px 0 4px}
+table.cm422-read{width:100%}
+table.cm422-read th{font-size:19px;padding:2px 10px;text-align:left}
+table.cm422-read td{font-size:20px;width:200px;padding:2px 10px;text-align:center}
+output.kind.cm422-msg{margin-top:4px;line-height:1.45;font-size:19px;display:block}
+output.kind.cm422-calc{margin-top:4px;line-height:1.4;font-size:19px;display:block}
+table.cm422-log{width:100%}
+table.cm422-log th,table.cm422-log td{font-size:19px;padding:2px 6px;text-align:center}
+.cm422-c{margin-left:22px}
