@@ -3,7 +3,7 @@
                 실험 1–5 = 교과서 102쪽 평형 농도 자료. 후보식 ㉠ y/x, ㉡ y/x², ㉢ y/(2x), ㉣ y/x³ (x=[NO2], y=[N2O4]).
                 [계산] → 고른 식의 열을 모든 행에 채움(스프레드시트 '아래로 채우기'). 일정성 = (최대−최소)/평균 %.
                 [평형 농도 측정] → 처음 농도로 평형 계산: N 보존 c = a0 + 2·b0, 2Kx² + x − c = 0, K = 212(25 °C),
-                측정 오차 ±1 %(고정 시드), 유효 숫자 세 자리. 표 최대 8행(넘으면 덱이 추가한 가장 오래된 행을 지움).
+                측정 오차 ±0.5 %(고정 시드), 유효 숫자 세 자리. 표 최대 8행(넘으면 덱이 추가한 가장 오래된 행을 지움).
                 그래프: 가로 실험, 세로 '평균에 대한 비'(0.6–1.4). API.loop로 새 점이 커졌다 작아짐. */
 window.DECK_LABS = {
   cm312ratio(root, API){
@@ -18,7 +18,7 @@ window.DECK_LABS = {
     const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const sig3=v=>{ if(v===0) return '0'; const p=Math.floor(Math.log10(Math.abs(v))); return (Math.round(v/Math.pow(10,p-2))*Math.pow(10,p-2)); };
     const fmt=v=>{ if(v>=1000) return String(Math.round(sig3(v))); if(v>=100) return v.toFixed(0); if(v>=10) return v.toFixed(1); if(v>=1) return v.toFixed(2); return v.toFixed(3); };
-    const fc=v=>v>=0.01? v.toFixed(3) : sig3(v).toPrecision(3);
+    const fc=v=>v>=0.1? v.toFixed(3) : v.toPrecision(3);  // 교과서 값(0.047)은 그대로, 새 측정값은 유효 숫자 세 자리
     // 고정 그림: 격자·축·라벨(처음 한 번만 — texText는 처음 그린 것만 KaTeX로 바뀐다)
     const bg=API.mk('g',{},svg);
     [0.8,1.0,1.2].forEach(v=>{ const y=G.y0-(G.y0-G.y1)*(v-LO)/(HI-LO);
@@ -44,7 +44,7 @@ window.DECK_LABS = {
       root.querySelectorAll('th[data-h]').forEach(h=>h.classList.toggle('cm312-on',h.dataset.h===sel));
       const tb=O('log'); tb.innerHTML='';
       rows.forEach((r,i)=>{ const tr=document.createElement('tr'); if(i===newIdx) tr.className='cm312-new';
-        tr.innerHTML=`<td>${r.n}</td><td>${fc(r.x)}</td><td>${fc(r.y)}</td>`+['a','b','c','d'].map(k=>`<td>${done[k]?fmt(F[k].f(r.x,r.y)):''}</td>`).join('');
+        tr.innerHTML=`<td>${r.n}</td><td>${r.n<=5?r.x.toFixed(3):fc(r.x)}</td><td>${r.n<=5?r.y.toFixed(3):fc(r.y)}</td>`+['a','b','c','d'].map(k=>`<td>${done[k]?fmt(F[k].f(r.x,r.y)):''}</td>`).join('');
         tb.appendChild(tr); });
       xl.forEach((t,i)=>{ t.setAttribute('x',X(i)); t.style.display=i<rows.length?'':'none'; });
       gr.innerHTML='';
@@ -55,7 +55,7 @@ window.DECK_LABS = {
         const t=API.mk('text',{x:lx+12,y:G.y1+10,'font-size':18,fill:F[k].col,'font-weight':700},gr); t.textContent=F[k].nm; lx+=52; });
       if(!done[sel]){ O('spread').textContent='—'; O('msg').textContent=note||`${F[sel].nm} 수식을 골랐다. [계산]을 눌러 모든 실험의 값을 채워 보자.`; return; }
       const s=stats(sel); O('spread').textContent='차이 '+s.sp.toFixed(1)+' %';
-      let m=`${F[sel].nm}: 가장 큰 값과 가장 작은 값의 차이가 평균의 ${s.sp.toFixed(1)} % → `+(s.sp<4?`처음 농도와 관계없이 거의 일정하다(평균 ${fmt(s.m)}).`:'실험마다 달라 일정하지 않다.');
+      let m=`${F[sel].nm}: 가장 큰 값과 가장 작은 값의 차이가 평균의 ${s.sp.toFixed(1)} % → `+(s.sp<5?`처음 농도와 관계없이 거의 일정하다(평균 ${fmt(s.m)}).`:'실험마다 달라 일정하지 않다.');
       if(['a','b','c','d'].every(k=>done[k])){ const best=['a','b','c','d'].sort((p,q)=>stats(p).sp-stats(q).sp)[0]; m+=` 가장 일정한 식: ${F[best].nm}`; }
       O('msg').textContent=m;
     }
@@ -64,7 +64,7 @@ window.DECK_LABS = {
       const a0=+I('a0').value, b0=+I('b0').value, c=a0+2*b0;
       if(c<=0){ O('msg').textContent='넣은 기체가 없다. 처음 농도를 0보다 크게 하자.'; return; }
       let x=(-1+Math.sqrt(1+8*K*c))/(4*K), y=(c-x)/2;
-      x=+fc(x*(1+(rnd()-.5)*0.02)); y=+fc(y*(1+(rnd()-.5)*0.02));
+      x=+(x*(1+(rnd()-.5)*0.01)).toPrecision(3); y=+(y*(1+(rnd()-.5)*0.01)).toPrecision(3);
       nexp++; rows.push({n:nexp,x,y}); if(rows.length>MAXR) rows.splice(5,1);
       newIdx=rows.length-1; pulse=1; render();
       note=`실험 ${nexp}: 평형 농도를 측정했다. 수식을 골라 [계산]해 보자.`; render();
