@@ -16,3 +16,14 @@ window.SITE_CONFIG = {
   SITE_TITLE: "화학 수업 슬라이드",
   SCHOOL: ""          // 첫 화면 부제(학교 이름 등, 비워도 됨)
 };
+
+// 첫 화면(덱 목록) 아래쪽 출처 표시 — 수업 화면(view.html)·수정 화면(edit.html)에는 넣지 않는다.
+window.SITE_CONFIG.CREDIT = ["제작: 여수고등학교 허재형", "전남온라인학교 김우주 선생님으로부터 제공받아 제작되었습니다."];
+document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.querySelector('.wrap');
+  if (!wrap || !document.getElementById('tabs')) return;
+  const f = document.createElement('footer');
+  window.SITE_CONFIG.CREDIT.forEach(t => { const d = document.createElement('div'); d.textContent = t; f.appendChild(d); });
+  f.style.cssText = 'max-width:inherit;margin:40px auto 24px;padding:14px 16px 0;border-top:1px solid #DDE3E8;text-align:center;font-size:14px;line-height:1.6;color:#5B6B7F';
+  wrap.after(f);
+});
