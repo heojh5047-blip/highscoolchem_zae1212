@@ -4,7 +4,7 @@
                 [계산] → 고른 식의 열을 모든 행에 채움(스프레드시트 '아래로 채우기'). 일정성 = (최대−최소)/평균 %.
                 [평형 농도 측정] → 처음 농도로 평형 계산: N 보존 c = a0 + 2·b0, 2Kx² + x − c = 0, K = 212(25 °C),
                 측정 오차 ±0.5 %(고정 시드), 유효 숫자 세 자리. 표 최대 8행(넘으면 덱이 추가한 가장 오래된 행을 지움).
-                그래프: 가로 실험, 세로 '평균에 대한 비'(0.6–1.4). API.loop로 새 점이 커졌다 작아짐. */
+                그래프: 가로 실험, 세로 '평균에 대한 비'(0.6–1.4, 범위 밖은 가장자리). ㉠과 ㉢은 평균에 대한 비가 같아 가로로 조금 비켜 그림. API.loop로 새 점이 커졌다 작아짐. */
 window.DECK_LABS = {
   cm312ratio(root, API){
     const O=k=>root.querySelector(`[data-o="${k}"]`), I=k=>root.querySelector(`[data-i="${k}"]`);
@@ -13,7 +13,7 @@ window.DECK_LABS = {
     const K=212, MAXR=8;
     const F={a:{f:(x,y)=>y/x,col:'#E08A2C',sh:'c',nm:'㉠'}, b:{f:(x,y)=>y/(x*x),col:'#16233D',sh:'d',nm:'㉡'},
              c:{f:(x,y)=>y/(2*x),col:'#0E7490',sh:'s',nm:'㉢'}, d:{f:(x,y)=>y/(x*x*x),col:'#8C99A6',sh:'m',nm:'㉣'}};
-    const G={x0:70,x1:660,y0:170,y1:14}, LO=0.6, HI=1.4;
+    const G={x0:70,x1:660,y0:170,y1:36}, OFF={a:-7,b:0,c:7,d:0}, LO=0.6, HI=1.4;
     let rows, done, sel='a', seed, nexp, pulse=0, newIdx=-1, note='';
     const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const sig3=v=>{ if(v===0) return '0'; const p=Math.floor(Math.log10(Math.abs(v))); return (Math.round(v/Math.pow(10,p-2))*Math.pow(10,p-2)); };
@@ -24,8 +24,8 @@ window.DECK_LABS = {
     [0.8,1.0,1.2].forEach(v=>{ const y=G.y0-(G.y0-G.y1)*(v-LO)/(HI-LO);
       API.mk('path',{d:`M${G.x0} ${y} H${G.x1}`,stroke:v===1?'#5B6B7F':'#E2E7EC','stroke-width':v===1?1.5:1.5,'stroke-dasharray':v===1?'6 5':''},bg);
       API.texText(bg,G.x0-8,y+6,v.toFixed(1),{size:18,anchor:'end',fill:'#16233D',mix:true}); });
-    API.arrow(bg,G.x0,G.y0,G.x1+10,G.y0,'ink',2); API.arrow(bg,G.x0,G.y0,G.x0,G.y1-4,'ink',2);
-    API.texText(bg,G.x0+8,G.y1+6,'평균에 대한 비',{size:18,anchor:'start',fill:'#16233D',mix:true});
+    API.arrow(bg,G.x0,G.y0,G.x1+10,G.y0,'ink',2); API.arrow(bg,G.x0,G.y0,G.x0,G.y1-8,'ink',2);
+    API.texText(bg,G.x0+8,G.y1-14,'평균에 대한 비',{size:18,anchor:'start',fill:'#16233D',mix:true});
     API.texText(bg,G.x0-8,G.y0+24,'실험',{size:18,anchor:'end',fill:'#16233D',mix:true});
     const xl=[]; for(let i=0;i<MAXR;i++) xl.push(API.texText(bg,0,G.y0+22,String(i+1),{size:18,anchor:'middle',fill:'#16233D',mix:true}));
     const gr=API.mk('g',{},svg);
@@ -49,10 +49,10 @@ window.DECK_LABS = {
       xl.forEach((t,i)=>{ t.setAttribute('x',X(i)); t.style.display=i<rows.length?'':'none'; });
       gr.innerHTML='';
       ['a','c','d','b'].forEach(k=>{ if(!done[k]) return; const s=stats(k), c=F[k].col;
-        API.mk('polyline',{points:s.v.map((v,i)=>`${X(i)},${Yv(v/s.m)}`).join(' '),fill:'none',stroke:c,'stroke-width':k==='b'?3.5:2.5},gr);
-        s.v.forEach((v,i)=>mark(gr,F[k].sh,X(i),Yv(v/s.m),c,i===newIdx?6+3*pulse:6)); });
-      let lx=G.x1-210; ['a','b','c','d'].forEach(k=>{ if(!done[k]) return; mark(gr,F[k].sh,lx,G.y1+4,F[k].col,6);
-        const t=API.mk('text',{x:lx+12,y:G.y1+10,'font-size':18,fill:F[k].col,'font-weight':700},gr); t.textContent=F[k].nm; lx+=52; });
+        API.mk('polyline',{points:s.v.map((v,i)=>`${X(i)+OFF[k]},${Yv(v/s.m)}`).join(' '),fill:'none',stroke:c,'stroke-width':k==='b'?3.5:2.5},gr);
+        s.v.forEach((v,i)=>mark(gr,F[k].sh,X(i)+OFF[k],Yv(v/s.m),c,i===newIdx?6+3*pulse:6)); });
+      let lx=G.x1-210; ['a','b','c','d'].forEach(k=>{ if(!done[k]) return; mark(gr,F[k].sh,lx,G.y1-20,F[k].col,6);
+        const t=API.mk('text',{x:lx+12,y:G.y1-14,'font-size':18,fill:F[k].col,'font-weight':700},gr); t.textContent=F[k].nm; lx+=52; });
       if(!done[sel]){ O('spread').textContent='—'; O('msg').textContent=note||`${F[sel].nm} 수식을 골랐다. [계산]을 눌러 모든 실험의 값을 채워 보자.`; return; }
       const s=stats(sel); O('spread').textContent='차이 '+s.sp.toFixed(1)+' %';
       let m=`${F[sel].nm}: 가장 큰 값과 가장 작은 값의 차이가 평균의 ${s.sp.toFixed(1)} % → `+(s.sp<5?`처음 농도와 관계없이 거의 일정하다(평균 ${fmt(s.m)}).`:'실험마다 달라 일정하지 않다.');
