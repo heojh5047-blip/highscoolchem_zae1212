@@ -1,0 +1,31 @@
+/* 1-2 혼합 기체의 부분 압력과 몰분율 — 덱 전용 (모두 .em12- 접두어) */
+.cover h1.em12-h1{font-size:84px;line-height:1.12}
+.em12-figc{display:flex;justify-content:center;margin:6px 0}
+.em12-use{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
+.em12-use .stage{padding:8px 14px}
+.em12-use .stage h3{font-size:21px;margin-bottom:2px}
+.em12-use .stage p{font-size:20px}
+ul.em12-ul li{font-size:21px;line-height:1.55;margin-top:8px}
+ol.em12-ox li{font-size:22px;margin-top:26px}
+ol.em12-ox li:first-child{margin-top:8px}
+.blank.em12-w{min-width:150px}
+.answer.em12-left{text-align:left}
+p.em12-fix{margin:0 0 8px}
+/* 개념 지도 */
+.em12-map{display:flex;align-items:center;gap:12px}
+.em12-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.5}
+.em12-node.em12-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em12-node.em12-dim{border-style:dashed;color:var(--muted);font-size:19px;padding:8px 12px}
+.em12-col{flex:0 0 200px;display:flex;flex-direction:column;gap:10px}
+.em12-arr{font-size:28px;color:var(--muted)}
+table.em12-mapt{width:100%}
+table.em12-mapt th{font-size:20px;width:150px}
+table.em12-mapt td{font-size:21px;text-align:left;padding:10px 10px;line-height:1.9}
+/* 실험실 */
+.em12-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.em12-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.em12-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em12-seg .btn.em12-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.em12-log{width:100%;margin-top:4px}
+table.em12-log th,table.em12-log td{font-size:19px;padding:3px 6px;text-align:center}
+output.kind.em12-msg{display:block;margin-top:8px;line-height:1.45;font-size:19px}
