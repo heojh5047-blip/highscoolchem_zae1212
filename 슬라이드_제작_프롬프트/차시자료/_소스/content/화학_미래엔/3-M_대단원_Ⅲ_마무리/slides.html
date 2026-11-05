@@ -1,0 +1,575 @@
+<!-- 화학_미래엔 3-M 대단원 Ⅲ 마무리 (교과서 130–135쪽) — scratchpad 화학_미래엔_3-M/gen.py로 만듦 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 화학 평형 › 대단원 마무리</div>
+    <h1 class="cm39-h1">대단원 Ⅲ<br><span class="acc">마무리</span></h1>
+    <p class="sub">평형 상수에서 평형 이동의 활용까지</p>
+    <p class="meta">고등학교 화학 (미래엔) 130–135쪽</p>
+  </div>
+  <svg class="fig" viewBox="0 0 540 540" style="width:540px" aria-label="밀폐된 플라스크 안에서 적갈색 이산화 질소와 무색 사산화 이질소가 함께 있고, 정반응과 역반응이 동시에 일어나는 화학 평형"><circle cx="270" cy="260" r="235" fill="#EEF3F8"/><path d="M235 70 H305 V150 A120 120 0 1 1 235 150 Z" fill="#FFFFFF" stroke="none"/><g data-anim="fade" data-dur="1.6" data-delay=".2"><path d="M235 70 H305 V150 A120 120 0 1 1 235 150 Z" fill="#B5562A" fill-opacity=".30" stroke="none"/></g><g data-atom="199.1,264.9,12,O,-"></g><g data-atom="199.1,235.1,12,O,-"></g><g data-atom="205.4,250.0,12,N,-"></g><g data-atom="230.9,235.1,12,O,-"></g><g data-atom="230.9,264.9,12,O,-"></g><g data-atom="224.6,250.0,12,N,-"></g><g data-atom="314.1,344.9,12,O,-"></g><g data-atom="314.1,315.1,12,O,-"></g><g data-atom="320.4,330.0,12,N,-"></g><g data-atom="345.9,315.1,12,O,-"></g><g data-atom="345.9,344.9,12,O,-"></g><g data-atom="339.6,330.0,12,N,-"></g><g data-atom="305.1,218.7,12,O,-"></g><g data-atom="334.9,218.7,12,O,-"></g><g data-atom="320.0,225.0,12,N,-"></g><g data-atom="200.1,338.7,12,O,-"></g><g data-atom="229.9,338.7,12,O,-"></g><g data-atom="215.0,345.0,12,N,-"></g><g data-atom="260.1,393.7,12,O,-"></g><g data-atom="289.9,393.7,12,O,-"></g><g data-atom="275.0,400.0,12,N,-"></g><g data-atom="254.1,314.9,12,O,-"></g><g data-atom="254.1,285.1,12,O,-"></g><g data-atom="260.4,300.0,12,N,-"></g><g data-atom="285.9,285.1,12,O,-"></g><g data-atom="285.9,314.9,12,O,-"></g><g data-atom="279.6,300.0,12,N,-"></g><path d="M235 70 H305 V150 A120 120 0 1 1 235 150 Z" fill="none" stroke="#7E8B98" stroke-width="4" stroke-linejoin="round"/><rect x="226" y="56" width="88" height="20" rx="5" fill="#8C99A6"/><path d="M200 473 H340 l-12 -9" fill="none" stroke="#2E9E6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M340 483 H200 l12 9" fill="none" stroke="#7B4FC8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><text class="tex" x="270.0" y="460.0" data-mix="정반응" data-size="19" data-anchor="middle" fill="#2E9E6A"></text><text class="tex" x="270.0" y="516.0" data-mix="역반응" data-size="19" data-anchor="middle" fill="#7B4FC8"></text><text class="tex" x="110.0" y="486.0" data-mix="$\ce{2NO2}$" data-size="26" data-anchor="middle" fill="#B5562A"></text><text class="tex" x="430.0" y="486.0" data-mix="$\ce{N2O4}$" data-size="26" data-anchor="middle" fill="#16233D"></text><g data-atom="380,92,12,N,-"></g><text class="tex" x="398.0" y="99.0" data-mix="N" data-size="19" data-anchor="start" fill="#16233D"></text><g data-atom="440,92,12,O,-"></g><text class="tex" x="458.0" y="99.0" data-mix="O" data-size="19" data-anchor="start" fill="#16233D"></text></svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12화학03-01]</span> 가역 반응과 동적 평형 &nbsp;<span class="code">[12화학03-02]</span> 평형 상수와 반응 지수 &nbsp;<span class="code">[12화학03-03]</span> 농도·압력·온도와 평형 이동 &nbsp;<span class="code">[12화학03-04]</span> 생활 속 평형 이동</div>
+  <ol class="goals mt8">
+    <li>대단원 Ⅲ의 핵심 개념(가역 반응, 화학 평형, 평형 상수, 반응 지수, 화학 평형 이동)을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li>평형 상수와 반응 지수를 구하고, 농도·압력·온도 변화에 따른 <b>평형 이동 방향</b>을 까닭과 함께 설명할 수 있다.</li>
+    <li>실험 설계·과학 글쓰기·프로젝트로 화학 평형 이동을 생명 현상과 산업에 <b>활용</b>할 수 있다.</li>
+  </ol>
+  <svg class="fig" viewBox="0 0 1112 150" style="width:1112px" aria-label="대단원 Ⅲ 단원 지도에서 여섯 소단원을 마치고 오늘은 대단원 마무리"><text class="tex" x="270.0" y="24.0" data-mix="1. 화학 평형" data-size="19" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text><path d="M60 42 V34 H480 V42" fill="none" stroke="#2E9E6A" stroke-width="2.5"/><text class="tex" x="790.0" y="24.0" data-mix="2. 화학 평형 이동" data-size="19" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text><path d="M580 42 V34 H1000 V42" fill="none" stroke="#2E9E6A" stroke-width="2.5"/><line x1="40" y1="58" x2="1080" y2="58" stroke="#C9D3DD" stroke-width="6" stroke-linecap="round"/><path d="M40 58 H1058" stroke="#2E9E6A" stroke-width="6" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.6" data-delay=".3"/><circle cx="90" cy="58" r="11" fill="#2E9E6A"/><circle cx="255" cy="58" r="11" fill="#2E9E6A"/><circle cx="420" cy="58" r="11" fill="#2E9E6A"/><circle cx="600" cy="58" r="11" fill="#2E9E6A"/><circle cx="765" cy="58" r="11" fill="#2E9E6A"/><circle cx="930" cy="58" r="11" fill="#2E9E6A"/><circle cx="1058" cy="58" r="16" fill="#FFE45C" stroke="#16233D" stroke-width="3"/><text class="tex" x="90.0" y="100.0" data-mix="01 가역 반응과||화학 평형" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="255.0" y="100.0" data-mix="02 화학 평형과||평형 상수" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="420.0" y="100.0" data-mix="03 화학 반응의||진행 방향 예측" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="600.0" y="100.0" data-mix="01 농도·압력 변화와||화학 평형 이동" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="765.0" y="100.0" data-mix="02 온도 변화와||화학 평형 이동" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="930.0" y="100.0" data-mix="03 일상생활 속의||화학 평형 이동" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="1058.0" y="100.0" data-mix="오늘||대단원 마무리" data-size="18" data-anchor="middle" fill="#16233D" data-weight="700"></text></svg>
+  <div class="flow mt8">
+    <div class="fnode hl">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">중단원 대응표</div><div class="farr">→</div>
+    <div class="fnode hl">대단원 마무리 01–10</div><div class="farr">→</div>
+    <div class="fnode">과학 역량 키우기 11–13</div><div class="farr">→</div>
+    <div class="fnode hl">프로젝트</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="개념 정리 ① 화학 평형">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ① 화학 평형</h2>
+  <div class="cm39-tree">
+    <div class="cm39-n cm39-root" style="grid-row:1 / span 5"><span>화학<br>평형</span></div>
+    <div class="cm39-a" style="grid-row:1 / span 3">→</div>
+    <div class="cm39-n cm39-mid" style="grid-row:1 / span 3"><span>가역 반응과<br>화학 평형</span></div>
+    <div class="cm39-a" style="grid-row:1;grid-column:4">→</div>
+    <p class="cm39-n" style="grid-row:1;grid-column:5" data-q>❶ <span class="blank"><span class="step">가역 반응</span></span></p>
+    <div class="cm39-a" style="grid-row:1;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:1;grid-column:7">정반응과 역반응이 모두 일어날 수 있는 반응</p>
+    <div class="cm39-a" style="grid-row:2;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:2;grid-column:5"><span>비가역 반응</span></div>
+    <div class="cm39-a" style="grid-row:2;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:2;grid-column:7">한 방향으로만 일어나는 반응</p>
+    <div class="cm39-a" style="grid-row:3;grid-column:4">→</div>
+    <p class="cm39-n" style="grid-row:3;grid-column:5" data-q>❷ <span class="blank"><span class="step">화학 평형</span></span></p>
+    <div class="cm39-a" style="grid-row:3;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:3;grid-column:7">가역 반응에서 반응물과 생성물의 농도가 일정하게 유지되는 동적 평형 상태</p>
+    <div class="cm39-a" style="grid-row:4;grid-column:2">→</div>
+    <div class="cm39-n cm39-mid" style="grid-row:4;grid-column:3"><span>화학 평형과<br>평형 상수</span></div>
+    <div class="cm39-a" style="grid-row:4;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:4;grid-column:5"><span>평형 상수 ($K$)</span></div>
+    <div class="cm39-a" style="grid-row:4;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:4;grid-column:7" data-q>❸ <span class="blank"><span class="step">화학 평형 상태</span></span>에서 반응물의 농도 곱에 대한 생성물의 농도 곱의 비</p>
+    <div class="cm39-a" style="grid-row:5;grid-column:2">→</div>
+    <div class="cm39-n cm39-mid" style="grid-row:5;grid-column:3"><span>화학 반응의<br>진행 방향 예측</span></div>
+    <div class="cm39-a" style="grid-row:5;grid-column:4">→</div>
+    <p class="cm39-n" style="grid-row:5;grid-column:5" data-q>❹ <span class="blank"><span class="step">반응 지수</span></span> ($Q$)</p>
+    <div class="cm39-a" style="grid-row:5;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:5;grid-column:7">관찰하는 시점에서 반응물의 농도 곱에 대한 생성물의 농도 곱의 비</p>
+  </div>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="개념 정리 ② 화학 평형 이동">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ② 화학 평형 이동</h2>
+  <div class="cm39-tree cm39-t2">
+    <div class="cm39-n cm39-root" style="grid-row:1 / span 8"><span>화학<br>평형<br>이동</span></div>
+    <div class="cm39-a" style="grid-row:1 / span 4">→</div>
+    <div class="cm39-n cm39-mid" style="grid-row:1 / span 4"><span>농도·압력<br>변화와 화학<br>평형 이동</span></div>
+    <div class="cm39-a" style="grid-row:1;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:1;grid-column:5"><span>농도: 반응물 농도 증가,<br>생성물 농도 감소</span></div>
+    <div class="cm39-a" style="grid-row:1;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:1;grid-column:7" data-q>❺ <span class="blank"><span class="step">정반응</span></span> 우세</p>
+    <div class="cm39-a" style="grid-row:2;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:2;grid-column:5"><span>농도: 반응물 농도 감소,<br>생성물 농도 증가</span></div>
+    <div class="cm39-a" style="grid-row:2;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:2;grid-column:7" data-q>❻ <span class="blank"><span class="step">역반응</span></span> 우세</p>
+    <div class="cm39-a" style="grid-row:3;grid-column:4">→</div>
+    <p class="cm39-n" style="grid-row:3;grid-column:5" data-q>압력 ❼ <span class="blank"><span class="step">증가</span></span></p>
+    <div class="cm39-a" style="grid-row:3;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:3;grid-column:7">전체 기체 분자 수가 감소하는 반응 우세</p>
+    <div class="cm39-a" style="grid-row:4;grid-column:4">→</div>
+    <p class="cm39-n" style="grid-row:4;grid-column:5" data-q>압력 ❽ <span class="blank"><span class="step">감소</span></span></p>
+    <div class="cm39-a" style="grid-row:4;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:4;grid-column:7">전체 기체 분자 수가 증가하는 반응 우세</p>
+    <div class="cm39-a" style="grid-row:5 / span 2;grid-column:2">→</div>
+    <div class="cm39-n cm39-mid" style="grid-row:5 / span 2;grid-column:3"><span>온도 변화와<br>화학 평형 이동</span></div>
+    <div class="cm39-a" style="grid-row:5;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:5;grid-column:5"><span>온도 증가</span></div>
+    <div class="cm39-a" style="grid-row:5;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:5;grid-column:7" data-q>에너지를 ❾ <span class="blank"><span class="step">흡수</span></span>하는 반응 우세</p>
+    <div class="cm39-a" style="grid-row:6;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:6;grid-column:5"><span>온도 감소</span></div>
+    <div class="cm39-a" style="grid-row:6;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:6;grid-column:7" data-q>에너지를 ❿ <span class="blank"><span class="step">방출</span></span>하는 반응 우세</p>
+    <div class="cm39-a" style="grid-row:7 / span 2;grid-column:2">→</div>
+    <div class="cm39-n cm39-mid" style="grid-row:7 / span 2;grid-column:3"><span>일상생활 속의<br>화학 평형 이동</span></div>
+    <div class="cm39-a" style="grid-row:7;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:7;grid-column:5"><span>생명 현상</span></div>
+    <div class="cm39-a" style="grid-row:7;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:7;grid-column:7">혈액이 체내에 산소를 공급하는 과정</p>
+    <div class="cm39-a" style="grid-row:8;grid-column:4">→</div>
+    <div class="cm39-n" style="grid-row:8;grid-column:5"><span>산업 현장</span></div>
+    <div class="cm39-a" style="grid-row:8;grid-column:6">→</div>
+    <p class="cm39-n cm39-leaf" style="grid-row:8;grid-column:7">암모니아 합성 과정에서 수득률 높이기</p>
+  </div>
+</section>
+
+<!-- ════════ 5. 연결 — 평형 문제를 푸는 두 도구 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="평형 문제를 푸는 두 도구">
+  <h2><span class="tag alt">연결</span>평형 문제를 푸는 두 도구</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <h3>❶ 양(농도) 변화 표 — 계수비 = 변한 양(mol)의 비</h3>
+      <p class="f21 cm39-tc">$a\mathrm{A}(g)+b\mathrm{B}(g)\ce{&lt;=&gt;}c\mathrm{C}(g)$ <span class="small c-muted">(부피 1 L)</span></p>
+      <table class="tight cm39-ice">
+        <tr><th></th><th>$\mathrm{A}$</th><th>$\mathrm{B}$</th><th>$\mathrm{C}$</th></tr>
+        <tr><td>처음</td><td>$n_\mathrm{A}$</td><td>$n_\mathrm{B}$</td><td>$0$</td></tr>
+        <tr><td>반응</td><td class="c-field">$-ax$</td><td class="c-field">$-bx$</td><td class="c-field">$+cx$</td></tr>
+        <tr><td>평형</td><td>$n_\mathrm{A}-ax$</td><td>$n_\mathrm{B}-bx$</td><td>$cx$</td></tr>
+      </table>
+      <p class="f21 mt8 step" data-g="k1">→ 평형 농도를 $K=\dfrac{[\mathrm{C}]^c}{[\mathrm{A}]^a[\mathrm{B}]^b}$에 넣는다. 순수한 고체와 액체(물)는 식에 넣지 않는다.</p>
+    </div>
+    <div class="col stack">
+      <h3>❷ 방향 판단 — $Q$와 $K$, 르샤틀리에 원리</h3>
+      <div class="cm39-qk">
+        <div class="card"><p>$Q&lt;K$</p><p class="c-field"><b>정반응</b> 쪽</p></div>
+        <div class="card"><p>$Q=K$</p><p><b>평형</b></p></div>
+        <div class="card"><p>$Q&gt;K$</p><p style="color:#7B4FC8"><b>역반응</b> 쪽</p></div>
+      </div>
+      <table class="tight cm39-lc mt8">
+        <tr><th>변화</th><th>평형이 이동하는 방향</th><th>$K$</th></tr>
+        <tr><td>반응물 농도 증가</td><td class="l"><span class="step" data-g="k2">그 물질을 소모하는 정반응</span></td><td><span class="step" data-g="k2">그대로</span></td></tr>
+        <tr><td>압력 증가</td><td class="l"><span class="step" data-g="k3">기체 분자 수가 감소하는 쪽</span></td><td><span class="step" data-g="k3">그대로</span></td></tr>
+        <tr><td>온도 증가</td><td class="l"><span class="step" data-g="k4">에너지를 흡수하는 쪽</span></td><td><span class="step" data-g="k4">변함</span></td></tr>
+      </table>
+      <div class="note step mt8" data-g="k5"><b>$K$는 온도에 따라서만 변한다.</b> 정반응이 흡열이면 온도가 높을수록 $K$가 커지고, 발열이면 작아진다. 촉매는 평형을 이동시키지 않는다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 중단원 마무리 대응표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="중단원 마무리 대응표">
+  <h2><span class="tag alt">중단원 마무리 대응표</span>소단원 덱에서 푼 문항</h2>
+  <div class="row">
+    <div class="col">
+      <h3>1. 화학 평형 <span class="small c-muted">(109–111쪽)</span></h3>
+      <table class="tight cm39-map">
+        <tr><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+        <tr><td>01</td><td class="l">가역 반응 보기</td><td>3-1-1 #26</td><td><span class="step" data-g="m1">③</span></td></tr>
+        <tr><td>02</td><td class="l">밀폐 용기 속 $\ce{NO2}$의 변화</td><td>#27</td><td><span class="step" data-g="m1">④</span></td></tr>
+        <tr><td>03</td><td class="l">평형 상수 옳지 않은 것</td><td>3-1-2 #21</td><td><span class="step" data-g="m1">②</span></td></tr>
+        <tr><td>04</td><td class="l">그래프로 반응식·평형 상수식</td><td>#22</td><td><span class="step" data-g="m1">$\ce{2A &lt;=&gt; 2B + C}$</span></td></tr>
+        <tr><td>05</td><td class="l">(가)→(나) 평형 상수와 $Q$</td><td>#23</td><td><span class="step" data-g="m1">②</span></td></tr>
+        <tr><td>06</td><td class="l">서술형 $\ce{C(s) + CO2(g)}$</td><td>3-1-3 #21</td><td><span class="step" data-g="m1">$K=2$, 정반응</span></td></tr>
+        <tr><td>07</td><td class="l">서술형 부피를 2 L로</td><td>#22</td><td><span class="step" data-g="m1">(나)</span></td></tr>
+        <tr><td>08</td><td class="l">칸막이를 연 용기</td><td>#23</td><td><span class="step" data-g="m1">⑤</span></td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3>2. 화학 평형 이동 <span class="small c-muted">(127–129쪽)</span></h3>
+      <table class="tight cm39-map">
+        <tr><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+        <tr><td>01</td><td class="l">가열한 강철 용기 속 기체</td><td>3-2-2 #23</td><td><span class="step" data-g="m2">③</span></td></tr>
+        <tr><td>02</td><td class="l">정반응이 우세한 조건</td><td>#24</td><td><span class="step" data-g="m2">ㄷ, ㄹ</span></td></tr>
+        <tr><td>03</td><td class="l">코발트 착이온과 진한 염산</td><td>3-2-1 #32</td><td><span class="step" data-g="m2">A, B</span></td></tr>
+        <tr><td>04</td><td class="l">서술형 얼음물·뜨거운 물</td><td>3-2-2 #25</td><td><span class="step" data-g="m2">㉠ 붉은색 ㉡ 파란색</span></td></tr>
+        <tr><td>05</td><td class="l">진행 방향과 평형의 B</td><td>3-2-1 #33</td><td><span class="step" data-g="m2">⑤</span></td></tr>
+        <tr><td>06</td><td class="l">서술형 가열·헬륨 첨가</td><td>3-2-2 #26</td><td><span class="step" data-g="m2">증가 / 변화 없음</span></td></tr>
+        <tr><td>07</td><td class="l">수득률 그래프로 반응 찾기</td><td>3-2-3 #19</td><td><span class="step" data-g="m2">③</span></td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="small c-muted mt8">#장 = 그 소단원 덱의 슬라이드 번호. 풀이는 그 덱에서 다시 볼 수 있다.</p>
+</section>
+
+<!-- ════════ 7. 대단원 마무리 01 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 01">
+  <h2><span class="tag q">대단원 마무리 01</span>시간에 따른 A와 B의 양</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <p class="f21">밀폐된 1 L 용기에 $\mathrm{A}(g)$를 넣었을 때 시간에 따른 양(mol)이다.</p>
+      <p class="f21 cm39-tc">$a\mathrm{A}(g)\ce{&lt;=&gt;}b\mathrm{B}(g)$ <span class="small c-muted">($a$, $b$는 반응 계수)</span></p>
+      <svg class="fig" viewBox="0 0 440 290" style="width:440px" aria-label="A의 양은 4 몰에서 1 몰로 줄고 B의 양은 0에서 2 몰로 늘어 일정해지는 그래프. 시간 t에서 B는 1 몰"><line x1="70" y1="250" x2="420" y2="250" stroke="#16233D" stroke-width="2"/><g data-arw="408,250,424,250,ink,2"></g><line x1="70" y1="250" x2="70" y2="25" stroke="#16233D" stroke-width="2"/><g data-arw="70,37,70,21,ink,2"></g><text class="tex" x="80.0" y="39.0" data-mix="양 [mol]" data-size="19" data-anchor="start" fill="#16233D"></text><text class="tex" x="416.0" y="280.0" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="60.0" y="272.0" data-mix="0" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="65" y1="205.0" x2="70" y2="205.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="60.0" y="212.0" data-mix="1" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="65" y1="160.0" x2="70" y2="160.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="60.0" y="167.0" data-mix="2" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="65" y1="115.0" x2="70" y2="115.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="60.0" y="122.0" data-mix="3" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="65" y1="70.0" x2="70" y2="70.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="60.0" y="77.0" data-mix="4" data-size="19" data-anchor="end" fill="#16233D"></text><path d="M70.0 70.0 L74.5 76.7 L79.0 83.2 L83.5 89.5 L88.0 95.7 L92.5 101.6 L97.0 107.5 L101.5 113.1 L106.0 118.6 L110.5 123.9 L115.0 129.1 L119.5 134.0 L124.0 138.9 L128.5 143.5 L133.0 148.0 L137.5 152.3 L142.0 156.4 L146.5 160.4 L151.0 164.2 L155.5 167.8 L160.0 171.2 L164.5 174.5 L169.0 177.7 L173.5 180.6 L178.0 183.4 L182.5 186.0 L187.0 188.5 L191.5 190.7 L196.0 192.8 L200.5 194.8 L205.0 196.6 L209.5 198.2 L214.0 199.6 L218.5 200.9 L223.0 202.0 L227.5 202.9 L232.0 203.6 L236.5 204.2 L241.0 204.7 L245.5 204.9 L250.0 205.0 L400.0 205.0" fill="none" stroke="#E4572E" stroke-width="3.5" stroke-linecap="round" data-anim="draw" data-dur="1.6" data-delay="0.3"/><path d="M70.0 250.0 L74.5 245.6 L79.0 241.2 L83.5 237.0 L88.0 232.9 L92.5 228.9 L97.0 225.0 L101.5 221.3 L106.0 217.6 L110.5 214.1 L115.0 210.6 L119.5 207.3 L124.0 204.1 L128.5 201.0 L133.0 198.0 L137.5 195.2 L142.0 192.4 L146.5 189.8 L151.0 187.2 L155.5 184.8 L160.0 182.5 L164.5 180.3 L169.0 178.2 L173.5 176.3 L178.0 174.4 L182.5 172.7 L187.0 171.0 L191.5 169.5 L196.0 168.1 L200.5 166.8 L205.0 165.6 L209.5 164.6 L214.0 163.6 L218.5 162.8 L223.0 162.0 L227.5 161.4 L232.0 160.9 L236.5 160.5 L241.0 160.2 L245.5 160.1 L250.0 160.0 L400.0 160.0" fill="none" stroke="#3D8BD9" stroke-width="3.5" stroke-linecap="round" data-anim="draw" data-dur="1.6" data-delay="0.5"/><line x1="122.7" y1="250.0" x2="122.7" y2="137.5" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><line x1="70.0" y1="205.0" x2="122.7" y2="205.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><line x1="70.0" y1="160.0" x2="250.0" y2="160.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><line x1="70.0" y1="205.0" x2="250.0" y2="205.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><line x1="250.0" y1="250.0" x2="250.0" y2="160.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><text class="tex" x="122.7" y="276.0" data-mix="$t$" data-size="20" data-anchor="middle" fill="#16233D"></text><text class="tex" x="380.0" y="148.0" data-mix="B" data-size="21" data-anchor="middle" fill="#3D8BD9"></text><text class="tex" x="380.0" y="235.0" data-mix="A" data-size="21" data-anchor="middle" fill="#E4572E"></text></svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (단, 온도는 일정하다.)</p>
+      <div class="bogi"><p>ㄱ. $a-b=1$이다.</p><p>ㄴ. $t$에서 $Q&gt;K$이다.</p><p>ㄷ. 이 반응의 평형 상수($K$)는 4이다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+      <p class="f21 step mt8">ㄱ ○ A 3 몰 감소, B 2 몰 증가 → $a:b=3:2$, $a-b=1$</p>
+      <p class="f21 step">ㄴ ✗ $t$에서는 아직 정반응이 우세하게 진행 중 → $Q&lt;K$</p>
+      <p class="f21 step">ㄷ ○ $K=\dfrac{[\mathrm{B}]^2}{[\mathrm{A}]^3}=\dfrac{2^2}{1^3}=4$</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ③</b></div>
+</section>
+
+<!-- ════════ 8. 대단원 마무리 02 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 02">
+  <h2><span class="tag q">대단원 마무리 02</span>처음 농도와 평형 농도</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <p class="f21">밀폐된 1 L 용기에서 반응이 평형에 도달했다. (단, 온도는 일정하다.)</p>
+      <p class="f22 cm39-tc">$\ce{A(g) + 3B(g) &lt;=&gt; 2C(g)}$</p>
+      <table class="tight cm39-ice">
+        <tr><th>구분</th><th>$[\ce{A}]$</th><th>$[\ce{B}]$</th><th>$[\ce{C}]$</th></tr>
+        <tr><td>처음 농도 (M)</td><td>0.04</td><td>0.08</td><td>0</td></tr>
+        <tr class="step" data-g="e2"><td class="c-field">반응</td><td class="c-field">$-0.02$</td><td class="c-field">$-0.06$</td><td class="c-field">$+0.04$</td></tr>
+        <tr><td>평형 농도 (M)</td><td>0.02</td><td><span class="cm39-dash">–</span><span class="step" data-g="e3">0.02</span></td><td><span class="cm39-dash">–</span><span class="step" data-g="e3">0.04</span></td></tr>
+      </table>
+      <p class="small c-muted mt8">mol/L = M. 계수비 1 : 3 : 2 = 변한 농도의 비</p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q>(1) 평형에 도달했을 때 $[\ce{A}]$와 $[\ce{B}]$의 크기를 비교해 &gt;, =, &lt;로 나타내 보자.</p>
+      <div class="answer step" data-g="e3">$[\ce{A}]=[\ce{B}]$ <span class="small">(둘 다 0.02 M)</span></div>
+      <p class="f21 mt8" data-q>(2) 이 반응의 평형 상수($K$)를 구해 보자.</p>
+      <div class="board" style="min-height:60px"></div>
+      <div class="answer step">$K=\dfrac{[\ce{C}]^2}{[\ce{A}][\ce{B}]^3}=\dfrac{(0.04)^2}{0.02\times(0.02)^3}=1\times10^{4}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 대단원 마무리 03 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 03">
+  <h2><span class="tag q">대단원 마무리 03</span>초기 상태와 평형 상태</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">
+      <p class="f22 cm39-tc">$\mathrm{A}(g)+b\mathrm{B}(g)\ce{&lt;=&gt;}c\mathrm{C}(g)$ <span class="small c-muted">($b$, $c$는 반응 계수)</span></p>
+      <div class="cm39-boxes">
+        <div class="cm39-vb"><p>A 0.2 몰<br>B 0.2 몰<br>C 0.4 몰</p><p class="small c-muted">1 L</p><p class="cm39-cap">초기 상태</p></div>
+        <div class="cm39-vb-arr">→</div>
+        <div class="cm39-vb"><p>A 0.1 몰<br>B $x$ 몰<br>C $y$ 몰</p><p class="small c-muted">1 L</p><p class="cm39-cap">평형 상태</p></div>
+      </div>
+      <p class="f21 mt8" data-q>$2b=c$일 때 이 반응의 평형 상수($K$)를 구해 보자. (단, 온도는 일정하고, $x$와 $y$는 0이 아니다.)</p>
+    </div>
+    <div class="col stack">
+      <div class="board" style="min-height:60px"></div>
+      <p class="f21 step">A가 0.1 몰 줄었다 → 정반응 진행. B는 $0.1b$ 몰 줄고, C는 $0.1c=0.2b$ 몰 는다.</p>
+      <p class="f21 step">$x=0.2-0.1b\neq0$이므로 $b&lt;2$ → $b=1$, $c=2$</p>
+      <p class="f21 step">$x=0.1$, $y=0.4+0.2=0.6$</p>
+      <div class="answer step">$K=\dfrac{[\ce{C}]^2}{[\ce{A}][\ce{B}]}=\dfrac{(0.6)^2}{0.1\times0.1}=36$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 대단원 마무리 04 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 04">
+  <h2><span class="tag q">대단원 마무리 04</span>세 기체의 양 변화</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <p class="f21">밀폐된 1 L 용기에 $\mathrm{A}(g)$ 0.4 몰, $\mathrm{B}(g)$ 0.3 몰을 넣었을 때 시간에 따른 각 기체의 양(mol)이다.</p>
+      <svg class="fig" viewBox="0 0 450 290" style="width:450px" aria-label="A 0.4 몰이 0.1 몰로, B 0.3 몰이 0.2 몰로 줄고 C가 0에서 0.2 몰로 늘어 일정해지는 그래프. t1에서 A와 B의 양이 같고 t2에서 A와 C의 양이 같다"><line x1="80" y1="250" x2="430" y2="250" stroke="#16233D" stroke-width="2"/><g data-arw="418,250,434,250,ink,2"></g><line x1="80" y1="250" x2="80" y2="22" stroke="#16233D" stroke-width="2"/><g data-arw="80,34,80,18,ink,2"></g><text class="tex" x="90.0" y="36.0" data-mix="양 [mol]" data-size="19" data-anchor="start" fill="#16233D"></text><text class="tex" x="426.0" y="280.0" data-mix="시간" data-size="19" data-anchor="end" fill="#16233D"></text><text class="tex" x="70.0" y="272.0" data-mix="0" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="75" y1="198.0" x2="80" y2="198.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="70.0" y="205.0" data-mix="0.1" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="75" y1="146.0" x2="80" y2="146.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="70.0" y="153.0" data-mix="0.2" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="75" y1="94.0" x2="80" y2="94.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="70.0" y="101.0" data-mix="0.3" data-size="19" data-anchor="end" fill="#16233D"></text><line x1="75" y1="42.0" x2="80" y2="42.0" stroke="#16233D" stroke-width="2"/><text class="tex" x="70.0" y="49.0" data-mix="0.4" data-size="19" data-anchor="end" fill="#16233D"></text><path d="M80.0 42.0 L84.5 49.7 L89.0 57.2 L93.5 64.5 L98.0 71.6 L102.5 78.6 L107.0 85.3 L111.5 91.8 L116.0 98.2 L120.5 104.3 L125.0 110.3 L129.5 116.0 L134.0 121.6 L138.5 126.9 L143.0 132.1 L147.5 137.1 L152.0 141.8 L156.5 146.4 L161.0 150.8 L165.5 155.0 L170.0 159.0 L174.5 162.8 L179.0 166.4 L183.5 169.8 L188.0 173.0 L192.5 176.1 L197.0 178.9 L201.5 181.5 L206.0 184.0 L210.5 186.2 L215.0 188.3 L219.5 190.1 L224.0 191.8 L228.5 193.2 L233.0 194.5 L237.5 195.6 L242.0 196.4 L246.5 197.1 L251.0 197.6 L255.5 197.9 L260.0 198.0 L410.0 198.0" fill="none" stroke="#E4572E" stroke-width="3.5" stroke-linecap="round" data-anim="draw" data-dur="1.6" data-delay="0.3"/><path d="M80.0 94.0 L84.5 96.6 L89.0 99.1 L93.5 101.5 L98.0 103.9 L102.5 106.2 L107.0 108.4 L111.5 110.6 L116.0 112.7 L120.5 114.8 L125.0 116.8 L129.5 118.7 L134.0 120.5 L138.5 122.3 L143.0 124.0 L147.5 125.7 L152.0 127.3 L156.5 128.8 L161.0 130.3 L165.5 131.7 L170.0 133.0 L174.5 134.3 L179.0 135.5 L183.5 136.6 L188.0 137.7 L192.5 138.7 L197.0 139.6 L201.5 140.5 L206.0 141.3 L210.5 142.1 L215.0 142.8 L219.5 143.4 L224.0 143.9 L228.5 144.4 L233.0 144.8 L237.5 145.2 L242.0 145.5 L246.5 145.7 L251.0 145.9 L255.5 146.0 L260.0 146.0 L410.0 146.0" fill="none" stroke="#3D8BD9" stroke-width="3.5" stroke-linecap="round" data-anim="draw" data-dur="1.6" data-delay="0.45"/><path d="M80.0 250.0 L84.5 244.9 L89.0 239.9 L93.5 235.0 L98.0 230.2 L102.5 225.6 L107.0 221.1 L111.5 216.8 L116.0 212.6 L120.5 208.5 L125.0 204.5 L129.5 200.7 L134.0 197.0 L138.5 193.4 L143.0 189.9 L147.5 186.6 L152.0 183.4 L156.5 180.4 L161.0 177.5 L165.5 174.7 L170.0 172.0 L174.5 169.5 L179.0 167.1 L183.5 164.8 L188.0 162.6 L192.5 160.6 L197.0 158.7 L201.5 157.0 L206.0 155.4 L210.5 153.9 L215.0 152.5 L219.5 151.3 L224.0 150.2 L228.5 149.2 L233.0 148.3 L237.5 147.6 L242.0 147.0 L246.5 146.6 L251.0 146.3 L255.5 146.1 L260.0 146.0 L410.0 146.0" fill="none" stroke="#43A047" stroke-width="3.5" stroke-linecap="round" data-anim="draw" data-dur="1.6" data-delay="0.6"/><line x1="132.7" y1="250.0" x2="132.7" y2="120.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><text class="tex" x="132.7" y="276.0" data-mix="$t_1$" data-size="20" data-anchor="middle" fill="#16233D"></text><line x1="179.5" y1="250.0" x2="179.5" y2="135.6" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><text class="tex" x="179.5" y="276.0" data-mix="$t_2$" data-size="20" data-anchor="middle" fill="#16233D"></text><line x1="80.0" y1="198.0" x2="132.7" y2="198.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><line x1="80.0" y1="146.0" x2="260.0" y2="146.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><line x1="80.0" y1="198.0" x2="260.0" y2="198.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="4 4"/><text class="tex" x="102.0" y="60.0" data-mix="A" data-size="20" data-anchor="middle" fill="#E4572E"></text><text class="tex" x="98.0" y="124.0" data-mix="B" data-size="20" data-anchor="middle" fill="#3D8BD9"></text><text class="tex" x="120.0" y="220.0" data-mix="C" data-size="20" data-anchor="middle" fill="#43A047"></text></svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (단, 온도는 일정하다.)</p>
+      <div class="bogi"><p>ㄱ. 이 반응의 평형 상수($K$)는 20이다.</p><p>ㄴ. $t_1$에서 반응 지수($Q$)는 평형 상수($K$)보다 작다.</p><p>ㄷ. $t_2$에서 B의 양은 0.22 몰이다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+      <p class="f21 step mt8">변한 양 A 0.3 : B 0.1 : C 0.2 → $\ce{3A + B &lt;=&gt; 2C}$</p>
+      <p class="f21 step">ㄱ ✗ $K=\dfrac{(0.2)^2}{(0.1)^3\times0.2}=200$ · ㄴ ○ 정반응 진행 중</p>
+      <p class="f21 step">ㄷ ○ $t_2$: A = C → $0.4-3n=2n$, $n=0.08$ → B $0.22$ 몰</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ④</b></div>
+</section>
+
+<!-- ════════ 11. 대단원 마무리 05 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 05">
+  <h2><span class="tag q">대단원 마무리 05</span>고체가 녹는 평형</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <p class="f21">$\mathrm{A}(s)$를 1 L의 물에 녹여 $\mathrm{B}(aq)$와 $\mathrm{C}(aq)$가 생성되는 반응이다.</p>
+      <p class="f22 cm39-tc">$\ce{A(s) &lt;=&gt; B(aq) + 2C(aq)}$ &nbsp; $K=4\times10^{-6}$</p>
+      <p class="f21" data-q>이 반응이 평형에 도달했을 때 $[\ce{B}]$와 $[\ce{C}]$를 각각 구해 보자. (단, 온도는 일정하고, 고체를 물에 녹였을 때 물의 부피 변화는 없다.)</p>
+      <svg class="fig" viewBox="0 0 420 285" style="width:420px" aria-label="물에 일부 녹은 고체 A, 용액 속 B 2개와 C 4개"><path d="M60 40 V216 Q60 230 74 230 H346 Q360 230 360 216 V40" fill="#DDEEF8" stroke="none"/><path d="M54 34 L60 40 V216 Q60 230 74 230 H346 Q360 230 360 216 V40 L366 34" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M150 230 Q210 196 270 230 Z" fill="#E6E1D6" stroke="#9A8F78" stroke-width="2"/><text class="tex" x="210.0" y="224.0" data-mix="A" data-size="19" data-anchor="middle" fill="#6B5E45"></text><g data-anim="move" data-from="8,30" data-dur="1.4" data-delay="0.20" data-ease="soft"><circle cx="110" cy="90" r="16" fill="#fff" stroke="#E08A2C" stroke-width="3"/><text class="tex" x="110.0" y="97.0" data-mix="B" data-size="19" data-anchor="middle" fill="#E08A2C"></text></g><g data-anim="move" data-from="-8,30" data-dur="1.4" data-delay="0.32" data-ease="soft"><circle cx="170" cy="80" r="16" fill="#fff" stroke="#0E7490" stroke-width="3"/><text class="tex" x="170.0" y="87.0" data-mix="C" data-size="19" data-anchor="middle" fill="#0E7490"></text></g><g data-anim="move" data-from="8,30" data-dur="1.4" data-delay="0.44" data-ease="soft"><circle cx="240" cy="100" r="16" fill="#fff" stroke="#0E7490" stroke-width="3"/><text class="tex" x="240.0" y="107.0" data-mix="C" data-size="19" data-anchor="middle" fill="#0E7490"></text></g><g data-anim="move" data-from="-8,30" data-dur="1.4" data-delay="0.56" data-ease="soft"><circle cx="300" cy="85" r="16" fill="#fff" stroke="#E08A2C" stroke-width="3"/><text class="tex" x="300.0" y="92.0" data-mix="B" data-size="19" data-anchor="middle" fill="#E08A2C"></text></g><g data-anim="move" data-from="8,30" data-dur="1.4" data-delay="0.68" data-ease="soft"><circle cx="120" cy="150" r="16" fill="#fff" stroke="#0E7490" stroke-width="3"/><text class="tex" x="120.0" y="157.0" data-mix="C" data-size="19" data-anchor="middle" fill="#0E7490"></text></g><g data-anim="move" data-from="-8,30" data-dur="1.4" data-delay="0.80" data-ease="soft"><circle cx="320" cy="150" r="16" fill="#fff" stroke="#0E7490" stroke-width="3"/><text class="tex" x="320.0" y="157.0" data-mix="C" data-size="19" data-anchor="middle" fill="#0E7490"></text></g><text class="tex" x="210.0" y="270.0" data-mix="B 1개마다 C 2개 → $[\mathrm{C}]=2[\mathrm{B}]$" data-size="19" data-anchor="middle" fill="#16233D"></text></svg>
+    </div>
+    <div class="col stack">
+      <div class="board" style="min-height:60px"></div>
+      <p class="f21 step">고체 A는 평형 상수식에 넣지 않는다 → $K=[\ce{B}][\ce{C}]^2$</p>
+      <p class="f21 step">$[\ce{B}]=s$이면 $[\ce{C}]=2s$ → $s\times(2s)^2=4s^3=4\times10^{-6}$</p>
+      <p class="f21 step">$s^3=1\times10^{-6}$ → $s=0.01$</p>
+      <div class="answer step">$[\ce{B}]=0.01\ \text{M}$, &nbsp;$[\ce{C}]=0.02\ \text{M}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 대단원 마무리 06 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 06">
+  <h2><span class="tag q">대단원 마무리 06</span>$\ce{NO2}$와 $\ce{N2O4}$의 평형</h2>
+  <p class="f22 cm39-tc">$\ce{2NO2(g) &lt;=&gt;[\text{에너지 방출}][\text{에너지 흡수}] N2O4(g)}$</p>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21">일정한 온도에서 밀폐된 1 L 용기에 $\ce{NO2}(g)$ 0.6 몰을 넣은 후 평형에 도달했을 때 $\ce{N2O4}(g)$ 0.2 몰이 생성되었다. 이에 대한 설명으로 옳지 <u>않은</u> 것은?</p>
+      <div class="choices cm39-c1"><span>① 평형에 도달했을 때 $\ce{NO2}(g)$의 농도는 0.2 mol/L이다.</span><span>② 주어진 온도에서 평형 상수($K$)는 1이다.</span><span>③ 온도를 낮추면 평형 상수($K$)가 커진다.</span><span>④ 온도를 높이면 $\ce{N2O4}(g)$의 농도가 감소한다.</span><span>⑤ 압력을 높이면 $\ce{N2O4}(g)$의 양(mol)이 증가한다.</span></div>
+    </div>
+    <div class="col" style="flex:0 0 430px">
+      <p class="f21 step">① ○ $\ce{NO2}$ 0.4 몰 반응 → $0.6-0.4=0.2$ 몰</p>
+      <p class="f21 step">② ✗ $K=\dfrac{[\ce{N2O4}]}{[\ce{NO2}]^2}=\dfrac{0.2}{(0.2)^2}=5$</p>
+      <p class="f21 step">③ ○ 정반응이 발열 → 온도를 낮추면 $K$ 증가</p>
+      <p class="f21 step">④ ○ 온도를 높이면 흡열인 역반응 우세</p>
+      <p class="f21 step">⑤ ○ 분자 수 2 → 1, 압력 증가 → 정반응 우세</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ②</b></div>
+</section>
+
+<!-- ════════ 13. 대단원 마무리 07 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 07 (서술형)">
+  <h2><span class="tag q">대단원 마무리 07</span>서술형 — 크로뮴산 이온과 다이크로뮴산 이온</h2>
+  <p class="f21">노란색 크로뮴산 칼륨($\ce{K2CrO4}$) 수용액이 주황색이 될 때까지 $\ce{HCl}(aq)$을 넣었을 때의 반응이다(온도 일정).</p>
+  <p class="f22 cm39-tc">$\underset{\text{노란색}}{\ce{2CrO4^2-(aq)}}\ce{ + 2H+(aq) &lt;=&gt; }\underset{\text{주황색}}{\ce{Cr2O7^2-(aq)}}\ce{ + H2O(l)}$</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 270" style="width:420px" aria-label="노란색 크로뮴산 칼륨 수용액에 염산을 넣으면 주황색이 되고, 수산화 나트륨 수용액을 넣으면 어떻게 될지 묻는 그림"><path d="M70 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#F2D23C"/><path d="M70 20 V170 a20.0 20.0 0 0 0 40 0 V20" fill="none" stroke="#7E8B98" stroke-width="3"/><g data-anim="fade" data-dur="1.2" data-delay=".5"><path d="M310 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#F08A24"/></g><path d="M310 20 V170 a20.0 20.0 0 0 0 40 0 V20" fill="none" stroke="#7E8B98" stroke-width="3"/><text class="tex" x="90.0" y="225.0" data-mix="노란색" data-size="19" data-anchor="middle" fill="#16233D"></text><text class="tex" x="330.0" y="225.0" data-mix="주황색" data-size="19" data-anchor="middle" fill="#16233D"></text><text class="tex" x="90.0" y="255.0" data-mix="$\ce{CrO4^2-}$ 많음" data-size="19" data-anchor="middle" fill="#16233D"></text><text class="tex" x="330.0" y="255.0" data-mix="$\ce{Cr2O7^2-}$ 많음" data-size="19" data-anchor="middle" fill="#16233D"></text><g data-arw="140,80,290,80,field,3.5"></g><text class="tex" x="215.0" y="64.0" data-mix="$\ce{HCl}(aq)$ 넣음" data-size="19" data-anchor="middle" fill="#2E9E6A"></text><g data-arw="290,130,140,130,bfield,3.5"></g><text class="tex" x="215.0" y="162.0" data-mix="$\ce{NaOH}(aq)$ 넣으면?" data-size="19" data-anchor="middle" fill="#7B4FC8"></text></svg>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q>같은 온도에서 이 수용액에 $\ce{NaOH}(aq)$을 넣으면 용액의 색이 어떻게 변할지 쓰고, 그 까닭을 설명해 보자.</p>
+      <div class="board" style="min-height:50px"></div>
+      <div class="answer step" style="text-align:left"><b>예시 답안</b> 노란색으로 변한다. $\ce{NaOH}$의 $\ce{OH-}$이 $\ce{H+}$과 반응해 물이 되므로 $[\ce{H+}]$가 감소한다. 감소한 $\ce{H+}$을 늘리는 역반응이 우세하게 진행되어 노란색 $\ce{CrO4^2-}$이 많아진다.</div>
+      <p class="small c-muted">채점 요소: 노란색 · $[\ce{H+}]$ 감소 · 역반응 우세</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 대단원 마무리 08 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 08">
+  <h2><span class="tag q">대단원 마무리 08</span>삼산화 황의 분해 평형</h2>
+  <p class="f22 cm39-tc">$\ce{2SO3(g) &lt;=&gt;[\text{에너지 흡수}][\text{에너지 방출}] 2SO2(g) + O2(g)}$</p>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21">이 반응이 화학 평형 상태에 있을 때, 이에 대한 설명으로 옳지 <u>않은</u> 것은?</p>
+      <div class="choices cm39-c1"><span>① 압력을 높이면 수득률이 증가한다.</span><span>② 온도를 높이면 평형 상수($K$)가 커진다.</span><span>③ 온도를 낮추면 역반응이 우세하게 진행한다.</span><span>④ 압력을 낮추면 정반응이 우세하게 진행한다.</span><span>⑤ $\ce{SO3}(g)$을 넣으면 생성물의 양(mol)이 증가한다.</span></div>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <div class="card"><p class="f21">기체 분자 수: 반응물 2 → 생성물 3 <span class="c-muted">(증가)</span></p><p class="f21">정반응: 에너지 흡수 <span class="c-muted">(흡열)</span></p></div>
+      <p class="f21 step mt8">① ✗ 압력 증가 → 분자 수가 감소하는 역반응 우세 → 수득률 감소</p>
+      <p class="f21 step">② ○ 흡열 반응은 온도가 높을수록 $K$ 증가</p>
+      <p class="f21 step">③ ○ ④ ○ ⑤ ○ 반응물을 넣으면 정반응 우세</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ①</b></div>
+</section>
+
+<!-- ════════ 15. 대단원 마무리 09 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 09">
+  <h2><span class="tag q">대단원 마무리 09</span>온도·압력과 C의 수득률</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">
+      <p class="f22 cm39-tc">$a\mathrm{A}(g)+b\mathrm{B}(g)\ce{&lt;=&gt;}c\mathrm{C}(g)$ <span class="small c-muted">($a$–$c$는 반응 계수)</span></p>
+      <p class="f21">용기에 $\mathrm{A}(g)$와 $\mathrm{B}(g)$를 넣고 온도와 압력을 바꾸었을 때 평형 상태에서 $\mathrm{C}(g)$의 수득률이다.</p>
+      <table class="tight cm39-q9">
+        <tr><th>압력(기압) \ 온도(°C)</th><th>200</th><th>400</th><th>600</th></tr>
+        <tr><td>100</td><td>82 %</td><td>25 %</td><td>5 %</td></tr>
+        <tr><td>200</td><td>86 %</td><td>36 %</td><td>8 %</td></tr>
+        <tr><td>600</td><td>96 %</td><td>65 %</td><td>23 %</td></tr>
+      </table>
+      <p class="small c-muted mt8">세로로 읽기(같은 온도) → 압력의 효과 · 가로로 읽기(같은 압력) → 온도의 효과</p>
+    </div>
+    <div class="col stack">
+      <p class="f21">옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <div class="bogi"><p>ㄱ. $a+b&gt;c$이다.</p><p>ㄴ. 압력이 높을수록 평형 상수가 커진다.</p><p>ㄷ. 온도가 높을수록 평형 상수가 작아진다.</p></div>
+      <div class="choices"><span>① ㄴ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄱ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+      <p class="f21 step mt8">ㄱ ○ 압력이 높을수록 수득률 증가 → 정반응이 분자 수 감소</p>
+      <p class="f21 step">ㄴ ✗ 평형 상수는 압력이 아니라 온도에 따라서만 변한다.</p>
+      <p class="f21 step">ㄷ ○ 온도가 높을수록 수득률 감소 → 정반응은 발열 → $K$ 감소</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ④</b></div>
+</section>
+
+<!-- ════════ 16. 대단원 마무리 10 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 대단원 마무리" data-title="대단원 마무리 10 (서술형)">
+  <h2><span class="tag q">대단원 마무리 10</span>서술형 — 운동 후 체온과 헤모글로빈</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">
+      <p class="f21">적혈구에 들어 있는 헤모글로빈($\ce{Hb}$)은 산소($\ce{O2}$)와 결합하여 인체 내에서 산소를 운반한다.</p>
+      <p class="f22 cm39-tc">$\ce{Hb(aq) + 4O2(g) &lt;=&gt;[\text{에너지 방출}][\text{에너지 흡수}] Hb(O2)4(aq)}$</p>
+      <svg class="fig" viewBox="0 0 480 280" style="width:480px" aria-label="체온이 올라가면 산소와 결합한 헤모글로빈에서 산소 분자가 떨어져 나와 조직에 공급된다"><rect x="30" y="30" width="22" height="170" rx="11" fill="#fff" stroke="#7E8B98" stroke-width="3"/><circle cx="41" cy="212" r="20" fill="#D7263D" stroke="#7E8B98" stroke-width="3"/><g data-anim="scale" data-from="1,0.45" data-o="41,212" data-dur="1.4" data-delay=".2"><rect x="35" y="70" width="12" height="140" fill="#D7263D"/></g><text class="tex" x="41.0" y="262.0" data-mix="체온 ↑" data-size="19" data-anchor="middle" fill="#16233D"></text><circle cx="200" cy="135" r="62" fill="#9C6B8E"/><text class="tex" x="200.0" y="143.0" data-mix="$\ce{Hb}$" data-size="24" data-anchor="middle" fill="#fff"></text><g data-anim="move" data-from="40,35" data-dur="1.6" data-delay=".6" data-ease="soft"><g data-atom="104.0,50,8,O,-"></g><g data-atom="116.0,50,8,O,-"></g></g><g data-anim="move" data-from="-60,40" data-dur="1.6" data-delay=".6" data-ease="soft"><g data-atom="304.0,45,8,O,-"></g><g data-atom="316.0,45,8,O,-"></g></g><g data-anim="move" data-from="45,-40" data-dur="1.6" data-delay=".6" data-ease="soft"><g data-atom="99.0,225,8,O,-"></g><g data-atom="111.0,225,8,O,-"></g></g><g data-anim="move" data-from="-70,-30" data-dur="1.6" data-delay=".6" data-ease="soft"><g data-atom="314.0,215,8,O,-"></g><g data-atom="326.0,215,8,O,-"></g></g><g data-arw="290,135,380,135,bfield,3.5"></g><text class="tex" x="335.0" y="120.0" data-mix="역반응" data-size="19" data-anchor="middle" fill="#7B4FC8"></text><text class="tex" x="420.0" y="128.0" data-mix="조직에||$\ce{O2}$ 공급" data-size="19" data-anchor="middle" fill="#16233D"></text><g data-atom="389.0,180,8,O,-"></g><g data-atom="401.0,180,8,O,-"></g><text class="tex" x="420.0" y="212.0" data-mix="$\ce{O2}$" data-size="19" data-anchor="start" fill="#16233D"></text></svg>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q>운동 후 체온이 높아졌을 때 화학 평형이 정반응과 역반응 중 어느 방향으로 이동하는지 쓰고, 그 까닭을 설명해 보자.</p>
+      <div class="board" style="min-height:50px"></div>
+      <div class="answer step" style="text-align:left"><b>예시 답안</b> 역반응 쪽으로 이동한다. 정반응이 에너지를 방출하는 반응이므로, 온도가 높아지면 높아진 온도를 낮추는 방향, 곧 에너지를 흡수하는 역반응이 우세하게 진행된다. 그 결과 $\ce{Hb(O2)4}$가 산소를 내놓아 활발히 움직인 근육 조직에 산소를 더 많이 공급한다.</div>
+      <p class="small c-muted">채점 요소: 역반응 · 정반응이 발열(에너지 방출) · 온도를 낮추는 방향</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 과학 역량 키우기 11 실험 설계 (1) ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 과학 역량 키우기" data-title="과학 역량 키우기 11: 실험 설계">
+  <h2><span class="tag">실험 설계하기</span>11 온도 변화에 따른 평형 이동 실험 설계</h2>
+  <p class="f21">황산 구리(II)($\ce{CuSO4}$) 수용액에 진한 염산($\ce{HCl}(aq)$)을 넣으면 다음과 같이 평형을 이룬다. 정반응은 흡열 반응이다.</p>
+  <p class="f22 cm39-tc">$\underset{\text{파란색}}{\ce{[Cu(H2O)6]^2+(aq)}}\ce{ + 4Cl-(aq) &lt;=&gt;[\text{에너지 흡수}][\text{에너지 방출}] }\underset{\text{노란색}}{\ce{[CuCl4]^2-(aq)}}\ce{ + 6H2O(l)}$</p>
+  <div class="row mt8">
+    <div class="col">
+      <div class="card"><p class="f21"><b>[준비물]</b> 황산 구리(II) 수용액, 진한 염산, 얼음물, 뜨거운 물, 시험관, 비커, 스포이트</p></div>
+      <p class="f21 mt8" data-q>Q 준비물로 온도 변화에 따른 평형 이동을 알아보는 실험을 설계해 볼까?</p>
+      <table class="tight cm39-var mt8">
+        <tr><th>조작 변인</th><td class="l"><span class="step" data-g="d1">용액의 온도 (얼음물 · 실온 · 뜨거운 물)</span></td></tr>
+        <tr><th>종속 변인</th><td class="l"><span class="step" data-g="d1">용액의 색 (파란색 ↔ 노란색)</span></td></tr>
+        <tr><th>통제 변인</th><td class="l"><span class="step" data-g="d1">용액의 양과 농도, 넣은 염산의 양, 시험관의 크기</span></td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 420px">
+      <div class="note q"><b>안전</b> 진한 염산은 피부·눈을 상하게 하고 자극성 기체가 나온다 → 보안경·장갑·실험복, 환기가 되는 곳에서 스포이트로 조금씩. 뜨거운 물에 데지 않게 집게를 쓴다. 남은 용액은 폐수 통에 모은다.</div>
+      <p class="f21 step mt8" data-g="d2"><b>가설</b> 정반응이 흡열 반응이므로 온도를 높이면 노란색 쪽, 낮추면 파란색 쪽으로 색이 변할 것이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 과학 역량 키우기 11 실험 설계 (2) ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 과학 역량 키우기" data-title="과학 역량 키우기 11: 과정과 예상 결과">
+  <h2><span class="tag">실험 설계하기</span>11 실험 과정과 예상 결과</h2>
+  <div class="stages cm39-st3">
+    <div class="stage"><h3>① 평형 혼합물 만들기</h3><p>황산 구리(II) 수용액에 진한 염산을 스포이트로 조금씩 넣어 파란색과 노란색이 섞인 초록색이 되게 한다.</p></div>
+    <div class="stage"><h3>② 나누어 담기</h3><p>같은 양씩 시험관 3개에 나누어 담는다. 하나는 실온에 두어 비교 기준으로 쓴다.</p></div>
+    <div class="stage"><h3>③ 온도 바꾸기</h3><p>나머지 두 시험관을 얼음물과 뜨거운 물이 든 비커에 넣고, 몇 분 뒤 색을 비교한다.</p></div>
+  </div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 520px"><svg class="fig" viewBox="0 0 520 290" style="width:520px" aria-label="초록색 평형 혼합물을 세 시험관에 나누어 얼음물에서는 파란색, 실온은 초록색, 뜨거운 물에서는 노란색이 진해진다"><rect x="20" y="90" width="120" height="120" rx="10" fill="#E3EEFB" stroke="#7E8B98" stroke-width="2.5"/><path d="M60 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#5FA86B"/><g data-anim="fade" data-dur="1.4" data-on="g:r1"><path d="M60 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#3E8ED0"/></g><path d="M60 20 V170 a20.0 20.0 0 0 0 40 0 V20" fill="none" stroke="#7E8B98" stroke-width="3"/><text class="tex" x="80.0" y="248.0" data-mix="얼음물" data-size="19" data-anchor="middle" fill="#16233D"></text><path d="M240 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#5FA86B"/><path d="M240 20 V170 a20.0 20.0 0 0 0 40 0 V20" fill="none" stroke="#7E8B98" stroke-width="3"/><text class="tex" x="260.0" y="248.0" data-mix="실온" data-size="19" data-anchor="middle" fill="#16233D"></text><rect x="380" y="90" width="120" height="120" rx="10" fill="#FDE2E4" stroke="#7E8B98" stroke-width="2.5"/><path d="M420 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#5FA86B"/><g data-anim="fade" data-dur="1.4" data-on="g:r2"><path d="M420 60 V170 a20.0 20.0 0 0 0 40 0 V60 Z" fill="#C9BE2E"/></g><path d="M420 20 V170 a20.0 20.0 0 0 0 40 0 V20" fill="none" stroke="#7E8B98" stroke-width="3"/><text class="tex" x="440.0" y="248.0" data-mix="뜨거운 물" data-size="19" data-anchor="middle" fill="#16233D"></text><text class="tex" x="80.0" y="280.0" data-mix="파란색 진해짐" data-size="19" data-anchor="middle" fill="#1F5FA8"></text><text class="tex" x="260.0" y="280.0" data-mix="초록색(기준)" data-size="19" data-anchor="middle" fill="#2E7D4F"></text><text class="tex" x="440.0" y="280.0" data-mix="노란색 진해짐" data-size="19" data-anchor="middle" fill="#8A7F10"></text></svg></div>
+    <div class="col stack">
+      <p class="f21" data-q>Q 얼음물과 뜨거운 물에서 색은 어떻게 변할까?</p>
+      <p class="f21 step" data-g="r1"><b>얼음물</b> → 파란색이 진해진다. 온도를 높이는 발열 반응, 곧 역반응이 우세하다.</p>
+      <p class="f21 step" data-g="r2"><b>뜨거운 물</b> → 노란색(초록빛 노랑)이 진해진다. 온도를 낮추는 흡열 반응, 곧 정반응이 우세하다.</p>
+      <p class="f21 step"><b>결론</b> 온도를 높이면 흡열 반응 쪽, 낮추면 발열 반응 쪽으로 평형이 이동한다. 다시 실온에 두면 처음 색으로 돌아간다(가역).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 과학 역량 키우기 12 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 과학 역량 키우기" data-title="과학 역량 키우기 12: 고압 산소 치료">
+  <h2><span class="tag">과학 글쓰기</span>12 고압 산소 치료의 원리</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">
+      <p class="f21">병원에서는 유독 가스 중독, 화상 상처 등을 치료할 때 고압 산소 치료실을 이용한다.</p>
+      <svg class="fig" viewBox="0 0 460 290" style="width:460px" aria-label="고압 산소 치료실 안의 환자와 산소 분자, 치료실의 압력을 높인다"><rect x="30" y="60" width="400" height="150" rx="75" fill="#F4F6F8" stroke="#7E8B98" stroke-width="4"/><rect x="60" y="205" width="40" height="40" fill="#C9D3DD"/><rect x="360" y="205" width="40" height="40" fill="#C9D3DD"/><ellipse cx="380" cy="135" rx="34" ry="52" fill="#DDEEF8" stroke="#7E8B98" stroke-width="3"/><rect x="110" y="120" width="200" height="34" rx="17" fill="#F2C9B0"/><circle cx="125" cy="137" r="20" fill="#F2C9B0"/><g data-anim="move" data-from="0,-30" data-dur="1.3" data-delay="0.20" data-ease="soft"><g data-atom="154.0,90,8,O,-"></g><g data-atom="166.0,90,8,O,-"></g></g><g data-anim="move" data-from="0,-30" data-dur="1.3" data-delay="0.35" data-ease="soft"><g data-atom="234.0,95,8,O,-"></g><g data-atom="246.0,95,8,O,-"></g></g><g data-anim="move" data-from="0,30" data-dur="1.3" data-delay="0.50" data-ease="soft"><g data-atom="294.0,180,8,O,-"></g><g data-atom="306.0,180,8,O,-"></g></g><g data-anim="move" data-from="0,30" data-dur="1.3" data-delay="0.65" data-ease="soft"><g data-atom="184.0,182,8,O,-"></g><g data-atom="196.0,182,8,O,-"></g></g><g data-anim="move" data-from="0,-30" data-dur="1.3" data-delay="0.80" data-ease="soft"><g data-atom="324.0,92,8,O,-"></g><g data-atom="336.0,92,8,O,-"></g></g><g data-arw="230,20,230,58,minus,3.5"></g><text class="tex" x="250.0" y="36.0" data-mix="압력 ↑, 순수한 $\ce{O2}$" data-size="19" data-anchor="start" fill="#16233D"></text><text class="tex" x="230.0" y="275.0" data-mix="고압 산소 치료실 (모식도)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q>Q 고압 산소 치료 원리를 화학 평형 이동과 관련지어 설명해 볼까?</p>
+      <p class="f22 cm39-tc">$\ce{Hb(aq) + 4O2(g) &lt;=&gt; Hb(O2)4(aq)}$</p>
+      <div class="board" style="min-height:40px"></div>
+      <div class="answer step" style="text-align:left"><b>예시 글</b> 치료실의 압력을 높이고 순수한 산소를 들이마시면 혈액에 녹는 산소의 농도가 커진다. 반응물인 $\ce{O2}$의 농도가 증가하므로 이를 감소시키는 정반응이 우세하게 진행되어 산소와 결합한 헤모글로빈이 많아지고, 조직에 산소를 더 많이 공급할 수 있다. 일산화 탄소에 중독되었을 때도 높은 농도의 산소가 헤모글로빈에 붙은 일산화 탄소를 밀어내는 쪽으로 평형이 이동한다.</div>
+      <p class="small c-muted">채점 요소: 압력 증가 → $\ce{O2}$ 농도 증가 · 정반응 우세 · 산소 공급 증가</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 과학 역량 키우기 13 (1) ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 과학 역량 키우기" data-title="과학 역량 키우기 13: 아폴로–소유스 사고">
+  <h2><span class="tag">과학 글쓰기</span>13 아폴로–소유스 시험 계획의 사고</h2>
+  <div class="row">
+    <div class="col">
+      <div class="cm39-box">
+        <p>아폴로–소유스 시험 계획은 미국과 (구)소련의 우주선이 함께 비행한 최초의 우주 계획이다.</p>
+        <p>1975년 7월 24일 귀환을 준비하던 중 우주선 안으로 유독 가스가 새어 들어와, 우주 비행사 한 명이 의식을 잃고 폐렴·폐부종으로 14일간 치료를 받았다.</p>
+        <p>새어 나온 가스는 <b>사산화 이질소($\ce{N2O4}$)</b>로, 독성과 부식성이 강한 산화제이며 로켓 추진에 쓰인다. 무색 기체인 사산화 이질소는 밀폐된 공간에서 <b>이산화 질소($\ce{NO2}$)와 화학 평형</b>을 이루는데, 온도가 높을수록 이산화 질소의 농도가 증가한다.</p>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21" data-q>(1) 밀폐된 공간에 $\ce{N2O4}(g)$가 유출되었을 때의 화학 반응식을 써 보자.</p>
+      <div class="board" style="min-height:40px"></div>
+      <div class="answer step">$\ce{N2O4(g) &lt;=&gt; 2NO2(g)}$</div>
+      <p class="small c-muted step">무색 ⇌ 적갈색 · 원자 수 N 2 = 2, O 4 = 4</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 과학 역량 키우기 13 (2) ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 과학 역량 키우기" data-title="과학 역량 키우기 13: 온도와 평형 상수">
+  <h2><span class="tag">과학 글쓰기</span>13 대기권 진입과 평형 상수</h2>
+  <p class="f21" data-q>(2) 지구 대기권에 진입하면서 우주선 내부의 온도가 점점 높아진다면 (1)에서 쓴 반응의 평형 상수($K$)는 어떻게 변할지 설명해 보자.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 540px"><svg class="fig" viewBox="0 0 530 300" style="width:530px" aria-label="온도가 낮을 때 상자에는 사산화 이질소 3개와 이산화 질소 2개, 온도가 높을 때는 사산화 이질소 1개와 이산화 질소 6개가 있어 적갈색이 진해진다"><rect x="20" y="10" width="200" height="215" rx="10" fill="#B5562A" fill-opacity="0.12" stroke="#7E8B98" stroke-width="3"/><g data-atom="54.1,69.9,12,O,-"></g><g data-atom="54.1,40.1,12,O,-"></g><g data-atom="60.4,55.0,12,N,-"></g><g data-atom="85.9,40.1,12,O,-"></g><g data-atom="85.9,69.9,12,O,-"></g><g data-atom="79.6,55.0,12,N,-"></g><g data-atom="144.1,134.9,12,O,-"></g><g data-atom="144.1,105.1,12,O,-"></g><g data-atom="150.4,120.0,12,N,-"></g><g data-atom="175.9,105.1,12,O,-"></g><g data-atom="175.9,134.9,12,O,-"></g><g data-atom="169.6,120.0,12,N,-"></g><g data-atom="59.1,194.9,12,O,-"></g><g data-atom="59.1,165.1,12,O,-"></g><g data-atom="65.4,180.0,12,N,-"></g><g data-atom="90.9,165.1,12,O,-"></g><g data-atom="90.9,194.9,12,O,-"></g><g data-atom="84.6,180.0,12,N,-"></g><g data-atom="155.1,43.7,12,O,-"></g><g data-atom="184.9,43.7,12,O,-"></g><g data-atom="170.0,50.0,12,N,-"></g><g data-atom="145.1,188.7,12,O,-"></g><g data-atom="174.9,188.7,12,O,-"></g><g data-atom="160.0,195.0,12,N,-"></g><text class="tex" x="120.0" y="255.0" data-mix="온도가 낮을 때" data-size="20" data-anchor="middle" fill="#16233D"></text><g data-anim="fade" data-dur="1" data-delay=".4"><g data-arw="238,118,292,118,equi,4"></g></g><text class="tex" x="265.0" y="100.0" data-mix="가열" data-size="19" data-anchor="middle" fill="#E08A2C"></text><rect x="310" y="10" width="200" height="215" rx="10" fill="#B5562A" fill-opacity="0.38" stroke="#7E8B98" stroke-width="3"/><g data-atom="394.1,136.9,12,O,-"></g><g data-atom="394.1,107.1,12,O,-"></g><g data-atom="400.4,122.0,12,N,-"></g><g data-atom="425.9,107.1,12,O,-"></g><g data-atom="425.9,136.9,12,O,-"></g><g data-atom="419.6,122.0,12,N,-"></g><g data-atom="333.1,48.7,12,O,-"></g><g data-atom="362.9,48.7,12,O,-"></g><g data-atom="348.0,55.0,12,N,-"></g><g data-atom="395.1,48.7,12,O,-"></g><g data-atom="424.9,48.7,12,O,-"></g><g data-atom="410.0,55.0,12,N,-"></g><g data-atom="457.1,48.7,12,O,-"></g><g data-atom="486.9,48.7,12,O,-"></g><g data-atom="472.0,55.0,12,N,-"></g><g data-atom="333.1,185.7,12,O,-"></g><g data-atom="362.9,185.7,12,O,-"></g><g data-atom="348.0,192.0,12,N,-"></g><g data-atom="395.1,185.7,12,O,-"></g><g data-atom="424.9,185.7,12,O,-"></g><g data-atom="410.0,192.0,12,N,-"></g><g data-atom="457.1,185.7,12,O,-"></g><g data-atom="486.9,185.7,12,O,-"></g><g data-atom="472.0,192.0,12,N,-"></g><text class="tex" x="410.0" y="255.0" data-mix="온도가 높을 때" data-size="20" data-anchor="middle" fill="#16233D"></text><g data-atom="190,282,12,N,-"></g><text class="tex" x="208.0" y="289.0" data-mix="N" data-size="19" data-anchor="start" fill="#16233D"></text><g data-atom="250,282,12,O,-"></g><text class="tex" x="268.0" y="289.0" data-mix="O" data-size="19" data-anchor="start" fill="#16233D"></text></svg></div>
+    <div class="col stack">
+      <p class="f21 step" data-g="w1">자료: 온도가 높을수록 $\ce{NO2}$의 농도 증가 → 정반응 우세 → 정반응은 <b>흡열 반응</b></p>
+      <p class="f21 step" data-g="w2">$K=\dfrac{[\ce{NO2}]^2}{[\ce{N2O4}]}$ — 분자가 커지고 분모가 작아진다.</p>
+      <div class="answer step" style="text-align:left"><b>예시 글</b> 평형 상수는 커진다. 온도가 높을수록 $\ce{NO2}$의 농도가 증가한다는 것은 온도를 낮추는 흡열 반응인 정반응이 우세하게 진행된다는 뜻이다. 따라서 새 평형에서 $[\ce{NO2}]$는 커지고 $[\ce{N2O4}]$는 작아져 $K$가 커진다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 프로젝트 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 프로젝트" data-title="프로젝트: 친환경 연료 생산의 수득률">
+  <h2><span class="tag">프로젝트</span>친환경 연료 생산의 수득률을 높여 보자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 430px">
+      <p class="f21">한국을 포함한 많은 나라가 2050년까지 탄소 배출량을 0으로 만들겠다는 <b>탄소 중립</b>을 선언했다.</p>
+      <p class="f21 mt8">새 에너지원으로 주목받는 <b>그린 메탄올</b>은 바이오매스에서 얻은 이산화 탄소와, 재생 에너지 전력으로 물을 전기 분해 해 얻은 수소를 반응시켜 만든다. 부산물은 물뿐이다.</p>
+      <p class="f21 mt8">열효율이 높고 저장이 쉬워 선박 연료로 떠오르고 있다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 660 395" style="width:580px" aria-label="재생 에너지로 물을 전기 분해 해 얻은 수소와 바이오매스에서 얻은 이산화 탄소를 합성하여 그린 메탄올과 물을 만든다"><rect x="10" y="10" width="250" height="150" rx="12" fill="#F3F8EE" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="135.0" y="40.0" data-mix="재생 에너지로 물을||전기 분해 → 수소" data-size="19" data-anchor="middle" fill="#16233D"></text><g data-anim="move" data-from="-30,0" data-dur="1.2" data-delay=".3" data-ease="soft"><line x1="69" y1="125" x2="91" y2="125" stroke="#9AA5B1" stroke-width="5"/><g data-atom="69,125,11,H,-"></g><g data-atom="91,125,11,H,-"></g><line x1="129" y1="125" x2="151" y2="125" stroke="#9AA5B1" stroke-width="5"/><g data-atom="129,125,11,H,-"></g><g data-atom="151,125,11,H,-"></g><line x1="189" y1="125" x2="211" y2="125" stroke="#9AA5B1" stroke-width="5"/><g data-atom="189,125,11,H,-"></g><g data-atom="211,125,11,H,-"></g></g><rect x="10" y="190" width="250" height="150" rx="12" fill="#F3F8EE" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="135.0" y="220.0" data-mix="바이오매스에서||이산화 탄소" data-size="19" data-anchor="middle" fill="#16233D"></text><g data-anim="move" data-from="-30,0" data-dur="1.2" data-delay=".5" data-ease="soft"><line x1="106.5" y1="298" x2="163.5" y2="298" stroke="#9AA5B1" stroke-width="4"/><line x1="106.5" y1="306" x2="163.5" y2="306" stroke="#9AA5B1" stroke-width="4"/><g data-atom="106.5,302,15,O,-"></g><g data-atom="135,302,15,C,-"></g><g data-atom="163.5,302,15,O,-"></g></g><g data-arw="268,85,330,160,field,4"></g><g data-arw="268,265,330,190,field,4"></g><rect x="336" y="130" width="90" height="60" rx="12" fill="#FFF6E0" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="381.0" y="167.0" data-mix="합성" data-size="20" data-anchor="middle" fill="#16233D"></text><g data-arw="430,160,470,160,field,4"></g><rect x="476" y="30" width="170" height="150" rx="12" fill="#EEF3F8" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="561.0" y="58.0" data-mix="그린 메탄올" data-size="19" data-anchor="middle" fill="#16233D" data-weight="700"></text><line x1="543.0" y1="110.0" x2="516.0" y2="110.0" stroke="#9AA5B1" stroke-width="5"/><line x1="543.0" y1="110.0" x2="537.0" y2="80.0" stroke="#9AA5B1" stroke-width="5"/><line x1="543.0" y1="110.0" x2="537.0" y2="140.0" stroke="#9AA5B1" stroke-width="5"/><line x1="543.0" y1="110.0" x2="579.0" y2="110.0" stroke="#9AA5B1" stroke-width="5"/><line x1="579.0" y1="110.0" x2="591.0" y2="83.0" stroke="#9AA5B1" stroke-width="5"/><g data-atom="516.0,110.0,11,H,-"></g><g data-atom="537.0,80.0,11,H,-"></g><g data-atom="537.0,140.0,11,H,-"></g><g data-atom="591.0,83.0,11,H,-"></g><g data-atom="543,110,15,C,-"></g><g data-atom="579,110,15,O,-"></g><rect x="476" y="200" width="170" height="120" rx="12" fill="#EEF3F8" stroke="#C9D3DD" stroke-width="2"/><text class="tex" x="561.0" y="230.0" data-mix="물(부산물)" data-size="19" data-anchor="middle" fill="#16233D"></text><line x1="561.0" y1="262.0" x2="538.9" y2="279.1" stroke="#9AA5B1" stroke-width="5"/><line x1="561.0" y1="262.0" x2="583.1" y2="279.1" stroke="#9AA5B1" stroke-width="5"/><g data-atom="538.9,279.1,11,H,-"></g><g data-atom="583.1,279.1,11,H,-"></g><g data-atom="561,262,15,O,-"></g><text class="tex" x="135.0" y="152.0" data-mix="$\ce{H2}$" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="135.0" y="335.0" data-mix="$\ce{CO2}$" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="561.0" y="172.0" data-mix="$\ce{CH3OH}$" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="561.0" y="314.0" data-mix="$\ce{H2O}$" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-arw="430,180,470,240,field,4"></g><g data-atom="40,375,11,H,-"></g><text class="tex" x="56.0" y="382.0" data-mix="H" data-size="19" data-anchor="start" fill="#16233D"></text><g data-atom="120,375,11,C,-"></g><text class="tex" x="136.0" y="382.0" data-mix="C" data-size="19" data-anchor="start" fill="#16233D"></text><g data-atom="200,375,11,O,-"></g><text class="tex" x="216.0" y="382.0" data-mix="O" data-size="19" data-anchor="start" fill="#16233D"></text></svg></div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> 메탄올도 태우면 이산화 탄소가 나오는데, 왜 그린 메탄올을 '친환경' 연료라고 할까?</p>
+  <div class="answer step" style="text-align:left">원료 $\ce{CO2}$를 식물(바이오매스)이 대기에서 흡수한 탄소에서 얻고 수소도 재생 에너지로 만들어, 태워도 대기 중 $\ce{CO2}$가 새로 늘지 않는다.</div>
+</section>
+
+<!-- ════════ 23. 프로젝트 ❶ ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 프로젝트" data-title="프로젝트 ❶ 반응과 생산 조건">
+  <h2><span class="tag">프로젝트</span>❶ 그린 메탄올 합성 반응과 생산 조건 조사하기</h2>
+  <p class="f21" data-q><b>1.</b> 이산화 탄소($\ce{CO2}$)와 수소($\ce{H2}$)로 그린 메탄올($\ce{CH3OH}$)을 합성하는 화학 반응식을 써 보자.</p>
+  <div class="answer step">$\ce{CO2(g) + 3H2(g) &lt;=&gt; CH3OH(g) + H2O(g)}$ <span class="small">(정반응 발열)</span></div>
+  <p class="small c-muted tc step">원자 수 C 1 = 1, H 6 = 6, O 2 = 2 · 기체 분자 수 4 → 2</p>
+  <p class="f21 mt8" data-q><b>2.</b> 그린 메탄올의 수득률을 높이려면 어떤 조건이 필요한지 조사해 보자.</p>
+  <table class="tight cm39-cond">
+    <tr><th>조건</th><th>평형 이동으로 본 까닭</th><th>실제 공정에서 고려할 점 (조사 예)</th></tr>
+    <tr class="step" data-g="c1"><td>높은 압력</td><td class="l">기체 분자 수가 감소하는 정반응 우세</td><td class="l">약 50–100 기압 — 튼튼한 설비·압축 비용</td></tr>
+    <tr class="step" data-g="c2"><td>낮은 온도</td><td class="l">발열 반응인 정반응 우세</td><td class="l">너무 낮으면 반응이 느림 → 약 200–300 °C + 촉매</td></tr>
+    <tr class="step" data-g="c3"><td>생성물 제거</td><td class="l">메탄올·물을 냉각해 빼내면 정반응 우세</td><td class="l">남은 기체는 다시 반응기로 돌려보냄</td></tr>
+  </table>
+  <p class="small c-muted mt8 step">촉매는 평형에 빨리 도달하게 할 뿐 평형을 이동시키지 않는다(수득률 자체는 그대로).</p>
+</section>
+
+<!-- ════════ 24. 프로젝트 ❷ ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 프로젝트" data-title="프로젝트 ❷ 전문가 토의">
+  <h2><span class="tag">프로젝트</span>❷ 각 분야의 전문가가 되어 토의하기</h2>
+  <p class="f21">그린 메탄올 생산 공장 설비가 갖춰야 할 조건과 주변 환경을 위한 고려 사항을 토의해 보자. <span class="small c-muted">과정·기능 길잡이: 담당한 전문가의 역할을 조사한 후 토의한다.</span></p>
+  <div class="cm39-cards mt8">
+    <div class="card"><h3>기계 설비원</h3><p class="cm39-say">"100 기압 이상의 압력을 견딜 설비를 마련해야 하고, 온도 조절이 동시에 이루어지도록 해야 합니다."</p><p class="step" data-g="x1"><b>덧붙일 점</b> 고압 반응기·압축기, 열교환기로 반응열을 빼내 온도를 일정하게, 누출 감지 장치</p></div>
+    <div class="card"><h3>화학 연구원</h3><p class="cm39-say">"이 반응은 기체 분자 수가 감소하고 반응 과정에서 많은 열이 발생합니다."</p><p class="step" data-g="x1"><b>덧붙일 점</b> 높은 압력·적당히 낮은 온도·촉매, 생성물을 냉각해 분리, 남은 기체 재순환</p></div>
+    <div class="card"><h3>환경 연구원</h3><p class="cm39-say">"이 반응에서 발생한 열로 인한 인근 바다의 수온 변화가 해안의 생태계에 미칠 영향이 염려스럽습니다."</p><p class="step" data-g="x1"><b>덧붙일 점</b> 반응열을 회수해 공장 난방·발전에 다시 쓰기, 냉각수 온도 기준 지키기</p></div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> 세 사람의 의견을 함께 만족하려면? <span class="step">→ <span class="ans">반응열을 버리지 않고 회수해 쓰면 온도 조절과 바다 수온 문제를 함께 줄일 수 있다.</span></span></p>
+</section>
+
+<!-- ════════ 25. 프로젝트 ❸ 사업 계획서 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 프로젝트" data-title="프로젝트 ❸ 사업 계획서">
+  <h2><span class="tag">프로젝트</span>❸ 그린 메탄올 생산 공장 사업 계획서 만들기</h2>
+  <p class="f21"><b>1.</b> 모둠별로 토의 내용을 활용해 공장을 설립하기 위한 사업 계획서를 만들고 발표해 보자. <span class="small c-muted">가치·태도 길잡이: 다른 모둠의 발표를 경청한다.</span></p>
+  <table class="tight cm39-plan cm39-big mt8">
+    <tr><th>항목</th><th>예시 (덱이 만든 예)</th></tr>
+    <tr><td>사업 목표</td><td class="l"><span class="step" data-g="p1">탄소 중립에 기여하는 선박용 그린 메탄올 생산</span></td></tr>
+    <tr><td>원료</td><td class="l"><span class="step" data-g="p1">바이오매스에서 얻은 $\ce{CO2}$, 태양광·풍력 전기로 물을 전기 분해 해 얻은 $\ce{H2}$</span></td></tr>
+    <tr><td>반응 조건</td><td class="l"><span class="step" data-g="p2">높은 압력, 적당히 낮은 온도와 촉매, 생성물 냉각·분리, 남은 기체 재순환</span></td></tr>
+    <tr><td>설비</td><td class="l"><span class="step" data-g="p2">고압 반응기, 압축기, 열교환기, 냉각기, 저장 탱크, 안전 감시 장치</span></td></tr>
+    <tr><td>환경 대책</td><td class="l"><span class="step" data-g="p3">반응열 회수·재사용, 냉각수 온도 관리, 해안 생태계 정기 조사</span></td></tr>
+    <tr><td>기대 효과</td><td class="l"><span class="step" data-g="p3">선박 연료의 탄소 배출 감소, 지역 일자리, 재생 에너지 저장 수단</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">발표할 때: 반응식 · 고른 조건과 평형 이동의 까닭 · 전문가 의견을 어떻게 반영했는지를 꼭 넣는다.</p>
+</section>
+
+<!-- ════════ 26. 프로젝트 평가 · 포트폴리오 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 프로젝트" data-title="프로젝트 평가 · 포트폴리오">
+  <h2><span class="tag">포트폴리오</span>활동 평가하고 포트폴리오 정리하기</h2>
+  <p class="f21"><b>2.</b> 우리 모둠의 활동을 평가해 보자.</p>
+  <table class="tight cm39-eval cm39-big">
+    <tr><th>내용</th><th>상</th><th>중</th><th>하</th></tr>
+    <tr><td class="l">그린 메탄올의 수득률을 높이기 위해 필요한 조건을 잘 조사했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">담당한 전문가의 역할을 잘 이해하고 역할에 맞게 토의했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">모든 모둠원이 사업 계획서 만들기 활동에 적극적으로 참여했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+  </table>
+  <div class="card mt16">
+    <p class="f21"><span class="tag">포트폴리오</span> 이 단원의 활동 결과 — 108쪽 화학과 나의 미래 · 126쪽 생활 속 과학 이야기 · 134–135쪽 프로젝트</p>
+    <p class="f21 mt8">❶ 활동 결과를 모아 「Ⅲ. 화학 평형 포트폴리오」로 정리한다.</p>
+    <p class="f21">❷ 디지털 공유 플랫폼에 올려 친구들과 공유하고, 댓글·'좋아요'로 소통한다.</p>
+    <p class="f21">❸ 포트폴리오를 인쇄해 책자로 만든다.</p>
+  </div>
+</section>
+
+<!-- ════════ 27. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 평형 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅲ. 화학 평형 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 가역 반응과 동적 평형, 평형 상수와 반응 지수, 농도·압력·온도에 따른 화학 평형 이동을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 자료로 평형 상수를 구하고 평형 이동을 예측하며, 온도에 따른 평형 이동 실험을 설계할 수 있다.</button>
+    <button class="chk">[가치·태도] 화학 평형 이동이 생명 현상과 산업(친환경 연료 생산)에 쓰임을 알고, 모둠 활동에 협력한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 평형에 도달한 용기에 반응물을 더 넣으면 평형 상수($K$)는 커질까? <span class="step">→ <span class="ans">변하지 않는다. 정반응이 우세하게 진행해 같은 $K$에 다시 도달한다.</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $Q&gt;K$일 때 반응은 어느 쪽으로 진행할까? <span class="step">→ <span class="ans">역반응 쪽 ($Q$가 작아져 $K$와 같아질 때까지)</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 정반응이 발열 반응일 때 온도를 높이면 $K$는? <span class="step">→ <span class="ans">작아진다 (흡열인 역반응 쪽으로 이동)</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 단원</b> Ⅳ. 역동적인 화학 반응 — 순수한 물은 전기가 거의 통하지 않는데, 정말 물 분자만 있을까?</div>
+</section>
