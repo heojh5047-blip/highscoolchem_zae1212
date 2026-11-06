@@ -1,0 +1,51 @@
+/* 2-1-1 화학 결합의 전기적 성질 — 덱 전용 (모두 .cm211- 접두어) */
+.cover h1.cm211-h1{font-size:104px}
+.cm211-unit p{margin-top:6px}
+.cm211-opt{text-align:center}
+.cm211-opt h3{margin-bottom:6px}
+
+/* 4열 단계 카드 */
+.cm211-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cm211-s4 .stage p{font-size:19px;line-height:1.55}
+
+/* 표 */
+table.cm211-var th{width:130px}
+table.cm211-res{width:100%}
+table.cm211-res td{text-align:center}
+table.cm211-res .blank{min-width:60px}
+table.cm211-half{width:100%}
+table.cm211-half th{width:90px}
+table.cm211-half td{text-align:center}
+table.cm211-half td.l{text-align:left}
+table.cm211-cmp{width:100%}
+table.cm211-cmp th:first-child{width:200px}
+table.cm211-cmp td{text-align:center}
+
+/* ○× 점검 */
+ol.cm211-ox li{margin-top:22px}
+ol.cm211-ox li:first-child{margin-top:0}
+
+/* 결론 답 */
+p.cm211-a{color:#1B5E3F;margin-top:4px}
+.answer.cm211-left{text-align:left}
+
+/* 개념 지도 */
+.cm211-map{display:flex;align-items:center;gap:14px}
+.cm211-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.6}
+.cm211-node.cm211-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm211-node.cm211-dim{flex:0 0 280px;border-style:dashed;color:var(--muted)}
+.cm211-arr{font-size:28px;color:var(--muted)}
+
+/* 실험실 */
+.cm211-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.cm211-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.cm211-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm211-seg .btn.cm211-act{background:var(--field);color:#fff;border-color:var(--field)}
+.cm211-seg .small{margin:0 2px 0 0}
+table.cm211-read{width:100%}
+table.cm211-read th{font-size:19px;padding:5px 10px;text-align:left}
+table.cm211-read td{font-size:21px;width:170px;padding:5px 10px;text-align:center}
+output.kind.cm211-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.cm211-log{width:100%}
+table.cm211-log th,table.cm211-log td{font-size:19px;padding:3px 6px;text-align:center}
+.cm211-line{display:inline-block;width:320px;border-bottom:2px solid var(--line);margin:0 6px;vertical-align:-4px;height:1.2em}

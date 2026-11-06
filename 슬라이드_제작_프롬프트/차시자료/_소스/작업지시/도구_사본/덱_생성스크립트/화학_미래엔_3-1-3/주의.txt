@@ -1,0 +1,1 @@
+이 덱은 첫 생성 뒤 slides.html을 직접 고쳤다 — slides.html이 원본. gen.py를 다시 돌리면 수정이 사라진다.

@@ -1,0 +1,9 @@
+{"findings":[
+{"slide":31,"severity":"high","rule":"D8","problem":"서술형 판서 공간이 고정 높이 줄을 넘어 예시 답안 상자와 겹침","fix":"줄 높이 180, 판서 공간 최소 높이 90"},
+{"slide":22,"severity":"medium","rule":"D8","problem":"HCl의 δ− 라벨이 분자 이름과 겹치고, Na+ 이온 안 라벨이 13px","fix":"모형을 12px 내리고 δ−를 Cl 오른쪽으로, Na+ 라벨은 이온 왼쪽 바깥(21px)"},
+{"slide":13,"severity":"medium","rule":"배치","problem":"원자 버튼 9개가 줄을 넘어 Cl만 다음 줄로 떨어짐","fix":"'원자 A/B' 글을 위 줄로 올리고 버튼 여백을 줄여 한 줄에"},
+{"slide":12,"severity":"medium","rule":"3.2","problem":"H 원자 라벨 15.9px(그림 축소)","fix":"12·15·28·32번 그림을 1:1로 넓힘"},
+{"slide":21,"severity":"low","rule":"배치","problem":"분자 이름이 모형에서 너무 멀리 떨어짐","fix":"이름을 25px 올리고 viewBox 높이를 줄임"},
+{"slide":34,"severity":"low","rule":"T5","problem":"제목의 「」 주변 간격이 벌어져 보임","fix":"제목을 '화학 결합과 결합의 극성 점검하기'로"},
+{"slide":0,"severity":"low","rule":"6.4","problem":"data-anim 12곳으로 권장(15–25)보다 적음","fix":"줄다리기 매듭 흔들림, 전자 구름 이동 3곳, 결합 구분 막대 자람 2곳, 05 전자쌍 이동 추가 → 19곳"}
+],"summary":"전체 캡처를 sheet 모음으로 두 번 확인. 자동 점검 0, 콘솔 0, motion 0, ask 0. 실험실 두 개는 PRE 시험으로 조작마다 출력이 바뀌고 표가 쌓임을 확인."}

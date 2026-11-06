@@ -1,0 +1,483 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 역동적인 화학 반응" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 역동적인 화학 반응 › 2. 중화 반응 › 02</div>
+    <h1 class="cm422-h1">중화 <span class="acc">적정</span></h1>
+    <p class="sub">농도를 모르는 산의 농도를 어떻게 알아낼까?</p>
+    <p class="meta">고등학교 화학 (미래엔) 158–162쪽</p>
+  </div>
+  @@cover@@
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 중화 적정" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12화학04-04]</span>중화 적정 실험을 계획하고 수행하여 미지 시료의 농도를 찾을 수 있다.</div>
+  <ol class="goals mt12">
+    <li>중화 적정 실험을 <b>계획</b>하고 <b>수행</b>할 수 있다.</li>
+    <li>아세트산의 함량을 구하는 방법을 통해 중화 적정의 <b>유용성</b>을 표현할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">중화 적정과 중화점</div><div class="farr">→</div>
+    <div class="fnode">정밀한 부피 측정 기구</div><div class="farr">→</div>
+    <div class="fnode hl">실험 설계</div><div class="farr">→</div>
+    <div class="fnode hl">식초 적정</div><div class="farr">→</div>
+    <div class="fnode">몰농도·함량(%)</div>
+  </div>
+  <p class="small mt16">[필수 탐구] 식초 속 아세트산 함량 구하는 실험하기 — 17번 실험실과 11–22번 탐구 슬라이드</p>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 중화 적정 · 도입" data-title="생각 열기: 신맛 나는 음료">
+  <h2><span class="tag">생각 열기</span>신맛 나는 음료 속 산의 양</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">@@juice@@</div>
+    <div class="col">
+      <p class="f22">오렌지주스, 레몬주스, 자몽주스는 모두 신맛이 난다.</p>
+      <p class="f22 mt8"><b>Q</b> 이들 음료 속에 들어 있는 수소 이온의 농도는 어떻게 알 수 있을까?</p>
+      <p class="f21 step mt12">→ pH 측정기로 pH를 재면 $[\ce{H+}]$를 알 수 있다. (02 pH)</p>
+      <p class="f21 step mt8">→ 음료 속 <b>산 전체의 양(mol)</b>을 알려면, 농도를 아는 염기로 <b>완전히 중화</b>할 때까지 넣어 보면 된다.</p>
+      <div class="note puzzle step mt12">오늘 배울 방법: <b>중화 적정</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 연결 ════════ -->
+<section class="slide" data-sec="02 중화 적정 · 도입" data-title="연결: 중화 반응의 양적 관계">
+  <h2><span class="tag alt">연결</span>지난 시간의 양적 관계로 농도 구하기</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">산과 염기가 <b>완전히 중화</b>하면 $\ce{H+}$의 양(mol) = $\ce{OH-}$의 양(mol)</p>
+      <div class="formula mt8">$nMV=n'M'V'$<div class="unit">가수 $n$, $n'$ · 몰농도 $M$, $M'$ · 부피 $V$, $V'$</div></div>
+      <p class="f21 mt8"><b>표준 용액</b>: 농도를 정확하게 아는 용액 (01 몰농도 탐구)</p>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <div class="card q">
+        <p class="f21"><b>Q</b> 산의 $n$, $V$와 염기 표준 용액의 $n'$, $M'$, $V'$를 알면 무엇을 구할 수 있을까?</p>
+        <p class="f22 step mt8">→ 산의 몰농도 $M=\dfrac{n'M'V'}{nV}$</p>
+        <p class="f21 step mt8">→ 그러려면 완전히 중화할 때까지 넣은 염기의 부피 $V'$를 정확히 재야 한다.</p>
+      </div>
+      <p class="f21 step mt12"><b>Q</b> 언제 완전히 중화되었는지 어떻게 알 수 있을까?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 중화 적정 ════════ -->
+<section class="slide" data-sec="02 · 중화 적정" data-title="중화 적정">
+  <h2><span class="no">1</span>중화 적정</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22"><mark>중화 반응의 양적 관계를 이용하여 농도를 모르는 산이나 염기 수용액의 농도를 알아내는 방법</mark>을 <b>중화 적정</b>이라고 한다.</p>
+      <div class="cm422-steps mt12">
+        <div class="fnode">① 농도를 모르는 산을 <b>일정 부피</b> $V$만큼 덜어 낸다.</div>
+        <div class="fnode step">② 농도를 아는 염기 <b>표준 용액</b>($M'$)을 조금씩 넣으며 완전히 중화하는 데 필요한 부피 $V'$를 잰다.</div>
+        <div class="fnode hl step">③ $nMV=n'M'V'$에서 산의 몰농도 $M$을 구한다.</div>
+      </div>
+      <p class="small mt8">염기의 농도를 알아낼 때는 산 표준 용액을 쓴다.</p>
+    </div>
+    <div class="col" style="flex:0 0 320px">@@setup_small@@</div>
+  </div>
+</section>
+
+<!-- ════════ 6. 중화점과 지시약 ════════ -->
+<section class="slide" data-sec="02 · 중화 적정" data-title="중화점과 지시약">
+  <h2><span class="no">1</span>중화점과 지시약</h2>
+  <p class="f22"><mark>반응하는 수소 이온의 양(mol)과 수산화 이온의 양(mol)이 같아 산과 염기가 완전히 중화하는 지점</mark>을 <b>중화점</b>이라고 한다. 액성에 따라 색이 변하는 <b>지시약</b>으로 중화점을 판단한다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 520px">
+      <p class="f21 c-muted" style="text-align:center">페놀프탈레인 용액을 넣었을 때</p>
+      @@php3@@
+    </div>
+    <div class="col">
+      <p class="f21 step">→ 산에 페놀프탈레인 용액을 넣고 염기를 떨어뜨리면, 중화점을 지나는 순간 <b>무색 → 붉은색</b>으로 변한다.</p>
+      <div class="note q mt12">
+        <p class="f21"><b>Q</b> 중화점의 용액은 항상 중성일까?</p>
+        <p class="f21 step mt8">→ <span class="ans">아니다.</span> 중화점은 '양(mol)이 같아진 지점'이다. 염산과 $\ce{NaOH}$는 중화점에서 중성이지만, 아세트산과 $\ce{NaOH}$는 약한 염기성이다.</p>
+        <p class="small step mt8">그래서 식초 적정에는 염기성에서 색이 변하는 페놀프탈레인을 쓴다. (까닭은 「화학 반응의 세계」에서)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 정밀한 부피 측정 기구 ════════ -->
+<section class="slide" data-sec="02 · 중화 적정" data-title="정밀한 부피 측정 기구">
+  <h2><span class="no">1</span>부피를 정밀하게 재는 기구</h2>
+  <p class="f21">중화 적정에서는 용액의 부피를 정밀하게 측정할 수 있는 <b>피펫, 부피 플라스크, 뷰렛</b>을 쓴다.</p>
+  <div class="stages mt8">
+    <div class="stage"><h3>피펫</h3>@@tool_pip@@<p>피펫 필러로 빨아올려 <b>표시선</b>에 맞춘 뒤, <b>일정 부피</b>의 용액을 정확히 옮긴다.</p></div>
+    <div class="stage"><h3>부피 플라스크</h3>@@tool_vf@@<p>표시선까지 채워 <b>일정 부피</b>의 용액을 정확히 만든다. (표준 용액, 희석)</p></div>
+    <div class="stage"><h3>뷰렛</h3>@@tool_bu@@<p><b>위가 0 눈금</b>이다. 꼭지로 조절하며 떨어뜨린 용액의 부피를 <b>연속으로</b> 잰다.</p></div>
+  </div>
+  <p class="small step mt8">눈금은 눈높이를 액면에 맞추고 <b>메니스커스의 아랫부분</b>을 읽는다.</p>
+</section>
+
+<!-- ════════ 8. 중화점 찾기 (그림 IV-9) ════════ -->
+<section class="slide" data-sec="02 · 중화 적정" data-title="중화점 찾기">
+  <h2><span class="no">1</span>수산화 나트륨 표준 용액으로 염산의 중화점 찾기</h2>
+  <div class="stages">
+    <div class="stage"><h3>① 지시약 넣기</h3>@@titr0@@<p>농도를 모르는 염산을 삼각 플라스크에 넣고 페놀프탈레인 용액을 1–2 방울 떨어뜨린다. <b>무색</b></p></div>
+    <div class="stage step"><h3>② 표준 용액 떨어뜨리기</h3>@@titr1@@<p>떨어진 자리가 붉어졌다가 흔들면 색이 없어진다. $\ce{OH-}$은 바로 $\ce{H+}$과 반응해 물이 된다.</p></div>
+    <div class="stage step"><h3>③ 중화점</h3>@@titr2@@<p>혼합 용액 <b>전체의 색이 붉은색으로 변하는 순간</b>을 찾는다. $\ce{H+}$이 모두 반응했다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 9. 뷰렛 눈금 읽기 ════════ -->
+<section class="slide" data-sec="02 · 중화 적정" data-title="뷰렛 눈금 읽기">
+  <h2><span class="no">1</span>뷰렛 눈금 읽기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">@@read2@@</div>
+    <div class="col">
+      <p class="f22">뷰렛은 위가 0이라 용액을 넣을수록 <b>눈금이 커진다</b>. 메니스커스의 아랫부분을 소수 둘째 자리까지 읽는다.</p>
+      <p class="f22 mt12"><b>Q</b> 떨어뜨린 표준 용액의 부피는?</p>
+      <div class="answer step">$20.55-0.50=20.05\ \text{mL}$</div>
+      <p class="f21 step mt8">→ 넣은 부피 = 나중 눈금 − 처음 눈금. 처음 눈금을 0에 꼭 맞출 필요는 없다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 개념 점검 ════════ -->
+<section class="slide" data-sec="02 · 개념 점검" data-title="개념 점검: 염산의 몰농도">
+  <h2><span class="tag q">개념 점검</span>중화 적정으로 몰농도 구하기</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f22">농도를 모르는 염산 20.0 mL를 0.1 M $\ce{NaOH}$ 수용액으로 중화 적정 하였더니 중화점까지 25.0 mL가 들었다. 염산의 몰농도는 몇 M인가?</p>
+      <p class="f21 step mt12">주어진 것: $n=1$, $V=20.0\ \text{mL}$ / $n'=1$, $M'=0.1\ \text{M}$, $V'=25.0\ \text{mL}$</p>
+      <p class="f21 step mt8">$nMV=n'M'V'$: $1\times M\times20.0=1\times0.1\times25.0$</p>
+      <p class="small step mt8">양변의 부피 단위가 같으므로 mL 그대로 계산해도 된다.</p>
+      <div class="answer step">$M=0.125\ \text{M}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 11. 탐구 목표 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 식초 속 아세트산 함량 (목표)">
+  <h2><span class="tag">탐구</span>식초 속 아세트산 함량 구하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[탐구]</span>식초 속 아세트산 함량 구하는 실험하기</div>
+  <p class="f21 mt8"><b>목표</b> 중화 적정으로 식초 속 아세트산의 농도를 구하는 실험을 계획하고 수행하여 식초 속 아세트산의 함량을 구할 수 있다. <span class="small">(탐구 설계 및 수행 · 탐구 능력 | 문제 해결 능력 | 의사 결정 능력 · 실험 영상)</span></p>
+  <div class="row mt8">
+    <div class="col">
+      <h3>준비물</h3>
+      <p class="f21">0.1 M 수산화 나트륨 표준 용액, 식초, 증류수, 페놀프탈레인 용액, 삼각 플라스크, 눈금실린더, 비커, 피펫, 피펫 필러, 유리 막대, 깔때기, 뷰렛, 뷰렛 집게, 스탠드, 흰 종이</p>
+      <table class="tight cm422-var mt8">
+        <tr><th>조작 변인</th><td class="l">식초의 종류</td></tr>
+        <tr><th>종속 변인</th><td class="l">중화점까지 넣은 $\ce{NaOH}$ 수용액의 부피</td></tr>
+        <tr><th>통제 변인</th><td class="l">표준 용액의 농도, 묽힌 식초의 부피, 지시약</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 440px">
+      <div class="note q"><b>안전</b>
+        <p class="f21">· 실험복, 보안경, 실험용 고무장갑, 마스크를 반드시 착용한다.</p>
+        <p class="f21">· 수산화 나트륨 수용액이 피부나 눈에 닿지 않게 한다. 닿으면 바로 많은 물로 씻는다.</p>
+        <p class="f21">· 실험 후 남은 수산화 나트륨 수용액은 <b>묽은 산으로 중화하여 무기계 폐수통</b>에 버린다. 적정한 혼합 용액도 폐수통에 모은다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 탐구 준비 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 준비">
+  <h2><span class="tag">탐구</span>준비 — 반응식과 양적 관계</h2>
+  <p class="f22"><b>Q</b> 아세트산($\ce{CH3COOH}$)과 수산화 나트륨($\ce{NaOH}$) 수용액의 중화 반응식을 완성해 보자.</p>
+  <div class="formula mt8">$\ce{CH3COOH(aq) + NaOH(aq) ->}$ <span class="blank cm422-wide"><span class="step">$\ce{CH3COONa(aq) + H2O(l)}$</span></span></div>
+  <p class="f22 mt16" data-q><b>Q</b> 아세트산 0.1 몰을 완전히 중화하는 데 필요한 수산화 나트륨의 양은 <span class="blank cm422-b"><span class="step">0.1</span></span> 몰이다.</p>
+  <div class="card mt16 step">
+    <p class="f21">아세트산 1 분자는 $\ce{H+}$ 1개를 내놓으며 반응한다 → 아세트산의 <b>가수 1</b>, 수산화 나트륨도 가수 1</p>
+    <p class="f21 mt8">→ $nMV=n'M'V'$에서 $n=n'=1$: &nbsp; $M_\text{아세트산}\times V_\text{식초}=0.1\ \text{M}\times V_{\ce{NaOH}}$</p>
+  </div>
+</section>
+
+<!-- ════════ 13. 탐구 과정 1 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 과정 1 장치 꾸미기">
+  <h2><span class="tag">탐구</span>과정 1 — 중화 적정 장치 꾸미기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 340px">@@setup@@</div>
+    <div class="col">
+      <p class="f21">표준 용액은 0.1 M 수산화 나트륨 수용액, 지시약은 페놀프탈레인 용액이다. 장치를 꾸미고 기구의 사용 방법과 넣을 용액을 정리하자.</p>
+      <div class="card mt8">
+        <p class="f21" data-q>· 뷰렛은 <span class="blank cm422-wide"><span class="step">수산화 나트륨 표준 용액</span></span>을 담아 조금씩 떨어뜨리는 데 사용한다.</p>
+        <p class="f21 mt4"><b>사용 방법</b></p>
+        <p class="f21 step">→ 표준 용액으로 헹군 뒤 채우고, 꼭지를 열어 끝부분의 공기를 뺀 다음 처음 눈금을 읽는다. 꼭지를 조절해 한 방울씩 떨어뜨린다.</p>
+      </div>
+      <div class="card mt8"><p class="f21" data-q>· 삼각 플라스크에는 <span class="blank cm422-b2"><span class="step">묽힌 식초 일정 부피</span></span>와 <span class="blank cm422-b2"><span class="step">페놀프탈레인 용액</span></span>을 넣는다.</p></div>
+      <div class="card mt8"><p class="f21" data-q>· 용액의 색 변화를 정확하게 관찰하기 위해 <span class="blank cm422-wide"><span class="step">삼각 플라스크 아래에 흰 종이를 깐다</span></span>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 탐구 과정 2–3 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 과정 2–3 실험 설계">
+  <h2><span class="tag">탐구</span>과정 2–3 — 실험 과정 설계하기</h2>
+  <p class="f21"><b>2</b> 과정 1을 바탕으로 모둠별로 실험 과정을 구체적으로 설계하여 발표하자. <span class="small">(공유 플랫폼으로 함께 자료를 만든다)</span></p>
+  <p class="f21 mt4"><b>Q</b> 모둠 친구들의 말은 옳을까?</p>
+  <div class="cm422-talk mt8">
+    <div class="card"><p class="f21 cm422-say">"뷰렛에 표준 용액을 가득 채우지 않아도 돼."</p>
+      <p class="f21 step mt8">→ <span class="ans">옳다.</span> 처음 눈금을 읽어 두면 나중 눈금과의 차로 부피를 구한다. (넣을 양보다는 넉넉히)</p></div>
+    <div class="card"><p class="f21 cm422-say">"뷰렛의 꼭지 아래쪽에도 용액을 채워야 해."</p>
+      <p class="f21 step mt8">→ <span class="ans">옳다.</span> 끝부분에 공기가 남으면 그 부피만큼 넣은 부피가 크게 측정된다.</p></div>
+    <div class="card"><p class="f21 cm422-say">"식초는 $\dfrac{1}{10}$로 묽혀 사용하는 것이 좋겠어."</p>
+      <p class="f21 step mt8">→ <span class="ans">옳다.</span> 식초(약 1 M) 20 mL를 그대로 적정하면 0.1 M $\ce{NaOH}$가 약 200 mL 필요해 50 mL 뷰렛을 여러 번 채워야 한다.</p></div>
+  </div>
+  <p class="f21 mt12"><b>3</b> 다른 모둠의 발표를 듣고 수정·보완해야 할 점을 토의해 <b>최종 실험 과정</b>을 정하자. → 다음 장</p>
+</section>
+
+<!-- ════════ 15. 실험 과정 ① ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 실험 과정 ①–③">
+  <h2><span class="tag">탐구</span>우리 모둠의 실험 과정 (예시) ①–③</h2>
+  <div class="stages">
+    <div class="stage"><h3>① 식초 묽히기</h3>@@st1@@<p>식초 10.0 mL를 피펫으로 100 mL 부피 플라스크에 넣고, 표시선까지 증류수를 채워 섞는다. ($\frac{1}{10}$로 묽힘)</p></div>
+    <div class="stage step"><h3>② 시료와 지시약</h3>@@st2@@<p>묽힌 식초 20.0 mL를 피펫으로 삼각 플라스크에 옮기고 페놀프탈레인 용액을 2–3 방울 넣는다.</p></div>
+    <div class="stage step"><h3>③ 뷰렛 준비</h3>@@st3@@<p>뷰렛을 표준 용액으로 헹군 뒤 채우고, 꼭지를 열어 끝의 공기를 뺀 다음 처음 눈금을 읽는다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 실험 과정 ② ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 실험 과정 ④–⑥">
+  <h2><span class="tag">탐구</span>우리 모둠의 실험 과정 (예시) ④–⑥</h2>
+  <div class="stages">
+    <div class="stage"><h3>④ 적정하기</h3>@@st4@@<p>삼각 플라스크를 흔들면서 표준 용액을 떨어뜨린다. 붉은색이 천천히 사라지면 한 방울씩 넣는다.</p></div>
+    <div class="stage step"><h3>⑤ 중화점</h3>@@st5@@<p>용액 전체가 연붉은색으로 변해 흔들어도 없어지지 않으면 멈추고 나중 눈금을 읽는다.</p></div>
+    <div class="stage step"><h3>⑥ 3회 반복</h3>@@st6@@<p>②–⑤를 3회 반복하고, 넣은 표준 용액 부피의 평균을 구한다.</p></div>
+  </div>
+  <div class="note q step mt8">붉은색이 진해질 때까지 넣으면 중화점을 지난 것이다 → 넣은 부피가 커져 농도가 크게 계산된다.</div>
+</section>
+
+<!-- ════════ 17. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="실험실: 식초 중화 적정">
+  <h2><span class="tag">실험실</span>식초 중화 적정 <span class="small c-muted">[필수 탐구] · 실험 영상 대신 예측·비교</span></h2>
+  <div class="lab" data-lab="cm422titr">
+    <div class="lab-ctl" style="flex-basis:470px">
+      <div class="cm422-seg"><span class="small">식초</span><button class="btn on" data-v="A">A (표시 6 %~7 %)</button><button class="btn" data-v="B">B (표시 없음)</button></div>
+      <div class="cm422-seg"><span class="small">희석</span><button class="btn" data-d="1">원액</button><button class="btn on" data-d="10">$\frac{1}{10}$로 묽힘</button><span class="small">시료</span><button class="btn" data-s="10">10.0 mL</button><button class="btn on" data-s="20">20.0 mL</button></div>
+      <div class="cm422-seg"><span class="small">넣기</span><button class="btn cm422-add" data-add="100">+5 mL</button><button class="btn cm422-add" data-add="20">+1 mL</button><button class="btn cm422-add" data-add="2">+0.1 mL</button><button class="btn cm422-add" data-add="1">한 방울</button></div>
+      <table class="readout cm422-read">
+        <tr><th>처음 눈금</th><td><output data-o="v0"></output></td></tr>
+        <tr><th>지금 눈금</th><td><output data-o="v1"></output></td></tr>
+        <tr class="hl"><th>넣은 부피</th><td><output data-o="dv"></output></td></tr>
+        <tr><th>플라스크 색</th><td><output data-o="col"></output></td></tr>
+      </table>
+      <div class="cm422-seg mt8"><button class="btn cm422-act" data-act="rec">기록</button><button class="btn cm422-act" data-act="next">다음 시료</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind cm422-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:300px">
+        <svg viewBox="0 0 600 300" width="600" height="300" aria-label="스탠드에 고정한 뷰렛, 삼각 플라스크, 뷰렛 눈금 확대 창"></svg>
+        <div class="ov" data-ov="z0" style="font-size:19px;font-weight:700"></div><div class="ov" data-ov="z1" style="font-size:19px;font-weight:700"></div><div class="ov" data-ov="z2" style="font-size:19px;font-weight:700"></div><div class="ov" data-ov="z3" style="font-size:19px;font-weight:700"></div>
+      </div>
+      <table class="tight cm422-log mt4"><thead><tr><th>실험</th><th>처음 눈금</th><th>나중 눈금</th><th>부피 (mL)</th><th>색</th></tr></thead><tbody data-o="log"></tbody></table>
+      <output class="kind cm422-calc" data-o="calc"></output>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 결과 1 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 1 측정값">
+  <h2><span class="tag">탐구</span>결과 1 — 측정값 정리</h2>
+  <p class="f21"><b>1</b> 모둠별로 설계한 실험 과정에 따라 실험을 3회 수행하고 측정값을 표에 써 보자. <span class="small">(예시 값)</span></p>
+  <table class="tight cm422-res mt8">
+    <tr><th>실험</th><th>뷰렛의 처음 눈금 (mL)</th><th>뷰렛의 나중 눈금 (mL)</th><th>중화 적정에 사용한 수산화 나트륨 수용액의 부피 (mL)</th></tr>
+    <tr><td>1</td><td>0.50</td><td>20.55</td><td><span class="blank"><span class="step" data-g="r1">20.05</span></span></td></tr>
+    <tr><td>2</td><td>0.20</td><td>20.10</td><td><span class="blank"><span class="step" data-g="r1">19.90</span></span></td></tr>
+    <tr><td>3</td><td>1.00</td><td>21.05</td><td><span class="blank"><span class="step" data-g="r1">20.05</span></span></td></tr>
+  </table>
+  <p class="f22 mt16"><b>Q</b> 중화 적정에 사용한 수산화 나트륨 수용액 부피의 평균값은 몇 mL인가?</p>
+  <div class="answer step">$\dfrac{20.05+19.90+20.05}{3}=20.00\ \text{mL}$</div>
+  <p class="small step mt8">실험실(17번)의 식초 A로 얻은 값과 비교해 보자.</p>
+</section>
+
+<!-- ════════ 19. 결과 2 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 2 몰농도">
+  <h2><span class="tag">탐구</span>결과 2 — 식초 속 아세트산의 몰농도</h2>
+  <p class="f21"><b>2</b> 중화 반응의 양적 관계를 이용하여 식초 속 아세트산의 몰농도를 구해 보자. <span class="small">(도움말: $nMV=n'M'V'$)</span></p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f22"><b>Q</b> 묽힌 식초 속 아세트산의 농도는 몇 M인가?</p>
+      <p class="f21 step mt8">주어진 것: 아세트산 $n=1$, $V=20.0\ \text{mL}$ / $\ce{NaOH}$ $n'=1$, $M'=0.1\ \text{M}$, $V'=20.00\ \text{mL}$</p>
+      <p class="f21 step mt8">$1\times M\times20.0=1\times0.1\times20.00$</p>
+      <div class="answer step">$M=0.100\ \text{M}$</div>
+      <p class="f22 mt16"><b>Q</b> 식초 속 아세트산의 농도는 몇 M인가?</p>
+      <p class="f21 step mt8">식초를 $\frac{1}{10}$로 묽혔으므로 원래 식초는 10배 진하다.</p>
+      <div class="answer step">$0.100\ \text{M}\times10=1.00\ \text{M}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 결과 3 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 3 함량">
+  <h2><span class="tag">탐구</span>결과 3 — 식초 속 아세트산의 함량(%)</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>3</b> 다음 자료를 이용하여 식초 속 아세트산의 함량(%)을 구해 보자.</p>
+      <p class="f21 mt4">· 식초의 밀도: 1 g/mL &nbsp; · 아세트산($\ce{CH3COOH}$)의 몰질량: 60 g/mol</p>
+      <div class="formula sm mt8">아세트산의 함량(%) $=\dfrac{\text{아세트산의 질량}}{\text{식초의 질량}}\times100$</div>
+      <p class="f22 mt8"><b>Q</b> 식초 속 아세트산의 함량은 몇 %인가?</p>
+      <p class="f21 step mt4">① 식초 1 L(= 1000 g) 속 아세트산: $1.00\ \text{mol}$</p>
+      <p class="f21 step mt4">② 아세트산의 질량: $1.00\ \text{mol}\times60\ \text{g/mol}=60\ \text{g}$</p>
+      <div class="answer step">$\dfrac{60\ \text{g}}{1000\ \text{g}}\times100=6.0\ \%$</div>
+    </div>
+    <div class="col" style="flex:0 0 300px">
+      @@vinegar@@
+      <p class="small mt4">총산도는 용액 100 mL에 들어 있는 용질의 g 수로 정의하는데, 식초의 밀도를 1 g/mL로 하여 % 농도로 나타낼 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 정리 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 정리">
+  <h2><span class="tag">탐구</span>정리 — 표시된 함량과 비교하기</h2>
+  <p class="f21"><b>Q</b> 실험값을 식초 용기에 표시된 아세트산의 함량(6 %~7 %)과 비교하고, 차이가 있다면 그 까닭을 토의해 보자.</p>
+  <p class="f21 step mt4">→ 예시 실험값 6.0 %는 표시값 범위 안이다. 차이가 나면 실험 조작을 점검한다.</p>
+  <table class="tight cm422-err mt8">
+    <tr><th>이런 실수를 하면?</th><th>무엇이 달라지나</th><th>계산한 함량</th></tr>
+    <tr><td class="l">뷰렛을 증류수로만 헹굼</td><td>표준 용액이 묽어져 $V'$ 증가</td><td><span class="blank"><span class="step">커진다</span></span></td></tr>
+    <tr><td class="l">중화점을 지나 진한 붉은색까지 넣음</td><td>$V'$ 증가</td><td><span class="blank"><span class="step">커진다</span></span></td></tr>
+    <tr><td class="l">꼭지 아래의 공기를 빼지 않음</td><td>공기 부피만큼 $V'$ 증가</td><td><span class="blank"><span class="step">커진다</span></span></td></tr>
+    <tr><td class="l">피펫을 증류수로만 헹궈 시료가 묽어짐</td><td>시료 속 아세트산 감소</td><td><span class="blank"><span class="step">작아진다</span></span></td></tr>
+  </table>
+  <div class="note puzzle step mt8">중화 적정으로 농도를 모르는 식초 속 아세트산의 함량을 구할 수 있다 → 식품의 품질 관리 등에 쓰이는 <b>유용한</b> 방법이다.</div>
+</section>
+
+<!-- ════════ 22. 스스로 평가하기 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 스스로 평가하기">
+  <h2><span class="tag q">스스로 평가하기</span>탐구 돌아보기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 중화 반응의 양적 관계를 이해하여 실험 결과로 식초 속 아세트산의 함량을 옳게 구했는가?</button>
+    <button class="chk">[과정·기능] 실험 과정을 구체적이고 실현 가능하도록 설계했으며, 실험 기구의 용도와 사용 방법을 숙지해 실험했는가?</button>
+    <button class="chk">[가치·태도] 식초 속 아세트산의 함량을 구하는 방법을 인지하여 중화 적정의 유용성을 깨달았는가?</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 같은 실험을 3회 반복해 평균을 내는 까닭은?</p>
+    <p class="f21 step mt8">→ <span class="ans">우연히 생기는 측정 오차를 줄여 믿을 만한 값을 얻기 위해서</span></p>
+    <p class="f21 mt12"><b>Q</b> 3회 중 한 번만 부피가 크게 다르면?</p>
+    <p class="f21 step mt8">→ 그 실험의 조작(중화점 지남, 공기 방울 등)을 점검하고, 한 번 더 실험한다.</p>
+  </div>
+</section>
+
+<!-- ════════ 23. 소단원 마무리 ════════ -->
+<section class="slide" data-sec="02 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>창의력 · 디지털 소양 키우기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 620px"><div class="card"><h3>창의력 키우기</h3>
+      <p class="f21">아세트산의 함량이 다른 두 가지 식초가 있을 때, pH 측정기나 pH 시험지를 사용하지 않고 산성도를 비교할 수 있는 방법을 설명해 보자.</p>
+      <div class="row mt8">
+        <div class="col" style="flex:0 0 300px">@@ab@@</div>
+        <div class="col"><p class="f21 step">→ 두 식초를 <b>같은 부피</b>씩 덜어 같은 비율로 묽히고, 페놀프탈레인을 넣어 <b>같은 표준 용액</b>으로 적정한다.</p>
+          <p class="f21 step mt8">→ 중화점까지 넣은 부피가 큰 식초(A)에 아세트산이 더 많다.</p>
+          <p class="small step mt8">실험실(17번)의 식초 A·B로 확인</p></div>
+      </div></div></div>
+    <div class="col"><div class="card"><h3>디지털 소양 키우기</h3>
+      <p class="f21">귤 통조림이나 간장을 만들 때 식품 첨가물로 염산을 사용하기도 한다. 사용한 염산이 식품에 남지 않게 제거하는 방법을 찾아 정리하고, 공유 플랫폼으로 공유해 보자.</p>
+      <p class="f21 step mt8">→ (예시) 수산화 나트륨, 탄산 나트륨 같은 <b>염기로 중화</b>해 물과 염으로 바꾸고, 물로 충분히 씻어 낸다.</p>
+      <p class="small step mt8">남은 산의 양은 중화 적정으로 확인할 수 있다.</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 화학과 나의 미래 ════════ -->
+<section class="slide" data-sec="02 · 화학과 나의 미래" data-title="화학과 나의 미래: 과학 수사 연구원">
+  <h2><span class="tag">화학과 나의 미래</span>진실을 밝히는 과학 수사 연구원</h2>
+  <div class="row">
+    <div class="col">
+      <h3>하는 일</h3>
+      <p class="f21">범죄 수사 증거물을 과학적으로 감정·연구하여 사건 해결을 돕는다. DNA·독극물 분석, 미세 증거물 감정, 다리 붕괴·교통사고의 원인 조사, 디지털 증거물의 복원·분석도 맡는다.</p>
+      <h3 class="mt12">필요한 능력</h3>
+      <p class="f21">관련 분야의 전문 지식과 자격, 유연하고 창의적인 사고, 정확한 감정을 위한 냉철한 사고, 꼼꼼함과 정확성</p>
+      <p class="small mt8">관련 학과: 화학과, 약학과, 법의학과, 생물학과, 유전 공학과, 기계 공학과, 전자 공학과 등</p>
+    </div>
+    <div class="col" style="flex:0 0 360px">
+      @@forensic@@
+      <div class="card q mt8"><p class="f21"><b>활동하기(조사)</b> 국립과학수사연구원 누리집과 최신 기사를 참고하여 과학 수사 연구원이 문제 해결에 결정적 기여를 한 사례를 찾아보자.</p></div>
+      <p class="small step mt8">독극물·약물 분석에서도 표준 용액과 적정 같은 정량 분석을 쓴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 중단원 마무리 06 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 06">
+  <h2><span class="tag q">중단원 마무리 06</span>중화 반응의 양적 관계</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 290px">@@q06@@</div>
+    <div class="col">
+      <p class="f21">그림은 농도가 같은 $\ce{NaOH(aq)}$와 $\ce{H2SO4(aq)}$를 반응시킨 혼합 용액에 존재하는 이온을 모형으로 나타낸 것이다. 이에 대한 설명으로 옳지 <u>않은</u> 것은?</p>
+      <p class="f21 mt4">① 혼합 용액의 액성은 산성이다.<br>② $\ce{Na+}$과 $\ce{SO4^2-}$은 구경꾼 이온이다.<br>③ 알짜 이온 반응식은 $\ce{H+ + OH- -> H2O}$이다.<br>④ 생성된 $\ce{H2O}$의 양(mol)은 반응한 $\ce{NaOH}$의 양(mol)보다 크다.<br>⑤ 혼합 전 $\ce{H2SO4}$의 양(mol)은 $\ce{NaOH}$의 양(mol)과 같다.</p>
+    </div>
+  </div>
+  <div class="answer step">정답 ④</div>
+  <p class="f21 step mt8">$\ce{SO4^2-}$ 2개 → $\ce{H2SO4}$ 2개($\ce{H+}$ 4개), $\ce{Na+}$ 2개 → $\ce{NaOH}$ 2개($\ce{OH-}$ 2개) → 물 2개 생성, $\ce{H+}$ 2개 남음. 생성된 물(2) = 반응한 $\ce{NaOH}$(2)</p>
+</section>
+
+<!-- ════════ 26. 중단원 마무리 07 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 07">
+  <h2><span class="tag q">중단원 마무리 07</span>중화 적정 실험 기구</h2>
+  <p class="f21">다음은 중화 적정 실험에 사용하는 실험 기구 중 일부를 나타낸 것이다.</p>
+  <div class="cm422-center mt8">@@q07@@</div>
+  <p class="f21 mt8">(1) 표준 용액을 만들 때 용액의 부피를 정확하게 측정하는 데 사용하는 실험 기구를 골라 보자. <span class="step">→ <span class="ans">(나) 부피 플라스크</span></span></p>
+  <p class="f21 mt8">(2) 중화 적정 실험에서 가해지는 표준 용액의 부피를 연속적으로 측정할 때 사용하는 실험 기구를 골라 보자. <span class="step">→ <span class="ans">(라) 뷰렛</span></span></p>
+</section>
+
+<!-- ════════ 27. 중단원 마무리 08 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 08">
+  <h2><span class="tag q">중단원 마무리 08</span>아세트산의 중화 적정</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 620px">
+      <div class="card cm422-proc">
+        <p class="f21">(가) $\ce{CH3COOH(aq)}$을 준비한다.<br>(나) (가)의 수용액 $x$ mL에 물을 넣어 100 mL 수용액을 만든다.<br>(다) (나)에서 만든 수용액 20 mL를 삼각 플라스크에 넣고 페놀프탈레인 용액을 2–3 방울 떨어뜨린다.<br>(라) (다)의 삼각 플라스크에 0.1 M $\ce{NaOH(aq)}$을 한 방울씩 떨어뜨리면서 흔들어 준다.<br>(마) 수용액 전체가 붉은색으로 변하는 순간 적정을 멈추고 사용된 $\ce{NaOH(aq)}$의 부피($V$)를 측정한다.</p>
+        <p class="f21 mt4">[결과] $V$: $y$ mL, (가)의 $\ce{CH3COOH(aq)}$의 몰농도: $a$ M</p>
+      </div>
+      <p class="f21 mt8">$a$는? (단, 온도는 25 °C로 일정하다.)</p>
+      <p class="f21 cm422-ch">① $\dfrac{y}{5x}$ <span class="cm422-c">② $\dfrac{2y}{5x}$</span> <span class="cm422-c">③ $\dfrac{y}{2x}$</span> <span class="cm422-c">④ $\dfrac{y}{x}$</span> <span class="cm422-c">⑤ $\dfrac{2y}{x}$</span></p>
+    </div>
+    <div class="col stack">
+      <p class="f21 step">(나)의 몰농도: $\dfrac{ax}{100}\ \text{M}$</p>
+      <p class="f21 step mt8">$1\times\dfrac{ax}{100}\times20=1\times0.1\times y$</p>
+      <div class="answer step">$a=\dfrac{y}{2x}$ &nbsp; 정답 ③</div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 중단원 마무리 09 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 09 (서술형)">
+  <h2><span class="tag q">중단원 마무리 09</span>서술형 — 식초 속 아세트산의 몰농도</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f22">식초 10 mL에 0.4 M 수산화 나트륨 수용액 25 mL를 가하였더니 완전히 중화하였다. 식초 속 아세트산의 몰농도를 구하고, 그 과정을 설명해 보자.</p>
+      <p class="f21 step mt12">아세트산($\ce{CH3COOH}$)과 $\ce{NaOH}$의 가수는 모두 1이다.</p>
+      <p class="f21 step mt8">$nMV=n'M'V'$: $1\times M\times10=1\times0.4\times25$</p>
+      <div class="answer step">$M=1.0\ \text{M}$</div>
+      <p class="small step mt8">채점 요소: 중화 반응의 양적 관계식 적용, 가수 1, 답과 단위</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 함께 풀어 보기 ════════ -->
+<section class="slide" data-sec="02 중화 적정 · 마무리" data-title="함께 풀어 보기">
+  <h2><span class="tag ink">함께 풀어 보기</span>2 중화 적정</h2>
+  <div class="cm422-node">1 중화 반응의 양적 관계 — ❶ $\ce{H+}$ ❷ $\ce{OH-}$ … ❽ 구경꾼 이온 ❾ $\ce{H2O(l)}$ ❿ 중성, $nMV=n'M'V'$ (지난 시간)</div>
+  <div class="row mt12">
+    <div class="col">
+      <p class="f21" data-q>(1) ⓫ <span class="blank cm422-b2"><span class="step">중화 적정</span></span>: 농도를 모르는 일정량의 산(염기) 수용액에 염기(산) 표준 용액을 조금씩 가하면서 용액이 완전히 중화하는 데 필요한 부피를 측정하여 농도를 모르는 산(염기) 수용액의 농도를 알아내는 방법</p>
+      <p class="f21 mt16" data-q>(2) ⓬ <span class="blank cm422-b2"><span class="step">지시약</span></span>: 용액의 액성에 따라 색이 변하여 중화 적정에서 중화점을 확인하는 데 사용하는 물질</p>
+      <p class="small mt16">함께 풀어 보기: 핵심 내용과 관련된 간단한 문제를 만들고, 공유 플랫폼에 공유하여 친구들과 함께 풀어 보자.</p>
+    </div>
+    <div class="col" style="flex:0 0 340px">@@setup_map@@</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 중화 적정 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 중화 반응의 양적 관계를 이용해 산이나 염기 수용액의 농도를 계산했다.</button>
+    <button class="chk">[과정·기능] 중화 적정 실험을 설계하고, 설계에 따라 실험을 수행했다.</button>
+    <button class="chk">[가치·태도] 중화 반응의 양적 관계를 이해하여 지속가능한 삶에 활용했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 중화점이란? <span class="step">→ <span class="ans">$\ce{H+}$과 $\ce{OH-}$의 양(mol)이 같아 완전히 중화하는 지점</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 뷰렛의 0 눈금은 위와 아래 중 어디에 있나? <span class="step">→ <span class="ans">위</span> (넣을수록 눈금이 커진다)</span></p>
+    <p class="f21 mt8"><b>Q</b> 묽힌 식초 20.0 mL가 0.1 M $\ce{NaOH(aq)}$ 15.0 mL로 중화되었다. 묽힌 식초의 몰농도는? <span class="step">→ <span class="ans">0.075 M</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 대단원 Ⅳ 마무리 — 물의 자동 이온화부터 중화 적정까지 한 번에 정리하기</div>
+</section>

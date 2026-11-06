@@ -1,0 +1,50 @@
+/* 1-1b 기체의 성질 (2) 이상 기체 방정식과 활용 — 덱 전용 (모두 .em11- 접두어) */
+table.em11-quant{width:100%}
+table.em11-quant th{font-size:21px}
+table.em11-quant td{font-size:22px;padding:8px 12px;text-align:center}
+table.em11-quant td.l{text-align:left}
+table.em11-data{width:100%}
+table.em11-data th{width:120px}
+table.em11-data td{text-align:center}
+table.em11-var{width:100%}
+table.em11-var td{text-align:center}
+.em11-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.em11-s4 .stage p{font-size:19px;line-height:1.55}
+table.em11-res{width:100%}
+table.em11-res td{text-align:center;font-size:22px}
+table.em11-res .blank{min-width:110px}
+table.em11-sum{width:100%}
+table.em11-sum td{text-align:center;font-size:22px;padding:2px 10px}
+table.em11-sum svg{display:block;margin:0 auto}
+ol.em11-ox li{margin-top:22px}
+ol.em11-ox li:first-child{margin-top:4px}
+ol.em11-ox .blank{min-width:64px}
+/* 개념 지도 */
+.em11-map{display:flex;align-items:center;gap:14px}
+.em11-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.5}
+.em11-node.em11-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em11-node.em11-dim{border-style:dashed;color:var(--muted);font-size:19px;padding:8px 12px}
+.em11-col{flex:0 0 260px;display:flex;flex-direction:column;gap:10px}
+.em11-arr{font-size:28px;color:var(--muted)}
+table.em11-mapt{width:100%}
+table.em11-mapt th{font-size:20px;width:170px}
+table.em11-mapt td{font-size:21px;text-align:left;padding:8px 10px}
+.blank.em11-w{min-width:150px}
+/* 실험실 */
+.em11-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.em11-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.em11-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em11-seg .btn.em11-act{background:var(--field);color:#fff;border-color:var(--field)}
+p.em11-fix{margin:0 0 6px}
+table.em11-log{width:100%;margin-top:4px}
+table.em11-log th,table.em11-log td{font-size:19px;padding:3px 6px;text-align:center}
+output.kind.em11-msg{display:block;margin-top:8px;line-height:1.45;font-size:19px}
+table.em11-pvnt{width:100%}
+table.em11-pvnt td{text-align:center;height:40px}
+.em11-merge{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.em11-merge .stage p.key{font-size:28px;text-align:center}
+.em11-merge .stage p{text-align:center}
+label.em11-cb{font-size:19px;display:inline-flex;align-items:center;gap:4px;margin-right:4px}
+.answer.em11-left{text-align:left}
+table.em11-goal th{width:130px}
+table.em11-goal td{font-size:20px}

@@ -1,0 +1,49 @@
+/* 1-1-1 평형과 안정성 — 덱 전용 (모두 .d111- 접두어) */
+
+/* 단원 도입 표: 오늘 배울 퍼즐 행 */
+.d111-cur th,.d111-cur td{background:#FFF8D6}
+
+/* 해 보기 표 속 짧은 빈칸 */
+.blank.d111-bl{min-width:44px}
+
+/* 진로 탐색 대화 배지 (inline-block — 부모를 flex로 만들지 않는다, T5) */
+.d111-qa{display:inline-block;width:30px;height:30px;line-height:30px;margin-right:10px;border-radius:8px;
+  text-align:center;color:#fff;font-size:18px;font-weight:700;vertical-align:1px}
+.d111-qa.q{background:var(--ink)} .d111-qa.a{background:var(--field)}
+
+/* 실험실: 모드·선택 버튼 줄, 슬라이더 2열 */
+.d111-mode,.d111-seg{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.d111-mode .btn,.d111-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:6px 14px}
+.d111-mode .btn.on,.d111-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.d111-seg .small{margin-right:2px}
+.d111-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.d111-grid .ctl{margin-bottom:8px}
+table.d111-read th{font-size:19px;padding:6px 10px}
+table.d111-read td{font-size:22px;width:150px;padding:6px 10px;font-variant-numeric:tabular-nums}
+output.kind.d111-msg{margin-top:10px;line-height:1.45}
+output.kind.d111-ok{color:var(--field)}
+
+/* 평형 조건 카드 속 공식: 위아래 여백을 줄임 */
+.d111-eq .formula{margin:8px auto 10px}
+/* 평형 조건 카드: 공식과 작은 그림을 한 줄에 */
+.d111-eqrow{display:flex;align-items:center;justify-content:center;gap:24px;margin:6px 0 8px}
+.d111-eqrow .formula{margin:0}
+.d111-eqrow svg{flex:0 0 auto;height:auto}
+
+/* 정답 상자: 굵은 결론은 가운데, 해설은 왼쪽 정렬 */
+.answer .d111-al{display:block;text-align:left;margin-top:6px}
+/* 크레인: 소제목과 공식을 한 줄에 */
+.d111-eqcard{display:flex;align-items:center;gap:18px;padding:10px 18px}
+.d111-eqcard h3{margin:0;flex:0 0 auto}
+.d111-eqcard .formula{margin:0}
+
+/* ○× 점검 */
+ol.d111-ox li{margin-top:22px}
+ol.d111-ox li:first-child{margin-top:0}
+
+/* 그림 아래 짧은 캡션 */
+.d111-cap{font-size:19px;color:var(--muted);text-align:center;margin-top:4px;line-height:1.45}
+
+/* 예제: 아래에 나란히 놓는 정답 세 개 */
+.answers.d111-three{gap:16px}
+.answers.d111-three .answer{padding:10px 20px}

@@ -1,0 +1,9 @@
+{"findings":[
+{"slide":8,"severity":"medium","rule":"D8","problem":"게이지 위 압력 라벨이 '='·'+' 기호와 겹치고 셋째 라벨이 잘림(자동 점검 3건)","fix":"압력 라벨을 상자 이름 아래 줄로 옮김(반영)"},
+{"slide":8,"severity":"low","rule":"S1","problem":"'산소만/질소만' 상자가 비어 있는데 압력계 바늘이 먼저 보임","fix":"두 압력계를 분자와 같은 단계(b1)로 묶음(반영)"},
+{"slide":11,"severity":"medium","rule":"3.2","problem":"형광펜 정의 문장 속 분수가 \\frac로 작아 화면에서 12px 정도","fix":"\\dfrac + 줄 간격 2.5로(반영)"},
+{"slide":15,"severity":"low","rule":"T3","problem":"풀이 줄 분수끼리 위아래로 닿음","fix":"줄마다 mt12(반영)"},
+{"slide":13,"severity":"low","rule":"빈 공간","problem":"아래쪽 빈 공간이 큼","fix":"정리 note 한 단계 추가(반영)"},
+{"slide":13,"severity":"low","rule":"C1","problem":"'Q1','Q2'가 C1에 걸림","fix":"'Q'로(반영)"},
+{"slide":20,"severity":"low","rule":"빈 공간","problem":"확인하기 두 문항 아래 빈 공간","fix":"확인 문제 형식 슬라이드라 유지(판서·발문 공간)"}
+],"summary":"25장 전체를 sheet 모음 2회 + 원본(8·11·15, 8번 단계)으로 봄. 최종 자동 점검 0건·콘솔 0건, motion 0, ask 0."}

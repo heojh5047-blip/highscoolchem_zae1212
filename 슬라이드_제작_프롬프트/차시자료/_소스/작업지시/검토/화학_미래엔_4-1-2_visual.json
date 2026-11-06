@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 pH 색표가 원 밖으로 나가 양 끝 0·14가 흐림","fix":"색표를 240 px로 줄여 원 안으로 (반영)"},
+{"slide":5,"severity":"high","rule":"D8","problem":"양면 자 + 질문이 안전 영역 아래로 넘침, pH 공식이 상자 밖으로","fix":"자 아래 화살표·설명 줄 삭제(높이 140), 공식 열 500 px (반영)"},
+{"slide":6,"severity":"medium","rule":"T4","problem":"aligned 계산 두 상자가 칸을 넘침","fix":".formula.cm412-fs(22px) (반영)"},
+{"slide":8,"severity":"medium","rule":"D8","problem":"색 띠 왼쪽 'pH' 라벨 잘림","fix":"띠를 오른쪽으로 옮기고 라벨 x 48 (반영)"},
+{"slide":9,"severity":"low","rule":"3.2","problem":"사다리의 \\tfrac{1}{10}이 화면에서 작음","fix":"'×1/10'로 (반영, S18도)"},
+{"slide":17,"severity":"low","rule":"M5","problem":"비커 이름 A–E가 수식 기울임체","fix":"글자 라벨(data-mix)로 바로 선 글꼴 (반영, 실험실·S18도)"},
+{"slide":21,"severity":"medium","rule":"D8","problem":"가로축 제목 [HCl] [M]이 잘리고 눈금 10^-5와 겹침","fix":"그래프 아래 여백 60 (반영)"},
+{"slide":23,"severity":"high","rule":"D8","problem":"왼쪽 열이 넘침, 그래프 pH 라벨 잘림","fix":"NaOH 반응식을 문장 안으로, 그래프 위 여백 (반영)"},
+{"slide":26,"severity":"medium","rule":"D8","problem":"충치 그림 라벨이 점선·막대·화살표와 겹침","fix":"그림 다시 배치(범위 음영 1개, 라벨 분리) (반영)"},
+{"slide":29,"severity":"medium","rule":"D8","problem":"정답 상자가 아래로 넘침","fix":"<보기>를 오른쪽 열로 옮기고 해설 줄임 (반영)"},
+{"slide":14,"severity":"low","rule":"3.3","problem":"확인하기 장 아래 빈 공간이 큼","fix":"판서 공간으로 둠 (기각 — 확인 문제 템플릿)"}
+],"summary":"render 자동 점검 15건 → 0건, 콘솔 오류 0건, motion_check 0건(data-anim 31), ask_check 0건(질문 강조 41). 전체 캡처 모음 두 번(완성 직후·최종)과 실험실 채운 상태(s20) 원본 확인."}

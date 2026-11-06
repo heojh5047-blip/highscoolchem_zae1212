@@ -1,0 +1,11 @@
+{"findings":[
+{"slide":2,"severity":"medium","rule":"D8","problem":"pH 띠 아래 라벨 잘림, '14'와 'pH' 겹침","fix":"띠 위치·핀 길이 조정, pH 라벨 오른쪽으로(반영)"},
+{"slide":3,"severity":"medium","rule":"D8","problem":"연계 흐름이 두 줄로 넘쳐 아래 note가 영역 밖","fix":"흐름 노드 글 줄임(반영)"},
+{"slide":5,"severity":"medium","rule":"D8","problem":"병 라벨 두 번째 줄 잘림","fix":"한 줄 라벨로(반영)"},
+{"slide":7,"severity":"medium","rule":"T4","problem":"카드 안 반응식이 칸을 넘침","fix":"카드 안 식은 상태 기호 생략(반영)"},
+{"slide":10,"severity":"low","rule":"D8","problem":"정답 상자가 아래로 넘침","fix":"정답 문장 줄임(반영)"},
+{"slide":11,"severity":"medium","rule":"3.2","problem":"단계 카드 안 입자 그림의 H 라벨이 화면 14px","fix":"H 라벨 빼고 범례(○ = 수소 원자), 다른 라벨 키움, 안전 note를 ③ 카드로 옮겨 넘침 해소(반영)"},
+{"slide":18,"severity":"medium","rule":"T3","problem":"두 반응식의 ⇌ 위치가 맞지 않고 연계 카드와 겹쳐 넘침","fix":"3열 표로 화살표 정렬, 연계는 아래 note로(반영)"},
+{"slide":17,"severity":"low","rule":"D8","problem":"두 번째 H+ 라벨이 화살표에 닿음","fix":"halo로 가독성 유지 — 유지"},
+{"slide":20,"severity":"low","rule":"레이아웃","problem":"산을 고르기 전 실험실 그림 아래쪽이 비어 보임","fix":"고르면 역할·괄호선·H+ 움직임이 채움 — 유지"}
+],"summary":"자동 점검 0건·콘솔 0건·motion 0·ask 0. 전체 캡처 두 번 확인."}

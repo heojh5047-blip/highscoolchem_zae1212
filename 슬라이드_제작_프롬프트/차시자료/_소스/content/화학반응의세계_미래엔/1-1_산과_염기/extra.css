@@ -1,0 +1,50 @@
+/* 1-1 산과 염기 — 덱 전용 (모두 .rm11- 접두어) */
+ol.rm11-units{list-style:none;padding:0;margin:8px 0 0}
+ol.rm11-units li{font-size:23px;line-height:1.5;padding:7px 0;border-bottom:1px dashed var(--line)}
+ol.rm11-units li:last-child{border-bottom:0}
+ol.rm11-units li b{display:inline-block;width:46px;color:var(--field)}
+ol.rm11-ugoals li{font-size:22px;line-height:1.5;margin-top:6px}
+.rm11-f19 .katex{font-size:1em}
+table.rm11-tb{width:100%}
+table.rm11-tb td{text-align:center}
+table.rm11-tb td.l{text-align:left}
+table.rm11-tb .blank{min-width:150px}
+table.rm11-pair{width:100%}
+table.rm11-pair td{text-align:center;width:50%}
+table.rm11-pair .blank{min-width:130px}
+table.rm11-cmp{width:100%}
+table.rm11-cmp th{width:120px}
+table.rm11-cmp td{text-align:center;font-size:21px}
+table.rm11-q2{width:100%}
+table.rm11-q2 td{text-align:center}
+table.rm11-q2 td.l{text-align:left}
+table.rm11-q2 .blank{min-width:140px}
+.rm11-p1{color:#2E9E6A;font-weight:700}
+.rm11-p2{color:#7B4FC8;font-weight:700}
+.answer.rm11-left{text-align:left}
+/* 개념 지도 */
+.rm11-map{display:flex;align-items:center;gap:14px}
+.rm11-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.45}
+.rm11-node.rm11-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.rm11-side{flex:0 0 300px;display:flex;flex-direction:column;gap:10px}
+.rm11-node.rm11-dim{border-style:dashed;color:var(--muted)}
+.rm11-arr{font-size:28px;color:var(--muted)}
+.blank.rm11-w1{min-width:260px}
+/* 실험실 */
+.rm11-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.rm11-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.rm11-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm11-seg .btn.rm11-act{background:var(--field);color:#fff;border-color:var(--field)}
+.rm11-seg .small{margin:0 2px 0 4px}
+.rm11-eq{font-size:20px;min-height:34px;margin:4px 0 6px}
+table.rm11-read{width:100%}
+table.rm11-read th{font-size:19px;padding:6px 10px;text-align:left;width:150px}
+table.rm11-read td{font-size:20px;width:auto;padding:6px 10px;text-align:center}
+output.rm11-score{font-size:19px;font-weight:700}
+output.kind.rm11-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.rm11-log{width:100%}
+table.rm11-log th,table.rm11-log td{font-size:19px;padding:3px 8px;text-align:center}
+table.rm11-eqt{margin:4px auto 0;border:2px solid var(--ink);border-radius:12px;background:#fff;border-collapse:separate;padding:6px 14px}
+table.rm11-eqt td{border:0;font-size:28px;padding:4px 6px;background:none}
+table.rm11-eqt td.r{text-align:right}
+table.rm11-eqt td.l{text-align:left}

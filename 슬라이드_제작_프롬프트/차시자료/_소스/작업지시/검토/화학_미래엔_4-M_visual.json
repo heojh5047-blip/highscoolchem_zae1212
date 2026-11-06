@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":3,"severity":"high","rule":"D8","problem":"개념 지도가 영역 밖으로 넘치고 첫 반응식 상자 글자가 옆 칸과 겹침","fix":"반응식·Kw 상자를 두 줄로 나누고 pH 잎 글을 <br>로 두 줄 고정, 열 너비·행 간격 줄임, 아래 메모 줄임"},
+{"slide":7,"severity":"medium","rule":"D8","problem":"정답 상자가 아래 여백 밖으로 넘침","fix":"정답 상자를 오른쪽 열 안으로 옮김"},
+{"slide":14,"severity":"medium","rule":"D8/3.2","problem":"줄이 영역 밖으로 넘치고 그림 라벨이 화면 13.9px","fix":"그림 viewBox를 줄이고 라벨 data-size 22, 정답을 한 줄 단계로 바꿔 높이 줄임"},
+{"slide":23,"severity":"medium","rule":"T4/3.2","problem":"반응식 .formula가 칸 밖으로 넘치고 그림 라벨 15px","fix":".formula.sm, 그림 너비 440·라벨 22"},
+{"slide":9,"severity":"low","rule":"T2","problem":"표 아래 계산 줄이 분수 때문에 어색하게 꺾임","fix":"÷ 꼴 두 줄로 고침"},
+{"slide":13,"severity":"low","rule":"T2","problem":"(가) 답 상자에서 단위 M만 다음 줄로 떨어짐","fix":"÷ 꼴 한 줄로"},
+{"slide":17,"severity":"low","rule":"T2","problem":"답 상자에서 L만 다음 줄로 떨어짐","fix":"÷ 꼴 한 줄로"},
+{"slide":19,"severity":"low","rule":"D8","problem":"'물' 라벨이 물 분자·화살표와 겹치고 '위산' 라벨이 H+ 원에 닿음","fix":"이온·물 분자를 위로 올리고 '물' 라벨을 아래 가운데로"}
+],"summary":"전체 캡처 모음 2회(완성 직후·최종) 확인. 넘침 6건을 고쳐 자동 점검 0건. 11번 단계별 캡처로 공개 순서 확인. 본보기(3-M)와 같은 밀도·구성."}

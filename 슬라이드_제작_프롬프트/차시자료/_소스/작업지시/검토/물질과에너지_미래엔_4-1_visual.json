@@ -1,0 +1,54 @@
+{
+ "findings": [
+  {
+   "slide": 8,
+   "severity": "medium",
+   "rule": "C3",
+   "problem": "일반식 '->'가 \\ce 밖이라 '− >'로 보임",
+   "fix": "\\longrightarrow로"
+  },
+  {
+   "slide": 9,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "4열 카드 중 넷째가 긴 반응식으로 화면 밖",
+   "fix": "minmax(0,1fr) 열 + 반응식 줄나눔"
+  },
+  {
+   "slide": 10,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "축 라벨 t [s]가 끝 눈금 400과 겹침",
+   "fix": "축 라벨을 축선 위로"
+  },
+  {
+   "slide": 18,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "실험실 아래 메시지가 안전 영역 밖",
+   "fix": "통제 변인 줄 삭제(탐구 슬라이드에 있음), 표 열 폭 조정"
+  },
+  {
+   "slide": 24,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "작은 그래프 v 라벨 잘림",
+   "fix": "축 원점 아래로"
+  },
+  {
+   "slide": 32,
+   "severity": "low",
+   "rule": "T5",
+   "problem": "개념 지도 노드 flex에 글자 직접 — 띄어쓰기 사라짐",
+   "fix": "span으로 감쌈"
+  },
+  {
+   "slide": 5,
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "그림 라벨 일부가 16px 미만",
+   "fix": "라벨 크기 20–21로"
+  }
+ ],
+ "summary": "자동 점검 0건, 콘솔 0건, motion 0, ask 0까지 고침. 전체 캡처 모음 두 번 확인."
+}
