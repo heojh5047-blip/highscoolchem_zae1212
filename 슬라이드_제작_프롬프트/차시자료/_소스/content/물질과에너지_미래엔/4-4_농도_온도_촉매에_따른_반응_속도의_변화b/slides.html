@@ -1,0 +1,558 @@
+<!-- 4-4b 농도, 온도, 촉매에 따른 반응 속도의 변화 (2) 촉매 — 이 파일은 scratchpad 물질과에너지_미래엔_4-4/gen.py 가 tpl_b.html 에서 만든다 -->
+
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 반응 속도" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 반응 속도 › 04</div>
+    <h1 class="em44-h1">농도, 온도, 촉매에 따른<br><span class="acc">반응 속도의 변화</span></h1>
+    <p class="sub">(2) 촉매 — 반응이 지나는 길을 바꾸는 물질</p>
+    <p class="meta">고등학교 물질과 에너지 108–119쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="촉매를 쓰지 않은 경로와 촉매를 쓴 낮은 경로의 에너지 도표">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <path d="M70 330 L150 330 C216.0 330 204.0 130 270 130 C336.0 130 324.0 400 390 400 L470 400" fill="none" stroke="#16233D" stroke-width="5" stroke-linecap="round" data-anim="draw" data-dur="1.2"/>
+    <path d="M70 330 L150 330 C216.0 330 204.0 240 270 240 C336.0 240 324.0 400 390 400 L470 400" fill="none" stroke="#2E9E6A" stroke-width="4" stroke-dasharray="10 8" data-anim="draw" data-dur="1.2" data-delay="1"/>
+    <line x1="120" y1="130" x2="262" y2="130" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/>
+    <line x1="160" y1="240" x2="262" y2="240" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/>
+    <g><line x1="120" y1="133" x2="120" y2="327" stroke="#E08A2C" stroke-width="2.5"/><polygon points="120,130 115,140 125,140" fill="#E08A2C"/><polygon points="120,330 115,320 125,320" fill="#E08A2C"/></g> <g><line x1="165" y1="243" x2="165" y2="327" stroke="#2E9E6A" stroke-width="2.5"/><polygon points="165,240 160,250 170,250" fill="#2E9E6A"/><polygon points="165,330 160,320 170,320" fill="#2E9E6A"/></g>
+    <text class="tex" x="110" y="236" data-mix="$E_\mathrm{a}$" data-size="26" data-anchor="end" fill="#B8661A" data-halo="1"></text>
+    <text class="tex" x="176" y="296" data-mix="$E_\mathrm{a}'$" data-size="24" fill="#2E9E6A" data-halo="1"></text>
+    <text class="tex" x="172" y="214" data-mix="촉매" data-size="22" fill="#2E9E6A"></text>
+    <text class="tex" x="105" y="364" data-mix="반응물" data-size="22" data-anchor="middle" fill="#16233D"></text> <text class="tex" x="435" y="434" data-mix="생성물" data-size="22" data-anchor="middle" fill="#16233D"></text>
+  </svg>
+</section>
+
+<!-- ════════ 2. 다시 보기: 앞 시간 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 도입" data-title="다시 보기: 농도와 온도">
+  <h2><span class="tag alt">다시 보기</span>앞 시간 정리 — 농도와 온도</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>농도 (압력, 표면적)</h3>
+        <p class="f21">농도 증가 → 단위 시간당 <b>충돌 횟수</b> 증가 → 반응 속도 빨라짐</p>
+        <p class="f21 mt8 c-muted">탐구: $\ce{KIO3}$의 상대 농도 1 → 4, 청람색까지 83 s → 21 s</p>
+      </div>
+      <div class="card mt12"><h3>온도</h3>
+        <p class="f21">온도 증가 → <b>$E_\mathrm{a}$ 이상의 에너지</b>를 가진 분자 수 증가 → 유효 충돌 증가 → 반응 속도 빨라짐</p>
+        <p class="f21 mt8 c-muted">탐구: 5 °C → 40 °C, 레이저가 사라질 때까지 185 s → 15 s</p>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 290" style="width:400px" aria-label="두 온도의 분포 곡선, 활성화 에너지는 그대로">
+        <line x1="40" y1="250" x2="378" y2="250" stroke="#5B6B7F" stroke-width="2"/><polygon points="386,250 376,245 376,255" fill="#5B6B7F"/><line x1="40" y1="250" x2="40" y2="32" stroke="#5B6B7F" stroke-width="2"/><polygon points="40,24 35,34 45,34" fill="#5B6B7F"/>
+        <path d="M209.7 250.0 L209.7 203.1 L212.4 204.3 L215.1 205.4 L217.7 206.5 L220.4 207.7 L223.1 208.7 L225.7 209.8 L228.4 210.8 L231.1 211.9 L233.8 212.9 L236.4 213.8 L239.1 214.8 L241.8 215.7 L244.4 216.6 L247.1 217.5 L249.8 218.4 L252.5 219.2 L255.1 220.0 L257.8 220.8 L260.5 221.6 L263.1 222.4 L265.8 223.1 L268.5 223.8 L271.2 224.6 L273.8 225.2 L276.5 225.9 L279.2 226.6 L281.8 227.2 L284.5 227.8 L287.2 228.5 L289.9 229.1 L292.5 229.6 L295.2 230.2 L297.9 230.7 L300.5 231.3 L303.2 231.8 L305.9 232.3 L308.6 232.8 L311.2 233.3 L313.9 233.8 L316.6 234.2 L319.2 234.7 L321.9 235.1 L324.6 235.5 L327.3 235.9 L329.9 236.3 L332.6 236.7 L335.3 237.1 L337.9 237.4 L340.6 237.8 L343.3 238.2 L346.0 238.5 L348.6 238.8 L351.3 239.1 L354.0 239.4 L356.6 239.8 L359.3 240.0 L362.0 240.3 L364.7 240.6 L367.3 240.9 L370.0 241.1 L370.0 250.0 Z" fill="#D7263D" opacity=".22"/><path d="M209.7 250.0 L209.7 226.4 L212.4 227.5 L215.1 228.6 L217.7 229.6 L220.4 230.6 L223.1 231.5 L225.7 232.4 L228.4 233.3 L231.1 234.1 L233.8 234.8 L236.4 235.6 L239.1 236.3 L241.8 236.9 L244.4 237.6 L247.1 238.2 L249.8 238.8 L252.5 239.3 L255.1 239.8 L257.8 240.3 L260.5 240.8 L263.1 241.3 L265.8 241.7 L268.5 242.1 L271.2 242.5 L273.8 242.9 L276.5 243.2 L279.2 243.6 L281.8 243.9 L284.5 244.2 L287.2 244.5 L289.9 244.8 L292.5 245.0 L295.2 245.3 L297.9 245.5 L300.5 245.7 L303.2 246.0 L305.9 246.2 L308.6 246.3 L311.2 246.5 L313.9 246.7 L316.6 246.9 L319.2 247.0 L321.9 247.2 L324.6 247.3 L327.3 247.5 L329.9 247.6 L332.6 247.7 L335.3 247.8 L337.9 247.9 L340.6 248.0 L343.3 248.1 L346.0 248.2 L348.6 248.3 L351.3 248.4 L354.0 248.5 L356.6 248.6 L359.3 248.6 L362.0 248.7 L364.7 248.8 L367.3 248.8 L370.0 248.9 L370.0 250.0 Z" fill="#1F6FD1" opacity=".38"/>
+        <path d="M40.0 250.0 L42.8 146.2 L45.5 111.5 L48.2 90.0 L51.0 75.7 L53.8 66.2 L56.5 60.0 L59.2 56.4 L62.0 54.8 L64.8 54.7 L67.5 55.8 L70.2 57.8 L73.0 60.7 L75.8 64.1 L78.5 68.0 L81.2 72.3 L84.0 76.9 L86.8 81.7 L89.5 86.6 L92.2 91.6 L95.0 96.7 L97.8 101.8 L100.5 106.9 L103.2 112.0 L106.0 117.0 L108.8 122.0 L111.5 126.8 L114.2 131.6 L117.0 136.3 L119.8 140.8 L122.5 145.2 L125.3 149.5 L128.0 153.7 L130.8 157.8 L133.5 161.7 L136.2 165.5 L139.0 169.1 L141.8 172.7 L144.5 176.1 L147.2 179.3 L150.0 182.5 L152.8 185.5 L155.5 188.4 L158.2 191.2 L161.0 193.9 L163.8 196.5 L166.5 199.0 L169.2 201.4 L172.0 203.6 L174.8 205.8 L177.5 207.9 L180.2 209.9 L183.0 211.8 L185.8 213.6 L188.5 215.3 L191.2 217.0 L194.0 218.6 L196.8 220.1 L199.5 221.6 L202.2 222.9 L205.0 224.3 L207.8 225.5 L210.5 226.7 L213.2 227.9 L216.0 228.9 L218.8 230.0 L221.5 231.0 L224.2 231.9 L227.0 232.8 L229.8 233.7 L232.5 234.5 L235.2 235.3 L238.0 236.0 L240.8 236.7 L243.5 237.4 L246.2 238.0 L249.0 238.6 L251.7 239.2 L254.5 239.7 L257.2 240.2 L260.0 240.7 L262.8 241.2 L265.5 241.7 L268.2 242.1 L271.0 242.5 L273.8 242.9 L276.5 243.2 L279.2 243.6 L282.0 243.9 L284.8 244.2 L287.5 244.5 L290.2 244.8 L293.0 245.1 L295.8 245.3 L298.5 245.6 L301.2 245.8 L304.0 246.0 L306.8 246.2 L309.5 246.4 L312.2 246.6 L315.0 246.8 L317.8 246.9 L320.5 247.1 L323.2 247.3 L326.0 247.4 L328.8 247.5 L331.5 247.7 L334.2 247.8 L337.0 247.9 L339.8 248.0 L342.5 248.1 L345.2 248.2 L348.0 248.3 L350.8 248.4 L353.5 248.5 L356.2 248.6 L359.0 248.6 L361.8 248.7 L364.5 248.8 L367.2 248.8 L370.0 248.9" fill="none" stroke="#1F6FD1" stroke-width="3" data-anim="draw" data-dur="1"/>
+        <path d="M40.0 250.0 L42.8 202.0 L45.5 184.4 L48.2 172.4 L51.0 163.4 L53.8 156.5 L56.5 151.0 L59.2 146.7 L62.0 143.3 L64.8 140.6 L67.5 138.6 L70.2 137.1 L73.0 136.0 L75.8 135.4 L78.5 135.1 L81.2 135.1 L84.0 135.3 L86.8 135.8 L89.5 136.4 L92.2 137.2 L95.0 138.2 L97.8 139.3 L100.5 140.5 L103.2 141.8 L106.0 143.2 L108.8 144.7 L111.5 146.3 L114.2 147.8 L117.0 149.5 L119.8 151.1 L122.5 152.8 L125.3 154.6 L128.0 156.3 L130.8 158.1 L133.5 159.8 L136.2 161.6 L139.0 163.4 L141.8 165.1 L144.5 166.9 L147.2 168.7 L150.0 170.4 L152.8 172.1 L155.5 173.8 L158.2 175.5 L161.0 177.2 L163.8 178.9 L166.5 180.5 L169.2 182.1 L172.0 183.7 L174.8 185.3 L177.5 186.9 L180.2 188.4 L183.0 189.9 L185.8 191.3 L188.5 192.8 L191.2 194.2 L194.0 195.6 L196.8 197.0 L199.5 198.3 L202.2 199.6 L205.0 200.9 L207.8 202.2 L210.5 203.4 L213.2 204.6 L216.0 205.8 L218.8 207.0 L221.5 208.1 L224.2 209.2 L227.0 210.3 L229.8 211.4 L232.5 212.4 L235.2 213.4 L238.0 214.4 L240.8 215.3 L243.5 216.3 L246.2 217.2 L249.0 218.1 L251.7 219.0 L254.5 219.8 L257.2 220.7 L260.0 221.5 L262.8 222.3 L265.5 223.0 L268.2 223.8 L271.0 224.5 L273.8 225.2 L276.5 225.9 L279.2 226.6 L282.0 227.3 L284.8 227.9 L287.5 228.5 L290.2 229.1 L293.0 229.7 L295.8 230.3 L298.5 230.9 L301.2 231.4 L304.0 232.0 L306.8 232.5 L309.5 233.0 L312.2 233.5 L315.0 233.9 L317.8 234.4 L320.5 234.9 L323.2 235.3 L326.0 235.7 L328.8 236.1 L331.5 236.5 L334.2 236.9 L337.0 237.3 L339.8 237.7 L342.5 238.0 L345.2 238.4 L348.0 238.7 L350.8 239.1 L353.5 239.4 L356.2 239.7 L359.0 240.0 L361.8 240.3 L364.5 240.6 L367.2 240.9 L370.0 241.1" fill="none" stroke="#D7263D" stroke-width="3" data-anim="draw" data-dur="1" data-delay=".5"/>
+        <line x1="209.71428571428572" y1="250" x2="209.71428571428572" y2="110" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="7 6"/>
+        <text class="tex" x="209.71428571428572" y="278" data-mix="$E_\mathrm{a}$" data-size="22" data-anchor="middle" fill="#B8661A"></text>
+        <text class="tex" x="78" y="40" data-mix="저온" data-size="20" fill="#1F6FD1"></text> <text class="tex" x="150" y="120" data-mix="고온" data-size="20" fill="#D7263D"></text>
+        <text class="tex" x="380" y="278" data-mix="운동 에너지" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 농도와 온도를 바꾸지 않고도 반응 속도를 바꿀 수 있을까? <span class="step">→ 반응 경로를 바꾸어 <b>활성화 에너지</b>를 바꾸는 물질, <b>촉매</b>를 넣는다.</span></p>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12물에04-04]</span>농도, 온도, 촉매에 따라 반응 속도가 달라짐을 이해하고, 일상생활에서 각각의 예를 찾아 화학의 유용성을 인식할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>농도, 온도, 촉매에 따라 반응 속도가 달라짐을 설명할 수 있다. — 이번 시간: <b>촉매</b></li>
+    <li>일상생활에서 농도, 온도, 촉매에 따라 반응 속도가 달라지는 예를 찾아 화학의 유용성을 인식할 수 있다.</li>
+  </ol>
+  <div class="std mt12"><span class="code">[필수 탐구]</span>농도, 온도, 촉매와 반응 속도의 관계를 탐구하는 실험하기 — ③ 촉매</div>
+  <h3 class="mt20">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">탐구: 촉매</div><div class="farr">→</div>
+    <div class="fnode hl">정촉매·부촉매</div><div class="farr">→</div>
+    <div class="fnode hl">활성화 에너지와 분자 수</div><div class="farr">→</div>
+    <div class="fnode">고체 촉매·광촉매</div><div class="farr">→</div>
+    <div class="fnode">효소</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 도입 ════════ -->
+<section class="slide" data-sec="04 · 촉매가 반응 속도에 미치는 영향" data-title="반응 속도를 바꾸는 물질">
+  <h2><span class="tag alt">연결</span>반응 속도에 영향을 주는 물질이 있을까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 300" style="width:420px" aria-label="과산화 수소수 병, 기포가 아주 천천히 생김">
+        <rect x="120" y="20" width="60" height="34" rx="6" fill="#9FB0C2"/>
+        <path d="M110 54 L190 54 L196 80 L196 270 Q196 284 182 284 L118 284 Q104 284 104 270 L104 80 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3"/>
+        <path d="M106 120 L194 120 L194 270 Q194 282 182 282 L118 282 Q106 282 106 270 Z" fill="#DDEEF8"/>
+        <rect x="112" y="150" width="76" height="58" rx="6" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="2"/>
+        <text class="tex" x="150" y="186" data-mix="$\ce{H2O2}$" data-size="22" data-anchor="middle" fill="#16233D"></text>
+        <g data-anim="move" data-from="0,60" data-dur="4" data-rep="loop" data-ease="lin"><circle cx="130" cy="230" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g>
+        <g data-anim="move" data-from="0,40" data-dur="5" data-rep="loop" data-ease="lin" data-delay="1.5"><circle cx="170" cy="250" r="3.5" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g>
+        <text class="tex" x="300" y="110" data-mix="실온에서" data-size="21" data-anchor="middle" fill="#16233D"></text> <text class="tex" x="300" y="140" data-mix="아주 천천히" data-size="21" data-anchor="middle" fill="#16233D"></text> <text class="tex" x="300" y="170" data-mix="분해된다" data-size="21" data-anchor="middle" fill="#16233D"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22">반응물의 농도와 온도 외에 반응 속도를 조절할 수 있는 또 다른 요인은 없을까?</p>
+      <div class="formula sm mt12">$\ce{2H2O2(l) -> 2H2O(l) + O2(g)}$<div class="unit">과산화 수소의 분해 — 실온에서는 느리다</div></div>
+      <p class="f22 mt16"><b>Q</b> 상처에 과산화 수소수를 바르면 거품이 많이 생긴다. 병 속에서는 거의 생기지 않는데, 무엇이 다를까?</p>
+      <p class="f22 mt8 step">→ 상처의 혈액·세포 속 물질(효소)이 분해 반응을 빠르게 한다. 반응 속도에 영향을 주는 <b>물질</b>을 실험으로 알아보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 탐구 ③ 목표와 준비 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 촉매 — 목표와 준비">
+  <h2><span class="tag">탐구</span>반응 속도에 영향을 주는 물질 알아보기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[탐구]</span>농도, 온도, 촉매와 반응 속도의 관계를 탐구하는 실험하기 — ③ 촉매</div>
+  <p class="f21 mt8"><b>목표</b> 반응 속도를 변화시키는 물질의 작용을 관찰하고, 그 역할을 설명할 수 있다.</p>
+  <div class="row mt8">
+    <div class="col">
+      <h3>준비</h3>
+      <div class="formula sm">$\ce{2H2O2(l) -> 2H2O(l) + O2(g)}$<div class="unit">과산화 수소($\ce{H2O2}$) 분해 반응</div></div>
+      <p class="f21 mt12"><b>Q</b> 반응 속도를 변화시키는 물질의 사용에 따른 반응 속도를 비교하려면 무엇을 관찰해야 할까?</p>
+      <p class="f21 step em44-a">→ 같은 시간 동안 <b>기포(거품)가 생기는 정도</b> — 거품이 올라오는 빠르기와 높이를 비교한다.</p>
+    </div>
+    <div class="col" style="flex:0 0 440px">
+      <table class="tight em44-var">
+        <tr><th>조작 변인</th><td class="l">아이오딘화 칼륨($\ce{KI}$)을 넣었는가</td></tr>
+        <tr><th>종속 변인</th><td class="l">기포(거품)가 생기는 정도</td></tr>
+        <tr><th>통제 변인</th><td class="l">10 % 과산화 수소수 10 mL, 세제 2–3 방울, 눈금실린더, 온도</td></tr>
+      </table>
+      <p class="small mt8">주방용 세제는 생긴 산소 기체를 거품으로 붙잡아 눈으로 비교하기 쉽게 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 탐구 ③ 준비물과 안전 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 촉매 — 준비물과 안전">
+  <h2><span class="tag">탐구</span>준비물과 안전 — 반응 속도에 영향을 주는 물질</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>준비물</h3>
+        <p class="f21">10 % 과산화 수소수, 아이오딘화 칼륨, 주방용 액체 세제, 스포이트, 눈금실린더, 약숟가락, 보안경, 실험복, 실험용 고무장갑</p>
+        <p class="small mt8">도움 자료: 128–129쪽 실험실 안전 수칙</p>
+      </div>
+      <div class="note mt12"><b>폐수 처리</b> 실험 후 남은 용액은 폐수 처리 기준과 방법에 따라 처리한다 — 거품이 가라앉은 뒤 남은 용액(아이오딘화 칼륨 포함)을 지정된 폐수 통에 모은다.</div>
+    </div>
+    <div class="col" style="flex:0 0 500px">
+      <div class="card q"><h3>안전</h3>
+        <p class="f21">· 실험복, 보안경, 실험용 고무장갑을 반드시 착용한다.</p>
+        <p class="f21">· 10 % 과산화 수소수가 피부에 닿으면 따가울 수 있으므로 바로 많은 물로 씻는다.</p>
+        <p class="f21">· 거품이 빠르게 솟아오르므로 눈금실린더 입구에 얼굴을 가까이 대지 않고, 쟁반 위에서 실험한다.</p>
+        <p class="f21">· 반응하면 열이 나므로 거품을 바로 만지지 않는다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 탐구 ③ 과정 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 촉매 — 과정">
+  <h2><span class="tag">탐구</span>과정 — 반응 속도에 영향을 주는 물질</h2>
+  <div class="row">
+    <div class="col">
+      <ol class="em44-steps f21">
+        <li>눈금실린더 A와 B에 과산화 수소수 10 mL와 주방용 세제 2–3 방울을 각각 넣는다.</li>
+        <li>눈금실린더 A에는 아무것도 넣지 않고, B에는 아이오딘화 칼륨($\ce{KI}$)을 소량 넣은 다음 각 눈금실린더에서 일어나는 변화를 관찰한다.</li>
+      </ol>
+      <p class="f21 mt16"><b>Q</b> 어느 눈금실린더에서 거품이 더 빨리 올라올까? 예측해 보자.</p>
+      <p class="f21 mt8 step">→ 결과는 실험실과 결과 및 정리에서 확인하자.</p>
+    </div>
+    <div class="col" style="flex:0 0 420px">
+      
+      <svg class="fig" viewBox="0 0 420 360" style="width:420px" aria-label="눈금실린더 A는 변화가 거의 없고 B는 거품이 위로 솟아오름">
+        <rect x="70" y="300" width="80" height="10" rx="3" fill="#9FB0C2"/><rect x="84" y="30" width="52" height="270" rx="4" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/><rect x="86" y="270" width="48" height="28" fill="#DDEEF8"/><g><rect x="86" y="292" width="48" height="6" fill="#F4F1EA"/></g><line x1="136" y1="273" x2="126" y2="273" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="246" x2="126" y2="246" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="219" x2="126" y2="219" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="192" x2="126" y2="192" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="165" x2="126" y2="165" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="138" x2="126" y2="138" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="111" x2="126" y2="111" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="84" x2="126" y2="84" stroke="#5B6B7F" stroke-width="1.5"/><line x1="136" y1="57" x2="126" y2="57" stroke="#5B6B7F" stroke-width="1.5"/>
+        <rect x="260" y="300" width="80" height="10" rx="3" fill="#9FB0C2"/><rect x="274" y="30" width="52" height="270" rx="4" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/><rect x="276" y="270" width="48" height="28" fill="#DDEEF8"/><g data-anim="scale" data-from="1,0.05" data-o="300,300" data-dur="2.2" data-ease="out"><rect x="276" y="60" width="48" height="238" fill="#F4F1EA"/><circle cx="284" cy="74" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="74" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="74" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="74" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="100" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="100" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="100" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="100" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="126" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="126" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="126" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="126" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="152" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="152" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="152" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="152" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="178" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="178" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="178" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="178" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="204" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="204" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="204" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="204" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="230" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="230" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="230" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="230" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="256" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="256" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="256" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="256" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="284" cy="282" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="295" cy="282" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="306" cy="282" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/><circle cx="317" cy="282" r="5" fill="#FFFFFF" stroke="#C9C2B0" stroke-width="1.2"/></g><line x1="326" y1="273" x2="316" y2="273" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="246" x2="316" y2="246" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="219" x2="316" y2="219" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="192" x2="316" y2="192" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="165" x2="316" y2="165" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="138" x2="316" y2="138" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="111" x2="316" y2="111" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="84" x2="316" y2="84" stroke="#5B6B7F" stroke-width="1.5"/><line x1="326" y1="57" x2="316" y2="57" stroke="#5B6B7F" stroke-width="1.5"/>
+        <g data-arw="350,90,330,60,ink,2.5"></g>
+        <text class="tex" x="110" y="340" data-mix="A (넣지 않음)" data-size="21" data-anchor="middle" fill="#16233D"></text> <text class="tex" x="300" y="340" data-mix="B ($\ce{KI}$ 소량)" data-size="21" data-anchor="middle" fill="#16233D"></text>
+        <text class="tex" x="390" y="120" data-mix="거품" data-size="20" data-anchor="middle" fill="#16233D"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 실험실: 촉매 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="실험실: 촉매와 반응 속도">
+  <h2><span class="tag">탐구</span>촉매 실험실 — 과산화 수소의 분해 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="em44cat">
+    <div class="lab-ctl" style="flex-basis:370px">
+      <div class="small">넣는 물질 (과산화 수소수 10 mL + 세제)</div>
+      <div class="em44-seg mt4"><button class="btn on" data-c="none">넣지 않음</button><button class="btn" data-c="ki">$\ce{KI}$</button><button class="btn" data-c="h3po4">묽은 인산</button></div>
+      <table class="readout em44-read">
+        <tr><th>활성화 에너지</th><td><output data-o="ea"></output></td></tr>
+        <tr><th>반응할 수 있는 분자 (그림 넓이)</th><td><output data-o="fr"></output></td></tr>
+        <tr class="hl"><th>거품 눈금 (30 s 뒤)</th><td><output data-o="v"></output></td></tr>
+        <tr><th>넣은 물질 (전 → 후)</th><td><output data-o="m"></output></td></tr>
+      </table>
+      <div class="em44-seg mt8"><button class="btn em44-act" data-act="run">넣고 30 s 관찰</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind em44-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 680px">
+      <div class="row" style="gap:8px">
+        <div class="lab-fig" style="width:150px;height:282px"><svg viewBox="0 0 150 282" width="150" height="282" aria-label="눈금실린더 속 거품"></svg></div>
+        <div class="lab-fig" style="width:256px;height:282px"><svg viewBox="0 0 256 282" width="256" height="282" aria-label="반응의 진행에 따른 엔탈피"></svg>
+          <div class="ov" data-ov="ey" style="font-size:19px"></div><div class="ov" data-ov="ex" style="font-size:19px"></div><div class="ov halo" data-ov="e1" style="font-size:19px"></div><div class="ov halo" data-ov="e2" style="font-size:19px"></div></div>
+        <div class="lab-fig" style="width:256px;height:282px"><svg viewBox="0 0 256 282" width="256" height="282" aria-label="분자 운동 에너지 분포와 활성화 에너지 경계"></svg>
+          <div class="ov" data-ov="dy" style="font-size:19px"></div><div class="ov" data-ov="dx" style="font-size:19px"></div><div class="ov" data-ov="d1" style="font-size:19px"></div></div>
+      </div>
+      <table class="tight em44-log mt8"><thead><tr><th>넣은 물질</th><th>활성화 에너지</th><th>거품 눈금 (mL)</th><th>반응 속도</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 탐구 ③ 결과 및 정리 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 촉매 — 결과 및 정리">
+  <h2><span class="tag">탐구</span>결과 및 정리 — 반응 속도에 영향을 주는 물질</h2>
+  <p class="f21"><b>1</b> 눈금실린더 A와 B에서 기포가 발생하는 정도를 비교하여 설명해 볼까?</p>
+  <div class="answer step mt8 em44-left">A: 기포가 거의 생기지 않는다(30 s 뒤 거의 10 mL 그대로). · B: 기포가 빠르게 많이 생겨 거품이 눈금실린더 위까지 솟아오른다. → B에서 과산화 수소의 분해가 훨씬 빠르다.</div>
+  <div class="board mt8" style="min-height:56px"></div>
+  <p class="f21 mt12"><b>2</b> 과산화 수소의 분해 반응에서 아이오딘화 칼륨의 역할은 무엇일까?</p>
+  <div class="answer step mt8 em44-left">아이오딘화 칼륨은 과산화 수소의 분해 반응 속도를 빠르게 한다. 반응이 끝난 뒤에도 그대로 남아 있으므로, 자신은 변하지 않으면서 반응 속도를 변화시키는 물질 = <b>촉매</b>이다.</div>
+  <p class="small mt16 c-muted"><b>스스로 평가하기</b> 지식·이해: 아이오딘화 칼륨의 역할을 옳게 설명했는가? · 과정·기능: 기포가 발생하는 정도를 옳게 비교했는가? · 가치·태도: 반응 속도에 영향을 주는 물질에 관심을 가지고 참여했는가?</p>
+</section>
+
+<!-- ════════ 10. ③ 촉매 ════════ -->
+<section class="slide" data-sec="04 · 촉매가 반응 속도에 미치는 영향" data-title="촉매">
+  <h2><span class="no">3</span>촉매</h2>
+  <p class="f22">과산화 수소($\ce{H2O2}$)는 실온에서 물($\ce{H2O}$)과 산소($\ce{O2}$)로 서서히 분해되는데, 아이오딘화 칼륨($\ce{KI}$)을 넣으면 분해 속도가 빨라진다.</p>
+  <p class="f22 mt12">화학 반응 과정에서 <mark>자신은 변하지 않으면서 반응 속도를 변화시키는 물질</mark>을 <b>촉매</b>라고 한다.</p>
+  <div class="formula mt16">$\ce{2H2O2(l) ->[\ce{KI}] 2H2O(l) + O2(g)}$<div class="unit">촉매는 화학 반응식에서 화살표 위에 주로 표시한다.</div></div>
+  <div class="row mt16">
+    <div class="col"><p class="f21"><b>Q</b> 반응식의 반응물·생성물에 $\ce{KI}$를 쓰지 않는 까닭은 무엇일까?</p>
+      <p class="f21 mt8 step">→ $\ce{KI}$는 반응 과정에 참여하지만 반응이 끝나면 처음 그대로 남는다 — <span class="ans">반응물도 생성물도 아니다</span>.</p></div>
+    <div class="col"><div class="note step">원자 수 확인: 왼쪽 H 4, O 4 = 오른쪽 H 4, O 2 + 2 — 촉매는 이 셈에 들어가지 않는다.</div></div>
+  </div>
+</section>
+
+<!-- ════════ 11. ③ 정촉매와 부촉매 ════════ -->
+<section class="slide" data-sec="04 · 촉매가 반응 속도에 미치는 영향" data-title="정촉매와 부촉매">
+  <h2><span class="no">3</span>정촉매와 부촉매</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3 class="c-field">정촉매</h3>
+        <p class="f21"><mark>반응 속도를 빠르게 하는 물질</mark></p>
+        <p class="f21 mt8">예 과산화 수소 분해 반응의 아이오딘화 칼륨($\ce{KI}$)</p></div>
+      <div class="card mt12"><h3 style="color:#7B4FC8">부촉매</h3>
+        <p class="f21"><mark>반응 속도를 느리게 하는 물질</mark></p>
+        <p class="f21 mt8">예 과산화 수소($\ce{H2O2}$)에 넣은 묽은 인산($\ce{H3PO4}$) — 분해 속도가 느려진다.</p></div>
+      <div class="note mt12">일반적으로 ‘촉매’는 정촉매를 뜻하고, 부촉매는 반응 속도를 느리게 하므로 <b>억제제</b>라고도 부른다.</div>
+    </div>
+    <div class="col" style="flex:0 0 460px">
+      <svg class="fig" viewBox="0 0 460 330" style="width:460px" aria-label="높은 산을 넘는 길과 낮은 고개를 넘는 길 비유">
+        <path d="M10 300 L120 300 C170 300 190 40 240 40 C290 40 310 300 360 300 L450 300 Z" fill="#CFE3C8" stroke="#7FA672" stroke-width="2"/>
+        <path d="M10 300 L120 300 C165 300 195 190 240 190 C285 190 315 300 360 300 L450 300" fill="none" stroke="#2E9E6A" stroke-width="4" stroke-dasharray="10 8" data-anim="draw" data-dur="1.4"/>
+        <path d="M30 300 L120 300 C170 300 190 40 240 40 C290 40 310 300 360 300 L430 300" fill="none" stroke="#16233D" stroke-width="3"/>
+        <g data-anim="move" data-from="-150,0" data-dur="1.6" data-ease="out" data-delay=".4"><circle cx="186" cy="228" r="11" fill="#F2A65A" stroke="#B86A1F" stroke-width="2"/></g>
+        <text class="tex" x="240" y="26" data-mix="촉매를 사용하지 않을 때: 높은 산을 넘음" data-size="19" data-anchor="middle" fill="#16233D"></text>
+        <text class="tex" x="240" y="180" data-mix="정촉매: 낮은 고개로" data-size="20" data-anchor="middle" fill="#2E9E6A" data-halo="1"></text>
+        <text class="tex" x="230" y="326" data-mix="정촉매를 쓰면 더 낮은 길로 쉽게 넘어간다" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="small c-muted em44-c">반응 경로 변화의 비유</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. ③ 촉매와 활성화 에너지 ════════ -->
+<section class="slide" data-sec="04 · 촉매가 반응 속도에 미치는 영향" data-title="촉매와 활성화 에너지">
+  <h2><span class="no">3</span>촉매를 사용하면 활성화 에너지가 달라진다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">
+      <svg class="fig" viewBox="0 0 600 410" style="width:600px" aria-label="촉매 없음, 정촉매, 부촉매 경로의 엔탈피 도표와 세 활성화 에너지">
+        <line x1="50" y1="380" x2="578" y2="380" stroke="#5B6B7F" stroke-width="2"/><polygon points="586,380 576,375 576,385" fill="#5B6B7F"/><line x1="50" y1="380" x2="50" y2="32" stroke="#5B6B7F" stroke-width="2"/><polygon points="50,24 45,34 55,34" fill="#5B6B7F"/>
+        <text class="tex" x="62" y="30" data-mix="엔탈피" data-size="21" fill="#16233D"></text> <text class="tex" x="570" y="404" data-mix="반응의 진행" data-size="21" data-anchor="end" fill="#16233D"></text>
+        <line x1="90" y1="270" x2="530" y2="270" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <path d="M60 270 L170 270 C247.0 270 233.0 150 310 150 C387.0 150 373.0 335 450 335 L560 335" fill="none" stroke="#16233D" stroke-width="3.5" stroke-linecap="round" data-anim="draw" data-dur="1.2"/>
+        <line x1="130" y1="150" x2="300" y2="150" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/>
+        <g><line x1="130" y1="153" x2="130" y2="267" stroke="#E08A2C" stroke-width="2.5"/><polygon points="130,150 125,160 135,160" fill="#E08A2C"/><polygon points="130,270 125,260 135,260" fill="#E08A2C"/></g> <text class="tex" x="140" y="172" data-mix="$E_\mathrm{a}$" data-size="23" fill="#B8661A" data-halo="1"></text>
+        <text class="tex" x="345" y="140" data-mix="촉매를 사용하지 않을 때" data-size="20" fill="#16233D" data-halo="1"></text>
+        <g class="step" data-g="k1"><path d="M60 270 L170 270 C247.0 270 233.0 212 310 212 C387.0 212 373.0 335 450 335 L560 335" fill="none" stroke="#2E9E6A" stroke-width="3.5" stroke-dasharray="10 7" data-anim="draw" data-dur="1.2" data-on="step"/>
+          <line x1="160" y1="212" x2="300" y2="212" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/>
+          <g><line x1="160" y1="215" x2="160" y2="267" stroke="#2E9E6A" stroke-width="2.5"/><polygon points="160,212 155,222 165,222" fill="#2E9E6A"/><polygon points="160,270 155,260 165,260" fill="#2E9E6A"/></g> <text class="tex" x="168" y="236" data-mix="$E_\mathrm{a}'$" data-size="23" fill="#2E9E6A" data-halo="1"></text> <text class="tex" x="345" y="206" data-mix="정촉매 사용" data-size="20" fill="#2E9E6A" data-halo="1"></text></g>
+        <g class="step" data-g="k2"><path d="M60 270 L170 270 C247.0 270 233.0 80 310 80 C387.0 80 373.0 335 450 335 L560 335" fill="none" stroke="#7B4FC8" stroke-width="3.5" stroke-dasharray="14 6 3 6" data-anim="draw" data-dur="1.2" data-on="step"/>
+          <line x1="100" y1="80" x2="300" y2="80" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/>
+          <g><line x1="100" y1="83" x2="100" y2="267" stroke="#7B4FC8" stroke-width="2.5"/><polygon points="100,80 95,90 105,90" fill="#7B4FC8"/><polygon points="100,270 95,260 105,260" fill="#7B4FC8"/></g> <text class="tex" x="92" y="140" data-mix="$E_\mathrm{a}''$" data-size="23" data-anchor="end" fill="#7B4FC8" data-halo="1"></text> <text class="tex" x="345" y="70" data-mix="부촉매 사용" data-size="20" fill="#7B4FC8" data-halo="1"></text></g>
+        <text class="tex" x="88" y="262" data-mix="반응물" data-size="20" fill="#16233D"></text> <text class="tex" x="470" y="326" data-mix="생성물" data-size="20" data-anchor="middle" fill="#16233D"></text>
+        <g class="step" data-g="k3"><line x1="540" y1="270" x2="540" y2="326" stroke="#16233D" stroke-width="2.5"/><polygon points="540,335 535,324 545,324" fill="#16233D"/><text class="tex" x="550" y="312" data-mix="$\Delta H$" data-size="22" fill="#16233D" data-halo="1"></text></g>
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f21">촉매를 사용하면 <b>새로운 반응 경로</b>로 반응이 진행되어 활성화 에너지의 크기가 달라진다.</p>
+      <p class="f21 mt12 step" data-g="k1"><b class="c-field">정촉매</b>: 활성화 에너지가 낮아진다($E_\mathrm{a}'&lt;E_\mathrm{a}$) → 반응 속도가 빨라진다.</p>
+      <p class="f21 mt12 step" data-g="k2"><b style="color:#7B4FC8">부촉매</b>: 활성화 에너지가 커진다($E_\mathrm{a}''&gt;E_\mathrm{a}$) → 반응 속도가 느려진다.</p>
+      <p class="f21 mt12"><b>Q</b> 촉매를 사용하면 반응 엔탈피($\Delta H$)도 달라질까?</p>
+      <p class="f21 mt8 step" data-g="k3">→ 달라지지 않는다. 반응물과 생성물의 엔탈피는 그대로이므로 $\Delta H$는 같다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ③ 반응할 수 있는 분자 수 ════════ -->
+<section class="slide" data-sec="04 · 촉매가 반응 속도에 미치는 영향" data-title="촉매와 반응할 수 있는 분자 수">
+  <h2><span class="no">3</span>촉매를 사용하면 반응할 수 있는 분자 수가 달라진다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">
+      <svg class="fig" viewBox="0 0 600 410" style="width:600px" aria-label="한 온도의 분포 곡선과 세 활성화 에너지 경계, 경계 오른쪽 넓이">
+        <line x1="60" y1="350" x2="568" y2="350" stroke="#5B6B7F" stroke-width="2"/><polygon points="576,350 566,345 566,355" fill="#5B6B7F"/><line x1="60" y1="350" x2="60" y2="52" stroke="#5B6B7F" stroke-width="2"/><polygon points="60,44 55,54 65,54" fill="#5B6B7F"/>
+        <g class="step" data-g="m1"><path d="M202.9 350.0 L202.9 229.6 L208.8 236.9 L214.8 243.9 L220.7 250.5 L226.7 256.8 L232.6 262.7 L238.6 268.3 L244.5 273.6 L250.5 278.6 L256.4 283.3 L262.4 287.7 L268.3 291.8 L274.3 295.7 L280.2 299.4 L286.2 302.8 L292.1 306.0 L298.1 309.0 L304.0 311.8 L310.0 314.4 L316.0 316.9 L321.9 319.2 L327.9 321.3 L333.8 323.3 L339.8 325.2 L345.7 326.9 L351.7 328.6 L357.6 330.1 L363.6 331.5 L369.5 332.8 L375.5 334.0 L381.4 335.2 L387.4 336.2 L393.3 337.2 L399.3 338.1 L405.2 339.0 L411.2 339.8 L417.1 340.5 L423.1 341.2 L429.0 341.8 L435.0 342.4 L441.0 343.0 L446.9 343.5 L452.9 344.0 L458.8 344.4 L464.8 344.8 L470.7 345.2 L476.7 345.5 L482.6 345.9 L488.6 346.2 L494.5 346.5 L500.5 346.7 L506.4 347.0 L512.4 347.2 L518.3 347.4 L524.3 347.6 L530.2 347.8 L536.2 347.9 L542.1 348.1 L548.1 348.2 L554.0 348.4 L560.0 348.5 L560.0 350.0 Z" fill="#2E9E6A" opacity=".22"/></g>
+        <path d="M317.1 350.0 L317.1 317.4 L321.2 318.9 L325.2 320.4 L329.3 321.8 L333.3 323.2 L337.4 324.5 L341.4 325.7 L345.5 326.9 L349.5 328.0 L353.6 329.1 L357.6 330.1 L361.7 331.1 L365.7 332.0 L369.8 332.9 L373.8 333.7 L377.9 334.5 L381.9 335.3 L386.0 336.0 L390.0 336.7 L394.0 337.3 L398.1 338.0 L402.1 338.6 L406.2 339.1 L410.2 339.7 L414.3 340.2 L418.3 340.7 L422.4 341.1 L426.4 341.6 L430.5 342.0 L434.5 342.4 L438.6 342.8 L442.6 343.1 L446.7 343.5 L450.7 343.8 L454.8 344.1 L458.8 344.4 L462.9 344.7 L466.9 345.0 L471.0 345.2 L475.0 345.5 L479.0 345.7 L483.1 345.9 L487.1 346.1 L491.2 346.3 L495.2 346.5 L499.3 346.7 L503.3 346.8 L507.4 347.0 L511.4 347.2 L515.5 347.3 L519.5 347.4 L523.6 347.6 L527.6 347.7 L531.7 347.8 L535.7 347.9 L539.8 348.0 L543.8 348.1 L547.9 348.2 L551.9 348.3 L556.0 348.4 L560.0 348.5 L560.0 350.0 Z" fill="#E08A2C" opacity=".3" data-anim="fade" data-delay="1"/>
+        <g class="step" data-g="m2"><path d="M402.9 350.0 L402.9 338.7 L405.5 339.0 L408.1 339.4 L410.7 339.7 L413.3 340.1 L416.0 340.4 L418.6 340.7 L421.2 341.0 L423.8 341.3 L426.4 341.6 L429.0 341.8 L431.7 342.1 L434.3 342.4 L436.9 342.6 L439.5 342.9 L442.1 343.1 L444.8 343.3 L447.4 343.5 L450.0 343.7 L452.6 344.0 L455.2 344.1 L457.9 344.3 L460.5 344.5 L463.1 344.7 L465.7 344.9 L468.3 345.0 L471.0 345.2 L473.6 345.4 L476.2 345.5 L478.8 345.7 L481.4 345.8 L484.0 346.0 L486.7 346.1 L489.3 346.2 L491.9 346.3 L494.5 346.5 L497.1 346.6 L499.8 346.7 L502.4 346.8 L505.0 346.9 L507.6 347.0 L510.2 347.1 L512.9 347.2 L515.5 347.3 L518.1 347.4 L520.7 347.5 L523.3 347.6 L526.0 347.6 L528.6 347.7 L531.2 347.8 L533.8 347.9 L536.4 347.9 L539.0 348.0 L541.7 348.1 L544.3 348.1 L546.9 348.2 L549.5 348.3 L552.1 348.3 L554.8 348.4 L557.4 348.4 L560.0 348.5 L560.0 350.0 Z" fill="#7B4FC8" opacity=".45"/></g>
+        <path d="M60.0 350.0 L64.2 206.6 L68.3 158.7 L72.5 129.0 L76.7 109.3 L80.8 96.1 L85.0 87.7 L89.2 82.7 L93.3 80.4 L97.5 80.3 L101.7 81.8 L105.8 84.6 L110.0 88.5 L114.2 93.3 L118.3 98.7 L122.5 104.6 L126.7 110.9 L130.8 117.5 L135.0 124.4 L139.2 131.3 L143.3 138.3 L147.5 145.4 L151.7 152.5 L155.8 159.5 L160.0 166.4 L164.2 173.2 L168.3 179.9 L172.5 186.5 L176.7 192.9 L180.8 199.2 L185.0 205.3 L189.2 211.3 L193.3 217.0 L197.5 222.6 L201.7 228.0 L205.8 233.3 L210.0 238.3 L214.2 243.2 L218.3 247.9 L222.5 252.4 L226.7 256.8 L230.8 261.0 L235.0 265.0 L239.2 268.9 L243.3 272.6 L247.5 276.1 L251.7 279.6 L255.8 282.8 L260.0 286.0 L264.2 289.0 L268.3 291.8 L272.5 294.6 L276.7 297.2 L280.8 299.7 L285.0 302.1 L289.2 304.4 L293.3 306.6 L297.5 308.7 L301.7 310.7 L305.8 312.6 L310.0 314.4 L314.2 316.2 L318.3 317.8 L322.5 319.4 L326.7 320.9 L330.8 322.4 L335.0 323.7 L339.2 325.0 L343.3 326.3 L347.5 327.4 L351.7 328.6 L355.8 329.6 L360.0 330.7 L364.2 331.6 L368.3 332.6 L372.5 333.4 L376.7 334.3 L380.8 335.1 L385.0 335.8 L389.2 336.5 L393.3 337.2 L397.5 337.9 L401.7 338.5 L405.8 339.1 L410.0 339.6 L414.2 340.2 L418.3 340.7 L422.5 341.1 L426.7 341.6 L430.8 342.0 L435.0 342.4 L439.2 342.8 L443.3 343.2 L447.5 343.5 L451.7 343.9 L455.8 344.2 L460.0 344.5 L464.2 344.8 L468.3 345.0 L472.5 345.3 L476.7 345.5 L480.8 345.8 L485.0 346.0 L489.2 346.2 L493.3 346.4 L497.5 346.6 L501.7 346.8 L505.8 346.9 L510.0 347.1 L514.2 347.3 L518.3 347.4 L522.5 347.5 L526.7 347.7 L530.8 347.8 L535.0 347.9 L539.2 348.0 L543.3 348.1 L547.5 348.2 L551.7 348.3 L555.8 348.4 L560.0 348.5" fill="none" stroke="#16233D" stroke-width="3.5" data-anim="draw" data-dur="1.2"/>
+        <line x1="317.14285714285717" y1="350" x2="317.14285714285717" y2="170" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="7 6"/>
+        <text class="tex" x="317.14285714285717" y="380" data-mix="$E_\mathrm{a}$" data-size="23" data-anchor="middle" fill="#B8661A"></text>
+        <g class="step" data-g="m1"><line x1="202.85714285714286" y1="350" x2="202.85714285714286" y2="140" stroke="#2E9E6A" stroke-width="2.5" stroke-dasharray="7 6"/><text class="tex" x="202.85714285714286" y="380" data-mix="$E_\mathrm{a}'$" data-size="23" data-anchor="middle" fill="#2E9E6A"></text></g>
+        <g class="step" data-g="m2"><line x1="402.85714285714283" y1="350" x2="402.85714285714283" y2="200" stroke="#7B4FC8" stroke-width="2.5" stroke-dasharray="7 6"/><text class="tex" x="402.85714285714283" y="380" data-mix="$E_\mathrm{a}''$" data-size="23" data-anchor="middle" fill="#7B4FC8"></text></g>
+        <text class="tex" x="568" y="404" data-mix="운동 에너지" data-size="21" data-anchor="end" fill="#5B6B7F"></text> <text class="tex" x="72" y="40" data-mix="분자 수" data-size="21" fill="#5B6B7F"></text>
+        <text class="tex" x="420" y="120" data-mix="온도 일정" data-size="21" fill="#16233D"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f21">온도가 같으면 분포 곡선은 그대로이다. 색칠한 부분 = 활성화 에너지 이상의 에너지를 가져 <b>반응할 수 있는 분자</b>.</p>
+      <p class="f21 mt12 step" data-g="m1"><b class="c-field">정촉매</b>: 경계가 $E_\mathrm{a}'$로 왼쪽에 옮겨 가 반응할 수 있는 분자 수가 <b>많아진다</b> → 빨라진다.</p>
+      <p class="f21 mt12 step" data-g="m2"><b style="color:#7B4FC8">부촉매</b>: 경계가 $E_\mathrm{a}''$로 오른쪽에 옮겨 가 반응할 수 있는 분자 수가 <b>적어진다</b> → 느려진다.</p>
+      <div class="note mt12"><b>Q</b> 온도를 높일 때와 무엇이 다를까? <span class="step">→ 온도는 <b>곡선</b>을 바꾸고, 촉매는 <b>경계($E_\mathrm{a}$)</b>를 바꾼다.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 비교 ════════ -->
+<section class="slide" data-sec="04 · 촉매가 반응 속도에 미치는 영향" data-title="온도와 촉매 비교">
+  <h2><span class="tag alt">다시 보기</span>온도를 높일 때와 정촉매를 넣을 때 <span class="small c-muted">덱 보충</span></h2>
+  <p class="f21" data-q>두 경우에 각 항목이 어떻게 되는지 채워 보자.</p>
+  <table class="tight em44-cmp mt12">
+    <tr><th>항목</th><th class="c-plus">온도를 높임</th><th class="c-field">정촉매를 넣음</th></tr>
+    <tr><th>활성화 에너지</th><td><span class="blank"><span class="step" data-g="v1">그대로</span></span></td><td><span class="blank"><span class="step" data-g="v2">낮아짐</span></span></td></tr>
+    <tr><th>분자 운동 에너지 분포</th><td><span class="blank"><span class="step" data-g="v1">오른쪽으로 퍼짐</span></span></td><td><span class="blank"><span class="step" data-g="v2">그대로</span></span></td></tr>
+    <tr><th>반응 엔탈피($\Delta H$)</th><td><span class="blank"><span class="step" data-g="v1">그대로</span></span></td><td><span class="blank"><span class="step" data-g="v2">그대로</span></span></td></tr>
+    <tr><th>반응할 수 있는 분자 수</th><td><span class="blank"><span class="step" data-g="v1">많아짐</span></span></td><td><span class="blank"><span class="step" data-g="v2">많아짐</span></span></td></tr>
+    <tr><th>반응 속도</th><td><span class="blank"><span class="step" data-g="v1">빨라짐</span></span></td><td><span class="blank"><span class="step" data-g="v2">빨라짐</span></span></td></tr>
+  </table>
+  <p class="small mt12 c-muted step">분자의 평균 운동 속도도 온도를 높일 때만 커진다 — 촉매는 분자의 운동 속도를 바꾸지 않는다.</p>
+</section>
+
+<!-- ════════ 15. 확인하기 ════════ -->
+<section class="slide" data-sec="04 · 확인하기" data-title="확인하기: 촉매" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>촉매와 반응 속도</h2>
+  <ol class="em44-ox f22">
+    <li>반응의 활성화 에너지를 낮추어 반응 속도를 빠르게 하는 물질을 <span class="blank"><span class="step">정촉매</span></span>(이)라고 한다.</li>
+    <li>다음 중 촉매를 사용할 때 달라지는 것을 있는 대로 골라 보자.<br>활성화 에너지 · 반응 속도 · 반응 엔탈피 · 분자 운동 속도 <span class="blank em44-wide"><span class="step">활성화 에너지, 반응 속도</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 16. ④ 고체 촉매 ════════ -->
+<section class="slide" data-sec="04 · 촉매의 활용" data-title="촉매의 활용: 고체 촉매">
+  <h2><span class="no">4</span>촉매의 활용 — 고체 촉매</h2>
+  <p class="f22">촉매로 반응의 활성화 에너지를 변화시켜 반응 속도를 조절하면 <b>비용, 시간, 생산량</b> 측면에서 많은 이익을 얻을 수 있다.</p>
+  <div class="row mt12">
+    <div class="col">
+      <p class="f21">· 금속이나 금속 산화물로 이루어진 <b>고체 촉매</b>는 암모니아나 플라스틱 등 생활에 꼭 필요한 물질을 합성하는 데 쓰인다.</p>
+      <p class="f21 mt8">· 발전소의 이산화 황($\ce{SO2}$), 자동차 배기가스의 질소 산화물($\mathrm{NO}_x$) 등 오염 물질을 제거하는 데도 쓰여 환경 문제 해결에 도움을 준다.</p>
+      <p class="f21 mt12"><b>Q</b> 자동차의 촉매 변환기는 어떤 일을 할까?</p>
+      <p class="f21 mt8 step">→ 연료가 연소할 때 생기는 탄화수소($\mathrm{C}_x\mathrm{H}_y$), 일산화 탄소($\ce{CO}$), 질소 산화물을 이산화 탄소, 수증기, 질소, 산소로 빠르게 바꾸어 내보낸다.</p>
+    </div>
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 250" style="width:520px" aria-label="배기가스가 촉매 변환기를 지나 이산화 탄소, 물, 질소로 바뀜">
+        <rect x="10" y="110" width="120" height="40" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/>
+        <rect x="390" y="110" width="120" height="40" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/>
+        <rect x="130" y="70" width="260" height="120" rx="30" fill="#E8ECF0" stroke="#7E8B98" stroke-width="3"/>
+        <line x1="160" y1="86" x2="160" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="180" y1="86" x2="180" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="200" y1="86" x2="200" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="220" y1="86" x2="220" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="240" y1="86" x2="240" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="260" y1="86" x2="260" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="280" y1="86" x2="280" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="300" y1="86" x2="300" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="320" y1="86" x2="320" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="340" y1="86" x2="340" y2="174" stroke="#9FB0C2" stroke-width="2"/><line x1="360" y1="86" x2="360" y2="174" stroke="#9FB0C2" stroke-width="2"/>
+        <line x1="150" y1="96" x2="370" y2="96" stroke="#9FB0C2" stroke-width="2"/><line x1="150" y1="113" x2="370" y2="113" stroke="#9FB0C2" stroke-width="2"/><line x1="150" y1="130" x2="370" y2="130" stroke="#9FB0C2" stroke-width="2"/><line x1="150" y1="147" x2="370" y2="147" stroke="#9FB0C2" stroke-width="2"/><line x1="150" y1="164" x2="370" y2="164" stroke="#9FB0C2" stroke-width="2"/>
+        <path d="M20 130 L500 130" stroke="#16233D" stroke-width="3" stroke-dasharray="10 12" fill="none" data-anim="dash" data-speed="60" data-flow=""/>
+        <g data-arw="440,130,505,130,ink,3"></g>
+        <text class="tex" x="12" y="52" data-mix="$\mathrm{NO}_x$, $\ce{CO}$, $\mathrm{C}_x\mathrm{H}_y$" data-size="20" fill="#16233D"></text>
+        <text class="tex" x="508" y="52" data-mix="$\ce{CO2}$, $\ce{H2O}$, $\ce{N2}$" data-size="20" data-anchor="end" fill="#16233D"></text>
+        <text class="tex" x="260" y="222" data-mix="촉매 변환기 (벌집 모양 금속 촉매)" data-size="20" data-anchor="middle" fill="#16233D"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ④ 광촉매 ════════ -->
+<section class="slide" data-sec="04 · 촉매의 활용" data-title="촉매의 활용: 광촉매">
+  <h2><span class="no">4</span>촉매의 활용 — 광촉매</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 470 320" style="width:470px" aria-label="햇빛을 받은 광촉매 판 위에서 물이 수소와 산소로 분해됨">
+        <circle cx="70" cy="60" r="34" fill="#FFD34D"/>
+        <line x1="114" y1="60" x2="128" y2="60" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="101" y1="91" x2="111" y2="101" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="70" y1="104" x2="70" y2="118" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="39" y1="91" x2="29" y2="101" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="26" y1="60" x2="12" y2="60" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="39" y1="29" x2="29" y2="19" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="70" y1="16" x2="70" y2="2" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="101" y1="29" x2="111" y2="19" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/>
+        <g data-arw="110,96,200,180,equi,3"></g><g data-arw="130,80,270,180,equi,3"></g>
+        <text class="tex" x="225" y="124" data-mix="빛" data-size="22" fill="#B8661A"></text>
+        <rect x="140" y="150" width="300" height="140" rx="10" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="2.5"/>
+        <rect x="170" y="262" width="240" height="18" rx="4" fill="#4A4F57"/>
+        <text class="tex" x="290" y="308" data-mix="광촉매" data-size="21" data-anchor="middle" fill="#16233D"></text>
+        <g data-anim="move" data-from="0,70" data-dur="2.2" data-rep="loop" data-ease="lin"><g data-atom="230,190,10,H,-"></g><g data-atom="244,190,10,H,-"></g></g>
+        <g data-anim="move" data-from="0,70" data-dur="2.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-atom="350,196,12,O,-"></g><g data-atom="367,196,12,O,-"></g></g>
+        <text class="tex" x="237" y="170" data-mix="$\ce{H2}$" data-size="21" data-anchor="middle" fill="#16233D"></text> <text class="tex" x="358" y="172" data-mix="$\ce{O2}$" data-size="21" data-anchor="middle" fill="#16233D"></text>
+        <text class="tex" x="290" y="248" data-mix="$\ce{H2O}$" data-size="21" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22"><mark>빛을 받으면 촉매 작용을 하는 물질</mark>을 <b>광촉매</b>라고 한다.</p>
+      <div class="formula sm mt12">$\ce{2H2O(l) ->[\text{빛, 광촉매}] 2H2(g) + O2(g)}$</div>
+      <p class="f21 mt12">· 광촉매는 빛에너지로 물을 분해해 수소와 산소를 만들 수 있다.</p>
+      <p class="f21 mt8">· 빛에너지만으로 오염 물질을 제거할 수도 있다.</p>
+      <p class="f21 mt12"><b>Q</b> 광촉매가 에너지와 환경 문제를 동시에 해결할 수 있다고 하는 까닭은 무엇일까?</p>
+      <p class="f21 mt8 step">→ 햇빛만으로 연소해도 물만 생기는 연료인 수소를 만들고, 오염 물질도 분해하기 때문이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. ④ 효소 ════════ -->
+<section class="slide" data-sec="04 · 촉매의 활용" data-title="생체 촉매: 효소">
+  <h2><span class="no">4</span>생체 촉매 — 효소</h2>
+  <p class="f21">생체 내 화학 반응은 일반적으로 높은 활성화 에너지가 필요하지만 빠르게 진행된다. <mark>생명활동에 필요한 반응의 속도를 빠르게 하는 생체 촉매</mark>를 <b>효소</b>라고 하며, 효소는 복잡한 구조의 단백질 분자이다.</p>
+  
+  <svg class="fig mt8" viewBox="0 0 1100 250" style="width:1100px" aria-label="효소와 기질 A가 결합해 효소-기질 복합체를 만들고 생성물 C, D가 됨, 기질 B는 결합하지 못함">
+    <path d="M126.3 73.1 A40 40 0 1 0 126.3 106.9 L106 106.9 L106 73.1 Z" fill="#7FA8D9" stroke="#2F5D94" stroke-width="2.5"/> <text class="tex" x="90" y="158" data-mix="효소" data-size="21" data-anchor="middle" fill="#16233D"></text>
+    <line x1="106" y1="60" x2="150" y2="22" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="156" y="26" data-mix="활성 자리" data-size="20" fill="#16233D"></text>
+    <rect x="250" y="45" width="26" height="30" rx="3" fill="#E879A6" stroke="#A3346A" stroke-width="2"/> <text class="tex" x="300" y="68" data-mix="기질 A" data-size="20" fill="#16233D"></text>
+    <g data-arw="150,90,400,90,ink,3"></g>
+    <g data-anim="move" data-from="-200,-30" data-dur="1.4" data-ease="out" data-on="g:z1"><path d="M516.3 73.1 A40 40 0 1 0 516.3 106.9 L496 106.9 L496 73.1 Z" fill="#7FA8D9" stroke="#2F5D94" stroke-width="2.5"/><rect x="496" y="75" width="26" height="30" rx="3" fill="#E879A6" stroke="#A3346A" stroke-width="2"/></g>
+    <text class="tex" x="480" y="158" data-mix="효소·기질 복합체" data-size="20" data-anchor="middle" fill="#16233D"></text>
+    <g data-arw="560,90,700,90,ink,3"></g>
+    <path d="M806.3 73.1 A40 40 0 1 0 806.3 106.9 L786 106.9 L786 73.1 Z" fill="#7FA8D9" stroke="#2F5D94" stroke-width="2.5"/> <text class="tex" x="840" y="98" data-mix="+" data-size="26" data-anchor="middle" fill="#16233D"></text>
+    <g data-anim="move" data-from="-90,30" data-dur="1.2" data-ease="out" data-on="g:z1"><polygon points="880,50 908,50 894,74" fill="#FFD34D" stroke="#B8901A" stroke-width="2"/><text class="tex" x="920" y="70" data-mix="C" data-size="21" fill="#16233D"></text></g>
+    <g data-anim="move" data-from="-90,-20" data-dur="1.2" data-ease="out" data-on="g:z1"><rect x="880" y="104" width="28" height="22" rx="3" fill="#B79BE0" stroke="#6E4FA6" stroke-width="2"/><text class="tex" x="920" y="124" data-mix="D" data-size="21" fill="#16233D"></text></g>
+    <text class="tex" x="900" y="158" data-mix="생성물" data-size="20" data-anchor="middle" fill="#16233D"></text>
+    <g data-arw="150,120,400,200,muted,2.5"></g>
+    <polygon points="200,214 232,214 216,186" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2"/><text class="tex" x="242" y="214" data-mix="기질 B" data-size="20" fill="#16233D"></text>
+    <path d="M510.8 191.6 A34 34 0 1 0 510.8 220.4 L496 220.4 L496 191.6 Z" fill="#7FA8D9" stroke="#2F5D94" stroke-width="2.5"/> <g data-anim="move" data-from="20,0" data-dur=".5" data-rep="damp"><polygon points="526,222 556,222 541,194" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2"/></g>
+    <text class="tex" x="580" y="214" data-mix="반응하지 않음 — 활성 자리와 모양이 맞지 않는다" data-size="20" fill="#5B6B7F"></text>
+  </svg>
+  <p class="f21 mt8 step" data-g="z1">효소의 촉매 작용은 <b>활성 자리</b>에서 일어난다. 효소는 활성 자리와 입체 구조가 맞는 특정한 반응물(<b>기질</b>)과 <b>선택적으로</b> 결합해 반응 속도를 빠르게 한다.</p>
+</section>
+
+<!-- ════════ 19. ④ 효소의 활용 ════════ -->
+<section class="slide" data-sec="04 · 촉매의 활용" data-title="효소의 활용">
+  <h2><span class="no">4</span>효소의 활용</h2>
+  <p class="f22">인류는 오래전부터 생활에 효소를 이용했다. 효소의 활용 분야는 계속 넓어지고 있다.</p>
+  <div class="stages mt12">
+    <div class="stage"><h3>발효 식품</h3><p>치즈, 포도주, 식혜, 메주 등을 만드는 데 효소를 이용한다.</p></div>
+    <div class="stage"><h3>생활용품·의약품</h3><p>효소 세제, 화장품, 의약품 등에 효소를 활용한다.</p></div>
+    <div class="stage"><h3>환경·에너지</h3><p>효소를 환경이나 에너지 분야에 활용하는 방법을 꾸준히 연구하고 있다.</p></div>
+  </div>
+  <p class="f21 mt20"><b>Q</b> 식혜를 만들 때 엿기름을 넣고 따뜻하게 두는 까닭은 무엇일까?</p>
+  <p class="f21 mt8 step">→ 엿기름 속 효소가 밥의 녹말을 당으로 분해하는 반응을 빠르게 한다. 따뜻하게 두면 효소가 잘 작용할 수 있는 온도가 되어 반응이 더 빠르다.</p>
+  <p class="f21 mt12 step c-muted">도입의 답: 상처의 혈액·세포 속 효소(카탈레이스)가 과산화 수소의 분해를 빠르게 해 거품이 생긴다.</p>
+</section>
+
+<!-- ════════ 20. 확인하기 ════════ -->
+<section class="slide" data-sec="04 · 확인하기" data-title="확인하기: 광촉매와 효소" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>광촉매와 효소</h2>
+  <ol class="em44-ox f22">
+    <li>광촉매는 <span class="blank"><span class="step">빛</span></span>을/를 받을 때 촉매 작용을 하는 물질이다.</li>
+    <li>생물체 내에서 생명활동에 필요한 반응의 속도를 빠르게 하는 촉매를 <span class="blank"><span class="step">효소</span></span>(이)라고 한다.</li>
+  </ol>
+</section>
+
+<!-- ════════ 21. 소단원 마무리 ════════ -->
+<section class="slide" data-sec="04 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>촉매로 생활과 환경 문제 해결하기</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>창의력 키우기</h3>
+        <p class="f21">촉매를 이용해서 대기 중의 이산화 탄소를 플라스틱 등의 자원으로 활용하는 방법을 조사해 보자.</p>
+        <div class="board mt8" style="min-height:50px"></div>
+        <div class="answer step mt8 em44-left"><span class="small">예시</span> · 촉매로 이산화 탄소와 수소를 반응시켜 메탄올을 만들고, 이를 플라스틱의 원료로 쓴다.<br>· 촉매로 이산화 탄소를 다른 원료와 반응시켜 플라스틱(폴리카보네이트 등)을 만든다.<br>· 광촉매로 햇빛을 이용해 이산화 탄소를 연료·화학 원료로 바꾼다(인공 광합성).</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>디지털 소양 키우기</h3>
+        <p class="f21">생활을 편리하게 하는 데 촉매를 활용하는 예를 검색해 보자.</p>
+        <div class="board mt8" style="min-height:50px"></div>
+        <div class="answer step mt8 em44-left"><span class="small">예시</span> · 효소 세제: 단백질·지방 얼룩을 분해한다.<br>· 콘택트렌즈 세척: 백금 촉매로 남은 과산화 수소를 분해한다.<br>· 자동차 촉매 변환기, 연료 전지의 백금 촉매<br><span class="small">검색 결과는 공공 기관·학회·교과서처럼 믿을 수 있는 출처인지 확인한다.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 대단원 마무리 07 ════════ -->
+<section class="slide" data-sec="04 · 대단원 마무리" data-title="대단원 마무리 07">
+  <h2><span class="tag q">대단원 마무리 07</span>반응 속도에 영향을 미치는 요인</h2>
+  <p class="f21">반응 속도에 영향을 미치는 요인에 대한 설명으로 가장 적절한 것은?</p>
+  <div class="row mt8">
+    <div class="col">
+      <div class="em44-five card">
+        <p>① 온도가 높아지면 활성화 에너지가 감소해 반응 속도가 빨라진다.</p>
+        <p>② 온도가 높아지면 입자의 충돌 횟수가 감소해 반응 속도가 느려진다.</p>
+        <p>③ 반응물의 농도가 증가하면 단위 시간당 입자의 충돌 횟수가 증가해 반응 속도가 빨라진다.</p>
+        <p>④ 기체 반응에서 온도가 일정할 때 압력을 높이면 입자의 충돌 횟수가 감소해 반응 속도가 느려진다.</p>
+        <p>⑤ 정촉매를 사용하면 정촉매를 사용하지 않을 때보다 활성화 에너지가 커지므로 반응 속도가 느려진다.</p>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ③</b> <span class="small">① 활성화 에너지는 그대로, $E_\mathrm{a}$ 이상인 분자 수가 증가 · ② 충돌 횟수는 증가, 속도는 빨라짐 · ④ 농도가 커져 충돌 횟수 증가 · ⑤ 정촉매는 활성화 에너지를 낮춘다</span></div>
+</section>
+
+<!-- ════════ 23. 대단원 마무리 08 ════════ -->
+<section class="slide" data-sec="04 · 대단원 마무리" data-title="대단원 마무리 08 (서술형)">
+  <h2><span class="tag q">대단원 마무리 08</span>정촉매와 부촉매의 활성화 에너지 <span class="small c-muted">서술형</span></h2>
+  <p class="f21">그림은 어떤 반응에서 촉매를 사용하지 않을 때와 정촉매와 부촉매를 각각 사용할 때 반응의 진행에 따른 엔탈피를 나타낸 것이다. 정촉매와 부촉매를 사용했을 때의 활성화 에너지를 각각 구하고, 그렇게 생각한 까닭을 설명해 보자. (단, (가)는 촉매를 사용하지 않은 경우이며, 온도는 일정하다.)</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 520 320" style="width:470px" aria-label="H1부터 H4까지 엔탈피 수준과 세 경로, 가는 가운데 경로">
+        <line x1="70" y1="295" x2="508" y2="295" stroke="#5B6B7F" stroke-width="2"/><polygon points="516,295 506,290 506,300" fill="#5B6B7F"/><line x1="70" y1="295" x2="70" y2="22" stroke="#5B6B7F" stroke-width="2"/><polygon points="70,14 65,24 75,24" fill="#5B6B7F"/>
+        <text class="tex" x="82" y="28" data-mix="엔탈피" data-size="20" fill="#16233D"></text> <text class="tex" x="510" y="316" data-mix="반응의 진행" data-size="20" data-anchor="end" fill="#16233D"></text>
+        <line x1="70" y1="215" x2="320" y2="215" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/><text class="tex" x="60" y="222" data-mix="$H_1$" data-size="21" data-anchor="end" fill="#16233D"></text><line x1="70" y1="170" x2="320" y2="170" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/><text class="tex" x="60" y="177" data-mix="$H_2$" data-size="21" data-anchor="end" fill="#16233D"></text><line x1="70" y1="125" x2="320" y2="125" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/><text class="tex" x="60" y="132" data-mix="$H_3$" data-size="21" data-anchor="end" fill="#16233D"></text><line x1="70" y1="75" x2="320" y2="75" stroke="#5B6B7F" stroke-width="1.4" stroke-dasharray="4 5"/><text class="tex" x="60" y="82" data-mix="$H_4$" data-size="21" data-anchor="end" fill="#16233D"></text>
+        <path d="M80 215 L160 215 C226.0 215 214.0 75 280 75 C346.0 75 334.0 250 400 250 L490 250" fill="none" stroke="#8C99A6" stroke-width="3"/>
+        <path d="M80 215 L160 215 C226.0 215 214.0 170 280 170 C346.0 170 334.0 250 400 250 L490 250" fill="none" stroke="#8C99A6" stroke-width="3"/>
+        <path d="M80 215 L160 215 C226.0 215 214.0 125 280 125 C346.0 125 334.0 250 400 250 L490 250" fill="none" stroke="#16233D" stroke-width="3.5" data-anim="draw" data-dur="1.2"/>
+        <text class="tex" x="320" y="118" data-mix="(가)" data-size="21" fill="#16233D" data-halo="1"></text>
+        <text class="tex" x="110" y="206" data-mix="반응물" data-size="19" data-anchor="middle" fill="#16233D"></text> <text class="tex" x="450" y="240" data-mix="생성물" data-size="19" data-anchor="middle" fill="#16233D"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <div class="board"></div>
+      <div class="answer step mt8 em44-left">정촉매: $H_2-H_1$, 부촉매: $H_4-H_1$<br><span class="small">까닭: 활성화 에너지는 반응물의 엔탈피($H_1$)에서 꼭대기까지의 차이다. 정촉매는 (가)보다 활성화 에너지를 낮추므로 꼭대기가 $H_2$인 경로, 부촉매는 높이므로 꼭대기가 $H_4$인 경로이다.</span></div>
+      <p class="small mt8 c-muted step">채점 요소: 두 값 모두 옳음 · 활성화 에너지의 뜻(반응물 → 꼭대기)으로 설명 · 정촉매는 낮추고 부촉매는 높인다는 근거</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 대단원 마무리 09 ════════ -->
+<section class="slide" data-sec="04 · 대단원 마무리" data-title="대단원 마무리 09">
+  <h2><span class="tag q">대단원 마무리 09</span>반응 속도를 조절하는 물질</h2>
+  <p class="f21">다음은 반응 속도를 조절하는 몇 가지 물질을 설명한 것이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+  <div class="row mt8">
+    <div class="col">
+      <div class="card"><p class="f21">(가) 빛을 받으면 촉매 작용을 하는 물질</p><p class="f21">(나) 금속이나 금속 산화물로 이루어진 고체 촉매</p><p class="f21">(다) 생명활동에 필요한 반응의 속도를 빠르게 하는 생체 촉매</p></div>
+      <div class="bogi mt8"><p>ㄱ. (가)는 오염 물질의 제거, 물의 분해 등에 이용된다.</p><p>ㄴ. (나)는 자동차의 촉매 변환기 등에 이용되어 대기 오염 물질을 제거한다.</p><p>ㄷ. 하나의 (다)는 다양한 반응물과 결합할 수 있으므로 반응 속도를 조절하는 데 효과적이다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">ㄷ: 효소는 활성 자리와 입체 구조가 맞는 특정한 반응물(기질)과만 선택적으로 결합한다</span></div>
+</section>
+
+<!-- ════════ 25. 스스로 정리 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>Ⅳ. 반응 속도 — 개념 지도</h2>
+  <div class="em44-map">
+    <div class="em44-node em44-hub"><span>Ⅳ<br>반응 속도</span></div>
+    <div class="em44-node em44-main">
+      <b>04 농도, 온도, 촉매에 따른 반응 속도의 변화</b>
+      <div class="em44-pair"><div class="em44-key">농도와 반응 속도</div><div class="em44-val">반응물의 농도 증가 → 충돌 횟수 증가 → 반응 속도 ❺ 빨라짐</div></div>
+      <div class="em44-pair"><div class="em44-key">온도와 반응 속도</div><div class="em44-val">온도 증가 → 유효 충돌을 할 수 있는 입자 수 증가 → 반응 속도 ❻ 빨라짐</div></div>
+      <div class="em44-pair"><div class="em44-key">촉매와 반응 속도</div><div class="em44-val em44-v3">
+        <p data-q>❼ <span class="blank"><span class="step">촉매</span></span>: 화학 반응에서 자신은 변하지 않으면서 반응 속도를 변화시키는 물질</p>
+        <p data-q>정촉매 사용 → 활성화 에너지 감소 → 반응 속도 ❽ <span class="blank"><span class="step">빨라짐</span></span></p>
+        <p data-q>광촉매: 빛을 받으면 촉매 작용을 하는 물질 · 생체 촉매인 ❾ <span class="blank"><span class="step">효소</span></span>은/는 식품, 환경, 에너지 등 많은 분야에서 활용됨.</p></div></div>
+    </div>
+    <div class="em44-side">
+      <div class="em44-node em44-dim"><span>01 화학 반응 속도</span></div>
+      <div class="em44-node em44-dim"><span>02 일차 반응의 반감기</span></div>
+      <div class="em44-node em44-dim"><span>03 유효 충돌과 활성화 에너지</span></div>
+    </div>
+  </div>
+  <p class="small mt8 c-muted">❺–❾는 대단원 마무리 개념 정리의 빈칸 번호이다(❺, ❻은 앞 시간에 채움).</p>
+</section>
+
+<!-- ════════ 26. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 촉매가 반응 경로를 바꾸어 활성화 에너지와 반응할 수 있는 분자 수를 변화시킨다는 것을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 아이오딘화 칼륨을 넣은 것과 넣지 않은 것을 비교하여 촉매와 반응 속도의 관계를 탐구했다.</button>
+    <button class="chk">[가치·태도] 고체 촉매·광촉매·효소의 활용 예를 찾아 화학의 유용성과 환경 문제 해결에 관심을 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 정촉매를 넣으면 반응 엔탈피는 어떻게 될까? <span class="step">→ <span class="ans">변하지 않는다</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 묽은 인산은 과산화 수소의 분해에서 어떤 촉매일까? <span class="step">→ 반응 속도를 느리게 하는 <span class="ans">부촉매</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 효소가 특정한 반응물과만 결합하는 까닭은? <span class="step">→ 활성 자리와 <span class="ans">입체 구조가 맞아야</span> 결합하기 때문</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 대단원 Ⅳ 마무리 — 반응 속도, 반감기, 활성화 에너지, 농도·온도·촉매를 하나의 개념 지도로 묶어 보자.</div>
+</section>
