@@ -1,0 +1,41 @@
+/* 3-3 화학 변화의 자발성 — 덱 전용 (모두 .em33- 접두어) */
+.em33-pick{display:flex;gap:12px}
+.em33-pick .card{flex:1 1 0;text-align:center;font-size:22px;padding:10px 8px;line-height:1.35}
+.card.em33-cool{background:#EEF5FD;border-color:#BFD4EE}
+.formula.em33-fs{font-size:22px;padding:8px 10px}
+p.em33-a{color:#1B5E3F;margin-top:4px}
+.answer.em33-left{text-align:left}
+.card.em33-sign{padding:8px 12px}
+.em33-bubble{display:inline-block;background:#FFF8E6;border:2px solid #F0D58C;border-radius:22px;padding:8px 20px;font-size:22px;position:relative}
+.em33-bubble::after{content:"";position:absolute;left:36px;bottom:-14px;border:12px solid transparent;border-top-color:#F0D58C;border-bottom:0}
+.card.em33-hcard{border-color:#E08A2C;border-width:2px;background:#FFF6EC}
+.card.em33-scard{border-color:#7B4FC8;border-width:2px;background:#F5F0FC}
+.card.em33-hcard h3,.card.em33-scard h3{font-size:21px}
+p.em33-cap{margin:0 0 2px 4px;color:var(--muted)}
+table.em33-four{width:100%}
+table.em33-four th{font-size:21px;padding:8px 10px}
+table.em33-four td{font-size:21px;padding:10px 12px;text-align:center;line-height:1.5}
+table.em33-four td.em33-yes{background:#EAF6EF}
+table.em33-four td.em33-no{background:#F1F3F5}
+.choices.em33-ch1{display:flex;flex-direction:column;gap:6px}
+table.em33-eqt{border-collapse:collapse;width:auto}
+table.em33-eqt td{border:0;background:transparent;padding:4px 10px;font-size:22px;text-align:left;white-space:nowrap}
+table.em33-eqt.em33-box{background:#fff;border:2px solid var(--line);border-radius:12px}
+/* 개념 지도 (3-1·3-2와 같은 꼴) */
+.em33-map{display:flex;align-items:stretch;gap:14px}
+.em33-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:21px;line-height:1.5}
+.em33-node.em33-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em33-node.em33-dim{flex:0 0 250px;border-style:dashed;color:var(--muted)}
+table.em33-sum{width:100%}
+table.em33-sum th{width:200px}
+.blank.em33-wide{min-width:220px}
+/* 실험실 */
+.em33-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 8px}
+.em33-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.em33-seg .btn.em33-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.em33-read{width:100%}
+table.em33-read th{font-size:19px;padding:4px 8px;text-align:left;width:120px}
+table.em33-read td{font-size:19px;padding:4px 8px;text-align:left;white-space:nowrap}
+output.kind.em33-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.em33-log{width:100%}
+table.em33-log th,table.em33-log td{font-size:19px;padding:3px 5px;text-align:center}

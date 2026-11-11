@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":9,"severity":"medium","rule":"D8","problem":"막대 '6' 라벨과 '앞면과 뒷면이 섞임' 라벨이 겹침","fix":"막대 배율 30→26, 라벨을 위로 올림"},
+{"slide":19,"severity":"medium","rule":"D8","problem":"생성물 O2 아래 원자 라벨이 '기체 3분자'와 겹침","fix":"생성물 분자를 위로 올리고 라벨 y 206"},
+{"slide":21,"severity":"medium","rule":"D8","problem":"OH- 원과 '2 입자' 라벨이 맞닿음","fix":"이온을 위로 올리고 viewBox 높이 200"},
+{"slide":10,"severity":"medium","rule":"D4","problem":"실험실 그래프의 가로축 이름 '앞면의 수'가 끝 눈금·막대와 겹침","fix":"그래프 오른쪽 끝을 560으로 줄이고 축 이름을 축 끝 오른쪽에"},
+{"slide":22,"severity":"medium","rule":"D7","problem":"배경 물 분자를 산소 원자(빨강)로 그려 이온보다 눈에 띄고, 물 범례가 상자 아래에서 겹침","fix":"물 분자를 옅은 하늘색 원 + '물 분자' 범례(왼쪽 위)로"},
+{"slide":16,"severity":"low","rule":"D21","problem":"③ 카드 분자 모형에 원소 범례가 없고 H 원자가 작아 잘 안 보임","fix":"N·H 범례를 넣고 H 반지름 9→10"},
+{"slide":5,"severity":"low","rule":"D27","problem":"물의 흐름 그림이 무엇인지 알아보기 어려움(벽 모양), 물방울이 물색과 같아 안 보임","fix":"높은 곳 → 폭포 → 낮은 곳 꼴로 다시 그리고 물방울을 흰 테 원으로, 흐름 화살표 추가"},
+{"slide":28,"severity":"low","rule":"T4","problem":"열화학 반응식 표가 왼쪽 열(560px)보다 넓어 오른쪽 풀이와 겹침","fix":"왼쪽 열 640px"}
+],"summary":"전체 캡처를 sheet 모음으로 두 번 보았다. 겹침·넘침 8건을 모두 고쳤고, 자동 점검 0건·콘솔 0건·motion 0·ask 0."}
