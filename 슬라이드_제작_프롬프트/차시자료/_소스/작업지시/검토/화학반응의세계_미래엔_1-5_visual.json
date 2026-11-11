@@ -1,0 +1,7 @@
+{"findings":[
+{"slide":17,"severity":"medium","rule":"D7","problem":"CH3COOH 막대를 field(초록)로 칠해 S5의 짝산·짝염기 괄호선(field)과 뜻이 겹치고, 입자 그림의 CH3COOH(회색 알약)과 색이 다르다.","fix":"CH3COOH 막대를 회색(LIGHT_G, grav 테)으로 바꿔 입자 그림과 맞춘다."},
+{"slide":1,"severity":"medium","rule":"D8","problem":"스포이트 옆 HCl(aq) 라벨이 표지 그림 바깥쪽에서 잘린다.","fix":"라벨을 그림 위 가운데 하나로 옮긴다(반영함)."},
+{"slide":20,"severity":"medium","rule":"D8","problem":"'평형이 이동한 뒤' 라벨을 세로 화살표가 지나가고, '폐로 배출'이 혈관 테와 겹친다.","fix":"화살표를 짧게, 라벨을 위로 옮긴다(반영함)."},
+{"slide":25,"severity":"low","rule":"3.4","problem":"개념 지도가 화면 위쪽 절반에만 있어 아래가 비어 보인다.","fix":"지도 위 여백을 늘리고 노드 글자를 조금 키운다."},
+{"slide":9,"severity":"low","rule":"T4","problem":"버튼 줄이 두 줄로 꺾여 해석 문장이 화면 아래에서 잘렸다.","fix":"버튼 글을 줄이고 '우리 모둠 기록'을 측정 줄로 옮긴다(반영함)."}
+],"summary":"자동 점검 0·콘솔 0. 긴 반응식 넘침은 단 배치를 바꿔 해결했다. 남은 것은 색 뜻 겹침(S17)과 S25 빈 공간."}
