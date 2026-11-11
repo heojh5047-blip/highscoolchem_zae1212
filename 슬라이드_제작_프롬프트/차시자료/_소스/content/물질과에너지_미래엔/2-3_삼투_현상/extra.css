@@ -1,0 +1,32 @@
+/* 2-3 삼투 현상 — 덱 전용 (모두 .em23- 접두어) */
+.cover h1.em23-h1{font-size:120px}
+.stages.c1{grid-template-columns:1fr;gap:10px}
+.stages.em23-four{grid-template-columns:repeat(4,1fr);gap:14px}
+.em23-four .stage{text-align:center}
+.em23-st .stage{padding:10px 14px;font-size:21px;line-height:1.5}
+table.em23-plan{width:100%}
+table.em23-plan td{font-size:20px}
+table.em23-var{width:100%}
+table.em23-var th{width:140px;font-size:21px}
+table.em23-var td{font-size:21px;line-height:1.55}
+table.em23-res{width:100%}
+table.em23-res td{text-align:center}
+table.em23-res .blank{min-width:70px}
+.answer.em23-left{text-align:left}
+/* 실험실 */
+.em23-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.em23-k{font-size:19px;font-weight:700;width:100%;color:var(--muted)}
+.em23-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 11px;font-size:19px}
+.em23-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em23-seg .btn.em23-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em23-seg .btn.em23-rec{background:#fff;color:var(--field);border-color:var(--field)}
+p.em23-ctrl{font-size:19px;line-height:1.4;margin:4px 0 8px;color:var(--muted)}
+output.kind.em23-msg{display:block;margin:4px 0;line-height:1.4;font-size:19px;min-height:54px}
+table.em23-log{width:100%}
+table.em23-log th,table.em23-log td{font-size:19px;padding:2px 6px;text-align:center}
+/* 개념 지도 */
+.em23-map{display:flex;align-items:stretch;gap:14px}
+.em23-col{display:flex;flex-direction:column;gap:10px;flex:1 1 0}
+.em23-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.55}
+.em23-node.em23-main{flex:1 1 auto;border-color:var(--field);background:#F2FAF5}
+.em23-node.em23-dim{flex:1 1 0;border-style:dashed;color:var(--muted)}
