@@ -29,7 +29,7 @@ add(f'''<!-- ════════ 1. 표지 ════════ -->
     <div class="kicker">Ⅲ. 화학 평형 › 1. 화학 평형 › 01</div>
     <h1 class="cm311-h1">가역 반응과<br><span class="acc">화학 평형</span></h1>
     <p class="sub">반응이 멈춘 듯 보여도, 정말 멈춘 것일까?</p>
-    <p class="meta">고등학교 화학 (미래엔) 97–101쪽</p>
+    <p class="meta">고등학교 화학 97–101쪽</p>
   </div>
   <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="마개를 닫은 플라스크 속 이산화 질소 분자와 사산화 이질소 분자, 아래에 가역 반응 화살표">
     {cov}

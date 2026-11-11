@@ -4,7 +4,7 @@
     <div class="kicker">Ⅲ. 화학 평형 › 2. 화학 평형 이동 › 01</div>
     <h1 class="cm321-h1">농도·압력 변화와<br><span class="acc">화학 평형 이동</span></h1>
     <p class="sub">평형에 있는 혼합물에 물질을 더 넣거나 누르면 어떻게 될까?</p>
-    <p class="meta">고등학교 화학 (미래엔) 113–119쪽</p>
+    <p class="meta">고등학교 화학 113–119쪽</p>
   </div>
   <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="주황색 다이크로뮴산 이온 시험관과 노란색 크로뮴산 이온 시험관 사이의 가역 화살표, 피스톤을 누르는 주사기 속 이산화 질소와 사산화 이질소">[[COVER]]</svg>
 </section>

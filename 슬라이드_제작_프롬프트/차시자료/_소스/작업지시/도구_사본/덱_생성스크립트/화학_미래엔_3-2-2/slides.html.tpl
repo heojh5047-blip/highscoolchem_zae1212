@@ -4,7 +4,7 @@
     <div class="kicker">Ⅲ. 화학 평형 › 2. 화학 평형 이동 › 02</div>
     <h1 class="cm322-h1">온도 변화와<br><span class="acc">화학 평형 이동</span></h1>
     <p class="sub">차갑게 하거나 데우면 평형은 어느 쪽으로 움직일까?</p>
-    <p class="meta">고등학교 화학 (미래엔) 120–123쪽</p>
+    <p class="meta">고등학교 화학 120–123쪽</p>
   </div>
   <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="보라색 코발트 수용액 시험관을 얼음물에 넣으면 붉은색, 뜨거운 물에 넣으면 파란색이 됨">[[COVER]]</svg>
 </section>

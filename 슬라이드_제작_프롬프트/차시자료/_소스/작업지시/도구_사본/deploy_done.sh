@@ -34,6 +34,8 @@ src,P=sys.argv[1],sys.argv[2]; d=json.load(open(src,encoding='utf-8'))
 d['decks']=[x for x in d['decks'] if os.path.exists(os.path.join(P,x['key'],x['file']+'.html'))]
 order=['화학_미래엔','물질과에너지_미래엔','화학반응의세계_미래엔']
 d['decks'].sort(key=lambda x: order.index(x['key']) if x['key'] in order else len(order))
+import re
+for x in d['decks']: x['label']=re.sub(r'\s*\([^)]*\)\s*$','',x['label'])   # 탭에 출판사 이름을 쓰지 않는다
 for p in (src, os.path.join(P,'decks.json')): json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,indent=1)
 print('decks.json: 덱',len(d['decks']),'개 · 탭 순서:',' → '.join(dict.fromkeys(x['key'] for x in d['decks'])))
 PY
