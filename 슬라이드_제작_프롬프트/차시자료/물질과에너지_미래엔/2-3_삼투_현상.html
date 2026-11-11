@@ -308,7 +308,7 @@ body.black #black{display:block}
 .em23-four .stage{text-align:center}
 .em23-st .stage{padding:10px 14px;font-size:21px;line-height:1.5}
 table.em23-plan{width:100%}
-table.em23-plan td{font-size:20px}
+table.em23-plan td{font-size:20px;text-align:left}
 table.em23-var{width:100%}
 table.em23-var th{width:140px;font-size:21px}
 table.em23-var td{font-size:21px;line-height:1.55;text-align:left}
@@ -317,16 +317,16 @@ table.em23-res td{text-align:center}
 table.em23-res .blank{min-width:70px}
 .answer.em23-left{text-align:left}
 /* 실험실 */
-.em23-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.em23-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
 .em23-k{font-size:19px;font-weight:700;color:var(--muted);margin-right:2px}
-.em23-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 11px;font-size:19px}
+.em23-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 8px;font-size:19px}
 .em23-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .em23-seg .btn.em23-act{background:var(--field);color:#fff;border-color:var(--field)}
 .em23-seg .btn.em23-rec{background:#fff;color:var(--field);border-color:var(--field)}
 p.em23-ctrl{font-size:19px;line-height:1.4;margin:4px 0 8px;color:var(--muted)}
 output.kind.em23-msg{display:block;margin:4px 0;line-height:1.4;font-size:19px;min-height:50px}
 table.em23-log{width:100%}
-table.em23-log th,table.em23-log td{font-size:19px;padding:2px 6px;text-align:center}
+table.em23-log th,table.em23-log td{font-size:19px;padding:1px 6px;text-align:center}
 /* 개념 지도 */
 .em23-map{display:flex;align-items:stretch;gap:14px}
 .em23-col{display:flex;flex-direction:column;gap:10px;flex:1 1 0}
@@ -503,7 +503,7 @@ table.em23-log th,table.em23-log td{font-size:19px;padding:2px 6px;text-align:ce
   <h2><span class="tag">실험실</span><span class="small c-muted">[필수 탐구]</span> 실험을 설계하고 수행하기</h2>
   <div class="lab" data-lab="em23osmo">
     <div class="lab-ctl" style="flex-basis:450px">
-      <div class="em23-seg"><span class="em23-k">조작 변인</span><button class="btn on" data-v="ci">튜브 속 농도</button><button class="btn" data-v="co">비커 속 농도</button><button class="btn" data-v="L">튜브 길이</button><button class="btn" data-v="T">물의 온도</button></div>
+      <div class="em23-seg"><span class="em23-k">조작 변인</span><button class="btn on" data-v="ci">튜브 농도</button><button class="btn" data-v="co">비커 농도</button><button class="btn" data-v="L">튜브 길이</button><button class="btn" data-v="T">온도</button></div>
       <div class="em23-seg"><span class="em23-k">종속 변인</span><button class="btn on" data-y="h">빨대 속 물 높이</button><button class="btn" data-y="m">튜브 질량 변화</button></div>
       <div class="ctl"><div class="lbl"><span data-o="la">장치 (가)</span><output data-o="a"></output></div>
         <input type="range" min="0" max="1" step="0.1" value="0.2" data-i="a" aria-label="장치 가의 조작 변인 값"></div>
@@ -691,7 +691,7 @@ table.em23-log th,table.em23-log td{font-size:19px;padding:2px 6px;text-align:ce
 <section class="slide" data-sec="03 · 대단원 마무리" data-title="대단원 마무리 10">
   <h2><span class="tag q">대단원 마무리 10</span>포도당 수용액 A와 B의 삼투 현상</h2>
   <div class="row">
-    <div class="col" style="flex:0 0 330px"><svg class="fig" viewBox="0 0 320 344" style="width:310px" aria-label="비커 속 수용액 A에 수용액 B를 넣은 반투막 튜브 장치를 두었더니 빨대 속 액면이 h만큼 올라갔다"><rect x="57" y="214" width="146" height="114" fill="#DDEEF8"/><line x1="57" y1="214" x2="203" y2="214" stroke="#9FC3DD" stroke-width="2"/><path d="M49 180 Q55 180 55 188 V322 Q55 330 63 330 H197 Q205 330 205 322 V180" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><g data-anim="scale" data-from="0.8,1" data-o="130,212" data-dur="2" data-delay="0.3" data-ease="soft"><path d="M123 212 C101 226 105 242 105 260 C105 292 111 304 126 308 L134 308 C149 304 155 292 155 260 C155 242 159 226 137 212 Z" fill="#B9D6EE" stroke="#5B8DB8" stroke-width="2.5"/></g><line x1="124" y1="311" x2="136" y2="311" stroke="#8C6D46" stroke-width="4"/><g data-anim="scale" data-from="1,0.2" data-o="130,216" data-dur="2" data-delay="0.3" data-ease="soft"><rect x="125" y="70" width="10" height="146" fill="#B9D6EE"/></g><rect x="123" y="24" width="14" height="198" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="120" y="214" width="20" height="7" rx="2" fill="#8C6D46"/><line x1="140" y1="196" x2="214" y2="196" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="140" y1="70" x2="214" y2="70" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 4"/><g data-arw="206,133,206,72,muted,2"></g><g data-arw="206,133,206,194,muted,2"></g><text class="tex" x="214" y="140" data-mix="$h$" data-size="20"></text><line x1="150" y1="250" x2="214" y2="250" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="218" y="256" data-mix="수용액 B" data-size="19"></text><line x1="150" y1="280" x2="214" y2="290" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="218" y="296" data-mix="반투막 튜브" data-size="19"></text><line x1="196" y1="318" x2="214" y2="326" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="218" y="332" data-mix="수용액 A" data-size="19"></text><text class="tex" x="100" y="172" data-mix="처음 높이" data-size="18" data-anchor="end" fill="#5B6B7F"></text></svg></div>
+    <div class="col" style="flex:0 0 330px"><svg class="fig" viewBox="0 0 320 344" style="width:310px" aria-label="비커 속 수용액 A에 수용액 B를 넣은 반투막 튜브 장치를 두었더니 빨대 속 액면이 h만큼 올라갔다"><rect x="57" y="214" width="146" height="114" fill="#DDEEF8"/><line x1="57" y1="214" x2="203" y2="214" stroke="#9FC3DD" stroke-width="2"/><path d="M49 180 Q55 180 55 188 V322 Q55 330 63 330 H197 Q205 330 205 322 V180" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><g data-anim="scale" data-from="0.8,1" data-o="130,212" data-dur="2" data-delay="0.3" data-ease="soft"><path d="M123 212 C101 226 105 242 105 260 C105 292 111 304 126 308 L134 308 C149 304 155 292 155 260 C155 242 159 226 137 212 Z" fill="#B9D6EE" stroke="#5B8DB8" stroke-width="2.5"/></g><line x1="124" y1="311" x2="136" y2="311" stroke="#8C6D46" stroke-width="4"/><g data-anim="scale" data-from="1,0.2" data-o="130,216" data-dur="2" data-delay="0.3" data-ease="soft"><rect x="125" y="70" width="10" height="146" fill="#B9D6EE"/></g><rect x="123" y="24" width="14" height="198" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="120" y="214" width="20" height="7" rx="2" fill="#8C6D46"/><line x1="140" y1="196" x2="214" y2="196" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="140" y1="70" x2="214" y2="70" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 4"/><g data-arw="206,133,206,72,muted,2"></g><g data-arw="206,133,206,194,muted,2"></g><text class="tex" x="214" y="140" data-mix="$h$" data-size="20"></text><line x1="150" y1="250" x2="214" y2="250" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="218" y="256" data-mix="수용액 B" data-size="19"></text><line x1="150" y1="280" x2="214" y2="290" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="218" y="296" data-mix="반투막 튜브" data-size="19"></text><line x1="196" y1="318" x2="214" y2="326" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="218" y="332" data-mix="수용액 A" data-size="19"></text><text class="tex" x="112" y="204" data-mix="처음 높이" data-size="18" data-anchor="end" fill="#5B6B7F"></text></svg></div>
     <div class="col">
       <p class="f21">농도가 다른 포도당 수용액 A와 B를 각각 비커와 반투막 튜브에 넣고 충분한 시간이 지났더니 빨대 속 액면이 $h$만큼 올라갔다. 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? <span class="small">(단, 온도는 일정하고, 물의 증발은 무시한다.)</span></p>
       <div class="bogi"><p>ㄱ. 농도는 수용액 A가 수용액 B보다 크다.</p><p>ㄴ. 어는점은 수용액 B가 수용액 A보다 낮다.</p><p>ㄷ. 반투막 튜브 안에 수용액 B보다 농도가 더 큰 수용액 C를 넣으면 $h$가 더 높아진다.</p></div>
@@ -837,7 +837,7 @@ window.DECK_LABS = {
     DEV.forEach(d=>{ API.mk('rect',{x:d.cx-7,y:14,width:14,height:TT+8-14,fill:'none',stroke:GLASS,'stroke-width':2.5},top);
       API.mk('rect',{x:d.cx-10,y:TT,width:20,height:7,rx:2,fill:RUB},top);
       API.mk('line',{x1:d.cx-14,y1:H0,x2:d.cx-8,y2:H0,stroke:'#D7263D','stroke-width':2},top); });
-    API.texText(top,20,H0+6,'처음',{size:18,mix:true,fill:'#D7263D'});
+    API.mk('line',{x1:8,y1:34,x2:16,y2:34,stroke:'#D7263D','stroke-width':2},top); API.texText(top,20,40,'처음',{size:18,mix:true,fill:'#D7263D'}); API.texText(top,20,62,'높이',{size:18,mix:true,fill:'#D7263D'});
     let st={m:'ci',y:'h',prog:1,note:''}, log=[];
     const val=k=>+I(k).value;
     function params(v){ const p=Object.assign({},BASE); p[st.m]=v; return p; }
@@ -851,8 +851,8 @@ window.DECK_LABS = {
       ['ci','L','T'].forEach(k=>xtk[k].style.display= (k===m||(k==='ci'&&m==='co'))?'':'none');
       O('la').textContent='(가) '+M.name; O('lb').textContent='(나) '+M.name;
       const va=val('a'), vb=val('b'); O('a').textContent=M.f(va); O('b').textContent=M.f(vb);
-      const ctl=[]; if(m!=='ci') ctl.push('튜브 속 0.5 M'); if(m!=='co') ctl.push('비커 속 증류수'); if(m!=='L') ctl.push('튜브 15 cm'); if(m!=='T') ctl.push('물 25 °C');
-      O('ctrl').textContent='통제 변인: '+ctl.join(' · ')+' · 20 mL · 20분';
+      const ctl=[]; if(m!=='ci') ctl.push('튜브 속 0.5 M'); if(m!=='co') ctl.push('비커 증류수'); if(m!=='L') ctl.push('튜브 15 cm'); if(m!=='T') ctl.push('물 25 °C');
+      O('ctrl').textContent='통제 변인: '+ctl.join(' · ')+' · 20분';
       while(g.firstChild) g.removeChild(g.firstChild);
       const res=[va,vb].map((v,i)=>{ const p=params(v), s=sim(p); return {p,s,key:m+v.toFixed(2)}; });
       res.forEach((r,i)=>{ const d=DEV[i], vol=r.s[ti], hh=Math.max(-3,3*vol);
@@ -870,16 +870,16 @@ window.DECK_LABS = {
       if(pts.length>=2){ const sp=pts.slice().sort((a,b)=>xv(a)-xv(b)); API.mk('polyline',{points:sp.map(r=>cxp(m,xv(r)).toFixed(1)+','+cyp(y,r.val).toFixed(1)).join(' '),fill:'none',stroke:MUT,'stroke-width':2,'stroke-dasharray':'6 5'},g); }
       pts.forEach(r=>API.mk('circle',{cx:cxp(m,xv(r)),cy:cyp(y,r.val),r:6,fill:r.d===0?INK:EQ,stroke:'#fff','stroke-width':1.5},g));
       // 해석
-      const msg=O('msg'), un= y==='h'?' cm':' g', ma=meas(res[0].s[40],y,res[0].key), mb=meas(res[1].s[40],y,res[1].key);
+      const fx=v=>v.toFixed(1).replace('-','−'), msg=O('msg'), un= y==='h'?' cm':' g', ma=meas(res[0].s[40],y,res[0].key), mb=meas(res[1].s[40],y,res[1].key);
       if(!done) msg.textContent=`실험 중… (${(ti*0.5).toFixed(1)}분)`;
       else if(st.note) msg.textContent=st.note;
       else if(va===vb) msg.textContent='두 장치의 조작 변인 값이 같다 — 값을 다르게 해야 비교할 수 있다.';
-      else { const big= mb>ma?'(나)':'(가)', txt=`20분 뒤 (가) ${ma.toFixed(1)}${un}, (나) ${mb.toFixed(1)}${un}. `;
+      else { const big= mb>ma?'(나)':'(가)', txt=`20분 뒤 (가) ${fx(ma)}${un}, (나) ${fx(mb)}${un}. `;
         if(m==='ci'||m==='co'){ const neg=[ma,mb].some(v=>v<0)?' 비커 쪽이 더 진한 장치는 물이 튜브 밖으로 더 많이 이동했다(튜브가 쪼그라듦).':'';
           msg.textContent=txt+`농도 차가 더 큰 ${big}에서 삼투 현상이 더 잘 일어났다.`+neg; }
         else msg.textContent=txt+(m==='L'?'튜브가 길수록(막이 넓을수록) 물이 더 많이 들어왔다':'온도가 높을수록 물이 더 빨리 들어왔다')+' — 이 설계로는 농도와의 관계를 알 수 없다.'; }
     }
-    function table(){ const tb=O('log'); tb.innerHTML=''; log.slice(-2).forEach(r=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${r.d?'(나)':'(가)'}</td><td>${MODE[r.m].f(r.v)}</td><td>${r.dc.toFixed(1)} M</td><td>${r.val.toFixed(1)} ${r.y==='h'?'cm':'g'}</td>`; tb.appendChild(tr); }); }
+    function table(){ const tb=O('log'); tb.innerHTML=''; log.slice(-2).forEach(r=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${r.d?'(나)':'(가)'}</td><td>${MODE[r.m].f(r.v)}</td><td>${r.dc.toFixed(1)} M</td><td>${r.val.toFixed(1).replace('-','−')} ${r.y==='h'?'cm':'g'}</td>`; tb.appendChild(tr); }); }
     root.querySelectorAll('[data-v]').forEach(b=>b.addEventListener('click',()=>{ setMode(b.dataset.v); st.prog=1; st.note=''; draw(); }));
     root.querySelectorAll('[data-y]').forEach(b=>b.addEventListener('click',()=>{ st.y=b.dataset.y; st.note=''; draw(); }));
     ['a','b'].forEach(k=>I(k).addEventListener('input',()=>{ st.prog=1; st.note=''; draw(); }));

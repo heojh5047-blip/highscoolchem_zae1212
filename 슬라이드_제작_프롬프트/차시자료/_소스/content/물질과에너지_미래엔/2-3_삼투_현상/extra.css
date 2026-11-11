@@ -5,7 +5,7 @@
 .em23-four .stage{text-align:center}
 .em23-st .stage{padding:10px 14px;font-size:21px;line-height:1.5}
 table.em23-plan{width:100%}
-table.em23-plan td{font-size:20px}
+table.em23-plan td{font-size:20px;text-align:left}
 table.em23-var{width:100%}
 table.em23-var th{width:140px;font-size:21px}
 table.em23-var td{font-size:21px;line-height:1.55;text-align:left}
@@ -14,16 +14,16 @@ table.em23-res td{text-align:center}
 table.em23-res .blank{min-width:70px}
 .answer.em23-left{text-align:left}
 /* 실험실 */
-.em23-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.em23-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
 .em23-k{font-size:19px;font-weight:700;color:var(--muted);margin-right:2px}
-.em23-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 11px;font-size:19px}
+.em23-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 8px;font-size:19px}
 .em23-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .em23-seg .btn.em23-act{background:var(--field);color:#fff;border-color:var(--field)}
 .em23-seg .btn.em23-rec{background:#fff;color:var(--field);border-color:var(--field)}
 p.em23-ctrl{font-size:19px;line-height:1.4;margin:4px 0 8px;color:var(--muted)}
 output.kind.em23-msg{display:block;margin:4px 0;line-height:1.4;font-size:19px;min-height:50px}
 table.em23-log{width:100%}
-table.em23-log th,table.em23-log td{font-size:19px;padding:2px 6px;text-align:center}
+table.em23-log th,table.em23-log td{font-size:19px;padding:1px 6px;text-align:center}
 /* 개념 지도 */
 .em23-map{display:flex;align-items:stretch;gap:14px}
 .em23-col{display:flex;flex-direction:column;gap:10px;flex:1 1 0}

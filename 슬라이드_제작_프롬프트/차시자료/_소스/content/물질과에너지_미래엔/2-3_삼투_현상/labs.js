@@ -55,7 +55,7 @@ window.DECK_LABS = {
     DEV.forEach(d=>{ API.mk('rect',{x:d.cx-7,y:14,width:14,height:TT+8-14,fill:'none',stroke:GLASS,'stroke-width':2.5},top);
       API.mk('rect',{x:d.cx-10,y:TT,width:20,height:7,rx:2,fill:RUB},top);
       API.mk('line',{x1:d.cx-14,y1:H0,x2:d.cx-8,y2:H0,stroke:'#D7263D','stroke-width':2},top); });
-    API.texText(top,20,H0+6,'처음',{size:18,mix:true,fill:'#D7263D'});
+    API.mk('line',{x1:8,y1:34,x2:16,y2:34,stroke:'#D7263D','stroke-width':2},top); API.texText(top,20,40,'처음',{size:18,mix:true,fill:'#D7263D'}); API.texText(top,20,62,'높이',{size:18,mix:true,fill:'#D7263D'});
     let st={m:'ci',y:'h',prog:1,note:''}, log=[];
     const val=k=>+I(k).value;
     function params(v){ const p=Object.assign({},BASE); p[st.m]=v; return p; }
@@ -69,8 +69,8 @@ window.DECK_LABS = {
       ['ci','L','T'].forEach(k=>xtk[k].style.display= (k===m||(k==='ci'&&m==='co'))?'':'none');
       O('la').textContent='(가) '+M.name; O('lb').textContent='(나) '+M.name;
       const va=val('a'), vb=val('b'); O('a').textContent=M.f(va); O('b').textContent=M.f(vb);
-      const ctl=[]; if(m!=='ci') ctl.push('튜브 속 0.5 M'); if(m!=='co') ctl.push('비커 속 증류수'); if(m!=='L') ctl.push('튜브 15 cm'); if(m!=='T') ctl.push('물 25 °C');
-      O('ctrl').textContent='통제 변인: '+ctl.join(' · ')+' · 20 mL · 20분';
+      const ctl=[]; if(m!=='ci') ctl.push('튜브 속 0.5 M'); if(m!=='co') ctl.push('비커 증류수'); if(m!=='L') ctl.push('튜브 15 cm'); if(m!=='T') ctl.push('물 25 °C');
+      O('ctrl').textContent='통제 변인: '+ctl.join(' · ')+' · 20분';
       while(g.firstChild) g.removeChild(g.firstChild);
       const res=[va,vb].map((v,i)=>{ const p=params(v), s=sim(p); return {p,s,key:m+v.toFixed(2)}; });
       res.forEach((r,i)=>{ const d=DEV[i], vol=r.s[ti], hh=Math.max(-3,3*vol);
@@ -88,16 +88,16 @@ window.DECK_LABS = {
       if(pts.length>=2){ const sp=pts.slice().sort((a,b)=>xv(a)-xv(b)); API.mk('polyline',{points:sp.map(r=>cxp(m,xv(r)).toFixed(1)+','+cyp(y,r.val).toFixed(1)).join(' '),fill:'none',stroke:MUT,'stroke-width':2,'stroke-dasharray':'6 5'},g); }
       pts.forEach(r=>API.mk('circle',{cx:cxp(m,xv(r)),cy:cyp(y,r.val),r:6,fill:r.d===0?INK:EQ,stroke:'#fff','stroke-width':1.5},g));
       // 해석
-      const msg=O('msg'), un= y==='h'?' cm':' g', ma=meas(res[0].s[40],y,res[0].key), mb=meas(res[1].s[40],y,res[1].key);
+      const fx=v=>v.toFixed(1).replace('-','−'), msg=O('msg'), un= y==='h'?' cm':' g', ma=meas(res[0].s[40],y,res[0].key), mb=meas(res[1].s[40],y,res[1].key);
       if(!done) msg.textContent=`실험 중… (${(ti*0.5).toFixed(1)}분)`;
       else if(st.note) msg.textContent=st.note;
       else if(va===vb) msg.textContent='두 장치의 조작 변인 값이 같다 — 값을 다르게 해야 비교할 수 있다.';
-      else { const big= mb>ma?'(나)':'(가)', txt=`20분 뒤 (가) ${ma.toFixed(1)}${un}, (나) ${mb.toFixed(1)}${un}. `;
+      else { const big= mb>ma?'(나)':'(가)', txt=`20분 뒤 (가) ${fx(ma)}${un}, (나) ${fx(mb)}${un}. `;
         if(m==='ci'||m==='co'){ const neg=[ma,mb].some(v=>v<0)?' 비커 쪽이 더 진한 장치는 물이 튜브 밖으로 더 많이 이동했다(튜브가 쪼그라듦).':'';
           msg.textContent=txt+`농도 차가 더 큰 ${big}에서 삼투 현상이 더 잘 일어났다.`+neg; }
         else msg.textContent=txt+(m==='L'?'튜브가 길수록(막이 넓을수록) 물이 더 많이 들어왔다':'온도가 높을수록 물이 더 빨리 들어왔다')+' — 이 설계로는 농도와의 관계를 알 수 없다.'; }
     }
-    function table(){ const tb=O('log'); tb.innerHTML=''; log.slice(-2).forEach(r=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${r.d?'(나)':'(가)'}</td><td>${MODE[r.m].f(r.v)}</td><td>${r.dc.toFixed(1)} M</td><td>${r.val.toFixed(1)} ${r.y==='h'?'cm':'g'}</td>`; tb.appendChild(tr); }); }
+    function table(){ const tb=O('log'); tb.innerHTML=''; log.slice(-2).forEach(r=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${r.d?'(나)':'(가)'}</td><td>${MODE[r.m].f(r.v)}</td><td>${r.dc.toFixed(1)} M</td><td>${r.val.toFixed(1).replace('-','−')} ${r.y==='h'?'cm':'g'}</td>`; tb.appendChild(tr); }); }
     root.querySelectorAll('[data-v]').forEach(b=>b.addEventListener('click',()=>{ setMode(b.dataset.v); st.prog=1; st.note=''; draw(); }));
     root.querySelectorAll('[data-y]').forEach(b=>b.addEventListener('click',()=>{ st.y=b.dataset.y; st.note=''; draw(); }));
     ['a','b'].forEach(k=>I(k).addEventListener('input',()=>{ st.prog=1; st.note=''; draw(); }));

@@ -1,0 +1,9 @@
+{"findings":[
+{"slide":11,"severity":"high","rule":"D8","problem":"실험실 조작부가 아래로 넘치고, 결과 그래프 제목·축 라벨이 장치 라벨과 겹치거나 잘림","fix":"버튼 글 줄임·간격 축소, 기록 표 2행, 그림 높이 480으로 늘리고 좌표 재배치 — 반영"},
+{"slide":4,"severity":"medium","rule":"D8","problem":"반투막 벽 조각 높이 음수(콘솔 오류), '통과 못 함' 라벨이 설탕 분자와 겹침","fix":"벽·구멍 좌표 재계산, 막힌 설탕 분자를 아래 구멍으로, 라벨 위로 — 반영"},
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 아래 라벨이 그림 바깥 흐림 영역에 걸려 흐리게 보임","fix":"장치와 라벨을 위로 40 옮김 — 반영"},
+{"slide":15,"severity":"medium","rule":"3.2","problem":"그림 라벨이 화면 15px","fix":"data-size 22 — 반영"},
+{"slide":19,"severity":"medium","rule":"T4","problem":"단위까지 쓴 계산식이 상자를 넘침","fix":"숫자식 한 줄 + 단위 줄(.unit) — 반영"},
+{"slide":8,"severity":"low","rule":"정렬","problem":"계획서 항목 표 가운데 정렬","fix":"왼쪽 정렬 — 반영"},
+{"slide":16,"severity":"low","rule":"밀도","problem":"글 카드만 있어 그림이 적음","fix":"사례 세 가지를 단계 공개 카드로 두고 유지(사용량 사정) — 기각"}
+],"summary":"자동 점검 0, 콘솔 0. 실험실·반투막 그림 겹침을 고친 뒤 전체 캡처 모음 두 번 확인."}
