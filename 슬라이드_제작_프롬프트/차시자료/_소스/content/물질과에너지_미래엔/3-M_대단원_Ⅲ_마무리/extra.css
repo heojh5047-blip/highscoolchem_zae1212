@@ -1,0 +1,69 @@
+/* 3-M 대단원 Ⅲ 마무리 — 덱 전용 (모두 .em39- 접두어) */
+.cover h1.em39-h1{font-size:104px}
+.flow.em39-flow .fnode{font-size:21px}
+/* 개념 정리 가지 그림 (1-M·2-M 꼴) */
+.em39-tree{display:grid;align-items:center;margin-top:4px}
+.em39-t1{grid-template-columns:110px 26px 140px 26px 170px 26px 1fr;grid-auto-rows:minmax(80px,auto);row-gap:12px}
+.em39-t2{grid-template-columns:110px 26px 150px 26px 170px 70px 1fr;grid-auto-rows:minmax(70px,auto);row-gap:10px}
+.em39-t3{grid-template-columns:110px 26px 110px 26px 200px 26px 1fr;grid-auto-rows:minmax(62px,auto);row-gap:9px}
+.em39-n{background:#fff;border:2px dashed #C9D3DD;border-radius:14px;padding:5px 12px;font-size:21px;line-height:1.4;text-align:center;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0}
+p.em39-n{display:block;align-self:center}
+.em39-root{grid-column:1;background:#2E7D5B;color:#fff;border:0;border-radius:50%;font-weight:700;aspect-ratio:1;align-self:center;font-size:21px}
+.em39-mid{background:#E8457F;color:#fff;border:0;font-weight:700;border-radius:40px}
+.em39-tree .em39-n:not(.em39-root):not(.em39-mid):not(.em39-leaf){background:#D7F0DD;border:0;font-weight:600}
+.em39-leaf{text-align:left;justify-content:flex-start}
+.em39-a{text-align:center;font-size:22px;color:var(--muted);white-space:nowrap}
+.em39-n .blank{min-width:80px}
+/* 번호 대응·대응표 */
+table.em39-num{width:100%}
+table.em39-num th,table.em39-num td{font-size:20px;padding:3px 10px;text-align:center}
+table.em39-num td.em39-same{background:#D7F0DD;font-weight:700}
+table.em39-num td.em39-own{color:var(--muted);font-style:italic}
+table.em39-map{width:100%}
+table.em39-map th,table.em39-map td{font-size:19px;padding:2px 10px}
+table.em39-map td:nth-child(4){white-space:nowrap;color:var(--muted)}
+table.em39-map td:last-child{white-space:nowrap;font-weight:700}
+table.em39-map tr.em39-here td{background:#FFF6C2}
+table.em39-fuel{width:100%}
+table.em39-fuel th,table.em39-fuel td{font-size:21px;padding:6px 12px}
+table.em39-pc{width:100%}
+table.em39-pc th,table.em39-pc td{font-size:20px;padding:7px 12px;line-height:1.45;width:33%}
+/* 글·카드 */
+.em39-src .card p{font-size:20px;line-height:1.45;margin:0}
+.answer.em39-left{text-align:left;font-weight:400;font-size:21px;line-height:1.5}
+.stages.c1{grid-template-columns:1fr;gap:10px}
+.em39-st .stage{padding:10px 16px;font-size:21px;line-height:1.5;text-align:left}
+.em39-three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.em39-three .card{padding:12px 16px}
+.em39-three h3{font-size:22px;margin:0 0 6px}
+.em39-three p{font-size:20px;line-height:1.45;margin:0}
+.em39-chips{display:flex;flex-wrap:wrap;gap:10px}
+.em39-chips > span{background:#F3EBDD;border-radius:10px;padding:8px 16px;font-size:21px}
+.em39-hi{border:3px solid #E08A2C}
+.em39-lo{border:3px solid #2E9E6A}
+.em39-hi h3{color:#B45F06;font-size:22px;margin:0 0 8px}
+.em39-lo h3{color:#2E7D5B;font-size:22px;margin:0 0 8px}
+.em39-hi .em39-chips > span{background:#FCEBD7}
+.em39-lo .em39-chips > span{background:#DDF1E4}
+table.em39-plan{width:100%}
+table.em39-plan th{width:260px;font-size:21px;text-align:left}
+table.em39-plan td{font-size:21px;text-align:left}
+.em39-line{display:inline-block;width:560px;border-bottom:2px solid #C9D3DD;vertical-align:-4px}
+table.em39-eval{width:100%}
+table.em39-eval td,table.em39-eval th{font-size:20px;padding:5px 10px}
+table.em39-eval td:not(.l){text-align:center;width:60px}
+.em39-news{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.em39-cn{position:relative;aspect-ratio:1;border-radius:16px;background:#EDE5F8;border:3px solid #7B4FC8;padding:44px 16px 14px;display:flex;align-items:center}
+.em39-cn p{font-size:22px;line-height:1.45;font-weight:600;margin:0}
+.em39-cn-g{background:#DDF1E4;border-color:#2E9E6A}
+.em39-k{position:absolute;top:10px;left:14px;font-size:20px;font-weight:700;color:var(--muted)}
+/* 실험실 */
+.em39-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 6px}
+.em39-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.em39-seg .btn.em39-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.readout.em39-read{margin:4px 0 6px}
+table.readout.em39-read td{white-space:nowrap}
+table.readout.em39-read th,table.readout.em39-read td{padding:5px 12px}
+output.em39-msg{font-size:19px;font-weight:600;line-height:1.45;margin-top:6px;display:block;min-height:54px}
+table.em39-log{width:100%;margin-top:6px}
+table.em39-log td,table.em39-log th{font-size:19px;padding:2px 5px;text-align:center}
