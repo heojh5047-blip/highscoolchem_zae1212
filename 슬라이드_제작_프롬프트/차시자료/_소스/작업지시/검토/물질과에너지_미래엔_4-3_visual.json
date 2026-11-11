@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":1,"severity":"high","rule":"D8","problem":"표지 제목이 세 줄로 접혀 cover-text가 넘침","fix":"제목 글자 84px(extra.css), 부제 한 줄 — 반영"},
+{"slide":3,"severity":"medium","rule":"D8","problem":"상자 아래 설명 글이 분자와 겹침","fix":"설명을 상자 밖으로 내림 — 반영"},
+{"slide":4,"severity":"medium","rule":"D8","problem":"② 칸의 H 원자를 두 번 그려 라벨이 겹치고, 넘침","fix":"중복 제거, 반응식 설명 한 줄로 — 반영"},
+{"slide":5,"severity":"medium","rule":"3.2","problem":"모형 그림 라벨이 화면에서 16px 미만, 정답 넘침, O3 라벨이 원자에 가림","fix":"그림 900px·라벨 23, 라벨 아래로 — 반영"},
+{"slide":8,"severity":"high","rule":"C1","problem":"실험실 라벨이 KaTeX 준비 전에 만들어져 \\ce{O3} 글자로 남음","fix":"API.ready에서 라벨 다시 넣기 — 반영"},
+{"slide":9,"severity":"medium","rule":"D8","problem":"궤적 설명 라벨이 그림 밖으로 잘림","fix":"그림 아래 범례로 옮김 — 반영"},
+{"slide":10,"severity":"medium","rule":"D8","problem":"활성화물·라벨 잘림, Ea 라벨과 축 이름 겹침, ΔH 화살표가 곡선을 가로지름","fix":"눈금 1.3 px/(kJ/mol), ΔH 화살표 x=300(꼭대기 왼쪽), Ea' 라벨 위로 — 반영"},
+{"slide":16,"severity":"medium","rule":"D21","problem":"BrNO 원자 라벨이 없어 Br와 O 색 구별이 어려움, Br2 라벨 겹침","fix":"원소 기호 라벨, 원자 반지름 키움, Br2 간격 — 반영"},
+{"slide":18,"severity":"medium","rule":"D8","problem":"정답 상자 넘침, 라벨 15px","fix":"반응식을 오른쪽 열로, 라벨 24 — 반영"},
+{"slide":14,"severity":"low","rule":"빈 공간","problem":"확인하기 아래 빈 공간","fix":"기각 — 4-1·4-2와 같은 check 틀(판서 공간) 유지"},
+{"slide":11,"severity":"low","rule":"D21","problem":"활성화물의 점선 결합이 원자에 가려 잘 안 보임","fix":"원자 간격을 넓히고 점선을 원자 위에 굵게 — 반영"}
+],"summary":"자동 점검 14 → 0건. 전체 캡처 모음 2회 확인. 남은 낮은 지적은 덱 틀 유지로 기각."}
