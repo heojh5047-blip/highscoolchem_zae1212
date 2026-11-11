@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 그림의 축 라벨 '반응의 진행'이 표지 원형 마스크 바깥이라 흐려져 잘림","fix":"도표 전체를 중심 반지름 210 안으로 옮김"},
+{"slide":5,"severity":"high","rule":"T4/D8","problem":"경로 카드 반응식이 칸을 넘치고 정답 상자가 안전 영역 밖, 그림 라벨 16px 미만","fix":"카드 설명 줄을 h3에 합치고 그림 폭 350, 라벨 22, Q·정답을 왼쪽 열로"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"경로 2 화살표가 CO(g)+1/2O2(g) 라벨·ΔH1 라벨과 겹침","fix":"경로 2 화살표 x=240으로, ΔH1 라벨 두 줄"},
+{"slide":13,"severity":"medium","rule":"D8","problem":"정답 상자가 오른쪽 안전 영역 밖으로 넘침","fix":"풀이 줄과 정답을 한 열로 아래에"},
+{"slide":17,"severity":"low","rule":"T1","problem":"제목이 두 줄로 '[경로 / 1]' 끊김","fix":"제목 줄이고 부제 한 줄"},
+{"slide":19,"severity":"high","rule":"D8","problem":"실험실 해석 문장이 화면 아래로 넘침","fix":"과정 버튼 이름 줄임, 해석 문장을 오른쪽 열 표 아래로, 그래프 높이 230·표 3행"},
+{"slide":4,"severity":"low","rule":"D8","problem":"'흑연 C(s)' 라벨이 그림 아래 가장자리에서 잘림","fix":"viewBox 높이 162"},
+{"slide":10,"severity":"low","rule":"6.4","problem":"data-anim 28곳으로 권장(15–25)보다 많음 — 불꽃 흔들기는 장식","fix":"S4·S10 불꽃 움직임 뺌 → 26곳"}
+],"summary":"전체 캡처를 모음으로 두 번(완성 직후·최종) 보고 겹침·잘림·넘침을 고쳤다. 최종 자동 점검 0건·콘솔 0건·motion 0·ask 0. 에너지 도표는 세로 '엔탈피 H', 가로 '반응의 진행', 화살표 길이 ΔH 비례, 경로 1 minus·경로 2 ox + 라벨."}
