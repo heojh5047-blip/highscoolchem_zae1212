@@ -1,0 +1,9 @@
+{"findings":[
+{"slide":9,"severity":"medium","rule":"D8","problem":"온도 라벨 '100 °C', '0 °C' 왼쪽 잘림, 흐름 넷째 칸 줄바꿈","fix":"눈금선·라벨을 오른쪽으로, 흐름을 전체 폭으로 — 반영"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"'온도 [°C]' 위 잘림, '최저 기온' 라벨이 기온선·'순수한 물' 라벨과 겹침, '순수한 물'이 세 줄로 꺾임","fix":"축 위 여백, 라벨을 기온선 아래 20px 고정, 막대 폭 80 — 반영"},
+{"slide":5,"severity":"medium","rule":"D2","problem":"'물 분자의 이동' 화살표가 관 밖(두 팔 사이 빈 곳)에 있음","fix":"화살표를 반투막이 있는 아래 통로 안으로 옮기고 라벨에 지시선 — 반영"},
+{"slide":6,"severity":"low","rule":"D25","problem":"ΔP 화살표가 두 곡선 사이에 맞지 않음","fix":"x=330에서 두 곡선 y(163→209)를 계산해 맞춤 — 반영"},
+{"slide":8,"severity":"low","rule":"D8","problem":"'뜨거운 냉각수'·'열 방출' 라벨이 화살표·라디에이터와 겹침","fix":"라벨 위치 조정 — 반영"},
+{"slide":13,"severity":"low","rule":"D8","problem":"(가)·(나) 그림 라벨이 서로 닿음","fix":"라벨 줄임 — 반영"},
+{"slide":16,"severity":"low","rule":"빈 공간","problem":"아래쪽 여백이 조금 큼","fix":"판서 공간으로 두어 기각"}
+],"summary":"23장 전체를 캡처 모음으로 두 번 확인. 자동 점검 0, 콘솔 0, motion 0(data-anim 21), ask 0(질문 강조 28)."}
