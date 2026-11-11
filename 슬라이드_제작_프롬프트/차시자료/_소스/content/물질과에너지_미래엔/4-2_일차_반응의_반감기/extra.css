@@ -1,0 +1,41 @@
+/* 4-2 일차 반응의 반감기 — 덱 전용 (모두 .em42- 접두어) */
+
+/* 4열 카드 */
+.em42-s4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.em42-s4 .stage p{font-size:19px;line-height:1.45;text-align:center}
+.em42-s4 .stage h3{text-align:center}
+
+/* 표 */
+table.em42-tbl td{text-align:center;min-width:80px}
+table.em42-plan th{width:190px;font-size:20px;white-space:nowrap}
+table.em42-plan td{font-size:20px}
+ol.em42-ox li{margin-top:22px}
+ol.em42-ox li:first-child{margin-top:8px}
+ol.em42-ox .blank{min-width:150px}
+p.em42-a{color:#1B5E3F;margin-top:4px}
+.answer.em42-left{text-align:left;font-size:20px;line-height:1.5}
+.em42-pick{display:flex;gap:12px;margin-top:8px}
+.em42-pick > span{border:2px solid var(--line);border-radius:10px;padding:4px 14px;font-size:21px;background:#fff}
+.mt4{margin-top:4px}
+
+/* 개념 지도 */
+.em42-map{display:flex;align-items:stretch;gap:16px}
+.em42-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.55}
+.em42-hub{flex:0 0 130px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border-color:var(--ink)}
+.em42-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em42-pair{display:flex;gap:12px;align-items:center;margin-top:14px}
+.em42-key{flex:0 0 250px;background:#DFF1E6;border-radius:22px;padding:8px 14px;text-align:center;font-weight:700}
+.em42-val{flex:1 1 0;border:2px dashed #9FC9B0;border-radius:12px;padding:8px 14px;background:#fff}
+.em42-side{flex:0 0 240px;display:flex;flex-direction:column;gap:12px}
+.em42-dim{border-style:dashed;color:var(--muted);flex:1 1 0;display:flex;align-items:center}
+
+/* 실험실 */
+.em42-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.em42-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.em42-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em42-seg .btn.em42-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em42-seg .small{margin-right:4px}
+table.em42-read th{font-size:19px;padding:5px 10px}
+table.em42-read td{font-size:19px;width:200px;padding:5px 8px;text-align:center}
+output.kind.em42-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.em42-log th,table.em42-log td{font-size:19px;padding:3px 6px;text-align:center}

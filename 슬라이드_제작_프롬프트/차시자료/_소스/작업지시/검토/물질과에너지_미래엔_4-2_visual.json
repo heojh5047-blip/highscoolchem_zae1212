@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":4,"severity":"high","rule":"D8","problem":"정답 상자가 무대 밖으로 넘침","fix":"반영 — 그림 높이 150px, 카드 문장을 본문으로"},
+{"slide":6,"severity":"medium","rule":"D4","problem":"x축 라벨 t [h]가 마지막 점·곡선 끝과 겹침","fix":"반영 — 가로 범위 0–4.4"},
+{"slide":7,"severity":"medium","rule":"D8","problem":"첫 입자 상자가 세로축 라벨, 곡선 끝이 t [s]와 겹침","fix":"반영 — 상자 위치·가로 범위 조정"},
+{"slide":8,"severity":"medium","rule":"T5","problem":"예측 선택지 상자가 낱말마다 쪼개짐(엔진 span.w에 CSS가 걸림), '실험 2' 라벨이 곡선과 겹침","fix":"반영 — .em42-pick > span, 라벨을 곡선 아래로"},
+{"slide":10,"severity":"medium","rule":"D8","problem":"실험실 그래프 세로축 라벨이 0.12 눈금과, t [s]가 마지막 측정점과 겹침","fix":"반영 — 그래프 높이·폭·라벨 위치 조정, 분자 수 글과 상자 테 간격"},
+{"slide":13,"severity":"low","rule":"D4","problem":"t [년] 라벨이 곡선 끝과 겹침, S14에서 눈금 숫자 15.9px","fix":"반영 — 가로 범위 21500, 눈금 20"},
+{"slide":16,"severity":"low","rule":"T4","problem":"발표 틀 표 머리 '활용한 일차 반응'이 두 줄","fix":"반영 — th 190px nowrap"},
+{"slide":12,"severity":"low","rule":"S2","problem":"확인하기 장 아래 빈 공간이 큼(S18, S21도)","fix":"기각 — 4-1과 같은 check 틀, 판서 공간으로 씀"}
+],"summary":"캡처 모음 전체 2회 확인. 겹침·넘침 7건 반영, 빈 공간 1건 기각. 최종 자동 점검 0건, 콘솔 0건."}
