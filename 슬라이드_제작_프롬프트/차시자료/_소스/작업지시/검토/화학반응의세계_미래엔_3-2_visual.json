@@ -1,0 +1,12 @@
+{"findings":[
+{"slide":5,"severity":"high","rule":"C1/M1","problem":"stage 안 svg 높이 규칙이 KaTeX 화살표 svg까지 줄여 반응식 화살표가 사라짐","fix":".rm32-g3w .stage > svg로 바꿈 — 반영"},
+{"slide":5,"severity":"medium","rule":"3.2","problem":"입자 그림 라벨 14px, 에탄올 모형 두 개가 겹침","fix":"라벨 21–28, 모형 배율·간격 조정 — 반영"},
+{"slide":7,"severity":"medium","rule":"D8","problem":"공-막대 모형 O 원자가 위쪽에서 잘림, 원자 라벨 16px 미만, 아래 문장 넘침","fix":"viewBox 높이 256, 모형 중심 아래로, 그림 폭 960, 표 여백 축소 — 반영"},
+{"slide":8,"severity":"medium","rule":"D8","problem":"모형 O 잘림","fix":"viewBox 300×210, 중심 108 — 반영"},
+{"slide":16,"severity":"medium","rule":"3.2/D8","problem":"과정 카드 그림 라벨 13px·잘림, 마지막 Q 줄 넘침","fix":"그림 높이 180, 라벨 25, 캡션 줄임 — 반영"},
+{"slide":17,"severity":"medium","rule":"D8","problem":"반응 라벨(.ov)이 기록 표와 겹치고 기록 5행이 칸 밖으로 넘침","fix":"라벨을 유리병 위로, 표 4행·위치 조정 — 반영"},
+{"slide":20,"severity":"medium","rule":"D8","problem":"관·범례가 그림 밖으로 잘림, 범례 글자 겹침, 기록 표가 아래로 넘침","fix":"관 좌표·범례 간격·그래프 높이 조정, 기록 버튼을 위로, 표 4행 — 반영"},
+{"slide":23,"severity":"medium","rule":"D8","problem":"선택지 표 때문에 정답 상자가 화면 밖으로 넘침","fix":"선택지를 .choices 한 줄 배열로 — 반영"},
+{"slide":22,"severity":"low","rule":"본보기 수준","problem":"글만 있고 아래 절반이 비어 있음","fix":"별 모양 은거울 본뜨기·연료 전지식 측정기 그림 추가 — 반영"},
+{"slide":25,"severity":"low","rule":"T1","problem":"왼쪽 흐린 노드 글이 좁아 쪼개짐, ▢ 기호가 o처럼 보임","fix":"옆 칸 270px, 빈칸을 ( )로 — 반영"}
+],"summary":"자동 점검 0건·콘솔 오류 0건이 되도록 고친 뒤 전체 sheet 모음 2회와 실험실 PRE 캡처(조작 뒤 상태)를 확인했다. 원자 색·크기는 3-1과 같은 배율(H 18·C·O 24 기준)."}
