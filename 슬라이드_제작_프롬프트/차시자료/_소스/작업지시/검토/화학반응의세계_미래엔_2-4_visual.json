@@ -1,0 +1,9 @@
+{"findings":[
+{"slide":4,"severity":"high","rule":"D8","problem":"미니 그림에서 극 라벨과 산화/환원 전극 라벨이 겹치고 아래 문장이 안전 영역을 넘음","fix":"ecell 라벨 간격을 SC 배율에 맞추고 그림 360px, 문장 줄임 — 반영"},
+{"slide":8,"severity":"medium","rule":"3.2","problem":"이온 라벨이 화면 15px","fix":"배율 1.2, 라벨 위치 조정, viewBox 높이 392 — 반영"},
+{"slide":16,"severity":"high","rule":"D8","problem":"실험실 왼쪽 열 넘침, 극 라벨이 그래프에 가림","fix":"버튼 글 줄이고 해석 문장을 오른쪽 열로, 장치 그림 위로 올림 — 반영"},
+{"slide":22,"severity":"medium","rule":"D8","problem":"양쪽 이온 라벨 겹침","fix":"(+)극 쪽 라벨 222, (−)극 쪽 라벨 y 166·238 — 반영"},
+{"slide":31,"severity":"medium","rule":"3.2","problem":"문항 그림 라벨 15.4px","fix":"라벨 배율 1.25 — 반영"},
+{"slide":26,"severity":"low","rule":"D8","problem":"용융액 라벨이 기포와 겹침","fix":"라벨을 탄소 전극 아래로 — 반영"},
+{"slide":21,"severity":"low","rule":"D2","problem":"철 속 전자 라벨이 작게 보임","fix":"보류(흰 글씨로 읽힘)"}],
+"summary":"전기 분해 그림은 한 틀(ecell)로 극·산화/환원 전극·전자 화살표 방향을 통일. 최종 자동 점검 0건."}

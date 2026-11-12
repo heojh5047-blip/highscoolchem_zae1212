@@ -35,32 +35,32 @@ window.DECK_LABS = {
       const q=model(); cur=q.t>0?q.I:0;
       while(gd.firstChild) gd.firstChild.remove();
       const D=(t,a)=>API.mk(t,a,gd);
-      D('rect',{x:82,y:84,width:356,height:82,fill:MET[m].sc,'fill-opacity':MET[m].so});
-      D('path',{d:'M74 64 H80 V158 Q80 168 90 168 H430 Q440 168 440 158 V64 H446',fill:'none',stroke:'#7E8B98','stroke-width':3,'stroke-linejoin':'round'});
+      D('rect',{x:82,y:82,width:356,height:74,fill:MET[m].sc,'fill-opacity':MET[m].so});
+      D('path',{d:'M74 62 H80 V150 Q80 160 90 160 H430 Q440 160 440 150 V62 H446',fill:'none',stroke:'#7E8B98','stroke-width':3,'stroke-linejoin':'round'});
       D('path',{d:'M150 48 V24 H252 M268 24 H370 V48',fill:'none',stroke:API.COL.ink,'stroke-width':3});
       D('line',{x1:268,y1:4,x2:268,y2:44,stroke:API.COL.ink,'stroke-width':3}); D('line',{x1:252,y1:13,x2:252,y2:35,stroke:API.COL.ink,'stroke-width':6});
       D('path',{d:'M278 8 H290 M284 2 V14',stroke:API.COL.plus,'stroke-width':3}); D('path',{d:'M230 8 H242',stroke:API.COL.minus,'stroke-width':3});
       const xo = cn==='n'?150:370, xp = cn==='n'?370:150;           // 물체 / 금속판 위치
       // 금속판
       const pl = cn==='n' ? Math.min(10,-q.da/12) : 0, pw=24-pl;
-      D('rect',{x:xp-pw/2,y:48,width:pw,height:112,rx:3,fill:MET[m].f,stroke:MET[m].s,'stroke-width':2});
-      if(cn==='p' && q.da>0) D('rect',{x:xp-14,y:76,width:28,height:84,rx:4,fill:MET[m].coat,'fill-opacity':Math.min(1,q.da/20),stroke:MET[m].s,'stroke-width':1.5});
+      D('rect',{x:xp-pw/2,y:48,width:pw,height:104,rx:3,fill:MET[m].f,stroke:MET[m].s,'stroke-width':2});
+      if(cn==='p' && q.da>0) D('rect',{x:xp-14,y:76,width:28,height:76,rx:4,fill:MET[m].coat,'fill-opacity':Math.min(1,q.da/20),stroke:MET[m].s,'stroke-width':1.5});
       // 물체
       const O1=OBJ[ob], cov = cn==='n' ? Math.min(1,q.dm/(m==='Ag'?20:8)) : 0;
-      const shape=(f,s,op,sw)=>{ if(ob==='Cu'){ D('circle',{cx:xo,cy:128,r:22,fill:f,'fill-opacity':op,stroke:s,'stroke-width':sw}); }
-        else { D('rect',{x:xo-4,y:56,width:8,height:72,rx:3,fill:f,'fill-opacity':op,stroke:s,'stroke-width':sw}); D('ellipse',{cx:xo,cy:142,rx:14,ry:20,fill:f,'fill-opacity':op,stroke:s,'stroke-width':sw}); } };
-      D('line',{x1:xo,y1:48,x2:xo,y2:ob==='Cu'?106:58,stroke:'#5B6B7F','stroke-width':3});
+      const shape=(f,s,op,sw)=>{ if(ob==='Cu'){ D('circle',{cx:xo,cy:120,r:22,fill:f,'fill-opacity':op,stroke:s,'stroke-width':sw}); }
+        else { D('rect',{x:xo-4,y:56,width:8,height:72,rx:3,fill:f,'fill-opacity':op,stroke:s,'stroke-width':sw}); D('ellipse',{cx:xo,cy:134,rx:14,ry:18,fill:f,'fill-opacity':op,stroke:s,'stroke-width':sw}); } };
+      D('line',{x1:xo,y1:48,x2:xo,y2:ob==='Cu'?98:58,stroke:'#5B6B7F','stroke-width':3});
       shape(O1.f,O1.s,1,2.5);
       if(cov>0) shape(MET[m].coat,MET[m].s,cov,3);
-      if(cn==='p' && q.dm<0){ const np=Math.min(9,Math.round(-q.dm/3)); for(let i=0;i<np;i++){ const a=i*2.4, r=ob==='Cu'?12:9; D('circle',{cx:xo+Math.cos(a)*r,cy:(ob==='Cu'?128:142)+Math.sin(a)*r,r:2.6,fill:'#3A3F47'}); } }
+      if(cn==='p' && q.dm<0){ const np=Math.min(9,Math.round(-q.dm/3)); for(let i=0;i<np;i++){ const a=i*2.4, r=ob==='Cu'?12:9; D('circle',{cx:xo+Math.cos(a)*r,cy:(ob==='Cu'?120:134)+Math.sin(a)*r,r:2.6,fill:'#3A3F47'}); } }
       // 전자 화살표: (+)극 → 전원 (+)단자, 전원 (−)단자 → (−)극 (왼쪽으로)
       const on=cur>0;
       if(on){ API.arrow(gd,350,38,292,38,API.COL.minus,3); API.arrow(gd,232,38,172,38,API.COL.minus,3); }
       API.place(V('e1'),320,54,on); API.place(V('e2'),202,54,on);
       V('mL').textContent = cn==='n'? O1.nm : MET[m].plate; V('mR').textContent = cn==='n'? MET[m].plate : O1.nm;
       API.place(V('mL'),88,40); API.place(V('mR'),432,40);
-      V('sol').innerHTML=API.tex(MET[m].sol); API.place(V('sol'),260,152);
-      API.place(V('pL'),150,186); API.place(V('pR'),370,186);
+      V('sol').innerHTML=API.tex(MET[m].sol); API.place(V('sol'),260,142);
+      API.place(V('pL'),150,178); API.place(V('pR'),370,178);
       V('vm').textContent=(1.5*q.k).toFixed(1)+' V'; API.place(V('vm'),260,58);
       O('k').textContent=`${q.k}개 · ${(1.5*q.k).toFixed(1)} V`; O('t').textContent=q.t+'분';
       O('i').textContent=(q.t>0?Math.round(q.I*1000):0)+' mA'; O('ne').textContent=q.ne.toFixed(2)+' mmol';
@@ -92,7 +92,7 @@ window.DECK_LABS = {
         if(s<24){ x=370; y=48-s; } else if(s<244){ x=370-(s-24); y=24; } else { x=150; y=24+(s-244); }
         c.setAttribute('cx',x); c.setAttribute('cy',y); c.setAttribute('opacity',(y===24&&x>244&&x<276)?0:1); });
       ids.forEach((c,i)=>{ if(!on){ c.setAttribute('opacity',0); return; }
-        const s=(i*190/5+t*30*sp)%190; c.setAttribute('cx',356-s); c.setAttribute('cy',100+((i*23)%50)); c.setAttribute('opacity',1); });
+        const s=(i*190/5+t*30*sp)%190; c.setAttribute('cx',356-s); c.setAttribute('cy',94+((i*23)%44)); c.setAttribute('opacity',1); });
     }
     function renderLog(){ const tb=O('log'); tb.innerHTML='';
       log.slice(-3).forEach(r=>{ const tr=document.createElement('tr');

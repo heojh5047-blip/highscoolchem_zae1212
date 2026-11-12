@@ -1,0 +1,7 @@
+{"findings":[
+{"slide":5,"severity":"low","rule":"S1","problem":"이온 이동 답에 .ans 없음(자동 점검 S9)","fix":"답을 span.ans로 — 반영"},
+{"slide":18,"severity":"medium","rule":"S7","problem":"결과 예시 표가 비어 있음","fix":"실험실 PRE 시험 값 4행으로 채움 — 반영"},
+{"slide":29,"severity":"medium","rule":"8.3","problem":"아연–구리를 '탄소 등으로 환원 → 전기 분해로 정제' 한 띠로 묶어 구리 제련을 탄소 환원처럼 보이게 함","fix":"띠를 K–Al 용융 전기 분해 / Zn–Pb 탄소 등으로 환원 / Cu–Au 쉽게 환원(구리는 전기 분해로 정제)으로 — 반영"},
+{"slide":16,"severity":"low","rule":"S12","problem":"철 숟가락을 황산 구리(II)에 넣으면 전류 없이도 치환이 일어나는 점은 모형에 없음","fix":"plan.md 확인 필요 4에 적음 — 보류"},
+{"slide":24,"severity":"low","rule":"C5","problem":"표백제 반응식은 교과서에 없음","fix":"검산 일치, 확인 필요 2에 적음"}],
+"summary":"58–63쪽 모든 개념·탐구·해 보기·확인하기·자료실·소단원 마무리와 대단원 마무리 09·10, 개념 정리 ❾·❿을 넣었다. 반응식 17개 검산 일치. 필수 탐구 반02-탐2는 실험실 rm24plate(S16)와 S13–S19로 이행."}
