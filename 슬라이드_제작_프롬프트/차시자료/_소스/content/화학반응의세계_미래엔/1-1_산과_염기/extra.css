@@ -48,3 +48,7 @@ table.rm11-eqt{margin:4px auto 0;border:2px solid var(--ink);border-radius:12px;
 table.rm11-eqt td{border:0;font-size:28px;padding:4px 6px;background:none}
 table.rm11-eqt td.r{text-align:right}
 table.rm11-eqt td.l{text-align:left}
+/* 해 보기: 반응식 아래 빈칸 */
+table.rm11-hb{margin:4px auto 0;border:2px solid var(--line);border-radius:12px;background:#fff;border-collapse:separate;padding:6px 14px}
+table.rm11-hb td{border:0;font-size:28px;padding:4px 8px;background:none;text-align:center}
+table.rm11-hb .blank{min-width:110px;font-size:22px}

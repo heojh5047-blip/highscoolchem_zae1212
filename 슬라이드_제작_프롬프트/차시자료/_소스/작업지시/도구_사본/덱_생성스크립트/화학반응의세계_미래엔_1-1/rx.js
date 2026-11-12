@@ -1,4 +1,4 @@
-(async()=>{const sl=document.querySelectorAll('.slide')[19];const L=sl.querySelector('.lab');const q=s=>L.querySelector(s);const T=e=>e.textContent.replace(/\s+/g,' ').trim();
+(async()=>{const sl=document.querySelectorAll('.slide')[20];const L=sl.querySelector('.lab');const q=s=>L.querySelector(s);const T=e=>e.textContent.replace(/\s+/g,' ').trim();
 const click=e=>e.dispatchEvent(new MouseEvent('click',{bubbles:true}));
 const rep=t=>console.warn('LAB '+t+' | msg='+T(q('[data-o="msg"]')).slice(0,60)+' | ab='+T(q('[data-o="ab"]')).slice(0,40)+' | rows='+q('[data-o="log"]').children.length+' | score='+T(q('[data-o="score"]')));
 click(q('[data-r="0"]'));click(q('[data-p="1"]'));rep('r1 wrong');click(q('[data-p="0"]'));rep('r1 right');click(q('[data-act="rec"]'));rep('rec');

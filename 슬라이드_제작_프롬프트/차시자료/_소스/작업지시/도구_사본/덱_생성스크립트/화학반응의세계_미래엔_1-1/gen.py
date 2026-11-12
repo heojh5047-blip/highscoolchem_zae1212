@@ -191,9 +191,9 @@ def proton():
 
 def roles_box():
     out = (f'<rect x="10" y="40" width="150" height="90" rx="14" fill="#FDECEE" stroke="{PLUS}" stroke-width="2.5"/>'
-           + tex(85, 80, '산', 26, fill=PLUS, mix=True, extra=' data-weight="700"') + tex(85, 112, '양성자 주개', 19, fill=PLUS, mix=True)
+           + tex(85, 80, '산', 26, fill=PLUS, mix=True, extra=' data-weight="700"') + tex(85, 112, '제공하는 물질', 19, fill=PLUS, mix=True)
            + f'<rect x="290" y="40" width="150" height="90" rx="14" fill="#E8F0FB" stroke="{MINUS}" stroke-width="2.5"/>'
-           + tex(365, 80, '염기', 26, fill=MINUS, mix=True, extra=' data-weight="700"') + tex(365, 112, '양성자 받개', 19, fill=MINUS, mix=True)
+           + tex(365, 80, '염기', 26, fill=MINUS, mix=True, extra=' data-weight="700"') + tex(365, 112, '제공받는 물질', 19, fill=MINUS, mix=True)
            + arw(170, 85, 280, 85, 'plus', 4) + tex(225, 68, '\\ce{H+}', 22, fill=PLUS))
     F['roles'] = out
 
@@ -266,7 +266,7 @@ def nh4cl():
     F['nh4cl'] = out
 
 
-# 짝산–짝염기 반응식 그림
+# 짝산·짝염기 반응식 그림
 def eqfig(key, parts, roles, fwd, rev, p1, p2, g=('g1', 'g2', 'g3', 'g3'), W=900):
     """parts: [(x, tex)] 7개(종1, +, 종2, 화살표, 종3, +, 종4). roles: 4개 (글, 색). fwd/rev: (from x, to x)"""
     y = 160
@@ -283,15 +283,15 @@ def eqfig(key, parts, roles, fwd, rev, p1, p2, g=('g1', 'g2', 'g3', 'g3'), W=900
     a, b = rev
     out += f'<g class="step" data-g="{g[1]}">' + arw(a, 100, b, 100, 'plus', 3) + tex((a + b) / 2, 88, '\\ce{H+}', 21, fill=PLUS) + '</g>'
     # 쌍 1 아래(field), 쌍 2 더 아래(bfield)
-    out += bracket(p1[0], p1[1], y + 64, y + 96, FIELD, '짝산–짝염기 쌍 1', g[2])
-    out += bracket(p2[0], p2[1], y + 64, y + 136, BF, '짝산–짝염기 쌍 2', g[3])
+    out += bracket(p1[0], p1[1], y + 64, y + 96, FIELD, '짝산·짝염기 쌍 1', g[2])
+    out += bracket(p2[0], p2[1], y + 64, y + 136, BF, '짝산·짝염기 쌍 2', g[3])
     F[key] = out
 
 
 def figs_eq():
-    eqfig('eq13', [(110, '\\ce{CH3COOH}'), (235, '+'), (320, '\\ce{H2O}'), (430, '\\ce{<=>}'), (560, '\\ce{CH3COO-}'), (685, '+'), (790, '\\ce{H3O+}')],
-          [('\\text{산}_1', PLUS), ('\\text{염기}_2', MINUS), ('\\text{염기}_1', MINUS), ('\\text{산}_2', PLUS)],
-          (150, 300), (765, 600), (110, 560), (320, 790))
+    eqfig('eq13', [(110, '\\ce{HCO3-}'), (230, '+'), (330, '\\ce{H2O}'), (440, '\\ce{<=>}'), (560, '\\ce{H2CO3}'), (680, '+'), (790, '\\ce{OH-}')],
+          [('\\text{염기}_1', MINUS), ('\\text{산}_2', PLUS), ('\\text{산}_1', PLUS), ('\\text{염기}_2', MINUS)],
+          (300, 150), (590, 765), (110, 560), (330, 790))
     eqfig('eq15', [(90, '\\ce{HF}'), (170, '+'), (250, '\\ce{NH3}'), (350, '\\ce{<=>}'), (450, '\\ce{F-}'), (530, '+'), (620, '\\ce{NH4+}')],
           [('\\text{산}_1', PLUS), ('\\text{염기}_2', MINUS), ('\\text{염기}_1', MINUS), ('\\text{산}_2', PLUS)],
           (110, 230), (600, 470), (90, 450), (250, 620), g=('e1', 'e2', 'e3', 'e3'))
