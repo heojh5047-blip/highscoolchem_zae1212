@@ -1,0 +1,8 @@
+{"findings":[
+{"slide":5,"severity":"medium","rule":"T4","problem":"다섯 카드가 내용 폭에 따라 불균등, 반응식이 칸을 넘침","fix":"minmax(0,1fr) 5열 + 반응식 두 줄 — 반영"},
+{"slide":5,"severity":"low","rule":"레이아웃","problem":"아래쪽 빈 공간이 크다","fix":"내용 추가 없이 유지(정답 단계 공개 뒤 판서 공간으로 씀)"},
+{"slide":12,"severity":"low","rule":"D8","problem":"② 오른쪽 화학식 라벨이 화살표·그림 가장자리에 닿음","fix":"라벨 x 562, 화살표 424–480으로 옮김 — 반영"},
+{"slide":14,"severity":"low","rule":"D2","problem":"배출 화살표가 HCO3- 원을 가로지름","fix":"화살표를 원 아래(y 148)로 내림 — 반영"},
+{"slide":15,"severity":"low","rule":"D8","problem":"pH 눈금 위 라벨 잘림","fix":"viewBox 위 여백 16 추가 — 반영"},
+{"slide":21,"severity":"low","rule":"레이아웃","problem":"글이 적어 아래가 비어 있음","fix":"유지(교과서 포트폴리오 쪽 분량 그대로)"}
+],"summary":"22장 자동 점검 0·콘솔 0·motion 0·ask 0. 개념 정리 가지 그림과 대응표가 본보기(물질과에너지 1-M) 수준이고, 과학 글쓰기 평형 이동 그림·실험실·인포그래픽 예시를 새로 그렸다."}
