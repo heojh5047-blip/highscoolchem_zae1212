@@ -383,9 +383,9 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   <h2>학습 목표</h2>
   <div class="std"><span class="code">[12화학02-03]</span>원자와 분자를 루이스 전자점식으로 표현하고, 전자쌍 반발 이론을 근거로 분자의 구조를 추론하여 모형으로 나타낼 수 있다.</div>
   <ol class="goals mt12">
-    <li><b>전자쌍 반발 이론</b>으로 중심 원자 주위의 전자쌍 배치를 설명할 수 있다.</li>
-    <li>중심 원자의 <b>공유 전자쌍</b>과 <b>비공유 전자쌍</b> 수로 분자 구조와 결합각을 추론할 수 있다.</li>
-    <li>소프트웨어로 분자 구조를 모델링하여 <b>3차원 모형</b>으로 나타낼 수 있다.</li>
+    <li><b>전자쌍 반발 이론</b>을 근거로 분자 구조를 추론해 모형으로 나타낼 수 있다.</li>
+    <li><b>소프트웨어</b>를 활용해 여러 가지 분자 구조를 모델링할 수 있다.</li>
+    <li>중심 원자의 <b>전자쌍 종류와 수</b>에 따른 분자 구조를 설명할 수 있다.</li>
   </ol>
   <h3 class="mt28">오늘의 흐름</h3>
   <div class="flow">
@@ -458,36 +458,42 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   </div>
 </section>
 
-<!-- ════════ 6. 해 보기: 풍선 ════════ -->
-<section class="slide" data-sec="02 · 해 보기" data-title="해 보기: 풍선으로 전자쌍 배치">
-  <h2><span class="tag">해 보기</span>풍선으로 전자쌍 배치 알아보기</h2>
-  <p class="f22">같은 크기로 분 풍선 2개, 3개, 4개를 각각 매듭끼리 묶고, 풍선이 저절로 놓이는 모습을 관찰하자. <span class="small">(풍선 하나 = 전자쌍 하나, 매듭 = 중심 원자)</span></p>
-  <div class="stages mt12">
-    <div class="stage"><h3>풍선 2개</h3><svg viewBox="0 0 300 200" aria-label="매듭에서 반대 방향으로 놓인 풍선 두 개"><g data-anim="pop" data-o="150,105" data-dur=".9" data-delay=".4" data-ease="back"><ellipse cx="103.6" cy="105" rx="41.6" ry="24" transform="rotate(-180 103.6 105)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><ellipse cx="196.4" cy="105" rx="41.6" ry="24" transform="rotate(-0 196.4 105)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><circle cx="150" cy="105" r="7" fill="#6E9CCB"/></g></svg><p class="key step" data-g="b1">반대 방향 일직선, $180^\circ$</p></div>
-    <div class="stage"><h3>풍선 3개</h3><svg viewBox="0 0 300 200" aria-label="한 평면에서 세 방향으로 놓인 풍선 세 개"><g data-anim="pop" data-o="150,105" data-dur=".9" data-delay=".4" data-ease="back"><ellipse cx="109.8" cy="128.2" rx="41.6" ry="24" transform="rotate(150 109.8 128.2)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><ellipse cx="150" cy="58.6" rx="41.6" ry="24" transform="rotate(-90 150 58.6)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><ellipse cx="190.2" cy="128.2" rx="41.6" ry="24" transform="rotate(30 190.2 128.2)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><circle cx="150" cy="105" r="7" fill="#6E9CCB"/></g></svg><p class="key step" data-g="b2">한 평면에서 세 방향, $120^\circ$</p></div>
-    <div class="stage"><h3>풍선 4개</h3><svg viewBox="0 0 300 200" aria-label="정사면체의 꼭짓점 방향으로 놓인 풍선 네 개"><g data-anim="pop" data-o="150,105" data-dur=".9" data-delay=".4" data-ease="back"><ellipse cx="178.1" cy="127.1" rx="32.1" ry="24" transform="rotate(38.2 178.1 127.1)" fill="#E3EEF8" stroke="#6E9CCB" stroke-width="2"/><ellipse cx="150" cy="59.6" rx="40.7" ry="24" transform="rotate(-90 150 59.6)" fill="#E3EEF8" stroke="#6E9CCB" stroke-width="2"/><ellipse cx="106.9" cy="121.7" rx="41.4" ry="24" transform="rotate(158.8 106.9 121.7)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><ellipse cx="169.1" cy="113.4" rx="18.7" ry="24" transform="rotate(23.7 169.1 113.4)" fill="#CFE3F7" stroke="#6E9CCB" stroke-width="2"/><circle cx="150" cy="105" r="7" fill="#6E9CCB"/></g></svg><p class="key step" data-g="b3">정사면체의 꼭짓점 방향, $109.5^\circ$</p></div>
+<!-- ════════ 6. 해 보기: 털실 철사 ════════ -->
+<section class="slide" data-sec="02 · 해 보기" data-title="해 보기: 전자쌍 수에 따른 분자 구조">
+  <h2><span class="tag">해 보기</span>전자쌍 수에 따른 분자 구조 알아보기 <span class="small c-muted">탐구 능력 · 의사 결정 능력</span></h2>
+  <p class="f21">10 cm 정도의 털실 철사 2개, 3개, 4개의 한쪽 끝을 각각 묶고, 모든 철사가 최대한 멀리 떨어지도록 배열한 다음 인접한 철사 사이의 각도를 재자. <span class="small">(매듭 = 중심 원자, 철사 = 중심 원자 주위의 전자쌍)</span></p>
+  <div class="card mt8">
+    <p class="f21" data-q><b>Q</b> ① 철사들 사이에는 어떤 힘이 작용한다고 볼 수 있을까? <span class="step" data-g="w1">→ <span class="ans">서로 밀어내는 힘</span>(반발력)</span></p>
+    <p class="f21 mt8" data-q><b>Q</b> ② 묶음을 이루는 철사의 개수와 각도 사이에 어떤 관계가 있는가? <span class="step" data-g="w2">→ 철사가 <span class="ans">많을수록 각도가 작아진다</span>.</span></p>
+    <p class="f21 mt8" data-q><b>Q</b> ③ 철사들의 끝점을 선으로 연결하면 어떤 모양이 될까? <span class="step" data-g="w4">→ <span class="ans">선분, 정삼각형, 정사면체</span></span></p>
   </div>
-  <div class="answer step">풍선이 서로 밀어 가장 멀리 떨어진 배치를 찾듯, 전자쌍도 <b>반발이 가장 작은 배치</b>를 이룬다.</div>
+  <div class="stages mt8">
+    <div class="stage"><h3>털실 철사 2개</h3><svg viewBox="0 0 300 200" style="height:140px" aria-label="매듭에서 반대 방향으로 뻗은 철사 두 개"><g data-anim="pop" data-o="150,100" data-dur=".9" data-delay=".4" data-ease="back"><line x1="150" y1="100" x2="245" y2="100" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="100" x2="55" y2="100" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><circle cx="150" cy="100" r="9" fill="#8A4A1C"/></g><g class="step" data-g="w4"><line x1="55" y1="100" x2="245" y2="100" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/></g></svg><p class="key step" data-g="w2">$180^\circ$</p></div>
+    <div class="stage"><h3>털실 철사 3개</h3><svg viewBox="0 0 300 200" style="height:140px" aria-label="한 평면에서 세 방향으로 뻗은 철사 세 개"><g data-anim="pop" data-o="150,110" data-dur=".9" data-delay=".4" data-ease="back"><line x1="150" y1="110" x2="150" y2="30" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="110" x2="219.3" y2="150" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="110" x2="80.7" y2="150" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><circle cx="150" cy="110" r="9" fill="#8A4A1C"/></g><g class="step" data-g="w4"><line x1="150" y1="30" x2="80.7" y2="150" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="150" y1="30" x2="219.3" y2="150" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="80.7" y1="150" x2="219.3" y2="150" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/></g></svg><p class="key step" data-g="w2">$120^\circ$</p></div>
+    <div class="stage"><h3>털실 철사 4개</h3><svg viewBox="0 0 300 200" style="height:140px" aria-label="정사면체의 꼭짓점 방향으로 뻗은 철사 네 개"><g data-anim="pop" data-o="150,110" data-dur=".9" data-delay=".4" data-ease="back"><line x1="150" y1="110" x2="198.5" y2="148.1" stroke="#E3B28E" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="110" x2="150" y2="31.7" stroke="#E3B28E" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="110" x2="75.7" y2="138.8" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="110" x2="175.8" y2="121.3" stroke="#C96A2B" stroke-width="7" stroke-linecap="round"/><circle cx="150" cy="110" r="9" fill="#8A4A1C"/></g><g class="step" data-g="w4"><line x1="150" y1="31.7" x2="175.8" y2="121.3" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="150" y1="31.7" x2="198.5" y2="148.1" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="150" y1="31.7" x2="75.7" y2="138.8" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="175.8" y1="121.3" x2="198.5" y2="148.1" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="175.8" y1="121.3" x2="75.7" y2="138.8" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><line x1="198.5" y1="148.1" x2="75.7" y2="138.8" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/></g></svg><p class="key step" data-g="w2">$109.5^\circ$</p></div>
+  </div>
+  <p class="small mt8">안전: 안전 장갑을 끼고 철사 끝에 손이 찔리지 않도록 한다. 철사가 구부러지지 않게 배열한다.</p>
 </section>
 
 <!-- ════════ 7. 전자쌍 수와 배치 ════════ -->
 <section class="slide" data-sec="02 · 전자쌍 반발 이론" data-title="전자쌍 수와 전자쌍 배치">
-  <h2><span class="no">1</span>전자쌍 수와 전자쌍 배치</h2>
+  <h2><span class="tag">자료 읽기</span>전자쌍 반발 이론에 따른 전자쌍의 배치</h2>
   <table class="cm222-geo">
-    <tr><th style="width:190px">전자쌍 수</th><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th style="width:190px">공유 전자쌍 수</th><td>2</td><td>3</td><td>4</td></tr>
     <tr class="cm222-figrow"><th>전자쌍의<br>배치</th>
       <td><svg class="fig" viewBox="0 0 300 220" style="width:270px" aria-label="중심 원자 양쪽 반대 방향의 전자쌍 두 개"><ellipse cx="104.6" cy="110" rx="45.4" ry="21" transform="rotate(-180 104.6 110)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="87.8" cy="104" r="4" fill="#16233D"/><circle cx="87.8" cy="116" r="4" fill="#16233D"/><ellipse cx="195.4" cy="110" rx="45.4" ry="21" transform="rotate(-0 195.4 110)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="212.2" cy="116" r="4" fill="#16233D"/><circle cx="212.2" cy="104" r="4" fill="#16233D"/><g data-atom="150,110,24,X"></g></svg></td>
       <td><svg class="fig" viewBox="0 0 300 220" style="width:270px" aria-label="한 평면에서 세 방향의 전자쌍 세 개"><ellipse cx="150" cy="64.6" rx="45.4" ry="21" transform="rotate(-90 150 64.6)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="156" cy="47.8" r="4" fill="#16233D"/><circle cx="144" cy="47.8" r="4" fill="#16233D"/><ellipse cx="110.7" cy="132.7" rx="45.4" ry="21" transform="rotate(150 110.7 132.7)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="93.1" cy="135.9" r="4" fill="#16233D"/><circle cx="99.1" cy="146.3" r="4" fill="#16233D"/><ellipse cx="189.3" cy="132.7" rx="45.4" ry="21" transform="rotate(30 189.3 132.7)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="200.9" cy="146.3" r="4" fill="#16233D"/><circle cx="206.9" cy="135.9" r="4" fill="#16233D"/><g data-atom="150,110,24,X"></g></svg></td>
       <td><svg class="fig" viewBox="0 0 300 220" style="width:270px" aria-label="정사면체 꼭짓점 방향의 전자쌍 네 개"><ellipse cx="176.3" cy="132.8" rx="34.8" ry="21" transform="rotate(40.9 176.3 132.8)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="182.2" cy="145.8" r="4" fill="#16233D"/><circle cx="190" cy="136.8" r="4" fill="#16233D"/><ellipse cx="150" cy="66" rx="44" ry="21" transform="rotate(-90 150 66)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="156" cy="49.7" r="4" fill="#16233D"/><circle cx="144" cy="49.7" r="4" fill="#16233D"/><ellipse cx="107.7" cy="126.1" rx="45.3" ry="21" transform="rotate(159.2 107.7 126.1)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="89.8" cy="126.5" r="4" fill="#16233D"/><circle cx="94.1" cy="137.7" r="4" fill="#16233D"/><ellipse cx="166" cy="115.1" rx="20" ry="21" transform="rotate(17.6 166 115.1)" fill="#1F6FD1" fill-opacity=".18" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="170.1" cy="122.7" r="4" fill="#16233D"/><circle cx="173.8" cy="111.2" r="4" fill="#16233D"/><g data-atom="150,110,24,X"></g></svg></td></tr>
-    <tr><th>배치 이름</th><td class="step" data-g="t1"><b>선형</b></td><td class="step" data-g="t1"><b>평면 삼각형</b></td><td class="step" data-g="t1"><b>정사면체형</b></td></tr>
-    <tr><th>전자쌍 사이 각</th><td class="step" data-g="t2">$180^\circ$</td><td class="step" data-g="t2">$120^\circ$</td><td class="step" data-g="t2">$109.5^\circ$</td></tr>
+    <tr><th>배치 이름</th><td class="step" data-g="t1"><b>선형</b></td><td class="step" data-g="t1"><b>평면 삼각형</b></td><td class="step" data-g="t1"><b>정사면체</b></td></tr>
+    <tr><th>인접한 두 전자쌍이 이루는 각</th><td class="step" data-g="t2">$180^\circ$</td><td class="step" data-g="t2">$120^\circ$</td><td class="step" data-g="t2">$109.5^\circ$</td></tr>
   </table>
-  <p class="small mt12">중심 원자가 $\mathrm{Be}$이면 전자쌍 2개, $\mathrm{B}$이면 전자쌍 3개로 옥텟 규칙의 예외이다. 이 단원은 이 두 경우와 옥텟 규칙을 따르는 중심 원자만 다룬다.</p>
+  <p class="f21 mt12" data-q><b>자료 읽기</b> 중심 원자 주위의 공유 전자쌍이 각각 2개, 3개, 4개일 때 중심 원자와 인접한 두 전자쌍이 이루는 각은 각각 몇 °일까?</p>
+  <p class="small mt8">중심 원자가 $\mathrm{Be}$이면 전자쌍 2개, $\mathrm{B}$이면 전자쌍 3개로 옥텟 규칙의 예외이다. 이 단원은 이 두 경우와 옥텟 규칙을 따르는 중심 원자만 다룬다.</p>
 </section>
 
 <!-- ════════ 8. 확인하기: 평면 90° ? ════════ -->
 <section class="slide" data-sec="02 · 전자쌍 반발 이론" data-title="CH₄의 결합각은 90°일까?">
-  <h2><span class="tag q">확인하기</span>메테인의 결합각은 $90^\circ$일까?</h2>
+  <h2><span class="tag alt">연결</span>메테인의 결합각은 $90^\circ$일까?</h2>
   <div class="row">
     <div class="col">
       <p class="f22">메테인 $\ce{CH4}$의 루이스 전자점식을 종이에 그리면 수소 원자 4개가 십자 모양으로 놓여 결합각이 $90^\circ$로 보인다.</p>
@@ -504,62 +510,74 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   </div>
 </section>
 
-<!-- ════════ 9. BeF2 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="BeF₂: 선형">
-  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ① $\ce{BeF2}$</h2>
+<!-- ════════ 9. 확인하기 (73쪽) ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 전자쌍 반발 이론" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>전자쌍 반발 이론</h2>
+  <div class="card">
+    <ol class="cm222-ox">
+      <li>분자에서 중심 원자의 전자쌍은 ( <span class="blank"><span class="step" data-g="c1">반발력</span></span> )을/를 최소화하도록 배치된다.</li>
+      <li>중심 원자 주위에 2개의 공유 전자쌍만 존재할 때 공유 전자쌍의 배치가 어떤 모양인지 써 보자. <span class="step" data-g="c2">→ <b class="c-field">선형</b> <span class="small">두 전자쌍이 서로 반대 방향($180^\circ$)에 놓인다.</span></span></li>
+    </ol>
+  </div>
+  <div class="note mt16 step" data-g="c2"><b>더 생각하기</b> 평면에 그린 루이스 전자점식으로는 결합각을 알 수 없다. 전자쌍은 3차원 공간에서 서로 가장 멀리 떨어지도록 놓인다.</div>
+</section>
+
+<!-- ════════ 10. BeCl2 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="BeCl₂: 선형">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ① $\ce{BeCl2}$</h2>
   <div class="row">
     <div class="col" style="flex:0 0 470px">
       <h3>루이스 전자점식</h3>
-      <svg class="fig" viewBox="0 0 460 170" style="width:460px" aria-label="플루오린화 베릴륨의 루이스 전자점식: 베릴륨 양쪽에 공유 전자쌍, 플루오린마다 비공유 전자쌍 세 개"><text class="tex" x="230" y="104.4" data-tex="\mathrm{Be}" data-size="40" data-anchor="middle"></text><circle cx="190" cy="82.8" r="4" fill="#16233D"/><circle cx="190" cy="97.2" r="4" fill="#16233D"/><circle cx="270" cy="82.8" r="4" fill="#16233D"/><circle cx="270" cy="97.2" r="4" fill="#16233D"/><text class="tex" x="162" y="104.4" data-tex="\mathrm{F}" data-size="40" data-anchor="middle"></text><circle cx="154.8" cy="60" r="4" fill="#16233D"/><circle cx="169.2" cy="60" r="4" fill="#16233D"/><circle cx="154.8" cy="120" r="4" fill="#16233D"/><circle cx="169.2" cy="120" r="4" fill="#16233D"/><circle cx="134" cy="82.8" r="4" fill="#16233D"/><circle cx="134" cy="97.2" r="4" fill="#16233D"/><text class="tex" x="298" y="104.4" data-tex="\mathrm{F}" data-size="40" data-anchor="middle"></text><circle cx="290.8" cy="60" r="4" fill="#16233D"/><circle cx="305.2" cy="60" r="4" fill="#16233D"/><circle cx="290.8" cy="120" r="4" fill="#16233D"/><circle cx="305.2" cy="120" r="4" fill="#16233D"/><circle cx="326" cy="82.8" r="4" fill="#16233D"/><circle cx="326" cy="97.2" r="4" fill="#16233D"/><rect class="step" data-g="h9" x="179" y="73" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h9" x="259" y="73" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/></svg>
+      <svg class="fig" viewBox="0 0 460 170" style="width:460px" aria-label="염화 베릴륨의 루이스 전자점식: 베릴륨 양쪽에 공유 전자쌍, 염소마다 비공유 전자쌍 세 개"><text class="tex" x="230" y="104.4" data-tex="\mathrm{Be}" data-size="40" data-anchor="middle"></text><circle cx="190" cy="82.8" r="4" fill="#16233D"/><circle cx="190" cy="97.2" r="4" fill="#16233D"/><circle cx="270" cy="82.8" r="4" fill="#16233D"/><circle cx="270" cy="97.2" r="4" fill="#16233D"/><text class="tex" x="155" y="104.4" data-tex="\mathrm{Cl}" data-size="40" data-anchor="middle"></text><circle cx="147.8" cy="60" r="4" fill="#16233D"/><circle cx="162.2" cy="60" r="4" fill="#16233D"/><circle cx="147.8" cy="120" r="4" fill="#16233D"/><circle cx="162.2" cy="120" r="4" fill="#16233D"/><circle cx="125" cy="82.8" r="4" fill="#16233D"/><circle cx="125" cy="97.2" r="4" fill="#16233D"/><text class="tex" x="305" y="104.4" data-tex="\mathrm{Cl}" data-size="40" data-anchor="middle"></text><circle cx="297.8" cy="60" r="4" fill="#16233D"/><circle cx="312.2" cy="60" r="4" fill="#16233D"/><circle cx="297.8" cy="120" r="4" fill="#16233D"/><circle cx="312.2" cy="120" r="4" fill="#16233D"/><circle cx="335" cy="82.8" r="4" fill="#16233D"/><circle cx="335" cy="97.2" r="4" fill="#16233D"/><rect class="step" data-g="h9" x="179" y="73" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h9" x="259" y="73" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/></svg>
       <p class="f22 step" data-g="h9" data-ask>중심 원자 $\mathrm{Be}$: 공유 전자쌍 <b class="c-field">2</b>개, 비공유 전자쌍 <b>0</b>개 → 전자쌍 <b>2</b>개</p>
       <p class="small mt8">$\mathrm{Be}$는 원자가 전자가 2개라 전자쌍이 2개뿐이다(옥텟 규칙의 예외).</p>
-      <div class="note mt12 step" data-g="m9">염화 베릴륨 $\ce{BeCl2}$도 같은 까닭으로 선형이다.</div>
+      <div class="note mt12 step" data-g="m9">플루오린화 베릴륨 $\ce{BeF2}$도 같은 까닭으로 선형이다.</div>
     </div>
     <div class="col">
       <h3>분자 구조</h3>
       <div class="step" data-g="m9">
-        <svg class="fig" viewBox="0 0 480 200" style="width:480px" aria-label="플루오린, 베릴륨, 플루오린이 일직선으로 놓인 공-막대 모형, 결합각 180도"><line x1="240" y1="105" x2="105" y2="105" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="240" y1="105" x2="375" y2="105" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="47.2,-0" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="105,105,24,F"></g></g><g data-anim="move" data-from="-47.2,-0" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="375,105,24,F"></g></g><g data-atom="240,105,24,Be"></g><g><path d="M194 105 L194.4 99 L195.6 93.1 L197.5 87.4 L200.2 82 L203.5 77 L207.5 72.5 L212 68.5 L217 65.2 L222.4 62.5 L228.1 60.6 L234 59.4 L240 59 L246 59.4 L251.9 60.6 L257.6 62.5 L263 65.2 L268 68.5 L272.5 72.5 L276.5 77 L279.8 82 L282.5 87.4 L284.4 93.1 L285.6 99 L286 105" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="240" y="40.2" data-tex="180^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg>
+        <svg class="fig" viewBox="0 0 480 200" style="width:480px" aria-label="염소, 베릴륨, 염소가 일직선으로 놓인 공-막대 모형, 결합각 180도"><line x1="240" y1="105" x2="105" y2="105" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="240" y1="105" x2="375" y2="105" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="47.2,-0" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="105,105,29,Cl"></g></g><g data-anim="move" data-from="-47.2,-0" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="375,105,29,Cl"></g></g><g data-atom="240,105,24,Be"></g><g><path d="M194 105 L194.4 99 L195.6 93.1 L197.5 87.4 L200.2 82 L203.5 77 L207.5 72.5 L212 68.5 L217 65.2 L222.4 62.5 L228.1 60.6 L234 59.4 L240 59 L246 59.4 L251.9 60.6 L257.6 62.5 L263 65.2 L268 68.5 L272.5 72.5 L276.5 77 L279.8 82 L282.5 87.4 L284.4 93.1 L285.6 99 L286 105" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="240" y="40.2" data-tex="180^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg>
       </div>
     </div>
   </div>
   <div class="answer step" data-g="m9">두 전자쌍이 반대 방향 → <b>선형</b>, 결합각 $180^\circ$</div>
 </section>
 
-<!-- ════════ 10. BF3 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="BF₃: 평면 삼각형">
-  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ② $\ce{BF3}$</h2>
+<!-- ════════ 11. BCl3 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="BCl₃: 평면 삼각형">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ② $\ce{BCl3}$</h2>
   <div class="row">
     <div class="col" style="flex:0 0 470px">
       <h3>루이스 전자점식</h3>
-      <svg class="fig" viewBox="100 0 260 190" style="width:236px" aria-label="플루오린화 붕소의 루이스 전자점식: 붕소 둘레에 공유 전자쌍 세 개"><text class="tex" x="230" y="92.4" data-tex="\mathrm{B}" data-size="40" data-anchor="middle"></text><circle cx="202" cy="70.8" r="4" fill="#16233D"/><circle cx="202" cy="85.2" r="4" fill="#16233D"/><circle cx="258" cy="70.8" r="4" fill="#16233D"/><circle cx="258" cy="85.2" r="4" fill="#16233D"/><circle cx="222.8" cy="108" r="4" fill="#16233D"/><circle cx="237.2" cy="108" r="4" fill="#16233D"/><text class="tex" x="174" y="92.4" data-tex="\mathrm{F}" data-size="40" data-anchor="middle"></text><circle cx="166.8" cy="48" r="4" fill="#16233D"/><circle cx="181.2" cy="48" r="4" fill="#16233D"/><circle cx="166.8" cy="108" r="4" fill="#16233D"/><circle cx="181.2" cy="108" r="4" fill="#16233D"/><circle cx="146" cy="70.8" r="4" fill="#16233D"/><circle cx="146" cy="85.2" r="4" fill="#16233D"/><text class="tex" x="286" y="92.4" data-tex="\mathrm{F}" data-size="40" data-anchor="middle"></text><circle cx="278.8" cy="48" r="4" fill="#16233D"/><circle cx="293.2" cy="48" r="4" fill="#16233D"/><circle cx="278.8" cy="108" r="4" fill="#16233D"/><circle cx="293.2" cy="108" r="4" fill="#16233D"/><circle cx="314" cy="70.8" r="4" fill="#16233D"/><circle cx="314" cy="85.2" r="4" fill="#16233D"/><text class="tex" x="230" y="152.4" data-tex="\mathrm{F}" data-size="40" data-anchor="middle"></text><circle cx="202" cy="130.8" r="4" fill="#16233D"/><circle cx="202" cy="145.2" r="4" fill="#16233D"/><circle cx="258" cy="130.8" r="4" fill="#16233D"/><circle cx="258" cy="145.2" r="4" fill="#16233D"/><circle cx="222.8" cy="168" r="4" fill="#16233D"/><circle cx="237.2" cy="168" r="4" fill="#16233D"/><rect class="step" data-g="h10" x="191" y="61" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h10" x="247" y="61" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h10" x="213" y="97" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/></svg>
+      <svg class="fig" viewBox="100 0 260 190" style="width:236px" aria-label="삼염화 붕소의 루이스 전자점식: 붕소 둘레에 공유 전자쌍 세 개, 염소마다 비공유 전자쌍 세 개"><text class="tex" x="230" y="92.4" data-tex="\mathrm{B}" data-size="40" data-anchor="middle"></text><circle cx="202" cy="70.8" r="4" fill="#16233D"/><circle cx="202" cy="85.2" r="4" fill="#16233D"/><circle cx="258" cy="70.8" r="4" fill="#16233D"/><circle cx="258" cy="85.2" r="4" fill="#16233D"/><circle cx="222.8" cy="108" r="4" fill="#16233D"/><circle cx="237.2" cy="108" r="4" fill="#16233D"/><text class="tex" x="166" y="92.4" data-tex="\mathrm{Cl}" data-size="40" data-anchor="middle"></text><circle cx="158.8" cy="48" r="4" fill="#16233D"/><circle cx="173.2" cy="48" r="4" fill="#16233D"/><circle cx="158.8" cy="108" r="4" fill="#16233D"/><circle cx="173.2" cy="108" r="4" fill="#16233D"/><circle cx="136" cy="70.8" r="4" fill="#16233D"/><circle cx="136" cy="85.2" r="4" fill="#16233D"/><text class="tex" x="294" y="92.4" data-tex="\mathrm{Cl}" data-size="40" data-anchor="middle"></text><circle cx="286.8" cy="48" r="4" fill="#16233D"/><circle cx="301.2" cy="48" r="4" fill="#16233D"/><circle cx="286.8" cy="108" r="4" fill="#16233D"/><circle cx="301.2" cy="108" r="4" fill="#16233D"/><circle cx="324" cy="70.8" r="4" fill="#16233D"/><circle cx="324" cy="85.2" r="4" fill="#16233D"/><text class="tex" x="230" y="152.4" data-tex="\mathrm{Cl}" data-size="40" data-anchor="middle"></text><circle cx="200" cy="130.8" r="4" fill="#16233D"/><circle cx="200" cy="145.2" r="4" fill="#16233D"/><circle cx="260" cy="130.8" r="4" fill="#16233D"/><circle cx="260" cy="145.2" r="4" fill="#16233D"/><circle cx="222.8" cy="168" r="4" fill="#16233D"/><circle cx="237.2" cy="168" r="4" fill="#16233D"/><rect class="step" data-g="h10" x="191" y="61" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h10" x="247" y="61" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h10" x="213" y="97" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/></svg>
       <p class="f22 step" data-g="h10">중심 원자 $\mathrm{B}$: 공유 전자쌍 <b class="c-field">3</b>개, 비공유 전자쌍 <b>0</b>개 → 전자쌍 <b>3</b>개</p>
       <p class="small mt8">$\mathrm{B}$는 원자가 전자가 3개라 전자쌍이 3개뿐이다(옥텟 규칙의 예외).</p>
-      <div class="note mt12 step" data-g="m10">염화 붕소 $\ce{BCl3}$도 평면 삼각형이다. 네 원자가 모두 한 평면에 있다.</div>
+      <div class="note mt12 step" data-g="m10">네 원자가 모두 한 평면에 있다. 플루오린화 붕소 $\ce{BF3}$도 평면 삼각형이다.</div>
     </div>
     <div class="col">
       <h3>분자 구조</h3>
       <div class="step" data-g="m10">
-        <svg class="fig" viewBox="0 0 480 260" style="width:440px" aria-label="붕소를 가운데 두고 플루오린 세 개가 한 평면에서 120도씩 벌어진 공-막대 모형"><line x1="240" y1="150" x2="240" y2="32" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="240" y1="150" x2="137.8" y2="209" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="240" y1="150" x2="342.2" y2="209" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="-0,41.3" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="240,32,24,F"></g></g><g data-anim="move" data-from="35.8,-20.6" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="137.8,209,24,F"></g></g><g data-anim="move" data-from="-35.8,-20.7" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="342.2,209,24,F"></g></g><g data-atom="240,150,24,B"></g><g><path d="M198.4 174 L200.7 177.5 L203.2 180.9 L206.1 183.9 L209.1 186.8 L212.5 189.3 L216 191.6 L219.7 193.5 L223.6 195.1 L227.6 196.4 L231.7 197.3 L235.8 197.8 L240 198 L244.2 197.8 L248.3 197.3 L252.4 196.4 L256.4 195.1 L260.3 193.5 L264 191.6 L267.5 189.3 L270.9 186.8 L273.9 183.9 L276.8 180.9 L279.3 177.5 L281.6 174" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="240" y="231.2" data-tex="120^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg>
+        <svg class="fig" viewBox="0 0 480 260" style="width:440px" aria-label="붕소를 가운데 두고 염소 세 개가 한 평면에서 120도씩 벌어진 공-막대 모형"><line x1="240" y1="150" x2="240" y2="32" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="240" y1="150" x2="137.8" y2="209" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="240" y1="150" x2="342.2" y2="209" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="-0,41.3" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="240,32,29,Cl"></g></g><g data-anim="move" data-from="35.8,-20.6" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="137.8,209,29,Cl"></g></g><g data-anim="move" data-from="-35.8,-20.7" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="342.2,209,29,Cl"></g></g><g data-atom="240,150,24,B"></g><g><path d="M198.4 174 L200.7 177.5 L203.2 180.9 L206.1 183.9 L209.1 186.8 L212.5 189.3 L216 191.6 L219.7 193.5 L223.6 195.1 L227.6 196.4 L231.7 197.3 L235.8 197.8 L240 198 L244.2 197.8 L248.3 197.3 L252.4 196.4 L256.4 195.1 L260.3 193.5 L264 191.6 L267.5 189.3 L270.9 186.8 L273.9 183.9 L276.8 180.9 L279.3 177.5 L281.6 174" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="240" y="231.2" data-tex="120^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg>
       </div>
     </div>
   </div>
   <div class="answer step" data-g="m10">세 전자쌍이 한 평면에서 세 방향 → <b>평면 삼각형</b>, 결합각 $120^\circ$</div>
 </section>
 
-<!-- ════════ 11. CH4 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="CH₄: 정사면체형">
+<!-- ════════ 12. CH4 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="CH₄: 정사면체">
   <h2><span class="no">2</span>공유 전자쌍만 있을 때 ③ $\ce{CH4}$</h2>
   <div class="row">
     <div class="col" style="flex:0 0 330px">
       <h3>루이스 전자점식</h3>
       <svg class="fig" viewBox="100 0 260 220" style="width:250px" aria-label="메테인의 루이스 전자점식: 탄소 둘레에 공유 전자쌍 네 개"><text class="tex" x="230" y="124.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><circle cx="202" cy="102.8" r="4" fill="#16233D"/><circle cx="202" cy="117.2" r="4" fill="#16233D"/><circle cx="258" cy="102.8" r="4" fill="#16233D"/><circle cx="258" cy="117.2" r="4" fill="#16233D"/><circle cx="222.8" cy="80" r="4" fill="#16233D"/><circle cx="237.2" cy="80" r="4" fill="#16233D"/><circle cx="222.8" cy="140" r="4" fill="#16233D"/><circle cx="237.2" cy="140" r="4" fill="#16233D"/><text class="tex" x="174" y="124.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="286" y="124.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="230" y="64.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="230" y="184.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><rect class="step" data-g="h11" x="191" y="93" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h11" x="247" y="93" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h11" x="213" y="69" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h11" x="213" y="129" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/></svg>
       <p class="f22 step" data-g="h11">중심 원자 $\mathrm{C}$: 공유 전자쌍 <b class="c-field">4</b>개, 비공유 <b>0</b>개 → 전자쌍 <b>4</b>개</p>
-      <div class="note mt12 step" data-g="m11">사염화 탄소 $\ce{CCl4}$, 실레인 $\ce{SiH4}$도 정사면체형이다.</div>
+      <div class="note mt12 step" data-g="m11">실레인 $\ce{SiH4}$도 정사면체이다.</div>
     </div>
     <div class="col step" data-g="m11">
       <h3>분자 구조</h3>
       <div class="row">
-        <div class="col"><svg class="fig" viewBox="0 0 320 250" style="width:320px" aria-label="정사면체형 메테인 공-막대 모형, 결합각 109.5도"><g data-anim="move" data-from="-6.6,-22.2" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="189,178.3,18,H"></g></g><g data-anim="move" data-from="-0,31.4" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="170,25.3,18,H"></g></g><line x1="170" y1="115" x2="189" y2="178.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="170" y1="115" x2="170" y2="25.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="170" y1="115" x2="83.2" y2="134.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="170" y1="115" x2="237.8" y2="122" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="30.4,-6.8" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="83.2,134.3,18,H"></g></g><g data-atom="170,115,24,C"></g><g data-anim="move" data-from="-23.7,-2.5" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="237.8,122,18,H"></g></g><g><path d="M170 74.2 L166.7 73.9 L163.4 73.9 L160.1 74.2 L156.9 74.7 L153.8 75.4 L150.8 76.4 L147.9 77.7 L145.1 79.2 L142.5 80.9 L140.1 82.8 L137.9 85 L135.8 87.3 L134 89.8 L132.4 92.5 L131.1 95.3 L130 98.2 L129.1 101.2 L128.6 104.4 L128.2 107.5 L128.2 110.8 L128.4 114 L128.8 117.3 L129.6 120.6 L130.5 123.8" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="115.6" y="78.1" data-tex="109.5^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg></div>
+        <div class="col"><svg class="fig" viewBox="0 0 320 250" style="width:320px" aria-label="정사면체 메테인 공-막대 모형, 결합각 109.5도"><g data-anim="move" data-from="-6.6,-22.2" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="189,178.3,18,H"></g></g><g data-anim="move" data-from="-0,31.4" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="170,25.3,18,H"></g></g><line x1="170" y1="115" x2="189" y2="178.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="170" y1="115" x2="170" y2="25.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="170" y1="115" x2="83.2" y2="134.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="170" y1="115" x2="237.8" y2="122" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-anim="move" data-from="30.4,-6.8" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="83.2,134.3,18,H"></g></g><g data-atom="170,115,24,C"></g><g data-anim="move" data-from="-23.7,-2.5" data-dur="1.2" data-delay=".3" data-ease="out"><g data-atom="237.8,122,18,H"></g></g><g><path d="M170 74.2 L166.7 73.9 L163.4 73.9 L160.1 74.2 L156.9 74.7 L153.8 75.4 L150.8 76.4 L147.9 77.7 L145.1 79.2 L142.5 80.9 L140.1 82.8 L137.9 85 L135.8 87.3 L134 89.8 L132.4 92.5 L131.1 95.3 L130 98.2 L129.1 101.2 L128.6 104.4 L128.2 107.5 L128.2 110.8 L128.4 114 L128.8 117.3 L129.6 120.6 L130.5 123.8" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="115.6" y="78.1" data-tex="109.5^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg></div>
         <div class="col" style="flex:0 0 250px">
           <svg class="fig" viewBox="0 0 240 230" style="width:220px" aria-label="쐐기 결합으로 그린 메테인 구조식"><line x1="120" y1="100" x2="120" y2="44" stroke="#16233D" stroke-width="3.5" stroke-linecap="round"/><text class="tex" x="120" y="36.8" data-tex="\mathrm{H}" data-size="30" data-anchor="middle"></text><line x1="103.7" y1="125.6" x2="52.9" y2="149.3" stroke="#16233D" stroke-width="3.5" stroke-linecap="round"/><text class="tex" x="36.6" y="167.7" data-tex="\mathrm{H}" data-size="30" data-anchor="middle"></text><polygon points="136.9,124.2 187.1,149.9 191.9,136.7" fill="#16233D"/><text class="tex" x="206.5" y="160.3" data-tex="\mathrm{H}" data-size="30" data-anchor="middle"></text><line x1="132.1" y1="141" x2="133.9" y2="140" stroke="#16233D" stroke-width="2.2"/><line x1="135.3" y1="148.4" x2="138.7" y2="146.4" stroke="#16233D" stroke-width="2.2"/><line x1="138.4" y1="155.9" x2="143.6" y2="152.9" stroke="#16233D" stroke-width="2.2"/><line x1="141.5" y1="163.3" x2="148.5" y2="159.3" stroke="#16233D" stroke-width="2.2"/><line x1="144.7" y1="170.7" x2="153.3" y2="165.7" stroke="#16233D" stroke-width="2.2"/><line x1="147.8" y1="178.2" x2="158.2" y2="172.2" stroke="#16233D" stroke-width="2.2"/><line x1="150.9" y1="185.6" x2="163.1" y2="178.6" stroke="#16233D" stroke-width="2.2"/><text class="tex" x="166" y="208.5" data-tex="\mathrm{H}" data-size="30" data-anchor="middle"></text><text class="tex" x="120" y="128.8" data-tex="\mathrm{C}" data-size="30" data-anchor="middle"></text></svg>
           <p class="small">실선: 종이 면 · 채운 쐐기: 종이 앞 · 점선 쐐기: 종이 뒤</p>
@@ -567,29 +585,57 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
       </div>
     </div>
   </div>
-  <div class="answer step" data-g="m11">네 전자쌍이 정사면체의 꼭짓점 방향 → <b>정사면체형</b>, 결합각 $109.5^\circ$</div>
+  <div class="answer step" data-g="m11">네 전자쌍이 정사면체의 꼭짓점 방향 → <b>정사면체</b>, 결합각 $109.5^\circ$</div>
 </section>
 
-<!-- ════════ 12. 확인하기 O× ════════ -->
-<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 공유 전자쌍만" data-tpl="check">
-  <h2><span class="tag q">확인하기</span>○, ×로 점검하기</h2>
-  <div class="card">
-    <ol class="cm222-ox">
-      <li>$\ce{BeF2}$의 중심 원자 주위에는 전자쌍이 2개 있다. <span class="step">→ <b class="c-field">○</b></span></li>
-      <li>$\ce{BF3}$의 분자 구조는 삼각뿔형이다. <span class="step">→ <b class="c-plus">×</b> <span class="small">중심 원자에 비공유 전자쌍이 없어 평면 삼각형이다.</span></span></li>
-      <li>$\ce{CH4}$의 결합각은 $90^\circ$이다. <span class="step">→ <b class="c-plus">×</b> <span class="small">정사면체형으로 $109.5^\circ$이다.</span></span></li>
-      <li>중심 원자에 공유 전자쌍만 있으면 분자 구조는 전자쌍의 배치와 같다. <span class="step">→ <b class="c-field">○</b></span></li>
-    </ol>
+<!-- ════════ 13. 다중 결합: CO2, HCN ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="다중 결합: CO₂, HCN">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ④ 다중 결합 $\ce{CO2}$, $\ce{HCN}$</h2>
+  <p class="f22"><mark>전자쌍 반발 이론으로 분자 구조를 결정할 때 이중 결합이나 삼중 결합은 하나의 결합으로 취급한다.</mark></p>
+  <div class="row mt12">
+    <div class="col">
+      <div class="card"><h3>이산화 탄소 $\ce{CO2}$</h3>
+        <svg class="fig" viewBox="0 0 400 110" style="width:400px" aria-label="이산화 탄소의 루이스 구조: 탄소 양쪽에 이중 결합으로 산소, 산소마다 비공유 전자쌍 두 개"><line x1="126" y1="55" x2="178" y2="55" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="126" y1="65" x2="178" y2="65" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="55" x2="274" y2="55" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="65" x2="274" y2="65" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><text class="tex" x="200" y="74.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><text class="tex" x="104" y="74.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="96.8" cy="30" r="4" fill="#16233D"/><circle cx="111.2" cy="30" r="4" fill="#16233D"/><circle cx="96.8" cy="90" r="4" fill="#16233D"/><circle cx="111.2" cy="90" r="4" fill="#16233D"/><text class="tex" x="296" y="74.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="288.8" cy="30" r="4" fill="#16233D"/><circle cx="303.2" cy="30" r="4" fill="#16233D"/><circle cx="288.8" cy="90" r="4" fill="#16233D"/><circle cx="303.2" cy="90" r="4" fill="#16233D"/></svg>
+        <p class="f21 step" data-g="d1">중심 원자 $\mathrm{C}$ 주위의 전자쌍 묶음: <b>2</b>개 (이중 결합 2개)</p>
+        <div class="step" data-g="d2"><svg class="fig" viewBox="0 0 400 140" style="width:400px" aria-label="산소, 탄소, 산소가 일직선인 공-막대 모형, 이중 결합 막대"><g data-anim="draw" data-dur="1" data-delay=".3"><line x1="200" y1="74.5" x2="80" y2="74.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="65.5" x2="80" y2="65.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="65.5" x2="320" y2="65.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="74.5" x2="320" y2="74.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><g data-atom="80,70,24,O"></g><g data-atom="320,70,24,O"></g><g data-atom="200,70,24,C"></g></g></svg></div>
+        <p class="key center step" data-g="d2"><b>선형</b>, 결합각 $180^\circ$</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>사이안화 수소 $\ce{HCN}$</h3>
+        <svg class="fig" viewBox="0 0 400 110" style="width:400px" aria-label="사이안화 수소의 루이스 구조: 수소–탄소 단일 결합, 탄소–질소 삼중 결합, 질소에 비공유 전자쌍 한 개"><line x1="126" y1="60" x2="178" y2="60" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="52" x2="274" y2="52" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="60" x2="274" y2="60" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="68" x2="274" y2="68" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><text class="tex" x="200" y="74.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><text class="tex" x="104" y="74.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="296" y="74.4" data-tex="\mathrm{N}" data-size="40" data-anchor="middle"></text><circle cx="324" cy="52.8" r="4" fill="#16233D"/><circle cx="324" cy="67.2" r="4" fill="#16233D"/></svg>
+        <p class="f21 step" data-g="d3">중심 원자 $\mathrm{C}$ 주위의 전자쌍 묶음: <b>2</b>개 (단일 결합 1개 + 삼중 결합 1개)</p>
+        <div class="step" data-g="d4"><svg class="fig" viewBox="0 0 400 140" style="width:400px" aria-label="수소, 탄소, 질소가 일직선인 공-막대 모형, 삼중 결합 막대"><g data-anim="draw" data-dur="1" data-delay=".3"><line x1="200" y1="70" x2="101.6" y2="70" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="200" y1="63" x2="320" y2="63" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="70" x2="320" y2="70" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="77" x2="320" y2="77" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><g data-atom="101.6,70,18,H"></g><g data-atom="320,70,24,N"></g><g data-atom="200,70,24,C"></g></g></svg></div>
+        <p class="key center step" data-g="d4"><b>선형</b>, 결합각 $180^\circ$</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ════════ 13. 연결: 비공유 전자쌍 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="비공유 전자쌍이 있으면?">
+<!-- ════════ 14. HCHO ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="다중 결합: HCHO">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ⑤ 다중 결합 $\ce{HCHO}$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">
+      <p class="f22">폼알데하이드 $\ce{HCHO}$는 탄소에 수소 2개가 단일 결합, 산소 1개가 이중 결합으로 결합해 있다.</p>
+      <svg class="fig mt8" viewBox="0 0 300 200" style="width:300px" aria-label="폼알데하이드의 루이스 구조: 탄소 위에 이중 결합 산소, 양옆에 수소"><line x1="145" y1="128" x2="145" y2="76" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="155" y1="128" x2="155" y2="76" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="76" y1="150" x2="128" y2="150" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="172" y1="150" x2="224" y2="150" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><text class="tex" x="150" y="164.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><text class="tex" x="150" y="68.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="122" cy="46.8" r="4" fill="#16233D"/><circle cx="122" cy="61.2" r="4" fill="#16233D"/><circle cx="178" cy="46.8" r="4" fill="#16233D"/><circle cx="178" cy="61.2" r="4" fill="#16233D"/><text class="tex" x="54" y="164.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="246" y="164.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text></svg>
+      <p class="f22 mt8" data-q><b>Q</b> 중심 원자 $\mathrm{C}$ 주위의 전자쌍 묶음은 몇 개이고, 분자 구조는 무엇일까?</p>
+    </div>
+    <div class="col">
+      <p class="f22 step" data-g="f1">전자쌍 묶음 <b>3</b>개 (단일 결합 2개 + 이중 결합 1개), 비공유 전자쌍 0개</p>
+      <div class="step" data-g="f2"><svg class="fig" viewBox="0 0 420 290" style="width:400px" aria-label="탄소를 가운데 두고 산소와 수소 두 개가 한 평면에서 약 120도씩 벌어진 공-막대 모형"><g data-anim="pop" data-o="200,150" data-dur=".9" data-delay=".3" data-ease="back"><line x1="195.5" y1="150" x2="195.5" y2="32" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="204.5" y1="150" x2="204.5" y2="32" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="150" x2="116.2" y2="198.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="200" y1="150" x2="283.8" y2="198.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="200,32,24,O"></g><g data-atom="116.2,198.4,18,H"></g><g data-atom="283.8,198.4,18,H"></g><g data-atom="200,150,24,C"></g><g><path d="M200 102 L195.8 102.2 L191.7 102.7 L187.6 103.6 L183.6 104.9 L179.7 106.5 L176 108.4 L172.5 110.7 L169.1 113.2 L166.1 116.1 L163.2 119.1 L160.7 122.5 L158.4 126 L156.5 129.7 L154.9 133.6 L153.6 137.6 L152.7 141.7 L152.2 145.8 L152 150 L152.2 154.2 L152.7 158.3 L153.6 162.4 L154.9 166.4 L156.5 170.3 L158.4 174" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="135.9" y="120.2" data-tex="\text{약 }120^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></g></svg></div>
+      <div class="answer step" data-g="f2"><b>평면 삼각형</b>, 결합각 약 $120^\circ$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 연결: 비공유 전자쌍 ════════ -->
+<section class="slide" data-sec="02 · 공유 전자쌍과 비공유 전자쌍이 함께 있을 때" data-title="비공유 전자쌍이 있으면?">
   <h2><span class="tag alt">연결</span>중심 원자에 비공유 전자쌍이 있으면?</h2>
   <div class="row">
     <div class="col" style="flex:0 0 330px">
       <svg class="fig" viewBox="0 0 300 180" style="width:300px" aria-label="암모니아의 루이스 전자점식: 질소에 공유 전자쌍 세 개와 비공유 전자쌍 한 개"><text class="tex" x="150" y="106.4" data-tex="\mathrm{N}" data-size="40" data-anchor="middle"></text><circle cx="142.8" cy="62" r="4" fill="#16233D"/><circle cx="157.2" cy="62" r="4" fill="#16233D"/><circle cx="122" cy="84.8" r="4" fill="#16233D"/><circle cx="122" cy="99.2" r="4" fill="#16233D"/><circle cx="178" cy="84.8" r="4" fill="#16233D"/><circle cx="178" cy="99.2" r="4" fill="#16233D"/><circle cx="142.8" cy="122" r="4" fill="#16233D"/><circle cx="157.2" cy="122" r="4" fill="#16233D"/><text class="tex" x="94" y="106.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="206" y="106.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="150" y="166.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><rect class="step" data-g="h13" x="111" y="75" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h13" x="167" y="75" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h13" x="133" y="111" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h13" x="133" y="51" width="34" height="22" rx="8" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/></svg>
-      <p class="f21 step" data-g="h13">$\mathrm{N}$: 공유 전자쌍 <b class="c-field">3</b>개 + 비공유 전자쌍 <b style="color:#B5661B">1</b>개 = 전자쌍 4개 → 전자쌍 배치는 정사면체형</p>
+      <p class="f21 step" data-g="h13">$\mathrm{N}$: 공유 전자쌍 <b class="c-field">3</b>개 + 비공유 전자쌍 <b style="color:#B5661B">1</b>개 = 전자쌍 4개 → 전자쌍 배치는 정사면체</p>
     </div>
     <div class="col">
       <p class="f22">암모니아 $\ce{NH3}$도 메테인처럼 중심 원자 주위에 전자쌍이 4개 있다.</p>
@@ -600,8 +646,8 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   </div>
 </section>
 
-<!-- ════════ 14. 반발력 크기 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="전자쌍 사이의 반발력">
+<!-- ════════ 16. 반발력 크기 ════════ -->
+<section class="slide" data-sec="02 · 공유 전자쌍과 비공유 전자쌍이 함께 있을 때" data-title="전자쌍 사이의 반발력">
   <h2><span class="no">3</span>전자쌍 사이의 반발력 크기</h2>
   <div class="row">
     <div class="col">
@@ -617,29 +663,29 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   </div>
 </section>
 
-<!-- ════════ 15. NH3 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="NH₃: 삼각뿔형">
-  <h2><span class="no">3</span>비공유 전자쌍이 있을 때 ① $\ce{NH3}$</h2>
+<!-- ════════ 17. NH3 ════════ -->
+<section class="slide" data-sec="02 · 공유 전자쌍과 비공유 전자쌍이 함께 있을 때" data-title="NH₃: 삼각뿔">
+  <h2><span class="no">3</span>비공유 전자쌍이 함께 있을 때 ① $\ce{NH3}$</h2>
   <div class="row">
     <div class="col" style="flex:0 0 400px">
       <svg class="fig" viewBox="0 0 300 180" style="width:300px" aria-label="암모니아의 루이스 전자점식"><text class="tex" x="150" y="106.4" data-tex="\mathrm{N}" data-size="40" data-anchor="middle"></text><circle cx="142.8" cy="62" r="4" fill="#16233D"/><circle cx="157.2" cy="62" r="4" fill="#16233D"/><circle cx="122" cy="84.8" r="4" fill="#16233D"/><circle cx="122" cy="99.2" r="4" fill="#16233D"/><circle cx="178" cy="84.8" r="4" fill="#16233D"/><circle cx="178" cy="99.2" r="4" fill="#16233D"/><circle cx="142.8" cy="122" r="4" fill="#16233D"/><circle cx="157.2" cy="122" r="4" fill="#16233D"/><text class="tex" x="94" y="106.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="206" y="106.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="150" y="166.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><rect class="step" data-g="h15" x="111" y="75" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h15" x="167" y="75" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h15" x="133" y="111" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h15" x="133" y="51" width="34" height="22" rx="8" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/></svg>
-      <p class="f21 step" data-g="h15">공유 전자쌍 <b class="c-field">3</b>개, 비공유 전자쌍 <b style="color:#B5661B">1</b>개 → 전자쌍 4개 → 전자쌍 배치: 정사면체형</p>
+      <p class="f21 step" data-g="h15">공유 전자쌍 <b class="c-field">3</b>개, 비공유 전자쌍 <b style="color:#B5661B">1</b>개 → 전자쌍 4개 → 전자쌍 배치: 정사면체</p>
       <div class="note step mt12" data-g="m15"><b>분자 구조의 이름</b>은 비공유 전자쌍을 빼고 <b>원자들의 배치</b>만 보고 붙인다. 질소가 꼭짓점, 수소 3개가 밑면인 삼각뿔이다.</div>
     </div>
     <div class="col step" data-g="m15">
       <svg class="fig" viewBox="0 0 420 280" style="width:420px" aria-label="질소 위에 비공유 전자쌍, 아래로 수소 세 개가 삼각뿔을 이루는 공-막대 모형, 결합각 107도"><g data-anim="rot" data-from="-10" data-o="200,120" data-dur="1.6" data-delay=".3" data-ease="soft"><g data-atom="214.1,186.6,18,H"></g><line x1="200" y1="120" x2="214.1" y2="186.6" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><ellipse cx="200" cy="77.9" rx="42.1" ry="21" transform="rotate(-90 200 77.9)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="206" cy="62.3" r="4" fill="#16233D"/><circle cx="194" cy="62.3" r="4" fill="#16233D"/><line x1="200" y1="120" x2="116.2" y2="141.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="200" y1="120" x2="269.8" y2="132.2" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="116.2,141.3,18,H"></g><g data-atom="200,120,24,N"></g><g data-atom="269.8,132.2,18,H"></g></g><g><path d="M206.4 150.3 L203.4 151.7 L200.4 152.9 L197.4 154 L194.5 154.8 L191.5 155.4 L188.6 155.8 L185.8 156 L183.1 155.9 L180.4 155.7 L177.9 155.2 L175.6 154.5 L173.3 153.6 L171.2 152.5 L169.4 151.2 L167.6 149.7 L166.1 148.1 L164.8 146.2 L163.7 144.2 L162.8 142.1 L162.2 139.8 L161.8 137.4 L161.6 134.9 L161.6 132.4 L161.9 129.7" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="157.2" y="181.2" data-tex="107^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></svg>
     </div>
   </div>
-  <div class="answer step" data-g="m15"><b>삼각뿔형</b>, 결합각 $107^\circ$ <span class="small">($109.5^\circ$보다 작다)</span></div>
+  <div class="answer step" data-g="m15"><b>삼각뿔</b>, 결합각 $107^\circ$ <span class="small">($109.5^\circ$보다 작다)</span></div>
 </section>
 
-<!-- ════════ 16. H2O ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="H₂O: 굽은 형">
-  <h2><span class="no">3</span>비공유 전자쌍이 있을 때 ② $\ce{H2O}$</h2>
+<!-- ════════ 18. H2O ════════ -->
+<section class="slide" data-sec="02 · 공유 전자쌍과 비공유 전자쌍이 함께 있을 때" data-title="H₂O: 굽은 형">
+  <h2><span class="no">3</span>비공유 전자쌍이 함께 있을 때 ② $\ce{H2O}$</h2>
   <div class="row">
     <div class="col" style="flex:0 0 400px">
       <svg class="fig" viewBox="0 0 300 180" style="width:300px" aria-label="물의 루이스 전자점식"><text class="tex" x="170" y="106.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="162.8" cy="62" r="4" fill="#16233D"/><circle cx="177.2" cy="62" r="4" fill="#16233D"/><circle cx="198" cy="84.8" r="4" fill="#16233D"/><circle cx="198" cy="99.2" r="4" fill="#16233D"/><circle cx="142" cy="84.8" r="4" fill="#16233D"/><circle cx="142" cy="99.2" r="4" fill="#16233D"/><circle cx="162.8" cy="122" r="4" fill="#16233D"/><circle cx="177.2" cy="122" r="4" fill="#16233D"/><text class="tex" x="114" y="106.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="170" y="166.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><rect class="step" data-g="h16" x="131" y="75" width="22" height="34" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h16" x="153" y="111" width="34" height="22" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/><rect class="step" data-g="h16" x="153" y="51" width="34" height="22" rx="8" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><rect class="step" data-g="h16" x="187" y="75" width="22" height="34" rx="8" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/></svg>
-      <p class="f21 step" data-g="h16">공유 전자쌍 <b class="c-field">2</b>개, 비공유 전자쌍 <b style="color:#B5661B">2</b>개 → 전자쌍 4개 → 전자쌍 배치: 정사면체형</p>
+      <p class="f21 step" data-g="h16">공유 전자쌍 <b class="c-field">2</b>개, 비공유 전자쌍 <b style="color:#B5661B">2</b>개 → 전자쌍 4개 → 전자쌍 배치: 정사면체</p>
       <div class="note step mt12" data-g="m16">비공유 전자쌍이 2개라 공유 전자쌍을 더 많이 밀어낸다. 원자만 보면 꺾인 모양이다.</div>
     </div>
     <div class="col step" data-g="m16">
@@ -649,80 +695,56 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   <div class="answer step" data-g="m16"><b>굽은 형</b>, 결합각 $104.5^\circ$ <span class="small">— 생각 열기 (나)의 답</span></div>
 </section>
 
-<!-- ════════ 17. 비교 ════════ -->
-<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="CH₄·NH₃·H₂O 비교">
+<!-- ════════ 19. 비교 ════════ -->
+<section class="slide" data-sec="02 · 공유 전자쌍과 비공유 전자쌍이 함께 있을 때" data-title="CH₄·NH₃·H₂O 비교">
   <h2><span class="no">3</span>전자쌍 4개인 분자 비교</h2>
   <div class="stages">
-    <div class="stage"><h3>$\ce{CH4}$</h3><svg viewBox="0 0 320 200" aria-label="메테인 모형 109.5도"><g data-atom="174.8,135.4,18,H"></g><g data-atom="160,16.1,18,H"></g><line x1="160" y1="86" x2="174.8" y2="135.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="160" y2="16.1" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="92.4" y2="101.1" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="212.9" y2="91.5" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="92.4,101.1,18,H"></g><g data-atom="160,86,24,C"></g><g data-atom="212.9,91.5,18,H"></g><g><path d="M160 52.6 L157.3 52.4 L154.6 52.4 L151.9 52.6 L149.3 53 L146.7 53.6 L144.3 54.4 L141.9 55.5 L139.6 56.7 L137.5 58.1 L135.5 59.7 L133.7 61.4 L132 63.3 L130.6 65.4 L129.3 67.6 L128.2 69.8 L127.3 72.2 L126.6 74.7 L126.1 77.3 L125.8 79.9 L125.8 82.5 L125.9 85.2 L126.3 87.9 L126.9 90.6 L127.7 93.2" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="111.9" y="53.8" data-tex="109.5^\circ" data-size="19" data-anchor="middle" data-halo="1"></text></g></svg><p>공유 4 · 비공유 0</p><p class="key"><b>정사면체형</b></p></div>
-    <div class="stage"><h3>$\ce{NH3}$</h3><svg viewBox="0 0 320 200" aria-label="암모니아 모형 107도"><g data-atom="171,137.9,18,H"></g><line x1="160" y1="86" x2="171" y2="137.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><ellipse cx="160" cy="53.2" rx="32.8" ry="21" transform="rotate(-90 160 53.2)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="166" cy="41" r="4" fill="#16233D"/><circle cx="154" cy="41" r="4" fill="#16233D"/><line x1="160" y1="86" x2="94.6" y2="102.6" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="214.4" y2="95.5" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="94.6,102.6,18,H"></g><g data-atom="160,86,24,N"></g><g data-atom="214.4,95.5,18,H"></g><g><path d="M165.2 110.8 L162.8 111.9 L160.4 112.9 L157.9 113.8 L155.5 114.5 L153.1 115 L150.7 115.3 L148.4 115.4 L146.2 115.4 L144 115.2 L141.9 114.8 L140 114.2 L138.2 113.5 L136.5 112.6 L134.9 111.5 L133.5 110.3 L132.3 109 L131.2 107.5 L130.3 105.8 L129.6 104.1 L129.1 102.2 L128.7 100.3 L128.5 98.2 L128.6 96.1 L128.8 93.9" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="122" y="140.7" data-tex="107^\circ" data-size="19" data-anchor="middle" data-halo="1"></text></g></svg><p>공유 3 · 비공유 1</p><p class="key"><b>삼각뿔형</b></p></div>
+    <div class="stage"><h3>$\ce{CH4}$</h3><svg viewBox="0 0 320 200" aria-label="메테인 모형 109.5도"><g data-atom="174.8,135.4,18,H"></g><g data-atom="160,16.1,18,H"></g><line x1="160" y1="86" x2="174.8" y2="135.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="160" y2="16.1" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="92.4" y2="101.1" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="212.9" y2="91.5" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="92.4,101.1,18,H"></g><g data-atom="160,86,24,C"></g><g data-atom="212.9,91.5,18,H"></g><g><path d="M160 52.6 L157.3 52.4 L154.6 52.4 L151.9 52.6 L149.3 53 L146.7 53.6 L144.3 54.4 L141.9 55.5 L139.6 56.7 L137.5 58.1 L135.5 59.7 L133.7 61.4 L132 63.3 L130.6 65.4 L129.3 67.6 L128.2 69.8 L127.3 72.2 L126.6 74.7 L126.1 77.3 L125.8 79.9 L125.8 82.5 L125.9 85.2 L126.3 87.9 L126.9 90.6 L127.7 93.2" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="111.9" y="53.8" data-tex="109.5^\circ" data-size="19" data-anchor="middle" data-halo="1"></text></g></svg><p>공유 4 · 비공유 0</p><p class="key"><b>정사면체</b></p></div>
+    <div class="stage"><h3>$\ce{NH3}$</h3><svg viewBox="0 0 320 200" aria-label="암모니아 모형 107도"><g data-atom="171,137.9,18,H"></g><line x1="160" y1="86" x2="171" y2="137.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><ellipse cx="160" cy="53.2" rx="32.8" ry="21" transform="rotate(-90 160 53.2)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="166" cy="41" r="4" fill="#16233D"/><circle cx="154" cy="41" r="4" fill="#16233D"/><line x1="160" y1="86" x2="94.6" y2="102.6" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="214.4" y2="95.5" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="94.6,102.6,18,H"></g><g data-atom="160,86,24,N"></g><g data-atom="214.4,95.5,18,H"></g><g><path d="M165.2 110.8 L162.8 111.9 L160.4 112.9 L157.9 113.8 L155.5 114.5 L153.1 115 L150.7 115.3 L148.4 115.4 L146.2 115.4 L144 115.2 L141.9 114.8 L140 114.2 L138.2 113.5 L136.5 112.6 L134.9 111.5 L133.5 110.3 L132.3 109 L131.2 107.5 L130.3 105.8 L129.6 104.1 L129.1 102.2 L128.7 100.3 L128.5 98.2 L128.6 96.1 L128.8 93.9" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="122" y="140.7" data-tex="107^\circ" data-size="19" data-anchor="middle" data-halo="1"></text></g></svg><p>공유 3 · 비공유 1</p><p class="key"><b>삼각뿔</b></p></div>
     <div class="stage"><h3>$\ce{H2O}$</h3><svg viewBox="0 0 320 200" aria-label="물 모형 104.5도"><ellipse cx="147" cy="66.7" rx="23.3" ry="21" transform="rotate(-123.9 147 66.7)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="147.2" cy="56.2" r="4" fill="#16233D"/><circle cx="137.2" cy="62.8" r="4" fill="#16233D"/><g data-atom="212.7,134.9,18,H"></g><line x1="160" y1="86" x2="212.7" y2="134.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="160" y1="86" x2="107.3" y2="129" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><ellipse cx="173" cy="61.6" rx="27.7" ry="21" transform="rotate(-62 173 61.6)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="183.1" cy="55.3" r="4" fill="#16233D"/><circle cx="172.5" cy="49.7" r="4" fill="#16233D"/><g data-atom="107.3,129,18,H"></g><g data-atom="160,86,24,O"></g><g><path d="M134.9 106.5 L136.4 108.7 L138.1 110.7 L139.9 112.6 L141.8 114.4 L143.9 116 L146 117.4 L148.2 118.6 L150.5 119.6 L152.8 120.5 L155.2 121.1 L157.6 121.6 L160 121.8 L162.4 121.8 L164.8 121.7 L167.2 121.3 L169.5 120.7 L171.8 119.9 L174 118.9 L176.1 117.8 L178.2 116.4 L180.1 114.9 L181.9 113.2 L183.6 111.3 L185.1 109.3" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="160" y="154.6" data-tex="104.5^\circ" data-size="19" data-anchor="middle" data-halo="1"></text></g></svg><p>공유 2 · 비공유 2</p><p class="key"><b>굽은 형</b></p></div>
   </div>
-  <p class="f22 mt12" data-q><b>Q</b> 세 분자는 전자쌍 배치가 모두 정사면체형인데, 결합각은 왜 다를까?</p>
+  <p class="f22 mt12" data-q><b>Q</b> 세 분자는 전자쌍 배치가 모두 정사면체인데, 결합각은 왜 다를까?</p>
   <div class="answer step">비공유 전자쌍 수가 많을수록 결합각이 작아진다: $109.5^\circ&gt;107^\circ&gt;104.5^\circ$</div>
 </section>
 
-<!-- ════════ 18. 다중 결합: CO2, HCN ════════ -->
-<section class="slide" data-sec="02 · 다중 결합이 있을 때" data-title="다중 결합: CO₂, HCN">
-  <h2><span class="no">4</span>다중 결합이 있을 때 ① $\ce{CO2}$, $\ce{HCN}$</h2>
-  <p class="f22"><mark>2중 결합이나 3중 결합은 한 방향을 향하는 전자쌍 묶음이므로 전자쌍 하나처럼 취급한다.</mark></p>
-  <div class="row mt12">
-    <div class="col">
-      <div class="card"><h3>이산화 탄소 $\ce{CO2}$</h3>
-        <svg class="fig" viewBox="0 0 400 110" style="width:400px" aria-label="이산화 탄소의 루이스 구조: 탄소 양쪽에 2중 결합으로 산소, 산소마다 비공유 전자쌍 두 개"><line x1="126" y1="55" x2="178" y2="55" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="126" y1="65" x2="178" y2="65" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="55" x2="274" y2="55" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="65" x2="274" y2="65" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><text class="tex" x="200" y="74.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><text class="tex" x="104" y="74.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="96.8" cy="30" r="4" fill="#16233D"/><circle cx="111.2" cy="30" r="4" fill="#16233D"/><circle cx="96.8" cy="90" r="4" fill="#16233D"/><circle cx="111.2" cy="90" r="4" fill="#16233D"/><text class="tex" x="296" y="74.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="288.8" cy="30" r="4" fill="#16233D"/><circle cx="303.2" cy="30" r="4" fill="#16233D"/><circle cx="288.8" cy="90" r="4" fill="#16233D"/><circle cx="303.2" cy="90" r="4" fill="#16233D"/></svg>
-        <p class="f21 step" data-g="d1">중심 원자 $\mathrm{C}$ 주위의 전자쌍 묶음: <b>2</b>개 (2중 결합 2개)</p>
-        <div class="step" data-g="d2"><svg class="fig" viewBox="0 0 400 140" style="width:400px" aria-label="산소, 탄소, 산소가 일직선인 공-막대 모형, 2중 결합 막대"><g data-anim="draw" data-dur="1" data-delay=".3"><line x1="200" y1="74.5" x2="80" y2="74.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="65.5" x2="80" y2="65.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="65.5" x2="320" y2="65.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="74.5" x2="320" y2="74.5" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><g data-atom="80,70,24,O"></g><g data-atom="320,70,24,O"></g><g data-atom="200,70,24,C"></g></g></svg></div>
-        <p class="key center step" data-g="d2"><b>선형</b>, 결합각 $180^\circ$</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card"><h3>사이안화 수소 $\ce{HCN}$</h3>
-        <svg class="fig" viewBox="0 0 400 110" style="width:400px" aria-label="사이안화 수소의 루이스 구조: 수소–탄소 단일 결합, 탄소–질소 3중 결합, 질소에 비공유 전자쌍 한 개"><line x1="126" y1="60" x2="178" y2="60" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="52" x2="274" y2="52" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="60" x2="274" y2="60" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="68" x2="274" y2="68" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><text class="tex" x="200" y="74.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><text class="tex" x="104" y="74.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="296" y="74.4" data-tex="\mathrm{N}" data-size="40" data-anchor="middle"></text><circle cx="324" cy="52.8" r="4" fill="#16233D"/><circle cx="324" cy="67.2" r="4" fill="#16233D"/></svg>
-        <p class="f21 step" data-g="d3">중심 원자 $\mathrm{C}$ 주위의 전자쌍 묶음: <b>2</b>개 (단일 결합 1개 + 3중 결합 1개)</p>
-        <div class="step" data-g="d4"><svg class="fig" viewBox="0 0 400 140" style="width:400px" aria-label="수소, 탄소, 질소가 일직선인 공-막대 모형, 3중 결합 막대"><g data-anim="draw" data-dur="1" data-delay=".3"><line x1="200" y1="70" x2="101.6" y2="70" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="200" y1="63" x2="320" y2="63" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="70" x2="320" y2="70" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="77" x2="320" y2="77" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><g data-atom="101.6,70,18,H"></g><g data-atom="320,70,24,N"></g><g data-atom="200,70,24,C"></g></g></svg></div>
-        <p class="key center step" data-g="d4"><b>선형</b>, 결합각 $180^\circ$</p>
-      </div>
-    </div>
+<!-- ════════ 20. 확인하기 (77쪽) ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 분자 구조와 결합각" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>분자 구조와 결합각</h2>
+  <div class="card">
+    <ol class="cm222-ox">
+      <li>사염화 탄소($\ce{CCl4}$)의 분자 구조는 ( <span class="blank"><span class="step" data-g="c1">정사면체</span></span> )이다. <span class="step small" data-g="c1">중심 원자 $\mathrm{C}$: 공유 전자쌍 4개, 비공유 전자쌍 0개</span></li>
+      <li>사염화 탄소($\ce{CCl4}$)와 삼염화 질소($\ce{NCl3}$) 중 결합각이 더 큰 분자를 써 보자. <span class="step" data-g="c2">→ <b class="c-field">$\ce{CCl4}$</b></span></li>
+    </ol>
   </div>
+  <table class="tight mt16 cm222-q2 step" data-g="c2">
+    <tr><th>분자</th><th>중심 원자의 공유 · 비공유 전자쌍</th><th>분자 구조</th><th>결합각</th></tr>
+    <tr><td>$\ce{CCl4}$</td><td>4 · 0</td><td>정사면체</td><td>$109.5^\circ$</td></tr>
+    <tr><td>$\ce{NCl3}$</td><td>3 · 1</td><td>삼각뿔</td><td>$109.5^\circ$보다 작다</td></tr>
+  </table>
+  <p class="small mt12 step" data-g="c2">$\ce{NCl3}$은 중심 원자의 비공유 전자쌍이 공유 전자쌍을 더 세게 밀어내 결합각이 작아진다.</p>
 </section>
 
-<!-- ════════ 19. HCHO ════════ -->
-<section class="slide" data-sec="02 · 다중 결합이 있을 때" data-title="다중 결합: HCHO">
-  <h2><span class="no">4</span>다중 결합이 있을 때 ② $\ce{HCHO}$</h2>
-  <div class="row">
-    <div class="col" style="flex:0 0 420px">
-      <p class="f22">폼알데하이드 $\ce{HCHO}$는 탄소에 수소 2개가 단일 결합, 산소 1개가 2중 결합으로 결합해 있다.</p>
-      <svg class="fig mt8" viewBox="0 0 300 200" style="width:300px" aria-label="폼알데하이드의 루이스 구조: 탄소 위에 2중 결합 산소, 양옆에 수소"><line x1="145" y1="128" x2="145" y2="76" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="155" y1="128" x2="155" y2="76" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="76" y1="150" x2="128" y2="150" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><line x1="172" y1="150" x2="224" y2="150" stroke="#16233D" stroke-width="3" stroke-linecap="round"/><text class="tex" x="150" y="164.4" data-tex="\mathrm{C}" data-size="40" data-anchor="middle"></text><text class="tex" x="150" y="68.4" data-tex="\mathrm{O}" data-size="40" data-anchor="middle"></text><circle cx="122" cy="46.8" r="4" fill="#16233D"/><circle cx="122" cy="61.2" r="4" fill="#16233D"/><circle cx="178" cy="46.8" r="4" fill="#16233D"/><circle cx="178" cy="61.2" r="4" fill="#16233D"/><text class="tex" x="54" y="164.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text><text class="tex" x="246" y="164.4" data-tex="\mathrm{H}" data-size="40" data-anchor="middle"></text></svg>
-      <p class="f22 mt8" data-q><b>Q</b> 중심 원자 $\mathrm{C}$ 주위의 전자쌍 묶음은 몇 개이고, 분자 구조는 무엇일까?</p>
-    </div>
-    <div class="col">
-      <p class="f22 step" data-g="f1">전자쌍 묶음 <b>3</b>개 (단일 결합 2개 + 2중 결합 1개), 비공유 전자쌍 0개</p>
-      <div class="step" data-g="f2"><svg class="fig" viewBox="0 0 420 290" style="width:400px" aria-label="탄소를 가운데 두고 산소와 수소 두 개가 한 평면에서 약 120도씩 벌어진 공-막대 모형"><g data-anim="pop" data-o="200,150" data-dur=".9" data-delay=".3" data-ease="back"><line x1="195.5" y1="150" x2="195.5" y2="32" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="204.5" y1="150" x2="204.5" y2="32" stroke="#9AA5B1" stroke-width="5" stroke-linecap="round"/><line x1="200" y1="150" x2="116.2" y2="198.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="200" y1="150" x2="283.8" y2="198.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="200,32,24,O"></g><g data-atom="116.2,198.4,18,H"></g><g data-atom="283.8,198.4,18,H"></g><g data-atom="200,150,24,C"></g><g><path d="M200 102 L195.8 102.2 L191.7 102.7 L187.6 103.6 L183.6 104.9 L179.7 106.5 L176 108.4 L172.5 110.7 L169.1 113.2 L166.1 116.1 L163.2 119.1 L160.7 122.5 L158.4 126 L156.5 129.7 L154.9 133.6 L153.6 137.6 L152.7 141.7 L152.2 145.8 L152 150 L152.2 154.2 L152.7 158.3 L153.6 162.4 L154.9 166.4 L156.5 170.3 L158.4 174" fill="none" stroke="#5B6B7F" stroke-width="2" data-anim="draw" data-dur=".8" data-delay="1.2"/><text class="tex" x="135.9" y="120.2" data-tex="\text{약 }120^\circ" data-size="20" data-anchor="middle" data-halo="1"></text></g></g></svg></div>
-      <div class="answer step" data-g="f2"><b>평면 삼각형</b>, 결합각 약 $120^\circ$</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 20. 분자 구조 정하는 순서 ════════ -->
+<!-- ════════ 21. 분자 구조 정하는 순서 ════════ -->
 <section class="slide" data-sec="02 · 분자 구조 정하기" data-title="분자 구조를 정하는 순서">
   <h2><span class="tag ink">정리</span>분자 구조를 정하는 순서</h2>
   <div class="cm222-s4">
     <div class="stage"><h3>① 그리기</h3><p>루이스 전자점식(구조)을 그린다.</p></div>
     <div class="stage"><h3>② 세기</h3><p>중심 원자 주위의 전자쌍 수를 센다. <b>다중 결합은 1개</b>로 센다.</p></div>
-    <div class="stage"><h3>③ 배치</h3><p>2개 선형, 3개 평면 삼각형, 4개 정사면체형으로 전자쌍을 놓는다.</p></div>
+    <div class="stage"><h3>③ 배치</h3><p>2개 선형, 3개 평면 삼각형, 4개 정사면체으로 전자쌍을 놓는다.</p></div>
     <div class="stage"><h3>④ 이름</h3><p>비공유 전자쌍은 빼고 <b>원자의 배치</b>로 이름을 붙인다.</p></div>
   </div>
   <table class="tight mt16 cm222-sum">
     <tr><th>공유 전자쌍(묶음)</th><td>2</td><td>3</td><td>4</td><td>3</td><td>2</td></tr>
     <tr><th>비공유 전자쌍</th><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td></tr>
-    <tr><th>분자 구조</th><td class="step" data-g="u1">선형</td><td class="step" data-g="u1">평면 삼각형</td><td class="step" data-g="u1">정사면체형</td><td class="step" data-g="u2">삼각뿔형</td><td class="step" data-g="u2">굽은 형</td></tr>
+    <tr><th>분자 구조</th><td class="step" data-g="u1">선형</td><td class="step" data-g="u1">평면 삼각형</td><td class="step" data-g="u1">정사면체</td><td class="step" data-g="u2">삼각뿔</td><td class="step" data-g="u2">굽은 형</td></tr>
     <tr><th>결합각</th><td class="step" data-g="u1">$180^\circ$</td><td class="step" data-g="u1">$120^\circ$</td><td class="step" data-g="u1">$109.5^\circ$</td><td class="step" data-g="u2">$107^\circ$</td><td class="step" data-g="u2">$104.5^\circ$</td></tr>
-    <tr><th>예</th><td>$\ce{BeF2}$, $\ce{CO2}$</td><td>$\ce{BF3}$, $\ce{HCHO}$</td><td>$\ce{CH4}$</td><td>$\ce{NH3}$</td><td>$\ce{H2O}$</td></tr>
+    <tr><th>예</th><td>$\ce{BeCl2}$, $\ce{CO2}$</td><td>$\ce{BCl3}$, $\ce{HCHO}$</td><td>$\ce{CH4}$</td><td>$\ce{NH3}$</td><td>$\ce{H2O}$</td></tr>
   </table>
 </section>
 
-<!-- ════════ 21. 연습 해 보기 OF2 ════════ -->
-<section class="slide" data-sec="02 · 분자 구조 정하기" data-title="연습 해 보기: OF₂">
-  <h2><span class="tag ex">연습 해 보기</span>플루오린화 산소 $\ce{OF2}$의 분자 구조</h2>
+<!-- ════════ 22. 연습 해 보기 OF2 ════════ -->
+<section class="slide" data-sec="02 · 분자 구조 정하기" data-title="더 해 보기: OF₂">
+  <h2><span class="tag ex">더 해 보기</span>플루오린화 산소 $\ce{OF2}$의 분자 구조</h2>
   <div class="row stretch" style="height:400px">
     <div class="col stack" style="flex:0 0 560px">
       <p class="f22" data-q><b>Q</b> 플루오린화 산소 $\ce{OF2}$의 분자 구조를 전자쌍 반발 이론으로 예측하고, 결합각을 $109.5^\circ$와 비교해 보자.</p>
@@ -732,7 +754,7 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
     <div class="col">
       <h3>풀이 따라가기</h3>
       <p class="f21 step" data-g="e1"><b>1</b> 루이스 전자점식: $\mathrm{O}$(원자가 전자 6)에 공유 전자쌍 2개, 비공유 전자쌍 2개</p>
-      <p class="f21 mt8 step" data-g="e2"><b>2</b> 전자쌍 4개 → 전자쌍 배치는 정사면체형</p>
+      <p class="f21 mt8 step" data-g="e2"><b>2</b> 전자쌍 4개 → 전자쌍 배치는 정사면체</p>
       <p class="f21 mt8 step" data-g="e3"><b>3</b> 비공유 전자쌍 2개 → 원자 배치는 꺾인 모양, 결합각은 $109.5^\circ$보다 작다</p>
       <div class="step" data-g="e3"><svg class="fig" viewBox="0 0 420 200" style="width:360px" aria-label="플루오린화 산소의 굽은 형 공-막대 모형"><ellipse cx="194.5" cy="46.9" rx="27.9" ry="21" transform="rotate(-123.9 194.5 46.9)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="193.7" cy="35" r="4" fill="#16233D"/><circle cx="183.7" cy="41.7" r="4" fill="#16233D"/><g data-atom="286,142.3,24,F"></g><line x1="210" y1="70" x2="286" y2="142.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="210" y1="70" x2="134" y2="133.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><ellipse cx="225.5" cy="40.8" rx="33.1" ry="21" transform="rotate(-62 225.5 40.8)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="236.6" cy="32.8" r="4" fill="#16233D"/><circle cx="226" cy="27.1" r="4" fill="#16233D"/><g data-atom="134,133.9,24,F"></g><g data-atom="210,70,24,O"></g></svg></div>
     </div>
@@ -740,29 +762,15 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   <div class="answer step" data-g="e4"><b>굽은 형</b> — 결합각은 $109.5^\circ$보다 작다 <span class="small">(물과 같은 꼴)</span></div>
 </section>
 
-<!-- ════════ 22. 확인하기: 분자 구조 분류 ════════ -->
-<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 분자 구조 예측" data-tpl="check">
-  <h2><span class="tag q">확인하기</span>분자 구조 예측하기</h2>
-  <p class="f22">중심 원자의 공유 전자쌍(묶음)과 비공유 전자쌍 수를 세고 분자 구조를 써 보자.</p>
-  <table class="tight mt12 cm222-chk">
-    <tr><th>분자</th><th>중심 원자</th><th>공유 전자쌍(묶음)</th><th>비공유 전자쌍</th><th>분자 구조</th></tr>
-    <tr><td>$\ce{SiH4}$</td><td>$\mathrm{Si}$</td><td><span class="blank"><span class="step" data-g="k1">4</span></span></td><td><span class="blank"><span class="step" data-g="k1">0</span></span></td><td><span class="blank"><span class="step" data-g="k1">정사면체형</span></span></td></tr>
-    <tr><td>$\ce{PH3}$</td><td>$\mathrm{P}$</td><td><span class="blank"><span class="step" data-g="k2">3</span></span></td><td><span class="blank"><span class="step" data-g="k2">1</span></span></td><td><span class="blank"><span class="step" data-g="k2">삼각뿔형</span></span></td></tr>
-    <tr><td>$\ce{H2S}$</td><td>$\mathrm{S}$</td><td><span class="blank"><span class="step" data-g="k3">2</span></span></td><td><span class="blank"><span class="step" data-g="k3">2</span></span></td><td><span class="blank"><span class="step" data-g="k3">굽은 형</span></span></td></tr>
-    <tr><td>$\ce{CS2}$</td><td>$\mathrm{C}$</td><td><span class="blank"><span class="step" data-g="k4">2</span></span></td><td><span class="blank"><span class="step" data-g="k4">0</span></span></td><td><span class="blank"><span class="step" data-g="k4">선형</span></span></td></tr>
-    <tr><td>$\ce{BCl3}$</td><td>$\mathrm{B}$</td><td><span class="blank"><span class="step" data-g="k5">3</span></span></td><td><span class="blank"><span class="step" data-g="k5">0</span></span></td><td><span class="blank"><span class="step" data-g="k5">평면 삼각형</span></span></td></tr>
-  </table>
-  <p class="small mt12">3주기 원소($\mathrm{Si}$, $\mathrm{P}$, $\mathrm{S}$)도 옥텟 규칙을 따르면 같은 방법으로 구조를 예측한다. $\ce{CS2}$는 $\ce{CO2}$처럼 2중 결합이 2개이다.</p>
-</section>
-
 <!-- ════════ 23. 탐구: 목표·준비 ════════ -->
 <section class="slide" data-sec="02 · 탐구" data-title="탐구: 분자 구조 모델링 (목표)">
-  <h2><span class="tag">탐구</span>소프트웨어를 활용해 분자 구조 모델링하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <h2><span class="tag">탐구</span>소프트웨어를 활용해 분자 구조 모델링하기 <span class="small c-muted">모의실험 · [필수 탐구]</span></h2>
   <div class="std"><span class="code">[탐구]</span>소프트웨어를 활용하여 분자 구조 모델링하기 <span class="small">(12화학02-03)</span></div>
   <div class="row mt12">
     <div class="col">
       <h3>목표</h3>
-      <p class="f22">분자 모델링 소프트웨어로 여러 분자의 3차원 구조를 만들고 결합각을 측정하여, 전자쌍 반발 이론으로 예측한 구조와 비교할 수 있다.</p>
+      <p class="f22">전자쌍 반발 이론을 근거로 분자 구조를 추론하고, 분자 구조를 모델링할 수 있다.</p>
+      <p class="small mt8">탐구 능력: 정보 수집·변환·해석 · 문제 해결 능력 · 의사 결정 능력</p>
       <h3 class="mt12">변인</h3>
       <table class="tight cm222-var">
         <tr><th>조작 변인</th><td class="l">중심 원자와 결합 원자의 종류 (→ 공유·비공유 전자쌍 수)</td></tr>
@@ -771,7 +779,7 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
       </table>
     </div>
     <div class="col" style="flex:0 0 380px">
-      <div class="card"><h3>준비물</h3><p class="f21">컴퓨터나 태블릿, 분자 모델링 소프트웨어(웹 프로그램 또는 이 덱의 실험실), 활동지</p></div>
+      <div class="card"><h3>준비물</h3><p class="f21">스마트 기기 — '분자 구조 모델링', '분자 구조 모의실험' 등을 검색해 분자 구조 모델링 프로그램을 실행한다(이 덱의 실험실로도 할 수 있다).</p></div>
       <div class="note q mt12"><b>안전·유의</b> 시약을 쓰지 않는 활동이다. 기기는 정해진 자리에서 쓰고, 자료는 정해진 곳에 저장한다. 화면을 오래 보았으면 잠깐 눈을 쉰다.</div>
     </div>
   </div>
@@ -780,16 +788,25 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
 <!-- ════════ 24. 탐구 과정 ════════ -->
 <section class="slide" data-sec="02 · 탐구" data-title="탐구: 과정">
   <h2><span class="tag">탐구</span>과정</h2>
-  <div class="cm222-s4">
-    <div class="stage"><h3>① 예측</h3><p>분자의 루이스 전자점식을 그려 중심 원자의 공유·비공유 전자쌍 수를 세고, 분자 구조를 예측한다.</p></div>
-    <div class="stage"><h3>② 모델링</h3><p>소프트웨어에서 중심 원자를 놓고 결합 원자를 연결한 뒤 <b>구조 정리</b>(에너지 최소화)를 실행한다.</p></div>
-    <div class="stage"><h3>③ 측정</h3><p>모형을 끌어 돌려 보며 입체 모양을 관찰하고, 두 결합 사이의 <b>결합각</b>을 측정한다.</p></div>
-    <div class="stage"><h3>④ 기록·비교</h3><p>결과 표에 분자 구조와 결합각을 기록하고, ①의 예측과 비교한다.</p></div>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>실험 1 중심 원자에 공유 전자쌍만 존재하는 분자</h3>
+        <p class="f21"><b>1</b> 전자쌍 반발 이론을 바탕으로 염화 베릴륨($\ce{BeCl2}$), 삼염화 붕소($\ce{BCl3}$), 메테인($\ce{CH4}$)의 분자 구조를 추론해 분자 모형으로 나타낸다. <span class="small">(루이스 전자점식 → 중심 원자의 공유 전자쌍 수 → 분자 모형)</span></p>
+        <p class="f21 mt8"><b>2</b> 세 분자를 분자 구조 모델링 프로그램으로 모델링해 보고, 분자 구조와 결합각을 확인한다.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>실험 2 공유 전자쌍과 비공유 전자쌍이 함께 존재하는 분자</h3>
+        <p class="f21"><b>1</b> 암모니아($\ce{NH3}$)와 물($\ce{H2O}$)의 분자 구조를 추론해 분자 모형으로 나타낸다. <span class="small">(중심 원자의 공유 전자쌍 · 비공유 전자쌍 수)</span></p>
+        <p class="f21 mt8"><b>2</b> 두 분자를 모델링 프로그램으로 모델링해 보고, 분자 구조와 결합각을 확인한다.</p>
+      </div>
+    </div>
   </div>
   <div class="row mt16">
-    <div class="col"><div class="note"><b>모델링할 분자</b> $\ce{BeF2}$, $\ce{BF3}$, $\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$, $\ce{CO2}$ (더 해 보기: $\ce{NF3}$, $\ce{OF2}$, $\ce{HCN}$, $\ce{HCHO}$)</div></div>
-    <div class="col" style="flex:0 0 420px"><div class="note puzzle"><b>도움말</b> 구조 정리 기능은 전자쌍(원자) 사이의 반발이 가장 작아지도록 원자 위치를 옮겨 준다 — 전자쌍 반발 이론과 같은 생각이다.</div></div>
+    <div class="col"><div class="note puzzle"><b>도움말</b> 비공유 전자쌍도 공유 전자쌍과 함께 반발력이 가장 작도록 배치하여 분자 구조를 추론한다.</div></div>
+    <div class="col" style="flex:0 0 470px"><div class="note"><b>결합각</b> 원자가 3개 이상 결합한 분자에서 중심 원자의 핵과, 중심 원자와 결합한 두 원자의 핵을 연결한 선이 이루는 각</div></div>
   </div>
+  <p class="small mt12">더 해 보기: $\ce{CO2}$, $\ce{HCN}$, $\ce{HCHO}$, $\ce{NF3}$, $\ce{OF2}$</p>
 </section>
 
 <!-- ════════ 25. 실험실 ════════ -->
@@ -829,134 +846,135 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
 
 <!-- ════════ 26. 결과 정리 ════════ -->
 <section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 정리">
-  <h2><span class="tag">탐구</span>결과 및 정리</h2>
+  <h2><span class="tag">탐구</span>결과 — 실험 1·2</h2>
   <p class="f22">실험실(또는 소프트웨어)에서 측정한 값을 표에 정리해 보자.</p>
   <table class="tight mt12 cm222-res">
-    <tr><th>분자</th><th>공유 전자쌍(묶음)</th><th>비공유 전자쌍</th><th>전자쌍 배치</th><th>결합각</th><th>분자 구조</th></tr>
-    <tr><td>$\ce{BeF2}$</td><td>2</td><td>0</td><td>선형</td><td><span class="blank"><span class="step" data-g="r1">$180^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r1">선형</span></span></td></tr>
-    <tr><td>$\ce{BF3}$</td><td>3</td><td>0</td><td>평면 삼각형</td><td><span class="blank"><span class="step" data-g="r2">$120^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r2">평면 삼각형</span></span></td></tr>
-    <tr><td>$\ce{CH4}$</td><td>4</td><td>0</td><td>정사면체형</td><td><span class="blank"><span class="step" data-g="r3">$109.5^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r3">정사면체형</span></span></td></tr>
-    <tr><td>$\ce{NH3}$</td><td>3</td><td>1</td><td>정사면체형</td><td><span class="blank"><span class="step" data-g="r4">$107^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r4">삼각뿔형</span></span></td></tr>
-    <tr><td>$\ce{H2O}$</td><td>2</td><td>2</td><td>정사면체형</td><td><span class="blank"><span class="step" data-g="r5">$104.5^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r5">굽은 형</span></span></td></tr>
-    <tr><td>$\ce{CO2}$</td><td>2</td><td>0</td><td>선형</td><td><span class="blank"><span class="step" data-g="r6">$180^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r6">선형</span></span></td></tr>
+    <tr><th>분자</th><th>공유 전자쌍</th><th>비공유 전자쌍</th><th>전자쌍 배치</th><th>결합각</th><th>분자 구조</th></tr>
+    <tr><td>$\ce{BeCl2}$</td><td>2</td><td>0</td><td>선형</td><td><span class="blank"><span class="step" data-g="r1">$180^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r1">선형</span></span></td></tr>
+    <tr><td>$\ce{BCl3}$</td><td>3</td><td>0</td><td>평면 삼각형</td><td><span class="blank"><span class="step" data-g="r2">$120^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r2">평면 삼각형</span></span></td></tr>
+    <tr><td>$\ce{CH4}$</td><td>4</td><td>0</td><td>정사면체</td><td><span class="blank"><span class="step" data-g="r3">$109.5^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r3">정사면체</span></span></td></tr>
+    <tr><td>$\ce{NH3}$</td><td>3</td><td>1</td><td>정사면체</td><td><span class="blank"><span class="step" data-g="r4">$107^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r4">삼각뿔</span></span></td></tr>
+    <tr><td>$\ce{H2O}$</td><td>2</td><td>2</td><td>정사면체</td><td><span class="blank"><span class="step" data-g="r5">$104.5^\circ$</span></span></td><td><span class="blank"><span class="step" data-g="r5">굽은 형</span></span></td></tr>
   </table>
   <p class="small mt12">소프트웨어마다 측정값이 소수 첫째 자리에서 조금 다를 수 있다. 예측과 다르면 루이스 전자점식부터 다시 확인하자.</p>
 </section>
 
-<!-- ════════ 27. 결론 도출 ════════ -->
-<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결론 도출">
-  <h2><span class="tag">탐구</span>결론 도출</h2>
+<!-- ════════ 27. 정리 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 정리">
+  <h2><span class="tag">탐구</span>정리</h2>
   <div class="row">
     <div class="col">
-      <p class="f22"><b>Q</b> ① 중심 원자 주위의 전자쌍 수와 전자쌍 배치는 어떤 관계가 있을까?</p>
-      <p class="f21 step cm222-a">→ 2개는 선형, 3개는 평면 삼각형, 4개는 정사면체형으로 놓인다. 전자쌍이 서로 반발하여 가장 멀리 떨어지기 때문이다.</p>
-      <p class="f22 mt12"><b>Q</b> ② 전자쌍 수가 같은데 결합각이 다른 까닭은 무엇일까?</p>
-      <p class="f21 step cm222-a">→ 비공유 전자쌍 수가 다르기 때문이다. 비공유 전자쌍은 반발력이 커서, 많을수록 결합각이 작아진다.</p>
-      <p class="f22 mt12"><b>Q</b> ③ 소프트웨어로 모델링하면 무엇이 좋을까?</p>
-      <p class="f21 step cm222-a">→ 모형을 3차원으로 돌려 보고 결합각을 직접 잴 수 있다. 종이 그림에서 생기는 착각(예: $\ce{CH4}$ $90^\circ$)을 바로잡는다.</p>
+      <p class="f21"><b>실험 1</b> 추론한 분자 구조와 모델링한 결과를 비교하고, 전자쌍 반발 이론이 유용한지 토의해 보자.</p>
+      <p class="f21 step cm222-a">→ <span class="ans">추론한 구조와 모델링 결과가 같다</span>. 추론한 구조(선형 $180^\circ$, 평면 삼각형 $120^\circ$, 정사면체 $109.5^\circ$)이다. 루이스 전자점식만으로는 알 수 없는 입체 구조를 예측할 수 있어 유용하다.</p>
+      <p class="f21 mt12"><b>실험 2 · 2</b> $\ce{BeCl2}$과 $\ce{H2O}$은 분자를 구성하는 원자 수가 같지만 분자 구조가 다른 까닭은?</p>
+      <p class="f21 step cm222-a">→ <span class="ans">중심 원자의 비공유 전자쌍 수가 다르다</span>. $\ce{BeCl2}$의 중심 원자에는 공유 전자쌍 2개만 있어 선형이고, $\ce{H2O}$의 중심 원자에는 비공유 전자쌍 2개가 더 있어 전자쌍 4개가 사면체 방향으로 배치되므로 굽은 형이다.</p>
+      <p class="f21 mt12"><b>실험 2 · 3</b> $\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$의 중심 원자의 전자쌍은 모두 4개인데 결합각이 서로 다른 까닭은?</p>
+      <p class="f21 step cm222-a">→ <span class="ans">비공유 전자쌍 수가 다르다</span>. 비공유 전자쌍이 공유 전자쌍보다 공간을 더 많이 차지해 반발력이 크다. 비공유 전자쌍 수가 0, 1, 2로 많아질수록 결합각이 $109.5^\circ$, $107^\circ$, $104.5^\circ$로 작아진다.</p>
     </div>
     <div class="col" style="flex:0 0 360px">
-      <div class="card"><h3>평가 기준 예시</h3>
-        <p class="f21"><b>상</b> 예측과 측정값을 비교하고 차이를 전자쌍 사이의 반발로 설명한다.</p>
-        <p class="f21 mt8"><b>중</b> 분자 구조 이름과 결합각을 맞게 기록한다.</p>
-        <p class="f21 mt8"><b>하</b> 모형은 만들었으나 기록이 불완전하다.</p>
+      <div class="card"><h3>스스로 평가하기</h3>
+        <p class="f21"><b>지식·이해</b> 분자 구조를 추론하고, 그 근거를 전자쌍 반발 이론으로 설명했는가?</p>
+        <p class="f21 mt8"><b>과정·기능</b> 분자 구조 모델링 프로그램을 올바르게 사용해 분자 구조를 모델링했는가?</p>
+        <p class="f21 mt8"><b>가치·태도</b> 분자 구조를 추론하고 분자를 모델링하는 과정에 즐거움을 느끼며 참여했는가?</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ 28. 확인 문제 01 ════════ -->
-<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
-  <h2><span class="tag q">확인 문제 01</span>세 분자의 구조</h2>
-  <p class="f22">그림은 분자 (가)–(다)의 구조를 공-막대 모형으로 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
-  <div class="row mt8">
-    <div class="col" style="flex:0 0 580px">
-      <svg class="fig" viewBox="0 0 580 210" style="width:580px" aria-label="(가) 평면 삼각형 BF3, (나) 비공유 전자쌍이 있는 삼각뿔형 NH3, (다) 정사면체형 CH4 공-막대 모형"><line x1="100" y1="112" x2="100" y2="30" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="100" y1="112" x2="29" y2="153" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="100" y1="112" x2="171" y2="153" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="100,30,24,F"></g><g data-atom="29,153,24,F"></g><g data-atom="171,153,24,F"></g><g data-atom="100,112,24,B"></g><g data-atom="304.8,144.3,18,H"></g><line x1="295" y1="98" x2="304.8" y2="144.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><ellipse cx="295" cy="68.8" rx="29.2" ry="21" transform="rotate(-90 295 68.8)" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="1.5"/><circle cx="301" cy="57.9" r="4" fill="#16233D"/><circle cx="289" cy="57.9" r="4" fill="#16233D"/><line x1="295" y1="98" x2="236.7" y2="112.8" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="295" y1="98" x2="343.5" y2="106.5" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="236.7,112.8,18,H"></g><g data-atom="295,98,24,N"></g><g data-atom="343.5,106.5,18,H"></g><g data-atom="498.2,148,18,H"></g><g data-atom="485,41.7,18,H"></g><line x1="485" y1="104" x2="498.2" y2="148" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="485" y1="104" x2="485" y2="41.7" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="485" y1="104" x2="424.7" y2="117.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="485" y1="104" x2="532.1" y2="108.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="424.7,117.4,18,H"></g><g data-atom="485,104,24,C"></g><g data-atom="532.1,108.9,18,H"></g>
-        <text class="tex" x="100" y="200" data-mix="(가) $\ce{BF3}$" data-size="20" data-anchor="middle"></text>
-        <text class="tex" x="295" y="200" data-mix="(나) $\ce{NH3}$" data-size="20" data-anchor="middle"></text>
-        <text class="tex" x="485" y="200" data-mix="(다) $\ce{CH4}$" data-size="20" data-anchor="middle"></text>
-      </svg>
-    </div>
-    <div class="col">
-      <div class="bogi" style="margin-top:12px"><p>ㄱ. (가)의 분자 구조는 평면 삼각형이다.</p><p>ㄴ. 결합각은 (다)가 (나)보다 크다.</p><p>ㄷ. (나)의 중심 원자에는 비공유 전자쌍이 2개 있다.</p></div>
-      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
-    </div>
-  </div>
-  <div class="board mt8" style="min-height:96px"></div>
-  <div class="answer step"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">ㄴ: $109.5^\circ&gt;107^\circ$ · ㄷ: $\ce{NH3}$의 비공유 전자쌍은 1개</span></div>
-</section>
-
-<!-- ════════ 29. 확인 문제 02 ════════ -->
-<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
-  <h2><span class="tag q">확인 문제 02</span>결합각 비교</h2>
-  <div class="row stretch" style="height:400px">
-    <div class="col stack">
-      <p class="f22">다음 분자를 결합각이 큰 것부터 차례대로 쓰시오.</p>
-      <div class="formula sm">$\ce{CO2}$ &nbsp;&nbsp; $\ce{BF3}$ &nbsp;&nbsp; $\ce{CH4}$ &nbsp;&nbsp; $\ce{H2O}$</div>
-      <div class="board"></div>
-    </div>
-    <div class="col" style="flex:0 0 420px">
+<!-- ════════ 28. 중단원 마무리 04 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 04">
+  <h2><span class="tag q">중단원 마무리 04</span>전자쌍 반발 이론과 분자 구조</h2>
+  <p class="f22">다음 중 분자 구조가 <u>다른</u> 하나는?</p>
+  <div class="choices mt8"><span>① $\ce{BeCl2}$</span><span>② $\ce{HCN}$</span><span>③ $\ce{H2O}$</span><span>④ $\ce{CS2}$</span><span>⑤ $\ce{CO2}$</span></div>
+  <div class="row stretch mt12" style="height:310px">
+    <div class="col stack"><div class="board"></div></div>
+    <div class="col" style="flex:0 0 520px">
       <table class="tight cm222-q2">
-        <tr><th>분자</th><th>묶음 · 비공유</th><th>분자 구조</th></tr>
-        <tr><td>$\ce{CO2}$</td><td class="step" data-g="q1">2 · 0</td><td class="step" data-g="q1">선형</td></tr>
-        <tr><td>$\ce{BF3}$</td><td class="step" data-g="q1">3 · 0</td><td class="step" data-g="q1">평면 삼각형</td></tr>
-        <tr><td>$\ce{CH4}$</td><td class="step" data-g="q1">4 · 0</td><td class="step" data-g="q1">정사면체형</td></tr>
+        <tr><th>분자</th><th>중심 원자의 공유 · 비공유</th><th>분자 구조</th></tr>
+        <tr><td>$\ce{BeCl2}$</td><td class="step" data-g="q1">2 · 0</td><td class="step" data-g="q1">선형</td></tr>
+        <tr><td>$\ce{HCN}$</td><td class="step" data-g="q1">2 · 0 <span class="small">(단일 + 삼중)</span></td><td class="step" data-g="q1">선형</td></tr>
         <tr><td>$\ce{H2O}$</td><td class="step" data-g="q1">2 · 2</td><td class="step" data-g="q1">굽은 형</td></tr>
+        <tr><td>$\ce{CS2}$</td><td class="step" data-g="q1">2 · 0 <span class="small">(이중 2개)</span></td><td class="step" data-g="q1">선형</td></tr>
+        <tr><td>$\ce{CO2}$</td><td class="step" data-g="q1">2 · 0 <span class="small">(이중 2개)</span></td><td class="step" data-g="q1">선형</td></tr>
       </table>
     </div>
   </div>
-  <div class="answer step" data-g="q2">$\ce{CO2}$($180^\circ$) &gt; $\ce{BF3}$($120^\circ$) &gt; $\ce{CH4}$($109.5^\circ$) &gt; $\ce{H2O}$($104.5^\circ$)</div>
+  <div class="answer step"><b>정답 ③ $\ce{H2O}$</b> <span class="small">나머지는 모두 선형이고, $\ce{H2O}$만 중심 원자에 비공유 전자쌍이 2개 있어 굽은 형이다.</span></div>
 </section>
 
-<!-- ════════ 30. 확인 문제 03 서술형 ════════ -->
-<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03 (서술형)">
-  <h2><span class="tag q">확인 문제 03</span>서술형</h2>
-  <div class="row stretch" style="height:250px">
-    <div class="col stack">
-      <p class="f22">$\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$는 중심 원자 주위의 전자쌍이 모두 4개인데 결합각이 다르다. 그 까닭을 <b>전자쌍 사이의 반발력</b>과 관련지어 서술하시오.</p>
-      <div class="board mt8"></div>
+<!-- ════════ 29. 중단원 마무리 05 서술형 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 05 (서술형)">
+  <h2><span class="tag q">중단원 마무리 05</span>서술형</h2>
+  <p class="f22">그림은 2주기 원소 $\mathrm{X}$와 3주기 원소 $\mathrm{Y}$로 이루어진 분자의 루이스 전자점식을 나타낸 것이다. 이에 대한 설명으로 옳지 <u>않은</u> 것을 골라 옳게 고쳐 보자. (단, $\mathrm{X}$, $\mathrm{Y}$는 임의의 원소 기호이다.)</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 300px">
+      <svg class="fig" viewBox="120 0 220 190" style="width:220px" aria-label="X 둘레에 Y 세 개가 공유 전자쌍으로 결합하고 X 위에 비공유 전자쌍 한 개, Y마다 비공유 전자쌍 세 개"><text class="tex" x="230" y="84.4" data-tex="\mathrm{X}" data-size="40" data-anchor="middle"></text><circle cx="222.8" cy="40" r="4" fill="#16233D"/><circle cx="237.2" cy="40" r="4" fill="#16233D"/><circle cx="202" cy="62.8" r="4" fill="#16233D"/><circle cx="202" cy="77.2" r="4" fill="#16233D"/><circle cx="258" cy="62.8" r="4" fill="#16233D"/><circle cx="258" cy="77.2" r="4" fill="#16233D"/><circle cx="222.8" cy="100" r="4" fill="#16233D"/><circle cx="237.2" cy="100" r="4" fill="#16233D"/><text class="tex" x="174" y="84.4" data-tex="\mathrm{Y}" data-size="40" data-anchor="middle"></text><circle cx="166.8" cy="40" r="4" fill="#16233D"/><circle cx="181.2" cy="40" r="4" fill="#16233D"/><circle cx="166.8" cy="100" r="4" fill="#16233D"/><circle cx="181.2" cy="100" r="4" fill="#16233D"/><circle cx="146" cy="62.8" r="4" fill="#16233D"/><circle cx="146" cy="77.2" r="4" fill="#16233D"/><text class="tex" x="286" y="84.4" data-tex="\mathrm{Y}" data-size="40" data-anchor="middle"></text><circle cx="278.8" cy="40" r="4" fill="#16233D"/><circle cx="293.2" cy="40" r="4" fill="#16233D"/><circle cx="278.8" cy="100" r="4" fill="#16233D"/><circle cx="293.2" cy="100" r="4" fill="#16233D"/><circle cx="314" cy="62.8" r="4" fill="#16233D"/><circle cx="314" cy="77.2" r="4" fill="#16233D"/><text class="tex" x="230" y="144.4" data-tex="\mathrm{Y}" data-size="40" data-anchor="middle"></text><circle cx="202" cy="122.8" r="4" fill="#16233D"/><circle cx="202" cy="137.2" r="4" fill="#16233D"/><circle cx="258" cy="122.8" r="4" fill="#16233D"/><circle cx="258" cy="137.2" r="4" fill="#16233D"/><circle cx="222.8" cy="160" r="4" fill="#16233D"/><circle cx="237.2" cy="160" r="4" fill="#16233D"/></svg>
+    </div>
+    <div class="col">
+      <div class="bogi"><p>(가) 결합각은 $109.5^\circ$보다 작다.</p><p>(나) 분자 구조는 평면 삼각형이다.</p><p>(다) 중심 원자에 3개의 공유 전자쌍이 있다.</p></div>
+      <div class="board mt8" style="min-height:120px"></div>
     </div>
   </div>
-  <div class="answer step cm222-left"><b>예시 답안</b> 세 분자 모두 전자쌍 배치는 정사면체형이지만, 비공유 전자쌍은 공유 전자쌍보다 반발력이 커서 공유 전자쌍들을 더 밀어낸다. 그래서 비공유 전자쌍 수가 0, 1, 2로 많아질수록 결합각이 $109.5^\circ$, $107^\circ$, $104.5^\circ$로 작아진다.<br><span class="small">채점 요소: ① 전자쌍 배치가 같음 ② 반발력 크기 순서 ③ 비공유 전자쌍 수와 결합각의 관계</span></div>
+  <div class="answer step cm222-left"><b>예시 답안</b> (나) — 중심 원자 $\mathrm{X}$에 공유 전자쌍 3개와 비공유 전자쌍 1개가 있어 전자쌍 4개가 사면체 방향으로 배치되므로, 분자 구조는 <b>삼각뿔</b>이다. <span class="small">(가)·(다)는 옳다. 예: $\ce{NCl3}$</span></div>
+</section>
+
+<!-- ════════ 30. 중단원 마무리 06 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 06">
+  <h2><span class="tag q">중단원 마무리 06</span>전자쌍 반발 이론과 분자 구조</h2>
+  <p class="f22">그림은 2주기 원소 $\mathrm{X}$~$\mathrm{Z}$와 수소($\ce{H}$)로 이루어진 분자 (가)~(다)의 분자 구조와 모형을 나타낸 것이다. (가)~(다)에 대한 설명으로 옳은 것은? (단, $\mathrm{X}$~$\mathrm{Z}$는 임의의 원소 기호이다.)</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 600px">
+      <svg class="fig" viewBox="0 0 600 220" style="width:600px" aria-label="(가) 삼각뿔 X와 수소 세 개, (나) 평면 삼각형 Y와 수소 세 개, (다) 굽은 형 Z와 수소 두 개의 공-막대 모형"><g data-atom="111.4,136.2,18,H"></g><line x1="100" y1="82" x2="111.4" y2="136.2" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="100" y1="82" x2="31.8" y2="99.3" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="100" y1="82" x2="156.8" y2="91.9" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="31.8,99.3,18,H"></g><g data-atom="100,82,24,X"></g><g data-atom="156.8,91.9,18,H"></g><line x1="300" y1="92" x2="300" y2="23.1" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="300" y1="92" x2="240.3" y2="126.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="300" y1="92" x2="359.7" y2="126.4" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="300,23.1,18,H"></g><g data-atom="240.3,126.4,18,H"></g><g data-atom="359.7,126.4,18,H"></g><g data-atom="300,92,24,Y"></g><line x1="500" y1="80" x2="441.6" y2="125.2" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><line x1="500" y1="80" x2="558.4" y2="125.2" stroke="#9AA5B1" stroke-width="7" stroke-linecap="round"/><g data-atom="441.6,125.2,18,H"></g><g data-atom="558.4,125.2,18,H"></g><g data-atom="500,80,24,Z"></g>
+        <text class="tex" x="100" y="182" data-mix="삼각뿔" data-size="20" data-anchor="middle"></text><text class="tex" x="100" y="210" data-mix="(가)" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="300" y="182" data-mix="평면 삼각형" data-size="20" data-anchor="middle"></text><text class="tex" x="300" y="210" data-mix="(나)" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="500" y="182" data-mix="굽은 형" data-size="20" data-anchor="middle"></text><text class="tex" x="500" y="210" data-mix="(다)" data-size="20" data-anchor="middle"></text>
+      </svg>
+    </div>
+    <div class="col"><div class="board" style="min-height:190px"></div></div>
+  </div>
+  <div class="choices col1 mt8"><span>① (가)의 중심 원자에 비공유 전자쌍이 존재한다.</span><span>② (나)의 중심 원자에 4개의 전자쌍이 존재한다.</span><span>③ (다)의 모든 원자는 같은 평면에 위치하지 않는다.</span><span>④ 결합각은 (다)가 (가)보다 크다.</span><span>⑤ 중심 원자의 비공유 전자쌍 수는 (나)와 (다)가 같다.</span></div>
+  <div class="answer step"><b>정답 ①</b> <span class="small">② (나) 전자쌍 3개 · ③ 원자 3개는 늘 한 평면 · ④ (가) $107^\circ$ &gt; (다) $104.5^\circ$ · ⑤ 비공유 (나) 0개, (다) 2개</span></div>
 </section>
 
 <!-- ════════ 31. 소단원 마무리 ════════ -->
 <section class="slide" data-sec="02 · 소단원 마무리" data-title="소단원 마무리">
-  <h2><span class="tag">소단원 마무리</span>모형으로 나타내기</h2>
+  <h2><span class="tag">소단원 마무리</span>창의력 키우기 · 디지털 소양 키우기</h2>
   <div class="row">
     <div class="col">
       <div class="card"><h3>창의력 키우기</h3>
-        <p class="f21">이쑤시개, 찰흙, 과일 젤리 같은 주변 물건으로 $\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$의 모형을 만들어 보자.</p>
-        <p class="f21 mt8">비공유 전자쌍은 무엇으로 나타낼지 정하고, 그렇게 정한 까닭을 설명해 보자.</p>
-        <p class="small mt8">예: 비공유 전자쌍은 부풀린 작은 풍선으로 — 공유 전자쌍보다 넓은 공간을 차지함을 나타낸다.</p>
+        <p class="f21">우리 주변에서 여러 가지 분자 구조를 표현할 수 있는 물체를 찾아보자.</p>
+        <p class="f21 mt12 step" data-g="m1"><b>예시</b> 선형 — 역기 봉과 원판 · 평면 삼각형 — 세 날개 선풍기 · 정사면체 — 삼각 김밥 포장, 테트라포드 · 삼각뿔 — 세 다리 카메라 삼각대 · 굽은 형 — 부메랑</p>
+        <p class="small mt8 step" data-g="m1">물체의 중심과 끝이 무엇(중심 원자, 결합한 원자)에 해당하는지 함께 설명한다.</p>
       </div>
     </div>
     <div class="col">
       <div class="card"><h3>디지털 소양 키우기</h3>
-        <p class="f21">분자 모델링 소프트웨어로 만든 모형 화면을 저장해 모둠 활동지에 붙이고, 결합각을 측정한 방법을 짧은 글로 설명해 보자.</p>
-        <p class="small mt8">다른 사람이 만든 자료를 쓸 때는 출처를 밝힌다.</p>
+        <p class="f21">과학자들이 분자 구조 모델링을 연구에 활용하는 다양한 사례를 찾아 공유 플랫폼을 활용하여 공유해 보자.</p>
+        <p class="f21 mt12 step" data-g="m2"><b>예시</b> 신약 개발에서 약 분자가 단백질에 맞물리는 모양 예측 · 새로운 소재·촉매의 구조 설계 · 단백질의 입체 구조 예측</p>
+        <p class="small mt8 step" data-g="m2">찾은 자료의 출처를 밝히고, 믿을 만한 기관의 자료인지 확인한다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ 32. 스스로 정리 ════════ -->
-<section class="slide" data-sec="02 전자쌍 반발 이론과 분자 구조 · 마무리" data-title="스스로 정리">
-  <h2><span class="tag ink">스스로 정리</span>분자의 구조와 성질 — 개념 지도</h2>
+<!-- ════════ 32. 함께 풀어 보기 ════════ -->
+<section class="slide" data-sec="02 전자쌍 반발 이론과 분자 구조 · 마무리" data-title="함께 풀어 보기">
+  <h2><span class="tag ink">함께 풀어 보기</span>분자의 구조와 성질 — 02 전자쌍 반발 이론과 분자 구조</h2>
   <div class="cm222-map">
     <div class="cm222-node cm222-dim">01 루이스 전자점식<br><span class="small">원자가 전자, 공유·비공유 전자쌍</span></div>
     <div class="cm222-arr">→</div>
-    <div class="cm222-node cm222-main"><b>전자쌍 반발 이론</b><br>전자쌍은 서로 반발하여 ❶ <span class="blank"><span class="step">가능한 한 멀리</span></span> 떨어져 있으려 한다.</div>
+    <div class="cm222-node cm222-main" data-q><b>(1)</b> ❸ <span class="blank"><span class="step">전자쌍 반발 이론</span></span> : 분자의 중심 원자의 전자쌍들이 가능한 한 서로 멀리 떨어져 배치된다는 것에 근거해 분자 구조를 예측하는 이론</div>
     <div class="cm222-arr">→</div>
-    <div class="cm222-node cm222-dim">03 분자의 극성과 성질<br><span class="small">(다음 시간)</span></div>
+    <div class="cm222-node cm222-dim">03 분자 구조에 따른 물질의 성질<br><span class="small">(다음 시간)</span></div>
   </div>
-  <table class="tight mt16 cm222-sum">
-    <tr><th>공유 · 비공유</th><td>2 · 0</td><td>3 · 0</td><td>4 · 0</td><td>3 · 1</td><td>2 · 2</td></tr>
-    <tr><th>분자 구조</th><td>❷ <span class="blank"><span class="step">선형</span></span></td><td>❸ <span class="blank"><span class="step">평면 삼각형</span></span></td><td>❹ <span class="blank"><span class="step">정사면체형</span></span></td><td>❺ <span class="blank"><span class="step">삼각뿔형</span></span></td><td>❻ <span class="blank"><span class="step">굽은 형</span></span></td></tr>
+  <p class="f21 mt12"><b>(2) 분자 구조</b></p>
+  <table class="tight mt8 cm222-sum">
+    <tr><th>분자 구조</th><td>선형</td><td>❹ <span class="blank"><span class="step">평면 삼각형</span></span></td><td>정사면체</td><td>삼각뿔</td><td>굽은 형</td></tr>
     <tr><th>결합각</th><td>$180^\circ$</td><td>$120^\circ$</td><td>$109.5^\circ$</td><td>$107^\circ$</td><td>$104.5^\circ$</td></tr>
+    <tr><th>중심 원자의 전자쌍 수<br><span class="small">(공유, 비공유)</span></th><td>2, 0</td><td>3, 0</td><td>❺ <span class="blank"><span class="step">4</span></span>, 0</td><td>3, ❻ <span class="blank"><span class="step">1</span></span></td><td>2, 2</td></tr>
+    <tr><th>예</th><td>$\ce{BeCl2}$</td><td>$\ce{BCl3}$</td><td>$\ce{CH4}$</td><td>$\ce{NH3}$</td><td>$\ce{H2O}$</td></tr>
   </table>
-  <p class="f22 mt16" data-q>전자쌍 사이의 반발력: ❼ <span class="blank cm222-wide"><span class="step">비공유–비공유 &gt; 비공유–공유 &gt; 공유–공유</span></span></p>
-  <p class="f22 mt8" data-q>다중 결합은 전자쌍 ❽ <span class="blank"><span class="step">하나</span></span>처럼 취급한다.</p>
+  <p class="small mt12">중단원 마무리 「함께 풀어 보기」(85쪽) 02 묶음. 제시된 핵심 내용으로 간단한 문제를 만들고, 공유 플랫폼에 공유하여 친구들과 함께 풀어 보자. · 더하기: 반발력 비공유–비공유 &gt; 비공유–공유 &gt; 공유–공유 · 이중·삼중 결합은 하나의 결합으로 취급</p>
 </section>
 
 <!-- ════════ 33. 스스로 점검하기 ════════ -->
@@ -964,12 +982,12 @@ table.cm222-log th,table.cm222-log td{font-size:19px;padding:4px 8px;text-align:
   <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
   <div class="chips col1">
     <button class="chk">[지식·이해] 전자쌍 반발 이론으로 분자 구조를 설명할 수 있다.</button>
-    <button class="chk">[과정·기능] 소프트웨어로 분자 구조를 모델링하고 결합각을 측정하였다.</button>
+    <button class="chk">[과정·기능] 분자 구조 모델링 프로그램으로 분자 구조를 모델링하고 결합각을 확인했다.</button>
     <button class="chk">[가치·태도] 분자의 입체 구조를 탐구하는 데 흥미를 가졌다.</button>
   </div>
   <div class="card mt16">
-    <p class="f21"><b>Q</b> $\ce{BF3}$와 $\ce{NH3}$는 결합 원자가 3개씩인데 구조가 다른 까닭은? <span class="step">→ <span class="ans">$\ce{NH3}$의 중심 원자에만 비공유 전자쌍이 있어</span> 전자쌍이 4개(정사면체형 배치)이기 때문이다.</span></p>
-    <p class="f21 mt8"><b>Q</b> $\ce{CO2}$의 중심 원자 주위 전자쌍 묶음은 몇 개인가? <span class="step">→ 2개 (2중 결합 2개) → 선형</span></p>
+    <p class="f21"><b>Q</b> $\ce{BCl3}$와 $\ce{NH3}$는 결합 원자가 3개씩인데 구조가 다른 까닭은? <span class="step">→ <span class="ans">$\ce{NH3}$의 중심 원자에만 비공유 전자쌍이 있어</span> 전자쌍이 4개(정사면체 배치)이기 때문이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{CO2}$의 중심 원자 주위 전자쌍 묶음은 몇 개인가? <span class="step">→ 2개 (이중 결합 2개) → 선형</span></p>
     <p class="f21 mt8"><b>Q</b> 분자 구조의 이름을 붙일 때 비공유 전자쌍도 포함할까? <span class="step">→ 포함하지 않는다. 원자의 배치만 본다.</span></p>
   </div>
   <div class="note puzzle mt16"><b>다음 시간</b> $\ce{CO2}$와 $\ce{H2O}$는 둘 다 극성 결합이 있다. 둘 다 극성 분자일까? 분자 구조와 관련지어 생각해 보자.</div>
@@ -1036,8 +1054,8 @@ window.DECK_LABS = {
     const VAL={Be:2,B:3,C:4,N:5,O:6}, NB={Be:2,B:3,C:4,N:3,O:2};
     const BAD={Be:['H'],B:['H'],O:['Cl']};
     const ANG={NH3:107,NF3:102,NCl3:107,H2O:104.5,OF2:103};
-    const GEO={2:'선형',3:'평면 삼각형',4:'정사면체형'};
-    const SHAPE={'2,0':'선형','3,0':'평면 삼각형','4,0':'정사면체형','3,1':'삼각뿔형','2,2':'굽은 형'};
+    const GEO={2:'선형',3:'평면 삼각형',4:'정사면체'};
+    const SHAPE={'2,0':'선형','3,0':'평면 삼각형','4,0':'정사면체','3,1':'삼각뿔','2,2':'굽은 형'};
     const ANG0={'2,0':180,'3,0':120,'4,0':109.5,'3,1':107,'2,2':104.5};
     let st={mode:'mol', c:'C', t:'H', p:null, yaw:25, pitch:-16, drag:null, idle:0};
     let mol=null, log=[];
@@ -1066,10 +1084,10 @@ window.DECK_LABS = {
           atoms:bd.map(v=>({el:'X',lab:'\\mathrm{B}',v,o:1})), lone:ld, nb, nl, ang, angTxt:fmtA(ang), shape:SHAPE[key], geo:GEO[nb+nl]};
       }
       if(st.p){
-        if(st.p==='CO2') return {tex:'\\ce{CO2}', name:'CO2', center:'C', atoms:[{el:'O',v:[-1,0,0],o:2},{el:'O',v:[1,0,0],o:2}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'2중 결합 2개'};
-        if(st.p==='HCN') return {tex:'\\ce{HCN}', name:'HCN', center:'C', atoms:[{el:'H',v:[-1,0,0],o:1},{el:'N',v:[1,0,0],o:3}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'단일 결합 1개 + 3중 결합 1개'};
+        if(st.p==='CO2') return {tex:'\\ce{CO2}', name:'CO2', center:'C', atoms:[{el:'O',v:[-1,0,0],o:2},{el:'O',v:[1,0,0],o:2}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'이중 결합 2개'};
+        if(st.p==='HCN') return {tex:'\\ce{HCN}', name:'HCN', center:'C', atoms:[{el:'H',v:[-1,0,0],o:1},{el:'N',v:[1,0,0],o:3}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'단일 결합 1개 + 삼중 결합 1개'};
         const a=x=>[Math.cos(x*Math.PI/180),Math.sin(x*Math.PI/180),0];
-        return {tex:'\\ce{HCHO}', name:'HCHO', center:'C', atoms:[{el:'O',v:a(90),o:2},{el:'H',v:a(212),o:1},{el:'H',v:a(328),o:1}], lone:[], nb:3, nl:0, ang:122, angTxt:'약 120°', shape:'평면 삼각형', geo:'평면 삼각형', multi:'단일 결합 2개 + 2중 결합 1개'};
+        return {tex:'\\ce{HCHO}', name:'HCHO', center:'C', atoms:[{el:'O',v:a(90),o:2},{el:'H',v:a(212),o:1},{el:'H',v:a(328),o:1}], lone:[], nb:3, nl:0, ang:122, angTxt:'약 120°', shape:'평면 삼각형', geo:'평면 삼각형', multi:'단일 결합 2개 + 이중 결합 1개'};
       }
       const c=st.c, t=st.t, nb=NB[c], nl=(VAL[c]-nb)/2, key=nb+','+nl;
       const formula = (c==='N'&&t==='H')? '\\ce{NH3}' : (c==='O'&&t==='H')? '\\ce{H2O}' : `\\ce{${c}${t}${nb}}`;

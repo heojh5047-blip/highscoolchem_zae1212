@@ -15,8 +15,8 @@ window.DECK_LABS = {
     const VAL={Be:2,B:3,C:4,N:5,O:6}, NB={Be:2,B:3,C:4,N:3,O:2};
     const BAD={Be:['H'],B:['H'],O:['Cl']};
     const ANG={NH3:107,NF3:102,NCl3:107,H2O:104.5,OF2:103};
-    const GEO={2:'선형',3:'평면 삼각형',4:'정사면체형'};
-    const SHAPE={'2,0':'선형','3,0':'평면 삼각형','4,0':'정사면체형','3,1':'삼각뿔형','2,2':'굽은 형'};
+    const GEO={2:'선형',3:'평면 삼각형',4:'정사면체'};
+    const SHAPE={'2,0':'선형','3,0':'평면 삼각형','4,0':'정사면체','3,1':'삼각뿔','2,2':'굽은 형'};
     const ANG0={'2,0':180,'3,0':120,'4,0':109.5,'3,1':107,'2,2':104.5};
     let st={mode:'mol', c:'C', t:'H', p:null, yaw:25, pitch:-16, drag:null, idle:0};
     let mol=null, log=[];
@@ -45,10 +45,10 @@ window.DECK_LABS = {
           atoms:bd.map(v=>({el:'X',lab:'\\mathrm{B}',v,o:1})), lone:ld, nb, nl, ang, angTxt:fmtA(ang), shape:SHAPE[key], geo:GEO[nb+nl]};
       }
       if(st.p){
-        if(st.p==='CO2') return {tex:'\\ce{CO2}', name:'CO2', center:'C', atoms:[{el:'O',v:[-1,0,0],o:2},{el:'O',v:[1,0,0],o:2}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'2중 결합 2개'};
-        if(st.p==='HCN') return {tex:'\\ce{HCN}', name:'HCN', center:'C', atoms:[{el:'H',v:[-1,0,0],o:1},{el:'N',v:[1,0,0],o:3}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'단일 결합 1개 + 3중 결합 1개'};
+        if(st.p==='CO2') return {tex:'\\ce{CO2}', name:'CO2', center:'C', atoms:[{el:'O',v:[-1,0,0],o:2},{el:'O',v:[1,0,0],o:2}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'이중 결합 2개'};
+        if(st.p==='HCN') return {tex:'\\ce{HCN}', name:'HCN', center:'C', atoms:[{el:'H',v:[-1,0,0],o:1},{el:'N',v:[1,0,0],o:3}], lone:[], nb:2, nl:0, ang:180, angTxt:'180°', shape:'선형', geo:'선형', multi:'단일 결합 1개 + 삼중 결합 1개'};
         const a=x=>[Math.cos(x*Math.PI/180),Math.sin(x*Math.PI/180),0];
-        return {tex:'\\ce{HCHO}', name:'HCHO', center:'C', atoms:[{el:'O',v:a(90),o:2},{el:'H',v:a(212),o:1},{el:'H',v:a(328),o:1}], lone:[], nb:3, nl:0, ang:122, angTxt:'약 120°', shape:'평면 삼각형', geo:'평면 삼각형', multi:'단일 결합 2개 + 2중 결합 1개'};
+        return {tex:'\\ce{HCHO}', name:'HCHO', center:'C', atoms:[{el:'O',v:a(90),o:2},{el:'H',v:a(212),o:1},{el:'H',v:a(328),o:1}], lone:[], nb:3, nl:0, ang:122, angTxt:'약 120°', shape:'평면 삼각형', geo:'평면 삼각형', multi:'단일 결합 2개 + 이중 결합 1개'};
       }
       const c=st.c, t=st.t, nb=NB[c], nl=(VAL[c]-nb)/2, key=nb+','+nl;
       const formula = (c==='N'&&t==='H')? '\\ce{NH3}' : (c==='O'&&t==='H')? '\\ce{H2O}' : `\\ce{${c}${t}${nb}}`;

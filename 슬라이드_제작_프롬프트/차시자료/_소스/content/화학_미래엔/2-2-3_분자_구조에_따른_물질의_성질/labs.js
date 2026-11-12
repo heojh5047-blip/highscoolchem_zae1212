@@ -29,9 +29,9 @@ window.DECK_LABS = {
       H2O:{tex:'\\ce{H2O}', c:'O', at:bent(104.5).map(v=>['H',v,1]), lone:[norm([0,.62,.78]),norm([0,.62,-.78])], shape:'굽은 형'},
       BCl3:{tex:'\\ce{BCl3}', c:'B', at:[90,210,330].map(a=>['Cl',pl(a),1]), shape:'평면 삼각형'},
       CH2O:{tex:'\\ce{CH2O}', c:'C', at:[['O',pl(90),2],['H',pl(212),1],['H',pl(328),1]], shape:'평면 삼각형'},
-      NH3:{tex:'\\ce{NH3}', c:'N', at:pyr(107).map(v=>['H',v,1]), lone:[[0,1,0]], shape:'삼각뿔형'},
-      CH4:{tex:'\\ce{CH4}', c:'C', at:tet().map(v=>['H',v,1]), shape:'정사면체형'},
-      CH3Cl:{tex:'\\ce{CH3Cl}', c:'C', at:tet().map((v,i)=>[i?'H':'Cl',v,1]), shape:'정사면체형'}
+      NH3:{tex:'\\ce{NH3}', c:'N', at:pyr(107).map(v=>['H',v,1]), lone:[[0,1,0]], shape:'삼각뿔'},
+      CH4:{tex:'\\ce{CH4}', c:'C', at:tet().map(v=>['H',v,1]), shape:'정사면체'},
+      CH3Cl:{tex:'\\ce{CH3Cl}', c:'C', at:tet().map((v,i)=>[i?'H':'Cl',v,1]), shape:'정사면체'}
     };
     let st={m:'NH3', yaw:30, pitch:-18, drag:null, idle:0, added:false};
     let log=[]; const labels=[];
