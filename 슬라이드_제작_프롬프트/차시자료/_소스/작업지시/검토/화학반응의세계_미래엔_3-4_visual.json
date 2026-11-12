@@ -1,0 +1,12 @@
+{"findings":[
+{"slide":1,"severity":"low","rule":"D8","problem":"표지 분자 아래쪽 H가 캡션과 가까움","fix":"분자를 위로 옮기고 캡션을 아래로 — 반영"},
+{"slide":7,"severity":"medium","rule":"T1","problem":"h2 끝의 '탐구 능력 | 의사 결정 능력'이 둘째 줄로 넘어가 '능력' 한 낱말만 남음","fix":"작은 글줄로 h2 아래에 뺌 — 반영"},
+{"slide":10,"severity":"low","rule":"빈 공간","problem":"아래 3분의 1이 비어 있음","fix":"'실험마다 이렇게 진행한다' 흐름 줄 추가(넘침이 생겨 한 줄 노드로 줄임) — 반영"},
+{"slide":12,"severity":"medium","rule":"T4","problem":"오른쪽 열이 좁아 답과 원자 수 식이 어색하게 줄바꿈","fix":"그림 열 760 → 690px — 반영"},
+{"slide":14,"severity":"low","rule":"D8","problem":"pH 시험지 라벨 '산성'이 플라스크 목과 겹침","fix":"시험지 오른쪽으로 옮기고 20px — 반영"},
+{"slide":16,"severity":"medium","rule":"D8","problem":"아스피린 C=O의 O 라벨이 viewBox 아래에서 잘림","fix":"viewBox 높이 430 → 450 — 반영"},
+{"slide":17,"severity":"medium","rule":"3.2","problem":"4칸 그림 라벨(70–80 °C, 얼음물)이 화면 15px","fix":"라벨 21px로 키움 — 반영"},
+{"slide":20,"severity":"medium","rule":"D8","problem":"'다이클로로메테인 용액', '유리 막대' 라벨이 그림 오른쪽에서 잘림","fix":"'유기 용액'으로 줄이고 유리 막대 라벨을 왼쪽 위로 — 반영"},
+{"slide":18,"severity":"low","rule":"빈 공간·그림 빈약","problem":"글만 있고 아래가 비어 있음","fix":"살리실산 → 아스피린 구조식 비교 그림(바뀐 부분 field 상자)을 오른쪽 열에 — 반영"},
+{"slide":21,"severity":"low","rule":"그림 빈약","problem":"글만 있음","fix":"경계면에서 나일론을 감아올리는 그림 추가 — 반영"}
+],"summary":"28장 전체를 sheet 모음으로 두 번 보고 바뀐 장은 원본으로 확인. 겹침·잘림·작은 라벨 지적을 모두 고쳐 자동 점검 0건. 확인하기(S9)의 빈 공간은 check 템플릿이라 그대로."}
