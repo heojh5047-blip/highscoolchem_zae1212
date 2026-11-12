@@ -1,0 +1,8 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 −COOH 글자가 작용기 상자를 넘침","fix":"상자 폭 130, 글자 26으로(반영)"},
+{"slide":6,"severity":"medium","rule":"D8","problem":"아래 행이 영역 밖으로 넘침(자동 점검)","fix":"구조식 그림 폭 1080→940px(반영)"},
+{"slide":9,"severity":"medium","rule":"3.2","problem":"구조식 그림 라벨이 화면 14.7px","fix":"그림 폭 560→640px, 이름 라벨 22(반영)"},
+{"slide":12,"severity":"medium","rule":"D8","problem":"시험관 아래 '포밀기 있음/없음' 라벨이 서로 붙음","fix":"'포밀기 ○/✕'로 줄임(반영)"},
+{"slide":17,"severity":"low","rule":"D8","problem":"부품 라벨이 옷 소매와 가까움","fix":"viewBox 400, 라벨 왼쪽 정렬·간격 넓힘(반영)"},
+{"slide":18,"severity":"low","rule":"D1","problem":"재활용 순환 화살표에 화살촉이 없고 아래가 빔","fix":"화살촉 3개 추가, 판서 공간 추가(반영)"}
+],"summary":"자동 점검 0·콘솔 0. 전체 캡처 sheet 모음 2회(완성 직후·최종) 확인, 10·11번 단계 공개 순서 확인."}

@@ -1,0 +1,54 @@
+/* 3-M 대단원 Ⅲ 마무리 — 덱 전용 (모두 .rm39- 접두어 + 중합 글자색 2개) */
+.cover h1.rm39-h1{font-size:104px}
+.c-field{color:#2E9E6A;font-weight:700}
+.c-bfield{color:#7B4FC8;font-weight:700}
+.flow.rm39-flow .fnode{font-size:21px}
+/* 개념 정리 가지 그림 (교과서 106쪽 꼴) */
+.rm39-tree{display:grid;align-items:center;margin-top:6px}
+.rm39-t1{grid-template-columns:128px 26px 130px 26px 190px 26px 130px 26px 1fr;grid-auto-rows:minmax(64px,auto);row-gap:12px;margin-top:10px}
+.rm39-t2{grid-template-columns:128px 26px 170px 26px 230px 26px 1fr;grid-auto-rows:minmax(84px,auto);row-gap:12px;margin-top:10px}
+.rm39-n{background:#fff;border:2px dashed #C9D3DD;border-radius:14px;padding:4px 12px;font-size:20px;line-height:1.4;text-align:center;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0}
+p.rm39-n{display:block;align-self:center}
+.rm39-root{grid-column:1;background:#2E7D5B;color:#fff;border:0;border-radius:50%;font-weight:700;aspect-ratio:1;align-self:center;font-size:23px}
+.rm39-mid{background:#E8457F;color:#fff;border:0;font-weight:700;border-radius:40px}
+.rm39-tree .rm39-n:not(.rm39-root):not(.rm39-mid):not(.rm39-leaf):not(.rm39-fg){background:#D7F0DD;border:0;font-weight:600}
+.rm39-fg{background:#FFF3E3}
+.rm39-leaf{text-align:left;justify-content:flex-start}
+.rm39-a{text-align:center;font-size:24px;color:var(--muted)}
+.rm39-n .blank{min-width:96px}
+/* 연결 네 카드 */
+.stages.rm39-st4{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stages.rm39-st4 .stage{min-width:0;padding:12px 12px}
+.stages.rm39-st4 h3{font-size:21px;margin:0 0 6px}
+.stages.rm39-st4 p{font-size:19px;line-height:1.45;margin:6px 0 0}
+.stages.c2.rm39-two .stage p{font-size:20px;line-height:1.45;margin:4px 0 0}
+/* 대응표 */
+table.rm39-map{width:100%}
+table.rm39-map th,table.rm39-map td{font-size:19px;padding:1px 10px}
+table.rm39-map td:nth-child(4){white-space:nowrap;color:var(--muted)}
+table.rm39-map td:last-child{white-space:nowrap;font-weight:700}
+table.rm39-map tr.rm39-here td{background:#FFF6C2}
+/* 글쓰기·읽기 */
+.rm39-src .card p{font-size:20px;line-height:1.45;margin:0}
+table.rm39-cmp{width:100%}
+table.rm39-cmp th,table.rm39-cmp td{font-size:20px;padding:6px 12px}
+table.rm39-cmp td:first-child{font-weight:700;white-space:nowrap}
+.answer.rm39-left{text-align:left;font-weight:400;font-size:21px;line-height:1.55}
+.rm39-cards .card p{font-size:20px;line-height:1.45;margin:0 0 4px}
+.rm39-chips{display:flex;flex-wrap:wrap;gap:10px}
+.rm39-chips > span{background:#F3EBDD;border-radius:10px;padding:7px 14px;font-size:20px}
+table.rm39-plan{width:100%}
+table.rm39-plan td,table.rm39-plan th{font-size:20px;padding:6px 10px}
+table.rm39-plan td:first-child{font-weight:700;white-space:nowrap}
+table.rm39-eval{width:100%}
+table.rm39-eval td,table.rm39-eval th{font-size:20px;padding:5px 10px}
+table.rm39-eval td:not(.l){text-align:center;width:60px}
+/* 실험실 */
+.rm39-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 8px}
+.rm39-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 12px;font-size:19px}
+.rm39-seg .btn.rm39-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.readout.rm39-read{margin:4px 0 6px}
+table.readout.rm39-read td{white-space:nowrap}
+output.rm39-msg{font-size:19px;font-weight:600;line-height:1.45;margin-top:4px}
+table.rm39-log{width:100%;margin-top:6px}
+table.rm39-log td,table.rm39-log th{font-size:19px;padding:2px 6px;text-align:center}

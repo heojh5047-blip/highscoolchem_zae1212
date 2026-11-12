@@ -1,0 +1,566 @@
+<!-- 화학반응의세계_미래엔 3-M 대단원 Ⅲ 마무리 (교과서 104–111쪽) — SCRATCH/화학반응의세계_미래엔_3-M/gen.py 로 구조식 좌표를 채움 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 탄소 화합물과 반응" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 탄소 화합물과 반응 › 대단원 마무리</div>
+    <h1 class="rm39-h1">대단원 Ⅲ<br><span class="acc">마무리</span></h1>
+    <p class="sub">작용기와 중합 반응으로 탄소 화합물을 한 장의 지도로</p>
+    <p class="meta">고등학교 화학 반응의 세계 104–111쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="하이드록시기, 포밀기, 카복실기 세 작용기 상자가 화살표로 이어지고, 아래에서 단위체 구슬이 이어져 고분자 사슬이 된다"><circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <g data-anim="pop" data-o="100,150" data-dur=".6" data-delay=".1"><rect x="35" y="118" width="130" height="64" rx="14" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="100" y="159" data-tex="\ce{-OH}" data-size="26" data-anchor="middle"></text></g>
+    <g data-anim="pop" data-o="270,150" data-dur=".6" data-delay=".5"><rect x="205" y="118" width="130" height="64" rx="14" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="270" y="160" data-tex="\ce{-CHO}" data-size="26" data-anchor="middle"></text></g>
+    <g data-anim="pop" data-o="440,150" data-dur=".6" data-delay=".9"><rect x="375" y="118" width="130" height="64" rx="14" fill="#E08A2C" fill-opacity=".18" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="440" y="159" data-tex="\ce{-COOH}" data-size="26" data-anchor="middle"></text></g>
+    <g data-arw="167,150,203,150,ox,3"></g><g data-arw="337,150,373,150,ox,3"></g>
+    <text class="tex" x="270" y="226" data-mix="작용기가 바뀌면 성질이 바뀐다" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text>
+    <line x1="90" y1="330" x2="450" y2="330" stroke="#7B4FC8" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="90" cy="330" r="26" fill="#5AA9E6"/><circle cx="180" cy="330" r="26" fill="#F2C230"/><circle cx="270" cy="330" r="26" fill="#5AA9E6"/><circle cx="360" cy="330" r="26" fill="#F2C230"/>
+    <g data-anim="move" data-from="60,40" data-dur="1.2" data-delay="1.2" data-ease="out"><circle cx="450" cy="330" r="26" fill="#5AA9E6"/></g>
+    <text class="tex" x="270" y="396" data-mix="단위체 → 중합 반응 → 고분자" data-size="22" data-anchor="middle" fill="#7B4FC8" data-weight="700"></text>
+    <text class="tex" x="270" y="470" data-mix="01–04 · 작용기와 고분자" data-size="22" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12반응03-01]</span> 작용기에 따른 탄소 화합물의 분류 &nbsp;<span class="code">[12반응03-02]</span> 탄소 화합물의 반응과 작용기의 변화 &nbsp;<span class="code">[12반응03-03]</span> 중합 반응과 고분자 &nbsp;<span class="code">[12반응03-04]</span> 탄소 화합물의 유용성</div>
+  <ol class="goals mt8">
+    <li>대단원 Ⅲ의 핵심 개념(탄화수소, 작용기, 작용기의 변화, 중합 반응과 고분자, 유용성)을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li>자일란·자일로스·자일리톨의 구조로 <b>중합 반응</b>과 <b>작용기의 변화</b>를 설명하는 글을 쓸 수 있다.</li>
+    <li>재활용과 새활용을 구별하고, <b>새활용 제품</b>을 조사·제작·전시할 수 있다.</li>
+  </ol>
+  <svg class="fig mt8" viewBox="0 0 1112 120" style="width:1112px" aria-label="대단원 Ⅲ 단원 지도에서 네 소단원을 마치고 오늘은 대단원 마무리"><line x1="40" y1="30" x2="1072" y2="30" stroke="#C9D3DD" stroke-width="6" stroke-linecap="round"/><path d="M40 30 H980" stroke="#2E9E6A" stroke-width="6" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.6" data-delay=".3"/><circle cx="120" cy="30" r="11" fill="#2E9E6A"/><circle cx="340" cy="30" r="11" fill="#2E9E6A"/><circle cx="560" cy="30" r="11" fill="#2E9E6A"/><circle cx="780" cy="30" r="11" fill="#2E9E6A"/><circle cx="980" cy="30" r="16" fill="#FFE45C" stroke="#16233D" stroke-width="3"/><text class="tex" x="120" y="76" data-mix="01 탄소 화합물의||종류" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="340" y="76" data-mix="02 탄소 화합물의||화학 반응" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="560" y="76" data-mix="03 다양한||고분자 화합물" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="780" y="76" data-mix="04 탄소 화합물의||유용성" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="980" y="76" data-mix="오늘: 대단원 마무리||104–111쪽" data-size="19" data-anchor="middle" fill="#16233D" data-weight="700"></text></svg>
+  <div class="flow mt8 rm39-flow">
+    <div class="fnode hl">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">연결 · 대응표</div><div class="farr">→</div>
+    <div class="fnode hl">과학 글쓰기 13</div><div class="farr">→</div>
+    <div class="fnode">이야기 · 미래</div><div class="farr">→</div>
+    <div class="fnode hl">프로젝트</div><div class="farr">→</div>
+    <div class="fnode">스스로 점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="개념 정리 ① 탄소 화합물의 종류">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ① 탄소 화합물의 종류</h2>
+  <div class="rm39-tree rm39-t1">
+    <div class="rm39-n rm39-root" style="grid-row:1 / span 5"><span>탄소<br>화합물과<br>반응</span></div>
+    <div class="rm39-a" style="grid-row:1 / span 5;grid-column:2">→</div>
+    <div class="rm39-n rm39-mid" style="grid-row:1 / span 5;grid-column:3"><span>탄소<br>화합물의<br>종류</span></div>
+    <div class="rm39-a" style="grid-row:1;grid-column:4">→</div>
+    <div class="rm39-n" style="grid-row:1;grid-column:5"><span>탄소 화합물</span></div>
+    <div class="rm39-a" style="grid-row:1;grid-column:6">→</div>
+    <p class="rm39-n rm39-leaf" style="grid-row:1;grid-column:7 / span 3" data-q>❶ <span class="blank"><span class="step">탄소</span></span>이/가 기본이 되어 H, O, N, F, Cl 등의 원자와 결합하여 만들어진 화합물</p>
+    <div class="rm39-a" style="grid-row:2;grid-column:4">→</div>
+    <p class="rm39-n" style="grid-row:2;grid-column:5" data-q>❷ <span class="blank"><span class="step">탄화수소</span></span></p>
+    <div class="rm39-a" style="grid-row:2;grid-column:6">→</div>
+    <div class="rm39-n rm39-leaf" style="grid-row:2;grid-column:7 / span 3"><span>탄소와 수소로만 이루어진 탄소 화합물 &nbsp;예 $\ce{CH4}$, $\ce{C3H8}$, $\ce{C4H10}$, $\ce{C2H4}$ 등</span></div>
+    <div class="rm39-a" style="grid-row:3 / span 3;grid-column:4">→</div>
+    <div class="rm39-n" style="grid-row:3 / span 3;grid-column:5"><span>작용기에 따른<br>탄소 화합물</span></div>
+    <div class="rm39-a" style="grid-row:3;grid-column:6">→</div>
+    <div class="rm39-n rm39-fg" style="grid-row:3;grid-column:7"><span>$\ce{-OH}$</span></div>
+    <div class="rm39-a" style="grid-row:3;grid-column:8">→</div>
+    <p class="rm39-n" style="grid-row:3;grid-column:9" data-q>❸ <span class="blank"><span class="step">알코올</span></span></p>
+    <div class="rm39-a" style="grid-row:4;grid-column:6">→</div>
+    <p class="rm39-n rm39-fg" style="grid-row:4;grid-column:7" data-q>❹ <span class="blank"><span class="step">$\ce{-CHO}$</span></span></p>
+    <div class="rm39-a" style="grid-row:4;grid-column:8">→</div>
+    <div class="rm39-n" style="grid-row:4;grid-column:9"><span>알데하이드</span></div>
+    <div class="rm39-a" style="grid-row:5;grid-column:6">→</div>
+    <div class="rm39-n rm39-fg" style="grid-row:5;grid-column:7"><span>$\ce{-COOH}$</span></div>
+    <div class="rm39-a" style="grid-row:5;grid-column:8">→</div>
+    <p class="rm39-n" style="grid-row:5;grid-column:9" data-q>❺ <span class="blank"><span class="step">카복실산</span></span></p>
+  </div>
+  <p class="small c-muted mt12">빈칸 번호는 교과서 번호다. 3-1 「스스로 정리」의 ❶–❺와 번호·답이 같다.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="개념 정리 ② 화학 반응 · 고분자 · 유용성">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ② 화학 반응 · 고분자 · 유용성</h2>
+  <div class="rm39-tree rm39-t2">
+    <div class="rm39-n rm39-root" style="grid-row:1 / span 4"><span>탄소<br>화합물과<br>반응</span></div>
+    <div class="rm39-a" style="grid-row:1;grid-column:2">→</div>
+    <div class="rm39-n rm39-mid" style="grid-row:1;grid-column:3"><span>탄소 화합물의<br>화학 반응</span></div>
+    <div class="rm39-a" style="grid-row:1;grid-column:4">→</div>
+    <div class="rm39-n" style="grid-row:1;grid-column:5"><span>작용기의 변화와<br>탄소 화합물의 반응</span></div>
+    <div class="rm39-a" style="grid-row:1;grid-column:6">→</div>
+    <p class="rm39-n rm39-leaf" style="grid-row:1;grid-column:7" data-q>화학 반응으로 ❻ <span class="blank"><span class="step">작용기</span></span>이/가 변하면 탄소 화합물의 성질이 바뀜<br>예 $\ce{C2H5-OH -> CH3-CHO}$(환원성) $\ce{-> CH3-COOH}$(산성)</p>
+    <div class="rm39-a" style="grid-row:2 / span 2;grid-column:2">→</div>
+    <div class="rm39-n rm39-mid" style="grid-row:2 / span 2;grid-column:3"><span>다양한<br>고분자 화합물</span></div>
+    <div class="rm39-a" style="grid-row:2;grid-column:4">→</div>
+    <div class="rm39-n" style="grid-row:2;grid-column:5"><span>단위체</span></div>
+    <div class="rm39-a" style="grid-row:2;grid-column:6">→</div>
+    <p class="rm39-n rm39-leaf" style="grid-row:2;grid-column:7" data-q>중합 반응을 해 ❼ <span class="blank"><span class="step">고분자</span></span>이/가 됨</p>
+    <div class="rm39-a" style="grid-row:3;grid-column:4">→</div>
+    <div class="rm39-n" style="grid-row:3;grid-column:5"><span>고분자의 종류</span></div>
+    <div class="rm39-a" style="grid-row:3;grid-column:6">→</div>
+    <div class="rm39-n rm39-leaf" style="grid-row:3;grid-column:7"><span>단백질, 핵산, 플라스틱, 고무 등</span></div>
+    <div class="rm39-a" style="grid-row:4;grid-column:2">→</div>
+    <div class="rm39-n rm39-mid" style="grid-row:4;grid-column:3"><span>탄소 화합물의<br>유용성</span></div>
+    <div class="rm39-a" style="grid-row:4;grid-column:4">→</div>
+    <div class="rm39-n" style="grid-row:4;grid-column:5"><span>합성 섬유(예 나일론)<br>의약품 합성(예 아스피린)</span></div>
+    <div class="rm39-a" style="grid-row:4;grid-column:6">→</div>
+    <p class="rm39-n rm39-leaf" style="grid-row:4;grid-column:7" data-q>❽ <span class="blank"><span class="step">탄소 화합물</span></span>의 반응으로 합성된 물질이 과학·기술·사회 발전에 영향을 끼침</p>
+  </div>
+  <p class="small c-muted mt12">3-2의 ❻, 3-3의 ❼, 3-4의 ❽은 교과서와 같은 번호다. 교과서 개념 정리의 빈칸은 모두 여덟 개다.</p>
+</section>
+
+<!-- ════════ 5. 연결: 네 소단원 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="연결: 네 소단원을 한 줄로">
+  <h2><span class="tag alt">연결</span>네 소단원을 한 줄로 꿰면?</h2>
+  <div class="stages rm39-st4 mt8">
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay=".1"><h3>01 탄소 화합물의 종류</h3><p>탄소 원자는 결합 4개 → 사슬·고리</p><p>작용기로 분류: $\ce{-OH}$ 알코올, $\ce{-CHO}$ 알데하이드, $\ce{-COOH}$ 카복실산</p></div>
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay=".4"><h3>02 탄소 화합물의 화학 반응</h3><p>$\ce{C2H5OH -> CH3CHO}$</p><p>$\ce{-> CH3COOH}$ (산화)</p><p>은거울 반응, 음주 측정기</p></div>
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay=".7"><h3>03 다양한 고분자 화합물</h3><p>단위체 → 첨가 중합·축합 중합 → 고분자</p><p>단백질, 핵산, 플라스틱, 고무</p></div>
+    <div class="stage" data-anim="pop" data-dur=".6" data-delay="1"><h3>04 탄소 화합물의 유용성</h3><p>나일론(합성 섬유), 아스피린(의약품), 인공 향</p><p>과학·기술·사회 발전</p></div>
+  </div>
+  <p class="f22 mt16"><b>Q</b> 네 소단원을 꿰는 낱말 하나를 고른다면 무엇일까?</p>
+  <div class="answer step mt8"><b>작용기</b> — 작용기가 성질을 정하고(01), 작용기가 반응해 다른 물질로 바뀌고(02), 작용기끼리 이어져 고분자가 되고(03), 작용기의 반응으로 새 물질을 만든다(04).</div>
+</section>
+
+<!-- ════════ 6. 연결: 작용기의 변화 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="연결: 작용기가 바뀌면 성질이 바뀐다">
+  <h2><span class="tag alt">연결</span>작용기가 바뀌면 성질이 바뀐다</h2>
+  <svg class="fig mt8" viewBox="0 0 1080 250" style="width:940px" aria-label="에탄올, 아세트알데하이드, 아세트산의 구조식. 작용기 하이드록시기, 포밀기, 카복실기에 상자가 있고 산화 화살표로 이어진다">
+    <g data-anim="pop" data-o="150,120" data-dur=".6" data-delay=".2">{{CH_ETH}}</g>
+    <g data-arw="290,120,370,120,ox,3"></g><text class="tex" x="330" y="104" data-mix="산화" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text>
+    <g data-anim="pop" data-o="480,120" data-dur=".6" data-delay=".6">{{CH_ALD}}</g>
+    <g data-arw="606,120,686,120,ox,3"></g><text class="tex" x="646" y="104" data-mix="산화" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text>
+    <g data-anim="pop" data-o="830,120" data-dur=".6" data-delay="1">{{CH_ACE}}</g>
+    <text class="tex" x="138" y="232" data-mix="에탄올 · 하이드록시기 · 중성" data-size="20" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="481" y="232" data-mix="아세트알데하이드 · 포밀기 · 환원성" data-size="20" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="830" y="232" data-mix="아세트산 · 카복실기 · 산성" data-size="20" data-anchor="middle" data-weight="700"></text>
+  </svg>
+  <div class="row mt8">
+    <div class="col"><div class="card"><p class="f21">탄소 골격은 그대로인데 <b>작용기만</b> 바뀌었다. 포밀기가 있으면 은거울 반응을 하고(환원성), 카복실기가 있으면 수용액이 산성이다.</p></div>
+      <p class="f22 mt12"><b>Q</b> 반대로 포밀기($\ce{-CHO}$)가 환원되어 하이드록시기($\ce{-OH}$)가 되면 어떤 성질이 사라질까?</p>
+      <div class="answer step mt8">환원성이 사라져 은거울 반응을 하지 않는다 — 과학 글쓰기 13의 <b>자일로스 → 자일리톨</b>이 이 경우다.</div></div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board" style="min-height:150px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 7. 연결: 첨가 중합과 축합 중합 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="연결: 첨가 중합과 축합 중합">
+  <h2><span class="tag alt">연결</span>단위체는 어떻게 이어질까? 첨가 중합과 축합 중합</h2>
+  <div class="stages c2 rm39-two mt8">
+    <div class="stage"><h3 class="c-field">첨가 중합 반응</h3>
+      <p>$n\,\ce{CH2=CH2} \longrightarrow \left[\ce{-CH2-CH2-}\right]_n$</p>
+      <p>단위체의 <b>이중 결합 하나가 끊어지며</b> 이웃과 연결 · 떨어져 나가는 분자가 없다</p>
+      <p>예 폴리에틸렌, 네오프렌</p>
+      <svg class="fig mt8" viewBox="0 0 500 110" style="width:500px" aria-label="이중 결합이 있는 단위체 구슬이 떨어져 나가는 것 없이 이어진다"><line x1="60" y1="50" x2="440" y2="50" stroke="#2E9E6A" stroke-width="5" stroke-linecap="round"/><circle cx="60" cy="50" r="24" fill="#F08A5D"/><circle cx="155" cy="50" r="24" fill="#F08A5D"/><circle cx="250" cy="50" r="24" fill="#F08A5D"/><circle cx="345" cy="50" r="24" fill="#F08A5D"/><g data-anim="move" data-from="50,0" data-dur="1" data-delay=".3" data-ease="out"><circle cx="440" cy="50" r="24" fill="#F08A5D"/></g><text class="tex" x="250" y="102" data-mix="에틸렌 구슬 = 단위체 하나" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+    <div class="stage"><h3 class="c-bfield">축합 중합 반응</h3>
+      <p>두 작용기 사이에서 <b>물과 같은 작은 분자가 떨어져 나가며</b> 연결</p>
+      <p>예 나일론, 폴리(에틸렌 테레프탈레이트)(PET), 단백질</p>
+      <svg class="fig mt8" viewBox="0 0 500 150" style="width:500px" aria-label="두 종류의 단위체 구슬이 이어질 때마다 물 분자가 떨어져 나간다"><line x1="60" y1="50" x2="440" y2="50" stroke="#7B4FC8" stroke-width="5" stroke-linecap="round"/><circle cx="60" cy="50" r="24" fill="#5AA9E6"/><circle cx="155" cy="50" r="24" fill="#F2C230"/><circle cx="250" cy="50" r="24" fill="#5AA9E6"/><circle cx="345" cy="50" r="24" fill="#F2C230"/><circle cx="440" cy="50" r="24" fill="#5AA9E6"/><g data-anim="move" data-from="0,-36" data-dur="1" data-delay=".3" data-ease="out"><rect x="370" y="92" width="96" height="36" rx="8" fill="none" stroke="#1F6FD1" stroke-width="2" stroke-dasharray="6 4"/><text class="tex" x="418" y="117" data-tex="\ce{H2O}" data-size="20" data-anchor="middle" fill="#1F6FD1"></text></g><text class="tex" x="180" y="122" data-mix="이어질 때마다 물이 빠진다" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 과학 글쓰기 13의 자일란은 자일로스끼리 어떻게 이어진 고분자일까?</p>
+  <div class="answer step mt8">자일로스의 하이드록시기끼리 물 분자가 빠지며 이어진다 → <b>축합 중합</b> (10번 장에서 그림으로 확인)</div>
+</section>
+
+<!-- ════════ 8. 대응표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 대단원 마무리" data-title="대단원 마무리 대응표">
+  <h2><span class="tag alt">대단원 마무리 대응표</span>문항 01–13은 어디에서 푸나?</h2>
+  <table class="tight rm39-map">
+    <tr><th>번호</th><th>머리표</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td>01</td><td class="l">01. 탄소 화합물의 종류</td><td class="l">탄소 화합물이 다양한 까닭</td><td>3-1 #33</td><td><span class="step" data-g="k1">④ ㄴ, ㄷ</span></td></tr>
+    <tr><td>02</td><td class="l">01. 탄소 화합물의 종류</td><td class="l">설명에 맞는 탄화수소</td><td>3-1 #34</td><td><span class="step" data-g="k1">⑤ 에타인</span></td></tr>
+    <tr><td>03</td><td class="l">01. 탄소 화합물의 종류</td><td class="l">모형 (가)~(다)에 대한 설명</td><td>3-1 #35</td><td><span class="step" data-g="k1">①</span></td></tr>
+    <tr><td>04</td><td class="l">01. 탄소 화합물의 종류</td><td class="l">서술형 작용기로 (가)~(라) 분류</td><td>3-1 #36</td><td><span class="step" data-g="k1">$\ce{-OH}$ (가)(라) · $\ce{-COOH}$ (나)(다)</span></td></tr>
+    <tr><td>05</td><td class="l">02. 탄소 화합물의 반응</td><td class="l">포도당 → (가) → (나) → 아세트산</td><td>3-2 #23</td><td><span class="step" data-g="k1">①</span></td></tr>
+    <tr><td>06</td><td class="l">02. 탄소 화합물의 반응</td><td class="l">서술형 아세트알데하이드와 아세트산 구분</td><td>3-2 #24</td><td><span class="step" data-g="k1">은거울 반응</span></td></tr>
+    <tr><td>07</td><td class="l">03. 다양한 고분자 화합물</td><td class="l">단위체 (가), (나)와 고분자 (다)</td><td>3-3 #23</td><td><span class="step" data-g="k1">③ ㄱ, ㄴ</span></td></tr>
+    <tr><td>08</td><td class="l">03. 다양한 고분자 화합물</td><td class="l">고분자에 대한 설명</td><td>3-3 #24</td><td><span class="step" data-g="k1">② ㄷ</span></td></tr>
+    <tr><td>09</td><td class="l">03. 다양한 고분자 화합물</td><td class="l">서술형 폴리에틸렌의 단위체·중합 반응</td><td>3-3 #25</td><td><span class="step" data-g="k1">에틸렌 · 첨가 중합</span></td></tr>
+    <tr><td>10</td><td class="l">03. 다양한 고분자 화합물</td><td class="l">네오프렌과 PET</td><td>3-3 #26</td><td><span class="step" data-g="k1">⑤ ㄱ, ㄴ, ㄷ</span></td></tr>
+    <tr><td>11</td><td class="l">04. 탄소 화합물의 유용성</td><td class="l">탄소 화합물이 끼친 영향</td><td>3-4 #25</td><td><span class="step" data-g="k1">④ ㄱ, ㄷ</span></td></tr>
+    <tr><td>12</td><td class="l">04. 탄소 화합물의 유용성</td><td class="l">서술형 나일론이 끼친 영향</td><td>3-4 #26</td><td><span class="step" data-g="k1">예시 답안</span></td></tr>
+    <tr class="rm39-here"><td>13</td><td class="l">과학 글쓰기</td><td class="l">자일란·자일로스·자일리톨</td><td>이 덱 #9–13</td><td><span class="step" data-g="k1">예시 글</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">01–12는 소단원 덱 끝에서 이미 풀었다(풀이·채점 요소는 그 덱). 노란 줄은 오늘 이 덱에서 쓰는 글이다.</p>
+</section>
+
+<!-- ════════ 9. 과학 글쓰기 13 자료 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 과학 글쓰기" data-title="과학 글쓰기 13: 자료 읽기">
+  <h2><span class="tag">과학 글쓰기</span>13 자일란, 자일로스, 자일리톨</h2>
+  <div class="row">
+    <div class="col stack rm39-src">
+      <div class="card"><p><b>자일란</b> 나무의 세포벽에 있는, 여러 종류의 단당류가 불균일하게 결합한 고분자이다. 분해하면 단당류로 나누어진다.</p></div>
+      <div class="card"><p><b>자일로스</b>($\ce{C5H10O5}$) 자일란을 분해할 때 나오는 '나무의 설탕'이다. 단맛은 설탕의 40 % 정도이고, 설탕을 분해하는 효소의 활성을 억제해 설탕에 섞으면 설탕 흡수율을 낮춘다 → 당뇨병 예방에 효과적이다.</p></div>
+      <div class="card"><p><b>자일리톨</b>($\ce{C5H12O5}$) 자일로스로부터 얻는다. 설탕과 거의 비슷한 단맛을 내면서 열량은 낮고, 충치를 일으키는 세균이 소화할 수 없어 치아를 부식시키는 산이 나오지 않는다 → 껌 등 충치 예방용 첨가물.</p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 640px">
+      <svg class="fig" viewBox="0 0 760 300" style="width:640px" aria-label="자일란의 반복 단위(고리 모양 자일로스가 산소로 이어짐), 자일로스와 자일리톨의 세로 사슬 구조식. 자일로스 위 끝은 포밀기, 자일리톨 위 끝은 CH2OH">
+        <g transform="translate(0,40)">{{XYLAN}}</g>
+        <g data-arw="262,140,292,140,muted,3"></g>
+        <g transform="translate(290,0)">{{XYLOSE}}</g>
+        <g data-arw="510,140,540,140,rd,3"></g>
+        <g transform="translate(540,0)">{{XYLITOL}}</g>
+        <text class="tex" x="130" y="292" data-mix="자일란" data-size="22" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="400" y="292" data-mix="자일로스" data-size="22" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="650" y="292" data-mix="자일리톨" data-size="22" data-anchor="middle" data-weight="700"></text>
+      </svg>
+      <p class="small c-muted">고리의 C에 붙은 H는 생략했다. 주황 상자는 두 물질에서 서로 다른 끝부분이다.</p>
+      <div class="note">글쓰기 길잡이: 자일로스와 자일리톨의 구조에서 <b>작용기의 차이점</b>을 확인한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 13 (1) ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 과학 글쓰기" data-title="과학 글쓰기 13 (1) 자일란의 단위체">
+  <h2><span class="tag">과학 글쓰기</span>13 (1) 자일란의 단위체와 중합 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 400" style="width:560px" aria-label="위: 고리 모양 자일로스 두 개의 하이드록시기가 마주 본다. 아래: 물 분자가 떨어져 나가고 두 고리가 산소 원자로 이어진다">
+        {{COND_BEFORE}}
+        <rect x="194" y="70" width="114" height="34" rx="8" fill="none" stroke="#1F6FD1" stroke-width="2" stroke-dasharray="6 4"/>
+        <text class="tex" x="260" y="34" data-mix="자일로스 + 자일로스" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+        <g data-arw="260,196,260,234,bfield,3"></g><text class="tex" x="272" y="222" data-mix="축합" data-size="19" data-anchor="start" fill="#7B4FC8" data-weight="700"></text>
+        <rect x="196" y="274" width="48" height="32" rx="8" fill="#2E9E6A" fill-opacity=".18" stroke="#2E9E6A" stroke-width="1.5"/>
+        {{COND_AFTER}}
+        <g data-anim="move" data-from="-230,-206" data-dur="1.2" data-delay=".4" data-ease="out"><rect x="440" y="272" width="96" height="36" rx="8" fill="none" stroke="#1F6FD1" stroke-width="2" stroke-dasharray="6 4"/><text class="tex" x="488" y="297" data-tex="\ce{+ H2O}" data-size="21" data-anchor="middle" fill="#1F6FD1"></text></g>
+      </svg>
+      <p class="small c-muted">파란 점선: 떨어져 나가는 물 · 초록 상자: 새로 생긴 결합. 고리의 H는 생략.</p>
+    </div>
+    <div class="col">
+      <p class="f21"><b>Q</b> 고분자 자일란의 단위체는 무엇이고, 어떤 중합 반응으로 합성될까?</p>
+      <div class="answer step mt8">단위체: <b>자일로스</b></div>
+      <div class="card step mt8"><p class="f21">이웃한 자일로스의 하이드록시기 사이에서 <b>물 분자가 떨어져 나가며</b> 결합한다 → <b class="c-bfield">축합 중합 반응</b></p></div>
+      <div class="formula sm step mt8">$n\,\ce{C5H10O5} \longrightarrow \ce{(C5H8O4)}_n + n\,\ce{H2O}$<div class="unit">사슬 양 끝은 생략한 꼴 · 반복 단위 $\ce{C5H8O4}$ = 자일로스 − 물</div></div>
+      <div class="board mt8" style="min-height:100px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 13 (2) ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 과학 글쓰기" data-title="과학 글쓰기 13 (2) 작용기의 변화">
+  <h2><span class="tag">과학 글쓰기</span>13 (2) 자일로스가 자일리톨이 되면 왜 성질이 변할까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 460px">
+      <svg class="fig" viewBox="0 0 600 300" style="width:460px" aria-label="자일로스(위 끝 포밀기)가 수소를 얻어 환원되면 자일리톨(위 끝 CH2OH, 하이드록시기 5개)이 된다">
+        <g data-anim="pop" data-o="130,36" data-dur=".6" data-delay=".3">{{XY2}}</g>
+        <g data-arw="238,150,362,150,rd,3"></g>
+        <text class="tex" x="300" y="132" data-mix="환원" data-size="21" data-anchor="middle" fill="#0E7490" data-weight="700"></text>
+        <text class="tex" x="300" y="182" data-tex="\ce{+ H2}" data-size="21" data-anchor="middle" fill="#0E7490"></text>
+      </svg>
+      <p class="small c-muted mt4">왼쪽 자일로스 · 오른쪽 자일리톨</p>
+    </div>
+    <div class="col">
+      <table class="tight rm39-cmp">
+        <tr><th>비교</th><th>자일로스</th><th>자일리톨</th></tr>
+        <tr><td>위 끝 작용기</td><td class="l">포밀기 $\ce{-CHO}$ + $\ce{-OH}$ 4개</td><td class="l"><span class="step" data-g="c1">$\ce{-OH}$만 5개</span></td></tr>
+        <tr><td>분자식</td><td class="l">$\ce{C5H10O5}$</td><td class="l"><span class="step" data-g="c2">$\ce{C5H12O5}$ (H 2개 많음)</span></td></tr>
+        <tr><td>은거울 반응</td><td class="l">한다 (환원성)</td><td class="l"><span class="step" data-g="c3">하지 않는다</span></td></tr>
+        <tr><td>단맛 · 열량</td><td class="l">설탕의 40 % 정도</td><td class="l"><span class="step" data-g="c4">설탕과 비슷, 열량 낮음</span></td></tr>
+        <tr><td>충치균</td><td class="l">—</td><td class="l"><span class="step" data-g="c4">소화하지 못함 → 산 ✕</span></td></tr>
+      </table>
+      <p class="f21 mt12"><b>Q</b> 성질이 바뀌는 까닭을 작용기로 말하면?</p>
+      <div class="answer step mt8">자일로스의 <b>포밀기가 환원되어 하이드록시기</b>가 되었기 때문이다 — 작용기가 바뀌면 성질이 바뀐다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 실험실 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 과학 글쓰기" data-title="실험실: 자일로스와 자일리톨의 은거울 반응">
+  <h2><span class="tag">실험실</span>자일로스와 자일리톨, 은거울 반응으로 구별하기</h2>
+  <div class="lab" data-lab="rm39mirror">
+    <div class="lab-ctl" style="flex-basis:400px">
+      <div class="ctl"><div class="lbl"><span>물 중탕 온도</span><output data-o="T"></output></div><input type="range" min="30" max="80" step="10" value="60" data-i="T" aria-label="물 중탕 온도"></div>
+      <div class="rm39-seg"><button class="btn rm39-act" data-act="heat">시험관 넣고 중탕</button><button class="btn" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <table class="readout rm39-read">
+        <tr><th>경과 시간</th><td><output data-o="t"></output></td></tr>
+        <tr class="hl"><th>자일로스</th><td><output data-o="pA"></output></td></tr>
+        <tr class="hl"><th>자일리톨</th><td><output data-o="pB"></output></td></tr>
+        <tr><th>포도당</th><td><output data-o="pC"></output></td></tr>
+      </table>
+      <output class="kind rm39-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="lab-fig" style="width:640px;height:300px">
+        <svg viewBox="0 0 640 300" width="640" height="300" aria-label="물 중탕한 시험관 세 개와 은 석출 정도–시간 그래프"></svg>
+      </div>
+      <table class="tight rm39-log"><thead><tr><th>온도</th><th>자일로스</th><th>자일리톨</th><th>포도당</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+  <p class="small c-muted mt4">세 시험관에 암모니아성 질산 은 수용액을 같은 양 넣었다. 표는 은 석출 50 %까지 걸린 시간. 과제: 60 °C, 40 °C, 80 °C에서 기록해 보자. (3-2 실험실 값으로 만든 수업용 모형)</p>
+</section>
+
+<!-- ════════ 13. 13 예시 글 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 과학 글쓰기" data-title="과학 글쓰기 13 예시 글">
+  <h2><span class="tag">과학 글쓰기</span>13 예시 글과 채점 요소</h2>
+  <p class="f21"><b>Q</b> (1)과 (2)를 구조식의 차이와 관련지어 한 편의 글로 써 볼까?</p>
+  <div class="row mt8">
+    <div class="col">
+      <div class="answer rm39-left step"><b>(1)</b> 자일란의 단위체는 자일로스이다. 고리 모양의 자일로스가 이웃한 자일로스와 하이드록시기 사이에서 물 분자를 내놓으며 차례로 결합하므로, 자일란은 축합 중합 반응으로 합성된다.</div>
+      <div class="answer rm39-left step mt8"><b>(2)</b> 자일로스의 포밀기($\ce{-CHO}$)가 수소를 얻어 환원되면 $\ce{-CH2OH}$가 되어, 하이드록시기만 5개 있는 자일리톨이 된다. 작용기가 바뀌었으므로 포밀기가 있을 때의 환원성이 없어지고, 단맛·열량과 세균이 이용할 수 있는지 같은 성질도 달라진다.</div>
+    </div>
+    <div class="col stack" style="flex:0 0 330px"><div class="note step"><b>채점 요소</b><br>① 단위체: 자일로스<br>② 하이드록시기 사이에서 물이 빠짐<br>③ 축합 중합 반응<br>④ 포밀기 → 하이드록시기(환원)<br>⑤ 작용기가 바뀌어 성질이 달라짐</div><div class="board mt8" style="min-height:110px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 포트폴리오 이야기: 덴드리머 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 포트폴리오 이야기" data-title="덴드리머">
+  <h2><span class="tag">포트폴리오 이야기</span>원하는 대로 정확하게 운반하는 고분자, 덴드리머 <span class="small c-muted">최신 과학</span></h2>
+  <div class="row">
+    <div class="col rm39-cards">
+      <div class="card"><p><b>덴드리머(dendrimer)</b> 일정한 규칙에 따라 분자의 사슬이 중심에서 바깥 방향으로 <b>삼차원으로 퍼진</b> 고분자이다. 대개 매우 대칭적인 공 모양이다.</p></div>
+      <div class="card mt8"><p><b>구조</b> 가운데 <b>코어</b>에서 뻗어 나간 가지가 이어져 내부에 빈 공간을 만들고, 표면에 다양한 <b>작용기</b>가 있다. 빈 공간이나 표면에 특정 물질을 결합시켜 운반할 수 있다.</p></div>
+      <div class="card mt8"><p><b>표면 작용기가 성질을 정한다</b> 예를 들어 표면 작용기가 양전하를 띠는 덴드리머는 음전하를 띠는 세포막을 통과할 수 있다. 몰질량·구조·성질을 원하는 대로 조절해 합성할 수 있다.</p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 360" style="width:380px" aria-label="코어에서 가지가 세 번 갈라져 공 모양으로 퍼지고, 표면에 작용기, 안쪽 빈 공간에 치료제가 있는 덴드리머">
+        <g data-anim="draw" data-dur="1.4" data-delay=".2" fill="none" stroke="#7B4FC8" stroke-width="4" stroke-linecap="round">
+          <path d="M190 170 L190 110 M190 170 L242 200 M190 170 L138 200"/>
+          <path d="M190 110 L160 72 M190 110 L220 72 M242 200 L290 190 M242 200 L262 246 M138 200 L90 190 M138 200 L118 246"/>
+          <path d="M160 72 L140 40 M160 72 L128 78 M220 72 L240 40 M220 72 L252 78 M290 190 L326 168 M290 190 L326 214 M262 246 L294 276 M262 246 L248 290 M90 190 L54 168 M90 190 L54 214 M118 246 L86 276 M118 246 L132 290"/>
+        </g>
+        <g fill="#E08A2C"><circle cx="140" cy="40" r="9"/><circle cx="128" cy="78" r="9"/><circle cx="240" cy="40" r="9"/><circle cx="252" cy="78" r="9"/><circle cx="326" cy="168" r="9"/><circle cx="326" cy="214" r="9"/><circle cx="294" cy="276" r="9"/><circle cx="248" cy="290" r="9"/><circle cx="54" cy="168" r="9"/><circle cx="54" cy="214" r="9"/><circle cx="86" cy="276" r="9"/><circle cx="132" cy="290" r="9"/></g>
+        <circle cx="190" cy="170" r="14" fill="#F08A24" stroke="#16233D" stroke-width="2"/>
+        <g data-anim="pop" data-o="190,170" data-dur=".6" data-delay="1.4"><circle cx="150" cy="140" r="12" fill="#7BC67E" stroke="#2E9E6A" stroke-width="2"/><circle cx="232" cy="142" r="12" fill="#7BC67E" stroke="#2E9E6A" stroke-width="2"/><circle cx="190" cy="226" r="12" fill="#7BC67E" stroke="#2E9E6A" stroke-width="2"/></g>
+        <text class="tex" x="190" y="330" data-mix="코어 · 가지 · 표면 작용기 · 치료제" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="small c-muted">주황 큰 원: 코어 · 보라 선: 가지 · 주황 점: 표면 작용기 · 초록 원: 빈 공간의 치료제</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 포트폴리오 이야기: 활동하기 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 포트폴리오 이야기" data-title="활동하기: 덴드리머의 쓰임 조사">
+  <h2><span class="tag">포트폴리오 이야기</span>활동하기(조사) 덴드리머는 어디에 쓰일까?</h2>
+  <svg class="fig" viewBox="0 0 1112 210" style="width:1112px" aria-label="약물 전달: 작용기를 인식하는 부분으로 암세포에 다가가 들어간 뒤 치료제를 내놓고 분해된다">
+    <ellipse cx="760" cy="105" rx="330" ry="96" fill="#FBE3E4" stroke="#D98E92" stroke-width="4"/>
+    <text class="tex" x="1040" y="30" data-mix="암세포" data-size="19" data-anchor="middle" fill="#B5545A" data-weight="700"></text>
+    <g data-anim="move" data-from="-120,0" data-dur="1.4" data-delay=".2" data-ease="out"><circle cx="180" cy="100" r="34" fill="none" stroke="#7B4FC8" stroke-width="4"/><circle cx="180" cy="100" r="9" fill="#F08A24"/><circle cx="168" cy="92" r="8" fill="#7BC67E"/><circle cx="194" cy="108" r="8" fill="#7BC67E"/><g fill="#E08A2C"><circle cx="214" cy="100" r="6"/><circle cx="180" cy="66" r="6"/><circle cx="180" cy="134" r="6"/><circle cx="146" cy="100" r="6"/></g></g>
+    <g data-arw="230,100,410,100,ink,3"></g>
+    <circle cx="520" cy="100" r="34" fill="none" stroke="#7B4FC8" stroke-width="4"/><circle cx="520" cy="100" r="9" fill="#F08A24"/>
+    <g data-anim="move" data-from="-30,-20" data-dur="1" data-delay="1" data-ease="out"><circle cx="600" cy="70" r="9" fill="#7BC67E"/><circle cx="616" cy="104" r="9" fill="#7BC67E"/></g>
+    <g data-arw="660,100,820,100,ink,3"></g>
+    <g stroke="#7B4FC8" stroke-width="4" stroke-linecap="round"><line x1="870" y1="80" x2="900" y2="94"/><line x1="920" y1="120" x2="948" y2="108"/><line x1="890" y1="128" x2="870" y2="140"/></g><circle cx="905" cy="110" r="9" fill="#F08A24"/>
+    <text class="tex" x="180" y="176" data-mix="① 작용기로 암세포 인식" data-size="19" data-anchor="middle" fill="#16233D"></text>
+    <text class="tex" x="520" y="176" data-mix="② 세포 안으로 → 치료제 내놓음" data-size="19" data-anchor="middle" fill="#16233D"></text>
+    <text class="tex" x="905" y="176" data-mix="③ 덴드리머는 분해" data-size="19" data-anchor="middle" fill="#16233D"></text>
+  </svg>
+  <div class="row mt8">
+    <div class="col">
+      <div class="card"><p class="f21"><b>활동하기</b> 덴드리머가 활용되는 여러 분야 중 하나를 골라, 그 분야에서 덴드리머가 유용한 점을 조사하여 발표해 보자.</p></div>
+      <div class="rm39-chips mt8"><span>약물 전달 시스템</span><span>유전 물질 운반체</span><span>촉매 운반체</span><span>수소 연료</span><span>화장품</span><span>센서</span></div>
+      <div class="card step mt8"><p class="f21"><b>예시</b> 약물 전달 — 항암제를 덴드리머에 싣고 표면 작용기가 암세포만 인식하게 하면, 건강한 세포에는 약이 덜 닿아 부작용이 줄고 적은 양으로 치료할 수 있다.</p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 380px">
+      <p class="f21"><b>Q</b> 개념 정리의 어느 빈칸과 이어질까?</p>
+      <div class="answer step mt8">❻ 작용기 — 표면 작용기를 바꾸면 덴드리머의 성질(가는 곳)이 바뀐다.</div>
+      <div class="board mt8" style="min-height:90px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 화학과 나의 미래 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 화학과 나의 미래" data-title="스마트 의류 연구원">
+  <h2><span class="tag">화학과 나의 미래</span>옷에 첨단 기술을 입히는 스마트 의류 연구원</h2>
+  <div class="row">
+    <div class="col rm39-cards">
+      <div class="card"><p><b>하는 일</b> 선수의 활동 범위·운동 속도·심박수를 실시간으로 기록하는 스마트 운동복, 쉽게 닳지 않고 열로부터 피부를 보호하는 스마트 군복처럼, 옷에 <b>최첨단 스마트 기술</b>을 접목하고 입기에 불편함이 없도록 연구·개발한다. 옷이 스마트폰이나 시계처럼 다양한 디지털 기능을 갖게 한다.</p></div>
+      <div class="card mt8"><p><b>필요한 능력</b> 최첨단 기술에 익숙하고 새 지식을 끊임없이 익히려는 자세 · <b>3D 프린팅</b>과 <b>코딩</b>에 대한 지식 · 미적 감각 · 무엇보다 여러 기술을 상상력으로 융합하는 <b>창의력</b></p></div>
+      <p class="small c-muted mt8">관련 학과: 섬유 화학과, 신소재 공학과, 컴퓨터·시스템 공학과, 의류 산업학과 등 · 커리어넷에서 스마트 의류 연구원 정보를 찾아보자.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 330" style="width:380px" aria-label="스마트 운동복의 가슴 센서가 전도성 실을 따라 신호를 보내 스마트폰에 기록한다">
+        <path d="M110 40 L70 60 L30 130 L70 150 L90 120 L90 290 H230 V120 L250 150 L290 130 L250 60 L210 40 Q160 70 110 40 Z" fill="#DDEEF8" stroke="#3E73A8" stroke-width="3"/>
+        <rect x="128" y="110" width="44" height="30" rx="6" fill="#16233D"/>
+        <path d="M172 125 H200 V230" fill="none" stroke="#5B6B7F" stroke-width="3"/>
+        <path d="M172 125 H200 V230" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 12" stroke-linecap="round" data-anim="dash" data-flow data-speed="30"/>
+        <rect x="186" y="230" width="28" height="20" rx="4" fill="#2E9E6A"/>
+        <rect x="300" y="190" width="56" height="96" rx="10" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><path d="M308 260 L318 240 L328 252 L338 220 L348 236" fill="none" stroke="#D7263D" stroke-width="3"/>
+        <path d="M218 240 Q262 230 296 238" fill="none" stroke="#1F6FD1" stroke-width="2.5" stroke-dasharray="5 5"/>
+        <text class="tex" x="150" y="100" data-mix="심박 센서" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="150" y="316" data-mix="전도성 실 · 전원" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="328" y="180" data-mix="기록" data-size="18" data-anchor="middle"></text>
+      </svg>
+      <p class="small c-muted">파란 점선: 센서 신호가 실을 따라 이동</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 화학과 나의 미래: 활동하기 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 화학과 나의 미래" data-title="활동하기: 스마트 의류 디자인 제안">
+  <h2><span class="tag">화학과 나의 미래</span>활동하기(발표) 내가 개발할 스마트 의류는?</h2>
+  <div class="card"><p class="f21">내가 스마트 의류 연구원이 된다면 어떤 스마트 의류를 개발할지 정하여, 접목해야 할 <b>스마트 기술</b>이 포함된 디자인을 제안해 보자.</p></div>
+  <div class="row mt8">
+    <div class="col">
+      <table class="tight rm39-plan step">
+        <tr><td>이름</td><td class="l">땀을 읽는 등산복 (예시)</td></tr>
+        <tr><td>기능</td><td class="l">땀의 양과 체온을 재어, 몸이 식으면 발열 섬유를 켜고 탈수 위험을 알림</td></tr>
+        <tr><td>스마트 기술</td><td class="l">땀 센서 · 온도 센서 · 전도성 실 · 블루투스로 스마트폰 앱 연결</td></tr>
+        <tr><td>재료</td><td class="l">나일론·폴리에스터 겉감(가볍고 질김), 물이 잘 빠지는 안감</td></tr>
+        <tr><td>화학 연결</td><td class="l">합성 섬유(고분자)의 성질, 전지·센서 — 탄소 화합물과 전기 화학</td></tr>
+      </table>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 290" style="width:400px" aria-label="등산복 디자인에 땀 센서, 온도 센서, 발열 섬유, 전원이 표시되어 있다">
+        <path d="M110 30 L70 50 L30 120 L70 140 L90 110 L90 270 H230 V110 L250 140 L290 120 L250 50 L210 30 Q160 60 110 30 Z" fill="#FDE8D6" stroke="#C2410C" stroke-width="3"/>
+        <g data-anim="pop" data-o="125,100" data-dur=".5" data-delay=".2"><circle cx="125" cy="100" r="12" fill="#1F6FD1"/></g>
+        <g data-anim="pop" data-o="195,100" data-dur=".5" data-delay=".5"><circle cx="195" cy="100" r="12" fill="#D7263D"/></g>
+        <g data-anim="pop" data-o="160,180" data-dur=".5" data-delay=".8"><path d="M110 170 Q135 160 160 170 T210 170" fill="none" stroke="#E08A2C" stroke-width="6" stroke-linecap="round"/></g>
+        <g data-anim="pop" data-o="160,240" data-dur=".5" data-delay="1.1"><rect x="146" y="230" width="28" height="20" rx="4" fill="#2E9E6A"/></g>
+        <text class="tex" x="300" y="60" data-mix="땀 센서" data-size="18" data-anchor="start" fill="#1F6FD1"></text>
+        <text class="tex" x="300" y="106" data-mix="온도 센서" data-size="18" data-anchor="start" fill="#D7263D"></text>
+        <text class="tex" x="300" y="180" data-mix="발열 섬유" data-size="18" data-anchor="start" fill="#C2410C"></text>
+        <text class="tex" x="300" y="246" data-mix="전원" data-size="18" data-anchor="start" fill="#2E9E6A"></text>
+      </svg>
+      <div class="board" style="min-height:70px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 프로젝트 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 프로젝트" data-title="프로젝트: 재활용을 넘어 새활용으로">
+  <h2><span class="tag">프로젝트</span>지속가능한 미래를 위해 재활용을 넘어 새활용으로</h2>
+  <div class="row">
+    <div class="col">
+      <div class="stages c2 rm39-two">
+        <div class="stage"><h3>재활용 (recycling)</h3><p>본래의 용도를 다한 제품을 다시 한번 <b>본래의 모습 그대로</b> 사용하는 것</p><p>예 분리배출한 종이 → 재생 종이, 폐플라스틱 → 새 플라스틱</p></div>
+        <div class="stage"><h3>새활용 (upcycling)</h3><p>디자인을 더하거나 활용 방법을 바꾸어 <b>처음과 전혀 다른 모습</b>으로 재탄생시키는 것</p><p>예 천막 → 가방, 항공기 자재 → 이름표, 군용 텐트 → 모자</p></div>
+      </div>
+      <p class="f21 mt12"><b>Q</b> 다 쓴 페트병을 녹여 다시 플라스틱 원료로 만들면? <span class="step">→ <span class="ans">재활용</span></span></p>
+      <p class="f21 mt8"><b>Q</b> 페트병을 잘라 화분으로 꾸미면? <span class="step">→ <span class="ans">새활용</span></span></p>
+      <div class="board mt12" style="min-height:130px"></div>
+    </div>
+    <div class="col stack" style="flex:0 0 330px">
+      <svg class="fig" viewBox="0 0 330 330" style="width:330px" aria-label="재활용은 제자리를 도는 순환 화살표, 새활용은 위로 올라가는 화살표">
+        <g data-anim="spin" data-o="90,110" data-speed="30"><path d="M90 50 A60 60 0 0 1 142 140" fill="none" stroke="#2E9E6A" stroke-width="12" stroke-linecap="round"/><path d="M128 158 A60 60 0 0 1 36 136" fill="none" stroke="#2E9E6A" stroke-width="12" stroke-linecap="round"/><path d="M32 116 A60 60 0 0 1 72 52" fill="none" stroke="#2E9E6A" stroke-width="12" stroke-linecap="round"/><path d="M135.0 152.1 L132.4 134.5 L151.5 145.5 Z" fill="#2E9E6A"/><path d="M29.9 123.7 L46.0 131.5 L26.2 141.1 Z" fill="#2E9E6A"/><path d="M85.8 48.5 L75.7 63.1 L69.2 42.1 Z" fill="#2E9E6A"/></g>
+        <text class="tex" x="90" y="214" data-mix="재활용" data-size="21" data-anchor="middle" data-weight="700"></text>
+        <path d="M200 170 L230 120 L250 140 L290 60" fill="none" stroke="#7B4FC8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        <g data-anim="move" data-from="-20,30" data-dur="1.2" data-rep="alt" data-ease="io"><path d="M276 50 L306 44 L298 74 Z" fill="#7B4FC8"/></g>
+        <text class="tex" x="250" y="214" data-mix="새활용" data-size="21" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="165" y="270" data-mix="같은 모습으로 다시 ↔ 새 쓸모로" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 새활용 재료와 고분자 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 프로젝트" data-title="프로젝트: 새활용 재료와 고분자">
+  <h2><span class="tag">프로젝트</span>새활용 재료는 어떤 탄소 화합물일까?</h2>
+  <table class="tight rm39-cmp mt8">
+    <tr><th>버려지는 물건</th><th>주재료(고분자)</th><th>만드는 중합 반응 · 배운 곳</th></tr>
+    <tr><td>페트병</td><td class="l">폴리(에틸렌 테레프탈레이트)(PET)</td><td class="l"><span class="step" data-g="m1">축합 중합 — 3-3</span></td></tr>
+    <tr><td>비닐봉지</td><td class="l">폴리에틸렌</td><td class="l"><span class="step" data-g="m2">첨가 중합 — 3-3</span></td></tr>
+    <tr><td>헌 옷·천막</td><td class="l">면(천연 고분자), 나일론·폴리에스터(합성 섬유)</td><td class="l"><span class="step" data-g="m3">나일론은 축합 중합 — 3-4</span></td></tr>
+  </table>
+  <div class="row mt12">
+    <div class="col">
+      <p class="f21"><b>Q</b> 이런 고분자 물건을 버리기보다 새활용하면 무엇이 좋을까?</p>
+      <div class="answer step mt8">합성 고분자는 자연에서 잘 분해되지 않고, 만들 때 자원(석유)과 에너지가 든다. 오래·새롭게 쓰면 <b>쓰레기와 자원 소비가 줄어든다</b>.</div>
+    </div>
+    <div class="col stack" style="flex:0 0 340px"><div class="board" style="min-height:140px"></div></div>
+  </div>
+  <p class="small c-muted mt8">버려진 물건의 재료를 알면 어떤 도구로 자르고 붙일지, 얼마나 오래 쓸 수 있을지 정하기 쉽다.</p>
+</section>
+
+<!-- ════════ 20. 프로젝트 ❶ ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 프로젝트" data-title="프로젝트 ❶ 새활용 제품 조사하기">
+  <h2><span class="tag">프로젝트</span>❶ 새활용 제품 조사하기</h2>
+  <p class="f21"><b>1.</b> 우리 생활 속 다양한 새활용 제품 중 한 가지를 정해 새활용 과정을 조사해 보자.</p>
+  <p class="f21 mt8"><b>2.</b> 새활용 제품이 갖춰야 할 조건을 토론하여 학급에서 새활용 제품 <b>기본 조건 세 가지</b>를 정해 보자.</p>
+  <div class="flow mt16 rm39-flow">
+    <div class="fnode">제품 하나 고르기</div><div class="farr">→</div>
+    <div class="fnode hl">원래 물건·재료</div><div class="farr">→</div>
+    <div class="fnode">새활용 과정</div><div class="farr">→</div>
+    <div class="fnode hl">좋은 점·아쉬운 점</div><div class="farr">→</div>
+    <div class="fnode">학급 토론</div>
+  </div>
+  <div class="row mt16">
+    <div class="col"><div class="note">가치·태도 길잡이: <b>새활용을 하는 까닭</b>을 생각하며 새활용 제품이 갖춰야 할 조건을 정한다.</div>
+      <div class="rm39-chips mt12"><span>검색어 예: 새활용 제품</span><span>업사이클링 과정</span><span>새활용 센터</span><span>현수막 가방</span></div></div>
+    <div class="col stack" style="flex:0 0 380px"><div class="board" style="min-height:150px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. 프로젝트 ❶ 예시 결과 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 프로젝트" data-title="프로젝트 ❶ 예시 결과">
+  <h2><span class="tag">프로젝트</span>❶ 예시 결과: 조사 기록과 학급 기본 조건</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>Q</b> 버려진 현수막은 어떤 과정을 거쳐 장바구니가 될까?</p>
+      <div class="flow mt8 rm39-flow step">
+        <div class="fnode">수거</div><div class="farr">→</div>
+        <div class="fnode">세척·건조</div><div class="farr">→</div>
+        <div class="fnode">재단</div><div class="farr">→</div>
+        <div class="fnode">디자인·바느질</div><div class="farr">→</div>
+        <div class="fnode hl">장바구니</div>
+      </div>
+      <p class="small c-muted mt8">현수막은 주로 합성 섬유 천에 인쇄한 것이어서 질기고 물에 강하다 — 장바구니로 오래 쓸 수 있다.</p>
+      <p class="f21 mt12"><b>Q</b> 우리 학급의 새활용 제품 기본 조건 세 가지는?</p>
+      <div class="card step mt8"><p class="f21"><b>예시</b> ① 버려질 물건을 주재료로 쓴다 ② 실제로 쓸 수 있는 쓸모가 있다 ③ 안전하고 오래 쓸 수 있다</p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 330px">
+      <svg class="fig" viewBox="0 0 330 200" style="width:330px" aria-label="길게 펼친 현수막이 장바구니로 바뀐다"><rect x="20" y="30" width="140" height="56" rx="4" fill="#FDE8D6" stroke="#C2410C" stroke-width="3"/><text class="tex" x="90" y="66" data-mix="현수막" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><g data-arw="170,58,212,58,ink,3"></g><g data-anim="pop" data-o="270,90" data-dur=".7" data-delay=".3"><path d="M226 70 H314 L304 170 H236 Z" fill="#FDE8D6" stroke="#C2410C" stroke-width="3"/><path d="M248 70 Q248 34 270 34 Q292 34 292 70" fill="none" stroke="#C2410C" stroke-width="4"/></g><text class="tex" x="270" y="194" data-mix="장바구니" data-size="19" data-anchor="middle"></text></svg>
+      <div class="board" style="min-height:120px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 프로젝트 ❷ 제작 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 프로젝트" data-title="프로젝트 ❷ 새활용 제품 제작하기">
+  <h2><span class="tag">프로젝트</span>❷ 새활용 제품 제작하기</h2>
+  <p class="f21"><b>1.</b> 모둠별로 우리 주변에서 사용을 다한 제품을 활용해, 학급에서 정한 새활용 제품 기본 조건 세 가지에 부합하는 새활용 제품을 만들자.</p>
+  <div class="stages rm39-st4 mt12">
+    <div class="stage" data-anim="pop" data-dur=".5" data-delay=".1"><h3>① 고르기</h3><svg class="fig" viewBox="0 0 200 110" style="width:200px" aria-label="헌 청바지"><path d="M60 10 H140 L150 100 H112 L100 44 L88 100 H50 Z" fill="#9FC3DD" stroke="#3E73A8" stroke-width="3"/></svg><p>헌 청바지와 단추를 모은다</p></div>
+    <div class="stage" data-anim="pop" data-dur=".5" data-delay=".4"><h3>② 자르기</h3><svg class="fig" viewBox="0 0 200 110" style="width:200px" aria-label="천 조각"><rect x="40" y="24" width="120" height="66" fill="#9FC3DD" stroke="#3E73A8" stroke-width="3"/><line x1="40" y1="57" x2="160" y2="57" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/></svg><p>필통 크기로 잘라 두 장을 만든다</p></div>
+    <div class="stage" data-anim="pop" data-dur=".5" data-delay=".7"><h3>③ 꿰매기</h3><svg class="fig" viewBox="0 0 200 110" style="width:200px" aria-label="꿰맨 주머니"><rect x="40" y="28" width="120" height="62" rx="8" fill="#9FC3DD" stroke="#3E73A8" stroke-width="3"/><path d="M46 84 H154" stroke="#C2410C" stroke-width="3" stroke-dasharray="6 5"/></svg><p>세 변을 꿰매고 지퍼를 단다</p></div>
+    <div class="stage" data-anim="pop" data-dur=".5" data-delay="1"><h3>④ 꾸미기</h3><svg class="fig" viewBox="0 0 200 110" style="width:200px" aria-label="꾸민 필통"><rect x="40" y="28" width="120" height="62" rx="8" fill="#9FC3DD" stroke="#3E73A8" stroke-width="3"/><circle cx="80" cy="58" r="8" fill="#F2C230"/><circle cx="110" cy="58" r="8" fill="#D7263D"/></svg><p>주머니·단추로 꾸며 필통 완성</p></div>
+  </div>
+  <div class="row mt12">
+    <div class="col"><div class="note">과정·기능 길잡이: 새활용 제품을 만들 때 쓰는 도구의 사용법을 익히고 안전에 유의한다.</div></div>
+    <div class="col"><div class="card"><p class="f21"><b>안전</b> 가위·칼은 몸 바깥쪽으로 · 글루건은 뜨거우니 끝을 만지지 않기 · 재료는 미리 씻어 말리기 · 남은 조각은 분리배출</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 프로젝트 ❷ 전시·평가 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 프로젝트" data-title="프로젝트 ❷ 전시하고 평가하기">
+  <h2><span class="tag">프로젝트</span>❷ 전시하고 평가하기</h2>
+  <p class="f21"><b>2.</b> 우리 모둠이 만든 새활용 제품을 전시해 보자. &nbsp; <b>3.</b> 우리 모둠의 새활용 제품을 평가해 보자.</p>
+  <table class="tight rm39-eval mt8"><tr><th>평가 내용</th><th>상</th><th>중</th><th>하</th></tr>
+    <tr><td class="l">학급에서 정한 새활용 제품 기본 조건 세 가지에 잘 부합하게 새활용 제품을 만들었는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">새활용 제품을 완성도 있게 만들었고 제품의 창의성과 예술성이 돋보이는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">모든 모둠원이 새활용 제품을 만드는 활동을 하면서 자원 순환의 필요성을 깨달았는가?</td><td>□</td><td>□</td><td>□</td></tr></table>
+  <div class="row mt12">
+    <div class="col"><table class="tight rm39-plan"><tr><td>제품 이름</td><td class="l">청바지 필통 (예시 전시 카드)</td></tr><tr><td>원래 물건</td><td class="l">헌 청바지(면), 단추</td></tr><tr><td>기본 조건</td><td class="l">① 버려질 물건 ✓ ② 쓸모 ✓ ③ 안전·튼튼 ✓</td></tr><tr><td>만든 사람</td><td class="l">○모둠</td></tr></table></div>
+    <div class="col stack" style="flex:0 0 380px"><div class="board" style="min-height:120px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 포트폴리오 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 포트폴리오" data-title="포트폴리오 정리">
+  <h2><span class="tag">포트폴리오</span>이 단원의 활동 결과를 정리해 보자</h2>
+  <div class="row">
+    <div class="col">
+      <div class="rm39-chips"><span>104쪽 최신 과학 이야기</span><span>105쪽 화학과 나의 미래</span><span>110–111쪽 프로젝트</span></div>
+      <ol class="goals mt12">
+        <li>이 단원의 활동 결과를 모아 「<b>Ⅲ. 탄소 화합물과 반응 포트폴리오</b>」 자료로 정리해 보자.</li>
+        <li>디지털 공유 플랫폼을 활용해 포트폴리오를 친구들에게 공유하고, 친구들의 포트폴리오에 댓글을 달거나 '좋아요' 표시를 하면서 소통해 보자.</li>
+        <li>포트폴리오를 인쇄해 책자로 만들어 보자.</li>
+      </ol>
+    </div>
+    <div class="col stack" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 170" style="width:380px" aria-label="세 쪽으로 펼친 포트폴리오 책자"><g data-anim="pop" data-o="190,90" data-dur=".8"><g fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"><rect x="20" y="20" width="106" height="140" rx="6"/><rect x="137" y="20" width="106" height="140" rx="6"/><rect x="254" y="20" width="106" height="140" rx="6"/></g><rect x="34" y="36" width="78" height="44" fill="#E9DDF7"/><rect x="151" y="36" width="78" height="44" fill="#DDEEF8"/><rect x="268" y="36" width="78" height="44" fill="#D7F0DD"/><g stroke="#C9D3DD" stroke-width="4" stroke-linecap="round"><line x1="34" y1="100" x2="112" y2="100"/><line x1="34" y1="120" x2="100" y2="120"/><line x1="151" y1="100" x2="229" y2="100"/><line x1="151" y1="120" x2="217" y2="120"/><line x1="268" y1="100" x2="346" y2="100"/><line x1="268" y1="120" x2="334" y2="120"/></g></g></svg>
+      <div class="card step"><p class="f21"><b>예시 목차</b> 표지 → 덴드리머 조사 → 스마트 의류 디자인 → 과학 글쓰기 13 → 새활용 제품 조사·제작·평가 → 느낀 점</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅲ. 탄소 화합물과 반응 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅲ. 탄소 화합물과 반응 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 탄소 화합물의 정의와 종류, 작용기에 따른 성질의 변화를 이해하고, 중합 반응으로 고분자가 합성되는 과정을 설명했다.</button>
+    <button class="chk">[과정·기능] 실험을 통해 작용기의 변화를 탐구하고, 새로운 물질을 만들었다.</button>
+    <button class="chk">[가치·태도] 우리 주변의 다양한 탄소 화합물과 탄소 화합물의 반응을 통해 합성된 새로운 물질이 과학·기술·사회 발전에 끼친 영향을 조사해 화학의 유용성을 깨달았다.</button>
+  </div>
+  <div class="card mt8">
+    <p class="f21"><b>Q</b> 포밀기가 있는지 확인하는 실험은? <span class="step">→ <span class="ans">은거울 반응 — 포밀기가 산화되고 은 이온($\ce{Ag+}$)이 환원되어 은이 석출된다.</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 첨가 중합과 축합 중합은 무엇이 다를까? <span class="step">→ <span class="ans">축합 중합에서만 물과 같은 작은 분자가 떨어져 나간다.</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 작용기가 바뀌면 무엇이 바뀔까? <span class="step">→ <span class="ans">물질의 성질(자일로스 → 자일리톨: 환원성이 없어짐)</span></span></p>
+  </div>
+  <p class="small c-muted mt8">평가 결과가 아쉽다면 'Ⅲ. 탄소 화합물과 반응'을 다시 한번 학습해 봅시다.</p>
+  <div class="note puzzle mt8"><b>화학 반응의 세계를 마치며</b> Ⅰ 산 염기(양성자의 이동) → Ⅱ 산화·환원(전자의 이동) → Ⅲ 탄소 화합물(작용기의 변화) — 세 단원 모두 "무엇이 이동하고 바뀌는가"로 반응을 읽었다.</div>
+</section>
