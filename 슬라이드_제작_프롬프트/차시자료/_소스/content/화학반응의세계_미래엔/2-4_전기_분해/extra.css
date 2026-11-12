@@ -1,0 +1,33 @@
+/* 2-4 전기 분해 — 덱 전용 (모두 .rm24- 접두어) */
+.rm24-ox{color:#C2410C;font-weight:700}
+.rm24-rd{color:#0E7490;font-weight:700}
+table.rm24-t{width:100%}
+table.rm24-t th,table.rm24-t td{font-size:20px;padding:7px 10px;text-align:center;line-height:1.45}
+table.rm24-t td.l{text-align:left}
+table.rm24-e th,table.rm24-e td{padding:4px 12px}
+.rm24-cond{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rm24-cond .card h3,.rm24-pick .card h3{font-size:22px}
+.rm24-cond .card p,.rm24-pick .card p{margin-top:6px}
+.rm24-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.formula.rm24-fs{font-size:22px;padding:8px 16px;margin:8px auto 10px}
+.stages.rm24-use{grid-template-columns:1fr;gap:10px}
+.stages.rm24-use .stage{padding:8px 14px}
+/* 개념 지도 */
+.rm24-map{display:flex;gap:14px;align-items:stretch}
+.rm24-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
+.rm24-node.rm24-main{flex:1 1 0;border-color:#C2410C;background:#FFF7F2}
+.rm24-node.rm24-main p{margin-top:9px}
+.rm24-side{flex:0 0 180px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.rm24-node.rm24-dim{border-style:dashed;color:var(--muted)}
+/* 실험실 */
+.rm24-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.rm24-sl{font-size:19px;font-weight:700;width:112px}
+.rm24-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 9px;font-size:19px}
+.rm24-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm24-seg .btn.rm24-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm24-read{width:100%}
+table.rm24-read th{font-size:19px;padding:3px 6px;text-align:left}
+table.rm24-read td{font-size:20px;padding:3px 6px;text-align:center}
+output.kind.rm24-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.rm24-log{width:100%}
+table.rm24-log th,table.rm24-log td{font-size:19px;padding:2px 4px;text-align:center}
