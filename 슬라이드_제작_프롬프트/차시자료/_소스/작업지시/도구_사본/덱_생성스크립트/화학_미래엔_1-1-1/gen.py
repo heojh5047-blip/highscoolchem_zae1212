@@ -137,17 +137,21 @@ def icon(kind, cx, cy):
         return (f'<path d="M{cx-40} {cy-4} L{cx} {cy-36} L{cx+40} {cy-4}" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/>'
                 f'<rect x="{cx-30}" y="{cy-8}" width="60" height="40" fill="#E9EEF3" {st}/>'
                 f'<rect x="{cx-20}" y="{cy+2}" width="14" height="14" fill="#BFE0F5" stroke="#16233D" stroke-width="1.8"/><rect x="{cx+4}" y="{cy+6}" width="14" height="26" fill="#C9A27A" stroke="#16233D" stroke-width="1.8"/>')
+    if kind == 'bottle':
+        return (f'<path d="M{cx-8} {cy-36} h16 v10 q16 6 16 22 v34 q0 6 -6 6 h-36 q-6 0 -6 -6 v-34 q0 -16 16 -22 Z" fill="#DDEEF8" {st}/>'
+                f'<rect x="{cx-16}" y="{cy}" width="32" height="18" rx="3" fill="#FFFFFF" stroke="#6E9CCB" stroke-width="2"/>'
+                f'<circle cx="{cx+26}" cy="{cy-22}" r="6" fill="#FFFFFF" stroke="#6E9CCB" stroke-width="2"/><circle cx="{cx+36}" cy="{cy-8}" r="4" fill="#FFFFFF" stroke="#6E9CCB" stroke-width="2"/>')
     raise ValueError(kind)
 
 
 def life6():
-    items = [('bread', '빵'), ('shirt', '운동복'), ('brush', '칫솔'), ('pill', '감기약'), ('phone', '스마트폰'), ('bus', '버스')]
+    items = [('house', '건물'), ('bottle', '세제'), ('pill', '의약품'), ('shirt', '기능성 옷'), ('phone', '스마트 기기'), ('bus', '자동차')]
     s = ''
     for i, (k, n) in enumerate(items):
         cx = 90 + i * 186
         s += f'<g data-anim="pop" data-o="{cx},70" data-dur=".7" data-delay="{.2 + i * .15:.2f}" data-ease="back"><circle cx="{cx}" cy="70" r="62" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/>{icon(k, cx, 72)}</g>'
         s += T(cx, 166, n, 21, weight=700)
-    return f'<svg class="fig" viewBox="0 0 1112 180" style="width:1112px" aria-label="빵, 운동복, 칫솔, 감기약, 스마트폰, 버스 그림">{s}</svg>'
+    return f'<svg class="fig" viewBox="0 0 1112 180" style="width:1112px" aria-label="건물, 세제, 의약품, 기능성 옷, 스마트 기기, 자동차 그림">{s}</svg>'
 
 
 def unit4():
@@ -165,10 +169,10 @@ def unit4():
 # ───────── 화학과 인류의 문제 (허브)
 def hub():
     cx, cy, r = 300, 196, 74
-    names = ['식량', '의류', '주거', '건강', '에너지', '환경', '첨단 기술']
+    names = ['식량', '의류', '교통·주거', '건강', '에너지', '환경']
     s = ''
     for i, n in enumerate(names):
-        a = math.radians(-90 + i * 360 / 7)
+        a = math.radians(-90 + i * 360 / len(names))
         bx, by = cx + 205 * math.cos(a), cy + 150 * math.sin(a)
         x1, y1 = cx + (r + 8) * math.cos(a), cy + (r + 8) * math.sin(a)
         # 상자 가장자리까지
@@ -182,7 +186,7 @@ def hub():
         s += T(bx, by + 8, n, 21, weight=700)
     s += (f'<g data-anim="pop" data-o="{cx},{cy}" data-dur=".8" data-ease="back"><circle cx="{cx}" cy="{cy}" r="{r}" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="3"/>'
           + T(cx, cy - 4, '화학', 30, weight=700, fill='#1B5E3F') + T(cx, cy + 26, '새 물질·새 반응', 18, fill='#1B5E3F') + '</g>')
-    return f'<svg class="fig" viewBox="0 0 600 392" style="width:560px" aria-label="가운데 화학에서 식량, 의류, 주거, 건강, 에너지, 환경, 첨단 기술로 뻗어 나가는 화살표">{s}</svg>'
+    return f'<svg class="fig" viewBox="0 0 600 392" style="width:560px" aria-label="가운데 화학에서 식량, 의류, 교통·주거, 건강, 에너지, 환경으로 뻗어 나가는 화살표">{s}</svg>'
 
 
 # ───────── 공기 속 질소
@@ -300,14 +304,14 @@ def card_icons():
 
 # ───────── 의약품 연표
 def timeline():
-    ev = [(80, '옛날', '버드나무 껍질||열·통증 완화'), (300, '1897', '아스피린 합성||(호프만)'), (520, '1928', '페니실린 발견||(플레밍)'),
-          (750, '1940년대', '페니실린||대량 생산'), (990, '오늘날', '백신·||항바이러스제')]
+    ev = [(80, '과거', '감염병으로||많은 사람이 사망'), (300, '1928', '최초의 항생제||페니실린 발견'), (520, '1940년대', '페니실린||대량 생산'),
+          (750, '그 뒤', '분자 구조를 바꾸어||성능을 개량한 항생제'), (990, '오늘날', '새로운 감염병의||백신을 빠르게 개발')]
     s = '<path d="M40 70 H1070" stroke="#5B6B7F" stroke-width="4" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.4" data-delay=".2"/>'
     for i, (x, y, t) in enumerate(ev):
         s += f'<g data-anim="pop" data-o="{x},70" data-dur=".6" data-delay="{.4 + i * .25:.2f}" data-ease="back"><circle cx="{x}" cy="70" r="13" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="4"/></g>'
         s += T(x, 40, y, 21, weight=700, fill='#1B5E3F')
         s += T(x, 118, t, 20)
-    return f'<svg class="fig" viewBox="0 0 1110 168" style="width:1110px" aria-label="의약품 연표: 버드나무 껍질, 1897 아스피린 합성, 1928 페니실린 발견, 1940년대 대량 생산, 오늘날 백신">{s}</svg>'
+    return f'<svg class="fig" viewBox="0 0 1110 168" style="width:1110px" aria-label="항생제와 백신 연표: 과거 감염병, 1928 페니실린 발견, 1940년대 대량 생산, 개량한 항생제, 오늘날 백신 개발">{s}</svg>'
 
 
 # ───────── 메테인 연소 입자
@@ -337,6 +341,28 @@ def env_icons():
     chim = '<rect x="50" y="56" width="40" height="64" fill="#D9DDE2" stroke="#16233D" stroke-width="2.5"/><path d="M60 52 q-10 -14 4 -22 q14 -8 10 -22 M80 52 q10 -12 0 -24" fill="none" stroke="#8C99A6" stroke-width="3" stroke-linecap="round"/>'
     tank = '<rect x="204" y="28" width="52" height="84" rx="14" fill="#E6F4EC" stroke="#16233D" stroke-width="2.5"/>' + T(230, 78, '$\\ce{CO2}$', 20, weight=700)
     c = pair(chim, tank, '$\\ce{CO2}$ 배출', '포집·활용', '공장 굴뚝의 이산화 탄소를 모아 저장하고 활용', '.8')
+    return a, b, c
+
+
+# ───────── 탄소 포집·활용·저장 카드 그림
+def ccus_icons():
+    def pair(prob, sol, lab1, lab2, aria, d):
+        return (f'<svg viewBox="0 0 300 156" aria-label="{aria}">{prob}<g data-arw="128,62,172,62,field,3"></g>'
+                f'<g data-anim="pop" data-o="230,62" data-dur=".7" data-delay="{d}" data-ease="back">{sol}</g>'
+                + T(70, 140, lab1, 19, fill=PLUS) + T(230, 140, lab2, 19, fill='#1B5E3F') + '</svg>')
+    chim = '<rect x="50" y="56" width="40" height="64" fill="#D9DDE2" stroke="#16233D" stroke-width="2.5"/><path d="M60 52 q-10 -14 4 -22 q14 -8 10 -22 M80 52 q10 -12 0 -24" fill="none" stroke="#8C99A6" stroke-width="3" stroke-linecap="round"/>'
+    tank = '<rect x="204" y="28" width="52" height="84" rx="14" fill="#E6F4EC" stroke="#16233D" stroke-width="2.5"/>' + T(230, 78, '$\\ce{CO2}$', 20, weight=700)
+    tankL = '<rect x="44" y="28" width="52" height="84" rx="14" fill="#E6F4EC" stroke="#16233D" stroke-width="2.5"/>' + T(70, 78, '$\\ce{CO2}$', 20, weight=700)
+    a = pair(chim, tank, '공장·발전소', '포집', '공장 굴뚝에서 나오는 이산화 탄소를 모아 탱크에 담음', '.4')
+    brick = ''.join(f'<rect x="{186 + (j % 2) * 22 + i * 44}" y="{36 + j * 22}" width="40" height="18" rx="2" fill="#E9C9A8" stroke="#16233D" stroke-width="2"/>'
+                    for j in range(4) for i in range(2 - (j % 2)))
+    b = pair(tankL, brick, '모은 $\\ce{CO2}$', '건축 자재·섬유', '모은 이산화 탄소로 건축 자재나 섬유 같은 유용한 물질을 만듦', '.6')
+    ground = ('<rect x="180" y="14" width="100" height="22" fill="#CDEBC0" stroke="#16233D" stroke-width="2"/>'
+              '<rect x="180" y="36" width="100" height="30" fill="#E8D5B5" stroke="#16233D" stroke-width="2"/>'
+              '<rect x="180" y="66" width="100" height="46" fill="#C9B08A" stroke="#16233D" stroke-width="2"/>'
+              '<path d="M230 14 V92" stroke="#5B6B7F" stroke-width="4"/>'
+              '<ellipse cx="230" cy="96" rx="30" ry="11" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="2.5"/>')
+    c = pair(tankL, ground, '모은 $\\ce{CO2}$', '땅속 깊이 저장', '모은 이산화 탄소를 땅속 깊은 지층에 저장', '.8')
     return a, b, c
 
 
@@ -386,11 +412,11 @@ def match():
 def main():
     tpl = open(os.path.join(HERE, 'slides.tpl.html'), encoding='utf-8').read()
     gr, n = graphene()
-    ci = card_icons(); ei = env_icons()
+    ci = card_icons(); cc = ccus_icons()
     F = {'cover': cover(), 'unitmap': unitmap(0), 'unit4': unit4(), 'life6': life6(), 'hub': hub(), 'air': air(),
          'reactor': reactor(), 'haber': haber_particles(), 'chain': chain(), 'furnace': furnace(),
          'card1': ci[0], 'card2': ci[1], 'card3': ci[2], 'timeline': timeline(), 'combust': combustion(),
-         'env1': ei[0], 'env2': ei[1], 'env3': ei[2], 'graphene': gr, 'match': match()}
+         'pillbig': '<g transform="translate(120 100) scale(1.9) translate(-120 -100)">' + icon('pill', 120, 100) + '</g>', 'cc1': cc[0], 'cc2': cc[1], 'cc3': cc[2]}
     def rep(m):
         k = m.group(1)
         return F.get(k, m.group(0))

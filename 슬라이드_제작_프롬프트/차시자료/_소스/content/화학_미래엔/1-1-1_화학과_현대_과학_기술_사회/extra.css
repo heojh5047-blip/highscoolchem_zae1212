@@ -10,7 +10,7 @@ table.cm111-sub td:last-child{width:170px;text-align:center}
 table.cm111-fib td:first-child{width:180px;text-align:center}
 table.cm111-new td{width:50%}
 table.cm111-sum th,table.cm111-sum td{font-size:21px;padding:6px 10px}
-table.cm111-sum td:first-child{width:140px;text-align:center}
+table.cm111-sum td:first-child{width:210px;text-align:center}
 table.cm111-role{width:100%}
 table.cm111-role td{text-align:center}
 table.cm111-rub td:first-child{width:90px;text-align:center}
@@ -54,3 +54,13 @@ ul.cm111-ul li{font-size:21px;line-height:1.55;margin-top:4px}
 .cm111-node.cm111-dim{border-style:dashed;color:var(--muted)}
 .cm111-side{flex:0 0 300px;display:flex;flex-direction:column;gap:10px}
 .cm111-arr{font-size:28px;color:var(--muted)}
+
+/* 교과서 재검토(11/12) 추가 */
+table.cm111-life{width:100%;table-layout:fixed;margin-top:2px}
+table.cm111-life td{font-size:17px;line-height:1.4;padding:6px 8px;text-align:center;vertical-align:top}
+table.cm111-sum2{width:100%;table-layout:fixed}
+table.cm111-sum2 th{font-size:20px;padding:6px 8px}
+table.cm111-sum2 td{font-size:18px;line-height:1.5;padding:6px 10px;vertical-align:top}
+ol.cm111-ch{list-style:none;margin:0;padding:0}
+ol.cm111-ch li{margin-top:10px;line-height:1.5}
+.cm111-art p{font-size:18px;line-height:1.5}
