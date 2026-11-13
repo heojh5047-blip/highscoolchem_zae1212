@@ -1,0 +1,30 @@
+/* 덱 전용 스타일 (접두어 ts2h-) — 교사 연수 공통 꼴 */
+.ts2h-info{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.ts2h-info > span{display:inline-block;padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-size:19px;color:var(--ink)}
+.ts2h-info > span b{color:var(--field);margin-right:6px}
+.ts2h-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ts2h-stat{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 20px}
+.ts2h-stat .n{display:block;font-size:54px;font-weight:800;line-height:1.15;color:var(--field)}
+.ts2h-stat .n.minus{color:var(--minus)} .ts2h-stat .n.equi{color:var(--equi)} .ts2h-stat .n.plus{color:var(--plus)}
+.ts2h-stat p{font-size:21px;line-height:1.5}
+.ts2h-tl{display:grid;gap:14px}
+.ts2h-tl.c5{grid-template-columns:repeat(5,1fr)} .ts2h-tl.c6{grid-template-columns:repeat(6,1fr)} .ts2h-tl.c4{grid-template-columns:repeat(4,1fr)}
+.ts2h-tl .it{background:#fff;border:1.5px solid var(--line);border-top:6px solid var(--minus);border-radius:12px;padding:10px 14px}
+.ts2h-tl .it h3{font-size:23px;margin-bottom:6px;color:var(--minus)}
+.ts2h-tl .it p{font-size:19px;line-height:1.5}
+.ts2h-tl .it.hl{border-top-color:var(--field)} .ts2h-tl .it.hl h3{color:var(--field)}
+.ts2h-tl .it.eq{border-top-color:var(--equi)} .ts2h-tl .it.eq h3{color:var(--equi)}
+.ts2h-big{font-size:36px;font-weight:700;line-height:1.4}
+.ts2h-ok{color:var(--field);font-weight:700} .ts2h-no{color:var(--plus);font-weight:700}
+.ts2h-src{margin-top:14px;color:var(--muted)}
+.ts2h-flag{display:inline-block;padding:1px 10px;border-radius:6px;background:#FFF1E0;color:#9A4F0C;font-size:18px;font-weight:700;vertical-align:2px;margin-right:6px}
+.ts2h-case{background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--plus);border-radius:12px;padding:12px 16px}
+.ts2h-case h3{font-size:22px;margin-bottom:4px}
+.ts2h-case p{font-size:19px;line-height:1.55}
+.ts2h-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.ts2h-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 20px}
+.ts2h-num{display:inline-block;min-width:34px;height:34px;line-height:34px;border-radius:50%;background:var(--ink);color:#fff;text-align:center;font-size:19px;font-weight:700;margin-right:10px}
+.cover .cover-fig.ts2h-fig{-webkit-mask-image:none;mask-image:none;top:90px}
+.slide table.tight td,.slide table.tight th{font-size:21px;padding:10px 14px}
+.slide .stage p,.slide .stage li{font-size:20px}
+.slide .note,.slide .note p{font-size:20px}
