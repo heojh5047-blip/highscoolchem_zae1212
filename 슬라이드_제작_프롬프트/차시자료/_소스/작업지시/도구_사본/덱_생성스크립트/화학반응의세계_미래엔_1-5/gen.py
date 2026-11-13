@@ -32,7 +32,7 @@ def dropper(cx, ytop, lab):
 
 # ── S1 표지: 증류수 vs 완충 용액에 염산 한 방울
 b = '<circle cx="270" cy="270" r="250" fill="#EEF3F8"/>'
-for i, (nm, p0, p1, col) in enumerate([('증류수', '7.0', '1.8', PLUS), ('완충 용액', '4.7', '4.6', INK)]):
+for i, (nm, p0, p1, col) in enumerate([('증류수', '7.00', '1.74', PLUS), ('완충 용액', '4.74', '4.66', INK)]):
     cx = 160+i*220
     b += dropper(cx, 40, '\\ce{HCl(aq)}')
     b += '<g data-anim="move" data-from="0,-50" data-dur=".9" data-ease="in" data-delay="%s"><path d="M%s 182 Q%s 196 %s 200 A7 7 0 1 1 %s 200 Q%s 196 %s 182 Z" fill="%s"/></g>' % (r(.4+i*.6), r(cx), r(cx+6), r(cx+6), r(cx-6), r(cx-6), r(cx), PLUS)
@@ -46,7 +46,7 @@ for i, (nm, p0, p1, col) in enumerate([('증류수', '7.0', '1.8', PLUS), ('완�
     b += T(cx, 440, mix='pH %s → %s' % (p0, p1), size=24, fill=col, weight='700')
 b += T(270, 492, mix='염산을 똑같이 넣었을 때', size=20, fill=MUTED)
 b += T(270, 30, tex='\\ce{HCl(aq)}', size=22, fill=PLUS)
-F['S1'] = '<svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="증류수와 완충 용액에 염산을 넣었을 때 pH 변화: 7.0에서 1.8, 4.7에서 4.6">' + b + '</svg>'
+F['S1'] = '<svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="증류수와 완충 용액에 염산을 넣었을 때 pH 변화: 7.00에서 1.74, 4.74에서 4.66">' + b + '</svg>'
 
 # ── S3 레몬
 b = ''
@@ -134,8 +134,8 @@ b += T(mx-60, 44, mix='pH 측정기', size=19, anchor='end', fill=MUTED)
 F['S8'] = svg((540, 330), 520, '증류수, 아세트산 수용액, 아세트산 나트륨 수용액, 완충 용액을 50 mL씩 담은 비커와 pH 측정기', b)
 
 # ── S11 pH 변화 비교 (처음 → NaOH / HCl)
-data = [('증류수', None, 7.0, 12.2, 1.8, '+5.2', '−5.2'), ('아세트산', '수용액', 2.7, 3.8, 1.7, '+1.1', '−1.0'),
-        ('아세트산||나트륨', '수용액', 9.0, 12.2, 5.7, '+3.2', '−3.3'), ('완충 용액', None, 4.7, 4.9, 4.6, '+0.2', '−0.1')]
+data = [('증류수', None, 7.00, 12.26, 1.74, '+5.26', '−5.26'), ('아세트산', '수용액', 2.72, 3.79, 1.74, '+1.07', '−0.98'),
+        ('아세트산||나트륨', '수용액', 9.04, 12.25, 5.71, '+3.21', '−3.33'), ('완충 용액', None, 4.74, 4.83, 4.66, '+0.09', '−0.08')]
 x0, y0, hh = 70, 340, 294
 Y = lambda p: y0-p/14*hh
 b = line(x0, y0, x0, y0-hh-14, MUTED, 2) + '<path d="M%s %s L%s %s L%s %s Z" fill="%s"/>' % (r(x0), r(y0-hh-22), r(x0-5), r(y0-hh-12), r(x0+5), r(y0-hh-12), MUTED)
@@ -160,7 +160,7 @@ for i, (n1, n2, p0, pb, pa, db, da) in enumerate(data):
         b += line(cx-14, Y(pa), cx-2, Y(pa), PLUS, 4)
     b += dot(cx, Y(p0), INK, 7)
     b += T(cx+16, Y(pb)-4 if pb-p0 >= .5 else Y(pb)-12, mix=db, size=19, anchor='start', fill=MINUS, weight='700', halo=True)
-    b += T(cx-16, Y(pa)+18 if p0-pa >= .5 else Y(pa)+26, mix=da, size=19, anchor='end', fill=PLUS, weight='700', halo=True)
+    b += T(cx-16, (Y(pa)+2 if i == 2 else Y(pa)+18) if p0-pa >= .5 else Y(pa)+26, mix=da, size=19, anchor='end', fill=PLUS, weight='700', halo=True)
     nb = len(n1.split('||'))
     for k, nn in enumerate(n1.split('||') + ([n2] if n2 else [])):
         b += T(cx, y0+26+k*24, mix=nn, size=19, weight='700' if k < nb else None)
