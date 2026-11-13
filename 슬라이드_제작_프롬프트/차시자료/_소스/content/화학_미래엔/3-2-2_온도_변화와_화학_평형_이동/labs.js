@@ -85,7 +85,7 @@ function tempLab(root, API){
   const Qco=(x,Cl)=>x/Math.max(1e-30,(CO-x)*Math.pow(Math.max(1e-9,Cl-4*x),4));
   const eqGas=(c,K)=>{ const x=(-1+Math.sqrt(1+8*K*c))/(4*K); return [x,(c-x)/2]; };
   const coName=f=>f<0.2?'붉은색':f<0.4?'붉은 보라색':f<0.6?'보라색':f<0.8?'푸른 보라색':'파란색';
-  const nName=a=>a<0.012?'아주 옅은 적갈색':a<0.04?'옅은 적갈색':a<0.07?'적갈색':'진한 적갈색';
+  const nName=a=>a<0.012?'아주 연한 적갈색':a<0.04?'연한 적갈색':a<0.07?'적갈색':'진한 적갈색';
   const fK=K=>K>=100?K.toFixed(0):K>=10?K.toFixed(1):K.toFixed(1);
   // ---------- 그리기 ----------
   function drawBath(T){ const cold=T<20, hot=T>40; deco.innerHTML='';
@@ -135,8 +135,8 @@ function tempLab(root, API){
       if(Math.abs(x1-st.x)/CO<0.03) m+=' (염화 이온이 적어 색 변화가 작다. 먼저 염화 칼슘을 넣어 보자.)'; }
     else { const K=KN(t), K0=KN(T0), c=st.a+2*st.y, [ae]=eqGas(c,K); l=Math.log10((st.y/(st.a*st.a))/K); col=nName(ae);
       anim={kind:'no2',t:0,a0:st.a,ae,c};
-      m= up ? `${T0} → ${t} °C: 온도를 높임 → K가 작아짐(${fK(K0)} → ${fK(K)}) → Q > K → 에너지를 흡수하는 역반응이 우세하게 진행한다. 이산화 질소가 늘어 적갈색이 진해진다.`
-            : `${T0} → ${t} °C: 온도를 낮춤 → K가 커짐(${fK(K0)} → ${fK(K)}) → Q < K → 에너지를 방출하는 정반응이 우세하게 진행한다. 사산화 이질소가 늘어 색이 옅어진다.`; }
+      m= up ? `${T0} → ${t} °C: 온도를 높임 → K가 작아짐(${fK(K0)} → ${fK(K)}) → Q > K → 에너지를 흡수하는 역반응이 우세하게 진행한다. 이산화 질소가 늘어 색이 진해진다.`
+            : `${T0} → ${t} °C: 온도를 낮춤 → K가 커짐(${fK(K0)} → ${fK(K)}) → Q < K → 에너지를 방출하는 정반응이 우세하게 진행한다. 사산화 이질소가 늘어 색이 연해진다.`; }
     O('msg').textContent=m;
     log([matTxt(),`${T0} → ${t} °C`,cmpTxt(l),dirTxt(l),col]);
     addPt(); draw(false); }
