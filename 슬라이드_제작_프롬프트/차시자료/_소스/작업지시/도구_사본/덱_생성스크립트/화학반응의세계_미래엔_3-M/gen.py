@@ -45,9 +45,9 @@ OUT['XYLITOL']=fischer(110,30,'CH2OH',boxtop=118)
 # S11 큰 피셔 두 개 (viewBox 0 0 600 300): 자일로스 cx 130, 자일리톨 cx 470
 OUT['XY2']=fischer(130,36,'CHO',boxtop=86)+fischer(470,36,'CH2OH',boxtop=118)
 # S10 축합: 위 반응 전 (y=90), 아래 반응 후 (y=300) viewBox 0 0 560 400
-s1,_=ring(110,86,right='OH'); s2,_=ring(410,86,left='HO')
+s1,_=ring(110,86,right='OH',left='HO',lx=24); s2,_=ring(410,86,left='HO',right='OH',rx=496)  # 끝 OH까지 그려 자일로스 하나 = C5H10O5
 OUT['COND_BEFORE']=s1+s2
-s3,_=ring(110,290); s4,a4=ring(330,290)
+s3,_=ring(110,290,left='HO',lx=24); s4,a4=ring(330,290,right='OH',rx=416)
 # 연결 O: C1(A)=(156,290), C4(B)=(284,290) → O at 220
 s5=sf([('C',156,290),('O',220,290),('C',284,290)],[(0,1,1),(1,2,1)],22).split('<text')[0]  # 선만
 OUT['COND_AFTER']=s3+s4+s5+'<text class="tex" x="220" y="297.9" data-tex="\\mathrm{O}" data-size="22" data-anchor="middle"></text>'
