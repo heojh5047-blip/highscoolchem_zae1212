@@ -1,0 +1,51 @@
+/* 2-5 우리 생활 속 산화·환원 반응 — 덱 전용 (모두 .rm25- 접두어) */
+.rm25-ox{color:#C2410C;font-weight:700}
+.rm25-rd{color:#0E7490;font-weight:700}
+.formula.rm25-fs{font-size:22px;padding:8px 16px;margin:8px auto 10px}
+table.rm25-t{width:100%}
+table.rm25-t th,table.rm25-t td{font-size:20px;padding:7px 10px;text-align:center;line-height:1.45}
+table.rm25-t td.l{text-align:left}
+table.rm25-t3 td{vertical-align:top;width:33%}
+table.rm25-res th,table.rm25-res td{padding:6px 6px;font-size:20px}
+.rm25-cond{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.rm25-cond .card{padding:10px 12px;text-align:center}
+.rm25-cond .card h3{font-size:22px;margin-top:4px}
+.rm25-cond .card p{margin-top:4px;text-align:left}
+/* 실험실 */
+.rm25-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.rm25-sl{font-size:19px;font-weight:700;width:104px}
+.rm25-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 9px;font-size:19px}
+.rm25-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm25-seg .btn.rm25-act{background:var(--field);color:#fff;border-color:var(--field)}
+.rm25-gap{flex:1 1 auto}
+table.rm25-read{width:100%}
+table.rm25-read th{font-size:19px;padding:3px 6px;text-align:left}
+table.rm25-read td{font-size:20px;padding:3px 6px;text-align:center}
+table.rm25-sc{width:100%}
+table.rm25-sc th{font-size:19px;padding:2px 4px}
+table.rm25-sc td{font-size:21px;font-weight:700;padding:2px 4px;text-align:center}
+table.rm25-log{width:100%}
+table.rm25-log th,table.rm25-log td{font-size:19px;padding:2px 4px;text-align:center}
+.rm25-rrow{gap:12px;align-items:flex-start;margin-top:4px}
+.rm25-key{display:inline-block;width:26px;height:0;vertical-align:middle;margin-right:6px}
+.rm25-k1{border-top:4px solid #E08A2C}
+.rm25-k2{border-top:3px dashed #5B6B7F}
+output.kind.rm25-msg{margin-top:6px;line-height:1.45;font-size:19px}
+/* 카드 뉴스 */
+.rm25-news{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rm25-card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:4px 4px 0 #E2E7EC}
+.rm25-card.rm25-c1{background:#16233D;color:#fff;border-color:#16233D}
+.rm25-ck{font-size:19px;color:#FFE45C;font-weight:700}
+.rm25-ct{font-size:32px;font-weight:700;margin-top:4px}
+.rm25-ct2{font-size:24px;font-weight:700;color:#0E7490}
+/* 말풍선 */
+.rm25-bub{display:flex;gap:18px;justify-content:center}
+.rm25-b{background:#FFF8E1;border:2px solid #E08A2C;border-radius:18px;padding:8px 18px;font-size:21px;font-weight:700}
+/* 개념 지도 */
+.rm25-map{display:flex;gap:14px;align-items:stretch}
+.rm25-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
+.rm25-node.rm25-main{flex:1 1 0;border-color:#C2410C;background:#FFF7F2}
+.rm25-node.rm25-main p{margin-top:8px}
+.rm25-side{flex:0 0 200px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.rm25-node.rm25-dim{border-style:dashed;color:var(--muted)}
+table.rm25-log td.l{text-align:left}

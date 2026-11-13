@@ -1,0 +1,35 @@
+/* 2-2 용액의 성질 — 덱 전용 (모두 .em22- 접두어) */
+.cover h1.em22-h1{font-size:120px}
+table.em22-var{width:100%}
+table.em22-var th{width:130px;font-size:20px}
+table.em22-var td{font-size:20px}
+ol.em22-proc li{font-size:21px;line-height:1.55;margin-bottom:6px}
+table.em22-res{width:100%}
+table.em22-res td{text-align:center}
+table.em22-res .blank{min-width:150px}
+table.em22-k{width:100%}
+table.em22-k td,table.em22-k th{text-align:center;font-size:20px}
+table.em22-k tr.em22-hl td{background:#FFF8D6;font-weight:700}
+.answer.em22-left{text-align:left}
+.em22-st .stage{padding:10px 14px}
+.em22-ic{display:flex;align-items:center;gap:12px}
+.em22-ic svg{flex:0 0 170px;margin:0}
+.em22-ic p{font-size:19px}
+/* 실험실 */
+.em22-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.em22-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 14px;font-size:20px}
+.em22-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em22-seg .btn.em22-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em22-seg .btn.em22-rec{background:#fff;color:var(--field);border-color:var(--field)}
+table.em22-read{width:100%}
+table.em22-read th{font-size:19px;padding:5px 10px;text-align:left}
+table.em22-read td{font-size:22px;width:150px;padding:5px 10px;text-align:center}
+output.kind.em22-msg{display:block;margin:6px 0;line-height:1.45;font-size:19px;min-height:56px}
+table.em22-log{width:100%}
+table.em22-log th,table.em22-log td{font-size:19px;padding:3px 6px;text-align:center}
+/* 개념 지도 */
+.em22-map{display:flex;align-items:stretch;gap:14px}
+.em22-col{display:flex;flex-direction:column;gap:10px;flex:1 1 0}
+.em22-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.55}
+.em22-node.em22-main{flex:1 1 auto;border-color:var(--field);background:#F2FAF5}
+.em22-node.em22-dim{flex:1 1 0;border-style:dashed;color:var(--muted)}

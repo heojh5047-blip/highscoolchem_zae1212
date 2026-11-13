@@ -1,0 +1,27 @@
+<!-- ════════ 10. 실험실 ════════ -->
+<section class="slide" data-sec="01 · 자료실" data-title="실험실: 금속을 이온 수용액에">
+  <h2><span class="tag alt">자료실</span>실험실: 금속을 이온 수용액에 넣기</h2>
+  <div class="lab" data-lab="rm21metal">
+    <div class="lab-ctl" style="flex-basis:470px">
+      <div class="rm21-seg"><span class="small">금속판</span><button class="btn" data-m="Mg">Mg</button><button class="btn on" data-m="Zn">Zn</button><button class="btn" data-m="Cu">Cu</button><button class="btn" data-m="Ag">Ag</button></div>
+      <div class="rm21-seg"><span class="small">수용액</span><button class="btn" data-s="Mg">$\ce{MgSO4}$</button><button class="btn" data-s="Zn">$\ce{ZnSO4}$</button><button class="btn on" data-s="Cu">$\ce{CuSO4}$</button><button class="btn" data-s="Ag">$\ce{AgNO3}$</button></div>
+      <table class="readout rm21-read">
+        <tr class="hl"><th>반응 여부</th><td><output data-o="rx"></output></td></tr>
+        <tr><th>산화되는 물질</th><td><output data-o="ox"></output></td></tr>
+        <tr><th>환원되는 물질</th><td><output data-o="rd"></output></td></tr>
+        <tr><th>주고받은 전자</th><td><output data-o="ne"></output></td></tr>
+      </table>
+      <div class="rm21-seg mt8"><button class="btn rm21-act" data-act="rec">측정 기록</button><button class="btn" data-act="again">다시 넣기</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind rm21-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="lab-fig" style="width:560px;height:300px">
+        <svg viewBox="0 0 560 300" width="560" height="300" aria-label="비커 속 금속판과 판 표면의 확대 입자 모형"></svg>
+        <div class="ov" data-ov="eq" style="font-size:19px;line-height:1.5;transform:none"></div>
+        <div class="ov" data-ov="leg" style="font-size:17px;color:#5B6B7F;transform:none"></div>
+      </div>
+      <table class="tight rm21-log mt8"><thead><tr><th>금속</th><th>수용액</th><th>반응</th><th>산화</th><th>환원</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+

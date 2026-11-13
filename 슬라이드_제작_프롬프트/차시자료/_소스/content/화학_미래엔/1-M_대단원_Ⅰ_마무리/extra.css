@@ -1,0 +1,47 @@
+/* 1-M 대단원 Ⅰ 마무리 — 덱 전용 (모두 .cm19- 접두어) */
+.cover h1.cm19-h1{font-size:104px}
+/* 개념 정리 가지 그림 */
+.cm19-tree{display:grid;grid-template-columns:150px 28px 200px 28px 250px 28px 1fr;grid-auto-rows:minmax(74px,auto);row-gap:12px;align-items:center;margin-top:6px}
+.cm19-tree2{grid-template-columns:140px 28px 180px 28px 170px 190px 1fr;grid-auto-rows:minmax(70px,auto)}
+.cm19-n{background:#fff;border:2px dashed #C9D3DD;border-radius:14px;padding:8px 12px;font-size:21px;line-height:1.4;text-align:center;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+p.cm19-n{display:block;align-self:center}
+.cm19-root{grid-column:1;background:#E8457F;color:#fff;border:0;border-radius:50%;font-weight:700;aspect-ratio:1;align-self:center;font-size:22px}
+.cm19-mid{background:#D7F0DD;border:0;font-weight:700}
+.cm19-leaf{text-align:left;justify-content:flex-start}
+.cm19-eq{padding:4px 8px}
+.cm19-a{text-align:center;font-size:24px;color:var(--muted)}
+.cm19-al{font-size:19px;text-align:right;padding-right:8px;white-space:nowrap}
+.cm19-n .blank{min-width:110px}
+/* 표 */
+table.cm19-map{width:100%}
+table.cm19-map th,table.cm19-map td{font-size:19px;padding:3px 8px}
+table.cm19-map td:nth-child(3){white-space:nowrap;color:var(--muted)}
+table.cm19-map td:last-child{white-space:nowrap;font-weight:700}
+.choices.cm19-c1{flex-direction:column;gap:10px}
+.bogi.cm19-nob::before{content:none}
+table.cm19-q4 th,table.cm19-q4 td{font-size:21px;text-align:center;padding:6px 18px}
+table.cm19-q4 .blank{min-width:90px}
+table.cm19-cnt th,table.cm19-cnt td{font-size:20px;text-align:center;padding:3px 12px}
+table.cm19-sea th,table.cm19-sea td{font-size:20px;text-align:center;padding:4px 10px}
+table.cm19-var{width:100%}
+table.cm19-var th{width:140px;font-size:21px}
+table.cm19-var td{font-size:21px}
+.stages.cm19-st4{grid-template-columns:repeat(4,1fr);gap:14px}
+.stages.cm19-st4 p{font-size:19px;line-height:1.45}
+.stages.cm19-st4 h3{font-size:21px;margin:0 0 4px}
+.flow.cm19-flow .fnode{font-size:21px}
+table.cm19-eval{width:100%}
+table.cm19-eval td,table.cm19-eval th{font-size:20px;padding:4px 10px}
+table.cm19-eval td:not(.l){text-align:center;width:56px}
+/* 실험실 */
+.cm19-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.cm19-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.cm19-seg .btn.cm19-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.readout.cm19-read{margin:6px 0 8px}
+table.readout.cm19-read td{white-space:nowrap}
+label.cm19-chk{display:flex;align-items:center;gap:8px;font-size:19px;cursor:pointer}
+label.cm19-chk input{width:20px;height:20px}
+output.cm19-msg{font-size:19px;font-weight:600;line-height:1.45;margin-top:8px}
+table.cm19-log{width:100%;margin-top:6px}
+table.cm19-log td,table.cm19-log th{font-size:19px;padding:2px 5px;text-align:center}
+.formula.cm19-fs{font-size:24px}

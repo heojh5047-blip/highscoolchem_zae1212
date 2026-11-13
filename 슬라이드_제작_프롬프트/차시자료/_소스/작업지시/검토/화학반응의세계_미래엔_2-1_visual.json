@@ -1,0 +1,61 @@
+{
+ "findings": [
+  {
+   "slide": 1,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "표지 그림 설명 라벨이 비커 아래와 겹치고 왼쪽이 잘림",
+   "fix": "라벨을 그림 아래 가운데 한 줄로 옮김(반영)"
+  },
+  {
+   "slide": 10,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "실험실 반쪽 반응식 겹침 글이 확대 원·비커 윗선과 겹침",
+   "fix": "확대 원·비커·금속판 위치를 내림(반영)"
+  },
+  {
+   "slide": 13,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "물 분자 δ+ 라벨이 SVG 오른쪽 끝에서 잘림",
+   "fix": "viewBox 넓힘(반영)"
+  },
+  {
+   "slide": 25,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "두 카드 안 반응식이 칸을 넘침",
+   "fix": "카드를 세로로 쌓고 반응식을 제목 줄로(반영)"
+  },
+  {
+   "slide": 20,
+   "severity": "low",
+   "rule": "T3",
+   "problem": "메테인 연소 반응식 조각 간격이 좁고 산화수 숫자가 원자보다 왼쪽으로 치우침",
+   "fix": "간격 넓힘(반영), 숫자 치우침은 KaTeX overset 특성으로 유지"
+  },
+  {
+   "slide": 36,
+   "severity": "low",
+   "rule": "T3",
+   "problem": "계수 반응식 화살표 양옆이 붙음",
+   "fix": "화살표 양옆 간격 추가(반영)"
+  },
+  {
+   "slide": 24,
+   "severity": "low",
+   "rule": "T3",
+   "problem": "산화수 overset 반응식이 붙어 보임",
+   "fix": "반응식 블록 + 산화수 설명 줄로 바꿈(반영)"
+  },
+  {
+   "slide": "5,25,33,35",
+   "severity": "info",
+   "rule": "지도서 대조 뒤 재확인",
+   "problem": "문장 바뀐 4장 sheet 확인 — 넘침·겹침 없음",
+   "fix": "없음"
+  }
+ ],
+ "summary": "자동 점검 0건, 콘솔 0건, 전체 캡처 모음 2회 확인. 원자 색·크기(덱 공통 약속), 산화 ox·환원 rd 색 일관, 정답 가운데 정렬 확인."
+}

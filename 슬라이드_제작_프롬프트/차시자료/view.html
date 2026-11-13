@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수업 슬라이드</title>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/config.js"></script>
+</head>
+<body>
+<div class="viewer"><iframe id="f" title="수업 슬라이드" allow="fullscreen" allowfullscreen></iframe></div>
+<div class="vbar"><a id="home" href="index.html">← 목록</a><span id="state">불러오는 중…</span></div>
+<script type="module">
+import { getFB, isAdmin, IS_LOCAL } from './js/fb.js';
+import { deckParam, loadDeck, getSlides, setSlides, dbKey, hash } from './js/deckio.js';
+const $ = s => document.querySelector(s);
+const d = deckParam();
+if (IS_LOCAL) $('#home').href = 'index.html?local';
+(async () => {
+  if (!d) { $('#state').textContent = '덱 주소가 올바르지 않습니다'; return; }
+  try {
+    let html = await loadDeck(d);
+    const fb = await getFB();
+    let info = '원본';
+    try {
+      const ov = await fb.get('decks/' + dbKey(d));
+      if (ov && ov.slides) {
+        const changed = ov.baseHash && ov.baseHash !== hash(getSlides(html));
+        html = setSlides(html, ov.slides);
+        info = '웹 수정본' + (changed ? ' (원본이 그 뒤에 다시 빌드됨)' : '');
+      }
+    } catch (e) { console.warn('[view] 수정본을 읽지 못해 원본을 보여 줌', e); }
+    const f = $('#f');
+    f.addEventListener('load', () => { try { f.contentWindow.focus(); } catch (e) { } });
+    f.srcdoc = html;
+    document.title = (html.match(/<title>([^<]*)<\/title>/) || [, '수업 슬라이드'])[1];
+    $('#state').textContent = info;
+    fb.onUser(u => { if (isAdmin(u)) $('#state').innerHTML = info + ` · <a href="edit.html?deck=${encodeURIComponent(d)}${IS_LOCAL ? '&local' : ''}">수정</a>`; });
+  } catch (e) { $('#state').textContent = e.message; }
+})();
+// 바깥(목록 단추)을 눌러도 키보드 조작이 슬라이드로 가게
+addEventListener('keydown', e => { try { const w = document.getElementById('f').contentWindow; w.focus(); w.document.dispatchEvent(new KeyboardEvent('keydown', { key: e.key, code: e.code, bubbles: true })); } catch (_) { } });
+</script>
+</body>
+</html>

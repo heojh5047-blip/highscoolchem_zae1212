@@ -1,0 +1,82 @@
+{
+"findings": [
+{
+"slide": 2,
+"severity": "medium",
+"rule": "M1",
+"problem": "SVG data-mix 안의 <b> 태그가 글자 그대로 보임",
+"fix": "<b> 대신 data-weight=700(반영)"
+},
+{
+"slide": 7,
+"severity": "medium",
+"rule": "T1",
+"problem": "물질 칩이 낱말마다 쪼개져 보임(keepWords span에 칩 스타일이 걸림)",
+"fix": ".rm31-chips > span 으로 선택자 제한(반영)"
+},
+{
+"slide": 19,
+"severity": "high",
+"rule": "D8",
+"problem": "여섯 구조식 격자 CSS가 없어 첫 그림이 화면을 덮음",
+"fix": ".rm31-g3s 3열 격자·svg 높이 120px(반영)"
+},
+{
+"slide": 21,
+"severity": "high",
+"rule": "M1",
+"problem": "실험실 구조식 원소 기호와 분자식이 KaTeX 로드 전 글자(\\mathrm{H})로 남음, 범례가 축 라벨과 겹침",
+"fix": "API.ready에서 다시 그림, 범례를 시험관 옆 세로로 옮김(반영)"
+},
+{
+"slide": 10,
+"severity": "medium",
+"rule": "3.2",
+"problem": "작은 공-막대 모형의 H 라벨이 화면 16px 미만",
+"fix": "반지름 18.5 미만 원자는 라벨 빼고 색으로 구분(엔진 원소 색), 골격 그림에 '검은 공 = 탄소' 범례(반영)"
+},
+{
+"slide": 1,
+"severity": "medium",
+"rule": "D3",
+"problem": "표지 에탄올 모형의 수소 원자가 겹쳐 보임",
+"fix": "원자끼리 가장 덜 겹치는 보기 각도 자동 계산(반영)"
+},
+{
+"slide": 30,
+"severity": "medium",
+"rule": "T4",
+"problem": "탄산수소 나트륨 반응식이 칸을 넘침, H+ 라벨과 화살표 겹침",
+"fix": "반응식을 전체 폭 줄로, 화살표를 위로(반영)"
+},
+{
+"slide": 29,
+"severity": "low",
+"rule": "D8",
+"problem": "폼산 -CHO 라벨이 왼쪽 가장자리에서 잘림",
+"fix": "점선 상자 아래 가운데로(반영)"
+},
+{
+"slide": 25,
+"severity": "low",
+"rule": "D8",
+"problem": "물 분자 하나가 에탄올 수소와 겹치고 범례가 잘림",
+"fix": "물 분자 2개로 줄이고 범례 위치 조정(반영)"
+},
+{
+"slide": 2,
+"severity": "low",
+"rule": "T1",
+"problem": "학습할 내용 흐름이 두 줄로 넘어감(오늘의 흐름도 같음)",
+"fix": "노드 글을 줄임(반영)"
+},
+{
+"slide": 35,
+"severity": "low",
+"rule": "지도서 대조",
+"problem": "(나) 모형을 에탄올로 바꾼 뒤 배치 확인",
+"fix": "gen.py q03 다시 생성, 캡처 모음으로 겹침 없음 확인(반영)"
+}
+],
+"summary": "자동 점검 32건 → 0건. 캡처 모음으로 전체를 보고 겹침·잘림·라벨 크기를 고쳤다. (11/13) 지도서 대조로 고친 6·7·22·23·28·29·35·36·37장을 캡처 모음으로 확인, 자동 점검 0건."
+}

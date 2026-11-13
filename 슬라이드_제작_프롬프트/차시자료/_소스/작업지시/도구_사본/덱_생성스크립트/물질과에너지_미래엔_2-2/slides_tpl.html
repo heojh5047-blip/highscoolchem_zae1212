@@ -1,0 +1,504 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 용액의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 용액의 성질 › 02</div>
+    <h1 class="em22-h1">용액의<br><span class="acc">성질</span></h1>
+    <p class="sub">설탕을 녹이면 물이 왜 덜 증발하고, 더 높은 온도에서 끓고, 더 낮은 온도에서 얼까?</p>
+    <p class="meta">고등학교 물질과 에너지 52–57쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="밀폐 용기 속 물과 설탕물, 물 쪽에서 더 많은 수증기 분자가 증발한 입자 모형">{{cover}}</svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 용액의 성질" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12물에02-02]</span>실험 데이터를 이용하여 용액의 농도에 따른 증기압, 끓는점, 어는점의 변화를 비교하고, 일상생활에서 나타나는 사례와 연관 지어 설명할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>용액의 농도에 따른 <b>증기압, 끓는점, 어는점</b>의 변화를 비교할 수 있다.</li>
+    <li>용액의 농도에 따른 증기압, 끓는점, 어는점의 변화를 <b>일상생활에서 나타나는 사례</b>와 관련지어 설명할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">증기 압력 내림</div><div class="farr">→</div>
+    <div class="fnode">라울 법칙</div><div class="farr">→</div>
+    <div class="fnode">몰랄 농도</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 설탕물의 끓는점·어는점</div><div class="farr">→</div>
+    <div class="fnode">끓는점 오름·어는점 내림</div><div class="farr">→</div>
+    <div class="fnode">생활 속 사례</div>
+  </div>
+  <div class="note mt12"><b>지난 시간과 연결</b> 물은 수소 결합 때문에 끓는점이 높고 비열이 크다. 오늘은 물에 다른 물질이 녹으면 증기압, 끓는점, 어는점이 어떻게 달라지는지 알아본다.</div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 용액의 성질 · 도입" data-title="생각 열기: 주스는 안 얼었네?">
+  <h2><span class="tag">생각 열기</span>주스는 안 얼었네?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px"><svg class="fig" viewBox="0 0 420 250" style="width:430px" aria-label="냉동실에 둔 물은 얼음이 되었고 주스는 액체로 남아 있다">{{freezer}}</svg></div>
+    <div class="col">
+      <p class="f22">같은 양의 물과 주스를 냉동실에 두었더니 물은 얼어 얼음이 되었는데, 주스는 얼지 않았다.</p>
+      <p class="f22 mt12"><b>Q</b> 주스가 물보다 잘 얼지 않는 까닭은 무엇일까?</p>
+      <div class="note mt12"><b>용액</b> 둘 이상의 물질이 균일하게 섞여 있는 혼합물. 녹이는 물질은 <b>용매</b>(물), 녹는 물질은 <b>용질</b>(설탕 등)이다.</div>
+    </div>
+  </div>
+  <div class="answer step mt16">주스는 물에 당 등 여러 물질이 녹아 있는 <b>용액</b>이다. 녹아 있는 용질 입자가 물이 어는 것을 방해하므로, 용액은 순수한 물보다 <b>낮은 온도에서 언다</b>.<br><span class="small">용액은 순수한 용매와 무엇이 다를까? 증기압부터 비교해 보자.</span></div>
+</section>
+
+<!-- ════════ 4. 다시 보기: 증기압 ════════ -->
+<section class="slide" data-sec="02 용액의 성질 · 도입" data-title="다시 보기: 증기압과 끓음">
+  <h2><span class="tag alt">다시 보기</span>증기압과 끓음</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 300px"><svg class="fig" viewBox="0 0 300 320" style="width:290px" aria-label="밀폐 용기에서 증발과 응축이 같은 속도로 일어나는 동적 평형">{{eqbox}}</svg></div>
+    <div class="col" style="flex:0 0 480px"><svg class="fig" viewBox="0 0 480 320" style="width:470px" aria-label="온도에 따른 물의 증기압 곡선과 1 기압에서의 끓는점">{{vpcurve}}</svg></div>
+    <div class="col">
+      <p class="f21">밀폐 용기에서 <b>증발 속도 = 응축 속도</b>가 되면 겉으로는 변화가 없는 <b>동적 평형</b> 상태가 된다.</p>
+      <p class="f21 mt8">이때 증기가 나타내는 압력이 <b>증기압(증기 압력)</b>이다. 온도가 높을수록 커진다.</p>
+      <p class="f21 mt12"><b>Q</b> 물은 언제 끓을까?</p>
+      <p class="f21 step c-field" data-g="bp">→ 증기압이 외부 압력과 같아질 때. 1 기압에서 물은 100 °C에서 끓는다.</p>
+    </div>
+  </div>
+  <p class="small mt8">연계 『물질과 에너지』 ‘물질의 세 가지 상태’ 단원에서 증기압을 배웠다.</p>
+</section>
+
+<!-- ════════ 5. 물과 설탕물의 증기압 비교 ════════ -->
+<section class="slide" data-sec="02 · 증기 압력 내림" data-title="물과 설탕물의 증기압 비교">
+  <h2><span class="no">1</span>물과 설탕물, 증기압은 어느 쪽이 클까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px"><svg class="fig" viewBox="0 0 600 345" style="width:590px" aria-label="같은 양의 물과 설탕물을 넣은 플라스크를 수은이 담긴 유리관으로 연결하면 설탕물 쪽 수은 기둥이 높아진다">{{mano}}</svg></div>
+    <div class="col">
+      <p class="f22">일정한 온도에서 같은 양의 물과 설탕물을 넣은 플라스크를 수은이 담긴 유리관으로 연결하고 충분한 시간을 둔다.</p>
+      <p class="f22 mt12">→ 수은 기둥은 <b>설탕물 쪽이 더 높아진다</b>.</p>
+      <p class="f22 mt12"><b>Q</b> 수은을 더 세게 미는 쪽은? 증기압은 어느 쪽이 클까?</p>
+      <div class="answer step" data-g="p">물 쪽 증기가 수은을 더 세게 민다.<br><b>증기압: 물 &gt; 설탕물</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 증기 압력 내림 ════════ -->
+<section class="slide" data-sec="02 · 증기 압력 내림" data-title="증기 압력 내림">
+  <h2><span class="no">1</span>증기 압력 내림</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 610px"><svg class="fig" viewBox="0 0 610 440" style="width:560px" aria-label="물과 설탕물의 입자 모형: 설탕물은 표면 일부를 설탕 분자가 차지해 증발하는 물 분자가 적다">{{evap}}</svg></div>
+    <div class="col">
+      <p class="f22">설탕물처럼 <b>비휘발성 용질</b>이 녹아 있으면 용질 입자가 용액 표면의 일부를 차지해, 순수한 용매보다 잘 증발하지 않는다.</p>
+      <p class="f22 mt12"><mark>용액의 증기압이 순수한 용매의 증기압보다 낮아지는 현상을 증기 압력 내림이라고 한다.</mark></p>
+      <p class="f22 mt12"><b>Q</b> 물과 설탕물의 증발량과 증기압을 비교하면?</p>
+      <div class="answer step">증발량: 물 &gt; 설탕물<br>증기압: 물 &gt; 설탕물</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 해 보기 ════════ -->
+<section class="slide" data-sec="02 · 해 보기" data-title="해 보기: 농도에 따른 증기압">
+  <h2><span class="tag">해 보기</span>용액의 농도에 따른 증기압 비교하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 570px"><span class="step" data-g="a1"></span><svg class="fig" viewBox="0 0 560 345" style="width:560px" aria-label="25 도에서 설탕물의 농도에 따른 증기압 그래프: 농도가 클수록 증기압이 낮아진다">{{hbg}}</svg><p class="small">그래프는 25 °C에서 설탕물의 농도에 따른 증기압(교과서 그래프 모양을 본뜸, 자료 출처: Jiao 외, 2004)</p></div>
+    <div class="col">
+      <p class="f22" data-q>1. 설탕물의 농도에 따라 증기압이 어떻게 변하는지 설명해 보자.</p>
+      <p class="f22 step c-field" data-g="a1">→ 설탕물의 농도가 커질수록 증기압이 낮아진다(증기 압력 내림이 커진다).</p>
+      <p class="f22 mt16" data-q>2. 설탕물의 농도가 80 %일 때 증기압이 어떻게 될지 예측해 보자.</p>
+      <p class="f22 step c-field" data-g="p80">→ 70 %일 때(약 19.6 mmHg)보다 더 낮아져 약 18 mmHg 정도가 될 것이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 라울 법칙 ════════ -->
+<section class="slide" data-sec="02 · 증기 압력 내림" data-title="라울 법칙">
+  <h2><span class="no">2</span>증기 압력 내림의 크기 — 라울 법칙</h2>
+  <p class="f22">증기 압력 내림($\Delta P$)은 순수한 용매의 증기압($P_\text{용매}$)과 용액의 증기압($P_\text{용액}$)의 차이다. 농도가 클수록 $\Delta P$가 커진다.</p>
+  <div class="row mt12">
+    <div class="col">
+      <div class="card"><h3>라울(Raoult, F. M., 1830~1901)</h3>
+        <p class="f21">비휘발성, 비전해질 용질이 녹아 있는 묽은 용액에서 <mark>증기 압력 내림은 용질의 종류와 관계없이 용질의 몰분율에 비례한다.</mark></p>
+        <div class="formula sm mt8">$P_\text{용액}=P_\text{용매}\cdot X_\text{용매}$<div class="unit">$P_\text{용액}$: 용액의 증기압, $P_\text{용매}$: 순수한 용매의 증기압, $X_\text{용매}$: 용매의 몰분율</div></div>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <p class="f21" data-q>$X_\text{용매}+X_\text{용질}=1$을 이용해 $\Delta P$를 $X_\text{용질}$로 나타내면?</p>
+      <div class="formula step">$\begin{aligned}\Delta P&amp;=P_\text{용매}-P_\text{용액}\\&amp;=P_\text{용매}-P_\text{용매}\cdot X_\text{용매}\\&amp;=P_\text{용매}\left(1-X_\text{용매}\right)\\&amp;=P_\text{용매}\cdot X_\text{용질}\end{aligned}$</div>
+    </div>
+  </div>
+  <p class="small mt8">$X_\text{용질}$: 용질의 몰분율 $=\dfrac{\text{용질의 양(mol)}}{\text{용매의 양(mol)}+\text{용질의 양(mol)}}$</p>
+</section>
+
+<!-- ════════ 9. 증기 압력 곡선 + 예제 ════════ -->
+<section class="slide" data-sec="02 · 증기 압력 내림" data-title="증기 압력 곡선과 예제">
+  <h2><span class="tag ex">예제</span>용매와 용액의 증기 압력 곡선</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 510px"><svg class="fig" viewBox="0 0 520 340" style="width:500px" aria-label="온도에 따른 용매와 용액의 증기 압력 곡선: 같은 온도에서 용액의 증기압이 낮다">{{vpdp}}</svg><p class="small step" data-g="dp">어느 온도에서나 용액의 증기압이 용매보다 $\Delta P$만큼 낮다.</p></div>
+    <div class="col stack">
+      <p class="f21">25 °C에서 물 9.5 mol에 포도당 0.5 mol을 녹인 수용액의 증기압은? <span class="small">(단, 25 °C에서 물의 증기압은 23.8 mmHg이다.)</span></p>
+      <div class="formula sm step">$X_\text{용질}=\dfrac{0.5}{9.5+0.5}=0.05$</div>
+      <div class="formula sm step">$\Delta P=23.8\times0.05\approx1.19\ \text{mmHg}$</div>
+      <div class="board" style="min-height:60px"></div>
+      <div class="answer step">$P_\text{용액}=23.8-1.19\approx22.6\ \text{mmHg}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 확인하기 (53쪽) ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 증기 압력 내림" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>증기 압력 내림</h2>
+  <p class="f22 mt12" data-q>1 비휘발성, 비전해질 용질이 녹아 있는 용액은 순수한 용매보다 증기압이 낮은데, 이러한 현상을 <span class="blank"><span class="step">증기 압력 내림</span></span>(이)라고 한다.</p>
+  <p class="f22 mt16" data-q>2 일정한 온도에서 비휘발성, 비전해질 용질이 녹아 있는 용액의 농도가 증가할수록 증기압이 ( 낮아진다, 높아진다 ).</p>
+  <p class="f22 step c-field">→ 낮아진다</p>
+</section>
+
+<!-- ════════ 11. 몰랄 농도 ════════ -->
+<section class="slide" data-sec="02 · 끓는점 오름과 어는점 내림" data-title="몰랄 농도">
+  <h2><span class="no">3</span>끓는점·어는점에는 왜 몰랄 농도를 쓸까?</h2>
+  <p class="f22">1 기압에서 순수한 물은 100 °C에서 끓고 0 °C에서 언다. 설탕물 같은 용액의 끓는점과 어는점은 <b>농도</b>의 영향을 받는다. 끓는점·어는점을 잴 때는 온도가 크게 바뀌므로 <b>온도의 영향을 받지 않는 농도</b>가 필요하다.</p>
+  <div class="row mt8">
+    <div class="col"><div class="card"><h3>몰농도 (M)</h3><svg class="fig" viewBox="0 0 270 250" style="width:250px" aria-label="부피 플라스크: 용액의 부피는 온도에 따라 변한다">{{vflask}}</svg><p class="f21 step" data-g="mv">용액의 부피가 온도에 따라 변해 <b>농도 값이 변한다</b>.</p></div></div>
+    <div class="col"><div class="card"><h3>몰랄 농도 (m)</h3><svg class="fig" viewBox="0 0 260 250" style="width:250px" aria-label="전자저울: 용매의 질량은 온도에 따라 변하지 않는다">{{balance}}</svg><p class="f21 step" data-g="mm">용매의 질량은 온도와 관계없어 <b>농도 값이 일정하다</b>.</p></div></div>
+    <div class="col" style="flex:0 0 380px">
+      <p class="f21"><mark>몰랄 농도는 용매 1 kg에 들어 있는 용질의 양(mol)이다.</mark></p>
+      <div class="formula mt8">$m=\dfrac{\text{용질의 양(mol)}}{\text{용매의 질량(kg)}}$<div class="unit">단위: m(몰랄 농도) 또는 mol/kg</div></div>
+      <p class="small mt8">이 덱에서 $m$은 몰랄 농도, 질량은 $w$로 쓴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 원하는 몰랄 농도의 설탕물 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="원하는 몰랄 농도의 설탕물 만들기">
+  <h2><span class="tag alt">도움 자료</span>원하는 몰랄 농도의 설탕물 만들기</h2>
+  <p class="f22">설탕($\ce{C12H22O11}$)의 몰질량은 342 g/mol이다. 물 100 g(0.1 kg)에 설탕을 녹여 만든다.</p>
+  <div class="row mt8">
+    <div class="col"><div class="card"><svg class="fig" viewBox="0 0 280 250" style="width:240px" aria-label="물 100 g에 설탕 17.1 g을 넣는 그림">{{mk05}}</svg>
+      <p class="f21">$17.1\ \text{g}\div342\ \text{g/mol}=0.05\ \text{mol}$</p><p class="f21">$\dfrac{0.05\ \text{mol}}{0.1\ \text{kg}}=0.5\ \text{m}$</p></div></div>
+    <div class="col"><div class="card"><svg class="fig" viewBox="0 0 280 250" style="width:240px" aria-label="물 100 g에 설탕 34.2 g을 넣는 그림">{{mk10}}</svg>
+      <p class="f21">$34.2\ \text{g}\div342\ \text{g/mol}=0.1\ \text{mol}$</p><p class="f21">$\dfrac{0.1\ \text{mol}}{0.1\ \text{kg}}=1\ \text{m}$</p></div></div>
+    <div class="col stack" style="flex:0 0 360px">
+      <p class="f21"><b>Q</b> 물 100 g으로 1.5 m 설탕물을 만들려면 설탕이 몇 g 필요할까?</p>
+      <p class="f21 step">용질의 양 $=1.5\ \text{mol/kg}\times0.1\ \text{kg}=0.15\ \text{mol}$</p>
+      <div class="board" style="min-height:60px"></div>
+      <div class="answer step">$0.15\times342=51.3\ \text{g}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 탐구: 목표·준비·안전 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 목표와 준비">
+  <h2><span class="tag">탐구</span><span class="small c-muted">[필수 탐구]</span> 설탕물의 농도에 따른 끓는점과 어는점 측정하기</h2>
+  <div class="std"><span class="code">[탐구 활동]</span>온도 센서를 이용하여 다양한 농도 조건에서 설탕물의 끓는점과 어는점 측정하기</div>
+  <div class="row mt12">
+    <div class="col">
+      <h3>목표</h3>
+      <p class="f21">다양한 농도 조건에서 온도 센서를 이용하여 설탕물의 끓는점과 어는점을 측정할 수 있다.</p>
+      <h3 class="mt12">변인</h3>
+      <table class="tight em22-var"><tr><th>조작 변인</th><td>설탕물의 몰랄 농도(0, 0.5, 1 m)</td></tr><tr><th>종속 변인</th><td>끓는점, 어는점</td></tr><tr><th>통제 변인</th><td>용매의 양, 외부 압력, 온도 센서, 가열·냉각 조건</td></tr></table>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <h3>준비물</h3>
+      <p class="f21">증류수, 설탕물(0.5 m, 1 m), 비커, 눈금실린더, 스포이트, 약숟가락, 온도 센서, 가열 장치, 스탠드, 집게, 얼음과 소금, 시험관, 스마트 기기</p>
+      <div class="note q mt12"><b>안전</b> 실험복, 보안경, 실험용 고무장갑을 착용한다. 가열 장치를 다룰 때는 안전 장갑을 끼고, 뜨거운 비커는 식힌 뒤 옮긴다. 한제는 매우 차가우므로 맨손으로 오래 만지지 않는다.<br><b>폐액</b> 설탕물과 녹은 한제(소금물)는 개수대에 바로 버리지 않고 정해진 통에 모아 처리한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 실험 1 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구 실험 1: 끓는점 측정">
+  <h2><span class="tag">탐구</span>실험 1 설탕물의 끓는점 측정하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px"><svg class="fig" viewBox="0 0 480 345" style="width:480px" aria-label="가열 장치 위 증류수 비커에 온도 센서를 넣고 스마트 기기로 온도 변화를 기록하는 장치">{{appb}}</svg></div>
+    <div class="col">
+      <h3>과정</h3>
+      <ol class="em22-proc">
+        <li>증류수 50 mL를 비커에 넣고 그림과 같이 장치한다.</li>
+        <li>온도 센서 프로그램을 실행하고 처음 온도를 측정한다.</li>
+        <li>비커를 가열하면서 데이터를 수집해 시간에 따른 온도 변화 그래프를 확인한다.</li>
+        <li>물이 끓기 시작하면 2 분 정도 더 측정한 뒤, 끓는점을 찾아 기록한다.</li>
+        <li>0.5 m 설탕물, 1 m 설탕물로 과정 1~4를 반복한다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 실험 2 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구 실험 2: 어는점 측정">
+  <h2><span class="tag">탐구</span>실험 2 설탕물의 어는점 측정하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px"><svg class="fig" viewBox="0 0 480 345" style="width:480px" aria-label="얼음과 소금을 섞은 한제 속 시험관에 온도 센서를 넣고 온도 변화를 기록하는 장치">{{appf}}</svg></div>
+    <div class="col">
+      <h3>과정</h3>
+      <ol class="em22-proc">
+        <li>500 mL 비커에 얼음과 소금을 약 3 : 1의 질량비로 섞어 <b>한제</b>를 만든다.</li>
+        <li>증류수 5 mL를 시험관에 넣고 그림과 같이 장치한다.</li>
+        <li>온도 센서 프로그램을 실행하고 처음 온도를 측정한다.</li>
+        <li>데이터를 수집해 시간에 따른 온도 변화 그래프를 확인한다.</li>
+        <li>물이 얼기 시작하면 2 분 정도 더 측정한 뒤, 어는점을 찾아 기록한다.</li>
+        <li>0.5 m 설탕물, 1 m 설탕물로 과정 2~5를 반복한다.</li>
+      </ol>
+      <p class="small mt8">한제: 두 가지 이상의 물질을 혼합해서 만드는 냉각제</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="실험실: 온도 센서로 끓는점·어는점 측정">
+  <h2><span class="tag">실험실</span><span class="small c-muted">[필수 탐구]</span> 온도 센서로 끓는점·어는점 측정하기</h2>
+  <div class="lab" data-lab="em22sensor">
+    <div class="lab-ctl" style="flex-basis:440px">
+      <div class="em22-seg"><button class="btn on" data-x="b">실험 1 끓는점</button><button class="btn" data-x="f">실험 2 어는점</button></div>
+      <div class="ctl"><div class="lbl"><span>설탕물의 몰랄 농도</span><output data-o="m"></output></div>
+        <input type="range" min="0" max="2" step="0.25" value="0.5" data-i="m" aria-label="설탕물의 몰랄 농도"></div>
+      <div class="em22-seg"><button class="btn em22-act" data-act="run">측정 시작</button><button class="btn em22-rec" data-act="rec">측정값 기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <table class="readout em22-read">
+        <tr><th><output data-o="lbl"></output></th><td><output data-o="T"></output></td></tr>
+        <tr class="hl"><th>$\Delta T$ (순수한 물과의 차)</th><td><output data-o="dT"></output></td></tr>
+      </table>
+      <output class="kind em22-msg" data-o="msg"></output>
+      <table class="tight em22-log"><thead><tr><th>실험</th><th>몰랄 농도</th><th>측정 온도</th><th>$\Delta T$</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+    <div class="lab-fig" style="width:640px;height:440px"><svg viewBox="0 0 640 440" width="640" height="440" aria-label="시간에 따른 온도 센서 그래프, 끓는점·어는점 부근 확대 그래프, 몰랄 농도에 따른 온도 변화 그래프"></svg>
+      <div class="ov halo" data-ov="kb"></div><div class="ov halo" data-ov="kf"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 결과 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구 결과">
+  <h2><span class="tag">탐구</span>결과 — 농도에 따른 끓는점과 어는점</h2>
+  <p class="f22">실험 1과 실험 2에서 얻은 그래프를 공유 플랫폼으로 공유하고, 농도에 따른 끓는점과 어는점을 써 보자.</p>
+  <table class="tight mt12 em22-res">
+    <tr><th>구분</th><th>증류수</th><th>0.5 m 설탕물</th><th>1 m 설탕물</th></tr>
+    <tr><th>끓는점(°C)</th><td><span class="blank"><span class="step" data-g="r1">100.00</span></span></td><td><span class="blank"><span class="step" data-g="r1">약 100.26</span></span></td><td><span class="blank"><span class="step" data-g="r1">약 100.51</span></span></td></tr>
+    <tr><th>어는점(°C)</th><td><span class="blank"><span class="step" data-g="r2">0.00</span></span></td><td><span class="blank"><span class="step" data-g="r2">약 −0.93</span></span></td><td><span class="blank"><span class="step" data-g="r2">약 −1.86</span></span></td></tr>
+  </table>
+  <p class="small mt8">예시 값: 1 기압에서의 이론값($K_\mathrm{b}=0.51$, $K_\mathrm{f}=1.86$). 실험실과 실제 센서 측정값은 대기압과 센서 정확도에 따라 조금 다르다.</p>
+  <p class="f22 mt16"><b>Q</b> 농도가 0.5 m에서 1 m로 2배가 되면 끓는점·어는점의 변화량은 어떻게 될까?</p>
+  <div class="answer step">끓는점 오름(0.26 → 0.51 °C)과 어는점 내림(0.93 → 1.86 °C)이 모두 약 <b>2배</b>가 된다.</div>
+</section>
+
+<!-- ════════ 18. 정리·결론 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구 정리와 결론">
+  <h2><span class="tag">탐구</span>정리 — 용액의 농도와 끓는점, 어는점</h2>
+  <p class="f22" data-q>1. 실험 1과 실험 2의 결과를 바탕으로 용액의 농도와 끓는점, 어는점의 관계를 설명해 보자.</p>
+  <div class="answer step em22-left">설탕물의 농도가 커질수록 끓는점은 높아지고 어는점은 낮아진다. 끓는점이 높아진 정도와 어는점이 낮아진 정도는 <b>몰랄 농도에 비례</b>한다.</div>
+  <p class="f22 mt16" data-q>2. 1.5 m 설탕물의 끓는점과 어는점을 예상해 보자.</p>
+  <div class="answer step">끓는점 $100+0.51\times1.5\approx100.77\ {}^\circ\text{C}$ · 어는점 $0-1.86\times1.5\approx-2.79\ {}^\circ\text{C}$</div>
+  <p class="f21 mt16"><b>Q</b> 실제 측정값이 예상과 다른 까닭은?</p>
+  <p class="f21 step c-field">→ 그날의 대기압(1 기압이 아님), 센서의 정확도, 끓는 동안 물이 증발해 농도가 커짐, 과냉각(어는점보다 조금 내려갔다 다시 올라감) 때문이다. 그래서 온도가 거의 일정해지는 구간의 처음 값을 읽고, 어는점을 잴 때는 유리 막대로 저어 과냉각을 줄이며, 여러 모둠의 결과를 평균 내어 정확도를 높인다.</p>
+  <div class="board mt8" style="min-height:60px"></div>
+</section>
+
+<!-- ════════ 19. 끓는점 오름 ════════ -->
+<section class="slide" data-sec="02 · 끓는점 오름과 어는점 내림" data-title="끓는점 오름">
+  <h2><span class="no">4</span>끓는점 오름</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 530px"><svg class="fig" viewBox="0 0 520 345" style="width:520px" aria-label="용매와 용액의 증기 압력 곡선: 용액은 더 높은 온도에서 증기압이 760 mmHg에 이른다">{{vpbp}}</svg></div>
+    <div class="col">
+      <p class="f22">끓음은 증기압이 외부 압력과 같을 때 일어난다. 비휘발성, 비전해질 용질이 녹은 용액은 증기압이 순수한 용매보다 낮다.</p>
+      <p class="f22 mt12"><b>Q</b> 그렇다면 용액은 어느 온도에서 끓을까?</p>
+      <p class="f22 step c-field" data-g="b1">→ 증기압이 760 mmHg에 이르려면 더 높은 온도가 필요하다.</p>
+      <p class="f22 mt12 step" data-g="b2"><mark>용액이 순수한 용매보다 높은 온도에서 끓는 현상을 끓는점 오름이라고 한다.</mark></p>
+      <div class="formula sm step" data-g="b2">$\Delta T_\mathrm{b}=T_\mathrm{b}'-T_\mathrm{b}$<div class="unit">$T_\mathrm{b}'$: 용액의 끓는점, $T_\mathrm{b}$: 순수한 용매의 끓는점</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. ΔTb = Kb·m ════════ -->
+<section class="slide" data-sec="02 · 끓는점 오름과 어는점 내림" data-title="끓는점 오름과 몰랄 오름 상수">
+  <h2><span class="no">4</span>끓는점 오름은 몰랄 농도에 비례한다</h2>
+  <p class="f22">비휘발성, 비전해질 용질이 녹아 있는 용액의 끓는점 오름은 <b>용질의 종류와 상관없이</b> 용액의 몰랄 농도($m$)에 비례한다.</p>
+  <div class="row mt12">
+    <div class="col">
+      <div class="formula">$\Delta T_\mathrm{b}=K_\mathrm{b}\cdot m$<div class="unit">$K_\mathrm{b}$: 몰랄 오름 상수 — 용액의 농도가 1 m일 때의 끓는점 오름 값, 용매의 종류에 따라 다르다.</div></div>
+      <p class="f21 mt16"><b>Q</b> 1 m 벤젠 용액(비휘발성, 비전해질 용질)의 끓는점은?</p>
+      <div class="answer step">$80.1+2.53\times1=82.63\ {}^\circ\text{C}$</div>
+    </div>
+    <div class="col" style="flex:0 0 440px">
+      <table class="tight em22-k"><tr><th>용매</th><th>끓는점(°C)</th><th>$K_\mathrm{b}$ (°C·kg/mol)</th></tr>
+        <tr class="em22-hl"><td>물</td><td>100.0</td><td>0.51</td></tr><tr><td>에탄올</td><td>78.4</td><td>1.22</td></tr><tr><td>아세트산</td><td>118.1</td><td>3.07</td></tr><tr><td>벤젠</td><td>80.1</td><td>2.53</td></tr></table>
+      <p class="small mt8">자료 출처: Oxtoby 외, 『Chemistry(8th ed.)』, 2021</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 어는점 내림 ════════ -->
+<section class="slide" data-sec="02 · 끓는점 오름과 어는점 내림" data-title="어는점 내림">
+  <h2><span class="no">5</span>어는점 내림</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px"><svg class="fig" viewBox="0 0 470 310" style="width:450px" aria-label="영하 1 도에서 물은 얼었고 1 몰랄 설탕물은 얼지 않았다">{{frz}}</svg></div>
+    <div class="col">
+      <p class="f22"><mark>비휘발성, 비전해질 용질이 녹아 있는 용액이 순수한 용매보다 낮은 온도에서 어는 현상을 어는점 내림이라고 한다.</mark></p>
+      <div class="formula sm mt12">$\Delta T_\mathrm{f}=T_\mathrm{f}-T_\mathrm{f}'=K_\mathrm{f}\cdot m$<div class="unit">$K_\mathrm{f}$: 몰랄 내림 상수 — 농도가 1 m일 때의 어는점 내림 값</div></div>
+      <table class="tight em22-k mt8"><tr><th>용매</th><th>어는점(°C)</th><th>$K_\mathrm{f}$ (°C·kg/mol)</th></tr>
+        <tr class="em22-hl"><td>물</td><td>0.0</td><td>1.86</td></tr><tr><td>에탄올</td><td>−114.7</td><td>1.9</td></tr><tr><td>아세트산</td><td>17</td><td>3.9</td></tr><tr><td>벤젠</td><td>5.5</td><td>4.9</td></tr></table>
+      <p class="small mt8">용질 입자가 섞여 있으면 물 분자가 얼음으로 배열하기 어려워 더 낮은 온도까지 내려가야 언다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 그림 II-15 ════════ -->
+<section class="slide" data-sec="02 · 끓는점 오름과 어는점 내림" data-title="몰랄 농도에 따른 끓는점과 어는점">
+  <h2><span class="no">5</span>몰랄 농도에 따른 끓는점과 어는점</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px"><svg class="fig" viewBox="0 0 580 345" style="width:570px" aria-label="물, 1 몰랄, 2 몰랄 수용액의 끓는점과 어는점: 농도가 2배면 끓는점 오름과 어는점 내림도 2배">{{bpfp}}</svg></div>
+    <div class="col">
+      <p class="f22">비휘발성, 비전해질 용질이 녹아 있는 묽은 용액의 끓는점과 어는점은 <b>용질의 종류에 관계없이 용액의 농도에만</b> 영향을 받는다.</p>
+      <p class="f22 mt12 step" data-g="k2">농도가 2배 → $\Delta T_\mathrm{b}$, $\Delta T_\mathrm{f}$도 2배</p>
+      <p class="f22 mt12"><b>Q</b> 1 m 포도당 수용액과 1 m 설탕 수용액의 끓는점과 어는점을 비교하면?</p>
+      <div class="answer step">같다 — 둘 다 $100.51\ {}^\circ\text{C}$에서 끓고<br>$-1.86\ {}^\circ\text{C}$에서 언다.<br><span class="small">용질의 종류가 아니라 용질 입자 수(몰랄 농도)가 중요하다.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 예제 ════════ -->
+<section class="slide" data-sec="02 · 끓는점 오름과 어는점 내림" data-title="예제: 끓는점과 어는점 구하기">
+  <h2><span class="tag ex">예제</span>포도당 수용액의 끓는점과 어는점</h2>
+  <p class="f22">물 200 g에 포도당($\ce{C6H12O6}$, 몰질량 180 g/mol) 18 g을 녹인 수용액의 끓는점과 어는점을 구해 보자. <span class="small">(단, 물의 $K_\mathrm{b}=0.51$, $K_\mathrm{f}=1.86\ {}^\circ\text{C}\cdot\text{kg/mol}$, 1 기압)</span></p>
+  <div class="row stretch mt8" style="height:350px">
+    <div class="col stack">
+      <p class="f21 step"><b>① 용질의 양</b> $\dfrac{18\ \text{g}}{180\ \text{g/mol}}=0.1\ \text{mol}$</p>
+      <p class="f21 step"><b>② 몰랄 농도</b> $m=\dfrac{0.1\ \text{mol}}{0.200\ \text{kg}}=0.5\ \text{m}$</p>
+      <p class="f21 step"><b>③ 끓는점</b> $\Delta T_\mathrm{b}=0.51\times0.5\approx0.26\ {}^\circ\text{C}$</p>
+      <p class="f21 step"><b>④ 어는점</b> $\Delta T_\mathrm{f}=1.86\times0.5=0.93\ {}^\circ\text{C}$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 440px"><div class="board"></div></div>
+  </div>
+  <div class="answer step">끓는점 약 100.26 °C · 어는점 −0.93 °C</div>
+</section>
+
+<!-- ════════ 24. 자료 읽기 ════════ -->
+<section class="slide" data-sec="02 · 자료 읽기" data-title="자료 읽기: 생활 속 사례">
+  <h2><span class="tag">자료 읽기</span>일상생활 속 끓는점 오름과 어는점 내림</h2>
+  <div class="stages c2 em22-st">
+    <div class="stage"><div class="em22-ic"><svg class="fig" viewBox="0 0 240 132" style="width:170px" aria-label="자동차와 부동액 통">{{icar}}</svg><p>자동차 냉각수에 에틸렌 글리콜 성분이 들어 있는 부동액을 넣는다.</p></div>
+      <p class="c-field">예 냉각수의 끓는점은 높아지고 어는점은 낮아져 엔진의 열에 끓거나 추운 날씨에 어는 것을 막는다.</p></div>
+    <div class="stage"><div class="em22-ic"><svg class="fig" viewBox="0 0 240 132" style="width:170px" aria-label="겨울잠을 자는 개구리">{{ifrog}}</svg><p data-q>개구리가 겨울잠을 잘 때 체액 속 포도당 농도가 증가한다.</p></div>
+      <p class="step c-field">→ 체액의 어는점이 낮아져 추운 겨울에도 체액이 잘 얼지 않는다.</p></div>
+    <div class="stage"><div class="em22-ic"><svg class="fig" viewBox="0 0 240 132" style="width:170px" aria-label="아이스크림과 영하 18 도">{{iice}}</svg><p data-q>아이스크림은 −18 °C 이하의 낮은 온도로 보관해야 녹지 않는다.</p></div>
+      <p class="step c-field">→ 설탕 등 여러 물질이 녹아 있어 어는점이 0 °C보다 훨씬 낮기 때문이다.</p></div>
+    <div class="stage"><div class="em22-ic"><svg class="fig" viewBox="0 0 240 132" style="width:170px" aria-label="눈 쌓인 도로에 제설제를 뿌리는 차">{{iroad}}</svg><p data-q>도로에 제설제를 뿌리면 눈이 쌓여도 도로가 잘 얼지 않는다.</p></div>
+      <p class="step c-field">→ 제설제가 녹은 물(용액)은 어는점이 낮아져 0 °C 아래에서도 잘 얼지 않는다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 확인하기 (57쪽) ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 끓는점 오름과 어는점 내림" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>끓는점 오름과 어는점 내림</h2>
+  <p class="f22 mt12" data-q>1 용매 1 kg에 들어 있는 용질의 양(mol)으로 나타낸 농도를 <span class="blank"><span class="step">몰랄 농도</span></span>(이)라고 한다.</p>
+  <p class="f22 mt16" data-q>2 용액의 농도가 커지면 끓는점은 ( 높아지고, 낮아지고 ), 어는점은 ( 높아진다, 낮아진다 ).</p>
+  <p class="f22 step c-field">→ 높아지고, 낮아진다</p>
+</section>
+
+<!-- ════════ 26. 소단원 마무리 ════════ -->
+<section class="slide" data-sec="02 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>용액의 성질과 우리 생활</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>창의력 키우기</h3>
+        <p class="f21">얼음 창고와 아이스크림 창고 중 어느 창고의 온도가 더 낮아야 하는지 토의해 보자.</p>
+        <p class="f21 mt8"><b>Q</b> 어느 창고일까?</p>
+        <p class="f21 step c-field">→ 아이스크림 창고. 얼음은 0 °C 아래면 녹지 않지만, 아이스크림은 설탕 등이 녹아 있는 혼합물이라 어는점이 0 °C보다 낮아 더 낮은 온도(−18 °C 이하)가 필요하다.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>디지털 소양 키우기</h3>
+        <p class="f21">제설제로 쓰이는 염화 칼슘($\ce{CaCl2}$)의 문제점을 검색해 보고, 이를 개선할 수 있는 제설제를 조사해 보자.</p>
+        <p class="f21 mt8"><b>Q</b> 어떤 문제점과 대안을 찾을 수 있을까?</p>
+        <p class="f21 step c-field">→ 예: 철을 부식시켜 자동차·구조물을 손상시키고, 녹은 물이 식물의 잎에 탈수를 일으키거나 토양 침식을 일으킬 수 있다. 대안으로 아세트산 칼슘 마그네슘(CMA) 제설제, 불가사리·조개껍데기에서 추출한 물질로 부식 물질을 흡착하게 만든 제설제 등이 개발되었다. 자료의 출처를 함께 적는다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 대단원 마무리 05 ════════ -->
+<section class="slide" data-sec="02 · 대단원 마무리" data-title="대단원 마무리 05">
+  <h2><span class="tag q">대단원 마무리 05</span>증류수와 수용액 (가)의 증기압</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px"><svg class="fig" viewBox="0 0 500 345" style="width:480px" aria-label="온도에 따른 증류수와 수용액 (가)의 증기압 곡선. 온도 t에서 증류수는 P, 수용액은 0.8P">{{q05}}</svg></div>
+    <div class="col">
+      <p class="f21">그림은 증류수와 수용액 (가)의 온도에 따른 증기압이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? <span class="small">(단, 외부 압력은 $P$ mmHg로 일정하다.)</span></p>
+      <div class="bogi"><p>ㄱ. 온도가 $t$ °C일 때 수용액 (가)의 증기 압력 내림은 $0.2P$ mmHg이다.</p><p>ㄴ. 끓는점에서 증류수와 수용액 (가)의 증기압은 같다.</p><p>ㄷ. 수용액 (가)는 증류수보다 끓는점이 낮다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+  </div>
+  <div class="board mt8" style="min-height:40px"></div>
+  <div class="answer step"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">ㄴ: 둘 다 증기압이 외부 압력 $P$와 같을 때 끓는다. ㄷ: 증기압이 낮은 (가)의 끓는점이 더 높다.</span></div>
+</section>
+
+<!-- ════════ 28. 대단원 마무리 06 ════════ -->
+<section class="slide" data-sec="02 · 대단원 마무리" data-title="대단원 마무리 06">
+  <h2><span class="tag q">대단원 마무리 06</span>어는점 내림에 영향을 주는 요인</h2>
+  <div class="row stretch" style="height:330px">
+    <div class="col stack">
+      <p class="f22">어는점 내림에 영향을 주는 요인으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 골라 보자.</p>
+      <div class="bogi"><p>ㄱ. 용질의 종류</p><p>ㄴ. 용매의 종류</p><p>ㄷ. 용액의 농도</p></div>
+      <div class="formula sm mt16">$\Delta T_\mathrm{f}=K_\mathrm{f}\cdot m$</div>
+    </div>
+    <div class="col stack" style="flex:0 0 440px"><div class="board"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ㄴ, ㄷ</b> <span class="small">$K_\mathrm{f}$는 용매의 종류에 따라 다르고, $m$은 용액의 농도이다. 비휘발성, 비전해질 용질이면 종류와 관계없다.</span></div>
+</section>
+
+<!-- ════════ 29. 대단원 마무리 07 ════════ -->
+<section class="slide" data-sec="02 · 대단원 마무리" data-title="대단원 마무리 07">
+  <h2><span class="tag q">대단원 마무리 07</span>가열한 수용액 (가)의 온도</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 490px"><svg class="fig" viewBox="0 0 490 340" style="width:470px" aria-label="일정한 열량으로 가열한 수용액 (가)의 시간에 따른 온도. 시간 t에 100.05 도에서 끓기 시작하고 그 뒤에도 온도가 조금씩 오른다">{{q07}}</svg></div>
+    <div class="col">
+      <p class="f21">비휘발성, 비전해질 용질 $\ce{A(s)}$를 녹인 수용액 (가)를 일정한 열량으로 가열했을 때 시간에 따른 온도이다. 물의 $K_\mathrm{b}$는 $0.5\ {}^\circ\text{C}\cdot\text{kg/mol}$이다. 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <p class="small">(단, 외부 압력은 1 기압으로 일정하고, 수용액은 라울 법칙을 따르며, 끓기 전 물의 증발은 무시한다.)</p>
+      <div class="bogi"><p>ㄱ. 농도는 0.1 m이다.</p><p>ㄴ. 시간이 지날수록 농도가 더 커진다.</p><p>ㄷ. $t$일 때 증기압은 1 기압보다 크다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+  </div>
+  <div class="board mt8" style="min-height:30px"></div>
+  <div class="answer step"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">ㄱ: $0.05=0.5m$ → $m=0.1$ · ㄴ: 끓으며 물이 증발해 농도가 커진다 · ㄷ: 끓을 때 증기압 = 1 기압</span></div>
+</section>
+
+<!-- ════════ 30. 대단원 마무리 08 ════════ -->
+<section class="slide" data-sec="02 · 대단원 마무리" data-title="대단원 마무리 08 (서술형)">
+  <h2><span class="tag q">대단원 마무리 08</span>서술형 — 용질의 몰분율과 증기압</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 510px"><svg class="fig" viewBox="0 0 510 345" style="width:490px" aria-label="용질의 몰분율에 따른 용액 (가)와 (나)의 증기압 상댓값 직선 그래프">{{q08}}</svg></div>
+    <div class="col stack">
+      <p class="f21">일정한 온도에서 용액 (가)와 (나)의 용질의 몰분율에 따른 증기압이다. (가)와 (나)의 용매는 각각 $\mathrm{A}$와 $\mathrm{B}$이고, 용질은 같다.</p>
+      <p class="f21 mt8" data-q>(1) $x$를 구하고 풀이 과정을 설명해 보자.</p>
+      <div class="answer step em22-left">$P_\mathrm{B}=3a$이므로 $3a(1-x)=2a$ → $x=\dfrac{1}{3}$</div>
+      <p class="f21 mt8" data-q>(2) 용질의 몰분율이 0.5일 때, (가)와 (나)의 증기 압력 내림을 비교해 보자.</p>
+      <div class="answer step em22-left">$\Delta P=P_\text{용매}\cdot X_\text{용질}$: (가) $5a\times0.5=2.5a$, (나) $3a\times0.5=1.5a$ → (가)가 (나)보다 크다(그래프의 기울기가 (가)가 더 크다).</div>
+      <div class="board" style="min-height:40px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 용액의 성질 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>Ⅱ. 용액의 성질 — 개념 정리</h2>
+  <div class="em22-map">
+    <div class="em22-node em22-dim">01 경이로운 물의 성질 (❶–❹)<br><span class="small">극성 · 수소 결합 · 비열 · 밀도 · 표면 장력</span></div>
+  </div>
+  <div class="em22-map mt12">
+    <div class="em22-col">
+      <div class="em22-node em22-main"><b>증기 압력 내림</b><br>용액은 순수한 용매보다 증기 압력이 ❺ <span class="blank"><span class="step">낮음</span></span>.<br><span class="small">증기 압력 내림은 용질의 몰분율에 비례함.</span></div>
+    </div>
+    <div class="em22-col">
+      <div class="em22-node em22-main"><b>끓는점 ❻ <span class="blank"><span class="step">오름</span></span></b><br>용액은 순수한 용매보다 끓는점이 높음.<br>끓는점 오름은 ❼ <span class="blank"><span class="step">용액</span></span>의 몰랄 농도에 비례함.</div>
+    </div>
+    <div class="em22-col">
+      <div class="em22-node em22-main"><b>어는점 내림</b><br>용액은 순수한 용매보다 어는점이 낮음.<br>어는점 내림은 용액의 ❽ <span class="blank"><span class="step">몰랄 농도</span></span>에 비례함.</div>
+    </div>
+  </div>
+  <div class="em22-map mt12">
+    <div class="em22-node em22-dim">03 삼투 현상 (❾–⑪)<br><span class="small">반투막 · 농도 차와 용매 이동</span></div>
+  </div>
+  <p class="small mt8">교과서 64쪽 대단원 마무리 개념 정리의 02 몫</p>
+</section>
+
+<!-- ════════ 32. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 용액의 성질 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 용액의 농도와 끓는점, 어는점의 관계를 옳게 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 온도 센서를 이용해 설탕물의 농도에 따른 끓는점과 어는점을 측정할 수 있다.</button>
+    <button class="chk">[가치·태도] 용액의 끓는점, 어는점 변화에 관심을 갖고 실험에 적극적으로 참여했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 설탕물의 증기압이 물보다 낮은 까닭은? <span class="step">→ 비휘발성 용질 입자가 표면 일부를 차지해 물이 덜 증발한다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 끓는점·어는점 변화를 비교할 때 몰랄 농도를 쓰는 까닭은? <span class="step">→ 용매의 질량 기준이라 온도의 영향을 받지 않는다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 0.5 m 설탕 수용액과 0.5 m 포도당 수용액 중 어는점이 더 낮은 것은? <span class="step">→ <span class="ans">같다</span>(−0.93 °C)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 김장할 때 배추에 소금을 뿌리면 배추의 숨이 죽는다. 배추 속 물은 왜 빠져나올까? (03 삼투 현상)</div>
+</section>

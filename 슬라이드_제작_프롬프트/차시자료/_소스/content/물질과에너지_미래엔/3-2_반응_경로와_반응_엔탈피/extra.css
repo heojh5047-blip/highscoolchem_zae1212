@@ -1,0 +1,46 @@
+/* 3-2 반응 경로와 반응 엔탈피 — 덱 전용 (모두 .em32- 접두어) */
+.card.em32-warm{background:#FDE2E4;border-color:#F2B8BE}
+.card.em32-p1{border-color:#1F6FD1;border-width:2px}
+.card.em32-p2{border-color:#C2410C;border-width:2px}
+.em32-badge{display:inline-block;color:#fff;border-radius:8px;padding:0 10px;margin-right:8px;font-size:20px}
+.em32-b1{background:#1F6FD1}.em32-b2{background:#C2410C}
+table.em32-eqt{border-collapse:collapse;width:auto}
+table.em32-eqt td{border:0;background:transparent;padding:3px 10px;font-size:21px;text-align:left;white-space:nowrap}
+table.em32-eqt td.r{text-align:right}
+table.em32-eqt.em32-big td{font-size:24px;padding:6px 10px}
+table.em32-eqt tr.em32-line td{border-top:2px solid var(--ink)}
+table.em32-eqt.em32-box{background:#fff;border:2px solid var(--line);border-radius:12px}
+.formula.em32-sum{text-align:left;display:flex;justify-content:center}
+.formula.em32-fs{font-size:22px;padding:8px 10px}
+.em32-pick{display:flex;gap:12px}
+.em32-pick .card{flex:1 1 0;text-align:center;font-size:22px;padding:10px 8px}
+p.em32-a{color:#1B5E3F;margin-top:4px}
+.answer.em32-left{text-align:left}
+ul.em32-ul{margin:0;padding-left:24px}
+ul.em32-ul li{font-size:21px;line-height:1.5;margin-top:4px}
+.card.em32-safe{background:#FFF8E6;border-color:#F0D58C}
+table.em32-res{width:100%}
+table.em32-res td,table.em32-res th{text-align:center}
+table.em32-res .blank{min-width:80px}
+.blank.em32-eq{min-width:640px;text-align:left}
+.blank.em32-wide{min-width:300px}
+/* 개념 지도 (3-1과 같은 꼴) */
+.em32-map{display:flex;align-items:stretch;gap:14px}
+.em32-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:21px;line-height:1.5}
+.em32-node.em32-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em32-node.em32-dim{flex:0 0 250px;border-style:dashed;color:var(--muted)}
+table.em32-sum{width:100%}
+table.em32-sum th{width:180px}
+/* 실험실 */
+.em32-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.em32-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.em32-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em32-seg .btn.em32-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em32-seg .small{margin:0 2px 0 2px}
+.lab .ctl{margin-bottom:6px}
+table.em32-read{width:100%}
+table.em32-read th{font-size:19px;padding:4px 8px;text-align:left;width:112px}
+table.em32-read td{font-size:19px;width:auto;padding:4px 8px;text-align:left;white-space:nowrap}
+output.kind.em32-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.em32-log{width:100%}
+table.em32-log th,table.em32-log td{font-size:19px;padding:3px 5px;text-align:center}

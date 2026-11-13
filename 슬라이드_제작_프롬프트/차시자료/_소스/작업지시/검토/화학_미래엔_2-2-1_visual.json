@@ -1,0 +1,75 @@
+{
+  "findings": [
+    {
+      "slide": 6,
+      "severity": "medium",
+      "rule": "3.2",
+      "problem": "점 순서 번호가 화면 15.4px, 왼쪽 쌍 번호 2·6이 겹침",
+      "fix": "18px로 키우고 쌍 번호를 위아래로 벌림(반영)"
+    },
+    {
+      "slide": 13,
+      "severity": "high",
+      "rule": "D8",
+      "problem": "해 보기 표가 아래로 넘침",
+      "fix": "그림 행 높이 124px, 첫 열 120px, 머리 글 19px(반영)"
+    },
+    {
+      "slide": 14,
+      "severity": "high",
+      "rule": "D8",
+      "problem": "결과 표와 정리 상자가 넘침",
+      "fix": "칸 그림 168px로 줄임(라벨 화면 21px 유지)(반영)"
+    },
+    {
+      "slide": 16,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "'빈자리' 라벨이 Cl 비공유 전자쌍과 겹침",
+      "fix": "라벨을 빈자리 상자 오른쪽 위로 옮김(반영)"
+    },
+    {
+      "slide": 18,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "정답 상자가 아래로 넘침",
+      "fix": "선택지 간격·해설을 줄임(반영)"
+    },
+    {
+      "slide": 19,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "정답 상자가 표와 겹침",
+      "fix": "행 높이 300px, 표 칸 여백 줄임(반영)"
+    },
+    {
+      "slide": 12,
+      "severity": "low",
+      "rule": "D22",
+      "problem": "② 카드 Cl:P:Cl 강조 상자가 원소 기호를 가려 빽빽함",
+      "fix": "강조 상자를 빼고 설명 글로 대신(반영)"
+    },
+    {
+      "slide": 5,
+      "severity": "low",
+      "rule": "D2",
+      "problem": "뜻 없는 점선이 C 위에 있음",
+      "fix": "삭제(반영)"
+    },
+    {
+      "slide": 20,
+      "severity": "low",
+      "rule": "S2",
+      "problem": "정답 해설이 두 줄로 넘어가 ○ 하나만 남음",
+      "fix": "해설을 한 줄로 줄임(반영)"
+    },
+    {
+      "slide": 2,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "예시 답안 추가 후 아래 줄이 영역 밖으로 넘침",
+      "fix": "answer 글자 20px·안쪽 여백 축소, 아랫줄 mt8(반영)"
+    }
+  ],
+  "summary": "전체 캡처를 sheet로 두 번(완성 직후·최종) 확인. 전자점 배치는 교과서 그림 Ⅱ-10 순서와 2-2-2 lewis_sym·dot_pair 좌표 규칙 그대로, 대칭 분자(CH4, CO2, CCl4, O2, N2) 대칭 확인. 최종 자동 점검 0·콘솔 0·motion 0·ask 0. (11/13 지도서 대조 뒤) S2·S4·S9 sheet 확인, 자동 점검 0·콘솔 0·motion 0·ask 0."
+}

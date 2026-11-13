@@ -1,0 +1,33 @@
+/* 4-M 대단원 Ⅳ 마무리 — 덱 전용 (모두 .cm49- 접두어) */
+.cover h1.cm49-h1{font-size:104px}
+.cm49-tc{text-align:center}
+/* 개념 정리 가지 그림 (3-M .cm39-tree 꼴) */
+.cm49-tree{display:grid;grid-template-columns:110px 24px 150px 24px 300px 24px 1fr;grid-auto-rows:minmax(74px,auto);row-gap:10px;align-items:center;margin-top:4px}
+.cm49-tree.cm49-t2{grid-auto-rows:minmax(50px,auto);row-gap:6px}
+.cm49-n{background:#fff;border:2px dashed #C9D3DD;border-radius:14px;padding:6px 12px;font-size:21px;line-height:1.35;text-align:center;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0}
+.cm49-t2 .cm49-n{font-size:20px;padding:3px 10px}
+p.cm49-n{display:block;align-self:center}
+.cm49-root{grid-column:1;background:#E8457F;color:#fff;border:0;border-radius:50%;font-weight:700;aspect-ratio:1;align-self:center;font-size:22px}
+.cm49-mid{background:#D7F0DD;border:0;font-weight:700}
+.cm49-leaf{text-align:left;justify-content:flex-start}
+.cm49-a{text-align:center;font-size:24px;color:var(--muted)}
+.cm49-n .blank{min-width:90px}
+/* 표 */
+table.cm49-map{width:100%}
+table.cm49-map th,table.cm49-map td{font-size:19px;padding:2px 7px}
+table.cm49-map td:nth-child(3){white-space:nowrap;color:var(--muted)}
+table.cm49-map td:last-child{white-space:nowrap;font-weight:700}
+table.cm49-q3,table.cm49-q6,table.cm49-anti{width:100%}
+table.cm49-q3 th,table.cm49-q3 td,table.cm49-q6 th,table.cm49-q6 td{font-size:20px;text-align:center;padding:4px 8px}
+table.cm49-anti th,table.cm49-anti td{font-size:21px;padding:4px 12px}
+table.cm49-eval{width:100%}
+table.cm49-eval td,table.cm49-eval th{font-size:20px;padding:5px 10px}
+table.cm49-eval td:not(.l){text-align:center;width:56px}
+.cm49-box{border:2px solid #C9D3DD;border-radius:12px;padding:8px 14px;background:#fff}
+.cm49-box p{font-size:20px;line-height:1.5;margin:3px 0}
+.cm49-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cm49-cards .card h3{font-size:21px;margin:0 0 4px}
+.cm49-cards .card p{font-size:20px;line-height:1.45;margin:4px 0}
+.cm49-sym{font-size:22px}
+ul.cm49-ul{margin:6px 0 0;padding-left:24px}
+ul.cm49-ul li{margin:3px 0;line-height:1.4}

@@ -1,0 +1,632 @@
+<!-- 물질과에너지_미래엔 4-M 대단원 Ⅳ 마무리 (교과서 120–127쪽) — scratchpad 물질과에너지_미래엔_4-M/gen.py + tpl.html이 만든다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 반응 속도" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 반응 속도 › 대단원 마무리</div>
+    <h1 class="em49-h1">대단원 Ⅳ<br><span class="acc">마무리</span></h1>
+    <p class="sub">반응 속도식 · 반감기 · 활성화 에너지 · 촉매를 한 장의 지도로</p>
+    <p class="meta">고등학교 물질과 에너지 120–127쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="반응물 농도가 줄어드는 곡선과 접선, 반감기마다 절반이 되는 막대, 촉매가 활성화 에너지를 낮추는 에너지 도표"><circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <g fill="#FFFFFF" stroke="#7E8B98" stroke-width="3"><rect x="48" y="166" width="134" height="168" rx="10"/><rect x="203" y="166" width="134" height="168" rx="10"/><rect x="358" y="166" width="134" height="168" rx="10"/></g>
+    <path d="M62 184 V318 H172" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+    <g data-anim="draw" data-dur="1.1" data-delay=".2"><path d="M64 192 C 84 250, 112 292, 170 306" stroke="#16233D" stroke-width="4" fill="none"/></g>
+    <path d="M60 180 L106 296" stroke="#D7263D" stroke-width="3"/>
+    <path d="M216 318 H326" stroke="#5B6B7F" stroke-width="2"/>
+    <g data-anim="scale" data-from="1,0" data-o="270,318" data-dur="1" data-delay=".4"><g fill="#16233D"><rect x="220" y="198" width="20" height="120"/><rect x="246" y="258" width="20" height="60"/><rect x="272" y="288" width="20" height="30"/><rect x="298" y="303" width="20" height="15"/></g></g>
+    <path d="M370 300 H392 C 412 300, 414 196, 428 196 C 442 196, 446 286, 466 286 H486" stroke="#16233D" stroke-width="3.5" fill="none"/>
+    <g data-anim="draw" data-dur="1" data-delay=".6"><path d="M392 300 C 410 300, 414 246, 428 246 C 442 246, 446 286, 466 286" stroke="#2E9E6A" stroke-width="3.5" stroke-dasharray="7 5" fill="none"/></g>
+    <path d="M380 300 V200" stroke="#E08A2C" stroke-width="3"/><path d="M380 196 L375 206 H385 Z" fill="#E08A2C"/><path d="M380 196 H426" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text class="tex" x="115" y="372" data-mix="반응 속도" data-size="24" data-anchor="middle" data-weight="700"></text><text class="tex" x="270" y="372" data-mix="반감기" data-size="24" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="372" data-mix="촉매" data-size="24" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="270" y="140" data-mix="반응 속도" data-size="26" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text>
+    <text class="tex" x="270" y="420" data-mix="농도 · 온도 · 촉매로 빠르기를 조절한다" data-size="22" data-anchor="middle" fill="#5B6B7F"></text>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12물에04-01]</span> 반응 속도와 반응속도식 &nbsp;<span class="code">[12물에04-02]</span> 1차 반응의 반감기 &nbsp;<span class="code">[12물에04-03]</span> 유효 충돌과 활성화 에너지 &nbsp;<span class="code">[12물에04-04]</span> 농도, 온도, 촉매와 반응 속도</div>
+  <ol class="goals mt8">
+    <li>대단원 Ⅳ의 핵심 개념(반응 속도식, 일차 반응의 반감기, 유효 충돌과 활성화 에너지, 농도·온도·촉매)을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li><b>반감기</b>와 <b>반응 속도</b>로 약의 복용 간격과 약의 형태가 중요한 까닭을 설명할 수 있다.</li>
+    <li>이야기·진로·프로젝트로 촉매와 효소가 생활과 환경 문제 해결에 쓰이는 예를 <b>찾을</b> 수 있다.</li>
+  </ol>
+  <svg class="fig mt8" viewBox="0 0 1112 130" style="width:1112px" aria-label="대단원 Ⅳ 단원 지도에서 네 소단원을 마치고 오늘은 대단원 마무리"><line x1="40" y1="34" x2="1072" y2="34" stroke="#C9D3DD" stroke-width="6" stroke-linecap="round"/><path d="M40 34 H990" stroke="#2E9E6A" stroke-width="6" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.6" data-delay=".3"/><circle cx="130" cy="34" r="11" fill="#2E9E6A"/><circle cx="345" cy="34" r="11" fill="#2E9E6A"/><circle cx="560" cy="34" r="11" fill="#2E9E6A"/><circle cx="775" cy="34" r="11" fill="#2E9E6A"/><circle cx="990" cy="34" r="16" fill="#FFE45C" stroke="#16233D" stroke-width="3"/><text class="tex" x="130" y="80" data-mix="01 화학||반응 속도" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="345" y="80" data-mix="02 일차 반응의||반감기" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="560" y="80" data-mix="03 유효 충돌과||활성화 에너지" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="775" y="80" data-mix="04 농도, 온도, 촉매에||따른 반응 속도의 변화" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="990" y="80" data-mix="오늘: 대단원 마무리||120–127쪽" data-size="19" data-anchor="middle" fill="#16233D" data-weight="700"></text></svg>
+  <div class="flow mt8 em49-flow">
+    <div class="fnode hl">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">대응표 · 종합</div><div class="farr">→</div>
+    <div class="fnode hl">과학 글쓰기 10</div><div class="farr">→</div>
+    <div class="fnode">이야기 · 미래</div><div class="farr">→</div>
+    <div class="fnode hl">프로젝트</div><div class="farr">→</div>
+    <div class="fnode">스스로 점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="개념 정리 ① 화학 반응 속도와 반감기">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ① 화학 반응 속도 · 일차 반응의 반감기</h2>
+  <div class="em49-tree em49-t1">
+    <div class="em49-n em49-root" style="grid-row:1 / span 4"><span>반응<br>속도</span></div>
+    <div class="em49-a" style="grid-row:1 / span 2;grid-column:2">→</div>
+    <div class="em49-n em49-mid" style="grid-row:1 / span 2;grid-column:3"><span>화학<br>반응 속도</span></div>
+    <div class="em49-a" style="grid-row:1;grid-column:4">→</div>
+    <div class="em49-n" style="grid-row:1;grid-column:5"><span>반응 속도</span></div>
+    <div class="em49-a" style="grid-row:1;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:1;grid-column:7">반응의 빠르기를 수치로 나타낸 것 · 반응 속도 $=\dfrac{\text{물질의 농도 변화량}}{\text{반응 시간}}$</p>
+    <div class="em49-a" style="grid-row:2;grid-column:4">→</div>
+    <div class="em49-n" style="grid-row:2;grid-column:5"><span>반응 속도식</span></div>
+    <div class="em49-a" style="grid-row:2;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:2;grid-column:7" data-q>$v=k[\ce{A}]^m[\ce{B}]^n$에서 $k$는 ❶ <span class="blank em49-wide"><span class="step">반응 속도 상수</span></span>, $m$, $n$은 반응 차수</p>
+    <div class="em49-a" style="grid-row:3 / span 2;grid-column:2">→</div>
+    <div class="em49-n em49-mid" style="grid-row:3 / span 2;grid-column:3"><span>일차 반응의<br>반감기</span></div>
+    <div class="em49-a" style="grid-row:3;grid-column:4">→</div>
+    <p class="em49-n" style="grid-row:3;grid-column:5" data-q>❷ <span class="blank"><span class="step">반감기</span></span></p>
+    <div class="em49-a" style="grid-row:3;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:3;grid-column:7">반응물의 농도가 절반으로 줄어드는 데 걸리는 시간</p>
+    <div class="em49-a" style="grid-row:4;grid-column:4">→</div>
+    <div class="em49-n" style="grid-row:4;grid-column:5"><span>일차 반응의<br>반감기의 특징</span></div>
+    <div class="em49-a" style="grid-row:4;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:4;grid-column:7">온도가 일정할 때 반응물의 농도에 관계없이 일정함.</p>
+  </div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 168" style="width:560px" aria-label="일차 반응에서 반응물 농도가 반감기마다 절반이 되고 반감기의 길이는 같다">
+        <path d="M50 20 V140 H530" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="165.0" y1="140" x2="165.0" y2="85.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/><line x1="50" y1="85.0" x2="165.0" y2="85.0" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/><line x1="280.0" y1="140" x2="280.0" y2="112.5" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/><line x1="50" y1="112.5" x2="280.0" y2="112.5" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/><line x1="395.0" y1="140" x2="395.0" y2="126.2" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/><line x1="50" y1="126.2" x2="395.0" y2="126.2" stroke="#5B6B7F" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <g data-anim="draw" data-dur="1.3" data-delay=".3"><path d="M50.0 30.0 L52.3 31.5 L54.6 33.0 L56.9 34.5 L59.2 35.9 L61.5 37.4 L63.8 38.8 L66.1 40.2 L68.4 41.5 L70.7 42.9 L73.0 44.2 L75.3 45.6 L77.6 46.9 L79.9 48.1 L82.2 49.4 L84.5 50.7 L86.8 51.9 L89.1 53.1 L91.4 54.3 L93.7 55.5 L96.0 56.6 L98.3 57.8 L100.6 58.9 L102.9 60.0 L105.2 61.1 L107.5 62.2 L109.8 63.3 L112.1 64.3 L114.4 65.4 L116.7 66.4 L119.0 67.4 L121.3 68.4 L123.6 69.4 L125.9 70.4 L128.2 71.3 L130.5 72.3 L132.8 73.2 L135.1 74.1 L137.4 75.0 L139.7 75.9 L142.0 76.8 L144.3 77.7 L146.6 78.5 L148.9 79.4 L151.2 80.2 L153.5 81.1 L155.8 81.9 L158.1 82.7 L160.4 83.5 L162.7 84.2 L165.0 85.0 L167.3 85.8 L169.6 86.5 L171.9 87.2 L174.2 88.0 L176.5 88.7 L178.8 89.4 L181.1 90.1 L183.4 90.8 L185.7 91.5 L188.0 92.1 L190.3 92.8 L192.6 93.4 L194.9 94.1 L197.2 94.7 L199.5 95.3 L201.8 95.9 L204.1 96.5 L206.4 97.1 L208.7 97.7 L211.0 98.3 L213.3 98.9 L215.6 99.5 L217.9 100.0 L220.2 100.6 L222.5 101.1 L224.8 101.6 L227.1 102.2 L229.4 102.7 L231.7 103.2 L234.0 103.7 L236.3 104.2 L238.6 104.7 L240.9 105.2 L243.2 105.7 L245.5 106.1 L247.8 106.6 L250.1 107.1 L252.4 107.5 L254.7 108.0 L257.0 108.4 L259.3 108.8 L261.6 109.3 L263.9 109.7 L266.2 110.1 L268.5 110.5 L270.8 110.9 L273.1 111.3 L275.4 111.7 L277.7 112.1 L280.0 112.5 L282.3 112.9 L284.6 113.3 L286.9 113.6 L289.2 114.0 L291.5 114.3 L293.8 114.7 L296.1 115.0 L298.4 115.4 L300.7 115.7 L303.0 116.1 L305.3 116.4 L307.6 116.7 L309.9 117.0 L312.2 117.4 L314.5 117.7 L316.8 118.0 L319.1 118.3 L321.4 118.6 L323.7 118.9 L326.0 119.2 L328.3 119.4 L330.6 119.7 L332.9 120.0 L335.2 120.3 L337.5 120.6 L339.8 120.8 L342.1 121.1 L344.4 121.3 L346.7 121.6 L349.0 121.9 L351.3 122.1 L353.6 122.4 L355.9 122.6 L358.2 122.8 L360.5 123.1 L362.8 123.3 L365.1 123.5 L367.4 123.8 L369.7 124.0 L372.0 124.2 L374.3 124.4 L376.6 124.6 L378.9 124.8 L381.2 125.1 L383.5 125.3 L385.8 125.5 L388.1 125.7 L390.4 125.9 L392.7 126.1 L395.0 126.2 L397.3 126.4 L399.6 126.6 L401.9 126.8 L404.2 127.0 L406.5 127.2 L408.8 127.3 L411.1 127.5 L413.4 127.7 L415.7 127.9 L418.0 128.0 L420.3 128.2 L422.6 128.4 L424.9 128.5 L427.2 128.7 L429.5 128.8 L431.8 129.0 L434.1 129.1 L436.4 129.3 L438.7 129.4 L441.0 129.6 L443.3 129.7 L445.6 129.9 L447.9 130.0 L450.2 130.1 L452.5 130.3 L454.8 130.4 L457.1 130.5 L459.4 130.7 L461.7 130.8 L464.0 130.9 L466.3 131.1 L468.6 131.2 L470.9 131.3 L473.2 131.4 L475.5 131.5 L477.8 131.7 L480.1 131.8 L482.4 131.9 L484.7 132.0 L487.0 132.1 L489.3 132.2 L491.6 132.3 L493.9 132.4 L496.2 132.5 L498.5 132.6 L500.8 132.7 L503.1 132.8 L505.4 132.9 L507.7 133.0 L510.0 133.1" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <text class="tex" x="58" y="24" data-mix="$[\ce{A}]$" data-size="19"></text><text class="tex" x="530" y="158" data-mix="시간" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="107" y="156" data-mix="$t_{1/2}$" data-size="19" data-anchor="middle"></text><text class="tex" x="222" y="156" data-mix="$t_{1/2}$" data-size="19" data-anchor="middle"></text><text class="tex" x="337" y="156" data-mix="$t_{1/2}$" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="390" y="60" data-mix="반감기마다 절반 · 길이는 같다" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <div class="card"><p class="f21"><b>반응 차수</b>는 실험 자료(초기 속도법)로 구한다 — 계수와 같다고 할 수 없다(01 덱).</p></div>
+      <div class="card"><p class="f21"><b>일차 반응</b> $v=k[\ce{A}]$, $k$의 단위 $\text{s}^{-1}$ · 반감기가 $n$번 지나면 $[\ce{A}]=[\ce{A}]_0\times\left(\dfrac{1}{2}\right)^n$(02 덱)</p></div>
+    </div>
+  </div>
+  <p class="small c-muted mt4">교과서 122쪽 개념 정리 01·02 몫 — 01 덱 #32의 번호와 다른 점은 #6.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="개념 정리 ② 유효 충돌과 활성화 에너지">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ② 유효 충돌과 활성화 에너지</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-tree em49-t2">
+        <div class="em49-n em49-root" style="grid-row:1 / span 2"><span>반응<br>속도</span></div>
+        <div class="em49-a" style="grid-row:1 / span 2;grid-column:2">→</div>
+        <div class="em49-n em49-mid" style="grid-row:1 / span 2;grid-column:3"><span>유효 충돌과<br>활성화<br>에너지</span></div>
+        <div class="em49-a" style="grid-row:1;grid-column:4">→</div>
+        <p class="em49-n" style="grid-row:1;grid-column:5" data-q>❸ <span class="blank"><span class="step">유효 충돌</span></span></p>
+        <div class="em49-a" style="grid-row:1;grid-column:6">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:1;grid-column:7">반응이 일어나기에 적합한 충돌</p>
+        <div class="em49-a" style="grid-row:2;grid-column:4">→</div>
+        <p class="em49-n" style="grid-row:2;grid-column:5" data-q>❹ <span class="blank em49-wide"><span class="step">활성화 에너지</span></span></p>
+        <div class="em49-a" style="grid-row:2;grid-column:6">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:2;grid-column:7">화학 반응이 일어나기 위해 필요한 최소한의 에너지</p>
+      </div>
+      <svg class="fig mt12" viewBox="0 0 640 200" style="width:640px" aria-label="방향이 알맞고 에너지가 충분한 충돌은 반응하고, 방향이 맞지 않는 충돌은 튕겨 나간다">
+        <rect x="4" y="4" width="306" height="192" rx="12" fill="#F1F8F3" stroke="#2E9E6A" stroke-width="2"/><rect x="330" y="4" width="306" height="192" rx="12" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/>
+        <text class="tex" x="157" y="32" data-mix="방향 알맞음 + 에너지 충분" data-size="19" data-anchor="middle" fill="#2E7D5B" data-weight="700"></text>
+        <text class="tex" x="483" y="32" data-mix="방향이 맞지 않음" data-size="19" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text>
+        <g data-anim="move" data-from="-34,0" data-dur=".9" data-delay=".3"><circle cx="70" cy="100" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="102" cy="100" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/></g>
+        <g data-anim="move" data-from="34,0" data-dur=".9" data-delay=".3"><circle cx="140" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/><circle cx="172" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/></g>
+        <circle cx="121" cy="100" r="9" fill="#FFD34D" opacity=".85"/>
+        <path d="M200 100 H232" stroke="#16233D" stroke-width="3"/><path d="M242 100 L228 93 V107 Z" fill="#16233D"/>
+        <circle cx="262" cy="80" r="15" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="288" cy="80" r="15" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/>
+        <circle cx="262" cy="122" r="15" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="288" cy="122" r="15" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/>
+        <text class="tex" x="157" y="180" data-mix="반응한다 (유효 충돌)" data-size="19" data-anchor="middle" fill="#2E7D5B"></text>
+        <circle cx="380" cy="80" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="380" cy="112" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/>
+        <circle cx="430" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/><circle cx="462" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/>
+        <path d="M494 100 L560 70" stroke="#8C99A6" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M568 66 L553 66 L558 79 Z" fill="#8C99A6"/>
+        <text class="tex" x="483" y="180" data-mix="튕겨 나간다 (반응 없음)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="small c-muted">A 원자(주황)·B 원자(초록) 모형: $\ce{A2 + B2 -> 2AB}$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 330" style="width:420px" aria-label="반응의 진행에 따른 엔탈피: 반응물에서 활성화 상태까지가 정반응의 활성화 에너지, 생성물에서 활성화 상태까지가 역반응의 활성화 에너지, 두 값의 차이가 반응 엔탈피">
+        <path d="M40 14 V300 H410" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <text class="tex" x="48" y="26" data-mix="엔탈피" data-size="19" fill="#5B6B7F"></text><text class="tex" x="410" y="324" data-mix="반응의 진행" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <g data-anim="draw" data-dur="1.2" data-delay=".3"><path d="M60 200 H130 C 180 200, 190 70, 225 70 C 260 70, 270 250, 320 250 H400" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <path d="M100 200 V80" stroke="#E08A2C" stroke-width="3"/><path d="M100 74 L94 86 H106 Z" fill="#E08A2C"/>
+        <path d="M94 70 H225" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <text class="tex" x="92" y="146" data-mix="$E_\mathrm{a}$" data-size="21" data-anchor="end" fill="#B8661A"></text>
+        <path d="M360 250 V80" stroke="#E08A2C" stroke-width="3"/><path d="M360 74 L354 86 H366 Z" fill="#E08A2C"/>
+        <path d="M225 70 H366" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <text class="tex" x="368" y="170" data-mix="$E_\mathrm{a}'$" data-size="21" fill="#B8661A"></text>
+        <path d="M130 200 H300" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <path d="M290 204 V236" stroke="#16233D" stroke-width="3"/><path d="M290 246 L284 234 H296 Z" fill="#16233D"/>
+        <text class="tex" x="282" y="228" data-mix="$\Delta H$" data-size="20" data-anchor="end"></text>
+        <text class="tex" x="80" y="226" data-mix="반응물" data-size="19" data-anchor="middle"></text><text class="tex" x="370" y="276" data-mix="생성물" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="225" y="56" data-mix="활성화 상태" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="f21 step">$\Delta H=E_\mathrm{a}-E_\mathrm{a}'$ — 활성화 에너지가 작을수록 유효 충돌이 많아 반응이 빠르다.</p>
+    </div>
+  </div>
+  <p class="small c-muted mt4">교과서 122쪽 개념 정리 03 몫 — 03 덱 「스스로 정리」(#19)와 같은 번호 ❸·❹.</p>
+</section>
+
+<!-- ════════ 5. 개념 정리 ③ ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="개념 정리 ③ 농도, 온도, 촉매">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ③ 농도, 온도, 촉매에 따른 반응 속도의 변화</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-tree em49-t3">
+        <div class="em49-n em49-mid" style="grid-row:1 / span 5;grid-column:1"><span>농도,<br>온도,<br>촉매에<br>따른 반응<br>속도의<br>변화</span></div>
+        <div class="em49-a" style="grid-row:1;grid-column:2">→</div>
+        <div class="em49-n" style="grid-row:1;grid-column:3"><span>농도와<br>반응 속도</span></div>
+        <div class="em49-a" style="grid-row:1;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:1;grid-column:5" data-q>반응물의 농도 증가 → 충돌 횟수 증가 → 반응 속도 ❺ <span class="blank"><span class="step">증가</span></span></p>
+        <div class="em49-a" style="grid-row:2;grid-column:2">→</div>
+        <div class="em49-n" style="grid-row:2;grid-column:3"><span>온도와<br>반응 속도</span></div>
+        <div class="em49-a" style="grid-row:2;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:2;grid-column:5" data-q>온도 증가 → 유효 충돌을 할 수 있는 입자 수 증가 → 반응 속도 ❻ <span class="blank"><span class="step">증가</span></span></p>
+        <div class="em49-a" style="grid-row:3 / span 3;grid-column:2">→</div>
+        <div class="em49-n" style="grid-row:3 / span 3;grid-column:3"><span>촉매와<br>반응 속도</span></div>
+        <div class="em49-a" style="grid-row:3;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:3;grid-column:5" data-q>❼ <span class="blank"><span class="step">촉매</span></span>: 화학 반응에서 자신은 변하지 않으면서 반응 속도를 변화시키는 물질</p>
+        <div class="em49-a" style="grid-row:4;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:4;grid-column:5" data-q>정촉매 사용 → 활성화 에너지 감소 → 반응 속도 ❽ <span class="blank"><span class="step">증가</span></span></p>
+        <div class="em49-a" style="grid-row:5;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:5;grid-column:5" data-q>광촉매: 빛을 받으면 촉매 작용을 하는 물질 · 생체 촉매인 ❾ <span class="blank"><span class="step">효소</span></span>은/는 식품, 환경, 에너지 등 많은 분야에서 활용됨.</p>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 260px">
+      <svg class="fig" viewBox="0 0 260 300" style="width:260px" aria-label="저온과 고온의 분자 운동 에너지 분포 곡선: 고온일수록, 정촉매로 활성화 에너지가 낮아질수록 활성화 에너지 이상의 분자가 많아진다">
+        <path d="M136.1 205.8 L136.7 206.2 L137.4 206.7 L138.0 207.1 L138.7 207.5 L139.3 207.9 L140.0 208.3 L140.6 208.7 L141.3 209.1 L141.9 209.5 L142.6 209.9 L143.2 210.3 L143.9 210.6 L144.5 211.0 L145.2 211.4 L145.8 211.8 L146.5 212.2 L147.1 212.5 L147.8 212.9 L148.4 213.3 L149.1 213.6 L149.7 214.0 L150.3 214.3 L151.0 214.7 L151.6 215.0 L152.3 215.4 L152.9 215.7 L153.6 216.1 L154.2 216.4 L154.9 216.7 L155.5 217.1 L156.2 217.4 L156.8 217.7 L157.5 218.0 L158.1 218.3 L158.8 218.7 L159.4 219.0 L160.1 219.3 L160.7 219.6 L161.4 219.9 L162.0 220.2 L162.7 220.5 L163.3 220.8 L164.0 221.1 L164.6 221.4 L165.3 221.7 L165.9 222.0 L166.6 222.2 L167.2 222.5 L167.9 222.8 L168.5 223.1 L169.2 223.4 L169.8 223.6 L170.5 223.9 L171.1 224.2 L171.8 224.4 L172.4 224.7 L173.1 224.9 L173.7 225.2 L174.4 225.5 L175.0 225.7 L175.7 226.0 L176.3 226.2 L177.0 226.5 L177.6 226.7 L178.3 226.9 L178.9 227.2 L179.6 227.4 L180.2 227.6 L180.9 227.9 L181.5 228.1 L182.2 228.3 L182.8 228.6 L183.5 228.8 L184.1 229.0 L184.8 229.2 L185.4 229.4 L186.1 229.6 L186.7 229.9 L187.4 230.1 L188.0 230.3 L188.7 230.5 L189.3 230.7 L190.0 230.9 L190.6 231.1 L191.3 231.3 L191.9 231.5 L192.6 231.7 L193.2 231.9 L193.9 232.1 L194.5 232.2 L195.2 232.4 L195.8 232.6 L196.5 232.8 L197.1 233.0 L197.8 233.2 L198.4 233.3 L199.1 233.5 L199.7 233.7 L200.4 233.9 L201.0 234.0 L201.7 234.2 L202.3 234.4 L203.0 234.5 L203.6 234.7 L204.3 234.9 L204.9 235.0 L205.6 235.2 L206.2 235.3 L206.9 235.5 L207.5 235.7 L208.2 235.8 L208.8 236.0 L209.5 236.1 L210.1 236.3 L210.8 236.4 L211.4 236.5 L212.1 236.7 L212.7 236.8 L213.4 237.0 L214.0 237.1 L214.7 237.3 L215.3 237.4 L216.0 237.5 L216.6 237.7 L217.3 237.8 L217.9 237.9 L218.6 238.1 L219.2 238.2 L219.9 238.3 L220.5 238.4 L221.2 238.6 L221.8 238.7 L222.5 238.8 L223.1 238.9 L223.8 239.0 L224.4 239.2 L225.1 239.3 L225.7 239.4 L226.4 239.5 L227.0 239.6 L227.7 239.7 L228.3 239.8 L229.0 240.0 L229.6 240.1 L230.3 240.2 L230.9 240.3 L231.6 240.4 L232.2 240.5 L232.9 240.6 L233.5 240.7 L234.2 240.8 L234.8 240.9 L235.5 241.0 L236.1 241.1 L236.8 241.2 L237.4 241.3 L238.1 241.4 L238.7 241.5 L239.4 241.6 L240.0 241.7 L240.0 250 L136.1 250 Z" fill="#D7263D" opacity=".22"/><path d="M136.1 227.8 L136.7 228.2 L137.4 228.6 L138.0 228.9 L138.7 229.3 L139.3 229.7 L140.0 230.1 L140.6 230.4 L141.3 230.8 L141.9 231.1 L142.6 231.5 L143.2 231.8 L143.9 232.2 L144.5 232.5 L145.2 232.8 L145.8 233.1 L146.5 233.4 L147.1 233.7 L147.8 234.0 L148.4 234.3 L149.1 234.6 L149.7 234.9 L150.3 235.2 L151.0 235.5 L151.6 235.7 L152.3 236.0 L152.9 236.3 L153.6 236.5 L154.2 236.8 L154.9 237.0 L155.5 237.2 L156.2 237.5 L156.8 237.7 L157.5 237.9 L158.1 238.2 L158.8 238.4 L159.4 238.6 L160.1 238.8 L160.7 239.0 L161.4 239.2 L162.0 239.4 L162.7 239.6 L163.3 239.8 L164.0 240.0 L164.6 240.2 L165.3 240.4 L165.9 240.6 L166.6 240.7 L167.2 240.9 L167.9 241.1 L168.5 241.3 L169.2 241.4 L169.8 241.6 L170.5 241.7 L171.1 241.9 L171.8 242.0 L172.4 242.2 L173.1 242.3 L173.7 242.5 L174.4 242.6 L175.0 242.8 L175.7 242.9 L176.3 243.0 L177.0 243.2 L177.6 243.3 L178.3 243.4 L178.9 243.6 L179.6 243.7 L180.2 243.8 L180.9 243.9 L181.5 244.0 L182.2 244.1 L182.8 244.3 L183.5 244.4 L184.1 244.5 L184.8 244.6 L185.4 244.7 L186.1 244.8 L186.7 244.9 L187.4 245.0 L188.0 245.1 L188.7 245.2 L189.3 245.3 L190.0 245.3 L190.6 245.4 L191.3 245.5 L191.9 245.6 L192.6 245.7 L193.2 245.8 L193.9 245.9 L194.5 245.9 L195.2 246.0 L195.8 246.1 L196.5 246.2 L197.1 246.2 L197.8 246.3 L198.4 246.4 L199.1 246.4 L199.7 246.5 L200.4 246.6 L201.0 246.7 L201.7 246.7 L202.3 246.8 L203.0 246.8 L203.6 246.9 L204.3 247.0 L204.9 247.0 L205.6 247.1 L206.2 247.1 L206.9 247.2 L207.5 247.2 L208.2 247.3 L208.8 247.3 L209.5 247.4 L210.1 247.4 L210.8 247.5 L211.4 247.5 L212.1 247.6 L212.7 247.6 L213.4 247.7 L214.0 247.7 L214.7 247.8 L215.3 247.8 L216.0 247.9 L216.6 247.9 L217.3 247.9 L217.9 248.0 L218.6 248.0 L219.2 248.1 L219.9 248.1 L220.5 248.1 L221.2 248.2 L221.8 248.2 L222.5 248.2 L223.1 248.3 L223.8 248.3 L224.4 248.3 L225.1 248.4 L225.7 248.4 L226.4 248.4 L227.0 248.5 L227.7 248.5 L228.3 248.5 L229.0 248.6 L229.6 248.6 L230.3 248.6 L230.9 248.6 L231.6 248.7 L232.2 248.7 L232.9 248.7 L233.5 248.7 L234.2 248.8 L234.8 248.8 L235.5 248.8 L236.1 248.8 L236.8 248.9 L237.4 248.9 L238.1 248.9 L238.7 248.9 L239.4 248.9 L240.0 249.0 L240.0 250 L136.1 250 Z" fill="#1F6FD1" opacity=".3"/>
+        <path d="M26 20 V250 H246" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <g data-anim="draw" data-dur="1" data-delay=".2"><path d="M26.0 250.0 L27.3 164.1 L28.7 133.7 L30.0 113.7 L31.4 99.3 L32.7 88.8 L34.0 80.9 L35.4 75.2 L36.7 71.1 L38.0 68.4 L39.4 66.8 L40.7 66.1 L42.0 66.1 L43.4 66.8 L44.7 68.0 L46.1 69.7 L47.4 71.8 L48.7 74.1 L50.1 76.8 L51.4 79.7 L52.8 82.7 L54.1 85.9 L55.4 89.2 L56.8 92.7 L58.1 96.2 L59.4 99.7 L60.8 103.3 L62.1 106.9 L63.5 110.5 L64.8 114.1 L66.1 117.7 L67.5 121.3 L68.8 124.8 L70.1 128.3 L71.5 131.8 L72.8 135.2 L74.2 138.5 L75.5 141.8 L76.8 145.1 L78.2 148.3 L79.5 151.4 L80.8 154.4 L82.2 157.4 L83.5 160.3 L84.8 163.2 L86.2 165.9 L87.5 168.7 L88.9 171.3 L90.2 173.9 L91.5 176.4 L92.9 178.8 L94.2 181.2 L95.5 183.5 L96.9 185.7 L98.2 187.9 L99.6 190.0 L100.9 192.1 L102.2 194.0 L103.6 196.0 L104.9 197.8 L106.2 199.6 L107.6 201.4 L108.9 203.1 L110.3 204.8 L111.6 206.3 L112.9 207.9 L114.3 209.4 L115.6 210.8 L117.0 212.2 L118.3 213.6 L119.6 214.9 L121.0 216.1 L122.3 217.4 L123.6 218.6 L125.0 219.7 L126.3 220.8 L127.7 221.9 L129.0 222.9 L130.3 223.9 L131.7 224.8 L133.0 225.8 L134.3 226.7 L135.7 227.5 L137.0 228.3 L138.3 229.2 L139.7 229.9 L141.0 230.7 L142.4 231.4 L143.7 232.1 L145.0 232.8 L146.4 233.4 L147.7 234.0 L149.1 234.6 L150.4 235.2 L151.7 235.8 L153.1 236.3 L154.4 236.8 L155.7 237.3 L157.1 237.8 L158.4 238.3 L159.8 238.7 L161.1 239.1 L162.4 239.5 L163.8 239.9 L165.1 240.3 L166.4 240.7 L167.8 241.1 L169.1 241.4 L170.4 241.7 L171.8 242.0 L173.1 242.4 L174.5 242.6 L175.8 242.9 L177.1 243.2 L178.5 243.5 L179.8 243.7 L181.2 244.0 L182.5 244.2 L183.8 244.4 L185.2 244.6 L186.5 244.8 L187.8 245.0 L189.2 245.2 L190.5 245.4 L191.8 245.6 L193.2 245.8 L194.5 245.9 L195.9 246.1 L197.2 246.2 L198.5 246.4 L199.9 246.5 L201.2 246.7 L202.6 246.8 L203.9 246.9 L205.2 247.0 L206.6 247.2 L207.9 247.3 L209.2 247.4 L210.6 247.5 L211.9 247.6 L213.2 247.7 L214.6 247.8 L215.9 247.9 L217.3 247.9 L218.6 248.0 L219.9 248.1 L221.3 248.2 L222.6 248.2 L223.9 248.3 L225.3 248.4 L226.6 248.4 L228.0 248.5 L229.3 248.6 L230.6 248.6 L232.0 248.7 L233.3 248.7 L234.7 248.8 L236.0 248.8 L237.3 248.9 L238.7 248.9 L240.0 249.0" stroke="#1F6FD1" stroke-width="3" fill="none"/></g>
+        <g data-anim="draw" data-dur="1" data-delay=".6"><path d="M26.0 250.0 L27.3 210.5 L28.7 195.6 L30.0 185.1 L31.4 177.0 L32.7 170.4 L34.0 165.0 L35.4 160.5 L36.7 156.8 L38.0 153.7 L39.4 151.0 L40.7 148.8 L42.0 147.0 L43.4 145.5 L44.7 144.3 L46.1 143.4 L47.4 142.7 L48.7 142.2 L50.1 141.9 L51.4 141.8 L52.8 141.8 L54.1 141.9 L55.4 142.2 L56.8 142.6 L58.1 143.1 L59.4 143.6 L60.8 144.3 L62.1 145.0 L63.5 145.8 L64.8 146.6 L66.1 147.5 L67.5 148.5 L68.8 149.5 L70.1 150.5 L71.5 151.6 L72.8 152.7 L74.2 153.8 L75.5 155.0 L76.8 156.1 L78.2 157.3 L79.5 158.5 L80.8 159.8 L82.2 161.0 L83.5 162.2 L84.8 163.5 L86.2 164.7 L87.5 165.9 L88.9 167.2 L90.2 168.4 L91.5 169.7 L92.9 170.9 L94.2 172.2 L95.5 173.4 L96.9 174.7 L98.2 175.9 L99.6 177.1 L100.9 178.3 L102.2 179.5 L103.6 180.7 L104.9 181.9 L106.2 183.0 L107.6 184.2 L108.9 185.4 L110.3 186.5 L111.6 187.6 L112.9 188.7 L114.3 189.8 L115.6 190.9 L117.0 192.0 L118.3 193.0 L119.6 194.1 L121.0 195.1 L122.3 196.1 L123.6 197.1 L125.0 198.1 L126.3 199.1 L127.7 200.1 L129.0 201.0 L130.3 202.0 L131.7 202.9 L133.0 203.8 L134.3 204.7 L135.7 205.6 L137.0 206.4 L138.3 207.3 L139.7 208.1 L141.0 208.9 L142.4 209.8 L143.7 210.6 L145.0 211.3 L146.4 212.1 L147.7 212.9 L149.1 213.6 L150.4 214.3 L151.7 215.1 L153.1 215.8 L154.4 216.5 L155.7 217.1 L157.1 217.8 L158.4 218.5 L159.8 219.1 L161.1 219.8 L162.4 220.4 L163.8 221.0 L165.1 221.6 L166.4 222.2 L167.8 222.8 L169.1 223.3 L170.4 223.9 L171.8 224.4 L173.1 225.0 L174.5 225.5 L175.8 226.0 L177.1 226.5 L178.5 227.0 L179.8 227.5 L181.2 228.0 L182.5 228.4 L183.8 228.9 L185.2 229.3 L186.5 229.8 L187.8 230.2 L189.2 230.6 L190.5 231.1 L191.8 231.5 L193.2 231.9 L194.5 232.2 L195.9 232.6 L197.2 233.0 L198.5 233.4 L199.9 233.7 L201.2 234.1 L202.6 234.4 L203.9 234.8 L205.2 235.1 L206.6 235.4 L207.9 235.7 L209.2 236.1 L210.6 236.4 L211.9 236.7 L213.2 236.9 L214.6 237.2 L215.9 237.5 L217.3 237.8 L218.6 238.1 L219.9 238.3 L221.3 238.6 L222.6 238.8 L223.9 239.1 L225.3 239.3 L226.6 239.6 L228.0 239.8 L229.3 240.0 L230.6 240.2 L232.0 240.5 L233.3 240.7 L234.7 240.9 L236.0 241.1 L237.3 241.3 L238.7 241.5 L240.0 241.7" stroke="#D7263D" stroke-width="3" fill="none"/></g>
+        <line x1="136.1" y1="40" x2="136.1" y2="250" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <line x1="99.4" y1="80" x2="99.4" y2="250" stroke="#2E9E6A" stroke-width="2.5" stroke-dasharray="3 4"/>
+        <text class="tex" x="136.1" y="34" data-mix="$E_\mathrm{a}$" data-size="19" data-anchor="middle" fill="#B8661A"></text>
+        <text class="tex" x="99.4" y="74" data-mix="정촉매" data-size="18" data-anchor="middle" fill="#2E7D5B"></text>
+        <text class="tex" x="150" y="112" data-mix="$T_1$ 저온" data-size="19" fill="#1F6FD1"></text>
+        <text class="tex" x="150" y="150" data-mix="$T_2$ 고온" data-size="19" fill="#D7263D"></text>
+        <text class="tex" x="34" y="18" data-mix="분자 수" data-size="18" fill="#5B6B7F"></text><text class="tex" x="246" y="276" data-mix="운동 에너지" data-size="18" data-anchor="end" fill="#5B6B7F"></text>
+      </svg>
+      <p class="small c-muted">색칠한 넓이 = 활성화 에너지 이상인 분자 수. 고온이면 넓이가 커지고, 정촉매는 경계를 왼쪽으로 옮긴다.</p>
+    </div>
+  </div>
+  <p class="small c-muted mt4">교과서 122쪽 개념 정리 04 몫 — 04 덱 (1) #30 ❺❻, 04 덱 (2) #25 ❼❽❾와 같은 번호.</p>
+</section>
+
+<!-- ════════ 6. 빈칸 번호 대응 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="연결: 스스로 정리 빈칸 번호 맞추기">
+  <h2><span class="tag alt">연결</span>교과서 122쪽 빈칸 번호와 소단원 덱의 번호</h2>
+  <table class="tight em49-num">
+    <tr><th>번호</th><th>교과서 122쪽 빈칸<br><span class="small">(이 덱 #3–5)</span></th><th>01 덱 #32</th><th>02 덱 #23</th><th>03 덱 #19</th><th>04 덱 (1) #30</th><th>04 덱 (2) #25</th></tr>
+    <tr><td>❶</td><td>반응 속도 상수</td><td class="em49-own">반응 속도</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>❷</td><td>반감기</td><td class="em49-own">접선</td><td class="em49-same">반감기</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>❸</td><td>유효 충돌</td><td class="em49-own">반응 속도 상수</td><td>—</td><td class="em49-same">유효 충돌</td><td>—</td><td>—</td></tr>
+    <tr><td>❹</td><td>활성화 에너지</td><td class="em49-own">반응 차수</td><td>—</td><td class="em49-same">활성화 에너지</td><td>—</td><td>—</td></tr>
+    <tr><td>❺</td><td>증가</td><td>—</td><td>—</td><td>—</td><td class="em49-same">증가</td><td class="em49-same">증가</td></tr>
+    <tr><td>❻</td><td>증가</td><td>—</td><td>—</td><td>—</td><td class="em49-same">증가</td><td class="em49-same">증가</td></tr>
+    <tr><td>❼</td><td>촉매</td><td>—</td><td>—</td><td>—</td><td>(흐림)</td><td class="em49-same">촉매</td></tr>
+    <tr><td>❽</td><td>증가</td><td>—</td><td>—</td><td>—</td><td>(흐림)</td><td class="em49-same">증가</td></tr>
+    <tr><td>❾</td><td>효소</td><td>—</td><td>—</td><td>—</td><td>(흐림)</td><td class="em49-same">효소</td></tr>
+  </table>
+  <div class="note mt8"><b>읽는 법</b> 초록 칸은 교과서와 같은 빈칸, 회색 기울임 칸은 01 덱이 붙인 <b>덱 자체 번호</b>이다. 교과서 ❶ 반응 속도 상수는 01 덱에서 ❸이다. 02 덱의 '농도' 빈칸은 번호 없는 덱 빈칸이다. 대단원 정리는 교과서 번호(#3–5)로 한다.</div>
+</section>
+
+<!-- ════════ 7. 대응표 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="대단원 마무리 대응표">
+  <h2><span class="tag alt">대단원 마무리 대응표</span>문항 01–10은 어디에서 푸나?</h2>
+  <table class="tight em49-map">
+    <tr><th>번호</th><th>머리표</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td>01</td><td>01</td><td class="l">서술형 반응 속도식과 $k$의 단위</td><td>01 덱 #30</td><td><span class="step" data-g="k1">$v=k[\ce{A}]$, $\text{s}^{-1}$</span></td></tr>
+    <tr><td>02</td><td>01</td><td class="l">$\ce{2NO + O2 -> 2NO2}$ 초기 반응 속도 자료</td><td>01 덱 #31</td><td><span class="step" data-g="k1">① ㄱ</span></td></tr>
+    <tr><td>03</td><td>02</td><td class="l">일차 반응에 대한 설명</td><td>02 덱 #21</td><td><span class="step" data-g="k1">② ㄴ</span></td></tr>
+    <tr><td>04</td><td>02</td><td class="l">서술형 입자 모형으로 반감기와 초기 몰농도비</td><td>02 덱 #22</td><td><span class="step" data-g="k1">2분, 2 : 1</span></td></tr>
+    <tr><td>05</td><td>03</td><td class="l">$\ce{HI}$ 분해 반응의 엔탈피와 활성화 에너지</td><td>03 덱 #18</td><td><span class="step" data-g="k1">④ ㄴ, ㄷ</span></td></tr>
+    <tr><td>06</td><td>04</td><td class="l">압력을 높인 실린더 속 입자 모형</td><td>04 덱 (1) #28</td><td><span class="step" data-g="k1">① ㄱ</span></td></tr>
+    <tr><td>07</td><td>04</td><td class="l">반응 속도에 영향을 미치는 요인</td><td>04 덱 (2) #22</td><td><span class="step" data-g="k1">③</span></td></tr>
+    <tr><td>08</td><td>04</td><td class="l">서술형 정촉매·부촉매의 활성화 에너지</td><td>04 덱 (2) #23</td><td><span class="step" data-g="k1">$H_2-H_1$, $H_4-H_1$</span></td></tr>
+    <tr><td>09</td><td>04</td><td class="l">반응 속도를 조절하는 물질 (가)–(다)</td><td>04 덱 (2) #24</td><td><span class="step" data-g="k1">③ ㄱ, ㄴ</span></td></tr>
+    <tr class="em49-here"><td>10</td><td>과학 글쓰기</td><td class="l">약의 복용법과 반감기, 약의 형태</td><td>이 덱 #9–13</td><td><span class="step" data-g="k1">서술(예시 답안)</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">머리표 01 화학 반응 속도 · 02 일차 반응의 반감기 · 03 유효 충돌과 활성화 에너지 · 04 농도, 온도, 촉매에 따른 반응 속도의 변화. 01–09는 모두 소단원 덱 끝에서 풀었다 — 오늘은 10(노란 줄)과 종합 문제(#8)를 푼다.</p>
+</section>
+
+<!-- ════════ 8. 확인 문제 01 종합 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="확인 문제 01 대단원 종합">
+  <h2><span class="tag q">확인 문제 01</span>반감기 · 반응 속도식 · 촉매를 한 문항으로</h2>
+  <p class="f21">표는 일정한 온도에서 일차 반응 $\ce{A(g) -> B(g)}$의 실험 Ⅰ–Ⅲ 조건과 반감기이다.</p>
+  <div class="row mt8">
+    <div class="col">
+      <table class="tight em49-exp">
+        <tr><th>실험</th><th>$[\ce{A}]_0$ (mol/L)</th><th>촉매</th><th>반감기 (s)</th></tr>
+        <tr><td>Ⅰ</td><td>0.80</td><td>없음</td><td>30</td></tr>
+        <tr><td>Ⅱ</td><td>0.40</td><td>없음</td><td>(가)</td></tr>
+        <tr><td>Ⅲ</td><td>0.80</td><td>정촉매</td><td>10</td></tr>
+      </table>
+      <p class="f21 mt8">이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <div class="bogi"><p>ㄱ. (가)는 30이다.</p><p>ㄴ. 실험 Ⅰ에서 60 s일 때 $[\ce{A}]=0.20\ \text{mol/L}$이다.</p><p>ㄷ. 활성화 에너지는 실험 Ⅲ이 실험 Ⅰ보다 크다.</p></div>
+      <div class="choices f21 mt8"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 460px">
+      <div class="board" style="min-height:90px"></div>
+      <p class="f21 step">ㄱ ○ 일차 반응의 반감기는 처음 농도에 관계없이 일정 → 30 s (02 덱)</p>
+      <p class="f21 step">ㄴ ○ 60 s = 반감기 2번 → $0.80\times\left(\dfrac{1}{2}\right)^2=0.20\ \text{mol/L}$</p>
+      <p class="f21 step">ㄷ × 반감기가 짧다 = 빠르다 → 정촉매가 활성화 에너지를 <b>낮춘</b> 것 (03·04 덱)</p>
+      <p class="f21 step"><b>Q</b> 처음 반응 속도의 비 Ⅰ : Ⅱ는? → $v=k[\ce{A}]$이므로 <span class="ans">2 : 1</span> (01 덱)</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ③</b> ㄱ, ㄴ</div>
+</section>
+
+<!-- ════════ 9. 과학 글쓰기 10 자료 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="과학 글쓰기 10 자료 읽기">
+  <h2><span class="tag">과학 글쓰기</span>10 약의 복용법 — 자료 읽기</h2>
+  <div class="row">
+    <div class="col stack em49-src">
+      <div class="card"><p><b>혈중 농도</b> 약을 먹으면 약물의 혈중 농도가 점차 높아져 최대 혈중 농도에 이르렀다가 시간이 지나면 줄어든다. 혈중 농도가 기준 농도 이상이면 약효가 나타나고, 그 이하이면 약효가 없다. 지나치게 높으면 약이 몸속에서 독성을 나타낼 수 있다.</p></div>
+      <div class="card"><p><b>복용 간격</b> 최대 혈중 농도에 이를 때까지 걸리는 시간과, 최대 혈중 농도에서 절반이 되는 데 걸리는 시간, 즉 <b>반감기</b>를 고려해 복용 간격을 정하고, 이에 따라 하루 복용 횟수(보통 3번)를 정한다. 그래서 복용법을 꼭 지켜야 한다.</p></div>
+      <div class="card"><p><b>어린아이의 약</b> 알약을 갈아 가루약으로 먹이거나 큰 약을 작게 쪼개어 먹이는 경우가 있는데, 이렇게 ㉠ <u>약의 형태를 바꾸면 약효에 변화가 생길 수 있다.</u></p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 470 270" style="width:470px" aria-label="약을 한 번 먹었을 때 혈중 농도가 최대에 이르렀다가 줄어드는 곡선과 기준 농도, 독성이 나타날 수 있는 농도">
+        <rect x="56" y="53.8" width="396" height="124.7" fill="#FFE45C" opacity=".22"/>
+        <path d="M56 14 V232 H456" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="56" y1="53.8" x2="452" y2="53.8" stroke="#D7263D" stroke-width="2" stroke-dasharray="7 5"/>
+        <line x1="56" y1="178.5" x2="452" y2="178.5" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.4" data-delay=".3"><path d="M56.0 232.0 L57.3 223.2 L58.6 215.1 L60.0 207.6 L61.3 200.7 L62.6 194.4 L63.9 188.5 L65.2 183.1 L66.6 178.2 L67.9 173.7 L69.2 169.5 L70.5 165.8 L71.8 162.3 L73.2 159.2 L74.5 156.4 L75.8 153.9 L77.1 151.6 L78.4 149.5 L79.8 147.7 L81.1 146.1 L82.4 144.7 L83.7 143.5 L85.0 142.4 L86.4 141.5 L87.7 140.7 L89.0 140.1 L90.3 139.6 L91.6 139.2 L93.0 138.9 L94.3 138.7 L95.6 138.6 L96.9 138.6 L98.2 138.7 L99.6 138.9 L100.9 139.1 L102.2 139.4 L103.5 139.7 L104.8 140.1 L106.2 140.5 L107.5 141.0 L108.8 141.6 L110.1 142.1 L111.4 142.7 L112.8 143.4 L114.1 144.0 L115.4 144.7 L116.7 145.4 L118.0 146.1 L119.4 146.9 L120.7 147.7 L122.0 148.4 L123.3 149.2 L124.6 150.0 L126.0 150.8 L127.3 151.7 L128.6 152.5 L129.9 153.3 L131.2 154.2 L132.6 155.0 L133.9 155.9 L135.2 156.7 L136.5 157.6 L137.8 158.4 L139.2 159.3 L140.5 160.1 L141.8 160.9 L143.1 161.8 L144.4 162.6 L145.8 163.5 L147.1 164.3 L148.4 165.1 L149.7 165.9 L151.0 166.8 L152.4 167.6 L153.7 168.4 L155.0 169.2 L156.3 170.0 L157.6 170.7 L159.0 171.5 L160.3 172.3 L161.6 173.1 L162.9 173.8 L164.2 174.6 L165.6 175.3 L166.9 176.1 L168.2 176.8 L169.5 177.5 L170.8 178.2 L172.2 178.9 L173.5 179.6 L174.8 180.3 L176.1 181.0 L177.4 181.7 L178.8 182.3 L180.1 183.0 L181.4 183.7 L182.7 184.3 L184.0 184.9 L185.4 185.6 L186.7 186.2 L188.0 186.8 L189.3 187.4 L190.6 188.0 L192.0 188.6 L193.3 189.2 L194.6 189.8 L195.9 190.3 L197.2 190.9 L198.6 191.5 L199.9 192.0 L201.2 192.6 L202.5 193.1 L203.8 193.6 L205.2 194.1 L206.5 194.7 L207.8 195.2 L209.1 195.7 L210.4 196.2 L211.8 196.7 L213.1 197.1 L214.4 197.6 L215.7 198.1 L217.0 198.5 L218.4 199.0 L219.7 199.4 L221.0 199.9 L222.3 200.3 L223.6 200.8 L225.0 201.2 L226.3 201.6 L227.6 202.0 L228.9 202.4 L230.2 202.8 L231.6 203.2 L232.9 203.6 L234.2 204.0 L235.5 204.4 L236.8 204.8 L238.2 205.2 L239.5 205.5 L240.8 205.9 L242.1 206.3 L243.4 206.6 L244.8 207.0 L246.1 207.3 L247.4 207.6 L248.7 208.0 L250.0 208.3 L251.4 208.6 L252.7 209.0 L254.0 209.3 L255.3 209.6 L256.6 209.9 L258.0 210.2 L259.3 210.5 L260.6 210.8 L261.9 211.1 L263.2 211.4 L264.6 211.7 L265.9 211.9 L267.2 212.2 L268.5 212.5 L269.8 212.7 L271.2 213.0 L272.5 213.3 L273.8 213.5 L275.1 213.8 L276.4 214.0 L277.8 214.3 L279.1 214.5 L280.4 214.8 L281.7 215.0 L283.0 215.2 L284.4 215.5 L285.7 215.7 L287.0 215.9 L288.3 216.1 L289.6 216.4 L291.0 216.6 L292.3 216.8 L293.6 217.0 L294.9 217.2 L296.2 217.4 L297.6 217.6 L298.9 217.8 L300.2 218.0 L301.5 218.2 L302.8 218.4 L304.2 218.6 L305.5 218.8 L306.8 218.9 L308.1 219.1 L309.4 219.3 L310.8 219.5 L312.1 219.6 L313.4 219.8 L314.7 220.0 L316.0 220.1 L317.4 220.3 L318.7 220.5 L320.0 220.6 L321.3 220.8 L322.6 220.9 L324.0 221.1 L325.3 221.2 L326.6 221.4 L327.9 221.5 L329.2 221.7 L330.6 221.8 L331.9 222.0 L333.2 222.1 L334.5 222.2 L335.8 222.4 L337.2 222.5 L338.5 222.6 L339.8 222.8 L341.1 222.9 L342.4 223.0 L343.8 223.1 L345.1 223.3 L346.4 223.4 L347.7 223.5 L349.0 223.6 L350.4 223.7 L351.7 223.8 L353.0 224.0 L354.3 224.1 L355.6 224.2 L357.0 224.3 L358.3 224.4 L359.6 224.5 L360.9 224.6 L362.2 224.7 L363.6 224.8 L364.9 224.9 L366.2 225.0 L367.5 225.1 L368.8 225.2 L370.2 225.3 L371.5 225.4 L372.8 225.5 L374.1 225.6 L375.4 225.6 L376.8 225.7 L378.1 225.8 L379.4 225.9 L380.7 226.0 L382.0 226.1 L383.4 226.2 L384.7 226.2 L386.0 226.3 L387.3 226.4 L388.6 226.5 L390.0 226.5 L391.3 226.6 L392.6 226.7 L393.9 226.8 L395.2 226.8 L396.6 226.9 L397.9 227.0 L399.2 227.0 L400.5 227.1 L401.8 227.2 L403.2 227.3 L404.5 227.3 L405.8 227.4 L407.1 227.4 L408.4 227.5 L409.8 227.6 L411.1 227.6 L412.4 227.7 L413.7 227.7 L415.0 227.8 L416.4 227.9 L417.7 227.9 L419.0 228.0 L420.3 228.0 L421.6 228.1 L423.0 228.1 L424.3 228.2 L425.6 228.2 L426.9 228.3 L428.2 228.4 L429.6 228.4 L430.9 228.5 L432.2 228.5 L433.5 228.5 L434.8 228.6 L436.2 228.6 L437.5 228.7 L438.8 228.7 L440.1 228.8 L441.4 228.8 L442.8 228.9 L444.1 228.9 L445.4 229.0 L446.7 229.0 L448.0 229.0 L449.4 229.1 L450.7 229.1 L452.0 229.2" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <circle cx="96.9" cy="138.6" r="6" fill="#D7263D"/>
+        <line x1="96.9" y1="138.6" x2="96.9" y2="232" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="185.4" y1="185.6" x2="185.4" y2="232" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <circle cx="185.4" cy="185.6" r="5" fill="#16233D"/>
+        <text class="tex" x="64" y="26" data-mix="혈중 농도" data-size="19" fill="#5B6B7F"></text><text class="tex" x="456" y="258" data-mix="시간" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="448" y="45.8" data-mix="독성이 나타날 수 있음" data-size="18" data-anchor="end" fill="#D7263D"></text>
+        <text class="tex" x="448" y="170.5" data-mix="기준 농도" data-size="18" data-anchor="end" fill="#2E7D5B"></text>
+        <text class="tex" x="108.9" y="132.6" data-mix="최대 혈중 농도" data-size="18" data-anchor="start"></text>
+        <text class="tex" x="195.4" y="177.6" data-mix="절반" data-size="18"></text>
+        <text class="tex" x="200" y="254" data-mix="반감기" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <div class="note"><b>글쓰기 길잡이</b> 하루 복용 횟수보다 약을 많이 먹거나 적게 먹을 때 약물의 혈중 농도가 어떻게 될지 생각해 본다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 과학 글쓰기 10 (1) ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="과학 글쓰기 10 (1)">
+  <h2><span class="tag">과학 글쓰기</span>10 (1) 많이 먹을 때와 적게 먹을 때</h2>
+  <p class="f21"><b>Q</b> 약을 하루 복용 횟수보다 많이 먹을 때와 적게 먹을 때 발생하는 문제를 글에서 찾아 써 볼까?</p>
+  <div class="row mt8">
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 570 230" style="width:540px" aria-label="4시간마다 먹으면 혈중 농도가 계속 올라가 독성이 나타날 수 있는 농도를 넘는다">
+        <path d="M50 14 V196 H486" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="50" y1="74.6" x2="480" y2="74.6" stroke="#D7263D" stroke-width="2" stroke-dasharray="7 5"/><line x1="50" y1="159.6" x2="480" y2="159.6" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.4" data-delay=".3"><path d="M50.0 196.0 L51.4 184.5 L52.9 174.7 L54.3 166.4 L55.7 159.3 L57.2 153.4 L58.6 148.5 L60.0 144.5 L61.5 141.2 L62.9 138.6 L64.3 136.5 L65.8 134.9 L67.2 133.8 L68.6 133.0 L70.1 132.6 L71.5 132.4 L72.9 132.4 L74.4 132.7 L75.8 133.1 L77.2 133.7 L78.7 134.4 L80.1 135.2 L81.5 136.0 L83.0 137.0 L84.4 138.0 L85.8 139.1 L87.3 128.6 L88.7 119.9 L90.1 112.7 L91.6 106.9 L93.0 102.1 L94.4 98.4 L95.9 95.5 L97.3 93.3 L98.7 91.9 L100.2 90.9 L101.6 90.5 L103.0 90.4 L104.5 90.7 L105.9 91.3 L107.3 92.2 L108.8 93.3 L110.2 94.5 L111.6 96.0 L113.1 97.5 L114.5 99.1 L115.9 100.9 L117.4 102.7 L118.8 104.5 L120.2 106.4 L121.7 108.3 L123.1 98.7 L124.5 90.8 L126.0 84.4 L127.4 79.2 L128.8 75.2 L130.3 72.2 L131.7 70.0 L133.1 68.6 L134.6 67.8 L136.0 67.5 L137.4 67.7 L138.9 68.2 L140.3 69.1 L141.7 70.3 L143.2 71.8 L144.6 73.4 L146.0 75.2 L147.5 77.2 L148.9 79.2 L150.3 81.4 L151.8 83.6 L153.2 85.8 L154.6 88.1 L156.1 90.4 L157.5 92.8 L158.9 83.6 L160.4 76.1 L161.8 70.1 L163.2 65.4 L164.7 61.8 L166.1 59.1 L167.5 57.3 L169.0 56.2 L170.4 55.7 L171.8 55.7 L173.3 56.2 L174.7 57.1 L176.1 58.3 L177.6 59.8 L179.0 61.6 L180.4 63.5 L181.9 65.5 L183.3 67.8 L184.7 70.1 L186.2 72.5 L187.6 74.9 L189.0 77.4 L190.5 79.9 L191.9 82.5 L193.3 85.0 L194.8 76.1 L196.2 68.8 L197.6 63.0 L199.1 58.4 L200.5 55.0 L201.9 52.5 L203.4 50.9 L204.8 50.0 L206.2 49.7 L207.7 49.9 L209.1 50.5 L210.5 51.6 L212.0 52.9 L213.4 54.6 L214.8 56.4 L216.3 58.5 L217.7 60.7 L219.1 63.1 L220.6 65.5 L222.0 68.0 L223.4 70.6 L224.9 73.2 L226.3 75.8 L227.7 78.5 L229.2 81.1 L230.6 72.3 L232.0 65.1 L233.5 59.4 L234.9 55.0 L236.3 51.6 L237.8 49.3 L239.2 47.7 L240.6 46.9 L242.1 46.6 L243.5 46.9 L244.9 47.7 L246.4 48.8 L247.8 50.2 L249.2 51.9 L250.7 53.9 L252.1 56.0 L253.5 58.3 L255.0 60.7 L256.4 63.2 L257.8 65.8 L259.3 68.4 L260.7 71.1 L262.1 73.8 L263.6 76.5 L265.0 79.2 L266.4 70.4 L267.9 63.3 L269.3 57.6 L270.7 53.2 L272.2 49.9 L273.6 47.6 L275.0 46.1 L276.5 45.3 L277.9 45.1 L279.3 45.5 L280.8 46.2 L282.2 47.4 L283.6 48.9 L285.1 50.6 L286.5 52.6 L287.9 54.8 L289.4 57.1 L290.8 59.5 L292.2 62.1 L293.7 64.7 L295.1 67.3 L296.5 70.0 L298.0 72.8 L299.4 75.5 L300.8 78.2 L302.3 69.5 L303.7 62.4 L305.1 56.7 L306.6 52.4 L308.0 49.1 L309.4 46.8 L310.9 45.3 L312.3 44.5 L313.7 44.4 L315.2 44.7 L316.6 45.5 L318.0 46.7 L319.5 48.2 L320.9 50.0 L322.3 52.0 L323.8 54.1 L325.2 56.5 L326.6 58.9 L328.1 61.5 L329.5 64.1 L330.9 66.8 L332.4 69.5 L333.8 72.2 L335.2 75.0 L336.7 77.8 L338.1 69.0 L339.5 61.9 L341.0 56.3 L342.4 51.9 L343.8 48.7 L345.3 46.4 L346.7 44.9 L348.1 44.1 L349.6 44.0 L351.0 44.4 L352.4 45.2 L353.9 46.4 L355.3 47.9 L356.7 49.6 L358.2 51.6 L359.6 53.8 L361.0 56.2 L362.5 58.6 L363.9 61.2 L365.3 63.8 L366.8 66.5 L368.2 69.2 L369.6 72.0 L371.1 74.7 L372.5 77.5 L373.9 68.8 L375.4 61.7 L376.8 56.1 L378.2 51.7 L379.7 48.5 L381.1 46.2 L382.5 44.7 L384.0 44.0 L385.4 43.8 L386.8 44.2 L388.3 45.0 L389.7 46.2 L391.1 47.7 L392.6 49.5 L394.0 51.5 L395.4 53.7 L396.9 56.0 L398.3 58.5 L399.7 61.1 L401.2 63.7 L402.6 66.4 L404.0 69.1 L405.5 71.9 L406.9 74.6 L408.3 77.4 L409.8 68.6 L411.2 61.6 L412.6 56.0 L414.1 51.6 L415.5 48.4 L416.9 46.1 L418.4 44.6 L419.8 43.9 L421.2 43.7 L422.7 44.1 L424.1 44.9 L425.5 46.1 L427.0 47.6 L428.4 49.4 L429.8 51.4 L431.3 53.6 L432.7 56.0 L434.1 58.4 L435.6 61.0 L437.0 63.6 L438.4 66.3 L439.9 69.0 L441.3 71.8 L442.7 74.6 L444.2 77.3 L445.6 68.6 L447.0 61.5 L448.5 55.9 L449.9 51.6 L451.3 48.3 L452.8 46.0 L454.2 44.6 L455.6 43.8 L457.1 43.7 L458.5 44.0 L459.9 44.9 L461.4 46.1 L462.8 47.6 L464.2 49.4 L465.7 51.4 L467.1 53.6 L468.5 55.9 L470.0 58.4 L471.4 60.9 L472.8 63.6 L474.3 66.3 L475.7 69.0 L477.1 71.8 L478.6 74.5 L480.0 77.3" stroke="#16233D" stroke-width="3" fill="none"/></g>
+        <text class="tex" x="58" y="26" data-mix="혈중 농도" data-size="19" fill="#5B6B7F"></text><text class="tex" x="486" y="222" data-mix="시간 (48시간)" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="488" y="80.6" data-mix="독성" data-size="19" fill="#D7263D"></text><text class="tex" x="488" y="165.6" data-mix="기준 농도" data-size="19" fill="#2E7D5B"></text>
+        <text class="tex" x="150" y="30" data-mix="많이: 4시간마다(하루 6번)" data-size="20" data-weight="700"></text>
+      </svg>
+      <div class="answer step em49-left"><b>많이 먹으면</b> 약물의 혈중 농도가 지나치게 높아져 약이 몸속에서 <span class="ans">독성</span>을 나타낼 수 있다.</div>
+    </div>
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 570 230" style="width:540px" aria-label="12시간마다 먹으면 다음 복용 전에 혈중 농도가 기준 농도 아래로 떨어진다">
+        <path d="M50 14 V196 H486" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="50" y1="74.6" x2="480" y2="74.6" stroke="#D7263D" stroke-width="2" stroke-dasharray="7 5"/><line x1="50" y1="159.6" x2="480" y2="159.6" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.4" data-delay=".6"><path d="M50.0 196.0 L51.4 184.5 L52.9 174.7 L54.3 166.4 L55.7 159.3 L57.2 153.4 L58.6 148.5 L60.0 144.5 L61.5 141.2 L62.9 138.6 L64.3 136.5 L65.8 134.9 L67.2 133.8 L68.6 133.0 L70.1 132.6 L71.5 132.4 L72.9 132.4 L74.4 132.7 L75.8 133.1 L77.2 133.7 L78.7 134.4 L80.1 135.2 L81.5 136.0 L83.0 137.0 L84.4 138.0 L85.8 139.1 L87.3 140.1 L88.7 141.3 L90.1 142.4 L91.6 143.5 L93.0 144.7 L94.4 145.8 L95.9 147.0 L97.3 148.1 L98.7 149.3 L100.2 150.4 L101.6 151.5 L103.0 152.6 L104.5 153.7 L105.9 154.8 L107.3 155.8 L108.8 156.9 L110.2 157.9 L111.6 158.9 L113.1 159.8 L114.5 160.8 L115.9 161.7 L117.4 162.6 L118.8 163.5 L120.2 164.4 L121.7 165.2 L123.1 166.0 L124.5 166.8 L126.0 167.6 L127.4 168.4 L128.8 169.1 L130.3 169.8 L131.7 170.6 L133.1 171.2 L134.6 171.9 L136.0 172.6 L137.4 173.2 L138.9 173.8 L140.3 174.4 L141.7 175.0 L143.2 175.6 L144.6 176.1 L146.0 176.7 L147.5 177.2 L148.9 177.7 L150.3 178.2 L151.8 178.7 L153.2 179.2 L154.6 179.6 L156.1 180.1 L157.5 180.5 L158.9 169.4 L160.4 160.0 L161.8 152.1 L163.2 145.5 L164.7 139.9 L166.1 135.4 L167.5 131.7 L169.0 128.8 L170.4 126.5 L171.8 124.8 L173.3 123.5 L174.7 122.7 L176.1 122.2 L177.6 122.0 L179.0 122.1 L180.4 122.5 L181.9 123.0 L183.3 123.7 L184.7 124.5 L186.2 125.5 L187.6 126.5 L189.0 127.6 L190.5 128.8 L191.9 130.0 L193.3 131.3 L194.8 132.6 L196.2 133.9 L197.6 135.3 L199.1 136.6 L200.5 137.9 L201.9 139.3 L203.4 140.6 L204.8 141.9 L206.2 143.2 L207.7 144.5 L209.1 145.8 L210.5 147.1 L212.0 148.3 L213.4 149.5 L214.8 150.7 L216.3 151.9 L217.7 153.0 L219.1 154.2 L220.6 155.3 L222.0 156.3 L223.4 157.4 L224.9 158.4 L226.3 159.4 L227.7 160.4 L229.2 161.3 L230.6 162.3 L232.0 163.2 L233.5 164.0 L234.9 164.9 L236.3 165.7 L237.8 166.6 L239.2 167.4 L240.6 168.1 L242.1 168.9 L243.5 169.6 L244.9 170.3 L246.4 171.0 L247.8 171.7 L249.2 172.4 L250.7 173.0 L252.1 173.6 L253.5 174.3 L255.0 174.8 L256.4 175.4 L257.8 176.0 L259.3 176.5 L260.7 177.1 L262.1 177.6 L263.6 178.1 L265.0 178.6 L266.4 167.5 L267.9 158.2 L269.3 150.3 L270.7 143.7 L272.2 138.3 L273.6 133.8 L275.0 130.1 L276.5 127.2 L277.9 125.0 L279.3 123.3 L280.8 122.1 L282.2 121.3 L283.6 120.8 L285.1 120.7 L286.5 120.9 L287.9 121.2 L289.4 121.8 L290.8 122.5 L292.2 123.4 L293.7 124.4 L295.1 125.4 L296.5 126.6 L298.0 127.8 L299.4 129.0 L300.8 130.3 L302.3 131.7 L303.7 133.0 L305.1 134.4 L306.6 135.7 L308.0 137.1 L309.4 138.5 L310.9 139.8 L312.3 141.2 L313.7 142.5 L315.2 143.8 L316.6 145.1 L318.0 146.4 L319.5 147.6 L320.9 148.9 L322.3 150.1 L323.8 151.3 L325.2 152.4 L326.6 153.6 L328.1 154.7 L329.5 155.8 L330.9 156.8 L332.4 157.9 L333.8 158.9 L335.2 159.9 L336.7 160.8 L338.1 161.8 L339.5 162.7 L341.0 163.6 L342.4 164.5 L343.8 165.3 L345.3 166.2 L346.7 167.0 L348.1 167.7 L349.6 168.5 L351.0 169.3 L352.4 170.0 L353.9 170.7 L355.3 171.4 L356.7 172.0 L358.2 172.7 L359.6 173.3 L361.0 174.0 L362.5 174.6 L363.9 175.1 L365.3 175.7 L366.8 176.3 L368.2 176.8 L369.6 177.3 L371.1 177.8 L372.5 178.3 L373.9 167.3 L375.4 158.0 L376.8 150.1 L378.2 143.5 L379.7 138.0 L381.1 133.6 L382.5 129.9 L384.0 127.0 L385.4 124.8 L386.8 123.1 L388.3 121.9 L389.7 121.1 L391.1 120.7 L392.6 120.6 L394.0 120.7 L395.4 121.1 L396.9 121.6 L398.3 122.4 L399.7 123.2 L401.2 124.2 L402.6 125.3 L404.0 126.4 L405.5 127.6 L406.9 128.9 L408.3 130.2 L409.8 131.5 L411.2 132.9 L412.6 134.3 L414.1 135.6 L415.5 137.0 L416.9 138.4 L418.4 139.7 L419.8 141.1 L421.2 142.4 L422.7 143.7 L424.1 145.0 L425.5 146.3 L427.0 147.6 L428.4 148.8 L429.8 150.0 L431.3 151.2 L432.7 152.4 L434.1 153.5 L435.6 154.6 L437.0 155.7 L438.4 156.8 L439.9 157.8 L441.3 158.8 L442.7 159.8 L444.2 160.8 L445.6 161.7 L447.0 162.6 L448.5 163.5 L449.9 164.4 L451.3 165.3 L452.8 166.1 L454.2 166.9 L455.6 167.7 L457.1 168.5 L458.5 169.2 L459.9 169.9 L461.4 170.6 L462.8 171.3 L464.2 172.0 L465.7 172.7 L467.1 173.3 L468.5 173.9 L470.0 174.5 L471.4 175.1 L472.8 175.7 L474.3 176.2 L475.7 176.8 L477.1 177.3 L478.6 177.8 L480.0 178.3" stroke="#16233D" stroke-width="3" fill="none"/></g>
+        <text class="tex" x="58" y="26" data-mix="혈중 농도" data-size="19" fill="#5B6B7F"></text><text class="tex" x="486" y="222" data-mix="시간 (48시간)" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="488" y="80.6" data-mix="독성" data-size="19" fill="#D7263D"></text><text class="tex" x="488" y="165.6" data-mix="기준 농도" data-size="19" fill="#2E7D5B"></text>
+        <text class="tex" x="150" y="30" data-mix="적게: 12시간마다(하루 2번)" data-size="19" data-weight="700"></text>
+      </svg>
+      <div class="answer step em49-left"><b>적게 먹으면</b> 혈중 농도가 기준 농도 이하로 떨어지는 동안 <span class="ans">약효가 나타나지 않는다</span>.</div>
+    </div>
+  </div>
+  <div class="board mt8" style="min-height:60px"></div>
+  <p class="small c-muted mt4">그래프는 반감기 4시간인 약을 가정한 덱 모형(#12 실험실과 같음). 정해진 간격(8시간마다, 하루 3번)이면 두 선 사이에 머문다. <b>평가 기준</b> 두 문제를 모두 옳게 쓰면 100%, 한 가지만 옳게 쓰면 50%.</p>
+</section>
+
+<!-- ════════ 11. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="확인 문제 02 반감기로 복용 간격 어림하기">
+  <h2><span class="tag q">확인 문제 02</span>반감기로 복용 간격 어림하기</h2>
+  <p class="f21">어떤 약물은 최대 혈중 농도에 이른 뒤 일차 반응처럼 줄어들고, 반감기는 4시간이다. 최대 혈중 농도를 100이라 할 때 약효가 나타나는 기준 농도는 25이다. 최대 혈중 농도에 이른 뒤 약효는 몇 시간 동안 이어질까? <span class="small c-muted">(덱 가정)</span></p>
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="stages c1 em49-st">
+        <div class="stage step"><b>① 반감기 1번(4시간)</b> $100\to50$</div>
+        <div class="stage step"><b>② 반감기 2번(8시간)</b> $50\to25$ — 기준 농도</div>
+        <div class="stage step"><b>③ 관계식</b> $100\times\left(\dfrac{1}{2}\right)^n=25$ → $n=2$, $2\times4\ \text{시간}=8\ \text{시간}$</div>
+      </div>
+      <div class="answer step"><b>정답</b> 약 8시간</div>
+      <p class="f21 step"><b>Q</b> 하루 3번 먹는 약과 어떻게 이어질까? → 8시간마다 다시 먹으면 혈중 농도가 <span class="ans">기준 농도 아래로 떨어지기 전에</span> 다시 높아진다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 264" style="width:420px" aria-label="최대 혈중 농도 100에서 4시간마다 절반이 되어 8시간 뒤 기준 농도 25에 이르는 곡선">
+        <path d="M56 14 V214 H404" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="56" y1="169" x2="404" y2="169" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.2" data-delay=".3"><path d="M56.0 34.0 L58.3 36.5 L60.5 38.9 L62.8 41.3 L65.1 43.7 L67.3 46.1 L69.6 48.4 L71.9 50.6 L74.1 52.9 L76.4 55.1 L78.7 57.3 L80.9 59.5 L83.2 61.6 L85.5 63.7 L87.7 65.8 L90.0 67.8 L92.3 69.8 L94.5 71.8 L96.8 73.8 L99.1 75.7 L101.3 77.6 L103.6 79.5 L105.9 81.3 L108.1 83.1 L110.4 84.9 L112.7 86.7 L114.9 88.5 L117.2 90.2 L119.5 91.9 L121.7 93.6 L124.0 95.2 L126.3 96.9 L128.5 98.5 L130.8 100.1 L133.1 101.7 L135.3 103.2 L137.6 104.7 L139.9 106.2 L142.1 107.7 L144.4 109.2 L146.7 110.6 L148.9 112.0 L151.2 113.4 L153.5 114.8 L155.7 116.2 L158.0 117.5 L160.3 118.9 L162.5 120.2 L164.8 121.5 L167.1 122.7 L169.3 124.0 L171.6 125.2 L173.9 126.5 L176.1 127.7 L178.4 128.9 L180.7 130.0 L182.9 131.2 L185.2 132.3 L187.5 133.4 L189.7 134.6 L192.0 135.7 L194.3 136.7 L196.5 137.8 L198.8 138.8 L201.1 139.9 L203.3 140.9 L205.6 141.9 L207.9 142.9 L210.1 143.9 L212.4 144.8 L214.7 145.8 L216.9 146.7 L219.2 147.7 L221.5 148.6 L223.7 149.5 L226.0 150.4 L228.3 151.2 L230.5 152.1 L232.8 153.0 L235.1 153.8 L237.3 154.6 L239.6 155.4 L241.9 156.2 L244.1 157.0 L246.4 157.8 L248.7 158.6 L250.9 159.4 L253.2 160.1 L255.5 160.9 L257.7 161.6 L260.0 162.3 L262.3 163.0 L264.5 163.7 L266.8 164.4 L269.1 165.1 L271.3 165.8 L273.6 166.4 L275.9 167.1 L278.1 167.7 L280.4 168.4 L282.7 169.0 L284.9 169.6 L287.2 170.2 L289.5 170.8 L291.7 171.4 L294.0 172.0 L296.3 172.6 L298.5 173.2 L300.8 173.7 L303.1 174.3 L305.3 174.8 L307.6 175.4 L309.9 175.9 L312.1 176.4 L314.4 176.9 L316.7 177.4 L318.9 178.0 L321.2 178.4 L323.5 178.9 L325.7 179.4 L328.0 179.9 L330.3 180.4 L332.5 180.8 L334.8 181.3 L337.1 181.7 L339.3 182.2 L341.6 182.6 L343.9 183.1 L346.1 183.5 L348.4 183.9 L350.7 184.3 L352.9 184.7 L355.2 185.1 L357.5 185.5 L359.7 185.9 L362.0 186.3 L364.3 186.7 L366.5 187.1 L368.8 187.4 L371.1 187.8 L373.3 188.2 L375.6 188.5 L377.9 188.9 L380.1 189.2 L382.4 189.5 L384.7 189.9 L386.9 190.2 L389.2 190.5 L391.5 190.9 L393.7 191.2 L396.0 191.5" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <path d="M169.3 214 V124 H56 M282.7 214 V169" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+        <circle cx="56" cy="34" r="5" fill="#D7263D"/><circle cx="169.3" cy="124" r="5" fill="#16233D"/><circle cx="282.7" cy="169" r="6" fill="#2E9E6A"/>
+        <text class="tex" x="48" y="40" data-mix="100" data-size="18" data-anchor="end"></text><text class="tex" x="48" y="130" data-mix="50" data-size="18" data-anchor="end"></text><text class="tex" x="48" y="175" data-mix="25" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="56" y="238" data-mix="0" data-size="18" data-anchor="middle"></text><text class="tex" x="169.3" y="238" data-mix="4" data-size="18" data-anchor="middle"></text><text class="tex" x="282.7" y="238" data-mix="8" data-size="18" data-anchor="middle"></text><text class="tex" x="396" y="238" data-mix="12" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="404" y="160" data-mix="기준 농도" data-size="18" data-anchor="end" fill="#2E7D5B"></text>
+        <text class="tex" x="64" y="26" data-mix="혈중 농도(상대)" data-size="18" fill="#5B6B7F"></text>
+        <text class="tex" x="404" y="258" data-mix="시간 (h)" data-size="18" data-anchor="end" fill="#5B6B7F"></text>
+      </svg>
+      <div class="board" style="min-height:70px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 실험실 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="실험실: 복용 간격과 약의 형태">
+  <h2><span class="tag">실험실</span>복용 간격과 약의 형태를 바꾸면 혈중 농도는?</h2>
+  <div class="lab" data-lab="em49dose">
+    <div class="lab-ctl" style="flex-basis:380px">
+      <div class="em49-seg"><span class="f21">약의 형태</span><button class="btn em49-act" data-s="0">알약</button><button class="btn" data-s="1">가루약</button></div>
+      <div class="ctl"><div class="lbl"><span>복용 간격</span><output data-o="tau"></output></div><input type="range" min="0" max="5" step="1" value="3" data-i="tau" aria-label="복용 간격"></div>
+      <table class="readout em49-read">
+        <tr><th>하루 복용</th><td><output data-o="n"></output></td></tr>
+        <tr><th>최대 혈중 농도</th><td><output data-o="mx"></output></td></tr>
+        <tr><th>가장 낮은 농도</th><td><output data-o="mn"></output></td></tr>
+        <tr class="hl"><th>약효 시간</th><td><output data-o="on"></output></td></tr>
+      </table>
+      <div class="em49-seg"><button class="btn em49-act" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 660px">
+      <div class="lab-fig" style="width:660px;height:290px">
+        <svg viewBox="0 0 660 290" width="660" height="290" aria-label="48시간 동안 약물의 혈중 농도 곡선과 기준 농도, 독성이 나타날 수 있는 농도"></svg>
+      </div>
+      <output class="kind em49-msg" data-o="msg"></output>
+      <table class="tight em49-log"><thead><tr><th>형태</th><th>간격</th><th>최대</th><th>최저</th><th>약효 시간</th><th>판단</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+  <p class="small c-muted mt4">덱 모형: 반감기 4시간(일차 반응처럼 줄어듦), 기준 농도 30, 독성 농도 100(상대값), 둘째 날(24–48시간)을 기준으로 판단. 과제: 두 선 사이에 머무는 간격을 찾고, 가루약으로 바꿔 보자.</p>
+</section>
+
+<!-- ════════ 13. 과학 글쓰기 10 (2) ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="과학 글쓰기 10 (2)">
+  <h2><span class="tag">과학 글쓰기</span>10 (2) 약의 형태를 바꾸면 왜 약효가 달라질까?</h2>
+  <p class="f21"><b>Q</b> ㉠의 까닭을 반응 속도와 관련지어 설명해 볼까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 430px">
+      <svg class="fig" viewBox="0 0 430 200" style="width:430px" aria-label="같은 양의 약을 잘게 나누면 겉넓이가 커져 녹고 흡수되는 속도가 빨라진다">
+        <rect x="30" y="60" width="96" height="96" fill="#E3D3B2" stroke="#B39D72" stroke-width="3"/>
+        <text class="tex" x="78" y="186" data-mix="알약" data-size="19" data-anchor="middle"></text>
+        <path d="M150 108 H208" stroke="#16233D" stroke-width="3"/><path d="M218 108 L204 101 V115 Z" fill="#16233D"/>
+        <text class="tex" x="184" y="94" data-mix="갈기" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+        <g data-anim="pop" data-o="310,108" data-dur=".8" data-delay=".3"><g fill="#E3D3B2" stroke="#B39D72" stroke-width="2"><rect x="246" y="56" width="26" height="26"/><rect x="284" y="50" width="26" height="26"/><rect x="322" y="58" width="26" height="26"/><rect x="360" y="52" width="26" height="26"/><rect x="252" y="96" width="26" height="26"/><rect x="292" y="92" width="26" height="26"/><rect x="332" y="100" width="26" height="26"/><rect x="370" y="94" width="26" height="26"/><rect x="246" y="136" width="26" height="26"/><rect x="288" y="132" width="26" height="26"/><rect x="326" y="140" width="26" height="26"/><rect x="366" y="134" width="26" height="26"/></g></g>
+        <text class="tex" x="320" y="190" data-mix="가루약 — 겉넓이가 커짐" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="215" y="30" data-mix="같은 양" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="f21 step" data-g="r1">① 가루로 만들면 표면적(접촉 면적)이 커진다 → 녹고 흡수되는 <b>반응 속도가 빨라진다</b> (04 덱 (1) 표면적).</p>
+      <p class="f21 step" data-g="r2">② 혈중 농도가 빨리, 높게 올라갔다가 빨리 줄어든다 (#12 가루약).</p>
+    </div>
+    <div class="col stack">
+      <div class="answer step em49-left"><b>예시 답안</b> 약의 <span class="ans">표면적이 증가</span>해 체내에서 약이 작용하는 <span class="ans">반응 속도가 빨라지기</span> 때문이다.</div>
+      <div class="note"><b>평가 기준</b> 100% — 알약을 가루약으로 바꾸면 표면적이 증가해 체내에서 약물이 작용하는 반응 속도가 빨라지기 때문임을 옳게 설명 · 50% — 표면적이 증가한다고만 설명</div>
+      <p class="small c-muted">더 나아가: 그러면 혈중 농도가 예상보다 빨리, 높게 올라 독성이 나타나거나 약효 시간이 짧아질 수 있다(#12 가루약). 천천히 녹도록 겉을 싼 약을 쪼개면 한꺼번에 녹아 나올 수도 있다. 약의 형태를 바꿀 때는 의사나 약사에게 물어본다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 최신 과학 이야기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 학습 과제물 이야기" data-title="최신 과학: 클릭 화학">
+  <h2><span class="tag">학습 과제물 이야기</span>최신 과학 — 무엇이든 붙일 수 있다! 클릭 화학</h2>
+  <div class="row">
+    <div class="col stack em49-src">
+      <div class="card"><p><b>2022 노벨 화학상</b> 반응의 부산물을 줄이고 반응 속도를 조절하려는 연구 가운데, 클릭 화학과 생체 직교 화학을 개발한 샤플리스, 멜달, 버토지가 공동으로 받았다.</p></div>
+      <div class="card"><p><b>클릭 화학</b> 실온, 대기압에서도 부산물 없이 원하는 생성물을 빠르게 합성하는 반응. 허리띠 버클을 '딸깍' 잠그듯 빠르고 간단하다는 뜻이다. 대표 반응은 구리 이온을 이용해 두 분자를 연결하는 반응이지만, 구리 이온 때문에 몸속에 쓰기에는 알맞지 않다.</p></div>
+      <div class="card"><p><b>생체 직교 화학</b> 버토지는 반응물 분자의 결합각을 조절해 반응물의 에너지를 활성화 에너지 근처까지 높여 <b>촉매 없이</b> 원하는 분자를 연결했다. 원하는 생체 분자와만 빠르게 반응해 몸속 다른 작용에 영향을 주지 않는다 → 신약 개발, 질병 진단과 치료법 연구.</p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 230" style="width:400px" aria-label="반응물의 에너지를 높이면 넘어야 할 에너지 장벽이 낮아진다">
+        <path d="M30 14 V200 H390" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <text class="tex" x="38" y="26" data-mix="엔탈피" data-size="18" fill="#5B6B7F"></text><text class="tex" x="390" y="222" data-mix="반응의 진행" data-size="18" data-anchor="end" fill="#5B6B7F"></text>
+        <path d="M50 170 H110 C 150 170, 165 50, 200 50 C 235 50, 250 186, 290 186 H380" stroke="#8C99A6" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+        <g data-anim="draw" data-dur="1" data-delay=".3"><path d="M50 96 H110 C 150 96, 165 50, 200 50 C 235 50, 250 186, 290 186 H380" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <path d="M80 166 V104" stroke="#E08A2C" stroke-width="3" data-anim="fade" data-dur=".6" data-delay="1"/><path d="M80 98 L74 110 H86 Z" fill="#E08A2C"/>
+        <text class="tex" x="300" y="80" data-mix="남은 장벽이||작다" data-size="18" fill="#16233D"></text>
+      </svg>
+      <p class="small c-muted">회색 점선: 원래 반응물 · 검은 선: 결합각을 조절해 에너지를 높인 반응물(주황 화살표)</p>
+      <p class="f21"><b>Q</b> 버토지의 방법이 촉매 없이도 빠른 까닭은?</p>
+      <p class="f21 step">→ 반응물의 에너지가 높아져 넘어야 할 <span class="ans">활성화 에너지가 작아지므로</span> 유효 충돌의 비율이 커진다(03 덱).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 이야기 활동하기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 학습 과제물 이야기" data-title="활동하기: 클릭 화학과 생체 직교 화학의 조건">
+  <h2><span class="tag">학습 과제물 이야기</span>활동하기(조사) — 클릭 화학과 생체 직교 화학의 조건</h2>
+  <p class="f21">클릭 화학과 생체 직교 화학의 조건을 조사해 보자. <span class="small c-muted">아래는 예시 결과</span></p>
+  <table class="tight em49-cmp mt8">
+    <tr><th>조건</th><th>클릭 화학</th><th>생체 직교 화학</th></tr>
+    <tr><td class="l">반응 환경</td><td class="l"><span class="step" data-g="c1">실온, 1기압 같은 단순한 조건 — 용매가 없거나 물처럼 해롭지 않은 용매</span></td><td class="l"><span class="step" data-g="c1">살아 있는 세포·몸속(체온, 물이 많은 환경)</span></td></tr>
+    <tr><td class="l">촉매</td><td class="l"><span class="step" data-g="c2">구리 이온($\ce{Cu+}$)</span></td><td class="l"><span class="step" data-g="c2">쓰지 않음 — 반응물의 에너지를 높여 둠</span></td></tr>
+    <tr><td class="l">빠르기·부산물</td><td class="l"><span class="step" data-g="c3">반응 시간이 짧고 수득률이 높으며 부산물이 거의 없음, 생성물 분리·정제가 쉬움</span></td><td class="l"><span class="step" data-g="c3">빠르게 끝나고, 해로운 부산물이 없으며 세포에 독성이 없음</span></td></tr>
+    <tr><td class="l">반응 상대</td><td class="l"><span class="step" data-g="c4">원하는 분자끼리만 선택적으로 — 다른 작용기와는 반응하지 않음</span></td><td class="l"><span class="step" data-g="c4">원하는 생체 분자와만 — 몸속 다른 분자와는 반응하지 않음</span></td></tr>
+    <tr><td class="l">활용</td><td class="l"><span class="step" data-g="c5">신약 후보 물질, 새로운 소재 합성</span></td><td class="l"><span class="step" data-g="c5">세포 속 분자 관찰, 질병 진단, 표적 치료</span></td></tr>
+  </table>
+  <p class="f21 mt12"><b>Q</b> 생체 직교 화학에서 구리 이온 촉매를 쓰지 않는 까닭은? <span class="step">→ 구리 이온이 몸속에서 해로울 수 있어 <span class="ans">체내에 적용하기에 알맞지 않기</span> 때문이다.</span></p>
+  <p class="small c-muted mt4">예시 결과는 지도서 예시 답안을 표로 정리한 것이다. 조사할 때는 출처(기사·누리집)를 함께 적는다.</p>
+</section>
+
+<!-- ════════ 16. 화학과 나의 미래 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 화학과 나의 미래" data-title="촉매 연구원">
+  <h2><span class="tag">화학과 나의 미래</span>반응을 설계하는 촉매 연구원</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>하는 일</b> 느린 반응을 빠르게 하거나 빠른 반응을 느리게 조절하는 촉매를 합성해 반응 속도를 조절하고, 이를 여러 화학 반응에 응용한다. 반응성이 작아 쓰기 어려운 물질을 쓸모 있는 물질로 바꾸는 촉매, 많은 에너지와 다양한 원료를 얻는 반응의 촉매를 개발한다. 친환경 촉매, 화학 공정의 폐기물을 줄이는 촉매로 에너지 고갈과 기후 위기 해결에 힘쓴다.</p>
+      <p class="f21 mt8"><b>필요한 능력</b> 물질의 성질과 화학 반응에 대한 이해(화학, 재료 공학, 물리학, 생명과학 등의 기초 지식), 새로운 반응 경로를 떠올리는 창의적 사고력과 이를 실험으로 검증하는 연구 역량</p>
+      <p class="small c-muted mt8">관련 학과: 화학과, 재료 공학과, 화학 공학과, 에너지 공학과, 신소재 공학과 등 · 누리집: 한국화학연구원에서 촉매 연구원과 관련된 정보를 찾아보자.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 430px">
+      <svg class="fig" viewBox="0 0 430 160" style="width:430px" aria-label="원료가 촉매를 거쳐 원하는 물질이 되고 폐기물은 줄어드는 흐름">
+        <path d="M40 92 H390" stroke="#C9E7D3" stroke-width="14" stroke-linecap="round"/>
+        <path d="M40 92 H390" stroke="#2E9E6A" stroke-width="3" stroke-dasharray="10 8" data-anim="dash" data-speed="40" data-flow/>
+        <g fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"><rect x="4" y="60" width="104" height="64" rx="8"/><rect x="322" y="60" width="104" height="64" rx="8"/></g>
+        <rect x="163" y="54" width="104" height="76" rx="38" fill="#D7F0DD" stroke="#2E9E6A" stroke-width="3"/>
+        <text class="tex" x="56" y="98" data-mix="원료" data-size="20" data-anchor="middle"></text><text class="tex" x="215" y="98" data-mix="촉매" data-size="20" data-anchor="middle" fill="#2E7D5B" data-weight="700"></text><text class="tex" x="374" y="88" data-mix="원하는||물질" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="215" y="30" data-mix="활성화 에너지가 낮은 새 경로" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+        <text class="tex" x="215" y="152" data-mix="부산물·폐기물 ↓, 에너지 ↓" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <div class="card q"><p class="f21"><b>활동하기(조사)</b> 인류가 촉매를 사용하는 예를 찾고, 이러한 촉매의 활용이 환경, 생물, 경제에 어떤 영향을 미치는지 조사해 보자.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 화학과 나의 미래 예시 결과 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 화학과 나의 미래" data-title="활동하기: 촉매 활용과 영향">
+  <h2><span class="tag">화학과 나의 미래</span>활동하기(조사) 예시 결과 — 촉매의 활용과 영향</h2>
+  <table class="tight em49-eff">
+    <tr><th>촉매 사용 예</th><th>환경</th><th>생물</th><th>경제</th></tr>
+    <tr><td class="l"><b>자동차 촉매 변환기</b><br><span class="small">고체 촉매(백금 등 금속)</span></td><td class="l"><span class="step" data-g="e1">배기가스의 일산화 탄소, 질소 산화물을 덜 해로운 물질로 바꿈 · 다 쓴 촉매 처리, 귀금속 채굴은 환경 부담</span></td><td class="l"><span class="step" data-g="e1">대기 오염 물질이 줄어 호흡기 건강에 도움 · 폐촉매의 중금속이 새면 해로움</span></td><td class="l"><span class="step" data-g="e1">귀금속 값이 오르면 제품 값도 오름 · 다 쓴 촉매를 재활용함</span></td></tr>
+    <tr><td class="l"><b>암모니아 합성</b><br><span class="small">철을 주성분으로 한 고체 촉매</span></td><td class="l"><span class="step" data-g="e2">비료를 많이 만들 수 있으나, 비료를 지나치게 쓰면 물이 오염됨</span></td><td class="l"><span class="step" data-g="e2">식량 생산이 늘어 많은 사람을 먹여 살림</span></td><td class="l"><span class="step" data-g="e2">촉매가 없을 때보다 낮은 온도에서 빨리 만들어 에너지·생산 비용이 줄어듦</span></td></tr>
+    <tr><td class="l"><b>효소 세제</b><br><span class="small">생체 촉매(효소)</span></td><td class="l"><span class="step" data-g="e3">찬물 세탁이 가능해 에너지 사용이 줄어듦</span></td><td class="l"><span class="step" data-g="e3">자연에서 잘 분해되지만, 피부가 예민한 사람은 주의</span></td><td class="l"><span class="step" data-g="e3">세탁에 드는 전기 요금 절약</span></td></tr>
+  </table>
+  <p class="f21 mt12"><b>Q</b> 세 예에 공통인 촉매의 역할은? <span class="step">→ 활성화 에너지를 낮춰 <span class="ans">낮은 온도·적은 에너지로도 반응을 빠르게</span> 한다.</span></p>
+  <p class="small c-muted mt4">지도서 예시: 촉매는 배기가스 정화, 암모니아 합성, 마가린 생산(수소화), 석유 정제, 연료 전지 등에 쓰이며, 반응 조건이 완화되어 에너지 사용과 생산 비용이 준다. 좋은 영향과 걱정되는 영향을 함께 적고, 출처를 밝힌다.</p>
+</section>
+
+<!-- ════════ 18. 프로젝트 도입 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트: 환경 문제의 해결사, 촉매와 효소">
+  <h2><span class="tag">프로젝트</span>환경 문제의 해결사, 촉매와 효소</h2>
+  <p class="f21">과학과 산업이 발전해 삶의 질이 높아졌지만, 지구가 오염되는 문제도 생겼다. 무분별한 자원 개발로 자연이 파괴되고, 산업 폐기물·폐수, 잘 분해되지 않는 생활 쓰레기, 공장의 매연, 자동차의 배기가스는 <b>대기 오염, 토양 오염, 수질 오염</b>의 원인이 된다. 이를 해결하려고 <b>촉매와 효소</b>를 이용하는 방법을 꾸준히 연구하고 있다.</p>
+  <div class="em49-browser mt12">
+    <div class="em49-bar"><span></span><span></span><span></span><b>촉매나 효소로 환경 문제를 해결하는 사례</b></div>
+    <div class="em49-hl" data-anim="pop" data-dur=".5" data-delay=".2"><b>"흐르는 물과 바람으로 오염을 정화? 압전 촉매가 무엇이기에?"</b><span>역학적 에너지로 공기나 물의 오염 물질을 제거하는…</span></div>
+    <div class="em49-hl" data-anim="pop" data-dur=".5" data-delay=".5"><b>"플라스틱을 6배 빨리 분해하는 효소 설계"</b><span>쓰레기 더미에서 페트(PET)병 같은 플라스틱을 먹고 사는 효소…</span></div>
+    <div class="em49-hl em49-pick" data-anim="pop" data-dur=".5" data-delay=".8"><b>"온실 가스의 변신, 효소가 책임진다!"</b><span>이산화 탄소를 폼산으로 전환하는 새로운 효소… → #19</span></div>
+  </div>
+  <p class="f21 mt12"><b>Q</b> 세 기사 속 촉매·효소는 각각 어떤 오염을 줄일까? <span class="step">→ 압전 촉매: <span class="ans">대기·수질</span> · 플라스틱 분해 효소: <span class="ans">토양(쓰레기)</span> · 폼산 전환 효소: <span class="ans">온실 가스(대기)</span></span></p>
+</section>
+
+<!-- ════════ 19. 프로젝트 기사 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트: 온실 가스의 변신 기사 읽기">
+  <h2><span class="tag">프로젝트</span>기사 읽기 — "온실 가스의 변신, 효소가 책임진다!"</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">이산화 탄소($\ce{CO2}$)를 폼산($\ce{HCOOH}$)으로 바꾸는 효소가 개발되었다. 폼산은 개미나 벌의 독에 섞여 있는 물질로, 세균을 없애거나 pH를 조절할 수 있어 식품 첨가물 등으로 쓰이고, 폼산으로 전지를 만드는 연구도 있다. 예전에는 화석 연료로 폼산을 만들어 이산화 탄소가 배출되었지만, 새 기술은 이산화 탄소를 폼산으로 바꿀 때 에너지가 적게 들어 <b>탄소 중립</b> 실현에 도움이 될 것으로 기대된다.</p>
+      <table class="tight em49-tech">
+        <tr><th>기존 기술</th><th>새로운 기술</th></tr>
+        <tr><td class="l">고온에서 반응함.</td><td class="l">실온(25 °C–30 °C)에서 반응함.</td></tr>
+        <tr><td class="l">귀금속 촉매를 이용함.</td><td class="l">재조합 효소를 이용함.</td></tr>
+        <tr><td class="l">부산물($\ce{CO2}$, $\ce{H2}$ 등)이 발생함.</td><td class="l">부산물이 발생하지 않음.</td></tr>
+      </table>
+      <p class="small c-muted">새로 개발된 기술의 차별성(교과서 126쪽 표)</p>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 170" style="width:400px" aria-label="이산화 탄소가 효소의 활성 자리에서 폼산으로 바뀌는 모형">
+        <ellipse cx="200" cy="106" rx="120" ry="52" fill="#7FA8D9" stroke="#2F5D94" stroke-width="3"/>
+        <path d="M176 56 Q200 92 224 56" fill="#FFFFFF" stroke="#2F5D94" stroke-width="3"/>
+        <text class="tex" x="200" y="128" data-mix="효소" data-size="20" data-anchor="middle" fill="#FFFFFF" data-weight="700"></text>
+        <g data-anim="move" data-from="-110,-10" data-dur="1" data-delay=".3"><circle cx="200" cy="58" r="12" fill="#3A3F47"/><circle cx="178" cy="58" r="10" fill="#E5533D"/><circle cx="222" cy="58" r="10" fill="#E5533D"/></g>
+        <text class="tex" x="60" y="34" data-mix="$\ce{CO2}$" data-size="20" data-anchor="middle"></text>
+        <path d="M300 60 H356" stroke="#16233D" stroke-width="3"/><path d="M366 60 L352 53 V67 Z" fill="#16233D"/>
+        <text class="tex" x="352" y="40" data-mix="$\ce{HCOOH}$" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="200" y="22" data-mix="활성 자리" data-size="18" data-anchor="middle" fill="#2F5D94"></text>
+      </svg>
+      <p class="f21"><b>Q</b> 새 기술은 왜 실온에서도 반응할 수 있을까?</p>
+      <p class="f21 step">→ 효소(생체 촉매)가 <span class="ans">활성화 에너지를 낮춰</span> 낮은 온도에서도 유효 충돌이 충분히 일어나기 때문이다.</p>
+      <p class="f21 step">→ 고온이 필요 없어 에너지가 적게 들고, 부산물이 없어 원료 낭비와 오염이 줄어든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 프로젝트 ❶ ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❶ 촉매나 효소로 환경 문제를 해결하는 사례 조사하기">
+  <h2><span class="tag">프로젝트</span>❶ 촉매나 효소로 환경 문제를 해결하는 사례 조사하기</h2>
+  <p class="f21"><b>1.</b> 인류가 마주한 환경 문제와 그 원인을 조사해 보자.</p>
+  <p class="f21 mt4"><b>2.</b> 1에서 조사한 내용을 모둠원과 공유하고, 그중 하나를 선택하여 촉매를 활용해 문제를 해결할 수 있는 방법을 조사해 보자.</p>
+  <p class="f21 mt4"><b>3.</b> 2의 내용을 홍보하는 자료를 인터넷 기사 형태로 만들어 보자.</p>
+  <table class="tight em49-plan mt12">
+    <tr><th>환경 문제 · 원인</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>고른 문제</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>촉매·효소와 하는 일</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>반응 속도와의 관계</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>검색어 · 출처</th><td><span class="em49-line"></span></td></tr>
+  </table>
+  <div class="note mt12"><b>과정·기능 길잡이</b> 촉매나 효소가 환경 문제를 해결하는 데 어떤 역할을 하는지 설명하는 내용을 포함하여 기사를 작성한다.</div>
+</section>
+
+<!-- ════════ 21. 프로젝트 ❶ 예시 결과 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❶ 예시 결과">
+  <h2><span class="tag">프로젝트</span>❶ 예시 결과 — 환경 문제 · 원인 · 촉매와 효소</h2>
+  <div class="em49-three">
+    <div class="card step"><h3>대기 오염</h3><p><b>원인</b> 공장 매연, 자동차 배기가스, 화석 연료 연소로 생기는 온실 가스</p><p><b>해결</b> 백금(Pt)·로듐(Rh)을 입힌 촉매 변환기가 배기가스의 오염 물질을 이산화 탄소, 수증기, 질소로 바꾼다.</p></div>
+    <div class="card step"><h3>수질 오염</h3><p><b>원인</b> 생활·산업 폐수의 무단 방류</p><p><b>해결</b> 이산화 타이타늄($\ce{TiO2}$) 같은 광촉매는 햇빛을 받아 물속·공기 중 오염 물질을 이산화 탄소와 물로 바꾼다. 압전 촉매는 흐르는 물·바람의 에너지를 쓴다.</p></div>
+    <div class="card step"><h3>토양 오염 · 쓰레기</h3><p><b>원인</b> 농약·화학 비료의 과다 사용, 잘 분해되지 않는 플라스틱</p><p><b>해결</b> 페트(PET)를 분해하는 효소를 설계해 분해 속도를 6배 높였다 → 쓰레기를 줄이고 원료로 다시 쓴다.</p></div>
+  </div>
+  <p class="f21 mt12"><b>Q</b> 세 사례에서 촉매·효소가 하는 공통적인 일은?</p>
+  <p class="f21 step">→ 활성화 에너지를 낮춰 오염 물질을 분해·전환하는 <span class="ans">반응 속도를 빠르게</span> 하므로, 높은 온도나 많은 에너지 없이도 오염 물질을 처리할 수 있다.</p>
+  <p class="small c-muted mt4">지도서 예시(환경 문제와 원인, 촉매 변환기, 광촉매)에 교과서 126쪽 기사 제목(압전 촉매, 페트 분해 효소)을 더했다.</p>
+</section>
+
+<!-- ════════ 22. 프로젝트 ❷ ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❷ 홍보 자료 발표하기">
+  <h2><span class="tag">프로젝트</span>❷ 홍보 자료 발표하기</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>1.</b> 모둠에서 만든 홍보 자료를 발표하고, 공유 플랫폼을 활용하여 공유해 보자.</p>
+      <p class="f21 mt4"><b>2.</b> 발표를 들으며 느낀 점과 지속가능한 지구를 위해 지녀야 하는 삶의 태도를 이야기해 보자.</p>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <div class="em49-bub">대기 오염, 토양 오염, 수질 오염으로 자료를 분류해서 공유하면 어떨까?</div>
+    </div>
+  </div>
+  <p class="f21 mt12"><b>3.</b> 우리 모둠의 활동을 평가해 보자.</p>
+  <table class="tight em49-eval"><tr><th>내용</th><th>상</th><th>중</th><th>하</th></tr>
+    <tr><td class="l">촉매나 효소가 환경 문제를 해결하는 데 어떻게 이용되는지 설명했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">인류가 마주한 환경 문제를 조사할 때 적절한 검색어를 활용해 필요한 자료를 조사했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">모든 모둠원이 인류가 마주한 환경 문제의 심각성을 인지하고, 지속가능한 지구에 대한 책임감을 느끼면서 활동에 참여했는가?</td><td>□</td><td>□</td><td>□</td></tr></table>
+</section>
+
+<!-- ════════ 23. 프로젝트 ❷ 예시 기사 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❷ 예시 인터넷 기사">
+  <h2><span class="tag">프로젝트</span>❷ 예시 인터넷 기사 — 우리 모둠의 홍보 자료</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-art">
+        <div class="em49-art-k">환경 · 과학 &nbsp;|&nbsp; ○○고 2모둠 기자</div>
+        <h3>"친환경 미래의 열쇠, 광촉매가 온다"</h3>
+        <p class="em49-lead">이산화 타이타늄($\ce{TiO2}$) 등을 이용한 광촉매 기술이 친환경 환경 정화의 새로운 길을 열고 있다.</p>
+        <p>햇빛을 받아 활성화된 $\ce{TiO2}$ 광촉매는 공기 중과 물속의 유해 오염 물질과 독성 물질을 이산화 탄소와 물로 바꾼다. 촉매가 분해 반응의 <b>활성화 에너지를 낮춰</b> 반응이 빨라지므로, 자동차 배기가스와 공장 폐수 등 다양한 오염원을 효과적으로 줄일 수 있다. 햇빛이라는 무한한 에너지를 쓰는 지속가능한 방법이다.</p>
+        <p class="em49-tip">기사를 쓸 때 생성형 인공지능의 도움을 받아도 된다 — 과학 원리와 출처는 직접 확인하기</p>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 360px">
+      <p class="f21"><b>Q</b> 기사에 꼭 들어가야 할 과학 원리는?</p>
+      <div class="answer step em49-left"><b>예시</b> 촉매(광촉매·효소)가 활성화 에너지를 낮춰 반응 속도를 빠르게 한다는 점 — 그래야 '왜 촉매가 문제를 해결하는지'를 읽는 사람이 이해할 수 있다(과정·기능 길잡이).</div>
+      <div class="note"><b>기사 짜임</b> 제목 → 첫 문단(무엇이 새로운가) → 과학 원리 → 기대 효과 → 출처</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 학습 과제물 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 학습 과제물" data-title="학습 과제물 정리">
+  <h2><span class="tag">학습 과제물</span>이 단원의 활동 결과를 정리해 보자</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-chips"><span>120쪽 최신 과학 이야기</span><span>121쪽 화학과 나의 미래</span><span>126–127쪽 프로젝트</span></div>
+      <ol class="goals mt12">
+        <li>이 단원의 활동 결과를 모아 「<b>Ⅳ. 반응 속도 학습 과제물</b>」 자료로 정리해 보자.</li>
+        <li>디지털 공유 플랫폼을 활용해 학습 과제물을 친구들에게 공유하고, 친구들의 학습 과제물에 댓글을 달거나 '좋아요' 표시를 하면서 소통해 보자.</li>
+        <li>학습 과제물을 인쇄해 책자로 만들어 보자.</li>
+      </ol>
+    </div>
+    <div class="col stack" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 170" style="width:380px" aria-label="세 쪽으로 펼친 학습 과제물 책자"><g data-anim="pop" data-o="190,90" data-dur=".8"><g fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"><rect x="20" y="20" width="106" height="140" rx="6"/><rect x="137" y="20" width="106" height="140" rx="6"/><rect x="254" y="20" width="106" height="140" rx="6"/></g><rect x="34" y="36" width="78" height="44" fill="#FDE2E4"/><rect x="151" y="36" width="78" height="44" fill="#D7F0DD"/><rect x="268" y="36" width="78" height="44" fill="#E3EEFB"/><g stroke="#C9D3DD" stroke-width="4" stroke-linecap="round"><line x1="34" y1="98" x2="112" y2="98"/><line x1="34" y1="116" x2="100" y2="116"/><line x1="34" y1="134" x2="108" y2="134"/><line x1="151" y1="98" x2="229" y2="98"/><line x1="151" y1="116" x2="217" y2="116"/><line x1="151" y1="134" x2="225" y2="134"/><line x1="268" y1="98" x2="346" y2="98"/><line x1="268" y1="116" x2="334" y2="116"/><line x1="268" y1="134" x2="342" y2="134"/></g></g></svg>
+      <div class="card step"><p class="f21"><b>예시 목차</b> 표지 → 클릭 화학 조사 → 촉매 연구원과 촉매의 영향 → 환경 문제 기사 → 느낀 점</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅳ. 반응 속도 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 화학 반응 속도를 반응물의 농도로 표현하고, 일차 반응의 반감기의 특징 및 유효 충돌과 활성화 에너지의 의미를 설명했다.</button>
+    <button class="chk">[과정·기능] 반응 속도를 측정하는 실험을 설계해 수행하고, 농도, 온도, 촉매와 반응 속도의 관계를 탐구했다.</button>
+    <button class="chk">[가치·태도] 화학 반응이 일어나기 위한 조건에 관심을 가지고, 농도, 온도, 촉매에 따라 반응 속도가 달라지는 예를 찾아 화학의 유용성을 인식했다.</button>
+  </div>
+  <div class="card mt8">
+    <p class="f21"><b>Q</b> 반응 속도식의 반응 차수는 무엇으로 정할까? <span class="step">→ <span class="ans">실험 자료</span>(농도를 바꾼 초기 반응 속도) — 계수로 정하지 않는다</span></p>
+    <p class="f21 mt8"><b>Q</b> 일차 반응에서 처음 농도를 2배로 하면 반감기는? <span class="step">→ <span class="ans">변하지 않는다</span>(농도에 관계없이 일정)</span></p>
+    <p class="f21 mt8"><b>Q</b> 고온과 정촉매, 빨라지는 까닭은 어떻게 다를까? <span class="step">→ 고온: $E_\mathrm{a}$ 이상인 <span class="ans">입자 수 증가</span> · 정촉매: <span class="ans">$E_\mathrm{a}$ 감소</span></span></p>
+  </div>
+  <p class="small c-muted mt4">평가 결과가 아쉽다면 'Ⅳ. 반응 속도'를 다시 한번 학습해 봅시다.</p>
+  <div class="note puzzle mt4"><b>과목 돌아보기</b> Ⅲ은 반응이 '일어날 수 있는지', Ⅳ는 '얼마나 빨리' 일어나는지 — 둘 다 따져야 반응을 조절한다.</div>
+</section>

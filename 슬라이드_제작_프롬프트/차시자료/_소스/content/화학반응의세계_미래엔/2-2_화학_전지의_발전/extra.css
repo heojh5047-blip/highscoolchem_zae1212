@@ -1,0 +1,51 @@
+/* 2-2 화학 전지의 발전 — 덱 전용 (모두 .rm22- 접두어) */
+.rm22-ox{color:#C2410C;font-weight:700}
+.rm22-rd{color:#0E7490;font-weight:700}
+ul.rm22-ul{padding-left:1.2em}
+ul.rm22-ul li{margin-top:6px;line-height:1.5}
+/* 조사 표 */
+table.rm22-survey{width:100%;table-layout:fixed}
+table.rm22-survey th,table.rm22-survey td{font-size:19px;padding:6px 8px;line-height:1.45;vertical-align:middle}
+table.rm22-survey th:first-child{width:112px}
+table.rm22-survey thead th:nth-child(2){width:300px}
+.rm22-conv{text-align:center}
+table.rm22-survey td.rm22-empty{background:repeating-linear-gradient(135deg,#FFFFFF 0 10px,#F3F5F7 10px 20px)}
+table.rm22-res{width:100%}
+table.rm22-res th{width:104px;font-size:20px;padding:6px 8px}
+table.rm22-res td{font-size:20px;padding:6px 10px;line-height:1.45}
+table.rm22-common{width:100%;table-layout:fixed}
+table.rm22-common th,table.rm22-common td{font-size:20px;padding:8px 8px;text-align:center;line-height:1.4}
+table.rm22-common th:first-child{width:210px}
+table.rm22-common tr.rm22-oxrow td,table.rm22-common tr.rm22-oxrow th{background:#FBEDE6}
+table.rm22-common tr.rm22-oxrow th{color:#C2410C}
+table.rm22-common tr.rm22-rdrow td,table.rm22-common tr.rm22-rdrow th{background:#E3F1F4}
+table.rm22-common tr.rm22-rdrow th{color:#0E7490}
+/* 발전 방향 카드 */
+.rm22-dir{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rm22-dir .card h3{font-size:22px}
+.rm22-dir .card p{margin-top:6px}
+/* 확인하기 표 */
+table.rm22-chk{width:100%;table-layout:fixed}
+table.rm22-chk th,table.rm22-chk td{text-align:center;font-size:22px;padding:8px}
+table.rm22-chk .blank{min-width:170px}
+/* 대단원 마무리 선택지 */
+.rm22-ch p{font-size:21px;line-height:1.5;margin-top:12px}
+.rm22-ch p:first-child{margin-top:0}
+/* 개념 지도 */
+.rm22-map{display:flex;gap:14px;align-items:stretch}
+.rm22-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
+.rm22-node.rm22-main{flex:1 1 0;border-color:#C2410C;background:#FFF7F2}
+.rm22-node.rm22-main p{margin-top:10px}
+.rm22-side{flex:0 0 200px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.rm22-node.rm22-dim{border-style:dashed;color:var(--muted)}
+/* 실험실 */
+.rm22-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.rm22-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 11px;font-size:19px}
+.rm22-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm22-seg .btn.rm22-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm22-read{width:100%}
+table.rm22-read th{font-size:19px;padding:5px 10px;text-align:left;width:170px}
+table.rm22-read td{font-size:20px;padding:5px 10px;text-align:center}
+output.kind.rm22-msg{margin-top:8px;line-height:1.45;font-size:19px}
+table.rm22-log{width:100%}
+table.rm22-log th,table.rm22-log td{font-size:19px;padding:3px 6px;text-align:center}

@@ -1,0 +1,68 @@
+{
+"findings": [
+{
+"slide": 4,
+"severity": "medium",
+"rule": "T4",
+"problem": "코발트 반응식이 오른쪽 칸에서 넘침",
+"fix": "반응식을 그림 아래 전체 폭 줄로 옮김"
+},
+{
+"slide": 5,
+"severity": "medium",
+"rule": "D8",
+"problem": "반응식·변인 표가 칸과 슬라이드 아래로 넘침",
+"fix": "반응식 전체 폭, 변인 표를 3열 가로 표로, 색 칩을 본문 끝으로"
+},
+{
+"slide": 9,
+"severity": "medium",
+"rule": "D8",
+"problem": "스스로 평가하기 칩이 아래로 넘치고 그림 라벨 13.8px",
+"fix": "그림 viewBox를 줄여 라벨 19px 이상, 답 상자를 그림 옆으로"
+},
+{
+"slide": 10,
+"severity": "medium",
+"rule": "D8",
+"problem": "그래프 눈금 라벨 잘림, 수직선 끝 라벨과 Q<K 라벨 겹침, 정보 글이 수직선 제목과 겹침",
+"fix": "수직선 y 48, 라벨 y+60, 그래프 GY 204−30l, 정보 글을 짧게"
+},
+{
+"slide": 7,
+"severity": "low",
+"rule": "3.2",
+"problem": "그림 라벨(50 mL, 얼음물, 5 mL) 15.5px, '뜨거운 물'이 김과 겹침",
+"fix": "크기 24, 위치 옮김"
+},
+{
+"slide": 25,
+"severity": "medium",
+"rule": "T4",
+"problem": "반응식이 그림 칸과 겹치고 채점 요소 줄이 넘침",
+"fix": "반응식 + 색 칩 줄을 위로 분리, 채점 요소 문장 줄임"
+},
+{
+"slide": 28,
+"severity": "medium",
+"rule": "D8",
+"problem": "개념 지도 큰 노드가 오른쪽으로 넘침, 시험관 라벨 12.4px",
+"fix": "옆 노드 폭 200, 색 칩을 설명 줄로, 그림 라벨 32(화면 19px)"
+},
+{
+"slide": 22,
+"severity": "low",
+"rule": "빈 공간",
+"problem": "아래 절반이 비어 있음",
+"fix": "영상 장면 예 그림(얼음물·뜨거운 물 속 NO2 관) 추가"
+},
+{
+"slide": 7,
+"severity": "low",
+"rule": "지도서 대조 후 확인",
+"problem": "S7·S13·S21·S25 문구 변경 뒤 넘침·겹침 여부",
+"fix": "sheet 모음으로 확인 — 문제 없음"
+}
+],
+"summary": "전체 캡처를 sheet 모음으로 두 번 보고 넘침·라벨 크기·겹침을 고쳤다. 최종 자동 점검 0건, 콘솔 오류 0건."
+}

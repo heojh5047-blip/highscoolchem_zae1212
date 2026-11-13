@@ -1,0 +1,690 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 산화·환원 반응" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 산화·환원 반응 › 03</div>
+    <h1>화학 전지의<br><span class="acc">원리</span></h1>
+    <p class="sub">전지의 전압은 무엇이 정할까?</p>
+    <p class="meta">고등학교 화학 반응의 세계 50–57쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 560 370" style="width:560px" aria-label="황산 아연 수용액 속 아연판과 황산 구리(II) 수용액 속 구리판을 염다리와 전압계로 이은 다니엘 전지. 전자는 도선을 따라 아연((−)극, 산화 전극)에서 구리((+)극, 환원 전극)로 이동한다">@@COVER@@</svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="03 화학 전지의 원리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12반응02-03]</span>화학 전지의 원리를 산화·환원 반응으로 설명하고, 표준 환원 전위를 이용하여 전위차를 구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[탐구]</span>금속판과 전해질을 이용하여 전지를 구성하고, 효율적인 전지가 갖추어야 하는 조건 탐색하기</div>
+  <ol class="goals mt12">
+    <li>화학 전지의 원리를 <b>산화·환원 반응</b>으로 설명할 수 있다.</li>
+    <li><b>표준 환원 전위</b>를 이용하여 전위차를 구할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">금속의 이온화 경향</div><div class="farr">→</div>
+    <div class="fnode hl">볼타 전지 · 다니엘 전지</div><div class="farr">→</div>
+    <div class="fnode">표준 환원 전위</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 효율적인 전지</div>
+  </div>
+  <div class="note mt16"><b>지난 배움과 연결</b> 02에서 모든 전지는 (−)극, (+)극, 전해질로 이루어져 있음을 찾았다. 오늘은 전지 속에서 일어나는 산화·환원 반응과, 전지마다 전압이 다른 까닭을 알아본다.</div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="03 화학 전지의 원리 · 도입" data-title="생각 열기: 천마총 목걸이">
+  <h2><span class="tag">생각 열기</span>오랜 시간이 흘러도 금은 변하지 않았다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 460px">
+      <svg class="fig" viewBox="0 0 440 300" style="width:440px" aria-label="옛 무덤에서 나온 목걸이. 금으로 된 구슬은 노랗게 빛나고, 은 등 다른 금속으로 된 부분은 녹이 슬어 까맣게 변했다"><rect x="0" y="0" width="440" height="300" rx="14" fill="#F4EFE6"/><path d="M70 60 Q220 300 370 60" fill="none" stroke="#9A7B5A" stroke-width="3" stroke-dasharray="2 6"/><g data-anim="fade" data-dur="1.4" data-rep="alt"><circle cx="220" cy="180" r="40" fill="#FFE45C" fill-opacity=".35"/></g><circle cx="98" cy="104" r="13" fill="#3A3A3A"/><circle cx="122" cy="136" r="13" fill="#E9C46A" stroke="#B8860B" stroke-width="2"/><circle cx="150" cy="160" r="13" fill="#3A3A3A"/><circle cx="183" cy="176" r="13" fill="#E9C46A" stroke="#B8860B" stroke-width="2"/><circle cx="220" cy="181" r="15" fill="#E9C46A" stroke="#B8860B" stroke-width="2"/><circle cx="257" cy="176" r="13" fill="#E9C46A" stroke="#B8860B" stroke-width="2"/><circle cx="290" cy="160" r="13" fill="#3A3A3A"/><circle cx="318" cy="136" r="13" fill="#E9C46A" stroke="#B8860B" stroke-width="2"/><circle cx="342" cy="104" r="13" fill="#3A3A3A"/><text class="tex" x="220" y="244" data-mix="금 — 광택 그대로" data-size="20" data-weight="700" data-anchor="middle" fill="#8A6A12"></text><text class="tex" x="220" y="276" data-mix="은 등 다른 금속 — 까맣게 녹슮" data-size="19" data-anchor="middle"></text><text class="tex" x="220" y="36" data-mix="천마총에서 나온 목걸이(그림)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg>
+    </div>
+    <div class="col">
+      <div class="card"><p class="f22">경주 천마총에서 발견된 목걸이에서 은 등의 금속 재료는 녹이 슬어 까맣게 변했지만, <b>금</b>은 색깔을 그대로 유지하고 있었다.</p></div>
+      <p class="f22 mt16"><b>Q</b> 금만 변하지 않은 까닭은 무엇일까?</p>
+      <div class="card tip step mt8"><p class="f21"><b>예상</b> 금속마다 전자를 잃고 <b>산화되는 정도</b>가 다르다. 금은 산화되기 매우 어려운 금속이 아닐까?</p></div>
+      <p class="small step mt12">→ 오늘 배울 「금속의 이온화 경향」으로 확인해 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 해 보기: 금속의 반응성 비교하기 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기: 금속의 반응성 비교하기">
+  <h2><span class="tag">해 보기</span>금속의 반응성 비교하기 <span class="small c-muted">탐구 능력</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">
+      <svg class="fig" viewBox="0 0 500 320" style="width:500px" aria-label="12홈판의 1번 줄에 마그네슘, 2번 줄에 아연, 3번 줄에 구리 조각을 넣고, A행에 황산 구리(II) 수용액, B행에 황산 아연 수용액, C행에 황산 마그네슘 수용액을 넣은 모습">@@WELLS0@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21"><b>준비물</b> 마그네슘판, 아연판, 구리판, 금속용 가위, $1\ \text{M}$ 황산 마그네슘·황산 아연·황산 구리(II) 수용액, 스포이트, 12홈판, 사포</p>
+      <p class="f21 mt12"><b>1</b> 12홈판의 1번 줄에 마그네슘($\ce{Mg}$), 2번 줄에 아연($\ce{Zn}$), 3번 줄에 구리($\ce{Cu}$)를 넣는다. <span class="small">(금속 조각은 사포로 표면의 불순물을 없앤 뒤 쓴다.)</span></p>
+      <p class="f21 mt8"><b>2</b> A행에 황산 구리(II)($\ce{CuSO4}$) 수용액, B행에 황산 아연($\ce{ZnSO4}$) 수용액, C행에 황산 마그네슘($\ce{MgSO4}$) 수용액을 넣는다.</p>
+      <div class="note mt12"><b>안전</b> 실험복·보안경·실험용 고무장갑을 착용한다. 금속을 자를 때는 안전 장갑을 끼고 손을 다치지 않게 한다. 남은 용액은 폐수 처리 기준과 방법에 따라 처리한다.</div>
+      <p class="f21 mt12"><b>Q</b> 어느 홈에서 금속 표면에 새 물질이 생길까?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 해 보기 정리 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기 정리: 산화되기 쉬운 순서">
+  <h2><span class="tag">해 보기</span>정리 — 산화되기 쉬운 순서</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">
+      <svg class="fig" viewBox="0 0 500 320" style="width:500px" aria-label="반응이 일어난 홈: A1(마그네슘 + 황산 구리(II)), A2(아연 + 황산 구리(II)), B1(마그네슘 + 황산 아연). 금속 표면에 구리 또는 아연이 석출되었다">@@WELLS1@@</svg>
+      <p class="small step" data-g="w1">반응 예: $\text{A1}$·$\text{A2}$ 금속 표면에 붉은 구리 석출, $\text{B1}$ 회색 아연 석출 (결과 예시)</p>
+    </div>
+    <div class="col">
+      <p class="f21"><b>1</b> 반응이 일어난 홈을 찾고, 각 반응에서 산화되는 물질을 써 보자.</p>
+      <table class="tight rm23-t mt8 step" data-g="w1">
+        <tr><th>홈</th><th>반응</th><th>산화되는 물질</th></tr>
+        <tr><td>$\text{A1}$</td><td>$\ce{Mg + Cu^2+ -> Mg^2+ + Cu}$</td><td>$\ce{Mg}$</td></tr>
+        <tr><td>$\text{A2}$</td><td>$\ce{Zn + Cu^2+ -> Zn^2+ + Cu}$</td><td>$\ce{Zn}$</td></tr>
+        <tr><td>$\text{B1}$</td><td>$\ce{Mg + Zn^2+ -> Mg^2+ + Zn}$</td><td>$\ce{Mg}$</td></tr>
+      </table>
+      <p class="small step">나머지 홈($\text{A3}$, $\text{B2}$, $\text{B3}$, C행)은 변화가 없다.</p>
+      <p class="f21 mt16"><b>2</b> 마그네슘, 아연, 구리를 산화되기 쉬운 순서대로 나열해 보자.</p>
+      <div class="answer step">$\ce{Mg}$ &gt; $\ce{Zn}$ &gt; $\ce{Cu}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 금속의 이온화 경향 ════════ -->
+<section class="slide" data-sec="03 · 금속의 이온화 경향" data-title="금속의 이온화 경향">
+  <h2><span class="no">1</span>금속의 이온화 경향</h2>
+  <p class="f22">금속 원소는 일반적으로 전자를 잃고 양이온이 되려는 경향이 있다. <mark>금속 원소가 전자를 잃고 양이온이 되려는 경향을 이온화 경향</mark>이라고 한다.</p>
+  <svg class="fig mt12" viewBox="0 0 1100 196" style="width:1100px;display:block;margin:0 auto" aria-label="이온화 경향이 큰 순서: 칼륨, 칼슘, 나트륨, 마그네슘, 알루미늄, 아연, 철, 니켈, 주석, 납, (수소), 구리, 수은, 은, 백금, 금. 왼쪽으로 갈수록 이온화 경향이 크고 산화되기 쉽다">@@SERIES@@</svg>
+  <p class="f22 mt12"><b>Q</b> 해 보기 결과($\ce{Mg}$ &gt; $\ce{Zn}$ &gt; $\ce{Cu}$)와 이 순서는 맞을까?</p>
+  <p class="f21 step">→ 맞다. 이온화 경향이 큰 금속일수록 전자를 잃고 <b>산화되기 쉽다</b> — 반응성이 크다.</p>
+  <p class="f21 step mt8">→ 금($\ce{Au}$)은 이온화 경향이 가장 작아 산화되기 어려우므로 오랜 시간이 지나도 광택을 유지한다(생각 열기).</p>
+</section>
+
+<!-- ════════ 7. 이온화 경향과 반응 ════════ -->
+<section class="slide" data-sec="03 · 금속의 이온화 경향" data-title="이온화 경향과 반응">
+  <h2><span class="no">1</span>이온화 경향으로 반응을 예측하기</h2>
+  <div class="stages c2">
+    <div class="stage">
+      <h3>금속과 금속 이온</h3>
+      <p>전자는 이온화 경향이 큰 금속에서 작은 금속의 이온으로 이동한다.</p>
+      <div class="formula sm rm23-fs">$\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$</div>
+      <p><b>Q</b> 구리를 황산 아연 수용액에 넣으면 어떻게 될까?</p>
+      <div class="formula sm rm23-fs step">$\ce{Cu(s) + Zn^2+(aq) ->}$ 반응이 일어나지 않음</div>
+      <p class="step">아연판 표면에는 구리가 석출되지만, 구리판에는 변화가 없다.</p>
+    </div>
+    <div class="stage">
+      <h3>금속과 산</h3>
+      <p>수소보다 이온화 경향이 큰 금속은 산과 반응하여 수소 기체가 발생한다.</p>
+      <div class="formula sm rm23-fs">$\ce{Zn(s) + 2H+(aq) -> Zn^2+(aq) + H2(g)}$</div>
+      <p><b>Q</b> 구리를 묽은 염산에 넣으면 어떻게 될까?</p>
+      <div class="formula sm rm23-fs step">$\ce{Cu(s) + 2H+(aq) ->}$ 반응이 일어나지 않음</div>
+      <p class="step">구리는 수소보다 이온화 경향이 작아 산과 반응하지 않는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 확인하기 (51) ════════ -->
+<section class="slide" data-sec="03 · 확인하기" data-title="확인하기: 이온화 경향" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>금속의 이온화 경향</h2>
+  <p class="f22" data-q><b>1</b> 금속 원소가 전자를 잃고 양이온이 되려는 경향을 <span class="blank"><span class="step">이온화 경향</span></span>(이)라고 한다.</p>
+  <p class="f22 mt20"><b>2</b> 황산 철(II) 수용액에 아연 조각을 넣으면 반응이 일어나고, 구리 조각을 넣으면 반응이 일어나지 않는다. 철, 구리, 아연을 이온화 경향이 큰 순서대로 쓰고, 그 까닭을 설명해 보자.</p>
+  <div class="answer step">아연 &gt; 철 &gt; 구리</div>
+  <p class="f21 step mt12">아연은 $\ce{Fe^2+}$에게 전자를 주므로($\ce{Zn + Fe^2+ -> Zn^2+ + Fe}$) 철보다 이온화 경향이 크다. 구리는 $\ce{Fe^2+}$에게 전자를 주지 못하므로 철보다 이온화 경향이 작다.</p>
+</section>
+
+<!-- ════════ 9. 해 보기: 화학 전지의 원리 알아보기 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기: 화학 전지의 원리 알아보기">
+  <h2><span class="tag">해 보기</span>화학 전지의 원리 알아보기 <span class="small c-muted">탐구 능력 · 의사 결정 능력</span></h2>
+  <p class="f21">이온화 경향이 서로 다른 두 금속판을 산에 넣고 도선으로 연결하면 어떤 현상이 나타날까?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 300px">
+      <h3 class="f21">실험 1 — 도선 없이</h3>
+      <svg class="fig" viewBox="0 0 300 290" style="width:300px" aria-label="묽은 황산에 아연판과 구리판을 따로 넣은 실험 1">@@VOLTA1@@</svg>
+    </div>
+    <div class="col" style="flex:0 0 300px">
+      <h3 class="f21">실험 2 — 집게 전선으로 연결</h3>
+      <svg class="fig" viewBox="0 0 300 290" style="width:300px" aria-label="묽은 황산 속 아연판과 구리판을 집게 달린 전선으로 연결한 실험 2">@@VOLTA2@@</svg>
+    </div>
+    <div class="col">
+      <p class="small"><b>준비물</b> 아연판, 구리판, 묽은 황산, 비커, 집게 달린 전선, 스타이로폼판</p>
+      <p class="f21 mt8"><b>1</b> 실험 1에서 기포가 생기는 곳은?</p>
+      <p class="f21 step" data-g="v1">→ <span class="ans">아연판</span>에서만 생긴다(구리판에서는 생기지 않는다)</p>
+      <p class="f21 mt8"><b>2</b> 실험 2에서 기포가 생기는 곳은?</p>
+      <p class="f21 step" data-g="v2">→ 대부분 <span class="ans">구리판</span>에서 생기고, 아연판에서는 소량만 생긴다</p><p class="small step" data-g="v2">기포가 <b>더 많이</b> 생기는 금속판이 어느 쪽인지 살펴본다.</p>
+      <div class="note mt12"><b>안전</b> 실험복·보안경·실험용 고무장갑 착용. 묽은 황산이 피부에 묻으면 바로 물로 씻는다. 남은 용액은 폐수 처리 기준에 따라 처리한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 해 보기 토의 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기 토의: 산화·환원과 전자 이동">
+  <h2><span class="tag">해 보기</span>토의 — 반응은 어디에서 일어날까?</h2>
+  <table class="tight rm23-t">
+    <tr><th></th><th>실험 1 (도선 없음)</th><th>실험 2 (도선 연결)</th></tr>
+    <tr><th>기포 발생 위치</th><td>아연판에서만</td><td>대부분 구리판 (아연판은 소량)</td></tr>
+    <tr><th>전자의 이동</th><td class="l">아연에서 바로 옆의 $\ce{H+}$으로</td><td class="l">아연판 → <b>도선</b> → 구리판 → 구리판 표면의 $\ce{H+}$으로</td></tr>
+  </table>
+  <p class="f22 mt16"><b>3</b> 산화 반응과 환원 반응이 일어나는 곳은? <span class="small">실험 1에서는 두 반응이 모두 아연판에서 일어난다. 실험 2에서는?</span></p>
+  <div class="row mt8">
+    <div class="col"><div class="card step"><p class="f21"><span class="rm23-ox">산화 — 아연판</span> 아연이 전자를 잃고 $\ce{Zn^2+}$이 되어 녹아 나온다.</p></div></div>
+    <div class="col"><div class="card step"><p class="f21"><span class="rm23-rd">환원 — 구리판 표면</span> $\ce{H+}$이 도선을 타고 온 전자를 얻어 $\ce{H2}$가 된다.</p></div></div>
+  </div>
+  <p class="f22 mt16"><b>4</b> 전자는 어느 방향으로 이동할까?</p>
+  <div class="answer step">아연판 → 도선 → 구리판 &nbsp;<span class="small">(전자의 흐름 = 전류)</span></div>
+  <p class="small step mt8">구리는 산과 반응하지 않는다. 구리판은 전자를 받아 $\ce{H+}$에게 건네주는 자리일 뿐이다.</p>
+</section>
+
+<!-- ════════ 11. 볼타 전지 ════════ -->
+<section class="slide" data-sec="03 · 화학 전지" data-title="볼타 전지">
+  <h2><span class="no">2</span>화학 전지 — 볼타 전지</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 370" style="width:560px" aria-label="묽은 황산 속 아연판과 구리판을 도선과 전구로 이은 볼타 전지. 아연판에서 아연 이온이 녹아 나오고, 전자는 도선을 따라 구리판으로 이동하며, 구리판 표면에서 수소 이온이 수소 기체가 된다">@@VOLTABIG@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21">묽은 황산에 아연판과 구리판을 넣고 도선으로 연결하면 전류가 흐른다. 이 전지를 <b>볼타 전지</b>라고 한다.</p>
+      <p class="small mt8">02에서 본 반쪽 반응식을 전지 그림에 맞추어 보자. 화학 전지에서 산화 반응이 일어나는 전극이 <b>(−)극</b>, 환원 반응이 일어나는 전극이 <b>(+)극</b>이다.</p>
+      <p class="f21 step mt12"><span class="rm23-ox">(−)극 · 산화</span> $\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</p>
+      <p class="f21 step mt8"><span class="rm23-rd">(+)극 · 환원</span> $\ce{2H+(aq) + 2e- -> H2(g)}$</p>
+      <div class="formula sm step">$\ce{Zn(s) + 2H+(aq) -> Zn^2+(aq) + H2(g)}$<span class="unit">전체 반응 — 두 반쪽 반응을 더함(전자 2개씩)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 분극 현상 ════════ -->
+<section class="slide" data-sec="03 · 화학 전지" data-title="분극 현상">
+  <h2><span class="no">2</span>볼타 전지의 분극 현상</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 400 290" style="width:400px" aria-label="구리판 표면에 수소 기체 방울이 달라붙어, 수소 이온이 구리판에 다가가 전자를 얻지 못한다">@@POLAR@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21">볼타 전지는 전류가 흐르기 시작한 뒤 전압이 떨어진다. 이를 <mark>분극 현상</mark>이라고 한다.</p>
+      <p class="f21 mt12"><b>Q</b> 왜 전압이 떨어질까?</p>
+      <p class="f21 step">→ 발생한 <b>수소 기체가 구리판 표면에 달라붙어</b> 수소 이온의 환원을 방해하기 때문이다.</p>
+      <p class="f21 mt12"><b>Q</b> 분극 현상을 줄이려면?</p>
+      <div class="card tip step"><p class="f21">이산화 망가니즈($\ce{MnO2}$)나 과산화 수소($\ce{H2O2}$) 같은 <b>산화제</b>를 넣어 수소 기체를 산화시켜 물로 만든다.</p></div>
+      <p class="small step mt8">산화제로도 분극을 완전히 없애지는 못한다. 이를 해결하려는 노력에서 전극을 서로 다른 전해질에 담근 다니엘 전지가 나왔다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 다니엘 전지 ════════ -->
+<section class="slide" data-sec="03 · 화학 전지" data-title="다니엘 전지">
+  <h2><span class="no">2</span>다니엘 전지 — 두 반쪽 전지</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 370" style="width:560px" aria-label="황산 아연 수용액 속 아연판과 황산 구리(II) 수용액 속 구리판을 염다리와 전구로 이은 다니엘 전지. 아연이 아연 이온으로 녹아 나오고, 구리 이온은 구리판에서 구리로 석출된다">@@DANIELL@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21">다니엘은 분극 현상이 일어나지 않아 비교적 오래 쓸 수 있는 전지를 만들었다. 각 전극이 서로 다른 전해질 수용액에 담겨 있고, 각각을 <mark>반쪽 전지</mark>라고 한다.</p>
+      <p class="f21 mt8"><b>Q</b> 각 반쪽 전지에서 어떤 반응이 일어날까?</p>
+      <p class="f21 step mt8"><span class="rm23-ox">(−)극 · 산화</span> $\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</p>
+      <p class="f21 step mt8"><span class="rm23-rd">(+)극 · 환원</span> $\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</p>
+      <div class="formula sm step">$\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$<span class="unit">전체 반응</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 염다리 ════════ -->
+<section class="slide" data-sec="03 · 화학 전지" data-title="염다리의 역할">
+  <h2><span class="no">2</span>염다리는 무슨 일을 할까?</h2>
+  <div class="stages c2">
+    <div class="stage">
+      <h3>① 염다리가 없다면</h3>
+      <svg viewBox="0 0 560 370" aria-label="아연 반쪽 전지에서는 양이온이 늘고, 구리 반쪽 전지에서는 양이온이 줄어 전하 불균형이 생긴다">@@BR0@@</svg>
+      <p>$\ce{Zn^2+}$은 늘고 $\ce{Cu^2+}$은 줄어 <b>전하의 불균형</b>이 생긴다.</p>
+    </div>
+    <div class="stage step">
+      <h3>② 염다리로 연결하면</h3>
+      <svg viewBox="0 0 560 370" aria-label="염다리 속 염화 이온은 황산 아연 수용액 쪽으로, 칼륨 이온은 황산 구리(II) 수용액 쪽으로 이동하여 전하 균형을 맞춘다">@@BR1@@</svg>
+      <p><mark>염다리</mark>: 두 반쪽 전지를 연결하는 장치(전해질 포화 수용액). 염다리 속 이온이 이동하여 <b>전하 균형</b>이 유지된다.</p>
+    </div>
+  </div>
+  <p class="small mt8">전자는 도선으로, 이온은 용액과 염다리 속으로 이동한다 — 전자가 용액을 지나가는 것이 아니다.</p>
+</section>
+
+<!-- ════════ 15. 자료 읽기 ════════ -->
+<section class="slide" data-sec="03 · 자료 읽기" data-title="자료 읽기: 전극의 질량 변화">
+  <h2><span class="tag">자료 읽기</span>다니엘 전지에서 전극의 질량은?</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><p class="f22" data-q>다니엘 전지에서 반응이 일어나면 아연판에서는 아연이 아연 이온으로 되어 용액에 녹아 나오므로 아연판의 질량은 <span class="blank"><span class="step">감소</span></span>하고, 구리판에서는 구리 이온이 구리로 석출되므로 구리판의 질량은 <span class="blank"><span class="step">증가</span></span>한다.</p></div>
+      <p class="f22 mt20"><b>Q</b> 황산 구리(II) 수용액의 파란색은 어떻게 변할까?</p>
+      <p class="f21 step">→ $\ce{Cu^2+}$이 줄어들어 파란색이 <span class="ans">점점 옅어진다</span>.</p>
+      <p class="f22 mt16"><b>Q</b> 전자 2몰이 이동하면 각 전극에서 몇 몰의 금속이 변할까?</p>
+      <p class="f21 step">→ 아연 1몰이 녹고, 구리 1몰이 석출된다($\ce{2e-}$당 1몰씩).</p>
+    </div>
+    <div class="col" style="flex:0 0 360px">
+      <svg class="fig" viewBox="0 0 360 300" style="width:360px" aria-label="반응 전후 전극 비교: 아연판은 얇아지고 구리판은 두꺼워진다"><rect x="40" y="40" width="40" height="200" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2" stroke-dasharray="5 4" fill-opacity=".35"/><g data-anim="scale" data-from="1.6,1" data-o="60,140" data-dur="1.6"><rect x="48" y="40" width="24" height="200" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/></g><rect x="236" y="40" width="40" height="200" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><g data-anim="fade" data-dur="1.6"><rect x="226" y="40" width="60" height="200" rx="4" fill="none" stroke="#8A4B22" stroke-width="5"/></g><text class="tex" x="84" y="276" data-mix="아연판 — 얇아짐" data-size="19" data-anchor="middle" fill="#C2410C"></text><text class="tex" x="268" y="276" data-mix="구리판 — 두꺼워짐" data-size="19" data-anchor="middle" fill="#0E7490"></text><text class="tex" x="60" y="26" data-mix="점선: 반응 전" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 확인하기 (53) ════════ -->
+<section class="slide" data-sec="03 · 확인하기" data-title="확인하기: 볼타 전지와 다니엘 전지" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>볼타 전지와 다니엘 전지</h2>
+  <p class="f22" data-q><b>1</b> 볼타 전지의 아연판은 ( 산화 / 환원 ) 반응이 일어나므로 ( (−)극 / (+)극 )이다.</p>
+  <p class="f22 step mt8">→ <span class="ans">산화</span>, <span class="ans">(−)극</span></p>
+  <p class="f22 mt20" data-q><b>2</b> 다니엘 전지의 <span class="blank"><span class="step">염다리</span></span>은/는 두 반쪽 전지를 연결해 전하 균형을 유지한다.</p>
+  <div class="note puzzle mt20"><b>생각 더하기</b> 볼타 전지와 다니엘 전지에서 (+)극에서 환원되는 물질은 각각 무엇일까? <span class="step">→ 볼타 전지 $\ce{H+}$, 다니엘 전지 $\ce{Cu^2+}$</span></div>
+</section>
+
+<!-- ════════ 17. 연결: 전위차 ════════ -->
+<section class="slide" data-sec="03 화학 전지의 원리 · 도입" data-title="연결: 전류가 흐르는 까닭">
+  <h2><span class="tag alt">연결</span>전류는 왜 한 방향으로 흐를까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px">
+      <svg class="fig" viewBox="0 0 560 320" style="width:560px" aria-label="물체가 높은 곳에서 낮은 곳으로 스스로 이동하듯, 전자는 전기적 위치 에너지가 높은 (−)극에서 낮은 (+)극으로 스스로 이동한다. 높이 차이가 전위차이다">@@POT@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21">물체가 높은 곳에서 낮은 곳으로 스스로 이동하듯, 전자는 <b>전기적 위치 에너지</b>가 높은 곳에서 낮은 곳으로 스스로 이동한다.</p>
+      <p class="f21 mt8">이때 전기적 위치 에너지의 차이를 <mark>전위차</mark>라고 한다.</p>
+      <p class="f21 mt16"><b>Q</b> 아연–구리 전지와 아연–철 전지의 전압은 같을까?</p>
+      <p class="f21 step">→ 다르다. 두 반쪽 전지 사이의 <b>전위차</b>가 다르기 때문이다. 이 전위차를 비교하려면 <b>공통 기준</b>이 필요하다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 전지 전위와 표준 상태 ════════ -->
+<section class="slide" data-sec="03 · 표준 환원 전위" data-title="전지 전위와 표준 상태">
+  <h2><span class="no">3</span>전지 전위와 표준 전지 전위</h2>
+  <p class="f22">화학 전지에서 전류가 흐르는 까닭은 두 반쪽 전지 사이에 전위차가 생기기 때문이다.</p>
+  <div class="row mt12">
+    <div class="col"><div class="card"><h3>전지 전위</h3><p class="f21 mt8">두 반쪽 전지의 <mark>전위차</mark></p></div></div>
+    <div class="col"><div class="card"><h3>표준 상태</h3><p class="f21 mt8">$25\ {}^\circ\text{C}$, 전해질 농도 $1\ \text{M}$, 기체 압력 $1\ \text{atm}$</p><p class="small">전극 전위는 농도·온도에 따라 달라지므로 조건을 정한다.</p></div></div>
+    <div class="col"><div class="card"><h3>표준 전지 전위 $E^\circ_\text{전지}$</h3><p class="f21 mt8">표준 상태의 두 반쪽 전지를 연결한 화학 전지의 전위</p></div></div>
+  </div>
+  <p class="f22 mt20"><b>Q</b> 반쪽 전지 하나의 전극 전위만 따로 잴 수 있을까?</p>
+  <p class="f21 step">→ 잴 수 없다. 산화·환원 반응은 <b>항상 동시에</b> 일어나므로 어느 한쪽만 떼어 낼 수 없다.</p>
+  <p class="f21 step mt8">→ 그래서 <b>표준 수소 전극</b>의 전극 전위를 $0.00\ \text{V}$로 정하고, 이를 기준으로 다른 반쪽 전지의 전극 전위를 잰다.</p>
+</section>
+
+<!-- ════════ 19. 자료실: 표준 수소 전극 ════════ -->
+<section class="slide" data-sec="03 · 자료실" data-title="자료실: 표준 수소 전극">
+  <h2><span class="tag alt">자료실</span>표준 수소 전극</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 370" style="width:560px" aria-label="1 M 수소 이온 용액 속 백금판 주위에 1 atm 수소 기체를 채운 표준 수소 전극과 1 M 황산 구리(II) 수용액 속 구리판을 염다리와 전압계로 연결했다. 전자는 수소 전극((−)극)에서 구리판((+)극)으로 이동한다">@@SHE@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21">$25\ {}^\circ\text{C}$에서 $\ce{H+}$ 농도가 $1\ \text{M}$인 용액에 백금($\ce{Pt}$)판을 꽂고, 그 주위에 $1\ \text{atm}$의 수소 기체를 채운 것이다. 전위를 <b>$0.00\ \text{V}$</b>로 정해 기준점으로 삼는다.</p>
+      <p class="f21 mt8">측정하는 반쪽 전지에 따라 $\ce{H2}$가 산화되거나 $\ce{H+}$이 환원된다.</p>
+      <p class="f21 mt12"><b>Q</b> 구리 반쪽 전지와 연결하면 전압계는 몇 V를 가리킬까?</p>
+      <p class="f21 step">→ <span class="ans">$+0.34\ \text{V}$</span> — $\ce{Cu^2+}$이 환원되고 $\ce{H2}$가 산화된다. 이것이 구리 전극의 표준 환원 전위이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 표준 환원 전위 표 ════════ -->
+<section class="slide" data-sec="03 · 표준 환원 전위" data-title="표준 환원 전위">
+  <h2><span class="no">3</span>표준 환원 전위 $E^\circ$</h2>
+  <p class="f21">표준 수소 전극과 표준 상태의 다른 반쪽 전지를 연결하여 환원 반응의 전극 전위를 측정한 것을 <mark>표준 환원 전위($E^\circ$)</mark>라고 한다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 620px">
+      <table class="tight rm23-e">
+        <tr><th>반쪽 반응</th><th>$E^\circ$ (V)</th></tr>
+        <tr><td>$\ce{O2(g) + 4H+(aq) + 4e- -> 2H2O(l)}$</td><td>+1.23</td></tr>
+        <tr><td>$\ce{Ag+(aq) + e- -> Ag(s)}$</td><td>+0.80</td></tr>
+        <tr><td>$\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</td><td>+0.34</td></tr>
+        <tr class="rm23-h"><td>$\ce{2H+(aq) + 2e- -> H2(g)}$</td><td>0.00</td></tr>
+        <tr><td>$\ce{Fe^2+(aq) + 2e- -> Fe(s)}$</td><td>−0.45</td></tr>
+        <tr><td>$\ce{Zn^2+(aq) + 2e- -> Zn(s)}$</td><td>−0.76</td></tr>
+        <tr><td>$\ce{2H2O(l) + 2e- -> H2(g) + 2OH-(aq)}$</td><td>−0.83</td></tr>
+        <tr><td>$\ce{Mg^2+(aq) + 2e- -> Mg(s)}$</td><td>−2.37</td></tr>
+      </table>
+      <p class="small">표준 환원 전위 ($25\ {}^\circ\text{C}$, 교과서 표 Ⅱ-1)</p>
+    </div>
+    <div class="col">
+      <p class="f21"><b>Q</b> $E^\circ$의 부호는 무엇을 뜻할까?</p>
+      <p class="f21 step"><span class="rm23-rd">(+)</span> $\ce{H+}$보다 <b>환원이 잘되는</b> 물질</p>
+      <p class="f21 step mt8"><span class="rm23-ox">(−)</span> $\ce{H2}$보다 <b>산화가 잘되는</b> 물질</p>
+      <p class="f21 mt12"><b>Q</b> 금속의 이온화 경향과는 어떤 관계일까?</p>
+      <div class="card tip step"><p class="f21">금속은 반쪽 전지의 표준 환원 전위가 <b>작을수록 이온화 경향이 크다</b>. ($\ce{Mg}$ &gt; $\ce{Zn}$ &gt; $\ce{Fe}$ &gt; $\ce{Cu}$ &gt; $\ce{Ag}$)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 해 보기: 표준 전지 전위 구하기 1·2 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기: 표준 전지 전위 구하기 ①">
+  <h2><span class="tag">해 보기</span>표준 전지 전위 구하기 <span class="small c-muted">탐구 능력 · 의사 결정 능력</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 150" style="width:560px" aria-label="표준 환원 전위 수직선: 아연 −0.76 V, 철 −0.45 V, 표준 수소 전극 0.00 V, 구리 +0.34 V">@@ELINE@@</svg>
+      <svg class="fig mt8" viewBox="0 0 560 270" style="width:500px;display:block;margin:0 auto" aria-label="표준 상태의 아연, 구리, 철 반쪽 전지">@@HALF3@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21"><b>1</b> (가) 구리–아연 전지, (나) 구리–철 전지를 만들 때 (−)극이 되는 반쪽 전지와 그 까닭은?</p>
+      <p class="f21 step">→ (가) <b>아연</b>, (나) <b>철</b> 반쪽 전지 — 표준 환원 전위가 더 작아 전자를 잃고 산화되기 쉽기 때문이다.</p>
+      <p class="f21 mt12" data-q><b>2</b> (−)극, (+)극의 반쪽 반응을 써 보자.</p>
+      <table class="tight rm23-t mt8">
+        <tr><th>구분</th><th>(가) 구리–아연</th><th>(나) 구리–철</th></tr>
+        <tr><th>(−)극</th><td><span class="step" data-g="h2">$\ce{Zn -> Zn^2+ + 2e-}$</span></td><td><span class="step" data-g="h2">$\ce{Fe -> Fe^2+ + 2e-}$</span></td></tr>
+        <tr><th>(+)극</th><td><span class="step" data-g="h2">$\ce{Cu^2+ + 2e- -> Cu}$</span></td><td><span class="step" data-g="h2">$\ce{Cu^2+ + 2e- -> Cu}$</span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 표준 전지 전위 식 ════════ -->
+<section class="slide" data-sec="03 · 표준 환원 전위" data-title="표준 전지 전위 구하는 식">
+  <h2><span class="no">3</span>표준 전지 전위 구하기</h2>
+  <p class="f22"><mark>표준 전지 전위($E^\circ_\text{전지}$)는 환원 반응이 일어나는 반쪽 전지의 표준 환원 전위에서 산화 반응이 일어나는 반쪽 전지의 표준 환원 전위를 뺀 값</mark>이다.</p>
+  <div class="formula">$E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}$<span class="unit">화학 전지: 환원 전극 = (+)극, 산화 전극 = (−)극 · 단위 V</span></div>
+  <div class="row">
+    <div class="col"><div class="card q"><p class="f21"><b>오개념 바로잡기</b> 전극 전위는 전극의 종류에 따라 정해지는 상대적인 값이다. 반쪽 반응식의 계수를 2배로 하더라도 <b>표준 환원 전위 값은 변하지 않는다</b>.</p></div></div>
+    <div class="col"><p class="f21"><b>Q</b> $\ce{Ag+ + e- -> Ag}$를 2배 한 $\ce{2Ag+ + 2e- -> 2Ag}$의 $E^\circ$는?</p><p class="f21 step">→ 그대로 $+0.80\ \text{V}$ (1.60 V가 아니다)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 해 보기 3 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기: 표준 전지 전위 구하기 ②">
+  <h2><span class="tag">해 보기</span>3. (가), (나)의 표준 전지 전위</h2>
+  <p class="f21">표준 환원 전위를 이용해 (가) 구리–아연 전지, (나) 구리–철 전지의 표준 전지 전위를 각각 구하고, 그 과정을 설명해 보자.</p>
+  <div class="row stretch mt8" style="height:380px">
+    <div class="col stack">
+      <p class="f21"><b>(가)</b> 산화 전극 $\ce{Zn}$ ($-0.76\ \text{V}$), 환원 전극 $\ce{Cu}$ ($+0.34\ \text{V}$)</p>
+      <div class="formula sm step">$\begin{aligned}E^\circ_\text{전지}&amp;=(+0.34)-(-0.76)\\&amp;=+1.10\ \text{V}\end{aligned}$</div>
+      <div class="board"></div>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>(나)</b> 산화 전극 $\ce{Fe}$ ($-0.45\ \text{V}$), 환원 전극 $\ce{Cu}$ ($+0.34\ \text{V}$)</p>
+      <div class="formula sm step">$\begin{aligned}E^\circ_\text{전지}&amp;=(+0.34)-(-0.45)\\&amp;=+0.79\ \text{V}\end{aligned}$</div>
+      <div class="board"></div>
+    </div>
+  </div>
+  <div class="answer step">(가) $+1.10\ \text{V}$ &nbsp; (나) $+0.79\ \text{V}$ <span class="small">— 표준 환원 전위의 차이가 클수록 전압이 크다</span></div>
+</section>
+
+<!-- ════════ 24. 해 보기 4 ════════ -->
+<section class="slide" data-sec="03 · 해 보기" data-title="해 보기: 아연–철 전지">
+  <h2><span class="tag">해 보기</span>4. 아연과 철로 구성된 전지</h2>
+  <p class="f21">아연과 철로 구성된 전지의 표준 전지 전위를 구하고 그 과정을 설명해 보자.</p>
+  <div class="row stretch mt8" style="height:400px">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21 step">① 표준 환원 전위가 작은 $\ce{Zn}$($-0.76\ \text{V}$)이 산화 전극((−)극), $\ce{Fe}$($-0.45\ \text{V}$)가 환원 전극((+)극)</p>
+      <p class="f21 step mt8">② $\ce{Zn + Fe^2+ -> Zn^2+ + Fe}$</p>
+      <div class="formula sm step">$\begin{aligned}E^\circ_\text{전지}&amp;=(-0.45)-(-0.76)\\&amp;=+0.31\ \text{V}\end{aligned}$</div>
+      <p class="small step">철은 구리–철 전지에서는 (−)극이었지만 아연과 만나면 (+)극이 된다 — 극은 짝이 되는 금속에 따라 상대적으로 정해진다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">$E^\circ_\text{전지}=+0.31\ \text{V}$</div>
+</section>
+
+<!-- ════════ 25. 확인하기 (55) ════════ -->
+<section class="slide" data-sec="03 · 확인하기" data-title="확인하기: 표준 환원 전위" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>표준 환원 전위</h2>
+  <p class="f22" data-q><b>1</b> 표준 수소 전극을 기준으로 표준 상태의 반쪽 전지를 연결하여 환원 반응의 전극 전위를 측정한 값을 <span class="blank"><span class="step">표준 환원 전위</span></span>(이)라고 한다.</p>
+  <p class="f22 mt20" data-q><b>2</b> 금속의 이온화 경향이 클수록 반쪽 전지의 표준 환원 전위가 ( 크다 / 작다 ).</p>
+  <p class="f22 step mt8">→ <span class="ans">작다</span> <span class="small">(예: $\ce{Mg}$ $-2.37\ \text{V}$ &lt; $\ce{Cu}$ $+0.34\ \text{V}$)</span></p>
+</section>
+
+<!-- ════════ 26. 탐구: 목표·준비물·안전 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구: 효율적인 전지의 조건">
+  <h2><span class="tag">탐구</span><span class="small c-muted">[필수 탐구]</span> 효율적인 전지가 갖추어야 하는 조건 탐색하기</h2>
+  <div class="std"><span class="code">[탐구]</span>금속판과 전해질을 이용하여 전지를 구성하고, 효율적인 전지가 갖추어야 하는 조건 탐색하기</div>
+  <div class="row mt12">
+    <div class="col">
+      <h3>목표 <span class="small c-muted">탐구 설계 및 수행 / 결론 도출</span></h3>
+      <p class="f21">금속판과 전해질을 이용해 전지를 구성하고, 효율적인 전지가 갖추어야 하는 조건을 탐색할 수 있다.</p>
+      <h3 class="mt12">준비물</h3>
+      <p class="f21">구리판, 아연판, 마그네슘판, $1\ \text{M}$ 황산 구리(II)·황산 아연·황산 마그네슘 수용액, 염화 칼륨($\ce{KCl}$) 포화 용액, 사포, 거름종이, 전압계, 집게 전선, 6홈판, 페트리 접시, 가위, 핀셋</p>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <div class="note"><b>안전</b>
+        <p>· 실험복, 보안경, 실험용 고무장갑을 착용한다. 금속판을 자를 때는 안전 장갑을 낀다.</p>
+        <p>· 황산 구리(II) 수용액은 피부·눈에 해로우므로 묻으면 바로 물로 씻는다.</p>
+        <p>· 실험 후 남은 용액(구리·아연 이온이 든 폐액)은 하수구에 버리지 말고 폐수 처리 기준과 방법에 따라 폐액 통에 모은다.</p>
+      </div>
+      <p class="small mt8">도움 자료: 실험실 안전 수칙, 주요 시약별 주의 사항, 표준 환원 전위 표</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 탐구: 과정 1·2 설계 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구 과정 1–2: 전지 설계">
+  <h2><span class="tag">탐구</span>과정 1–2 — 전지를 설계하고 만들기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 300" style="width:560px" aria-label="6홈판의 두 홈에 황산 마그네슘 수용액과 황산 구리(II) 수용액을 넣고 마그네슘판과 구리판을 꽂은 뒤, 염화 칼륨 포화 용액을 적신 거름종이로 두 홈을 잇고 전압계를 연결한 설계도">@@HEX6@@</svg>
+    </div>
+    <div class="col">
+      <p class="f21"><b>1</b> 홈판, 몇 가지 금속판과 전해질 수용액을 이용하여 전지를 설계해 보자.</p>
+      <table class="tight rm23-t mt8">
+        <tr><th>구분</th><th>금속판의 종류</th><th>전해질의 종류</th></tr>
+        <tr><th>(−)극</th><td><span class="step" data-g="d1">마그네슘판</span></td><td><span class="step" data-g="d1">$1\ \text{M}$ 황산 마그네슘</span></td></tr>
+        <tr><th>(+)극</th><td><span class="step" data-g="d1">구리판</span></td><td><span class="step" data-g="d1">$1\ \text{M}$ 황산 구리(II)</span></td></tr>
+      </table>
+      <p class="small step" data-g="d1">설계 예시 — 모둠마다 금속판 짝을 바꾼다(아연–구리, 마그네슘–아연 …).</p>
+      <p class="f21 mt12"><b>2</b> 설계한 대로 화학 전지를 만든다.</p>
+      <p class="small">· 금속판은 사포로 표면의 불순물을 없앤 뒤 쓴다. · 염다리는 염화 칼륨 포화 용액에 적신 거름종이로 만든다. · 전압계의 (+)단자를 (+)극에 잇는다.</p>
+      <p class="f21 mt8"><b>Q</b> 변인을 정해 보자 — 바꾸는 것, 재는 것, 같게 할 것은?</p>
+      <p class="f21 step">→ 조작: 금속판·전해질의 종류 / 종속: 전지 전위(V) / 통제: 농도 $1\ \text{M}$, 전극 사이 거리, 용액의 양</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 탐구: 과정 3 관찰·측정 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구 과정 3: 관찰과 측정">
+  <h2><span class="tag">탐구</span>과정 3 — 변화를 관찰하고 전지 전위 측정하기</h2>
+  <table class="tight rm23-t">
+    <tr><th>구분</th><th>금속판의 종류</th><th>전해질의 종류</th><th>전극에서 일어나는 변화</th><th>전지 전위(V)</th></tr>
+    <tr><th>(−)극</th><td>마그네슘판</td><td>$1\ \text{M}$ 황산 마그네슘 수용액</td><td class="l"><span class="step" data-g="m1">표면에 어두운 얼룩이 생기고, 시간이 지날수록 두께가 얇아진다(산화)</span></td><td rowspan="2"><span class="step" data-g="m2">2.71</span></td></tr>
+    <tr><th>(+)극</th><td>구리판</td><td>$1\ \text{M}$ 황산 구리(II) 수용액</td><td class="l"><span class="step" data-g="m1">석출된 구리가 구리판에 달라붙고, 수용액의 푸른색이 점점 옅어진다(환원)</span></td></tr>
+  </table>
+  <p class="f22 mt16"><b>Q</b> 실제로 잰 값이 표준 전지 전위($+2.71\ \text{V}$)보다 작게 나오기도 하는 까닭은?</p>
+  <p class="f21 step">→ 금속판 표면의 산화막·불순물(특히 마그네슘판), 거름종이 염다리와 용액의 저항(전극 사이 거리), 실제 농도·온도가 표준 상태와 다른 점 등 때문이다.</p>
+  <p class="small step mt8">전압계를 반대로 이으면 바늘이 0 아래로 내려가거나(아날로그) 음수가 나온다(디지털) → 두 극을 바꾸어 잇는다. 수업에서는 모둠이 잰 값을 넣는다.</p>
+  <div class="note puzzle mt16"><b>다음 장</b> 실험실에서 금속판의 짝, 전해질, 염다리, 전극 사이 거리를 바꾸어 측정하고 기록해 보자.</div>
+</section>
+
+<!-- ════════ 29. 실험실 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="실험실: 금속판과 전해질로 전지 만들기">
+  <h2><span class="tag">탐구</span><span class="small c-muted">[필수 탐구]</span> 실험실: 금속판과 전해질로 전지 만들기</h2>
+  <div class="lab" data-lab="rm23cell">
+    <div class="lab-ctl" style="flex-basis:520px">
+      <div class="rm23-seg"><span class="rm23-sl">왼쪽 금속판</span><button class="btn" data-l="Mg">마그네슘</button><button class="btn on" data-l="Zn">아연</button><button class="btn" data-l="Fe">철</button><button class="btn" data-l="Cu">구리</button><button class="btn" data-l="Ag">은</button></div>
+      <div class="rm23-seg"><span class="rm23-sl">오른쪽 금속판</span><button class="btn" data-r="Mg">마그네슘</button><button class="btn" data-r="Zn">아연</button><button class="btn" data-r="Fe">철</button><button class="btn on" data-r="Cu">구리</button><button class="btn" data-r="Ag">은</button></div>
+      <div class="rm23-seg"><span class="rm23-sl">전해질</span><button class="btn on" data-e="ion">각 금속 이온 1 M</button><button class="btn" data-e="acid">둘 다 묽은 황산</button><button class="btn" data-e="water">증류수</button></div>
+      <div class="rm23-seg"><span class="rm23-sl">염다리</span><button class="btn on" data-s="1">있음</button><button class="btn" data-s="0">없음</button></div>
+      <div class="ctl"><div class="lbl"><span>전극 사이 거리</span><output data-o="d"></output></div>
+        <input type="range" min="1" max="5" step="1" value="2" data-i="d" aria-label="전극 사이 거리"></div>
+      <table class="readout rm23-read">
+        <tr class="hl"><th>전압계</th><td><output data-o="v"></output></td><th>5분 뒤</th><td><output data-o="v5"></output></td></tr>
+        <tr><th>이론값 $E^\circ_\text{전지}$</th><td><output data-o="th"></output></td><th>전류</th><td><output data-o="i"></output></td></tr>
+      </table>
+      <div class="rm23-seg mt8"><button class="btn rm23-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind rm23-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 520px">
+      <div class="lab-fig" style="width:520px;height:270px">
+        <svg viewBox="0 0 520 270" width="520" height="270" aria-label="고른 두 금속판과 전해질, 염다리, 전압계로 만든 전지와 도선 위 전자의 흐름"></svg>
+        <div class="ov" data-ov="mL" style="font-size:19px"></div>
+        <div class="ov" data-ov="mR" style="font-size:19px"></div>
+        <div class="ov halo" data-ov="sL" style="font-size:18px"></div>
+        <div class="ov halo" data-ov="sR" style="font-size:18px"></div>
+        <div class="ov" data-ov="pL" style="font-size:18px;font-weight:700"></div>
+        <div class="ov" data-ov="pR" style="font-size:18px;font-weight:700"></div>
+        <div class="ov" data-ov="e1" style="font-size:20px;color:#1F6FD1">$e^-$</div>
+        <div class="ov halo" data-ov="vm" style="font-size:19px;font-weight:700"></div>
+      </div>
+      <table class="tight rm23-log mt8"><thead><tr><th>#</th><th>(−)극</th><th>(+)극</th><th>전해질</th><th>거리</th><th>전압</th><th>5분 뒤</th><th>전압 막대</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 정리 1·2 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구 정리 1–2: 결과 공유와 전압 비교">
+  <h2><span class="tag">탐구</span>정리 1–2 — 결과를 공유하고 전압 비교하기</h2>
+  <p class="f21"><b>1</b> 공유 플랫폼(스프레드시트)에 모둠별 결과를 모아 보자. <span class="small">(결과 예시 — 실험실 측정값)</span></p>
+  <table class="tight rm23-t mt8">
+    <tr><th>모둠</th><th>(−)극</th><th>(+)극</th><th>전해질</th><th>측정 전위(V)</th><th>$E^\circ_\text{전지}$(V)</th></tr>
+    <tr><td>1</td><td>마그네슘판</td><td>구리판</td><td>황산 마그네슘 | 황산 구리(II)</td><td>2.69</td><td><span class="step" data-g="c1">2.71</span></td></tr>
+    <tr><td>2</td><td>아연판</td><td>구리판</td><td>황산 아연 | 황산 구리(II)</td><td>1.09</td><td><span class="step" data-g="c1">1.10</span></td></tr>
+    <tr><td>3</td><td>마그네슘판</td><td>아연판</td><td>황산 마그네슘 | 황산 아연</td><td>1.59</td><td><span class="step" data-g="c1">1.61</span></td></tr>
+  </table>
+  <p class="f21 mt16"><b>2</b> 금속판과 전해질의 종류에 따라 전압이 서로 다른 까닭을 표준 환원 전위 표를 참고하여 토의해 보자. 왜 그럴까?</p>
+  <div class="card tip step"><p class="f21">금속은 종류에 따라 산화되는 정도가 달라 표준 환원 전위도 다르다. 전지 전위는 두 반쪽 전지의 <b>표준 환원 전위 차이</b>로 정해진다. 이온화 경향 차이가 큰 금속끼리(마그네슘–구리) 짝지을수록 전압이 크다. 같은 금속판이라도 전해질을 바꾸면(예: 둘 다 묽은 황산) (+)극에서 환원되는 물질이 달라져 전압이 달라진다.</p></div>
+  <p class="small step mt8">실제 수업에서 마그네슘판의 측정값은 표면 산화막 때문에 이론값보다 훨씬 작게 나올 수 있다.</p>
+</section>
+
+<!-- ════════ 31. 탐구 정리 3 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구 정리 3: 효율적인 전지 선정">
+  <h2><span class="tag">탐구</span>정리 3 — 효율적인 전지의 조건 정하기</h2>
+  <p class="f21">효율적인 전지가 갖추어야 하는 조건을 정하고, 여러 모둠이 만든 전지 중 가장 효율적인 전지를 선정해 보자. 어떤 조건이 필요할까?</p>
+  <div class="rm23-cond mt12">
+    <div class="card step" data-g="k1"><h3>① 전압이 크다</h3><p class="f21">표준 환원 전위 차이가 큰 금속판 짝</p></div>
+    <div class="card step" data-g="k1"><h3>② 전압이 오래 유지된다</h3><p class="f21">분극이 없도록 반쪽 전지 + 염다리</p></div>
+    <div class="card step" data-g="k2"><h3>③ 전류가 잘 흐른다</h3><p class="f21">전극 사이가 가깝고 이온이 잘 이동하는 전해질</p></div>
+    <div class="card step" data-g="k2"><h3>④ 값싸고 안전하다</h3><p class="f21">금속판의 가격, 다루기 쉬움, 폐액 처리</p></div>
+  </div>
+  <p class="f21 mt16"><b>Q</b> 결과 예시에서 가장 효율적인 전지를 고른다면?</p>
+  <p class="f21 step">→ <b>예시</b> <span class="ans">모둠 1의 마그네슘–구리 전지</span>. 금속판의 가격이 저렴하면서도 전지 전위가 가장 높아 낮은 비용으로 높은 전압을 얻을 수 있다. 전압이 일정하게 유지되는 정도 등 다른 조건을 우선하면 선정 결과가 달라질 수 있다 — <b>기준에 따라 가장 효율적인 전지가 달라진다</b>.</p>
+</section>
+
+<!-- ════════ 32. 탐구 정리 4 · 스스로 평가하기 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구 정리 4와 스스로 평가하기">
+  <h2><span class="tag">탐구</span>정리 4 — 전지의 효율을 높이려면?</h2>
+  <p class="f21"><b>4</b> 전지의 효율을 높이기 위해 고려해야 하는 다양한 요소를 탐색해 보자. 무엇을 더 따져야 할까?</p>
+  <div class="stages mt8">
+    <div class="stage step" data-g="f1"><h3>전극</h3><p>표준 환원 전위가 높은 전극 신소재 개발(전지 전위 향상), 표면 상태(산화막 제거)</p></div>
+    <div class="stage step" data-g="f1"><h3>전해질·분리막</h3><p>전해질과 분리막의 성능을 개선해 이온 전도성 향상, 전극 사이 거리(내부 저항)</p></div>
+    <div class="stage step" data-g="f1"><h3>온도·설계</h3><p>최적의 효율을 내는 온도 범위 유지, 여러 셀을 직렬연결할 때 모든 셀의 충전·방전이 균일하도록 설계</p></div>
+  </div>
+  <h3 class="mt16">스스로 평가하기</h3>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] (−)극과 (+)극을 이루는 금속판과 전해질을 옳게 이해했는가?</button>
+    <button class="chk">[과정·기능] 설계한 전지를 옳게 구성하여 금속판과 전해질의 종류에 따른 전압을 측정했는가?</button>
+    <button class="chk">[가치·태도] 실험 결과를 분석하여 효율적인 전지가 갖추어야 할 조건을 인식했는가?</button>
+  </div>
+</section>
+
+<!-- ════════ 33. 소단원 마무리 ════════ -->
+<section class="slide" data-sec="03 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>더 생각해 보기</h2>
+  <div class="row">
+    <div class="col" style="flex:1.5">
+      <div class="card">
+        <h3>창의력 키우기</h3>
+        <p class="f21 mt8">알칼리 건전지의 반쪽 반응식을 찾아보고, 표준 환원 전위 표(부록)를 활용하여 알칼리 건전지의 표준 전지 전위를 구해 보자.</p>
+        <div class="step mt8"><p class="small"><b>예시</b></p><p class="small">(−)극: $\ce{Zn(s) + 2OH-(aq) -> ZnO(s) + H2O(l) + 2e-}$</p><p class="small">(+)극: $\ce{2MnO2(s) + H2O(l) + 2e- -> Mn2O3(s) + 2OH-(aq)}$</p><p class="small mt8">$E^\circ$: (−)극 $-1.26\ \text{V}$, (+)극 $+0.15\ \text{V}$</p></div>
+        <p class="small step mt8">$E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}=0.15-(-1.26)=1.41\ \text{V}$</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h3>디지털 소양 키우기</h3>
+        <p class="f21 mt8">바닷물에 녹아 있는 나트륨 이온과 칼륨 이온으로 리튬 이온 전지의 리튬을 대체할 수 있을지 자료를 검색하여 가능성을 알아보자.</p>
+        <p class="f21 step mt8"><b>예시</b> 리튬은 매장량이 한정적이다. 나트륨·칼륨은 리튬과 같은 1족 알칼리 금속이라 성질이 비슷해 같은 원리로 전지를 만들 수 있고, 바닷물에 풍부하다.</p>
+        <p class="f21 step mt8">다만 리튬보다 무겁고 에너지 밀도가 낮아 더 많은 연구가 필요하다. (검색한 자료의 출처를 함께 적는다.)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 34. 대단원 마무리 05 ════════ -->
+<section class="slide" data-sec="03 · 대단원 마무리" data-title="대단원 마무리 05">
+  <h2><span class="tag q">대단원 마무리 05</span>전자의 이동 방향으로 판단하기</h2>
+  <p class="f21">그림은 금속 $\mathrm{A}$와 $\mathrm{B}$를 전극으로 사용한 화학 전지와 전자의 이동 방향을 나타낸 것이다. 이에 대한 설명으로 옳은 것은? <span class="small">(단, $\mathrm{A}$와 $\mathrm{B}$는 임의의 원소 기호이다.)</span></p>
+  <div class="row stretch mt8" style="height:372px">
+    <div class="col stack" style="flex:0 0 440px">
+      <svg class="fig" viewBox="0 0 560 330" style="width:440px" aria-label="금속 A가 1 M A 이온 수용액에, 금속 B가 1 M B 이온 수용액에 담겨 있고 염다리와 전구로 연결되어 있다. 전자는 도선을 따라 B에서 A 쪽으로 이동한다">@@Q05@@</svg>
+      <div class="board"></div>
+    </div>
+    <div class="col stack">
+      <div class="rm23-ch">
+        <p>① 금속판 $\mathrm{A}$에서 산화 반응이 일어난다. <span class="step c-muted" data-g="q5">— 전자를 받는 $\mathrm{A}$에서는 환원</span></p>
+        <p>② 금속의 이온화 경향은 $\mathrm{A}$가 $\mathrm{B}$보다 작다.</p>
+        <p>③ 반응이 진행될수록 $\mathrm{A}^{2+}(aq)$ 수는 증가한다. <span class="step c-muted" data-g="q5">— $\mathrm{A}^{2+}$이 환원되어 감소</span></p>
+        <p>④ 반응이 진행될수록 금속판 $\mathrm{B}$의 질량은 증가한다. <span class="step c-muted" data-g="q5">— $\mathrm{B}$가 산화되어 감소</span></p>
+        <p>⑤ 반응이 진행되면 각 반쪽 전지의 전하 불균형이 일어난다. <span class="step c-muted" data-g="q5">— 염다리가 전하 균형 유지</span></p>
+      </div>
+      <p class="small step mt8">전자가 $\mathrm{B}$ → $\mathrm{A}$로 이동하므로 $\mathrm{B}$가 (−)극(산화 전극), $\mathrm{A}$가 (+)극(환원 전극)이다.</p>
+    </div>
+  </div>
+  <div class="answer step">정답 ②</div>
+</section>
+
+<!-- ════════ 35. 대단원 마무리 06 ════════ -->
+<section class="slide" data-sec="03 · 대단원 마무리" data-title="대단원 마무리 06 (서술형)">
+  <h2><span class="tag q">대단원 마무리 06</span><span class="small c-muted">서술형</span> 볼타 전지의 전압이 떨어지는 까닭</h2>
+  <p class="f21">다음은 볼타 전지의 반쪽 반응식이다.</p>
+  <div class="formula sm">$\begin{aligned}&amp;(-)\text{극: }\ce{Zn(s) -> Zn^2+(aq) + 2e-}\\&amp;(+)\text{극: }\ce{2H+(aq) + 2e- -> H2(g)}\end{aligned}$</div>
+  <p class="f21">볼타 전지에서는 전류가 흐르기 시작한 후 전압이 떨어지는 현상이 나타나는데, 이러한 현상이 일어나는 까닭을 설명해 보자.</p>
+  <div class="row stretch mt8" style="height:120px"><div class="col stack"><div class="board"></div></div></div>
+  <div class="answer step"><b>예시 답안</b> (+)극(구리판)에서 발생한 수소 기체가 구리판 표면에 달라붙어 수소 이온이 전자를 얻는 환원 반응을 방해하기 때문이다(분극 현상).</div>
+  <p class="small step mt8">채점 요소: ① (+)극에서 발생한 수소 기체가 금속판 표면에 달라붙음 ② 수소 이온의 환원을 방해함 — 두 요소를 모두 쓰면 완전한 답</p>
+</section>
+
+<!-- ════════ 36. 대단원 마무리 07 ════════ -->
+<section class="slide" data-sec="03 · 대단원 마무리" data-title="대단원 마무리 07">
+  <h2><span class="tag q">대단원 마무리 07</span>표준 환원 전위로 판단하기</h2>
+  <p class="f21">그림은 화학 전지를, 자료는 $25\ {}^\circ\text{C}$에서 세 가지 금속의 반쪽 반응에 대한 표준 환원 전위($E^\circ$)이다. 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? <span class="small">(단, $\mathrm{A}$와 $\mathrm{B}$는 임의의 원소 기호이다.)</span></p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 560 310" style="width:400px" aria-label="1 M 구리 이온 수용액 속 구리와 1 M X 이온 수용액 속 X를 염다리와 전구로 이은 화학 전지">@@Q07@@</svg>
+      <div class="board mt8" style="height:120px"></div>
+    </div>
+    <div class="col">
+      <div class="card rm23-dat"><p>$\mathrm{A}^{+}(aq)+\ce{e-}\ce{->}\mathrm{A}(s)$ &nbsp; $E^\circ=+0.80\ \text{V}$</p><p>$\mathrm{B}^{2+}(aq)+\ce{2e-}\ce{->}\mathrm{B}(s)$ &nbsp; $E^\circ=-0.76\ \text{V}$</p><p>$\ce{Cu^2+(aq) + 2e- -> Cu(s)}$ &nbsp; $E^\circ=+0.34\ \text{V}$</p></div>
+      <div class="bogi mt8"><p>ㄱ. 금속의 이온화 경향은 $\mathrm{A}&gt;\ce{Cu}&gt;\mathrm{B}$이다. <span class="step c-muted" data-g="q7">✗ $E^\circ$가 작을수록 크다 → $\mathrm{B}&gt;\ce{Cu}&gt;\mathrm{A}$</span></p><p>ㄴ. $\mathrm{X}$가 $\mathrm{A}$이면 $\ce{Cu}(s)$는 (−)극이다. <span class="step c-muted" data-g="q7">○ $\ce{Cu}$(+0.34)가 산화</span></p><p>ㄷ. $\mathrm{X}$가 $\mathrm{B}$이면 $\mathrm{B}(s)$의 질량은 점차 감소한다. <span class="step c-muted" data-g="q7">○ $\mathrm{B}$(−0.76)가 산화</span></p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+  </div>
+  <div class="answer step">정답 ④</div>
+</section>
+
+<!-- ════════ 37. 대단원 마무리 08 ════════ -->
+<section class="slide" data-sec="03 · 대단원 마무리" data-title="대단원 마무리 08 (서술형)">
+  <h2><span class="tag q">대단원 마무리 08</span><span class="small c-muted">서술형</span> 수소 연료 전지</h2>
+  <p class="f21">다음은 수소 연료 전지의 반쪽 반응식과 표준 환원 전위이다.</p>
+  <div class="formula sm">$\begin{aligned}&amp;(-)\text{극: }\ce{H2(g) -> 2H+(aq) + 2e-} &amp;&amp; E^\circ=0.00\ \text{V}\\&amp;(+)\text{극: }\ce{1/2O2(g) + 2H+(aq) + 2e- -> H2O(l)} &amp;&amp; E^\circ=+1.23\ \text{V}\end{aligned}$</div>
+  <div class="row stretch" style="height:250px">
+    <div class="col stack">
+      <p class="f21">⑴ 수소 연료 전지의 전체 반응식을 써 보자.</p>
+      <div class="formula sm step">$\ce{2H2(g) + O2(g) -> 2H2O(l)}$</div>
+      <div class="board"></div>
+    </div>
+    <div class="col stack">
+      <p class="f21">⑵ 표준 전지 전위를 구하고, 그 과정을 설명해 보자.</p>
+      <div class="formula sm step">$E^\circ_\text{전지}=(+1.23)-(0.00)=+1.23\ \text{V}$</div>
+      <div class="board"></div>
+    </div>
+  </div>
+  <p class="small step mt8">⑴ 두 반쪽 반응식을 더하면 전자 2개와 $\ce{2H+}$이 지워지고, 계수를 정수로 맞춘다($\ce{H2 + 1/2O2 -> H2O}$로 써도 같다). ⑵ 환원 전극((+)극, 산소)의 $E^\circ$에서 산화 전극((−)극, 수소)의 $E^\circ$를 뺀다. 채점 요소: 식 꼴 + 값과 단위</p>
+</section>
+
+<!-- ════════ 38. 스스로 정리 ════════ -->
+<section class="slide" data-sec="03 화학 전지의 원리 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>산화·환원 반응 — 개념 지도</h2>
+  <div class="rm23-map">
+    <div class="rm23-side">
+      <div class="rm23-node rm23-dim">01 산화와 환원</div>
+      <div class="rm23-node rm23-dim">02 화학 전지의 발전</div>
+    </div>
+    <div class="rm23-node rm23-main">
+      <b>03 화학 전지의 원리</b>
+      <p class="f21" data-q><b>원리</b> 금속이 전자를 잃고 양이온이 되려는 경향 ❺ <span class="blank"><span class="step">이온화 경향</span></span></p>
+      <p class="f21" data-q><b>화학 전지</b> 산화·환원 반응으로 ❻ <span class="blank"><span class="step">화학</span></span> 에너지를 전기 에너지로 전환</p>
+      <p class="f21" data-q>(−)극: ❼ <span class="blank"><span class="step">산화</span></span> 반응 &nbsp; (+)극: ❽ <span class="blank"><span class="step">환원</span></span> 반응</p>
+      <p class="f21" data-q>두 반쪽 전지를 잇고 전하 균형을 유지하는 장치 ⓐ <span class="blank"><span class="step">염다리</span></span> · 볼타 전지의 전압이 떨어지는 ⓑ <span class="blank"><span class="step">분극 현상</span></span></p>
+      <p class="f21" data-q><b>표준 전지 전위</b> $E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}$ — 표준 수소 전극(0.00 V) 기준의 ⓒ <span class="blank"><span class="step">표준 환원 전위</span></span>로 구함</p>
+      <p class="small">❺–❽은 대단원 마무리 개념 정리의 번호, ⓐ–ⓒ는 덱이 더한 빈칸</p>
+    </div>
+    <div class="rm23-side">
+      <div class="rm23-node rm23-dim">04 전기 분해</div>
+      <div class="rm23-node rm23-dim">05 우리 생활 속 산화·환원 반응</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="03 화학 전지의 원리 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 화학 전지의 (−)극과 (+)극에서 일어나는 반응을 산화·환원으로 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 금속판과 전해질로 전지를 꾸미고, 표준 환원 전위로 전지 전위를 구하여 측정값과 비교할 수 있다.</button>
+    <button class="chk">[가치·태도] 효율적인 전지의 조건을 따지며 가격·안전·환경도 함께 생각했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 다니엘 전지에서 염다리를 빼면? <span class="step">→ <span class="ans">전류가 흐르지 않는다</span> (전하 균형을 맞출 이온 이동이 끊김)</span></p>
+    <p class="f21 mt8"><b>Q</b> 은–구리 전지의 표준 전지 전위는? <span class="step">→ <span class="ans">$+0.46\ \text{V}$</span> ($0.80-0.34$, 구리가 (−)극)</span></p>
+    <p class="f21 mt8"><b>Q</b> 이온화 경향이 큰 금속의 표준 환원 전위는 큰가, 작은가? <span class="step">→ <span class="ans">작다</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 전지와 반대로, 전기 에너지를 가하여 산화·환원 반응을 일으키면 어떤 일이 생길까? 이때 (+)극에서는 무슨 반응이 일어날까? — 04 전기 분해</div>
+</section>

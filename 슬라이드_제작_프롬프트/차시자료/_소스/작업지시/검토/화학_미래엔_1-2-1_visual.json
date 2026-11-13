@@ -1,0 +1,82 @@
+{
+ "findings": [
+  {
+   "slide": 9,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "물·과산화 수소 모형의 H 라벨이 화면에서 15.7px",
+   "fix": "그림을 1:1(520px)로 — 반영"
+  },
+  {
+   "slide": 32,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "05 모형 A·B 라벨이 8.7–13px",
+   "fix": "라벨을 빼고 '큰 파란 공 A, 작은 흰 공 B' 범례 — 반영"
+  },
+  {
+   "slide": 20,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "더미 아래 '1 몰' 라벨이 viewBox 아래에서 잘림·받침과 겹침",
+   "fix": "더미를 올리고 viewBox 높이 132 — 반영"
+  },
+  {
+   "slide": 26,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "아세트산 반응식이 열 너비를 넘침",
+   "fix": "반응식을 열 밖 전체 폭 블록으로 — 반영"
+  },
+  {
+   "slide": 7,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "'반응의 진행' 라벨이 물 분자의 H와 겹침",
+   "fix": "화살표 위로 옮김 — 반영"
+  },
+  {
+   "slide": 5,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "가운데 말풍선 꼬리가 엉뚱한 그릇을 가리킴",
+   "fix": "꼬리를 설탕 그릇 쪽으로 — 반영"
+  },
+  {
+   "slide": 14,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "세포 그림의 화학식 라벨이 화살표 시작과 겹침",
+   "fix": "라벨·화살표 위치 조정 — 반영"
+  },
+  {
+   "slide": 12,
+   "severity": "low",
+   "rule": "T4",
+   "problem": "실험실 원자 수 표가 넓고 기록 표가 좁아 기록 글이 여러 줄로 쪼개짐",
+   "fix": "원자 수 표 폭 250px 고정 — 반영"
+  },
+  {
+   "slide": 12,
+   "severity": "low",
+   "rule": "M1",
+   "problem": "실험실 '반응 전/후' 라벨을 수식으로 넘겨 KaTeX 경고 6건",
+   "fix": "texText mix:true — 반영"
+  },
+  {
+   "slide": 2,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "지도서 답 추가 후 오른쪽 열 넘침",
+   "fix": "답을 왼쪽 햄버거 그림 아래로 옮김 — 반영"
+  },
+  {
+   "slide": 15,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "석회 동굴 반응식 추가 후 카드 셋이 폭을 넘침",
+   "fix": "카드 둘(지도서 예시)로 줄임 — 반영"
+  }
+ ],
+ "summary": "자동 점검 6건·콘솔 경고 6건을 0으로 만들고 겹침·꼬리·표 폭을 고쳤다. 남은 문제 없음. | 11/13 지도서 대조 수정 후: 자동 점검 0건, 고친 장 2·7·15·26·27·33 sheet 확인."
+}

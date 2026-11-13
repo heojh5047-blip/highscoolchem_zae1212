@@ -1,0 +1,83 @@
+/* 3-1 탄소 화합물의 종류 — 덱 전용 (모두 .rm31- 접두어) */
+.cover h1.rm31-h1{font-size:104px}
+
+/* 대단원 도입: 연계 사슬 */
+.rm31-chain{display:flex;flex-direction:column;align-items:stretch;gap:2px}
+.rm31-node{background:#fff;border:2px solid var(--line);border-radius:12px;padding:8px 14px;font-size:21px;line-height:1.45}
+.rm31-node.rm31-main{border-color:var(--field);background:#F2FAF5}
+.rm31-down{text-align:center;color:var(--muted);font-size:22px;line-height:1.1}
+
+/* 격자 카드 */
+.rm31-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rm31-g3 .card h3{margin-bottom:2px}
+.rm31-g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rm31-g4 .stage p{font-size:19px;line-height:1.5}
+.rm31-g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rm31-g2s{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rm31-g2s .stage{padding:8px 12px}
+.rm31-g2s .stage h3{font-size:21px;margin-bottom:0}
+.rm31-big{font-size:30px;text-align:center;padding:52px 0 54px}
+
+/* 표 */
+table.rm31-cls{width:100%}
+table.rm31-cls th{width:250px;font-size:21px}
+table.rm31-cls td{text-align:center;font-size:21px;padding:4px 8px}
+table.rm31-tb{width:100%}
+table.rm31-tb td,table.rm31-tb th{text-align:center;font-size:21px}
+table.rm31-tb .blank{min-width:80px}
+table.rm31-fg{width:100%}
+table.rm31-fg td{text-align:center;font-size:21px;padding:2px 8px}
+table.rm31-cmp{width:100%}
+table.rm31-cmp th{width:210px;font-size:21px}
+table.rm31-cmp td{text-align:center;font-size:21px}
+table.rm31-var th{width:120px}
+table.rm31-var td{font-size:20px}
+table.rm31-res{width:100%}
+table.rm31-res th{font-size:19px;padding:6px 4px}
+table.rm31-res td{text-align:center;font-size:19px;padding:6px 4px}
+table.rm31-res .blank{min-width:66px}
+.rm31-fsm .katex{font-size:.86em}
+.rm31-arrow{font-size:40px;color:var(--muted);text-align:center;margin-top:90px}
+
+/* 결론·답 */
+p.rm31-a{color:#1B5E3F;margin-top:4px}
+.answer.rm31-left{text-align:left}
+.blank.rm31-wide{min-width:430px}
+
+/* 개념 지도 */
+.rm31-map{display:flex;gap:16px;align-items:stretch}
+.rm31-mnode{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.45}
+.rm31-mnode.rm31-cur{flex:1 1 0;border-color:var(--field);background:#F7FCF9}
+.rm31-side{flex:0 0 250px;display:flex;flex-direction:column;gap:12px}
+.rm31-mnode.rm31-dim{border-style:dashed;color:var(--muted);flex:1}
+
+/* 실험실 */
+.rm31-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.rm31-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 11px;font-size:19px}
+.rm31-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm31-seg .btn:disabled{opacity:.35;cursor:not-allowed}
+.rm31-seg .btn.rm31-act{border-color:#9FC3DD}
+.rm31-seg .btn.rm31-act.done{background:#DDEEF8}
+.rm31-seg .btn.rm31-rec{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm31-read{width:100%}
+table.rm31-read th{font-size:19px;padding:5px 10px;width:200px}
+table.rm31-read td{font-size:21px;width:auto;padding:5px 10px;text-align:center}
+output.kind.rm31-msg{display:block;margin-top:4px;line-height:1.4;font-size:19px;min-height:54px}
+table.rm31-log{width:100%}
+table.rm31-log th,table.rm31-log td{font-size:19px;padding:3px 6px;text-align:center}
+
+/* 교과서 대조 뒤 추가 */
+.rm31-chips{display:flex;flex-wrap:wrap;gap:8px}
+.rm31-chips > span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-size:20px}
+.rm31-g3s{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rm31-g3s .stage{padding:6px 12px}
+.rm31-g3s .stage h3{font-size:21px;margin-bottom:0}
+.rm31-g3s .stage svg{height:120px;margin:0 auto}
+.rm31-g3s .stage p.key{margin:0}
+.rm31-g2s .stage svg{height:112px;margin:0 auto}
+table.rm31-goal th{width:120px;font-size:20px}
+table.rm31-goal td{font-size:20px}
+table.rm31-ex{width:100%}
+table.rm31-ex th,table.rm31-ex td{font-size:20px}
+.rm31-hl{background:#FFF8D6}
+.rm31-fsm .katex{font-size:.78em}

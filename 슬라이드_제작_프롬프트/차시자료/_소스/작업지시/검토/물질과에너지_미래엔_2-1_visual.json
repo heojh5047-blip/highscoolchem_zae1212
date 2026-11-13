@@ -1,0 +1,75 @@
+{
+ "findings": [
+  {
+   "slide": 2,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "03 삼투 현상 칸 라벨이 화면에서 14.7px, '물'·'용액' 위쪽 잘림",
+   "fix": "라벨 21, viewBox 위 여백 — 반영"
+  },
+  {
+   "slide": 11,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "H2Te 라벨과 '실온 25 °C' 겹침",
+   "fix": "H2Te 라벨을 점 아래로 — 반영"
+  },
+  {
+   "slide": 12,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "얼음 카드의 H 원자가 그림 밖으로 잘리고, 액체 카드 분자가 뭉쳐 겹침",
+   "fix": "viewBox 넓힘, 액체는 흔든 격자 배치로 다시 생성 — 반영"
+  },
+  {
+   "slide": 14,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "실험실 그래프 t 축 라벨 잘림, 범례 간격 좁음",
+   "fix": "라벨 위치·범례 간격 조정 — 반영"
+  },
+  {
+   "slide": 16,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "해풍 카드의 해와 '빨리 데워짐' 라벨 겹침",
+   "fix": "해 위치 옮김 — 반영"
+  },
+  {
+   "slide": 18,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "기화열 막대 값과 축 제목 겹침",
+   "fix": "막대 배율 5.0 — 반영"
+  },
+  {
+   "slide": 20,
+   "severity": "medium",
+   "rule": "D21",
+   "problem": "물 패널 분자가 두 덩어리로 흩어지고 겹침",
+   "fix": "16분자를 촘촘한 흔든 격자로(얼음과 같은 수) — 반영"
+  },
+  {
+   "slide": 21,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "모식 그래프 축 제목 잘림, lake3 clipPath id 중복(D5)",
+   "fix": "viewBox 높이 330, id에 b 접미사 — 반영"
+  },
+  {
+   "slide": 17,
+   "severity": "low",
+   "rule": "빈 공간",
+   "problem": "확인하기 장(17·24·29) 아래 빈 공간이 큼",
+   "fix": "판서 공간으로 둠(교과서 확인하기 2문항 그대로) — 기각"
+  },
+  {
+   "slide": 17,
+   "severity": "info",
+   "rule": "지도서 대조 후 확인",
+   "problem": "17·22·25·26·28·30장 문구 변경",
+   "fix": "sheet로 확인 — 잘림·겹침 없음"
+  }
+ ],
+ "summary": "자동 점검 0건·콘솔 0건, motion 0, ask 0. 겹침·잘림을 고치고 입자 그림을 다시 생성했다. 확인하기 장의 빈 공간은 판서용으로 남김. (11/13) 지도서 대조로 고친 6장을 sheet로 다시 봄: 이상 없음."
+}

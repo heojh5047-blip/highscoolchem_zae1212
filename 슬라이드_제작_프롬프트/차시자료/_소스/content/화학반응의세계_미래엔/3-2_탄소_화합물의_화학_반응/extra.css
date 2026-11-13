@@ -1,0 +1,53 @@
+/* 3-2 탄소 화합물의 화학 반응 — 덱 전용 (모두 .rm32- 접두어) */
+.cover h1.rm32-h1{font-size:100px}
+.c-ox{color:#C2410C} .c-rd{color:#0E7490} .c-o{color:#C26A12}
+
+/* 격자 */
+.rm32-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rm32-g3 .card h3{margin-bottom:0}
+.rm32-g3 .card > svg{width:100%;height:170px}
+.rm32-g3w{display:grid;grid-template-columns:.85fr 1.9fr 1fr;gap:14px}
+.rm32-g3w .stage > svg{width:100%;height:auto;max-height:230px;margin:0 auto}
+.rm32-g3w .stage p{font-size:19px;line-height:1.5}
+.rm32-eq{font-size:25px;text-align:center;padding:30px 0 10px}
+
+/* 표 */
+table.rm32-tb{width:100%}
+table.rm32-tb th,table.rm32-tb td{text-align:center;font-size:21px;padding:6px 10px}
+table.rm32-tb td.l{text-align:left}
+table.rm32-var th{width:120px;font-size:19px}
+table.rm32-var td{font-size:19px}
+table.rm32-ch{width:auto}
+table.rm32-ch th,table.rm32-ch td{text-align:center;font-size:21px;padding:3px 18px}
+.rm32-flow .fnode{font-size:21px;padding:6px 14px}
+
+p.rm32-a{color:#1B5E3F;margin-top:2px}
+.rm32-chips .chk{font-size:20px;padding:6px 14px}
+
+/* 개념 지도 */
+.rm32-map{display:flex;gap:16px;align-items:stretch;margin-top:8px}
+.rm32-mnode{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.45}
+.rm32-mnode.rm32-cur{flex:1 1 0;border-color:var(--field);background:#F7FCF9;padding:18px 22px}
+.rm32-side{flex:0 0 270px;display:flex;flex-direction:column;gap:12px}
+.rm32-mnode.rm32-dim{border-style:dashed;color:var(--muted);flex:1}
+.rm32-mapeq{font-size:23px;line-height:1.8}
+.rm32-o{display:inline-block;border:2.5px solid #E08A2C;border-radius:999px;padding:0 6px;background:rgba(224,138,44,.12)}
+
+/* 실험실 */
+.rm32-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.rm32-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 11px;font-size:19px}
+.rm32-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm32-seg .btn:disabled{opacity:.35;cursor:not-allowed}
+.rm32-seg .btn.rm32-act{border-color:#9FC3DD}
+.rm32-seg .btn.rm32-act.done{background:#DDEEF8}
+.rm32-seg .btn.rm32-rec{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm32-read{width:100%}
+table.rm32-read th{font-size:19px;padding:5px 10px;width:190px}
+table.rm32-read td{font-size:21px;padding:5px 10px;text-align:center}
+output.kind.rm32-msg{display:block;margin:6px 0;line-height:1.4;font-size:19px;min-height:54px}
+table.rm32-log{width:100%}
+table.rm32-log th,table.rm32-log td{font-size:19px;padding:3px 6px;text-align:center}
+.rm32-logbox{position:absolute;left:8px;right:8px;top:336px}
+.rm32-chs{flex-wrap:wrap;gap:6px 22px}
+.rm32-chs span{font-size:21px}
+table.rm32-sm th,table.rm32-sm td{padding:3px 10px}

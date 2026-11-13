@@ -1,0 +1,75 @@
+{
+  "findings": [
+    {
+      "slide": 1,
+      "severity": "high",
+      "rule": "D8",
+      "problem": "표지 제목 세 줄(120px)이 안전 영역 아래로 넘침.",
+      "fix": "h1 92px로 두 줄."
+    },
+    {
+      "slide": 5,
+      "severity": "medium",
+      "rule": "3.2",
+      "problem": "반응식 괄호 라벨 '산화'·'환원'이 화면 15px, 이어 위쪽 잘림.",
+      "fix": "viewBox 600(-10 위 여백), 라벨 24."
+    },
+    {
+      "slide": 9,
+      "severity": "medium",
+      "rule": "3.2",
+      "problem": "미생물 연료 전지·항산화제 그림 라벨 14.5px.",
+      "fix": "그림 폭 480/440, 라벨 20–23."
+    },
+    {
+      "slide": 23,
+      "severity": "high",
+      "rule": "3.2",
+      "problem": "col.stack 안 그림이 줄어 라벨 9.7px.",
+      "fix": "왼쪽 열에 글 + 그림, 오른쪽 열에 판서 + 단계 정답으로 재배치."
+    },
+    {
+      "slide": 16,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "실험실 물질 이름 겹침·잘림, 기록 표 4행이 줄바꿈되어 화면 밖, 방사형 라벨 15px.",
+      "fix": "전해질 이름을 전해질 칸 안(halo)으로, 물질 이름 y 184, 기록 표 3행·설계 한 칸, 라벨 23."
+    },
+    {
+      "slide": 21,
+      "severity": "low",
+      "rule": "D8",
+      "problem": "'세포 하나 약 0.15 V' 왼쪽 잘림.",
+      "fix": "anchor start."
+    },
+    {
+      "slide": 18,
+      "severity": "low",
+      "rule": "C1",
+      "problem": "Q1·Q2·Q3가 화학식으로 오인됨.",
+      "fix": "Q만 씀."
+    },
+    {
+      "slide": 25,
+      "severity": "low",
+      "rule": "레이아웃",
+      "problem": "아래쪽 빈 공간.",
+      "fix": "기각 — 질문 답 판서 공간으로 둠."
+    },
+    {
+      "slide": 0,
+      "severity": "low",
+      "rule": "6.4",
+      "problem": "data-anim 45곳으로 권장(15–25)보다 많음.",
+      "fix": "기각 — 아이콘 pop·반응식 괄호 그리기 등 짧은 움직임, motion_check 0건."
+    },
+    {
+      "slide": 22,
+      "severity": "low",
+      "rule": "D",
+      "problem": "지도서 값으로 바꾸며 막대가 2개 → 3개(철 추가).",
+      "fix": "행 간격 40, 값 라벨을 막대 끝 오른쪽에 두어 겹침 없음을 sheet로 확인."
+    }
+  ],
+  "summary": "첫 렌더 자동 점검 10건을 모두 고쳐 0건. 25장 캡처 모음 두 번 확인, 실험실은 PRE 후 캡처로 기록 표·그래프 확인. (11/13 지도서 대조 뒤) 자동 점검 0건, 고친 장 sheet 확인."
+}

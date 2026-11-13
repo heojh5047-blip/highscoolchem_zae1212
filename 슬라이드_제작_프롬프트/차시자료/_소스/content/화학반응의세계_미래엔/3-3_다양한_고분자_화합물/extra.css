@@ -1,0 +1,47 @@
+/* 3-3 다양한 고분자 화합물 — 덱 전용 (모두 .rm33- 접두어) */
+.cover h1.rm33-h1{font-size:96px}
+.c-bf{color:#7B4FC8}
+
+/* 격자 */
+.rm33-g3w{display:grid;grid-template-columns:.7fr 1.6fr 1.15fr;gap:14px;margin-top:8px}
+.rm33-g3w .stage > svg{width:100%;height:auto;max-height:230px;margin:0 auto}
+.rm33-g3w .stage p{font-size:19px;line-height:1.5}
+.rm33-eq{font-size:24px;text-align:center;padding:40px 0 14px}
+.stages .stage > svg{width:100%;height:auto}
+.rm33-cap{text-align:center;margin-top:0}
+p.rm33-a{color:#1B5E3F;margin-top:2px}
+.rm33-fgs{font-size:23px;line-height:2.2;text-align:center;padding:14px 0 4px}
+.rm33-o{display:inline-block;border:2.5px solid #E08A2C;border-radius:999px;padding:0 8px;background:rgba(224,138,44,.12);margin:0 4px}
+
+/* 표 */
+table.rm33-tb{width:100%}
+table.rm33-tb th,table.rm33-tb td{text-align:center;font-size:21px;padding:6px 10px}
+table.rm33-tb th.rm33-add,table.rm33-tb td.rm33-add{color:#2E9E6A;font-weight:700}
+table.rm33-tb th.rm33-con,table.rm33-tb td.rm33-con{color:#7B4FC8;font-weight:700}
+.rm33-chs{flex-wrap:wrap;gap:6px 22px}
+.rm33-chs span{font-size:21px}
+
+/* 개념 지도 */
+.rm33-map{display:flex;gap:16px;align-items:stretch;margin-top:8px}
+.rm33-mnode{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.45}
+.rm33-mnode.rm33-cur{flex:1 1 0;border-color:var(--field);background:#F7FCF9;padding:18px 22px}
+.rm33-side{flex:0 0 272px;display:flex;flex-direction:column;gap:12px}
+.rm33-mnode.rm33-dim{border-style:dashed;color:var(--muted);flex:1}
+.rm33-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rm33-two > div{border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:20px;line-height:1.45;background:#fff}
+
+/* 실험실 */
+.rm33-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.rm33-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 11px;font-size:19px}
+.rm33-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm33-seg .btn:disabled{opacity:.35;cursor:not-allowed}
+.rm33-seg .btn.rm33-act{border-color:#9FC3DD;background:#DDEEF8}
+.rm33-seg .btn.rm33-rec{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm33-read{width:100%}
+table.rm33-read th{font-size:19px;padding:5px 10px;width:210px}
+table.rm33-read td{font-size:21px;padding:5px 10px;text-align:center}
+output.kind.rm33-msg{display:block;margin:6px 0;line-height:1.4;font-size:19px;min-height:54px}
+table.rm33-log{width:100%}
+table.rm33-log th,table.rm33-log td{font-size:19px;padding:3px 6px;text-align:center}
+.ov.rm33-ov{font-size:20px}
+.ov.rm33-leg{font-size:19px}
