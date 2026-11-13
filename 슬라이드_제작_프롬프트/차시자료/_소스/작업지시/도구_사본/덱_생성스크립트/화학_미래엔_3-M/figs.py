@@ -171,7 +171,7 @@ def hb10():
     return svg('0 0 480 280',480,'체온이 올라가면 산소와 결합한 헤모글로빈에서 산소 분자가 떨어져 나와 조직에 공급된다',o)
 def tubes11():
     o=[]
-    spec=[(60,'#3E8ED0','얼음물','#E3EEFB','r1'),(240,'#5FA86B','실온',None,None),(420,'#C9BE2E','뜨거운 물','#FDE2E4','r2')]
+    spec=[(60,'#3E8ED0','얼음물','#E3EEFB','r1'),(240,'#5FA86B','처음(실온)',None,None),(420,'#C9BE2E','뜨거운 물','#FDE2E4','r2')]
     for x,col,lab,bath,g in spec:
         if bath:
             o.append(f'<rect x="{x-40}" y="90" width="120" height="120" rx="10" fill="{bath}" stroke="#7E8B98" stroke-width="2.5"/>')
@@ -184,7 +184,7 @@ def tubes11():
     o.append(T(80,280,'파란색 진해짐',19,fill='#1F5FA8'))
     o.append(T(260,280,'초록색(기준)',19,fill='#2E7D4F'))
     o.append(T(440,280,'노란색 진해짐',19,fill='#8A7F10'))
-    return svg('0 0 520 290',520,'초록색 평형 혼합물을 세 시험관에 나누어 얼음물에서는 파란색, 실온은 초록색, 뜨거운 물에서는 노란색이 진해진다',o)
+    return svg('0 0 520 290',520,'초록색 평형 혼합물(처음, 실온)을 얼음물에 넣으면 파란색이, 뜨거운 물에 넣으면 노란색이 진해진다',o)
 def chamber12():
     o=['<rect x="30" y="60" width="400" height="150" rx="75" fill="#F4F6F8" stroke="#7E8B98" stroke-width="4"/>',
        '<rect x="60" y="205" width="40" height="40" fill="#C9D3DD"/><rect x="360" y="205" width="40" height="40" fill="#C9D3DD"/>',

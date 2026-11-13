@@ -47,6 +47,7 @@ table.cm39-eval td:not(.l){text-align:center;width:56px}
 .cm39-box p{font-size:20px;line-height:1.5;margin:4px 0}
 .stages.cm39-st3 p{font-size:20px;line-height:1.45}
 .stages.cm39-st3 h3{font-size:21px;margin:0 0 4px}
+.stages.cm39-st4{grid-template-columns:repeat(4,1fr);gap:14px}
 .cm39-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .cm39-cards .card h3{font-size:21px;margin:0 0 4px}
 .cm39-cards .card p{font-size:20px;line-height:1.45;margin:4px 0}
