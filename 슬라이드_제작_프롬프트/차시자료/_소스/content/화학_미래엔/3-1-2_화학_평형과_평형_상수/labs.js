@@ -3,7 +3,7 @@
                 실험 1–5 = 교과서 102쪽 평형 농도 자료. 후보식 ㉠ y/x, ㉡ y/x², ㉢ y/(2x), ㉣ y/x³ (x=[NO2], y=[N2O4]).
                 [계산] → 고른 식의 열을 모든 행에 채움(스프레드시트 '아래로 채우기'). 일정성 = (최대−최소)/평균 %.
                 [평형 농도 측정] → 처음 농도로 평형 계산: N 보존 c = a0 + 2·b0, 2Kx² + x − c = 0, K = 212(25 °C),
-                측정 오차 ±0.5 %(고정 시드), 유효 숫자 세 자리. 표 최대 8행(넘으면 덱이 추가한 가장 오래된 행을 지움).
+                측정 오차 ±0.5 %(고정 시드), 평형 농도 유효 숫자 세 자리, 농도비는 소수 첫째 자리(지도서 예시). 표 최대 8행(넘으면 덱이 추가한 가장 오래된 행을 지움).
                 그래프: 가로 실험, 세로 '평균에 대한 비'(0.6–1.4, 범위 밖은 가장자리). ㉠과 ㉢은 평균에 대한 비가 같아 가로로 조금 비켜 그림. API.loop로 새 점이 커졌다 작아짐. */
 window.DECK_LABS = {
   cm312ratio(root, API){
@@ -17,7 +17,7 @@ window.DECK_LABS = {
     let rows, done, sel='a', seed, nexp, pulse=0, newIdx=-1, note='';
     const rnd=()=>{ seed=(seed+0x6D2B79F5)|0; let z=Math.imul(seed^(seed>>>15),1|seed); z=(z+Math.imul(z^(z>>>7),61|z))^z; return ((z^(z>>>14))>>>0)/4294967296; };
     const sig3=v=>{ if(v===0) return '0'; const p=Math.floor(Math.log10(Math.abs(v))); return (Math.round(v/Math.pow(10,p-2))*Math.pow(10,p-2)); };
-    const fmt=v=>{ if(v>=1000) return String(Math.round(sig3(v))); if(v>=100) return v.toFixed(0); if(v>=10) return v.toFixed(1); if(v>=1) return v.toFixed(2); return v.toFixed(3); };
+    const fmt=v=>{ if(v>=1000) return String(Math.round(sig3(v))); if(v>=1) return v.toFixed(1); return v.toFixed(3); };  // 지도서 예시처럼 소수 첫째 자리(211.4)
     const fc=v=>v>=0.1? v.toFixed(3) : v.toPrecision(3);  // 교과서 값(0.047)은 그대로, 새 측정값은 유효 숫자 세 자리
     // 고정 그림: 격자·축·라벨(처음 한 번만 — texText는 처음 그린 것만 KaTeX로 바뀐다)
     const bg=API.mk('g',{},svg);
@@ -55,7 +55,8 @@ window.DECK_LABS = {
         const t=API.mk('text',{x:lx+12,y:G.y1-14,'font-size':18,fill:F[k].col,'font-weight':700},gr); t.textContent=F[k].nm; lx+=52; });
       if(!done[sel]){ O('spread').textContent='—'; O('msg').textContent=note||`${F[sel].nm} 수식을 골랐다. [계산]을 눌러 모든 실험의 값을 채워 보자.`; return; }
       const s=stats(sel); O('spread').textContent='차이 '+s.sp.toFixed(1)+' %';
-      let m=`${F[sel].nm}: 가장 큰 값과 가장 작은 값의 차이가 평균의 ${s.sp.toFixed(1)} % → `+(s.sp<5?`처음 농도와 관계없이 거의 일정하다(평균 ${fmt(s.m)}).`:'실험마다 달라 일정하지 않다.');
+      const dv=s.v.map(v=>+fmt(v)), df=Math.max(...dv)-Math.min(...dv);
+      let m=`${F[sel].nm}: 최댓값과 최솟값의 차이 ${df>=100?Math.round(df):df.toFixed(1)}(평균의 ${s.sp.toFixed(1)} %) → `+(s.sp<5?`처음 농도와 관계없이 거의 일정하다(평균 ${fmt(s.m)}).`:'실험마다 달라 일정하지 않다.');
       if(['a','b','c','d'].every(k=>done[k])){ const best=['a','b','c','d'].sort((p,q)=>stats(p).sp-stats(q).sp)[0]; m+=` 가장 일정한 식: ${F[best].nm}`; }
       O('msg').textContent=m;
     }
