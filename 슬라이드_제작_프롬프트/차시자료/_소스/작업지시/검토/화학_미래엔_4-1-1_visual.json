@@ -1,14 +1,97 @@
-{"findings":[
-{"slide":7,"severity":"medium","rule":"T4","problem":"HCl 반응식이 카드 밖으로 넘침","fix":"왼쪽 열 폭 640px"},
-{"slide":15,"severity":"medium","rule":"D8","problem":"단계 카드 막대 그래프 아래 라벨 잘림","fix":"viewBox 높이 200"},
-{"slide":16,"severity":"medium","rule":"T4","problem":"아세트산 반응식이 칸을 넘침","fix":"상태 기호를 빼고 .cm411-fs(22px)"},
-{"slide":17,"severity":"high","rule":"M1","problem":"실험실 readout에 KaTeX 원문(1.0\\times10^{-7})이 그대로 보임 — KaTeX 로드 전 API.tex 호출","fix":"API.ready(()=>draw()) 추가"},
-{"slide":17,"severity":"low","rule":"D8","problem":"'중성' 라벨이 비커 그림과 겹침","fix":"점선과 라벨을 왼쪽으로"},
-{"slide":20,"severity":"medium","rule":"D8","problem":"몰수 막대 값 0.17 잘림","fix":"막대 배율 640"},
-{"slide":21,"severity":"low","rule":"D8","problem":"'용질 1 mol'과 '용액 1 L' 라벨이 붙음","fix":"'용액 1 L'을 플라스크 아래로"},
-{"slide":22,"severity":"medium","rule":"M1","problem":"수식 안 ❶❷❸가 KaTeX 경고","fix":"\\boxed{1}…로 바꾸고 빈칸 번호를 '빈칸 1:' 줄로"},
-{"slide":28,"severity":"medium","rule":"3.2","problem":"4열 카드 그림 라벨 15px 미만","fix":"라벨 24, 저울 숫자 24"},
-{"slide":36,"severity":"medium","rule":"D8","problem":"기구 ㄱ·ㄴ·ㄷ 라벨이 아래에서 잘림","fix":"라벨을 기구 왼쪽 위로"},
-{"slide":0,"severity":"low","rule":"레이아웃","problem":"몇 장(10, 19, 25, 33–35)은 아래 빈 공간이 넓음","fix":"판서 공간으로 쓰도록 유지(기각 — 글자 줄이지 않음)"},
-{"slide":0,"severity":"low","rule":"D5","problem":"clip-cm411-26 중복","fix":"glass3a를 clip-cm411-26g로"}
-],"summary":"자동 점검 0건·콘솔 0건까지 고침. 실험실 KaTeX 초기화 문제를 찾아 고쳤다. 전체 캡처 모음 3회 확인."}
+{
+"findings": [
+{
+"slide": 7,
+"severity": "medium",
+"rule": "T4",
+"problem": "HCl 반응식이 카드 밖으로 넘침",
+"fix": "왼쪽 열 폭 640px"
+},
+{
+"slide": 15,
+"severity": "medium",
+"rule": "D8",
+"problem": "단계 카드 막대 그래프 아래 라벨 잘림",
+"fix": "viewBox 높이 200"
+},
+{
+"slide": 16,
+"severity": "medium",
+"rule": "T4",
+"problem": "아세트산 반응식이 칸을 넘침",
+"fix": "상태 기호를 빼고 .cm411-fs(22px)"
+},
+{
+"slide": 17,
+"severity": "high",
+"rule": "M1",
+"problem": "실험실 readout에 KaTeX 원문(1.0\\times10^{-7})이 그대로 보임 — KaTeX 로드 전 API.tex 호출",
+"fix": "API.ready(()=>draw()) 추가"
+},
+{
+"slide": 17,
+"severity": "low",
+"rule": "D8",
+"problem": "'중성' 라벨이 비커 그림과 겹침",
+"fix": "점선과 라벨을 왼쪽으로"
+},
+{
+"slide": 20,
+"severity": "medium",
+"rule": "D8",
+"problem": "몰수 막대 값 0.17 잘림",
+"fix": "막대 배율 640"
+},
+{
+"slide": 21,
+"severity": "low",
+"rule": "D8",
+"problem": "'용질 1 mol'과 '용액 1 L' 라벨이 붙음",
+"fix": "'용액 1 L'을 플라스크 아래로"
+},
+{
+"slide": 22,
+"severity": "medium",
+"rule": "M1",
+"problem": "수식 안 ❶❷❸가 KaTeX 경고",
+"fix": "\\boxed{1}…로 바꾸고 빈칸 번호를 '빈칸 1:' 줄로"
+},
+{
+"slide": 28,
+"severity": "medium",
+"rule": "3.2",
+"problem": "4열 카드 그림 라벨 15px 미만",
+"fix": "라벨 24, 저울 숫자 24"
+},
+{
+"slide": 36,
+"severity": "medium",
+"rule": "D8",
+"problem": "기구 ㄱ·ㄴ·ㄷ 라벨이 아래에서 잘림",
+"fix": "라벨을 기구 왼쪽 위로"
+},
+{
+"slide": 0,
+"severity": "low",
+"rule": "레이아웃",
+"problem": "몇 장(10, 19, 25, 33–35)은 아래 빈 공간이 넓음",
+"fix": "판서 공간으로 쓰도록 유지(기각 — 글자 줄이지 않음)"
+},
+{
+"slide": 0,
+"severity": "low",
+"rule": "D5",
+"problem": "clip-cm411-26 중복",
+"fix": "glass3a를 clip-cm411-26g로"
+},
+{
+"slide": 0,
+"severity": "low",
+"rule": "지도서 대조 후 재확인",
+"problem": "S3·6·8·13·16·27·31·38 문장 변경",
+"fix": "sheet 모음으로 확인 — 넘침·잘림 없음, render 0·motion 0·ask 0",
+"status": "확인"
+}
+],
+"summary": "자동 점검 0건·콘솔 0건까지 고침. 실험실 KaTeX 초기화 문제를 찾아 고쳤다. 전체 캡처 모음 3회 확인. | (11/13) 지도서 대조로 고친 8장 재확인, 문제 없음."
+}
