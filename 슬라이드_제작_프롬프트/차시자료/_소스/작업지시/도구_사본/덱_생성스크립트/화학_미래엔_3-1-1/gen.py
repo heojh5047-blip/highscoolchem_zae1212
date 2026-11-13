@@ -139,6 +139,7 @@ add(f'''<!-- ════════ 4. 중단원 도입 ═══════�
       <svg class="fig" viewBox="0 0 330 360" style="width:300px" aria-label="입김이 닿은 꽃잎의 색이 변하는 장미">
         {b}
       </svg>
+      <p class="f21 step cm311-a">예) 겨울에 언 강이 봄에 다시 녹는다. 당긴 용수철을 놓으면 원래 길이로 돌아간다. 온도에 따라 색이 변하는 옷이 있다.</p>
     </div>
   </div>
 </section>''')
