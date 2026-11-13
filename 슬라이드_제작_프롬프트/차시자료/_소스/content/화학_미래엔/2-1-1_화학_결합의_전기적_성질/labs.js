@@ -3,7 +3,7 @@
      · 조작: 전해질(증류수만 / 황산 나트륨 수용액), 전압 3–9 V, 전류를 흘린 시간 0–10분
      · 모의 계산: 전류 I = (V − 1.8)/R (R: 황산 나트륨 20 Ω, 증류수 2000 Ω)
        수소 부피(mL) = I·t(s)/96485/2 × 24.5 L × 1000 (25 °C, 1 기압 가정 — 화면에는 식을 보이지 않음)
-       산소 부피 = 수소 × 0.485 − 0.1 (산소가 물에 조금 더 녹음, 0 아래면 0), 측정값 = 계산값 + 고정 시드 오차(±0.1 mL)
+       산소 부피 = 수소 × 0.5 (지도서 예시처럼 부피비 약 1 : 2), 측정값 = 계산값 + 고정 시드 오차(±0.1 mL)
      · 「측정 기록」→ 표(최근 4행)와 그래프(최근 12개)에 쌓인다. 「성냥불」「향불」로 기체 확인. 「초기화」. */
 window.DECK_LABS = {
   cm211elec(root, API){
@@ -19,7 +19,7 @@ window.DECK_LABS = {
     function noise(e,v,t,side){ let h=(e*131+Math.round(v*10)*17+t*29+side*7)%97; h=(h*h+11)%5; return [0,0.1,-0.1,0.1,-0.1][h]; }
     function calc(){
       const v=+I('v').value, t=+I('t').value, R=st.e?20:2000, cur=Math.max(0,(v-1.8)/R);
-      let h=cur*t*60/96485/2*24.5*1000, o=Math.max(0,h*0.485-0.1);
+      let h=cur*t*60/96485/2*24.5*1000, o=h*0.5;
       if(h>0.5) h+=noise(st.e,v,t,0); if(o>0.5) o+=noise(st.e,v,t,1);
       const full=h>30; h=Math.min(30,r1(h)); o=Math.min(30,r1(o));
       return {v,t,cur,h,o,full};
@@ -101,8 +101,8 @@ window.DECK_LABS = {
     root.querySelectorAll('[data-e]').forEach(b=>b.addEventListener('click',()=>{ st.e=+b.dataset.e; update(); }));
     ['v','t'].forEach(k=>I(k).addEventListener('input',update));
     root.querySelector('[data-act="rec"]').addEventListener('click',()=>{ log.push({e:st.e,v:cur.v,t:cur.t,h:cur.h,o:cur.o}); if(log.length>30) log.shift(); renderLog(); draw(); });
-    root.querySelector('[data-act="h2"]').addEventListener('click',()=>{ O('msg').textContent= cur.h>=2? "성냥불을 대니 '펑' 소리를 내며 탄다 → (−)극 기체는 수소이다." : '기체가 너무 적어 확인하기 어렵다. 시간을 늘려 보자.'; });
-    root.querySelector('[data-act="o2"]').addEventListener('click',()=>{ O('msg').textContent= cur.o>=2? '꺼져 가던 향불이 다시 타오른다 → (+)극 기체는 산소이다.' : '기체가 너무 적어 확인하기 어렵다. 시간을 늘려 보자.'; });
+    root.querySelector('[data-act="h2"]').addEventListener('click',()=>{ O('msg').textContent= cur.h>=2? "성냥불을 대니 '퍽' 소리를 내며 탄다 → (−)극 기체는 수소이다." : '기체가 너무 적어 확인하기 어렵다. 시간을 늘려 보자.'; });
+    root.querySelector('[data-act="o2"]').addEventListener('click',()=>{ O('msg').textContent= cur.o>=2? '꺼져 가는 향불을 대니 다시 타오른다 → (+)극 기체는 산소이다.' : '기체가 너무 적어 확인하기 어렵다. 시간을 늘려 보자.'; });
     root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ log=[]; st.e=1; I('v').value=9; I('t').value=0; renderLog(); update(); });
 
     base(); update();
