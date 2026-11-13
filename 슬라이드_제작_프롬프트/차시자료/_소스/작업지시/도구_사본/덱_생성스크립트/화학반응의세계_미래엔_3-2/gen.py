@@ -5,9 +5,10 @@ from figs import *
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = '/home/user/highscoolchem_zae1212/슬라이드_제작_프롬프트/차시자료/_소스/content/화학반응의세계_미래엔/3-2_탄소_화합물의_화학_반응/slides.html'
+import sys as _s; OUT = _s.argv[1] if len(_s.argv)>1 else OUT
 F = {}
 OX, RD, FIELD, PLUS, MINUS, GRAV = '#C2410C', '#0E7490', '#2E9E6A', '#D7263D', '#1F6FD1', '#8C99A6'
-ORG, GRN = '#F08A24', '#3E9A6A'
+ORG, GRN = '#F2B32A', '#3E9A6A'
 
 
 def T(x, y, mix, size=20, anchor='middle', fill=None, weight=None, extra='', halo=False):

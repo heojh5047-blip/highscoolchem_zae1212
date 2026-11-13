@@ -6,7 +6,7 @@
              관 밀폐 → 초록 앞면 L(t) = L∞(1 − e^(−t/40)), L∞ = 11 mm × 방울(에탄올), 5.5 mm × 방울(아세트알데하이드), 0(아세트산·물), 상한 100 mm
              기록 → 표 + 초록 길이–방울 수 그래프 (모의 값 — plan.md 2절) */
 (function(){
-const INK='#16233D', MUT='#5B6B7F', EQ='#E08A2C', OX='#C2410C', RD='#0E7490', ORG='#F08A24', GRN='#3E9A6A';
+const INK='#16233D', MUT='#5B6B7F', EQ='#E08A2C', OX='#C2410C', RD='#0E7490', ORG='#F2B32A', GRN='#3E9A6A';
 const SER={eth:{c:'#2E9E6A',m:'s',t:'에탄올'}, ald:{c:'#7B4FC8',m:'t',t:'아세트알데하이드'}, glu:{c:'#E08A2C',m:'c',t:'포도당'}, ace:{c:'#D7263D',m:'d',t:'아세트산'}, wat:{c:'#8C99A6',m:'o',t:'증류수'}};
 function marker(API,g,x,y,s,r){ r=r||6; const c=SER[s].c, m=SER[s].m;
   if(m==='c') return API.mk('circle',{cx:x,cy:y,r,fill:c},g);
@@ -170,9 +170,9 @@ window.DECK_LABS = {
       let m;
       if(!st.run) m='솜에 시료를 적시고 관을 밀폐해 실리카 젤을 관찰하자.';
       else if(!st.done) m='기체가 관 안으로 퍼지며 반응하는 중…';
-      else if(s==='eth') m='에탄올이 산화되어 아세트알데하이드가 되고(−OH → −CHO), 주황색 다이크로뮴산 이온이 환원되어 초록색 크로뮴 이온이 된다. 양이 많을수록 초록 부분이 길다.';
+      else if(s==='eth') m='에탄올이 산화되어 아세트알데하이드가 되고(−OH → −CHO), 노란색 다이크로뮴산 이온이 환원되어 초록색 크로뮴 이온이 된다. 양이 많을수록 초록 부분이 길다.';
       else if(s==='ald') m='아세트알데하이드가 산화되어 아세트산이 된다(−CHO → −COOH). 산화 한 단계만 남아 에탄올보다 초록 부분이 짧다.';
-      else if(s==='ace') m='아세트산의 −COOH는 더 산화되기 어렵다. 다이크로뮴산 이온이 환원되지 않아 주황색 그대로다.';
+      else if(s==='ace') m='아세트산의 −COOH는 더 산화되기 어렵다. 다이크로뮴산 이온이 환원되지 않아 노란색 그대로다.';
       else m='물에는 산화될 탄소 화합물이 없다. 색이 변하지 않는다(대조 실험).';
       O('msg').textContent=m;
       drawTube();
