@@ -244,7 +244,7 @@ add(f'''<!-- ════════ 6. 해 보기: 자발적 변화의 특징 
       <p class="f21 mt12" data-q><b>2</b> (가)와 (나)에서와는 반대로 냄새나 잉크가 한쪽으로 다시 모이는 현상이 일어날 수 있는지 토의해 보자.</p>
       <p class="f21 step em33-a">→ <span class="ans">저절로는 일어나지 않는다. 퍼진 입자들이 한곳에 다시 모일 확률은 매우 작다.</span></p>
       <p class="f21 mt12" data-q><b>3</b> 일상생활에서 관찰할 수 있는 자발적 변화의 예를 더 찾아보자.</p>
-      <p class="f21 step em33-a">→ <span class="ans">각설탕이 물에 녹는다, 얼음이 실온에서 녹는다, 철이 녹슨다, 향수 냄새가 방에 퍼진다</span></p>
+      <p class="f21 step em33-a">→ <span class="ans">얼음이 실온에서 녹는다, 나무가 탄다, 각설탕이 물에 녹는다, 철이 녹슨다</span></p>
     </div>
   </div>
 </section>''')
@@ -537,7 +537,7 @@ add(f'''<!-- ════════ 16. 해 보기: 부호 예측 ════
     <div class="stage"><svg viewBox="0 0 300 140" aria-label="시험관 속 아연에서 수소 기체 거품이 생긴다"><path d="M120 10 L120 118 Q120 132 134 132 L166 132 Q180 132 180 118 L180 10" fill="none" stroke="{GL}" stroke-width="3"/><path d="M123 40 L123 118 Q123 129 134 129 L166 129 Q177 129 177 118 L177 40 Z" fill="{WAT}"/><path d="M132 126 L140 112 L152 116 L164 108 L170 126 Z" fill="#8FA3B8" stroke="#5C6F82" stroke-width="1.5"/>{bub}{T(196,64,'\\ce{HCl(aq)}',19,'start',tex=True)}{T(196,122,'\\ce{Zn(s)}',19,'start',tex=True)}</svg>
       <h3>② 아연과 염산이 반응하여 수소 기체가 발생한다.</h3>
       <p class="f21 center">$\\ce{{Zn(s) + 2HCl(aq) -> ZnCl2(aq) + H2(g)}}$</p>
-      <p class="f21 step em33-a">→ <span class="ans">증가($\\Delta S&gt;0$)</span> 기체가 생성된다.</p></div>
+      <p class="f21 step em33-a">→ <span class="ans">증가($\\Delta S&gt;0$)</span> 물질의 양은 약간 줄지만, 기체가 생성되는 영향이 더 크다.</p></div>
     <div class="stage"><svg viewBox="0 0 300 140" aria-label="질소 분자 1개와 수소 분자 3개가 암모니아 분자 2개가 된다">{n2(40,44)}{h2(40,82)}{h2(80,62)}{h2(80,104)}{A(118,74,170,74,'ink',3)}{nh3(214,52)}{nh3(254,92)}<g data-atom="212,16,9,N,-"></g>{T(225,22,'N',18,'start')}<g data-atom="252,16,8,H,-"></g>{T(264,22,'H',18,'start')}{T(66,134,'기체 4분자',19,'middle')}{T(234,134,'기체 2분자',19,'middle')}</svg>
       <h3>③ 질소와 수소를 반응시켜 암모니아를 합성한다.</h3>
       <p class="f21 center">$\\ce{{N2(g) + 3H2(g) -> 2NH3(g)}}$</p>
@@ -765,7 +765,7 @@ add(f'''<!-- ════════ 25. 소단원 마무리 ══════
     <div class="col" style="flex:0 0 420px">
       <div class="card"><h3>디지털 소양 키우기</h3>
         <p class="f21" data-q>일상생활 속에서 엔트로피가 증가하는 변화를 찾아 사진을 찍고, 공유 플랫폼을 활용하여 공유해 보자.</p>
-        <p class="f21 mt8 step em33-a">→ <span class="ans">예: 컵 속 얼음이 녹는다, 커피에 각설탕이 녹는다, 향을 피우면 냄새가 퍼진다, 드라이아이스가 승화한다</span></p>
+        <p class="f21 mt8 step em33-a">→ <span class="ans">예: 장작이 탄다, 도미노가 무너진다, 컵 속 얼음이 녹는다, 커피에 각설탕이 녹는다</span></p>
         <p class="small mt8 step">사진마다 "무엇이 더 무질서해졌는지" 한 줄 설명을 함께 올린다.</p>
       </div>
     </div>
