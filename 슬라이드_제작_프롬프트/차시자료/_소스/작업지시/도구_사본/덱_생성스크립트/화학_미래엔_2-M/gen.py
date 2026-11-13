@@ -117,8 +117,8 @@ def q02():
     # 강조
     y2 = y0 + h
     s += f'<g class="step" data-g="p1"><rect x="{x0}" y="{y2}" width="{7 * w}" height="{h}" rx="8" fill="none" stroke="{FIELD}" stroke-width="3.5"/><g data-arw="{x0 + 20},{y0 + 3 * h + 22},{x0 + 7 * w - 20},{y0 + 3 * h + 22},field,3"></g>' + lab(x0 + 3.5 * w, y0 + 3 * h + 50, '같은 주기: 오른쪽으로 갈수록 커진다', 20, FIELD, mix=True) + '</g>'
-    xs = x0 + 6 * w
-    s += f'<g class="step" data-g="p2"><rect x="{xs}" y="{y2}" width="{w}" height="{2 * h}" rx="8" fill="none" stroke="{MINUS}" stroke-width="3.5"/><g data-arw="{xs + w + 22},{y2 + 10},{xs + w + 22},{y2 + 2 * h - 10},minus,3"></g>' + lab(x0 + 3.5 * w, y0 + 3 * h + 80, '같은 족: 아래로 갈수록 작아진다', 20, MINUS, mix=True) + '</g>'
+    xs = x0  # 1족(H, Li, Na) — 지도서 예시 답안
+    s += f'<g class="step" data-g="p2"><rect x="{xs}" y="{y0}" width="{w}" height="{3 * h}" rx="8" fill="none" stroke="{MINUS}" stroke-width="3.5"/><g data-arw="{xs - 13},{y0 + 10},{xs - 13},{y0 + 3 * h - 10},minus,3"></g>' + lab(x0 + 3.5 * w, y0 + 3 * h + 80, '같은 족: 아래로 갈수록 작아진다', 20, MINUS, mix=True) + '</g>'
     return s
 F['Q02'] = q02()
 
