@@ -1,0 +1,632 @@
+<!-- 물질과에너지_미래엔 4-M 대단원 Ⅳ 마무리 (교과서 120–127쪽) — scratchpad 물질과에너지_미래엔_4-M/gen.py + tpl.html이 만든다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 반응 속도" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 반응 속도 › 대단원 마무리</div>
+    <h1 class="em49-h1">대단원 Ⅳ<br><span class="acc">마무리</span></h1>
+    <p class="sub">반응 속도식 · 반감기 · 활성화 에너지 · 촉매를 한 장의 지도로</p>
+    <p class="meta">고등학교 물질과 에너지 120–127쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="반응물 농도가 줄어드는 곡선과 접선, 반감기마다 절반이 되는 막대, 촉매가 활성화 에너지를 낮추는 에너지 도표"><circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <g fill="#FFFFFF" stroke="#7E8B98" stroke-width="3"><rect x="48" y="166" width="134" height="168" rx="10"/><rect x="203" y="166" width="134" height="168" rx="10"/><rect x="358" y="166" width="134" height="168" rx="10"/></g>
+    <path d="M62 184 V318 H172" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+    <g data-anim="draw" data-dur="1.1" data-delay=".2"><path d="M64 192 C 84 250, 112 292, 170 306" stroke="#16233D" stroke-width="4" fill="none"/></g>
+    <path d="M60 180 L106 296" stroke="#D7263D" stroke-width="3"/>
+    <path d="M216 318 H326" stroke="#5B6B7F" stroke-width="2"/>
+    <g data-anim="scale" data-from="1,0" data-o="270,318" data-dur="1" data-delay=".4"><g fill="#16233D"><rect x="220" y="198" width="20" height="120"/><rect x="246" y="258" width="20" height="60"/><rect x="272" y="288" width="20" height="30"/><rect x="298" y="303" width="20" height="15"/></g></g>
+    <path d="M370 300 H392 C 412 300, 414 196, 428 196 C 442 196, 446 286, 466 286 H486" stroke="#16233D" stroke-width="3.5" fill="none"/>
+    <g data-anim="draw" data-dur="1" data-delay=".6"><path d="M392 300 C 410 300, 414 246, 428 246 C 442 246, 446 286, 466 286" stroke="#2E9E6A" stroke-width="3.5" stroke-dasharray="7 5" fill="none"/></g>
+    <path d="M380 300 V200" stroke="#E08A2C" stroke-width="3"/><path d="M380 196 L375 206 H385 Z" fill="#E08A2C"/><path d="M380 196 H426" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text class="tex" x="115" y="372" data-mix="반응 속도" data-size="24" data-anchor="middle" data-weight="700"></text><text class="tex" x="270" y="372" data-mix="반감기" data-size="24" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="372" data-mix="촉매" data-size="24" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="270" y="140" data-mix="반응 속도" data-size="26" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text>
+    <text class="tex" x="270" y="420" data-mix="농도 · 온도 · 촉매로 빠르기를 조절한다" data-size="22" data-anchor="middle" fill="#5B6B7F"></text>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12물에04-01]</span> 반응 속도와 반응속도식 &nbsp;<span class="code">[12물에04-02]</span> 1차 반응의 반감기 &nbsp;<span class="code">[12물에04-03]</span> 유효 충돌과 활성화 에너지 &nbsp;<span class="code">[12물에04-04]</span> 농도, 온도, 촉매와 반응 속도</div>
+  <ol class="goals mt8">
+    <li>대단원 Ⅳ의 핵심 개념(반응 속도식, 일차 반응의 반감기, 유효 충돌과 활성화 에너지, 농도·온도·촉매)을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li><b>반감기</b>와 <b>반응 속도</b>로 약의 복용 간격과 약의 형태가 중요한 까닭을 설명할 수 있다.</li>
+    <li>이야기·진로·프로젝트로 촉매와 효소가 생활과 환경 문제 해결에 쓰이는 예를 <b>찾을</b> 수 있다.</li>
+  </ol>
+  <svg class="fig mt8" viewBox="0 0 1112 130" style="width:1112px" aria-label="대단원 Ⅳ 단원 지도에서 네 소단원을 마치고 오늘은 대단원 마무리"><line x1="40" y1="34" x2="1072" y2="34" stroke="#C9D3DD" stroke-width="6" stroke-linecap="round"/><path d="M40 34 H990" stroke="#2E9E6A" stroke-width="6" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.6" data-delay=".3"/><circle cx="130" cy="34" r="11" fill="#2E9E6A"/><circle cx="345" cy="34" r="11" fill="#2E9E6A"/><circle cx="560" cy="34" r="11" fill="#2E9E6A"/><circle cx="775" cy="34" r="11" fill="#2E9E6A"/><circle cx="990" cy="34" r="16" fill="#FFE45C" stroke="#16233D" stroke-width="3"/><text class="tex" x="130" y="80" data-mix="01 화학||반응 속도" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="345" y="80" data-mix="02 일차 반응의||반감기" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="560" y="80" data-mix="03 유효 충돌과||활성화 에너지" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="775" y="80" data-mix="04 농도, 온도, 촉매에||따른 반응 속도의 변화" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="990" y="80" data-mix="오늘: 대단원 마무리||120–127쪽" data-size="19" data-anchor="middle" fill="#16233D" data-weight="700"></text></svg>
+  <div class="flow mt8 em49-flow">
+    <div class="fnode hl">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">대응표 · 종합</div><div class="farr">→</div>
+    <div class="fnode hl">과학 글쓰기 10</div><div class="farr">→</div>
+    <div class="fnode">이야기 · 미래</div><div class="farr">→</div>
+    <div class="fnode hl">프로젝트</div><div class="farr">→</div>
+    <div class="fnode">스스로 점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="개념 정리 ① 화학 반응 속도와 반감기">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ① 화학 반응 속도 · 일차 반응의 반감기</h2>
+  <div class="em49-tree em49-t1">
+    <div class="em49-n em49-root" style="grid-row:1 / span 4"><span>반응<br>속도</span></div>
+    <div class="em49-a" style="grid-row:1 / span 2;grid-column:2">→</div>
+    <div class="em49-n em49-mid" style="grid-row:1 / span 2;grid-column:3"><span>화학<br>반응 속도</span></div>
+    <div class="em49-a" style="grid-row:1;grid-column:4">→</div>
+    <div class="em49-n" style="grid-row:1;grid-column:5"><span>반응 속도</span></div>
+    <div class="em49-a" style="grid-row:1;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:1;grid-column:7">반응의 빠르기를 수치로 나타낸 것 · 반응 속도 $=\dfrac{\text{물질의 농도 변화량}}{\text{반응 시간}}$</p>
+    <div class="em49-a" style="grid-row:2;grid-column:4">→</div>
+    <div class="em49-n" style="grid-row:2;grid-column:5"><span>반응 속도식</span></div>
+    <div class="em49-a" style="grid-row:2;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:2;grid-column:7" data-q>$v=k[\ce{A}]^m[\ce{B}]^n$에서 $k$는 ❶ <span class="blank em49-wide"><span class="step">반응 속도 상수</span></span>, $m$, $n$은 반응 차수</p>
+    <div class="em49-a" style="grid-row:3 / span 2;grid-column:2">→</div>
+    <div class="em49-n em49-mid" style="grid-row:3 / span 2;grid-column:3"><span>일차 반응의<br>반감기</span></div>
+    <div class="em49-a" style="grid-row:3;grid-column:4">→</div>
+    <p class="em49-n" style="grid-row:3;grid-column:5" data-q>❷ <span class="blank"><span class="step">반감기</span></span></p>
+    <div class="em49-a" style="grid-row:3;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:3;grid-column:7">반응물의 농도가 절반으로 줄어드는 데 걸리는 시간</p>
+    <div class="em49-a" style="grid-row:4;grid-column:4">→</div>
+    <div class="em49-n" style="grid-row:4;grid-column:5"><span>일차 반응의<br>반감기의 특징</span></div>
+    <div class="em49-a" style="grid-row:4;grid-column:6">→</div>
+    <p class="em49-n em49-leaf" style="grid-row:4;grid-column:7">온도가 일정할 때 반응물의 농도에 관계없이 일정함.</p>
+  </div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 168" style="width:560px" aria-label="일차 반응에서 반응물 농도가 반감기마다 절반이 되고 반감기의 길이는 같다">
+        <path d="M50 20 V140 H530" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        {{S3DASH}}
+        <g data-anim="draw" data-dur="1.3" data-delay=".3"><path d="{{S3CURVE}}" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <text class="tex" x="58" y="24" data-mix="$[\ce{A}]$" data-size="19"></text><text class="tex" x="530" y="158" data-mix="시간" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="107" y="156" data-mix="$t_{1/2}$" data-size="19" data-anchor="middle"></text><text class="tex" x="222" y="156" data-mix="$t_{1/2}$" data-size="19" data-anchor="middle"></text><text class="tex" x="337" y="156" data-mix="$t_{1/2}$" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="390" y="60" data-mix="반감기마다 절반 · 길이는 같다" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <div class="card"><p class="f21"><b>반응 차수</b>는 실험 자료(초기 속도법)로 구한다 — 계수와 같다고 할 수 없다(01 덱).</p></div>
+      <div class="card"><p class="f21"><b>일차 반응</b> $v=k[\ce{A}]$, $k$의 단위 $\text{s}^{-1}$ · 반감기가 $n$번 지나면 $[\ce{A}]=[\ce{A}]_0\times\left(\dfrac{1}{2}\right)^n$(02 덱)</p></div>
+    </div>
+  </div>
+  <p class="small c-muted mt4">교과서 122쪽 개념 정리 01·02 몫 — 01 덱 #32의 번호와 다른 점은 #6.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="개념 정리 ② 유효 충돌과 활성화 에너지">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ② 유효 충돌과 활성화 에너지</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-tree em49-t2">
+        <div class="em49-n em49-root" style="grid-row:1 / span 2"><span>반응<br>속도</span></div>
+        <div class="em49-a" style="grid-row:1 / span 2;grid-column:2">→</div>
+        <div class="em49-n em49-mid" style="grid-row:1 / span 2;grid-column:3"><span>유효 충돌과<br>활성화<br>에너지</span></div>
+        <div class="em49-a" style="grid-row:1;grid-column:4">→</div>
+        <p class="em49-n" style="grid-row:1;grid-column:5" data-q>❸ <span class="blank"><span class="step">유효 충돌</span></span></p>
+        <div class="em49-a" style="grid-row:1;grid-column:6">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:1;grid-column:7">반응이 일어나기에 적합한 충돌</p>
+        <div class="em49-a" style="grid-row:2;grid-column:4">→</div>
+        <p class="em49-n" style="grid-row:2;grid-column:5" data-q>❹ <span class="blank em49-wide"><span class="step">활성화 에너지</span></span></p>
+        <div class="em49-a" style="grid-row:2;grid-column:6">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:2;grid-column:7">화학 반응이 일어나기 위해 필요한 최소한의 에너지</p>
+      </div>
+      <svg class="fig mt12" viewBox="0 0 640 200" style="width:640px" aria-label="방향이 알맞고 에너지가 충분한 충돌은 반응하고, 방향이 맞지 않는 충돌은 튕겨 나간다">
+        <rect x="4" y="4" width="306" height="192" rx="12" fill="#F1F8F3" stroke="#2E9E6A" stroke-width="2"/><rect x="330" y="4" width="306" height="192" rx="12" fill="#F4F7FA" stroke="#C9D3DD" stroke-width="2"/>
+        <text class="tex" x="157" y="32" data-mix="방향 알맞음 + 에너지 충분" data-size="19" data-anchor="middle" fill="#2E7D5B" data-weight="700"></text>
+        <text class="tex" x="483" y="32" data-mix="방향이 맞지 않음" data-size="19" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text>
+        <g data-anim="move" data-from="-34,0" data-dur=".9" data-delay=".3"><circle cx="70" cy="100" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="102" cy="100" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/></g>
+        <g data-anim="move" data-from="34,0" data-dur=".9" data-delay=".3"><circle cx="140" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/><circle cx="172" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/></g>
+        <circle cx="121" cy="100" r="9" fill="#FFD34D" opacity=".85"/>
+        <path d="M200 100 H232" stroke="#16233D" stroke-width="3"/><path d="M242 100 L228 93 V107 Z" fill="#16233D"/>
+        <circle cx="262" cy="80" r="15" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="288" cy="80" r="15" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/>
+        <circle cx="262" cy="122" r="15" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="288" cy="122" r="15" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/>
+        <text class="tex" x="157" y="180" data-mix="반응한다 (유효 충돌)" data-size="19" data-anchor="middle" fill="#2E7D5B"></text>
+        <circle cx="380" cy="80" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/><circle cx="380" cy="112" r="18" fill="#F2A65A" stroke="#B86A1F" stroke-width="2.5"/>
+        <circle cx="430" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/><circle cx="462" cy="100" r="18" fill="#8FD19E" stroke="#2E7D4F" stroke-width="2.5"/>
+        <path d="M494 100 L560 70" stroke="#8C99A6" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M568 66 L553 66 L558 79 Z" fill="#8C99A6"/>
+        <text class="tex" x="483" y="180" data-mix="튕겨 나간다 (반응 없음)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="small c-muted">A 원자(주황)·B 원자(초록) 모형: $\ce{A2 + B2 -> 2AB}$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 330" style="width:420px" aria-label="반응의 진행에 따른 엔탈피: 반응물에서 활성화 상태까지가 정반응의 활성화 에너지, 생성물에서 활성화 상태까지가 역반응의 활성화 에너지, 두 값의 차이가 반응 엔탈피">
+        <path d="M40 14 V300 H410" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <text class="tex" x="48" y="26" data-mix="엔탈피" data-size="19" fill="#5B6B7F"></text><text class="tex" x="410" y="324" data-mix="반응의 진행" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <g data-anim="draw" data-dur="1.2" data-delay=".3"><path d="M60 200 H130 C 180 200, 190 70, 225 70 C 260 70, 270 250, 320 250 H400" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <path d="M100 200 V80" stroke="#E08A2C" stroke-width="3"/><path d="M100 74 L94 86 H106 Z" fill="#E08A2C"/>
+        <path d="M94 70 H225" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <text class="tex" x="92" y="146" data-mix="$E_\mathrm{a}$" data-size="21" data-anchor="end" fill="#B8661A"></text>
+        <path d="M360 250 V80" stroke="#E08A2C" stroke-width="3"/><path d="M360 74 L354 86 H366 Z" fill="#E08A2C"/>
+        <path d="M225 70 H366" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <text class="tex" x="368" y="170" data-mix="$E_\mathrm{a}'$" data-size="21" fill="#B8661A"></text>
+        <path d="M130 200 H300" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <path d="M290 204 V236" stroke="#16233D" stroke-width="3"/><path d="M290 246 L284 234 H296 Z" fill="#16233D"/>
+        <text class="tex" x="282" y="228" data-mix="$\Delta H$" data-size="20" data-anchor="end"></text>
+        <text class="tex" x="80" y="226" data-mix="반응물" data-size="19" data-anchor="middle"></text><text class="tex" x="370" y="276" data-mix="생성물" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="225" y="56" data-mix="활성화 상태" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="f21 step">$\Delta H=E_\mathrm{a}-E_\mathrm{a}'$ — 활성화 에너지가 작을수록 유효 충돌이 많아 반응이 빠르다.</p>
+    </div>
+  </div>
+  <p class="small c-muted mt4">교과서 122쪽 개념 정리 03 몫 — 03 덱 「스스로 정리」(#19)와 같은 번호 ❸·❹.</p>
+</section>
+
+<!-- ════════ 5. 개념 정리 ③ ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="개념 정리 ③ 농도, 온도, 촉매">
+  <h2><span class="tag ink">대단원 마무리</span>개념 정리 ③ 농도, 온도, 촉매에 따른 반응 속도의 변화</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-tree em49-t3">
+        <div class="em49-n em49-mid" style="grid-row:1 / span 5;grid-column:1"><span>농도,<br>온도,<br>촉매에<br>따른 반응<br>속도의<br>변화</span></div>
+        <div class="em49-a" style="grid-row:1;grid-column:2">→</div>
+        <div class="em49-n" style="grid-row:1;grid-column:3"><span>농도와<br>반응 속도</span></div>
+        <div class="em49-a" style="grid-row:1;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:1;grid-column:5" data-q>반응물의 농도 증가 → 충돌 횟수 증가 → 반응 속도 ❺ <span class="blank"><span class="step">빨라짐</span></span></p>
+        <div class="em49-a" style="grid-row:2;grid-column:2">→</div>
+        <div class="em49-n" style="grid-row:2;grid-column:3"><span>온도와<br>반응 속도</span></div>
+        <div class="em49-a" style="grid-row:2;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:2;grid-column:5" data-q>온도 증가 → 유효 충돌을 할 수 있는 입자 수 증가 → 반응 속도 ❻ <span class="blank"><span class="step">빨라짐</span></span></p>
+        <div class="em49-a" style="grid-row:3 / span 3;grid-column:2">→</div>
+        <div class="em49-n" style="grid-row:3 / span 3;grid-column:3"><span>촉매와<br>반응 속도</span></div>
+        <div class="em49-a" style="grid-row:3;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:3;grid-column:5" data-q>❼ <span class="blank"><span class="step">촉매</span></span>: 화학 반응에서 자신은 변하지 않으면서 반응 속도를 변화시키는 물질</p>
+        <div class="em49-a" style="grid-row:4;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:4;grid-column:5" data-q>정촉매 사용 → 활성화 에너지 감소 → 반응 속도 ❽ <span class="blank"><span class="step">빨라짐</span></span></p>
+        <div class="em49-a" style="grid-row:5;grid-column:4">→</div>
+        <p class="em49-n em49-leaf" style="grid-row:5;grid-column:5" data-q>광촉매: 빛을 받으면 촉매 작용을 하는 물질 · 생체 촉매인 ❾ <span class="blank"><span class="step">효소</span></span>은/는 식품, 환경, 에너지 등 많은 분야에서 활용됨.</p>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 260px">
+      <svg class="fig" viewBox="0 0 260 300" style="width:260px" aria-label="저온과 고온의 분자 운동 에너지 분포 곡선: 고온일수록, 정촉매로 활성화 에너지가 낮아질수록 활성화 에너지 이상의 분자가 많아진다">
+        <path d="{{S5A2}}" fill="#D7263D" opacity=".22"/><path d="{{S5A1}}" fill="#1F6FD1" opacity=".3"/>
+        <path d="M26 20 V250 H246" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <g data-anim="draw" data-dur="1" data-delay=".2"><path d="{{S5T1}}" stroke="#1F6FD1" stroke-width="3" fill="none"/></g>
+        <g data-anim="draw" data-dur="1" data-delay=".6"><path d="{{S5T2}}" stroke="#D7263D" stroke-width="3" fill="none"/></g>
+        <line x1="{{S5EA}}" y1="40" x2="{{S5EA}}" y2="250" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <line x1="{{S5EAC}}" y1="80" x2="{{S5EAC}}" y2="250" stroke="#2E9E6A" stroke-width="2.5" stroke-dasharray="3 4"/>
+        <text class="tex" x="{{S5EA}}" y="34" data-mix="$E_\mathrm{a}$" data-size="19" data-anchor="middle" fill="#B8661A"></text>
+        <text class="tex" x="{{S5EAC}}" y="74" data-mix="정촉매" data-size="18" data-anchor="middle" fill="#2E7D5B"></text>
+        <text class="tex" x="150" y="112" data-mix="$T_1$ 저온" data-size="19" fill="#1F6FD1"></text>
+        <text class="tex" x="150" y="150" data-mix="$T_2$ 고온" data-size="19" fill="#D7263D"></text>
+        <text class="tex" x="34" y="18" data-mix="분자 수" data-size="18" fill="#5B6B7F"></text><text class="tex" x="246" y="276" data-mix="운동 에너지" data-size="18" data-anchor="end" fill="#5B6B7F"></text>
+      </svg>
+      <p class="small c-muted">색칠한 넓이 = 활성화 에너지 이상인 분자 수. 고온이면 넓이가 커지고, 정촉매는 경계를 왼쪽으로 옮긴다.</p>
+    </div>
+  </div>
+  <p class="small c-muted mt4">교과서 122쪽 개념 정리 04 몫 — 04 덱 (1) #30 ❺❻, 04 덱 (2) #25 ❼❽❾와 같은 번호.</p>
+</section>
+
+<!-- ════════ 6. 빈칸 번호 대응 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="연결: 스스로 정리 빈칸 번호 맞추기">
+  <h2><span class="tag alt">연결</span>교과서 122쪽 빈칸 번호와 소단원 덱의 번호</h2>
+  <table class="tight em49-num">
+    <tr><th>번호</th><th>교과서 122쪽 빈칸<br><span class="small">(이 덱 #3–5)</span></th><th>01 덱 #32</th><th>02 덱 #23</th><th>03 덱 #19</th><th>04 덱 (1) #30</th><th>04 덱 (2) #25</th></tr>
+    <tr><td>❶</td><td>반응 속도 상수</td><td class="em49-own">반응 속도</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>❷</td><td>반감기</td><td class="em49-own">접선</td><td class="em49-same">반감기</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>❸</td><td>유효 충돌</td><td class="em49-own">반응 속도 상수</td><td>—</td><td class="em49-same">유효 충돌</td><td>—</td><td>—</td></tr>
+    <tr><td>❹</td><td>활성화 에너지</td><td class="em49-own">반응 차수</td><td>—</td><td class="em49-same">활성화 에너지</td><td>—</td><td>—</td></tr>
+    <tr><td>❺</td><td>빨라짐</td><td>—</td><td>—</td><td>—</td><td class="em49-same">빨라짐</td><td class="em49-same">빨라짐</td></tr>
+    <tr><td>❻</td><td>빨라짐</td><td>—</td><td>—</td><td>—</td><td class="em49-same">빨라짐</td><td class="em49-same">빨라짐</td></tr>
+    <tr><td>❼</td><td>촉매</td><td>—</td><td>—</td><td>—</td><td>(흐림)</td><td class="em49-same">촉매</td></tr>
+    <tr><td>❽</td><td>빨라짐</td><td>—</td><td>—</td><td>—</td><td>(흐림)</td><td class="em49-same">빨라짐</td></tr>
+    <tr><td>❾</td><td>효소</td><td>—</td><td>—</td><td>—</td><td>(흐림)</td><td class="em49-same">효소</td></tr>
+  </table>
+  <div class="note mt8"><b>읽는 법</b> 초록 칸은 교과서와 같은 빈칸, 회색 기울임 칸은 01 덱이 붙인 <b>덱 자체 번호</b>이다. 교과서 ❶ 반응 속도 상수는 01 덱에서 ❸이다. 02 덱의 '농도' 빈칸은 번호 없는 덱 빈칸이다. 대단원 정리는 교과서 번호(#3–5)로 한다.</div>
+</section>
+
+<!-- ════════ 7. 대응표 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="대단원 마무리 대응표">
+  <h2><span class="tag alt">대단원 마무리 대응표</span>문항 01–10은 어디에서 푸나?</h2>
+  <table class="tight em49-map">
+    <tr><th>번호</th><th>머리표</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td>01</td><td>01</td><td class="l">서술형 반응 속도식과 $k$의 단위</td><td>01 덱 #30</td><td><span class="step" data-g="k1">$v=k[\ce{A}]$, $\text{s}^{-1}$</span></td></tr>
+    <tr><td>02</td><td>01</td><td class="l">$\ce{2NO + O2 -> 2NO2}$ 초기 반응 속도 자료</td><td>01 덱 #31</td><td><span class="step" data-g="k1">① ㄱ</span></td></tr>
+    <tr><td>03</td><td>02</td><td class="l">일차 반응에 대한 설명</td><td>02 덱 #21</td><td><span class="step" data-g="k1">② ㄴ</span></td></tr>
+    <tr><td>04</td><td>02</td><td class="l">서술형 입자 모형으로 반감기와 초기 몰농도비</td><td>02 덱 #22</td><td><span class="step" data-g="k1">2분, 2 : 1</span></td></tr>
+    <tr><td>05</td><td>03</td><td class="l">$\ce{HI}$ 분해 반응의 엔탈피와 활성화 에너지</td><td>03 덱 #18</td><td><span class="step" data-g="k1">④ ㄴ, ㄷ</span></td></tr>
+    <tr><td>06</td><td>04</td><td class="l">압력을 높인 실린더 속 입자 모형</td><td>04 덱 (1) #28</td><td><span class="step" data-g="k1">① ㄱ</span></td></tr>
+    <tr><td>07</td><td>04</td><td class="l">반응 속도에 영향을 미치는 요인</td><td>04 덱 (2) #22</td><td><span class="step" data-g="k1">③</span></td></tr>
+    <tr><td>08</td><td>04</td><td class="l">서술형 정촉매·부촉매의 활성화 에너지</td><td>04 덱 (2) #23</td><td><span class="step" data-g="k1">$H_2-H_1$, $H_4-H_1$</span></td></tr>
+    <tr><td>09</td><td>04</td><td class="l">반응 속도를 조절하는 물질 (가)–(다)</td><td>04 덱 (2) #24</td><td><span class="step" data-g="k1">③ ㄱ, ㄴ</span></td></tr>
+    <tr class="em49-here"><td>10</td><td>과학 글쓰기</td><td class="l">약의 복용법과 반감기, 약의 형태</td><td>이 덱 #9–13</td><td><span class="step" data-g="k1">서술(예시 답안)</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">머리표 01 화학 반응 속도 · 02 일차 반응의 반감기 · 03 유효 충돌과 활성화 에너지 · 04 농도, 온도, 촉매에 따른 반응 속도의 변화. 01–09는 모두 소단원 덱 끝에서 풀었다 — 오늘은 10(노란 줄)과 종합 문제(#8)를 푼다.</p>
+</section>
+
+<!-- ════════ 8. 확인 문제 01 종합 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 대단원 마무리" data-title="확인 문제 01 대단원 종합">
+  <h2><span class="tag q">확인 문제 01</span>반감기 · 반응 속도식 · 촉매를 한 문항으로</h2>
+  <p class="f21">표는 일정한 온도에서 일차 반응 $\ce{A(g) -> B(g)}$의 실험 Ⅰ–Ⅲ 조건과 반감기이다.</p>
+  <div class="row mt8">
+    <div class="col">
+      <table class="tight em49-exp">
+        <tr><th>실험</th><th>$[\ce{A}]_0$ (mol/L)</th><th>촉매</th><th>반감기 (s)</th></tr>
+        <tr><td>Ⅰ</td><td>0.80</td><td>없음</td><td>30</td></tr>
+        <tr><td>Ⅱ</td><td>0.40</td><td>없음</td><td>(가)</td></tr>
+        <tr><td>Ⅲ</td><td>0.80</td><td>정촉매</td><td>10</td></tr>
+      </table>
+      <p class="f21 mt8">이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <div class="bogi"><p>ㄱ. (가)는 30이다.</p><p>ㄴ. 실험 Ⅰ에서 60 s일 때 $[\ce{A}]=0.20\ \text{mol/L}$이다.</p><p>ㄷ. 활성화 에너지는 실험 Ⅲ이 실험 Ⅰ보다 크다.</p></div>
+      <div class="choices f21 mt8"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 460px">
+      <div class="board" style="min-height:90px"></div>
+      <p class="f21 step">ㄱ ○ 일차 반응의 반감기는 처음 농도에 관계없이 일정 → 30 s (02 덱)</p>
+      <p class="f21 step">ㄴ ○ 60 s = 반감기 2번 → $0.80\times\left(\dfrac{1}{2}\right)^2=0.20\ \text{mol/L}$</p>
+      <p class="f21 step">ㄷ × 반감기가 짧다 = 빠르다 → 정촉매가 활성화 에너지를 <b>낮춘</b> 것 (03·04 덱)</p>
+      <p class="f21 step"><b>Q</b> 처음 반응 속도의 비 Ⅰ : Ⅱ는? → $v=k[\ce{A}]$이므로 <span class="ans">2 : 1</span> (01 덱)</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ③</b> ㄱ, ㄴ</div>
+</section>
+
+<!-- ════════ 9. 과학 글쓰기 10 자료 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="과학 글쓰기 10 자료 읽기">
+  <h2><span class="tag">과학 글쓰기</span>10 약의 복용법 — 자료 읽기</h2>
+  <div class="row">
+    <div class="col stack em49-src">
+      <div class="card"><p><b>혈중 농도</b> 약을 먹으면 약물의 혈중 농도가 점차 높아져 최대 혈중 농도에 이르렀다가 시간이 지나면 줄어든다. 혈중 농도가 기준 농도 이상이면 약효가 나타나고, 그 이하이면 약효가 없다. 지나치게 높으면 약이 몸속에서 독성을 나타낼 수 있다.</p></div>
+      <div class="card"><p><b>복용 간격</b> 최대 혈중 농도에 이를 때까지 걸리는 시간과, 최대 혈중 농도에서 절반이 되는 데 걸리는 시간, 즉 <b>반감기</b>를 고려해 복용 간격을 정하고, 이에 따라 하루 복용 횟수(보통 3번)를 정한다. 그래서 복용법을 꼭 지켜야 한다.</p></div>
+      <div class="card"><p><b>어린아이의 약</b> 알약을 갈아 가루약으로 먹이거나 큰 약을 작게 쪼개어 먹이는 경우가 있는데, 이렇게 ㉠ <u>약의 형태를 바꾸면 약효에 변화가 생길 수 있다.</u></p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 470 270" style="width:470px" aria-label="약을 한 번 먹었을 때 혈중 농도가 최대에 이르렀다가 줄어드는 곡선과 기준 농도, 독성이 나타날 수 있는 농도">
+        <rect x="56" y="{{S9Y100}}" width="396" height="{{S9BH}}" fill="#FFE45C" opacity=".22"/>
+        <path d="M56 14 V232 H456" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="56" y1="{{S9Y100}}" x2="452" y2="{{S9Y100}}" stroke="#D7263D" stroke-width="2" stroke-dasharray="7 5"/>
+        <line x1="56" y1="{{S9Y30}}" x2="452" y2="{{S9Y30}}" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.4" data-delay=".3"><path d="{{S9CURVE}}" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <circle cx="{{S9MX}}" cy="{{S9MY}}" r="6" fill="#D7263D"/>
+        <line x1="{{S9MX}}" y1="{{S9MY}}" x2="{{S9MX}}" y2="232" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="{{S9HX}}" y1="{{S9HY}}" x2="{{S9HX}}" y2="232" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <circle cx="{{S9HX}}" cy="{{S9HY}}" r="5" fill="#16233D"/>
+        <text class="tex" x="64" y="26" data-mix="혈중 농도" data-size="19" fill="#5B6B7F"></text><text class="tex" x="456" y="258" data-mix="시간" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="448" y="{{S9Y100L}}" data-mix="독성이 나타날 수 있음" data-size="18" data-anchor="end" fill="#D7263D"></text>
+        <text class="tex" x="448" y="{{S9Y30L}}" data-mix="기준 농도" data-size="18" data-anchor="end" fill="#2E7D5B"></text>
+        <text class="tex" x="{{S9MXL}}" y="{{S9MYL}}" data-mix="최대 혈중 농도" data-size="18" data-anchor="start"></text>
+        <text class="tex" x="{{S9HXL}}" y="{{S9HYL}}" data-mix="절반" data-size="18"></text>
+        <text class="tex" x="200" y="254" data-mix="반감기" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <div class="note"><b>글쓰기 길잡이</b> 하루 복용 횟수보다 약을 많이 먹거나 적게 먹을 때 약물의 혈중 농도가 어떻게 될지 생각해 본다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 과학 글쓰기 10 (1) ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="과학 글쓰기 10 (1)">
+  <h2><span class="tag">과학 글쓰기</span>10 (1) 많이 먹을 때와 적게 먹을 때</h2>
+  <p class="f21"><b>Q</b> 약을 하루 복용 횟수보다 많이 먹을 때와 적게 먹을 때 발생하는 문제를 글에서 찾아 써 볼까?</p>
+  <div class="row mt8">
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 570 230" style="width:540px" aria-label="4시간마다 먹으면 혈중 농도가 계속 올라가 독성이 나타날 수 있는 농도를 넘는다">
+        <path d="M50 14 V196 H486" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="50" y1="{{S10Y100}}" x2="480" y2="{{S10Y100}}" stroke="#D7263D" stroke-width="2" stroke-dasharray="7 5"/><line x1="50" y1="{{S10Y30}}" x2="480" y2="{{S10Y30}}" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.4" data-delay=".3"><path d="{{S10A}}" stroke="#16233D" stroke-width="3" fill="none"/></g>
+        <text class="tex" x="58" y="26" data-mix="혈중 농도" data-size="19" fill="#5B6B7F"></text><text class="tex" x="486" y="222" data-mix="시간 (48시간)" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="488" y="{{S10Y100T}}" data-mix="독성" data-size="19" fill="#D7263D"></text><text class="tex" x="488" y="{{S10Y30T}}" data-mix="기준 농도" data-size="19" fill="#2E7D5B"></text>
+        <text class="tex" x="150" y="30" data-mix="많이: 4시간마다(하루 6번)" data-size="20" data-weight="700"></text>
+      </svg>
+      <div class="answer step em49-left"><b>많이 먹으면</b> 약물의 혈중 농도가 지나치게 높아져 약이 몸속에서 <span class="ans">독성</span>을 나타낼 수 있다.</div>
+    </div>
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 570 230" style="width:540px" aria-label="12시간마다 먹으면 다음 복용 전에 혈중 농도가 기준 농도 아래로 떨어진다">
+        <path d="M50 14 V196 H486" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="50" y1="{{S10Y100}}" x2="480" y2="{{S10Y100}}" stroke="#D7263D" stroke-width="2" stroke-dasharray="7 5"/><line x1="50" y1="{{S10Y30}}" x2="480" y2="{{S10Y30}}" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.4" data-delay=".6"><path d="{{S10B}}" stroke="#16233D" stroke-width="3" fill="none"/></g>
+        <text class="tex" x="58" y="26" data-mix="혈중 농도" data-size="19" fill="#5B6B7F"></text><text class="tex" x="486" y="222" data-mix="시간 (48시간)" data-size="19" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="488" y="{{S10Y100T}}" data-mix="독성" data-size="19" fill="#D7263D"></text><text class="tex" x="488" y="{{S10Y30T}}" data-mix="기준 농도" data-size="19" fill="#2E7D5B"></text>
+        <text class="tex" x="150" y="30" data-mix="적게: 12시간마다(하루 2번)" data-size="19" data-weight="700"></text>
+      </svg>
+      <div class="answer step em49-left"><b>적게 먹으면</b> 혈중 농도가 기준 농도 이하로 떨어지는 동안 <span class="ans">약효가 나타나지 않는다</span>.</div>
+    </div>
+  </div>
+  <div class="board mt8" style="min-height:60px"></div>
+  <p class="small c-muted mt4">그래프는 반감기 4시간인 약을 가정한 덱 모형(#12 실험실과 같음). 정해진 간격(8시간마다, 하루 3번)이면 두 선 사이에 머문다.</p>
+</section>
+
+<!-- ════════ 11. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="확인 문제 02 반감기로 복용 간격 어림하기">
+  <h2><span class="tag q">확인 문제 02</span>반감기로 복용 간격 어림하기</h2>
+  <p class="f21">어떤 약물은 최대 혈중 농도에 이른 뒤 일차 반응처럼 줄어들고, 반감기는 4시간이다. 최대 혈중 농도를 100이라 할 때 약효가 나타나는 기준 농도는 25이다. 최대 혈중 농도에 이른 뒤 약효는 몇 시간 동안 이어질까? <span class="small c-muted">(덱 가정)</span></p>
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="stages c1 em49-st">
+        <div class="stage step"><b>① 반감기 1번(4시간)</b> $100\to50$</div>
+        <div class="stage step"><b>② 반감기 2번(8시간)</b> $50\to25$ — 기준 농도</div>
+        <div class="stage step"><b>③ 관계식</b> $100\times\left(\dfrac{1}{2}\right)^n=25$ → $n=2$, $2\times4\ \text{시간}=8\ \text{시간}$</div>
+      </div>
+      <div class="answer step"><b>정답</b> 약 8시간</div>
+      <p class="f21 step"><b>Q</b> 하루 3번 먹는 약과 어떻게 이어질까? → 8시간마다 다시 먹으면 혈중 농도가 <span class="ans">기준 농도 아래로 떨어지기 전에</span> 다시 높아진다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 264" style="width:420px" aria-label="최대 혈중 농도 100에서 4시간마다 절반이 되어 8시간 뒤 기준 농도 25에 이르는 곡선">
+        <path d="M56 14 V214 H404" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <line x1="56" y1="169" x2="404" y2="169" stroke="#2E9E6A" stroke-width="2" stroke-dasharray="7 5"/>
+        <g data-anim="draw" data-dur="1.2" data-delay=".3"><path d="{{S11CURVE}}" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <path d="M169.3 214 V124 H56 M282.7 214 V169" stroke="#8C99A6" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+        <circle cx="56" cy="34" r="5" fill="#D7263D"/><circle cx="169.3" cy="124" r="5" fill="#16233D"/><circle cx="282.7" cy="169" r="6" fill="#2E9E6A"/>
+        <text class="tex" x="48" y="40" data-mix="100" data-size="18" data-anchor="end"></text><text class="tex" x="48" y="130" data-mix="50" data-size="18" data-anchor="end"></text><text class="tex" x="48" y="175" data-mix="25" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="56" y="238" data-mix="0" data-size="18" data-anchor="middle"></text><text class="tex" x="169.3" y="238" data-mix="4" data-size="18" data-anchor="middle"></text><text class="tex" x="282.7" y="238" data-mix="8" data-size="18" data-anchor="middle"></text><text class="tex" x="396" y="238" data-mix="12" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="404" y="160" data-mix="기준 농도" data-size="18" data-anchor="end" fill="#2E7D5B"></text>
+        <text class="tex" x="64" y="26" data-mix="혈중 농도(상대)" data-size="18" fill="#5B6B7F"></text>
+        <text class="tex" x="404" y="258" data-mix="시간 (h)" data-size="18" data-anchor="end" fill="#5B6B7F"></text>
+      </svg>
+      <div class="board" style="min-height:70px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 실험실 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="실험실: 복용 간격과 약의 형태">
+  <h2><span class="tag">실험실</span>복용 간격과 약의 형태를 바꾸면 혈중 농도는?</h2>
+  <div class="lab" data-lab="em49dose">
+    <div class="lab-ctl" style="flex-basis:380px">
+      <div class="em49-seg"><span class="f21">약의 형태</span><button class="btn em49-act" data-s="0">알약</button><button class="btn" data-s="1">가루약</button></div>
+      <div class="ctl"><div class="lbl"><span>복용 간격</span><output data-o="tau"></output></div><input type="range" min="0" max="5" step="1" value="3" data-i="tau" aria-label="복용 간격"></div>
+      <table class="readout em49-read">
+        <tr><th>하루 복용</th><td><output data-o="n"></output></td></tr>
+        <tr><th>최대 혈중 농도</th><td><output data-o="mx"></output></td></tr>
+        <tr><th>가장 낮은 농도</th><td><output data-o="mn"></output></td></tr>
+        <tr class="hl"><th>약효 시간</th><td><output data-o="on"></output></td></tr>
+      </table>
+      <div class="em49-seg"><button class="btn em49-act" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 660px">
+      <div class="lab-fig" style="width:660px;height:290px">
+        <svg viewBox="0 0 660 290" width="660" height="290" aria-label="48시간 동안 약물의 혈중 농도 곡선과 기준 농도, 독성이 나타날 수 있는 농도"></svg>
+      </div>
+      <output class="kind em49-msg" data-o="msg"></output>
+      <table class="tight em49-log"><thead><tr><th>형태</th><th>간격</th><th>최대</th><th>최저</th><th>약효 시간</th><th>판단</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+  <p class="small c-muted mt4">덱 모형: 반감기 4시간(일차 반응처럼 줄어듦), 기준 농도 30, 독성 농도 100(상대값), 둘째 날(24–48시간)을 기준으로 판단. 과제: 두 선 사이에 머무는 간격을 찾고, 가루약으로 바꿔 보자.</p>
+</section>
+
+<!-- ════════ 13. 과학 글쓰기 10 (2) ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 과학 글쓰기" data-title="과학 글쓰기 10 (2)">
+  <h2><span class="tag">과학 글쓰기</span>10 (2) 약의 형태를 바꾸면 왜 약효가 달라질까?</h2>
+  <p class="f21"><b>Q</b> ㉠의 까닭을 반응 속도와 관련지어 설명해 볼까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 430px">
+      <svg class="fig" viewBox="0 0 430 200" style="width:430px" aria-label="같은 양의 약을 잘게 나누면 겉넓이가 커져 녹고 흡수되는 속도가 빨라진다">
+        <rect x="30" y="60" width="96" height="96" fill="#E3D3B2" stroke="#B39D72" stroke-width="3"/>
+        <text class="tex" x="78" y="186" data-mix="알약" data-size="19" data-anchor="middle"></text>
+        <path d="M150 108 H208" stroke="#16233D" stroke-width="3"/><path d="M218 108 L204 101 V115 Z" fill="#16233D"/>
+        <text class="tex" x="184" y="94" data-mix="갈기" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+        <g data-anim="pop" data-o="310,108" data-dur=".8" data-delay=".3"><g fill="#E3D3B2" stroke="#B39D72" stroke-width="2"><rect x="246" y="56" width="26" height="26"/><rect x="284" y="50" width="26" height="26"/><rect x="322" y="58" width="26" height="26"/><rect x="360" y="52" width="26" height="26"/><rect x="252" y="96" width="26" height="26"/><rect x="292" y="92" width="26" height="26"/><rect x="332" y="100" width="26" height="26"/><rect x="370" y="94" width="26" height="26"/><rect x="246" y="136" width="26" height="26"/><rect x="288" y="132" width="26" height="26"/><rect x="326" y="140" width="26" height="26"/><rect x="366" y="134" width="26" height="26"/></g></g>
+        <text class="tex" x="320" y="190" data-mix="가루약 — 겉넓이가 커짐" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="215" y="30" data-mix="같은 양" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="f21 step" data-g="r1">① 가루로 만들면 표면적(접촉 면적)이 커진다 → 녹고 흡수되는 <b>반응 속도가 빨라진다</b> (04 덱 (1) 표면적).</p>
+      <p class="f21 step" data-g="r2">② 혈중 농도가 빨리, 높게 올라갔다가 빨리 줄어든다 (#12 가루약).</p>
+    </div>
+    <div class="col stack">
+      <div class="answer step em49-left"><b>예시 답안</b> 알약을 갈거나 쪼개면 약의 표면적이 커져 약이 녹고 흡수되는 반응 속도가 빨라진다. 그러면 약물의 혈중 농도가 예상보다 빨리, 높게 올라가 독성이 나타날 수 있고, 최대 혈중 농도에 일찍 이른 뒤 빨리 줄어 약효가 나타나는 시간이 짧아질 수 있다. 따라서 약의 형태를 바꾸면 정해진 복용 간격과 맞지 않아 약효가 달라진다.</div>
+      <div class="note"><b>채점 요소</b> ① 표면적 증가 ② 녹고 흡수되는 속도 증가 ③ 혈중 농도 변화(지나치게 높아짐 또는 약효 시간 변화)</div>
+      <p class="small c-muted">천천히 녹도록 겉을 싼 약을 쪼개면 한꺼번에 녹아 나올 수도 있다. 약의 형태를 바꿀 때는 의사나 약사에게 물어본다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 최신 과학 이야기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 학습 과제물 이야기" data-title="최신 과학: 클릭 화학">
+  <h2><span class="tag">학습 과제물 이야기</span>최신 과학 — 무엇이든 붙일 수 있다! 클릭 화학</h2>
+  <div class="row">
+    <div class="col stack em49-src">
+      <div class="card"><p><b>2022 노벨 화학상</b> 반응의 부산물을 줄이고 반응 속도를 조절하려는 연구 가운데, 클릭 화학과 생체 직교 화학을 개발한 샤플리스, 멜달, 버토지가 공동으로 받았다.</p></div>
+      <div class="card"><p><b>클릭 화학</b> 실온, 대기압에서도 부산물 없이 원하는 생성물을 빠르게 합성하는 반응. 허리띠 버클을 '딸깍' 잠그듯 빠르고 간단하다는 뜻이다. 대표 반응은 구리 이온을 이용해 두 분자를 연결하는 반응이지만, 구리 이온 때문에 몸속에 쓰기에는 알맞지 않다.</p></div>
+      <div class="card"><p><b>생체 직교 화학</b> 버토지는 반응물 분자의 결합각을 조절해 반응물의 에너지를 활성화 에너지 근처까지 높여 <b>촉매 없이</b> 원하는 분자를 연결했다. 원하는 생체 분자와만 빠르게 반응해 몸속 다른 작용에 영향을 주지 않는다 → 신약 개발, 질병 진단과 치료법 연구.</p></div>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 230" style="width:400px" aria-label="반응물의 에너지를 높이면 넘어야 할 에너지 장벽이 낮아진다">
+        <path d="M30 14 V200 H390" stroke="#5B6B7F" stroke-width="2" fill="none"/>
+        <text class="tex" x="38" y="26" data-mix="엔탈피" data-size="18" fill="#5B6B7F"></text><text class="tex" x="390" y="222" data-mix="반응의 진행" data-size="18" data-anchor="end" fill="#5B6B7F"></text>
+        <path d="M50 170 H110 C 150 170, 165 50, 200 50 C 235 50, 250 186, 290 186 H380" stroke="#8C99A6" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+        <g data-anim="draw" data-dur="1" data-delay=".3"><path d="M50 96 H110 C 150 96, 165 50, 200 50 C 235 50, 250 186, 290 186 H380" stroke="#16233D" stroke-width="3.5" fill="none"/></g>
+        <path d="M80 166 V104" stroke="#E08A2C" stroke-width="3" data-anim="fade" data-dur=".6" data-delay="1"/><path d="M80 98 L74 110 H86 Z" fill="#E08A2C"/>
+        <text class="tex" x="300" y="80" data-mix="남은 장벽이||작다" data-size="18" fill="#16233D"></text>
+      </svg>
+      <p class="small c-muted">회색 점선: 원래 반응물 · 검은 선: 결합각을 조절해 에너지를 높인 반응물(주황 화살표)</p>
+      <p class="f21"><b>Q</b> 버토지의 방법이 촉매 없이도 빠른 까닭은?</p>
+      <p class="f21 step">→ 반응물의 에너지가 높아져 넘어야 할 <span class="ans">활성화 에너지가 작아지므로</span> 유효 충돌의 비율이 커진다(03 덱).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 이야기 활동하기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 학습 과제물 이야기" data-title="활동하기: 클릭 화학과 생체 직교 화학의 조건">
+  <h2><span class="tag">학습 과제물 이야기</span>활동하기(조사) — 클릭 화학과 생체 직교 화학의 조건</h2>
+  <p class="f21">클릭 화학과 생체 직교 화학의 조건을 조사해 보자. <span class="small c-muted">아래는 예시 결과</span></p>
+  <table class="tight em49-cmp mt8">
+    <tr><th>조건</th><th>클릭 화학</th><th>생체 직교 화학</th></tr>
+    <tr><td class="l">반응 환경</td><td class="l"><span class="step" data-g="c1">실온, 대기압 — 물 같은 흔한 용매에서도</span></td><td class="l"><span class="step" data-g="c1">살아 있는 세포·몸속(체온, 물이 많은 환경)</span></td></tr>
+    <tr><td class="l">촉매</td><td class="l"><span class="step" data-g="c2">구리 이온($\ce{Cu+}$)</span></td><td class="l"><span class="step" data-g="c2">쓰지 않음 — 반응물의 에너지를 높여 둠</span></td></tr>
+    <tr><td class="l">빠르기·부산물</td><td class="l"><span class="step" data-g="c3">빠르고 부산물이 거의 없음</span></td><td class="l"><span class="step" data-g="c3">빠르고 부산물이 거의 없음</span></td></tr>
+    <tr><td class="l">반응 상대</td><td class="l"><span class="step" data-g="c4">연결하려는 두 분자끼리만</span></td><td class="l"><span class="step" data-g="c4">원하는 생체 분자와만 — 몸속 다른 분자와는 반응하지 않음</span></td></tr>
+    <tr><td class="l">활용</td><td class="l"><span class="step" data-g="c5">신약 후보 물질, 새로운 소재 합성</span></td><td class="l"><span class="step" data-g="c5">세포 속 분자 관찰, 질병 진단, 표적 치료</span></td></tr>
+  </table>
+  <p class="f21 mt12"><b>Q</b> 생체 직교 화학에서 구리 이온 촉매를 쓰지 않는 까닭은? <span class="step">→ 구리 이온이 몸속에서 해로울 수 있어 <span class="ans">체내에 적용하기에 알맞지 않기</span> 때문이다.</span></p>
+  <p class="small c-muted mt4">예시 결과는 덱이 쓴 것이다. 조사할 때는 출처(기사·누리집)를 함께 적는다.</p>
+</section>
+
+<!-- ════════ 16. 화학과 나의 미래 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 화학과 나의 미래" data-title="촉매 연구원">
+  <h2><span class="tag">화학과 나의 미래</span>반응을 설계하는 촉매 연구원</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>하는 일</b> 느린 반응을 빠르게 하거나 빠른 반응을 느리게 조절하는 촉매를 합성해 반응 속도를 조절하고, 이를 여러 화학 반응에 응용한다. 반응성이 작아 쓰기 어려운 물질을 쓸모 있는 물질로 바꾸는 촉매, 많은 에너지와 다양한 원료를 얻는 반응의 촉매를 개발한다. 친환경 촉매, 화학 공정의 폐기물을 줄이는 촉매로 에너지 고갈과 기후 위기 해결에 힘쓴다.</p>
+      <p class="f21 mt8"><b>필요한 능력</b> 물질의 성질과 화학 반응에 대한 이해(화학, 재료 공학, 물리학, 생명과학 등의 기초 지식), 새로운 반응 경로를 떠올리는 창의적 사고력과 이를 실험으로 검증하는 연구 역량</p>
+      <p class="small c-muted mt8">관련 학과: 화학과, 재료 공학과, 화학 공학과, 에너지 공학과, 신소재 공학과 등 · 누리집: 한국화학연구원에서 촉매 연구원과 관련된 정보를 찾아보자.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 430px">
+      <svg class="fig" viewBox="0 0 430 160" style="width:430px" aria-label="원료가 촉매를 거쳐 원하는 물질이 되고 폐기물은 줄어드는 흐름">
+        <path d="M40 92 H390" stroke="#C9E7D3" stroke-width="14" stroke-linecap="round"/>
+        <path d="M40 92 H390" stroke="#2E9E6A" stroke-width="3" stroke-dasharray="10 8" data-anim="dash" data-speed="40" data-flow/>
+        <g fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"><rect x="4" y="60" width="104" height="64" rx="8"/><rect x="322" y="60" width="104" height="64" rx="8"/></g>
+        <rect x="163" y="54" width="104" height="76" rx="38" fill="#D7F0DD" stroke="#2E9E6A" stroke-width="3"/>
+        <text class="tex" x="56" y="98" data-mix="원료" data-size="20" data-anchor="middle"></text><text class="tex" x="215" y="98" data-mix="촉매" data-size="20" data-anchor="middle" fill="#2E7D5B" data-weight="700"></text><text class="tex" x="374" y="88" data-mix="원하는||물질" data-size="19" data-anchor="middle"></text>
+        <text class="tex" x="215" y="30" data-mix="활성화 에너지가 낮은 새 경로" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+        <text class="tex" x="215" y="152" data-mix="부산물·폐기물 ↓, 에너지 ↓" data-size="18" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <div class="card q"><p class="f21"><b>활동하기(조사)</b> 인류가 촉매를 사용하는 예를 찾고, 이러한 촉매의 활용이 환경, 생물, 경제에 어떤 영향을 미치는지 조사해 보자.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 화학과 나의 미래 예시 결과 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 화학과 나의 미래" data-title="활동하기: 촉매 활용과 영향">
+  <h2><span class="tag">화학과 나의 미래</span>활동하기(조사) 예시 결과 — 촉매의 활용과 영향</h2>
+  <table class="tight em49-eff">
+    <tr><th>촉매 사용 예</th><th>환경</th><th>생물</th><th>경제</th></tr>
+    <tr><td class="l"><b>자동차 촉매 변환기</b><br><span class="small">고체 촉매(백금 등 금속)</span></td><td class="l"><span class="step" data-g="e1">배기가스의 일산화 탄소, 질소 산화물을 덜 해로운 물질로 바꿈</span></td><td class="l"><span class="step" data-g="e1">호흡기 질환을 일으키는 대기 오염 물질 감소</span></td><td class="l"><span class="step" data-g="e1">귀금속이 비싸 비용이 들고, 다 쓴 촉매를 재활용함</span></td></tr>
+    <tr><td class="l"><b>암모니아 합성</b><br><span class="small">철을 주성분으로 한 고체 촉매</span></td><td class="l"><span class="step" data-g="e2">비료를 많이 만들 수 있으나, 비료를 지나치게 쓰면 물이 오염됨</span></td><td class="l"><span class="step" data-g="e2">식량 생산이 늘어 많은 사람을 먹여 살림</span></td><td class="l"><span class="step" data-g="e2">촉매가 없을 때보다 낮은 온도에서 빨리 만들어 에너지·생산 비용이 줄어듦</span></td></tr>
+    <tr><td class="l"><b>효소 세제</b><br><span class="small">생체 촉매(효소)</span></td><td class="l"><span class="step" data-g="e3">찬물 세탁이 가능해 에너지 사용이 줄어듦</span></td><td class="l"><span class="step" data-g="e3">자연에서 잘 분해되지만, 피부가 예민한 사람은 주의</span></td><td class="l"><span class="step" data-g="e3">세탁에 드는 전기 요금 절약</span></td></tr>
+  </table>
+  <p class="f21 mt12"><b>Q</b> 세 예에 공통인 촉매의 역할은? <span class="step">→ 활성화 에너지를 낮춰 <span class="ans">낮은 온도·적은 에너지로도 반응을 빠르게</span> 한다.</span></p>
+  <p class="small c-muted mt4">예시 결과는 덱이 쓴 것이다. 좋은 영향과 걱정되는 영향을 함께 적고, 출처를 밝힌다(04 덱 (2) 촉매의 활용).</p>
+</section>
+
+<!-- ════════ 18. 프로젝트 도입 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트: 환경 문제의 해결사, 촉매와 효소">
+  <h2><span class="tag">프로젝트</span>환경 문제의 해결사, 촉매와 효소</h2>
+  <p class="f21">과학과 산업이 발전해 삶의 질이 높아졌지만, 지구가 오염되는 문제도 생겼다. 무분별한 자원 개발로 자연이 파괴되고, 산업 폐기물·폐수, 잘 분해되지 않는 생활 쓰레기, 공장의 매연, 자동차의 배기가스는 <b>대기 오염, 토양 오염, 수질 오염</b>의 원인이 된다. 이를 해결하려고 <b>촉매와 효소</b>를 이용하는 방법을 꾸준히 연구하고 있다.</p>
+  <div class="em49-browser mt12">
+    <div class="em49-bar"><span></span><span></span><span></span><b>촉매나 효소로 환경 문제를 해결하는 사례</b></div>
+    <div class="em49-hl" data-anim="pop" data-dur=".5" data-delay=".2"><b>"흐르는 물과 바람으로 오염을 정화? 압전 촉매가 무엇이기에?"</b><span>역학적 에너지로 공기나 물의 오염 물질을 제거하는…</span></div>
+    <div class="em49-hl" data-anim="pop" data-dur=".5" data-delay=".5"><b>"플라스틱을 6배 빨리 분해하는 효소 설계"</b><span>쓰레기 더미에서 페트(PET)병 같은 플라스틱을 먹고 사는 효소…</span></div>
+    <div class="em49-hl em49-pick" data-anim="pop" data-dur=".5" data-delay=".8"><b>"온실 가스의 변신, 효소가 책임진다!"</b><span>이산화 탄소를 폼산으로 전환하는 새로운 효소… → #19</span></div>
+  </div>
+  <p class="f21 mt12"><b>Q</b> 세 기사 속 촉매·효소는 각각 어떤 오염을 줄일까? <span class="step">→ 압전 촉매: <span class="ans">대기·수질</span> · 플라스틱 분해 효소: <span class="ans">토양(쓰레기)</span> · 폼산 전환 효소: <span class="ans">온실 가스(대기)</span></span></p>
+</section>
+
+<!-- ════════ 19. 프로젝트 기사 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트: 온실 가스의 변신 기사 읽기">
+  <h2><span class="tag">프로젝트</span>기사 읽기 — "온실 가스의 변신, 효소가 책임진다!"</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">이산화 탄소($\ce{CO2}$)를 폼산($\ce{HCOOH}$)으로 바꾸는 효소가 개발되었다. 폼산은 개미나 벌의 독에 섞여 있는 물질로, 세균을 없애거나 pH를 조절할 수 있어 식품 첨가물 등으로 쓰이고, 폼산으로 전지를 만드는 연구도 있다. 예전에는 화석 연료로 폼산을 만들어 이산화 탄소가 배출되었지만, 새 기술은 이산화 탄소를 폼산으로 바꿀 때 에너지가 적게 들어 <b>탄소 중립</b> 실현에 도움이 될 것으로 기대된다.</p>
+      <table class="tight em49-tech">
+        <tr><th>기존 기술</th><th>새로운 기술</th></tr>
+        <tr><td class="l">고온에서 반응함.</td><td class="l">실온(25 °C–30 °C)에서 반응함.</td></tr>
+        <tr><td class="l">귀금속 촉매를 이용함.</td><td class="l">재조합 효소를 이용함.</td></tr>
+        <tr><td class="l">부산물($\ce{CO2}$, $\ce{H2}$ 등)이 발생함.</td><td class="l">부산물이 발생하지 않음.</td></tr>
+      </table>
+      <p class="small c-muted">새로 개발된 기술의 차별성(교과서 126쪽 표)</p>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 170" style="width:400px" aria-label="이산화 탄소가 효소의 활성 자리에서 폼산으로 바뀌는 모형">
+        <ellipse cx="200" cy="106" rx="120" ry="52" fill="#7FA8D9" stroke="#2F5D94" stroke-width="3"/>
+        <path d="M176 56 Q200 92 224 56" fill="#FFFFFF" stroke="#2F5D94" stroke-width="3"/>
+        <text class="tex" x="200" y="128" data-mix="효소" data-size="20" data-anchor="middle" fill="#FFFFFF" data-weight="700"></text>
+        <g data-anim="move" data-from="-110,-10" data-dur="1" data-delay=".3"><circle cx="200" cy="58" r="12" fill="#3A3F47"/><circle cx="178" cy="58" r="10" fill="#E5533D"/><circle cx="222" cy="58" r="10" fill="#E5533D"/></g>
+        <text class="tex" x="60" y="34" data-mix="$\ce{CO2}$" data-size="20" data-anchor="middle"></text>
+        <path d="M300 60 H356" stroke="#16233D" stroke-width="3"/><path d="M366 60 L352 53 V67 Z" fill="#16233D"/>
+        <text class="tex" x="352" y="40" data-mix="$\ce{HCOOH}$" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="200" y="22" data-mix="활성 자리" data-size="18" data-anchor="middle" fill="#2F5D94"></text>
+      </svg>
+      <p class="f21"><b>Q</b> 새 기술은 왜 실온에서도 반응할 수 있을까?</p>
+      <p class="f21 step">→ 효소(생체 촉매)가 <span class="ans">활성화 에너지를 낮춰</span> 낮은 온도에서도 유효 충돌이 충분히 일어나기 때문이다.</p>
+      <p class="f21 step">→ 고온이 필요 없어 에너지가 적게 들고, 부산물이 없어 원료 낭비와 오염이 줄어든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 프로젝트 ❶ ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❶ 촉매나 효소로 환경 문제를 해결하는 사례 조사하기">
+  <h2><span class="tag">프로젝트</span>❶ 촉매나 효소로 환경 문제를 해결하는 사례 조사하기</h2>
+  <p class="f21"><b>1.</b> 인류가 마주한 환경 문제와 그 원인을 조사해 보자.</p>
+  <p class="f21 mt4"><b>2.</b> 1에서 조사한 내용을 모둠원과 공유하고, 그중 하나를 선택하여 촉매를 활용해 문제를 해결할 수 있는 방법을 조사해 보자.</p>
+  <p class="f21 mt4"><b>3.</b> 2의 내용을 홍보하는 자료를 인터넷 기사 형태로 만들어 보자.</p>
+  <table class="tight em49-plan mt12">
+    <tr><th>환경 문제 · 원인</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>고른 문제</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>촉매·효소와 하는 일</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>반응 속도와의 관계</th><td><span class="em49-line"></span></td></tr>
+    <tr><th>검색어 · 출처</th><td><span class="em49-line"></span></td></tr>
+  </table>
+  <div class="note mt12"><b>과정·기능 길잡이</b> 촉매나 효소가 환경 문제를 해결하는 데 어떤 역할을 하는지 설명하는 내용을 포함하여 기사를 작성한다.</div>
+</section>
+
+<!-- ════════ 21. 프로젝트 ❶ 예시 결과 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❶ 예시 결과">
+  <h2><span class="tag">프로젝트</span>❶ 예시 결과 — 환경 문제 · 원인 · 촉매와 효소</h2>
+  <div class="em49-three">
+    <div class="card step"><h3>대기 오염</h3><p><b>원인</b> 자동차 배기가스, 공장 매연</p><p><b>해결</b> 촉매 변환기가 일산화 탄소·질소 산화물을 덜 해로운 기체로 빠르게 바꾼다. 광촉매를 바른 벽면은 빛을 받아 오염 물질을 분해한다.</p></div>
+    <div class="card step"><h3>수질 오염</h3><p><b>원인</b> 산업 폐수, 생활 하수</p><p><b>해결</b> 압전 촉매는 흐르는 물·바람의 역학적 에너지로, 광촉매는 빛으로 물속 오염 물질을 분해한다.</p></div>
+    <div class="card step"><h3>토양 오염 · 쓰레기</h3><p><b>원인</b> 잘 분해되지 않는 플라스틱</p><p><b>해결</b> 페트(PET)를 분해하는 효소를 설계해 분해 속도를 6배 높였다 → 쓰레기를 줄이고 원료로 다시 쓴다.</p></div>
+  </div>
+  <p class="f21 mt12"><b>Q</b> 세 사례에서 촉매·효소가 하는 공통적인 일은?</p>
+  <p class="f21 step">→ 활성화 에너지를 낮춰 오염 물질을 분해·전환하는 <span class="ans">반응 속도를 빠르게</span> 하므로, 높은 온도나 많은 에너지 없이도 오염 물질을 처리할 수 있다.</p>
+  <p class="small c-muted mt4">예시 결과는 덱이 쓴 것이다(교과서 126쪽 기사 제목 + 04 덱 (2) 촉매의 활용).</p>
+</section>
+
+<!-- ════════ 22. 프로젝트 ❷ ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❷ 홍보 자료 발표하기">
+  <h2><span class="tag">프로젝트</span>❷ 홍보 자료 발표하기</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>1.</b> 모둠에서 만든 홍보 자료를 발표하고, 공유 플랫폼을 활용하여 공유해 보자.</p>
+      <p class="f21 mt4"><b>2.</b> 발표를 들으며 느낀 점과 지속가능한 지구를 위해 지녀야 하는 삶의 태도를 이야기해 보자.</p>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <div class="em49-bub">대기 오염, 토양 오염, 수질 오염으로 자료를 분류해서 공유하면 어떨까?</div>
+    </div>
+  </div>
+  <p class="f21 mt12"><b>3.</b> 우리 모둠의 활동을 평가해 보자.</p>
+  <table class="tight em49-eval"><tr><th>내용</th><th>상</th><th>중</th><th>하</th></tr>
+    <tr><td class="l">촉매나 효소가 환경 문제를 해결하는 데 어떻게 이용되는지 설명했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">인류가 마주한 환경 문제를 조사할 때 적절한 검색어를 활용해 필요한 자료를 조사했는가?</td><td>□</td><td>□</td><td>□</td></tr>
+    <tr><td class="l">모든 모둠원이 인류가 마주한 환경 문제의 심각성을 인지하고, 지속가능한 지구에 대한 책임감을 느끼면서 활동에 참여했는가?</td><td>□</td><td>□</td><td>□</td></tr></table>
+</section>
+
+<!-- ════════ 23. 프로젝트 ❷ 예시 기사 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 프로젝트" data-title="프로젝트 ❷ 예시 인터넷 기사">
+  <h2><span class="tag">프로젝트</span>❷ 예시 인터넷 기사 — 우리 모둠의 홍보 자료</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-art">
+        <div class="em49-art-k">환경 · 과학 &nbsp;|&nbsp; ○○고 2모둠 기자</div>
+        <h3>"버려진 페트병, 효소가 빠르게 먹어 치운다"</h3>
+        <p class="em49-lead">자연에서 수백 년 걸려도 잘 분해되지 않는 페트병을, 효소를 이용해 며칠 만에 분해하는 연구가 이어지고 있다.</p>
+        <p>효소는 생물이 만드는 촉매다. 효소의 활성 자리에 플라스틱 사슬이 꼭 맞게 들어가면, 사슬을 끊는 반응의 <b>활성화 에너지가 낮아져</b> 낮은 온도에서도 반응이 빨라진다. 분해된 물질은 다시 모아 새 페트병의 원료로 쓸 수 있다.</p>
+        <p class="em49-tip">우리가 할 일: 페트병은 라벨을 떼고 깨끗이 헹궈 분리배출하기</p>
+      </div>
+    </div>
+    <div class="col stack" style="flex:0 0 360px">
+      <p class="f21"><b>Q</b> 기사에 꼭 들어가야 할 과학 원리는?</p>
+      <div class="answer step em49-left"><b>예시</b> 촉매(효소)가 활성화 에너지를 낮춰 반응 속도를 빠르게 한다는 점 — 그래야 '왜 효소가 문제를 해결하는지'를 읽는 사람이 이해할 수 있다(과정·기능 길잡이).</div>
+      <div class="note"><b>기사 짜임</b> 제목 → 첫 문단(무엇이 새로운가) → 과학 원리 → 우리가 할 일 → 출처</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 학습 과제물 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 학습 과제물" data-title="학습 과제물 정리">
+  <h2><span class="tag">학습 과제물</span>이 단원의 활동 결과를 정리해 보자</h2>
+  <div class="row">
+    <div class="col">
+      <div class="em49-chips"><span>120쪽 최신 과학 이야기</span><span>121쪽 화학과 나의 미래</span><span>126–127쪽 프로젝트</span></div>
+      <ol class="goals mt12">
+        <li>이 단원의 활동 결과를 모아 「<b>Ⅳ. 반응 속도 학습 과제물</b>」 자료로 정리해 보자.</li>
+        <li>디지털 공유 플랫폼을 활용해 학습 과제물을 친구들에게 공유하고, 친구들의 학습 과제물에 댓글을 달거나 '좋아요' 표시를 하면서 소통해 보자.</li>
+        <li>학습 과제물을 인쇄해 책자로 만들어 보자.</li>
+      </ol>
+    </div>
+    <div class="col stack" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 170" style="width:380px" aria-label="세 쪽으로 펼친 학습 과제물 책자"><g data-anim="pop" data-o="190,90" data-dur=".8"><g fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"><rect x="20" y="20" width="106" height="140" rx="6"/><rect x="137" y="20" width="106" height="140" rx="6"/><rect x="254" y="20" width="106" height="140" rx="6"/></g><rect x="34" y="36" width="78" height="44" fill="#FDE2E4"/><rect x="151" y="36" width="78" height="44" fill="#D7F0DD"/><rect x="268" y="36" width="78" height="44" fill="#E3EEFB"/><g stroke="#C9D3DD" stroke-width="4" stroke-linecap="round"><line x1="34" y1="98" x2="112" y2="98"/><line x1="34" y1="116" x2="100" y2="116"/><line x1="34" y1="134" x2="108" y2="134"/><line x1="151" y1="98" x2="229" y2="98"/><line x1="151" y1="116" x2="217" y2="116"/><line x1="151" y1="134" x2="225" y2="134"/><line x1="268" y1="98" x2="346" y2="98"/><line x1="268" y1="116" x2="334" y2="116"/><line x1="268" y1="134" x2="342" y2="134"/></g></g></svg>
+      <div class="card step"><p class="f21"><b>예시 목차</b> 표지 → 클릭 화학 조사 → 촉매 연구원과 촉매의 영향 → 환경 문제 기사 → 느낀 점</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 반응 속도 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅳ. 반응 속도 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 화학 반응 속도를 반응물의 농도로 표현하고, 일차 반응의 반감기의 특징 및 유효 충돌과 활성화 에너지의 의미를 설명했다.</button>
+    <button class="chk">[과정·기능] 반응 속도를 측정하는 실험을 설계해 수행하고, 농도, 온도, 촉매와 반응 속도의 관계를 탐구했다.</button>
+    <button class="chk">[가치·태도] 화학 반응이 일어나기 위한 조건에 관심을 가지고, 농도, 온도, 촉매에 따라 반응 속도가 달라지는 예를 찾아 화학의 유용성을 인식했다.</button>
+  </div>
+  <div class="card mt8">
+    <p class="f21"><b>Q</b> 반응 속도식의 반응 차수는 무엇으로 정할까? <span class="step">→ <span class="ans">실험 자료</span>(농도를 바꾼 초기 반응 속도) — 계수로 정하지 않는다</span></p>
+    <p class="f21 mt8"><b>Q</b> 일차 반응에서 처음 농도를 2배로 하면 반감기는? <span class="step">→ <span class="ans">변하지 않는다</span>(농도에 관계없이 일정)</span></p>
+    <p class="f21 mt8"><b>Q</b> 고온과 정촉매, 빨라지는 까닭은 어떻게 다를까? <span class="step">→ 고온: $E_\mathrm{a}$ 이상인 <span class="ans">입자 수 증가</span> · 정촉매: <span class="ans">$E_\mathrm{a}$ 감소</span></span></p>
+  </div>
+  <p class="small c-muted mt4">평가 결과가 아쉽다면 'Ⅳ. 반응 속도'를 다시 한번 학습해 봅시다.</p>
+  <div class="note puzzle mt4"><b>과목 돌아보기</b> Ⅲ은 반응이 '일어날 수 있는지', Ⅳ는 '얼마나 빨리' 일어나는지 — 둘 다 따져야 반응을 조절한다.</div>
+</section>

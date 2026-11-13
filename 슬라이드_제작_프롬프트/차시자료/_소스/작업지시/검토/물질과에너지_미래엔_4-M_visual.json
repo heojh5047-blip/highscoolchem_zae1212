@@ -1,9 +1,61 @@
-{"findings":[
-{"slide":3,"severity":"medium","rule":"D8","problem":"아래 쪽 주석이 영역 밖으로 넘침, 이어서 t1/2 눈금 라벨 잘림","fix":"가지 그림 줄 높이 52px, 주석 한 줄로, 반감기 그림 viewBox 168(반영)"},
-{"slide":5,"severity":"medium","rule":"D8","problem":"분포 곡선의 'T1 저온' 라벨이 Ea·정촉매 라벨과 겹침","fix":"T1 라벨을 T2 라벨 위(오른쪽 빈 곳)로 옮김(반영)"},
-{"slide":10,"severity":"medium","rule":"D8·S2","problem":"'독성'·'기준 농도' 라벨이 곡선과 겹치고, 정답 두 개인데 판서 공간 없음","fix":"viewBox를 넓혀 라벨을 그래프 오른쪽 밖으로, .board 추가(반영)"},
-{"slide":11,"severity":"low","rule":"D8","problem":"'시간 (h)' 라벨이 곡선과 겹침","fix":"축 아래로 옮김(반영)"},
-{"slide":12,"severity":"medium","rule":"D8","problem":"실험실 '시간 (h)' 라벨이 아래 가장자리에서 잘림, 이어서 복용 표시 삼각형과 겹침","fix":"마지막 눈금을 '48 h'로(반영)"},
-{"slide":14,"severity":"low","rule":"D8","problem":"에너지 도표 안 설명 라벨이 회색 점선 곡선과 겹침","fix":"설명은 그림 아래 캡션으로(반영)"},
-{"slide":25,"severity":"medium","rule":"D8","problem":"과목 돌아보기 note가 아래로 넘침","fix":"Q 한 줄로 줄이고 note 한 줄로(반영)"}
-],"summary":"전체 캡처를 모음으로 두 번 보았다. 3-M과 같은 가지 그림·대응표·과학 글쓰기·프로젝트 꼴. 겹침·잘림·넘침 7곳을 고친 뒤 자동 점검 0건."}
+{
+"findings": [
+{
+"slide": 3,
+"severity": "medium",
+"rule": "D8",
+"problem": "아래 쪽 주석이 영역 밖으로 넘침, 이어서 t1/2 눈금 라벨 잘림",
+"fix": "가지 그림 줄 높이 52px, 주석 한 줄로, 반감기 그림 viewBox 168(반영)"
+},
+{
+"slide": 5,
+"severity": "medium",
+"rule": "D8",
+"problem": "분포 곡선의 'T1 저온' 라벨이 Ea·정촉매 라벨과 겹침",
+"fix": "T1 라벨을 T2 라벨 위(오른쪽 빈 곳)로 옮김(반영)"
+},
+{
+"slide": 10,
+"severity": "medium",
+"rule": "D8·S2",
+"problem": "'독성'·'기준 농도' 라벨이 곡선과 겹치고, 정답 두 개인데 판서 공간 없음",
+"fix": "viewBox를 넓혀 라벨을 그래프 오른쪽 밖으로, .board 추가(반영)"
+},
+{
+"slide": 11,
+"severity": "low",
+"rule": "D8",
+"problem": "'시간 (h)' 라벨이 곡선과 겹침",
+"fix": "축 아래로 옮김(반영)"
+},
+{
+"slide": 12,
+"severity": "medium",
+"rule": "D8",
+"problem": "실험실 '시간 (h)' 라벨이 아래 가장자리에서 잘림, 이어서 복용 표시 삼각형과 겹침",
+"fix": "마지막 눈금을 '48 h'로(반영)"
+},
+{
+"slide": 14,
+"severity": "low",
+"rule": "D8",
+"problem": "에너지 도표 안 설명 라벨이 회색 점선 곡선과 겹침",
+"fix": "설명은 그림 아래 캡션으로(반영)"
+},
+{
+"slide": 25,
+"severity": "medium",
+"rule": "D8",
+"problem": "과목 돌아보기 note가 아래로 넘침",
+"fix": "Q 한 줄로 줄이고 note 한 줄로(반영)"
+},
+{
+"slide": "6,10,13,15,17,21,23",
+"severity": "low",
+"rule": "지도서 대조 후 화면",
+"problem": "문장 바뀐 장의 넘침·겹침 확인",
+"fix": "sheet 모음으로 확인, 넘침·겹침 없음, render 자동 점검 0건(확인)"
+}
+],
+"summary": "전체 캡처를 모음으로 두 번 보았다. 3-M과 같은 가지 그림·대응표·과학 글쓰기·프로젝트 꼴. 겹침·잘림·넘침 7곳을 고친 뒤 자동 점검 0건."
+}
