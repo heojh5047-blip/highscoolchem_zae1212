@@ -15,7 +15,8 @@
   <h2><span class="tag ink">단원 도입</span>2. 화학 반응식</h2>
   {{map}}
   <div class="row mt8">
-    <div class="col" style="flex:0 0 560px">{{burger}}</div>
+    <div class="col" style="flex:0 0 560px">{{burger}}
+      <div class="answer step mt12">반응 전후 원자의 종류와 수는 변하지 않으므로, <b>화학 반응식</b>을 완성하면 반응물과 생성물을 이루는 원자의 개수로부터 양적 관계를 알 수 있다.</div></div>
     <div class="col">
       <div class="card q"><p class="f21">햄버거를 만들 때 정해진 비율대로 재료를 넣는 것처럼, 화학 반응에서도 반응물과 생성물 사이에 <b>일정한 양적 관계</b>가 성립한다.</p>
       <p class="f21 mt8"><b>Q</b> 화학 반응의 양적 관계를 어떻게 알 수 있을까?</p></div>
@@ -88,7 +89,7 @@
       <ul class="cm121-ul">
         <li>반응물: 수소($\ce{H2}$), 산소($\ce{O2}$) → 화살표 <b>왼쪽</b></li>
         <li>생성물: 물($\ce{H2O}$) → 화살표 <b>오른쪽</b></li>
-        <li>화살표(→)는 반응의 진행, 물질이 두 가지 이상이면 '+'로 잇는다.</li>
+        <li>화살표(→)는 반응의 진행(수학의 등호 '='와 다르다), 물질이 두 가지 이상이면 '+'로 잇는다.</li>
       </ul>
       <div class="formula sm mt12">$\ce{H2 + O2 -> H2O}$<div class="unit">아직 계수를 맞추지 않은 식</div></div>
     </div>
@@ -230,8 +231,7 @@
   <p class="f22">2. 주변에서 찾을 수 있는 화학 반응 한 가지를 화학 반응식으로 나타내 보자.</p>
   <div class="stages mt8">
     <div class="stage step"><h3>가스레인지 불꽃</h3><p>메테인의 연소</p><p class="key">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$</p></div>
-    <div class="stage step"><h3>숯불 구이</h3><p>탄소의 연소</p><p class="key">$\ce{C(s) + O2(g) -> CO2(g)}$</p></div>
-    <div class="stage step"><h3>불꽃놀이의 흰 빛</h3><p>마그네슘의 연소</p><p class="key">$\ce{2Mg(s) + O2(g) -> 2MgO(s)}$</p></div>
+    <div class="stage step"><h3>석회 동굴</h3><p>석회석이 이산화 탄소가 녹은 물에 녹는다.</p><p class="key">$\ce{CaCO3(s) + CO2(g) + H2O(l) -> Ca(HCO3)2(aq)}$</p></div>
   </div>
   <p class="f22 mt16"><b>정리</b> 화학 반응을 화학 반응식으로 나타낼 때 유용한 점은 무엇일까?</p>
   <div class="answer step">반응물·생성물의 <b>종류와 상태</b>, 원자 수 보존, 반응하는 입자 수의 비를 <b>짧은 식으로 정확하게</b>, 언어와 관계없이 전할 수 있다.</div>
@@ -382,7 +382,7 @@
   <div class="row">
     <div class="col">
       <p class="f21">고대 이집트의 왕 클레오파트라는 진주를 식초에 녹여 마셨다는 일화가 있다. 진주의 주성분인 탄산 칼슘($\ce{CaCO3}$)과 식초의 주성분인 아세트산($\ce{CH3COOH}$)의 화학 반응식을 찾아보고, 이 일화가 실제로 가능할지 토의해 보자.</p>
-      <div class="card tip step mt12" data-g="e2"><p class="f21"><b>토의 예</b> 반응은 일어나 기포가 생기지만, 식초는 묽고 진주는 단단해서 통째로는 녹는 데 매우 오래 걸린다. 진주를 갈아 넣으면 가능성이 커진다.</p></div>
+      <div class="card tip step mt12" data-g="e2"><p class="f21"><b>토의 예</b> 반응식으로 보아 탄산 칼슘은 아세트산에 녹으므로 가능하다. 하지만 식초는 산성이 강하지 않아 진주가 다 녹는 데 시간이 오래 걸리므로, 클레오파트라는 다 녹지 않은 진주를 삼켰을 것 같다.</p></div>
     </div>
     <div class="col" style="flex:0 0 340px">{{s26}}</div>
   </div>
@@ -397,7 +397,7 @@
   <div class="stages mt12">
     <div class="stage step"><h3>산소의 발견 (1774)</h3><p class="key">$\ce{2HgO(s) -> 2Hg(l) + O2(g)}$</p><p>산화 수은(II)을 가열해 산소를 얻었다(프리스틀리, 라부아지에).</p></div>
     <div class="stage step"><h3>물의 합성</h3><p class="key">$\ce{2H2(g) + O2(g) -> 2H2O(l)}$</p><p>라부아지에가 물이 수소와 산소로 이루어진 화합물임을 밝혔다.</p></div>
-    <div class="stage step"><h3>암모니아 합성 (1909)</h3><p class="key">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$</p><p>하버가 공기 속 질소로 비료 원료를 만들었다.</p></div>
+    <div class="stage step"><h3>암모니아 합성 (1909)</h3><p class="key">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$</p><p>하버가 공기 속 질소로 비료 원료를 만들어 식량 증산에 기여했다(‘공기로 빵을 만든 과학자’).</p></div>
   </div>
   <div class="note mt16"><b>카드 틀</b> 화학 반응식 · 누가, 언제 · 왜 중요한가 · 참고한 자료(출처)</div>
 </section>
@@ -490,7 +490,7 @@
     <div class="cm121-node cm121-main">
       <b>2-01 화학 반응식의 의미</b>
       <p class="f21 mt8">(1) 화학 반응식: 반응물과 생성물의 화학식으로 화학 반응을 나타낸 것</p>
-      <p class="f21" data-q>(2) ① →의 왼쪽에 ❶ <span class="blank"><span class="step">반응물의 화학식</span></span>, 오른쪽에 생성물의 화학식 ② 원자의 종류·개수가 같도록 계수 ③ 상태 (s), (l), (g), (aq)</p>
+      <p class="f21" data-q>(2) ① →의 왼쪽에 ❶ <span class="blank"><span class="step">반응물</span></span>, 오른쪽에 생성물의 화학식 ② 원자의 종류·개수가 같도록 계수 ③ 상태 (s), (l), (g), (aq)</p>
       <p class="f21" data-q>예) ❷ <span class="blank"><span class="step">$\ce{2H2}$</span></span>$(g)$ $\ce{+ O2(g) -> 2H2O(l)}$</p>
       <p class="f21" data-q>(3) $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$: 반응 계수비·몰비·부피비 = ❸ <span class="blank"><span class="step">1</span></span> : ❹ <span class="blank"><span class="step">3</span></span> : ❺ <span class="blank"><span class="step">2</span></span>, 질량비 14 : 3 : 17</p>
     </div>
