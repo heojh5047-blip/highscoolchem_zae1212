@@ -228,12 +228,18 @@ for k in ['den', 'safe', 'res', 'env', 'life']:
 
 # ── 디지털 소양: 제련 전력량 막대 (조사 예시)
 def bars():
-    o = ['<line x1="150" y1="20" x2="150" y2="140" stroke="#5B6B7F" stroke-width="2"/>']
-    o.append(T(140, 56, mix='알루미늄', size=20, anchor='end') + T(140, 116, mix='구리(정제)', size=20, anchor='end'))
-    o.append('<g data-anim="scale" data-from="0,1" data-o="150,50" data-dur="1.4"><rect x="150" y="34" width="378" height="30" fill="#FDE7C2" stroke="#E08A2C" stroke-width="2"/></g>')
-    o.append('<g data-anim="scale" data-from="0,1" data-o="150,110" data-dur="1.4"><rect x="150" y="94" width="11" height="30" fill="#FDE7C2" stroke="#E08A2C" stroke-width="2"/></g>')
-    o.append(T(520, 84, mix='약 13–15 kWh', size=19, weight=700, anchor='end') + T(172, 116, mix='약 0.3–0.5 kWh', size=19, weight=700, anchor='start'))
-    o.append(T(340, 162, mix='금속 1 kg을 얻는 데 드는 전력량 (조사 예시)', size=18, fill=MUTED))
+    o = ['<line x1="150" y1="14" x2="150" y2="138" stroke="#5B6B7F" stroke-width="2"/>']
+    k = 378 / 13.6
+    for i, (name, v, lab) in enumerate([('알루미늄', 13.6, '13.6 MWh'), ('구리', 1.6, '1.6 MWh'), ('철', 0.55, '550 kWh')]):
+        y = 20 + i * 40
+        w = round(v * k, 1)
+        o.append(T(140, y + 21, mix=name, size=20, anchor='end'))
+        o.append(f'<g data-anim="scale" data-from="0,1" data-o="150,{y+14}" data-dur="1.4" data-delay="{i*.2:.1f}"><rect x="150" y="{y}" width="{w}" height="28" fill="#FDE7C2" stroke="#E08A2C" stroke-width="2"/></g>')
+        if i == 0:
+            o.append(T(520, y + 21, mix=lab, size=19, weight=700, anchor='end'))
+        else:
+            o.append(T(round(150 + w + 10), y + 21, mix=lab, size=19, weight=700, anchor='start'))
+    o.append(T(340, 162, mix='금속 1 톤을 제련하는 데 필요한 전력량 (조사 예시)', size=18, fill=MUTED))
     return ''.join(o)
 F['BARS'] = bars()
 
