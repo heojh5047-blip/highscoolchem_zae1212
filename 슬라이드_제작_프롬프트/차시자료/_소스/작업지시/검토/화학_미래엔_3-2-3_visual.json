@@ -1,11 +1,75 @@
-{"findings":[
-{"slide":1,"severity":"medium","rule":"D8","problem":"표지 반응식 라벨이 오른쪽 가장자리 흐림·상자에 걸려 잘림","fix":"라벨을 왼쪽 아래(150,440)로 옮김"},
-{"slide":5,"severity":"medium","rule":"D8","problem":"정반응·역반응 라벨이 겹침(자동 점검)","fix":"두 라벨의 y를 245/280으로 나눔"},
-{"slide":6,"severity":"medium","rule":"D8","problem":"③ 카드의 Hb 공이 6개라 오른쪽이 잘림, 공기 칸 O2가 서로 겹침","fix":"Hb 반지름 14·간격 52, O2 최소 거리 30"},
-{"slide":8,"severity":"low","rule":"D8","problem":"범례(H·N)가 상자 테에 붙음","fix":"범례를 두 상자 사이 아래로"},
-{"slide":11,"severity":"low","rule":"D8","problem":"들어가는 기체 라벨이 압축기와 겹침","fix":"라벨을 관 위(y 100)로"},
-{"slide":15,"severity":"medium","rule":"T4","problem":"Al(OH)3 평형식이 오른쪽 칸을 넘침","fix":"식을 행 위 전체 너비로 올림"},
-{"slide":17,"severity":"low","rule":"D8","problem":"산 그림이 고지대 막대와 겹침","fix":"막대를 왼쪽으로, 산을 오른쪽으로"},
-{"slide":19,"severity":"low","rule":"T3","problem":"선택지 반응식 위·아래 글이 이웃 줄과 붙음","fix":"선택지 간격 22px"},
-{"slide":12,"severity":"low","rule":"D21","problem":"반응 용기 분자가 촉매 격자 위에 겹쳐 보임","fix":"기각 — 촉매 칸은 용기 안 배경이고 분자가 움직이므로 그대로 둠"}
-],"summary":"자동 점검 5건(라벨 겹침·잘림·칸 넘침·정답 강조)을 모두 고치고, 눈으로 본 겹침을 정리했다. 최종 자동 점검 0·콘솔 0·motion 0·ask 0."}
+{
+ "findings": [
+  {
+   "slide": 1,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "표지 반응식 라벨이 오른쪽 가장자리 흐림·상자에 걸려 잘림",
+   "fix": "라벨을 왼쪽 아래(150,440)로 옮김"
+  },
+  {
+   "slide": 5,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "정반응·역반응 라벨이 겹침(자동 점검)",
+   "fix": "두 라벨의 y를 245/280으로 나눔"
+  },
+  {
+   "slide": 6,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "③ 카드의 Hb 공이 6개라 오른쪽이 잘림, 공기 칸 O2가 서로 겹침",
+   "fix": "Hb 반지름 14·간격 52, O2 최소 거리 30"
+  },
+  {
+   "slide": 8,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "범례(H·N)가 상자 테에 붙음",
+   "fix": "범례를 두 상자 사이 아래로"
+  },
+  {
+   "slide": 11,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "들어가는 기체 라벨이 압축기와 겹침",
+   "fix": "라벨을 관 위(y 100)로"
+  },
+  {
+   "slide": 15,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "Al(OH)3 평형식이 오른쪽 칸을 넘침",
+   "fix": "식을 행 위 전체 너비로 올림"
+  },
+  {
+   "slide": 17,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "산 그림이 고지대 막대와 겹침",
+   "fix": "막대를 왼쪽으로, 산을 오른쪽으로"
+  },
+  {
+   "slide": 19,
+   "severity": "low",
+   "rule": "T3",
+   "problem": "선택지 반응식 위·아래 글이 이웃 줄과 붙음",
+   "fix": "선택지 간격 22px"
+  },
+  {
+   "slide": 12,
+   "severity": "low",
+   "rule": "D21",
+   "problem": "반응 용기 분자가 촉매 격자 위에 겹쳐 보임",
+   "fix": "기각 — 촉매 칸은 용기 안 배경이고 분자가 움직이므로 그대로 둠"
+  },
+  {
+   "slide": 16,
+   "severity": "low",
+   "rule": "지도서 대조 뒤 확인",
+   "problem": "표 첫 행 추가로 높이 늘어남",
+   "fix": "sheet 확인: 넘침·겹침 없음(S3·S9·S15·S16·S18)"
+  }
+ ],
+ "summary": "자동 점검 5건(라벨 겹침·잘림·칸 넘침·정답 강조)을 모두 고치고, 눈으로 본 겹침을 정리했다. 최종 자동 점검 0·콘솔 0·motion 0·ask 0. (11/13) 고친 5장 sheet 확인, 문제 없음."
+}
