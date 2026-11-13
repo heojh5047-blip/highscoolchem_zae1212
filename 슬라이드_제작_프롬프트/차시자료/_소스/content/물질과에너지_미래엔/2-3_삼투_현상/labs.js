@@ -13,7 +13,7 @@ window.DECK_LABS = {
     const INK='#16233D', EQ='#E08A2C', MUT='#5B6B7F', GRID='#E2E7EC', GLASS='#7E8B98', WAT='#DDEEF8', WTOP='#9FC3DD', SOL='#8FB8DE', SOLS='#5B8DB8', RUB='#8C6D46';
     const BASE={ci:0.5,co:0,L:15,T:25};
     const MODE={
-      ci:{name:'튜브 속 농도',min:0,max:1,step:0.1,a:0.2,b:0.6,f:v=>v.toFixed(1)+' M'},
+      ci:{name:'튜브 속 농도',min:0,max:1,step:0.1,a:0.5,b:1,f:v=>v.toFixed(1)+' M'},
       co:{name:'비커 속 농도',min:0,max:1,step:0.1,a:0,b:0.3,f:v=>v.toFixed(1)+' M'},
       L:{name:'튜브 길이',min:5,max:20,step:5,a:10,b:15,f:v=>v.toFixed(0)+' cm'},
       T:{name:'물의 온도',min:10,max:40,step:5,a:15,b:35,f:v=>v.toFixed(0)+' °C'}};
