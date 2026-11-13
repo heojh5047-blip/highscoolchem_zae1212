@@ -303,7 +303,7 @@ FIG['chain'] = chain()
 
 
 # ───── 21 결과 막대그래프 ─────
-MEAS_HCL = [1.07, 2.04, 2.97, 4.05, 5.09]
+MEAS_HCL = [1.00, 2.15, 3.19, 4.09, 5.10]
 
 
 def bargraph(vals, labels, ymax, step, vb_w=520, vb_h=320, title_x='[\\ce{HCl}]\\ [\\text{M}]', ylab='\\text{측정한 pH}',
@@ -333,7 +333,7 @@ def bargraph(vals, labels, ymax, step, vb_w=520, vb_h=320, title_x='[\\ce{HCl}]\
     return ''.join(o)
 
 
-FIG['res1'] = svg('0 0 520 320', 500, '측정한 pH 막대그래프: A 1.07, B 2.04, C 2.97, D 4.05, E 5.09',
+FIG['res1'] = svg('0 0 520 320', 500, '측정한 pH 막대그래프: A 1.00, B 2.15, C 3.19, D 4.09, E 5.10',
                   bargraph(MEAS_HCL, ['0.1', '0.01', '0.001', '10^{-4}', '10^{-5}'], 6, 1))
 
 

@@ -8,7 +8,7 @@ window.DECK_LABS = {
   cm412dil(root, API){
     const $=s=>root.querySelector(s), O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`);
     const svg=$('svg'), KW=1e-14, N=10, L='ABCDEFGHIJ';
-    const ERR={a:[.07,.04,-.03,.05,.09,.06,-.04,-.03,-.02,-.01], b:[-.06,-.03,.04,-.05,-.08,-.05,.04,.03,.02,.01]};
+    const ERR={a:[0,.15,.19,.09,.10,.06,-.04,-.03,-.02,-.01], b:[-.06,-.03,.04,-.05,-.08,-.05,.04,.03,.02,.01]};
     const NAME={a:'염산',b:'수산화 나트륨 수용액'};
     const COLS={a:API.COL.plus,b:API.COL.minus};
     const thPH=(s,k)=>{ const C=0.1*Math.pow(10,-k), h=(C+Math.sqrt(C*C+4*KW))/2; return s==='a'? -Math.log10(h) : 14+Math.log10(h); };
