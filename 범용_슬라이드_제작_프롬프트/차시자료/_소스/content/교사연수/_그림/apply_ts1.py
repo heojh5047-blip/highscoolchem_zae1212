@@ -40,7 +40,7 @@ A = f'''<section class="slide" data-sec="05 · 화학물질 관리" data-title="
     {''.join(cards)}
   </div>
   <div class="note" style="margin-top:12px">예시는 대표적인 경우입니다. 같은 물질도 농도에 따라 달라지므로 <b>실제 표시는 제품의 경고표지와 MSDS 2항</b>으로 확인합니다.</div>
-  <p class="small ts1-src">출처: UN GHS(화학물질 분류·표시 세계조화시스템) 그림문자를 다시 그림, 고용노동부 고시 「화학물질의 분류·표시 및 물질안전보건자료에 관한 기준」 <span class="ts1-flag">확인</span>원고에 그림문자 목록이 없어 공식 자료로 추가 — 예시 물질 확인</p>
+  <p class="small ts1-src">출처: GHS(화학물질 분류·표시 세계조화시스템) 그림문자 — 소방청 기준 그림과 대조해 다시 그림 · 고용노동부 고시 「화학물질의 분류·표시 및 물질안전보건자료에 관한 기준」 <span class="ts1-flag">확인</span>예시 물질</p>
 </section>'''
 
 # ── B. 경고표지 읽기 (새 장) — 가상 라벨 ──
