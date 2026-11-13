@@ -504,10 +504,10 @@ def formic():
     s += f'<text class="tex step" data-g="fa" x="{f(cx)}" y="205" data-mix="$\\ce{{-CHO}}$" data-size="19" data-anchor="middle" fill="#7B4FC8" data-weight="700"></text>'
     return s
 F['FORMIC'] = formic()
-# 대단원 마무리 03: (가) 메테인 (나) 에테인 (다) 아세트산 공-막대
+# 대단원 마무리 03: (가) 메테인 (나) 에탄올 (다) 아세트산 공-막대 (지도서 대조로 고침)
 def q03():
     s = ''
-    for x, mol, lab in ((100, mol_methane(), '(가)'), (310, mol_alkane_like(2), '(나)'), (530, mol_alkane_like(2, 'COOH'), '(다)')):
+    for x, mol, lab in ((100, mol_methane(), '(가)'), (310, mol_alkane_like(2, 'OH'), '(나)'), (530, mol_alkane_like(2, 'COOH'), '(다)')):
         a, b = mol
         s += bs3d(a, b, x, 95, k=42, yaw='auto', sc=.72)[0]
         s += T(x, 196, lab, 20)
