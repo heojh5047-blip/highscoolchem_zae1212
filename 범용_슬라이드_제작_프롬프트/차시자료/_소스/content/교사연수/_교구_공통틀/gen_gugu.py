@@ -36,6 +36,7 @@ H = dict(pfx='ts2h-', folder='2_2022_개정_교육과정_교구_관리_고등', 
      ("'학생당 1' 교구(보안경, 방독 마스크)는?", '<b>28개</b>'), ("'실험실당 4' 간이 소화기는?", '4 × 3실 = <b>12개</b>'),
      ("'학교당 30' 고글식 보안경은?", '학교 규모와 관계없이 <b>30개</b>')]),
   CLSDEF='27', NDEF='28',
+  LABNOTE='<b>원고 예시</b> 27학급·28명 → 3실 · 4학생당 7개 · 학생당 28개 · 간이 소화기 12개 · 고글식 보안경은 학교당 30개',
   CHGROWS=rows([('새로 필수가 된 안전 항목', '방독 마스크·레이저 보안경(학생당 1), 고글식 보안경(학교당 30), 방염담요, 콘센트 전원 비상 차단 스위치, 흡착포, 금속 쓰레기통, 자동화재탐지설비, 소화용 모래'),
      ('권장 → 필수', '흄후드, 시험관, 시약병, 홀피펫, 피펫 필러, 마이크로피펫, 기압계, 현미경(광학), 천체 망원경, 편광현미경, 전향력 실험 장치'),
      ('새로 필수가 된 디지털 탐구 도구', '센서(온도·기체 압력·무게·이산화 탄소), 마이크로컨트롤러, 스마트 기기, RGB 광 패널, 전자회로 실험키트'),
@@ -80,6 +81,7 @@ M = dict(pfx='ts2m-', folder='2_2022_개정_교육과정_교구_관리_중등', 
      ("2022 기준 '4학생당 1' 교구는?", '25 ÷ 4 = 6.25 → <b>7개</b>'), ('기준 실 수는?', '11~23학급 → <b>2실</b>'),
      ("'실험실당 4' 간이 소화기는?", '4 × 2실 = <b>8개</b>')]),
   CLSDEF='18', NDEF='25',
+  LABNOTE='<b>2015와 비교</b> 같은 학교(주당 4시간)를 2015 기준으로 세면 7조 × 적용 비율 300% = <b>21개</b>, 2022 기준은 <b>7개</b> — 2022는 한 학급이 동시에 쓸 수량만 최소치로 제시합니다.',
   CHGROWS=rows([('새로 필수가 된 안전 항목', '방독 마스크·레이저 보안경(학생당 1), 방염담요, 흄후드, 콘센트 전원 비상 차단 스위치, 흡착포, 금속 쓰레기통, 자동화재탐지설비, 소화용 모래'),
      ('권장 → 필수', '간이 소화기, 구급함, 눈세척기, 마스크, 비커, 점화기, 집게, 눈금피펫'),
      ('새로 필수가 된 디지털 탐구 도구', '센서(온도·기체 압력·힘), 열화상 카메라, 스마트기기(학생당 1)'),
@@ -125,7 +127,7 @@ for L in (H, M):
     for k in sorted([k for k in L if k.isupper() or k[0].isupper()], key=len, reverse=True):
         s = s.replace(k, L[k])
     s = s.replace('PFX', L['pfx'])
-    left = [w for w in ('LEVEL', 'ROOMS', 'BAR', 'PFX', 'EXQ', 'EXSTEPS', 'CHGROWS', 'MEAS', 'LINKROWS', 'BOOST', 'RULES', 'CHECKS', 'UTIL1', 'SHAREEX', 'PRACT', 'POSTEXTRA', 'NOTEEXTRA', 'PPEEXTRA', 'SPECNOTE', 'UNITWORD', 'SUBJ') if w in s]
+    left = [w for w in ('LEVEL', 'ROOMS', 'BAR', 'PFX', 'EXQ', 'EXSTEPS', 'CHGROWS', 'MEAS', 'LINKROWS', 'BOOST', 'RULES', 'CHECKS', 'UTIL1', 'SHAREEX', 'LABNOTE', 'PRACT', 'POSTEXTRA', 'NOTEEXTRA', 'PPEEXTRA', 'SPECNOTE', 'UNITWORD', 'SUBJ') if w in s]
     if left: print('남은 자리표시:', L['key'], left)
     d = os.path.join(C, L['folder']); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'slides.html'), 'w', encoding='utf-8').write(s)
