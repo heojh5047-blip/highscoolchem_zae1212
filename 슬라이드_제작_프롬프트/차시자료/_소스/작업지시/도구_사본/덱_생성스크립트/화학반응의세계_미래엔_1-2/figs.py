@@ -171,7 +171,7 @@ def procfigs():
     return a,b,c
 
 def resplot():
-    th=[1.0,2.87,13.0,11.13]; me=[1.1,2.9,12.9,11.1]
+    th=[1.0,2.87,13.0,11.13]; me=[1.03,2.89,13.0,11.12]
     X=[110,210,310,410]; Y=lambda p:270-p*17
     s=f'<line x1="60" y1="20" x2="60" y2="270" stroke="{MUTED}" stroke-width="2"/><line x1="60" y1="270" x2="470" y2="270" stroke="{MUTED}" stroke-width="2"/>'
     for p in (0,7,14):
