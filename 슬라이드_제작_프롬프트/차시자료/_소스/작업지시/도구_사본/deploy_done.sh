@@ -32,7 +32,7 @@ python3 -I - "$S/decks.json" "$ST/public" <<'PY'
 import json,sys,os
 src,P=sys.argv[1],sys.argv[2]; d=json.load(open(src,encoding='utf-8'))
 d['decks']=[x for x in d['decks'] if os.path.exists(os.path.join(P,x['key'],x['file']+'.html'))]
-order=['화학_미래엔','물질과에너지_미래엔','화학반응의세계_미래엔']
+order=['화학_미래엔','물질과에너지_미래엔','화학반응의세계_미래엔','고급화학']
 d['decks'].sort(key=lambda x: order.index(x['key']) if x['key'] in order else len(order))
 import re
 for x in d['decks']: x['label']=re.sub(r'\s*\([^)]*\)\s*$','',x['label'])   # 탭에 출판사 이름을 쓰지 않는다
