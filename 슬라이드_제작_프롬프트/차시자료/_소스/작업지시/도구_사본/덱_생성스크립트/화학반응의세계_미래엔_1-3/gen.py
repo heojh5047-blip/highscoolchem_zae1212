@@ -103,19 +103,20 @@ b += T(150, 30, mix='깔때기', size=19, anchor='start', fill=MUTED)
 F['S8a'] = svg((260, 200), 240, '깔때기로 뷰렛에 표준 용액을 넣고 꼭지를 열어 3방울 정도 흘리는 모습', b)
 # 카드2: 눈금 확대
 b = '<rect x="20" y="10" width="220" height="170" rx="10" fill="#FFFFFF" stroke="%s" stroke-width="2"/>' % INK
-cx = 110; PP = 120  # 1 mL = 120 px, 0 at y=40
+cx = 110; PP = 120  # 1 mL = 120 px, 3 mL at y=40
+RD = 0.39  # 3.39 mL (지도서 예시 답안)
 y0 = 40
-b += '<rect x="%d" y="%s" width="60" height="%s" fill="%s"/>' % (cx-30, r(y0+0.5*PP), r(180-(y0+0.5*PP)), WATER)
-b += '<path d="M%d %s Q%d %s %d %s Q%d %s %d %s" fill="none" stroke="%s" stroke-width="2.4"/>' % (cx-30, r(y0+0.5*PP-10), cx-21, r(y0+0.5*PP), cx, r(y0+0.5*PP), cx+21, r(y0+0.5*PP), cx+30, r(y0+0.5*PP-10), WATER_S)
+b += '<rect x="%d" y="%s" width="60" height="%s" fill="%s"/>' % (cx-30, r(y0+RD*PP), r(180-(y0+RD*PP)), WATER)
+b += '<path d="M%d %s Q%d %s %d %s Q%d %s %d %s" fill="none" stroke="%s" stroke-width="2.4"/>' % (cx-30, r(y0+RD*PP-10), cx-21, r(y0+RD*PP), cx, r(y0+RD*PP), cx+21, r(y0+RD*PP), cx+30, r(y0+RD*PP-10), WATER_S)
 b += line(cx-30, 12, cx-30, 178, GLASS, 2.6) + line(cx+30, 12, cx+30, 178, GLASS, 2.6)
 for t in range(0, 12):
     y = y0+t*PP/10
     L = 30 if t % 10 == 0 else (20 if t % 5 == 0 else 11)
     b += line(cx-30, y, cx-30+L, y, INK if t % 10 == 0 else MUTED, 2 if t % 10 == 0 else 1.2)
-b += T(cx-40, y0+7, tex='0', size=20, anchor='end') + T(cx-40, y0+PP+7, tex='1', size=20, anchor='end')
-b += line(cx-36, y0+0.5*PP, 238, y0+0.5*PP, PLUS, 2, '5 4')
-b += T(232, y0+0.5*PP-8, mix='눈높이', size=19, anchor='end', fill=PLUS)
-F['S8b'] = svg((260, 190), 240, '뷰렛 눈금 확대: 메니스커스 아래쪽이 0.50 mL 눈금에 있다', b)
+b += T(cx-40, y0+7, tex='3', size=20, anchor='end') + T(cx-40, y0+PP+7, tex='4', size=20, anchor='end')
+b += line(cx-36, y0+RD*PP, 238, y0+RD*PP, PLUS, 2, '5 4')
+b += T(232, y0+RD*PP-8, mix='눈높이', size=19, anchor='end', fill=PLUS)
+F['S8b'] = svg((260, 190), 240, '뷰렛 눈금 확대: 메니스커스 아래쪽이 3.39 mL 눈금에 있다', b)
 # 카드3: 피펫으로 염산 20 mL + 자석
 b = beaker(70, 100, 120, 80, 140)
 b += '<rect x="110" y="160" width="40" height="9" rx="4" fill="#FFFFFF" stroke="%s" stroke-width="2"/>' % STAND

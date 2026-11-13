@@ -5,14 +5,14 @@
      · 넣을 때마다 (부피, pH)가 표에 쌓이고 그래프에 점이 찍힌다. 「곡선 잇기」로 점을 이어 시각화.
      · 시료를 바꾸면 지금까지의 점은 회색 점선 「이전 곡선」으로 남아 두 곡선을 비교할 수 있다.
      · 기록한 점 가운데 pH가 가장 크게 변한 구간의 가운데를 중화점으로 읽고, 산의 몰농도 = 0.1 × V중화점 / 20을 계산한다.
-     · 뷰렛 50 mL, 위가 0 눈금, 처음 눈금 0.50 mL. */
+     · 뷰렛 50 mL, 위가 0 눈금, 처음 눈금 3.39 mL(지도서 예시). */
 window.DECK_LABS = {
   rm13titr(root, API){
     const $=s=>root.querySelector(s), O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`);
     const svg=$('svg'), C=API.COL, mk=(t,a,p)=>API.mk(t,a,p);
     const WATER='#DDEEF8', WATER_S='#9FC3DD', GLASS='#7E8B98', STAND='#5B6B7F', KW=1e-14;
     const ACID=[{n:'0.1 M 염산',C:0.1,Ka:0,col:C.ink},{n:'0.1 M 아세트산',C:0.1,Ka:1.8e-5,col:C.equi},{n:'농도 모르는 염산',C:0.08,Ka:0,col:C.ink}];
-    const VA=20, CB=0.1, R0=0.50;
+    const VA=20, CB=0.1, R0=3.39;
     function pHcalc(a,V){
       const A=ACID[a], Vt=(VA+V)/1000, na=A.C*VA/1000, nb=CB*V/1000;
       if(!A.Ka){ const d=(na-nb)/Vt, h=(d+Math.sqrt(d*d+4*KW))/2; return -Math.log10(h); }
