@@ -1,0 +1,1 @@
+11/13 지도서 대조에서 slides.html을 직접 고쳤다. slides.src.html·gen.py는 옛 상태 — slides.html이 원본.
