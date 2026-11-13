@@ -370,9 +370,9 @@ def step2():
     # 스포이트(페놀프탈레인)
     o.append(f'<path d="M232,40 L232,84 L236,98 L240,84 L240,40 Z" fill="#FFFFFF" stroke="{GLASS}" stroke-width="2"/><rect x="229" y="22" width="14" height="20" rx="6" fill="#B9C3CD" stroke="{STAND}" stroke-width="1.5"/>')
     o.append(droplet(236, 116, anim='data-anim="move" data-from="0,-12" data-dur=".9" data-rep="loop" data-ease="in"'))
-    o.append(tex(56, 218, mix='묽힌 식초||20.0 mL', size=19, weight=700))
+    o.append(tex(56, 218, mix='묽힌 식초||10.0 mL', size=19, weight=700))
     o.append(tex(250, 64, mix='페놀프탈레인', size=19, anchor='start', weight=700)[0:0])
-    return svg('0 0 300 250', None, '피펫으로 묽힌 식초 20.0 mL를 삼각 플라스크에 옮기고 페놀프탈레인 용액을 2–3 방울 넣는다', ''.join(o), cls='')
+    return svg('0 0 300 250', None, '피펫으로 묽힌 식초 10.0 mL를 삼각 플라스크에 옮기고 페놀프탈레인 용액을 2–3 방울 넣는다', ''.join(o), cls='')
 
 
 def step3():
@@ -427,12 +427,12 @@ FIG['vinegar'] = svg('0 0 200 280', 180, '총산도 6 %–7 %라고 표시된 �
 # ───── 23 식초 A·B 비교 (뷰렛 두 개) ─────
 def compare_ab():
     o = []
-    for cx, used, nm in ((90, 20.0, '식초 A'), (250, 15.0, '식초 B')):
+    for cx, used, nm in ((90, 11.1, '식초 A'), (250, 7.5, '식초 B')):
         o.append(burette(cx, 20, 34, 214, 230, 252, level=used, w=16, nsize=21, minor=False,
                          liq_anim=f'data-anim="move" data-from="0,{-used*3.6:.0f}" data-dur="1.6" data-delay=".3" data-ease="out" data-on="step"'))
         o.append(tex(cx, 284, mix=nm, size=20, weight=700))
         o.append(tex(cx + 18, 34 + used * 3.6 + 7, f'{used:.1f}', size=19, anchor='start', weight=700, fill=PLUS, halo=True))
-    return svg('0 0 340 296', 300, '같은 부피의 식초 A와 B를 적정하면 식초 A에 표준 용액이 20.0 mL, B에 15.0 mL 들어간다', ''.join(o))
+    return svg('0 0 340 296', 300, '같은 부피의 식초 A와 B를 적정하면 식초 A에 표준 용액이 11.1 mL, B에 7.5 mL 들어간다', ''.join(o))
 FIG['ab'] = compare_ab()
 
 
