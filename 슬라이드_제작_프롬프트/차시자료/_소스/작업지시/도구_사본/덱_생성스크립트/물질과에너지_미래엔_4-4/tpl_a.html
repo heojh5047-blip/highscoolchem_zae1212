@@ -215,17 +215,17 @@ def well(x,v,lab):
 <!-- ════════ 9. 탐구 ① 결과 및 정리 ════════ -->
 <section class="slide" data-sec="04 · 탐구" data-title="탐구: 농도 — 결과 및 정리">
   <h2><span class="tag">탐구</span>결과 및 정리 — 농도에 따른 반응 속도</h2>
-  <p class="f21" data-q><b>1</b> 홈 ①의 상대 농도를 1이라 할 때 홈 ②–④의 상대 농도를 구하고, <b>2</b> 걸린 시간과 반응 속도를 써 보자. <span class="small c-muted">(예시 값 — 실험실 측정)</span></p>
+  <p class="f21" data-q><b>1</b> 홈 ①의 상대 농도를 1이라 할 때 홈 ②–④의 상대 농도를 구하고, <b>2</b> 걸린 시간과 반응 속도를 써 보자. <span class="small c-muted">(예시 값)</span></p>
   <table class="tight em44-res mt8">
     <tr><th>홈의 번호</th><td>①</td><td>②</td><td>③</td><td>④</td></tr>
     <tr><th>$\ce{KIO3}(aq)$ 부피(mL)</th><td>0.5</td><td>1.0</td><td>1.5</td><td>2.0</td></tr>
     <tr><th>증류수 부피(mL)</th><td>1.5</td><td>1.0</td><td>0.5</td><td>0</td></tr>
     <tr><th>$\ce{KIO3}(aq)$의 상대 농도</th><td>1</td><td><span class="blank"><span class="step" data-g="r1">2</span></span></td><td><span class="blank"><span class="step" data-g="r1">3</span></span></td><td><span class="blank"><span class="step" data-g="r1">4</span></span></td></tr>
-    <tr><th>걸린 시간(s)</th><td><span class="blank"><span class="step" data-g="r2">83</span></span></td><td><span class="blank"><span class="step" data-g="r2">42</span></span></td><td><span class="blank"><span class="step" data-g="r2">28</span></span></td><td><span class="blank"><span class="step" data-g="r2">21</span></span></td></tr>
-    <tr><th>반응 속도($\frac{1}{\text{s}}$)</th><td><span class="blank"><span class="step" data-g="r3">0.012</span></span></td><td><span class="blank"><span class="step" data-g="r3">0.024</span></span></td><td><span class="blank"><span class="step" data-g="r3">0.036</span></span></td><td><span class="blank"><span class="step" data-g="r3">0.048</span></span></td></tr>
+    <tr><th>걸린 시간(s)</th><td><span class="blank"><span class="step" data-g="r2">3.66</span></span></td><td><span class="blank"><span class="step" data-g="r2">1.70</span></span></td><td><span class="blank"><span class="step" data-g="r2">0.85</span></span></td><td><span class="blank"><span class="step" data-g="r2">0.50</span></span></td></tr>
+    <tr><th>반응 속도($\frac{1}{\text{s}}$)</th><td><span class="blank"><span class="step" data-g="r3">0.27</span></span></td><td><span class="blank"><span class="step" data-g="r3">0.59</span></span></td><td><span class="blank"><span class="step" data-g="r3">1.18</span></span></td><td><span class="blank"><span class="step" data-g="r3">2.00</span></span></td></tr>
   </table>
   <p class="f21 mt12"><b>3</b> 실험 결과를 바탕으로 반응물의 농도와 반응 속도는 어떤 관계인지 설명해 볼까?</p>
-  <div class="answer step mt8">$\ce{KIO3}$의 농도가 2배, 3배, 4배가 되면 걸린 시간은 약 $\frac{1}{2}$, $\frac{1}{3}$, $\frac{1}{4}$로 짧아진다 → <b>반응물의 농도가 클수록 반응 속도가 빠르다.</b></div>
+  <div class="answer step mt8">$\ce{KIO3}$ 수용액의 농도가 클수록 색이 변할 때까지 걸린 시간이 짧아진다 → <b>반응물의 농도가 클수록 반응 속도는 빨라진다.</b></div>
   <p class="small mt12 c-muted"><b>스스로 평가하기</b> 지식·이해: 반응물의 농도와 반응 속도의 관계를 설명했는가? · 과정·기능: $\ce{KIO3}$ 수용액의 농도를 제외한 다른 변인을 일정하게 통제했는가? · 가치·태도: 관심을 가지고 실험에 참여했는가?</p>
 </section>
 
@@ -478,8 +478,8 @@ def thermo(x,lvl,col):
   <h2><span class="tag">탐구</span>온도 실험실 — 레이저가 사라지는 시간 <span class="small c-muted">[필수 탐구]</span></h2>
   <div class="lab" data-lab="em44temp">
     <div class="lab-ctl" style="flex-basis:380px">
-      <div class="em44-seg"><button class="btn" data-p="5">얼음물</button><button class="btn on" data-p="20">실온의 물</button><button class="btn" data-p="40">더운물</button></div>
-      <div class="ctl"><div class="lbl"><span>물의 온도</span><output data-o="T"></output></div><input type="range" min="0" max="50" step="1" value="20" data-i="T" aria-label="물의 온도"></div>
+      <div class="em44-seg"><button class="btn" data-p="1.8">얼음물</button><button class="btn on" data-p="18">실온의 물</button><button class="btn" data-p="40">더운물</button></div>
+      <div class="ctl"><div class="lbl"><span>물의 온도</span><output data-o="T"></output></div><input type="range" min="0" max="50" step="0.1" value="18" data-i="T" aria-label="물의 온도"></div>
       <table class="readout em44-read">
         <tr><th>초시계</th><td><output data-o="clk"></output></td></tr>
         <tr class="hl"><th>반응 속도 ($\frac{1}{t}$)</th><td><output data-o="rate"></output></td></tr>
@@ -506,14 +506,14 @@ def thermo(x,lvl,col):
 <!-- ════════ 21. 탐구 ② 결과 및 정리 ════════ -->
 <section class="slide" data-sec="04 · 탐구" data-title="탐구: 온도 — 결과 및 정리">
   <h2><span class="tag">탐구</span>결과 및 정리 — 온도에 따른 반응 속도</h2>
-  <p class="f21" data-q><b>1</b> 물의 온도와 레이저 빛이 보이지 않을 때까지 걸린 시간을 쓰고, 반응 속도를 계산해 보자. <span class="small c-muted">(예시 값 — 실험실 측정)</span></p>
+  <p class="f21" data-q><b>1</b> 물의 온도와 레이저 빛이 보이지 않을 때까지 걸린 시간을 쓰고, 반응 속도를 계산해 보자. <span class="small c-muted">(예시 값)</span></p>
   <table class="tight em44-res mt8">
-    <tr><th>온도</th><td>얼음물( <span class="blank"><span class="step" data-g="t1">5</span></span> °C)</td><td>실온의 물( <span class="blank"><span class="step" data-g="t1">20</span></span> °C)</td><td>더운물( <span class="blank"><span class="step" data-g="t1">40</span></span> °C)</td></tr>
-    <tr><th>걸린 시간(s)</th><td><span class="blank"><span class="step" data-g="t2">185</span></span></td><td><span class="blank"><span class="step" data-g="t2">61</span></span></td><td><span class="blank"><span class="step" data-g="t2">15</span></span></td></tr>
-    <tr><th>반응 속도($\frac{1}{\text{s}}$)</th><td><span class="blank"><span class="step" data-g="t3">0.0054</span></span></td><td><span class="blank"><span class="step" data-g="t3">0.016</span></span></td><td><span class="blank"><span class="step" data-g="t3">0.067</span></span></td></tr>
+    <tr><th>온도</th><td>얼음물( <span class="blank"><span class="step" data-g="t1">1.8</span></span> °C)</td><td>실온의 물( <span class="blank"><span class="step" data-g="t1">18</span></span> °C)</td><td>더운물( <span class="blank"><span class="step" data-g="t1">40</span></span> °C)</td></tr>
+    <tr><th>걸린 시간(s)</th><td><span class="blank"><span class="step" data-g="t2">151</span></span></td><td><span class="blank"><span class="step" data-g="t2">39</span></span></td><td><span class="blank"><span class="step" data-g="t2">9</span></span></td></tr>
+    <tr><th>반응 속도($\frac{1}{\text{s}}$)</th><td><span class="blank"><span class="step" data-g="t3">0.0066</span></span></td><td><span class="blank"><span class="step" data-g="t3">0.026</span></span></td><td><span class="blank"><span class="step" data-g="t3">0.11</span></span></td></tr>
   </table>
   <p class="f21 mt16"><b>2</b> 실험 결과를 바탕으로 온도와 반응 속도는 어떤 관계인지 설명해 볼까?</p>
-  <div class="answer step mt8">온도가 높을수록 레이저 빛이 사라질 때까지 걸린 시간이 짧다 → <b>온도가 높을수록 반응 속도가 빠르다.</b></div>
+  <div class="answer step mt8">온도가 높을수록 레이저 빛이 보이지 않을 때까지 걸린 시간이 짧아진다 → <b>온도가 높을수록 반응 속도는 빨라진다.</b></div>
   <p class="small mt16 c-muted"><b>스스로 평가하기</b> 지식·이해: 온도와 반응 속도의 관계를 설명했는가? · 과정·기능: 레이저 빛이 보이지 않을 때까지 걸린 시간을 정확히 측정했는가? · 가치·태도: 관심을 가지고 실험에 참여했는가?</p>
 </section>
 
@@ -627,7 +627,7 @@ def thermo(x,lvl,col):
     <tr><th>음식물을 냉장고에 보관한다.</th><td class="l">예 음식물을 낮은 온도에 보관해 음식물이 변질되는 속도를 느리게 한다.</td></tr>
     <tr><th>비닐하우스에서 작물을 재배한다.</th><td class="l"><span class="blank em44-full"><span class="step">온도를 높게 유지해 작물이 자라는 데 필요한 반응(광합성 등)을 빠르게 한다.</span></span></td></tr>
     <tr><th>종자를 냉동하여 보관한다.</th><td class="l"><span class="blank em44-full"><span class="step">낮은 온도에서 종자의 호흡 등 물질대사 반응을 느리게 해 오래 보관한다.</span></span></td></tr>
-    <tr><th>더 찾아보기</th><td class="l"><span class="blank em44-full"><span class="step">압력솥(물의 끓는점이 높아져 음식이 빨리 익음), 김치냉장고(낮은 온도로 발효를 느리게 함)</span></span></td></tr>
+    <tr><th>더 찾아보기</th><td class="l"><span class="blank em44-full"><span class="step">생선을 얼음 위에 올려 판매(생선의 온도를 낮춰 신선함을 오래 유지), 김치냉장고(낮은 온도로 발효를 느리게 함)</span></span></td></tr>
   </table>
 </section>
 
