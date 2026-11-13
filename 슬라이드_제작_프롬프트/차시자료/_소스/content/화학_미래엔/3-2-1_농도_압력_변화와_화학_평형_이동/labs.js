@@ -162,7 +162,7 @@ function shiftLab(root, API, startMode){
     else m+='전체 기체 분자 수가 증가하는 역반응이 우세하게 진행한다. 적갈색이 진해진다.';
     if(varn==='온도') m+=' (까닭은 다음 시간 02에서)';
     O('msg').textContent=m;
-    const obs= Math.abs(l1)<0.02?'색 그대로': l1<0?'옅어짐, 분자 수 감소':'진해짐, 분자 수 증가';
+    const obs= Math.abs(l1)<0.02?'색 그대로': l1<0?'연해짐, 분자 수 감소':'진해짐, 분자 수 증가';
     log([varn,label,cmpTxt(l1),dirTxt(l1),obs]);
     if(Math.abs(l1)<0.02){ anim=null; redraw(true); } else drawGas(S.a,S.y,K,false);
   }

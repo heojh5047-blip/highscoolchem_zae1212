@@ -1,15 +1,103 @@
-{"findings":[
-{"slide":6,"severity":"medium","rule":"3.2","problem":"'물의 이동' 라벨이 화면 15px","fix":"data-size 23"},
-{"slide":10,"severity":"high","rule":"D8","problem":"스포이트 라벨이 viewBox 위로 잘리고 '4 mL' 등이 16px 미만","fix":"시험관·스포이트를 아래로 옮기고 viewBox 300×264, 라벨 24"},
-{"slide":14,"severity":"medium","rule":"D8","problem":"'진한 HCl(aq)' 라벨이 그림 오른쪽에서 잘림","fix":"'진한 염산'으로 줄이고 왼쪽 끝 맞춤"},
-{"slide":22,"severity":"low","rule":"3.2","problem":"'누름', '시간' 라벨 15.6px","fix":"data-size 24"},
-{"slide":23,"severity":"medium","rule":"D8","problem":"스스로 평가하기 칩이 아래 안전 영역을 넘침","fix":"h3를 칩 줄 안의 작은 제목으로 합침"},
-{"slide":25,"severity":"medium","rule":"D21","problem":"1/2 V 주사기 안 분자가 심하게 겹침","fix":"주사기 폭 290·높이 270으로 키우고 그림 높이 240"},
-{"slide":27,"severity":"medium","rule":"T4","problem":"반응식 공식 박스가 칸을 넘침","fix":"공식을 열 밖 전체 폭으로 옮김"},
-{"slide":30,"severity":"low","rule":"3.2","problem":"주사기 아래 라벨 15px","fix":"data-size 23"},
-{"slide":32,"severity":"medium","rule":"D8","problem":"스포이트 라벨 잘림","fix":"viewBox 300×330, 시험관 왼쪽으로"},
-{"slide":1,"severity":"low","rule":"D8","problem":"표지 범례 'N2O4'가 그림 오른쪽 가장자리에서 흐려짐","fix":"범례를 주사기 왼쪽으로 옮김"},
-{"slide":13,"severity":"medium","rule":"D8","problem":"실험실 수직선의 Q 라벨·K 라벨·눈금 라벨이 겹치고, 기록 표 글이 줄바꿈되어 슬라이드 아래로 넘침","fix":"K 라벨을 기준선 오른쪽 위로, 방향 화살표는 축 아래, 표는 고정 열 너비·짧은 글·최대 4행"},
-{"slide":4,"severity":"low","rule":"T1","problem":"오늘의 흐름이 두 줄로 넘어감","fix":"노드 줄임"},
-{"slide":33,"severity":"low","rule":"T1","problem":"풀이 끝 '몰'이 홀로 줄바꿈","fix":"줄을 나누어 'B는 10−1=9 몰'"}
-],"summary":"자동 점검 0·콘솔 0·motion 0·ask 0. 라벨 크기·잘림·겹침과 실험실 배치를 고쳤고 sheet 모음으로 전체를 두 번 확인했다."}
+{
+ "findings": [
+  {
+   "slide": 6,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "'물의 이동' 라벨이 화면 15px",
+   "fix": "data-size 23"
+  },
+  {
+   "slide": 10,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "스포이트 라벨이 viewBox 위로 잘리고 '4 mL' 등이 16px 미만",
+   "fix": "시험관·스포이트를 아래로 옮기고 viewBox 300×264, 라벨 24"
+  },
+  {
+   "slide": 14,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "'진한 HCl(aq)' 라벨이 그림 오른쪽에서 잘림",
+   "fix": "'진한 염산'으로 줄이고 왼쪽 끝 맞춤"
+  },
+  {
+   "slide": 22,
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "'누름', '시간' 라벨 15.6px",
+   "fix": "data-size 24"
+  },
+  {
+   "slide": 23,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "스스로 평가하기 칩이 아래 안전 영역을 넘침",
+   "fix": "h3를 칩 줄 안의 작은 제목으로 합침"
+  },
+  {
+   "slide": 25,
+   "severity": "medium",
+   "rule": "D21",
+   "problem": "1/2 V 주사기 안 분자가 심하게 겹침",
+   "fix": "주사기 폭 290·높이 270으로 키우고 그림 높이 240"
+  },
+  {
+   "slide": 27,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "반응식 공식 박스가 칸을 넘침",
+   "fix": "공식을 열 밖 전체 폭으로 옮김"
+  },
+  {
+   "slide": 30,
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "주사기 아래 라벨 15px",
+   "fix": "data-size 23"
+  },
+  {
+   "slide": 32,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "스포이트 라벨 잘림",
+   "fix": "viewBox 300×330, 시험관 왼쪽으로"
+  },
+  {
+   "slide": 1,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "표지 범례 'N2O4'가 그림 오른쪽 가장자리에서 흐려짐",
+   "fix": "범례를 주사기 왼쪽으로 옮김"
+  },
+  {
+   "slide": 13,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "실험실 수직선의 Q 라벨·K 라벨·눈금 라벨이 겹치고, 기록 표 글이 줄바꿈되어 슬라이드 아래로 넘침",
+   "fix": "K 라벨을 기준선 오른쪽 위로, 방향 화살표는 축 아래, 표는 고정 열 너비·짧은 글·최대 4행"
+  },
+  {
+   "slide": 4,
+   "severity": "low",
+   "rule": "T1",
+   "problem": "오늘의 흐름이 두 줄로 넘어감",
+   "fix": "노드 줄임"
+  },
+  {
+   "slide": 33,
+   "severity": "low",
+   "rule": "T1",
+   "problem": "풀이 끝 '몰'이 홀로 줄바꿈",
+   "fix": "줄을 나누어 'B는 10−1=9 몰'"
+  },
+  {
+   "slide": 2,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "지도서 답안 교체 후 왼쪽 열 넘침",
+   "fix": "답 문장 줄임 — render 0건"
+  }
+ ],
+ "summary": "자동 점검 0·콘솔 0·motion 0·ask 0. 라벨 크기·잘림·겹침과 실험실 배치를 고쳤고 sheet 모음으로 전체를 두 번 확인했다. / 11/13 지도서 대조 후 S2·S10·S22·S23·S28·S31 sheet 확인, render 0·motion 0·ask 0."
+}
