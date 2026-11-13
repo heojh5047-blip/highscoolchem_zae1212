@@ -18,7 +18,7 @@ window.DECK_LABS = {
     const svg=$('svg'), fig=$('.lab-fig'), g=API.mk('g',{},svg), W=620, X0=84, Y0=226, YT=34;
     let st={f:'C8H18', unit:'g'}, log=[];
     const val=k=>{ const F=FUEL[k], pg=F.H/F.M; return {g:pg, L:pg*F.d, co2:F.nC*44/F.H*1000}; };
-    const sci=v=> v>=1000? Math.round(v).toLocaleString('en-US') : v>=100? v.toFixed(0) : v.toFixed(1);
+    const sci=v=> v.toFixed(1);
     const names={};
     function label(k){ if(!names[k]){ const d=document.createElement('div'); d.className='ov mid'; d.style.cssText='font-size:19px;line-height:1.25;text-align:center'; fig.appendChild(d); names[k]=d; }
       names[k].innerHTML=API.tex(FUEL[k].tex)+'<br>'+FUEL[k].name; return names[k]; }
@@ -28,8 +28,8 @@ window.DECK_LABS = {
       const F=FUEL[st.f], v=val(st.f);
       O('H').textContent=`−${F.H} kJ/mol`;
       O('M').textContent=`${F.M} g/mol · ${F.d} g/L`;
-      O('g').textContent=`${F.H} ÷ ${F.M} = ${v.g.toFixed(1)}`;
-      O('L').textContent=`${v.g.toFixed(1)} × ${F.d} = ${sci(v.L)}`;
+      O('g').textContent=`−${F.H} ÷ ${F.M} = −${v.g.toFixed(1)}`;
+      O('L').textContent=`−${v.g.toFixed(1)} × ${F.d} ≈ −${sci(v.L)}`;
       O('c').textContent=`${v.co2.toFixed(1)} g`;
       let m=`${F.name}(${F.alt?'대체 연료':'화석 연료'}): `;
       if(st.f==='H2') m+='단위 질량당 열은 가장 크지만, 기체라 단위 부피당 열은 매우 작다. 연소 생성물은 물뿐이다.';
@@ -37,7 +37,7 @@ window.DECK_LABS = {
       else m+= `액체라 단위 부피당 열이 크다. 열 1000 kJ을 얻을 때 이산화 탄소 ${v.co2.toFixed(1)} g이 생긴다.`;
       O('msg').textContent=m;
     }
-    const UN={g:['단위 질량당 연소 엔탈피 [kJ/g]',160,40],L:['단위 부피당 연소 엔탈피 [kJ/L]',40000,10000],co2:['열 1000 kJ당 이산화 탄소 [g]',80,20]};
+    const UN={g:['단위 질량당 연소 엔탈피의 크기 [kJ/g]',160,40],L:['단위 부피당 연소 엔탈피의 크기 [kJ/L]',40000,10000],co2:['열 1000 kJ당 이산화 탄소 [g]',80,20]};
     function draw(){
       while(g.firstChild) g.removeChild(g.firstChild);
       const mk=(t,a)=>API.mk(t,a,g), [lab,ymax,tick]=UN[st.unit], y=v=>Y0-(Y0-YT)*Math.min(v,ymax)/ymax;
@@ -55,7 +55,7 @@ window.DECK_LABS = {
     }
     function renderLog(){ const tb=O('log'); tb.innerHTML='';
       log.forEach(r=>{ const v=val(r.f), tr=document.createElement('tr');
-        tr.innerHTML=`<td>${FUEL[r.f].name}</td><td>${v.g.toFixed(1)}</td><td>${sci(v.L)}</td><td>${v.co2.toFixed(1)}</td>`; tb.appendChild(tr); }); }
+        tr.innerHTML=`<td>${FUEL[r.f].name}</td><td>−${v.g.toFixed(1)}</td><td>−${sci(v.L)}</td><td>${v.co2.toFixed(1)}</td>`; tb.appendChild(tr); }); }
     root.querySelectorAll('[data-f]').forEach(b=>b.addEventListener('click',()=>{ st.f=b.dataset.f; show(); }));
     root.querySelectorAll('[data-u]').forEach(b=>b.addEventListener('click',()=>{ st.unit=b.dataset.u; show(); draw(); }));
     $('[data-act="rec"]').addEventListener('click',()=>{ if(log.some(r=>r.f===st.f)){ O('msg').textContent=`${FUEL[st.f].name}은(는) 이미 기록했다. 다른 연료를 골라 보자.`; return; }
