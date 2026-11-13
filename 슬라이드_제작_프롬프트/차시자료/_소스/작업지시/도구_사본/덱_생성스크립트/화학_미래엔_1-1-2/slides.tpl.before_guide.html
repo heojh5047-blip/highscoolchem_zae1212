@@ -1,0 +1,584 @@
+<!-- 화학_미래엔 1-1-2 몰과 물질의 양 — 그림 좌표는 scratchpad 화학_미래엔_1-1-2/gen.py 로 계산해 넣었다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 화학의 언어" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 화학의 언어 › 1. 생활 속 화학과 물질의 양 › 02</div>
+    <h1 class="cm112-h1">몰과<br><span class="acc">물질의 양</span></h1>
+    <p class="sub">셀 수 없이 작은 입자는 어떻게 셀까?</p>
+    <p class="meta">고등학교 화학 18–26쪽</p>
+  </div>
+  {{cover}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 몰과 물질의 양" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12화학01-02]</span>다양한 단위를 몰로 환산할 수 있음을 이해하고, 물질의 양을 몰 단위로 표현할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>물질의 양을 <b>몰</b> 단위로 표현할 수 있다.</li>
+    <li>입자 수, 질량, 기체의 부피 같은 <b>다양한 단위를 몰로 환산</b>할 수 있다.</li>
+    <li>물질의 양을 몰 단위로 나타낼 때의 <b>편리성</b>을 인식할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">몰과 아보가드로수</div><div class="farr">→</div>
+    <div class="fnode hl">몰과 몰질량</div><div class="farr">→</div>
+    <div class="fnode hl">몰과 기체의 부피</div><div class="farr">→</div>
+    <div class="fnode">탐구</div><div class="farr">→</div>
+    <div class="fnode">중단원 마무리</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 몰과 물질의 양 · 도입" data-title="생각 열기: 젤리는 무게로 판다">
+  <h2><span class="tag">생각 열기</span>젤리는 왜 무게를 달아서 팔까?</h2>
+  <p class="f22">"젤리 50개 주세요." — "이 젤리는 무게를 달아서 팔아요."</p>
+  {{s3}}
+  <p class="f22 mt8"><b>Q</b> 원자나 분자처럼 크기가 매우 작은 입자는 어떻게 세는 것이 편리할까?</p>
+  <div class="answer step">→ 일정한 개수의 <b>묶음</b>을 정하고, 그 묶음의 <b>질량이나 부피</b>를 재어 센다.</div>
+</section>
+
+<!-- ════════ 4. 연결: 묶음 단위 ════════ -->
+<section class="slide" data-sec="02 몰과 물질의 양 · 도입" data-title="묶음 단위">
+  <h2><span class="tag alt">연결</span>많은 물건은 묶음 단위로 센다</h2>
+  {{s4}}
+  <p class="f22 mt8"><b>Q</b> 달걀 열 판, 연필 다섯 다스는 각각 몇 개일까?</p>
+  <p class="f22 step">→ 달걀 <span class="ans">300개</span>, 연필 <span class="ans">60자루</span></p>
+  <div class="card tip step mt8"><p class="f21">원자·분자는 매우 작고 가벼워서, 겉보기에 적은 양에도 셀 수 없을 만큼 많은 입자가 들어 있다. → <b>아주 큰 묶음 단위</b>가 필요하다.</p></div>
+</section>
+
+<!-- ════════ 5. 몰과 아보가드로수 ════════ -->
+<section class="slide" data-sec="02 · 몰과 아보가드로수" data-title="몰과 아보가드로수">
+  <h2><span class="no">1</span>몰과 아보가드로수</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22"><mark>몰(mol)은 물질의 양을 나타내는 묶음 단위이다. 1 몰은 입자 $6.02\times10^{23}$개를 뜻하며, 이 수를 아보가드로수라고 한다.</mark></p>
+      <p class="f22 mt12">달걀 1판이 30개이듯, 원자 1 몰은 원자 $6.02\times10^{23}$개이다.</p>
+      <div class="card mt12 cm112-avo"><h3>아보가드로수의 정의는 바뀌었다</h3>
+        <p class="f21"><b>예전</b> 질량수가 12인 탄소(탄소-12, $\ce{^{12}C}$) 정확히 $12\ \text{g}$ 속에 들어 있는 탄소 원자의 수 <span class="small">(1960년대, 측정해서 정하는 값)</span></p>
+        <p class="f21 mt8"><b>지금</b> 2019년부터 국제도량형총회(CGPM)의 새 정의로, 1 몰은 정확히 $6.02214076\times10^{23}$개의 입자이다. 아보가드로 상수는 측정값이 아닌 <b>고정된 상수</b> $N_\mathrm{A}=6.02214076\times10^{23}\ \text{/mol}$이다.</p>
+        <p class="small mt8">수업과 문제에서는 줄여서 $6.02\times10^{23}$을 쓴다.</p>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 540px">
+      {{s5}}
+      <div class="card mt8"><p class="f21"><b>아보가드로</b>(1776~1856, 이탈리아) — 1811년, 같은 온도와 압력에서 같은 부피의 기체 속 분자 수가 같다고 주장했다. 후대 과학자들이 1 몰의 입자 수를 재고 그의 이름을 붙였다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 해 보기: 1 몰의 개수 체험하기 ════════ -->
+<section class="slide" data-sec="02 · 해 보기" data-title="해 보기: 1 몰의 개수 체험하기">
+  <h2><span class="tag">해 보기</span>1 몰의 개수 체험하기 <span class="small c-muted">탐구 능력 | 문제 해결 능력</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 280px">{{s6}}<p class="small">준비물: 동전 모양 초콜릿, 자, 계산기</p></div>
+    <div class="col">
+      <ol class="cm112-ol">
+        <li>초콜릿 10개를 쌓고 높이를 재어 보자. <span class="step c-muted">(예) <span class="ans">2.5 cm</span></span></li>
+        <li>초콜릿 1개의 두께는? <span class="step">$\dfrac{2.5\ \text{cm}}{10}=$ <span class="ans">$0.25\ \text{cm}$</span></span></li>
+        <li>초콜릿 1 몰을 쌓으면 높이는 몇 km일까? <span class="step">$0.25\ \text{cm}\times6.02\times10^{23}=1.505\times10^{23}\ \text{cm}=$ <span class="ans">$1.505\times10^{18}\ \text{km}$</span></span></li>
+        <li>모둠별로 1 몰의 개수를 체험할 수 있는 활동을 만들어 발표해 보자.</li>
+      </ol>
+      <div class="answer step">지구–태양 거리(약 $1.5\times10^{8}\ \text{km}$)의 약 <b>100억 배</b> — 1 몰은 상상하기 어려울 만큼 큰 수!</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 몰과 입자 수 ════════ -->
+<section class="slide" data-sec="02 · 몰과 아보가드로수" data-title="몰과 입자 수">
+  <h2><span class="no">1</span>몰과 물질을 이루는 입자 수</h2>
+  <p class="f22">모든 물질 1 몰에는 그 물질을 이루는 입자가 $6.02\times10^{23}$개 들어 있다. → 물질의 양(mol)을 알면 입자 수를 안다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 600px">{{s7}}</div>
+    <div class="col">
+      <p class="f22">탄소 $\ce{C}$ 1 몰 = 탄소 <b>원자</b> $6.02\times10^{23}$개</p>
+      <p class="f22 mt8">수소 $\ce{H2}$ 1 몰 = 수소 <b>분자</b> $6.02\times10^{23}$개</p>
+      <p class="f22 mt8"><b>Q</b> 수소 $\ce{H2}$ 1 몰에 든 수소 원자는 몇 개일까?</p>
+      <p class="f22 step">→ 분자 1개에 원자 2개 → <span class="ans">$1.204\times10^{24}$개</span></p>
+    </div>
+  </div>
+  <div class="formula sm step">입자 수 $=$ 물질의 양(mol) $\times\ 6.02\times10^{23}$ 개/mol<span class="unit">몰을 쓸 때는 무엇(원자·분자)의 몰인지 밝힌다.</span></div>
+</section>
+
+<!-- ════════ 8. 확인하기 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 몰과 아보가드로수" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>몰과 아보가드로수</h2>
+  <ol class="cm112-ox mt12">
+    <li class="f22">1 몰은 $6.02\times10^{23}$개의 입자를 뜻하며, 이 수를 <span class="blank"><span class="step">아보가드로수</span></span>(이)라고 한다.</li>
+    <li class="f22">이산화 탄소($\ce{CO2}$) 1 몰에 포함된 산소 원자 수를 구해 보자.
+      <p class="f22 mt8 step">→ $\ce{CO2}$ 분자 1개에 산소 원자 2개 → 산소 원자 2 몰 → <span class="ans">$1.204\times10^{24}$개</span></p></li>
+  </ol>
+  <div class="cm112-fig mt16">{{s8}}</div>
+</section>
+
+<!-- ════════ 9. 연결: 질량으로 개수 세기 ════════ -->
+<section class="slide" data-sec="02 · 몰과 몰질량" data-title="질량으로 개수 세기">
+  <h2><span class="tag alt">연결</span>세지 않고 질량으로 개수를 안다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{s9}}</div>
+    <div class="col">
+      <p class="f22">같은 크기의 나사못을 수백 개씩 포장할 때는 하나씩 세지 않는다.</p>
+      <p class="f22 mt12"><b>Q</b> 나사못 100개가 50 g이라면, 나사못 500 g은 몇 개일까?</p>
+      <p class="f22 step">→ $\dfrac{500\ \text{g}}{50\ \text{g}}\times100=$ <span class="ans">1000개</span></p>
+      <div class="answer step mt12">원자·분자도 <b>1 몰의 질량</b>을 알면, 질량을 재어 입자 수를 알 수 있다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 몰질량 ════════ -->
+<section class="slide" data-sec="02 · 몰과 몰질량" data-title="몰질량">
+  <h2><span class="no">2</span>몰질량</h2>
+  <p class="f22"><mark>물질 1 몰의 질량을 몰질량이라고 하며, 단위는 g/mol로 나타낸다.</mark></p>
+  <div class="row mt12">
+    <div class="col" style="flex:0 0 400px">
+      <table class="tight cm112-mm"><thead><tr><th>원자</th><th>몰질량(g/mol)</th><th>원자</th><th>몰질량(g/mol)</th></tr></thead><tbody>
+        <tr><td>$\ce{H}$</td><td>1</td><td>$\ce{Na}$</td><td>23</td></tr><tr><td>$\ce{C}$</td><td>12</td><td>$\ce{Mg}$</td><td>24.3</td></tr><tr><td>$\ce{N}$</td><td>14</td><td>$\ce{S}$</td><td>32</td></tr><tr><td>$\ce{O}$</td><td>16</td><td>$\ce{Cl}$</td><td>35.5</td></tr></tbody></table>
+    </div>
+    <div class="col">
+      {{s10}}
+      <p class="f22 mt8"><b>Q</b> 같은 1 몰인데 질량이 다른 까닭은?</p>
+      <p class="f22 step">→ 같은 1 몰이라도 물질을 이루는 <b>원자의 종류와 수</b>에 따라 몰질량이 달라진다.</p>
+    </div>
+  </div>
+  <div class="note puzzle mt12 cm112-fw"><b>추가 상식 — 원자량·분자량·화학식량</b> <b>원자량</b>: 탄소-12 원자의 질량을 12로 정하고 이를 기준으로 나타낸 원자의 상대적 질량(예: $\ce{H}$ 1, $\ce{O}$ 16). <b>분자량</b>: 분자를 이루는 원자들의 원자량의 합(예: $\ce{H2O}$ 18). <b>화학식량</b>: 화학식을 이루는 원자들의 원자량의 합 — <b>이온 결정</b>($\ce{NaCl}$ 등)은 분자가 따로 없으므로 분자량이라 하지 않고 화학식량($\ce{NaCl}$ 58.5)으로 나타낸다.<br><b>주의</b> 원자량·분자량·화학식량은 상대적인 값이라 <b>단위가 없다</b>. 몰질량은 수치는 같지만 단위 g/mol이 붙는다($\ce{H2O}$의 분자량 18, 몰질량 $18\ \text{g/mol}$) — 혼동하지 말자.</div>
+</section>
+
+<!-- ════════ 11. 분자의 몰질량 ════════ -->
+<section class="slide" data-sec="02 · 몰과 몰질량" data-title="분자의 몰질량">
+  <h2><span class="no">2</span>분자의 몰질량 구하기</h2>
+  <p class="f22">분자의 몰질량은 분자를 이루는 원자의 몰질량을 모두 더해 구한다.</p>
+  <div class="row mt8 cm112-mrow">
+    <div class="col" style="flex:0 0 190px">{{s11a}}</div>
+    <div class="col"><div class="formula sm">$\ce{H2O}$의 몰질량 $=2\times1\ \text{g/mol}+16\ \text{g/mol}=18\ \text{g/mol}$</div></div>
+  </div>
+  <div class="row cm112-mrow">
+    <div class="col" style="flex:0 0 190px">{{s11b}}</div>
+    <div class="col"><div class="formula sm">$\ce{CO2}$의 몰질량 $=12\ \text{g/mol}+2\times16\ \text{g/mol}=44\ \text{g/mol}$</div></div>
+  </div>
+  <p class="f22 mt8"><b>Q</b> 다음 물질의 몰질량은?</p>
+  <p class="f22">(1) $\ce{O2}$ <span class="blank"><span class="step">32 g/mol</span></span> &nbsp; (2) $\ce{CH4}$ <span class="blank"><span class="step">16 g/mol</span></span> &nbsp; (3) $\ce{NH3}$ <span class="blank"><span class="step">17 g/mol</span></span></p>
+</section>
+
+<!-- ════════ 12. 여러 가지 물질 1 몰 ════════ -->
+<section class="slide" data-sec="02 · 몰과 몰질량" data-title="여러 가지 물질 1 몰">
+  <h2><span class="no">2</span>여러 가지 물질 1 몰</h2>
+  {{s12}}
+  <p class="f22"><b>Q</b> 모두 1 몰인데 질량과 차지하는 부피가 다른 까닭은 무엇일까?</p>
+  <p class="f22 step">→ 입자 수는 모두 $6.02\times10^{23}$개로 같지만, <b>입자 1개의 질량</b>과 <b>상태(입자 사이 거리)</b>가 다르기 때문이다.</p>
+</section>
+
+<!-- ════════ 13. 분자로 존재하지 않는 화합물 ════════ -->
+<section class="slide" data-sec="02 · 몰과 몰질량" data-title="염화 나트륨의 몰질량">
+  <h2><span class="no">2</span>분자로 존재하지 않는 화합물의 몰질량</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">염화 나트륨($\ce{NaCl}$)처럼 분자로 존재하지 않는 화합물은 <b>화학식</b>을 이루는 원자의 몰질량을 더해 구한다.</p>
+      <p class="f22 mt12"><b>Q</b> $\ce{NaCl}$의 몰질량은?</p>
+      <div class="formula sm step">$\ce{NaCl}$의 몰질량 $=23\ \text{g/mol}+35.5\ \text{g/mol}=58.5\ \text{g/mol}$</div>
+      <div class="note mt12"><b>연계</b> 중학교 과학 '물질의 구성'에서 화합물을 화학식으로 나타내는 방법을 배웠다.</div>
+      <p class="small mt8">나트륨과 칼륨은 국제순수·응용화학연합(IUPAC) 이름인 '소듐', '포타슘'으로 부르기도 한다.</p>
+    </div>
+    <div class="col" style="flex:0 0 340px">{{s13}}</div>
+  </div>
+</section>
+
+<!-- ════════ 14. 몰과 질량, 입자 수 ════════ -->
+<section class="slide" data-sec="02 · 몰과 몰질량" data-title="몰과 질량, 입자 수">
+  <h2><span class="no">2</span>몰과 질량, 입자 수의 관계</h2>
+  <p class="f22">몰질량을 이용하면 질량으로부터 물질의 양(mol)을 구하고, 이로부터 입자 수를 알 수 있다.</p>
+  {{s14}}
+  <div class="formula step">$\text{몰(mol)}=\dfrac{\text{질량(g)}}{\text{몰질량(g/mol)}}$<span class="unit">질량 $=$ 몰 $\times$ 몰질량</span></div>
+</section>
+
+<!-- ════════ 15. 연습 해 보기 ════════ -->
+<section class="slide" data-sec="02 · 연습 해 보기" data-title="연습 해 보기: 에탄올 23 g">
+  <h2><span class="tag ex">연습 해 보기</span>에탄올 23 g 속 분자 수</h2>
+  <p class="f22">에탄올($\ce{C2H5OH}$, 몰질량 46 g/mol) 23 g에 들어 있는 에탄올 분자 수를 구해 보자.</p>
+  <div class="row mt8">
+    <div class="col">
+      <h3>풀이 따라가기</h3>
+      <p class="f22 step"><b>1단계</b> 질량과 몰질량으로 양(mol)을 구한다. $\dfrac{23\ \text{g}}{46\ \text{g/mol}}=0.5\ \text{mol}$</p>
+      <p class="f22 step mt8"><b>2단계</b> 양(mol)으로 분자 수를 구한다. $0.5\ \text{mol}\times6.02\times10^{23}\ \text{개/mol}=3.01\times10^{23}$개</p>
+    </div>
+    <div class="col stack" style="flex:0 0 360px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+  <div class="answer step">답 $3.01\times10^{23}$개</div>
+</section>
+
+<!-- ════════ 16. 직접 해 보기 ════════ -->
+<section class="slide" data-sec="02 · 연습 해 보기" data-title="직접 해 보기: 물 3.6 g">
+  <h2><span class="tag ex">직접 해 보기</span>물 3.6 g 속 수소 원자 수</h2>
+  <p class="f22">물($\ce{H2O}$) 3.6 g에 들어 있는 수소($\ce{H}$) 원자 수를 구해 보자. (H 1 g/mol, O 16 g/mol)</p>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f22 step"><b>1</b> $\ce{H2O}$의 몰질량 18 g/mol → $\dfrac{3.6\ \text{g}}{18\ \text{g/mol}}=0.2\ \text{mol}$</p>
+      <p class="f22 step mt8"><b>2</b> 물 분자 1개에 수소 원자 2개 → 수소 원자 $0.2\times2=0.4\ \text{mol}$</p>
+      <p class="f22 step mt8"><b>3</b> $0.4\ \text{mol}\times6.02\times10^{23}\ \text{개/mol}$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 360px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+  <div class="answer step">답 $2.408\times10^{23}$개</div>
+</section>
+
+<!-- ════════ 17. 확인하기 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 몰질량" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>몰과 몰질량</h2>
+  <ol class="cm112-ox mt12">
+    <li class="f22">물질 1 몰의 질량인 <span class="blank"><span class="step">몰질량</span></span>을/를 이용하면 물질의 질량으로부터 양(mol)을 구할 수 있다.</li>
+    <li class="f22">메테인($\ce{CH4}$) 0.5 몰에 들어 있는 수소($\ce{H}$) 원자의 질량은 몇 g인가?
+      <p class="f22 mt8 step">→ 분자 1개에 H 원자 4개 → H 원자 $0.5\times4=2\ \text{mol}$ → $2\ \text{mol}\times1\ \text{g/mol}=$ <span class="ans">2 g</span></p></li>
+  </ol>
+  <div class="cm112-fig mt16">{{s17}}</div>
+</section>
+
+<!-- ════════ 18. 몰과 기체의 부피 ════════ -->
+<section class="slide" data-sec="02 · 몰과 기체의 부피" data-title="아보가드로 법칙과 22.4 L">
+  <h2><span class="no">3</span>몰과 기체의 부피</h2>
+  <p class="f22">기체는 질량보다 부피를 재기가 더 쉽다. <mark>아보가드로 법칙: 같은 온도와 압력에서 기체의 종류와 관계없이 같은 부피에 든 기체 분자 수는 같다.</mark></p>
+  {{s18}}
+  <div class="answer step">0 °C, 1 기압에서 기체 1 몰의 부피는 기체의 종류와 관계없이 <b>22.4 L</b>이다.</div>
+  <p class="small mt8">연계 — 『물질과 에너지』 '물질의 세 가지 상태'에서 몰과 기체 부피의 정량적인 관계를 더 배운다.</p>
+</section>
+
+<!-- ════════ 19. 기체의 부피와 몰 ════════ -->
+<section class="slide" data-sec="02 · 몰과 기체의 부피" data-title="기체의 부피와 몰">
+  <h2><span class="no">3</span>몰과 기체의 부피, 입자 수의 관계</h2>
+  <p class="f22">0 °C, 1 기압에서는 기체의 부피로부터 기체의 양(mol)을 구하고, 이로부터 입자 수를 알 수 있다.</p>
+  {{s19}}
+  <p class="f22"><b>Q</b> 0 °C, 1 기압에서 다음 기체의 양(mol)은?</p>
+  <p class="f22">(1) $\ce{CH4}$ 22.4 L <span class="blank"><span class="step">1 몰</span></span> &nbsp; (2) $\ce{H2}$ 2.24 L <span class="blank"><span class="step">0.1 몰</span></span> &nbsp; (3) $\ce{N2}$ 5.6 L <span class="blank"><span class="step">0.25 몰</span></span></p>
+</section>
+
+<!-- ════════ 20. 확인하기 S6 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="물 1 몰도 22.4 L일까?">
+  <h2><span class="tag q">확인하기</span>0 °C, 1 기압에서 물 1 몰도 22.4 L일까?</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card cm112-opt"><p class="f22"><b>(가)</b> 그렇다. 1 몰이면 무엇이든 22.4 L이다.</p></div>
+      <div class="card cm112-opt mt12"><p class="f22"><b>(나)</b> 아니다. 22.4 L는 기체에만 해당한다.</p></div>
+      <p class="f21 step mt12">0 °C, 1 기압에서 물은 기체가 아니다. 물 1 몰(18 g)은 약 18 mL로, 22.4 L의 약 $\dfrac{1}{1200}$이다.</p>
+    </div>
+    <div class="col" style="flex:0 0 440px">{{s20}}</div>
+  </div>
+  <div class="answer step">(나) — 22.4 L는 0 °C, 1 기압의 <b>기체</b> 1 몰에만 쓴다.</div>
+</section>
+
+<!-- ════════ 21. 해 보기: 교실 기체 ════════ -->
+<section class="slide" data-sec="02 · 해 보기" data-title="해 보기: 교실에 채워진 기체의 양">
+  <h2><span class="tag">해 보기</span>교실에 채워진 기체의 양(mol) 구하기 <span class="small c-muted">탐구 능력 | 문제 해결 능력</span></h2>
+  <div class="row">
+    <div class="col">
+      <p class="small">준비물: 스마트 기기(길이 측정 애플리케이션), 계산기</p>
+      <ol class="cm112-ol">
+        <li>교실의 가로·세로·높이를 재어 교실의 부피가 몇 L인지 구해 보자. <span class="step c-muted">(예) 9 m × 8 m × 3 m = <span class="ans">$216\ \text{m}^3=216000\ \text{L}$</span></span></li>
+        <li>0 °C, 1 기압에서 교실에 채워진 공기의 양(mol)은? <span class="step">$\dfrac{216000\ \text{L}}{22.4\ \text{L/mol}}\approx$ <span class="ans">$9.64\times10^{3}\ \text{mol}$</span></span></li>
+        <li>교실의 기체가 모두 질소($\ce{N2}$, 28 g/mol)라면 질량은? <span class="step">$9.64\times10^{3}\ \text{mol}\times28\ \text{g/mol}\approx$ <span class="ans">$2.7\times10^{5}\ \text{g}$</span> (약 270 kg)</span></li>
+      </ol>
+    </div>
+    <div class="col" style="flex:0 0 330px">
+      <div class="note"><b>부피 단위의 환산</b><br>$1\ \text{cm}^3=1\ \text{mL}=0.001\ \text{L}$<br>$1\ \text{m}^3=1000000\ \text{cm}^3=1000\ \text{L}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 정리 지도 ════════ -->
+<section class="slide" data-sec="02 · 몰과 물질의 양" data-title="몰과 입자 수·질량·부피">
+  <h2><span class="no">4</span>몰과 입자 수, 질량, 기체의 부피</h2>
+  {{s22}}
+  <div class="formula step">$\text{몰(mol)}=\dfrac{\text{입자 수}}{6.02\times10^{23}\ \text{개/mol}}=\dfrac{\text{질량(g)}}{\text{몰질량(g/mol)}}=\dfrac{\text{기체의 부피(L)}}{22.4\ \text{L/mol}}$<span class="unit">기체의 부피는 0 °C, 1 기압일 때</span></div>
+  <p class="small">질량 ↔ 부피, 질량 ↔ 입자 수는 몰을 거쳐 바꾼다. (교과서 모의실험은 이 지도와 다음 확인하기로 대신한다.)</p>
+</section>
+
+<!-- ════════ 23. 확인하기 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 기체의 부피" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>몰과 기체의 부피</h2>
+  <ol class="cm112-ox mt12">
+    <li class="f22">0 °C, 1 기압에서 기체 1 몰의 부피는 <span class="blank"><span class="step">22.4</span></span> L이다.</li>
+    <li class="f22">0 °C, 1 기압에서 이산화 탄소($\ce{CO2}$) 기체 11.2 L의 질량은 몇 g인가? (단, $\ce{CO2}$의 몰질량은 44 g/mol이다.)
+      <p class="f22 mt8 step">→ $\dfrac{11.2\ \text{L}}{22.4\ \text{L/mol}}=0.5\ \text{mol}$ → $0.5\ \text{mol}\times44\ \text{g/mol}=$ <span class="ans">22 g</span></p></li>
+  </ol>
+  <div class="cm112-fig mt16">{{s23}}</div>
+</section>
+
+<!-- ════════ 24. 탐구: 목표·준비물·안전 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 목표와 준비">
+  <h2><span class="tag">탐구</span>다양한 물질의 몰질량 탐색하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[탐구]</span>다양한 물질의 몰질량을 탐색하고, 특정한 몰수에 해당하는 물질의 질량 측정하기 <span class="small">(12화학01-02)</span></div>
+  <div class="row mt8">
+    <div class="col">
+      <h3>목표</h3>
+      <p class="f21">몰 단위의 의미와 크기를 이해하고, 특정한 양(mol)에 해당하는 물질의 질량을 측정할 수 있다.</p>
+      <table class="tight cm112-var mt8">
+        <tr><th>조작 변인</th><td class="l">물질의 종류, 물질의 양(mol)</td></tr>
+        <tr><th>종속 변인</th><td class="l">측정할 질량</td></tr>
+        <tr><th>통제 변인</th><td class="l">같은 전자저울, 영점을 맞춘 용기</td></tr>
+      </table>
+      <p class="small mt8">준비물: 탄소 가루, 구리판, 물, 염화 나트륨, 포도당, 에탄올, 전자저울, 비커, 페트리 접시, 약숟가락, 금속용 가위, 실험복, 보안경, 실험용 고무장갑, 안전 장갑</p>
+    </div>
+    <div class="col" style="flex:0 0 420px">
+      <div class="note q"><b>안전</b>
+        <ul class="cm112-ul">
+          <li>실험복, 보안경, 실험용 고무장갑을 착용한다.</li>
+          <li>시약끼리 섞이지 않게 약숟가락을 따로 쓴다.</li>
+          <li>남은 탄소 가루는 고체 폐기물 수집 용기에, 구리판은 금속 고체 폐기물 수집 용기에 버린다.</li>
+          <li>남은 에탄올은 유기계 폐수통에 버린다.</li>
+        </ul></div>
+      <p class="small mt8">도움 자료: 실험실 안전 수칙(8–9쪽), 실험 기구 사용 방법(174–175쪽), 주요 시약별 주의 사항(176–177쪽)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 탐구: 과정 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 과정">
+  <h2><span class="tag">탐구</span>과정 <span class="small c-muted">탐구 수행 · 결론 도출 | 실험 영상</span></h2>
+  <div class="stages">
+    <div class="stage"><h3>① 몰질량 찾기</h3><div data-anim="pop" data-o="110,55" data-dur=".6" data-ease="back">{{s25a}}</div><p>탄소, 구리, 물, 염화 나트륨, 포도당, 에탄올의 몰질량을 자료에서 찾거나 원자의 몰질량으로 계산한다.</p></div>
+    <div class="stage"><h3>② 물질과 양 정하기</h3><div data-anim="pop" data-o="110,55" data-dur=".6" data-delay=".2" data-ease="back">{{s25b}}</div><p>모둠별로 질량을 잴 물질과 그 양(mol)을 정하고, 필요한 질량을 계산한다.</p></div>
+    <div class="stage"><h3>③ 질량 측정</h3><div data-anim="pop" data-o="110,55" data-dur=".6" data-delay=".4" data-ease="back">{{s25c}}</div><p>고체는 페트리 접시, 액체는 비커에 담는다. 영점을 맞춘 저울로 계산한 질량만큼 잰다. 구리판은 금속용 가위로 자른다.</p></div>
+  </div>
+  <div class="row mt12">
+    <div class="col"><div class="note puzzle">"포도당 0.1 몰의 질량인 18 g을 측정해 보자." — "포도당 0.1 몰의 입자 수는 $6.02\times10^{22}$개야."</div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="실험실: 몰질량과 질량 측정">
+  <h2><span class="tag">탐구</span>실험실: 정한 양(mol)만큼 질량 재기</h2>
+  <div class="lab" data-lab="cm112mass">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="cm112-seg" data-set="sub"><button class="btn on" data-s="C">탄소</button><button class="btn" data-s="Cu">구리</button><button class="btn" data-s="H2O">물</button><button class="btn" data-s="NaCl">염화 나트륨</button><button class="btn" data-s="Glu">포도당</button><button class="btn" data-s="EtOH">에탄올</button></div>
+      <div class="ctl"><div class="lbl"><span>물질의 양</span><output data-o="n"></output></div><input type="range" min="1" max="20" step="1" value="2" data-i="n" aria-label="물질의 양(mol)"></div>
+      <table class="readout cm112-read">
+        <tr><th>몰질량</th><td><output data-o="M"></output></td></tr>
+        <tr class="hl"><th>필요한 질량</th><td><output data-o="w"></output></td></tr>
+      </table>
+      <div class="cm112-seg mt8"><button class="btn" data-act="tare">영점 맞추기</button><button class="btn cm112-act" data-act="pour">덜어 담기</button><button class="btn" data-act="rec">측정 기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind cm112-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 610px">
+      <div class="lab-fig" style="width:610px;height:300px">
+        <svg viewBox="0 0 610 300" width="610" height="300" aria-label="전자저울 위 용기에 물질을 덜어 담고, 오른쪽 확대 원에 입자 모형을 보이는 실험실"></svg>
+        <div class="ov" data-ov="disp" style="font-size:28px;font-weight:700;color:#9FF0C0"></div>
+        <div class="ov" data-ov="f" style="font-size:20px;font-weight:700"></div>
+        <div class="ov" data-ov="mm" style="font-size:19px;transform:none"></div>
+        <div class="ov" data-ov="N" style="font-size:20px"></div>
+      </div>
+      <table class="tight cm112-log mt8"><thead><tr><th>물질</th><th>몰질량</th><th>양(mol)</th><th>계산(g)</th><th>저울(g)</th><th>입자 수(개)</th><th>영점</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 결과 및 정리 1 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 및 정리 1">
+  <h2><span class="tag">탐구</span>결과 및 정리</h2>
+  <p class="f22">1. 물질의 양(mol)과 측정한 질량을 쓰고, 각 물질의 입자 수를 비교해 보자. <span class="small c-muted">(0.1 몰로 정했을 때의 예)</span></p>
+  <table class="tight mt8 cm112-res">
+    <tr><th>물질</th><th>몰질량(g/mol)</th><th>양(mol)</th><th>질량(g)</th><th>입자 수(개)</th></tr>
+    <tr><td>탄소 $\ce{C}$</td><td>12</td><td>0.1</td><td><span class="blank"><span class="step" data-g="r1">1.2</span></span></td><td><span class="blank"><span class="step" data-g="r1">$6.02\times10^{22}$</span></span></td></tr>
+    <tr><td>구리 $\ce{Cu}$</td><td>63.5</td><td>0.1</td><td><span class="blank"><span class="step" data-g="r2">6.35</span></span></td><td><span class="blank"><span class="step" data-g="r2">$6.02\times10^{22}$</span></span></td></tr>
+    <tr><td>물 $\ce{H2O}$</td><td>18</td><td>0.1</td><td><span class="blank"><span class="step" data-g="r3">1.8</span></span></td><td><span class="blank"><span class="step" data-g="r3">$6.02\times10^{22}$</span></span></td></tr>
+    <tr><td>염화 나트륨 $\ce{NaCl}$</td><td>58.5</td><td>0.1</td><td><span class="blank"><span class="step" data-g="r4">5.85</span></span></td><td><span class="blank"><span class="step" data-g="r4">$6.02\times10^{22}$</span></span></td></tr>
+    <tr><td>포도당 $\ce{C6H12O6}$</td><td>180</td><td>0.1</td><td><span class="blank"><span class="step" data-g="r5">18</span></span></td><td><span class="blank"><span class="step" data-g="r5">$6.02\times10^{22}$</span></span></td></tr>
+    <tr><td>에탄올 $\ce{C2H5OH}$</td><td>46</td><td>0.1</td><td><span class="blank"><span class="step" data-g="r6">4.6</span></span></td><td><span class="blank"><span class="step" data-g="r6">$6.02\times10^{22}$</span></span></td></tr>
+  </table>
+  <div class="answer step mt8">같은 양(mol)이면 입자 수가 같고, 질량은 몰질량에 비례한다.</div>
+</section>
+
+<!-- ════════ 28. 결과 및 정리 2·3 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 및 정리 2·3">
+  <h2><span class="tag">탐구</span>결론 도출과 스스로 평가하기</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">2. 물질의 입자 수를 구하려고 질량을 측정하는 까닭은 무엇일까?</p>
+      <p class="f21 step cm112-a">→ 입자는 너무 작아 셀 수 없지만, 질량은 저울로 잴 수 있고 몰질량으로 나누면 양(mol), 곧 입자 수를 알 수 있기 때문이다.</p>
+      <p class="f22 mt12">3. 여섯 물질 중 같은 질량에 든 물질의 양(mol)이 가장 많은 것과 가장 적은 것은 무엇일까?</p>
+      <p class="f21 step cm112-a">→ 몰 $=$ 질량 $\div$ 몰질량이므로, 몰질량이 가장 작은 <b>탄소</b>(12 g/mol)가 가장 많고, 가장 큰 <b>포도당</b>(180 g/mol)이 가장 적다.</p>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <div class="card"><h3>스스로 평가하기</h3>
+        <div class="chips col1 mt8">
+          <button class="chk">[지식·이해] 정한 물질의 양(mol)을 질량으로 환산했는가?</button>
+          <button class="chk">[과정·기능] 특정 양(mol)에 해당하는 질량을 측정했는가?</button>
+          <button class="chk">[가치·태도] 몰질량이 물질의 양을 몰로 나타내는 데 유용함을 인식했는가?</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 몰의 편리성 ════════ -->
+<section class="slide" data-sec="02 · 몰과 물질의 양" data-title="몰은 왜 편리할까?">
+  <h2><span class="no">4</span>몰로 나타내면 무엇이 편리할까?</h2>
+  <div class="flow">
+    <div class="fnode">실제로 재는 것<br>질량 · 부피</div><div class="farr">→</div>
+    <div class="fnode hl">몰(mol)로 바꿈</div><div class="farr">→</div>
+    <div class="fnode">입자 수를 앎<br>(반응은 입자 사이에서)</div>
+  </div>
+  <p class="f22 mt12">화학 반응은 물질을 이루는 입자 사이에서 일어나므로, 측정한 질량·부피를 몰로 바꾸어 입자 수를 아는 것이 중요하다. 그래서 과학·공학·의학에서는 몰을 <b>표준 단위</b>로 쓴다.</p>
+  <p class="f22 mt12"><b>Q</b> 수소 2 g과 산소 2 g을 반응시키면 물 4 g이 생길까?</p>
+  <p class="f21 step">→ 질량은 같아도 양(mol)이 다르다. 수소 2 g은 1 몰, 산소 2 g은 $\dfrac{1}{16}$ 몰이다.</p>
+  <div class="answer step">물은 4 g이 되지 않는다 — 반응은 질량이 아니라 <b>입자 수(몰)</b>에 맞춰 일어난다. (2-02에서 계산)</div>
+</section>
+
+<!-- ════════ 30. 소단원 마무리 ════════ -->
+<section class="slide" data-sec="02 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>몰을 찾아 알리기</h2>
+  <div class="row stretch">
+    <div class="col">
+      <div class="card"><h3>창의력 키우기</h3>
+        <p class="f21">과학, 공학, 의학 분야에서 몰이 활용되는 예를 찾아 발표해 보자.</p>
+        <p class="f21 step mt8 c-muted">예) 혈액 검사의 포도당 농도(mmol/L), 약의 성분 양, 반도체 공정에 넣는 기체의 양</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>디지털 소양 키우기</h3>
+        <p class="f21">아보가드로수의 $10^{23}$을 따서 <b>10월 23일</b>을 '몰의 날'로 기념하기도 한다. '몰의 날'을 안내하는 카드 뉴스를 만들어 공유 플랫폼에 올려 보자.</p>
+        <p class="f21 step mt8 c-muted">예) ① 몰의 날은 언제? ② 1 몰은 몇 개? ③ 1 몰이 얼마나 큰지 비유 ④ 오늘 해 볼 일</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 포트폴리오 이야기 ════════ -->
+<section class="slide" data-sec="02 · 포트폴리오 이야기" data-title="포트폴리오 이야기: 아보가드로수">
+  <h2><span class="tag">포트폴리오 이야기</span>새롭게 측정한 아보가드로수 <span class="small c-muted">최신 과학</span></h2>
+  {{s31}}
+  <p class="f21">1960년대에는 아보가드로수를 '탄소-12 12 g에 든 탄소 원자 수'로 정했다. 그러나 질량의 기준인 국제 킬로그램 원기의 무게가 조금씩 줄어 아보가드로수도 흔들렸다. 화학·물리학·재료 공학·기계 공학의 과학자들이 함께 규소 구로 원자 수를 재었고, 2019년 아보가드로수는 정해진 값을 가진 상수가 되었다.</p>
+  <div class="note puzzle mt8"><b>활동하기 · 조사</b> '아보가드로 프로젝트'가 무엇인지, 세계의 과학자들이 어떻게 협력했는지 조사해 보자.</div>
+</section>
+
+<!-- ════════ 32. 중단원 마무리 04 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 04">
+  <h2><span class="tag q">중단원 마무리 04</span>물질의 양 비교</h2>
+  <p class="f22">물질의 양(mol)이 가장 큰 것은?</p>
+  <div class="row">
+    <div class="col">
+      <div class="choices cm112-c1"><span>① 탄소($\ce{C}$) 1 몰</span><span>② 수소($\ce{H2}$) 2 몰</span><span>③ 염화 나트륨($\ce{NaCl}$) 0.5 몰</span><span>④ 마그네슘($\ce{Mg}$) 원자 $3.01\times10^{23}$개</span><span>⑤ 이산화 탄소($\ce{CO2}$) 분자 $1.806\times10^{23}$개</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 420px"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ②</b> <span class="small">④ 0.5 몰, ⑤ $\dfrac{1.806\times10^{23}}{6.02\times10^{23}}=0.3$ 몰</span></div>
+</section>
+
+<!-- ════════ 33. 중단원 마무리 05 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 05">
+  <h2><span class="tag q">중단원 마무리 05</span>몰질량</h2>
+  <p class="f22">물질의 몰질량으로 옳지 않은 것은? (단, H, C, O의 몰질량은 각각 1 g/mol, 12 g/mol, 16 g/mol이다.)</p>
+  <div class="row">
+    <div class="col">
+      <div class="choices cm112-c1"><span>① 수소($\ce{H2}$) – 2 g/mol</span><span>② 물($\ce{H2O}$) – 18 g/mol</span><span>③ 산소($\ce{O2}$) – 16 g/mol</span><span>④ 탄소($\ce{C}$) – 12 g/mol</span><span>⑤ 메테인($\ce{CH4}$) – 16 g/mol</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 420px"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ③</b> <span class="small">$\ce{O2}$의 몰질량 $=2\times16=32$ g/mol</span></div>
+</section>
+
+<!-- ════════ 34. 중단원 마무리 06 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 06">
+  <h2><span class="tag q">중단원 마무리 06</span>1 몰이 아닌 것</h2>
+  <p class="f22">물질의 양이 1 몰이 아닌 것은? (단, H, N, O의 몰질량은 각각 1 g/mol, 14 g/mol, 16 g/mol이다.)</p>
+  <div class="row">
+    <div class="col">
+      <div class="choices cm112-c1"><span>① 물($\ce{H2O}$) 18 g에 들어 있는 물 분자 수</span><span>② 수소($\ce{H2}$) 1 g에 들어 있는 수소 원자 수</span><span>③ 질소($\ce{N2}$) 28 g에 들어 있는 질소 분자 수</span><span>④ 암모니아($\ce{NH3}$) 17 g에 들어 있는 수소 원자 수</span><span>⑤ 이산화 질소($\ce{NO2}$) 46 g에 들어 있는 질소 원자 수</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 360px"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ④</b> <span class="small">$\ce{NH3}$ 17 g = 1 몰 → 수소 원자 3 몰 (② 0.5 몰 × 2 = 1 몰)</span></div>
+</section>
+
+<!-- ════════ 35. 중단원 마무리 07 서술형 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 07 (서술형)">
+  <h2><span class="tag q">중단원 마무리 07</span>서술형 — 처방전</h2>
+  <div class="row">
+    <div class="col">
+      <table class="tight cm112-rx"><tr><th>처방 의약품 이름</th><th>1회 투약량</th><th>1일 투약 횟수</th><th>총 투약 일수</th></tr>
+        <tr><td>아세틸살리실산</td><td>180 mg</td><td>3회</td><td>3일</td></tr></table>
+      <p class="f22 mt8">처방된 전체 아세틸살리실산($\ce{C9H8O4}$)에 포함된 산소($\ce{O}$) 원자의 양(mol)을 구하고, 계산 과정을 설명해 보자. (단, 아세틸살리실산의 몰질량은 180 g/mol이다.)</p>
+    </div>
+    <div class="col stack" style="flex:0 0 360px"><div class="board" style="min-height:220px"></div></div>
+  </div>
+  <div class="answer step cm112-left"><b>예시 답안</b> 전체 질량 $180\ \text{mg}\times3\times3=1620\ \text{mg}=1.62\ \text{g}$ → $\dfrac{1.62\ \text{g}}{180\ \text{g/mol}}=0.009\ \text{mol}$ → 분자 1개에 O 원자 4개이므로 $0.009\times4=$ <b>0.036 mol</b><br><span class="small">채점 요소: 전체 질량 · 양(mol) 환산 · 분자 속 원자 수 비</span></div>
+</section>
+
+<!-- ════════ 36. 중단원 마무리 08 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 08">
+  <h2><span class="tag q">중단원 마무리 08</span>몰과 기체의 부피</h2>
+  <p class="f22">몰과 기체의 부피에 대한 설명으로 옳지 <u>않은</u> 것은? (단, 0 °C, 1 기압에서 기체 1 몰의 부피는 22.4 L이다.)</p>
+  <div class="row">
+    <div class="col">
+      <div class="choices cm112-c1 cm112-ch">
+        <span>① 몰질량이 서로 다른 기체라도 같은 온도와 압력에서 1 몰의 부피는 같다.</span>
+        <span>② 0 °C, 1 기압에서 산소($\ce{O2}$) 0.2 몰의 부피는 4.48 L이다.</span>
+        <span>③ 0 °C, 1 기압에서 메테인($\ce{CH4}$) 11.2 L에 든 메테인의 양은 0.5 몰이다.</span>
+        <span>④ 0 °C, 1 기압에서 헬륨($\ce{He}$) 2.24 L와 암모니아($\ce{NH3}$) 2.24 L에 든 분자의 양(mol)은 같다.</span>
+        <span>⑤ 0 °C, 1 기압에서 이산화 탄소($\ce{CO2}$) 5.6 L와 암모니아($\ce{NH3}$) 5.6 L에 든 원자 수는 같다.</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 260px"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ⑤</b> <span class="small">둘 다 0.25 몰 → 원자 $\ce{CO2}$ 0.75 몰, $\ce{NH3}$ 1 몰</span></div>
+</section>
+
+<!-- ════════ 37. 중단원 마무리 09 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 09">
+  <h2><span class="tag q">중단원 마무리 09</span>기체 (가)~(다)</h2>
+  <p class="f22">다음은 0 °C, 1 기압에서 기체 (가)~(다)에 대한 자료이다. 옳은 것은? (단, H의 몰질량은 1 g/mol, 기체 1 몰의 부피는 22.4 L)</p>
+  <div class="row">
+    <div class="col">
+      <div class="bogi"><p>(가) 수소($\ce{H2}$) 4 g</p><p>(나) 산소($\ce{O2}$) 11.2 L</p><p>(다) 메테인($\ce{CH4}$) 분자 $6.02\times10^{23}$개</p></div>
+      <div class="choices cm112-c1"><span>① (가)의 부피는 44.8 L이다.</span><span>② (가)에서 수소 분자 수는 $6.02\times10^{23}$개이다.</span><span>③ (나)에서 산소 분자의 양은 1 몰이다.</span><span>④ (다)에서 탄소 원자의 양은 4 몰이다.</span><span>⑤ 분자의 양(mol)은 (다) &gt; (나) &gt; (가)이다.</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 340px"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ①</b> <span class="small">(가) 2 몰, (나) 0.5 몰, (다) 1 몰</span></div>
+</section>
+
+<!-- ════════ 38. 중단원 마무리 10 ════════ -->
+<section class="slide" data-sec="02 · 중단원 마무리" data-title="중단원 마무리 10">
+  <h2><span class="tag q">중단원 마무리 10</span>같은 부피의 수소와 산소</h2>
+  <p class="f22">그림은 같은 온도와 압력에서 같은 부피의 수소($\ce{H2}$) 기체와 산소($\ce{O2}$) 기체를 모형으로 나타낸 것이다. 두 기체가 같은 값을 갖는 것만을 &lt;보기&gt;에서 있는 대로 골라 보자. (단, H, O의 몰질량은 각각 1 g/mol, 16 g/mol)</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{s38}}</div>
+    <div class="col">
+      <div class="bogi"><p>ㄱ. 질량 &nbsp;&nbsp; ㄴ. 원자 수 &nbsp;&nbsp; ㄷ. 기체의 양(mol)</p></div>
+      <div class="board mt8" style="min-height:120px"></div>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ㄴ, ㄷ</b> <span class="small">분자 수가 같고 두 분자 모두 원자 2개 — 질량은 1 : 16</span></div>
+</section>
+
+<!-- ════════ 39. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 몰과 물질의 양 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">함께 풀어 보기</span>Ⅰ. 화학의 언어 — 개념 지도</h2>
+  <div class="cm112-map">
+    <div class="cm112-node cm112-done"><b>01 화학의 유용성</b><p class="small">식량·의류·주거와 현대 사회의 문제를 해결</p></div>
+    <div class="cm112-arr">→</div>
+    <div class="cm112-node cm112-main">
+      <b>02 몰과 물질의 양</b>
+      <p class="f21 mt8" data-q>(1) ❺ <span class="blank"><span class="step">몰</span></span>: 원자·분자 등 입자 약 $6.02\times10^{23}$개를 나타내는 묶음 단위</p>
+      <p class="f21" data-q>(2) 몰질량: 물질 1 몰의 질량(g/mol) — $\ce{H2O}$ 36 g의 양 $=\dfrac{36\ \text{g}}{18\ \text{g/mol}}=$ ❻ <span class="blank"><span class="step">2</span></span> mol</p>
+      <p class="f21" data-q>(3) 0 °C, 1 기압에서 기체 1 몰의 부피는 ❼ <span class="blank"><span class="step">22.4</span></span> L이다.</p>
+    </div>
+    <div class="cm112-arr">→</div>
+    <div class="cm112-side">
+      <div class="cm112-node cm112-dim">2-01 화학 반응식<br><span class="small">(다음 시간)</span></div>
+      <div class="cm112-node cm112-dim">2-02 화학 반응의 양적 관계</div>
+    </div>
+  </div>
+  <div class="formula sm mt12">(4) $\text{몰(mol)}=\dfrac{\text{입자 수}}{6.02\times10^{23}\ \text{개/mol}}=\dfrac{\text{질량(g)}}{\text{몰질량(g/mol)}}=\dfrac{\text{기체의 부피(L)}}{22.4\ \text{L/mol}}$</div>
+</section>
+
+<!-- ════════ 40. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 몰과 물질의 양 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 몰을 이용해 다양한 물질의 양을 표현했다.</button>
+    <button class="chk">[과정·기능] 물질의 몰질량을 탐색하고, 정한 양(mol)의 질량을 측정했다.</button>
+    <button class="chk">[가치·태도] 몰이 물질의 양을 표현하는 유용한 단위임을 인식했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 1 몰은 입자 몇 개인가? <span class="step">→ <span class="ans">$6.02\times10^{23}$개</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 물($\ce{H2O}$) 9 g은 몇 몰인가? <span class="step">→ $\dfrac{9}{18}=$ <span class="ans">0.5 몰</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 0 °C, 1 기압에서 산소 44.8 L는 몇 몰인가? <span class="step">→ $\dfrac{44.8}{22.4}=$ <span class="ans">2 몰</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 물질이 반응하는 모습을 화학식으로 어떻게 나타낼까? — 2-01 화학 반응식</div>
+</section>
