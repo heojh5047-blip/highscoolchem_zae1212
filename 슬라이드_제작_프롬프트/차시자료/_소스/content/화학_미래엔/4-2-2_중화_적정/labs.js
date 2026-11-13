@@ -1,6 +1,6 @@
 /* 4-2-2 중화 적정 — 실험실
    cm422titr : 식초 중화 적정 (필수 탐구 화04-탐3, 교과서 159–161쪽 탐구 · 실험 영상 대체)
-     · 식초 A 1.00 M(6.0 %) / 식초 B 0.75 M(4.5 %) — 덱이 정한 참값. 희석 원액 / 1/10, 시료(피펫) 10.0 / 20.0 mL
+     · 식초 A 1.11 M(6.66 %, 지도서 탐구 결과 예시) / 식초 B 0.75 M(4.5 %, 덱이 만든 시료). 희석 원액 / 1/10, 시료(피펫) 10.0 / 20.0 mL
      · 표준 용액 0.1 M NaOH, 한 방울 = 0.05 mL. 중화점 부피 V* = (식초 몰농도 / 희석) × 시료 / 0.1 + 시료마다 작은 오차(고정 시드)
      · 뷰렛 50 mL, 위가 0 눈금. 처음 눈금은 시료마다 다름. 50 mL를 넘게 넣을 수 없음(원액이면 넘침 → 희석 필요)
      · 색: V < V*−0.5 무색(떨어진 자리만 잠깐 붉음) · V* 바로 앞 무색(붉은색이 천천히 사라짐) · V* ≤ V < V*+0.1 연붉은색(중화점) · 그 뒤 붉은색(지나침)
@@ -11,7 +11,7 @@ window.DECK_LABS = {
     const $=s=>root.querySelector(s), O=k=>root.querySelector(`[data-o="${k}"]`), Ov=k=>root.querySelector(`[data-ov="${k}"]`);
     const svg=$('svg'), C=API.COL;
     const WATER='#DDEEF8', WATER_S='#9FC3DD', GLASS='#7E8B98', PINK_L='#F6C3D9', PINK_LS='#E79BBE', PINK='#E04A8B', PINK_S='#B8326C', STAND='#5B6B7F';
-    const TRUE={A:1.00,B:0.75}, DELTA=[0.03,-0.08,0.02,-0.03,0.06], R0=[0.50,0.20,1.00,0.35,0.80];
+    const TRUE={A:1.11,B:0.75}, DELTA=[-0.20,0.20,0.00,-0.03,0.06], R0=[1.18,12.09,23.38,0.35,0.80];  // 식초 A 10.0 mL → 10.90 / 11.30 / 11.10 mL (지도서 예시 10.91 / 11.29 / 11.10)
     // ── 기하
     const BX=190, BW=16, Y0=24, PPM=3, STOP=190, TIP=210;           // 뷰렛
     const FX=190, FB=284, FH=72, FW=130, FNW=24, FNH=16;              // 삼각 플라스크
@@ -58,7 +58,7 @@ window.DECK_LABS = {
     API.texText(svg,ZX+ZW/2,ZY-10,'\\text{눈금 확대}',{size:19,anchor:'middle',fill:C.muted});
     // ── 상태
     let st, shown=0;
-    const init=()=>{ st={vin:'A',dil:10,samp:20,k:0,n:0,rec:false,rows:[],msg:''}; shown=R0[0]; };
+    const init=()=>{ st={vin:'A',dil:10,samp:10,k:0,n:0,rec:false,rows:[],msg:''}; shown=R0[0]; };
     const r0=()=>R0[st.k%5], vStar=()=>TRUE[st.vin]/st.dil*st.samp/0.1+DELTA[st.k%5], V=()=>st.n*0.05;
     const f2=v=>v.toFixed(2);
     function state(){ const v=V(), s=vStar(); if(st.n===0) return 'zero'; if(v<s-0.5) return 'none'; if(v<s-1e-9) return 'near'; if(v<s+0.1-1e-9) return 'end'; return 'over'; }
@@ -75,7 +75,7 @@ window.DECK_LABS = {
       if(!st.rows.length) return '중화점에서 기록한 부피의 평균으로 식초 속 아세트산의 함량을 구한다.';
       if(!ok.length) return '중화점(연붉은색)에서 기록한 값이 없다 — 평균에 넣을 값이 없다.';
       const avg=ok.reduce((a,r)=>a+r.v,0)/ok.length, md=0.1*avg/st.samp, mv=md*st.dil;
-      return `중화점 ${ok.length}회 평균 ${f2(avg)} mL → 묽힌 식초 ${md.toFixed(3)} M → 식초 ${mv.toFixed(2)} M → 함량 ${(mv*6).toFixed(1)} %`; }
+      return `중화점 ${ok.length}회 평균 ${f2(avg)} mL → 묽힌 식초 ${md.toFixed(3)} M → 식초 ${mv.toFixed(2)} M → 함량 ${(mv*6).toFixed(2)} %`; }
     function paint(){
       const sx=state();
       O('v0').textContent=f2(r0())+' mL'; O('v1').textContent=f2(r0()+V())+' mL'; O('dv').textContent=f2(V())+' mL';

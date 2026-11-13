@@ -17,7 +17,7 @@ table.cm422-res th{font-size:20px}
 table.cm422-res .blank{min-width:90px}
 table.cm422-err{width:100%}
 table.cm422-err td{font-size:20px}
-table.cm422-err td:last-child{text-align:center}
+table.cm422-err td:first-child{text-align:center;font-weight:700;white-space:nowrap}
 table.cm422-err .blank{min-width:100px}
 .cm422-proc p{line-height:1.5}
 .cm422-node{background:#fff;border:2px dashed var(--line);border-radius:14px;padding:8px 14px;font-size:20px;color:var(--muted)}
