@@ -28,3 +28,9 @@
 .slide table.tight td,.slide table.tight th{font-size:21px;padding:10px 14px}
 .slide .stage p,.slide .stage li{font-size:20px}
 .slide .note,.slide .note p{font-size:20px}
+/* ── 그림 ── */
+.ts2m-legend{list-style:none;padding:0;margin:0}
+.ts2m-legend li{font-size:19px;line-height:1.4;margin-top:4px;padding-left:38px;text-indent:-38px}
+.slide table.ts2m-compact td,.slide table.ts2m-compact th{padding:7px 12px}
+.ts2m-dot{display:inline-block;width:26px;height:26px;line-height:26px;border-radius:50%;color:#fff;font-size:15px;font-weight:800;text-align:center;margin-right:12px;text-indent:0}
+
