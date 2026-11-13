@@ -107,7 +107,7 @@ window.DECK_LABS = {
       else { const rows=log.filter(r=>r.c===c&&r.M), avg=rows.reduce((s,r)=>s+r.M,0)/rows.length, near=Math.abs(avg-32)<Math.abs(avg-4)?'산소(32 g/mol)':'헬륨(4 g/mol)';
         O('msg').textContent=`용기 ${c}: 평균 몰질량 약 ${avg.toFixed(1)} g/mol → ${near}에 가깝다.`+(m.pw?'':' (수증기압을 빼지 않으면 몰질량이 조금 작게 나온다.)')+(c===2?' 질량 감소가 작아 저울 눈금(0.01 g) 오차가 크다.':''); }
     });
-    root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ log=[]; c=1; gas=0; seed=13; I('Vt').value=450; I('tc').value=25;
+    root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ log=[]; c=1; gas=0; seed=13; I('Vt').value=450; I('tc').value=20;
       root.querySelectorAll('[data-m]').forEach(x=>x.checked=x.dataset.m==='pw'); update(); table(); O('msg').textContent='측정할 값을 고르고 「기체 모으고 측정」을 누르자.'; });
     update(); table(); O('msg').textContent='측정할 값을 고르고 「기체 모으고 측정」을 누르자.';
     (()=>{ [['0',0],['10',10],['20',20],['30',30],['40',40]].forEach(([s,v])=>{ API.texText(svg,MX(v),SY+28,s,{size:18,anchor:'middle'}); });
