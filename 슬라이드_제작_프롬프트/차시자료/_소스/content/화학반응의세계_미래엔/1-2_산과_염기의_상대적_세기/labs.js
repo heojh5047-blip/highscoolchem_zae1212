@@ -11,10 +11,10 @@ window.DECK_LABS = {
     const ce=s=>API.tex('\\ce{'+s+'}');
     const KW=1.0e-14;
     const SOL=[
-      {f:'HCl',  kind:'강산',   eq:'HCl(aq) + H2O(l) -> Cl-(aq) + H3O+(aq)', type:'sa', bias:0.06, why:'진한 강산 수용액에서는 이온끼리의 영향으로 측정값이 조금 크게 나올 수 있다.'},
+      {f:'HCl',  kind:'강산',   eq:'HCl(aq) + H2O(l) -> Cl-(aq) + H3O+(aq)', type:'sa', bias:0.03, why:'진한 강산 수용액에서는 이온끼리의 영향으로 측정값이 조금 크게 나올 수 있다.'},
       {f:'CH3COOH', kind:'약산', eq:'CH3COOH(aq) + H2O(l) <=> CH3COO-(aq) + H3O+(aq)', type:'wa', K:1.8e-5, bias:0.02, why:'계산의 근사와 온도 차이가 원인일 수 있다.'},
-      {f:'NaOH', kind:'강염기', eq:'NaOH(aq) -> Na+(aq) + OH-(aq)', type:'sb', bias:-0.12, why:'수산화 나트륨 수용액이 공기 중 '+'CO2'+'를 흡수하면 [OH-]가 줄어 pH가 낮게 나온다.'},
-      {f:'NH3',  kind:'약염기', eq:'NH3(aq) + H2O(l) <=> NH4+(aq) + OH-(aq)', type:'wb', K:1.8e-5, bias:-0.06, why:'암모니아가 공기 중으로 날아가 농도가 줄면 pH가 낮게 나온다.'}
+      {f:'NaOH', kind:'강염기', eq:'NaOH(aq) -> Na+(aq) + OH-(aq)', type:'sb', bias:-0.02, why:'수산화 나트륨 수용액이 공기 중 '+'CO2'+'를 흡수하면 [OH-]가 줄어 pH가 낮게 나온다.'},
+      {f:'NH3',  kind:'약염기', eq:'NH3(aq) + H2O(l) <=> NH4+(aq) + OH-(aq)', type:'wb', K:1.8e-5, bias:-0.01, why:'암모니아가 공기 중으로 날아가 농도가 줄면 pH가 낮게 나온다.'}
     ];
     const CONC=[0.1,0.01];
     let st={s:0,c:0,calc:false,me:null,t:9,target:0}, log=[], seed=12;
@@ -89,7 +89,7 @@ window.DECK_LABS = {
       draw(); });
     $('[data-act="meas"]').addEventListener('click',()=>{
       const S=SOL[st.s], th=theory(st.s,CONC[st.c]).pH;
-      const m=Math.round((th+S.bias*(st.c?0.7:1)+(rnd()-0.5)*0.1)*100)/100;
+      const m=Math.round((th+S.bias*(st.c?0.7:1)+(rnd()-0.5)*0.04)*100)/100;
       st.me=m; st.t=0; st.target=m;
       const r={i:st.s,c:st.c,th,m,src:'모의'}; push(r);
       O('msg').innerHTML=(st.calc?'':'(이론값을 먼저 계산하면 예측과 비교할 수 있다.) ')+explain(r);

@@ -1,11 +1,75 @@
-{"findings":[
-{"slide":1,"severity":"low","rule":"D8","problem":"표지 '아세트산 수용액' 라벨이 그림 오른쪽 가장자리에서 잘림","fix":"라벨 크기 26→22(반영)"},
-{"slide":6,"severity":"medium","rule":"T4","problem":"두 반응식을 두 열에 나눠 칸을 넘침","fix":"덱 전용 .rm12-two 가로 배치 + 글자 20px + 강산/약산 설명 줄(반영)"},
-{"slide":8,"severity":"medium","rule":"D8","problem":"막대그래프의 CH3COOH 라벨이 잘리고 왼쪽 반응식이 칸을 넘침, 정답 2개에 판서 공간 없음(S2)","fix":"라벨 열 이동·막대 축척 40, .formula.sm.rm12-eqk 21px, 첫 답을 인라인 .ans로(반영)"},
-{"slide":11,"severity":"medium","rule":"D8","problem":"반응식 그림의 화학식·+·⇌·Ka 라벨이 서로 닿음","fix":"글자 26, 위치 재배치(반영)"},
-{"slide":20,"severity":"low","rule":"T1","problem":"h2가 두 줄로 넘어감","fix":"h2 '목표와 준비' + h3에 교과서 탐구 이름(반영)"},
-{"slide":24,"severity":"low","rule":"D8","problem":"pH 측정기 전극이 표시 창과 겹치고, 그래프 아래 CH3COOH·NaOH 라벨이 붙음","fix":"측정기·전극 위치 이동, 가로 간격 90(반영)"},
-{"slide":25,"severity":"medium","rule":"D8","problem":"그래프 범례가 잘리고 'pH' 축 라벨이 눈금 14와 겹침","fix":"범례를 아래로, pH 라벨을 축 오른쪽 위로(반영)"},
-{"slide":29,"severity":"medium","rule":"S2","problem":"고정 높이 행 때문에 예시 답안이 판서 공간을 덮음","fix":"고정 높이 제거, 판서 공간 min-height 90(반영)"},
-{"slide":30,"severity":"medium","rule":"D8","problem":"오른쪽 풀이 식이 영역 밖으로 넘침","fix":"식을 두 줄로(반영)"}
-],"summary":"전체 33장 캡처를 모음으로 두 번 보고 고침. 자동 점검 0, 콘솔 0, motion 0, ask 0."}
+{
+  "findings": [
+    {
+      "slide": 1,
+      "severity": "low",
+      "rule": "D8",
+      "problem": "표지 '아세트산 수용액' 라벨이 그림 오른쪽 가장자리에서 잘림",
+      "fix": "라벨 크기 26→22(반영)"
+    },
+    {
+      "slide": 6,
+      "severity": "medium",
+      "rule": "T4",
+      "problem": "두 반응식을 두 열에 나눠 칸을 넘침",
+      "fix": "덱 전용 .rm12-two 가로 배치 + 글자 20px + 강산/약산 설명 줄(반영)"
+    },
+    {
+      "slide": 8,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "막대그래프의 CH3COOH 라벨이 잘리고 왼쪽 반응식이 칸을 넘침, 정답 2개에 판서 공간 없음(S2)",
+      "fix": "라벨 열 이동·막대 축척 40, .formula.sm.rm12-eqk 21px, 첫 답을 인라인 .ans로(반영)"
+    },
+    {
+      "slide": 11,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "반응식 그림의 화학식·+·⇌·Ka 라벨이 서로 닿음",
+      "fix": "글자 26, 위치 재배치(반영)"
+    },
+    {
+      "slide": 20,
+      "severity": "low",
+      "rule": "T1",
+      "problem": "h2가 두 줄로 넘어감",
+      "fix": "h2 '목표와 준비' + h3에 교과서 탐구 이름(반영)"
+    },
+    {
+      "slide": 24,
+      "severity": "low",
+      "rule": "D8",
+      "problem": "pH 측정기 전극이 표시 창과 겹치고, 그래프 아래 CH3COOH·NaOH 라벨이 붙음",
+      "fix": "측정기·전극 위치 이동, 가로 간격 90(반영)"
+    },
+    {
+      "slide": 25,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "그래프 범례가 잘리고 'pH' 축 라벨이 눈금 14와 겹침",
+      "fix": "범례를 아래로, pH 라벨을 축 오른쪽 위로(반영)"
+    },
+    {
+      "slide": 29,
+      "severity": "medium",
+      "rule": "S2",
+      "problem": "고정 높이 행 때문에 예시 답안이 판서 공간을 덮음",
+      "fix": "고정 높이 제거, 판서 공간 min-height 90(반영)"
+    },
+    {
+      "slide": 30,
+      "severity": "medium",
+      "rule": "D8",
+      "problem": "오른쪽 풀이 식이 영역 밖으로 넘침",
+      "fix": "식을 두 줄로(반영)"
+    },
+    {
+      "slide": 12,
+      "severity": "low",
+      "rule": "지도서 대조(11/13)",
+      "problem": "주의 문장 추가 뒤 넘침 여부",
+      "fix": "S11·12·22·25·26·28 다시 캡처해 sheet로 확인 — 넘침·겹침 없음"
+    }
+  ],
+  "summary": "전체 33장 캡처를 모음으로 두 번 보고 고침. 자동 점검 0, 콘솔 0, motion 0, ask 0. / 11/13 지도서 대조 뒤 고친 6장 다시 캡처·확인, 자동 점검 0, 콘솔 0, motion 0, ask 0."
+}
