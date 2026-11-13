@@ -180,7 +180,7 @@ F['ELINE'] = eline()
 # ── 탐구: 6홈판 전지 설계도
 def hex6():
     o = ['<rect x="20" y="30" width="520" height="220" rx="18" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="2"/>']
-    W = [(110, 'Zn', r'\ce{ZnSO4(aq)}', 'w'), (280, 'Cu', r'\ce{CuSO4(aq)}', 'cu'), (450, 'Mg', r'\ce{MgSO4(aq)}', 'w')]
+    W = [(110, 'Mg', r'\ce{MgSO4(aq)}', 'w'), (280, 'Cu', r'\ce{CuSO4(aq)}', 'cu'), (450, 'Zn', r'\ce{ZnSO4(aq)}', 'w')]
     for x, m, s, sk in W:
         c, op = SOL[sk]
         o.append(f'<circle cx="{x}" cy="150" r="58" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><circle cx="{x}" cy="150" r="54" fill="{c}" fill-opacity="{op}"/>')
@@ -191,7 +191,7 @@ def hex6():
     o.append(T(290, 70, mix='거름종이 염다리($\\ce{KCl}$ 포화 용액)', size=18, anchor='start'))
     o.append('<line x1="300" y1="76" x2="200" y2="142" stroke="#5B6B7F" stroke-width="1.5"/>')
     o.append("<g data-circuit='{\"parts\":[[\"wire\",[[88,96],[88,24],[162,24]]],[\"wire\",[[198,24],[258,24],[258,96]]],[\"meter\",[180,24],\"V\",{\"r\":16}]],\"stroke\":3}'></g>")
-    o.append(T(110, 286, mix='(−)극 · 아연판', size=19, weight=700)); o.append(T(280, 286, mix='(+)극 · 구리판', size=19, weight=700))
+    o.append(T(110, 286, mix='(−)극 · 마그네슘판', size=19, weight=700)); o.append(T(280, 286, mix='(+)극 · 구리판', size=19, weight=700))
     o.append(T(450, 286, mix='(다른 모둠 금속판)', size=18, fill='#5B6B7F'))
     return ''.join(o)
 F['HEX6'] = hex6()
