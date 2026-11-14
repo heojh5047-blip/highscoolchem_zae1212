@@ -1,0 +1,30 @@
+/* 고급화학 1-1-1 — 덱 전용 (모두 .ac111- 접두어) */
+.cover h1.ac111-h1{font-size:64px;line-height:1.15}
+.ac111-units{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ac111-units .card h3{font-size:23px;margin-bottom:4px}
+.ac111-units .card.ac111-now{border-color:var(--plus);border-width:2px}
+table.ac111-ser td,table.ac111-res td,table.ac111-rdft td{text-align:center}
+table.ac111-res td.l{text-align:left}
+table.ac111-var th{width:140px}
+.ac111-eqs{display:flex;flex-direction:column;gap:10px}
+.ac111-eqs .card{font-size:22px;padding:10px 16px}
+ol.ac111-ox{padding-left:1.4em}
+ol.ac111-ox li{margin-top:16px}
+ol.ac111-ox li:first-child{margin-top:0}
+/* 개념 지도 */
+.ac111-map{display:flex;align-items:center;gap:12px;margin-top:20px}
+.ac111-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75;flex:0 0 140px}
+.ac111-node.ac111-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac111-node.ac111-dim{flex:0 0 190px;border-style:dashed;color:var(--muted)}
+.ac111-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.ac111-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.ac111-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 11px;font-size:19px}
+.ac111-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac111-seg .btn.ac111-act{background:var(--field);color:#fff;border-color:var(--field)}
+.ac111-seg .small{margin:0 2px 0 4px}
+.ac111-cb{font-size:20px;margin-right:6px;cursor:pointer}
+output.kind.ac111-msg{margin-top:8px;line-height:1.45;font-size:19px;display:block}
+table.ac111-log th,table.ac111-log td,table.ac111-rd th,table.ac111-rd td{font-size:19px;padding:3px 8px;text-align:center}
+/* 심화 상자 (대단원 Ⅰ 약속 — 이 덱에서는 쓰지 않음) */
+.ac111-deep{border:2px dashed #5B6B7F;background:#F7F8FA}
