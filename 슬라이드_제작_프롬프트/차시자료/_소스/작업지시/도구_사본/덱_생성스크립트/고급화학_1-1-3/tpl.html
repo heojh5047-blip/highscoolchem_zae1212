@@ -1,0 +1,547 @@
+<!-- 고급화학 1-1-3 원자 오비탈의 모양과 원자의 전자 배치 — gen.py가 tpl.html에서 만든다(그림 자리표) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 물질의 구조 › 1. 원자 오비탈 › 03–04</div>
+    <h1 class="ac113-h1">원자 오비탈의 모양과<br><span class="acc">원자의 전자 배치</span></h1>
+    <p class="sub">전자는 어떤 모양의 오비탈에, 어떤 순서로 채워질까?</p>
+    <p class="meta">고등학교 고급 화학 19–27쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="03 원자 오비탈의 모양" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화01-01]</span>오비탈은 전자의 에너지와 위치의 정보를 가진 함수임을 이해하고, 오비탈을 이용한 원자의 현대적 모형에 호기심을 갖는다.</div>
+  <div class="std mt8"><span class="code">[12고화01-02]</span>전형 원소와 전이 원소에 속하는 원자의 바닥상태의 전자 배치를 나타내고, 공통점과 차이점을 비교할 수 있다.</div>
+  <ol class="goals mt8 f21">
+    <li>네 가지 양자수의 뜻과 허용되는 값을 알고, 오비탈의 이름과 수를 정할 수 있다.</li>
+    <li>s, p, d 오비탈의 모양과 공간 배향을 경계 표면 그림으로 설명할 수 있다.</li>
+    <li>다전자 원자에서 가려막기 효과와 침투 효과로 오비탈의 에너지 순서를 설명할 수 있다.</li>
+    <li>쌓음 원리, 파울리 배타 원리, 훈트 규칙으로 전형 원소와 전이 원소의 바닥상태 전자 배치를 나타내고 비교할 수 있다.</li>
+    <li>전자 배치로 원소의 주기적 성질을 설명할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">양자수·모양</div><div class="farr">→</div>
+    <div class="fnode">오비탈 에너지</div><div class="farr">→</div>
+    <div class="fnode">배치 규칙</div><div class="farr">→</div>
+    <div class="fnode hl">실험실</div><div class="farr">→</div>
+    <div class="fnode">주기적 성질</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 다시 보기·생각 열기 ════════ -->
+<section class="slide" data-sec="03 원자 오비탈의 모양 · 도입" data-title="다시 보기와 생각 열기">
+  <h2><span class="tag alt">다시 보기</span>지난 시간에 배운 오비탈</h2>
+  <div class="row">
+    <div class="col stack">
+      <div class="card"><p class="f21"><b>파동 함수</b> $\psi$ → 전자를 발견할 확률 밀도 $\psi^2$</p></div>
+      <div class="card"><p class="f21"><b>s 오비탈</b>: 구형 대칭, 마디는 $n-1$개</p></div>
+      <div class="card"><p class="f21"><b>1s, 2s, 3s</b>: $n$이 클수록 오비탈이 크다</p></div>
+    </div>
+    <div class="col" style="flex:0 0 320px">{{BOUND}}</div>
+  </div>
+  <div class="card q mt16"><p class="f22"><b>Q</b> 수소 원자의 2s와 2p 오비탈은 에너지가 같을까? 전자가 11개인 나트륨 원자에서는?</p></div>
+  <div class="answer step">수소: 같다(에너지는 $n$에만 의존) · 다전자 원자: 2s &lt; 2p — 오늘 그 까닭을 찾는다</div>
+</section>
+
+<!-- ════════ 4. 원자 오비탈과 양자수 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈과 양자수" data-title="원자 오비탈과 양자수">
+  <h2><span class="no">1</span>원자 오비탈과 양자수</h2>
+  <p class="f22">슈뢰딩거 방정식은 전자가 2개 이상인 원자도 근사적 방법으로 풀 수 있다. 해인 파동 함수 $\psi$는 여러 개이고, 각 해는 <b>세 양자수</b>의 특별한 조합으로 정해진다.</p>
+  <table class="tight ac113-qn mt12">
+    <tr><th>양자수</th><th>기호</th><th>허용되는 값</th><th>관계 있는 것</th></tr>
+    <tr><td>주 양자수</td><td>$n$</td><td>$1,\ 2,\ 3,\ \cdots$</td><td><span class="blank"><span class="step" data-g="q1">크기 · 에너지</span></span></td></tr>
+    <tr><td>각운동량 양자수</td><td>$l$</td><td>$0,\ 1,\ 2,\ \cdots,\ n-1$</td><td><span class="blank"><span class="step" data-g="q2">모양</span></span></td></tr>
+    <tr><td>자기 양자수</td><td>$m_l$</td><td>$-l,\ \cdots,\ -1,\ 0,\ 1,\ \cdots,\ +l$</td><td><span class="blank"><span class="step" data-g="q3">공간 배향</span></span></td></tr>
+  </table>
+  <div class="note big mt16 step">양자수 조합 하나 = 파동 함수 하나 = <mark>원자 오비탈</mark> 하나. 파동 함수로 각 오비탈의 상대적 에너지, 모양, 공간 배향을 설명한다.</div>
+</section>
+
+<!-- ════════ 5. 주 양자수와 껍질 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈과 양자수" data-title="주 양자수와 껍질">
+  <h2><span class="no">2</span>주 양자수 $n$과 껍질</h2>
+  <div class="row">
+    <div class="col stack">
+      <div class="formula sm">$E_n\propto-\dfrac{1}{n^2}\qquad n=1,\ 2,\ 3,\ 4,\ \cdots$<span class="unit">수소 원자: 전자의 에너지는 $n$에만 의존한다. 다른 원자에서도 전자의 에너지는 주로 $n$이 정한다.</span></div>
+      <p class="f21">$n$이 클수록 오비탈이 크고, 전자가 원자핵에서 멀리 떨어진 곳에 머무는 시간이 길다.</p>
+      <p class="f21 step">$n$이 같은 오비탈들은 같은 <mark>껍질</mark>에 속한다. 확률 밀도가 가장 큰 곳을 경계로 하는 속이 빈 공 껍데기 모양이고, $n$이 클수록 커지는 데서 온 이름이다.</p>
+      <p class="f21 step"><b>Q</b> $n=3$인 껍질의 이름은? <span class="step">→ <span class="ans">M 껍질</span></span></p>
+    </div>
+    <div class="col" style="flex:0 0 340px">{{SHELLS}}<p class="small c-muted">크기 관계만 나타낸 그림</p></div>
+  </div>
+</section>
+
+<!-- ════════ 6. 각운동량 양자수와 자기 양자수 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈과 양자수" data-title="각운동량 양자수와 자기 양자수">
+  <h2><span class="no">3</span>각운동량 양자수 $l$과 자기 양자수 $m_l$</h2>
+  <div class="row">
+    <div class="col stack">
+      <div class="card"><h3>각운동량 양자수 $l$ — 모양</h3>
+        <p class="f21">$l=0,\ 1,\ 2,\ \cdots,\ n-1$ (정숫값)</p>
+        <table class="tight ac113-c mt8"><tr><th>$l$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>기호</th><td>s</td><td>p</td><td>d</td><td>f</td><td>g</td></tr></table>
+        <p class="f21 mt8">주 양자수가 $n$인 껍질은 $l$에 따라 $n$개의 <mark>부껍질</mark>로 나뉜다.</p></div>
+      <p class="f21"><b>Q</b> $n=3$인 껍질의 부껍질은? <span class="step">→ <span class="ans">3s, 3p, 3d (3개)</span></span></p>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>자기 양자수 $m_l$ — 공간 배향</h3>
+        <p class="f21">$m_l=-l,\ \cdots,\ -1,\ 0,\ 1,\ \cdots,\ l$ → $(2l+1)$개</p>
+        <p class="f21 mt8">같은 부껍질에 속한 여러 오비탈을 구분한다.</p>
+        <p class="f21 mt8">예: $l=1$ → $m_l=-1,\ 0,\ 1$ → 배향이 다른 p 오비탈 3개</p></div>
+      <p class="f21"><b>Q</b> $l=2$인 부껍질의 오비탈 수는? <span class="step">→ <span class="ans">$2\times2+1=5$개</span> (3d 오비탈 5개)</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 표 Ⅰ-1 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈과 양자수" data-title="허용되는 양자수와 오비탈">
+  <h2><span class="no">4</span>$n=4$까지 허용되는 양자수와 오비탈</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 700px">
+      <table class="tight ac113-c ac113-t1">
+        <tr><th>$n$</th><th>$l$</th><th>오비탈 이름</th><th>$m_l$</th><th>오비탈 수</th></tr>
+        <tr><td>1</td><td>0</td><td>1s</td><td>0</td><td>1</td></tr>
+        <tr><td rowspan="2">2</td><td>0</td><td>2s</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>2p</td><td>$-1,\ 0,\ 1$</td><td>3</td></tr>
+        <tr><td rowspan="3">3</td><td>0</td><td>3s</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>3p</td><td>$-1,\ 0,\ 1$</td><td>3</td></tr>
+        <tr><td>2</td><td>3d</td><td>$-2,\ -1,\ 0,\ 1,\ 2$</td><td><span class="blank"><span class="step">5</span></span></td></tr>
+        <tr><td rowspan="4">4</td><td>0</td><td>4s</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>4p</td><td>$-1,\ 0,\ 1$</td><td>3</td></tr>
+        <tr><td>2</td><td><span class="blank"><span class="step">4d</span></span></td><td>$-2,\ -1,\ 0,\ 1,\ 2$</td><td>5</td></tr>
+        <tr><td>3</td><td><span class="blank"><span class="step" data-g="f4">4f</span></span></td><td><span class="blank"><span class="step" data-g="f4">$-3,\ \cdots,\ 3$</span></span></td><td><span class="blank"><span class="step" data-g="f4">7</span></span></td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>껍질의 오비탈 총수</h3>
+        <p class="f21">$n=1$: 1개 · $n=2$: 4개</p>
+        <p class="f21">$n=3$: 9개 · $n=4$: <span class="blank"><span class="step">16</span></span>개</p></div>
+      <p class="f21"><b>Q</b> 주 양자수가 $n$인 껍질의 오비탈 총수는?</p>
+      <div class="answer step">$n^2$개</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 축퇴 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈과 양자수" data-title="껍질, 부껍질, 오비탈과 축퇴">
+  <h2><span class="no">5</span>껍질, 부껍질, 오비탈과 축퇴</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 610px">{{TREE}}<p class="small c-muted">수소 원자: 같은 높이 = 같은 에너지</p></div>
+    <div class="col stack">
+      <p class="f21">껍질(주 양자수 $n$) → 부껍질(각운동량 양자수 $l$) → 오비탈(자기 양자수 $m_l$)</p>
+      <p class="f21 step">같은 부껍질에서 공간 배향만 다른 오비탈들은 에너지 준위가 같다 = <mark>축퇴</mark>, 축퇴도는 $(2l+1)$개이다.</p>
+      <p class="f21 step">수소 원자에서는 $n$이 같으면 $l$이 달라도 에너지가 같다(2s = 2p).</p>
+      <p class="f21 step">강한 전기장이나 자기장이 가해지면 축퇴가 풀려 에너지 준위가 달라진다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. s, p 오비탈 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈의 모양과 에너지" data-title="s 오비탈과 p 오비탈의 모양">
+  <h2><span class="no">6</span>s 오비탈과 p 오비탈의 모양</h2>
+  <p class="f21">원자핵과 전자 사이의 상호 작용은 거리에만 관계하므로 원자 전체의 전자 분포는 구형 대칭이다. 그러나 공유 결합(혼성 오비탈, Ⅰ-3)을 설명하려면 오비탈마다의 모양을 나타낸다.</p>
+  {{SP}}
+  <div class="row">
+    <div class="col"><p class="f21 step"><b>s</b>: 각도에 관계없는 구형 대칭 · <b>p</b>: $x$, $y$, $z$ 축 방향으로 배향된, 원자핵에서 마디로 분리된 아령 모양(경계 표면)</p></div>
+    <div class="col" style="flex:0 0 470px"><div class="note puzzle"><p class="f21"><b>Q</b> 전자는 2p의 두 엽 사이를 어떻게 지나다닐까?</p><p class="f21 step">→ 두 엽이 따로 있는 것이 아니라 오비탈 전체가 <b>하나의 파동 함수</b>이다. 마디면은 발견 확률이 0일 뿐이다.</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 10. 3d 오비탈 ════════ -->
+<section class="slide" data-sec="03 · 원자 오비탈의 모양과 에너지" data-title="3d 오비탈의 모양">
+  <h2><span class="no">7</span>3d 오비탈의 모양</h2>
+  <p class="f22">$n=3$, $l=2$이면 $m_l=-2,\ -1,\ 0,\ 1,\ 2$ → 에너지가 같은(축퇴된) 3d 오비탈 5개가 있다.</p>
+  {{DORB}}
+  <div class="row mt8">
+    <div class="col"><p class="f21"><b>Q</b> 네 엽이 축 <b>위에</b> 놓이는 d 오비탈은 무엇일까? <span class="step">→ <span class="ans">$3d_{x^2-y^2}$</span> ($3d_{xy}$, $3d_{xz}$, $3d_{yz}$는 두 축 사이, $3d_{z^2}$는 $z$축 위 두 엽과 고리)</span></p></div>
+    <div class="col" style="flex:0 0 330px"><p class="small c-muted">그림은 경계 표면(발견 확률 약 90 %)이고, $+$/$-$는 파동 함수의 부호(위상)이다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 11. 화학사 ════════ -->
+<section class="slide" data-sec="03 · 화학사" data-title="화학사: 슈뢰딩거와 파동 방정식">
+  <h2><span class="tag">화학사</span>슈뢰딩거와 파동 방정식</h2>
+  <div class="card"><p class="f21">1926년 오스트리아의 물리학자 슈뢰딩거(1887–1961)는 물질파의 파동성을 설명하는 파동 방정식을 발표하여 파동역학, 곧 <b>양자 역학</b>이 크게 발전하는 계기를 마련하였다.</p>
+  <p class="f21 mt8">1923년에 X선의 입자성이 발견되었고, 1927년에는 전자처럼 질량이 작은 입자에서 파동성이 크게 나타나는 것이 실험으로 증명되었다. 전자선은 X선보다 파장이 짧아 분자 속 원자의 위치와 원자 사이의 거리를 재는 데 쓰인다.</p>
+  <p class="f21 mt8">대학에서 화학을 공부한 슈뢰딩거는 1933년 노벨 물리학상을 받았고, 여러 분야의 책도 펴냈다.</p></div>
+  {{TIME}}
+  <p class="f21"><b>Q</b> 슈뢰딩거 방정식의 해 $\psi$가 알려 주는 것은? <span class="step">→ <span class="ans">오비탈의 에너지, 모양, 배향</span>(전자를 발견할 확률 분포)</span></p>
+</section>
+
+<!-- ════════ 12. 다전자 원자의 선 스펙트럼 ════════ -->
+<section class="slide" data-sec="04 · 다전자 원자의 선 스펙트럼" data-title="다전자 원자의 선 스펙트럼">
+  <h2><span class="no">8</span>다전자 원자의 선 스펙트럼</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 720px">{{SPECS}}</div>
+    <div class="col stack"><p class="f21">다전자 원자는 선이 많고 가까이 몰린 선이 있다.</p><p class="f21 step">→ 오비탈의 에너지 준위가 수소처럼 단순하지 않다.</p></div>
+  </div>
+  <div class="stages mt8 step">
+    <div class="stage"><p class="f21">전자의 운동 에너지</p></div>
+    <div class="stage"><p class="f21">원자핵–전자 인력에 의한 위치 에너지</p></div>
+    <div class="stage"><p class="f21"><b>전자–전자 반발</b>에 의한 위치 에너지 <span class="small c-plus">(새로 생김)</span></p></div>
+  </div>
+  <p class="f21 step mt8">그래서 슈뢰딩거 방정식의 정확한 해는 구할 수 없고, 근사적 방법과 컴퓨터로 해를 구한다.</p>
+</section>
+
+<!-- ════════ 13. 가려막기 ════════ -->
+<section class="slide" data-sec="04 · 오비탈의 에너지 준위" data-title="가려막기 효과와 유효 핵 전하">
+  <h2><span class="no">9</span>가려막기 효과와 유효 핵 전하</h2>
+  <p class="f21">분광학 실험과 이론 계산: 다전자 원자에서는 $E_{2s}&lt;E_{2p}$, $E_{3s}&lt;E_{3p}&lt;E_{3d}$이다. <b>Q</b> 이 차이는 어떻게 설명할까?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 450px">{{SHIELD}}</div>
+    <div class="col stack">
+      <p class="f21 step"><mark>가려막기 효과</mark>: 다른 전자 때문에 어떤 전자가 느끼는 실제 원자핵 전하가 줄어드는 현상</p>
+      <div class="formula sm step">$Z_\text{eff}=Z-S$<span class="unit">유효 핵 전하 = 핵전하 − 가려막기 상수<br>가려막기 상수 $S$: 다른 전자들의 가려막기 효과를 모두 합한 값. 안쪽 껍질의 전자가 바깥 껍질의 전자보다 잘 가려막는다.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 침투 효과 ════════ -->
+<section class="slide" data-sec="04 · 오비탈의 에너지 준위" data-title="침투 효과">
+  <h2><span class="no">10</span>침투 효과</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{RDF3}}<p class="small c-muted">수소 원자의 3s, 3p, 3d 방사 방향 확률 분포(계산)</p></div>
+    <div class="col stack">
+      <p class="f21">안쪽 껍질을 뚫고 원자핵 가까이 존재할 확률이 높은 오비탈일수록 에너지가 낮다. 1s 전자는 2s 전자보다, 2s 전자는 3s 전자보다 원자핵 가까이에서 발견될 확률이 높다.</p>
+      <p class="f21 step">ns 전자는 np, nd 전자보다 원자핵 가까이에서 발견될 확률이 높다 = <mark>침투 효과</mark> → 가려막기를 덜 받아 더 큰 $Z_\text{eff}$를 느끼고 에너지가 낮다.</p>
+      <div class="formula sm step">$E_{ns}&lt;E_{np}&lt;E_{nd}&lt;E_{nf}$</div>
+      <p class="f21 step">→ 다전자 원자의 오비탈 에너지는 $n$뿐만 아니라 $l$에도 영향을 받는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 에너지 순서 ════════ -->
+<section class="slide" data-sec="04 · 오비탈의 에너지 준위" data-title="다전자 원자의 오비탈 에너지 순서">
+  <h2><span class="no">11</span>다전자 원자의 오비탈 에너지 순서</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{ELEV}}</div>
+    <div class="col stack">
+      <p class="f21">전자–전자 반발 때문에 $n$이 같아도 $l$에 따라 에너지가 갈라진다.</p>
+      <div class="row step">
+        <div class="col" style="flex:0 0 250px">{{DIAG}}</div>
+        <div class="col"><p class="f21"><b>채우는 순서</b> (화살표를 위에서부터)</p><p class="f21">$1s\to2s\to2p\to3s\to3p$ $\to4s\to3d\to4p\to5s$ $\to4d\to5p\to6s\to4f$ $\to5d\to6p\to7s$</p></div>
+      </div>
+      <p class="small">4s와 3d처럼 에너지가 가까운 오비탈은 순서가 바뀌기도 한다(크로뮴, 구리).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 쌓음 원리와 스핀 ════════ -->
+<section class="slide" data-sec="04 · 다전자 원자의 전자 배치" data-title="쌓음 원리와 스핀 양자수">
+  <h2><span class="no">12</span>쌓음 원리와 스핀 양자수</h2>
+  <p class="f21"><mark>쌓음 원리</mark>: 원자핵에 양성자를 1개씩 더할 때마다 수소 원자 형태의 오비탈에 전자를 1개씩 더해 가는 것. 이렇게 쌓은 전자 배열이 주기율표의 체제를 설명한다.</p>
+  {{SPIN}}
+  <p class="f21 step">수소 원자살을 불균일한 자기장에 통과시키면 두 갈래로 나뉜다. 전자가 스스로 축을 중심으로 회전한다고 생각할 수 있는 스핀 운동 때문이다.</p>
+  <p class="f21 step">→ <mark>스핀 양자수</mark> $m_s$는 $+\tfrac12$과 $-\tfrac12$의 두 값만 가진다.</p>
+</section>
+
+<!-- ════════ 17. 파울리 배타 원리 ════════ -->
+<section class="slide" data-sec="04 · 다전자 원자의 전자 배치" data-title="파울리 배타 원리">
+  <h2><span class="no">13</span>파울리 배타 원리</h2>
+  <p class="f22">한 원자 안에서 네 양자수 $n$, $l$, $m_l$, $m_s$가 모두 같은 전자는 존재할 수 없다.</p>
+  <p class="f22 step">→ 오비탈 하나에는 스핀이 서로 반대인 전자가 최대 2개까지 들어간다 = <mark>파울리 배타 원리</mark></p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 630px">{{PAULI}}</div>
+    <div class="col stack">
+      <table class="tight ac113-c"><tr><th>헬륨</th><th>$n$</th><th>$l$</th><th>$m_l$</th><th>$m_s$</th></tr><tr><td>전자 1</td><td>1</td><td>0</td><td>0</td><td>$+\tfrac12$</td></tr><tr><td>전자 2</td><td>1</td><td>0</td><td>0</td><td><span class="blank"><span class="step">$-\tfrac12$</span></span></td></tr></table>
+    </div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> $n=2$인 껍질에 들어갈 수 있는 전자는 최대 몇 개일까? <span class="step">→ <span class="ans">오비탈 4개 × 2 = 8개</span> (껍질마다 $2n^2$개)</span></p>
+</section>
+
+<!-- ════════ 18. 훈트 규칙 ════════ -->
+<section class="slide" data-sec="04 · 다전자 원자의 전자 배치" data-title="훈트 규칙">
+  <h2><span class="no">14</span>훈트 규칙</h2>
+  <p class="f22">에너지 준위가 같은 오비탈이 여러 개 있을 때, 홀전자 수가 최대인 전자 배치가 가장 안정하다 = <mark>훈트 규칙</mark>(최대 다중도의 원리)</p>
+  <p class="f21 mt8">질소의 2p 전자 3개</p>
+  {{HUND}}
+  <div class="row">
+    <div class="col"><p class="f21 step">같은 오비탈에 두 전자가 들어가면 반발이 커진다 → 빈 오비탈에 같은 스핀으로 하나씩 먼저 들어간다.</p>
+      <p class="f21 mt8"><b>Q</b> 탄소의 2p 전자 2개는 어떻게 배치될까?</p></div>
+    <div class="col" style="flex:0 0 190px"><div class="step" data-ask>{{CARB}}</div></div>
+  </div>
+  <div class="note big step">다전자 원자의 전자는 쌓음 원리, 파울리 배타 원리, 훈트 규칙에 따라 오비탈에 배치한다.</div>
+</section>
+
+<!-- ════════ 19. 표 Ⅰ-2 ════════ -->
+<section class="slide" data-sec="04 · 다전자 원자의 전자 배치" data-title="3주기 원소의 전자 배치">
+  <h2><span class="no">15</span>3주기 원소의 전자 배치와 원자가 전자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 590px">
+      <table class="tight ac113-c ac113-t2">
+        <tr><th>원자 번호</th><th>원소</th><th>$3s$ &nbsp;&nbsp;&nbsp; $3p$</th><th>전체 전자 배치</th></tr>
+        <tr><td>11</td><td>$\mathrm{Na}$</td><td>{{T2_11}}</td><td>$[1s^22s^22p^6]\,3s^1$</td></tr>
+        <tr><td>12</td><td>$\mathrm{Mg}$</td><td>{{T2_12}}</td><td>$[1s^22s^22p^6]\,3s^2$</td></tr>
+        <tr class="step"><td>13</td><td>$\mathrm{Al}$</td><td>{{T2_13}}</td><td>$[1s^22s^22p^6]\,3s^23p^1$</td></tr>
+        <tr class="step"><td>14</td><td>$\mathrm{Si}$</td><td>{{T2_14}}</td><td>$[1s^22s^22p^6]\,3s^23p^2$</td></tr>
+        <tr class="step"><td>15</td><td>$\mathrm{P}$</td><td>{{T2_15}}</td><td>$[1s^22s^22p^6]\,3s^23p^3$</td></tr>
+        <tr class="step"><td>16</td><td>$\mathrm{S}$</td><td>{{T2_16}}</td><td>$[1s^22s^22p^6]\,3s^23p^4$</td></tr>
+        <tr class="step"><td>17</td><td>$\mathrm{Cl}$</td><td>{{T2_17}}</td><td>$[1s^22s^22p^6]\,3s^23p^5$</td></tr>
+        <tr class="step"><td>18</td><td>$\mathrm{Ar}$</td><td>{{T2_18}}</td><td>$[1s^22s^22p^6]\,3s^23p^6$</td></tr>
+      </table>
+      <p class="small c-muted">초록 전자: 새로 채운 전자 · 주황 칸: 홀전자</p>
+    </div>
+    <div class="col stack">
+      <div class="card"><p class="f21">나트륨 $1s^2 2s^2 2p^6 3s^1$ = $[\mathrm{Ne}]3s^1$</p><p class="small">줄임 표기: 앞 18족 원소의 배치를 [ ]로 쓴다.</p></div>
+      <p class="f21"><mark>원자가 전자</mark>: 가장 바깥 주 양자수 에너지 준위에 있는 전자 — 결합에 관여하는 가장 중요한 전자</p>
+      <p class="f21"><b>Q</b> 규소와 인의 원자가 전자 수는?</p>
+      <div class="answer step">Si: 3s 2개 + 3p 2개 = 4개<br>P: 3s 2개 + 3p 3개 = 5개</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 실험실 안내 ════════ -->
+<section class="slide" data-sec="04 · 실험실" data-title="실험실 안내: 예측하기">
+  <h2><span class="tag">실험실</span>전자 배치 상자 채우기 — 예측하고 확인하기</h2>
+  <p class="f21">원소를 골라 오비탈 상자에 전자를 직접 채우고, 세 규칙으로 바닥상태인지 검사한다. 먼저 예측을 적어 보자.</p>
+  <div class="stages c2 mt8">
+    <div class="stage"><p class="f21"><b>① 탄소·질소·산소</b> 2p의 홀전자 수는 각각 몇 개일까?</p><p class="f21 step">→ 예측 예: 2, 3, 2개</p></div>
+    <div class="stage"><p class="f21"><b>② 칼륨</b> 19번째 전자는 3d와 4s 중 어디에 들어갈까?</p><p class="f21 step">→ 예측 예: 4s (4s가 3d보다 낮다)</p></div>
+    <div class="stage"><p class="f21"><b>③ 철과 $\ce{Fe^2+}$</b> 이온이 될 때 어느 오비탈의 전자를 먼저 잃을까?</p><p class="f21 step">→ 예측 예: 마지막에 넣은 3d? 아니면 4s?</p></div>
+    <div class="stage"><p class="f21"><b>④ 크로뮴·구리</b> 쌓는 순서대로 채운 배치가 실제 바닥상태와 같을까?</p><p class="f21 step">→ 예측 예: 같을 것이다? — 실험실에서 확인</p></div>
+  </div>
+  <p class="small mt8">조작: 상자 누르기(빈칸 → ↑ → ↓ → ↑↓ → 빈칸) · 「전자 1개 넣기」 · 「규칙 검사」 · 「기록」</p>
+</section>
+
+<!-- ════════ 21. 실험실 ════════ -->
+<section class="slide" data-sec="04 · 실험실" data-title="실험실: 전자 배치 상자">
+  <h2><span class="tag">실험실</span>전자 배치 상자 실험실</h2>
+  <div class="lab" data-lab="ac113fill">
+    <div class="lab-ctl" style="flex-basis:380px">
+      <div class="ctl"><div class="lbl"><span>원자 번호 $Z$</span><output data-o="z"></output></div><input type="range" min="1" max="36" step="1" value="6" data-i="z" aria-label="원자 번호"></div>
+      <div class="ac113-seg"><span class="small">전하</span><button class="btn" data-q="-2">−2</button><button class="btn" data-q="-1">−1</button><button class="btn on" data-q="0">0</button><button class="btn" data-q="1">+1</button><button class="btn" data-q="2">+2</button><button class="btn" data-q="3">+3</button></div>
+      <div class="ac113-seg"><button class="btn ac113-act" data-act="add">전자 1개 넣기</button><button class="btn" data-act="fill">모두 채우기</button><button class="btn" data-act="clear">비우기</button></div>
+      <div class="ac113-seg"><button class="btn ac113-act" data-act="check">규칙 검사</button><button class="btn" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <div class="res"><div class="small">넣은 전자 / 필요한 전자</div><div class="big"><output data-o="cnt"></output></div></div>
+      <output class="kind ac113-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 700px">
+      <div class="lab-fig" style="width:700px;height:320px"><svg viewBox="0 0 700 320" width="700" height="320" aria-label="1s부터 4p까지 오비탈 상자를 에너지 순서대로 계단처럼 놓은 그림. 상자를 누르면 전자가 들어간다"></svg>
+        <div class="ov" data-ov="cfg" style="font-size:21px"></div>
+      </div>
+      <p class="f21 ac113-info"><output data-o="info"></output></p>
+      <table class="tight ac113-log mt8"><thead><tr><th>원소</th><th>줄임 표기</th><th>홀전자</th><th>원자가 전자</th><th>검사 결과</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 실험실 결과 ════════ -->
+<section class="slide" data-sec="04 · 실험실" data-title="실험실 결과 정리">
+  <h2><span class="tag">실험실</span>결과 정리 — 예측과 비교하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <table class="tight ac113-c">
+        <tr><th>원소</th><th>바닥상태 전자 배치</th><th>홀전자</th></tr>
+        <tr><td>C</td><td>$[\mathrm{He}]2s^2 2p^2$</td><td><span class="blank"><span class="step" data-g="r1">2</span></span></td></tr>
+        <tr><td>N</td><td>$[\mathrm{He}]2s^2 2p^3$</td><td><span class="blank"><span class="step" data-g="r1">3</span></span></td></tr>
+        <tr><td>O</td><td>$[\mathrm{He}]2s^2 2p^4$</td><td><span class="blank"><span class="step" data-g="r1">2</span></span></td></tr>
+        <tr><td>K</td><td>$[\mathrm{Ar}]4s^1$</td><td>1</td></tr>
+        <tr><td>Fe</td><td>$[\mathrm{Ar}]3d^6 4s^2$</td><td>4</td></tr>
+        <tr><td>$\ce{Fe^2+}$</td><td><span class="blank"><span class="step" data-g="r2">$[\mathrm{Ar}]3d^6$</span></span></td><td>4</td></tr>
+        <tr><td>Cr</td><td><span class="blank"><span class="step" data-g="r3">$[\mathrm{Ar}]3d^5 4s^1$</span></span></td><td>6</td></tr>
+        <tr><td>Cu</td><td><span class="blank"><span class="step" data-g="r3">$[\mathrm{Ar}]3d^{10} 4s^1$</span></span></td><td>1</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 칼륨의 19번째 전자가 4s에 들어가는 까닭은?</p>
+      <p class="f21 step">→ <span class="ans">4s가 침투 효과로 3d보다 에너지가 낮기</span> 때문이다.</p>
+      <p class="f21"><b>Q</b> $\ce{Fe^2+}$가 4s 전자를 먼저 잃는 까닭은?</p>
+      <p class="f21 step">→ 3d에 전자가 채워지면 3d의 에너지가 4s보다 낮아져, <span class="ans">에너지가 높은 4s 전자가 먼저</span> 떨어져 나간다. 오비탈의 에너지 순서는 핵전하와 전자 수에 따라 달라진다.</p>
+      <p class="f21"><b>Q</b> 크로뮴과 구리가 쌓는 순서와 다른 까닭은?</p>
+      <p class="f21 step">→ 4s와 3d의 에너지 차가 작아, <span class="ans">반쯤 채워진 $d^5$와 모두 채워진 $d^{10}$</span> 배치가 더 안정하기 때문이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 예제 Ⅰ-1 ════════ -->
+<section class="slide" data-sec="04 · 예제" data-title="예제 Ⅰ-1">
+  <h2><span class="tag ex">예제 Ⅰ-1</span>바닥상태 전자 배치 예측하기</h2>
+  <p class="f21">산업 공정에 쓸 새로운 촉매 물질을 개발하려면 먼저 원소의 전자 배치를 확인해야 할 수 있다. 다음 원자의 바닥상태 전자 배치를 예측하여라. &nbsp;<b>1.</b> 바나듐 원자 &nbsp;<b>2.</b> 납 원자</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21"><b>풀이 1</b> <span class="step">바나듐: 원자 번호 23, 4주기 5족 → 아르곤 배치 $[\mathrm{Ar}]$(전자 18개) 뒤에 전자 5개</span></p>
+      <div class="answer step">$[\mathrm{Ar}]3d^3 4s^2$</div>
+      <p class="f21"><b>풀이 2</b> <span class="step">납: 원자 번호 82, 6주기 14족 → 제논 배치 $[\mathrm{Xe}]$(54개) 뒤에 다 채워진 4f(14개)·5d(10개), 바깥 $6s^2 6p^2$(원자가 전자 4개)</span></p>
+      <div class="answer step">$[\mathrm{Xe}]4f^{14}5d^{10}6s^2 6p^2$</div>
+      <p class="small step">검산: $18+3+2=23$, $54+14+10+2+2=82$</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 전형·전이 비교 ════════ -->
+<section class="slide" data-sec="04 · 현대적 주기율표와 원소의 주기적 성질" data-title="전형 원소와 전이 원소의 전자 배치">
+  <h2><span class="no">16</span>전형 원소와 전이 원소의 전자 배치 비교</h2>
+  <table class="tight ac113-cmp">
+    <tr><th></th><th>전형 원소 (1–2족, 13–18족)</th><th>전이 원소 (3–12족)</th></tr>
+    <tr><th>마지막에 채워지는 오비탈</th><td>$ns$ 또는 $np$</td><td><span class="blank"><span class="step" data-g="c1">$(n-1)d$</span></span></td></tr>
+    <tr><th>예</th><td>$\mathrm{P}:\ [\mathrm{Ne}]3s^2 3p^3$</td><td>$\mathrm{Fe}:\ [\mathrm{Ar}]3d^6 4s^2$</td></tr>
+    <tr><th>원자가 전자</th><td>가장 바깥 $ns$, $np$ 전자 — 족 번호로 예측</td><td><span class="blank"><span class="step" data-g="c2">가장 바깥 $ns$ 전자</span></span> — $d$ 전자도 결합에 참여할 수 있어 족 번호와 단순히 대응하지 않는다</td></tr>
+    <tr><th>양이온이 될 때</th><td>바깥 $ns$, $np$ 전자를 잃는다</td><td><span class="blank"><span class="step" data-g="c3">$4s$ 전자를 먼저</span></span> 잃는다: $\ce{Fe^2+}:\ [\mathrm{Ar}]3d^6$</td></tr>
+    <tr><th>예외</th><td>—</td><td><span class="blank"><span class="step" data-g="c4">$\mathrm{Cr}:\ [\mathrm{Ar}]3d^5 4s^1$, $\mathrm{Cu}:\ [\mathrm{Ar}]3d^{10} 4s^1$</span></span></td></tr>
+  </table>
+  <div class="note big mt12 step"><b>공통점</b> 모두 쌓음 원리·파울리 배타 원리·훈트 규칙으로 바닥상태 배치를 정하고, 앞 18족 원소의 배치 + 바깥 전자로 줄여 쓴다.</div>
+  <p class="small mt8">4s, 3d는 채우는 순서($4s^2 3d^6$)로도, 주 양자수 순서($3d^6 4s^2$)로도 쓴다 — 교과서도 두 꼴을 함께 쓴다.</p>
+</section>
+
+<!-- ════════ 25. 주기율표 ════════ -->
+<section class="slide" data-sec="04 · 현대적 주기율표와 원소의 주기적 성질" data-title="현대적 주기율표">
+  <h2><span class="no">17</span>현대적 주기율표</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 800px">{{PT}}</div>
+    <div class="col stack">
+      <p class="f21">화학적 성질이 비슷한 원소가 같은 세로 열(족)에 오도록 원자 번호 순서로 배치한다.</p>
+      <p class="f21 step"><b>같은 족</b>(18족 제외): 원자가 전자 수가 같아 화학적 성질이 비슷 · <b>같은 주기</b>: 전자 껍질 수가 같다</p>
+      <p class="f21 step"><b>준금속</b>(B, Si, Ge, As, Sb, Te)은 대체로 반도체 성질을 나타낸다.</p>
+    </div>
+  </div>
+  <div class="row step">
+    <div class="col"><p class="f21"><b>전형 원소</b>(주족 원소): 한 주기에서 원자가 전자 수에 따라 성질이 크게 변하고, 비슷한 성질은 같은 족에서만 나타난다.</p></div>
+    <div class="col"><p class="f21"><b>전이 원소</b>(전이 금속): 같은 주기에서도 성질이 비슷하다. d·f 전자는 s·p 원자가 전자만큼 결합에 쉽게 참여하지 못한다. 금속 광택, 비교적 높은 전기·열전도도.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 원자 반지름 ════════ -->
+<section class="slide" data-sec="04 · 현대적 주기율표와 원소의 주기적 성질" data-title="원자 반지름의 주기성">
+  <h2><span class="no">18</span>원자 반지름의 주기성</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{RADII}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 같은 주기에서 원자 번호가 커질수록 원자 반지름은 어떻게 될까?</p>
+      <p class="f21 step">→ <span class="ans">작아진다</span>. 전자 껍질 수는 같지만 양성자 수가 늘어 원자가 전자가 느끼는 유효 핵 전하가 커지기 때문이다.</p>
+      <p class="f21"><b>Q</b> 같은 족에서 원자 번호가 커질수록?</p>
+      <p class="f21 step">→ <span class="ans">커진다</span>. 유효 핵 전하도 커지지만, 전자 껍질 수가 많아지는 효과가 더 크기 때문이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 이온화 에너지·전자 친화도 ════════ -->
+<section class="slide" data-sec="04 · 현대적 주기율표와 원소의 주기적 성질" data-title="이온화 에너지와 전자 친화도">
+  <h2><span class="no">19</span>이온화 에너지와 전자 친화도</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 610px">{{IE}}</div>
+    <div class="col stack">
+      <p class="f21 step"><b>같은 주기</b>: 원자 번호가 커질수록 이온화 에너지가 대체로 증가 — 같은 껍질 전자끼리의 가려막기는 작아 유효 핵 전하가 커진다.</p>
+      <p class="f21 step"><b>같은 족</b>: 주기가 커질수록 감소 — 껍질이 늘어 원자핵과 전자 사이 인력이 약해진다.</p>
+      <p class="f21 step"><b>전자 친화도</b>: 같은 주기에서 원자 번호가 커질수록 대체로 증가(유효 핵 전하 증가), 같은 족에서 주기가 커질수록 대체로 감소.</p>
+      <div class="note"><p class="f21"><b>Q</b> 주기마다 18족에서 가장 크고 1족에서 가장 작은 까닭은?</p><p class="f21 step">→ 18족은 껍질이 다 채워져 안정하고, 1족은 새 껍질의 ns 전자 1개라 떼어 내기 쉽다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac113-ox f21">
+    <li>수소 원자에서 2s와 2p 오비탈의 에너지는 같다. <span class="step">→ <span class="ans">○</span> 수소 원자의 에너지는 $n$에만 의존한다.</span></li>
+    <li>나트륨 원자에서 3s 오비탈은 3p 오비탈보다 에너지가 높다. <span class="step">→ <span class="ans">×</span> 침투 효과로 3s가 더 낮다.</span></li>
+    <li>$n=3$인 껍질에는 오비탈이 9개 있다. <span class="step">→ <span class="ans">○</span> $n^2=9$</span></li>
+    <li>p 오비탈의 전자는 원자핵을 지나 두 엽 사이를 오간다. <span class="step">→ <span class="ans">×</span> 오비탈 전체가 하나의 파동 함수이며, 마디면의 발견 확률은 0이다.</span></li>
+    <li>수소 원자에서 $3d_{z^2}$와 $3d_{xy}$ 오비탈은 에너지가 같다. <span class="step">→ <span class="ans">○</span> 축퇴되어 있다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 29. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>철, 철(Ⅱ) 이온, 크로뮴의 전자 배치</h2>
+  <p class="f21">철, 철(Ⅱ) 이온, 크로뮴의 바닥상태 전자 배치를 줄임 표기로 쓰고, 홀전자 수를 구하여라. (원자 번호 Cr 24, Fe 26)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="answer step">$\mathrm{Fe}:\ [\mathrm{Ar}]3d^6 4s^2$ — 홀전자 4개</div>
+      <div class="answer step">$\ce{Fe^2+}:\ [\mathrm{Ar}]3d^6$ — 홀전자 4개 (4s 전자 2개를 먼저 잃음)</div>
+      <div class="answer step">$\mathrm{Cr}:\ [\mathrm{Ar}]3d^5 4s^1$ — 홀전자 6개</div>
+      <p class="small step">채점 요소: 4s를 먼저 잃음 · 크로뮴의 예외 배치 · 훈트 규칙으로 홀전자 세기</p>
+    </div>
+    <div class="col stack"><div class="step" data-ask="no">{{FE3D}}</div><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>$n=4$일 때 허용되는 $l$</h2>
+  <p class="f22">주 양자수 $n=4$일 때 허용되는 각운동량 양자수($l$)를 결정하고 각각의 오비탈 이름을 적어라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f22 step">$l=0,\ 1,\ \cdots,\ n-1$ → $l=0,\ 1,\ 2,\ 3$</p>
+      <div class="answer step">$l=0$: 4s, $l=1$: 4p, $l=2$: 4d, $l=3$: 4f</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 31. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>불가능한 양자수 조합</h2>
+  <p class="f22">양자수 조합을 $n$, $l$, $m_l$, $m_s$로 나타낼 때, 다음 중 불가능한 양자수 조합은 어느 것인가?</p>
+  <table class="tight ac113-c ac113-ex2 mt12">
+    <tr><th>보기</th><th>$n,\ l,\ m_l,\ m_s$</th><th>판정</th></tr>
+    <tr><td>1)</td><td>$3,\ 2,\ 0,\ +\tfrac12$</td><td><span class="blank"><span class="step">가능</span></span></td></tr>
+    <tr><td>2)</td><td>$2,\ 2,\ 1,\ -\tfrac12$</td><td><span class="blank"><span class="step">불가능: $n=2$이면 $l\le1$</span></span></td></tr>
+    <tr><td>3)</td><td>$4,\ 1,\ 0,\ -\tfrac12$</td><td><span class="blank"><span class="step">가능</span></span></td></tr>
+    <tr><td>4)</td><td>$1,\ 0,\ -1,\ +\tfrac12$</td><td><span class="blank"><span class="step">불가능: $l=0$이면 $m_l=0$뿐</span></span></td></tr>
+  </table>
+  <div class="answer step mt12">2), 4)</div>
+</section>
+
+<!-- ════════ 32. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>전자 배치, 홀전자, 원자가 전자</h2>
+  <p class="f21">다음 원자나 이온들의 바닥상태 전자 배치를 오비탈 기호를 사용하여 나타내고, 홀전자 수와 원자가 전자 수를 써라.</p>
+  <table class="tight ac113-c ac113-ex3 mt8">
+    <tr><th></th><th>바닥상태 전자 배치</th><th>홀전자</th><th>원자가 전자</th></tr>
+    <tr><td>1) $\mathrm{Na}$</td><td><span class="blank"><span class="step" data-g="e1">$[\mathrm{Ne}]3s^1$</span></span></td><td><span class="blank"><span class="step" data-g="e1">1</span></span></td><td><span class="blank"><span class="step" data-g="e1">1</span></span></td></tr>
+    <tr><td>2) $\ce{Ca^2+}$</td><td><span class="blank"><span class="step" data-g="e2">$[\mathrm{Ar}]$ ($1s^22s^22p^63s^23p^6$)</span></span></td><td><span class="blank"><span class="step" data-g="e2">0</span></span></td><td><span class="blank"><span class="step" data-g="e2">8</span></span></td></tr>
+    <tr><td>3) $\mathrm{N}$</td><td><span class="blank"><span class="step" data-g="e3">$[\mathrm{He}]2s^2 2p^3$</span></span></td><td><span class="blank"><span class="step" data-g="e3">3</span></span></td><td><span class="blank"><span class="step" data-g="e3">5</span></span></td></tr>
+    <tr><td>4) $\mathrm{S}$</td><td><span class="blank"><span class="step" data-g="e4">$[\mathrm{Ne}]3s^2 3p^4$</span></span></td><td><span class="blank"><span class="step" data-g="e4">2</span></span></td><td><span class="blank"><span class="step" data-g="e4">6</span></span></td></tr>
+    <tr><td>5) $\ce{Cl-}$</td><td><span class="blank"><span class="step" data-g="e5">$[\mathrm{Ar}]$</span></span></td><td><span class="blank"><span class="step" data-g="e5">0</span></span></td><td><span class="blank"><span class="step" data-g="e5">8</span></span></td></tr>
+    <tr><td>6) $\mathrm{Cu}$</td><td><span class="blank"><span class="step" data-g="e6">$[\mathrm{Ar}]4s^1 3d^{10}$</span></span></td><td><span class="blank"><span class="step" data-g="e6">1</span></span></td><td><span class="blank"><span class="step" data-g="e6">1</span></span></td></tr>
+  </table>
+  <p class="small mt8">원자가 전자 = 가장 바깥 주 양자수 준위의 전자 수(이온은 이온의 가장 바깥 껍질로 센다). 구리는 4s와 3d의 에너지가 가까워 $d^{10}$이 되는 예외 배치이다.</p>
+</section>
+
+<!-- ════════ 33. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>원자 속 전자의 속력 불확정성</h2>
+  <p class="f22">하이젠베르크 불확정성 원리를 사용하여 전형적 원자의 지름 0.2 nm 안에 존재하는 전자의 속력의 최소 불확정성 $\Delta v$는 얼마인지 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">$\Delta x\cdot\Delta p=\dfrac{h}{4\pi}$, $\Delta p=m\Delta v$ → $\Delta v=\dfrac{h}{4\pi m\Delta x}$</p>
+      <p class="f21 step">$\Delta v=\dfrac{6.626\times10^{-34}\ \text{J}\cdot\text{s}}{4\times3.14\times(9.11\times10^{-31}\ \text{kg})\times(2.00\times10^{-10}\ \text{m})}$</p>
+      <div class="answer step">$\Delta v=2.90\times10^{5}\ \text{m/s}$</div>
+      <p class="small step">원자 크기만큼만 위치를 알아도 속력이 이만큼 불확실하다 → 전자의 궤도를 정할 수 없다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 34. 스스로 정리 ════════ -->
+<section class="slide" data-sec="03–04 원자 오비탈의 모양과 원자의 전자 배치 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 원자 오비탈 — 03·04</h2>
+  <div class="ac113-map">
+    <div class="ac113-node ac113-dim">01 보어 모형<br>02 현대적 모형<br><span class="small">(지난 시간)</span></div>
+    <div class="ac113-arr">→</div>
+    <div class="ac113-node ac113-main" data-q><b>03 원자 오비탈의 모양</b><br>❶ $l=0\sim$ <span class="blank"><span class="step">$n-1$</span></span>, $m_l$ <span class="blank"><span class="step">$2l+1$</span></span>개<br>❷ 껍질의 오비탈 수 <span class="blank"><span class="step">$n^2$</span></span><br>❸ s <span class="blank"><span class="step">구형</span></span>, p <span class="blank"><span class="step">아령 모양</span></span></div>
+    <div class="ac113-arr">→</div>
+    <div class="ac113-node ac113-main" data-q><b>04 원자의 전자 배치</b><br>❹ <span class="blank"><span class="step">가려막기·침투</span></span> → $E_{ns}&lt;E_{np}&lt;E_{nd}$<br>❺ <span class="blank"><span class="step">쌓음 원리</span></span>, <span class="blank"><span class="step">파울리 배타 원리</span></span>, <span class="blank"><span class="step">훈트 규칙</span></span><br>❻ 전이 원소 양이온 <span class="blank"><span class="step">4s</span></span> 먼저, 예외 <span class="blank"><span class="step">Cr·Cu</span></span></div>
+    <div class="ac113-arr">→</div>
+    <div class="ac113-node ac113-dim">2. 화학 결합과 에너지<br><span class="small">(다음 중단원)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 35. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="03–04 원자 오비탈의 모양과 원자의 전자 배치 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 네 양자수로 오비탈의 이름·수·모양을 설명하고, 가려막기·침투 효과로 오비탈의 에너지 순서를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 세 규칙으로 전형 원소와 전이 원소의 바닥상태 전자 배치를 나타내고 비교할 수 있다.</button>
+    <button class="chk">[가치·태도] 오비탈로 원소의 주기적 성질이 설명되는 것에 호기심을 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $n=3$인 껍질의 오비탈 수와 최대 전자 수는? <span class="step">→ <span class="ans">9개, 18개</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 칼륨의 바닥상태에서 마지막 전자가 들어가는 오비탈은? <span class="step">→ <span class="ans">4s</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 같은 주기에서 이온화 에너지가 대체로 커지는 까닭은? <span class="step">→ <span class="ans">유효 핵 전하가 커지기</span> 때문이다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 원자들은 전자 배치를 바탕으로 어떻게 결합할까? (2. 화학 결합과 에너지)</div>
+</section>
