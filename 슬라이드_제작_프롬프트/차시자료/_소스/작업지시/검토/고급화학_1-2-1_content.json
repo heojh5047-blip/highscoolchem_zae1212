@@ -1,0 +1,7 @@
+{"findings":[
+{"slide":32,"severity":"high","rule":"D22","problem":"OCN⁻ (가) N에 비공유 전자쌍 3개를 그려 N 둘레 전자가 10개였다","fix":"gen.py 전자 수 자동 검산이 찾아냄 → N 비공유 전자쌍 2개로 고침(형식 전하 −1 유지)"},
+{"slide":21,"severity":"low","rule":"6.5","problem":"'→'로 시작하는 단계가 답 강조 없이 설명문이었다","fix":"화살표를 빼고 설명 단계로 바꿈"},
+{"slide":24,"severity":"low","rule":"S2","problem":"결론 상자와 정답이 둘 다 .answer라 판서 공간 점검에 걸림","fix":"결론은 .note.big로, 정답만 .answer"},
+{"slide":32,"severity":"low","rule":"S2","problem":"정답 상자 2개(판서 공간 없음)","fix":"둘째 답을 '→ … .ans' 단계 문장으로"},
+{"slide":16,"severity":"medium","rule":"범위","problem":"P의 3d 오비탈로 원자가 껍질이 확장된다는 설명은 현대 이론과 다르다","fix":"교과서 문장 그대로 두고 plan.md 확인 필요 2에 적음"}
+],"summary":"반응식 10개, 루이스 구조 18종의 전자 수·형식 전하, 계산 9개를 다시 확인했다. 전자 수 오류 1건(OCN⁻)을 고쳤고, 나머지는 질문 강조·판서 점검 꼴 정리다. 필수 탐구 고화-탐03은 S17–S18로 조사·토론·발표를 모두 이행한다."}
