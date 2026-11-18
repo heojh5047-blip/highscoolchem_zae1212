@@ -145,7 +145,7 @@ window.DECK_LABS = {
       O('msg').textContent=`측정 ${reads.map(x=>x.toFixed(1)).join(', ')}° → 평균 ${mean.toFixed(1)}°, 실험값 ${M.exp}°와 ${Math.abs(mean-M.exp).toFixed(1)}° 차이`;
       if(st.view==='graph') draw(); });
     root.querySelector('[data-act="graph"]').addEventListener('click',()=>{ st.view=st.view==='graph'?'model':'graph';
-      root.querySelector('[data-act="graph"]').classList.toggle('on',st.view==='graph'); API.place(Ov('f'),16,10,st.view!=='graph'); draw(); });
+      root.querySelector('[data-act="graph"]').classList.toggle('on',st.view==='graph'); API.place(Ov('f'),16,10,st.view!=='graph'); API.place(Ov('hint'),W-80,H-20,st.view!=='graph'); draw(); });
     root.querySelector('[data-act="reset"]').addEventListener('click',()=>{ log=[]; seed=20261117; renderLog(); st={...st,mode:'hyb',h:'sp3',p:'CH4',yaw:25,pitch:-16,view:'model'};
       root.querySelectorAll('[data-m]').forEach(x=>x.classList.toggle('on',x.dataset.m==='hyb'));
       root.querySelector('[data-act="graph"]').classList.remove('on');

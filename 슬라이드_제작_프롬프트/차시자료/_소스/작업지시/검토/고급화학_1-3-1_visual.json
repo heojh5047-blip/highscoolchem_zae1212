@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":1,"severity":"high","rule":"D8","problem":"표지 그림 클래스가 cover-fig가 아니라 제목과 겹침, 그림 아래 설명 글이 배경 원에 잘림","fix":"cls='cover-fig', 설명 글 삭제"},
+{"slide":10,"severity":"medium","rule":"D8","problem":"막대 값 612와 2×348 점선 라벨이 겹침, 세로축 제목 잘림","fix":"값 라벨을 막대 안(흰 글씨)으로, 점선 라벨을 왼쪽으로, 제목 y 내림"},
+{"slide":12,"severity":"medium","rule":"D8","problem":"아래 He2 줄이 안전 영역 밖","fix":"H2 결합 차수 줄을 오른쪽 열로 옮기고 그림 폭 600"},
+{"slide":14,"severity":"medium","rule":"D8","problem":"두 MO 도표와 정답이 화면 아래로 넘침","fix":"도표 폭 820, 글자 22(화면 18px), B2 문장 줄임"},
+{"slide":16,"severity":"low","rule":"D8","problem":"'더 가까이 좁게' 라벨 왼쪽 잘림","fix":"그림을 오른쪽으로 옮기고 viewBox 320"},
+{"slide":21,"severity":"medium","rule":"D8·3.2","problem":"sp 그림 캡션이 아래로 넘치고 에너지 상자 라벨이 16px 미만","fix":"에너지 상자 폭 480, sp 오비탈 220"},
+{"slide":35,"severity":"medium","rule":"3.2","problem":"N2·O2 도표 라벨 12.8px","fix":"라벨 25, 도표 폭 740"},
+{"slide":34,"severity":"low","rule":"3.2","problem":"Be 라벨 15px","fix":"원자 배율 0.86"},
+{"slide":15,"severity":"low","rule":"S2","problem":"정답 여러 개인데 판서 공간 없음(S15·S17·S23·S33)","fix":"작은 .board 추가"},
+{"slide":3,"severity":"low","rule":"레이아웃","problem":"흐름 상자가 두 줄로 넘어감","fix":"노드 하나로 합침"},
+{"slide":32,"severity":"low","rule":"실험실","problem":"그래프 보기에서 '끌어서 돌려 보자' 안내가 남음","fix":"그래프 보기에서 숨김"}
+],"summary":"전체 sheet 모음 두 번(완성 직후·최종), S14·S24·S32·S35 단계 캡처. 지적 11건 모두 반영. 남은 것: 분자 모형 일부(CH4 σ 그림의 뒤쪽 H)는 투영상 엽 끝과 조금 어긋나 보이나 화학적 의미는 맞음."}
