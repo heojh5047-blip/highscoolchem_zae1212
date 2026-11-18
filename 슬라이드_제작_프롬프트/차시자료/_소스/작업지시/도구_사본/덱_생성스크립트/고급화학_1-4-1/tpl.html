@@ -1,0 +1,670 @@
+<!-- 고급화학 1-4-1 탄소 화합물의 구조식과 탄화수소의 구조 — gen.py가 tpl.html에서 만든다(그림 자리표) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 물질의 구조 › 4. 탄소 화합물의 분자 구조 › 01–02</div>
+    <h1 class="ac141-h1">탄소 화합물의<br>구조식과<br><span class="acc">탄화수소의 구조</span></h1>
+    <p class="sub">같은 분자식, 다른 구조 — 탄소 골격이 성질을 바꾼다</p>
+    <p class="meta">고등학교 고급 화학 55–63쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅰ-4. 탄소 화합물의 분자 구조 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>4. 탄소 화합물의 분자 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 290px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 탄소 화합물의 구조식</p>
+        <p class="f21"><b class="c-plus">02</b> 탄화수소의 구조</p>
+        <p class="f21 c-muted"><b>03</b> 방향족 화합물의 구조</p>
+        <p class="small c-plus mt8">← 오늘: 01과 02 앞부분(알케인·알켄·알카인)</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">많은 화합물은 분자 구조로부터 화학 반응성과 물리적 성질을 예상할 수 있지만, 탄소 화합물은 구조와 반응성이 매우 복잡하므로 먼저 간단한 탄소 화합물의 구조부터 이해해야 한다. 이 장에서는 탄소 원자가 4개의 원자가 전자로 <b>단일 결합, 2중 결합, 3중 결합</b>을 만드는 <b>혼성화</b>와, 다양한 <b>작용기</b>를 가진 탄소 화합물의 화학 반응성과 물리적 성질을 알아본다.</p>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 290px">
+      <h3 class="f21">사과와 토마토 — 에틸렌의 마술</h3>
+      {{INTRO}}
+    </div>
+  </div>
+  <div class="note puzzle mt8"><b>생각해 보기</b> 에틸렌은 탄소 2개, 수소 4개뿐인 작은 분자인데, 잘 익은 사과가 내놓는 에틸렌 기체가 옆의 토마토를 빨리 익게 한다. 이 작은 분자의 어떤 구조가 열쇠일까? — 2중 결합(π 결합)</div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 탄소 화합물의 구조식" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화01-05]</span>원자가 결합 이론과 혼성 오비탈의 정의를 이해하고, 혼성 오비탈로 설명할 수 있는 다양한 탄소 화합물 분자 구조를 탐색할 수 있다.</div>
+  <div class="std"><span class="code">[12고화01-06]</span>포화 및 불포화 탄화수소의 이성질체를 이해하고, 이성질체를 구조식으로 그려 비교할 수 있다.</div>
+  <ol class="goals mt8 f21">
+    <li>탄소 원자가 혼성 오비탈로 만드는 <b>단일·2중·3중 결합</b>으로 메테인, 에테인, 에틸렌, 아세틸렌의 구조를 설명할 수 있다.</li>
+    <li>탄소 화합물이 많은 까닭을 설명하고, <b>작용기</b>에 따라 분류할 수 있다.</li>
+    <li>탄화수소를 <b>알케인, 알켄, 알카인</b>으로 분류하고 일반식과 성질을 비교할 수 있다.</li>
+    <li><b>구조 이성질체</b>와 <b>시스-트랜스 이성질체</b>를 구조식으로 그려 비교할 수 있다.</li>
+    <li>탄소 수와 구조 이성질체 수의 관계를 조사하고, 이성질체 분자 모형을 만들어 성질을 비교할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">구조식</div><div class="farr">→</div>
+    <div class="fnode">혼성과 결합</div><div class="farr">→</div>
+    <div class="fnode">탄화수소 분류</div><div class="farr">→</div>
+    <div class="fnode">구조 이성질체</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 이성질체 수</div><div class="farr">→</div>
+    <div class="fnode">시스-트랜스·첨가</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 분자 모형</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 탄소 화합물의 구조식 · 도입" data-title="생각 열기: C4H10의 구조">
+  <h2><span class="tag">생각 열기</span>$\ce{C4H10}$의 구조는 몇 가지일까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">{{OPENBOX}}</div>
+    <div class="col stack">
+      <div class="card"><h3><span class="tag alt">다시 보기</span></h3>
+        <p class="f21">탄소 원자는 결합을 <b>4개</b>, 수소 원자는 <b>1개</b> 만든다. (3. 원자가 결합과 혼성 오비탈)</p></div>
+      <p class="f22 mt16"><b>Q</b> 탄소 4개와 수소 10개를 모두 써서 분자 모형을 만들 때, 서로 다른 모양은 몇 가지 만들 수 있을까?</p>
+    </div>
+  </div>
+  <div class="answer step mt8">2가지 — 탄소 4개가 한 줄로 이어진 것과, 가운데 탄소에 가지가 달린 것</div>
+  <p class="f21 step mt8">→ 분자식이 같아도 구조가 다른 분자가 있다. 오늘은 탄소 화합물의 구조를 구조식으로 나타내고 비교해 본다.</p>
+</section>
+
+<!-- ════════ 5. 탄소의 결합 4개 ════════ -->
+<section class="slide" data-sec="01 · 탄소 화합물의 구조식" data-title="탄소 원자의 결합 4개">
+  <h2><span class="no">1</span>탄소 원자는 결합을 4개 만든다</h2>
+  <p class="f22">탄소 원자는 원자가 전자 4개로 <b>공유 결합 4개</b>를 만들어 <b>사슬</b> 화합물과 <b>고리</b> 화합물을 만든다.</p>
+  {{F38}}
+  <p class="small" style="text-align:center">선-결합 구조식: 모든 공유 결합을 선 하나로 나타낸 구조식</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 640px">
+      <table class="ac141-c">
+        <tr><th>탄소 하나의 결합</th><th>예</th></tr>
+        <tr class="step"><td>단일 결합 4개</td><td>메테인, 에테인, 사이클로프로페인</td></tr>
+        <tr class="step"><td>2중 결합 1개 + 단일 결합 2개</td><td>에틸렌</td></tr>
+        <tr class="step"><td>3중 결합 1개 + 단일 결합 1개</td><td>아세틸렌</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <p class="f21"><b>Q</b> 사이클로프로페인($\ce{C3H6}$)은 사슬 화합물일까, 고리 화합물일까?</p>
+      <div class="answer step">탄소 3개가 고리를 이룬 고리 화합물</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 구조식의 여러 표현 ════════ -->
+<section class="slide" data-sec="01 · 탄소 화합물의 구조식" data-title="구조식의 여러 가지 표현">
+  <h2><span class="no">2</span>프로페인을 나타내는 여러 가지 방법</h2>
+  <div class="ac141-s4">
+    <div class="stage"><h3>① 분자식</h3><div class="ac141-big">$\ce{C3H8}$</div><p class="small">원자의 종류와 수만</p></div>
+    <div class="stage"><h3>② 선-결합 구조식</h3>{{PRLEW}}<p class="small">모든 결합을 선으로</p></div>
+    <div class="stage"><h3>③ 축약 구조식</h3><div class="ac141-big">$\ce{CH3CH2CH3}$</div><p class="small">탄소마다 붙은 H를 묶어서</p></div>
+    <div class="stage"><h3>④ 분자 모형</h3>{{PRBS}}<p class="small">실제 3차원 모양(공-막대)</p></div>
+  </div>
+  <div class="note step mt16">선-결합 구조식은 평면에 그린 것일 뿐이다. 실제 탄소 사슬은 결합각이 약 109.5°인 <b>지그재그 모양</b>이므로, 구조식을 비교할 때는 분자 모형으로 3차원 모양을 꼭 확인한다.</div>
+  <div class="row mt16">
+    <p class="f21" style="flex:1"><b>Q</b> 축약 구조식 $\ce{CH3CH2CH2CH3}$의 분자식은?</p>
+    <div class="answer step" style="flex:0 0 300px">$\ce{C4H10}$</div>
+  </div>
+</section>
+
+<!-- ════════ 7. 메테인 ════════ -->
+<section class="slide" data-sec="01 · 메테인과 에테인의 구조" data-title="메테인의 구조">
+  <h2><span class="no">3</span>메테인($\ce{CH4}$)의 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">{{CH4W}}
+      <p class="small">쐐기 결합: 채운 쐐기 = 종이 앞으로, 점선 쐐기 = 종이 뒤로, 실선 = 종이 면</p></div>
+    <div class="col stack">
+      <p class="f21">가장 간단한 탄소 화합물인 메테인은 C–H 단일 결합 4개가 <b>정사면체</b>의 각 꼭짓점을 향한다. H–C–H 결합각은 <b>109.5°</b>(정사면체 각)이다.</p>
+      <p class="f21 step">C의 $sp^3$ 혼성 오비탈 4개가 H 4개의 $1s$ 오비탈과 <b>σ 결합</b>을 하여 똑같은 C–H 결합 4개를 만든다.</p>
+      <div class="card"><h3><span class="tag alt">다시 보기</span></h3>
+        <p class="small">$sp^3$ 혼성화: s 오비탈 1개 + p 오비탈 3개 → $sp^3$ 혼성 오비탈 4개<br>σ(시그마) 결합: 오비탈이 정면으로 겹쳐 단면이 원형인 공유 결합</p></div>
+      <p class="f21 mt8"><b>Q</b> 4개의 C–H 결합의 길이와 세기는 서로 같을까?</p>
+      <div class="answer step">모두 같다 — 똑같은 $sp^3$ 혼성 오비탈 4개가 결합하기 때문</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 에테인 ════════ -->
+<section class="slide" data-sec="01 · 메테인과 에테인의 구조" data-title="에테인과 탄소-탄소 단일 결합">
+  <h2><span class="no">4</span>에테인($\ce{C2H6}$)과 탄소-탄소 단일 결합</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{C2H6W}}{{C2H6ORB}}</div>
+    <div class="col stack">
+      <p class="f21">에테인은 C–C 단일 결합 1개와 C–H 단일 결합 6개를 가지며, 모든 결합각이 정사면체 각에 가깝다.</p>
+      <p class="f21 step">각 C의 $sp^3$ 혼성 오비탈 1개씩이 겹쳐 <b>C–C σ 결합</b>($sp^3$–$sp^3$)을 만들고, 나머지 3개씩은 H의 $1s$와 σ 결합 → C–H 결합 6개</p>
+      <div class="row step">
+        <div class="col" style="flex:0 0 200px">{{C2H6END}}</div>
+        <p class="f21 col">σ 결합은 결합 축을 중심으로 원통 대칭이라, C–C 단일 결합을 축으로 <b>돌려도 겹침이 그대로</b>이다 → 단일 결합은 자유롭게 회전한다.</p>
+      </div>
+      <p class="f21"><b>Q</b> 에테인에서 σ 결합은 모두 몇 개일까?</p>
+      <div class="answer step">7개 (C–C 1개 + C–H 6개)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 에틸렌 ════════ -->
+<section class="slide" data-sec="01 · 에틸렌의 구조" data-title="에틸렌의 구조">
+  <h2><span class="no">5</span>에틸렌($\ce{C2H4}$)의 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 360px">{{C2H4ST}}</div>
+    <div class="col">{{ETHENE}}</div>
+  </div>
+  <p class="f21">에틸렌은 탄소 원자 사이에 <b>2중 결합</b>이 있고, <b>모든 원자가 한 평면</b> 위에 있다.</p>
+  <p class="f21 step">각 C는 $sp^2$ 혼성화 → $sp^2$ 혼성 오비탈 3개가 한 평면에서 120°, 혼성하지 않은 p 오비탈 1개는 평면에 수직</p>
+  <p class="f21 step">$sp^2$–$sp^2$ 겹침 → C–C σ 결합 / 나란한 두 p 오비탈의 <b>측면 겹침</b> → <b>π(파이) 결합</b> ⇒ C=C 2중 결합 = σ 1 + π 1</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:1"><b>Q</b> 에틸렌의 결합각은 모두 정확히 120°일까?</p>
+    <div class="answer step" style="flex:0 0 640px">아니다 — H–C–H 117.4°, H–C=C 121.3°: 2중 결합 쪽 전자 밀도가 커서 C–H 결합을 밀어낸다.</div>
+  </div>
+</section>
+
+<!-- ════════ 10. 아세틸렌 ════════ -->
+<section class="slide" data-sec="01 · 아세틸렌의 구조" data-title="아세틸렌의 구조">
+  <h2><span class="no">6</span>아세틸렌($\ce{C2H2}$)의 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 390px">{{C2H2ST}}</div>
+    <div class="col">{{ETHYNE}}</div>
+  </div>
+  <p class="f21">아세틸렌은 탄소 원자 사이에 <b>3중 결합</b>이 있고, <b>모든 원자가 한 직선</b> 위에 있다.</p>
+  <p class="f21 step">각 C는 $sp$ 혼성화 → $sp$ 혼성 오비탈 2개가 180°, 혼성하지 않은 p 오비탈 2개는 서로 수직</p>
+  <p class="f21 step">$sp$–$sp$ 겹침 → C–C σ 결합 1개 / p 오비탈 두 쌍의 측면 겹침 → π 결합 2개 ⇒ C≡C 3중 결합</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:1"><b>Q</b> 아세틸렌의 σ 결합과 π 결합은 각각 몇 개일까?</p>
+    <div class="answer step" style="flex:0 0 400px">σ 3개(C–C 1 + C–H 2), π 2개</div>
+  </div>
+</section>
+
+<!-- ════════ 11. 비교 ════════ -->
+<section class="slide" data-sec="01 · 탄소 화합물의 구조식" data-title="세 분자의 구조 비교">
+  <h2><span class="no">7</span>에테인·에틸렌·아세틸렌 비교</h2>
+  {{C2FOUR}}
+  <table class="ac141-c ac141-cmp">
+    <tr><th></th><th>에테인 $\ce{C2H6}$</th><th>에틸렌 $\ce{C2H4}$</th><th>아세틸렌 $\ce{C2H2}$</th></tr>
+    <tr><td>C의 혼성</td><td><span class="blank"><span class="step">$sp^3$</span></span></td><td><span class="blank"><span class="step">$sp^2$</span></span></td><td><span class="blank"><span class="step">$sp$</span></span></td></tr>
+    <tr><td>탄소-탄소 결합</td><td>단일(σ)</td><td>2중(σ + π)</td><td>3중(σ + 2π)</td></tr>
+    <tr><td>분자 모양</td><td><span class="blank"><span class="step">입체(정사면체 각)</span></span></td><td><span class="blank"><span class="step">평면</span></span></td><td><span class="blank"><span class="step">직선</span></span></td></tr>
+    <tr><td>결합각</td><td>111.2°</td><td>121.3° · 117.4°</td><td>180°</td></tr>
+    <tr><td>C–C 결합 길이</td><td>0.154 nm</td><td>0.134 nm</td><td>0.120 nm</td></tr>
+  </table>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 470px"><b>Q</b> 탄소-탄소 결합 길이가 단일 &gt; 2중 &gt; 3중인 까닭은?</p>
+    <div class="answer step" style="flex:1">공유하는 전자쌍이 많을수록 두 원자핵을 더 강하게 끌어당겨 결합이 짧고 강해진다.</div>
+  </div>
+  <p class="small">s 성격($sp$ 50 %, $sp^2$ 33 %, $sp^3$ 25 %)이 클수록 결합이 짧아진다(3. 원자가 결합과 혼성 오비탈).</p>
+</section>
+
+<!-- ════════ 12. 다양성 ════════ -->
+<section class="slide" data-sec="01 · 탄소 화합물의 다양성" data-title="탄소 화합물의 다양성">
+  <h2><span class="no">8</span>탄소 화합물은 왜 이렇게 많을까?</h2>
+  <p class="f21">음식물·의약품·농약·합성 섬유·플라스틱·석유 화학 제품의 대부분과, 생명체를 이루는 탄수화물·단백질·지방·핵산·세포막·효소는 모두 <b>탄소 화합물</b>이다. 알려진 화합물의 <b>90 % 이상</b>이 탄소 화합물이고, 해마다 수많은 새 탄소 화합물이 만들어지거나 발견된다.</p>
+  <p class="f21"><mark>유기 화합물</mark>: 탄소 화합물 — 유기 화합물을 공부하는 학문은 <b>유기 화학</b></p>
+  {{DIVERS}}
+  <p class="f21 mt8"><b>Q</b> 모든 원소 가운데 탄소만 이렇게 많은 화합물을 만드는 까닭은?</p>
+  <div class="answer step">탄소는 원자가 4로 다른 탄소나 H, O, N, S, Cl, Br 등과 공유 결합을 하고, $sp^3$·$sp^2$·$sp$ 혼성화로 <b>사슬·고리 모양의 단일·2중·3중 결합</b>을 만들 수 있다.</div>
+</section>
+
+<!-- ════════ 13. 작용기 ════════ -->
+<section class="slide" data-sec="01 · 탄소 화합물의 다양성" data-title="작용기에 따른 분류">
+  <h2><span class="no">9</span>작용기로 탄소 화합물을 분류한다</h2>
+  <p class="f21"><mark>작용기</mark>: 탄소 화합물의 구조적 특성을 결정짓는 특정한 원자들의 집단</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 470px">
+      <table class="ac141-c ac141-fg">
+        <tr><th>작용기</th><th>꼴</th><th>작용기</th><th>꼴</th></tr>
+        <tr><td>할로젠기</td><td>$-\mathrm{X}$</td><td>카보닐기</td><td>$\ce{>C=O}$</td></tr>
+        <tr><td>하이드록시기</td><td>$\ce{-OH}$</td><td>카복실기</td><td>$\ce{-COOH}$</td></tr>
+        <tr><td>에테르기</td><td>$\ce{-O-}$</td><td>아미노기</td><td>$\ce{-NH2}$</td></tr>
+      </table>
+      <p class="small mt8">X: F, Cl, Br, I 같은 할로젠 원자</p>
+    </div>
+    <div class="col stack">
+      <p class="f21 step">화학 반응성은 분자의 크기나 복잡성과 관계없이 <b>작용기의 종류</b>로 정해지고, 같은 계열의 탄소 화합물은 화학 반응성이 비슷하다 → 수많은 탄소 화합물의 반응성을 예측할 수 있다.</p>
+      <div class="card step"><h3>작용기에 따른 계열</h3><p class="f21">알케인 · 알켄 · 알카인 · 방향족 화합물 · 할로젠 화합물 · 알코올 · 에테르 · 카보닐 화합물 · 아민</p></div>
+    </div>
+  </div>
+  <div class="row mt16">
+    <div class="col" style="flex:0 0 560px">
+      <p class="f21"><b>Q</b> 메탄올 $\ce{CH3}$<span class="ac141-hl">$\ce{OH}$</span>과 에탄올 $\ce{CH3CH2}$<span class="ac141-hl">$\ce{OH}$</span>의 화학 반응성이 비슷한 까닭은?</p>
+    </div>
+    <div class="col"><div class="answer step">같은 작용기(하이드록시기 $\ce{-OH}$)를 가지기 때문</div></div>
+  </div>
+  <p class="small">작용기와 탄화수소 유도체는 다음 시간(02 뒷부분)에 자세히 다룬다.</p>
+</section>
+
+<!-- ════════ 14. 탄화수소 분류 ════════ -->
+<section class="slide" data-sec="02 · 탄화수소의 구조" data-title="탄화수소의 분류">
+  <h2><span class="no">10</span>탄화수소의 분류</h2>
+  <p class="f21"><mark>탄화수소</mark>: 탄소와 수소 원자로만 이루어진 분자 — 2중·3중 결합이 있는지에 따라 포화·불포화 탄화수소로, 탄소-탄소 결합의 종류에 따라 알케인·알켄·알카인으로 나눈다.</p>
+  {{CLASS}}
+  <div class="row">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 사슬 모양인 $\ce{C3H6}$와 $\ce{C3H4}$는 각각 어느 계열일까?</p>
+    <div class="answer step" style="flex:1">$\ce{C3H6}$: $\mathrm{C}_n\mathrm{H}_{2n}$ → 알켄 · $\ce{C3H4}$: $\mathrm{C}_n\mathrm{H}_{2n-2}$ → 알카인</div>
+  </div>
+  <p class="small">사이클로프로페인처럼 고리가 있으면 단일 결합만 있어도 $\mathrm{C}_n\mathrm{H}_{2n}$이다.</p>
+</section>
+
+<!-- ════════ 15. 알케인 이름 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="알케인과 IUPAC 이름">
+  <h2><span class="no">11</span>포화 탄화수소인 알케인</h2>
+  <p class="f21"><mark>알케인</mark>: 탄소-탄소 원자 사이의 결합이 모두 C–C 단일 결합인 포화 탄화수소 — 분자식 $\mathrm{C}_n\mathrm{H}_{2n+2}$</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 700px">
+      <table class="ac141-c ac141-name">
+        <tr><th>탄소 수</th><th>분자식</th><th>이름</th><th>탄소 수</th><th>분자식</th><th>이름</th></tr>
+        <tr><td>1</td><td>$\ce{CH4}$</td><td>메테인(methane)</td><td>6</td><td><span class="blank"><span class="step">$\ce{C6H14}$</span></span></td><td>헥세인(hexane)</td></tr>
+        <tr><td>2</td><td>$\ce{C2H6}$</td><td>에테인(ethane)</td><td>7</td><td><span class="blank"><span class="step">$\ce{C7H16}$</span></span></td><td>헵테인(heptane)</td></tr>
+        <tr><td>3</td><td>$\ce{C3H8}$</td><td>프로페인(propane)</td><td>8</td><td><span class="blank"><span class="step">$\ce{C8H18}$</span></span></td><td>옥테인(octane)</td></tr>
+        <tr><td>4</td><td>$\ce{C4H10}$</td><td>뷰테인(butane)</td><td>9</td><td><span class="blank"><span class="step">$\ce{C9H20}$</span></span></td><td>노네인(nonane)</td></tr>
+        <tr><td>5</td><td>$\ce{C5H12}$</td><td>펜테인(pentane)</td><td>10</td><td><span class="blank"><span class="step">$\ce{C10H22}$</span></span></td><td>데케인(decane)</td></tr>
+      </table>
+      <p class="small mt8">표 Ⅰ-7 직선-사슬 알케인의 IUPAC 이름</p>
+    </div>
+    <div class="col stack">
+      <p class="f21">국제순수및응용화학연합회(IUPAC)가 체계화한 <b>IUPAC 이름</b>을 쓰지만, 오래전부터 써 온 <b>관용명</b>을 쓸 때도 있다.</p>
+      <p class="small">예: 에틸렌(관용명) = 에텐(IUPAC 이름)</p>
+      <p class="f21 mt8"><b>Q</b> 탄소가 8개인 직선-사슬 알케인의 분자식은?</p>
+      <div class="answer step">$\ce{C8H18}$(옥테인) — $2\times8+2=18$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 끓는점 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="알케인의 끓는점">
+  <h2><span class="no">12</span>알케인의 물리적 성질 — 끓는점</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{BPGRAPH}}<p class="small">직선-사슬 알케인의 끓는점(1 atm, 덱 보충 자료)</p></div>
+    <div class="col stack">
+      <p class="f21">알케인은 무극성인 C–C, C–H 결합만 가져 <b>무극성 분자</b>이다 → 분자 사이 인력이 매우 약해 분자량에 비해 끓는점이 낮다.</p>
+      <p class="f21 step">상온에서 메테인–뷰테인($n$ 1–4)은 <b>기체</b>, 펜테인–데케인($n$ 5–10)은 <b>액체</b>이다.</p>
+      <p class="f21 mt8"><b>Q</b> 탄소 수가 늘수록 끓는점이 높아지는 까닭은?</p>
+      <div class="answer step">분자가 커지면 전자 수와 표면적이 커져 분자 사이의 분산력이 강해진다.</div>
+      <p class="small">분자 사이의 힘은 Ⅱ. 물질의 성질에서 자세히 다룬다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 구조 이성질체 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="분자 구조식과 구조 이성질체">
+  <h2><span class="no">13</span>분자 구조식과 구조 이성질체</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      {{I46}}
+      <p class="f21">탄소 수 1–3의 알케인은 분자 구조식이 <b>1가지</b>뿐이다. 탄소 수가 4 이상이면 2가지 이상이 가능하다.</p>
+      <p class="f21 step"><mark>이성질체</mark>: 분자식은 같으나 구조식이 다른 분자<br><mark>구조 이성질체</mark>: 분자 구조를 이루는 <b>탄소 골격 자체</b>가 서로 다른 이성질체</p>
+    </div>
+    <div class="col stack">
+      {{I47C4}}
+      <p class="f21"><b>Q</b> 뷰테인과 2-메틸프로페인은 분자식이 같을까?</p>
+      <div class="answer step">같다 — 둘 다 $\ce{C4H10}$이고, 탄소 골격만 다르다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. C5H12 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="C5H12의 구조 이성질체">
+  <h2><span class="no">14</span>$\ce{C5H12}$의 구조 이성질체</h2>
+  {{C5ISO}}
+  <p class="f21 step">$\ce{C4H10}$은 2개, $\ce{C5H12}$는 3개의 구조 이성질체가 있다. 탄소 수가 6인 $\ce{C6H14}$은 5개, 10인 $\ce{C10H22}$는 75개이다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 가지가 많아질수록 분자 모양은 어떻게 달라질까?</p>
+    <div class="answer step" style="flex:1">길쭉한 사슬 → 공 모양에 가까워진다(펜테인 → 2,2-다이메틸프로페인).</div>
+  </div>
+  <p class="small">이름의 숫자는 가지(메틸 치환기)가 붙은 탄소의 번호 — 이름 짓는 규칙은 다루지 않는다.</p>
+</section>
+
+<!-- ════════ 19. 같은 분자일까 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="같은 분자일까, 다른 이성질체일까">
+  <h2><span class="no">15</span>같은 분자일까, 다른 이성질체일까?</h2>
+  {{SAME4}}
+  <p class="f21"><b>Q</b> (가)–(라)는 모두 $\ce{C5H12}$의 탄소 골격(H 생략)이다. 서로 다른 분자는 몇 가지일까?</p>
+  <div class="row mt8 ac141-pick">
+    <div class="card">① 4가지</div><div class="card">② 3가지</div><div class="card">③ 2가지</div>
+  </div>
+  <div class="answer step mt8">③ 2가지 — (가) = (나) 펜테인, (다) = (라) 2-메틸뷰테인</div>
+  <p class="f21 step mt8">판단 방법: <b>가장 긴 탄소 사슬</b>의 길이와 가지가 붙은 자리를 비교한다. 사슬을 꺾거나 뒤집어 그린 것은 같은 분자이다(단일 결합은 자유롭게 회전).</p>
+</section>
+
+<!-- ════════ 20. 탐구 활동 61 (1) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 이성질체 수 조사 (1)">
+  <h2 class="ac141-h2l"><span class="tag">탐구 활동</span>포화 탄화수소의 탄소 수와 구조 이성질체 수 사이의 수학적 관계 조사 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐06]</span>포화 탄화수소의 탄소 수와 구조 이성질체 수 사이의 수학적 관계 조사 (61쪽)</div>
+  <table class="ac141-c ac141-cnt mt8">
+    <tr><th>탄소 수 $n$</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+    <tr><th>분자식</th><td>$\ce{CH4}$</td><td>$\ce{C2H6}$</td><td>$\ce{C3H8}$</td><td>$\ce{C4H10}$</td><td>$\ce{C5H12}$</td><td>$\ce{C6H14}$</td><td>$\ce{C7H16}$</td><td>$\ce{C8H18}$</td><td>$\ce{C9H20}$</td><td>$\ce{C10H22}$</td></tr>
+    <tr><th>구조 이성질체 수</th><td>1</td><td>1</td><td>1</td><td>2</td><td>3</td><td>5</td><td>9</td><td>18</td><td>35</td><td>75</td></tr>
+  </table>
+  <h3 class="mt16">모둠 활동</h3>
+  <ol class="ac141-ol f21">
+    <li>탄소 수가 1 늘 때 이성질체 수가 어떻게 변하는지 <b>차이</b>와 <b>비</b>를 계산한다.</li>
+    <li>이성질체 수를 그래프로 그린다(세로축은 로그 눈금).</li>
+    <li>$n$과 이성질체 수 사이에 성립하는 수학적 관계(식, 세는 방법)를 조사한다.</li>
+    <li>모둠별로 조사한 내용을 발표한다.</li>
+  </ol>
+  <p class="small mt8">도움: 탄소 골격은 꼭짓점마다 결합이 4개 이하인 '나무 모양 그래프'로 볼 수 있다. 조사한 자료의 출처를 적는다.</p>
+</section>
+
+<!-- ════════ 21. 탐구 활동 61 (2) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 이성질체 수 조사 (2)">
+  <h2><span class="tag">탐구 활동</span>결과 정리 예시 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{LOGBAR}}</div>
+    <div class="col stack">
+      <p class="f21 step"><b>1</b> 비: 2/1 = 2, 3/2 = 1.5, 5/3 ≈ 1.7, 9/5 = 1.8, 18/9 = 2.0, 35/18 ≈ 1.9, 75/35 ≈ 2.1</p>
+      <p class="f21 step"><b>2</b> 차이(1, 1, 2, 4, 9, 17, 40)도 비도 일정하지 않다 → 등차·등비수열이 아니며 간단한 식으로 나타낼 수 없다.</p>
+      <p class="f21 step"><b>3</b> 로그 눈금에서 거의 직선 → $n$이 1 늘 때마다 약 2배씩(조금씩 더 커지며) <b>지수 함수처럼</b> 늘어난다.</p>
+      <p class="f21 step"><b>4</b> 수학자 케일리(1875)는 탄소 골격을 나무 모양 그래프로 보고 차례로 세는 방법(점화식)을 만들었다. 오늘날에는 이 방법을 컴퓨터로 계산한다.</p>
+    </div>
+  </div>
+  <div class="note step mt8"><b>정리 예시</b> 탄소 수가 조금만 늘어도 이성질체 수가 폭발적으로 늘어난다 → 탄소 화합물이 매우 다양한 까닭의 하나이다.</div>
+</section>
+
+<!-- ════════ 22. 연소 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="알케인의 반응성과 연소 반응">
+  <h2><span class="no">16</span>알케인의 화학 반응성과 연소 반응</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">알케인은 무극성 분자로 실험실의 대부분의 화학 시약과 반응하지 않아, 친화성이 작다는 뜻으로 <b>파라핀</b>이라고도 한다. 그러나 적당한 조건에서는 산소나 할로젠과 반응한다.</p>
+      <p class="f21"><mark>연소 반응</mark>: 알케인이 공기 중 산소와 반응하며 많은 열과 빛을 내는 반응</p>
+      <div class="formula step">$\ce{CH4 + 2O2 -> CO2 + 2H2O}\ +\ 890\ \text{kJ/mol}$
+        <div class="unit">(213 kcal/mol) — 열화학 반응식으로는<br>$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$ $\ \Delta H=-890\ \text{kJ}$<br>열을 방출하면 $\Delta H&lt;0$</div></div>
+    </div>
+    <div class="col" style="flex:0 0 340px">{{FLAME}}
+      <p class="f21"><b>Q</b> 가정용 도시가스의 주성분은?</p>
+      <div class="answer step">메테인($\ce{CH4}$)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 염소화 ════════ -->
+<section class="slide" data-sec="02 · 포화 탄화수소인 알케인" data-title="메테인의 염소화">
+  <h2><span class="no">17</span>메테인의 염소화 — 치환 반응과 라디칼 연쇄 반응</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <p class="f21">알케인과 염소의 혼합물에 자외선($h\nu$)을 쪼이면 수소가 염소로 <b>차례로 치환</b>된다.</p>
+      <div class="formula sm step">$\begin{aligned}&amp;\ce{CH4 + Cl2 ->[h\nu] CH3Cl + HCl}\\ &amp;\ce{CH3Cl + Cl2 -> CH2Cl2 + HCl}\\ &amp;\ce{CH2Cl2 + Cl2 -> CHCl3 + HCl}\\ &amp;\ce{CHCl3 + Cl2 -> CCl4 + HCl}\end{aligned}$</div>
+      <p class="small">생성물은 4가지의 혼합물 — 비율은 반응물의 양과 반응 시간에 따라 다르다.</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><mark>치환 반응</mark>: 두 반응물의 어떤 부분이 서로 교환되어 새로운 두 생성물을 만드는 반응</p>
+      <p class="f21 step"><mark>라디칼 반응</mark>: 반응성이 매우 큰 <b>홀전자를 가진 화학종(라디칼)</b>에 의한 반응 — 개시 단계, 전파 단계, 종결 단계를 거치며 연쇄적으로 일어나므로 <b>연쇄 반응</b>이라고 한다.</p>
+    </div>
+  </div>
+  <div class="stages step mt8">
+    <div class="stage"><h3>개시 단계</h3><p>$\ce{Cl2 ->[h\nu] 2Cl}\cdot$</p><p class="small">빛이 결합을 끊어 라디칼을 만든다</p></div>
+    <div class="stage"><h3>전파 단계</h3><p>$\ce{Cl}\cdot + \ce{CH4 -> }\cdot\ce{CH3 + HCl}$<br>$\cdot\ce{CH3 + Cl2 -> CH3Cl + }\ce{Cl}\cdot$</p><p class="small">라디칼이 다시 생겨 반응이 이어진다</p></div>
+    <div class="stage"><h3>종결 단계</h3><p>$\ce{Cl}\cdot + \ce{Cl}\cdot \ce{-> Cl2}$ 등</p><p class="small">라디칼끼리 만나 반응이 끝난다 (단계 식은 덱 보충, 자세히는 [심화] 덱)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 알켄 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="불포화 탄화수소인 알켄">
+  <h2><span class="no">18</span>불포화 탄화수소인 알켄</h2>
+  <p class="f21"><mark>알켄</mark>: 탄소-탄소 원자 사이에 C=C 2중 결합, 즉 π 결합이 있는 불포화 탄화수소 — 분자식 $\mathrm{C}_n\mathrm{H}_{2n}$</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 620px">
+      <table class="ac141-c">
+        <tr><th>$n$</th><th>분자식</th><th>예(축약 구조식)</th></tr>
+        <tr><td>2</td><td>$\ce{C2H4}$</td><td>에틸렌 $\ce{CH2=CH2}$</td></tr>
+        <tr><td>3</td><td><span class="blank"><span class="step">$\ce{C3H6}$</span></span></td><td>프로펜 $\ce{CH2=CHCH3}$</td></tr>
+        <tr><td>4</td><td><span class="blank"><span class="step">$\ce{C4H8}$</span></span></td><td>1-뷰텐 $\ce{CH2=CHCH2CH3}$, 2-뷰텐 $\ce{CH3CH=CHCH3}$</td></tr>
+      </table>
+      <p class="f21 step mt8">알켄은 자연계에 많고 생물학에서 중요하다. 가장 간단한 알켄인 <b>에틸렌</b>은 과일이 익도록 유도하는 <b>식물 호르몬</b>이다.</p>
+    </div>
+    <div class="col">{{ETHPI}}</div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 1-뷰텐과 2-뷰텐처럼 2중 결합의 위치만 다른 두 분자는 구조 이성질체일까?</p>
+    <div class="answer step" style="flex:1">그렇다 — 분자식($\ce{C4H8}$)이 같고 구조식이 다르다.</div>
+  </div>
+</section>
+
+<!-- ════════ 25. 시스-트랜스 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="시스-트랜스 이성질체">
+  <h2><span class="no">19</span>2중 결합은 돌지 않는다 — 시스-트랜스 이성질체</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{CISTRANS}}</div>
+    <div class="col">{{PROT}}</div>
+  </div>
+  <p class="f21 step">C=C 2중 결합은 π 결합이 있어 단일 결합과 달리 <b>회전할 수 없다</b> → 2중 결합 양쪽 탄소 원자에 치환기가 있으면 치환기의 위치에 따라 <mark>시스-트랜스 이성질체</mark>가 생긴다.</p>
+  <p class="f21 step">2-뷰텐: 메틸 치환기 2개가 2중 결합을 중심으로 <b>같은 쪽</b> → <b>시스-2-뷰텐</b>, <b>반대쪽</b> → <b>트랜스-2-뷰텐</b></p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 1-뷰텐($\ce{CH2=CHCH2CH3}$)에도 시스-트랜스 이성질체가 있을까?</p>
+    <div class="answer step" style="flex:1">없다 — 2중 결합의 한쪽 탄소에 H 2개가 붙어 있어, 바꾸어 그려도 같은 분자이다.</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 성질 차이 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="시스·트랜스 이성질체의 성질">
+  <h2><span class="no">20</span>시스와 트랜스는 성질이 다른 화합물이다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{CTBS}}</div>
+    <div class="col stack">
+      <p class="f21">시스 이성질체와 트랜스 이성질체는 분자식은 같지만 <b>물리적으로 분리할 수 있는 서로 다른 화합물</b>로, 끓는점·녹는점·용해도 등의 물리적 성질이 다르다.</p>
+      <table class="ac141-c">
+        <tr><th></th><th>시스-2-뷰텐</th><th>트랜스-2-뷰텐</th></tr>
+        <tr><td>끓는점</td><td><span class="blank"><span class="step">3.7 °C</span></span></td><td><span class="blank"><span class="step">0.9 °C</span></span></td></tr>
+        <tr><td>녹는점</td><td>−139 °C</td><td>−106 °C</td></tr>
+        <tr><td>분자의 극성</td><td>극성</td><td>무극성</td></tr>
+      </table>
+      <p class="small">녹는점은 덱 보충 값. 트랜스는 대칭이라 고체에서 잘 쌓여 녹는점이 높다.</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 470px"><b>Q</b> 시스-2-뷰텐의 끓는점이 더 높은 까닭은?</p>
+    <div class="answer step" style="flex:1">시스는 극성 분자라 분자 사이에 쌍극자 힘이 더 작용한다(트랜스는 결합 쌍극자의 합이 0인 무극성).</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 첨가 반응 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="알켄의 반응성과 첨가 반응">
+  <h2><span class="no">21</span>알켄의 반응성은 π 결합이 정한다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">{{EPI}}</div>
+    <div class="col stack">
+      <p class="f21 step"><b>①</b> π 결합 전자는 σ 결합 전자보다 바깥 공간에 많이 노출되어, 전자를 좋아하는 화학종이 공격하기 쉽다.</p>
+      <p class="f21 step"><b>②</b> π 결합을 끊는 데 필요한 에너지는 σ 결합보다 훨씬 적다. <span class="small">(어림: C=C 612 − C–C 348 = 264 kJ/mol &lt; 348 kJ/mol)</span></p>
+      <p class="f21 step"><mark>첨가 반응</mark>: 두 반응물이 서로 첨가되어 새로운 단일 생성물을 만드는 반응 — 알켄의 대표적 반응</p>
+      <p class="f21 step"><b>친전자체</b>(전자를 좋아하는 화학종)가 π 결합을 공격 → π 결합이 끊어지고 <b>새로운 σ 결합 2개</b>가 생긴다.</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 첨가 반응에서 생성물은 몇 가지일까?</p>
+    <div class="answer step" style="flex:1">1가지(단일 생성물) — 치환 반응은 2가지</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 에틸렌 첨가 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="에틸렌의 첨가 반응">
+  <h2><span class="no">22</span>에틸렌의 첨가 반응</h2>
+  <p class="f21">에틸렌에 브로민화 수소($\ce{HBr}$)나 브로민($\ce{Br2}$)을 반응시키면 첨가 반응으로 각각 <b>브로모에테인</b>과 <b>1,2-다이브로모에테인</b>이 생긴다. 두 반응은 <b>양이온 중간체</b>를 거쳐 <b>두 단계</b>로 진행된다.</p>
+  {{ADD2}}
+  <div class="row">
+    <div class="col">
+      <p class="f21"><b>Q</b> 1,2-다이브로모에테인 이름의 '1,2'는 무엇을 뜻할까?</p>
+      <div class="answer step">Br가 1번과 2번 탄소에 하나씩 붙어 있다.</div>
+    </div>
+    <p class="small col" style="flex:0 0 470px">굽은 화살표는 전자쌍의 이동을 나타낸다(원자의 이동이 아님). 자세한 메커니즘은 [심화] 친핵성 치환·제거 반응과 첨가 반응에서 다룬다.</p>
+  </div>
+</section>
+
+<!-- ════════ 29. 알카인 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="불포화 탄화수소인 알카인">
+  <h2><span class="no">23</span>불포화 탄화수소인 알카인</h2>
+  <p class="f21"><mark>알카인</mark>: 탄소-탄소 원자 사이에 C≡C 3중 결합, 즉 π 결합 2개가 있는 불포화 탄화수소 — 분자식 $\mathrm{C}_n\mathrm{H}_{2n-2}$</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 360px">{{TORCH}}</div>
+    <div class="col stack">
+      <p class="f21">가장 간단한 알카인인 <b>아세틸렌</b>은 아크릴계 합성 섬유의 원료로 쓰이고, 탈 때 높은 온도의 불꽃을 내어 <b>고온 불꽃 용접</b>에 쓰인다.</p>
+      <p class="f21 step">알카인도 π 결합이 있어 알켄과 같은 방식으로 첨가 반응을 하지만, π 결합이 <b>2개</b>이므로 <b>2번</b> 첨가할 수 있다.</p>
+    </div>
+  </div>
+  {{ACADD}}
+  <div class="row">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 아세틸렌 1몰과 반응하는 $\ce{HBr}$은 최대 몇 몰일까?</p>
+    <div class="answer step" style="flex:1">2몰(2당량) — π 결합 2개에 한 번씩</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 정리 표 ════════ -->
+<section class="slide" data-sec="02 · 불포화 탄화수소인 알켄과 알카인" data-title="알케인·알켄·알카인 정리">
+  <h2><span class="tag ink">정리</span>알케인·알켄·알카인 비교</h2>
+  <table class="ac141-c ac141-cmp">
+    <tr><th></th><th>알케인</th><th>알켄</th><th>알카인</th></tr>
+    <tr><td>분류</td><td>포화 탄화수소</td><td>불포화 탄화수소</td><td>불포화 탄화수소</td></tr>
+    <tr><td>탄소-탄소 결합</td><td>단일 결합만</td><td>2중 결합</td><td>3중 결합</td></tr>
+    <tr><td>일반식</td><td><span class="blank"><span class="step">$\mathrm{C}_n\mathrm{H}_{2n+2}$</span></span></td><td><span class="blank"><span class="step">$\mathrm{C}_n\mathrm{H}_{2n}$</span></span></td><td><span class="blank"><span class="step">$\mathrm{C}_n\mathrm{H}_{2n-2}$</span></span></td></tr>
+    <tr><td>다중 결합 탄소의 혼성</td><td>$sp^3$(모든 탄소)</td><td>$sp^2$</td><td>$sp$</td></tr>
+    <tr><td>대표 반응</td><td><span class="blank"><span class="step">연소, 치환(염소화)</span></span></td><td><span class="blank"><span class="step">첨가</span></span></td><td><span class="blank"><span class="step">첨가(2번)</span></span></td></tr>
+    <tr><td>이성질체</td><td>구조 이성질체</td><td>구조 + 시스-트랜스</td><td>구조 이성질체</td></tr>
+  </table>
+  <div class="row mt16">
+    <p class="f21" style="flex:0 0 540px"><b>Q</b> 알카인에는 3중 결합 탄소에 시스-트랜스 이성질체가 생기지 않는다. 왜일까?</p>
+    <div class="answer step" style="flex:1">3중 결합의 탄소는 $sp$ 혼성으로 결합이 일직선(180°)이라 치환기의 '같은 쪽·반대쪽'이 생기지 않는다.</div>
+  </div>
+</section>
+
+<!-- ════════ 31. 탐구 활동 63 (1) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 분자 모형 (1)">
+  <h2 class="ac141-h2l"><span class="tag">탐구 활동</span>포화와 불포화 탄화수소 구조 이성질체 분자 모형 만들기와 물리적 및 화학적 성질 차이 조사 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐07]</span>포화와 불포화 탄화수소 구조 이성질체 분자 모형 만들기와 물리적 및 화학적 성질 차이 조사 (63쪽)</div>
+  <p class="f21 mt8"><b>목표</b> 포화 탄화수소의 구조 이성질체와 불포화 탄화수소의 시스-트랜스 이성질체 분자 모형을 만들고, 3차원 구조의 차이에 따른 물리적 성질과 화학 반응성의 차이를 조사하여 발표한다.</p>
+  <p class="f21"><b>준비물</b> 분자 모형 세트(탄소: 검은 공·구멍 4개, 수소: 흰 공, 결합 막대, 2중 결합용 휘는 막대 2개), 자료 조사용 기기</p>
+  <div class="ac141-s4 mt8">
+    <div class="stage"><h3>① 만들기</h3><p class="small">$\ce{C4H10}$, $\ce{C5H12}$의 구조 이성질체 모형을 모두 만든다.</p></div>
+    <div class="stage"><h3>② 비교하기</h3><p class="small">모형을 돌리거나 뒤집어 같은 분자인지 확인하고 구조식을 그린다.</p></div>
+    <div class="stage"><h3>③ 2중 결합</h3><p class="small">시스·트랜스-2-뷰텐 모형을 만들고 2중 결합을 돌려 본다.</p></div>
+    <div class="stage"><h3>④ 조사·발표</h3><p class="small">끓는점·녹는점·극성·반응성 자료를 조사해 비교하고 발표한다.</p></div>
+  </div>
+  <p class="small mt8"><b>안전</b> 모형 막대의 끝이 뾰족하니 얼굴 가까이에서 다루지 않는다. 작은 부품은 정리함에 모은다. 시약을 쓰지 않는 모형·자료 탐구이며, 조사한 자료의 출처를 적는다.</p>
+</section>
+
+<!-- ════════ 32. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 분자 모형 조립">
+  <h2><span class="tag">탐구 활동</span>분자 모형 조립 실험실 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  <div class="lab" data-lab="ac141model">
+    <div class="lab-ctl" style="flex-basis:470px">
+      <div class="ac141-seg"><button class="btn on" data-m="alk">알케인 골격 조립</button><button class="btn" data-m="bu">2-뷰텐 모형</button><button class="btn" data-act="graph">그래프</button><button class="btn" data-act="reset">초기화</button></div>
+      <div data-set="alk">
+        <div class="ac141-seg"><span class="small">분자식</span><button class="btn" data-n="4">$\ce{C4H10}$</button><button class="btn on" data-n="5">$\ce{C5H12}$</button><button class="btn" data-n="6">$\ce{C6H14}$</button></div>
+        <svg data-board viewBox="0 0 440 148" width="440" height="148" aria-label="탄소를 놓는 조립판: 점을 누르면 탄소를 놓거나 뺀다"></svg>
+        <div class="ac141-seg"><output class="small" data-o="stat"></output><button class="btn ac141-act" data-act="check">확인</button><button class="btn" data-act="clear">골격 지우기</button></div>
+      </div>
+      <div data-set="bu" style="display:none">
+        <div class="ac141-seg"><button class="btn on" data-b="cis">시스-2-뷰텐</button><button class="btn" data-b="trans">트랜스-2-뷰텐</button><button class="btn" data-b="butane">뷰테인(비교)</button></div>
+        <div class="ctl"><div class="lbl"><span>가운데 결합을 축으로 돌리기</span><output data-o="th"></output></div>
+          <input type="range" min="0" max="180" step="15" value="0" data-i="th" aria-label="가운데 결합 회전 각"></div>
+        <div class="ac141-seg"><label class="small"><input type="checkbox" data-i="p" checked> p 오비탈 보기</label><button class="btn ac141-act" data-act="rec">성질 기록</button></div>
+      </div>
+      <table class="readout ac141-read">
+        <tr><th><output data-o="k1"></output></th><td><span data-o="v1"></span></td></tr>
+        <tr><th><output data-o="k2"></output></th><td><span data-o="v2"></span></td></tr>
+        <tr class="hl"><th><output data-o="k3"></output></th><td><span data-o="v3"></span></td></tr>
+      </table>
+      <output class="kind ac141-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="lab-fig" style="width:560px;height:300px">
+        <svg viewBox="0 0 560 300" width="560" height="300" aria-label="끌어서 돌릴 수 있는 공-막대 분자 모형 또는 끓는점 막대그래프"></svg>
+        <div class="ov" data-ov="f" style="font-size:26px;font-weight:700;transform:none"></div>
+        <div class="ov" data-ov="hint" style="font-size:17px;color:#5B6B7F">끌어서 돌려 보자</div>
+      </div>
+      <table class="tight ac141-log mt8"><thead><tr><th>분자식</th><th>이름</th><th>가지·극성</th><th>끓는점</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 탐구 활동 63 (3) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 분자 모형 (3)">
+  <h2><span class="tag">탐구 활동</span>결과 및 정리 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <table class="ac141-c ac141-res">
+        <tr><th>분자식</th><th>이성질체</th><th>가지 수</th><th>끓는점 (°C)</th></tr>
+        <tr><td rowspan="2">$\ce{C4H10}$</td><td>뷰테인</td><td>0</td><td><span class="blank"><span class="step">−0.5</span></span></td></tr>
+        <tr><td>2-메틸프로페인</td><td>1</td><td><span class="blank"><span class="step">−12</span></span></td></tr>
+        <tr><td rowspan="3">$\ce{C5H12}$</td><td>펜테인</td><td>0</td><td><span class="blank"><span class="step">36</span></span></td></tr>
+        <tr><td>2-메틸뷰테인</td><td>1</td><td><span class="blank"><span class="step">28</span></span></td></tr>
+        <tr><td>2,2-다이메틸프로페인</td><td>2</td><td><span class="blank"><span class="step">10</span></span></td></tr>
+        <tr><td rowspan="2">$\ce{C4H8}$</td><td>시스-2-뷰텐</td><td>—</td><td><span class="blank"><span class="step">3.7</span></span></td></tr>
+        <tr><td>트랜스-2-뷰텐</td><td>—</td><td><span class="blank"><span class="step">0.9</span></span></td></tr>
+      </table>
+      <p class="small mt8">오개념: "가지가 많은 이성질체도 분자량이 같으므로 끓는점이 같다." (×)</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 분자식이 같은 알케인에서 가지가 많을수록 끓는점이 낮아지는 까닭은?</p>
+      <p class="f21 step">→ 가지가 많을수록 공 모양에 가까워져 이웃 분자와 닿는 면적이 작다 → 분산력이 약해진다.</p>
+      <p class="f21 mt8"><b>Q</b> 포화 탄화수소와 불포화 탄화수소의 화학 반응성은 어떻게 다를까?</p>
+      <p class="f21 step">→ 알켄은 π 결합에 브로민 등이 쉽게 <b>첨가</b>된다(적갈색이 빨리 사라짐). 알케인은 빛이 없으면 거의 반응하지 않는다.</p>
+      <p class="f21 mt8"><b>Q</b> 시스-2-뷰텐과 트랜스-2-뷰텐은 왜 서로 바뀌지 않을까?</p>
+      <p class="f21 step">→ π 결합을 끊어야만 돌 수 있어, 실온에서는 바뀌지 않는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 34. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac141-ox f21">
+    <li>에틸렌의 모든 원자는 한 평면 위에 있다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>아세틸렌의 C≡C 3중 결합은 σ 결합 3개로 이루어진다. <span class="step">→ <span class="ans">×</span> σ 결합 1개 + π 결합 2개</span></li>
+    <li>분자식이 $\mathrm{C}_n\mathrm{H}_{2n}$인 사슬 모양 탄화수소는 알켄이다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>뷰테인과 2-메틸프로페인은 분자식이 같으므로 끓는점도 같다. <span class="step">→ <span class="ans">×</span> 가지가 있는 2-메틸프로페인이 더 낮다.</span></li>
+    <li>메테인과 염소가 빛을 받아 일어나는 반응은 첨가 반응이다. <span class="step">→ <span class="ans">×</span> 치환 반응</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 35. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>$\ce{C4H8}$ 알켄 이성질체 모두 그리기</h2>
+  <p class="f21">분자식이 $\ce{C4H8}$인 사슬 모양 알켄의 이성질체를 시스-트랜스 이성질체를 포함하여 모두 구조식으로 그려라.</p>
+  <div class="board" style="height:130px"></div>
+  {{Q2FIG}}
+  <div class="answer step">4가지 — 구조 이성질체 3개(1-뷰텐, 2-뷰텐, 2-메틸프로펜) + 2-뷰텐의 시스-트랜스 1쌍</div>
+  <p class="small mt8">채점 요소: 구조 이성질체 3개 · 시스-트랜스 구별 · 구조식 표기</p>
+</section>
+
+<!-- ════════ 36. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>$\ce{C6H14}$의 구조 이성질체</h2>
+  <p class="f21">분자식이 $\ce{C6H14}$인 알케인의 구조 이성질체 5가지를 모두 그려라. 끓는점이 가장 낮은 것은 어느 것일까?</p>
+  <div class="board" style="height:130px"></div>
+  {{Q3FIG}}
+  <div class="answer step">2,2-다이메틸뷰테인(50 °C) — 가지가 가장 많아 공 모양에 가깝다.</div>
+  <p class="small mt8">탄소 골격만 그림(H 생략). 끓는점은 자체 지도서 자료</p>
+</section>
+
+<!-- ════════ 37. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01–02 탄소 화합물의 구조식과 탄화수소의 구조 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 탄소 화합물의 분자 구조 — 01–02</h2>
+  <div class="ac141-top">
+    <div class="ac141-node ac141-dim">3. 원자가 결합과 혼성 오비탈 <span class="small">(지난 시간)</span></div>
+    <div class="ac141-arr">→</div>
+    <div class="ac141-node ac141-dim" style="border-style:solid;border-color:var(--field);color:var(--ink)"><b>01–02 오늘</b></div>
+    <div class="ac141-arr">→</div>
+    <div class="ac141-node ac141-dim">02 탄화수소 유도체 · 03 방향족 <span class="small">(다음 시간)</span></div>
+  </div>
+  <div class="ac141-map">
+    <div class="ac141-node ac141-main" data-q><b>01 탄소 화합물의 구조식</b><br>❶ C는 결합을 <span class="blank"><span class="step">4개</span></span> 만든다<br>❷ 메테인·에테인: <span class="blank"><span class="step">$sp^3$</span></span>, 109.5°<br>❸ 에틸렌: $sp^2$ 평면, C=C = σ 1 + <span class="blank"><span class="step">π 1</span></span><br>❹ 아세틸렌: $sp$ 직선, C≡C = σ 1 + π <span class="blank"><span class="step">2</span></span><br>❺ 반응성은 <span class="blank"><span class="step">작용기</span></span>가 정한다</div>
+    <div class="ac141-node ac141-main" data-q><b>02 탄화수소의 구조</b><br>❻ 알케인 <span class="blank"><span class="step">$\mathrm{C}_n\mathrm{H}_{2n+2}$</span></span>: 포화, 연소·<span class="blank"><span class="step">치환</span></span><br>❼ 알켄 $\mathrm{C}_n\mathrm{H}_{2n}$·알카인 <span class="blank"><span class="step">$\mathrm{C}_n\mathrm{H}_{2n-2}$</span></span>: 불포화 → <span class="blank"><span class="step">첨가</span></span> 반응<br>❽ 탄소 골격이 다른 <span class="blank"><span class="step">구조 이성질체</span></span>(탄소 4개 → 2, 5개 → 3, 6개 → 5)<br>❾ C=C는 돌지 않는다 → <span class="blank"><span class="step">시스-트랜스</span></span> 이성질체</div>
+  </div>
+</section>
+
+<!-- ════════ 38. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01–02 탄소 화합물의 구조식과 탄화수소의 구조 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 메테인·에테인·에틸렌·아세틸렌의 혼성과 결합, 알케인·알켄·알카인의 일반식을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 구조 이성질체와 시스-트랜스 이성질체를 구조식으로 그리고 분자 모형으로 비교할 수 있다.</button>
+    <button class="chk">[가치·태도] 분자 구조가 물질의 성질을 정한다는 것을 알고, 모형과 자료로 확인하는 태도를 가진다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{C5H12}$의 구조 이성질체는 몇 개일까? <span class="step">→ <span class="ans">3개</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 2-뷰텐에 시스-트랜스 이성질체가 있는 까닭은? <span class="step">→ <span class="ans">C=C(π 결합)가 회전하지 않고, 양쪽 탄소에 치환기가 있다.</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 에틸렌에 $\ce{Br2}$를 첨가한 생성물은? <span class="step">→ <span class="ans">1,2-다이브로모에테인 $\ce{CH2BrCH2Br}$</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 탄화수소의 H 대신 작용기가 붙으면 성질과 반응성은 어떻게 달라질까? (02 뒷부분 탄화수소 유도체, 03 방향족 화합물)</div>
+</section>
