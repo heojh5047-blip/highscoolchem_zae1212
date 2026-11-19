@@ -1,0 +1,471 @@
+<!-- 고급화학 2-1-1a 기체 분자 운동론 — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 1. 기체 분자 › 01</div>
+    <h1 class="ac211-h1">기체 분자 운동론과<br>실제 기체·혼합 기체 <span class="acc">(1)</span></h1>
+    <p class="sub">기체 분자 운동론 — 보이지 않는 분자의 운동으로 압력과 온도를 설명하기</p>
+    <p class="meta">고등학교 고급 화학 72–79쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 460 496" style="width:440px" aria-label="상자 속에서 무질서하게 움직이는 기체 분자와 두 온도의 속력 분포 곡선(T1 < T2)"><g transform="translate(0,40)"><rect x="30" y="24" width="400" height="250" rx="8" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><g data-anim="move" data-from="5.7,-1.7" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="155.5,77.4,135.4,83.5,ink,2"></g><circle cx="165.9" cy="74.3" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="1.9,5.7" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="281.5,47.3,275.1,28,ink,2"></g><circle cx="284.9" cy="57.5" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5.9,0.9" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="232.4,118.6,205.4,114.2,ink,2"></g><circle cx="243.1" cy="120.3" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="1.4,-5.8" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="66.6,161.1,59.8,188.8,ink,2"></g><circle cx="69.1" cy="150.6" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5.2,-3" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="64,66.7,41.4,79.5,ink,2"></g><circle cx="73.4" cy="61.4" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="6,-0.4" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="191.8,219.7,173.7,221,ink,2"></g><circle cx="202.5" cy="218.9" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-0.5,6" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="277.4,234.1,279.6,210.2,ink,2"></g><circle cx="276.4" cy="244.8" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.3,-5.5" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="399.1,61.9,389.3,85.3,ink,2"></g><circle cx="403.4" cy="52" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5.3,2.9" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="351,98.8,331.1,87.8,ink,2"></g><circle cx="360.5" cy="104" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-5.6,2" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="170.4,213,192,205.2,ink,2"></g><circle cx="160.3" cy="216.7" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-5.6,-2.2" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="123.8,170.5,147.4,179.9,ink,2"></g><circle cx="113.8" cy="166.5" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-6,0.3" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="306.5,133,333.2,131.9,ink,2"></g><circle cx="295.7" cy="133.5" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="4.5,-3.9" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="154.2,174.4,135.3,190.9,ink,2"></g><circle cx="162.3" cy="167.3" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><line x1="60" y1="420" x2="430" y2="420" stroke="#5B6B7F" stroke-width="2"/><line x1="60" y1="420" x2="60" y2="310" stroke="#5B6B7F" stroke-width="2"/><g data-anim="draw" data-dur="1.4"><path d="M60 420 L62.2 419.8 L64.5 419.2 L66.8 418.1 L69 416.7 L71.2 414.9 L73.5 412.8 L75.8 410.3 L78 407.5 L80.2 404.5 L82.5 401.2 L84.8 397.7 L87 394.1 L89.2 390.3 L91.5 386.5 L93.8 382.6 L96 378.8 L98.2 374.9 L100.5 371.2 L102.8 367.6 L105 364.1 L107.2 360.8 L109.5 357.7 L111.8 354.9 L114 352.3 L116.2 350 L118.5 348.1 L120.8 346.4 L123 345 L125.2 344 L127.5 343.2 L129.8 342.8 L132 342.7 L134.2 342.9 L136.5 343.4 L138.8 344.2 L141 345.2 L143.2 346.5 L145.5 348 L147.8 349.7 L150 351.6 L152.2 353.7 L154.5 355.9 L156.8 358.2 L159 360.6 L161.2 363.1 L163.5 365.7 L165.8 368.3 L168 370.9 L170.2 373.5 L172.5 376.1 L174.8 378.6 L177 381.1 L179.2 383.6 L181.5 386 L183.8 388.3 L186 390.6 L188.2 392.7 L190.5 394.8 L192.8 396.8 L195 398.6 L197.2 400.4 L199.5 402.1 L201.8 403.6 L204 405.1 L206.2 406.5 L208.5 407.8 L210.8 408.9 L213 410 L215.2 411 L217.5 411.9 L219.8 412.8 L222 413.6 L224.2 414.3 L226.5 414.9 L228.8 415.5 L231 416 L233.2 416.5 L235.5 416.9 L237.8 417.3 L240 417.6 L242.2 417.9 L244.5 418.2 L246.8 418.4 L249 418.6 L251.2 418.8 L253.5 419 L255.7 419.1 L258 419.2 L260.2 419.3 L262.5 419.4 L264.8 419.5 L267 419.6 L269.2 419.6 L271.5 419.7 L273.8 419.7 L276 419.8 L278.2 419.8 L280.5 419.8 L282.8 419.9 L285 419.9 L287.2 419.9 L289.5 419.9 L291.8 419.9 L294 419.9 L296.2 420 L298.5 420 L300.8 420 L303 420 L305.2 420 L307.5 420 L309.8 420 L312 420 L314.2 420 L316.5 420 L318.8 420 L321 420 L323.2 420 L325.5 420 L327.8 420 L330 420 L332.2 420 L334.5 420 L336.8 420 L339 420 L341.2 420 L343.5 420 L345.8 420 L348 420 L350.2 420 L352.5 420 L354.8 420 L357 420 L359.2 420 L361.5 420 L363.8 420 L366 420 L368.2 420 L370.5 420 L372.8 420 L375 420 L377.2 420 L379.5 420 L381.8 420 L384 420 L386.2 420 L388.5 420 L390.8 420 L393 420 L395.2 420 L397.5 420 L399.8 420 L402 420 L404.2 420 L406.5 420 L408.8 420 L411 420 L413.2 420 L415.5 420 L417.8 420 L420 420" fill="none" stroke="#1F6FD1" stroke-width="3.5" stroke-linejoin="round"/></g><g data-anim="draw" data-dur="1.4" data-delay=".4"><path d="M60 420 L62.2 420 L64.5 419.9 L66.8 419.8 L69 419.6 L71.2 419.4 L73.5 419.1 L75.8 418.7 L78 418.4 L80.2 417.9 L82.5 417.5 L84.8 417 L87 416.4 L89.2 415.8 L91.5 415.2 L93.8 414.5 L96 413.8 L98.2 413 L100.5 412.2 L102.8 411.4 L105 410.6 L107.2 409.7 L109.5 408.9 L111.8 408 L114 407 L116.2 406.1 L118.5 405.2 L120.8 404.2 L123 403.2 L125.2 402.3 L127.5 401.3 L129.8 400.3 L132 399.4 L134.2 398.4 L136.5 397.5 L138.8 396.5 L141 395.6 L143.2 394.7 L145.5 393.8 L147.8 392.9 L150 392 L152.2 391.2 L154.5 390.4 L156.8 389.6 L159 388.9 L161.2 388.1 L163.5 387.5 L165.8 386.8 L168 386.2 L170.2 385.6 L172.5 385 L174.8 384.5 L177 384 L179.2 383.6 L181.5 383.2 L183.8 382.8 L186 382.5 L188.2 382.2 L190.5 382 L192.8 381.8 L195 381.6 L197.2 381.5 L199.5 381.4 L201.8 381.4 L204 381.4 L206.2 381.4 L208.5 381.5 L210.8 381.6 L213 381.7 L215.2 381.9 L217.5 382.1 L219.8 382.3 L222 382.6 L224.2 382.9 L226.5 383.2 L228.8 383.6 L231 384 L233.2 384.4 L235.5 384.9 L237.8 385.3 L240 385.8 L242.2 386.3 L244.5 386.8 L246.8 387.4 L249 387.9 L251.2 388.5 L253.5 389.1 L255.7 389.7 L258 390.3 L260.2 390.9 L262.5 391.6 L264.8 392.2 L267 392.8 L269.2 393.5 L271.5 394.1 L273.8 394.8 L276 395.4 L278.2 396.1 L280.5 396.7 L282.8 397.4 L285 398 L287.2 398.7 L289.5 399.3 L291.8 399.9 L294 400.6 L296.2 401.2 L298.5 401.8 L300.8 402.4 L303 403 L305.2 403.6 L307.5 404.2 L309.8 404.7 L312 405.3 L314.2 405.8 L316.5 406.4 L318.8 406.9 L321 407.4 L323.2 407.9 L325.5 408.4 L327.8 408.9 L330 409.3 L332.2 409.8 L334.5 410.2 L336.8 410.6 L339 411 L341.2 411.4 L343.5 411.8 L345.8 412.2 L348 412.6 L350.2 412.9 L352.5 413.2 L354.8 413.6 L357 413.9 L359.2 414.2 L361.5 414.5 L363.8 414.7 L366 415 L368.2 415.3 L370.5 415.5 L372.8 415.7 L375 416 L377.2 416.2 L379.5 416.4 L381.8 416.6 L384 416.8 L386.2 417 L388.5 417.1 L390.8 417.3 L393 417.5 L395.2 417.6 L397.5 417.7 L399.8 417.9 L402 418 L404.2 418.1 L406.5 418.2 L408.8 418.3 L411 418.4 L413.2 418.5 L415.5 418.6 L417.8 418.7 L420 418.8" fill="none" stroke="#D7263D" stroke-width="3.5" stroke-linejoin="round"/></g><text class="tex" x="150" y="326" data-tex="T_1" data-size="22" data-anchor="middle" fill="#1F6FD1"></text><text class="tex" x="330" y="372" data-tex="T_2" data-size="22" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="424" y="446" data-mix="속력 $v$" data-size="19" data-anchor="end" fill="#5B6B7F"></text></g></svg>
+</section>
+
+<!-- ════════ 2. 대단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 도입" data-title="대단원 도입">
+  <h2><span class="tag">대단원 도입</span>Ⅱ. 물질의 성질</h2>
+  <div class="std"><span class="code">단원 안내</span>물질의 상태는 분자의 열운동과 분자 사이의 상호 작용으로 정해진다. 기체는 분자 사이의 상호 작용이 작고 운동 에너지가 커서 이상 기체 방정식으로 설명할 수 있지만, 액체와 고체는 분자의 크기와 상호 작용을 무시할 수 없다. 기체·액체·고체의 특성을 분자 수준에서 이해하고, 용액의 농도·용해도·증기 압력 등 용액의 성질을 설명해 보자.</div>
+  <div class="ac211-units mt16">
+    <div class="card ac211-now"><h3>1. 기체 분자 <span class="small c-plus">← 오늘</span></h3><p class="small">74–84쪽</p></div>
+    <div class="card"><h3>2. 액체 분자</h3><p class="small">85–96쪽</p></div>
+    <div class="card"><h3>3. 고체</h3><p class="small">97–104쪽</p></div>
+    <div class="card"><h3>4. 용액의 성질</h3><p class="small">105–117쪽</p></div>
+  </div>
+  <div class="note puzzle mt16"><b>생각해 보기</b> 천연가스는 액체로 바꾸면 부피가 약 600분의 1로 줄어 배로 실어 나른다. 같은 물질이 기체일 때와 액체일 때 분자는 어떻게 다를까?</div>
+</section>
+
+<!-- ════════ 3. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅱ-1. 기체 분자 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>1. 기체 분자</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 기체 분자 운동론 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 실제 기체와 혼합 기체 <span class="small">(다음 시간)</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">거시적인 기체 법칙을 기체 분자 운동론과 속력 분포로 설명하여, 분자 수준에서 기체의 온도·압력·부피 사이의 관계를 이해한다. 반데르발스 상태 방정식으로 이상 기체와 실제 기체의 차이를, 혼합 기체에서 부분 압력과 몰분율의 관계를 알아본다.</p>
+      </div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 350" style="width:520px" aria-label="고도에 따른 대기 질량 분포: 5.5 km 아래에 약 50 %, 100 km 아래에 99 % 이상"><defs><linearGradient id="grad-ac211-03" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="#9CC7F0"/><stop offset="1" stop-color="#0B1F3F"/></linearGradient></defs><rect x="150" y="40" width="90" height="290" rx="0" fill="url(#grad-ac211-03)" stroke="#16233D" stroke-width="1.5"/><path d="M110 330 Q195 308 280 330" fill="#3FA36B" stroke="#16233D" stroke-width="1.5"/><line x1="144" y1="330" x2="150" y2="330" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="140" y="336" data-tex="0" data-size="18" data-anchor="end"></text><line x1="144" y1="272" x2="150" y2="272" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="140" y="278" data-tex="20" data-size="18" data-anchor="end"></text><line x1="144" y1="214" x2="150" y2="214" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="140" y="220" data-tex="40" data-size="18" data-anchor="end"></text><line x1="144" y1="156" x2="150" y2="156" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="140" y="162" data-tex="60" data-size="18" data-anchor="end"></text><line x1="144" y1="98" x2="150" y2="98" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="140" y="104" data-tex="80" data-size="18" data-anchor="end"></text><line x1="144" y1="40" x2="150" y2="40" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="140" y="46" data-tex="100" data-size="18" data-anchor="end"></text><text class="tex" x="92" y="185" data-mix="고도||(km)" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="scale" data-from="1,0" data-o="195,330" data-dur="1.2"><rect x="170" y="314.1" width="50" height="15.9" rx="0" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".7"/></g><line x1="240" y1="314.1" x2="270" y2="314.1" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="276" y="320.1" data-mix="5.5 km 아래: 대기 질량의 약 50 %" data-size="19" data-anchor="start"></text><line x1="240" y1="40" x2="270" y2="40" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="5 4"/><text class="tex" x="276" y="58" data-mix="100 km 아래: 99 % 이상" data-size="19" data-anchor="start"></text><text class="tex" x="276" y="170.5" data-mix="중력이 기체 분자를||지표 가까이 붙든다" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg><p class="small">대기의 기체는 생명 현상에 필요한 물질을 주고 우주 방사선을 막으며, 기체의 압력 변화는 바람과 날씨로 나타난다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 4. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-01]</span>기체의 온도, 압력, 부피 사이의 관계를 기체 분자 운동론으로 이해하고, 온도에 따른 기체 분자의 속력 분포 변화를 예측할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화02-02]</span>이상 기체 방정식을 이해하고, 혼합 기체의 부분 압력과 몰 분율의 관계를 설명할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>기체 분자 운동론의 가정으로 압력을 유도하고, 온도·압력·부피의 관계를 분자 운동으로 설명할 수 있다.</li>
+    <li>제곱평균근 속력을 계산하고, 온도와 몰질량에 따른 <b>속력 분포의 변화</b>를 예측할 수 있다.</li>
+    <li>기체 상수를 측정하는 실험을 조사·수행하고, 기체 상숫값을 계산하여 발표할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">기본 가정</div><div class="farr">→</div>
+    <div class="fnode">압력 유도</div><div class="farr">→</div>
+    <div class="fnode">$v_\text{rms}$</div><div class="farr">→</div>
+    <div class="fnode">속력 분포</div><div class="farr">→</div>
+    <div class="fnode hl">디지털 탐구</div><div class="farr">→</div>
+    <div class="fnode">기체 상수</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 기체 상수 측정</div>
+  </div>
+</section>
+
+<!-- ════════ 5. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 도입" data-title="생각 열기: 여름철 타이어">
+  <h2><span class="tag">생각 열기</span>여름에 자전거 타이어가 더 팽팽해지는 까닭은?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 460px"><svg class="fig" viewBox="0 0 480 240" style="width:440px" aria-label="같은 부피의 타이어 속 기체: 온도가 높으면 분자의 속력이 빠르다(화살표 길이)"><rect x="20" y="30" width="200" height="170" rx="16" fill="#E3EEFB" stroke="#1F6FD1" stroke-width="3"/><g data-anim="move" data-from="2.4,3.5" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="106.9,115.8,99.6,105.3,ink,2"></g><circle cx="112" cy="123.2" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.2,-0.4" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="200.2,111.1,212.5,112.3,ink,2"></g><circle cx="191.3" cy="110.3" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.5,-3.9" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="70.3,125,74.3,135,ink,2"></g><circle cx="67" cy="116.6" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="4.1,-0.9" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="133.1,157.5,121.5,160.1,ink,2"></g><circle cx="141.8" cy="155.4" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="4.2,0.5" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="42.3,156.7,29.4,155.1,ink,2"></g><circle cx="51.2" cy="157.7" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.2,3.6" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="147.8,44.1,141.5,34,ink,2"></g><circle cx="152.5" cy="51.8" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.2,0.1" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="210,179,216,178.8,ink,2"></g><circle cx="201" cy="179.1" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><text class="tex" x="120" y="226" data-mix="겨울 (낮은 온도)" data-size="20" data-anchor="middle" fill="#1F6FD1" data-weight="700"></text><rect x="260" y="30" width="200" height="170" rx="16" fill="#FDE2E4" stroke="#D7263D" stroke-width="3"/><g data-anim="move" data-from="-4.9,7.5" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="360.7,129.2,371.2,113.1,ink,2"></g><circle cx="355.7" cy="136.7" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-7.7,4.6" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="395.7,61.1,417.3,48.3,ink,2"></g><circle cx="388" cy="65.7" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-9,0.7" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="286.8,97,317.1,94.5,ink,2"></g><circle cx="277.8" cy="97.7" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="8,-4.2" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="314.1,162,295.8,171.6,ink,2"></g><circle cx="322" cy="157.8" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="6.5,6.2" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="385.5,122.8,370.4,108.3,ink,2"></g><circle cx="392" cy="129" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-8.5,-2.9" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="294.4,161.9,314.4,168.5,ink,2"></g><circle cx="285.9" cy="159" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="7.3,-5.3" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="325.3,107.1,305.8,121.2,ink,2"></g><circle cx="332.6" cy="101.8" r="10" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><text class="tex" x="360" y="226" data-mix="여름 (높은 온도)" data-size="20" data-anchor="middle" fill="#D7263D" data-weight="700"></text></svg></div>
+    <div class="col stack">
+      <p class="f22">공기를 같은 양 넣은 타이어도 더운 날에는 압력이 높아진다. 타이어 속 공기 분자에게는 무슨 일이 일어났을까?</p>
+      <div class="card q"><p class="f22"><b>Q</b> 기체의 압력을 분자의 움직임으로 설명하면?</p></div>
+      <div class="answer step">분자가 벽에 부딪히며 미는 힘</div>
+      <p class="f22 step">→ 온도가 높으면 분자가 더 빠르게 움직여 벽에 <b>더 세게, 더 자주</b> 부딪힌다. 이 생각을 식으로 바꾼 것이 <b>기체 분자 운동론</b>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 연결: 기체 법칙 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 도입" data-title="연결: 기체 법칙">
+  <h2><span class="tag alt">연결</span>「물질과 에너지」에서 배운 기체 법칙</h2>
+  <div class="stages mt8">
+    <div class="stage"><h3>보일 법칙</h3><div class="formula sm">$V\propto\dfrac{1}{P}$</div><p>온도·몰수가 일정할 때</p></div>
+    <div class="stage"><h3>샤를 법칙</h3><div class="formula sm">$V\propto T$</div><p>압력·몰수가 일정할 때 ($T$: 절대 온도)</p></div>
+    <div class="stage"><h3>아보가드로 법칙</h3><div class="formula sm">$V\propto n$</div><p>온도·압력이 일정할 때</p></div>
+  </div>
+  <div class="formula mt16">$V=R\left(\dfrac{nT}{P}\right)\ \Longrightarrow\ PV=nRT$</div>
+  <p class="f22 mt12">이 법칙들은 측정으로 얻은 <b>거시적</b> 관계이다.</p>
+  <p class="f22 step" data-q><b>Q</b> 그렇다면 분자 하나하나는 어떻게 움직이기에 이런 관계가 나올까? <span class="small">→ 오늘은 분자의 운동(미시)에서 출발해 이 식에 도착한다.</span></p>
+</section>
+
+<!-- ════════ 7. ① 기체 분자 운동론 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="기체 분자 운동론">
+  <h2><span class="no">1</span>기체 분자 운동론</h2>
+  <p class="f22"><mark>기체 분자 운동론</mark>은 기체 분자들의 미시적인 운동으로 거시적 현상인 기체 법칙을 설명하는 이론이다.</p>
+  <div class="row mt12">
+    <div class="col stack">
+      <div class="card"><h3>발전 과정</h3><p class="f21">18세기 <b>베르누이</b>가 제안 → 19세기 <b>클라우지우스, 맥스웰, 볼츠만</b>이 발전시켰다.</p></div>
+      <div class="card"><h3>쓰임</h3><p class="f21">확산을 이용한 동위원소의 분리, 반응 속도 등 여러 현상을 설명한다.</p></div>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>압력이란?</h3><p class="f21">기체 분자가 용기 벽에 충돌하여 벽의 넓이 $A$에 작용하는 힘 $F$</p>
+        <div class="formula">$P=\dfrac{F}{A}$</div></div>
+      <p class="f21 step"><b>계획</b> 분자 한 개의 충돌 → 충돌하는 분자 수 → 힘 → 압력 순서로 계산한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ② 기본 가정 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="기본 가정">
+  <h2><span class="no">2</span>기체 분자 운동론의 기본 가정</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px"><svg class="fig" viewBox="0 0 460 306" style="width:440px" aria-label="기체 분자 운동론의 가정: 분자는 무질서하게 움직이며 벽과 완전 탄성 충돌"><rect x="20" y="20" width="420" height="250" rx="6" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><g data-anim="move" data-from="5.7,-1.7" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="91.2,188.9,66.6,196.3,ink,2"></g><circle cx="100.7" cy="186" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="6,-0.6" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="272.3,141.4,251,143.5,ink,2"></g><circle cx="282.1" cy="140.5" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4,4.5" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="355.4,140.3,370,123.9,ink,2"></g><circle cx="348.8" cy="147.7" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.5,-5.8" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="234.5,97.6,242.4,127.2,ink,2"></g><circle cx="232" cy="88" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-0.2,6" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="38.5,107.3,39.4,79,ink,2"></g><circle cx="38.2" cy="117.1" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="0.8,6" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="261.7,42.1,259.1,24,ink,2"></g><circle cx="262.9" cy="52" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-2.8,5.3" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="348,78.4,358,59.4,ink,2"></g><circle cx="343.4" cy="87.2" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.6,3.9" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="134.4,39.7,152.6,24.1,ink,2"></g><circle cx="126.8" cy="46.1" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5.7,-1.8" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="412.6,199.5,390,206.7,ink,2"></g><circle cx="422.1" cy="196.6" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="4.5,-3.9" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="397,123.1,382.3,135.8,ink,2"></g><circle cx="404.5" cy="116.6" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="1.2,5.9" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="83.2,227.7,77.1,197.3,ink,2"></g><circle cx="85.2" cy="237.4" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><circle cx="440" cy="150" r="26" fill="none" stroke="#E08A2C" stroke-width="2" stroke-dasharray="5 4"/><text class="tex" x="230" y="296" data-mix="분자 크기 ≪ 분자 사이 거리 (크기 비례 아님)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+    <div class="col">
+      <ol class="ac211-ol f21">
+        <li>분자 사이의 거리가 분자의 크기보다 훨씬 커서, 기체 부피에 비해 <b>분자의 부피는 0</b>으로 본다.</li>
+        <li>분자는 특별한 방향 없이 <b>무질서하게 끊임없이</b> 움직이며, 일정한 속력 분포를 가진다.</li>
+        <li>충돌할 때를 빼면 분자 사이의 <b>인력과 반발력을 무시</b>한다.</li>
+        <li>분자와 용기 벽의 충돌은 <b>완전 탄성 충돌</b>이다.</li>
+      </ol>
+      <p class="f21 mt12 step"><b>Q</b> 이 가정 가운데 실제 기체에서 가장 먼저 맞지 않게 되는 것은? <span class="small">→ 02에서 1과 3을 다시 본다.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. ③ 운동량 변화 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="압력 유도 ① 운동량 변화">
+  <h2><span class="no">3</span>압력 유도 ① 분자 한 개의 운동량 변화</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px"><svg class="fig" viewBox="0 0 380 300" style="width:380px" aria-label="벽에 수직으로 충돌하는 분자의 운동량 변화: +mv_x에서 −mv_x로, 크기 2mv_x"><rect x="330" y="20" width="26" height="250" rx="0" fill="#C9D3DD" stroke="#8C99A6" stroke-width="1.5"/><text class="tex" x="343" y="292" data-mix="용기 벽" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="move" data-from="-120,0" data-dur="1.1" data-ease="in"><circle cx="300" cy="80" r="14" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-arw="120,80,282,80,plus,5"></g><text class="tex" x="200" y="62" data-tex="+mv_x" data-size="22" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="60" y="86" data-mix="충돌 전" data-size="20" data-anchor="middle" data-weight="700"></text><circle cx="300" cy="200" r="14" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="282,200,120,200,minus,5"></g><text class="tex" x="200" y="182" data-tex="-mv_x" data-size="22" data-anchor="middle" fill="#1F6FD1"></text><text class="tex" x="60" y="206" data-mix="충돌 후" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="165" y="262" data-tex="\Delta p=2mv_x" data-size="22" data-anchor="middle"></text></svg></div>
+    <div class="col stack">
+      <p class="f22">질량 $m$인 분자가 $x$축 방향 속도 $v_x$로 벽에 수직으로 부딪히면, 완전 탄성 충돌이므로 같은 빠르기로 튀어 나온다.</p>
+      <div class="formula step">$\Delta p=|p_\mathrm{f}-p_\mathrm{i}|=|m(-v_x)-mv_x|=2mv_x$</div>
+      <p class="f21 step">→ 쓴 가정: <b>4. 완전 탄성 충돌</b> (빠르기가 줄지 않음)</p>
+      <p class="small">$p$: 운동량($p=mv$), 아래 첨자 i 처음, f 나중</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. ④ 충돌 수 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="압력 유도 ② 충돌 수">
+  <h2><span class="no">4</span>압력 유도 ② $\Delta t$ 동안 벽에 충돌하는 분자 수</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px"><svg class="fig" viewBox="0 0 410 300" style="width:400px" aria-label="Δt 동안 벽에 충돌할 수 있는 분자: 벽에서 v_xΔt 안의 부피 Av_xΔt 속, 벽 쪽으로 움직이는 절반"><rect x="40" y="40" width="330" height="220" rx="0" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><rect x="250" y="40" width="120" height="220" fill="#FFE45C" fill-opacity=".35"/><rect x="370" y="40" width="22" height="220" rx="0" fill="#C9D3DD" stroke="#8C99A6" stroke-width="1.5"/><line x1="250" y1="40" x2="250" y2="260" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><line x1="250" y1="30" x2="370" y2="30" stroke="#5B6B7F" stroke-width="1.5"/><g data-arw="310,30,250,30,muted,1.5"></g><g data-arw="310,30,370,30,muted,1.5"></g><text class="tex" x="310" y="26" data-tex="v_x\Delta t" data-size="20" data-anchor="middle" data-halo="1"></text><text class="tex" x="381" y="284" data-mix="넓이 $A$" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-arw="301,90,326,90,plus,2.5"></g><circle cx="290" cy="90" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="341,170,366,170,plus,2.5"></g><circle cx="330" cy="170" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="269,215,244,215,muted,2.5"></g><circle cx="280" cy="215" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="334,120,309,120,muted,2.5"></g><circle cx="345" cy="120" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="151,110,176,110,plus,2.5"></g><circle cx="140" cy="110" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="99,200,74,200,muted,2.5"></g><circle cx="110" cy="200" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="201,160,226,160,plus,2.5"></g><circle cx="190" cy="160" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><text class="tex" x="190" y="290" data-mix="벽 쪽으로 가는 분자만 충돌(절반)" data-size="19" data-anchor="middle" fill="#16233D"></text></svg></div>
+    <div class="col stack">
+      <p class="f21">$\Delta t$ 동안 벽까지 올 수 있는 분자는 벽에서 거리 $v_x\Delta t$ 안, 곧 부피 $Av_x\Delta t$ 속에 있다. 용기 부피 $V$, 전체 분자 수 $N$이면</p>
+      <div class="formula sm step">$\text{분자 수}=\dfrac{Av_x\Delta t}{V}\times N$</div>
+      <p class="f21 step">그 가운데 벽 쪽으로 움직이는 분자는 절반이다.</p>
+      <div class="formula sm step">$\text{충돌 수}=\dfrac{NAv_x\Delta t}{2V}$</div>
+      <p class="f21 step">→ 쓴 가정: <b>2. 무질서한 운동</b> (방향이 고르게 섞임)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑤ 힘과 압력 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="압력 유도 ③ 힘과 압력">
+  <h2><span class="no">5</span>압력 유도 ③ 힘과 압력</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">총운동량 변화 $=$ (분자 하나의 $2mv_x$) $\times$ (충돌 수) $=\dfrac{NAv_x\Delta t}{2V}\times2mv_x=\dfrac{NmAv_x^{\,2}\Delta t}{V}$</p>
+      <p class="f21 step">뉴턴 제2법칙: 힘 = 시간에 따른 운동량 변화 $\Rightarrow F=\dfrac{NmAv_x^{\,2}}{V}$</p>
+      <p class="f21 step">$P=\dfrac{F}{A}$이고, 분자마다 속력이 다르므로 $v_x^{\,2}$ 대신 평균값 $\overline{v_x^{\,2}}$를 쓴다.</p>
+      <div class="formula sm step">$P=\dfrac{Nm\overline{v_x^{\,2}}}{V}$</div>
+      <p class="f21 step">3차원에서 $v^2=v_x^{\,2}+v_y^{\,2}+v_z^{\,2}$, 방향이 고르므로 $\overline{v^2}=3\overline{v_x^{\,2}}$ → $\overline{v_x^{\,2}}=\dfrac{1}{3}\overline{v^2}$</p>
+      <div class="formula step">$PV=\dfrac{1}{3}Nm\overline{v^2}$</div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 380 300" style="width:330px" aria-label="3차원 속도 v와 x 성분 v_x"><g data-arw="120,210,350,210,muted,2"></g><g data-arw="120,210,120,30,muted,2"></g><g data-arw="120,210,40,270,muted,2"></g><text class="tex" x="364" y="218" data-tex="x" data-size="20" data-anchor="start"></text><text class="tex" x="120" y="20" data-tex="y" data-size="20" data-anchor="middle"></text><text class="tex" x="28" y="282" data-tex="z" data-size="20" data-anchor="middle"></text><path d="M270 210 L230 240 L230 130" fill="none" stroke="#5B6B7F" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="4 4"/><line x1="80" y1="240" x2="230" y2="240" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 4"/><g data-arw="120,210,270,210,minus,3"></g><text class="tex" x="195" y="234" data-tex="v_x" data-size="20" data-anchor="middle" fill="#1F6FD1"></text><g data-anim="draw" data-dur="1"><line x1="120" y1="210" x2="230" y2="130" stroke="#D7263D" stroke-width="0"/></g><g data-arw="120,210,230,130,plus,4"></g><text class="tex" x="240" y="124" data-tex="\vec v" data-size="22" data-anchor="start" fill="#D7263D"></text><circle cx="230" cy="130" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></svg><p class="small">$\overline{v^2}$: 평균 제곱 속력</p></div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑥ 온도와 운동 에너지 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="이론식과 실험식 비교">
+  <h2><span class="no">6</span>이론식 = 실험식 → 온도의 뜻</h2>
+  <p class="f22">$N$개의 분자 $=n$ mol이므로 $Nm=nM$ ($M$: 몰질량). 분자 운동에서 얻은 식을 실험식 $PV=nRT$와 같게 놓는다.</p>
+  <div class="formula mt8">$PV=\dfrac{1}{3}Nm\overline{v^2}=\dfrac{1}{3}nM\overline{v^2}=nRT$</div>
+  <div class="row mt12">
+    <div class="col stack">
+      <div class="card step" data-g="t1"><h3>평균 제곱 속력</h3><div class="formula sm">$\overline{v^2}=\dfrac{3RT}{M}$</div><p class="f21">온도에 비례, 몰질량에 반비례</p></div>
+    </div>
+    <div class="col stack">
+      <div class="card step" data-g="t2"><h3>기체 1 mol의 평균 운동 에너지</h3><div class="formula sm">$\begin{aligned}E_\mathrm{k}&amp;=\dfrac{1}{2}m\overline{v^2}\times N_\mathrm{A}\\&amp;=\dfrac{1}{2}M\left(\dfrac{3RT}{M}\right)=\dfrac{3}{2}RT\end{aligned}$</div><p class="f21">기체의 종류와 관계없이 <b>온도에만</b> 의존</p></div>
+    </div>
+  </div>
+  <div class="note big mt12 step">절대 온도는 기체 분자의 <b>평균 운동 에너지의 척도</b>이다. <span class="small">(25 °C: $E_\mathrm{k}=\tfrac32\times8.314\times298\approx3.72\times10^{3}\ \text{J/mol}$)</span></div>
+</section>
+
+<!-- ════════ 13. ⑦ 제곱평균근 속력 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="제곱평균근 속력">
+  <h2><span class="no">7</span>제곱평균근 속력 $v_\text{rms}$</h2>
+  <p class="f22">평균 제곱 속력에 제곱근을 취하면 <mark>제곱평균근 속력</mark>을 얻는다. 같은 온도에서 기체 분자의 속력을 비교할 수 있다.</p>
+  <div class="formula mt8">$v_\text{rms}=\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}$<div class="unit">$R=8.314\ \text{J/(mol}\cdot\text{K)}$, $M$: 몰질량 [kg/mol], $T$ [K] → $v_\text{rms}$ [m/s]</div></div>
+  <div class="note mt12"><b>주의</b> $\text{J}=\text{kg}\cdot\text{m}^2/\text{s}^2$이므로 몰질량은 반드시 <b>kg/mol</b>로 넣는다. ($\ce{N2}$: $28.02\ \text{g/mol}=2.802\times10^{-2}\ \text{kg/mol}$)</div>
+  <div class="row mt12">
+    <div class="col"><p class="f21" data-q><b>Q</b> 절대 온도를 2배로 높이면 $v_\text{rms}$는 몇 배가 될까?</p><p class="f21 step">→ <span class="ans">$\sqrt2\approx1.4$배</span> (2배가 되는 것은 평균 운동 에너지)</p></div>
+    <div class="col"><p class="f21"><b>Q</b> 같은 온도에서 $\ce{He}$와 $\ce{N2}$ 중 $v_\text{rms}$가 큰 것은?</p><p class="f21 step">→ <span class="ans">몰질량이 작은 $\ce{He}$</span></p></div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 기체 법칙의 분자 해석 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="기체 법칙의 분자 해석">
+  <h2><span class="no">8</span>기체 법칙을 분자 운동으로 설명하기</h2>
+  <div class="row">
+    <div class="col stack">
+      <h3>부피 일정 — $P\propto T$</h3>
+      <svg class="fig" viewBox="0 0 370 200" style="width:340px" aria-label="부피가 일정할 때 온도가 높으면 분자가 빠르게 더 세게 더 자주 충돌"><rect x="10" y="20" width="160" height="140" rx="10" fill="#E3EEFB" stroke="#1F6FD1" stroke-width="2.5"/><g data-anim="move" data-from="-3.5,-2.3" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="33.3,51.8,40.3,56.4,ink,2"></g><circle cx="26.6" cy="47.4" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="3.4,-2.4" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="69.4,114.9,61.9,120.1,ink,2"></g><circle cx="76.1" cy="110.2" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.8,-3.2" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="38.8,122.6,30.3,132.3,ink,2"></g><circle cx="44.2" cy="116.5" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-0.9,-4.1" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="112.8,57.9,115,68.8,ink,2"></g><circle cx="111.1" cy="50" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4,1.2" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="102.4,81.9,114.2,78.4,ink,2"></g><circle cx="94.6" cy="84.3" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.2,-4" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="80.9,152.4,84.5,156,ink,2"></g><circle cx="78.6" cy="144.6" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><text class="tex" x="90" y="186" data-mix="$T$ 낮음" data-size="20" data-anchor="middle" fill="#1F6FD1" data-weight="700"></text><rect x="200" y="20" width="160" height="140" rx="10" fill="#FDE2E4" stroke="#D7263D" stroke-width="2.5"/><g data-anim="move" data-from="-7,-4.6" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="223.3,51.8,236.5,60.6,ink,2"></g><circle cx="216.6" cy="47.4" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="6.9,-4.8" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="259.4,114.9,245,124.9,ink,2"></g><circle cx="266.1" cy="110.2" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5.6,-6.3" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="228.8,122.6,212.3,141.3,ink,2"></g><circle cx="234.2" cy="116.5" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.7,-8.2" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="302.8,57.9,307.2,78.8,ink,2"></g><circle cx="301.1" cy="50" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-8,2.4" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="292.4,81.9,315.2,75.1,ink,2"></g><circle cx="284.6" cy="84.3" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-2.4,-8" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="270.9,152.4,277.8,156,ink,2"></g><circle cx="268.6" cy="144.6" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><text class="tex" x="280" y="186" data-mix="$T$ 높음" data-size="20" data-anchor="middle" fill="#D7263D" data-weight="700"></text><text class="tex" x="185" y="96" data-tex="\Rightarrow" data-size="26" data-anchor="middle"></text></svg>
+      <p class="f21 step">온도가 높아지면 평균 속력이 빨라져 벽에 충돌하는 <b>횟수와 힘</b>이 커지므로 압력이 커진다.</p>
+    </div>
+    <div class="col stack">
+      <h3>온도 일정 — $V\propto\dfrac{1}{P}$</h3>
+      <svg class="fig" viewBox="0 0 370 200" style="width:340px" aria-label="온도가 일정할 때 외부 압력이 커지면 부피가 줄어 단위 부피당 충돌 수 증가"><rect x="10" y="20" width="160" height="140" rx="4" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><g data-anim="move" data-from="3.4,5" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="70,53.7,61.1,40.7,ink,2"></g><circle cx="74.5" cy="60.4" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.3,5.9" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="48.3,127.6,50.8,116.2,ink,2"></g><circle cx="46.6" cy="135.5" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-3.2,5" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="104.5,104.1,111.5,93.2,ink,2"></g><circle cx="100.1" cy="110.9" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="0.7,6" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="133.2,75.3,131.9,63.1,ink,2"></g><circle cx="134.1" cy="83.3" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.3,-4.2" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="50.9,57.2,63.6,69.6,ink,2"></g><circle cx="45.2" cy="51.5" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-6,0.8" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="127,52.4,138.7,50.9,ink,2"></g><circle cx="119" cy="53.4" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><rect x="14" y="8" width="152" height="10" rx="0" fill="#8C99A6" stroke="#5B6B7F" stroke-width="1.5"/><g data-arw="90,-8,90,6,ink,2.5"></g><text class="tex" x="90" y="186" data-mix="$V$ 큼" data-size="20" data-anchor="middle" data-weight="700"></text><g data-anim="scale" data-from="1,1.75" data-o="280,160" data-dur="1.4" data-ease="out"><rect x="200" y="80" width="160" height="80" rx="4" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/></g><g data-anim="move" data-from="0,-30" data-dur="1.4" data-ease="out"><rect x="204" y="68" width="152" height="10" rx="0" fill="#8C99A6" stroke="#5B6B7F" stroke-width="1.5"/><g data-arw="280,40,280,64,ink,4"></g><text class="tex" x="272" y="40" data-mix="외부 압력 증가" data-size="19" data-anchor="end"></text></g><g data-arw="229.5,93.3,237.6,84,ink,2"></g><circle cx="225" cy="100" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="254.9,143.9,244.8,149.4,ink,2"></g><circle cx="262" cy="140" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="291.9,107.4,279.6,106.6,ink,2"></g><circle cx="300" cy="108" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="336.7,130.1,339.2,118.6,ink,2"></g><circle cx="335" cy="138" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="232,141.2,218.7,143.2,ink,2"></g><circle cx="240" cy="140" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="326.8,93.6,337.6,86.5,ink,2"></g><circle cx="320" cy="98" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><text class="tex" x="280" y="186" data-mix="$V$ 작음" data-size="20" data-anchor="middle" data-weight="700"></text></svg>
+      <p class="f21 step">평균 속력은 그대로이지만 부피가 줄어 <b>단위 부피당 충돌하는 분자 수</b>가 늘어난다. 기체 압력이 외부 압력과 같아질 때까지 부피가 줄어든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 예제 Ⅱ-1 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="예제 Ⅱ-1">
+  <h2><span class="tag ex">예제 Ⅱ-1</span>질소 분자의 제곱평균근 속력</h2>
+  <p class="f22"><b>Q</b> 20 °C에서 질소 분자들의 제곱평균근 속력 $v_\text{rms}$는 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step"><b>주어진 것</b> $T=20+273=293\ \text{K}$, $M=28.02\ \text{g/mol}=2.802\times10^{-2}\ \text{kg/mol}$</p>
+      <p class="f21 step"><b>관계식</b> $v_\text{rms}=\sqrt{\dfrac{3RT}{M}}$</p>
+      <div class="step f21">$v_\text{rms}=\sqrt{\dfrac{3\times8.314\ \text{J/(mol}\cdot\text{K)}\times293\ \text{K}}{2.802\times10^{-2}\ \text{kg/mol}}}=\sqrt{2.61\times10^{5}\ \text{m}^2/\text{s}^2}$</div>
+      <div class="answer step">$v_\text{rms}\approx511\ \text{m/s}$</div>
+      <p class="small step">시속 약 1800 km — 소리의 빠르기(약 340 m/s)보다 빠르다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 속력 분포 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자의 속력 분포" data-title="맥스웰의 속력 분포">
+  <h2><span class="no">9</span>기체 분자의 속력 분포</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 570px"><svg class="fig" viewBox="0 0 600 398" style="width:560px" aria-label="질소 분자의 맥스웰 속력 분포(계산): 100 K, 300 K, 500 K"><line x1="163.3" y1="330" x2="163.3" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="246.7" y1="330" x2="246.7" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="330" y1="330" x2="330" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="413.3" y1="330" x2="413.3" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="496.7" y1="330" x2="496.7" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="580" y1="330" x2="580" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="252.2" x2="580" y2="252.2" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="174.4" x2="580" y2="174.4" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="96.7" x2="580" y2="96.7" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="330" x2="588" y2="330" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="330" x2="80" y2="42" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="330" x2="80" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="80" y="356" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="163.3" y1="330" x2="163.3" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="163.3" y="356" data-tex="200" data-size="18" data-anchor="middle"></text><line x1="246.7" y1="330" x2="246.7" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="246.7" y="356" data-tex="400" data-size="18" data-anchor="middle"></text><line x1="330" y1="330" x2="330" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="330" y="356" data-tex="600" data-size="18" data-anchor="middle"></text><line x1="413.3" y1="330" x2="413.3" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="413.3" y="356" data-tex="800" data-size="18" data-anchor="middle"></text><line x1="496.7" y1="330" x2="496.7" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="496.7" y="356" data-tex="1000" data-size="18" data-anchor="middle"></text><line x1="580" y1="330" x2="580" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="580" y="356" data-tex="1200" data-size="18" data-anchor="middle"></text><line x1="74" y1="330" x2="80" y2="330" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="336" data-tex="0" data-size="18" data-anchor="end"></text><line x1="74" y1="252.2" x2="80" y2="252.2" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="258.2" data-tex="0.001" data-size="18" data-anchor="end"></text><line x1="74" y1="174.4" x2="80" y2="174.4" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="180.4" data-tex="0.002" data-size="18" data-anchor="end"></text><line x1="74" y1="96.7" x2="80" y2="96.7" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="102.7" data-tex="0.003" data-size="18" data-anchor="end"></text><text class="tex" x="580" y="388" data-mix="속력 $v$ [m/s]" data-size="19" data-anchor="end"></text><text class="tex" x="18" y="40" data-mix="$f(v)$ [s/m]" data-size="19" data-anchor="start"></text><g data-anim="draw" data-dur="1.3" data-delay="0"><path d="M80 330 L83.1 329.3 L86.2 327.3 L89.4 323.9 L92.5 319.2 L95.6 313.3 L98.8 306.2 L101.9 298.1 L105 288.9 L108.1 278.8 L111.2 267.9 L114.4 256.3 L117.5 244.2 L120.6 231.7 L123.8 218.8 L126.9 205.8 L130 192.8 L133.1 179.9 L136.2 167.2 L139.4 154.9 L142.5 143 L145.6 131.7 L148.8 121.1 L151.9 111.2 L155 102.1 L158.1 94 L161.2 86.7 L164.4 80.5 L167.5 75.3 L170.6 71.2 L173.8 68.1 L176.9 66 L180 65 L183.1 65.1 L186.2 66.1 L189.4 68 L192.5 70.9 L195.6 74.6 L198.8 79.1 L201.9 84.3 L205 90.2 L208.1 96.7 L211.2 103.7 L214.4 111.1 L217.5 119 L220.6 127.1 L223.8 135.5 L226.9 144.1 L230 152.8 L233.1 161.6 L236.2 170.3 L239.4 179.1 L242.5 187.7 L245.6 196.2 L248.8 204.5 L251.9 212.5 L255 220.4 L258.1 228 L261.2 235.3 L264.4 242.3 L267.5 249 L270.6 255.3 L273.8 261.3 L276.9 267 L280 272.4 L283.1 277.4 L286.2 282.1 L289.4 286.5 L292.5 290.6 L295.6 294.3 L298.8 297.8 L301.9 301 L305 304 L308.1 306.7 L311.2 309.2 L314.4 311.4 L317.5 313.5 L320.6 315.3 L323.8 317 L326.9 318.5 L330 319.9 L333.1 321.1 L336.2 322.2 L339.4 323.1 L342.5 324 L345.6 324.8 L348.8 325.4 L351.9 326 L355 326.6 L358.1 327 L361.2 327.4 L364.4 327.8 L367.5 328.1 L370.6 328.4 L373.8 328.6 L376.9 328.8 L380 329 L383.1 329.1 L386.2 329.3 L389.4 329.4 L392.5 329.5 L395.6 329.6 L398.8 329.6 L401.9 329.7 L405 329.7 L408.1 329.8 L411.2 329.8 L414.4 329.8 L417.5 329.9 L420.6 329.9 L423.8 329.9 L426.9 329.9 L430 329.9 L433.1 330 L436.2 330 L439.4 330 L442.5 330 L445.6 330 L448.8 330 L451.9 330 L455 330 L458.1 330 L461.2 330 L464.4 330 L467.5 330 L470.6 330 L473.8 330 L476.9 330 L480 330 L483.1 330 L486.2 330 L489.4 330 L492.5 330 L495.6 330 L498.8 330 L501.9 330 L505 330 L508.1 330 L511.2 330 L514.4 330 L517.5 330 L520.6 330 L523.8 330 L526.9 330 L530 330 L533.1 330 L536.2 330 L539.4 330 L542.5 330 L545.6 330 L548.8 330 L551.9 330 L555 330 L558.1 330 L561.2 330 L564.4 330 L567.5 330 L570.6 330 L573.8 330 L576.9 330 L580 330" fill="none" stroke="#1F6FD1" stroke-width="3.5" stroke-linejoin="round"/></g><text class="tex" x="195.5" y="54.9" data-tex="100\ \text{K}" data-size="20" data-anchor="start" fill="#1F6FD1" data-halo="1"></text><g data-anim="draw" data-dur="1.3" data-delay="0.4"><path d="M80 330 L83.1 329.9 L86.2 329.5 L89.4 328.8 L92.5 327.9 L95.6 326.7 L98.8 325.3 L101.9 323.7 L105 321.8 L108.1 319.6 L111.2 317.3 L114.4 314.7 L117.5 311.9 L120.6 308.9 L123.8 305.8 L126.9 302.5 L130 299 L133.1 295.3 L136.2 291.6 L139.4 287.7 L142.5 283.7 L145.6 279.6 L148.8 275.4 L151.9 271.2 L155 266.9 L158.1 262.6 L161.2 258.2 L164.4 253.9 L167.5 249.6 L170.6 245.3 L173.8 241 L176.9 236.8 L180 232.6 L183.1 228.5 L186.2 224.5 L189.4 220.7 L192.5 216.9 L195.6 213.2 L198.8 209.7 L201.9 206.4 L205 203.1 L208.1 200.1 L211.2 197.2 L214.4 194.5 L217.5 192 L220.6 189.6 L223.8 187.5 L226.9 185.5 L230 183.8 L233.1 182.2 L236.2 180.9 L239.4 179.7 L242.5 178.8 L245.6 178 L248.8 177.5 L251.9 177.1 L255 177 L258.1 177 L261.2 177.3 L264.4 177.7 L267.5 178.3 L270.6 179.1 L273.8 180 L276.9 181.1 L280 182.4 L283.1 183.8 L286.2 185.4 L289.4 187.1 L292.5 189 L295.6 191 L298.8 193.1 L301.9 195.3 L305 197.6 L308.1 199.9 L311.2 202.4 L314.4 205 L317.5 207.6 L320.6 210.3 L323.8 213 L326.9 215.8 L330 218.6 L333.1 221.5 L336.2 224.4 L339.4 227.3 L342.5 230.2 L345.6 233.1 L348.8 236.1 L351.9 239 L355 241.9 L358.1 244.8 L361.2 247.6 L364.4 250.5 L367.5 253.3 L370.6 256.1 L373.8 258.8 L376.9 261.5 L380 264.1 L383.1 266.7 L386.2 269.3 L389.4 271.8 L392.5 274.2 L395.6 276.6 L398.8 278.9 L401.9 281.2 L405 283.4 L408.1 285.5 L411.2 287.6 L414.4 289.6 L417.5 291.5 L420.6 293.4 L423.8 295.2 L426.9 297 L430 298.7 L433.1 300.3 L436.2 301.9 L439.4 303.4 L442.5 304.8 L445.6 306.2 L448.8 307.5 L451.9 308.8 L455 310 L458.1 311.2 L461.2 312.3 L464.4 313.3 L467.5 314.3 L470.6 315.3 L473.8 316.2 L476.9 317 L480 317.8 L483.1 318.6 L486.2 319.3 L489.4 320 L492.5 320.7 L495.6 321.3 L498.8 321.9 L501.9 322.4 L505 323 L508.1 323.4 L511.2 323.9 L514.4 324.3 L517.5 324.7 L520.6 325.1 L523.8 325.5 L526.9 325.8 L530 326.1 L533.1 326.4 L536.2 326.7 L539.4 326.9 L542.5 327.2 L545.6 327.4 L548.8 327.6 L551.9 327.8 L555 327.9 L558.1 328.1 L561.2 328.3 L564.4 328.4 L567.5 328.5 L570.6 328.7 L573.8 328.8 L576.9 328.9 L580 329" fill="none" stroke="#16233D" stroke-width="3.5" stroke-linejoin="round"/></g><text class="tex" x="269.8" y="167" data-tex="300\ \text{K}" data-size="20" data-anchor="start" fill="#16233D" data-halo="1"></text><g data-anim="draw" data-dur="1.3" data-delay="0.8"><path d="M80 330 L83.1 329.9 L86.2 329.8 L89.4 329.5 L92.5 329 L95.6 328.5 L98.8 327.8 L101.9 327 L105 326.1 L108.1 325.1 L111.2 324 L114.4 322.8 L117.5 321.4 L120.6 320 L123.8 318.5 L126.9 316.8 L130 315.1 L133.1 313.3 L136.2 311.4 L139.4 309.4 L142.5 307.3 L145.6 305.2 L148.8 303 L151.9 300.8 L155 298.5 L158.1 296.1 L161.2 293.7 L164.4 291.2 L167.5 288.7 L170.6 286.2 L173.8 283.6 L176.9 281.1 L180 278.5 L183.1 275.9 L186.2 273.3 L189.4 270.7 L192.5 268.1 L195.6 265.5 L198.8 262.9 L201.9 260.4 L205 257.8 L208.1 255.3 L211.2 252.9 L214.4 250.4 L217.5 248.1 L220.6 245.7 L223.8 243.5 L226.9 241.2 L230 239.1 L233.1 237 L236.2 234.9 L239.4 233 L242.5 231.1 L245.6 229.3 L248.8 227.5 L251.9 225.9 L255 224.3 L258.1 222.8 L261.2 221.4 L264.4 220.1 L267.5 218.9 L270.6 217.7 L273.8 216.7 L276.9 215.7 L280 214.9 L283.1 214.1 L286.2 213.5 L289.4 212.9 L292.5 212.4 L295.6 212.1 L298.8 211.8 L301.9 211.6 L305 211.5 L308.1 211.5 L311.2 211.5 L314.4 211.7 L317.5 212 L320.6 212.3 L323.8 212.7 L326.9 213.2 L330 213.8 L333.1 214.5 L336.2 215.2 L339.4 216 L342.5 216.9 L345.6 217.8 L348.8 218.8 L351.9 219.9 L355 221 L358.1 222.2 L361.2 223.5 L364.4 224.7 L367.5 226.1 L370.6 227.5 L373.8 228.9 L376.9 230.4 L380 231.9 L383.1 233.4 L386.2 235 L389.4 236.6 L392.5 238.2 L395.6 239.9 L398.8 241.6 L401.9 243.3 L405 245 L408.1 246.7 L411.2 248.4 L414.4 250.2 L417.5 251.9 L420.6 253.7 L423.8 255.4 L426.9 257.2 L430 258.9 L433.1 260.7 L436.2 262.4 L439.4 264.2 L442.5 265.9 L445.6 267.6 L448.8 269.3 L451.9 271 L455 272.6 L458.1 274.3 L461.2 275.9 L464.4 277.5 L467.5 279.1 L470.6 280.6 L473.8 282.2 L476.9 283.7 L480 285.2 L483.1 286.6 L486.2 288.1 L489.4 289.5 L492.5 290.9 L495.6 292.2 L498.8 293.5 L501.9 294.8 L505 296.1 L508.1 297.3 L511.2 298.5 L514.4 299.7 L517.5 300.9 L520.6 302 L523.8 303.1 L526.9 304.1 L530 305.1 L533.1 306.1 L536.2 307.1 L539.4 308 L542.5 309 L545.6 309.8 L548.8 310.7 L551.9 311.5 L555 312.3 L558.1 313.1 L561.2 313.8 L564.4 314.6 L567.5 315.3 L570.6 315.9 L573.8 316.6 L576.9 317.2 L580 317.8" fill="none" stroke="#D7263D" stroke-width="3.5" stroke-linejoin="round"/></g><text class="tex" x="321" y="201.5" data-tex="500\ \text{K}" data-size="20" data-anchor="start" fill="#D7263D" data-halo="1"></text></svg></div>
+    <div class="col stack">
+      <p class="f21">같은 온도에서도 분자의 속력은 모두 같지 않다. <b>맥스웰</b>은 어떤 순간에 속력 $v$를 가진 분자의 비율을 계산하는 식을 유도했고, 실험으로 측정한 분포와 일치하였다.</p>
+      <p class="f21 step" data-q><b>Q</b> 온도가 높아질수록 곡선은 어떻게 변할까?</p>
+      <p class="f21 step">→ 봉우리가 <b>빠른 쪽</b>으로 옮겨 가고, <b>낮아지며 넓게</b> 퍼진다. 빠른 분자의 비율이 커진다.</p>
+      <p class="small">질소($\ce{N2}$)에 대해 식으로 계산하여 그린 곡선</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑩ 속력 분포 함수 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자의 속력 분포" data-title="속력 분포 함수">
+  <h2><span class="no">10</span>맥스웰의 속력 분포 함수</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\dfrac{\Delta N}{N}=f(v)\,\Delta v$<br>$f(v)=4\pi\left(\dfrac{m}{2\pi k_\mathrm{B}T}\right)^{\frac{3}{2}}v^2e^{-mv^2/2k_\mathrm{B}T}$<div class="unit">$\Delta N/N$: 속력이 $v$와 $v+\Delta v$ 사이인 분자의 분율, 볼츠만 상수 $k_\mathrm{B}=1.38\times10^{-23}\ \text{J/K}$</div></div>
+      <ul class="f21 ac211-ul">
+        <li class="step">$v$가 매우 크면 지수 인자 $e^{-mv^2/2k_\mathrm{B}T}\to0$ → 아주 빠른 분자는 적다.</li>
+        <li class="step">$v\to0$이면 $v^2\to0$ → 아주 느린 분자도 적다.</li>
+        <li class="step">앞의 계수 $4\pi\left(\frac{m}{2\pi k_\mathrm{B}T}\right)^{3/2}$는 0부터 무한대까지의 확률(곡선 아래 넓이)이 <b>1</b>이 되게 한다.</li>
+      </ul>
+      <p class="small">식은 유도하지 않고 각 인자의 뜻을 해석한다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 530 368" style="width:500px" aria-label="300 K 질소의 속력 분포: 곡선 아래 넓이 1, 최빈 속력 < 평균 속력 < 제곱평균근 속력"><line x1="216.7" y1="300" x2="216.7" y2="60" stroke="#E2E7EC" stroke-width="1"/><line x1="363.3" y1="300" x2="363.3" y2="60" stroke="#E2E7EC" stroke-width="1"/><line x1="510" y1="300" x2="510" y2="60" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="190.9" x2="510" y2="190.9" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="81.8" x2="510" y2="81.8" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="300" x2="518" y2="300" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="300" x2="70" y2="52" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="300" x2="70" y2="306" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="326" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="216.7" y1="300" x2="216.7" y2="306" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="216.7" y="326" data-tex="400" data-size="18" data-anchor="middle"></text><line x1="363.3" y1="300" x2="363.3" y2="306" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="363.3" y="326" data-tex="800" data-size="18" data-anchor="middle"></text><line x1="510" y1="300" x2="510" y2="306" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="510" y="326" data-tex="1200" data-size="18" data-anchor="middle"></text><line x1="64" y1="300" x2="70" y2="300" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="306" data-tex="0" data-size="18" data-anchor="end"></text><line x1="64" y1="190.9" x2="70" y2="190.9" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="196.9" data-tex="0.001" data-size="18" data-anchor="end"></text><line x1="64" y1="81.8" x2="70" y2="81.8" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="87.8" data-tex="0.002" data-size="18" data-anchor="end"></text><text class="tex" x="520" y="358" data-mix="속력 $v$ [m/s]" data-size="19" data-anchor="end"></text><text class="tex" x="14" y="40" data-mix="$f(v)$ [s/m]" data-size="19" data-anchor="start"></text><path d="M70 300 L70 300 L73.7 299.7 L77.3 298.7 L81 297.1 L84.7 294.8 L88.3 291.9 L92 288.4 L95.7 284.4 L99.3 279.8 L103 274.6 L106.7 269 L110.3 262.9 L114 256.5 L117.7 249.6 L121.3 242.5 L125 235 L128.7 227.3 L132.3 219.5 L136 211.5 L139.7 203.4 L143.3 195.3 L147 187.2 L150.7 179.1 L154.3 171.2 L158 163.4 L161.7 155.8 L165.3 148.4 L169 141.4 L172.7 134.6 L176.3 128.1 L180 122.1 L183.7 116.4 L187.3 111.2 L191 106.4 L194.7 102.1 L198.3 98.2 L202 94.9 L205.7 92 L209.3 89.7 L213 87.9 L216.7 86.5 L220.3 85.7 L224 85.4 L227.7 85.5 L231.3 86.1 L235 87.2 L238.7 88.7 L242.3 90.7 L246 93 L249.7 95.7 L253.3 98.8 L257 102.2 L260.7 105.9 L264.3 110 L268 114.2 L271.7 118.7 L275.3 123.4 L279 128.3 L282.7 133.4 L286.3 138.5 L290 143.8 L293.7 149.2 L297.3 154.6 L301 160 L304.7 165.5 L308.3 171 L312 176.4 L315.7 181.8 L319.3 187.1 L323 192.4 L326.7 197.6 L330.3 202.7 L334 207.6 L337.7 212.5 L341.3 217.2 L345 221.8 L348.7 226.2 L352.3 230.5 L356 234.6 L359.7 238.6 L363.3 242.4 L367 246.1 L370.7 249.5 L374.3 252.9 L378 256.1 L381.7 259.1 L385.3 262 L389 264.7 L392.7 267.2 L396.3 269.7 L400 271.9 L403.7 274.1 L407.3 276.1 L411 278 L414.7 279.8 L418.3 281.4 L422 282.9 L425.7 284.4 L429.3 285.7 L433 286.9 L436.7 288.1 L440.3 289.1 L444 290.1 L447.7 291 L451.3 291.9 L455 292.6 L458.7 293.3 L462.3 294 L466 294.5 L469.7 295.1 L473.3 295.6 L477 296 L480.7 296.4 L484.3 296.8 L488 297.1 L491.7 297.4 L495.3 297.7 L499 297.9 L502.7 298.2 L506.3 298.4 L510 298.6 L510 300 Z" fill="#2E9E6A" stroke="none" stroke-width="0" stroke-linejoin="round" fill-opacity=".12"/><path d="M70 300 L72.8 299.8 L75.5 299.3 L78.2 298.3 L81 297.1 L83.8 295.4 L86.5 293.4 L89.2 291.1 L92 288.4 L94.8 285.4 L97.5 282.1 L100.2 278.5 L103 274.6 L105.8 270.5 L108.5 266 L111.2 261.4 L114 256.5 L116.8 251.4 L119.5 246.1 L122.2 240.6 L125 235 L127.8 229.3 L130.5 223.4 L133.2 217.5 L136 211.5 L138.8 205.4 L141.5 199.3 L144.2 193.3 L147 187.2 L149.8 181.1 L152.5 175.1 L155.2 169.2 L158 163.4 L160.8 157.7 L163.5 152.1 L166.2 146.6 L169 141.4 L171.8 136.2 L174.5 131.3 L177.2 126.6 L180 122.1 L182.8 117.8 L185.5 113.7 L188.2 109.9 L191 106.4 L193.8 103.1 L196.5 100.1 L199.2 97.4 L202 94.9 L204.8 92.7 L207.5 90.8 L210.2 89.2 L213 87.9 L215.8 86.8 L218.5 86 L221.2 85.6 L224 85.4 L226.8 85.4 L229.5 85.8 L232.2 86.4 L235 87.2 L237.8 88.3 L240.5 89.6 L243.2 91.2 L246 93 L248.8 95 L251.5 97.2 L254.2 99.6 L257 102.2 L259.8 105 L262.5 107.9 L265.2 111 L268 114.2 L270.8 117.6 L273.5 121.1 L276.2 124.6 L279 128.3 L281.8 132.1 L284.5 135.9 L287.2 139.8 L290 143.8 L292.8 147.8 L295.5 151.9 L298.2 156 L301 160 L303.8 164.1 L306.5 168.2 L309.2 172.3 L312 176.4 L314.8 180.5 L317.5 184.5 L320.2 188.5 L323 192.4 L325.8 196.3 L328.5 200.1 L331.2 203.9 L334 207.6 L336.8 211.3 L339.5 214.8 L342.2 218.3 L345 221.8 L347.8 225.1 L350.5 228.3 L353.2 231.5 L356 234.6 L358.8 237.6 L361.5 240.5 L364.2 243.3 L367 246.1 L369.8 248.7 L372.5 251.2 L375.2 253.7 L378 256.1 L380.8 258.3 L383.5 260.5 L386.2 262.6 L389 264.7 L391.8 266.6 L394.5 268.5 L397.2 270.2 L400 271.9 L402.8 273.6 L405.5 275.1 L408.2 276.6 L411 278 L413.8 279.3 L416.5 280.6 L419.2 281.8 L422 282.9 L424.8 284 L427.5 285.1 L430.2 286 L433 286.9 L435.8 287.8 L438.5 288.6 L441.2 289.4 L444 290.1 L446.8 290.8 L449.5 291.4 L452.2 292 L455 292.6 L457.8 293.1 L460.5 293.6 L463.2 294.1 L466 294.5 L468.8 294.9 L471.5 295.3 L474.2 295.7 L477 296 L479.8 296.3 L482.5 296.6 L485.2 296.9 L488 297.1 L490.8 297.4 L493.5 297.6 L496.2 297.8 L499 297.9 L501.8 298.1 L504.5 298.3 L507.2 298.4 L510 298.6" fill="none" stroke="#16233D" stroke-width="3.5" stroke-linejoin="round"/><line x1="224.7" y1="300" x2="224.7" y2="85.3" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><text class="tex" x="230.7" y="286" data-tex="v_\text{p}" data-size="19" data-anchor="start" data-halo="1"></text><line x1="244.6" y1="300" x2="244.6" y2="92" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><text class="tex" x="250.6" y="260" data-tex="\bar v" data-size="19" data-anchor="start" data-halo="1"></text><line x1="259.5" y1="300" x2="259.5" y2="104.7" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><text class="tex" x="265.5" y="234" data-tex="v_\text{rms}" data-size="19" data-anchor="start" data-halo="1"></text><text class="tex" x="300" y="180" data-mix="넓이 = 1 (전체 분자)" data-size="19" data-anchor="start" fill="#2E9E6A" data-halo="1"></text></svg><p class="small">$v_\text{p}$: 가장 많은 분자의 속력(최빈 속력), $\bar v$: 평균 속력</p></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 예측 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자의 속력 분포" data-title="예측: 온도와 몰질량">
+  <h2><span class="tag">예측</span>속력 분포는 어떻게 바뀔까?</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (1) 질소의 온도를 200 K에서 600 K로 높이면 곡선은? (봉우리 위치·높이·넓이)</p>
+      <svg class="fig" viewBox="0 0 380 214" style="width:340px" aria-label="온도를 높일 때의 속력 분포 예측(질소 200 K → 600 K)"><line x1="40" y1="180" x2="370" y2="180" stroke="#5B6B7F" stroke-width="2"/><line x1="40" y1="180" x2="40" y2="22" stroke="#5B6B7F" stroke-width="2"/><path d="M40 180 L42 179.9 L44 179.5 L46 178.8 L48 177.9 L50 176.8 L52 175.4 L54 173.8 L56 172 L58 169.9 L60 167.7 L62 165.2 L64 162.6 L66 159.8 L68 156.9 L70 153.8 L72 150.7 L74 147.4 L76 144.1 L78 140.6 L80 137.2 L82 133.7 L84 130.2 L86 126.7 L88 123.3 L90 119.9 L92 116.5 L94 113.2 L96 110.1 L98 107 L100 104 L102 101.2 L104 98.5 L106 95.9 L108 93.5 L110 91.3 L112 89.3 L114 87.4 L116 85.8 L118 84.3 L120 83 L122 82 L124 81.1 L126 80.4 L128 80 L130 79.7 L132 79.6 L134 79.7 L136 80 L138 80.5 L140 81.1 L142 81.9 L144 82.9 L146 84 L148 85.3 L150 86.7 L152 88.2 L154 89.9 L156 91.6 L158 93.5 L160 95.4 L162 97.5 L164 99.6 L166 101.7 L168 104 L170 106.2 L172 108.5 L174 110.8 L176 113.2 L178 115.5 L180 117.9 L182 120.2 L184 122.5 L186 124.8 L188 127.1 L190 129.4 L192 131.6 L194 133.8 L196 136 L198 138.1 L200 140.1 L202 142.1 L204 144.1 L206 146 L208 147.8 L210 149.6 L212 151.3 L214 152.9 L216 154.5 L218 156 L220 157.5 L222 158.8 L224 160.2 L226 161.4 L228 162.6 L230 163.8 L232 164.9 L234 165.9 L236 166.9 L238 167.8 L240 168.7 L242 169.5 L244 170.3 L246 171 L248 171.7 L250 172.3 L252 172.9 L254 173.5 L256 174 L258 174.5 L260 174.9 L262 175.4 L264 175.8 L266 176.1 L268 176.4 L270 176.8 L272 177 L274 177.3 L276 177.5 L278 177.8 L280 178 L282 178.2 L284 178.3 L286 178.5 L288 178.6 L290 178.8 L292 178.9 L294 179 L296 179.1 L298 179.2 L300 179.3 L302 179.3 L304 179.4 L306 179.5 L308 179.5 L310 179.6 L312 179.6 L314 179.7 L316 179.7 L318 179.7 L320 179.8 L322 179.8 L324 179.8 L326 179.8 L328 179.9 L330 179.9 L332 179.9 L334 179.9 L336 179.9 L338 179.9 L340 179.9 L342 179.9 L344 179.9 L346 180 L348 180 L350 180 L352 180 L354 180 L356 180 L358 180 L360 180" fill="none" stroke="#1F6FD1" stroke-width="3" stroke-linejoin="round"/><g class="step" data-g="pr1"><path d="M40 180 L42 180 L44 179.9 L46 179.8 L48 179.6 L50 179.4 L52 179.1 L54 178.8 L56 178.4 L58 178 L60 177.5 L62 177 L64 176.5 L66 175.9 L68 175.3 L70 174.6 L72 173.9 L74 173.1 L76 172.3 L78 171.5 L80 170.7 L82 169.8 L84 168.8 L86 167.9 L88 166.9 L90 165.9 L92 164.9 L94 163.8 L96 162.8 L98 161.7 L100 160.6 L102 159.4 L104 158.3 L106 157.2 L108 156 L110 154.9 L112 153.7 L114 152.5 L116 151.4 L118 150.2 L120 149.1 L122 147.9 L124 146.8 L126 145.6 L128 144.5 L130 143.4 L132 142.3 L134 141.2 L136 140.1 L138 139.1 L140 138.1 L142 137.1 L144 136.1 L146 135.1 L148 134.2 L150 133.3 L152 132.4 L154 131.6 L156 130.8 L158 130 L160 129.3 L162 128.5 L164 127.9 L166 127.2 L168 126.6 L170 126 L172 125.5 L174 125 L176 124.6 L178 124.1 L180 123.8 L182 123.4 L184 123.1 L186 122.8 L188 122.6 L190 122.4 L192 122.3 L194 122.1 L196 122.1 L198 122 L200 122 L202 122.1 L204 122.1 L206 122.2 L208 122.4 L210 122.6 L212 122.8 L214 123 L216 123.3 L218 123.6 L220 123.9 L222 124.3 L224 124.7 L226 125.1 L228 125.5 L230 126 L232 126.5 L234 127 L236 127.6 L238 128.1 L240 128.7 L242 129.3 L244 129.9 L246 130.6 L248 131.2 L250 131.9 L252 132.6 L254 133.3 L256 134 L258 134.7 L260 135.5 L262 136.2 L264 137 L266 137.7 L268 138.5 L270 139.2 L272 140 L274 140.8 L276 141.6 L278 142.4 L280 143.1 L282 143.9 L284 144.7 L286 145.5 L288 146.3 L290 147 L292 147.8 L294 148.6 L296 149.3 L298 150.1 L300 150.9 L302 151.6 L304 152.3 L306 153.1 L308 153.8 L310 154.5 L312 155.2 L314 155.9 L316 156.6 L318 157.3 L320 157.9 L322 158.6 L324 159.2 L326 159.9 L328 160.5 L330 161.1 L332 161.7 L334 162.3 L336 162.9 L338 163.4 L340 164 L342 164.5 L344 165 L346 165.6 L348 166.1 L350 166.6 L352 167 L354 167.5 L356 168 L358 168.4 L360 168.8" fill="none" stroke="#D7263D" stroke-width="3" stroke-linejoin="round"/><text class="tex" x="250" y="124" data-tex="600\ \text{K}" data-size="19" data-anchor="start" fill="#D7263D" data-halo="1"></text></g><text class="tex" x="118" y="40" data-tex="200\ \text{K}" data-size="19" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="366" y="204" data-mix="$v$" data-size="19" data-anchor="end" fill="#5B6B7F"></text></svg>
+      <p class="f21 step" data-g="pr1">→ 봉우리가 오른쪽으로 $\sqrt3\approx1.7$배 옮겨 가고 낮아진다. 넓이(=1)는 그대로이다.</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (2) 같은 300 K에서 질소 대신 헬륨이면 곡선은?</p>
+      <svg class="fig" viewBox="0 0 380 214" style="width:340px" aria-label="몰질량이 작을 때의 속력 분포 예측(300 K, 질소와 헬륨)"><line x1="40" y1="180" x2="370" y2="180" stroke="#5B6B7F" stroke-width="2"/><line x1="40" y1="180" x2="40" y2="22" stroke="#5B6B7F" stroke-width="2"/><path d="M40 180 L42 179.2 L44 177 L46 173.3 L48 168.3 L50 162 L52 154.7 L54 146.4 L56 137.4 L58 127.9 L60 118.1 L62 108.1 L64 98.3 L66 88.7 L68 79.6 L70 71.1 L72 63.5 L74 56.8 L76 51.1 L78 46.5 L80 43 L82 40.7 L84 39.6 L86 39.6 L88 40.7 L90 42.8 L92 45.8 L94 49.6 L96 54.2 L98 59.5 L100 65.2 L102 71.3 L104 77.7 L106 84.3 L108 91 L110 97.7 L112 104.4 L114 110.8 L116 117.1 L118 123.1 L120 128.8 L122 134.1 L124 139.1 L126 143.8 L128 148.1 L130 152 L132 155.5 L134 158.8 L136 161.6 L138 164.2 L140 166.5 L142 168.5 L144 170.2 L146 171.7 L148 173.1 L150 174.2 L152 175.2 L154 176 L156 176.7 L158 177.3 L160 177.8 L162 178.2 L164 178.5 L166 178.8 L168 179.1 L170 179.2 L172 179.4 L174 179.5 L176 179.6 L178 179.7 L180 179.8 L182 179.8 L184 179.9 L186 179.9 L188 179.9 L190 179.9 L192 180 L194 180 L196 180 L198 180 L200 180 L202 180 L204 180 L206 180 L208 180 L210 180 L212 180 L214 180 L216 180 L218 180 L220 180 L222 180 L224 180 L226 180 L228 180 L230 180 L232 180 L234 180 L236 180 L238 180 L240 180 L242 180 L244 180 L246 180 L248 180 L250 180 L252 180 L254 180 L256 180 L258 180 L260 180 L262 180 L264 180 L266 180 L268 180 L270 180 L272 180 L274 180 L276 180 L278 180 L280 180 L282 180 L284 180 L286 180 L288 180 L290 180 L292 180 L294 180 L296 180 L298 180 L300 180 L302 180 L304 180 L306 180 L308 180 L310 180 L312 180 L314 180 L316 180 L318 180 L320 180 L322 180 L324 180 L326 180 L328 180 L330 180 L332 180 L334 180 L336 180 L338 180 L340 180 L342 180 L344 180 L346 180 L348 180 L350 180 L352 180 L354 180 L356 180 L358 180 L360 180" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><text class="tex" x="84" y="40" data-mix="$\ce{N2}$" data-size="19" data-anchor="start"></text><g class="step" data-g="pr2"><path d="M40 180 L42 180 L44 179.8 L46 179.6 L48 179.4 L50 179 L52 178.5 L54 178 L56 177.4 L58 176.8 L60 176 L62 175.2 L64 174.4 L66 173.4 L68 172.5 L70 171.4 L72 170.3 L74 169.2 L76 168 L78 166.7 L80 165.5 L82 164.2 L84 162.8 L86 161.5 L88 160.1 L90 158.7 L92 157.3 L94 155.8 L96 154.4 L98 153 L100 151.6 L102 150.2 L104 148.8 L106 147.4 L108 146 L110 144.7 L112 143.4 L114 142.1 L116 140.9 L118 139.7 L120 138.5 L122 137.4 L124 136.3 L126 135.3 L128 134.4 L130 133.4 L132 132.6 L134 131.8 L136 131 L138 130.3 L140 129.7 L142 129.2 L144 128.7 L146 128.2 L148 127.8 L150 127.5 L152 127.3 L154 127.1 L156 127 L158 126.9 L160 126.9 L162 127 L164 127.1 L166 127.2 L168 127.5 L170 127.8 L172 128.1 L174 128.5 L176 128.9 L178 129.4 L180 129.9 L182 130.5 L184 131.1 L186 131.7 L188 132.4 L190 133.1 L192 133.9 L194 134.6 L196 135.5 L198 136.3 L200 137.1 L202 138 L204 138.9 L206 139.8 L208 140.7 L210 141.6 L212 142.6 L214 143.5 L216 144.5 L218 145.4 L220 146.4 L222 147.4 L224 148.3 L226 149.3 L228 150.2 L230 151.2 L232 152.1 L234 153 L236 153.9 L238 154.8 L240 155.7 L242 156.6 L244 157.5 L246 158.3 L248 159.1 L250 160 L252 160.7 L254 161.5 L256 162.3 L258 163 L260 163.7 L262 164.5 L264 165.1 L266 165.8 L268 166.4 L270 167.1 L272 167.7 L274 168.3 L276 168.8 L278 169.4 L280 169.9 L282 170.4 L284 170.9 L286 171.3 L288 171.8 L290 172.2 L292 172.6 L294 173 L296 173.4 L298 173.8 L300 174.1 L302 174.5 L304 174.8 L306 175.1 L308 175.4 L310 175.6 L312 175.9 L314 176.2 L316 176.4 L318 176.6 L320 176.8 L322 177 L324 177.2 L326 177.4 L328 177.6 L330 177.7 L332 177.9 L334 178 L336 178.1 L338 178.3 L340 178.4 L342 178.5 L344 178.6 L346 178.7 L348 178.8 L350 178.9 L352 179 L354 179 L356 179.1 L358 179.2 L360 179.2" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 6"/><text class="tex" x="222" y="122" data-mix="$\ce{He}$" data-size="19" data-anchor="start" data-halo="1"></text></g><text class="tex" x="366" y="204" data-mix="$v$" data-size="19" data-anchor="end" fill="#5B6B7F"></text></svg>
+      <p class="f21 step" data-g="pr2">→ 평균 운동 에너지가 같으므로 가벼운 헬륨은 훨씬 빠른 쪽에 넓게 퍼진다($\sqrt{28.02/4.00}\approx2.6$배).</p>
+    </div>
+  </div>
+  <p class="small mt8">예측한 뒤 디지털 탐구 실험실에서 확인한다.</p>
+</section>
+
+<!-- ════════ 19. 디지털 탐구 설계 ════════ -->
+<section class="slide" data-sec="01 · 디지털 탐구" data-title="디지털 탐구: 설계">
+  <h2><span class="tag">디지털 탐구</span>시뮬레이션으로 온도에 따른 기체 분자의 속력 분포 탐구하기</h2>
+  <div class="std"><span class="code">탐구 목표</span>온도와 몰질량을 바꾸며 속력 분포 곡선을 그리고, 봉우리의 위치·높이·곡선 아래 넓이의 변화를 해석한다. [12고화02-01 「속력 분포 변화 예측」]</div>
+  <table class="tight ac211-var mt12">
+    <tr><th>조작 변인</th><td class="l">온도 $T$ (100–1000 K), 기체 종류(몰질량)</td></tr>
+    <tr><th>종속 변인</th><td class="l">최빈 속력 $v_\text{p}$, $v_\text{rms}$, 봉우리 높이, 1000 m/s보다 빠른 분자의 비율</td></tr>
+    <tr><th>통제 변인</th><td class="l">한 번에 하나만 바꾼다(온도를 바꿀 때 기체는 그대로).</td></tr>
+  </table>
+  <div class="stages mt12">
+    <div class="stage"><h3>① 예측</h3><p>200 K → 300 K → 600 K에서 곡선 모양을 먼저 그려 본다.</p></div>
+    <div class="stage"><h3>② 곡선 고정·비교</h3><p>온도마다 「곡선 고정」으로 겹쳐 그리고 「기록」으로 표에 남긴다.</p></div>
+    <div class="stage"><h3>③ 해석</h3><p>최빈 속력과 $\sqrt T$의 관계, 넓이가 일정한 까닭, 몰질량의 영향을 설명한다.</p></div>
+  </div>
+  <p class="small mt8">시뮬레이션 결과는 측정값이 아니므로, 보고서에 사용한 프로그램 이름과 설정값을 밝히고 이론값과 구별해 적는다.</p>
+</section>
+
+<!-- ════════ 20. 실험실: 속력 분포 ════════ -->
+<section class="slide" data-sec="01 · 디지털 탐구" data-title="실험실: 속력 분포">
+  <h2><span class="tag">디지털 탐구</span>속력 분포 실험실</h2>
+  <div class="lab" data-lab="ac211spd">
+    <div class="lab-ctl" style="flex-basis:440px">
+      <div class="ac211-seg"><span class="small">기체</span><button class="btn" data-gas="He">헬륨</button><button class="btn on" data-gas="N2">질소</button><button class="btn" data-gas="O2">산소</button><button class="btn" data-gas="CO2">이산화 탄소</button></div>
+      <div class="ctl"><div class="lbl"><span>온도 $T$</span><output data-o="T"></output></div><input type="range" min="100" max="1000" step="10" value="300" data-i="T" aria-label="온도"></div>
+      <svg class="ac211-box" viewBox="0 0 420 96" width="420" height="96" aria-label="상자 속 분자 운동(빠른 분자일수록 붉은색)"></svg>
+      <div class="res"><div class="small">제곱평균근 속력 $v_\text{rms}$</div><div class="big"><output data-o="big"></output></div><output class="kind ac211-msg" data-o="msg"></output></div>
+      <div class="ac211-seg mt8"><button class="btn ac211-act" data-act="pin">곡선 고정</button><button class="btn ac211-act" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:300px"><svg viewBox="0 0 600 300" width="600" height="300" aria-label="속력 분포 곡선 그래프"></svg></div>
+      <table class="tight ac211-log mt8"><thead><tr><th>기체</th><th>T (K)</th><th>최빈 속력 (m/s)</th><th>v_rms (m/s)</th><th>봉우리 높이 (s/m)</th><th>1000 m/s 초과</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 디지털 탐구 결과 ════════ -->
+<section class="slide" data-sec="01 · 디지털 탐구" data-title="디지털 탐구: 결과 해석">
+  <h2><span class="tag">디지털 탐구</span>결과 정리와 해석</h2>
+  <table class="tight ac211-res">
+    <tr><th>질소</th><th>200 K</th><th>300 K</th><th>600 K</th><th>헬륨 300 K</th></tr>
+    <tr><td>최빈 속력 (m/s)</td><td>345</td><td>422</td><td>597</td><td>1117</td></tr>
+    <tr><td>$v_\text{rms}$ (m/s)</td><td>422</td><td>517</td><td>731</td><td>1368</td></tr>
+    <tr><td>봉우리 높이 (s/m)</td><td>0.00241</td><td>0.00197</td><td>0.00139</td><td>0.00074</td></tr>
+  </table>
+  <div class="f21 mt12">
+    <p><b>Q</b> (1) 온도가 2배(300 K → 600 K)가 되면 최빈 속력은 몇 배인가? <span class="step">→ <span class="ans">$597/422\approx1.41=\sqrt2$배</span> — 최빈 속력은 $\sqrt T$에 비례한다.</span></p>
+    <p class="mt8"><b>Q</b> (2) 온도가 달라져도 곡선 아래 넓이가 일정한 까닭은? <span class="step">→ 넓이는 모든 분자의 분율을 더한 값, 곧 <span class="ans">1</span>이다. 봉우리가 낮아지는 만큼 넓게 퍼진다.</span></p>
+    <p class="mt8"><b>Q</b> (3) 같은 온도에서 헬륨의 분포가 질소와 다른 까닭은? <span class="step">→ 같은 온도에서 평균 운동 에너지 $\tfrac12m\overline{v^2}$가 같으므로, 질량이 작은 분자일수록 속력이 크다.</span></p>
+  </div>
+  <p class="small mt8">값은 맥스웰 분포 식으로 계산한 이론값이다(최빈 속력 $v_\text{p}=\sqrt{2RT/M}$).</p>
+</section>
+
+<!-- ════════ 22. ⑪ 이상 기체 방정식과 기체 상수 ════════ -->
+<section class="slide" data-sec="01 · 이상 기체 방정식과 기체 상수" data-title="이상 기체 방정식과 기체 상수">
+  <h2><span class="no">11</span>이상 기체 방정식과 기체 상수</h2>
+  <p class="f22"><mark>이상 기체 방정식</mark> $PV=nRT$는 보일 법칙, 샤를 법칙, 아보가드로 법칙을 조합하여 비례 상수인 기체 상수 $R$로 나타낸 식이다.</p>
+  <div class="formula mt8">$R=0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}=8.314\ \text{J/(mol}\cdot\text{K)}$</div>
+  <div class="row mt12">
+    <div class="col stack">
+      <div class="card"><h3>기체 상수의 성질</h3><p class="f21">기체의 종류나 조건과 관계없이 일정하고, 단위에 따라 값이 다르다. 기체 1 mol의 온도를 1 K 올리는 데 쓰이는 에너지로 설명하기도 한다.</p></div>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 두 값이 같은 상수임을 단위 환산으로 확인하면? ($1\ \text{atm}\cdot\text{L}=101.325\ \text{J}$)</p>
+      <p class="f21 step">→ <span class="ans">$0.08206\times101.325=8.315\approx8.314$</span> $\text{J/(mol}\cdot\text{K)}$</p>
+      <p class="f21 step"><b>탐구로 잇기</b> $R=\dfrac{PV}{nT}$ — 기체의 $P$, $V$, $n$, $T$를 재면 $R$을 실험으로 구할 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 탐구 활동: 목표·원리 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 기체 상수 측정 (원리)">
+  <h2><span class="tag">탐구 활동</span>기체 상수를 측정하는 실험 방법 조사와 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐09]</span>모둠별로 염소산 칼륨($\ce{KClO3}$)과 이산화 망가니즈($\ce{MnO2}$)를 반응시켜 발생한 산소를 수상 치환으로 모아 기체 상수를 결정하는 실험 방법을 조사하여 수행하고, 기체 상숫값을 계산하여 발표한다.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\ce{2KClO3(s) ->[\ce{MnO2}] 2KCl(s) + 3O2(g)}$</div>
+      <p class="f21">$\ce{MnO2}$는 촉매로, 반응 뒤에도 그대로 남는다. 시험관의 <b>질량 감소</b> = 빠져나간 산소의 질량</p>
+      <div class="formula sm step">$n_{\ce{O2}}=\dfrac{\text{질량 감소}}{32.00\ \text{g/mol}},\qquad R=\dfrac{P_{\ce{O2}}V}{n_{\ce{O2}}T}$</div>
+      <p class="f21 step"><b>수증기 보정</b> 물 위에서 모은 기체에는 수증기가 섞인다. 돌턴의 부분 압력 법칙: $P_{\ce{O2}}=P_\text{대기}-P_{\ce{H2O}}$</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 520 310" style="width:470px" aria-label="염소산 칼륨과 이산화 망가니즈를 가열하여 발생한 산소를 수상 치환으로 눈금실린더에 모으는 장치"><rect x="250" y="170" width="220" height="110" rx="6" fill="#DDEEF8" stroke="#7E8B98" stroke-width="2"/><line x1="252" y1="190" x2="468" y2="190" stroke="#9FC3DD" stroke-width="2"/><rect x="330" y="40" width="56" height="196" rx="0" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.2"/><rect x="331" y="112" width="54" height="123" fill="#DDEEF8"/><line x1="330" y1="56" x2="342" y2="56" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="74" x2="342" y2="74" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="92" x2="342" y2="92" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="110" x2="342" y2="110" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="128" x2="342" y2="128" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="146" x2="342" y2="146" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="164" x2="342" y2="164" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="182" x2="342" y2="182" stroke="#5B6B7F" stroke-width="1.2"/><line x1="330" y1="200" x2="342" y2="200" stroke="#5B6B7F" stroke-width="1.2"/><g data-anim="scale" data-from="1,0.2" data-o="358,40" data-dur="1.6" data-ease="out"><rect x="331" y="41" width="54" height="70" fill="#FFFFFF"/></g><line x1="330" y1="112" x2="386" y2="112" stroke="#9FC3DD" stroke-width="2"/><text class="tex" x="358" y="84" data-tex="\ce{O2}" data-size="22" data-anchor="middle"></text><g data-anim="move" data-from="0,40" data-rep="loop" data-dur="1.6" data-delay="1.2"><circle cx="352" cy="220" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,40" data-rep="loop" data-dur="1.6" data-delay="0.8"><circle cx="364" cy="200" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,40" data-rep="loop" data-dur="1.6" data-delay="0.4"><circle cx="356" cy="176" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,40" data-rep="loop" data-dur="1.6" data-delay="0"><circle cx="362" cy="150" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g transform="rotate(-18 120 150)"><path d="M60 130 L170 130 A20 20 0 0 1 170 170 L60 170" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.2"/><path d="M150 156 Q168 150 186 160 L186 166 L150 166 Z" fill="#F4F1E6" stroke="#5B6B7F" stroke-width="1"/><rect x="52" y="128" width="14" height="44" rx="2" fill="#8C6B4A" stroke="#16233D" stroke-width="1.5"/></g><path d="M64 132 L40 90 L40 60 L250 60 L250 230 L352 230" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><path d="M160 236 Q150 214 166 200 Q170 218 180 210 Q186 228 172 238 Z" fill="#F28C28" stroke="#C2410C" stroke-width="1.2"/><rect x="150" y="238" width="40" height="30" rx="3" fill="#C9D3DD" stroke="#16233D" stroke-width="1.5"/><text class="tex" x="170" y="296" data-mix="가열" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="72" y="232" data-mix="$\ce{KClO3}$ +||$\ce{MnO2}$" data-size="19" data-anchor="middle"></text><text class="tex" x="400" y="130" data-mix="수면 높이를||맞춘다" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 탐구 활동: 준비·과정·안전 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>준비물·과정·안전 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="f21"><b>준비물</b> 염소산 칼륨 0.5 g, 이산화 망가니즈 약간, 시험관, 고무마개와 유리관·고무관, 눈금실린더(250 mL), 수조, 가열 장치, 전자저울, 온도계, 기압계(또는 그날의 기압 자료)</p>
+  <div class="stages mt8">
+    <div class="stage"><h3>① 질량 재기</h3><svg class="fig" viewBox="0 0 190 112" style="width:170px" aria-label="전자저울로 시험관 질량 측정"><rect x="20" y="70" width="140" height="30" rx="6" fill="#E9EDF1" stroke="#16233D" stroke-width="2"/><rect x="50" y="60" width="80" height="10" rx="2" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><rect x="42" y="76" width="96" height="18" rx="3" fill="#16233D" stroke="#16233D" stroke-width="1"/><text class="tex" x="90" y="91" data-tex="12.345\ \text{g}" data-size="18" data-anchor="middle" fill="#FFFFFF"></text><path d="M78 58 L84 24 L96 24 L102 58 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/></svg><p>시료를 넣은 시험관의 질량을 잰다.</p></div>
+    <div class="stage"><h3>② 산소 모으기</h3><svg class="fig" viewBox="0 0 190 112" style="width:170px" aria-label="수상 치환으로 모은 기체의 부피를 수면을 맞춰 읽음"><rect x="20" y="60" width="140" height="46" rx="4" fill="#DDEEF8" stroke="#7E8B98" stroke-width="2"/><rect x="70" y="6" width="30" height="90" rx="0" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><rect x="71" y="46" width="28" height="49" fill="#DDEEF8"/><line x1="70" y1="46" x2="100" y2="46" stroke="#9FC3DD" stroke-width="2"/><line x1="20" y1="72" x2="70" y2="72" stroke="#9FC3DD" stroke-width="2" stroke-dasharray="4 3"/><line x1="100" y1="72" x2="160" y2="72" stroke="#9FC3DD" stroke-width="2" stroke-dasharray="4 3"/></svg><p>가열하여 산소를 모은다. 다 식힌 뒤 실린더 안팎의 수면 높이를 맞추고 부피를 읽는다.</p></div>
+    <div class="stage"><h3>③ 조건 재기</h3><svg class="fig" viewBox="0 0 190 112" style="width:170px" aria-label="물의 온도와 대기압 측정"><rect x="30" y="20" width="18" height="80" rx="9" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><rect x="35" y="58" width="8" height="38" fill="#D7263D"/><circle cx="39" cy="100" r="10" fill="#D7263D" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="56" y="66" data-tex="t\ {}^\circ\text{C}" data-size="18" data-anchor="start"></text><circle cx="130" cy="58" r="32" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><line x1="130" y1="58" x2="148" y2="40" stroke="#D7263D" stroke-width="2.5"/><text class="tex" x="130" y="84" data-mix="기압계" data-size="18" data-anchor="middle"></text></svg><p>시험관 질량을 다시 재고, 물의 온도와 대기압을 기록한다.</p></div>
+  </div>
+  <div class="note mt8"><b>안전</b> 보안경·실험용 장갑·실험복. $\ce{KClO3}$는 강한 산화제 — 유기물·종이와 섞지 않는다. 가열을 멈추기 전에 유리관을 물에서 빼서 <b>물이 거꾸로 빨려 들어가지 않게</b> 한다. 남은 고체는 지정된 폐기물 통에 모은다.</div>
+  <p class="small mt8 step">수면을 맞추는 까닭: 실린더 속 기체의 압력이 대기압과 같아지게 하려고.</p>
+</section>
+
+<!-- ════════ 25. 실험실: 기체 상수 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="실험실: 기체 상수 측정">
+  <h2><span class="tag">탐구 활동</span>기체 상수 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac211gasR">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <div class="ctl"><div class="lbl"><span>염소산 칼륨 질량</span><output data-o="m"></output></div><input type="range" min="0.20" max="1.00" step="0.05" value="0.50" data-i="m" aria-label="염소산 칼륨 질량"></div>
+      <div class="ctl"><div class="lbl"><span>물의 온도</span><output data-o="t"></output></div><input type="range" min="15" max="30" step="1" value="25" data-i="t" aria-label="물의 온도"></div>
+      <div class="ctl"><div class="lbl"><span>대기압</span><output data-o="pa"></output></div><input type="range" min="740" max="780" step="1" value="760" data-i="pa" aria-label="대기압"></div>
+      <label class="ac211-cb"><input type="checkbox" data-i="corr" checked> 수증기압 보정 (돌턴 법칙)</label>
+      <div class="res"><div class="small">이번 실험의 기체 상수 $R$</div><div class="big"><output data-o="big"></output></div><output class="kind ac211-msg" data-o="msg"></output></div>
+      <div class="ac211-seg mt8"><button class="btn ac211-act" data-act="run">실험하기</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:250px"><svg viewBox="0 0 600 250" width="600" height="250" aria-label="수상 치환 장치와 측정값"></svg></div>
+      <table class="tight ac211-log mt8"><thead><tr><th>회</th><th>질량 감소 (g)</th><th>V (mL)</th><th>t (°C)</th><th>산소 압력 (mmHg)</th><th>R (atm·L/(mol·K))</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 탐구 활동: 결과 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과 정리와 발표">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 발표 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="tight ac211-res">
+        <tr><th>측정한 양</th><th>예시 값</th></tr>
+        <tr><td>시험관 질량 감소</td><td>0.196 g</td></tr>
+        <tr><td>모은 기체 부피</td><td>154 mL</td></tr>
+        <tr><td>물의 온도 / 수증기압</td><td>25 °C / 23.8 mmHg</td></tr>
+        <tr><td>대기압</td><td>760 mmHg</td></tr>
+      </table>
+      <p class="small">0.50 g의 $\ce{KClO3}$가 모두 분해되면 산소 $0.196\ \text{g}$이 나온다(덱이 계산한 예시 값).</p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 예시 값으로 $R$을 계산하면?</p>
+      <div class="f21 step">$\begin{aligned}n_{\ce{O2}}&amp;=\dfrac{0.196}{32.00}=6.13\times10^{-3}\ \text{mol}\\ P_{\ce{O2}}&amp;=\dfrac{760-23.8}{760}=0.969\ \text{atm}\\ R&amp;=\dfrac{0.969\times0.154}{(6.13\times10^{-3})\times298}\end{aligned}$</div>
+      <div class="answer step">$R\approx0.0817\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}$ (오차 약 −0.4 %)</div>
+    </div>
+  </div>
+  <p class="f21 mt8 step"><b>토론</b> 수증기압을 빼지 않으면 $R$이 약 3 % 커진다. 그 밖의 오차: 관 속에 남은 공기, 수면 높이 차, 물에 녹은 산소, 덜 분해된 시료. 모둠별로 결과와 오차 원인을 발표하자.</p>
+</section>
+
+<!-- ════════ 27. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>헬륨과 질소의 속력 비교</h2>
+  <p class="f22">같은 온도에서 헬륨($\ce{He}$, 4.00 g/mol)의 제곱평균근 속력은 질소($\ce{N2}$, 28.02 g/mol)의 몇 배인가? 또 두 기체 1 mol의 평균 운동 에너지를 비교하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$\dfrac{v_\text{rms}(\ce{He})}{v_\text{rms}(\ce{N2})}=\sqrt{\dfrac{M_{\ce{N2}}}{M_{\ce{He}}}}=\sqrt{\dfrac{28.02}{4.00}}=\sqrt{7.005}$</p>
+      <div class="answer step">약 2.65배, 평균 운동 에너지는 $\tfrac32RT$로 같다</div>
+      <p class="small step">채점 요소: $v_\text{rms}\propto1/\sqrt M$ · 계산 값 · 운동 에너지는 온도에만 의존</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02" data-tpl="check">
+  <h2><span class="tag q">확인 문제 02</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac211-ox f21">
+    <li>온도가 같으면 기체 분자들의 속력은 모두 같다. <span class="step">→ <span class="ans">×</span> 평균 운동 에너지가 같을 뿐 속력은 넓게 분포한다.</span></li>
+    <li>절대 온도가 높아지면 속력 분포 곡선의 봉우리는 빠른 쪽으로 옮겨 가고 낮아진다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>속력 분포 곡선 아래의 넓이는 온도가 높을수록 커진다. <span class="step">→ <span class="ans">×</span> 전체 분자의 분율이므로 늘 1이다.</span></li>
+    <li>압력 유도에서 $\overline{v^2}=3\overline{v_x^{\,2}}$는 분자 운동이 무질서하다는 가정에서 나온다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>$v_\text{rms}$를 계산할 때 몰질량을 g/mol로 넣으면 m/s 단위의 값이 나온다. <span class="step">→ <span class="ans">×</span> kg/mol로 넣어야 한다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 29. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 기체 분자 — 01 기체 분자 운동론</h2>
+  <div class="ac211-map">
+    <div class="ac211-node">기본 가정<br><span class="small">부피 0, 무질서, 인력 없음, 탄성 충돌</span></div>
+    <div class="ac211-arr">→</div>
+    <div class="ac211-node ac211-main" data-q><b>01 기체 분자 운동론</b><br>❶ $PV=$ <span class="blank"><span class="step">$\tfrac13Nm\overline{v^2}$</span></span><br>❷ $E_\mathrm{k}=$ <span class="blank"><span class="step">$\tfrac32RT$</span></span> (1 mol)<br>❸ $v_\text{rms}=$ <span class="blank"><span class="step">$\sqrt{3RT/M}$</span></span><br>❹ 온도↑ → 봉우리 <span class="blank"><span class="step">빠른 쪽·낮게</span></span><br>❺ $R=$ <span class="blank"><span class="step">$0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}$</span></span></div>
+    <div class="ac211-arr">→</div>
+    <div class="ac211-node ac211-dim">02 실제 기체와 혼합 기체<br>압축 인자, 반데르발스 식, 부분 압력<br><span class="small">(다음 시간)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 기체 분자 운동론의 가정으로 압력을 설명하고, 온도가 평균 운동 에너지의 척도임을 안다.</button>
+    <button class="chk">[과정·기능] 속력 분포 곡선을 그려 온도·몰질량의 영향을 해석하고, 기체 상수를 실험으로 구했다.</button>
+    <button class="chk">[가치·태도] 이상적인 가정에서 유도한 식이 실제 기체의 이해에 도움이 된다는 점에 흥미를 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 압력 유도의 네 단계는? <span class="step">→ <span class="ans">운동량 변화 → 충돌 수 → 힘 → 압력</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 25 °C 헬륨의 $v_\text{rms}$는 약 몇 m/s일까? <span class="step">→ <span class="ans">약 $1.36\times10^{3}\ \text{m/s}$</span> (연습 문제 1에서 확인)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 높은 압력·낮은 온도에서 실제 기체는 왜 이상 기체처럼 행동하지 않을까?</div>
+</section>

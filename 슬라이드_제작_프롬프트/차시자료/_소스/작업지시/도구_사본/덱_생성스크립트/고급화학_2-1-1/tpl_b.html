@@ -1,0 +1,450 @@
+<!-- 고급화학 2-1-1b 실제 기체와 혼합 기체 — gen.py가 tpl_b.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 1. 기체 분자 › 02</div>
+    <h1 class="ac211-h1">기체 분자 운동론과<br>실제 기체·혼합 기체 <span class="acc">(2)</span></h1>
+    <p class="sub">실제 기체와 혼합 기체 — 이상 기체에서 벗어나는 까닭과 부분 압력</p>
+    <p class="meta">고등학교 고급 화학 79–84쪽</p>
+  </div>
+  {{COVER_B}}
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 도입" data-title="다시 보기: 기체 분자 운동론">
+  <h2><span class="tag alt">다시 보기</span>01 기체 분자 운동론</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>기본 가정</h3><p class="f21">① 분자 부피 0 ② 무질서한 운동 ③ <b>인력·반발력 무시</b> ④ 완전 탄성 충돌</p></div>
+    <div class="stage"><h3>압력과 온도</h3><p class="f21">$PV=\tfrac13Nm\overline{v^2}=nRT$, $E_\mathrm{k}=\tfrac32RT$, $v_\text{rms}=\sqrt{3RT/M}$</p></div>
+    <div class="stage"><h3>속력 분포</h3><p class="f21">온도가 높을수록 봉우리가 빠른 쪽으로 옮겨 가고 낮게 퍼진다. 넓이는 1</p></div>
+    <div class="stage"><h3>기체 상수</h3><p class="f21">$R=0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}=8.314\ \text{J/(mol}\cdot\text{K)}$ — 탐구에서 측정</p></div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 가정 ①과 ③은 실제 분자에도 맞을까? <span class="small">→ 오늘 그 답을 찾는다.</span></p>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-02]</span>이상 기체 방정식을 이해하고, 혼합 기체의 부분 압력과 몰 분율의 관계를 설명할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화02-03]</span>이상 기체와 실제 기체의 차이를 이해하고, 실제 기체의 성질이 이상 기체와 다른 원인을 탐색할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>압축 인자로 이상 기체와 실제 기체의 차이를 비교하고, 그 원인을 <b>분자 사이의 인력과 분자의 부피</b>로 설명할 수 있다.</li>
+    <li>반데르발스 상태 방정식의 보정 항의 뜻을 설명하고 압력을 계산할 수 있다.</li>
+    <li>혼합 기체의 부분 압력과 몰분율의 관계를 설명하고, 기체 분자량 측정 실험을 수행할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">실제 기체</div><div class="farr">→</div>
+    <div class="fnode">압축 인자 $Z$</div><div class="farr">→</div>
+    <div class="fnode">반데르발스 식</div><div class="farr">→</div>
+    <div class="fnode">부분 압력·몰분율</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 분자량 측정</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 도입" data-title="생각 열기: 기체의 액화">
+  <h2><span class="tag">생각 열기</span>이상 기체는 액체가 될 수 있을까?</h2>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f22">천연가스(주성분 메테인 $\ce{CH4}$)는 약 $-162\ {}^\circ\text{C}$로 식혀 액체로 만들어 운반한다. 이산화 탄소도 압력을 높이면 액체가 된다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 기체 분자 운동론의 가정을 그대로 따르는 이상 기체라면, 아무리 압축하고 식혀도 액체가 될 수 있을까?</p></div>
+      <div class="answer step">될 수 없다 — 분자 사이의 인력이 없고 부피가 0이기 때문</div>
+      <p class="f22 step">→ 실제 기체가 액체로 되는 것은 분자 사이에 <b>인력</b>이 있고 분자에 <b>자체 부피</b>가 있다는 증거이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 실제 기체 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="실제 기체">
+  <h2><span class="no">1</span>실제 기체는 언제 이상 기체와 다를까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 430px">{{REAL}}</div>
+    <div class="col stack">
+      <p class="f21">실제 기체는 압력 $P$가 0에 가까워지는 조건에서만 이상 기체 법칙을 따른다.</p>
+      <p class="f21 step" data-q><b>Q</b> 높은 압력, 낮은 온도에서 벗어나는 까닭은?</p>
+      <p class="f21 step">→ 압축하면 분자 사이 거리가 가까워지고, 냉각하면 분자의 운동 속력이 느려져 이웃 분자의 <b>인력에 붙들리기 쉽다</b>.</p>
+      <p class="f21 step">→ 낮은 압력·높은 온도에서는 분자 사이가 멀고 운동 에너지가 커서 분자의 크기와 인력을 무시할 수 있다 → 이상 기체 방정식이 잘 맞는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 비교 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="이상 기체와 실제 기체 비교">
+  <h2><span class="no">2</span>이상 기체와 실제 기체</h2>
+  <table class="tight ac211-cmp mt8">
+    <tr><th>구분</th><th>이상 기체</th><th>실제 기체</th></tr>
+    <tr><td>분자 자체의 부피</td><td>없다(0)</td><td><span class="blank"><span class="step" data-g="c1">있다</span></span></td></tr>
+    <tr><td>분자 사이의 인력</td><td>없다</td><td><span class="blank"><span class="step" data-g="c2">있다</span></span></td></tr>
+    <tr><td>충돌</td><td>완전 탄성 충돌</td><td>인력·반발력이 작용</td></tr>
+    <tr><td>높은 압력·낮은 온도</td><td>$PV=nRT$ 그대로</td><td><span class="blank"><span class="step" data-g="c3">벗어나다가 결국 액체가 된다</span></span></td></tr>
+    <tr><td>낮은 압력·높은 온도</td><td>$PV=nRT$</td><td><span class="blank"><span class="step" data-g="c4">이상 기체에 가깝다</span></span></td></tr>
+  </table>
+  <p class="f22 mt16 step" data-q><b>Q</b> 실제 기체가 이상 기체에서 얼마나 벗어나는지 숫자 하나로 나타낼 수는 없을까? <span class="small">→ 압축 인자 $Z$</span></p>
+</section>
+
+<!-- ════════ 7. ③ 압축 인자 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="압축 인자">
+  <h2><span class="no">3</span>압축 인자 $Z$</h2>
+  <p class="f22"><mark>압축 인자</mark> $Z$는 같은 조건에서 실제 기체의 몰 부피와 이상 기체의 몰 부피의 비이다.</p>
+  <div class="formula mt8">$Z=\dfrac{PV}{nRT}=\dfrac{V_{\mathrm{m},\,\text{실제}}}{V_{\mathrm{m},\,\text{이상}}}$<div class="unit">$V_\mathrm{m}$: 몰 부피(기체 1 mol의 부피), 이상 기체는 언제나 $Z=1$</div></div>
+  <div class="stages c2 mt12">
+    <div class="stage step" data-g="z1"><h3>$Z&lt;1$</h3><p class="f21">실제 부피가 이상 기체보다 작다 → 분자 사이의 <b>인력</b>의 효과가 크다.</p></div>
+    <div class="stage step" data-g="z2"><h3>$Z&gt;1$</h3><p class="f21">실제 부피가 이상 기체보다 크다 → 분자 <b>자체 부피(반발)</b>의 효과가 크다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ Z–P 그래프 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="압력과 압축 인자 그래프">
+  <h2><span class="no">4</span>압력에 따른 압축 인자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px">{{ZG}}</div>
+    <div class="col stack">
+      <p class="f21">이상 기체는 압력과 관계없이 $Z=1$이지만, 실제 기체의 $Z$는 압력에 따라 달라진다.</p>
+      <p class="f21 step"><b>압력 → 0</b> 분자 사이가 매우 멀어 상호 작용을 무시할 수 있으므로 기체의 종류와 관계없이 $Z\to1$</p>
+      <p class="f21 step"><b>$\ce{CH4}$, $\ce{O2}$</b> 중간 압력에서 $Z&lt;1$(인력) → 높은 압력에서 $Z&gt;1$(분자 부피)</p>
+      <p class="f21 step"><b>$\ce{H2}$, $\ce{He}$</b> 인력이 매우 약해 처음부터 $Z&gt;1$</p>
+      <p class="small">0 °C에서 반데르발스 식(표 Ⅱ-1의 상수)으로 계산한 곡선</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 확인 문제 01 (그래프 해석) ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>압축 인자 그래프 해석</h2>
+  <p class="f22">앞 그래프에서 0 °C, 100 atm일 때 메테인의 $Z\approx0.74$, 수소의 $Z\approx1.08$이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21"><b>Q</b> (1) 같은 조건에서 메테인 1 mol의 실제 부피는 이상 기체로 계산한 부피보다 큰가, 작은가? 그 까닭은?</p>
+      <p class="f21 step">→ <span class="ans">작다</span> ($Z&lt;1$). 분자 사이의 인력이 분자를 서로 끌어당기는 효과가 크다.</p>
+      <p class="f21 mt8"><b>Q</b> (2) 수소가 $Z&gt;1$인 까닭은?</p>
+      <p class="f21 step">→ 수소 분자 사이의 인력은 매우 약하므로 <span class="ans">분자 자체 부피</span>의 효과가 더 크게 나타난다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 반데르발스 상태 방정식 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="반데르발스 상태 방정식">
+  <h2><span class="no">5</span>반데르발스 상태 방정식</h2>
+  <p class="f22">1873년 네덜란드의 물리학자 <b>반데르발스</b>는 분자 사이의 인력과 반발력을 보정하여 실제 기체를 설명하는 상태 방정식을 제안하였다.</p>
+  <div class="formula mt12">$\left[P+a\left(\dfrac{n}{V}\right)^2\right]\times(V-nb)=nRT$</div>
+  <div class="row mt12">
+    <div class="col"><div class="card"><h3>$a$ — 압력 보정</h3><p class="f21">분자 사이에 작용하는 <b>인력</b>의 정도</p></div></div>
+    <div class="col"><div class="card"><h3>$b$ — 부피 보정</h3><p class="f21">분자 <b>자체 부피</b>, 곧 분자 사이의 반발 정도</p></div></div>
+  </div>
+  <p class="f21 mt12"><mark>반데르발스 상수</mark> $a$와 $b$는 기체마다 다른 값을 가진다.</p>
+</section>
+
+<!-- ════════ 11. ⑥ 보정 항의 뜻 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="보정 항의 뜻">
+  <h2><span class="no">6</span>두 보정 항의 뜻</h2>
+  <div class="stages c2">
+    <div class="stage">{{VDW_A}}<h3>압력 보정 $+a\left(\dfrac{n}{V}\right)^2$</h3><p class="f21">인력이 분자의 운동을 방해하여 측정 압력 $P$가 이상 기체에서 예상한 값보다 <b>작다</b>. → 측정한 $P$에 <b>더해</b> 준다.</p></div>
+    <div class="stage">{{VDW_B}}<h3>부피 보정 $-nb$</h3><p class="f21">분자 자체 부피가 있어 다른 분자가 들어갈 수 없으므로, 분자가 실제로 움직일 수 있는 공간은 측정 부피 $V$보다 <b>작다</b>. → $V$에서 $nb$를 <b>뺀다</b>.</p></div>
+  </div>
+  <p class="f21 mt8 step" data-q><b>Q</b> $a=0$, $b=0$이면 이 식은? → <span class="ans">$PV=nRT$ (이상 기체 방정식)</span></p>
+</section>
+
+<!-- ════════ 12. ⑦ 반데르발스 상수 표 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="반데르발스 상수 표">
+  <h2><span class="no">7</span>몇 가지 기체의 반데르발스 상수</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">
+      <table class="tight ac211-vdw">
+        <tr><th>물질</th><th>화학식</th><th>$a$</th><th>$b$</th><th>물질</th><th>화학식</th><th>$a$</th><th>$b$</th></tr>
+        <tr><td>물</td><td>$\ce{H2O}$</td><td>5.537</td><td>0.0305</td><td>네온</td><td>$\ce{Ne}$</td><td>0.208</td><td>0.0167</td></tr>
+        <tr><td>암모니아</td><td>$\ce{NH3}$</td><td>4.225</td><td>0.0371</td><td>이산화 탄소</td><td>$\ce{CO2}$</td><td>3.658</td><td>0.0429</td></tr>
+        <tr><td>황화 수소</td><td>$\ce{H2S}$</td><td>4.544</td><td>0.0434</td><td>수소</td><td>$\ce{H2}$</td><td>0.2452</td><td>0.0265</td></tr>
+        <tr><td>아르곤</td><td>$\ce{Ar}$</td><td>1.355</td><td>0.0320</td><td>산소</td><td>$\ce{O2}$</td><td>1.382</td><td>0.0319</td></tr>
+        <tr><td>헬륨</td><td>$\ce{He}$</td><td>0.0346</td><td>0.0238</td><td>메테인</td><td>$\ce{CH4}$</td><td>2.303</td><td>0.0431</td></tr>
+        <tr><td colspan="4"></td><td>벤젠</td><td>$\ce{C6H6}$</td><td>18.57</td><td>0.1193</td></tr>
+      </table>
+      <p class="small">$a$ [$\text{bar}\cdot\text{L}^2/\text{mol}^2$], $b$ [L/mol]</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (1) $a$가 가장 작은 기체와, 크게 나타나는 기체는?</p>
+      <p class="f21 step">→ <span class="ans">헬륨</span>이 가장 작다. 극성이 커 분자 사이의 힘이 큰 $\ce{H2O}$, $\ce{NH3}$와 분자가 큰 벤젠은 $a$가 크다.</p>
+      <p class="f21"><b>Q</b> (2) $b$가 가장 큰 기체와 그 까닭은?</p>
+      <p class="f21 step">→ <span class="ans">벤젠</span> — 분자 자체가 가장 크다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑧ 비리얼 방정식과 보일 온도 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="비리얼 방정식과 보일 온도">
+  <h2><span class="no">8</span>비리얼 방정식 꼴과 보일 온도</h2>
+  <p class="f21">반데르발스 식을 1 mol에 대해 $Z$로 정리하면 ($V_\mathrm{m}$: 몰 부피)</p>
+  <div class="step f21">$\begin{aligned}Z=\dfrac{PV_\mathrm{m}}{RT}&amp;=\dfrac{V_\mathrm{m}}{V_\mathrm{m}-b}-\dfrac{a}{RTV_\mathrm{m}}=\dfrac{1}{1-b/V_\mathrm{m}}-\dfrac{a}{RTV_\mathrm{m}}\\ &amp;=1+\left(b-\dfrac{a}{RT}\right)\dfrac{1}{V_\mathrm{m}}+\left(\dfrac{b}{V_\mathrm{m}}\right)^2+\cdots\qquad\left(\tfrac{1}{1-x}=1+x+x^2+\cdots\right)\end{aligned}$</div>
+  <div class="formula sm step">비리얼 방정식: $\dfrac{PV_\mathrm{m}}{RT}=1+\dfrac{B}{V_\mathrm{m}}+\dfrac{C}{V_\mathrm{m}^{\,2}}+\cdots$</div>
+  <p class="f21 step">$V_\mathrm{m}$이 클 때 $\dfrac{B}{V_\mathrm{m}}\gg\dfrac{C}{V_\mathrm{m}^{\,2}}$이므로, $B=0$이 되는 온도에서 실제 기체는 이상 기체처럼 행동한다. 이 온도가 <mark>보일 온도</mark> $T_\mathrm{B}$이다.</p>
+  <p class="f21 step">반데르발스 식에서 $B=b-\dfrac{a}{RT}=0$ → $T_\mathrm{B}=\dfrac{a}{Rb}$ <span class="small">(예: $\ce{N2}$ 약 430 K, $\ce{H2}$ 약 110 K — 실제 측정값과는 차이가 있다)</span></p>
+</section>
+
+<!-- ════════ 14. 다양한 상태 방정식 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="여러 가지 상태 방정식">
+  <h2><span class="tag alt">더 알아보기</span>여러 가지 실제 기체 상태 방정식</h2>
+  <p class="f21">반데르발스 식 말고도 실제 기체를 더 정확히 나타내려는 여러 상태 방정식이 있다. <b>식을 외우지 않고</b>, 무엇을 보정했는지만 살펴보자.</p>
+  <table class="tight ac211-eos mt8">
+    <tr><th>상태 방정식</th><th>식의 꼴</th><th>보정한 점</th></tr>
+    <tr><td>비리얼 방정식</td><td>$Z=1+\dfrac{B}{V_\mathrm{m}}+\dfrac{C}{V_\mathrm{m}^{\,2}}+\cdots$</td><td class="l">계수 $B$, $C$를 실험으로 정한다. 항을 늘릴수록 정확하다.</td></tr>
+    <tr><td>베르텔로 방정식</td><td>$\left(P+\dfrac{a}{TV_\mathrm{m}^{\,2}}\right)(V_\mathrm{m}-b)=RT$</td><td class="l">인력 보정이 온도가 높을수록 작아지게 했다.</td></tr>
+    <tr><td>레들리히–퀑 방정식</td><td>$P=\dfrac{RT}{V_\mathrm{m}-b}-\dfrac{a}{\sqrt T\,V_\mathrm{m}(V_\mathrm{m}+b)}$</td><td class="l">공학에서 기체·액체 계산에 널리 쓰인다.</td></tr>
+  </table>
+  <p class="f21 mt12 step">→ 모두 $P$가 작아지면 $PV_\mathrm{m}=RT$로 돌아간다. 이상적인 가정에서 출발한 식을 보정해 넓혀 가는 것이 상태 방정식의 확장성이다.</p>
+</section>
+
+<!-- ════════ 15. 예제 Ⅱ-2 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="예제 Ⅱ-2">
+  <h2><span class="tag ex">예제 Ⅱ-2</span>반데르발스 식으로 압력 구하기</h2>
+  <p class="f21"><b>Q</b> 0 °C에서 부피 5.00 L인 용기에 어떤 기체 1.50 mol이 들어 있을 때, 반데르발스 상태 방정식으로 구한 압력 $P$는? ($R=8.314\times10^{-2}\ \text{L}\cdot\text{bar/(K}\cdot\text{mol)}$, $a=16.4\ \text{bar}\cdot\text{L}^2/\text{mol}^2$, $b=8.4\times10^{-2}\ \text{L/mol}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">$P=\dfrac{nRT}{V-nb}-a\left(\dfrac{n}{V}\right)^2$</p>
+      <div class="step f21">$\begin{aligned}P&amp;=\dfrac{1.50\times(8.314\times10^{-2})\times273}{5.00-1.50\times(8.4\times10^{-2})}-16.4\times\left(\dfrac{1.50}{5.00}\right)^2\\ &amp;=\dfrac{34.0}{4.874}-1.476=6.99-1.48\end{aligned}$</div>
+      <div class="answer step">$P\approx5.51\ \text{bar}$</div>
+      <p class="f21 step" data-q><b>Q</b> 이상 기체라면? → $\dfrac{nRT}{V}=6.81\ \text{bar}$. 실제 압력이 더 작다 → <span class="ans">인력의 효과가 크다</span></p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 돌턴의 부분 압력 법칙 ════════ -->
+<section class="slide" data-sec="02 · 혼합 기체의 부분 압력과 몰분율" data-title="돌턴의 부분 압력 법칙">
+  <h2><span class="no">9</span>돌턴의 부분 압력 법칙</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">{{DALTON}}</div>
+    <div class="col stack">
+      <p class="f21">지구의 대기처럼 우리가 다루는 기체는 대부분 혼합 기체이다. 1802년 영국의 <b>돌턴</b>은 "서로 반응하지 않는 기체들의 혼합물은 한 가지 순수한 기체처럼 행동한다."라고 발표하였다.</p>
+      <p class="f21"><mark>돌턴의 부분 압력 법칙</mark>: 기체 혼합물의 전체 압력은 성분 기체들의 부분 압력의 합과 같다.</p>
+      <div class="formula sm">$P_\text{전체}=P_\mathrm{A}+P_\mathrm{B}+P_\mathrm{C}+\cdots$</div>
+      <p class="small">부분 압력: 그 성분 기체가 혼자 같은 용기 전체를 채울 때의 압력. 이상 기체 법칙이 성립하는 낮은 압력에서 잘 맞는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑩ 몰분율 ════════ -->
+<section class="slide" data-sec="02 · 혼합 기체의 부분 압력과 몰분율" data-title="부분 압력과 몰분율">
+  <h2><span class="no">10</span>부분 압력과 몰분율</h2>
+  <p class="f21">이상 기체의 압력은 분자의 종류와 관계없으므로, 혼합 기체의 전체 압력은 <b>전체 몰수</b>로 정해진다.</p>
+  <div class="formula sm">$P_\text{전체}=(n_\mathrm{A}+n_\mathrm{B}+n_\mathrm{C}+\cdots)\dfrac{RT}{V}=n_\text{전체}\dfrac{RT}{V}$</div>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21"><mark>몰분율</mark>: 혼합물에서 한 성분의 몰수를 전체 몰수로 나눈 값</p>
+      <div class="formula sm">$X_\mathrm{A}=\dfrac{n_\mathrm{A}}{n_\mathrm{A}+n_\mathrm{B}+n_\mathrm{C}+\cdots}=\dfrac{n_\mathrm{A}}{n_\text{전체}}$</div>
+    </div>
+    <div class="col stack">
+      <p class="f21">몰분율로 나타낸 성분 A의 부분 압력</p>
+      <div class="formula sm step">$P_\mathrm{A}=X_\mathrm{A}P_\text{전체}=X_\mathrm{A}\dfrac{n_\text{전체}RT}{V}=\dfrac{n_\mathrm{A}RT}{V}$</div>
+    </div>
+  </div>
+  <div class="note mt8"><b>Q</b> "부분 압력은 그 기체가 차지하는 부피의 비율이다." — 맞을까? <span class="step">→ <span class="ans">아니다.</span> 각 기체는 용기 <b>전체</b>를 채우며, 부분 압력은 전체 압력 가운데 그 기체가 기여하는 몫(몰분율에 비례)이다.</span></div>
+</section>
+
+<!-- ════════ 18. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>공기 속 산소의 부분 압력</h2>
+  <p class="f22">건조한 공기의 몰분율은 질소 0.78, 산소 0.21, 아르곤 0.01이다. 1.00 atm의 공기에서 산소의 부분 압력은? 또 이 공기를 압축하여 전체 압력이 5.00 atm이 되면 산소의 부분 압력은?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$P_{\ce{O2}}=X_{\ce{O2}}P_\text{전체}=0.21\times1.00\ \text{atm}=0.21\ \text{atm}$</p>
+      <p class="f21 step">압축해도 몰분율은 같다: $0.21\times5.00\ \text{atm}=1.05\ \text{atm}$</p>
+      <div class="answer step">0.21 atm, 1.05 atm</div>
+      <p class="small step">심해 잠수에서 산소 부분 압력이 너무 커지는 문제로 이어진다(연습 문제 4).</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 19. 탐구 활동: 목표·원리 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 기체 분자량 측정 (원리)">
+  <h2><span class="tag">탐구 활동</span>기체 분자량 측정 실험 방법 조사와 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐10]</span>모둠별로 아이소프로필 알코올을 기화시켜 기체 분자량을 측정하는 실험 방법을 조사해 수행하고, 결과를 토론하여 발표한다. 오차를 줄이기 위해 주의할 점을 500자 이내로 적는다.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>원리</b> 끓는 물에 담근 플라스크를 액체의 증기로 가득 채운 뒤 식혀서, 응축된 액체의 질량 $m$을 잰다. 증기의 $P$, $V$, $T$를 알면 이상 기체 방정식으로 몰질량을 구한다.</p>
+      <div class="formula sm step">$n=\dfrac{m}{M}=\dfrac{PV}{RT}\quad\Longrightarrow\quad M=\dfrac{mRT}{PV}$</div>
+      <p class="f21 step">$V$ = 플라스크 부피(물을 가득 채워 잰다), $T$ = 끓는 물의 온도, $P$ = 대기압(작은 구멍으로 남는 증기가 빠져나가 대기압과 같아진다)</p>
+      <p class="small">아이소프로필 알코올(프로판-2-올, $\ce{C3H7OH}$, 몰질량 60.10 g/mol, 끓는점 약 82 °C)</p>
+    </div>
+    <div class="col">{{DUMAS}}</div>
+  </div>
+</section>
+
+<!-- ════════ 20. 탐구 활동: 과정·안전 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>과정과 안전 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="f21"><b>준비물</b> 아이소프로필 알코올 3 mL, 둥근바닥 플라스크(250 mL), 알루미늄 포일, 고무줄, 바늘, 비커(1 L), 가열 장치, 온도계, 전자저울(0.001 g), 기압계</p>
+  <div class="stages mt8">
+    <div class="stage"><h3>① 빈 플라스크 재기</h3><p>포일 뚜껑과 고무줄을 씌운 마른 플라스크의 질량을 잰다. 포일 가운데에 바늘로 작은 구멍을 낸다.</p></div>
+    <div class="stage"><h3>② 기화시키기</h3><p>알코올 3 mL를 넣고 끓는 물에 목까지 담근다. 액체가 모두 사라지고 1–2분 더 둔 뒤 물의 온도를 잰다.</p></div>
+    <div class="stage"><h3>③ 식혀서 재기</h3><p>꺼내 바깥 물기를 닦고 실온으로 식힌 뒤 질량을 잰다. 마지막에 물을 가득 채워 부피를 잰다.</p></div>
+  </div>
+  <div class="note mt8"><b>안전</b> 보안경·실험용 장갑·실험복. 아이소프로필 알코올은 <b>인화성</b> — 불꽃이 없는 가열 장치(전기 가열기)를 쓰고 환기한다. 끓는 물에 데지 않게 집게를 쓴다. 남은 알코올은 유기 폐액 통에 모은다.</div>
+</section>
+
+<!-- ════════ 21. 실험실: 분자량 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 기체 분자량 측정">
+  <h2><span class="tag">탐구 활동</span>기체 분자량 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac211mm">
+    <div class="lab-ctl" style="flex-basis:440px">
+      <div class="ac211-seg"><span class="small">시료</span><button class="btn on" data-s="ipa">아이소프로필 알코올</button><button class="btn" data-s="etoh">에탄올</button><button class="btn" data-s="ace">아세톤</button><button class="btn" data-s="unk">미지 시료</button></div>
+      <div class="ctl"><div class="lbl"><span>플라스크 부피</span><output data-o="v"></output></div><input type="range" min="120" max="300" step="2" value="256" data-i="v" aria-label="플라스크 부피"></div>
+      <div class="ctl"><div class="lbl"><span>물중탕 온도</span><output data-o="t"></output></div><input type="range" min="90" max="100" step="0.5" value="99" data-i="t" aria-label="물중탕 온도"></div>
+      <div class="ctl"><div class="lbl"><span>대기압</span><output data-o="pa"></output></div><input type="range" min="740" max="780" step="1" value="760" data-i="pa" aria-label="대기압"></div>
+      <div class="ac211-cbs"><span class="small">오차 원인</span><br><label class="ac211-cb"><input type="checkbox" data-i="wet"> 바깥 물기를 닦지 않음</label><br><label class="ac211-cb"><input type="checkbox" data-i="early"> 액체가 남은 채로 꺼냄</label></div>
+      <div class="ac211-seg mt8"><button class="btn ac211-act" data-act="run">실험하기</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 590px">
+      <div class="lab-fig" style="width:590px;height:250px"><svg viewBox="0 0 590 250" width="590" height="250" aria-label="물중탕 속 플라스크와 측정값"></svg></div>
+      <div class="res mt8"><div class="small">계산한 몰질량 $M$ <output class="ac211-inl" data-o="big"></output></div><output class="kind ac211-msg" data-o="msg"></output></div>
+      <table class="tight ac211-log mt8"><thead><tr><th>회</th><th>시료</th><th>m (g)</th><th>V (L)</th><th>T (K)</th><th>P (atm)</th><th>M (g/mol)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동: 결과·토론 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과와 오차">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 오차 줄이기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><b>예시 값</b> $m=0.504\ \text{g}$, $V=0.256\ \text{L}$, $T=99+273=372\ \text{K}$, $P=760\ \text{mmHg}=1.00\ \text{atm}$</p>
+      <p class="f21" data-q><b>Q</b> 몰질량은?</p>
+      <div class="f21 step">$M=\dfrac{mRT}{PV}=\dfrac{0.504\times0.08206\times372}{1.00\times0.256}$</div>
+      <div class="answer step">$M\approx60.1\ \text{g/mol}$ — $\ce{C3H7OH}$(60.10)와 같다</div>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>오차를 줄이기 위한 주의 사항 <span class="small">(예시 답안 요약)</span></h3>
+        <ul class="f21 ac211-ul">
+          <li class="step">액체가 <b>모두 기화</b>한 것을 확인한 뒤 꺼낸다(남으면 $m$, $M$이 커진다).</li>
+          <li class="step">꺼낸 플라스크의 <b>바깥 물기</b>를 완전히 닦는다.</li>
+          <li class="step">플라스크를 목까지 담가 증기 전체가 물의 온도가 되게 하고, 그 온도를 정확히 잰다.</li>
+          <li class="step">포일 구멍은 작게 — 식는 동안 공기가 다시 들어와도 증기가 빠져나가지 않게 한다.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="small mt8">채점 요소(500자 글): 오차 원인 2가지 이상 · 결과($M$)가 커지는지 작아지는지 · 줄이는 방법. 발표는 모둠의 $M$과 문헌값의 차이(%)로 비교한다.</p>
+</section>
+
+<!-- ════════ 23. 화학사 ════════ -->
+<section class="slide" data-sec="02 · 화학사" data-title="화학사: 산소와 라부아지에">
+  <h2><span class="tag">화학사</span>산소와 라부아지에</h2>
+  {{TIMELINE}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21">당시에는 물질이 탈 때 '플로지스톤'이 빠져나간다는 <b>플로지스톤설</b>이 정설이었지만, 금속을 가열하면 질량이 늘어나는 현상은 설명하지 못했다.</p>
+      <p class="f21">프리스틀리는 산화 수은을 가열해 산소를 처음 얻었으나 '탈플로지스톤화 공기'라 불렀다.</p>
+      <div class="formula sm">$\ce{2HgO(s) ->[\Delta] 2Hg(l) + O2(g)}$</div>
+    </div>
+    <div class="col stack">
+      <p class="f21">라부아지에는 이 기체와 반응한 금속의 질량이 늘고, 비금속과 반응한 생성물이 물에 녹아 산성을 띤다는 것을 알아내 <b>"산(oxy)을 만든다(genes)"</b>는 뜻으로 <b>산소(oxygen)</b>라고 이름 붙였다. 1780년 플로지스톤설을 반박하였고, 1787년 근대 화학 명명법의 기초를 세웠다.</p>
+      <p class="f21 step" data-q><b>Q</b> 오늘 탐구에서 산소의 양을 무엇으로 쟀을까? → <span class="ans">시험관의 질량 감소와 기체 부피</span> — 질량을 정확히 재는 라부아지에의 방법이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>헬륨의 속력</h2>
+  <p class="f22">25 °C에서 헬륨의 평균 제곱 속력과 제곱평균근 속력을 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$T=25+273=298\ \text{K}$, $M=4.00\ \text{g/mol}=4.00\times10^{-3}\ \text{kg/mol}$</p>
+      <p class="f21 step">$\overline{v^2}=\dfrac{3RT}{M}=\dfrac{3\times8.314\times298}{4.00\times10^{-3}}=1.86\times10^{6}\ \text{m}^2/\text{s}^2$</p>
+      <p class="f21 step">$v_\text{rms}=\sqrt{1.86\times10^{6}\ \text{m}^2/\text{s}^2}$</p>
+      <div class="answer step">$\overline{v^2}=1.86\times10^{6}\ \text{m}^2/\text{s}^2$, $v_\text{rms}=1.36\times10^{3}\ \text{m/s}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>두 기체를 한 용기에</h2>
+  <p class="f22">3기압의 산소 2 L와 4기압의 질소 3 L를 부피가 6 L인 용기에 함께 넣었다. 혼합 기체의 압력을 계산하여라. (단, 온도는 일정하다.)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 400px">{{Q2}}</div>
+    <div class="col stack">
+      <p class="f21 step">보일 법칙 $PV=P'V'$: 산소 $3\times2=6\times P_{\ce{O2}}$ → $P_{\ce{O2}}=1$기압</p>
+      <p class="f21 step">질소 $4\times3=6\times P_{\ce{N2}}$ → $P_{\ce{N2}}=2$기압</p>
+      <div class="answer step">$P_\text{전체}=1+2=3$기압</div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>이상 기체와 반데르발스 기체의 압력</h2>
+  <p class="f21">300 °C에서 질소 기체 8.00 kg의 부피가 100 L이다. 이상 기체 방정식과 반데르발스 상태 방정식으로 압력을 계산하여 비교하여라. (질소: $a=1.40\ \text{atm}\cdot\text{L}^2/\text{mol}^2$, $b=0.04\ \text{L/mol}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step">$n=\dfrac{8.00\times10^{3}\ \text{g}}{28.02\ \text{g/mol}}=286\ \text{mol}$, $T=300+273=573\ \text{K}$</p>
+      <p class="f21 step">이상 기체: $P=\dfrac{nRT}{V}=\dfrac{286\times0.08206\times573}{100}=134\ \text{atm}$ <span class="small">(부록 풀이 135 atm)</span></p>
+      <p class="f21 step">반데르발스: $P=\dfrac{286\times0.08206\times573}{100-286\times0.04}-1.40\times\left(\dfrac{286}{100}\right)^2=151.8-11.5=140\ \text{atm}$</p>
+      <div class="answer step">이상 기체 약 134 atm &lt; 반데르발스 약 140 atm</div>
+      <p class="f21 step">→ 이 조건에서는 분자 사이의 인력보다 분자 자체 부피(반발)의 효과가 더 크다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>헬리옥스</h2>
+  <p class="f21">산소의 부분 압력이 0.1 atm 이하이거나 1.4 atm 이상이면 저산소증이나 산소 중독으로 위험하다. 심해 잠수부는 헬륨과 산소를 섞은 헬리옥스를 쓴다. 298 K에서 헬륨 24.2 g과 산소 4.32 g이 섞인 헬리옥스가 12.5 L 탱크에 들어 있다. 각 성분의 몰분율과 부분 압력, 전체 압력을 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step">$n_{\ce{He}}=\dfrac{24.2}{4.00}=6.05\ \text{mol}$, $n_{\ce{O2}}=\dfrac{4.32}{32.00}=0.135\ \text{mol}$</p>
+      <p class="f21 step">$X_{\ce{He}}=\dfrac{6.05}{6.185}=0.978$, $X_{\ce{O2}}=\dfrac{0.135}{6.185}=0.0218$</p>
+      <p class="f21 step">$P_\text{전체}=\dfrac{n_\text{전체}RT}{V}=\dfrac{6.185\times0.08206\times298}{12.5}=12.1\ \text{atm}$</p>
+      <div class="answer step">$P_{\ce{He}}=11.8\ \text{atm}$, $P_{\ce{O2}}=0.264\ \text{atm}$, $P_\text{전체}=12.1\ \text{atm}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>수상 치환으로 모은 산소</h2>
+  <p class="f21">산소 기체를 298 K, 760.0 mmHg에서 수상 치환으로 1.00 L 모았다. 생성된 산소의 질량(g)을 계산하여라. (298 K에서 수증기압 23.78 mmHg)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">$P_{\ce{O2}}=760.0-23.78=736.2\ \text{mmHg}=\dfrac{736.2}{760}\ \text{atm}=0.9687\ \text{atm}$</p>
+      <p class="f21 step">$n_{\ce{O2}}=\dfrac{P_{\ce{O2}}V}{RT}=\dfrac{0.9687\times1.00}{0.08206\times298}=3.96\times10^{-2}\ \text{mol}$</p>
+      <p class="f21 step">$m=3.96\times10^{-2}\ \text{mol}\times32.00\ \text{g/mol}$</p>
+      <div class="answer step">약 1.27 g</div>
+      <p class="small step">기체 상수 측정 탐구(01)와 같은 수증기 보정이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 기체 분자 — 02 실제 기체와 혼합 기체</h2>
+  <div class="ac211-map">
+    <div class="ac211-node ac211-dim">01 기체 분자 운동론<br>$PV=\tfrac13Nm\overline{v^2}$<br>$v_\text{rms}=\sqrt{3RT/M}$</div>
+    <div class="ac211-arr">→</div>
+    <div class="ac211-node ac211-main" data-q><b>실제 기체</b><br>❶ $Z=$ <span class="blank"><span class="step">$PV/nRT$</span></span><br>❷ $Z&lt;1$: <span class="blank"><span class="step">인력</span></span> 우세<br>❸ $a$: 인력, $b$: <span class="blank"><span class="step">분자 자체 부피</span></span><br>❹ $P\to0$이면 $Z\to$ <span class="blank"><span class="step">1</span></span></div>
+    <div class="ac211-arr">+</div>
+    <div class="ac211-node ac211-main" data-q><b>혼합 기체</b><br>❺ $P_\text{전체}=$ <span class="blank"><span class="step">$P_\mathrm{A}+P_\mathrm{B}+\cdots$</span></span><br>❻ $X_\mathrm{A}=$ <span class="blank"><span class="step">$n_\mathrm{A}/n_\text{전체}$</span></span><br>❼ $P_\mathrm{A}=$ <span class="blank"><span class="step">$X_\mathrm{A}P_\text{전체}$</span></span></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 압축 인자와 반데르발스 식으로 실제 기체가 이상 기체와 다른 원인을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 부분 압력과 몰분율을 계산하고, 기체 분자량을 실험으로 구했다.</button>
+    <button class="chk">[가치·태도] 이상적인 식을 보정해 실제를 설명하는 상태 방정식의 확장성에 흥미를 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 반데르발스 식에서 압력에는 더하고 부피에서는 빼는 까닭은? <span class="step">→ <span class="ans">인력은 측정 압력을 줄이고, 분자 부피는 움직일 공간을 줄이기</span> 때문이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 수상 치환으로 모은 기체의 압력을 구할 때 빼는 것은? <span class="step">→ <span class="ans">그 온도의 수증기압</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 2. 액체 분자 — 분자 사이의 힘이 커지면 증기압과 끓는점은 어떻게 될까?</div>
+</section>
