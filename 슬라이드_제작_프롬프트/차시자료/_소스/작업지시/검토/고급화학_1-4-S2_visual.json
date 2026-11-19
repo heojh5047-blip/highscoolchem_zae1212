@@ -1,0 +1,75 @@
+{
+ "findings": [
+  {
+   "slide": 1,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "표지 그림이 cover-fig 클래스가 없어 제목 위에 겹침, 가장자리 라벨이 흐려짐",
+   "fix": "cls='cover-fig', 세로 배치로 다시 그리고 viewBox 안쪽 여백"
+  },
+  {
+   "slide": 15,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "오쏘 공격 구조에서 NO2가 CH3와 겹치고 ↔ 화살표와 붙음",
+   "fix": "오쏘: H 위·NO2 오른쪽, 구조 간격 186, ↔ 위치 조정"
+  },
+  {
+   "slide": 14,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "고리 안쪽 탄소 번호가 결합선과 겹침",
+   "fix": "번호를 오쏘·메타·파라 라벨 아래로"
+  },
+  {
+   "slide": 23,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "아래쪽 치환기(COCH3)와 이름 라벨 겹침",
+   "fix": "중간 이름 라벨을 빼고 정답 카드에서 설명"
+  },
+  {
+   "slide": 24,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "2×2 카드가 화면 아래로 넘침, 오쏘 에틸 라벨 잘림",
+   "fix": "그림 이름 줄 제거·viewBox 조정, 주/부생성물은 설명 줄에(왼쪽 = 주)"
+  },
+  {
+   "slide": 10,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "아레늄 이온의 CH(CH3)2 라벨이 H와 붙음",
+   "fix": "162° 방향, 결합 길이 28"
+  },
+  {
+   "slide": 33,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "곡선 위 라벨 겹침, pH 축 이름과 눈금 10 겹침",
+   "fix": "라벨을 곡선 위 빈 곳으로, 가로축 범위 줄임"
+  },
+  {
+   "slide": 37,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "합성 경로 그림의 시약 라벨이 Br와 겹치고 마지막 이름 잘림",
+   "fix": "간격 190, 시약 라벨 위로, viewBox 1100"
+  },
+  {
+   "slide": 8,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "오른쪽 칸의 Q·정답이 아래 여백 밖으로",
+   "fix": "Q를 왼쪽 칸 아래로 옮김"
+  },
+  {
+   "slide": 38,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "아래로 넘침",
+   "fix": "반응 도식 옆에 판서 공간, 정답 문장 줄임"
+  }
+ ],
+ "summary": "자동 점검 77건 → 0건. 고리 도우미 ring()의 치환기 라벨 위치·사방 여백을 장마다 조정했고 원자 라벨은 화면 18px 이상(전하 동그라미 18px)."
+}
