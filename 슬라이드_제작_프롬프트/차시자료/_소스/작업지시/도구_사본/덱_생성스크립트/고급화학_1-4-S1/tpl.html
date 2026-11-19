@@ -1,0 +1,724 @@
+<!-- 고급화학 1-4-S1 [심화] 친핵성 치환·제거 반응과 첨가 반응 — gen.py가 tpl.html에서 만든다(그림 자리표는 이중 중괄호 이름) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker"><span class="tag alt">심화</span> Ⅰ. 물질의 구조 › 4. 탄소 화합물의 분자 구조</div>
+    <h1 class="ac14s1-h1">[심화] 친핵성 치환·제거<br><span class="acc">반응과 첨가 반응</span></h1>
+    <p class="sub">전자쌍이 흐르는 길을 따라 생성물을 예측한다</p>
+    <p class="meta">고급 화학 심화 82–90·94–105쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="[심화] 유기 반응과 메커니즘" data-title="학습 목표">
+  <h2>학습 목표 <span class="small c-muted">[심화]</span></h2>
+  <div class="std"><span class="code">[12고화01-06]</span>포화 및 불포화 탄화수소의 이성질체를 이해하고, 이성질체를 구조식으로 그려 비교할 수 있다.</div>
+  <div class="std"><span class="code">[12고화01-07]</span>탄화수소 유도체에서 다양한 작용기의 특징을 알고, 산 염기 반응, 산화·환원 반응과 연관 지을 수 있다.</div>
+  <ol class="goals mt8 f21">
+    <li>굽은 화살표로 친핵체에서 친전자체로 가는 <b>전자쌍의 흐름</b>을 나타낼 수 있다.</li>
+    <li>$\mathrm{S_N2}$·$\mathrm{S_N1}$ 반응의 메커니즘·속도식·입체 화학과 기질·친핵체·이탈기·용매의 효과를 설명할 수 있다.</li>
+    <li>$\mathrm{E2}$·$\mathrm{E1}$·$\mathrm{E1cB}$ 반응과 <b>자이체프 규칙</b>을 알고, 조건에 따라 우세한 경로를 예측할 수 있다.</li>
+    <li>알켄·알카인·다이엔의 첨가 반응에서 <b>중간체의 안정성</b>으로 선택성(마르코브니코프 규칙)을 설명할 수 있다.</li>
+  </ol>
+  <div class="note mt8 f21"><b>심화</b> 교과서 본문 밖의 심화 내용이다. 화학·약학·생명 계열로 진학하려는 학생의 <b>자율 탐구 자료</b>로 쓴다(결론과 예제 중심).</div>
+  <div class="flow mt8">
+    <div class="fnode">굽은 화살표</div><div class="farr">→</div>
+    <div class="fnode">치환 $\mathrm{S_N2}$·$\mathrm{S_N1}$</div><div class="farr">→</div>
+    <div class="fnode">제거 $\mathrm{E2}$·$\mathrm{E1}$</div><div class="farr">→</div>
+    <div class="fnode hl">경로 고르기</div><div class="farr">→</div>
+    <div class="fnode">라디칼</div><div class="farr">→</div>
+    <div class="fnode">첨가 반응</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="[심화] 유기 반응과 메커니즘 · 도입" data-title="생각 열기: 치환일까 제거일까">
+  <h2><span class="tag">생각 열기</span>같은 할로젠화 알킬인데 생성물이 다르다?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 330px">
+      <div class="card"><h3><span class="tag alt">다시 보기</span></h3>
+        <p class="small"><b>친핵성 치환 반응</b>: 할로젠화 알킬의 할로젠기가 친핵체로 치환된다.</p>
+        <p class="small mt8"><b>제거 반응</b>: 할로젠기와 옆 탄소의 수소가 떨어져 2중 결합이 생긴다.</p></div>
+    </div>
+    <div class="col">{{OPEN}}</div>
+  </div>
+  <p class="f22 mt8"><b>Q</b> 같은 $\ce{OH-}$인데 왜 어떤 때는 치환, 어떤 때는 제거가 일어날까?</p>
+  <div class="answer step">$\ce{OH-}$가 전자쌍을 <b>탄소</b>에 주면 치환, <b>수소 이온</b>에 주면 제거 — 어느 쪽이 우세한지는 기질·시약·용매·온도가 정한다.</div>
+  <p class="f21 step mt8">→ 오늘은 전자쌍의 흐름(<b>반응 메커니즘</b>)으로 생성물을 예측해 본다.</p>
+</section>
+
+<!-- ════════ 4. 굽은 화살표 ════════ -->
+<section class="slide" data-sec="심화 · 굽은 화살표" data-title="굽은 화살표">
+  <h2><span class="tag alt">심화</span>굽은 화살표는 전자쌍의 이동이다 <span class="small c-muted">[심화]</span></h2>
+  <div class="stages ac14s1-st">
+    <div class="stage"><h3>① 비공유 전자쌍 → 원자</h3>{{ARR1}}</div>
+    <div class="stage"><h3>② 결합 전자쌍 → 원자</h3>{{ARR2}}</div>
+    <div class="stage"><h3>③ π 결합 → 원자</h3>{{ARR3}}</div>
+  </div>
+  <p class="f21 step mt8"><b>규칙 1</b> 화살표의 <b>꼬리 = 전자쌍</b>(비공유 전자쌍, σ 결합, π 결합, 음전하), <b>머리 = 전자쌍을 받는 원자</b>(δ+ 원자, 양이온, 이탈기)</p>
+  <p class="f21 step"><b>규칙 2</b> 전자가 많은 <span class="c-minus">친핵체</span> → 전자가 부족한 <span class="c-plus">친전자체</span>로 향한다. 원자의 이동이 아니다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 화살표 ②에서 Br가 얻은 것은 무엇일까?</p>
+    <div class="answer step" style="flex:1">C–Br 결합의 전자쌍 → $\ce{Br-}$(비공유 전자쌍 4개)</div>
+  </div>
+  <p class="small">전자 <b>1개</b>가 움직이는 라디칼 반응에는 미늘이 한쪽만 있는 화살표를 쓴다(뒤에서).</p>
+</section>
+
+<!-- ════════ 5. 친핵체와 친전자체 ════════ -->
+<section class="slide" data-sec="심화 · 굽은 화살표" data-title="친핵체와 친전자체">
+  <h2><span class="tag alt">심화</span>친핵체와 친전자체, 친핵성과 염기성 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 510px">{{NUC}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>친핵체</mark>: 비공유 전자쌍이나 π 전자를 내놓는 <b>루이스 염기</b> — $\ce{OH-}$, $\ce{CN-}$, $\ce{I-}$, $\ce{H2O}$, $\ce{NH3}$, 알켄의 C=C</p>
+      <p class="f21 mt8"><mark>친전자체</mark>: 전자쌍을 받아들이는 <b>루이스 산</b> — $\delta^+$ 탄소, $\ce{H+}$, 탄소 양이온, $\ce{Br2}$</p>
+      <p class="f21 step mt8">친핵체가 전자쌍을 <b>탄소</b>에 주면 친핵성, <b>수소 이온</b>에 주면 염기성이다. 두 크기는 경향이 비슷하지만 <b>같지 않다</b> — 같은 족에서는 아래쪽 원자일수록 친핵성이 크다($\ce{I-}$ &gt; $\ce{Br-}$ &gt; $\ce{Cl-}$).</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> $\ce{NH3}$는 친핵체일까, 친전자체일까?</p>
+    <div class="answer step" style="flex:1">친핵체 — N에 비공유 전자쌍이 있다.</div>
+  </div>
+</section>
+
+<!-- ════════ 6. 작용기 반응 비교 ════════ -->
+<section class="slide" data-sec="심화 · 굽은 화살표" data-title="작용기 반응의 메커니즘 비교">
+  <h2><span class="tag alt">심화</span>작용기의 반응도 친핵체 → 친전자체로 읽는다 <span class="small c-muted">[심화]</span></h2>
+  <table class="tight ac14s1-t">
+    <thead><tr><th>반응</th><th>친핵체</th><th>친전자체</th><th>반응 유형</th><th>관련 개념</th></tr></thead>
+    <tbody>
+      <tr><td class="l">알코올의 산화(크로뮴산)</td><td class="step" data-g="n">알코올의 O</td><td class="step" data-g="e">Cr(Ⅵ)</td><td>에스터 형성 후 제거</td><td>산화·환원</td></tr>
+      <tr><td class="l">카보닐 화합물의 환원($\ce{NaBH4}$)</td><td class="step" data-g="n">$\ce{H-}$</td><td class="step" data-g="e">카보닐 C</td><td>친핵성 첨가</td><td>산화·환원</td></tr>
+      <tr><td class="l">피셔 에스터화($\ce{H2SO4}$)</td><td class="step" data-g="n">알코올의 O</td><td class="step" data-g="e">양성자가 붙은 카보닐 C</td><td>친핵성 아실 치환</td><td>산 촉매, 화학 평형</td></tr>
+      <tr><td class="l">비누화</td><td class="step" data-g="n">$\ce{OH-}$</td><td class="step" data-g="e">카보닐 C</td><td>친핵성 아실 치환</td><td>산 염기</td></tr>
+    </tbody>
+  </table>
+  <div class="formula sm step mt16">$\ce{CH3COOH + CH3CH2OH &lt;=&gt;[H2SO4] CH3COOCH2CH3 + H2O}$<div class="unit">피셔 에스터화: 카복실산의 C–OH 결합이 끊어진다(모든 단계가 가역적)</div></div>
+  <div class="note mt16 f21">탄소의 산화: 결합한 O(또는 N, 할로젠)가 늘거나 H가 줄면 산화 — 탄소의 산화수 $\ce{CH4}$(−4) → $\ce{CH3OH}$(−2) → $\ce{HCHO}$(0) → $\ce{HCOOH}$(+2) → $\ce{CO2}$(+4)</div>
+  <p class="small">카보닐 화합물의 자세한 반응은 [심화] 방향족 치환과 카보닐 화합물의 반응에서</p>
+</section>
+
+<!-- ════════ 7. 치환과 제거 ════════ -->
+<section class="slide" data-sec="심화 · 할로젠화 알킬의 치환과 제거" data-title="할로젠화 알킬: 치환과 제거">
+  <h2><span class="tag alt">심화</span>할로젠화 알킬은 치환과 제거, 두 가지로 반응한다 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{SUBEL}}</div>
+    <div class="col stack">
+      <div class="card"><p class="f21"><b>기질</b>: 반응물인 할로젠화 알킬 · <b>이탈기</b>: 떨어져 나가는 $\ce{X-}$<br><b>β 탄소</b>: 할로젠이 붙은 탄소(α)의 이웃 탄소</p></div>
+      <div class="formula sm step">$\mathrm{Nu^-} + \mathrm{R{-}X} \longrightarrow \mathrm{R{-}Nu} + \mathrm{X^-}$<div class="unit">치환: 친핵체가 α 탄소를 공격하여 할로젠을 밀어냄</div></div>
+      <div class="formula sm step">$\mathrm{B^-} + \mathrm{H{-}C{-}C{-}X} \longrightarrow \mathrm{C{=}C} + \mathrm{H{-}B} + \mathrm{X^-}$<div class="unit">제거: 염기가 β 수소를 떼어 냄</div></div>
+      <div class="note step">메커니즘 이름의 숫자 1, 2는 <b>단계 수가 아니라 속도 결정 단계에 참여하는 입자 수</b>(분자도)이다.</div>
+    </div>
+  </div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> $\mathrm{S_N2}$에서 S, N은 무엇을 뜻할까?</p>
+    <div class="answer step" style="flex:1">S 치환, N 친핵성 — 2는 속도 결정 단계의 분자도</div>
+  </div>
+</section>
+
+<!-- ════════ 8. SN2 속도식 ════════ -->
+<section class="slide" data-sec="심화 · SN2 반응" data-title="SN2 반응의 속도식">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N2}$: 속도가 두 반응물 농도에 모두 비례한다 <span class="small c-muted">[심화]</span></h2>
+  <div class="formula sm">$\ce{HO- + CH3Br -&gt; CH3OH + Br-}$</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">
+      <table class="tight ac14s1-t">
+        <thead><tr><th>실험</th><th>$[\ce{CH3Br}]$ [M]</th><th>$[\ce{OH-}]$ [M]</th><th>상대 속도</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>0.10</td><td>0.10</td><td>1</td></tr>
+          <tr><td>2</td><td>0.20</td><td>0.10</td><td class="step">2</td></tr>
+          <tr><td>3</td><td>0.10</td><td>0.20</td><td class="step">2</td></tr>
+          <tr><td>4</td><td>0.20</td><td>0.20</td><td data-q><span class="blank"><span class="step">4</span></span></td></tr>
+        </tbody>
+      </table>
+      <p class="small mt8">덱 예시값 — 「농도를 각각 2배로 하면 속도가 각각 2배」를 표로 만든 것</p>
+      <p class="f21 mt8"><b>Q</b> 실험 4의 상대 속도는 얼마일까?</p>
+    </div>
+    <div class="col stack">
+      <div class="formula step">$v=k[\mathrm{RX}][\mathrm{Nu^-}]$<div class="unit">2차 반응 — 두 입자가 한 단계에서 만난다</div></div>
+      <p class="f21 step"><b>이분자 친핵성 치환 반응($\mathrm{S_N2}$)</b>: 중간체 없이 <b>한 단계</b>로 일어난다(휴즈와 잉골드).</p>
+      <p class="small">속도식과 분자도는 Ⅳ-5 반응 메커니즘에서 자세히</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. SN2 메커니즘 ════════ -->
+<section class="slide" data-sec="심화 · SN2 반응" data-title="SN2 메커니즘과 발덴 반전">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N2}$ 메커니즘: 뒤쪽 공격과 발덴 반전 <span class="small c-muted">[심화]</span></h2>
+  {{SN2}}
+  <p class="f21 step">① 친핵체는 이탈기의 <b>정반대편(180° 뒤쪽)</b>에서 탄소를 공격한다.</p>
+  <p class="f21 step">② 전이 상태: C–Nu 결합이 반쯤 생기고 C–X 결합이 반쯤 끊어진다 — 나머지 세 원자단은 <b>한 평면</b>에 놓인다.</p>
+  <p class="f21 step">③ 세 원자단이 바람에 뒤집힌 우산처럼 젖혀진다 = <mark>발덴 반전</mark> → 카이랄 중심의 <b>입체 배열이 반전</b>된다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 600px"><b>Q</b> (S)-2-브로모뷰테인이 $\mathrm{S_N2}$ 반응을 하면 생성물의 입체 배열은?</p>
+    <div class="answer step" style="flex:1">반전된 (R)-2-뷰탄올</div>
+  </div>
+</section>
+
+<!-- ════════ 10. SN2 에너지·입체 장애 ════════ -->
+<section class="slide" data-sec="심화 · SN2 반응" data-title="SN2의 에너지 도표와 입체 장애">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N2}$의 에너지 도표와 입체 장애 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">{{ESN2}}</div>
+    <div class="col">{{CROWD}}</div>
+  </div>
+  <p class="f21 step">친핵체가 뒤쪽에서 다가가야 하므로 탄소 주위가 붐빌수록(<b>입체 장애</b>) 전이 상태의 에너지가 높아져 느려진다: $\ce{CH3X}$ &gt; 1차 &gt; 2차 ≫ 3차</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 3차 할로젠화 알킬에서 $\mathrm{S_N2}$가 거의 일어나지 않는 까닭은?</p>
+    <div class="answer step" style="flex:1">세 알킬기가 뒤쪽을 가려 친핵체가 탄소에 다가갈 수 없다.</div>
+  </div>
+</section>
+
+<!-- ════════ 11. SN2 요인 ════════ -->
+<section class="slide" data-sec="심화 · SN2 반응" data-title="SN2에 영향을 주는 요인">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N2}$에 영향을 주는 요인 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col">
+      <table class="tight ac14s1-t ac14s1-f">
+        <thead><tr><th>요인</th><th>빨라지는 조건</th><th>까닭</th></tr></thead>
+        <tbody>
+          <tr><td>기질</td><td class="l">$\ce{CH3X}$ &gt; 1차 &gt; 2차 ≫ 3차</td><td class="l step">입체 장애가 전이 상태의 에너지를 높인다.</td></tr>
+          <tr><td>친핵체</td><td class="l">$\ce{HS-}$, $\ce{CN-}$ &gt; $\ce{I-}$ &gt; $\ce{CH3O-}$ &gt; $\ce{OH-}$ &gt; $\ce{Cl-}$ &gt; $\ce{NH3}$ &gt; $\ce{CH3COO-}$ &gt; $\ce{H2O}$</td><td class="l step">반응성이 큰 친핵체일수록 $E_\mathrm{a}$가 작다.</td></tr>
+          <tr><td>이탈기</td><td class="l">$\ce{TsO-}$ &gt; $\ce{I-}$ &gt; $\ce{Br-}$ &gt; $\ce{Cl-}$ ≫ $\ce{F-}$<br>$\ce{OH-}$, $\ce{RO-}$, $\ce{NH2-}$는 이탈하지 않음</td><td class="l step">음전하를 잘 안정화하는 <b>약한 염기</b>일수록 좋은 이탈기</td></tr>
+          <tr><td>용매</td><td class="l">극성 비양성자성<br>(DMSO, DMF, 아세토나이트릴)</td><td class="l step">물·알코올은 친핵체를 수소 결합으로 둘러싸 반응성을 떨어뜨린다.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 380px">{{SOLV}}</div>
+  </div>
+  <p class="small mt8">친핵체 세기: 반응하는 원자가 같으면 염기성 순서($\ce{OH-}$ &gt; $\ce{CH3COO-}$ &gt; $\ce{H2O}$), 같은 족에서는 아래쪽일수록 크고, 음전하를 띤 것이 중성보다 강하다.</p>
+</section>
+
+<!-- ════════ 12. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="심화 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>어느 쪽이 $\mathrm{S_N2}$ 반응이 더 빠를까?</h2>
+  <div class="row ac14s1-pick">
+    <div class="card"><b>1)</b> $\ce{CH3CH2Br}$ / $\ce{(CH3)2CHBr}$<br><span class="small">친핵체 $\ce{I-}$, 아세톤</span></div>
+    <div class="card"><b>2)</b> $\ce{CH3CH2Br}$ + $\ce{CN-}$ / $\ce{CH3CH2Br}$ + $\ce{H2O}$</div>
+    <div class="card"><b>3)</b> $\ce{CH3CH2I}$ / $\ce{CH3CH2F}$<br><span class="small">친핵체 $\ce{CN-}$, DMSO</span></div>
+  </div>
+  <div class="board" style="height:150px"></div>
+  <div class="answers">
+    <div class="answer step">1) $\ce{CH3CH2Br}$ — 1차가 2차보다 입체 장애가 작다.</div>
+    <div class="answer step">2) $\ce{CN-}$ — 음전하를 띤 강한 친핵체</div>
+    <div class="answer step">3) $\ce{CH3CH2I}$ — $\ce{I-}$는 좋은 이탈기, $\ce{F-}$는 거의 이탈하지 않는다.</div>
+  </div>
+</section>
+
+<!-- ════════ 13. SN1 메커니즘 ════════ -->
+<section class="slide" data-sec="심화 · SN1 반응" data-title="SN1 메커니즘">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N1}$: 탄소 양이온을 거치는 여러 단계 반응 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">$\ce{(CH3)3CBr}$은 물과 반응하는 속도가 $\ce{CH3Br}$보다 <b>100만 배 이상</b> 빠르고, $\ce{(CH3)3CBr}$의 농도에만 비례한다: $v=k[\mathrm{RX}]$</p>
+  <div class="stages ac14s1-st">
+    <div class="stage step"><h3>① C–Br이 끊어짐 <span class="c-plus">(느림)</span></h3>{{SN1A}}</div>
+    <div class="stage step"><h3>② 물이 양이온 공격</h3>{{SN1B}}</div>
+    <div class="stage step"><h3>③ 양성자 떼어 냄</h3>{{SN1C}}</div>
+  </div>
+  <div class="formula sm step">$\ce{(CH3)3CBr + 2H2O -&gt; (CH3)3COH + H3O+ + Br-}$</div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 물의 농도가 속도식에 없는 까닭은?</p>
+    <div class="answer step" style="flex:1">속도 결정 단계(①) <b>뒤에</b> 반응하기 때문</div>
+  </div>
+</section>
+
+<!-- ════════ 14. SN1 에너지 도표 ════════ -->
+<section class="slide" data-sec="심화 · SN1 반응" data-title="SN1의 에너지 도표와 오개념">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N1}$의 에너지 도표: 골짜기가 중간체 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{ESN1}}</div>
+    <div class="col stack">
+      <div class="card"><h3>오개념 바로잡기</h3>
+        <p class="f21">✕ $\mathrm{S_N1}$ 반응은 한 단계 반응이다.</p>
+        <p class="f21 step c-field">○ 1은 <b>속도 결정 단계의 분자도</b>이다. 탄소 양이온을 거치는 <b>여러 단계</b> 반응이다.</p>
+        <p class="f21 mt8">✕ 3차 할로젠화 알킬은 입체 장애 때문에 반응하지 않는다.</p>
+        <p class="f21 step c-field">○ $\mathrm{S_N2}$만 어렵다. $\mathrm{S_N1}$·$\mathrm{E1}$·$\mathrm{E2}$는 빠르게 일어난다.</p>
+      </div>
+      <p class="f21 mt8"><b>Q</b> 에너지 도표에서 중간체는 어디에 나타날까?</p>
+      <div class="answer step">두 언덕 사이의 골짜기(극소점)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 탄소 양이온 ════════ -->
+<section class="slide" data-sec="심화 · SN1 반응" data-title="탄소 양이온의 구조와 안정성">
+  <h2><span class="tag alt">심화</span>탄소 양이온의 구조와 안정성 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 380px">{{CATION}}</div>
+    <div class="col stack">
+      <p class="f21">탄소 양이온: $sp^2$ 혼성, <b>평면 삼각형</b>, 빈 p 오비탈</p>
+      <p class="f21 step">친핵체가 <b>양쪽 면에서 같은 확률</b>로 공격 → 카이랄 중심이면 두 거울상 이성질체가 같은 양 = <mark>라세미 혼합물</mark></p>
+      <p class="small step">실제로는 떨어져 나간 이탈기가 한쪽 면을 잠시 가려 반전된 생성물이 조금 더 많은 경우가 많다.</p>
+      {{CATROW}}
+      <p class="small step">알릴·벤질 양이온은 공명으로 더 안정하다.</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> $\mathrm{S_N1}$ 속도가 3차 &gt; 2차 ≫ 1차인 까닭은?</p>
+    <div class="answer step" style="flex:1">더 안정한 탄소 양이온이 생길수록 속도 결정 단계의 $E_\mathrm{a}$가 작다.</div>
+  </div>
+</section>
+
+<!-- ════════ 16. SN1 요인 ════════ -->
+<section class="slide" data-sec="심화 · SN1 반응" data-title="SN1에 영향을 주는 요인">
+  <h2><span class="tag alt">심화</span>$\mathrm{S_N1}$에 영향을 주는 요인 <span class="small c-muted">[심화]</span></h2>
+  <table class="tight ac14s1-t ac14s1-f">
+    <thead><tr><th>요인</th><th>빨라지는 조건</th><th>까닭</th></tr></thead>
+    <tbody>
+      <tr><td>기질</td><td class="l">3차 &gt; 2차 ≫ 1차 &gt; 메틸, 알릴·벤질은 빠르다.</td><td class="l step">탄소 양이온의 안정성 순서와 같다.</td></tr>
+      <tr><td>이탈기</td><td class="l">$\mathrm{S_N2}$와 같은 순서, 산성에서는 양성자가 붙은 OH($\ce{H2O}$)도 이탈</td><td class="l step">이탈기가 속도 결정 단계에 참여한다.</td></tr>
+      <tr><td>친핵체</td><td class="l">속도에 영향 없음 — 물·알코올처럼 중성이고 염기성이 약한 것</td><td class="l step">속도 결정 단계에 참여하지 않는다. 강한 염기는 제거 반응을 일으킨다.</td></tr>
+      <tr><td>용매</td><td class="l">극성 양성자성(물, 메탄올, 폼산)</td><td class="l step">탄소 양이온과 전이 상태를 용매화하여 안정하게 한다.</td></tr>
+    </tbody>
+  </table>
+  <div class="row mt16 ac14s1-two">
+    <div class="card step"><h3 class="c-field">$\mathrm{S_N2}$</h3><p class="f21">한 단계 · 뒤쪽 공격 · <b>반전</b> · 비양성자성 용매</p></div>
+    <div class="card step"><h3 class="c-field">$\mathrm{S_N1}$</h3><p class="f21">여러 단계 · 탄소 양이온 · <b>라세미화</b> · 양성자성 용매</p></div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 640px"><b>Q</b> 같은 기질에서 용매를 물 → DMSO로 바꾸면 어느 경로가 유리해질까?</p>
+    <div class="answer step" style="flex:1">$\mathrm{S_N2}$ — 친핵체가 맨몸이 되고, 탄소 양이온은 안정화되지 않는다.</div>
+  </div>
+</section>
+
+<!-- ════════ 17. 연결: 속도 결정 단계 ════════ -->
+<section class="slide" data-sec="심화 · 연결" data-title="연결: 속도 결정 단계(Ⅳ-5)">
+  <h2><span class="tag alt">연결</span>Ⅳ-5 반응 메커니즘: 가장 느린 단계가 속도를 정한다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">{{NECK}}</div>
+    <div class="col stack">
+      <table class="tight ac14s1-t">
+        <thead><tr><th></th><th>반응</th><th>분자도</th><th>속도식</th></tr></thead>
+        <tbody>
+          <tr><td>$\mathrm{S_N2}$</td><td>단일 단계 반응</td><td>2</td><td>$v=k[\mathrm{RX}][\mathrm{Nu^-}]$</td></tr>
+          <tr><td>$\mathrm{S_N1}$</td><td>다단계 반응</td><td class="step">속도 결정 단계 1</td><td>$v=k[\mathrm{RX}]$</td></tr>
+        </tbody>
+      </table>
+      <p class="f21 step mt8">다단계 반응에서는 <b>가장 느린 단계(속도 결정 단계)</b>의 반응물이 속도식에 나타난다. 중간체는 속도식에 나타나지 않는다.</p>
+    </div>
+  </div>
+  <div class="note mt8 f21">Ⅳ-5에서는 실험으로 얻은 속도식과 반응 메커니즘이 맞는지 맞추어 본다.</div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 640px"><b>Q</b> $\mathrm{E2}$의 속도식이 $v=k[\mathrm{RX}][\mathrm{B^-}]$이면 속도 결정 단계의 분자도는?</p>
+    <div class="answer step" style="flex:1">2(단일 단계 반응)</div>
+  </div>
+</section>
+
+<!-- ════════ 18. 자이체프 ════════ -->
+<section class="slide" data-sec="심화 · 제거 반응" data-title="제거 반응과 자이체프 규칙">
+  <h2><span class="tag alt">심화</span>제거 반응과 자이체프 규칙 <span class="small c-muted">[심화]</span></h2>
+  <div class="ac14s1-fig">{{ZAIT}}</div>
+  <p class="f21 step"><mark>자이체프 규칙</mark>: 제거 반응에서는 2중 결합 탄소에 <b>알킬기가 더 많이 붙은, 더 안정한 알켄</b>이 주로 생긴다.</p>
+  <div class="formula sm step">$\ce{CH3CH2CHBrCH3 + CH3CH2O- -&gt; CH3CH=CHCH3 + CH3CH2OH + Br-}$</div>
+  <div class="row step ac14s1-three">
+    <div class="card"><b>$\mathrm{E2}$</b> C–H와 C–X가 <b>동시에</b></div>
+    <div class="card"><b>$\mathrm{E1}$</b> C–X <b>먼저</b> → C–H</div>
+    <div class="card"><b>$\mathrm{E1cB}$</b> C–H <b>먼저</b> → C–X</div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 2-브로모뷰테인에서 β 탄소는 몇 개일까?</p>
+    <div class="answer step" style="flex:1">2개($\mathrm{C1}$, $\mathrm{C3}$) → 1-뷰텐 또는 2-뷰텐</div>
+  </div>
+</section>
+
+<!-- ════════ 19. E2 ════════ -->
+<section class="slide" data-sec="심화 · 제거 반응" data-title="E2 메커니즘">
+  <h2><span class="tag alt">심화</span>$\mathrm{E2}$: 한 단계, anti 동일 평면 <span class="small c-muted">[심화]</span></h2>
+  <div class="ac14s1-fig">{{E2}}</div>
+  <div class="formula sm step">$\ce{CH3CH2Br + CH3CH2O- -&gt; CH2=CH2 + CH3CH2OH + Br-}$</div>
+  <div class="row ac14s1-three">
+    <div class="card step"><b>① 속도식 2차</b><br><span class="f21">$v=k[\mathrm{RX}][\mathrm{B^-}]$</span></div>
+    <div class="card step"><b>② 동위원소 효과</b><br><span class="small">β H → D이면 약 7배 느림: C–H가 속도 결정 단계에서 끊어짐</span></div>
+    <div class="card step"><b>③ anti 동일 평면</b><br><span class="small">H와 Br이 한 평면의 반대쪽 — 고리에서는 둘 다 축방향일 때만(자이체프보다 우선)</span></div>
+  </div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 염기가 떼어 내는 수소는 어느 것일까?</p>
+    <div class="answer step" style="flex:1">Br와 anti 동일 평면인 β 수소</div>
+  </div>
+</section>
+
+<!-- ════════ 20. E1 ════════ -->
+<section class="slide" data-sec="심화 · 제거 반응" data-title="E1과 SN1의 경쟁">
+  <h2><span class="tag alt">심화</span>$\mathrm{E1}$: 같은 탄소 양이온에서 두 갈래 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 800px">{{E1}}</div>
+    <div class="col stack">
+      <div class="card step"><p class="small">80 % 에탄올 수용액, 65 °C</p><p class="f21"><b>치환 : 제거</b><br>≈ <b>64 : 36</b></p></div>
+    </div>
+  </div>
+  <p class="f21 step">$\mathrm{E1}$: 느린 해리 → 약한 염기(용매)가 이웃 탄소의 H를 떼어 냄 · 속도식 1차 · 동위원소 효과 없음 · 보통 자이체프 생성물</p>
+  <div class="formula sm step">$\ce{(CH3)3CCl + H2O -&gt; (CH3)2C=CH2 + H3O+ + Cl-}$<div class="unit">알코올 + 진한 황산 가열(탈수 반응)도 탄소 양이온을 거치는 $\mathrm{E1}$이다.</div></div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> $\mathrm{E1}$과 $\mathrm{S_N1}$이 항상 경쟁하는 까닭은?</p>
+    <div class="answer step" style="flex:1">같은 탄소 양이온 중간체를 거친다.</div>
+  </div>
+</section>
+
+<!-- ════════ 21. E1cB ════════ -->
+<section class="slide" data-sec="심화 · 제거 반응" data-title="E1cB 반응">
+  <h2><span class="tag alt">심화</span>$\mathrm{E1cB}$: C–H가 먼저 끊어진다 <span class="small c-muted">[심화]</span></h2>
+  {{E1CB}}
+  <p class="f21 step">H를 먼저 떼어 <b>반응물의 짝염기(탄소 음이온)</b>를 만든 뒤 이탈기가 떨어진다: $v=k[\mathrm{RH}][\mathrm{B^-}]$</p>
+  <p class="f21 step">나쁜 이탈기(–OH) + <b>카보닐기 옆의 산성 수소</b>일 때 · 생체의 제거 반응 대부분</p>
+  <div class="row">
+    <div class="formula sm step" style="flex:0 0 560px">$\ce{(CH3)2C(OH)CH2COCH3 -&gt;[OH-] (CH3)2C=CHCOCH3 + H2O}$</div>
+  </div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 이 반응에서 이탈기는 무엇일까?</p>
+    <div class="answer step" style="flex:1">$\ce{OH-}$ — 공명으로 안정한 음이온이 밀어낸다.</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 다섯 경로 비교 ════════ -->
+<section class="slide" data-sec="심화 · 반응 경로 고르기" data-title="다섯 가지 경로 비교">
+  <h2><span class="tag alt">심화</span>치환 반응과 제거 반응의 비교 <span class="small c-muted">[심화]</span></h2>
+  <table class="tight ac14s1-t ac14s1-cmp">
+    <thead><tr><th></th><th class="ac14s1-sub">$\mathrm{S_N2}$</th><th class="ac14s1-sub">$\mathrm{S_N1}$</th><th class="ac14s1-eli">$\mathrm{E2}$</th><th class="ac14s1-eli">$\mathrm{E1}$</th><th class="ac14s1-eli">$\mathrm{E1cB}$</th></tr></thead>
+    <tbody>
+      <tr><th>단계 수</th><td>1</td><td>2 이상</td><td>1</td><td>2</td><td>2</td></tr>
+      <tr><th>중간체</th><td>없음</td><td>탄소 양이온</td><td>없음</td><td>탄소 양이온</td><td>탄소 음이온</td></tr>
+      <tr><th>속도식</th><td>$k[\mathrm{RX}][\mathrm{Nu}]$</td><td>$k[\mathrm{RX}]$</td><td>$k[\mathrm{RX}][\mathrm{B}]$</td><td>$k[\mathrm{RX}]$</td><td>$k[\mathrm{RH}][\mathrm{B}]$</td></tr>
+      <tr><th>알맞은 기질</th><td>$\ce{CH3}$ &gt; 1차 &gt; 2차</td><td>3차, 알릴, 벤질</td><td>2차, 3차</td><td>3차</td><td>C=O에서 두 탄소<br>떨어진 이탈기</td></tr>
+      <tr><th>시약</th><td>강한 친핵체,<br>약한 염기</td><td>약한 친핵체<br>($\ce{H2O}$, ROH)</td><td>강한 염기</td><td>약한 염기</td><td>염기</td></tr>
+      <tr><th>용매</th><td>극성 비양성자성</td><td>극성 양성자성</td><td>다양</td><td>극성 양성자성</td><td>다양</td></tr>
+      <tr><th>입체 화학</th><td>반전</td><td>라세미화</td><td>anti 동일 평면</td><td>–</td><td>–</td></tr>
+    </tbody>
+  </table>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 중간체가 같은 두 경로를 짝지으면?</p>
+    <div class="answer step" style="flex:1">$\mathrm{S_N1}$과 $\mathrm{E1}$ — 탄소 양이온</div>
+  </div>
+</section>
+
+<!-- ════════ 23. 경로 고르기 ════════ -->
+<section class="slide" data-sec="심화 · 반응 경로 고르기" data-title="반응 경로 고르기">
+  <h2><span class="tag alt">심화</span>기질과 시약을 보면 반응 경로를 예측할 수 있다 <span class="small c-muted">[심화]</span></h2>
+  {{FLOW}}
+  <div class="row mt8">
+    <p class="f21 step" style="flex:1">가열하면 제거가 유리해진다 — 생성물 입자 수가 늘어 엔트로피가 커지기 때문이다. <span class="small">(덱 보충: 정성적 경향)</span></p>
+  </div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 3차 할로젠화 알킬에 $\ce{CH3CH2O-}$를 넣으면?</p>
+    <div class="answer step" style="flex:1">$\mathrm{E2}$(강한 염기)</div>
+  </div>
+</section>
+
+<!-- ════════ 24. 실험실 ════════ -->
+<section class="slide" data-sec="심화 · 실험실" data-title="실험실: 반응 경로 고르기">
+  <h2><span class="tag">실험실</span>조건을 골라 반응 경로를 예측해 보자</h2>
+  <div class="lab" data-lab="ac14s1path">
+    <div class="lab-ctl" style="flex-basis:520px">
+      <div class="ac14s1-seg"><span class="small">기질</span><button class="btn" data-s="me">메틸</button><button class="btn on" data-s="p1">1차</button><button class="btn" data-s="p2">2차</button><button class="btn" data-s="p3">3차</button></div>
+      <div class="ac14s1-seg"><span class="small">시약</span><button class="btn" data-r="I">$\ce{I-}$</button><button class="btn on" data-r="CN">$\ce{CN-}$</button><button class="btn" data-r="OH">$\ce{OH-}$</button><button class="btn" data-r="EtO">$\ce{CH3CH2O-}$</button><button class="btn" data-r="tBuO">$\ce{(CH3)3CO-}$</button><button class="btn" data-r="H2O">$\ce{H2O}$</button></div>
+      <div class="ac14s1-seg"><span class="small">용매</span><button class="btn on" data-v="apr">비양성자성(DMSO)</button><button class="btn" data-v="pro">양성자성(물·에탄올)</button></div>
+      <div class="ac14s1-seg"><span class="small">온도</span><button class="btn on" data-t="rt">25 °C</button><button class="btn" data-t="hot">가열</button></div>
+      <div class="ac14s1-seg"><span class="small">예측</span><button class="btn" data-p="SN2">$\mathrm{S_N2}$</button><button class="btn" data-p="SN1">$\mathrm{S_N1}$</button><button class="btn" data-p="E2">$\mathrm{E2}$</button><button class="btn" data-p="E1">$\mathrm{E1}$</button><button class="btn" data-p="none">거의 없음</button></div>
+      <div class="ac14s1-seg"><button class="btn ac14s1-act" data-act="run">반응시키기</button><button class="btn" data-act="reset">초기화</button><output class="small" data-o="score"></output></div>
+      <table class="readout ac14s1-read">
+        <tr><th>조건</th><td><output data-o="cond"></output></td></tr>
+        <tr class="hl"><th>우세한 경로</th><td><output data-o="path"></output></td></tr>
+      </table>
+      <output class="kind ac14s1-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="lab-fig" style="width:560px;height:250px">
+        <svg viewBox="0 0 560 250" width="560" height="250" aria-label="고른 경로의 에너지 도표와 생성물"></svg>
+        <div class="ov" data-ov="prod" style="font-size:24px;transform:none"></div>
+        <div class="ov" data-ov="pname" style="font-size:18px;color:#5B6B7F;transform:none"></div>
+      </div>
+      <table class="tight ac14s1-log mt8"><thead><tr><th>#</th><th>기질</th><th>시약·용매·온도</th><th>예측</th><th>결과</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 예제 (1) ════════ -->
+<section class="slide" data-sec="심화 · 예제" data-title="예제: 메커니즘 예측 (1)">
+  <h2><span class="tag ex">예제</span>메커니즘과 주생성물을 예측하라 (1)</h2>
+  <p class="f21">(가) 1-브로모뷰테인 + $\ce{NaCN}$, DMSO &nbsp; (나) 2-브로모-2-메틸뷰테인 + $\ce{CH3CH2ONa}$, 에탄올, 가열 &nbsp; (다) 2-클로로-2-메틸프로페인, $\ce{H2O}$, 25 °C</p>
+  <div class="board" style="height:110px"></div>
+  <div class="answers">
+    <div class="answer step">(가) 1차 + 좋은 친핵체 + 극성 비양성자성 → $\mathrm{S_N2}$: 펜테인나이트릴 $\ce{CH3CH2CH2CH2CN}$</div>
+    <div class="answer step">(나) 3차 + 강한 염기 → $\mathrm{E2}$: 자이체프 생성물 2-메틸-2-뷰텐 $\ce{(CH3)2C=CHCH3}$</div>
+    <div class="answer step">(다) 3차 + 중성 양성자성 용매 → $\mathrm{S_N1}$ $\ce{(CH3)3COH}$ + $\mathrm{E1}$ $\ce{(CH3)2C=CH2}$</div>
+  </div>
+  <div class="formula sm step mt8">(가) $\ce{CH3CH2CH2CH2Br + CN- -&gt; CH3CH2CH2CH2CN + Br-}$<br>(나) $\ce{(CH3)2CBrCH2CH3 + CH3CH2O- -&gt; (CH3)2C=CHCH3 + CH3CH2OH + Br-}$</div>
+</section>
+
+<!-- ════════ 26. 예제 (2) ════════ -->
+<section class="slide" data-sec="심화 · 예제" data-title="예제: 메커니즘 예측 (2)">
+  <h2><span class="tag ex">예제</span>메커니즘과 주생성물을 예측하라 (2)</h2>
+  <p class="f21">(라) (S)-2-브로모뷰테인 + $\ce{NaI}$, 아세톤 &nbsp; (마) 4-하이드록시-4-메틸-2-펜탄온 + $\ce{NaOH}$, 가열</p>
+  <div class="answers">
+    <div class="answer step">(라) 2차 + 염기성이 약하고 친핵성이 강한 $\ce{I-}$ + 비양성자성 → $\mathrm{S_N2}$: 반전된 (R)-2-아이오도뷰테인</div>
+  </div>
+  <div class="row">
+    <div class="col step" style="flex:0 0 650px">{{SN2I}}</div>
+    <div class="board" style="flex:1;height:190px"></div>
+  </div>
+  <div class="answers">
+    <div class="answer step">(마) β-하이드록시 케톤 + 염기 → $\mathrm{E1cB}$: 4-메틸-3-펜텐-2-온 $\ce{(CH3)2C=CHCOCH3}$</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 알코올과 에테르 ════════ -->
+<section class="slide" data-sec="심화 · 할로젠화 알킬의 치환과 제거" data-title="치환 반응의 활용">
+  <h2><span class="tag alt">심화</span>치환 반응의 활용: 알코올과 에테르 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <h3>알코올 → 할로젠화 알킬</h3>
+      <p class="f21">–OH는 이탈기가 되지 못한다.</p>
+      <p class="f21 step">3차 알코올: HBr이 OH에 양성자를 붙여 $\ce{H2O}$로 떨어뜨린다($\mathrm{S_N1}$).</p>
+      <div class="formula sm step ac14s1-fs">$\ce{(CH3)3COH + HBr -&gt; (CH3)3CBr + H2O}$</div>
+      <p class="f21 step">1·2차 알코올: $\ce{SOCl2}$, $\ce{PBr3}$로 좋은 이탈기로 바꾼 뒤 $\mathrm{S_N2}$</p>
+    </div>
+    <div class="col stack">
+      <h3><mark>윌리엄슨 에테르 합성</mark></h3>
+      <p class="f21">알코올산 이온($\ce{RO-}$) + 1차 할로젠화 알킬 → 에테르($\mathrm{S_N2}$)</p>
+      {{WIL}}
+    </div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> 삼차-뷰틸 메틸 에테르를 만들려면? (A) $\ce{(CH3)3CO-}$ + $\ce{CH3I}$ &nbsp; (B) $\ce{CH3O-}$ + $\ce{(CH3)3CCl}$</p>
+  <div class="answer step">(A) — (B)는 3차 기질 + 강한 염기라 $\mathrm{E2}$가 일어나 2-메틸프로펜만 생긴다.</div>
+  <div class="formula sm step mt8">$\ce{(CH3)3CO- + CH3I -&gt; (CH3)3COCH3 + I-}$ &nbsp;/&nbsp; $\ce{CH3O- + (CH3)3CCl -&gt; (CH3)2C=CH2 + CH3OH + Cl-}$</div>
+</section>
+
+<!-- ════════ 28. 세 원칙 ════════ -->
+<section class="slide" data-sec="심화 · 유기 반응과 메커니즘" data-title="메커니즘을 읽는 세 원칙">
+  <h2><span class="tag alt">심화</span>메커니즘을 읽는 세 원칙과 해먼드 가설 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">할로젠화 알킬에서 본 방법으로 알켄·알카인의 반응도 <b>전자쌍의 흐름</b>과 <b>중간체의 안정성</b>으로 이해할 수 있다.</p>
+      <ol class="ac14s1-ol f21">
+        <li class="step">굽은 화살표: 전자가 많은 곳(비공유 전자쌍, π 결합, 음전하) → 부족한 곳(δ+ 원자, 양이온, 이탈기가 붙은 탄소)</li>
+        <li class="step">알켄의 C=C와 벤젠의 π 전자도 <b>친핵체</b>로 작용한다.</li>
+        <li class="step">여러 경로가 가능하면 <b>더 안정한 중간체</b>를 거치는 경로가 빠르다.</li>
+      </ol>
+      <p class="f21 step mt8"><mark>해먼드 가설</mark>: 흡열 단계의 전이 상태는 그 단계에서 생기는 중간체와 구조·에너지가 비슷하다 → 중간체가 안정할수록 전이 상태도 낮다.</p>
+    </div>
+    <div class="col" style="flex:0 0 420px">{{HAM}}</div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 400px"><b>Q</b> 원칙 ③이 성립하는 까닭은?</p>
+    <div class="answer step" style="flex:1">해먼드 가설 — 중간체의 안정성이 활성화 에너지에 반영된다.</div>
+  </div>
+</section>
+
+<!-- ════════ 29. 라디칼 할로젠화 ════════ -->
+<section class="slide" data-sec="심화 · 라디칼 할로젠화" data-title="알케인의 라디칼 할로젠화">
+  <h2><span class="tag alt">심화</span>알케인은 라디칼 연쇄 반응으로 할로젠화된다 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="formula sm" style="flex:0 0 420px">$\ce{CH4 + Cl2 -&gt;[h\nu] CH3Cl + HCl}$</div>
+    <p class="f21" style="flex:1"><mark>라디칼</mark>: 짝짓지 않은 전자를 가진 화학종 — 결합 전자쌍이 <b>한 개씩</b> 나뉘므로 미늘이 한쪽만 있는 화살표로 나타낸다.</p>
+  </div>
+  <div class="ac14s1-s4 mt8">
+    <div class="stage step"><h3>개시</h3>{{RAD1}}</div>
+    <div class="stage step"><h3>전파 ①</h3>{{RAD2}}</div>
+    <div class="stage step"><h3>전파 ②</h3>{{RAD3}}</div>
+    <div class="stage step"><h3>종결</h3>{{RAD4}}</div>
+  </div>
+  <p class="f21 step mt8">전파 단계에서 소모된 라디칼이 다시 생겨, 라디칼 하나가 수천 번 반응한다 = <b>연쇄 반응</b></p>
+  <div class="row">
+    <p class="f21" style="flex:0 0 600px"><b>Q</b> 알케인이 친핵체·친전자체와 잘 반응하지 않는 까닭은?</p>
+    <div class="answer step" style="flex:1">비공유 전자쌍도 π 결합도 없다.</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 라디칼 선택성 + 예제 ════════ -->
+<section class="slide" data-sec="심화 · 라디칼 할로젠화" data-title="라디칼의 안정성과 선택성">
+  <h2><span class="tag alt">심화</span>라디칼의 안정성과 선택성 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21">탄소 라디칼 안정성: 3차 &gt; 2차 &gt; 1차 &gt; 메틸</p>
+      <table class="tight ac14s1-t"><thead><tr><th>H 1개당 상대 반응성</th><th>3차 : 2차 : 1차</th></tr></thead>
+        <tbody><tr><td>염소화</td><td>5 : 4 : 1</td></tr><tr><td>브로민화</td><td>1600 : 80 : 1</td></tr></tbody></table>
+      <p class="f21 step mt8">브로민화의 수소 떼기는 <b>흡열</b> → 전이 상태가 라디칼과 비슷(해먼드) → 선택성이 크다.</p>
+      <p class="small step">반응성은 3차 H가 크지만 1차 H의 개수가 많다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3><span class="tag ex">예제</span></h3><p class="f21">2-메틸프로페인을 빛을 쪼이며 염소화할 때 1-클로로-2-메틸프로페인과 2-클로로-2-메틸프로페인의 생성 비율을 예상하라(3차 : 1차 = 5 : 1).</p></div>
+      {{ISOB}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="board" style="flex:0 0 200px;height:60px"></div>
+    <div class="answers" style="flex:1">
+      <div class="answer step">1차 H 9개 × 1 = 9, 3차 H 1개 × 5 = 5 → 9 : 5</div>
+      <div class="answer step">1-클로로-2-메틸프로페인 약 64 %, 2-클로로-2-메틸프로페인 약 36 %</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. HBr 첨가 ════════ -->
+<section class="slide" data-sec="심화 · 알켄의 첨가 반응" data-title="알켄의 친전자성 첨가">
+  <h2><span class="tag alt">심화</span>알켄의 친전자성 첨가: 탄소 양이온을 거친다 <span class="small c-muted">[심화]</span></h2>
+  {{HBR}}
+  <div class="row ac14s1-two mt8">
+    <div class="card step"><p class="f21">① π 전자가 H–Br의 H를 공격 → C–H 결합 + 탄소 양이온 <b>(느린 단계)</b></p></div>
+    <div class="card step"><p class="f21">② $\ce{Br-}$이 탄소 양이온을 공격 → C–Br 결합</p></div>
+  </div>
+  <div class="formula sm step mt8">$\ce{CH2=CH2 + HBr -&gt; CH3CH2Br}$<div class="unit">친전자체($\ce{H+}$)가 먼저 첨가되므로 친전자성 첨가</div></div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 이 반응에서 친핵체로 작용하는 것은 무엇일까?</p>
+    <div class="answer step" style="flex:1">①에서 알켄의 π 결합, ②에서 $\ce{Br-}$</div>
+  </div>
+</section>
+
+<!-- ════════ 32. 마르코브니코프 ════════ -->
+<section class="slide" data-sec="심화 · 알켄의 첨가 반응" data-title="마르코브니코프 규칙">
+  <h2><span class="tag alt">심화</span>마르코브니코프 규칙: 더 안정한 탄소 양이온을 거친다 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{MARK}}</div>
+    <div class="col" style="flex:0 0 360px">{{EMARK}}</div>
+  </div>
+  <p class="f21 step"><mark>마르코브니코프 규칙</mark>: HX가 첨가될 때 H는 <b>수소가 더 많이 붙은 탄소</b>에, X는 <b>치환기가 더 많은 탄소</b>에 붙는다.</p>
+  <div class="row">
+    <div class="formula sm step" style="flex:0 0 420px">$\ce{(CH3)2C=CH2 + HBr -&gt; (CH3)3CBr}$</div>
+    <p class="f21" style="flex:1"><b>Q</b> 프로펜에 HBr이 첨가되면 주생성물은?</p>
+  </div>
+  <div class="row">
+    <div class="answer step" style="flex:0 0 700px;margin-left:auto">2-브로모프로페인 $\ce{CH3CHBrCH3}$(2차 탄소 양이온을 거침)</div>
+  </div>
+</section>
+
+<!-- ════════ 33. 수소화와 수화 ════════ -->
+<section class="slide" data-sec="심화 · 알켄의 첨가 반응" data-title="수소화와 물 첨가">
+  <h2><span class="tag alt">심화</span>수소화와 물 첨가 세 가지 <span class="small c-muted">[심화]</span></h2>
+  <table class="tight ac14s1-t ac14s1-hy">
+    <thead><tr><th>반응</th><th>시약</th><th>위치 선택성</th><th>입체 선택성</th><th>중간체</th><th>자리 옮김</th></tr></thead>
+    <tbody>
+      <tr><td>수소화</td><td>$\ce{H2}$, Pd/C</td><td>–</td><td>syn(촉매 표면 한쪽 면)</td><td>금속 표면 중간체</td><td>–</td></tr>
+      <tr class="step"><td>산 촉매 수화</td><td>$\ce{H3O+}$</td><td>마르코브니코프</td><td>없음</td><td>탄소 양이온</td><td>일어날 수 있다</td></tr>
+      <tr class="step"><td>수소붕소화–산화</td><td>$\ce{BH3}$, THF; $\ce{H2O2}$, $\ce{OH-}$</td><td>반마르코브니코프</td><td>syn</td><td>없음(사각형 전이 상태)</td><td>없다</td></tr>
+      <tr class="step"><td>옥시수은화–탈수은화</td><td>$\ce{Hg(OAc)2}$, $\ce{H2O}$; $\ce{NaBH4}$</td><td>마르코브니코프</td><td>조절되지 않음</td><td>머큐리늄 이온</td><td>없다</td></tr>
+    </tbody>
+  </table>
+  <div class="step mt8">{{HYD2}}</div>
+  <p class="small">공업: 에틸렌 + 물 → 에탄올($\ce{H3PO4}$, 250 °C). 산 촉매 수화의 역반응이 알코올의 산 촉매 탈수($\mathrm{E1}$)이다. $\ce{H2}$·Pd/C는 C=C만 환원하고 C=O, 벤젠 고리, C≡N은 환원하지 않는다.</p>
+  <div class="row">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> OH를 덜 치환된 탄소에 붙이려면 어느 방법을 쓸까?</p>
+    <div class="answer step" style="flex:1">수소붕소화–산화</div>
+  </div>
+</section>
+
+<!-- ════════ 34. 할로젠 첨가·에폭시화 ════════ -->
+<section class="slide" data-sec="심화 · 알켄의 첨가 반응" data-title="할로젠 첨가와 에폭시화">
+  <h2><span class="tag alt">심화</span>할로젠은 고리형 이온을 거쳐 anti 첨가한다 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{BROMO}}</div>
+    <div class="col stack">
+      <p class="f21 step">π 전자가 $\ce{Br2}$의 Br 하나를 공격하는 동시에 그 Br의 비공유 전자쌍이 다른 탄소와 결합 → <b>브로모늄 이온</b>(탄소 양이온이 아님)</p>
+      <p class="f21 step">$\ce{Br-}$이 가리지 않은 <b>반대쪽 면</b>에서 공격 → <mark>anti 첨가</mark>: 사이클로펜텐 + $\ce{Br2}$ → trans-1,2-다이브로모사이클로펜테인만</p>
+      <div class="card step"><p class="small"><b>에폭시화</b>: 과산화산($\ce{RCO3H}$)이 산소 원자 하나를 한 단계로 C=C에 전달 → 에폭사이드(세 원자 고리 에테르). 산 수용액에서 고리가 열리면 trans-1,2-다이올, 차가운 묽은 $\ce{KMnO4}$·$\ce{OsO4}$로는 cis-1,2-다이올</p></div>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 600px"><b>Q</b> 사이클로펜텐에 $\ce{Br2}$가 첨가될 때 cis형이 생기지 않는 까닭은?</p>
+    <div class="answer step" style="flex:1">Br가 한쪽 면을 가려 $\ce{Br-}$이 반대쪽에서만 공격한다.</div>
+  </div>
+</section>
+
+<!-- ════════ 35. 알카인 ════════ -->
+<section class="slide" data-sec="심화 · 알카인의 반응" data-title="알카인의 반응">
+  <h2><span class="tag alt">심화</span>알카인은 시약에 따라 cis와 trans 알켄을 골라 만든다 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">아세틸렌화 이온(말단 알카인 + $\ce{NaNH2}$)은 강한 친핵체 → 1차 할로젠화 알킬과 $\mathrm{S_N2}$(2·3차는 $\mathrm{E2}$가 우세)</p>
+      <div class="formula sm ac14s1-fs">$\ce{HC#C- + CH3Br -&gt; HC#CCH3 + Br-}$</div>
+      <p class="f21 step">수화($\ce{HgSO4}$, 묽은 $\ce{H2SO4}$): 마르코브니코프 → 엔올 → <b>케토–엔올 토토머화</b> → 케톤</p>
+    </div>
+    <div class="col">
+      <table class="tight ac14s1-t"><thead><tr><th>시약</th><th>생성물</th><th>입체 화학</th></tr></thead>
+        <tbody><tr><td>$\ce{H2}$, Pd/C</td><td>알케인</td><td>–</td></tr>
+          <tr><td>$\ce{H2}$, 린들라 촉매</td><td>cis 알켄</td><td>syn 첨가</td></tr>
+          <tr><td>Li 또는 Na, 액체 $\ce{NH3}$</td><td>trans 알켄</td><td>anti 첨가</td></tr></tbody></table>
+      <p class="small mt8">린들라 촉매: 활성을 낮춘 촉매 표면 한쪽 면 / Li: 비닐 라디칼이 덜 붐비는 trans 배치</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <div class="card" style="flex:1"><p class="f21"><span class="tag ex">예제</span>2-뷰틴 → (가) cis-2-뷰텐, (나) trans-2-뷰텐, 1-뷰틴 → (다) 2-뷰탄온의 시약은?</p></div>
+    <div class="board" style="flex:0 0 220px;height:56px"></div>
+  </div>
+  <div class="answers">
+    <div class="answer step">(가) $\ce{H2}$, 린들라 촉매(syn) &nbsp; (나) 액체 $\ce{NH3}$ 속 Li(라디칼 음이온 → trans 비닐 라디칼 → 비닐 음이온)</div>
+    <div class="answer step">(다) $\ce{HgSO4}$, $\ce{H2SO4}$, $\ce{H2O}$ → 엔올 $\ce{CH3CH2C(OH)=CH2}$ → 2-뷰탄온 $\ce{CH3CH2COCH3}$</div>
+  </div>
+</section>
+
+<!-- ════════ 36. 다이엔 ════════ -->
+<section class="slide" data-sec="심화 · 컨쥬게이션 다이엔" data-title="1,2-첨가와 1,4-첨가">
+  <h2><span class="tag alt">심화</span>컨쥬게이션 다이엔의 1,2-첨가와 1,4-첨가 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{ALLYL}}</div>
+    <div class="col" style="flex:0 0 380px">{{EDIENE}}</div>
+  </div>
+  <div class="row ac14s1-two">
+    <div class="card step"><p class="f21"><b>−80 °C</b>: 1,2-생성물 약 80 % — 역반응이 거의 없어 빨리 생기는 생성물 = <mark>속도론적 지배</mark></p></div>
+    <div class="card step"><p class="f21"><b>40 °C</b>: 1,4-생성물 약 80 % — 평형에 이르러 더 안정한 생성물 = <mark>열역학적 지배</mark></p></div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 40 °C에서 1,4-생성물이 많은 까닭은?</p>
+    <div class="answer step" style="flex:1">2중 결합 탄소에 치환기가 더 많아 더 안정하다.</div>
+  </div>
+</section>
+
+<!-- ════════ 37. 딜스–알더 ════════ -->
+<section class="slide" data-sec="심화 · 컨쥬게이션 다이엔" data-title="딜스–알더 반응">
+  <h2><span class="tag alt">심화</span>딜스–알더 반응: 한 단계로 고리를 만든다 <span class="small c-muted">[심화]</span></h2>
+  <div class="ac14s1-fig">{{DA}}</div>
+  <p class="f21 step"><mark>딜스–알더 반응</mark>: π 전자 4개(다이엔) + 2개(친다이엔체)가 고리 모양 전이 상태에서 <b>동시에</b> 재배열 → 새 C–C σ 결합 2개</p>
+  <p class="f21 step">조건: ① 다이엔은 <b>s-cis</b> 형태 ② 친다이엔체에 전자를 끄는 기(C=O, C≡N) → 빨라짐 ③ 친다이엔체의 cis 치환기는 생성물에서도 cis</p>
+  <div class="formula sm step ac14s1-fs">$\ce{CH2=CHCH=CH2 + CH2=CH2 -&gt; C6H10}$ &nbsp;·&nbsp; $\ce{C4H6 + C3H4O -&gt; C7H10O}$<div class="unit">1,3-뷰타다이엔 + 프로펜알(100 °C 부근) → 3-사이클로헥센-1-카브알데하이드</div></div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> s-trans 다이엔이 반응하지 못하는 까닭은?</p>
+    <div class="answer step" style="flex:1">양 끝 탄소가 너무 멀어 동시에 결합할 수 없다.</div>
+  </div>
+</section>
+
+<!-- ════════ 38. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="심화 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>2-메틸-2-뷰텐의 첨가 생성물</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{MB2}}</div>
+    <div class="col stack">
+      <p class="f21"><b>1)</b> HBr을 첨가할 때 거치는 중간체와 주생성물은?</p>
+      <p class="f21"><b>2)</b> 수소붕소화–산화로 물을 첨가하면 OH는 어느 탄소에 붙을까?</p>
+      <div class="board"></div>
+    </div>
+  </div>
+  <div class="answers">
+    <div class="answer step">1) 3차 탄소 양이온 $\ce{(CH3)2C+CH2CH3}$ → 2-브로모-2-메틸뷰테인 $\ce{(CH3)2CBrCH2CH3}$</div>
+    <div class="answer step">2) 덜 치환된 $\mathrm{C3}$ → 3-메틸-2-뷰탄올 $\ce{(CH3)2CHCH(OH)CH3}$(반마르코브니코프, syn)</div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 정리 ════════ -->
+<section class="slide" data-sec="[심화] 유기 반응과 메커니즘 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>[심화] 유기 반응과 메커니즘</h2>
+  <div class="ac14s1-top">
+    <div class="ac14s1-node ac14s1-dim">1-4-2 탄화수소 유도체 <span class="small">(지난 시간)</span></div>
+    <div class="ac14s1-arr">→</div>
+    <div class="ac14s1-node ac14s1-dim" style="border-style:solid;border-color:var(--field);color:var(--ink)"><b>오늘</b> <span class="small">심화</span></div>
+    <div class="ac14s1-arr">→</div>
+    <div class="ac14s1-node ac14s1-dim">[심화] 방향족 치환·카보닐 화합물</div>
+  </div>
+  <div class="ac14s1-map">
+    <div class="ac14s1-node ac14s1-main" data-q><b>치환과 제거</b> <span class="small c-muted">심화</span><br>❶ 굽은 화살표의 꼬리 = <span class="blank"><span class="step">전자쌍</span></span><br>❷ $\mathrm{S_N2}$: 한 단계, 뒤쪽 공격 → 입체 배열 <span class="blank"><span class="step">반전</span></span><br>❸ $\mathrm{S_N1}$: <span class="blank"><span class="step">탄소 양이온</span></span> 중간체, $v=k[\mathrm{RX}]$<br>❹ 탄소 양이온 안정성: 3차 <span class="blank"><span class="step">&gt; 2차 &gt; 1차</span></span><br>❺ 더 치환된 알켄 = <span class="blank"><span class="step">자이체프 규칙</span></span><br>❻ $\mathrm{E2}$: H와 X가 <span class="blank"><span class="step">anti 동일 평면</span></span></div>
+    <div class="ac14s1-node ac14s1-main" data-q><b>첨가 반응</b> <span class="small c-muted">심화</span><br>❼ 라디칼: 개시 → <span class="blank"><span class="step">전파</span></span> → 종결<br>❽ H는 수소가 많은 탄소에 = <span class="blank"><span class="step">마르코브니코프 규칙</span></span><br>❾ $\ce{Br2}$: 브로모늄 이온 → <span class="blank"><span class="step">anti 첨가</span></span><br>❿ 다이엔: 낮은 온도 1,2-첨가 = <span class="blank"><span class="step">속도론적 지배</span></span></div>
+  </div>
+</section>
+
+<!-- ════════ 40. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="[심화] 유기 반응과 메커니즘 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] $\mathrm{S_N2}$·$\mathrm{S_N1}$·$\mathrm{E2}$·$\mathrm{E1}$·$\mathrm{E1cB}$의 단계·중간체·속도식과 마르코브니코프·자이체프 규칙을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 기질·시약·용매·온도로 우세한 반응 경로를 예측하고 굽은 화살표로 메커니즘을 그릴 수 있다.</button>
+    <button class="chk">[가치·태도] 반응 조건을 바꾸어 원하는 생성물을 얻는 합성 설계의 중요성을 이해한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\mathrm{S_N1}$의 숫자 1이 뜻하는 것은? <span class="step">→ <span class="ans">속도 결정 단계의 분자도(단계 수가 아님)</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 3차 할로젠화 알킬 + 강한 염기의 주된 경로는? <span class="step">→ <span class="ans">$\mathrm{E2}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 프로펜 + HBr의 주생성물은? <span class="step">→ <span class="ans">2-브로모프로페인</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> [심화] 방향족 치환과 카보닐 화합물의 반응 — 벤젠의 π 전자는 왜 첨가 대신 치환을 할까?</div>
+</section>

@@ -1,0 +1,48 @@
+/* 고급화학 1-4-S1 [심화] — 덱 전용 (모두 .ac14s1- 접두어) */
+.cover h1.ac14s1-h1{font-size:62px;line-height:1.18}
+.ac14s1-st{gap:14px}
+.ac14s1-st .stage{padding:6px 10px}
+.ac14s1-st .stage h3{font-size:21px;margin-bottom:0}
+.ac14s1-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ac14s1-s4 .stage{padding:6px 8px}
+.ac14s1-s4 .stage h3{font-size:21px;margin-bottom:0}
+table.ac14s1-t{width:100%}
+table.ac14s1-t td,table.ac14s1-t th{font-size:20px;padding:3px 8px;text-align:center;vertical-align:middle}
+table.ac14s1-t td.l{text-align:left}
+table.ac14s1-f td:first-child{white-space:nowrap;font-weight:700}
+table.ac14s1-cmp th{white-space:nowrap}
+table.ac14s1-cmp thead th.ac14s1-sub{border-bottom:3px solid var(--field)}
+table.ac14s1-cmp thead th.ac14s1-eli{border-bottom:3px solid #7B4FC8}
+table.ac14s1-hy td{font-size:19px}
+.ac14s1-two{gap:14px}
+.ac14s1-two .card{flex:1 1 0;padding:8px 12px}
+.ac14s1-two .card h3{font-size:22px;margin-bottom:2px}
+.ac14s1-three{gap:12px}
+.ac14s1-three .card{flex:1 1 0;padding:8px 12px;font-size:21px}
+.ac14s1-pick{gap:16px;margin-top:8px}
+.ac14s1-pick .card{flex:1 1 0;text-align:center;font-size:22px;padding:14px 10px}
+ol.ac14s1-ol{padding-left:1.4em}
+ol.ac14s1-ol li{margin-top:6px}
+/* 개념 지도 */
+.ac14s1-top{display:flex;align-items:center;gap:12px;margin-top:8px}
+.ac14s1-map{display:flex;align-items:stretch;gap:16px;margin-top:14px}
+.ac14s1-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.8}
+.ac14s1-node.ac14s1-main{flex:1 1 0;border-color:var(--field);border-style:dashed;background:#F2FAF5}
+.ac14s1-node.ac14s1-dim{border-style:dashed;color:var(--muted);padding:6px 14px}
+.ac14s1-arr{font-size:26px;color:var(--muted)}
+/* 실험실 */
+.ac14s1-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:7px}
+.ac14s1-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.ac14s1-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac14s1-seg .btn.ac14s1-act{background:var(--field);color:#fff;border-color:var(--field)}
+.ac14s1-seg .btn.ac14s1-pk{background:#FFF3C4;border-color:#E08A2C;color:var(--ink)}
+.ac14s1-seg .small{margin:0 4px 0 0;min-width:40px}
+table.ac14s1-read{width:100%}
+table.ac14s1-read th{font-size:19px;padding:5px 10px;text-align:left;white-space:nowrap}
+table.ac14s1-read td{font-size:20px;width:330px;padding:5px 10px;text-align:center}
+output.kind.ac14s1-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.ac14s1-log{width:100%}
+table.ac14s1-log th,table.ac14s1-log td{font-size:19px;padding:2px 6px;text-align:center;white-space:nowrap}
+.ac14s1-fig{text-align:center}
+.ac14s1-fig svg.fig{display:inline-block}
+.formula.ac14s1-fs{font-size:24px}
