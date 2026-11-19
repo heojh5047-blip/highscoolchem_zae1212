@@ -1,0 +1,428 @@
+<!-- 고급화학 1-M 대단원 Ⅰ 마무리 — gen.py가 tpl.html에서 만든다(그림 자리표). 이 파일을 직접 고치지 말고 SCRATCH/고급화학_1-M/tpl.html을 고친다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 물질의 구조 › 대단원 마무리</div>
+    <h1 class="ac19-h1">대단원 Ⅰ<br><span class="acc">마무리</span></h1>
+    <p class="sub">오비탈에서 분자 구조까지, 그리고 떨리는 분자</p>
+    <p class="meta">고등학교 고급 화학 69–71쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <table class="tight ac19-std">
+    <tr><td>[12고화01-01]</td><td class="l">오비탈은 전자의 에너지와 위치의 정보를 가진 함수 — 원자의 현대적 모형</td></tr>
+    <tr><td>[12고화01-02]</td><td class="l">전형 원소와 전이 원소 원자의 바닥상태 전자 배치 비교</td></tr>
+    <tr><td>[12고화01-03]</td><td class="l">다양한 화학 결합의 원리, 입자 간 거리와 에너지 관계 추론</td></tr>
+    <tr><td>[12고화01-04]</td><td class="l">루이스 구조식으로 형식 전하와 공명 구조, 분자의 안정성 비교</td></tr>
+    <tr><td>[12고화01-05]</td><td class="l">원자가 결합 이론과 혼성 오비탈로 탄소 화합물의 분자 구조 탐색</td></tr>
+    <tr><td>[12고화01-06]</td><td class="l">포화·불포화 탄화수소의 이성질체를 구조식으로 그려 비교</td></tr>
+    <tr><td>[12고화01-07]</td><td class="l">탄화수소 유도체의 작용기 — 산 염기 반응, 산화·환원 반응과 연관</td></tr>
+  </table>
+  <ol class="goals mt8 f21">
+    <li>대단원 Ⅰ의 핵심 개념을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li><b>종합 문제</b>를 풀며 오비탈·결합·분자 구조를 이어서 설명할 수 있다.</li>
+    <li>$\ce{H2O}$와 $\ce{CO2}$의 <b>진동 운동 방식과 에너지</b>를 분자 모형으로 설명하고, 온실 기체인 까닭을 발표할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">대응표</div><div class="farr">→</div>
+    <div class="fnode">종합 문제 1–7</div><div class="farr">→</div>
+    <div class="fnode hl">STEAM: 분자의 진동</div><div class="farr">→</div>
+    <div class="fnode">스스로 점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="개념 정리 ① 원자 오비탈">
+  <h2><span class="tag ink">개념 정리</span>1. 원자 오비탈</h2>
+  <div class="ac19-top"><span class="ac19-u ac19-now">1. 원자 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u">2. 화학 결합과 에너지</span><span class="ac19-ar">→</span><span class="ac19-u">3. 원자가 결합과 혼성 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u">4. 탄소 화합물의 분자 구조</span></div>
+  <div class="ac19-map">
+    <div class="ac19-node" data-q><h3>01–02 보어 모형과 현대적 모형 <span class="small c-muted">(1-1-1)</span></h3>
+      ❶ 선 스펙트럼 → <span class="blank"><span class="step">에너지 준위</span></span>의 양자화<br>
+      ❷ 수소 원자 $E_n=$ <span class="blank"><span class="step">$-\dfrac{2.178\times10^{-18}}{n^2}\ \text{J}$</span></span><br>
+      ❸ 물질파 $\lambda=$ <span class="blank"><span class="step">$\dfrac{h}{mv}$</span></span>, 불확정성 $\Delta x\cdot\Delta p\ge$ <span class="blank"><span class="step">$\dfrac{h}{4\pi}$</span></span><br>
+      ❹ 파동 함수의 제곱 $\psi^2$ = <span class="blank"><span class="step">확률 밀도</span></span></div>
+    <div class="ac19-node" data-q><h3>03–04 오비탈 모양과 전자 배치 <span class="small c-muted">(1-1-3)</span></h3>
+      ❺ $l=0\sim$ <span class="blank"><span class="step">$n-1$</span></span>, $m_l$은 <span class="blank"><span class="step">$2l+1$</span></span>개<br>
+      ❻ s는 <span class="blank"><span class="step">구형</span></span>, p는 <span class="blank"><span class="step">아령 모양</span></span><br>
+      ❼ 다전자 원자: <span class="blank"><span class="step">$E_{ns}&lt;E_{np}&lt;E_{nd}$</span></span> (가려막기·침투)<br>
+      ❽ <span class="blank"><span class="step">쌓음 원리</span></span>·파울리 배타 원리·<span class="blank"><span class="step">훈트 규칙</span></span><br>
+      ❾ 전이 원소 양이온은 <span class="blank"><span class="step">4s</span></span> 전자를 먼저 잃음</div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(1-1-1 #38, 1-1-3 #34)와 같은 내용이다.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="개념 정리 ② 화학 결합과 에너지">
+  <h2><span class="tag ink">개념 정리</span>2. 화학 결합과 에너지</h2>
+  <div class="ac19-top"><span class="ac19-u">1. 원자 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u ac19-now">2. 화학 결합과 에너지</span><span class="ac19-ar">→</span><span class="ac19-u">3. 원자가 결합과 혼성 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u">4. 탄소 화합물의 분자 구조</span></div>
+  <div class="ac19-map">
+    <div class="ac19-node" data-q><h3>01 공유 결합 <span class="small c-muted">(1-2-1)</span></h3>
+      ❶ 형식 전하 = 원자가 전자 수 − <span class="blank"><span class="step">해당 원자에 속한 전자 수</span></span><br>
+      ❷ 실제 구조 = <span class="blank"><span class="step">공명 혼성체</span></span><br>
+      ❸ 결합 길이 = 위치 에너지가 <span class="blank"><span class="step">최소</span></span>인 거리<br>
+      ❹ 결합 차수 ↑ → 결합 길이 <span class="blank"><span class="step">↓</span></span><br>
+      ❺ 전기음성도 차 ↑ → <span class="blank"><span class="step">이온성</span></span> ↑</div>
+    <div class="ac19-node" data-q><h3>02–04 이온·금속·전이 금속 <span class="small c-muted">(1-2-2)</span></h3>
+      ❻ 격자 에너지 ∝ <span class="blank"><span class="step">$Z^+Z^-/r_0$</span></span>, <span class="blank"><span class="step">본-하버 회로</span></span>로 구함<br>
+      ❼ 금속 결합: 금속 양이온과 <span class="blank"><span class="step">자유 전자</span></span>의 인력<br>
+      ❽ 착이온의 흔한 배위수 <span class="blank"><span class="step">6</span></span> (팔면체형)
+      <span class="ac19-deep"><b class="ac19-dt">심화</b>❾ 위 <span class="blank"><span class="step">$e_g$</span></span>, 아래 <span class="blank"><span class="step">$t_{2g}$</span></span> · ❿ 강한 장 → <span class="blank"><span class="step">저스핀</span></span></span></div>
+  </div>
+  <p class="small c-muted mt8">1-2-1 #35, 1-2-2 #38 「스스로 정리」 · 점선 상자는 심화(결정장 이론)</p>
+</section>
+
+<!-- ════════ 5. 개념 정리 ③ ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="개념 정리 ③ 원자가 결합과 혼성 오비탈">
+  <h2><span class="tag ink">개념 정리</span>3. 원자가 결합과 혼성 오비탈</h2>
+  <div class="ac19-top"><span class="ac19-u">1. 원자 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u">2. 화학 결합과 에너지</span><span class="ac19-ar">→</span><span class="ac19-u ac19-now">3. 원자가 결합과 혼성 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u">4. 탄소 화합물의 분자 구조</span></div>
+  <div class="ac19-map">
+    <div class="ac19-node" data-q><h3>01 원자가 결합 · 02 분자 오비탈 <span class="small c-muted">(1-3-1)</span></h3>
+      ❶ 두 원자 오비탈의 <span class="blank"><span class="step">겹침</span></span>으로 공유 결합<br>
+      ❷ 핵 축을 따라 겹침 <span class="blank"><span class="step">σ 결합</span></span>, 나란히 옆으로 <span class="blank"><span class="step">π 결합</span></span><br>
+      ❸ 3중 결합 = σ <span class="blank"><span class="step">1</span></span> + π <span class="blank"><span class="step">2</span></span>
+      <span class="ac19-deep"><b class="ac19-dt">심화</b>❹ 결합 차수 = ½(<span class="blank"><span class="step">결합성</span></span> − <span class="blank"><span class="step">반결합성</span></span> 전자 수) · ❺ $\ce{O2}$ 홀전자 2 → <span class="blank"><span class="step">상자성</span></span></span></div>
+    <div class="ac19-node" data-q><h3>03 혼성 오비탈 <span class="small c-muted">(1-3-1)</span></h3>
+      ❻ s 1 + p 3 → $sp^3$, <span class="blank"><span class="step">109.5°</span></span><br>
+      ❼ s 1 + p 2 → $sp^2$, <span class="blank"><span class="step">120°</span></span>, 남은 p로 π 1<br>
+      ❽ s 1 + p 1 → $sp$, <span class="blank"><span class="step">180°</span></span>, 남은 p로 π 2<br>
+      ❾ 혼성은 구조를 설명하는 <span class="blank"><span class="step">모형</span></span>이다 — 루이스 구조 → 원자가 결합 → 혼성 오비탈로 발전</div>
+  </div>
+  <p class="small c-muted mt8">1-3-1 #38 「스스로 정리」 · 점선 상자는 심화(분자 오비탈 이론)</p>
+</section>
+
+<!-- ════════ 6. 개념 정리 ④ ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="개념 정리 ④ 탄소 화합물의 분자 구조">
+  <h2><span class="tag ink">개념 정리</span>4. 탄소 화합물의 분자 구조</h2>
+  <div class="ac19-top"><span class="ac19-u">1. 원자 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u">2. 화학 결합과 에너지</span><span class="ac19-ar">→</span><span class="ac19-u">3. 원자가 결합과 혼성 오비탈</span><span class="ac19-ar">→</span><span class="ac19-u ac19-now">4. 탄소 화합물의 분자 구조</span></div>
+  <div class="ac19-map">
+    <div class="ac19-node" data-q><h3>01 구조식 · 02 탄화수소 <span class="small c-muted">(1-4-1)</span></h3>
+      ❶ 알케인 <span class="blank"><span class="step">$\mathrm{C}_n\mathrm{H}_{2n+2}$</span></span>: 포화, 연소·<span class="blank"><span class="step">치환</span></span> 반응<br>
+      ❷ 알켄·알카인: 불포화 → <span class="blank"><span class="step">첨가</span></span> 반응<br>
+      ❸ 탄소 골격이 다른 <span class="blank"><span class="step">구조 이성질체</span></span> (C 5개 → 3, 6개 → 5)<br>
+      ❹ C=C는 회전하지 못함 → <span class="blank"><span class="step">시스-트랜스 이성질체</span></span></div>
+    <div class="ac19-node" data-q><h3>02 유도체 · 03 방향족 <span class="small c-muted">(1-4-2)</span></h3>
+      ❺ 할로젠화 알킬의 C는 <span class="blank"><span class="step">$\delta^+$</span></span> → 친핵성 치환, <span class="blank"><span class="step">제거</span></span> 반응<br>
+      ❻ 알코올: <span class="blank"><span class="step">수소 결합</span></span>, 산화 → 알데하이드 → <span class="blank"><span class="step">카복실산</span></span><br>
+      ❼ 벤젠: 평면 정육각형, <span class="blank"><span class="step">$sp^2$</span></span><br>
+      ❽ π 전자 6개가 <span class="blank"><span class="step">비편재화</span></span> → 공명 혼성체, 더 안정</div>
+  </div>
+  <p class="small c-muted mt8">1-4-1 #37, 1-4-2 #35 「스스로 정리」</p>
+</section>
+
+<!-- ════════ 7. 연결 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="연결: 전자에서 분자 모양까지">
+  <h2><span class="tag alt">연결</span>전자가 있는 곳에서 분자의 모양까지</h2>
+  {{CHAIN}}
+  <p class="f22 mt8"><b>Q</b> 대단원 Ⅰ의 네 중단원을 한 줄로 이으면 어떻게 될까?</p>
+  <div class="answer step">전자가 있는 곳(오비탈)이 결합을 정하고, 결합이 분자 모양을 정하며, 분자 모양과 작용기가 성질과 반응을 정한다.</div>
+  <p class="small step mt8">종합 문제 2(알렌)는 이 네 칸을 한 분자에서 모두 쓴다. STEAM(분자 모양 → 진동 방식 → 온실 효과)도 같은 사슬의 끝이다.</p>
+</section>
+
+<!-- ════════ 8. 연습 문제 대응표 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="연습 문제 대응표">
+  <h2><span class="tag alt">연습 문제 대응표</span>중단원 연습 문제는 어디에서 풀었나?</h2>
+  <table class="tight ac19-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac19-sec" rowspan="4">Ⅰ-1 (27쪽)</td><td>1</td><td class="l">$n=4$일 때 허용되는 $l$</td><td class="ac19-deck">1-1-3 #30</td><td class="l ac19-key"><span class="step" data-g="k1">$l=0,1,2,3$ (4s, 4p, 4d, 4f)</span></td></tr>
+    <tr><td>2</td><td class="l">불가능한 양자수 조합</td><td class="ac19-deck">#31</td><td class="l ac19-key"><span class="step" data-g="k1">2), 4)</span></td></tr>
+    <tr><td>3</td><td class="l">전자 배치, 홀전자, 원자가 전자</td><td class="ac19-deck">#32</td><td class="l ac19-key"><span class="step" data-g="k1">예: N $[\mathrm{He}]2s^22p^3$ 홀 3, 원자가 5</span></td></tr>
+    <tr><td>4</td><td class="l">원자 속 전자의 속력 불확정성</td><td class="ac19-deck">#33</td><td class="l ac19-key"><span class="step" data-g="k1">$2.90\times10^{5}\ \text{m/s}$</span></td></tr>
+    <tr><td class="ac19-sec" rowspan="5">Ⅰ-2 (45쪽)</td><td>1</td><td class="l">$\ce{I3-}$의 루이스 구조와 형식 전하</td><td class="ac19-deck">1-2-2 #31</td><td class="l ac19-key"><span class="step" data-g="k1">가운데 I −1, 양 끝 0</span></td></tr>
+    <tr><td>2</td><td class="l">옥텟을 만족시키지 못하는 중심 원자</td><td class="ac19-deck">#32</td><td class="l ac19-key"><span class="step" data-g="k1">2) $\ce{BF3}$, 5) $\ce{ClF3}$</span></td></tr>
+    <tr><td>3</td><td class="l">$\ce{NO3-}$의 공명 구조</td><td class="ac19-deck">#33</td><td class="l ac19-key"><span class="step" data-g="k1">공명 구조 3개, 결합 차수 4/3</span></td></tr>
+    <tr><td>4</td><td class="l">KCl의 격자 에너지</td><td class="ac19-deck">#34</td><td class="l ac19-key"><span class="step" data-g="k1">717 kJ/mol</span></td></tr>
+    <tr><td>5</td><td class="l">[심화] 철(Ⅱ) 착이온의 홀전자 수</td><td class="ac19-deck">#35</td><td class="l ac19-key"><span class="step" data-g="k1">$\ce{[Fe(CN)6]^4-}$ 0, $\ce{[Fe(H2O)6]^2+}$ 4</span></td></tr>
+    <tr><td class="ac19-sec" rowspan="2">Ⅰ-3 (54쪽)</td><td>1</td><td class="l">중심 원자의 혼성과 분자의 극성</td><td class="ac19-deck">1-3-1 #34</td><td class="l ac19-key"><span class="step" data-g="k1">$\ce{NF3}$ $sp^3$ 극성, 나머지 무극성</span></td></tr>
+    <tr><td>2</td><td class="l">[심화] 액체 질소와 액체 산소</td><td class="ac19-deck">#35</td><td class="l ac19-key"><span class="step" data-g="k1">결합 차수 3, 2 · 반자성, 상자성</span></td></tr>
+    <tr><td class="ac19-sec" rowspan="4">Ⅰ-4 (69쪽)</td><td>1</td><td class="l">$\ce{C5H12}$, $\ce{C6H14}$의 구조 이성질체</td><td class="ac19-deck">1-4-2 #31</td><td class="l ac19-key"><span class="step" data-g="k1">3개, 5개</span></td></tr>
+    <tr><td>2</td><td class="l">$\ce{CH3-CH=CH-C#CH}$의 혼성과 결합</td><td class="ac19-deck">#32</td><td class="l ac19-key"><span class="step" data-g="k1">$sp^3,sp^2,sp^2,sp,sp$ · σ 4, π 3</span></td></tr>
+    <tr><td>3</td><td class="l">가장 간단한 컨쥬게이션 분자</td><td class="ac19-deck">#33</td><td class="l ac19-key"><span class="step" data-g="k1">$\ce{CH2=CH-CH=CH2}$ 등</span></td></tr>
+    <tr><td>4</td><td class="l">끓는점이 가장 높은 것</td><td class="ac19-deck">#34</td><td class="l ac19-key"><span class="step" data-g="k1">2) 1-뷰탄올 (수소 결합)</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">풀이와 그림은 각 덱의 그 장에 있다. 덱 #장 = 슬라이드 번호.</p>
+</section>
+
+<!-- ════════ 9. 종합 문제 대응표 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 대단원 마무리" data-title="종합 문제 대응표">
+  <h2><span class="tag alt">종합 문제 대응표</span>종합 문제는 어느 소단원 덱과 이어질까?</h2>
+  <table class="tight ac19-ov">
+    <tr><th>종합 문제</th><th>내용</th><th>같은·비슷한 내용을 다룬 소단원 덱 (#장)</th><th>이 덱</th></tr>
+    <tr><td>1</td><td class="l">수소 원자의 이온화 에너지</td><td class="l"><b>1-1-1 확인 문제 01(#35)과 같은 계산</b> — 그 덱은 1 mol당 값까지</td><td>#10</td></tr>
+    <tr><td>2</td><td class="l">알렌의 형식 전하·혼성·결합</td><td class="l">1-2-1 형식 전하(#10) · 1-3-1 $sp^2$·$sp$ 혼성(#19–21) · 1-4-2 연습 문제 2(#32)</td><td>#11–12</td></tr>
+    <tr><td>3</td><td class="l">[심화] $\ce{[Co(CN)6]^3-}$의 홀전자와 색</td><td class="l">1-2-2 [심화] 착이온의 색·분광 화학 계열·Co(Ⅲ)(#25–27)</td><td>#13</td></tr>
+    <tr><td>4</td><td class="l">[심화] $\ce{[Co(CN)6]^4-}$의 산화와 자성</td><td class="l">1-2-2 연습 문제 5(#35, 같은 꼴의 Fe(Ⅱ) 착이온)</td><td>#14</td></tr>
+    <tr><td>5</td><td class="l">기하 이성질체 그리기</td><td class="l">1-4-1 시스-트랜스 이성질체(#25–26) · 확인 문제 02(#35)</td><td>#15</td></tr>
+    <tr><td>6</td><td class="l">탄소 3개인 화합물의 예</td><td class="l">1-4-1 작용기에 따른 분류(#13–15) · 1-4-2 탄화수소 유도체(#4–19)</td><td>#16</td></tr>
+    <tr><td>7</td><td class="l">반응의 주된 생성물</td><td class="l">1-4-1 치환·첨가 반응(#23, #27–28) · 1-4-2 친핵성 치환·제거 반응(#6–7)</td><td>#17–18</td></tr>
+  </table>
+  <div class="note mt16"><b>종합 문제 1</b>은 1-1-1 확인 문제 01과 같은 계산이다 — 오늘은 원자 1개당 값과 "제거 = $n=\infty$로 전이"만 확인하고 넘어가도 된다. 2–7은 이 덱에서 한 장씩 푼다.</div>
+</section>
+
+<!-- ════════ 10. 종합 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 1">
+  <h2><span class="tag q">종합 문제 1</span>수소 원자의 이온화 에너지</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">바닥상태에 있는 수소 원자에서 전자를 제거하여 $\ce{H+}$ 이온이 생성되는 데 필요한 이온화 에너지를 계산하여라.</p>
+      <p class="f21 mt8"><b>Q</b> 전자를 "제거한다"는 것은 어느 준위에서 어느 준위로 옮기는 것일까?</p>
+      <div class="answer step">$n_\mathrm{i}=1$ → $n_\mathrm{f}=\infty$ (에너지 0)</div>
+      <div class="formula sm step mt8">$\Delta E=-2.178\times10^{-18}\ \text{J}\left(\tfrac{1}{\infty^2}-\tfrac{1}{1^2}\right)=2.178\times10^{-18}\ \text{J}$</div>
+      <div class="answer step">$2.178\times10^{-18}\ \text{J}$ <span class="small">(1 mol당 약 1311 kJ/mol)</span></div>
+      <div class="board" style="height:24px"></div>
+    </div>
+    <div class="col" style="flex:0 0 360px">{{HLEV}}</div>
+  </div>
+</section>
+
+<!-- ════════ 11. 종합 문제 2 (1)(2) ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 2 (1)(2)">
+  <h2><span class="tag q">종합 문제 2</span>알렌의 형식 전하와 혼성 오비탈</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{ALLENE}}<div class="board"></div></div>
+    <div class="col stack">
+      <p class="f21">알렌의 루이스 구조식이 왼쪽과 같다.</p>
+      <p class="ac19-sub mt8">1) 알렌을 구성하는 각 원자의 형식 전하를 표시하여라.</p>
+      <p class="ac19-sub">2) 원자가 결합 이론으로 설명할 때, 각 탄소 원자의 혼성 오비탈의 이름은?</p>
+      <div class="formula sm step mt8">형식 전하 = 원자가 − 비공유 − $\tfrac12$ × 공유 전자 수<span class="unit">끝 C: $4-0-\tfrac12(8)=0$ · 가운데 C: $4-0-\tfrac12(8)=0$ · H: $1-0-\tfrac12(2)=0$</span></div>
+      <div class="answers">
+        <div class="answer step">1) 모든 원자의 형식 전하는 0</div>
+        <div class="answer step">2) $sp^2$, $sp$, $sp^2$ <span class="small">(결합 원자 수 3, 2, 3)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 종합 문제 2 (3)(4) ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 2 (3)(4)">
+  <h2><span class="tag q">종합 문제 2</span>알렌의 σ 결합·π 결합과 모양</h2>
+  <p class="ac19-sub">3) 알렌 분자에 존재하는 σ 결합과 π 결합은 각각 몇 개인가? &nbsp; 4) 알렌이 동일 평면에 존재하는 분자인지 또는 아닌지를 설명하여라.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">{{ALLPI}}</div>
+    <div class="col stack">
+      <div class="answer step">3) σ 결합 6개 (C–H 4 + C–C 2), π 결합 2개</div>
+      <p class="f21 mt8"><b>Q</b> 두 π 결합은 서로 어떤 방향일까?</p>
+      <div class="answer step ac19-left">4) 평면이 아니다. 가운데 $sp$ 탄소에 남은 두 p 오비탈($p_y$, $p_z$)이 서로 수직이어서 두 π 결합이 수직이고, 양 끝 $\ce{CH2}$ 면도 서로 90° 틀어져 있다.</div>
+      <p class="small step mt8">채점 요소: π 결합 두 개가 수직 · 가운데 C의 p 오비탈 두 개 · 두 $\ce{CH2}$ 면이 수직</p>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 종합 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 3 [심화]">
+  <h2><span class="tag q">종합 문제 3</span>$\ce{[Co(CN)6]^3-}$의 홀전자와 색<span class="small c-muted">[심화]</span></h2>
+  <p class="ac19-sub">착이온 $\ce{[Co(CN)6]^3-}$는 연한 노란색이다. 1) 홀전자의 수는 몇 개인가? 2) 리간드를 암모니아로 치환하면 착이온이 띠는 색의 파장은 길어질까, 짧아질까?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">{{CO3}}</div>
+    <div class="col stack">
+      <p class="f21 step">$\ce{Co^3+}$: $[\mathrm{Ar}]3d^6$, $\ce{CN-}$는 강한 장 → 저스핀 $t_{2g}^6$</p>
+      <div class="answer step">1) 0개</div>
+      <p class="f21 mt8"><b>Q</b> $\ce{NH3}$로 바꾸면 $\Delta_\mathrm{o}$는 어떻게 될까?</p>
+      <div class="answer step ac19-left">2) $\ce{NH3}$도 강한 장이지만 $\ce{CN-}$보다 $\Delta_\mathrm{o}$가 약간 작다 → 더 긴 파장의 빛을 흡수 → 띠는 색의 파장도 길어진다.</div>
+      <p class="small step mt8">띠는 색은 흡수 빛의 보색(1-2-2 #25): 보라 → 파랑 흡수로 연한 노란색 → 노란 주황색</p>
+      <div class="board" style="height:36px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 종합 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 4 [심화]">
+  <h2><span class="tag q">종합 문제 4</span>산화되면 상자성에서 반자성으로<span class="small c-muted">[심화]</span></h2>
+  <p class="ac19-sub">상자성인 $\ce{[Co(CN)6]^4-}$ 이온이 $\ce{[Co(CN)6]^3-}$ 이온으로 산화할 때 반자성이 된다. 그 이유를 착이온의 d 오비탈 전자 배치와 결정장 이론으로 설명하여라.</p>
+  {{CO4}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21 step">$\ce{Co^2+}$ $d^7$ → $\ce{Co^3+}$ $d^6$ · $\ce{CN-}$는 강한 장 → 둘 다 저스핀</p>
+      <div class="answer step ac19-left">$t_{2g}^6e_g^1$(홀전자 1개, 상자성)에서 에너지가 높은 $e_g$ 전자 1개를 잃어 $t_{2g}^6$(홀전자 0개, 반자성)이 된다.</div>
+    </div>
+    <p class="small step" style="flex:0 0 300px">채점 요소: d 전자 수 7 → 6 · 강한 장 저스핀 · 홀전자 1 → 0</p>
+  </div>
+</section>
+
+<!-- ════════ 15. 종합 문제 5 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 5">
+  <h2><span class="tag q">종합 문제 5</span>기하 이성질체 그리기</h2>
+  <p class="f21">$\ce{CH3-CH=CH-Br}$과 $\ce{Br-CH=CH-CH2-CH3}$ 각각의 기하 이성질체 구조를 그려라.</p>
+  <div class="board" style="height:28px"></div>
+  {{ISO}}
+  <div class="answer step">C=C는 회전하지 못하고, 두 탄소에 각각 서로 다른 원자(단)가 붙어 있어 시스·트랜스가 두 가지씩 생긴다.</div>
+  <p class="small mt8">기하 이성질체 = 시스-트랜스 이성질체(1-4-1 #25). 형광펜: 같은 쪽 또는 반대쪽에 놓인 두 원자단 · 이름은 덱이 붙임</p>
+</section>
+
+<!-- ════════ 16. 종합 문제 6 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 6">
+  <h2><span class="tag q">종합 문제 6</span>탄소 원자 수가 3개인 탄소 화합물</h2>
+  <p class="f21">다음 각 계열에 해당하는 탄소 원자 수가 3개인 탄소 화합물의 예를 들어라.</p>
+  <div class="row mt8">
+    <table class="tight ac19-c3">
+      <tr><th>계열</th><th>예</th><th>이름</th></tr>
+      <tr><td>1) 알케인</td><td><span class="step" data-g="c1">$\ce{CH3CH2CH3}$</span></td><td><span class="step" data-g="c1">프로페인</span></td></tr>
+      <tr><td>2) 알켄</td><td><span class="step" data-g="c2">$\ce{H2C=CHCH3}$</span></td><td><span class="step" data-g="c2">프로펜</span></td></tr>
+      <tr><td>3) 알카인</td><td><span class="step" data-g="c3">$\ce{HC#CCH3}$</span></td><td><span class="step" data-g="c3">프로파인</span></td></tr>
+      <tr><td>4) 할로젠 화합물</td><td><span class="step" data-g="c4">$\ce{CH3CH2CH2Br}$</span></td><td><span class="step" data-g="c4">1-브로모프로페인</span></td></tr>
+      <tr><td>5) 알코올</td><td><span class="step" data-g="c5">$\ce{CH3CH2CH2OH}$</span></td><td><span class="step" data-g="c5">1-프로판올</span></td></tr>
+    </table>
+    <table class="tight ac19-c3">
+      <tr><th>계열</th><th>예</th><th>이름</th></tr>
+      <tr><td>6) 에테르</td><td><span class="step" data-g="c6">$\ce{CH3OCH2CH3}$</span></td><td><span class="step" data-g="c6">에틸 메틸 에테르</span></td></tr>
+      <tr><td>7) 알데하이드</td><td><span class="step" data-g="c7">$\ce{CH3CH2CHO}$</span></td><td><span class="step" data-g="c7">프로판알</span></td></tr>
+      <tr><td>8) 케톤</td><td><span class="step" data-g="c8">$\ce{CH3COCH3}$</span></td><td><span class="step" data-g="c8">아세톤</span></td></tr>
+      <tr><td>9) 카복실산</td><td><span class="step" data-g="c9">$\ce{CH3CH2COOH}$</span></td><td><span class="step" data-g="c9">프로판산</span></td></tr>
+      <tr><td>10) 에스터</td><td><span class="step" data-g="c10">$\ce{CH3COOCH3}$</span></td><td><span class="step" data-g="c10">아세트산 메틸</span></td></tr>
+    </table>
+  </div>
+  <p class="f21 mt8"><b>Q</b> 6)–10)을 서로 가르는 기준은 무엇일까?</p>
+  <div class="answer step">작용기: –O–(에테르), –CHO(알데하이드), –CO–(케톤), –COOH(카복실산), –COO–(에스터)</div>
+  <p class="small mt8">부록 풀이의 예이다. 같은 계열의 다른 이성질체(2-프로판올, 2-브로모프로페인, 폼산 에틸 등)도 정답이다.</p>
+</section>
+
+<!-- ════════ 17. 종합 문제 7 (1)(2) ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 7 (1)(2)">
+  <h2><span class="tag q">종합 문제 7</span>반응의 주된 생성물 ① 할로젠화 알킬</h2>
+  <p class="f21">다음 탄소 화합물의 화학 반응에서 주된 생성물의 구조식을 써라. &nbsp; 1) $\ce{(CH3)3CBr + ^{-}OH}$ &nbsp; 2) $\ce{CH3CH2CH2Br + ^{-}SCH2CH3}$</p>
+  {{RX12}}
+  <div class="answer step ac19-left">둘 다 친핵성 치환 반응 — 친핵체($\ce{OH-}$, $\ce{CH3CH2S-}$)가 $\delta^+$ 탄소를 공격해 새 결합을 만들고, $\ce{Br-}$이 떨어져 나간다(1-4-2 #6).</div>
+  <div class="note mt8"><b>심화 연결</b> 1)처럼 탄소에 가지가 많은 할로젠화 알킬은 강한 염기를 만나면 제거 반응으로 $\ce{(CH3)2C=CH2}$도 함께 생긴다. 부록 풀이는 치환 생성물을 답으로 한다 — 두 경로의 비교는 [심화] 「친핵성 치환·제거 반응과 첨가 반응」 덱.</div>
+</section>
+
+<!-- ════════ 18. 종합 문제 7 (3)(4) ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 종합 문제" data-title="종합 문제 7 (3)(4)">
+  <h2><span class="tag q">종합 문제 7</span>반응의 주된 생성물 ② 불포화 탄화수소</h2>
+  <p class="f21">3) $\ce{(CH3)2C=CH2 + HBr}$ &nbsp; 4) $\ce{CH3-C#C-H + 2Br2}$</p>
+  {{RX34}}
+  <div class="answer step ac19-left">둘 다 첨가 반응 — π 결합이 끊어지고 새 σ 결합이 생긴다. 3중 결합은 π 결합이 2개라 $\ce{Br2}$가 두 번 첨가된다.</div>
+  <p class="small step mt8">3)에서 H는 수소가 더 많은 탄소에, Br은 가지가 많은 탄소에 붙는다 — 더 안정한 탄소 양이온 중간체를 거치기 때문이다(두 단계 첨가, 1-4-1 #28).</p>
+</section>
+
+<!-- ════════ 19. STEAM 도입 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: 기체 분자의 세 가지 운동">
+  <h2><span class="tag">STEAM</span>기체 분자의 진동 운동 방식과 진동 운동 에너지</h2>
+  {{MOTION}}
+  <table class="tight ac19-act mt8">
+    <tr><td>상황 제시</td><td class="l">① $\ce{H2O}$는 비선형 굽은 구조, $\ce{CO2}$는 선형 구조 ② 진동 운동 방식의 자유도를 조사해 모형으로 설명 ③ 진동 운동 에너지 크기 비교</td></tr>
+    <tr><td>창의적 설계</td><td class="l">① 굽은 구조·선형 구조인 이유 ② 스타이로폼 공과 두꺼운 고무줄로 진동 모형 만들기 ③ 진동 운동 에너지를 구해 비교</td></tr>
+    <tr><td>감성적 체험</td><td class="l">① 모형으로 진동 방식 설명 ② 진동 에너지를 구하는 방법 발표 ③ 온실 기체인 이유를 조사·토론·발표하고 500자 이내로 쓰기</td></tr>
+  </table>
+  <p class="f21 mt8"><b>Q</b> 세 운동 가운데 분자의 모양에 따라 가짓수가 달라지는 것은?</p>
+  <div class="answer step">회전 운동과 진동 운동 (선형 분자는 회전이 2가지뿐)</div>
+</section>
+
+<!-- ════════ 20. 분자 모양 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: 굽은 H2O와 선형 CO2">
+  <h2><span class="tag">STEAM<span class="ac19-st"> · 상황 제시 1 · 창의적 설계 1</span></span>왜 $\ce{H2O}$는 굽고 $\ce{CO2}$는 직선일까?</h2>
+  {{SHAPE}}
+  <p class="f21 mt8"><b>Q</b> 두 분자의 중심 원자 둘레에 있는 전자쌍과 혼성은 어떻게 다를까?</p>
+  <div class="row">
+    <div class="answer step ac19-left">$\ce{H2O}$: O 둘레 전자쌍 4개(공유 2 + 비공유 2) → $sp^3$ 혼성, 비공유 전자쌍이 더 크게 밀어 104.5°의 굽은형</div>
+    <div class="answer step ac19-left">$\ce{CO2}$: C는 2중 결합 2개, 비공유 전자쌍 없음 → $sp$ 혼성, 남은 p 2개로 π 결합 2개 → 180° 직선형</div>
+  </div>
+  <p class="f21 step mt8">→ 원자 수가 3개로 같아도 모양이 다르면 <b>회전·진동 운동의 가짓수</b>가 달라진다.</p>
+  <div class="board" style="height:40px"></div>
+</section>
+
+<!-- ════════ 21. 자유도와 H2O ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: 자유도와 H2O의 진동">
+  <h2><span class="tag">STEAM<span class="ac19-st"> · 상황 제시 2</span></span>운동의 자유도와 $\ce{H2O}$의 진동 3가지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="formula sm">원자 $N$개 → 자유도 $3N$ = 병진 3 + 회전 3 + 진동 $3N-6$<span class="unit">선형 분자: 회전 2, 진동 $3N-5$ · 원자 하나가 $x$, $y$, $z$ 세 방향으로 움직일 수 있다</span></div>
+      <table class="tight ac19-dof mt8">
+        <tr><th>분자</th><th>$3N$</th><th>병진</th><th>회전</th><th>진동</th></tr>
+        <tr><td>$\ce{H2O}$ 굽은형</td><td>9</td><td>3</td><td>3</td><td><span class="step" data-g="d1"><b>3</b></span></td></tr>
+        <tr><td>$\ce{CO2}$ 선형</td><td>9</td><td>3</td><td>2</td><td><span class="step" data-g="d2"><b>4</b></span></td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> 선형 분자는 왜 회전이 2가지일까?</p>
+      <div class="answer step ac19-left">분자 축 둘레로 돌면 원자의 위치가 바뀌지 않아 운동으로 세지 않는다.</div>
+    </div>
+    <div class="col">{{H2OV}}</div>
+  </div>
+  <p class="small mt8">자유도 세기와 진동 이름은 덱 보충 자료 · 파수는 기체 $\ce{H2O}$의 문헌값</p>
+</section>
+
+<!-- ════════ 22. CO2와 모형 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: CO2의 진동과 분자 모형">
+  <h2><span class="tag">STEAM<span class="ac19-st"> · 상황 제시 2 · 창의적 설계 2</span></span>$\ce{CO2}$의 진동 4가지와 분자 모형</h2>
+  {{CO2V}}
+  <div class="row mt8">
+    <div class="card" style="flex:1 1 0"><h3>분자 모형 만들기</h3>
+      <p class="f21">스타이로폼 공(O 2개, C 1개 / $\ce{H2O}$는 O 1개, 작은 H 2개)을 두꺼운 고무줄로 잇는다 → 양 끝 공을 당겼다 놓으면 <b>신축</b>, 옆으로 밀었다 놓으면 <b>굽힘</b> 진동이 보인다.</p></div>
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21"><b>Q</b> 고무줄을 두 겹(2중 결합처럼 단단하게) 감으면 무엇이 달라질까?</p>
+      <div class="answer step ac19-left">더 빨리 떨린다 — 결합 길이를 바꾸는 신축 진동이 결합각을 바꾸는 굽힘보다 진동수(에너지)가 크다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 진동 에너지 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: 진동 운동 에너지 구하기">
+  <h2><span class="tag">STEAM<span class="ac19-st"> · 창의적 설계 3</span></span>진동 운동 에너지 구하기와 비교</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 580px">
+      <div class="formula sm">$E=h\nu=hc\tilde{\nu}$<span class="unit">$\tilde{\nu}$: 파수(1 cm 안의 파동 수, $\text{cm}^{-1}$) — 적외선 흡수 스펙트럼에서 읽는다</span></div>
+      <div class="formula sm step mt8">$\begin{aligned}E&=(6.626\times10^{-34})(3.00\times10^{8})(2.349\times10^{5})\\&=4.67\times10^{-20}\ \text{J}\end{aligned}$<span class="unit">$\ce{CO2}$ 비대칭 신축 $\tilde{\nu}=2349\ \text{cm}^{-1}=2.349\times10^{5}\ \text{m}^{-1}$ · $\times N_\mathrm{A}$ → 28.1 kJ/mol</span></div>
+      <p class="f21 mt8"><b>Q</b> 그래프에서 무엇을 비교할 수 있을까?</p>
+      <div class="answer step ac19-left">① 신축 &gt; 굽힘 ② O–H 신축이 가장 크다 ③ 모두 $RT$보다 훨씬 커서 실온에서는 적외선을 흡수해야 진동이 들뜬다.</div>
+    </div>
+    <div class="col stack">{{EBAR}}
+      <div class="note"><b>도움 자료</b> 아주 높은 온도에서는 진동 방식 하나마다 평균 $kT$ → $\ce{H2O}$ $3kT$, $\ce{CO2}$ $4kT$ (자유도가 많은 $\ce{CO2}$가 더 많이 저장)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 온실 기체 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: 왜 온실 기체일까">
+  <h2><span class="tag">STEAM<span class="ac19-st"> · 감성적 체험 3</span></span>$\ce{H2O}$와 $\ce{CO2}$는 왜 온실 기체일까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{IRSPEC}}</div>
+    <div class="col stack">
+      <table class="tight ac19-ir">
+        <tr><th>분자 · 진동</th><th>쌍극자 모멘트 변화</th><th>적외선 흡수</th></tr>
+        <tr><td class="l">$\ce{CO2}$ 대칭 신축</td><td>없음</td><td><span class="step" data-g="i1">흡수 안 함</span></td></tr>
+        <tr><td class="l">$\ce{CO2}$ 굽힘·비대칭 신축</td><td>있음</td><td><span class="step" data-g="i1">흡수</span></td></tr>
+        <tr><td class="l">$\ce{H2O}$ 3가지 모두</td><td>있음</td><td><span class="step" data-g="i1">흡수</span></td></tr>
+        <tr><td class="l">$\ce{N2}$, $\ce{O2}$ 신축</td><td>없음</td><td><span class="step" data-g="i1">흡수 안 함</span></td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> 대기의 99 %인 $\ce{N2}$, $\ce{O2}$는 왜 온실 기체가 아닐까?</p>
+      <div class="answer step ac19-left">같은 원자 2개로 된 분자는 진동해도 쌍극자 모멘트가 생기지 않아 적외선을 흡수하지 못한다(쌍극자 모멘트 1-2-1 #29).</div>
+    </div>
+  </div>
+  <p class="small mt8">흡수 띠 위치와 지구 복사 곡선(288 K)은 덱 보충 자료</p>
+</section>
+
+<!-- ════════ 25. 발표·글쓰기 예시 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · STEAM" data-title="STEAM: 발표와 글쓰기 예시">
+  <h2><span class="tag">STEAM<span class="ac19-st"> · 감성적 체험 1–3</span></span>발표하고 500자 이내로 쓰기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 440px">
+      {{GREEN}}
+      <p class="small"><b>발표 길잡이</b> ① 모형으로 신축·굽힘 보이기 ② 파수 → $E=hc\tilde{\nu}$ → kJ/mol 순서로 계산 말하기 ③ 쌍극자 변화로 흡수 여부 판단</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 대기 중의 $\ce{H2O}$와 $\ce{CO2}$가 온실 기체인 이유를 글로 쓰면?</p>
+      <div class="answer step ac19-essay">(예시 글) 지표는 햇빛을 받아 데워진 뒤 그 에너지를 적외선으로 내보낸다. 대기의 $\ce{H2O}$와 $\ce{CO2}$는 진동할 때 쌍극자 모멘트가 변하는 진동 방식이 있어, 진동 에너지와 같은 에너지의 적외선을 흡수한다. $\ce{CO2}$는 굽힘(15 μm)과 비대칭 신축(4.3 μm), $\ce{H2O}$는 굽힘(6.3 μm)과 신축 진동으로 흡수한다. 진동이 활발해진 분자는 에너지를 주변에 나누거나 적외선을 사방으로 다시 내보내고, 그 일부가 지표로 돌아와 지표가 쉽게 식지 않는다. 대기의 대부분인 $\ce{N2}$와 $\ce{O2}$는 같은 원자 2개로 되어 있어 진동해도 쌍극자 모멘트가 생기지 않으므로 적외선을 흡수하지 못한다. 그래서 양이 적은 $\ce{H2O}$와 $\ce{CO2}$가 온실 기체이고, $\ce{CO2}$가 늘면 더 많은 적외선이 붙잡혀 기온이 올라간다.</div>
+      <p class="small step">채점 요소: 지표의 적외선 · 쌍극자 변화와 흡수 · 흡수 진동 이름 · 다시 내보냄 · $\ce{N2}$·$\ce{O2}$ 비교 · 500자 이내 (예시 글은 덱이 씀)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅰ. 물질의 구조 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅰ. 물질의 구조 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 원자 오비탈과 전자 배치, 화학 결합의 원리, 혼성 오비탈로 본 탄소 화합물의 구조를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 루이스 구조·전자 배치·결정장 도표·구조식을 그려 종합 문제를 풀고, 분자 모형으로 진동 운동을 표현할 수 있다.</button>
+    <button class="chk">[가치·태도] 분자의 구조와 진동이 온실 효과 같은 지구 환경 문제와 이어짐을 알고 토론에 참여한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 알렌의 가운데 탄소는 어떤 혼성일까? <span class="step">→ <span class="ans">$sp$ (π 결합 2개가 서로 수직)</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{[Co(CN)6]^3-}$가 반자성인 까닭은? <span class="step">→ <span class="ans">강한 장 리간드라 저스핀 $t_{2g}^6$, 홀전자 0</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{CO2}$의 진동 중 적외선을 흡수하지 않는 것은? <span class="step">→ <span class="ans">대칭 신축 진동(쌍극자 모멘트 변화 없음)</span></span></p>
+  </div>
+  <p class="small c-muted mt8">점검 결과가 아쉬우면 대응표(#8, #9)의 소단원 덱 장을 다시 보자.</p>
+  <div class="note puzzle mt8"><b>다음 시간</b> Ⅱ. 물질의 성질 — 오늘 본 기체 분자의 병진 운동이 압력·온도와 어떻게 이어지는지 알아본다.</div>
+</section>

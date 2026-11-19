@@ -1,0 +1,68 @@
+{
+ "findings": [
+  {
+   "slide": 10,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "n=3·n=4·n=∞ 라벨 겹침, 판서 공간 때문에 넘침",
+   "fix": "n=4 준위 생략, 식 한 줄로, 판서 공간 높이 조정 — 반영"
+  },
+  {
+   "slide": 11,
+   "severity": "medium",
+   "rule": "D8/S2",
+   "problem": "오른쪽 열 넘침, 판서 공간 없음",
+   "fix": "판서 공간을 그림 아래 왼쪽 열로 옮기고 보조 문장 정리 — 반영"
+  },
+  {
+   "slide": 12,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "'π 결합 ②' 라벨이 H와 겹침",
+   "fix": "라벨을 그림 아래로 내리고 viewBox 높이를 늘림 — 반영"
+  },
+  {
+   "slide": 19,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "H 원자 라벨이 화면 13.5px",
+   "fix": "H 19, O 24로 키움(19·21번) — 반영"
+  },
+  {
+   "slide": 22,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "아래 라벨 잘림, 범례가 라벨과 겹침",
+   "fix": "viewBox 높이를 늘리고 범례를 위로 — 반영"
+  },
+  {
+   "slide": 23,
+   "severity": "high",
+   "rule": "D8/T4",
+   "problem": "계산 식이 칸을 넘고 도움 자료 상자가 화면 밖으로 넘침",
+   "fix": "식을 aligned 두 줄로, 도움 자료를 그래프 아래 오른쪽 열로, 막대그래프 높이 축소 — 반영"
+  },
+  {
+   "slide": 24,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "흡수 띠 위 H2O·CO2 라벨 겹침",
+   "fix": "라벨 높이를 엇갈리게 — 반영"
+  },
+  {
+   "slide": 1,
+   "severity": "low",
+   "rule": "빈 공간",
+   "problem": "표지 아래 낱말 사슬 글이 흐리게 잘려 보임",
+   "fix": "낱말 사슬 줄을 빼고 S7 연결 장에서 다룸 — 반영"
+  },
+  {
+   "slide": 25,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "'적외선'·'다시 내보냄' 라벨이 물결선 가까이",
+   "fix": "라벨 위치 옮김(흰 바탕) — 반영, 끝 모습 겹침 없음(자동 점검 0)"
+  }
+ ],
+ "summary": "render 자동 점검 21건 → 0건, 콘솔 0, motion 0, ask 0. 전체 캡처 sheet 모음 두 번(완성 직후·최종) 확인."
+}
