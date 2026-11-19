@@ -1,0 +1,430 @@
+<!-- 고급화학 2-4-1a 용액의 농도 — gen.py가 tpl_a.html에서 만든다 -->
+<!-- 1 표지 -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 4. 용액의 성질 › 01</div>
+    <h1 class="ac241-h1">용액의 농도와 용해도·<br>묽은 용액의 성질 <span class="acc">(1)</span></h1>
+    <p class="sub">용액의 농도 — 여러 가지 농도 단위, 용액 제조와 희석, 흡광도로 농도 재기</p>
+    <p class="meta">고등학교 고급 화학 105–110쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 440 540" style="width:400px" aria-label="부피 플라스크와 피펫, 흡광도–농도 직선"><path d="M141 140 L141 244 A62 62 0 1 0 159 244 L159 140 Z" fill="#71ACDC" stroke="none"/><path d="M141 108 L141 244 A62 62 0 1 0 159 244 L159 108" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="138" y="96" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="137" y1="140" x2="163" y2="140" stroke="#16233D" stroke-width="2"/><g data-anim="move" data-from="0,-60" data-dur="1.4" data-ease="out"><rect x="268" y="40" width="12" height="190" rx="4" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.2"/><rect x="270" y="150" width="8" height="78" rx="0" fill="#3E8ED0" stroke="none" stroke-width="0"/><path d="M270 230 L274 262 L278 230" fill="none" stroke="#7E8B98" stroke-width="2" stroke-linejoin="round"/><rect x="264" y="20" width="20" height="26" rx="3" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/></g><line x1="70" y1="500" x2="410" y2="500" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="500" x2="70" y2="390" stroke="#5B6B7F" stroke-width="2"/><g data-anim="draw" data-dur="1.4"><path d="M70 500 L400 403.6" fill="none" stroke="#2E9E6A" stroke-width="3" stroke-linejoin="round"/></g><g data-anim="pop" data-o="130,482.5" data-delay="0"><circle cx="130" cy="482.5" r="6" fill="#C6DEF1" stroke="#16233D" stroke-width="2"/></g><g data-anim="pop" data-o="190,464.9" data-delay="0.1"><circle cx="190" cy="464.9" r="6" fill="#A4CAE9" stroke="#16233D" stroke-width="2"/></g><g data-anim="pop" data-o="250,447.4" data-delay="0.3"><circle cx="250" cy="447.4" r="6" fill="#82B6E0" stroke="#16233D" stroke-width="2"/></g><g data-anim="pop" data-o="310,429.9" data-delay="0.4"><circle cx="310" cy="429.9" r="6" fill="#60A2D8" stroke="#16233D" stroke-width="2"/></g><g data-anim="pop" data-o="370,412.3" data-delay="0.6"><circle cx="370" cy="412.3" r="6" fill="#3E8ED0" stroke="#16233D" stroke-width="2"/></g><text class="tex" x="405" y="526" data-mix="농도" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="80" y="394" data-mix="흡광도" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg>
+</section>
+
+<!-- 2 중단원 도입 -->
+<section class="slide" data-sec="Ⅱ-4. 용액의 성질 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>4. 용액의 성질 — 거대한 용액인 바다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 용액의 농도 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 용해도와 묽은 용액의 성질 <span class="small">(다음 시간)</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21"><b>용액</b>은 2가지 이상의 물질이 균일하게 섞인 혼합물로, 주성분을 <b>용매</b>, 부성분을 <b>용질</b>이라고 한다. 농도를 나타내는 방법, 용액의 제조와 농도 단위 변환·희석, 용해도와 그 변화, 묽은 용액의 증기 압력 내림을 알아보자.</p>
+      </div>
+    </div>
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 540 256" style="width:520px" aria-label="바닷물 속 물 분자와 나트륨 이온·염화 이온"><rect x="10" y="10" width="520" height="200" rx="8" fill="#EAF4FB" stroke="#16233D" stroke-width="2.5"/><g data-anim="move" data-from="-8,6" data-rep="alt" data-dur="1.5"><circle cx="141.2" cy="43.3" r="9" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><line x1="136.7" y1="43.3" x2="145.7" y2="43.3" stroke="#D7263D" stroke-width="2.2"/><line x1="141.2" y1="38.8" x2="141.2" y2="47.8" stroke="#D7263D" stroke-width="2.2"/></g><g data-anim="move" data-from="-8,-6" data-rep="alt" data-dur="1.2"><circle cx="219.3" cy="52" r="9" fill="#FFFFFF" stroke="#1F6FD1" stroke-width="2"/><line x1="214.8" y1="52" x2="223.8" y2="52" stroke="#1F6FD1" stroke-width="2.2"/></g><g data-anim="move" data-from="8,6" data-rep="alt" data-dur="1.3"><circle cx="58.5" cy="93.5" r="9" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><line x1="54" y1="93.5" x2="63" y2="93.5" stroke="#D7263D" stroke-width="2.2"/><line x1="58.5" y1="89" x2="58.5" y2="98" stroke="#D7263D" stroke-width="2.2"/></g><g data-anim="move" data-from="-8,-6" data-rep="alt" data-dur="1"><circle cx="474" cy="160.5" r="9" fill="#FFFFFF" stroke="#1F6FD1" stroke-width="2"/><line x1="469.5" y1="160.5" x2="478.5" y2="160.5" stroke="#1F6FD1" stroke-width="2.2"/></g><circle cx="399.4" cy="63.3" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="287.9" cy="72.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="110.3" cy="43.8" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="130.6" cy="181.8" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="430.5" cy="161.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="177.2" cy="131.3" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="383.2" cy="169.6" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="455.5" cy="40.6" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="321.7" cy="138.8" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="257.1" cy="41" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="469.5" cy="122.2" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="274.1" cy="95.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="318.3" cy="98.4" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="104.7" cy="77.3" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="422.5" cy="33.3" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="48.6" cy="131.2" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="512.7" cy="58.9" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="334.7" cy="72.4" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="199.6" cy="151.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="56.1" cy="64.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="399.4" cy="129.4" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="141.9" cy="81.6" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="112.6" cy="103.1" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="463.2" cy="186.4" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="226.3" cy="184.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="328.8" cy="163.4" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="169.2" cy="58.2" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="187.7" cy="27.6" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="408.5" cy="86.9" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="505.1" cy="97.2" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="356.3" cy="51.1" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="85.7" cy="114.9" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="431.6" cy="109.8" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="156.9" cy="181" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="492.7" cy="38.5" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="499.9" cy="187.6" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="498.6" cy="138.1" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="256.1" cy="114.4" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="38.9" cy="31.7" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="31.1" cy="166.7" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="140" cy="107.8" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="232.2" cy="160.1" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><circle cx="40" cy="236" r="7" fill="#E4E8EC" stroke="#8C99A6" stroke-width="1.2"/><text class="tex" x="54" y="242" data-mix="물 분자(용매)" data-size="19" data-anchor="start"></text><circle cx="230" cy="236" r="9" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><line x1="225.5" y1="236" x2="234.5" y2="236" stroke="#D7263D" stroke-width="2.2"/><line x1="230" y1="231.5" x2="230" y2="240.5" stroke="#D7263D" stroke-width="2.2"/><circle cx="254" cy="236" r="9" fill="#FFFFFF" stroke="#1F6FD1" stroke-width="2"/><line x1="249.5" y1="236" x2="258.5" y2="236" stroke="#1F6FD1" stroke-width="2.2"/><text class="tex" x="272" y="242" data-mix="$\ce{Na+}$, $\ce{Cl-}$(용질)" data-size="19" data-anchor="start"></text><text class="tex" x="530" y="242" data-mix="크기 비례 아님" data-size="18" data-anchor="end" fill="#5B6B7F"></text></svg>
+      <p class="f21">바닷물은 물이 용매, $\ce{NaCl}$이 주된 용질이다. 마시는 물, 차, 공기, 우리 몸의 혈장도 용액이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 학습 목표 -->
+<section class="slide" data-sec="01 용액의 농도" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-06]</span>다양한 농도 단위를 이해하고, 용해도에 영향을 미치는 요인을 탐구할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>액체 부피 측정 도구의 특성과 쓰임을 알고, 메니스커스를 바르게 읽을 수 있다.</li>
+    <li>몰농도, 몰랄 농도, 질량 백분율, ppm·ppb, 부피 백분율을 정의하고 <b>서로 변환</b>할 수 있다.</li>
+    <li>용액을 만들고 희석하며, <b>분광 광도계</b>로 농도와 흡광도의 관계를 측정할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">부피 측정 도구</div><div class="farr">→</div>
+    <div class="fnode">여러 가지 농도</div><div class="farr">→</div>
+    <div class="fnode">용액 제조</div><div class="farr">→</div>
+    <div class="fnode">농도 단위 변환</div><div class="farr">→</div>
+    <div class="fnode">희석</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 흡광도 측정</div>
+  </div>
+</section>
+
+<!-- 4 생각 열기 -->
+<section class="slide" data-sec="01 용액의 농도 · 도입" data-title="생각 열기: 생리 식염수">
+  <h2><span class="tag">생각 열기</span>0.9 %와 0.154 M, 같은 용액일까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 260px"><svg class="fig" viewBox="0 0 260 310" style="width:220px" aria-label="생리 식염수 수액 주머니"><path d="M60 30 L200 30 L210 60 L210 230 L180 260 L80 260 L50 230 L50 60 Z" fill="#F4F9FD" stroke="#7E8B98" stroke-width="2.5" stroke-linejoin="round"/><g data-anim="scale" data-from="1,0.2" data-o="130,258"><path d="M54 90 L206 90 L206 228 L178 256 L82 256 L54 228 Z" fill="#E2EEF8" stroke="none" stroke-width="0" stroke-linejoin="round"/></g><line x1="130" y1="260" x2="130" y2="300" stroke="#7E8B98" stroke-width="4"/><rect x="118" y="20" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><text class="tex" x="130" y="140" data-mix="생리 식염수" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="130" y="172" data-mix="$\ce{NaCl}$ 0.9 %" data-size="20" data-anchor="middle"></text></svg></div>
+    <div class="col stack">
+      <p class="f22">병원의 생리 식염수에는 「염화 나트륨 0.9 %」라고 적혀 있다. 실험실 시약 병에는 「0.154 M $\ce{NaCl}$」이라고 적힌 용액이 있다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 두 용액은 같은 용액일까, 다른 용액일까?</p></div>
+      <div class="answer step">같은 용액이다</div>
+      <p class="f21 step">생리 식염수 1 L에는 $\ce{NaCl}$ 약 9 g이 들어 있다. → $9\ \text{g}\div58.44\ \text{g/mol}\approx0.154\ \text{mol}$ → 0.154 M</p>
+      <p class="f21 step">→ 같은 진하기도 <b>단위에 따라 숫자가 다르다</b>. 오늘은 농도 단위를 정의하고 서로 바꾸는 방법을 배운다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 ① 부피 측정 도구 -->
+<section class="slide" data-sec="01 · 액체 부피 측정 도구의 특성과 용도" data-title="액체 부피 측정 도구">
+  <h2><span class="no">1</span>액체 부피 측정 도구</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px"><svg class="fig" viewBox="0 0 500 340" style="width:500px" aria-label="눈금실린더, 뷰렛, 부피 피펫, 부피 플라스크"><rect x="40" y="40" width="36" height="220" rx="0" fill="none" stroke="#7E8B98" stroke-width="2.2"/><rect x="42" y="120" width="32" height="138" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/><path d="M26 262 L90 262" fill="none" stroke="#7E8B98" stroke-width="4" stroke-linejoin="round"/><line x1="40" y1="60" x2="54" y2="60" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="80" x2="48" y2="80" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="100" x2="48" y2="100" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="120" x2="48" y2="120" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="140" x2="48" y2="140" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="160" x2="54" y2="160" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="180" x2="48" y2="180" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="200" x2="48" y2="200" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="220" x2="48" y2="220" stroke="#5B6B7F" stroke-width="1.2"/><line x1="40" y1="240" x2="48" y2="240" stroke="#5B6B7F" stroke-width="1.2"/><rect x="170" y="30" width="18" height="200" rx="0" fill="none" stroke="#7E8B98" stroke-width="2.2"/><rect x="172" y="70" width="14" height="158" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/><path d="M170 230 L176 246 L182 246 L188 230" fill="none" stroke="#7E8B98" stroke-width="2" stroke-linejoin="round"/><rect x="164" y="236" width="30" height="8" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="179" y1="246" x2="179" y2="268" stroke="#7E8B98" stroke-width="2.5"/><line x1="170" y1="40" x2="178" y2="40" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="62" x2="178" y2="62" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="84" x2="178" y2="84" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="106" x2="178" y2="106" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="128" x2="178" y2="128" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="150" x2="178" y2="150" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="172" x2="178" y2="172" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="194" x2="178" y2="194" stroke="#5B6B7F" stroke-width="1.2"/><line x1="170" y1="216" x2="178" y2="216" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="200" y="48" data-tex="0" data-size="18" data-anchor="start"></text><line x1="300" y1="24" x2="300" y2="110" stroke="#7E8B98" stroke-width="5"/><ellipse cx="300" cy="150" rx="16" ry="40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><line x1="300" y1="190" x2="300" y2="262" stroke="#7E8B98" stroke-width="5"/><line x1="291" y1="70" x2="309" y2="70" stroke="#16233D" stroke-width="2"/><path d="M421 96 L421 190 A40 40 0 1 0 439 190 L439 96 Z" fill="#DDEEF8" stroke="none"/><path d="M421 64 L421 190 A40 40 0 1 0 439 190 L439 64" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="418" y="52" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="417" y1="96" x2="443" y2="96" stroke="#16233D" stroke-width="2"/><g data-anim="pop" data-o="58,296" data-delay="0"><text class="tex" x="58" y="300" data-mix="눈금실린더" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="58" y="328" data-mix="Tc" data-size="19" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="pop" data-o="179,296" data-delay="0.1"><text class="tex" x="179" y="300" data-mix="뷰렛" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="179" y="328" data-mix="Td" data-size="19" data-anchor="middle" fill="#D7263D"></text></g><g data-anim="pop" data-o="300,296" data-delay="0.3"><text class="tex" x="300" y="300" data-mix="부피 피펫" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="300" y="328" data-mix="Td" data-size="19" data-anchor="middle" fill="#D7263D"></text></g><g data-anim="pop" data-o="430,296" data-delay="0.4"><text class="tex" x="430" y="300" data-mix="부피 플라스크" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="430" y="328" data-mix="Tc" data-size="19" data-anchor="middle" fill="#1F6FD1"></text></g><text class="tex" x="318" y="74" data-mix="표선" data-size="18" data-anchor="start" fill="#5B6B7F"></text><text class="tex" x="448" y="106" data-mix="표선" data-size="18" data-anchor="start" fill="#5B6B7F"></text></svg></div>
+    <div class="col stack">
+      <p class="f22">용액을 만들고 다룰 때는 눈금실린더, 뷰렛, 피펫, 부피 플라스크를 쓴다.</p>
+      <p class="f21">도구에는 부피 눈금(또는 총부피 눈금)과 함께 <b class="c-plus">Td</b> 또는 <b class="c-minus">Tc</b>, 그리고 보정할 때의 <b>기준 온도</b>가 적혀 있다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 기준 온도가 적혀 있는 까닭은?</p></div>
+      <div class="answer step">기준 온도에서만 부피와 눈금이 일치한다</div>
+      <p class="small step">유리와 액체는 온도에 따라 부피가 변한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 ② Td와 Tc -->
+<section class="slide" data-sec="01 · 액체 부피 측정 도구의 특성과 용도" data-title="옮기는 도구와 담는 도구">
+  <h2><span class="no">2</span>옮기는 도구(Td)와 담는 도구(Tc)</h2>
+  <table class="tight ac241-res mt8">
+    <tr><th class="l">표시</th><th class="l">도구</th><th class="l">쓰임과 주의</th></tr>
+    <tr><td class="l c-plus"><b>Td</b><br><span class="small">덜어 옮긴 부피</span></td><td class="l">피펫<br>뷰렛</td><td class="l">피펫: 비커에 덜은 액체를 <b>피펫 필러</b>로 빨아올림(공기가 들어가지 않게). 눈금피펫 = 최대 용량의 1/100 눈금, 부피 피펫 = 총용량 눈금만<br>뷰렛: 적정에 사용, 처음 눈금과 나중 눈금의 차이 = 사용한 부피</td></tr>
+    <tr><td class="l c-minus"><b>Tc</b><br><span class="small">담긴 부피</span></td><td class="l">부피 플라스크<br>눈금실린더</td><td class="l">부피 플라스크: 정확한 부피를 담아 원하는 농도의 용액을 만든다<br>눈금실린더: 액체의 양에 맞는 용량을 골라야 오차가 작다</td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 눈금실린더로 잰 10.0 mL를 다른 비커에 부으면 10.0 mL가 다 옮겨질까?</p></div>
+  <div class="answer step">아니다 — 벽에 남아 더 적게 옮겨진다</div>
+  <p class="f21 step">→ 정확한 부피를 <b>옮길</b> 때는 Td 표시가 있는 피펫을 쓴다.</p>
+</section>
+
+<!-- 7 ③ 메니스커스 -->
+<section class="slide" data-sec="01 · 액체 부피 측정 도구의 특성과 용도" data-title="메니스커스 읽기">
+  <h2><span class="no">3</span>메니스커스 읽기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px"><svg class="fig" viewBox="0 0 520 310" style="width:500px" aria-label="물과 수은의 메니스커스를 눈높이에서 읽기"><rect x="40" y="30" width="60" height="230" rx="0" fill="none" stroke="#7E8B98" stroke-width="2.2"/><line x1="40" y1="50" x2="62" y2="50" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="70" x2="52" y2="70" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="90" x2="52" y2="90" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="110" x2="52" y2="110" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="130" x2="52" y2="130" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="150" x2="62" y2="150" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="170" x2="52" y2="170" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="190" x2="52" y2="190" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="210" x2="52" y2="210" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="230" x2="52" y2="230" stroke="#5B6B7F" stroke-width="1.3"/><line x1="40" y1="250" x2="62" y2="250" stroke="#5B6B7F" stroke-width="1.3"/><text class="tex" x="32" y="56" data-tex="20" data-size="18" data-anchor="end"></text><text class="tex" x="32" y="156" data-tex="15" data-size="18" data-anchor="end"></text><text class="tex" x="32" y="256" data-tex="10" data-size="18" data-anchor="end"></text><path d="M42 258 L42 140 Q70 162 98 140 L98 258 Z" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="1.5"/><g data-anim="move" data-from="0,-40" data-dur="1.2" data-delay="0"><line x1="70" y1="151" x2="176" y2="151" stroke="#D7263D" stroke-width="2" stroke-dasharray="6 4"/><path d="M176 151 Q190 135 206 151 Q190 167 176 151 Z" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><circle cx="192" cy="151" r="5" fill="#16233D" stroke="#16233D" stroke-width="0"/></g><text class="tex" x="70" y="296" data-mix="물" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="190" y="197" data-mix="오목한 아래 끝" data-size="18" data-anchor="middle" fill="#D7263D"></text><rect x="300" y="30" width="60" height="230" rx="0" fill="none" stroke="#7E8B98" stroke-width="2.2"/><line x1="300" y1="50" x2="322" y2="50" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="70" x2="312" y2="70" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="90" x2="312" y2="90" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="110" x2="312" y2="110" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="130" x2="312" y2="130" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="150" x2="322" y2="150" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="170" x2="312" y2="170" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="190" x2="312" y2="190" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="210" x2="312" y2="210" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="230" x2="312" y2="230" stroke="#5B6B7F" stroke-width="1.3"/><line x1="300" y1="250" x2="322" y2="250" stroke="#5B6B7F" stroke-width="1.3"/><text class="tex" x="292" y="56" data-tex="20" data-size="18" data-anchor="end"></text><text class="tex" x="292" y="156" data-tex="15" data-size="18" data-anchor="end"></text><text class="tex" x="292" y="256" data-tex="10" data-size="18" data-anchor="end"></text><path d="M302 258 L302 160 Q330 138 358 160 L358 258 Z" fill="#AEB6BF" stroke="#5B6B7F" stroke-width="1.5"/><g data-anim="move" data-from="0,-40" data-dur="1.2" data-delay="0.3"><line x1="330" y1="149" x2="436" y2="149" stroke="#D7263D" stroke-width="2" stroke-dasharray="6 4"/><path d="M436 149 Q450 133 466 149 Q450 165 436 149 Z" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><circle cx="452" cy="149" r="5" fill="#16233D" stroke="#16233D" stroke-width="0"/></g><text class="tex" x="330" y="296" data-mix="수은" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="450" y="195" data-mix="볼록한 위 끝" data-size="18" data-anchor="middle" fill="#D7263D"></text></svg></div>
+    <div class="col stack">
+      <p class="f22">눈높이를 메니스커스와 맞춘 뒤 <b>곡면의 끝</b>을 읽는다.</p>
+      <p class="f21">물은 <b>오목한 아랫부분</b>, 수은은 <b>볼록한 윗부분</b>의 눈금을 읽는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 그림의 두 눈금은 각각 몇 mL일까?</p></div>
+      <div class="answer step">물 15.0 mL, 수은 15.0 mL</div>
+      <p class="f21 step">눈을 메니스커스보다 위에 두고 읽으면 실제보다 크게, 아래에 두면 작게 읽힌다(시차).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 연결 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="연결: 농도 단위가 여러 가지인 까닭">
+  <h2><span class="tag alt">연결</span>농도를 나타내는 방법이 왜 여러 가지일까?</h2>
+  <p class="f22">용액을 정량적으로 분석하려면 「얼마나 진한가」를 숫자로 나타내야 한다. 그런데 쓰는 상황이 다르다.</p>
+  <div class="stages mt12">
+    <div class="stage"><h3>용액을 만들고 덜어 쓸 때</h3><p class="f21">부피로 재는 것이 편하다</p><p class="f21 step c-field">→ 용액 부피 기준: 몰농도</p></div>
+    <div class="stage"><h3>온도가 바뀌는 실험</h3><p class="f21">용액의 부피는 온도에 따라 변한다</p><p class="f21 step c-field">→ 질량 기준: 몰랄 농도, 질량 백분율</p></div>
+    <div class="stage"><h3>아주 묽은 용액</h3><p class="f21">수돗물 속 금속, 대기 오염 물질</p><p class="f21 step c-field">→ ppm, ppb</p></div>
+  </div>
+  <p class="f21 mt12 step">입자 수의 비가 필요할 때(기체·증기압)는 몰분율을 쓴다.</p>
+</section>
+
+<!-- 9 ④ 몰농도 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="몰농도">
+  <h2><span class="no">4</span>몰농도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22"><mark>몰농도는 용질의 몰수를 용액의 부피(L)로 나눈 값</mark>이다.</p>
+      <div class="formula">$\text{몰농도}\ M=\dfrac{\text{용질의 양(mol)}}{\text{용액의 부피(L)}}$<div class="unit">단위: M (= mol/L)</div></div>
+      <p class="f21">해당 몰수의 용질을 증류수에 녹여 부피 플라스크에 넣고 원하는 부피를 만든다.</p>
+      <p class="small">식의 기호 $M$은 양(몰농도), 숫자 뒤의 M은 단위(mol/L)이다.</p>
+      <p class="f21 step">→ 용액의 단위 부피당 용질의 양을 바로 알 수 있어, 용액을 <b>희석하고 옮길 때</b> 편리하다.</p>
+    </div>
+    <div class="col" style="flex:0 0 260px"><svg class="fig" viewBox="0 0 300 350" style="width:280px" aria-label="부피 플라스크에 만든 용액 1 L"><path d="M101 100 L101 194 A62 62 0 1 0 119 194 L119 100 Z" fill="#82B6E0" stroke="none"/><path d="M101 68 L101 194 A62 62 0 1 0 119 194 L119 68" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="98" y="56" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="97" y1="100" x2="123" y2="100" stroke="#16233D" stroke-width="2"/><circle cx="146.5" cy="239.7" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="113.2" cy="251.2" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="125.1" cy="224.7" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="104" cy="239.2" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="90.9" cy="235" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="104.5" cy="246.9" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="95.7" cy="256.6" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><text class="tex" x="128" y="106" data-mix="← 표선: 용액 1 L" data-size="19" data-anchor="start" fill="#5B6B7F"></text><text class="tex" x="140" y="340" data-mix="용질 $n$ mol을 녹여 용액 1 L" data-size="19" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- 10 ⑤ 몰랄 농도 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="몰랄 농도">
+  <h2><span class="no">5</span>몰랄 농도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22"><mark>몰랄 농도는 용질의 몰수를 용매의 질량(kg)으로 나눈 값</mark>이다.</p>
+      <div class="formula">$\text{몰랄 농도}\ m=\dfrac{\text{용질의 양(mol)}}{\text{용매의 질량(kg)}}$<div class="unit">단위: m (= mol/kg)</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 용액을 20 °C에서 60 °C로 데우면 몰농도와 몰랄 농도는 어떻게 될까?</p></div>
+      <div class="answer step">몰농도는 조금 작아지고, 몰랄 농도는 그대로</div>
+      <p class="f21 step">용액의 부피는 열팽창하지만 용매의 질량은 변하지 않는다 → 몰랄 농도는 <b>온도와 무관</b>하여 온도가 다른 용액을 비교할 때 쓴다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 260px"><svg class="fig" viewBox="0 0 260 284" style="width:240px" aria-label="용매 1 kg에 용질을 녹인 용액"><rect x="40" y="102.5" width="180" height="127.5" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/><path d="M36 54 L40 60 L40 230 L220 230 L220 60 L224 54" fill="none" stroke="#7E8B98" stroke-width="2.5" stroke-linejoin="round"/><line x1="40" y1="102.5" x2="220" y2="102.5" stroke="#9FC3DD" stroke-width="1.5"/><text class="tex" x="130" y="218" data-mix="용매 1 kg" data-size="20" data-anchor="middle" data-weight="700"></text><g data-anim="move" data-from="0,-70" data-dur="1.2" data-ease="out"><circle cx="90" cy="110" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="106" cy="120" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="122" cy="110" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="138" cy="120" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="154" cy="110" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="170" cy="120" r="5" fill="#D7263D" stroke="#D7263D" stroke-width="0"/></g><text class="tex" x="130" y="40" data-mix="+ 용질 $n$ mol" data-size="19" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="130" y="270" data-mix="부피가 아니라 질량 기준" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg><p class="small">「용액 1 L」(몰농도)와 「용매 1 kg」(몰랄 농도)을 구분하자.</p></div>
+  </div>
+</section>
+
+<!-- 11 ⑥ 질량 백분율·ppm·ppb -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="질량 백분율·ppm·ppb">
+  <h2><span class="no">6</span>질량 백분율, ppm, ppb</h2>
+  <p class="f22"><b>질량 부분비</b>는 용액의 질량에 대한 용질의 질량비에 <b>곱 인자</b>를 곱한 값이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\text{질량 백분율}=\dfrac{\text{용질의 질량}}{\text{용액의 질량}}\times100\ \%$<div class="unit">퍼센트 농도, 곱 인자 100</div></div>
+      <div class="formula sm">$\text{ppm}=\dfrac{\text{용질의 질량}}{\text{용액의 질량}}\times10^{6}$<div class="unit">parts per million, 곱 인자 $10^6$</div></div>
+      <div class="formula sm">$\text{ppb}=\dfrac{\text{용질의 질량}}{\text{용액의 질량}}\times10^{9}$<div class="unit">parts per billion, 곱 인자 $10^9$</div></div>
+    </div>
+    <div class="col stack">
+      <p class="f21">농도가 아주 작을 때 ppm이나 ppb로 나타낸다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 물 1.0 kg에 납이 0.010 mg 녹아 있다. 납의 농도는 몇 ppb일까?</p></div>
+      <p class="f21 step">$\dfrac{0.010\times10^{-3}\ \text{g}}{1.0\times10^{3}\ \text{g}}\times10^{9}$</p>
+      <div class="answer step">10 ppb</div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 ⑦ 부피 백분율·몰분율 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="부피 백분율과 몰분율">
+  <h2><span class="no">7</span>부피 백분율과 몰분율</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">용질과 용액이 모두 액체이면 <b>부피 비</b>로 나타내기도 한다.</p>
+      <div class="formula sm">$\text{부피 백분율}=\dfrac{\text{용질의 부피}}{\text{용액의 부피}}\times100\ \%$<div class="unit">단위 vol% 또는 v/v%</div></div>
+      <p class="f21">20 % 에탄올 수용액: 용액 100 mL에 에탄올 20 mL</p>
+      <div class="card"><p class="f21"><span class="tag alt">다시 보기</span> <b>몰분율</b>(2-1-1 혼합 기체): $X_\mathrm{A}=\dfrac{n_\mathrm{A}}{n_\text{전체}}$</p>
+      <p class="f21 step">단위가 없고, 모든 성분의 몰분율 합은 1이다. 02의 라울 법칙에서 다시 쓴다.</p></div>
+    </div>
+    <div class="col" style="flex:0 0 320px"><svg class="fig" viewBox="0 0 320 326" style="width:300px" aria-label="100 mL 용액 속 에탄올 20 mL"><rect x="60" y="30" width="90" height="230" rx="0" fill="none" stroke="#7E8B98" stroke-width="2.5"/><g data-anim="scale" data-from="1,0" data-o="105,258" data-dur="1.2"><rect x="62" y="58" width="86" height="200" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/></g><g data-anim="scale" data-from="1,0" data-o="105,258" data-dur="1.2" data-delay=".4"><rect x="62" y="218" width="86" height="40" rx="0" fill="#BFE3CC" stroke="none" stroke-width="0"/></g><line x1="150" y1="58" x2="176" y2="58" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="182" y="64" data-mix="100 mL(용액)" data-size="19" data-anchor="start"></text><line x1="150" y1="218" x2="176" y2="218" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="182" y="224" data-mix="에탄올 20 mL" data-size="19" data-anchor="start" fill="#2E9E6A"></text><text class="tex" x="150" y="292" data-mix="20 vol% 에탄올 수용액" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="150" y="316" data-mix="(실제로는 고르게 섞인다)" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- 13 ⑧ 한눈에 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="농도 단위 한눈에">
+  <h2><span class="no">8</span>농도 단위 한눈에</h2>
+  <table class="tight ac241-res mt8">
+    <tr><th class="l">농도</th><th>분자</th><th>분모</th><th>온도의 영향</th><th class="l">주로 쓰는 곳</th></tr>
+    <tr><td class="l">몰농도 (M)</td><td>용질 mol</td><td>용액 L</td><td class="step">있음</td><td class="l step">용액 제조·희석·적정</td></tr>
+    <tr><td class="l">몰랄 농도 (m)</td><td>용질 mol</td><td>용매 kg</td><td class="step">없음</td><td class="l step">끓는점 오름·어는점 내림</td></tr>
+    <tr><td class="l">질량 백분율 (%)</td><td>용질 g</td><td>용액 g × 1/100</td><td class="step">없음</td><td class="l step">시판 시약 표시</td></tr>
+    <tr><td class="l">ppm·ppb</td><td>용질 g</td><td>용액 g × $10^{-6}$·$10^{-9}$</td><td class="step">없음</td><td class="l step">수질·대기의 미량 성분</td></tr>
+    <tr><td class="l">몰분율 $X$</td><td>성분 mol</td><td>전체 mol</td><td class="step">없음</td><td class="l step">증기압(라울 법칙)·기체</td></tr>
+  </table>
+  <p class="f21 mt12 step">→ 부피가 분모에 들어가는 농도만 온도에 따라 값이 변한다.</p>
+</section>
+
+<!-- 14 ⑨ 용액 제조 -->
+<section class="slide" data-sec="01 · 용액의 제조와 농도 단위 변환" data-title="고체 용질의 용액 제조">
+  <h2><span class="no">9</span>고체 용질로 몰농도 용액 만들기</h2>
+  <div class="stages ac241-c4 mt8">
+    <div class="stage"><svg class="fig" viewBox="0 0 260 216" style="width:240px" aria-label="고체 용질의 용액 제조 1단계"><rect x="20" y="150" width="120" height="20" rx="3" fill="#E6EAEE" stroke="#16233D" stroke-width="2"/><rect x="40" y="130" width="80" height="20" rx="0" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><text class="tex" x="80" y="146" data-tex="12.49" data-size="20" data-anchor="middle"></text><rect x="150" y="115" width="90" height="55" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/><path d="M146 64 L150 70 L150 170 L240 170 L240 70 L244 64" fill="none" stroke="#7E8B98" stroke-width="2.5" stroke-linejoin="round"/><line x1="150" y1="115" x2="240" y2="115" stroke="#9FC3DD" stroke-width="1.5"/><g data-anim="move" data-from="-50,-20" data-dur="1.2"><path d="M180 40 L205 28 L212 44 Z" fill="#C9D2DB" stroke="#16233D" stroke-width="2" stroke-linejoin="round"/><circle cx="203" cy="62" r="4" fill="#3E8ED0" stroke="#3E8ED0" stroke-width="0"/><circle cx="198" cy="72" r="4" fill="#3E8ED0" stroke="#3E8ED0" stroke-width="0"/></g></svg><p class="f21">① 필요한 몰수만큼 질량을 재어 증류수가 담긴 비커에서 최대한 녹인다.</p></div>
+    <div class="stage step"><svg class="fig" viewBox="0 0 260 216" style="width:240px" aria-label="고체 용질의 용액 제조 2단계"><path d="M161 150 L161 136 A40 40 0 1 0 179 136 L179 150 Z" fill="#A4CAE9" stroke="none"/><path d="M161 40 L161 136 A40 40 0 1 0 179 136 L179 40" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="158" y="28" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="157" y1="72" x2="183" y2="72" stroke="#16233D" stroke-width="2"/><path d="M140 30 L200 30 L176 58 L176 80 L164 80 L164 58 Z" fill="none" stroke="#7E8B98" stroke-width="2" stroke-linejoin="round"/><g data-anim="rot" data-from="-20" data-o="80,70"><rect x="40" y="70" width="70" height="30" rx="0" fill="#4F98D4" stroke="none" stroke-width="0"/><path d="M36 34 L40 40 L40 100 L110 100 L110 40 L114 34" fill="none" stroke="#7E8B98" stroke-width="2.5" stroke-linejoin="round"/><line x1="40" y1="70" x2="110" y2="70" stroke="#7E8B98" stroke-width="1.5"/></g></svg><p class="f21">② 깔때기로 부피 플라스크에 옮기고, 비커·깔때기를 증류수로 2–3회 씻어 넣는다(표선을 넘지 않게).</p></div>
+    <div class="stage step"><svg class="fig" viewBox="0 0 260 216" style="width:240px" aria-label="고체 용질의 용액 제조 3단계"><g data-anim="rot" data-from="10" data-o="130,140" data-rep="damp" data-dur="1.6"><path d="M121 88 L121 136 A40 40 0 1 0 139 136 L139 88 Z" fill="#82B6E0" stroke="none"/><path d="M121 30 L121 136 A40 40 0 1 0 139 136 L139 30" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="118" y="18" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="117" y1="62" x2="143" y2="62" stroke="#16233D" stroke-width="2"/></g></svg><p class="f21">③ 표선 근처까지 증류수 → 마개를 막고 흔들어 다 녹인다. 온도가 변하면 실온까지 기다린다.</p></div>
+    <div class="stage step"><svg class="fig" viewBox="0 0 260 216" style="width:240px" aria-label="고체 용질의 용액 제조 4단계"><path d="M101 62 L101 136 A40 40 0 1 0 119 136 L119 62 Z" fill="#82B6E0" stroke="none"/><path d="M101 30 L101 136 A40 40 0 1 0 119 136 L119 30" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="98" y="18" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="97" y1="62" x2="123" y2="62" stroke="#16233D" stroke-width="2"/><path d="M180 40 L230 40 L236 110 L174 110 Z" fill="#F4F9FD" stroke="#7E8B98" stroke-width="2.2" stroke-linejoin="round"/><path d="M205 40 L205 24 L150 24 L130 46" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><g data-anim="move" data-from="0,-14" data-rep="loop" data-dur="1"><circle cx="122" cy="54" r="3.5" fill="#9FC3DD" stroke="#9FC3DD" stroke-width="0"/></g><line x1="60" y1="62" x2="98" y2="62" stroke="#D7263D" stroke-width="2" stroke-dasharray="5 4"/><text class="tex" x="56" y="68" data-mix="표선" data-size="18" data-anchor="end" fill="#D7263D"></text></svg><p class="f21">④ 씻기병으로 표선까지 채우고 다시 흔들어 농도를 고르게 한다.</p></div>
+  </div>
+  <p class="f21 mt8"><b class="c-plus">안전</b> 실험복, 보호 장갑, 보안경을 착용한다.</p>
+</section>
+
+<!-- 15 확인 문제 01 -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>황산 구리 표준 용액 만들기</h2>
+  <p class="f22">0.500 M 황산 구리 표준 용액 100 mL를 만들려면 황산 구리 오수화물($\ce{CuSO4*5H2O}$, 몰질량 249.7 g/mol)이 몇 g 필요할까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">필요한 몰수: $0.500\ \text{mol/L}\times0.100\ \text{L}=0.0500\ \text{mol}$</p>
+      <p class="f21 step">질량: $0.0500\ \text{mol}\times249.7\ \text{g/mol}=12.49\ \text{g}$</p>
+      <div class="answer step">약 12.5 g</div>
+      <p class="f21 step">12.5 g을 녹여 100 mL 부피 플라스크의 표선까지 맞춘다. 결정수의 질량도 몰질량에 넣는다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 16 ⑩ 농도 단위 변환 -->
+<section class="slide" data-sec="01 · 용액의 제조와 농도 단위 변환" data-title="농도 단위 변환: 진한 염산">
+  <h2><span class="no">10</span>농도 단위 변환 — 진한 염산의 몰농도</h2>
+  <p class="f22">밀도 1.18 g/mL, 질량 퍼센트 37 %인 진한 염산의 몰농도는? ($\ce{HCl}$ 36.46 g/mol)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 760px">
+      <p class="f21 step"><b>기준</b>: 진한 염산 용액 1.00 L</p>
+      <p class="f21 step">$\ce{HCl}$의 질량: $1.00\ \text{L}\times\dfrac{1000\ \text{mL}}{1\ \text{L}}\times\dfrac{1.18\ \text{g}}{1\ \text{mL}}\times0.37=437\ \text{g}$</p>
+      <p class="f21 step">$\ce{HCl}$의 몰수: $437\ \text{g}\times\dfrac{1\ \text{mol}}{36.46\ \text{g}}=12.0\ \text{mol}$</p>
+      <div class="answer step">12.0 M</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <p class="small mt8">공식을 외우기보다 「용액 1 L」 또는 「용액 100 g」처럼 기준을 먼저 정하고 질량 → 몰수 → 부피를 차례로 구한다.</p>
+</section>
+
+<!-- 17 ⑪ 변환 식 -->
+<section class="slide" data-sec="01 · 용액의 제조와 농도 단위 변환" data-title="농도 변환 식">
+  <h2><span class="no">11</span>농도 변환 식 정리</h2>
+  <p class="f21">밀도 $d$ (g/mL), 질량 백분율 $a$ (%), 몰질량 $A$ (g/mol)일 때 (시료 1.00 L 기준으로 유도)</p>
+  <div class="row mt8">
+    <div class="col"><div class="formula sm">$M=\dfrac{10\times d\times a}{A}$<div class="unit">질량 백분율 → 몰농도</div></div></div>
+    <div class="col"><div class="formula sm">$m=\dfrac{1000\times a}{A\times(100-a)}$<div class="unit">질량 백분율 → 몰랄 농도</div></div></div>
+    <div class="col"><div class="formula sm">$m=\dfrac{1000\times M}{1000\times d-M\times A}$<div class="unit">몰농도 → 몰랄 농도</div></div></div>
+  </div>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 37 % 진한 염산의 몰랄 농도는?</p></div>
+  <p class="f21 step">$m=\dfrac{1000\times37}{36.46\times(100-37)}$</p>
+  <div class="answer step">약 16.1 m</div>
+  <p class="f21 step">몰농도(12.0 M)보다 크다 — 용액 1 L 속 용매(물)는 $1180-437=743\ \text{g}$으로 1 kg보다 적기 때문이다.</p>
+</section>
+
+<!-- 18 예제 Ⅱ-5 -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅱ-5">
+  <h2><span class="tag ex">예제 Ⅱ-5</span>포도당 수용액의 몰농도</h2>
+  <p class="f22">질량 백분율이 6.56 %인 포도당($\ce{C6H12O6}$) 수용액의 몰농도는 얼마인가? (단, 이 수용액의 밀도는 1.03 g/mL이다.)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step"><b>풀이</b> 수용액 100 g에는 포도당 6.56 g이 있다.</p>
+      <p class="f21 step">포도당 몰수: $6.56\ \text{g}\times\dfrac{1\ \text{mol}}{180.16\ \text{g}}=0.0364\ \text{mol}$</p>
+      <p class="f21 step">수용액 100 g의 부피: $100\ \text{g}\times\dfrac{1\ \text{mL}}{1.03\ \text{g}}\times\dfrac{10^{-3}\ \text{L}}{1\ \text{mL}}=0.0971\ \text{L}$</p>
+      <div class="answer step">$\dfrac{0.0364\ \text{mol}}{0.0971\ \text{L}}=0.375\ \text{M}$</div>
+      <p class="small step">식으로 확인: $M=\dfrac{10\times1.03\times6.56}{180.16}=0.375$</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 19 ⑫ 희석 -->
+<section class="slide" data-sec="01 · 용액의 희석과 농도" data-title="용액의 희석">
+  <h2><span class="no">12</span>용액의 희석</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 420px"><svg class="fig" viewBox="0 0 430 310" style="width:400px" aria-label="저장 용액을 피펫으로 덜어 부피 플라스크에서 희석"><rect x="20" y="126" width="110" height="84" rx="0" fill="#3E8ED0" stroke="none" stroke-width="0"/><path d="M16 84 L20 90 L20 210 L130 210 L130 90 L134 84" fill="none" stroke="#7E8B98" stroke-width="2.5" stroke-linejoin="round"/><line x1="20" y1="126" x2="130" y2="126" stroke="#7E8B98" stroke-width="1.5"/><text class="tex" x="75" y="236" data-mix="저장 용액 5.0 M" data-size="19" data-anchor="middle"></text><g data-anim="move" data-from="-120,0" data-dur="1.4" data-ease="io"><rect x="196" y="20" width="10" height="150" rx="3" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><rect x="198" y="110" width="6" height="58" rx="0" fill="#3E8ED0" stroke="none" stroke-width="0"/><path d="M196 170 L201 192 L206 170" fill="none" stroke="#7E8B98" stroke-width="2" stroke-linejoin="round"/></g><g data-arw="150,120,186,120,ink,2.5"></g><text class="tex" x="168" y="108" data-mix="피펫" data-size="18" data-anchor="middle"></text><path d="M321 82 L321 156 A60 60 0 1 0 339 156 L339 82 Z" fill="#CCE2F3" stroke="none"/><path d="M321 50 L321 156 A60 60 0 1 0 339 156 L339 50" fill="none" stroke="#7E8B98" stroke-width="2.5"/><rect x="318" y="38" width="24" height="12" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="1.5"/><line x1="317" y1="82" x2="343" y2="82" stroke="#16233D" stroke-width="2"/><text class="tex" x="315" y="300" data-mix="증류수로 표선까지 → 1 L" data-size="19" data-anchor="middle"></text><circle cx="45" cy="170" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="65" cy="190" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="90" cy="165" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="110" cy="195" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="100" cy="180" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="300" cy="205" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="330" cy="230" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="355" cy="200" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="320" cy="180" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><circle cx="345" cy="245" r="4" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><text class="tex" x="330" y="40" data-mix="용질 입자 수(몰수) 같음" data-size="19" data-anchor="middle" fill="#D7263D"></text></svg></div>
+    <div class="col stack">
+      <p class="f21">진한 <b>저장 용액</b>을 피펫으로 덜어 부피 플라스크에 옮기고 용매를 넣어 최종 부피를 맞춘다.</p>
+      <div class="formula">$M_1V_1=M_2V_2$<div class="unit">$M_1$, $V_1$: 저장 용액 · $M_2$, $V_2$: 희석된 용액</div></div>
+      <p class="f21"><mark>희석 전과 후의 용질의 몰수는 같다.</mark></p>
+      <p class="f21" data-q>5.0 M 염산으로 $1.5\times10^{-2}$ M 염산 1 L 만들기: $5.0\ \text{M}\times V=0.015\ \text{M}\times1000\ \text{mL}$</p>
+      <div class="answer step">$V=3.0\ \text{mL}$</div>
+      <p class="f21 step">피펫으로 3.0 mL → 1 L 부피 플라스크 → 증류수를 표선까지</p>
+    </div>
+  </div>
+</section>
+
+<!-- 20 확인 문제 02 -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>표준 용액 희석 계획</h2>
+  <p class="f22">0.5 M 황산 구리 표준 용액으로 0.1, 0.2, 0.3, 0.4 M 용액을 50.0 mL씩 만들려고 한다. 표준 용액을 몇 mL씩 덜어야 할까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$V_1=\dfrac{M_2V_2}{M_1}=\dfrac{M_2\times50.0\ \text{mL}}{0.5\ \text{M}}$</p>
+      <table class="tight ac241-res">
+        <tr><th>만들 농도 (M)</th><td>0.1</td><td>0.2</td><td>0.3</td><td>0.4</td></tr>
+        <tr><th>표준 용액 (mL)</th><td><span class="blank"><span class="step">10.0</span></span></td><td><span class="blank"><span class="step">20.0</span></span></td><td><span class="blank"><span class="step">30.0</span></span></td><td><span class="blank"><span class="step">40.0</span></span></td></tr>
+      </table>
+      <p class="f21 step">각각 50 mL 부피 플라스크에 옮기고 증류수를 표선까지 넣는다. → 이 용액들로 오늘의 탐구 활동을 한다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 21 탐구 원리 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 흡광도 (원리)">
+  <h2><span class="tag">탐구 활동</span>분광 광도계를 이용한 용액의 흡광도 변화 측정 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">고화-탐16</span>황산 구리 표준 용액의 파장별 흡광도를 확인하고, 희석한 용액의 흡광도를 측정하여 농도와 흡광도의 관계를 그래프로 설명하며, 색과 흡광도가 큰 파장의 관계와 미지 농도를 알아내는 방법을 토론한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px"><svg class="fig" viewBox="0 0 520 262" style="width:520px" aria-label="분광 광도계의 구조: 광원, 회절발, 슬릿, 큐벳, 검출기"><rect x="10" y="90" width="70" height="60" rx="6" fill="#FFF6D6" stroke="#16233D" stroke-width="2"/><text class="tex" x="45" y="126" data-mix="광원" data-size="19" data-anchor="middle"></text><g data-anim="draw" data-dur="1"><line x1="80" y1="120" x2="150" y2="120" stroke="#C9B458" stroke-width="6"/></g><path d="M150 80 L190 120 L150 160 Z" fill="#E8EEF5" stroke="#16233D" stroke-width="2" stroke-linejoin="round"/><text class="tex" x="165" y="186" data-mix="회절발" data-size="18" data-anchor="middle"></text><line x1="180" y1="120" x2="250" y2="70" stroke="#7B2CBF" stroke-width="3"/><line x1="180" y1="120" x2="250" y2="90" stroke="#1F6FD1" stroke-width="3"/><line x1="180" y1="120" x2="250" y2="110" stroke="#2E9E6A" stroke-width="3"/><line x1="180" y1="120" x2="250" y2="130" stroke="#E8C547" stroke-width="3"/><line x1="180" y1="120" x2="250" y2="150" stroke="#E08A2C" stroke-width="3"/><line x1="180" y1="120" x2="250" y2="170" stroke="#D7263D" stroke-width="3"/><rect x="250" y="60" width="10" height="110" rx="0" fill="#16233D" stroke="#16233D" stroke-width="0"/><rect x="250" y="156" width="10" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/><text class="tex" x="255" y="200" data-mix="슬릿" data-size="18" data-anchor="middle"></text><rect x="250" y="60" width="10" height="96" rx="0" fill="#16233D" stroke="#16233D" stroke-width="0"/><g data-anim="dash" data-speed="40" data-flow="1"><line x1="260" y1="163" x2="450" y2="163" stroke="#E53935" stroke-width="2" stroke-dasharray="8 8"/></g><line x1="260" y1="163" x2="330" y2="163" stroke="#E53935" stroke-width="6"/><rect x="330" y="120" width="50" height="80" rx="3" fill="#60A2D8" stroke="#7E8B98" stroke-width="2.5"/><line x1="380" y1="163" x2="440" y2="163" stroke="#E53935" stroke-width="3"/><text class="tex" x="355" y="226" data-mix="큐벳(용액)" data-size="18" data-anchor="middle"></text><rect x="440" y="130" width="70" height="66" rx="6" fill="#E6EAEE" stroke="#16233D" stroke-width="2"/><text class="tex" x="475" y="168" data-mix="검출기" data-size="18" data-anchor="middle"></text><text class="tex" x="300" y="148" data-tex="I_0" data-size="20" data-anchor="middle"></text><text class="tex" x="410" y="148" data-tex="I" data-size="20" data-anchor="middle"></text><line x1="330" y1="214" x2="380" y2="214" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="355" y="252" data-mix="$b$ = 1 cm" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg><p class="f21">흡광도 $=\log\dfrac{I_0}{I}$ ($I_0$: 들어간 빛, $I$: 통과한 빛)</p></div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 파란 황산 구리 수용액은 어떤 색의 빛을 가장 많이 흡수할까?</p></div>
+      <div class="row"><div class="col" style="flex:0 0 240px"><svg class="fig" viewBox="0 0 260 284" style="width:240px" aria-label="색상환: 마주 보는 색이 보색"><path d="M130 128 L86 51.8 A88 88 0 0 1 174 51.8 Z" fill="#D7263D" fill-opacity=".85" stroke="#FFFFFF" stroke-width="2"/><text class="tex" x="130" y="23" data-mix="빨강" data-size="18" data-anchor="middle"></text><path d="M130 128 L174 51.8 A88 88 0 0 1 218 128 Z" fill="#E8792B" fill-opacity=".85" stroke="#FFFFFF" stroke-width="2"/><text class="tex" x="227" y="79" data-mix="주황" data-size="18" data-anchor="middle"></text><path d="M130 128 L218 128 A88 88 0 0 1 174 204.2 Z" fill="#E8C547" fill-opacity=".85" stroke="#FFFFFF" stroke-width="2"/><text class="tex" x="227" y="191" data-mix="노랑" data-size="18" data-anchor="middle"></text><path d="M130 128 L174 204.2 A88 88 0 0 1 86 204.2 Z" fill="#2E9E6A" fill-opacity=".85" stroke="#FFFFFF" stroke-width="2"/><text class="tex" x="130" y="247" data-mix="초록" data-size="18" data-anchor="middle"></text><path d="M130 128 L86 204.2 A88 88 0 0 1 42 128 Z" fill="#1F6FD1" fill-opacity=".85" stroke="#FFFFFF" stroke-width="2"/><text class="tex" x="33" y="191" data-mix="파랑" data-size="18" data-anchor="middle"></text><path d="M130 128 L42 128 A88 88 0 0 1 86 51.8 Z" fill="#7B2CBF" fill-opacity=".85" stroke="#FFFFFF" stroke-width="2"/><text class="tex" x="33" y="79" data-mix="보라" data-size="18" data-anchor="middle"></text><circle cx="130" cy="128" r="30" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/><g data-anim="rot" data-from="-180" data-o="130,128" data-dur="1.4"><g data-arw="85,154,175,102,ink,3"></g><g data-arw="175,102,85,154,ink,3"></g></g><text class="tex" x="130" y="274" data-mix="마주 보는 색 = 보색" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+      <div class="col stack"><div class="answer step">주황–빨강 빛</div>
+      <p class="f21 step">흡수한 빛의 보색(파랑)이 우리 눈에 보인다.</p></div></div>
+      <p class="small step">덱 보충: 흡광도 $=\varepsilon bc$ (비어–람베르트 관계, $b$: 빛이 지나는 길이, $c$: 농도) → 흡광도는 농도에 비례한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 22 탐구 설계·과정 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 설계와 과정">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 — 설계와 과정</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 460px">
+      <table class="tight ac241-var">
+        <tr><th>조작 변인</th><td>용액의 농도, 빛의 파장</td></tr>
+        <tr><th>종속 변인</th><td>흡광도</td></tr>
+        <tr><th>통제 변인</th><td>큐벳(빛의 길이 1 cm), 온도, 같은 분광 광도계</td></tr>
+      </table>
+      <div class="card mt8"><p class="f21"><b class="c-plus">안전</b> 보안경·장갑 착용. 황산 구리는 독성이 있고 피부를 자극한다. 폐액은 중금속 폐액통에 모은다. 큐벳의 투명한 면을 손으로 만지지 않는다.</p></div>
+    </div>
+    <div class="col stack">
+      <ol class="ac241-ol f21">
+        <li>0.5 M 표준 용액을 큐벳에 담아 파장을 바꾸며 흡광도를 재고, <b>파장–흡광도 그래프</b>에서 흡광도가 가장 큰 파장을 찾는다.</li>
+        <li>표준 용액을 희석하여 0.1, 0.2, 0.3, 0.4 M 용액을 만든다(확인 문제 02).</li>
+        <li>증류수로 바탕(흡광도 0)을 맞춘 뒤, 정한 파장에서 농도별 흡광도를 잰다.</li>
+        <li><b>농도–흡광도 그래프</b>(검량선)를 그리고, 미지 시료의 흡광도로 농도를 구한다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 23 실험실 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="실험실: 흡광도 측정">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac241abs">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="ac241-seg"><span class="small">시료</span><button class="btn" data-c="0">증류수</button><button class="btn" data-c="0.1">0.1</button><button class="btn" data-c="0.2">0.2</button><button class="btn" data-c="0.3">0.3</button><button class="btn" data-c="0.4">0.4</button><button class="btn on" data-c="0.5">0.5 M</button><button class="btn" data-c="u">미지</button></div>
+      <div class="ctl"><div class="lbl"><span>빛의 파장</span><output data-o="lam"></output></div><input type="range" min="400" max="900" step="10" value="600" data-i="lam" aria-label="빛의 파장"></div>
+      <svg class="ac241-app" viewBox="0 0 430 120" width="410" height="114" aria-label="분광 광도계 속 빛과 큐벳"></svg>
+      <div class="res"><div class="small">측정한 흡광도</div><div class="big"><output data-o="big"></output></div><output class="kind ac241-msg" data-o="msg"></output></div>
+      <div class="ac241-seg mt8"><button class="btn ac241-act" data-act="scan">파장별 흡광도 측정</button><button class="btn ac241-act" data-act="rec">흡광도 측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 590px">
+      <div class="ac241-seg"><span class="small">그래프</span><button class="btn on" data-act="gs">파장–흡광도</button><button class="btn" data-act="gc">농도–흡광도</button></div>
+      <div class="lab-fig" style="width:590px;height:270px"><svg viewBox="0 0 590 270" width="590" height="270" aria-label="흡광도 그래프"></svg></div>
+      <table class="tight ac241-log mt8"><thead><tr><th>회</th><th>시료</th><th>파장 (nm)</th><th>흡광도</th><th>투과율 (%)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- 24 탐구 결과 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 — 결과(예시)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px"><svg class="fig" viewBox="0 0 490 296" style="width:470px" aria-label="황산 구리 수용액의 파장별 흡광도"><line x1="150" y1="230" x2="150" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="230" y1="230" x2="230" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="310" y1="230" x2="310" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="390" y1="230" x2="390" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="470" y1="230" x2="470" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="166.7" x2="470" y2="166.7" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="103.3" x2="470" y2="103.3" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="40" x2="470" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="230" x2="478" y2="230" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="230" x2="70" y2="32" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="230" x2="70" y2="236" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="256" data-tex="400" data-size="18" data-anchor="middle"></text><line x1="150" y1="230" x2="150" y2="236" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="150" y="256" data-tex="500" data-size="18" data-anchor="middle"></text><line x1="230" y1="230" x2="230" y2="236" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="230" y="256" data-tex="600" data-size="18" data-anchor="middle"></text><line x1="310" y1="230" x2="310" y2="236" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="310" y="256" data-tex="700" data-size="18" data-anchor="middle"></text><line x1="390" y1="230" x2="390" y2="236" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="390" y="256" data-tex="800" data-size="18" data-anchor="middle"></text><line x1="470" y1="230" x2="470" y2="236" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="470" y="256" data-tex="900" data-size="18" data-anchor="middle"></text><line x1="64" y1="166.7" x2="70" y2="166.7" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="172.7" data-tex="1" data-size="18" data-anchor="end"></text><line x1="64" y1="103.3" x2="70" y2="103.3" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="109.3" data-tex="2" data-size="18" data-anchor="end"></text><line x1="64" y1="40" x2="70" y2="40" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="46" data-tex="3" data-size="18" data-anchor="end"></text><text class="tex" x="60" y="228" data-tex="0" data-size="18" data-anchor="end"></text><line x1="70" y1="103.3" x2="470" y2="103.3" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="6 4"/><text class="tex" x="78" y="95.3" data-mix="측정 한계에 가까움" data-size="18" data-anchor="start" fill="#5B6B7F"></text><g data-anim="draw" data-dur="1.4"><path d="M70 230 L72.5 230 L75 230 L77.5 230 L80 230 L82.5 230 L85 230 L87.5 230 L90 230 L92.5 230 L95 230 L97.5 230 L100 230 L102.5 230 L105 230 L107.5 230 L110 230 L112.5 229.9 L115 229.9 L117.5 229.8 L120 229.8 L122.5 229.7 L125 229.6 L127.5 229.5 L130 229.4 L132.5 229.2 L135 229.1 L137.5 228.9 L140 228.6 L142.5 228.3 L145 228 L147.5 227.6 L150 227.2 L152.5 226.7 L155 226.1 L157.5 225.5 L160 224.7 L162.5 223.9 L165 223 L167.5 222 L170 220.9 L172.5 219.6 L175 218.3 L177.5 216.8 L180 215.1 L182.5 213.4 L185 211.4 L187.5 209.3 L190 207.1 L192.5 204.6 L195 202.1 L197.5 199.3 L200 196.3 L202.5 193.2 L205 189.9 L207.5 186.4 L210 182.7 L212.5 178.8 L215 174.8 L217.5 170.5 L220 166.1 L222.5 161.6 L225 156.8 L227.5 152 L230 147 L232.5 141.8 L235 136.6 L237.5 131.3 L240 125.9 L242.5 120.5 L245 115.2 L247.5 109.8 L250 104.6 L252.5 99.5 L255 94.7 L257.5 90 L260 85.7 L262.5 81.7 L265 78.1 L267.5 75 L270 72.2 L272.5 69.8 L275 67.7 L277.5 66.1 L280 64.7 L282.5 63.5 L285 62.6 L287.5 61.9 L290 61.3 L292.5 60.9 L295 60.5 L297.5 60.2 L300 60 L302.5 59.8 L305 59.7 L307.5 59.5 L310 59.5 L312.5 59.4 L315 59.3 L317.5 59.3 L320 59.2 L322.5 59.2 L325 59.2 L327.5 59.2 L330 59.2 L332.5 59.1 L335 59.1 L337.5 59.1 L340 59.1 L342.5 59.1 L345 59.1 L347.5 59.1 L350 59.1 L352.5 59.1 L355 59.1 L357.5 59.1 L360 59.1 L362.5 59.1 L365 59.1 L367.5 59.1 L370 59.1 L372.5 59.1 L375 59.1 L377.5 59.1 L380 59.1 L382.5 59.1 L385 59.1 L387.5 59.1 L390 59.1 L392.5 59.1 L395 59.1 L397.5 59.1 L400 59.1 L402.5 59.1 L405 59.1 L407.5 59.1 L410 59.1 L412.5 59.1 L415 59.1 L417.5 59.1 L420 59.1 L422.5 59.1 L425 59.1 L427.5 59.1 L430 59.1 L432.5 59.1 L435 59.1 L437.5 59.1 L440 59.1 L442.5 59.1 L445 59.1 L447.5 59.1 L450 59.1 L452.5 59.1 L455 59.1 L457.5 59.1 L460 59.1 L462.5 59.1 L465 59.2 L467.5 59.2 L470 59.2" fill="none" stroke="#3E8ED0" stroke-width="3" stroke-linejoin="round"/></g><g data-anim="draw" data-dur="1.4"><path d="M70 230 L72.5 230 L75 230 L77.5 230 L80 230 L82.5 230 L85 230 L87.5 230 L90 230 L92.5 230 L95 230 L97.5 230 L100 230 L102.5 230 L105 230 L107.5 230 L110 230 L112.5 230 L115 230 L117.5 230 L120 230 L122.5 230 L125 230 L127.5 229.9 L130 229.9 L132.5 229.9 L135 229.9 L137.5 229.8 L140 229.8 L142.5 229.7 L145 229.6 L147.5 229.6 L150 229.5 L152.5 229.4 L155 229.3 L157.5 229.1 L160 229 L162.5 228.8 L165 228.6 L167.5 228.4 L170 228.2 L172.5 228 L175 227.7 L177.5 227.4 L180 227.1 L182.5 226.7 L185 226.3 L187.5 225.9 L190 225.5 L192.5 225 L195 224.4 L197.5 223.9 L200 223.3 L202.5 222.7 L205 222 L207.5 221.3 L210 220.6 L212.5 219.8 L215 219 L217.5 218.1 L220 217.2 L222.5 216.3 L225 215.3 L227.5 214.3 L230 213.3 L232.5 212.2 L235 211.1 L237.5 210 L240 208.8 L242.5 207.6 L245 206.4 L247.5 205.2 L250 203.9 L252.5 202.6 L255 201.3 L257.5 200 L260 198.7 L262.5 197.4 L265 196 L267.5 194.7 L270 193.3 L272.5 191.9 L275 190.6 L277.5 189.2 L280 187.9 L282.5 186.5 L285 185.2 L287.5 183.9 L290 182.6 L292.5 181.3 L295 180 L297.5 178.8 L300 177.5 L302.5 176.3 L305 175.1 L307.5 174 L310 172.8 L312.5 171.7 L315 170.6 L317.5 169.6 L320 168.6 L322.5 167.6 L325 166.7 L327.5 165.7 L330 164.9 L332.5 164 L335 163.2 L337.5 162.5 L340 161.7 L342.5 161 L345 160.4 L347.5 159.8 L350 159.2 L352.5 158.6 L355 158.1 L357.5 157.7 L360 157.2 L362.5 156.8 L365 156.5 L367.5 156.2 L370 155.9 L372.5 155.6 L375 155.4 L377.5 155.3 L380 155.1 L382.5 155 L385 154.9 L387.5 154.9 L390 154.9 L392.5 154.9 L395 154.9 L397.5 155 L400 155.1 L402.5 155.2 L405 155.4 L407.5 155.6 L410 155.8 L412.5 156 L415 156.3 L417.5 156.5 L420 156.8 L422.5 157.2 L425 157.5 L427.5 157.9 L430 158.2 L432.5 158.6 L435 159.1 L437.5 159.5 L440 159.9 L442.5 160.4 L445 160.9 L447.5 161.4 L450 161.9 L452.5 162.4 L455 162.9 L457.5 163.5 L460 164 L462.5 164.6 L465 165.1 L467.5 165.7 L470 166.3" fill="none" stroke="#2E9E6A" stroke-width="3" stroke-linejoin="round"/></g><text class="tex" x="358" y="51" data-mix="0.5 M" data-size="18" data-anchor="middle" fill="#3E8ED0"></text><text class="tex" x="406" y="147.1" data-mix="0.1 M" data-size="18" data-anchor="middle" fill="#2E9E6A"></text><text class="tex" x="470" y="286" data-mix="파장 (nm)" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="80" y="26" data-mix="흡광도" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg>
+      <table class="tight ac241-res">
+        <tr><th>농도 (M)</th><td>0.1</td><td>0.2</td><td>0.3</td><td>0.4</td><td>0.5</td></tr>
+        <tr><th>600 nm</th><td>0.26</td><td>0.53</td><td>0.79</td><td>1.05</td><td>1.31</td></tr>
+        <tr><th>800 nm</th><td>1.19</td><td>2.22</td><td>2.65</td><td>2.70</td><td>2.70</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="row"><div class="col"><svg class="fig" viewBox="0 0 390 286" style="width:380px" aria-label="800 nm에서 흡광도와 농도"><line x1="124.5" y1="220" x2="124.5" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="179.1" y1="220" x2="179.1" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="233.6" y1="220" x2="233.6" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="288.2" y1="220" x2="288.2" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="342.7" y1="220" x2="342.7" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="160" x2="370" y2="160" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="100" x2="370" y2="100" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="40" x2="370" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="220" x2="378" y2="220" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="220" x2="70" y2="32" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="220" x2="70" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="246" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="124.5" y1="220" x2="124.5" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="124.5" y="246" data-tex="0.1" data-size="18" data-anchor="middle"></text><line x1="179.1" y1="220" x2="179.1" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="179.1" y="246" data-tex="0.2" data-size="18" data-anchor="middle"></text><line x1="233.6" y1="220" x2="233.6" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="233.6" y="246" data-tex="0.3" data-size="18" data-anchor="middle"></text><line x1="288.2" y1="220" x2="288.2" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="288.2" y="246" data-tex="0.4" data-size="18" data-anchor="middle"></text><line x1="342.7" y1="220" x2="342.7" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="342.7" y="246" data-tex="0.5" data-size="18" data-anchor="middle"></text><line x1="64" y1="160" x2="70" y2="160" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="166" data-tex="1" data-size="18" data-anchor="end"></text><line x1="64" y1="100" x2="70" y2="100" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="106" data-tex="2" data-size="18" data-anchor="end"></text><line x1="64" y1="40" x2="70" y2="40" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="46" data-tex="3" data-size="18" data-anchor="end"></text><line x1="70" y1="220" x2="206.4" y2="40" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 4"/><text class="tex" x="217.3" y="43" data-mix="비례라면" data-size="18" data-anchor="start" fill="#5B6B7F"></text><g data-anim="pop" data-o="124.5,148.8" data-delay="0"><circle cx="124.5" cy="148.8" r="6" fill="#FFFFFF" stroke="#E08A2C" stroke-width="2.5"/></g><g data-anim="pop" data-o="179.1,86.6" data-delay="0.1"><circle cx="179.1" cy="86.6" r="6" fill="#FFFFFF" stroke="#E08A2C" stroke-width="2.5"/></g><g data-anim="pop" data-o="233.6,61.1" data-delay="0.2"><circle cx="233.6" cy="61.1" r="6" fill="#FFFFFF" stroke="#E08A2C" stroke-width="2.5"/></g><g data-anim="pop" data-o="288.2,58.3" data-delay="0.4"><circle cx="288.2" cy="58.3" r="6" fill="#FFFFFF" stroke="#E08A2C" stroke-width="2.5"/></g><g data-anim="pop" data-o="342.7,58.1" data-delay="0.5"><circle cx="342.7" cy="58.1" r="6" fill="#FFFFFF" stroke="#E08A2C" stroke-width="2.5"/></g><text class="tex" x="370" y="276" data-mix="농도 (M)" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="80" y="22" data-mix="흡광도 (800 nm)" data-size="19" data-anchor="start" fill="#E08A2C"></text></svg></div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 흡광도가 가장 큰 800 nm 자료는 왜 직선이 아닐까?</p></div>
+      <p class="f21 step">흡광도 2는 빛이 1 %만, 3은 0.1 %만 통과한다는 뜻 → 검출기가 잴 수 있는 한계에 걸려 값이 더 커지지 않는다.</p>
+      <div class="answer step">측정 한계 — 흡광도 약 0.1–1.5의 파장을 고른다</div>
+    </div>
+  </div>
+</section>
+
+<!-- 25 탐구 결론 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결론과 토론">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 — 결론과 토론</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 390px"><svg class="fig" viewBox="0 0 390 286" style="width:380px" aria-label="600 nm에서 흡광도와 농도"><line x1="124.5" y1="220" x2="124.5" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="179.1" y1="220" x2="179.1" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="233.6" y1="220" x2="233.6" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="288.2" y1="220" x2="288.2" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="342.7" y1="220" x2="342.7" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="160" x2="370" y2="160" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="100" x2="370" y2="100" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="40" x2="370" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="220" x2="378" y2="220" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="220" x2="70" y2="32" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="220" x2="70" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="246" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="124.5" y1="220" x2="124.5" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="124.5" y="246" data-tex="0.1" data-size="18" data-anchor="middle"></text><line x1="179.1" y1="220" x2="179.1" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="179.1" y="246" data-tex="0.2" data-size="18" data-anchor="middle"></text><line x1="233.6" y1="220" x2="233.6" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="233.6" y="246" data-tex="0.3" data-size="18" data-anchor="middle"></text><line x1="288.2" y1="220" x2="288.2" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="288.2" y="246" data-tex="0.4" data-size="18" data-anchor="middle"></text><line x1="342.7" y1="220" x2="342.7" y2="226" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="342.7" y="246" data-tex="0.5" data-size="18" data-anchor="middle"></text><line x1="64" y1="160" x2="70" y2="160" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="166" data-tex="1" data-size="18" data-anchor="end"></text><line x1="64" y1="100" x2="70" y2="100" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="106" data-tex="2" data-size="18" data-anchor="end"></text><line x1="64" y1="40" x2="70" y2="40" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="46" data-tex="3" data-size="18" data-anchor="end"></text><g data-anim="draw" data-dur="1.2"><path d="M70 220 L370 133.2" fill="none" stroke="#2E9E6A" stroke-width="3" stroke-linejoin="round"/></g><g data-anim="pop" data-o="124.5,204.1" data-delay="0"><circle cx="124.5" cy="204.1" r="6" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/></g><g data-anim="pop" data-o="179.1,188.3" data-delay="0.1"><circle cx="179.1" cy="188.3" r="6" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/></g><g data-anim="pop" data-o="233.6,172.5" data-delay="0.2"><circle cx="233.6" cy="172.5" r="6" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/></g><g data-anim="pop" data-o="288.2,156.8" data-delay="0.4"><circle cx="288.2" cy="156.8" r="6" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/></g><g data-anim="pop" data-o="342.7,141.3" data-delay="0.5"><circle cx="342.7" cy="141.3" r="6" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/></g><g class="step" data-g="unk"><line x1="70" y1="178.8" x2="211.8" y2="178.8" stroke="#D7263D" stroke-width="1.8" stroke-dasharray="5 4"/><line x1="211.8" y1="178.8" x2="211.8" y2="220" stroke="#D7263D" stroke-width="1.8" stroke-dasharray="5 4"/><path d="M211.8 170.8 l8 8 l-8 8 l-8 -8 Z" fill="#D7263D"/><text class="tex" x="221.8" y="166.8" data-mix="미지 0.69" data-size="18" data-anchor="start" fill="#D7263D" data-halo="1"></text></g><text class="tex" x="370" y="276" data-mix="농도 (M)" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="80" y="22" data-mix="흡광도 (600 nm)" data-size="19" data-anchor="start" fill="#2E9E6A"></text></svg></div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q ①</b> 황산 구리 수용액의 색과 흡광도가 큰 파장의 관계는?</p>
+      <p class="f21 step">→ 주황–빨강(약 600–800 nm) 빛을 흡수하고, 흡수되지 않고 통과한 <b>파란빛</b>이 보인다 — 흡수한 빛의 보색이 용액의 색이다.</p>
+      <p class="f21" data-q><b>Q ②</b> 미지 농도의 황산 구리 수용액의 농도는 어떻게 알아낼까?</p>
+      <p class="f21 step">→ 같은 파장(600 nm)에서 흡광도 0.69를 재어 검량선($y=2.63x$)에서 읽는다.</p>
+      <div class="answer step">약 0.26 M</div>
+      <p class="f21 step">흡광도는 농도에 <b>비례</b>한다. 미지 시료가 검량선 범위를 넘으면 희석해 다시 잰다.</p>
+    </div>
+  </div>
+  <div class="chips mt8"><button class="chk">모둠 그래프를 서로 비교하고 결론을 발표했다</button></div>
+</section>
+
+<!-- 26 스스로 정리 -->
+<section class="slide" data-sec="01 용액의 농도 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 용액의 성질 — 01 용액의 농도</h2>
+  <div class="ac241-map">
+    <div class="ac241-node ac241-main" data-q><b>부피 측정</b><br>담는 도구(부피 플라스크) = <span class="blank"><span class="step">Tc</span></span><br>물의 메니스커스는 오목한 <span class="blank"><span class="step">아래 끝</span></span>을 읽음</div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-main" data-q><b>농도 단위</b><br>몰농도 = 용질 mol ÷ <span class="blank"><span class="step">용액의 부피(L)</span></span><br>몰랄 농도 = 용질 mol ÷ <span class="blank"><span class="step">용매의 질량(kg)</span></span><br>ppm의 곱 인자 <span class="blank"><span class="step">$10^6$</span></span></div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-main" data-q><b>제조·희석·측정</b><br>희석: <span class="blank"><span class="step">$M_1V_1=M_2V_2$</span></span><br>흡광도는 농도에 <span class="blank"><span class="step">비례</span></span></div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-dim">02<br>용해도와<br>묽은 용액의 성질</div>
+  </div>
+</section>
+
+<!-- 27 스스로 점검하기 -->
+<section class="slide" data-sec="01 용액의 농도 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 몰농도, 몰랄 농도, 질량 백분율, ppm·ppb, 부피 백분율, 몰분율을 정의할 수 있다.</button>
+    <button class="chk">[과정·기능] 밀도와 질량 백분율로 몰농도를 구하고, 희석 계획을 세워 흡광도 검량선을 그렸다.</button>
+    <button class="chk">[가치·태도] 정확한 부피 측정과 안전한 시약 취급의 중요성을 생각해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 40 vol% 에탄올 수용액 100 mL 속 에탄올은 몇 mL일까? <span class="step">→ <span class="ans">40 mL</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 0.10 M 용액으로 0.010 M 용액 100 mL를 만들려면 몇 mL를 덜어야 할까? <span class="step">→ <span class="ans">10 mL</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 02 용해도와 묽은 용액의 성질 — 식용유는 왜 물에 녹지 않을까?</div>
+</section>

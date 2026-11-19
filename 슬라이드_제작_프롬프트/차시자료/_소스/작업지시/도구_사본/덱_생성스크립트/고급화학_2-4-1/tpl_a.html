@@ -1,0 +1,430 @@
+<!-- 고급화학 2-4-1a 용액의 농도 — gen.py가 tpl_a.html에서 만든다 -->
+<!-- 1 표지 -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 4. 용액의 성질 › 01</div>
+    <h1 class="ac241-h1">용액의 농도와 용해도·<br>묽은 용액의 성질 <span class="acc">(1)</span></h1>
+    <p class="sub">용액의 농도 — 여러 가지 농도 단위, 용액 제조와 희석, 흡광도로 농도 재기</p>
+    <p class="meta">고등학교 고급 화학 105–110쪽</p>
+  </div>
+  {{COVER_A}}
+</section>
+
+<!-- 2 중단원 도입 -->
+<section class="slide" data-sec="Ⅱ-4. 용액의 성질 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>4. 용액의 성질 — 거대한 용액인 바다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 용액의 농도 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 용해도와 묽은 용액의 성질 <span class="small">(다음 시간)</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21"><b>용액</b>은 2가지 이상의 물질이 균일하게 섞인 혼합물로, 주성분을 <b>용매</b>, 부성분을 <b>용질</b>이라고 한다. 농도를 나타내는 방법, 용액의 제조와 농도 단위 변환·희석, 용해도와 그 변화, 묽은 용액의 증기 압력 내림을 알아보자.</p>
+      </div>
+    </div>
+    <div class="col stack">
+      {{SEA}}
+      <p class="f21">바닷물은 물이 용매, $\ce{NaCl}$이 주된 용질이다. 마시는 물, 차, 공기, 우리 몸의 혈장도 용액이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 학습 목표 -->
+<section class="slide" data-sec="01 용액의 농도" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-06]</span>다양한 농도 단위를 이해하고, 용해도에 영향을 미치는 요인을 탐구할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>액체 부피 측정 도구의 특성과 쓰임을 알고, 메니스커스를 바르게 읽을 수 있다.</li>
+    <li>몰농도, 몰랄 농도, 질량 백분율, ppm·ppb, 부피 백분율을 정의하고 <b>서로 변환</b>할 수 있다.</li>
+    <li>용액을 만들고 희석하며, <b>분광 광도계</b>로 농도와 흡광도의 관계를 측정할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">부피 측정 도구</div><div class="farr">→</div>
+    <div class="fnode">여러 가지 농도</div><div class="farr">→</div>
+    <div class="fnode">용액 제조</div><div class="farr">→</div>
+    <div class="fnode">농도 단위 변환</div><div class="farr">→</div>
+    <div class="fnode">희석</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 흡광도 측정</div>
+  </div>
+</section>
+
+<!-- 4 생각 열기 -->
+<section class="slide" data-sec="01 용액의 농도 · 도입" data-title="생각 열기: 생리 식염수">
+  <h2><span class="tag">생각 열기</span>0.9 %와 0.154 M, 같은 용액일까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 260px">{{SALINE}}</div>
+    <div class="col stack">
+      <p class="f22">병원의 생리 식염수에는 「염화 나트륨 0.9 %」라고 적혀 있다. 실험실 시약 병에는 「0.154 M $\ce{NaCl}$」이라고 적힌 용액이 있다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 두 용액은 같은 용액일까, 다른 용액일까?</p></div>
+      <div class="answer step">같은 용액이다</div>
+      <p class="f21 step">생리 식염수 1 L에는 $\ce{NaCl}$ 약 9 g이 들어 있다. → $9\ \text{g}\div58.44\ \text{g/mol}\approx0.154\ \text{mol}$ → 0.154 M</p>
+      <p class="f21 step">→ 같은 진하기도 <b>단위에 따라 숫자가 다르다</b>. 오늘은 농도 단위를 정의하고 서로 바꾸는 방법을 배운다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 ① 부피 측정 도구 -->
+<section class="slide" data-sec="01 · 액체 부피 측정 도구의 특성과 용도" data-title="액체 부피 측정 도구">
+  <h2><span class="no">1</span>액체 부피 측정 도구</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{TOOLS}}</div>
+    <div class="col stack">
+      <p class="f22">용액을 만들고 다룰 때는 눈금실린더, 뷰렛, 피펫, 부피 플라스크를 쓴다.</p>
+      <p class="f21">도구에는 부피 눈금(또는 총부피 눈금)과 함께 <b class="c-plus">Td</b> 또는 <b class="c-minus">Tc</b>, 그리고 보정할 때의 <b>기준 온도</b>가 적혀 있다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 기준 온도가 적혀 있는 까닭은?</p></div>
+      <div class="answer step">기준 온도에서만 부피와 눈금이 일치한다</div>
+      <p class="small step">유리와 액체는 온도에 따라 부피가 변한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 ② Td와 Tc -->
+<section class="slide" data-sec="01 · 액체 부피 측정 도구의 특성과 용도" data-title="옮기는 도구와 담는 도구">
+  <h2><span class="no">2</span>옮기는 도구(Td)와 담는 도구(Tc)</h2>
+  <table class="tight ac241-res mt8">
+    <tr><th class="l">표시</th><th class="l">도구</th><th class="l">쓰임과 주의</th></tr>
+    <tr><td class="l c-plus"><b>Td</b><br><span class="small">덜어 옮긴 부피</span></td><td class="l">피펫<br>뷰렛</td><td class="l">피펫: 비커에 덜은 액체를 <b>피펫 필러</b>로 빨아올림(공기가 들어가지 않게). 눈금피펫 = 최대 용량의 1/100 눈금, 부피 피펫 = 총용량 눈금만<br>뷰렛: 적정에 사용, 처음 눈금과 나중 눈금의 차이 = 사용한 부피</td></tr>
+    <tr><td class="l c-minus"><b>Tc</b><br><span class="small">담긴 부피</span></td><td class="l">부피 플라스크<br>눈금실린더</td><td class="l">부피 플라스크: 정확한 부피를 담아 원하는 농도의 용액을 만든다<br>눈금실린더: 액체의 양에 맞는 용량을 골라야 오차가 작다</td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 눈금실린더로 잰 10.0 mL를 다른 비커에 부으면 10.0 mL가 다 옮겨질까?</p></div>
+  <div class="answer step">아니다 — 벽에 남아 더 적게 옮겨진다</div>
+  <p class="f21 step">→ 정확한 부피를 <b>옮길</b> 때는 Td 표시가 있는 피펫을 쓴다.</p>
+</section>
+
+<!-- 7 ③ 메니스커스 -->
+<section class="slide" data-sec="01 · 액체 부피 측정 도구의 특성과 용도" data-title="메니스커스 읽기">
+  <h2><span class="no">3</span>메니스커스 읽기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{MENIS}}</div>
+    <div class="col stack">
+      <p class="f22">눈높이를 메니스커스와 맞춘 뒤 <b>곡면의 끝</b>을 읽는다.</p>
+      <p class="f21">물은 <b>오목한 아랫부분</b>, 수은은 <b>볼록한 윗부분</b>의 눈금을 읽는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 그림의 두 눈금은 각각 몇 mL일까?</p></div>
+      <div class="answer step">물 15.0 mL, 수은 15.0 mL</div>
+      <p class="f21 step">눈을 메니스커스보다 위에 두고 읽으면 실제보다 크게, 아래에 두면 작게 읽힌다(시차).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 연결 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="연결: 농도 단위가 여러 가지인 까닭">
+  <h2><span class="tag alt">연결</span>농도를 나타내는 방법이 왜 여러 가지일까?</h2>
+  <p class="f22">용액을 정량적으로 분석하려면 「얼마나 진한가」를 숫자로 나타내야 한다. 그런데 쓰는 상황이 다르다.</p>
+  <div class="stages mt12">
+    <div class="stage"><h3>용액을 만들고 덜어 쓸 때</h3><p class="f21">부피로 재는 것이 편하다</p><p class="f21 step c-field">→ 용액 부피 기준: 몰농도</p></div>
+    <div class="stage"><h3>온도가 바뀌는 실험</h3><p class="f21">용액의 부피는 온도에 따라 변한다</p><p class="f21 step c-field">→ 질량 기준: 몰랄 농도, 질량 백분율</p></div>
+    <div class="stage"><h3>아주 묽은 용액</h3><p class="f21">수돗물 속 금속, 대기 오염 물질</p><p class="f21 step c-field">→ ppm, ppb</p></div>
+  </div>
+  <p class="f21 mt12 step">입자 수의 비가 필요할 때(기체·증기압)는 몰분율을 쓴다.</p>
+</section>
+
+<!-- 9 ④ 몰농도 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="몰농도">
+  <h2><span class="no">4</span>몰농도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22"><mark>몰농도는 용질의 몰수를 용액의 부피(L)로 나눈 값</mark>이다.</p>
+      <div class="formula">$\text{몰농도}\ M=\dfrac{\text{용질의 양(mol)}}{\text{용액의 부피(L)}}$<div class="unit">단위: M (= mol/L)</div></div>
+      <p class="f21">해당 몰수의 용질을 증류수에 녹여 부피 플라스크에 넣고 원하는 부피를 만든다.</p>
+      <p class="small">식의 기호 $M$은 양(몰농도), 숫자 뒤의 M은 단위(mol/L)이다.</p>
+      <p class="f21 step">→ 용액의 단위 부피당 용질의 양을 바로 알 수 있어, 용액을 <b>희석하고 옮길 때</b> 편리하다.</p>
+    </div>
+    <div class="col" style="flex:0 0 260px">{{MOLAR}}</div>
+  </div>
+</section>
+
+<!-- 10 ⑤ 몰랄 농도 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="몰랄 농도">
+  <h2><span class="no">5</span>몰랄 농도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22"><mark>몰랄 농도는 용질의 몰수를 용매의 질량(kg)으로 나눈 값</mark>이다.</p>
+      <div class="formula">$\text{몰랄 농도}\ m=\dfrac{\text{용질의 양(mol)}}{\text{용매의 질량(kg)}}$<div class="unit">단위: m (= mol/kg)</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 용액을 20 °C에서 60 °C로 데우면 몰농도와 몰랄 농도는 어떻게 될까?</p></div>
+      <div class="answer step">몰농도는 조금 작아지고, 몰랄 농도는 그대로</div>
+      <p class="f21 step">용액의 부피는 열팽창하지만 용매의 질량은 변하지 않는다 → 몰랄 농도는 <b>온도와 무관</b>하여 온도가 다른 용액을 비교할 때 쓴다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 260px">{{MOLAL}}<p class="small">「용액 1 L」(몰농도)와 「용매 1 kg」(몰랄 농도)을 구분하자.</p></div>
+  </div>
+</section>
+
+<!-- 11 ⑥ 질량 백분율·ppm·ppb -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="질량 백분율·ppm·ppb">
+  <h2><span class="no">6</span>질량 백분율, ppm, ppb</h2>
+  <p class="f22"><b>질량 부분비</b>는 용액의 질량에 대한 용질의 질량비에 <b>곱 인자</b>를 곱한 값이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\text{질량 백분율}=\dfrac{\text{용질의 질량}}{\text{용액의 질량}}\times100\ \%$<div class="unit">퍼센트 농도, 곱 인자 100</div></div>
+      <div class="formula sm">$\text{ppm}=\dfrac{\text{용질의 질량}}{\text{용액의 질량}}\times10^{6}$<div class="unit">parts per million, 곱 인자 $10^6$</div></div>
+      <div class="formula sm">$\text{ppb}=\dfrac{\text{용질의 질량}}{\text{용액의 질량}}\times10^{9}$<div class="unit">parts per billion, 곱 인자 $10^9$</div></div>
+    </div>
+    <div class="col stack">
+      <p class="f21">농도가 아주 작을 때 ppm이나 ppb로 나타낸다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 물 1.0 kg에 납이 0.010 mg 녹아 있다. 납의 농도는 몇 ppb일까?</p></div>
+      <p class="f21 step">$\dfrac{0.010\times10^{-3}\ \text{g}}{1.0\times10^{3}\ \text{g}}\times10^{9}$</p>
+      <div class="answer step">10 ppb</div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 ⑦ 부피 백분율·몰분율 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="부피 백분율과 몰분율">
+  <h2><span class="no">7</span>부피 백분율과 몰분율</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">용질과 용액이 모두 액체이면 <b>부피 비</b>로 나타내기도 한다.</p>
+      <div class="formula sm">$\text{부피 백분율}=\dfrac{\text{용질의 부피}}{\text{용액의 부피}}\times100\ \%$<div class="unit">단위 vol% 또는 v/v%</div></div>
+      <p class="f21">20 % 에탄올 수용액: 용액 100 mL에 에탄올 20 mL</p>
+      <div class="card"><p class="f21"><span class="tag alt">다시 보기</span> <b>몰분율</b>(2-1-1 혼합 기체): $X_\mathrm{A}=\dfrac{n_\mathrm{A}}{n_\text{전체}}$</p>
+      <p class="f21 step">단위가 없고, 모든 성분의 몰분율 합은 1이다. 02의 라울 법칙에서 다시 쓴다.</p></div>
+    </div>
+    <div class="col" style="flex:0 0 320px">{{ETOH}}</div>
+  </div>
+</section>
+
+<!-- 13 ⑧ 한눈에 -->
+<section class="slide" data-sec="01 · 용액의 여러 가지 농도 표시" data-title="농도 단위 한눈에">
+  <h2><span class="no">8</span>농도 단위 한눈에</h2>
+  <table class="tight ac241-res mt8">
+    <tr><th class="l">농도</th><th>분자</th><th>분모</th><th>온도의 영향</th><th class="l">주로 쓰는 곳</th></tr>
+    <tr><td class="l">몰농도 (M)</td><td>용질 mol</td><td>용액 L</td><td class="step">있음</td><td class="l step">용액 제조·희석·적정</td></tr>
+    <tr><td class="l">몰랄 농도 (m)</td><td>용질 mol</td><td>용매 kg</td><td class="step">없음</td><td class="l step">끓는점 오름·어는점 내림</td></tr>
+    <tr><td class="l">질량 백분율 (%)</td><td>용질 g</td><td>용액 g × 1/100</td><td class="step">없음</td><td class="l step">시판 시약 표시</td></tr>
+    <tr><td class="l">ppm·ppb</td><td>용질 g</td><td>용액 g × $10^{-6}$·$10^{-9}$</td><td class="step">없음</td><td class="l step">수질·대기의 미량 성분</td></tr>
+    <tr><td class="l">몰분율 $X$</td><td>성분 mol</td><td>전체 mol</td><td class="step">없음</td><td class="l step">증기압(라울 법칙)·기체</td></tr>
+  </table>
+  <p class="f21 mt12 step">→ 부피가 분모에 들어가는 농도만 온도에 따라 값이 변한다.</p>
+</section>
+
+<!-- 14 ⑨ 용액 제조 -->
+<section class="slide" data-sec="01 · 용액의 제조와 농도 단위 변환" data-title="고체 용질의 용액 제조">
+  <h2><span class="no">9</span>고체 용질로 몰농도 용액 만들기</h2>
+  <div class="stages ac241-c4 mt8">
+    <div class="stage">{{PREP1}}<p class="f21">① 필요한 몰수만큼 질량을 재어 증류수가 담긴 비커에서 최대한 녹인다.</p></div>
+    <div class="stage step">{{PREP2}}<p class="f21">② 깔때기로 부피 플라스크에 옮기고, 비커·깔때기를 증류수로 2–3회 씻어 넣는다(표선을 넘지 않게).</p></div>
+    <div class="stage step">{{PREP3}}<p class="f21">③ 표선 근처까지 증류수 → 마개를 막고 흔들어 다 녹인다. 온도가 변하면 실온까지 기다린다.</p></div>
+    <div class="stage step">{{PREP4}}<p class="f21">④ 씻기병으로 표선까지 채우고 다시 흔들어 농도를 고르게 한다.</p></div>
+  </div>
+  <p class="f21 mt8"><b class="c-plus">안전</b> 실험복, 보호 장갑, 보안경을 착용한다.</p>
+</section>
+
+<!-- 15 확인 문제 01 -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>황산 구리 표준 용액 만들기</h2>
+  <p class="f22">0.500 M 황산 구리 표준 용액 100 mL를 만들려면 황산 구리 오수화물($\ce{CuSO4*5H2O}$, 몰질량 249.7 g/mol)이 몇 g 필요할까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">필요한 몰수: $0.500\ \text{mol/L}\times0.100\ \text{L}=0.0500\ \text{mol}$</p>
+      <p class="f21 step">질량: $0.0500\ \text{mol}\times249.7\ \text{g/mol}=12.49\ \text{g}$</p>
+      <div class="answer step">약 12.5 g</div>
+      <p class="f21 step">12.5 g을 녹여 100 mL 부피 플라스크의 표선까지 맞춘다. 결정수의 질량도 몰질량에 넣는다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 16 ⑩ 농도 단위 변환 -->
+<section class="slide" data-sec="01 · 용액의 제조와 농도 단위 변환" data-title="농도 단위 변환: 진한 염산">
+  <h2><span class="no">10</span>농도 단위 변환 — 진한 염산의 몰농도</h2>
+  <p class="f22">밀도 1.18 g/mL, 질량 퍼센트 37 %인 진한 염산의 몰농도는? ($\ce{HCl}$ 36.46 g/mol)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 760px">
+      <p class="f21 step"><b>기준</b>: 진한 염산 용액 1.00 L</p>
+      <p class="f21 step">$\ce{HCl}$의 질량: $1.00\ \text{L}\times\dfrac{1000\ \text{mL}}{1\ \text{L}}\times\dfrac{1.18\ \text{g}}{1\ \text{mL}}\times0.37=437\ \text{g}$</p>
+      <p class="f21 step">$\ce{HCl}$의 몰수: $437\ \text{g}\times\dfrac{1\ \text{mol}}{36.46\ \text{g}}=12.0\ \text{mol}$</p>
+      <div class="answer step">12.0 M</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <p class="small mt8">공식을 외우기보다 「용액 1 L」 또는 「용액 100 g」처럼 기준을 먼저 정하고 질량 → 몰수 → 부피를 차례로 구한다.</p>
+</section>
+
+<!-- 17 ⑪ 변환 식 -->
+<section class="slide" data-sec="01 · 용액의 제조와 농도 단위 변환" data-title="농도 변환 식">
+  <h2><span class="no">11</span>농도 변환 식 정리</h2>
+  <p class="f21">밀도 $d$ (g/mL), 질량 백분율 $a$ (%), 몰질량 $A$ (g/mol)일 때 (시료 1.00 L 기준으로 유도)</p>
+  <div class="row mt8">
+    <div class="col"><div class="formula sm">$M=\dfrac{10\times d\times a}{A}$<div class="unit">질량 백분율 → 몰농도</div></div></div>
+    <div class="col"><div class="formula sm">$m=\dfrac{1000\times a}{A\times(100-a)}$<div class="unit">질량 백분율 → 몰랄 농도</div></div></div>
+    <div class="col"><div class="formula sm">$m=\dfrac{1000\times M}{1000\times d-M\times A}$<div class="unit">몰농도 → 몰랄 농도</div></div></div>
+  </div>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 37 % 진한 염산의 몰랄 농도는?</p></div>
+  <p class="f21 step">$m=\dfrac{1000\times37}{36.46\times(100-37)}$</p>
+  <div class="answer step">약 16.1 m</div>
+  <p class="f21 step">몰농도(12.0 M)보다 크다 — 용액 1 L 속 용매(물)는 $1180-437=743\ \text{g}$으로 1 kg보다 적기 때문이다.</p>
+</section>
+
+<!-- 18 예제 Ⅱ-5 -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅱ-5">
+  <h2><span class="tag ex">예제 Ⅱ-5</span>포도당 수용액의 몰농도</h2>
+  <p class="f22">질량 백분율이 6.56 %인 포도당($\ce{C6H12O6}$) 수용액의 몰농도는 얼마인가? (단, 이 수용액의 밀도는 1.03 g/mL이다.)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step"><b>풀이</b> 수용액 100 g에는 포도당 6.56 g이 있다.</p>
+      <p class="f21 step">포도당 몰수: $6.56\ \text{g}\times\dfrac{1\ \text{mol}}{180.16\ \text{g}}=0.0364\ \text{mol}$</p>
+      <p class="f21 step">수용액 100 g의 부피: $100\ \text{g}\times\dfrac{1\ \text{mL}}{1.03\ \text{g}}\times\dfrac{10^{-3}\ \text{L}}{1\ \text{mL}}=0.0971\ \text{L}$</p>
+      <div class="answer step">$\dfrac{0.0364\ \text{mol}}{0.0971\ \text{L}}=0.375\ \text{M}$</div>
+      <p class="small step">식으로 확인: $M=\dfrac{10\times1.03\times6.56}{180.16}=0.375$</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 19 ⑫ 희석 -->
+<section class="slide" data-sec="01 · 용액의 희석과 농도" data-title="용액의 희석">
+  <h2><span class="no">12</span>용액의 희석</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 420px">{{DILUTE}}</div>
+    <div class="col stack">
+      <p class="f21">진한 <b>저장 용액</b>을 피펫으로 덜어 부피 플라스크에 옮기고 용매를 넣어 최종 부피를 맞춘다.</p>
+      <div class="formula">$M_1V_1=M_2V_2$<div class="unit">$M_1$, $V_1$: 저장 용액 · $M_2$, $V_2$: 희석된 용액</div></div>
+      <p class="f21"><mark>희석 전과 후의 용질의 몰수는 같다.</mark></p>
+      <p class="f21" data-q>5.0 M 염산으로 $1.5\times10^{-2}$ M 염산 1 L 만들기: $5.0\ \text{M}\times V=0.015\ \text{M}\times1000\ \text{mL}$</p>
+      <div class="answer step">$V=3.0\ \text{mL}$</div>
+      <p class="f21 step">피펫으로 3.0 mL → 1 L 부피 플라스크 → 증류수를 표선까지</p>
+    </div>
+  </div>
+</section>
+
+<!-- 20 확인 문제 02 -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>표준 용액 희석 계획</h2>
+  <p class="f22">0.5 M 황산 구리 표준 용액으로 0.1, 0.2, 0.3, 0.4 M 용액을 50.0 mL씩 만들려고 한다. 표준 용액을 몇 mL씩 덜어야 할까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$V_1=\dfrac{M_2V_2}{M_1}=\dfrac{M_2\times50.0\ \text{mL}}{0.5\ \text{M}}$</p>
+      <table class="tight ac241-res">
+        <tr><th>만들 농도 (M)</th><td>0.1</td><td>0.2</td><td>0.3</td><td>0.4</td></tr>
+        <tr><th>표준 용액 (mL)</th><td><span class="blank"><span class="step">10.0</span></span></td><td><span class="blank"><span class="step">20.0</span></span></td><td><span class="blank"><span class="step">30.0</span></span></td><td><span class="blank"><span class="step">40.0</span></span></td></tr>
+      </table>
+      <p class="f21 step">각각 50 mL 부피 플라스크에 옮기고 증류수를 표선까지 넣는다. → 이 용액들로 오늘의 탐구 활동을 한다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 21 탐구 원리 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 흡광도 (원리)">
+  <h2><span class="tag">탐구 활동</span>분광 광도계를 이용한 용액의 흡광도 변화 측정 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">고화-탐16</span>황산 구리 표준 용액의 파장별 흡광도를 확인하고, 희석한 용액의 흡광도를 측정하여 농도와 흡광도의 관계를 그래프로 설명하며, 색과 흡광도가 큰 파장의 관계와 미지 농도를 알아내는 방법을 토론한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">{{SPEC}}<p class="f21">흡광도 $=\log\dfrac{I_0}{I}$ ($I_0$: 들어간 빛, $I$: 통과한 빛)</p></div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 파란 황산 구리 수용액은 어떤 색의 빛을 가장 많이 흡수할까?</p></div>
+      <div class="row"><div class="col" style="flex:0 0 240px">{{WHEEL}}</div>
+      <div class="col stack"><div class="answer step">주황–빨강 빛</div>
+      <p class="f21 step">흡수한 빛의 보색(파랑)이 우리 눈에 보인다.</p></div></div>
+      <p class="small step">덱 보충: 흡광도 $=\varepsilon bc$ (비어–람베르트 관계, $b$: 빛이 지나는 길이, $c$: 농도) → 흡광도는 농도에 비례한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 22 탐구 설계·과정 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 설계와 과정">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 — 설계와 과정</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 460px">
+      <table class="tight ac241-var">
+        <tr><th>조작 변인</th><td>용액의 농도, 빛의 파장</td></tr>
+        <tr><th>종속 변인</th><td>흡광도</td></tr>
+        <tr><th>통제 변인</th><td>큐벳(빛의 길이 1 cm), 온도, 같은 분광 광도계</td></tr>
+      </table>
+      <div class="card mt8"><p class="f21"><b class="c-plus">안전</b> 보안경·장갑 착용. 황산 구리는 독성이 있고 피부를 자극한다. 폐액은 중금속 폐액통에 모은다. 큐벳의 투명한 면을 손으로 만지지 않는다.</p></div>
+    </div>
+    <div class="col stack">
+      <ol class="ac241-ol f21">
+        <li>0.5 M 표준 용액을 큐벳에 담아 파장을 바꾸며 흡광도를 재고, <b>파장–흡광도 그래프</b>에서 흡광도가 가장 큰 파장을 찾는다.</li>
+        <li>표준 용액을 희석하여 0.1, 0.2, 0.3, 0.4 M 용액을 만든다(확인 문제 02).</li>
+        <li>증류수로 바탕(흡광도 0)을 맞춘 뒤, 정한 파장에서 농도별 흡광도를 잰다.</li>
+        <li><b>농도–흡광도 그래프</b>(검량선)를 그리고, 미지 시료의 흡광도로 농도를 구한다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 23 실험실 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="실험실: 흡광도 측정">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac241abs">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="ac241-seg"><span class="small">시료</span><button class="btn" data-c="0">증류수</button><button class="btn" data-c="0.1">0.1</button><button class="btn" data-c="0.2">0.2</button><button class="btn" data-c="0.3">0.3</button><button class="btn" data-c="0.4">0.4</button><button class="btn on" data-c="0.5">0.5 M</button><button class="btn" data-c="u">미지</button></div>
+      <div class="ctl"><div class="lbl"><span>빛의 파장</span><output data-o="lam"></output></div><input type="range" min="400" max="900" step="10" value="600" data-i="lam" aria-label="빛의 파장"></div>
+      <svg class="ac241-app" viewBox="0 0 430 120" width="410" height="114" aria-label="분광 광도계 속 빛과 큐벳"></svg>
+      <div class="res"><div class="small">측정한 흡광도</div><div class="big"><output data-o="big"></output></div><output class="kind ac241-msg" data-o="msg"></output></div>
+      <div class="ac241-seg mt8"><button class="btn ac241-act" data-act="scan">파장별 흡광도 측정</button><button class="btn ac241-act" data-act="rec">흡광도 측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 590px">
+      <div class="ac241-seg"><span class="small">그래프</span><button class="btn on" data-act="gs">파장–흡광도</button><button class="btn" data-act="gc">농도–흡광도</button></div>
+      <div class="lab-fig" style="width:590px;height:270px"><svg viewBox="0 0 590 270" width="590" height="270" aria-label="흡광도 그래프"></svg></div>
+      <table class="tight ac241-log mt8"><thead><tr><th>회</th><th>시료</th><th>파장 (nm)</th><th>흡광도</th><th>투과율 (%)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- 24 탐구 결과 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 — 결과(예시)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">{{SPECTRUM}}
+      <table class="tight ac241-res">
+        <tr><th>농도 (M)</th><td>0.1</td><td>0.2</td><td>0.3</td><td>0.4</td><td>0.5</td></tr>
+        <tr><th>600 nm</th><td>0.26</td><td>0.53</td><td>0.79</td><td>1.05</td><td>1.31</td></tr>
+        <tr><th>800 nm</th><td>1.19</td><td>2.22</td><td>2.65</td><td>2.70</td><td>2.70</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="row"><div class="col">{{CAL800}}</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 흡광도가 가장 큰 800 nm 자료는 왜 직선이 아닐까?</p></div>
+      <p class="f21 step">흡광도 2는 빛이 1 %만, 3은 0.1 %만 통과한다는 뜻 → 검출기가 잴 수 있는 한계에 걸려 값이 더 커지지 않는다.</p>
+      <div class="answer step">측정 한계 — 흡광도 약 0.1–1.5의 파장을 고른다</div>
+    </div>
+  </div>
+</section>
+
+<!-- 25 탐구 결론 -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결론과 토론">
+  <h2><span class="tag">탐구 활동</span>흡광도 측정 — 결론과 토론</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 390px">{{CAL600}}</div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q ①</b> 황산 구리 수용액의 색과 흡광도가 큰 파장의 관계는?</p>
+      <p class="f21 step">→ 주황–빨강(약 600–800 nm) 빛을 흡수하고, 흡수되지 않고 통과한 <b>파란빛</b>이 보인다 — 흡수한 빛의 보색이 용액의 색이다.</p>
+      <p class="f21" data-q><b>Q ②</b> 미지 농도의 황산 구리 수용액의 농도는 어떻게 알아낼까?</p>
+      <p class="f21 step">→ 같은 파장(600 nm)에서 흡광도 0.69를 재어 검량선($y=2.63x$)에서 읽는다.</p>
+      <div class="answer step">약 0.26 M</div>
+      <p class="f21 step">흡광도는 농도에 <b>비례</b>한다. 미지 시료가 검량선 범위를 넘으면 희석해 다시 잰다.</p>
+    </div>
+  </div>
+  <div class="chips mt8"><button class="chk">모둠 그래프를 서로 비교하고 결론을 발표했다</button></div>
+</section>
+
+<!-- 26 스스로 정리 -->
+<section class="slide" data-sec="01 용액의 농도 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 용액의 성질 — 01 용액의 농도</h2>
+  <div class="ac241-map">
+    <div class="ac241-node ac241-main" data-q><b>부피 측정</b><br>담는 도구(부피 플라스크) = <span class="blank"><span class="step">Tc</span></span><br>물의 메니스커스는 오목한 <span class="blank"><span class="step">아래 끝</span></span>을 읽음</div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-main" data-q><b>농도 단위</b><br>몰농도 = 용질 mol ÷ <span class="blank"><span class="step">용액의 부피(L)</span></span><br>몰랄 농도 = 용질 mol ÷ <span class="blank"><span class="step">용매의 질량(kg)</span></span><br>ppm의 곱 인자 <span class="blank"><span class="step">$10^6$</span></span></div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-main" data-q><b>제조·희석·측정</b><br>희석: <span class="blank"><span class="step">$M_1V_1=M_2V_2$</span></span><br>흡광도는 농도에 <span class="blank"><span class="step">비례</span></span></div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-dim">02<br>용해도와<br>묽은 용액의 성질</div>
+  </div>
+</section>
+
+<!-- 27 스스로 점검하기 -->
+<section class="slide" data-sec="01 용액의 농도 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 몰농도, 몰랄 농도, 질량 백분율, ppm·ppb, 부피 백분율, 몰분율을 정의할 수 있다.</button>
+    <button class="chk">[과정·기능] 밀도와 질량 백분율로 몰농도를 구하고, 희석 계획을 세워 흡광도 검량선을 그렸다.</button>
+    <button class="chk">[가치·태도] 정확한 부피 측정과 안전한 시약 취급의 중요성을 생각해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 40 vol% 에탄올 수용액 100 mL 속 에탄올은 몇 mL일까? <span class="step">→ <span class="ans">40 mL</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 0.10 M 용액으로 0.010 M 용액 100 mL를 만들려면 몇 mL를 덜어야 할까? <span class="step">→ <span class="ans">10 mL</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 02 용해도와 묽은 용액의 성질 — 식용유는 왜 물에 녹지 않을까?</div>
+</section>
