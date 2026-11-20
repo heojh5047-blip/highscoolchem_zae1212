@@ -1,0 +1,465 @@
+<!-- 고급화학 3-4-1a 화학 전지의 개요 — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 4. 화학 전지 › 01</div>
+    <h1 class="ac341-h1">화학 전지의 개요와<br>전지 전위 <span class="acc">(1)</span></h1>
+    <p class="sub">화학 전지의 개요 — 반쪽 전지, 전극 반응, 전지 표기, 염다리</p>
+    <p class="meta">고등학교 고급 화학 164–169쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ-4. 화학 전지 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>4. 화학 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 화학 전지의 개요 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 전지 전위 <span class="small c-muted">(다음 시간 — 이 덱의 (2))</span></p>
+        <p class="f21"><b>03</b> 실용 전지</p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">휴대 전화·노트북 컴퓨터·손목시계를 움직이는 배터리 속에서는 <b>산화 환원 반응</b>이 일어난다. 화학 에너지를 전기 에너지로 바꾸는 것이 화학 전지의 핵심이다. 이 장에서는 화학 전지의 개요와 전극 반응, 전지 전위와 반응성, 전지 전위와 깁스 자유 에너지의 관계, 농도와 전지 전위(네른스트 식), 실용 전지와 연료 전지를 알아본다.</p>
+      </div>
+    </div>
+    <div class="col stack">{{INTRO}}</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-06]</span>표준 환원 전위의 정의를 이해하고, 여러 가지 물질의 표준 환원 전위를 활용하여 화학 전지의 표준 전지 전위차를 구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화03-07]</span>표준 전지 전위차와 깁스 자유 에너지 관계를 이해하고, 다양한 화학 전지에 호기심을 갖는다.</div>
+  <ol class="goals mt12 f22">
+    <li>갈바니 전지와 전해 전지를 구분하고, 화학 전지에서 전류가 생기는 원리를 반쪽 반응으로 설명할 수 있다.</li>
+    <li>다니엘 전지에서 산화 전극·환원 전극의 반응과 전자·이온의 이동 방향을 설명하고, 전지를 표기할 수 있다.</li>
+    <li>염다리의 역할을 설명하고, 염다리 조건을 바꾸는 실험을 설계·수행할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">한 비커 반응</div><div class="farr">→</div>
+    <div class="fnode">두 반쪽 전지</div><div class="farr">→</div>
+    <div class="fnode">다니엘 전지</div><div class="farr">→</div>
+    <div class="fnode">전지 표기</div><div class="farr">→</div>
+    <div class="fnode">염다리</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 염다리 실험</div>
+  </div>
+  <p class="small mt12">Ⅲ-3에서: 반쪽 반응법, 잃은 전자 수 = 얻은 전자 수 · 다음 시간 (2): 전지 전위와 $\Delta G^\circ=-nFE^\circ$</p>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 도입" data-title="생각 열기: 레몬 전지">
+  <h2><span class="tag">생각 열기</span>건전지 속 화학 반응은 어떻게 전기를 만들까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">레몬에 아연판과 구리판을 꽂은 레몬 전지 몇 개를 도선으로 차례로 이어 LED에 연결하면 불이 켜진다. 두 금속판을 같은 금속으로 바꾸면 불이 켜지지 않는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전자는 어느 금속판에서 어느 금속판으로 흐를까?</p>
+        <p class="f21 step">→ 더 쉽게 산화되는 아연판에서 도선을 따라 구리판으로 흐른다. 아연이 전자를 내놓는 <b>산화</b> 반응이 일어난다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 레몬즙은 무슨 일을 할까?</p>
+        <p class="f21 step">→ 이온이 들어 있는 전해질이다. 도선으로는 전자가, 레몬즙 속으로는 이온이 움직여 회로가 완성된다.</p></div>
+      <p class="small step">오늘은 산화 반응과 환원 반응을 서로 다른 곳에서 일어나게 하여 전류를 얻는 장치, <b>화학 전지</b>를 알아본다.</p>
+    </div>
+    <div class="col stack">{{LEMON}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. 연결 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 도입" data-title="연결: 한 비커 속 산화 환원">
+  <h2><span class="tag alt">연결</span>한 비커 속 산화 환원 반응에서는 왜 전류가 생기지 않을까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">Ⅲ-3에서 배운 반쪽 반응: 아연판을 황산 구리(Ⅱ) 수용액에 넣으면</p>
+      <div class="formula sm">$\ce{Zn(s) -> Zn^2+(aq) + 2e-}$ &nbsp;&nbsp; $\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 전자가 이동했는데 왜 도선에 쓸 수 있는 전류가 생기지 않을까?</p>
+        <p class="f21 step">→ 전자는 아연 표면에 닿은 구리 이온에게 <b>직접</b> 옮겨 간다. 용기 안 여기저기서 고르게 일어나므로 일정한 방향의 전류가 없고, 에너지는 열로 나온다(온도 상승).</p></div>
+      <p class="f21 step"><mark>두 반쪽 반응을 서로 다른 용기로 나누고 도선으로 이으면</mark> 전자가 한 방향으로 흐른다 — 이것이 화학 전지의 출발점이다.</p>
+    </div>
+    <div class="col">{{MIX}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ① 전기 화학과 두 종류의 전지 ════════ -->
+<section class="slide" data-sec="01 · 전기 화학 전지의 개요" data-title="전기 화학 전지의 두 종류">
+  <h2><span class="no">1</span>전기 화학 전지의 개요</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <p class="f21"><mark>화학 변화와 전기가 하는 일 사이의 관계를 탐구하는 분야가 전기 화학</mark>이다. 전기 화학이 다루는 반응은 전자의 이동이 따르는 반응, 곧 모든 <b>산화 환원 반응</b>이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 두 전지의 차이는 무엇일까?</p>
+        <p class="f21 step">→ <span class="ans">갈바니 전지</span>(볼타 전지처럼)는 <b>자발적</b> 반응으로 전기 에너지를 만든다. <b>전해 전지</b>는 전기 에너지를 써서 <b>비자발적</b> 반응을 일으켜 유용한 물질을 얻는다(Ⅲ-5).</p></div>
+      <div class="card tip"><p class="small"><b>산업에서의 중요성</b> 전기 에너지는 화석 연료를 대신할 청정에너지이다. 휴대용 기기부터 선박용 발전기까지 쓰임이 넓어, 효율 좋은 전지 기술은 경제·산업에서 잠재력이 크다.</p></div>
+    </div>
+    <div class="col">{{TWO}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ② 두 반쪽 반응을 나누면 ════════ -->
+<section class="slide" data-sec="01 · 전기 화학 전지의 개요" data-title="두 반쪽 반응을 나누면 — 직류 전류">
+  <h2><span class="no">2</span>두 반쪽 반응을 나누면 — 직류 전류</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산화 반쪽 반응에서 나온 전자는 환원 반쪽 반응으로 들어간다. 두 반쪽 반응을 다른 용기에서 일어나게 하고 회로로 이으면, 전자는 <b>산화 전극 → 환원 전극</b>의 한 방향으로 흐른다. 이것이 <b>직류 전류</b>를 만드는 원리이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 화학 전지에서 전기 에너지는 어디에서 올까?</p>
+        <p class="f21 step">→ 자발적 반응의 <b>자유 에너지 변화</b>가 전자의 운동 에너지, 곧 전기 에너지로 바뀐다. 각 전극의 반쪽 반응은 잃은 전자 수와 얻은 전자 수의 균형으로 이해한다.</p></div>
+      <div class="stages c2">
+        <div class="stage"><p class="small"><b>직류</b> 화학 전지가 만드는 한 방향 전류 — 휴대용 기기·자동차</p></div>
+        <div class="stage"><p class="small"><b>교류</b> 발전기가 만드는, 방향과 크기가 주기적으로 바뀌는 전류 — 가정·공장 전력</p></div>
+      </div>
+      <p class="small">생물계에서도: ATP를 만드는 산화적 인산화와 전자 전달계, 엽록체의 광계 반응은 전자가 이동하는 산화 환원 반응이다.</p>
+    </div>
+    <div class="col">{{SPLIT}}</div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 볼타 전지 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="볼타 전지">
+  <h2><span class="no">3</span>볼타 전지와 다니엘 전지 만들기 — 볼타 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">과학사에서 최초의 전지는 <b>볼타 전지</b>이다. 볼타는 소금물에 적신 골판지로 나눈 아연판과 구리판을 쌓아 올리고 회로를 이어 전류와 기전력이 생기는 것을 보였다.</p>
+      <div class="formula sm">산화 전극: $\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 구리판 표면에서는 무엇이 환원될까?</p>
+        <p class="f21 step">→ 구리가 아니라 물에서 이온화된 <b>양성자</b>($\ce{H+}$)가 환원되어 수소 기체가 생긴다.</p>
+        <div class="formula sm step">환원 전극: $\ce{2H+(aq) + 2e- -> H2(g)}$</div></div>
+      <p class="small step">구리판에 붙는 수소 기포가 전지의 성능을 떨어뜨린다 → 이 문제를 고친 것이 다니엘 전지(화학사, 169쪽).</p>
+    </div>
+    <div class="col">{{VOLTA}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 다니엘 전지의 구성 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="다니엘 전지의 구성">
+  <h2><span class="no">4</span>다니엘 전지의 구성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <p class="f21"><b>다니엘 전지</b>는 황산 아연 용액에 담근 아연 전극과 황산 구리(Ⅱ) 용액에 담근 구리 전극을 이은 회로이다. 산화가 일어나는 <b class="ac341-cox">산화 전극</b>과 환원이 일어나는 <b class="ac341-crd">환원 전극</b>이 완전히 나뉘어 있고, 전자의 통로인 <b>회로</b>와 이온의 통로인 <b>염다리</b>로만 이어진다.</p>
+      <table class="ac341-c ac341-sm">
+        <tr><th class="ac341-cox">산화 반쪽 반응 · 산화 전극</th></tr><tr><td>$\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</td></tr>
+        <tr><th class="ac341-crd">환원 반쪽 반응 · 환원 전극</th></tr><tr><td>$\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</td></tr>
+        <tr><th>전체(전지) 반응</th></tr><tr><td class="step">$\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$</td></tr>
+      </table>
+    </div>
+    <div class="col">{{DANIELL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 전극 표면에서 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="전극 표면에서 일어나는 일">
+  <h2><span class="no">5</span>전극 표면에서 일어나는 일</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{SURF}}
+      <p class="small">산화되는 $\ce{Zn}$ 원자 하나당 전자 $2$개를 잃고, 환원되는 $\ce{Cu^2+}$ 하나당 전자 $2$개를 얻는다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 전지를 한동안 작동시키면 두 전극의 질량은 어떻게 될까?</p>
+        <p class="f21 step">→ 아연 전극은 녹아 나가 <b>줄어들고</b>, 구리 전극에는 구리가 석출되어 <b>늘어난다</b>.</p></div>
+      <div class="step">{{AFTER}}</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑥ 전자와 이온의 이동 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="전자와 이온의 이동">
+  <h2><span class="no">6</span>전자는 도선으로, 이온은 염다리로</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산화 전극((−)극)에서 $\ce{Zn}$이 이온이 될 때 생긴 전자는 회로를 따라 환원 전극((+)극)으로 가서 용액 속 $\ce{Cu^2+}$을 환원시킨다.</p>
+      <p class="f21">염다리 속 반응하지 않는 <b class="c-minus">음이온은 산화 전극 쪽</b>으로, <b class="c-plus">양이온은 환원 전극 쪽</b>으로 이동하여 전하 균형을 유지한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 「전자가 염다리를 통해 다시 아연 쪽으로 돌아온다」는 맞는 말일까?</p>
+        <p class="f21 step" data-g="m1">→ 아니다. 전자는 <b>도선으로만</b> 이동하고, 염다리와 용액 속에서는 <b>이온</b>이 이동한다. 염다리를 빼면 전류가 멈춘다.</p></div>
+    </div>
+    <div class="col">{{MOVE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ 전극에서 일어나는 산화 환원 반응 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="반쪽 전지와 전극">
+  <h2><span class="no">7</span>전극에서 일어나는 산화 환원 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">화학 전지의 두 반쪽 반응은 서로 떨어진 두 <b>반쪽 전지</b>에서 일어난다. 반쪽 전지에는 <b>전해질</b> 용액과 <b>전극</b>이 있고, 두 전극은 회로로 이어진다.</p>
+      <table class="ac341-c ac341-sm">
+        <tr><th></th><th class="ac341-cox">산화 전극 (anode)</th><th class="ac341-crd">환원 전극 (cathode)</th></tr>
+        <tr><td class="l">일어나는 반응</td><td>산화 — 전자 방출</td><td>환원 — 전자를 용액 속 이온에 줌</td></tr>
+        <tr><td class="l">전자의 흐름</td><td>회로로 내보냄</td><td>회로에서 들어옴</td></tr>
+        <tr><td class="l">전극의 전하</td><td><span class="blank"><span class="step">(−)극</span></span></td><td><span class="blank"><span class="step">(+)극</span></span></td></tr>
+      </table>
+      <p class="f21 mt8">전극의 전하는 전자의 흐름 방향으로 정해진다. 산화 전극은 남는 전자를 가져 음의 전하를 띤다.</p>
+      <p class="small">전극의 <b>이름</b>은 반응(산화·환원)으로 정한다. 부호는 전지의 종류에 따라 달라져, 전해 전지(Ⅲ-5)에서는 (+)극이 산화 전극이다.</p>
+    </div>
+    <div class="col">{{HALF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>다니엘 전지를 작동시키면</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">다니엘 전지 $\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$를 작동시켰다. 염다리는 $\ce{KNO3}$ 수용액이다. 물음에 답하여라.</p>
+      <p class="f21">(1) $\ce{K+}$은 어느 전극 쪽으로 이동할까? <span class="step">→ <span class="ans">구리 전극(환원 전극) 쪽</span></span></p>
+      <p class="f21">(2) 황산 아연 용액의 $[\ce{Zn^2+}]$는 어떻게 변할까? <span class="step">→ <span class="ans">커진다</span></span></p>
+      <p class="f21">(3) 전자 $1\ \text{mol}$이 도선으로 흐를 때 석출되는 구리는 몇 mol일까? <span class="step">→ <span class="ans">$0.5\ \text{mol}$</span> ($\ce{Cu^2+}$ 하나가 전자 $2$개를 얻으므로)</span></p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 전지 표기법 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="전지 표기법">
+  <h2><span class="no">8</span>전지를 표기하는 방법</h2>
+  <p class="f21">반쪽 전지의 구성 성분을 차례로 쓰되 <b class="ac341-cox">산화 반쪽 전지는 왼쪽</b>, <b class="ac341-crd">환원 반쪽 전지는 오른쪽</b>에 놓고, 상 경계는 세로선 $|$, 염다리는 이중 선 $\|$로 나타낸다.</p>
+  <div class="row mt8">
+    <div class="col">{{NOTE}}</div>
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="card q"><p class="f21"><b>Q</b> 이 표기에서 전자는 어느 쪽으로 흐를까?</p>
+        <p class="f21 step" data-g="n2">→ 왼쪽(산화 전극) → 오른쪽(환원 전극)</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 왼쪽과 오른쪽을 바꾸어 쓰면 무엇을 뜻하게 될까?</p>
+        <p class="f21 step">→ 구리가 산화되고 아연 이온이 환원되는 반대 반응을 나타낸다. 표기만 보고도 어느 쪽이 산화 전극인지 알 수 있다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑨ 염다리가 없으면 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="염다리가 없으면">
+  <h2><span class="no">9</span>염다리가 없으면 — 전하 불균형</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산화 전극 쪽: $\ce{Zn}$이 산화되어 $\ce{Zn^2+}$이 계속 늘어난다 → 용액에 <b class="c-plus">양전하</b>가 쌓인다.</p>
+      <p class="f21">환원 전극 쪽: $\ce{Cu^2+}$이 줄어들어 $\ce{SO4^2-}$의 비율이 커진다 → 용액에 <b class="c-minus">음전하</b>가 쌓인다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 이렇게 전하가 쌓이면 전지는 어떻게 될까?</p>
+        <p class="f21 step" data-g="i1">→ 쌓인 전하가 두 전극의 전위차를 상쇄하여 전지 전위가 0이 되면 전자의 이동과 전지의 작동이 <b>멈춘다</b>. 이 전하 불균형을 막는 것이 <b>염다리</b>이다.</p></div>
+    </div>
+    <div class="col stack">
+      <div class="ac341-swap"><div class="ac341-s0">{{IMB0}}</div><div class="ac341-s1 step" data-g="i1">{{IMB1}}</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑩ 염다리의 역할과 구성 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="염다리의 역할과 구성">
+  <h2><span class="no">10</span>염다리의 역할과 구성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><mark>염다리는 두 반쪽 전지를 잇는 고농도 이온의 통로로, 전하 불균형을 막아 전지 반응이 계속되게 한다.</mark></p>
+      <ul class="ac341-ul f21">
+        <li>산화 전극 쪽에 <b class="c-minus">음이온</b>을 공급 — 양전하가 쌓이지 않게</li>
+        <li>환원 전극 쪽에 <b class="c-plus">양이온</b>을 공급 — 음전하가 쌓이지 않게</li>
+        <li>두 전해질의 이온과 <b>반응하지 않는</b> 이온으로 만든다($\ce{KNO3}$, $\ce{KCl}$, $\ce{Na2SO4}$ 등)</li>
+      </ul>
+      <div class="card q"><p class="f21"><b>Q</b> 다니엘 전지 염다리에 $\ce{AgNO3}$ 용액을 쓰면 안 되는 까닭은?</p>
+        <p class="f21 step">→ 염다리에서 아연 쪽으로 들어간 $\ce{Ag+}$이 아연판과 직접 반응하여 은이 석출된다. <span class="ans">염다리 이온은 전극 반응에 끼어들지 않아야</span> 한다.</p></div>
+    </div>
+    <div class="col">{{BTYPE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑪ 비활성 전극 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="비활성 전극">
+  <h2><span class="no">11</span>비활성 전극을 쓰는 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">반쪽 반응의 반응물이나 생성물을 고체 전극으로 쓸 수 없을 때는 반응하지 않는 <b>비활성 전극</b>(흑연, 백금 등)을 쓴다.</p>
+      <div class="formula sm ac341-eq">$\ce{C(s)}\,|\,\ce{I-(aq)}\,|\,\ce{I2(s)}\,\|\,\ce{H+(aq)}, \ce{MnO4-(aq)}, \ce{Mn^2+(aq)}\,|\,\ce{C(s)}$</div>
+      <p class="f21"><b class="ac341-cox">산화</b> $\ce{2I-(aq) -> I2(s) + 2e-}$</p>
+      <p class="f21"><b class="ac341-crd">환원</b> $\ce{MnO4-(aq) + 8H+(aq) + 5e- -> Mn^2+(aq) + 4H2O(l)}$</p>
+      <p class="small">한 반쪽 전지 안의 여러 화학종은 쉼표로 나누어 쓴다.</p>
+    </div>
+    <div class="col">{{INERT}}</div>
+  </div>
+  <p class="f21 mt8" data-q>전자 수를 $10$개로 맞추어 더하면 전체 반응은</p>
+  <div class="formula sm ac341-eq step">$\ce{2MnO4-(aq) + 16H+(aq) + 10I-(aq) -> 2Mn^2+(aq) + 5I2(s) + 8H2O(l)}$</div>
+</section>
+
+<!-- ════════ 18. 예제 Ⅲ-10 (1) ════════ -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅲ-10 (1)">
+  <h2><span class="tag ex">예제 Ⅲ-10</span>전지 표기에서 전체 반응 쓰기 (1)</h2>
+  <p class="f21">다음 화학 전지의 전체 반응을 나타내어라. &nbsp; 1. $\ce{Zn(s)}\,|\,\ce{Zn^2+(aq)}\,\|\,\ce{Co^3+(aq)}, \ce{Co^2+(aq)}\,|\,\ce{Pt(s)}$</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21 step"><b>풀이 1</b> 왼쪽이 산화, 오른쪽이 환원이다. 예제 Ⅲ-9처럼 반쪽 반응으로 나누고 원자와 전하를 맞춘다.<br>&nbsp; 산화: $\ce{Zn(s) -> Zn^2+(aq) + 2e-}$ &nbsp; 환원: $\ce{Co^3+(aq) + e- -> Co^2+(aq)}$</p>
+      <p class="f21 step"><b>풀이 2</b> 전자 수를 맞추려고 환원 반쪽 반응에 $2$를 곱해 더한다.</p>
+      <div class="answer step">$\ce{Zn(s) + 2Co^3+(aq) -> Zn^2+(aq) + 2Co^2+(aq)}$</div>
+      <p class="small step">백금은 반응하지 않는 전극이다. (교과서 풀이에는 생성물이 $\ce{Co(s)}$로 적혀 있으나, 전지 표기의 환원 반쪽 전지가 $\ce{Co^3+}$, $\ce{Co^2+}$ | $\ce{Pt}$이므로 생성물은 $\ce{Co^2+}$이다.)</p>
+    </div>
+    <div class="col stack">{{EX10A}}<div class="board ac341-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 19. 예제 Ⅲ-10 (2) ════════ -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅲ-10 (2)">
+  <h2><span class="tag ex">예제 Ⅲ-10</span>전지 표기에서 전체 반응 쓰기 (2)</h2>
+  <p class="f21">다음 화학 전지의 전체 반응을 나타내어라. &nbsp; 2. $\ce{Ni(s)}\,|\,\ce{Ni^2+(aq)}\,\|\,\ce{Ag+(aq)}\,|\,\ce{Ag(s)}$</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21 step"><b>풀이 1</b> 산화: $\ce{Ni(s) -> Ni^2+(aq) + 2e-}$ &nbsp; 환원: $\ce{Ag+(aq) + e- -> Ag(s)}$</p>
+      <p class="f21 step"><b>풀이 2</b> Q 전자 수를 맞추려면 어느 반쪽 반응에 몇을 곱해야 할까? → 환원 반쪽 반응에 $2$</p>
+      <div class="answer step">$\ce{Ni(s) + 2Ag+(aq) -> Ni^2+(aq) + 2Ag(s)}$</div>
+      <p class="small step">확인: 원자 $\ce{Ni}$ $1=1$, $\ce{Ag}$ $2=2$ · 전하 $+2=+2$</p>
+    </div>
+    <div class="col stack">{{EX10B}}<div class="board ac341-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>반응식에서 전지 표기 쓰기</h2>
+  <p class="f21">반응 $\ce{Mg(s) + 2H+(aq) -> Mg^2+(aq) + H2(g)}$를 이용하는 전지를 표기하여라. 수소 기체 쪽에는 백금 전극을 쓴다.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">Q 산화되는 것과 환원되는 것은? <span class="step">→ <span class="ans">$\ce{Mg}$ 산화(왼쪽) · $\ce{H+}$ 환원(오른쪽)</span></span></p>
+      <div class="answer step">$\ce{Mg(s)}\,|\,\ce{Mg^2+(aq)}\,\|\,\ce{H+(aq)}\,|\,\ce{H2(g)}\,|\,\ce{Pt(s)}$</div>
+      <p class="small step">고체·용액·기체가 맞닿는 곳마다 세로선(상 경계)을 긋는다. 이렇게 수소 기체를 쓰는 전극은 다음 시간 「표준 수소 전극」으로 다시 만난다.</p>
+    </div>
+    <div class="col stack">{{MGH}}<div class="board ac341-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 활동 1 — 예측과 설계 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 예측과 실험 설계">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 다니엘 전지에서 염다리의 작용 실험 설계와 실험</h2>
+  <div class="std"><span class="code">탐구 목표</span>화학 전지의 성능과 염다리의 관계를 예측하고, 염다리 내 이온의 농도·재질 등 성능에 영향을 미치는 요인을 확인하는 실험을 설계하여 수행한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">
+      <h3>1 예측</h3>
+      <div class="card q"><p class="f21"><b>Q</b> 염다리 속 이온 농도가 커지면 전지의 성능(전류)은 어떻게 될까?</p>
+        <p class="f21 step">→ 이온이 많을수록 전하가 잘 옮겨져 내부 저항이 작아지고 전류가 커질 것이다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 염다리가 없거나 증류수만 적신 거름종이이면?</p>
+        <p class="f21 step">→ 이온 통로가 없거나 거의 없어 전류가 흐르지 않을 것이다.</p></div>
+    </div>
+    <div class="col stack">
+      <h3>2 실험 설계 (모둠)</h3>
+      <table class="ac341-sm">
+        <tr><th>변인</th><th>예</th></tr>
+        <tr><td>조작 변인</td><td>염다리 유무, 염다리 속 $\ce{KNO3}$ 농도(증류수·0.1 M·1.0 M·포화), 재질(거름종이·면실·한천 젤 U자관)</td></tr>
+        <tr><td>종속 변인</td><td>전압계 값, 부하(100 Ω)에 흐르는 전류</td></tr>
+        <tr><td>통제 변인</td><td>금속판 크기·닦은 정도, $[\ce{Zn^2+}]$·$[\ce{Cu^2+}]$, 용액 부피, 전극 사이 거리, 측정 시간</td></tr>
+      </table>
+      <p class="small">한 번에 한 변인만 바꾼다. 농도를 바꾸는 실험은 염다리를 같게 둔다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 2 — 준비물·과정·안전 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 실험 과정과 안전</h2>
+  <p class="f21"><b>준비물</b> 아연판, 구리판, 사포, 비커 2개, 1.0 M $\ce{ZnSO4}$, 1.0 M $\ce{CuSO4}$, $\ce{KNO3}$ 용액(0.1 M·1.0 M·포화), 거름종이, 면실, 한천 젤 U자관, 집게 도선, 디지털 전압계, 100 Ω 저항, 보안경, 실험용 장갑</p>
+  <div class="mt8">{{PROC}}</div>
+  <div class="stages c2 mt8">
+    <div class="stage"><p class="small"><b>과정 팁</b> 염다리는 측정마다 새것으로 바꾸어 두 용액이 섞이지 않게 한다. 전압이 안정될 때까지 30초–1분 기다린 뒤 기록한다. 전압계 단자를 바꾸면 부호가 바뀐다.</p></div>
+    <div class="stage"><p class="small"><b class="c-plus">안전</b> 보안경·장갑을 쓰고, 황산 구리(Ⅱ) 수용액이 피부에 닿지 않게 한다. 금속판의 날카로운 모서리에 주의한다. 실험이 끝난 용액은 지정된 폐액통에 버린다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 실험실 ════════ -->
+<section class="slide" data-sec="01 · 실험실" data-title="실험실: 다니엘 전지와 염다리">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 실험실: 다니엘 전지 조립하기</h2>
+  <div class="lab" data-lab="ac341bridge">
+    <div class="lab-ctl" style="flex-basis:500px">
+      <div class="ac341-seg"><span class="ac341-sl">염다리</span><button class="btn on" data-s="1">있음</button><button class="btn" data-s="0">없음</button></div>
+      <div class="ac341-seg"><span class="ac341-sl">재질</span><button class="btn on" data-m="paper">거름종이</button><button class="btn" data-m="thread">면실</button><button class="btn" data-m="gel">한천 젤 U자관</button></div>
+      <div class="ac341-seg"><span class="ac341-sl">$\ce{KNO3}$</span><button class="btn" data-c="0">증류수</button><button class="btn" data-c="1">0.1 M</button><button class="btn on" data-c="2">1.0 M</button><button class="btn" data-c="3">포화</button></div>
+      <div class="ctl"><div class="lbl"><span>$[\ce{Zn^2+}]$</span><output data-o="zn"></output></div>
+        <input type="range" min="0" max="3" step="1" value="3" data-i="zn" aria-label="아연 이온 농도"></div>
+      <div class="ctl"><div class="lbl"><span>$[\ce{Cu^2+}]$</span><output data-o="cu"></output></div>
+        <input type="range" min="0" max="3" step="1" value="3" data-i="cu" aria-label="구리 이온 농도"></div>
+      <table class="readout ac341-read">
+        <tr class="hl"><th>전압계</th><td><output data-o="v"></output></td><th>전류(100 Ω)</th><td><output data-o="i"></output></td></tr>
+        <tr><th>내부 저항</th><td><output data-o="r"></output></td><th>부하 전압</th><td><output data-o="vl"></output></td></tr>
+      </table>
+      <div class="ac341-seg mt8"><button class="btn ac341-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind ac341-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 540px">
+      <div class="lab-fig" style="width:540px;height:290px">
+        <svg viewBox="0 0 540 290" width="540" height="290" aria-label="아연 전극과 구리 전극, 고른 염다리, 전압계로 만든 다니엘 전지와 전자·이온의 흐름"></svg>
+        <div class="ov" data-ov="mL" style="font-size:19px">$\ce{Zn}$</div>
+        <div class="ov" data-ov="mR" style="font-size:19px">$\ce{Cu}$</div>
+        <div class="ov halo" data-ov="sL" style="font-size:18px"></div>
+        <div class="ov halo" data-ov="sR" style="font-size:18px"></div>
+        <div class="ov" data-ov="pL" style="font-size:18px;font-weight:700">(−)극 · <span style="color:#C2410C">산화 전극</span></div>
+        <div class="ov" data-ov="pR" style="font-size:18px;font-weight:700">(+)극 · <span style="color:#0E7490">환원 전극</span></div>
+        <div class="ov" data-ov="e1" style="font-size:20px;color:#1F6FD1">$e^-$</div>
+        <div class="ov halo" data-ov="vm" style="font-size:19px;font-weight:700"></div>
+        <div class="ov halo" data-ov="ia" style="font-size:18px;color:#1F6FD1">← $\ce{NO3-}$</div>
+        <div class="ov halo" data-ov="ic" style="font-size:18px;color:#D7263D">$\ce{K+}$ →</div>
+      </div>
+      <table class="tight ac341-log mt8"><thead><tr><th>#</th><th>염다리</th><th>농도</th><th>$[\ce{Zn^2+}]$</th><th>$[\ce{Cu^2+}]$</th><th>전압(V)</th><th>전류(mA)</th><th>전류 막대</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 탐구 활동 3 — 결과와 토론 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과와 토론">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 결과 정리와 토론·발표</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><b>결과 예시</b> ($[\ce{Zn^2+}]=[\ce{Cu^2+}]=1.0\ \text{M}$, 실험실 측정값) — 이온이 든 염다리이면 전압계 값은 모두 $1.10\ \text{V}$였지만(증류수 염다리 $0.68\ \text{V}$, 염다리 없음 $0$) 전류는 크게 달랐다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 염다리 조건이 바뀔 때 전압보다 전류가 크게 달라지는 까닭은?</p>
+        <p class="f21 step">→ 전압계는 전류를 거의 흘리지 않고 재므로 기전력에 가깝게 나온다. 전류를 흘리면 염다리의 저항(내부 저항)에서 전압이 깎이므로, 이온이 많고 통로가 넓을수록 전류가 크다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 성능이 좋은 염다리의 조건을 정리하면?</p>
+        <p class="f21 step">→ ① 이온 농도가 높다 ② 이온이 지나는 단면이 넓고 짧다 ③ 전극 반응을 하지 않는 이온이다 ④ 두 용액이 섞이지 않는다(젤·다공성 재질).</p></div>
+    </div>
+    <div class="col stack">{{RESULT}}<p class="small">토론 뒤 모둠별로 설계·결과·결론을 발표한다. 측정값이 계산값보다 조금 작은 까닭(산화막, 접촉 전위 등)도 함께 이야기해 보자.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 탐구 활동 4 — 건전지 속 염다리 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 건전지 속 염다리 역할">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 건전지에서 염다리 역할을 하는 구조 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>활동</b> 건전지와 같은 배터리에서 염다리의 역할을 하는 구조가 무엇인지 조사한 뒤 발표해 보자.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 알칼리 전지에서 염다리 역할을 하는 것은?</p>
+        <p class="f21 step">→ 아연 가루(산화 전극 쪽)와 이산화 망가니즈(환원 전극 쪽) 사이의 <b>분리막</b>이다. 두 전극 물질이 직접 닿지 않게 막으면서, $\ce{KOH}$ 전해질의 $\ce{OH-}$ 같은 이온은 지나가게 하여 전하 균형을 유지한다.</p></div>
+      <p class="f21 step">예시 결과: 망간 건전지 — 전해질 반죽을 적신 종이 분리막 · 리튬 이온 전지 — 다공성 고분자 분리막 + 리튬 이온 전해질</p>
+      <p class="small step">공통점: 전자는 바깥 회로로, 이온은 분리막을 통해 이동한다. 분리막이 찢어져 두 전극이 닿으면 안에서 단락이 일어나 위험하다.</p>
+    </div>
+    <div class="col">{{SEP}}</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 화학사 ════════ -->
+<section class="slide" data-sec="01 · 화학사" data-title="화학사: 볼타 전지와 다니엘 전지">
+  <h2><span class="tag">화학사</span>볼타 전지와 다니엘 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <div class="stages c2">
+        <div class="stage"><h3>1780 갈바니</h3><p class="small">구리와 아연을 이은 두 금속판을 죽은 개구리 근육에 대면 근육이 수축함을 관찰 → 「생체 전기」라고 생각</p></div>
+        <div class="stage"><h3>1799–1800 볼타</h3><p class="small">전류는 생체가 아니라 두 금속과 전해액의 작용이라 보고, 묽은 황산(또는 소금물)에 적신 종이를 아연판·구리판 사이에 끼워 쌓음 → 최초의 화학 전지</p></div>
+        <div class="stage"><h3>1836 다니엘</h3><p class="small">구리판에서 수소가 생겨 성능이 떨어지는 문제를 풀려고, 구리 쪽은 황산 구리 용액, 아연 쪽은 황산 용액으로 나누고 소의 식도 주머니를 이온 통로로 씀</p></div>
+        <div class="stage"><h3>오늘날</h3><p class="small">다니엘의 장치가 현대 화학 전지의 원형 → 갈바니 전지·볼타 전지·다니엘 전지라는 이름을 함께 쓴다</p></div>
+      </div>
+      <p class="small">그 앞에는 게리케의 정전기 발생 장치, 쿨롱·프리스틀리의 정전기 연구가 있었다.</p>
+    </div>
+    <div class="col">{{HIST}}</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 화학 전지 — 01 화학 전지의 개요</h2>
+  <div class="ac341-map">
+    <div class="ac341-node ac341-dim">Ⅲ-3<br>반쪽 반응법<br>잃은 $e^-$ = 얻은 $e^-$</div>
+    <div class="ac341-arr">→</div>
+    <div class="ac341-node ac341-main"><b>01 화학 전지의 개요</b><br>❶ 자발적 반응으로 전기 에너지를 만드는 전지 = <span class="blank"><span class="step">갈바니 전지</span></span> · 전기 에너지로 비자발적 반응 = 전해 전지<br>❷ 산화 전극 = <span class="blank"><span class="step">(−)극</span></span>, 환원 전극 = (+)극, 전자는 <span class="blank"><span class="step">도선</span></span>을 따라 산화 전극 → 환원 전극<br>❸ 다니엘 전지: $\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$ — 작동하면 $\ce{Zn}$ 전극 <span class="blank"><span class="step">감소</span></span>, $\ce{Cu}$ 전극 증가<br>❹ 전지 표기: 산화 반쪽 전지 <span class="blank"><span class="step">왼쪽</span></span>, 상 경계 $|$, 염다리 $\|$<br>❺ 염다리: 음이온 → <span class="blank"><span class="step">산화 전극</span></span> 쪽, 양이온 → 환원 전극 쪽 — 전하 균형 유지</div>
+    <div class="ac341-arr">→</div>
+    <div class="ac341-node ac341-dim">02 전지 전위<br>$E^\circ_\text{전지}$<br>$\Delta G^\circ=-nFE^\circ$</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 갈바니 전지와 전해 전지를 구분하고, 다니엘 전지의 두 전극 반응과 전자·이온의 이동을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 염다리 조건을 바꾸는 실험을 설계하고, 측정값으로 성능 좋은 염다리의 조건을 정리했다.</button>
+    <button class="chk">[가치·태도] 모둠 토론과 조사 발표에서 건전지 속 구조를 화학 전지 원리와 연결해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{Ni(s)}\,|\,\ce{Ni^2+(aq)}\,\|\,\ce{Ag+(aq)}\,|\,\ce{Ag(s)}$에서 (−)극은? <span class="step">→ <span class="ans">니켈 전극</span> (왼쪽 = 산화 전극)</span></p>
+    <p class="f21 mt8"><b>Q</b> 염다리에서 이동하는 것은 전자일까, 이온일까? <span class="step">→ <span class="ans">이온</span> (전자는 도선으로만)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 다니엘 전지의 전압은 왜 약 $1.10\ \text{V}$일까? 반쪽 전지 하나의 전위는 무엇을 기준으로 잴까? — 02 전지 전위</div>
+</section>

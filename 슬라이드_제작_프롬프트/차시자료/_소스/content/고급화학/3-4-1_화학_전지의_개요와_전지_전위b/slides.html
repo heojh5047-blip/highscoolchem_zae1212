@@ -1,0 +1,434 @@
+<!-- 고급화학 3-4-1b 전지 전위 — gen.py가 tpl_b.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 4. 화학 전지 › 02</div>
+    <h1 class="ac341-h1">화학 전지의 개요와<br>전지 전위 <span class="acc">(2)</span></h1>
+    <p class="sub">전지 전위 — 표준 환원 전위, 표준 전지 전위, $\Delta G^\circ=-nFE^\circ$, 네른스트 식(심화)</p>
+    <p class="meta">고등학교 고급 화학 170–175쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 480 480" style="width:500px" aria-label="표준 환원 전위 눈금 위의 구리와 아연 반쪽 반응: 두 값의 차가 다니엘 전지의 표준 전지 전위 1.10 V이다"><line x1="160" y1="96" x2="160" y2="400" stroke="#16233D" stroke-width="3"/><line x1="150" y1="114.7" x2="170" y2="114.7" stroke="#16233D" stroke-width="3"/><text class="tex" x="144" y="121.7" data-mix="+1.23" data-size="20" data-anchor="end"></text><text class="tex" x="182" y="121.7" data-tex="\ce{O2}/\ce{H2O}" data-size="20" data-anchor="start"></text><line x1="150" y1="212.6" x2="170" y2="212.6" stroke="#16233D" stroke-width="3"/><text class="tex" x="144" y="219.6" data-mix="+0.34" data-size="20" data-anchor="end"></text><text class="tex" x="182" y="219.6" data-tex="\ce{Cu^2+}/\ce{Cu}" data-size="20" data-anchor="start"></text><line x1="150" y1="250" x2="170" y2="250" stroke="#16233D" stroke-width="3"/><text class="tex" x="144" y="257" data-mix="0.00" data-size="20" data-anchor="end"></text><text class="tex" x="182" y="257" data-tex="\ce{H+}/\ce{H2}" data-size="20" data-anchor="start"></text><line x1="150" y1="333.6" x2="170" y2="333.6" stroke="#16233D" stroke-width="3"/><text class="tex" x="144" y="340.6" data-mix="-0.76" data-size="20" data-anchor="end"></text><text class="tex" x="182" y="340.6" data-tex="\ce{Zn^2+}/\ce{Zn}" data-size="20" data-anchor="start"></text><line x1="160" y1="250" x2="340" y2="250" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><text class="tex" x="160" y="84" data-tex="E^\circ\ [\text{V}]" data-size="20" data-anchor="middle"></text><g data-anim="scale" data-from="1,0" data-o="330,333.6" data-dur="1.2"><line x1="330" y1="212.6" x2="330" y2="333.6" stroke="#E08A2C" stroke-width="4"/></g><line x1="316" y1="212.6" x2="344" y2="212.6" stroke="#E08A2C" stroke-width="3"/><line x1="316" y1="333.6" x2="344" y2="333.6" stroke="#E08A2C" stroke-width="3"/><text class="tex" x="352" y="272" data-mix="$E^\circ_\text{전지}$||$=1.10$ V" data-size="21" data-anchor="start" fill="#E08A2C" data-weight="700"></text></svg>
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="02 전지 전위 · 도입" data-title="다시 보기: 화학 전지의 개요">
+  <h2><span class="tag alt">다시 보기</span>01 화학 전지의 개요</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <div class="stages c2">
+        <div class="stage"><h3>두 전극</h3><p class="f21">산화 전극 (−)극, 환원 전극 (+)극</p></div>
+        <div class="stage"><h3>전자·이온</h3><p class="f21">전자는 도선, 이온은 염다리</p></div>
+        <div class="stage"><h3>전지 표기</h3><p class="f21">$\ce{Zn(s)}\,|\,\ce{Zn^2+(aq)}\,\|\,\ce{Cu^2+(aq)}\,|\,\ce{Cu(s)}$</p></div>
+        <div class="stage"><h3>염다리</h3><p class="f21">고농도 이온 통로 — 전하 균형</p></div>
+      </div>
+      <p class="f22 mt16"><b>Q</b> 실험실에서 다니엘 전지의 전압계 값은 약 몇 V였을까?</p>
+      <div class="answer step">약 $1.1\ \text{V}$ — 오늘은 이 값이 어디에서 오는지 구한다</div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 370" style="width:470px" aria-label="다니엘 전지: 아연 전극이 산화 전극, 구리 전극이 환원 전극이며 염다리 이온이 전하 균형을 유지한다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{Zn}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{ZnSO4(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{CuSO4(aq)}" data-size="20" data-anchor="middle"></text><g data-anim="move" data-from="60,0" data-dur="1.6" data-rep="loop" data-ease="lin"><g data-chg="214,112,9,-"></g></g><g data-anim="move" data-from="-60,0" data-dur="1.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-chg="346,112,9,+"></g></g><text class="tex" x="280" y="170" data-mix="← $\ce{SO4^2-}$" data-size="20" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><text class="tex" x="280" y="206" data-mix="$\ce{Na+}$ →" data-size="20" data-anchor="middle" fill="#D7263D" data-halo="1"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 전지 전위" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-06]</span>표준 환원 전위의 정의를 이해하고, 여러 가지 물질의 표준 환원 전위를 활용하여 화학 전지의 표준 전지 전위차를 구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화03-07]</span>표준 전지 전위차와 깁스 자유 에너지 관계를 이해하고, 다양한 화학 전지에 호기심을 갖는다.</div>
+  <ol class="goals mt12 f22">
+    <li>표준 수소 전극을 기준으로 표준 환원 전위를 정의하고, 표준 환원 전위로 반응성을 비교할 수 있다.</li>
+    <li>$E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}$으로 표준 전지 전위를 구하고 자발성을 판단할 수 있다.</li>
+    <li>$\Delta G^\circ=-nFE^\circ_\text{전지}$로 전지 전위와 깁스 자유 에너지·평형 상수를 연결할 수 있다. <span class="small c-muted">[심화] 네른스트 식으로 농도에 따른 전위 변화를 해석한다.</span></li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">전지 전위</div><div class="farr">→</div>
+    <div class="fnode">표준 환원 전위</div><div class="farr">→</div>
+    <div class="fnode hl">$E^\circ_\text{전지}$ 구하기</div><div class="farr">→</div>
+    <div class="fnode">$\Delta G^\circ=-nFE^\circ$</div><div class="farr">→</div>
+    <div class="fnode">네른스트 식 [심화]</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 전지 전위 · 도입" data-title="생각 열기: 다양한 전지의 전위">
+  <h2><span class="tag">생각 열기</span>전지마다 전압이 다른 까닭은?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">표 Ⅲ-9는 여러 전지의 전위이다. 자동차 납축전지는 전지 $6$개를 이어 약 $12\ \text{V}$, 길이 $1.8\ \text{m}$ 전기뱀장어는 약 $5000$개의 세포를 이어 약 $750\ \text{V}$를 만든다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전지 하나의 전위는 무엇에 따라 달라질까?</p>
+        <p class="f21 step">→ 어떤 산화 환원 반응인가(전극 물질의 종류)와 반응에 참여하는 화학종의 <b>농도</b>에 따라 달라진다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 같은 다니엘 전지라도 오래 쓰면 전압이 줄어드는 까닭은?</p>
+        <p class="f21 step">→ 반응이 진행되며 $\ce{Cu^2+}$은 줄고 $\ce{Zn^2+}$은 늘어 농도가 바뀌기 때문이다 — 이 덱 끝의 심화에서 식으로 본다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 300" style="width:540px" aria-label="여러 전지의 전압 비교: 리튬 이온 전지 3.7 V가 가장 크고 오징어 신경 세포막 0.070 V가 가장 작다"><text class="tex" x="218" y="48" data-mix="알칼리 전지" data-size="19" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="230,43" data-dur=".8" data-delay="0"><rect x="230" y="30" width="105.4" height="26" rx="3" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="343.4" y="50" data-mix="1.5 V" data-size="19" data-anchor="start"></text><text class="tex" x="218" y="94" data-mix="납축전지 전지 하나" data-size="19" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="230,89" data-dur=".8" data-delay="0.1"><rect x="230" y="76" width="147.6" height="26" rx="3" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="385.6" y="96" data-mix="2.1 V" data-size="19" data-anchor="start"></text><text class="tex" x="218" y="140" data-mix="수은 전지" data-size="19" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="230,135" data-dur=".8" data-delay="0.2"><rect x="230" y="122" width="91.4" height="26" rx="3" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="329.4" y="142" data-mix="1.3 V" data-size="19" data-anchor="start"></text><text class="tex" x="218" y="186" data-mix="리튬 이온 전지" data-size="19" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="230,181" data-dur=".8" data-delay="0.3"><rect x="230" y="168" width="260" height="26" rx="3" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="498" y="188" data-mix="3.7 V" data-size="19" data-anchor="start"></text><text class="tex" x="218" y="232" data-mix="전기뱀장어 세포 하나" data-size="19" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="230,227" data-dur=".8" data-delay="0.4"><rect x="230" y="214" width="10.5" height="26" rx="3" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="248.5" y="234" data-mix="0.15 V" data-size="19" data-anchor="start"></text><text class="tex" x="218" y="278" data-mix="오징어 신경 세포막" data-size="19" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="230,273" data-dur=".8" data-delay="0.5"><rect x="230" y="260" width="4.9" height="26" rx="3" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="242.9" y="280" data-mix="0.070 V" data-size="19" data-anchor="start"></text></svg><p class="small">표 Ⅲ-9 다양한 전지의 전위(V) — 전기뱀장어는 세포 하나, 오징어는 신경 세포막 안팎</p></div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 전지 전위 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="전지 전위">
+  <h2><span class="no">1</span>전지 전위</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><mark>두 전극 사이의 전위차를 전지 전위라고 한다.</mark> 전위차가 만드는 전기장이 전자를 움직이고, 화학 전지가 내는 전기 에너지는 이 전위차(전압·기전력)에 비례한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 자발적 산화 환원 반응으로 작동하는 전지에서 전자의 이동 방향과 전지 전위의 부호는?</p>
+        <p class="f21 step">→ 전자는 산화 전극((−)극)에서 양의 전위를 가진 환원 전극((+)극)으로 이동하고, 전지 전위는 <b>양</b>의 값을 가진다.</p></div>
+      <p class="small">전지 전위는 같은 다니엘 전지라도 화학종의 농도에 따라 달라진다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 540 344" style="width:520px" aria-label="전자는 낮은 전위의 (−)극에서 높은 전위의 (+)극으로 이동하며 일을 하고, 두 극의 전위차가 전지 전위이다"><rect x="20" y="40" width="120" height="240" rx="10" fill="#EAF2FC" stroke="#1F6FD1" stroke-width="2"/><text class="tex" x="80" y="30" data-mix="(−)극" data-size="20" data-anchor="middle" data-weight="700"></text><rect x="400" y="40" width="120" height="240" rx="10" fill="#FDECEE" stroke="#D7263D" stroke-width="2"/><text class="tex" x="460" y="30" data-mix="(+)극" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="80" y="170" data-mix="낮은 전위" data-size="19" data-anchor="middle"></text><text class="tex" x="460" y="170" data-mix="높은 전위" data-size="19" data-anchor="middle"></text><line x1="140" y1="120" x2="400" y2="120" stroke="#16233D" stroke-width="3"/><g data-anim="move" data-from="-210,0" data-dur="2" data-rep="loop" data-ease="lin"><circle cx="370" cy="120" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="370" y="126" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-arw="170,90,370,90,minus,3"></g><text class="tex" x="270" y="78" data-mix="전자는 양의 전위 쪽으로" data-size="19" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><line x1="80" y1="300" x2="460" y2="300" stroke="#5B6B7F" stroke-width="1.5"/><line x1="80" y1="292" x2="80" y2="308" stroke="#5B6B7F" stroke-width="1.5"/><line x1="460" y1="292" x2="460" y2="308" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="270" y="330" data-mix="전위차 = 전지 전위 $E_\text{전지}$ (자발적이면 $+$)" data-size="19" data-anchor="middle" data-halo="1"></text><text class="tex" x="270" y="200" data-mix="전자가 이동하며||일을 한다" data-size="19" data-anchor="middle" data-halo="1"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 전위와 일 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="전위·전하·일의 관계">
+  <h2><span class="no">2</span>전위, 전하, 일의 관계</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">전지 전위는 전위차가 있는 두 전극 사이에서 전하가 이동하며 한 일과 같다. 전위·전하·일의 SI 단위는 볼트 V, 쿨롱 C, 줄 J이고</p>
+      <div class="formula">$1\ \text{V}=1\ \dfrac{\text{J}}{\text{C}}$<div class="unit">$1\ \text{C}$의 전하가 $1\ \text{V}$의 전위차를 지나면 $1\ \text{J}$의 일</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> $1.5\ \text{V}$ 알칼리 전지에서 $2.0\ \text{C}$의 전하가 회로를 지나면 전기가 한 일은 몇 J일까?</p>
+        <p class="f21 step">→ $1.5\ \text{J/C}\times2.0\ \text{C}=$ <span class="ans">$3.0\ \text{J}$</span></p></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 표준 전지 전위 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="표준 전지 전위">
+  <h2><span class="no">3</span>표준 전지 전위 $E^\circ_\text{전지}$</h2>
+  <p class="f21"><mark>표준 전지 전위는 정해진 표준 조건에서 전류를 흘리지 않고 잰 전지 전위</mark>로, 여러 전지의 능력을 비교하는 데 쓴다.</p>
+  <div class="stages mt12">
+    <div class="stage"><h3>온도</h3><p class="f21">$298\ \text{K}$</p></div>
+    <div class="stage"><h3>농도·압력</h3><p class="f21">모든 이온·분자 $1\ \text{M}$, 모든 기체 $1\ \text{atm}$</p></div>
+    <div class="stage"><h3>전극</h3><p class="f21">순수한 고체</p></div>
+  </div>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 전류가 흐르는 동안 잰 전지 전위는 왜 표준 전지 전위와 다를까?</p>
+    <p class="f21 step">→ 반응이 진행되며 농도가 바뀌고, 회로와 용액의 저항에서 전압이 깎이기 때문이다(01 실험실: 부하 전압 &lt; 전압계 값).</p></div>
+  <p class="small mt8">표준 표시 $^\circ$는 위첨자 동그라미이다: $E^\circ$, $\Delta G^\circ$ (Ⅲ-1의 $\Delta H^\circ$와 같은 약속).</p>
+</section>
+
+<!-- ════════ 8. 연결 — 기준이 필요 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="연결: 반쪽 전지 전위의 기준">
+  <h2><span class="tag alt">연결</span>반쪽 전지 하나의 전위는 어떻게 잴까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">어떤 산화 환원 반응도 두 반쪽 반응으로 나눌 수 있으므로, 표준 전지 전위도 두 <b>반쪽 전지 전위</b>($E^\circ_\text{반쪽 전극}$: $E^\circ_\text{산화 전극}$ 또는 $E^\circ_\text{환원 전극}$)로 나눌 수 있다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전압계로 반쪽 전지 하나의 전위만 잴 수 있을까?</p>
+        <p class="f21 step">→ 없다. 전압계는 언제나 두 전극 사이의 <b>차</b>만 잰다. 그래서 산의 높이를 해수면 기준으로 재듯, 기준 반쪽 전지를 정하고 그것과 비교한 <b>상댓값</b>을 쓴다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 540 310" style="width:540px" aria-label="산의 높이를 해수면 기준으로 재듯, 반쪽 전지의 전위는 표준 수소 전극을 0 V 기준으로 잰 상댓값이다"><path d="M20 250 L90 120 L140 170 L200 60 L270 250 Z" fill="#DDE7D3" stroke="#6B8F5A" stroke-width="2"/><rect x="10" y="250" width="300" height="50" rx="0" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="1.5"/><line x1="10" y1="250" x2="320" y2="250" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><text class="tex" x="160" y="284" data-mix="해수면 = 0 m (기준)" data-size="19" data-anchor="middle" fill="#16233D"></text><line x1="200" y1="60" x2="200" y2="250" stroke="#E08A2C" stroke-width="2.5"/><text class="tex" x="260" y="140" data-mix="높이" data-size="20" data-anchor="start" fill="#E08A2C" data-weight="700"></text><line x1="204" y1="150" x2="256" y2="140" stroke="#E08A2C" stroke-width="1.5"/><rect x="340" y="40" width="190" height="240" rx="12" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="435" y="70" data-mix="전위도 기준이 필요" data-size="19" data-anchor="middle" data-weight="700"></text><line x1="360" y1="190" x2="510" y2="190" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><text class="tex" x="435" y="182" data-mix="표준 수소 전극 = 0.00 V" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><line x1="380" y1="120" x2="500" y2="120" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="440" y="112" data-mix="$\ce{Cu^2+}$/$\ce{Cu}$ $+0.34$" data-size="18" data-anchor="middle"></text><line x1="380" y1="250" x2="500" y2="250" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="440" y="242" data-mix="$\ce{Zn^2+}$/$\ce{Zn}$ $-0.76$" data-size="18" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 표준 수소 전극 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="표준 수소 전극">
+  <h2><span class="no">4</span>표준 수소 전극</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <p class="f21"><mark>표준 기준 반쪽 전지는 표준 수소 전극</mark>으로, 백금 전극을 $1\ \text{M}$ $\ce{H3O+}(aq)$ 용액에 담그고 $1\ \text{atm}$의 $\ce{H2}$ 기체를 넣은 전극이다.</p>
+      <p class="f21">이 기준 반쪽 반응은 양성자가 환원되어 수소가 되는 반응이며, 그 전위를 $E^\circ_\text{기준}=0.00\ \text{V}$로 정한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 백금을 전극으로 쓰는 까닭은?</p>
+        <p class="f21 step">→ 반쪽 반응의 물질($\ce{H+}$, $\ce{H2}$)이 기체와 이온이라 전극으로 쓸 수 없으므로, 반응하지 않고 전자만 주고받는 비활성 전극이 필요하다(01의 비활성 전극).</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 570 350" style="width:520px" aria-label="표준 수소 전극: 1 M 하이드로늄 이온 용액에 담근 백금 전극에 1 atm 수소 기체를 불어 넣는다"><path d="M54 120 H60 V320 Q60 330 70 330 H290 Q300 330 300 320 V120 H306" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="62" y="160" width="236" height="168" fill="#DDEEF8" fill-opacity="1"/><rect x="150" y="70" width="60" height="230" rx="22" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5" fill-opacity=".4"/><line x1="180" y1="20" x2="180" y2="270" stroke="#16233D" stroke-width="3"/><rect x="162" y="240" width="36" height="50" rx="2" fill="#B8BEC6" stroke="#7E8B98" stroke-width="2"/><g data-arw="60,90,148,100,ink,3"></g><text class="tex" x="56" y="82" data-tex="\ce{H2}(g)\ 1\ \text{atm}" data-size="19" data-anchor="start"></text><g data-anim="move" data-from="0,40" data-dur="1.6" data-rep="loop"><circle cx="170" cy="232" r="5" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/><circle cx="192" cy="222" r="4" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/><circle cx="182" cy="206" r="4.5" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/></g><line x1="198" y1="270" x2="330" y2="280" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="334" y="286" data-mix="백금 전극" data-size="19" data-anchor="start"></text><line x1="270" y1="300" x2="330" y2="320" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="334" y="326" data-mix="$1\ \text{M}$ $\ce{H3O+}(aq)$" data-size="19" data-anchor="start"></text><rect x="314" y="80" width="246" height="100" rx="10" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="437" y="118" data-tex="\ce{2H+(aq) + 2e- -> H2(g)}" data-size="19" data-anchor="middle"></text><text class="tex" x="437" y="158" data-tex="E^\circ_\text{기준}=0.00\ \text{V}" data-size="20" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 표준 환원 전위 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="표준 환원 전위 재기">
+  <h2><span class="no">5</span>표준 환원 전위</h2>
+  <p class="f21"><mark>표준 상태의 반쪽 반응을 환원 전극에, 표준 수소 전극을 산화 전극에 연결하여 얻는 전지 전위를 표준 전극 전위(표준 전위)라고 한다.</mark> 언제나 환원 반응의 꼴로 주므로 <b>표준 환원 전위</b>라고도 한다.</p>
+  <div class="row mt8">
+    <div class="col stack"><svg class="fig" viewBox="0 0 560 370" style="width:470px" aria-label="표준 수소 전극을 왼쪽, 구리 반쪽 전지를 오른쪽에 이으면 전자가 수소 전극에서 구리 쪽으로 흐르고 전압은 0.34 V이다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="115" y="90" width="18" height="180" rx="3" fill="#B8BEC6" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="280" y="92" data-mix="0.34 V" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" x="104" y="112" data-tex="" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="1\ \text{M}\ \ce{H3O+}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="1\ \text{M}\ \ce{Cu^2+}" data-size="20" data-anchor="middle"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text><rect x="104" y="76" width="40" height="200" rx="18" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" fill-opacity=".35" stroke="#7E8B98"/><g data-arw="40,96,100,104,ink,2.5"></g><text class="tex" x="36" y="88" data-tex="\ce{H2}" data-size="21" data-anchor="start"></text><g data-anim="move" data-from="0,30" data-dur="1.8" data-rep="loop"><circle cx="116" cy="240" r="5" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/><circle cx="132" cy="218" r="4" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/></g></svg><p class="f21 step" data-g="z0">$\ce{Cu^2+}$/$\ce{Cu}$: 구리 쪽이 실제로 환원 전극 → $E^\circ=+0.34\ \text{V}$</p></div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 560 370" style="width:470px" aria-label="표준 수소 전극과 아연 반쪽 전지를 이으면 전자는 아연에서 수소 전극 쪽으로 흐르고 전압은 0.76 V이다 — 아연이 산화 전극이 된다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="115" y="90" width="18" height="180" rx="3" fill="#B8BEC6" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><path d="M424 90 V50 H298 M262 50 H124 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="232,26,160,26,minus,3"></g><g data-arw="400,26,328,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="280" y="92" data-mix="0.76 V" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" x="104" y="112" data-tex="" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Zn}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="1\ \text{M}\ \ce{H3O+}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="1\ \text{M}\ \ce{Zn^2+}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="135" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text><rect x="104" y="76" width="40" height="200" rx="18" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" fill-opacity=".35" stroke="#7E8B98"/><g data-arw="40,96,100,104,ink,2.5"></g><text class="tex" x="36" y="88" data-tex="\ce{H2}" data-size="21" data-anchor="start"></text><g data-anim="move" data-from="0,30" data-dur="1.8" data-rep="loop"><circle cx="116" cy="240" r="5" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/><circle cx="132" cy="218" r="4" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/></g></svg><p class="f21">Q 아연 반쪽 전지를 이으면 $E^\circ$는?</p><p class="f21 step">→ 전자가 반대로 흘러 아연이 산화 전극이 된다 → <span class="ans">$E^\circ=-0.76\ \text{V}$</span></p></div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑥ 표 Ⅲ-10 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="표 Ⅲ-10 표준 환원 전위">
+  <h2><span class="no">6</span>몇 가지 반응의 표준 환원 전위 (25 °C)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="ac341-c ac341-sm ac341-tab">
+        <caption class="small">표 Ⅲ-10 25 °C에서 몇 가지 반응의 표준 환원 전위</caption>
+        <tr><th>환원 반쪽 반응</th><th>$E^\circ$ (V)</th></tr>
+        <tr><td class="l">$\ce{F2(g) + 2e- -> 2F-(aq)}$</td><td>$2.87$</td></tr>
+        <tr><td class="l">$\ce{O2(g) + 4H+(aq) + 4e- -> 2H2O(l)}$</td><td>$1.23$</td></tr>
+        <tr><td class="l">$\ce{2Hg^2+(aq) + 2e- -> Hg2^2+(aq)}$</td><td>$0.90$</td></tr>
+        <tr><td class="l">$\ce{Hg2^2+(aq) + 2e- -> 2Hg(l)}$</td><td>$0.79$</td></tr>
+        <tr><td class="l">$\ce{O2(g) + 2H2O(l) + 4e- -> 4OH-(aq)}$</td><td>$0.40$</td></tr>
+        <tr><td class="l">$\ce{2H+(aq) + 2e- -> H2(g)}$</td><td>$0.00$</td></tr>
+        <tr><td class="l">$\ce{Co^2+(aq) + 2e- -> Co(s)}$</td><td>$-0.28$</td></tr>
+        <tr><td class="l">$\ce{Cd^2+(aq) + 2e- -> Cd(s)}$</td><td>$-0.40$</td></tr>
+        <tr><td class="l">$\ce{Zn^2+(aq) + 2e- -> Zn(s)}$</td><td>$-0.76$</td></tr>
+        <tr><td class="l">$\ce{Mg^2+(aq) + 2e- -> Mg(s)}$</td><td>$-2.37$</td></tr>
+        <tr><td class="l">$\ce{Na+(aq) + e- -> Na(s)}$</td><td>$-2.70$</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <p class="f21">구리: $\ce{Cu^2+(aq) + 2e- -> Cu(s)}$ $E^\circ=0.34\ \text{V}$ (교과서 Ⅲ-4 03·Ⅲ-5에서 쓰는 값)</p>
+      <div class="card q"><p class="f21"><b>Q</b> 표에서 가장 환원되기 쉬운 물질과 가장 산화되기 쉬운 물질은?</p>
+        <p class="f21 step">→ $E^\circ$가 가장 큰 <span class="ans">$\ce{F2}$</span>가 가장 환원되기 쉽고(강한 산화제), 가장 작은 <span class="ans">$\ce{Na}$</span>이 가장 산화되기 쉽다(강한 환원제).</p></div>
+      <p class="small">$E^\circ$가 클수록 환원 반응(오른쪽 방향)이 일어나려는 경향이 크다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ 표준 환원 전위와 반응성 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 표준 환원 전위" data-title="표준 환원 전위와 반응성">
+  <h2><span class="no">7</span>표준 환원 전위와 산화 환원 반응의 반응성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">눈금에서 위쪽 반쪽 반응은 환원(→), 아래쪽 반쪽 반응은 산화(←)로 짝지을 때 자발적이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 아연판을 $\ce{Cu^2+}$ 수용액에 넣으면 반응할까? 구리판을 $\ce{Zn^2+}$ 수용액에 넣으면?</p>
+        <p class="f21 step">→ $\ce{Cu^2+}$($+0.34$)이 $\ce{Zn^2+}$($-0.76$)보다 환원되기 쉬우므로 $\ce{Zn + Cu^2+ -> Zn^2+ + Cu}$는 <span class="ans">자발적</span>이다. 구리판과 $\ce{Zn^2+}$은 반응하지 않는다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 금속 마그네슘과 금속 코발트 가운데 더 강한 환원제는?</p>
+        <p class="f21 step">→ $E^\circ$가 더 작은 <span class="ans">$\ce{Mg}$</span>($-2.37$) — 더 산화되기 쉽다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 520 410" style="width:520px" aria-label="표 Ⅲ-10의 표준 환원 전위를 세로 눈금에 놓으면 위쪽일수록 환원되기 쉽고 아래쪽일수록 산화되기 쉽다"><line x1="120" y1="30" x2="120" y2="380" stroke="#16233D" stroke-width="3"/><text class="tex" x="120" y="22" data-tex="E^\circ\ [\text{V}]" data-size="19" data-anchor="middle"></text><line x1="110" y1="40" x2="130" y2="40" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="47" data-mix="+2.87" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="47" data-tex="\ce{F2}/\ce{F-}" data-size="19" data-anchor="start"></text><line x1="110" y1="137.2" x2="130" y2="137.2" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="144.2" data-mix="+1.23" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="144.2" data-tex="\ce{O2}/\ce{H2O}" data-size="19" data-anchor="start"></text><line x1="110" y1="186.3" x2="130" y2="186.3" stroke="#16233D" stroke-width="3"/><line x1="108" y1="186.3" x2="96" y2="163.6" stroke="#5B6B7F" stroke-width="1.2"/><line x1="132" y1="186.3" x2="140" y2="163.6" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="92" y="170.6" data-mix="+0.40" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="170.6" data-tex="\ce{O2}/\ce{OH-}" data-size="19" data-anchor="start"></text><line x1="110" y1="189.9" x2="130" y2="189.9" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="195.6" data-mix="+0.34" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="195.6" data-tex="\ce{Cu^2+}/\ce{Cu}" data-size="19" data-anchor="start"></text><line x1="110" y1="210" x2="130" y2="210" stroke="#16233D" stroke-width="3"/><line x1="108" y1="210" x2="96" y2="213.6" stroke="#5B6B7F" stroke-width="1.2"/><line x1="132" y1="210" x2="140" y2="213.6" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="92" y="220.6" data-mix="0.00" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="220.6" data-tex="\ce{H+}/\ce{H2}" data-size="19" data-anchor="start"></text><line x1="110" y1="226.6" x2="130" y2="226.6" stroke="#16233D" stroke-width="3"/><line x1="108" y1="226.6" x2="96" y2="238.6" stroke="#5B6B7F" stroke-width="1.2"/><line x1="132" y1="226.6" x2="140" y2="238.6" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="92" y="245.6" data-mix="-0.28" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="245.6" data-tex="\ce{Co^2+}/\ce{Co}" data-size="19" data-anchor="start"></text><line x1="110" y1="255.1" x2="130" y2="255.1" stroke="#16233D" stroke-width="3"/><line x1="108" y1="255.1" x2="96" y2="263.6" stroke="#5B6B7F" stroke-width="1.2"/><line x1="132" y1="255.1" x2="140" y2="263.6" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="92" y="270.6" data-mix="-0.76" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="270.6" data-tex="\ce{Zn^2+}/\ce{Zn}" data-size="19" data-anchor="start"></text><line x1="110" y1="350.4" x2="130" y2="350.4" stroke="#16233D" stroke-width="3"/><line x1="108" y1="350.4" x2="96" y2="347.7" stroke="#5B6B7F" stroke-width="1.2"/><line x1="132" y1="350.4" x2="140" y2="347.7" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="92" y="354.7" data-mix="-2.37" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="354.7" data-tex="\ce{Mg^2+}/\ce{Mg}" data-size="19" data-anchor="start"></text><line x1="110" y1="370" x2="130" y2="370" stroke="#16233D" stroke-width="3"/><line x1="108" y1="370" x2="96" y2="372.7" stroke="#5B6B7F" stroke-width="1.2"/><line x1="132" y1="370" x2="140" y2="372.7" stroke="#5B6B7F" stroke-width="1.2"/><text class="tex" x="92" y="379.7" data-mix="-2.70" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="379.7" data-tex="\ce{Na+}/\ce{Na}" data-size="19" data-anchor="start"></text><g data-arw="460,360,460,50,rd,3"></g><text class="tex" x="450" y="44" data-mix="환원되기 쉬움||(강한 산화제)" data-size="18" data-anchor="end" fill="#0E7490"></text><text class="tex" x="450" y="340" data-mix="산화되기 쉬움||(강한 환원제)" data-size="18" data-anchor="end" fill="#C2410C"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑧ 표준 전지 전위 구하기 ════════ -->
+<section class="slide" data-sec="02 · 표준 전지 전위 구하기" data-title="표준 전지 전위 구하기">
+  <h2><span class="no">8</span>표준 환원 전위로 표준 전지 전위 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">표준 전지 전위는 환원 전극과 산화 전극의 표준 환원 전위의 차이다. 이것이 전지가 최대로 만들 수 있는 <b>기전력</b>이다.</p>
+      <div class="formula">$E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}$<div class="unit">두 값 모두 「환원」 전위를 그대로 넣는다 (산화 전극의 부호를 미리 바꾸지 않는다)</div></div>
+      <p class="f21" data-q>다니엘 전지: 환원 전극 $\ce{Cu}$, 산화 전극 $\ce{Zn}$</p>
+      <p class="f21 step" data-g="d1">$E^\circ_\text{전지}=0.34\ \text{V}-(-0.76\ \text{V})=$ <span class="ans">$+1.10\ \text{V}$</span></p>
+      <div class="card tip step"><p class="small"><b>주의</b> 반쪽 반응식에 $2$를 곱해도 $E^\circ$는 그대로이다. $E^\circ$는 물질의 양과 무관한 <b>세기 성질</b>이다 — 전자 수를 맞추려고 계수를 곱할 때 $E^\circ$에는 곱하지 않는다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 460 340" style="width:460px" aria-label="구리와 아연의 표준 환원 전위 차 1.10 V가 다니엘 전지의 표준 전지 전위이다"><line x1="120" y1="30" x2="120" y2="310" stroke="#16233D" stroke-width="3"/><text class="tex" x="120" y="22" data-tex="E^\circ\ [\text{V}]" data-size="19" data-anchor="middle"></text><line x1="110" y1="82.2" x2="130" y2="82.2" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="89.2" data-mix="+0.34" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="89.2" data-tex="\ce{Cu^2+}/\ce{Cu}" data-size="19" data-anchor="start"></text><line x1="110" y1="137.5" x2="130" y2="137.5" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="144.5" data-mix="0.00" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="144.5" data-tex="\ce{H+}/\ce{H2}" data-size="19" data-anchor="start"></text><line x1="110" y1="261" x2="130" y2="261" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="268" data-mix="-0.76" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="268" data-tex="\ce{Zn^2+}/\ce{Zn}" data-size="19" data-anchor="start"></text><g class="step" data-g="d1"><line x1="320" y1="82.2" x2="320" y2="261" stroke="#E08A2C" stroke-width="4"/><line x1="306" y1="82.2" x2="334" y2="82.2" stroke="#E08A2C" stroke-width="3"/><line x1="306" y1="261" x2="334" y2="261" stroke="#E08A2C" stroke-width="3"/><text class="tex" x="340" y="178.6" data-mix="$1.10$ V" data-size="20" data-anchor="start" fill="#E08A2C" data-halo="1" data-weight="700"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>마그네슘–코발트 전지</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">표 Ⅲ-10을 이용하여 $\ce{Mg}$ 전극($1\ \text{M}$ $\ce{Mg^2+}$)과 $\ce{Co}$ 전극($1\ \text{M}$ $\ce{Co^2+}$)으로 만든 전지를 생각하자.</p>
+      <p class="f21">(1) 산화 전극은? <span class="step">→ <span class="ans">$\ce{Mg}$ 전극</span> ($E^\circ$가 더 작음)</span></p>
+      <p class="f21">(2) 전체 반응은? <span class="step">→ <span class="ans">$\ce{Mg(s) + Co^2+(aq) -> Mg^2+(aq) + Co(s)}$</span></span></p>
+      <p class="f21">(3) $E^\circ_\text{전지}$는? <span class="step">→ $-0.28-(-2.37)=$ <span class="ans">$+2.09\ \text{V}$</span></span></p>
+      <p class="f21">(4) 전지 표기는? <span class="step">→ <span class="ans">$\ce{Mg(s)}\,|\,\ce{Mg^2+(aq)}\,\|\,\ce{Co^2+(aq)}\,|\,\ce{Co(s)}$</span></span></p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 15. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>반응이 저절로 일어날까?</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">표준 상태에서 반응 $\ce{Co(s) + Cd^2+(aq) -> Co^2+(aq) + Cd(s)}$는 자발적일까?</p>
+      <p class="f21 step">풀이: 쓰인 대로라면 환원 전극은 $\ce{Cd}$, 산화 전극은 $\ce{Co}$이다.</p>
+      <p class="f21 step">$E^\circ_\text{전지}=-0.40-(-0.28)=-0.12\ \text{V}$</p>
+      <div class="answer step">$E^\circ_\text{전지}&lt;0$ → 비자발적</div>
+      <p class="f21 step">역반응 $\ce{Cd(s) + Co^2+(aq) -> Cd^2+(aq) + Co(s)}$가 자발적이다($E^\circ_\text{전지}=+0.12\ \text{V}$).</p>
+      <p class="small step">전지 전위가 양이 되도록 전극을 정하면, 그것이 실제로 저절로 일어나는 반응이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 예제 Ⅲ-11 (1) ════════ -->
+<section class="slide" data-sec="02 · 예제" data-title="예제 Ⅲ-11 (1)">
+  <h2><span class="tag ex">예제 Ⅲ-11</span>산화 전극과 환원 전극 구별하기</h2>
+  <p class="f21">다음 두 반쪽 반응으로 만든 화학 전지에서 산화 전극의 반응과 환원 전극의 반응을 구별하고, 전지 전위 $E^\circ_\text{전지}$를 계산하여라.</p>
+  <div class="formula sm">1. $\ce{Fe^3+ + e- -> Fe^2+}$ &nbsp; $E^\circ=0.771\ \text{V}$ &nbsp;&nbsp;&nbsp; 2. $\ce{I3- + 2e- -> 3I-}$ &nbsp; $E^\circ=0.536\ \text{V}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">Q 어느 쪽이 환원 전극일까?</p>
+      <p class="f21 step">→ $E^\circ$가 더 큰 1이 환원된다. 환원 전극: <span class="ans">$\ce{Fe^3+ + e- -> Fe^2+}$</span></p>
+      <p class="f21 step">산화 전극: 2를 거꾸로 — $\ce{3I- -> I3- + 2e-}$</p>
+      <p class="small step">산화 반쪽 반응과 환원 반쪽 반응이 각각 산화 전극 반응과 환원 전극 반응이다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 460 330" style="width:460px" aria-label="철 이온과 삼아이오딘화 이온의 표준 환원 전위 차 0.235 V"><line x1="120" y1="30" x2="120" y2="300" stroke="#16233D" stroke-width="3"/><text class="tex" x="120" y="22" data-tex="E^\circ\ [\text{V}]" data-size="19" data-anchor="middle"></text><line x1="110" y1="72.2" x2="130" y2="72.2" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="79.2" data-mix="+0.771" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="79.2" data-tex="\ce{Fe^3+}/\ce{Fe^2+}" data-size="19" data-anchor="start"></text><line x1="110" y1="131" x2="130" y2="131" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="138" data-mix="+0.536" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="138" data-tex="\ce{I3-}/\ce{I-}" data-size="19" data-anchor="start"></text><line x1="110" y1="265" x2="130" y2="265" stroke="#16233D" stroke-width="3"/><text class="tex" x="92" y="272" data-mix="0.00" data-size="19" data-anchor="end"></text><text class="tex" x="144" y="272" data-tex="\ce{H+}/\ce{H2}" data-size="19" data-anchor="start"></text><g class="step" data-g="d1"><line x1="320" y1="72.2" x2="320" y2="131" stroke="#E08A2C" stroke-width="4"/><line x1="306" y1="72.2" x2="334" y2="72.2" stroke="#E08A2C" stroke-width="3"/><line x1="306" y1="131" x2="334" y2="131" stroke="#E08A2C" stroke-width="3"/><text class="tex" x="340" y="108.6" data-mix="$0.235$ V" data-size="20" data-anchor="start" fill="#E08A2C" data-halo="1" data-weight="700"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 17. 예제 Ⅲ-11 (2) ════════ -->
+<section class="slide" data-sec="02 · 예제" data-title="예제 Ⅲ-11 (2)">
+  <h2><span class="tag ex">예제 Ⅲ-11</span>전지 전위 계산하기</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21" data-q>$E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}$에 넣으면</p>
+      <p class="f21 step">$E^\circ_\text{전지}=0.771\ \text{V}-0.536\ \text{V}$</p>
+      <div class="answer step">$E^\circ_\text{전지}=+0.235\ \text{V}$</div>
+      <p class="f21 step mt8">더 해 보기: 전자 수를 $2$로 맞춘 전체 반응은 $\ce{2Fe^3+ + 3I- -> 2Fe^2+ + I3-}$ ($n=2$). 반쪽 반응 1에 $2$를 곱해도 $E^\circ=0.771\ \text{V}$는 그대로이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 연결 — Ⅲ-2 깁스 자유 에너지 ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 깁스 자유 에너지" data-title="연결: 자발성과 자유 에너지">
+  <h2><span class="tag alt">연결</span>Ⅲ-2의 $\Delta G$와 전지 전위</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">Ⅲ-2에서: 일정한 온도·압력에서 $\Delta G=\Delta H-T\Delta S&lt;0$이면 자발적이고, 표준 상태 값은 $\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ$로 구했다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 자발적 반응의 전지에서 $E_\text{전지}&gt;0$, $\Delta G&lt;0$이다. 두 양은 어떤 관계일까?</p>
+        <p class="f21 step">→ 서로 비례하며 부호가 반대이다.</p>
+        <div class="formula sm step">$\Delta G\propto-E_\text{전지}$</div></div>
+      <p class="small">반응 지수로 보면: $Q/K&lt;1$이면 아직 평형 전이라 정반응이 자발적($\Delta G&lt;0$), $Q/K&gt;1$이면 역반응이 일어난다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 510 290" style="width:500px" aria-label="깁스 자유 에너지 변화가 음수이면 전지 전위는 양수로 자발적이고, 0이면 평형, 양수이면 전지 전위가 음수로 비자발적이다"><text class="tex" x="110" y="26" data-mix="Ⅲ-2 깁스 자유 에너지" data-size="19" data-anchor="middle" data-weight="700"></text><text class="tex" x="400" y="26" data-mix="Ⅲ-4 전지 전위" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="20" y="50" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="110" y="86" data-mix="$\Delta G&lt;0$" data-size="22" data-anchor="middle"></text><rect x="310" y="50" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="400" y="86" data-mix="$E_\text{전지}&gt;0$" data-size="22" data-anchor="middle"></text><g data-anim="draw" data-dur=".6" data-delay="0"><path d="M204 78 L306 78" fill="none" stroke="#2E9E6A" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6 4"/></g><text class="tex" x="255" y="70" data-mix="자발적" data-size="18" data-anchor="middle" fill="#2E9E6A" data-halo="1" data-weight="700"></text><rect x="20" y="128" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="110" y="164" data-mix="$\Delta G=0$" data-size="22" data-anchor="middle"></text><rect x="310" y="128" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="400" y="164" data-mix="$E_\text{전지}=0$" data-size="22" data-anchor="middle"></text><g data-anim="draw" data-dur=".6" data-delay="0.2"><path d="M204 156 L306 156" fill="none" stroke="#5B6B7F" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6 4"/></g><text class="tex" x="255" y="148" data-mix="평형" data-size="18" data-anchor="middle" fill="#5B6B7F" data-halo="1" data-weight="700"></text><rect x="20" y="206" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><text class="tex" x="110" y="242" data-mix="$\Delta G&gt;0$" data-size="22" data-anchor="middle"></text><rect x="310" y="206" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><text class="tex" x="400" y="242" data-mix="$E_\text{전지}&lt;0$" data-size="22" data-anchor="middle"></text><g data-anim="draw" data-dur=".6" data-delay="0.5"><path d="M204 234 L306 234" fill="none" stroke="#D7263D" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6 4"/></g><text class="tex" x="255" y="226" data-mix="비자발적" data-size="18" data-anchor="middle" fill="#D7263D" data-halo="1" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 19. ⑨ ΔG = −nFE ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 깁스 자유 에너지" data-title="ΔG = −nFE">
+  <h2><span class="no">9</span>표준 전지 전위차와 깁스 자유 에너지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 580px">
+      <p class="f21">전지가 주위에 할 수 있는 최대 일은 자유 에너지 변화와 같고, 이는 전지 전위와 전하량의 곱이다: $w_\text{최대}=\Delta G=-E_\text{전지}\times\text{전하량}$</p>
+      <p class="f21">전하량은 이동한 전자의 몰수 $n$과 $1\ \text{mol}$ 전자당 전하량인 <b>패러데이 상수</b> $F$의 곱이다: 전하량 $=nF$ &nbsp;($F\approx9.6485\times10^{4}\ \text{C/mol}$)</p>
+      <div class="formula step">$\Delta G=-nFE_\text{전지}$<br>표준 상태: $\Delta G^\circ=-nFE^\circ_\text{전지}$<div class="unit">$n$: 전체 반응식에서 이동한 전자의 몰수 · $\Delta G$의 단위 J (= C × V)</div></div>
+      <p class="small step">이 관계로 전위를 재면 반응의 $\Delta G^\circ$를 알 수 있다 — Ⅲ-2처럼 $\Delta H^\circ$·$\Delta S^\circ$를 따로 재지 않아도 된다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 540 340" style="width:520px" aria-label="전자 n몰이 전위차 E를 지나며 옮긴 전하량은 nF이고, 전기가 한 일은 E와 nF의 곱이다"><rect x="20" y="40" width="150" height="190" rx="10" fill="#EAF2FC" stroke="#1F6FD1" stroke-width="2"/><text class="tex" x="95" y="30" data-mix="(−)극" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="370" y="40" width="150" height="190" rx="10" fill="#FDECEE" stroke="#D7263D" stroke-width="2"/><text class="tex" x="445" y="30" data-mix="(+)극" data-size="19" data-anchor="middle" data-weight="700"></text><g data-anim="move" data-from="-170,0" data-dur="1.8" data-rep="loop" data-delay="0" data-ease="lin"><circle cx="300" cy="110" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="300" y="116" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="move" data-from="-170,0" data-dur="1.8" data-rep="loop" data-delay="0.3" data-ease="lin"><circle cx="326" cy="134" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="326" y="140" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="move" data-from="-170,0" data-dur="1.8" data-rep="loop" data-delay="0.6" data-ease="lin"><circle cx="352" cy="110" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="352" y="116" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><line x1="170" y1="135" x2="370" y2="135" stroke="#16233D" stroke-width="3"/><text class="tex" x="270" y="190" data-mix="전자 $n$ mol 이동" data-size="19" data-anchor="middle" fill="#1F6FD1" data-halo="1" data-weight="700"></text><rect x="60" y="250" width="420" height="80" rx="10" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="270" y="282" data-mix="전하량 $=nF$ &nbsp;(1 mol 전자의 전하량 $F$)" data-size="19" data-anchor="middle"></text><text class="tex" x="270" y="314" data-mix="일 $=$ 전위차 $\times$ 전하량 $=E_\text{전지}\times nF$" data-size="19" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>다니엘 전지의 $\Delta G^\circ$</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21">다니엘 전지 $\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$, $E^\circ_\text{전지}=1.10\ \text{V}$이다. ($F=96485\ \text{C/mol}$)</p>
+      <p class="f21">(1) $\Delta G^\circ$는? <span class="step">→ $n=2$, $\Delta G^\circ=-2\times96485\times1.10=$ <span class="ans">$-2.12\times10^{5}\ \text{J}=-212\ \text{kJ}$</span></span></p>
+      <p class="f21">(2) 반응식을 $\ce{2Zn + 2Cu^2+ -> 2Zn^2+ + 2Cu}$로 쓰면 $E^\circ$와 $\Delta G^\circ$는 어떻게 될까? <span class="step">→ <span class="ans">$E^\circ$는 $1.10\ \text{V}$ 그대로, $\Delta G^\circ$는 $-424\ \text{kJ}$로 2배</span> ($n=4$)</span></p>
+      <p class="small step">$E^\circ$는 세기 성질, $\Delta G^\circ$는 반응의 양에 비례하는 크기 성질이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. ⑩ ΔG°, K, E° ════════ -->
+<section class="slide" data-sec="02 · 전지 전위와 깁스 자유 에너지" data-title="ΔG°, K, E°의 관계">
+  <h2><span class="no">10</span>$\Delta G^\circ$, 평형 상수 $K$, $E^\circ_\text{전지}$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">자유 에너지 변화와 반응 지수 $Q$, 평형 상수 $K$ 사이에는 $\Delta G=RT\ln\dfrac{Q}{K}=RT\ln Q-RT\ln K$가 성립한다.</p>
+      <p class="f21">표준 상태에서는 $Q=1$이므로 $\Delta G^\circ=-RT\ln K$ → 따라서</p>
+      <div class="formula sm step">$\Delta G^\circ=-nFE^\circ_\text{전지}=-RT\ln K$<br>⇒ $E^\circ_\text{전지}=\dfrac{RT}{nF}\ln K$<div class="unit">$R=8.314\ \text{J/(mol}\cdot\text{K)}$, $T=298.15\ \text{K}$</div></div>
+      <div class="card q step"><p class="f21"><b>Q</b> 이 관계식은 어디에 쓸모 있을까?</p>
+        <p class="f21 step">→ 평형 상수가 아주 크거나 작으면 평형 농도를 재기 어렵다. 그러나 작은 전위도 잴 수 있으므로, $E^\circ_\text{전지}$를 재어 $K$를 구한다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 600 380" style="width:520px" aria-label="표준 자유 에너지 변화, 평형 상수, 표준 전지 전위는 세 식으로 서로 이어진다"><path d="M300 50 L90 300 L510 300 Z" fill="#FAFBFC" stroke="#5B6B7F" stroke-width="2" stroke-linejoin="round"/><circle cx="300" cy="50" r="38" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="300" y="58" data-tex="\Delta G^\circ" data-size="24" data-anchor="middle"></text><circle cx="90" cy="300" r="38" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="90" y="308" data-tex="K" data-size="24" data-anchor="middle"></text><circle cx="510" cy="300" r="38" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="510" y="308" data-tex="E^\circ_\text{전지}" data-size="24" data-anchor="middle"></text><text class="tex" x="182" y="168" data-mix="$\Delta G^\circ=-RT\ln K$" data-size="21" data-anchor="end" data-halo="1"></text><text class="tex" x="418" y="168" data-mix="$\Delta G^\circ=-nFE^\circ_\text{전지}$" data-size="21" data-anchor="start" data-halo="1"></text><text class="tex" x="300" y="346" data-mix="$E^\circ_\text{전지}=\dfrac{RT}{nF}\ln K$" data-size="21" data-anchor="middle" data-halo="1"></text><g class="step" data-g="t1"><text class="tex" x="300" y="220" data-mix="$E^\circ_\text{전지}&gt;0$||⇔ $\Delta G^\circ&lt;0$ ⇔ $K&gt;1$" data-size="19" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 22. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>전위로 평형 상수 구하기</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21">25 °C에서 다니엘 전지 반응의 평형 상수 $K$를 구하여라. ($E^\circ_\text{전지}=1.10\ \text{V}$, $n=2$, $\dfrac{RT}{F}\ln10=0.0592\ \text{V}$)</p>
+      <p class="f21 step">$\ln K=\dfrac{nF}{RT}E^\circ_\text{전지}$ → 상용로그로 $\log K=\dfrac{nE^\circ_\text{전지}}{0.0592}=\dfrac{2\times1.10}{0.0592}=37.2$</p>
+      <div class="answer step">$K\approx1.5\times10^{37}$</div>
+      <p class="f21 step">Q 평형에서 $\ce{Cu^2+}$은 얼마나 남을까? → $\dfrac{[\ce{Zn^2+}]}{[\ce{Cu^2+}]}=K$이므로 거의 남지 않는다. 이렇게 큰 $K$는 농도로 재기 어렵고 전위로 구한다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 심화 ⑪ 네른스트 식 ════════ -->
+<section class="slide" data-sec="02 · 농도와 전지 전위 · 심화" data-title="[심화] 네른스트 식">
+  <h2><span class="tag alt">심화</span>농도와 전지 전위 — 네른스트 식 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">반응이 진행되면 구성 성분은 표준 상태가 아니게 된다. $\Delta G=\Delta G^\circ+RT\ln Q$에 $\Delta G=-nFE_\text{전지}$, $\Delta G^\circ=-nFE^\circ_\text{전지}$를 넣고 $-nF$로 나누면(유도는 두 줄)</p>
+      <div class="formula sm">$-nFE_\text{전지}=-nFE^\circ_\text{전지}+RT\ln Q$ &nbsp;→&nbsp; $E_\text{전지}=E^\circ_\text{전지}-\dfrac{RT}{nF}\ln Q$</div>
+      <p class="f21" data-q>25 °C의 상수를 넣고 상용로그로 바꾼 식이 <b>네른스트 식</b>이다.</p>
+      <div class="formula step">$E_\text{전지}=E^\circ_\text{전지}-\dfrac{0.0592}{n}\log Q$<div class="unit">25 °C에서 · $Q$는 전체 반응식으로 쓰고, 순수한 고체·액체는 넣지 않는다(1로 둠)</div></div>
+    </div>
+    <div class="col stack">
+      <table class="ac341-c ac341-sm">
+        <caption class="small">표 Ⅲ-11 반응 지수와 전지 전위</caption>
+        <tr><th>$Q$</th><th>농도 관계</th><th>$E_\text{전지}$</th></tr>
+        <tr><td>$Q&lt;1$</td><td>반응물 농도 곱 &gt; 생성물 농도 곱</td><td><span class="blank"><span class="step">$E&gt;E^\circ$</span></span></td></tr>
+        <tr><td>$Q=1$</td><td>반응물 농도 곱 = 생성물 농도 곱</td><td><span class="blank"><span class="step">$E=E^\circ$</span></span></td></tr>
+        <tr><td>$Q&gt;1$</td><td>반응물 농도 곱 &lt; 생성물 농도 곱</td><td><span class="blank"><span class="step">$E&lt;E^\circ$</span></span></td></tr>
+        <tr><td>$Q=K$</td><td>평형 농도</td><td><span class="blank"><span class="step">$E=0$</span></span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 심화 ⑫ 방전과 평형 ════════ -->
+<section class="slide" data-sec="02 · 농도와 전지 전위 · 심화" data-title="[심화] 농도가 바뀌면 — 방전과 평형">
+  <h2><span class="tag alt">심화</span>농도가 바뀌면 전지 전위는? <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">다니엘 전지: $Q=\dfrac{[\ce{Zn^2+}]}{[\ce{Cu^2+}]}$, $n=2$ &nbsp;→&nbsp; $E_\text{전지}=1.10-0.0296\log Q$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전지가 작동하면(방전) $E_\text{전지}$는 어떻게 될까?</p>
+        <p class="f21 step" data-g="g1">→ $[\ce{Zn^2+}]$는 커지고 $[\ce{Cu^2+}]$는 작아져 $Q$가 커지므로 $E_\text{전지}$가 <span class="ans">작아진다</span>.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> $E_\text{전지}=0$이 되는 것은 언제일까?</p>
+        <p class="f21 step">→ <span class="ans">$Q=K$</span>, 곧 평형에 이를 때이다. 다 쓴 전지는 평형에 이른 전지이다.</p></div>
+      <p class="small step">반대로 $[\ce{Cu^2+}]$를 크게, $[\ce{Zn^2+}]$를 작게 하면($Q&lt;1$) $E_\text{전지}&gt;1.10\ \text{V}$가 된다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 520 380" style="width:520px" aria-label="다니엘 전지의 전지 전위는 log Q가 커질수록 직선으로 작아지고, Q가 K가 되면 0이 된다"><line x1="80" y1="300" x2="490" y2="300" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="305" x2="80" y2="40" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="300" x2="80" y2="306" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="80" y="328" data-mix="-10" data-size="18" data-anchor="middle"></text><line x1="160" y1="300" x2="160" y2="306" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="160" y="328" data-mix="0" data-size="18" data-anchor="middle"></text><line x1="240" y1="300" x2="240" y2="306" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="240" y="328" data-mix="10" data-size="18" data-anchor="middle"></text><line x1="320" y1="300" x2="320" y2="306" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="320" y="328" data-mix="20" data-size="18" data-anchor="middle"></text><line x1="400" y1="300" x2="400" y2="306" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="400" y="328" data-mix="30" data-size="18" data-anchor="middle"></text><line x1="480" y1="300" x2="480" y2="306" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="480" y="328" data-mix="40" data-size="18" data-anchor="middle"></text><line x1="74" y1="300" x2="80" y2="300" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="70" y="306" data-mix="0.0" data-size="18" data-anchor="end"></text><line x1="74" y1="210.7" x2="80" y2="210.7" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="70" y="216.7" data-mix="0.5" data-size="18" data-anchor="end"></text><line x1="74" y1="121.4" x2="80" y2="121.4" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="70" y="127.4" data-mix="1.0" data-size="18" data-anchor="end"></text><text class="tex" x="480" y="356" data-mix="$\log Q$" data-size="19" data-anchor="end"></text><text class="tex" x="88" y="36" data-mix="$E_\text{전지}$ [V]" data-size="19" data-anchor="start"></text><g data-anim="draw" data-dur="1.4"><line x1="80" y1="50.7" x2="457.3" y2="300" stroke="#16233D" stroke-width="3.5"/></g><line x1="160" y1="103.6" x2="160" y2="300" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="160" cy="103.6" r="6" fill="#D7263D" stroke="#D7263D" stroke-width="0"/><text class="tex" x="170" y="95.6" data-mix="$Q=1$: $E=E^\circ=1.10$ V" data-size="18" data-anchor="start" data-halo="1"></text><circle cx="457.3" cy="300" r="7" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/><text class="tex" x="451.3" y="286" data-mix="$Q=K$: $E=0$" data-size="18" data-anchor="end" fill="#2E9E6A" data-halo="1" data-weight="700"></text><g class="step" data-g="g1"><g data-arw="208,157.1,352,246.4,ox,3"></g><text class="tex" x="288" y="171" data-mix="방전 →||$Q$ 증가" data-size="18" data-anchor="start" fill="#C2410C" data-halo="1"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 심화 예제 Ⅲ-12 ════════ -->
+<section class="slide" data-sec="02 · 농도와 전지 전위 · 심화" data-title="[심화] 예제 Ⅲ-12">
+  <h2><span class="tag ex">예제 Ⅲ-12</span>반쪽 반응의 전위 구하기 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">$\ce{Cr2O7^2-}$의 농도가 $10^{-3}\ \text{M}$, $\ce{Cr^3+}$의 농도가 $10^{-2}\ \text{M}$인 용액의 pH가 $3.0$일 때, 이 반쪽 반응의 전위는 얼마인가? (단, $\ce{Cr2O7^2- + 14H+ + 6e- -> 2Cr^3+ + 7H2O}$의 표준 전위는 $1.33\ \text{V}$이다.)</p>
+  <p class="f21 step mt8"><b>풀이 1</b> pH $3.0$ → $[\ce{H+}]=10^{-3}\ \text{M}$, $n=6$. 네른스트 식에서 $Q$는 생성물 / 반응물(물은 넣지 않음).</p>
+  <div class="formula sm step">$E=1.33-\dfrac{0.0592}{6}\log\dfrac{[\ce{Cr^3+}]^2}{[\ce{Cr2O7^2-}][\ce{H+}]^{14}}=1.33-\dfrac{0.0592}{6}\log\dfrac{(10^{-2})^2}{(10^{-3})(10^{-3})^{14}}$</div>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step"><b>풀이 2</b> $\log\dfrac{10^{-4}}{10^{-45}}=\log10^{41}=41$ → $E=1.33-41\times\dfrac{0.0592}{6}=1.33-0.40$</p>
+      <div class="answer step">$E=+0.93\ \text{V}$</div>
+      <p class="small step">산성이 약해지면($[\ce{H+}]$ 감소) 다이크로뮴산 이온의 산화력이 크게 줄어든다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 심화 ⑬ 농도와 전위 활용 ════════ -->
+<section class="slide" data-sec="02 · 농도와 전지 전위 · 심화" data-title="[심화] 실험실 결과 다시 보기와 농도차 전지">
+  <h2><span class="tag alt">심화</span>01 실험실 다시 보기와 농도차 전지 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 460px">
+      <p class="f21">01 실험실에서 $[\ce{Zn^2+}]=1.0\ \text{M}$로 두고 $[\ce{Cu^2+}]$를 $10$배씩 줄이면 전압계 값이 약 $0.03\ \text{V}$씩 작아졌다.</p>
+      <p class="f21 step">→ 네른스트 식의 기울기 $\dfrac{0.0592}{2}\approx0.030$과 맞는다. 이 직선을 검정선으로 쓰면 농도를 모르는 $\ce{CuSO4}$ 용액의 농도도 구할 수 있다.</p>
+      <svg class="fig" viewBox="0 0 460 340" style="width:440px" aria-label="구리 이온 농도를 10배씩 줄이면 다니엘 전지의 전위가 약 0.03 V씩 작아진다"><line x1="80" y1="270" x2="430" y2="270" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="270" x2="80" y2="50" stroke="#5B6B7F" stroke-width="2"/><line x1="115.8" y1="270" x2="115.8" y2="276" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="115.8" y="298" data-mix="-3" data-size="18" data-anchor="middle"></text><line x1="205.3" y1="270" x2="205.3" y2="276" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="205.3" y="298" data-mix="-2" data-size="18" data-anchor="middle"></text><line x1="294.7" y1="270" x2="294.7" y2="276" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="294.7" y="298" data-mix="-1" data-size="18" data-anchor="middle"></text><line x1="384.2" y1="270" x2="384.2" y2="276" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="384.2" y="298" data-mix="0" data-size="18" data-anchor="middle"></text><line x1="74" y1="217.5" x2="80" y2="217.5" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="70" y="223.5" data-mix="1.00" data-size="18" data-anchor="end"></text><line x1="74" y1="165" x2="80" y2="165" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="70" y="171" data-mix="1.05" data-size="18" data-anchor="end"></text><line x1="74" y1="112.5" x2="80" y2="112.5" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="70" y="118.5" data-mix="1.10" data-size="18" data-anchor="end"></text><text class="tex" x="420" y="326" data-mix="$\log[\ce{Cu^2+}]$" data-size="19" data-anchor="end"></text><text class="tex" x="88" y="46" data-mix="$E_\text{전지}$ [V]" data-size="19" data-anchor="start"></text><line x1="97.9" y1="212" x2="402.1" y2="106.3" stroke="#16233D" stroke-width="2.5"/><g data-anim="pop" data-dur=".4" data-delay="0" data-o="384.2,112.5"><circle cx="384.2" cy="112.5" r="7" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><g data-anim="pop" data-dur=".4" data-delay="0.1" data-o="294.7,144"><circle cx="294.7" cy="144" r="7" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><g data-anim="pop" data-dur=".4" data-delay="0.3" data-o="205.3,175.5"><circle cx="205.3" cy="175.5" r="7" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><g data-anim="pop" data-dur=".4" data-delay="0.4" data-o="115.8,207"><circle cx="115.8" cy="207" r="7" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><text class="tex" x="241.1" y="128.2" data-mix="기울기 $\approx\dfrac{0.0592}{2}=0.0296$" data-size="18" data-anchor="middle" data-halo="1"></text></svg>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>농도차 전지</b>: 같은 전극·같은 이온이라도 농도만 다르면 전위가 생긴다($E^\circ_\text{전지}=0$).</p>
+      <svg class="fig" viewBox="0 0 560 370" style="width:500px" aria-label="같은 구리 전극을 묽은 용액과 진한 용액에 담근 농도차 전지: 묽은 쪽 구리가 산화되고 진한 쪽 구리 이온이 환원된다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.06"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="280" y="92" data-mix="0.059 V" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" x="104" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="0.010\ \text{M}\ \ce{Cu^2+}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="1.0\ \text{M}\ \ce{Cu^2+}" data-size="20" data-anchor="middle"></text><g data-anim="move" data-from="60,0" data-dur="1.6" data-rep="loop" data-ease="lin"><g data-chg="214,112,9,-"></g></g><g data-anim="move" data-from="-60,0" data-dur="1.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-chg="346,112,9,+"></g></g><text class="tex" x="280" y="170" data-mix="← $\ce{NO3-}$" data-size="20" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><text class="tex" x="280" y="206" data-mix="$\ce{K+}$ →" data-size="20" data-anchor="middle" fill="#D7263D" data-halo="1"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg>
+      <p class="f21 step">Q 전자는 어느 쪽에서 나올까? → 묽은 쪽 $\ce{Cu}$가 산화되고 진한 쪽 $\ce{Cu^2+}$이 환원되어 두 농도가 같아지는 쪽으로 진행한다. $E=0-\dfrac{0.0592}{2}\log\dfrac{0.010}{1.0}=$ <span class="ans">$+0.059\ \text{V}$</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 전지 전위 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 화학 전지 — 02 전지 전위</h2>
+  <div class="ac341-map">
+    <div class="ac341-node ac341-dim">01 화학 전지의 개요<br>산화 전극 (−)<br>환원 전극 (+)</div>
+    <div class="ac341-arr">→</div>
+    <div class="ac341-node ac341-main"><b>02 전지 전위</b><br>❶ 표준 수소 전극의 $E^\circ$ = <span class="blank"><span class="step">$0.00\ \text{V}$</span></span> — 표준 환원 전위는 이 기준과 비교한 상댓값<br>❷ $E^\circ$가 클수록 <span class="blank"><span class="step">환원</span></span>되기 쉽다(강한 산화제)<br>❸ $E^\circ_\text{전지}=E^\circ_\text{환원 전극}-$ <span class="blank"><span class="step">$E^\circ_\text{산화 전극}$</span></span> &gt; 0이면 자발적, 다니엘 전지 $1.10\ \text{V}$<br>❹ $\Delta G^\circ=$ <span class="blank"><span class="step">$-nFE^\circ_\text{전지}$</span></span> $=-RT\ln K$<br>❺ <span class="small c-muted">[심화]</span> $E_\text{전지}=E^\circ_\text{전지}-\dfrac{0.0592}{n}\log Q$, 평형에서 $E_\text{전지}=$ <span class="blank"><span class="step">$0$</span></span></div>
+    <div class="ac341-arr">→</div>
+    <div class="ac341-node ac341-dim">03 실용 전지<br>1차·2차 전지<br>연료 전지</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 전지 전위 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 표준 수소 전극을 기준으로 표준 환원 전위를 정의하고, $\Delta G^\circ=-nFE^\circ_\text{전지}$의 뜻을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 표준 환원 전위 표로 표준 전지 전위를 구하고 반응의 자발성을 판단했다.</button>
+    <button class="chk">[가치·태도] 전지마다 전압이 다른 까닭에 호기심을 갖고 여러 화학 전지를 전위로 비교해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{Zn}$–$\ce{Co}$ 전지의 $E^\circ_\text{전지}$는? <span class="step">→ $-0.28-(-0.76)=$ <span class="ans">$+0.48\ \text{V}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $E^\circ_\text{전지}&gt;0$인 반응의 $\Delta G^\circ$와 $K$의 크기는? <span class="step">→ <span class="ans">$\Delta G^\circ&lt;0$, $K&gt;1$</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 일회용 건전지와 충전하는 배터리는 무엇이 다를까? — 03 실용 전지</div>
+</section>
