@@ -1,0 +1,40 @@
+/* 표지 시안 (접두어 sp0-) */
+.sp0-pill{display:inline-block;padding:7px 18px;border-radius:999px;font-size:20px;font-weight:700;letter-spacing:.02em}
+.sp0-who{font-size:24px;line-height:1.5}
+.sp0-who b{font-weight:800}
+.sp0-muted{color:var(--muted)}
+.sp0-dark .band{color:rgba(255,255,255,.55)}
+/* A 키노트형 */
+.sp0-a .wrap{position:absolute;left:96px;top:120px;width:820px}
+.sp0-a h1{font-size:84px;line-height:1.12;letter-spacing:-.025em;margin:26px 0 0}
+.sp0-a .bar{width:120px;height:8px;border-radius:4px;background:var(--minus);margin:34px 0 26px}
+.sp0-a .foot{position:absolute;left:96px;right:96px;bottom:70px;display:flex;justify-content:space-between;border-top:2px solid var(--ink);padding-top:14px;font-size:21px}
+.sp0-a .big{position:absolute;right:60px;top:70px;font-size:300px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:2px #CFD8E1;letter-spacing:-.04em}
+/* B 분할형 */
+.sp0-b .left{position:absolute;left:0;top:0;bottom:0;width:690px;background:#16233D;color:#fff;padding:120px 70px 0 90px}
+.sp0-b h1{font-size:68px;line-height:1.15;letter-spacing:-.02em;margin:26px 0 30px;color:#fff}
+.sp0-b .sub{font-size:24px;color:#C9D3E0;line-height:1.5}
+.sp0-b .who{position:absolute;left:90px;bottom:80px;font-size:22px;color:#fff;line-height:1.6}
+.sp0-b .fig{position:absolute;right:30px;top:60px}
+/* C 성과 미리보기형 */
+.sp0-c .wrap{position:absolute;left:96px;right:96px;top:110px}
+.sp0-c h1{font-size:66px;line-height:1.15;letter-spacing:-.02em;margin:20px 0 10px}
+.sp0-c .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.sp0-c .tile{background:#fff;border:1.5px solid var(--line);border-top:8px solid var(--minus);border-radius:16px;padding:18px 22px}
+.sp0-c .tile:nth-child(2){border-top-color:var(--field)} .sp0-c .tile:nth-child(3){border-top-color:var(--equi)}
+.sp0-c .tile .n{font-size:20px;font-weight:800;color:var(--muted)}
+.sp0-c .tile p{font-size:26px;font-weight:700;line-height:1.35;margin-top:6px}
+.sp0-c .foot{position:absolute;left:96px;right:96px;bottom:66px;display:flex;justify-content:space-between;font-size:21px;color:var(--muted)}
+/* D 센터 무대형 */
+.sp0-d{background:radial-gradient(ellipse at 50% 40%,#24406E 0%,#16233D 70%) !important;color:#fff;text-align:center}
+.sp0-d .wrap{position:absolute;left:120px;right:120px;top:150px}
+.sp0-d h1{font-size:78px;line-height:1.15;letter-spacing:-.02em;margin:30px 0 22px;color:#fff}
+.sp0-d .sub{font-size:26px;color:#C9D3E0}
+.sp0-d .who{position:absolute;left:0;right:0;bottom:84px;font-size:23px;color:#fff;line-height:1.6}
+.sp0-d .rings{position:absolute;left:0;top:0}
+/* E 여정 띠형 */
+.sp0-e .wrap{position:absolute;left:96px;top:110px;width:900px}
+.sp0-e h1{font-size:72px;line-height:1.15;letter-spacing:-.02em;margin:22px 0 18px}
+.sp0-e .road{position:absolute;left:0;right:0;bottom:150px}
+.sp0-e .who{position:absolute;left:96px;right:96px;bottom:58px;display:flex;justify-content:space-between;font-size:21px}
+.sp0-plain{background:#fff !important}
