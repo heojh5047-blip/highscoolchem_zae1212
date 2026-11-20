@@ -1,0 +1,645 @@
+<!-- 고급화학 3-1-2 엔탈피 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 1. 화학 반응의 반응 엔탈피 › 02</div>
+    <h1 class="ac312-h1">엔탈피</h1>
+    <p class="sub">압력이 일정할 때 출입하는 열 — 열화학 반응식, 표준 생성 엔탈피, 헤스 법칙</p>
+    <p class="meta">고등학교 고급 화학 132–141쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 460 460" style="width:430px" aria-label="헤스 법칙: 질소가 두 단계(+180 kJ, −112 kJ)를 거쳐도 한 단계(+68 kJ)로 반응해도 엔탈피 변화는 같다"><line x1="100" y1="342" x2="240" y2="342" stroke="#16233D" stroke-width="3"/><text class="tex" x="170" y="372" data-tex="\ce{N2(g) + 2O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="240" y1="342" x2="372" y2="342" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><line x1="130" y1="126" x2="300" y2="126" stroke="#16233D" stroke-width="3"/><text class="tex" x="215" y="116" data-tex="\ce{2NO(g) + O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="270" y1="260.4" x2="380" y2="260.4" stroke="#16233D" stroke-width="3"/><text class="tex" x="330" y="248.4" data-tex="\ce{2NO2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur="1.0"><g data-arw="165,339,165,129,field,4"></g></g><text class="tex" x="157" y="222" data-tex="+180" data-size="22" data-anchor="end" fill="#2E9E6A"></text><g data-anim="draw" data-dur="1.0" data-delay=".9"><g data-arw="285,129,285,257.4,bfield,4"></g></g><text class="tex" x="277" y="186" data-tex="-112" data-size="22" data-anchor="end" fill="#7B4FC8"></text><g data-anim="draw" data-dur=".9" data-delay="1.8"><g data-arw="355,339,355,263.4,ink,4"></g></g><text class="tex" x="347" y="314" data-tex="+68" data-size="22" data-anchor="end" data-halo="1"></text></svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 엔탈피" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-02]</span>엔탈피의 정의를 이해하고 헤스 법칙을 활용하여 다양한 화학 반응의 반응 엔탈피를 예측할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>엔탈피를 $H\equiv U+PV$로 정의하고, 압력이 일정할 때 $\Delta H=q_P$인 까닭을 설명할 수 있다.</li>
+    <li>열화학 반응식과 표준 상태를 이해하고, 표준 생성 엔탈피로 반응 엔탈피를 계산할 수 있다.</li>
+    <li>헤스 법칙으로 직접 측정하기 어려운 반응의 반응 엔탈피를 예측하고, 실험으로 확인할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">엔탈피 $H$</div><div class="farr">→</div>
+    <div class="fnode">열화학 반응식</div><div class="farr">→</div>
+    <div class="fnode">표준 상태</div><div class="farr">→</div>
+    <div class="fnode">표준 생성 엔탈피</div><div class="farr">→</div>
+    <div class="fnode">헤스 법칙</div><div class="farr">→</div>
+    <div class="fnode hl">중화열 실험실</div>
+  </div>
+  <p class="small mt12">지난 시간: 계의 내부 에너지 변화 $\Delta U=q+w$ (01 화학 반응과 에너지)</p>
+</section>
+
+<!-- ════════ 3. 진로 ════════ -->
+<section class="slide" data-sec="02 · 진로" data-title="진로: 에너지공학 기술">
+  <h2><span class="tag">진로</span>에너지공학 기술</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">기후 변화와 기상 이변, 화력 발전·수송 기관이 내는 열과 유해 물질, 끊임없는 이산화 탄소 배출, 원전 사고와 핵폐기물, 화석 연료의 고갈 — 세계는 에너지 자원 확보에 치열하게 경쟁하고 있다.</p>
+      <p class="f21"><b>에너지공학</b>은 기초과학을 바탕으로 여러 공학이 결합한 융합 학문이다. 에너지공학 기술자는 석탄·석유·천연가스 사업의 기술 조건을 분석하고, 광산 시설과 장비를 설계하며, 석유·천연가스의 보유량과 생산 잠재성을 분석한다.</p>
+      <p class="f21">천연가스와 신재생 에너지, 에너지 효율 높이기, 온실가스 배출 저감 진단, 탄소 배출권 거래 분야에서 전문 인력이 더 필요해질 것이다.</p>
+    </div>
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 440 280" style="width:420px" aria-label="화석 연료 중심에서 태양, 풍력, 수소 같은 신재생·청정에너지로"><rect x="20" y="120" width="120" height="90" rx="4" fill="#E6EBF0" stroke="#16233D" stroke-width="2"/><rect x="40" y="60" width="22" height="62" rx="0" fill="#C9D2DB" stroke="#16233D" stroke-width="2"/><rect x="90" y="76" width="22" height="46" rx="0" fill="#C9D2DB" stroke="#16233D" stroke-width="2"/><g data-anim="move" data-from="-6,14" data-dur="2" data-rep="loop"><circle cx="52" cy="44" r="12" fill="#EEF1F4" stroke="#5B6B7F" stroke-width="1.5"/><circle cx="70" cy="30" r="15" fill="#EEF1F4" stroke="#5B6B7F" stroke-width="1.5"/></g><text class="tex" x="80" y="240" data-mix="화석 연료" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="80" y="266" data-mix="$\ce{CO2}$ 배출, 고갈" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-arw="160,160,226,160,ink,4"></g><circle cx="282" cy="74" r="24" fill="#FFE7B8" stroke="#E08A2C" stroke-width="2"/><line x1="313" y1="74" x2="324" y2="74" stroke="#E08A2C" stroke-width="3"/><line x1="303.9" y1="95.9" x2="311.7" y2="103.7" stroke="#E08A2C" stroke-width="3"/><line x1="282" y1="105" x2="282" y2="116" stroke="#E08A2C" stroke-width="3"/><line x1="260.1" y1="95.9" x2="252.3" y2="103.7" stroke="#E08A2C" stroke-width="3"/><line x1="251" y1="74" x2="240" y2="74" stroke="#E08A2C" stroke-width="3"/><line x1="260.1" y1="52.1" x2="252.3" y2="44.3" stroke="#E08A2C" stroke-width="3"/><line x1="282" y1="43" x2="282" y2="32" stroke="#E08A2C" stroke-width="3"/><line x1="303.9" y1="52.1" x2="311.7" y2="44.3" stroke="#E08A2C" stroke-width="3"/><line x1="372" y1="150" x2="372" y2="72" stroke="#16233D" stroke-width="3"/><g data-anim="spin" data-o="372,72" data-speed="60"><path d="M372 72 L372 38" fill="none" stroke="#16233D" stroke-width="4" stroke-linejoin="round"/><path d="M372 72 L401.4 89" fill="none" stroke="#16233D" stroke-width="4" stroke-linejoin="round"/><path d="M372 72 L342.6 89" fill="none" stroke="#16233D" stroke-width="4" stroke-linejoin="round"/></g><circle cx="372" cy="72" r="4" fill="#16233D" stroke="#16233D" stroke-width="1"/><g data-atom="300,180,18,H"></g><g data-atom="326,180,18,H"></g><text class="tex" x="326" y="240" data-mix="신재생·청정에너지" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="326" y="266" data-mix="태양·풍력·수소" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg>
+      <div class="card q"><p class="f21"><b>Q</b> 여러 연료를 비교하려면 무엇을 재야 할까?</p>
+        <p class="f21 step">→ 같은 양의 연료가 탈 때 방출하는 열 — 오늘 배울 <b>엔탈피 변화</b>로 나타낸다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 엔탈피 · 도입" data-title="생각 열기">
+  <h2><span class="tag">생각 열기</span>부피가 일정할 때와 압력이 일정할 때</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <p class="f21">(가) 용기가 단단해서 부피가 변하지 않으면 팽창 일이 없다. 비팽창 일도 없으면 $\Delta U=q+w$에서 $w=0$ → <b>출입한 열만 재면</b> $\Delta U$를 안다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 많은 반응은 대기압(약 $1\ \text{atm}$)의 열린 용기에서 일어난다. 이때 출입한 열 $q$도 $\Delta U$와 같을까?</p></div>
+      <p class="f21 step">→ 같지 않다. 생긴 기체가 자기 공간을 차지하려고 주위의 대기를 밀어내므로, 피스톤이 없어도 <b>일</b>을 한다.</p>
+      <p class="f21 step">압력이 일정할 때 팽창 일까지 고려한 에너지 변화를 알려 주는 <b>새로운 상태 함수</b>가 필요하다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 570 350" style="width:560px" aria-label="(가) 부피가 변하지 않는 단단한 통에서는 일이 없다 (나) 압력이 일정한 열린 용기에서는 기체가 대기를 밀어내며 일을 한다"><rect x="40" y="90" width="170" height="170" rx="14" fill="#FFF4E8" stroke="#16233D" stroke-width="5"/><g data-anim="move" data-from="3.1,3.9" data-rep="alt" data-dur="0.9" data-ease="io"><circle cx="101.7" cy="128.9" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.8,4.7" data-rep="alt" data-dur="1.2" data-ease="io"><circle cx="144.9" cy="118.6" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.1,4.5" data-rep="alt" data-dur="1.1" data-ease="io"><circle cx="129.7" cy="157.3" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-3.2,-3.8" data-rep="alt" data-dur="1" data-ease="io"><circle cx="66.7" cy="176" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.8,-1.5" data-rep="alt" data-dur="0.8" data-ease="io"><circle cx="68.2" cy="121" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="4.7,1.8" data-rep="alt" data-dur="0.9" data-ease="io"><circle cx="115" cy="218.1" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-2.1,-4.5" data-rep="alt" data-dur="1" data-ease="io"><circle cx="141.8" cy="234.1" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-2,4.6" data-rep="alt" data-dur="1.1" data-ease="io"><circle cx="187.9" cy="115.1" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.8,1.5" data-rep="alt" data-dur="0.9" data-ease="io"><circle cx="172.3" cy="147.2" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><text class="tex" x="125" y="22" data-mix="(가) 단단한 통" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="125" y="300" data-tex="\Delta V=0\ \rightarrow\ w=0" data-size="21" data-anchor="middle"></text><text class="tex" x="125" y="334" data-tex="\Delta U=q_V" data-size="22" data-anchor="middle"></text><g data-anim="fade" data-dur="1" data-rep="loop"><g data-arw="214,175,262,175,equi,4"></g></g><text class="tex" x="238" y="160" data-mix="열" data-size="19" data-anchor="middle" fill="#E08A2C"></text><g data-anim="move" data-from="0,26" data-dur="1.6" data-ease="out"><rect x="333" y="138" width="164" height="122" rx="0" fill="#FFF4E8" stroke="none" stroke-width="0"/><g data-anim="move" data-from="-4.9,-0.9" data-rep="alt" data-dur="0.8" data-ease="io"><circle cx="408.4" cy="204.7" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="1.8,4.7" data-rep="alt" data-dur="0.9" data-ease="io"><circle cx="473.5" cy="195.7" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="4.9,0.9" data-rep="alt" data-dur="1" data-ease="io"><circle cx="371.5" cy="200.1" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.7,1.8" data-rep="alt" data-dur="1.2" data-ease="io"><circle cx="432.9" cy="227.1" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-5,-0.6" data-rep="alt" data-dur="1.1" data-ease="io"><circle cx="359" cy="180.1" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-5,0" data-rep="alt" data-dur="1.1" data-ease="io"><circle cx="358.5" cy="228.7" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-4.8,1.3" data-rep="alt" data-dur="0.9" data-ease="io"><circle cx="441.7" cy="155" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5,-0.1" data-rep="alt" data-dur="1.3" data-ease="io"><circle cx="481.5" cy="243.6" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.7,-4.2" data-rep="alt" data-dur="1.2" data-ease="io"><circle cx="367.7" cy="152.4" r="8" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><rect x="333" y="124" width="164" height="14" rx="2" fill="#C9D2DB" stroke="#16233D" stroke-width="2"/><path d="M330 70 L330 260 L500 260 L500 70" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/></g><g data-arw="365,64,365,110,ink,3"></g><g data-arw="415,64,415,110,ink,3"></g><g data-arw="465,64,465,110,ink,3"></g><text class="tex" x="415" y="54" data-mix="대기압 약 $1\ \text{atm}$" data-size="19" data-anchor="middle"></text><line x1="333" y1="150" x2="497" y2="150" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><text class="tex" x="506" y="156" data-mix="처음" data-size="18" data-anchor="start" fill="#5B6B7F"></text><g data-arw="520,140,520,104,ink,4"></g><text class="tex" x="510" y="192" data-mix="대기를||밀어냄" data-size="18" data-anchor="start"></text><text class="tex" x="415" y="300" data-tex="\Delta V>0\ \rightarrow\ w<0" data-size="21" data-anchor="middle"></text><text class="tex" x="415" y="334" data-mix="열 $q$ ≠ $\Delta U$" data-size="22" data-anchor="middle"></text><text class="tex" x="415" y="22" data-mix="(나) 열린 용기(압력 일정)" data-size="21" data-anchor="middle" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 엔탈피의 정의 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="엔탈피의 정의">
+  <h2><span class="no">1</span>엔탈피의 정의</h2>
+  <p class="f22">일정한 압력의 화학 반응계에서 에너지 변화를 알려 주는 상태 함수가 <mark>엔탈피</mark> $H$이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="formula">$H\equiv U+PV$<div class="unit">$U$: 계의 내부 에너지, $P$: 계의 압력, $V$: 계의 부피 ($\equiv$: 이렇게 정의한다)</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 엔탈피의 절댓값을 잴 수 있을까?</p>
+        <p class="f21 step">→ 잴 수 없다($U$의 절댓값을 모른다). 실험으로는 반응열로 <b>엔탈피 변화</b> $\Delta H$만 잰다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 570 214" style="width:540px" aria-label="엔탈피 H는 내부 에너지 U에 압력 P와 부피 V의 곱을 더한 것으로, U, P, V가 상태 함수이므로 H도 상태 함수이다"><g data-anim="pop" data-o="68,72" data-dur=".5" data-delay="0.00"><rect x="20" y="30" width="96" height="84" rx="12" fill="#FDECEE" stroke="#D7263D" stroke-width="3"/><text class="tex" x="68" y="88" data-tex="H" data-size="40" data-anchor="middle" fill="#D7263D"></text><text class="tex" x="68" y="146" data-mix="엔탈피" data-size="20" data-anchor="middle"></text></g><g data-anim="pop" data-o="248,72" data-dur=".5" data-delay="0.25"><rect x="200" y="30" width="96" height="84" rx="12" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><text class="tex" x="248" y="88" data-tex="U" data-size="40" data-anchor="middle" fill="#16233D"></text><text class="tex" x="248" y="146" data-mix="내부 에너지" data-size="20" data-anchor="middle"></text></g><g data-anim="pop" data-o="382,72" data-dur=".5" data-delay="0.50"><rect x="334" y="30" width="96" height="84" rx="12" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><text class="tex" x="382" y="88" data-tex="P" data-size="40" data-anchor="middle" fill="#16233D"></text><text class="tex" x="382" y="146" data-mix="압력" data-size="20" data-anchor="middle"></text></g><g data-anim="pop" data-o="498,72" data-dur=".5" data-delay="0.75"><rect x="450" y="30" width="96" height="84" rx="12" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><text class="tex" x="498" y="88" data-tex="V" data-size="40" data-anchor="middle" fill="#16233D"></text><text class="tex" x="498" y="146" data-mix="부피" data-size="20" data-anchor="middle"></text></g><text class="tex" x="158" y="88" data-tex="\equiv" data-size="38" data-anchor="middle"></text><text class="tex" x="313" y="88" data-tex="+" data-size="38" data-anchor="middle"></text><text class="tex" x="373" y="200" data-mix="셋 다 상태 함수 → $H$도 상태 함수" data-size="20" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text><path d="M216 158 L216 166 L540 166 L540 158" fill="none" stroke="#2E9E6A" stroke-width="2" stroke-linejoin="round"/></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② ΔH = qP ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="압력이 일정하면 ΔH = q">
+  <h2><span class="no">2</span>압력이 일정하면 $\Delta H=q_P$</h2>
+  <p class="f21">내부 에너지 변화가 $\Delta U$, 부피 변화가 $\Delta V$인 <b>등압 과정</b>에서 엔탈피 변화를 따라가 보자.</p>
+  <div class="stages c2 mt8">
+    <div class="stage step"><h3>1. 등압에서 $H=U+PV$의 변화</h3><div class="formula sm">$\Delta H=\Delta U+P\Delta V$</div></div>
+    <div class="stage step"><h3>2. 열역학 제1법칙 $\Delta U=q+w$ 대입</h3><div class="formula sm">$\Delta H=q+w+P\Delta V$</div></div>
+    <div class="stage step"><h3>3. 팽창 일 말고 다른 일이 없으면</h3><div class="formula sm">$\Delta H=q-P_\text{외부}\Delta V+P\Delta V$</div></div>
+    <div class="stage step"><h3>4. 대기압에 놓인 계: $P=P_\text{외부}$</h3><div class="formula sm">$\Delta H=q$</div></div>
+  </div>
+  <div class="answer step mt8">$\Delta H=q_P$ (압력 일정)</div>
+  <p class="f21 step">화학 반응은 보통 대기압의 열린 용기에서 일어나므로, 계가 방출하거나 흡수하는 <b>열 = 계의 엔탈피 변화</b>로 볼 수 있다.</p>
+</section>
+
+<!-- ════════ 7. ③ 두 열량계 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="두 열량계가 재는 것">
+  <h2><span class="no">3</span>두 열량계가 재는 것</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 310px">
+      <svg class="fig" viewBox="0 0 420 392" style="width:300px" aria-label="통열량계: 물에 잠긴 단단한 강철 통 속에서 시료가 연소한다 — 부피 일정"><rect x="40" y="90" width="320" height="250" rx="10" fill="#F3F5F8" stroke="#16233D" stroke-width="3"/><rect x="56" y="104" width="288" height="222" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/><rect x="150" y="170" width="100" height="120" rx="12" fill="#B7C0CA" stroke="#16233D" stroke-width="3"/><rect x="168" y="250" width="64" height="24" rx="3" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><rect x="180" y="240" width="40" height="12" rx="2" fill="#3A3F47" stroke="#16233D" stroke-width="1.5"/><line x1="176" y1="170" x2="176" y2="60" stroke="#16233D" stroke-width="2"/><line x1="224" y1="170" x2="224" y2="60" stroke="#16233D" stroke-width="2"/><circle cx="176" cy="56" r="5" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><circle cx="224" cy="56" r="5" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><g data-anim="pop" data-o="200,236" data-dur=".8" data-rep="loop"><circle cx="200" cy="236" r="9" fill="#FFE45C" stroke="#C2410C" stroke-width="1.5"/></g><line x1="176" y1="200" x2="192" y2="236" stroke="#16233D" stroke-width="1.5"/><line x1="224" y1="200" x2="208" y2="236" stroke="#16233D" stroke-width="1.5"/><rect x="295" y="40" width="10" height="260" rx="5" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><circle cx="300" cy="306" r="9" fill="#D7263D" stroke="#16233D" stroke-width="1.5"/><rect x="297.5" y="170" width="5" height="134" rx="0" fill="#D7263D" stroke="none" stroke-width="0"/><text class="tex" x="200" y="34" data-mix="점화 단자" data-size="25" data-anchor="middle"></text><text class="tex" x="312" y="62" data-mix="온도계" data-size="25" data-anchor="start"></text><text class="tex" x="100" y="318" data-mix="물" data-size="25" data-anchor="middle"></text><text class="tex" x="146" y="160" data-mix="강철 통" data-size="25" data-anchor="end"></text><text class="tex" x="200" y="376" data-mix="부피 일정" data-size="25" data-anchor="middle"></text></svg>
+      <p class="f21"><b>통열량계</b>: $\Delta V=0$ → $w=0$<br>잰 열 $q_V=\Delta U$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 300px">
+      <svg class="fig" viewBox="0 0 400 392" style="width:290px" aria-label="컵 열량계: 2겹 폴리스타이렌 컵과 뚜껑, 온도계, 젓개 — 대기압(압력 일정)에서 반응"><path d="M80 110 L280 110 L262 330 L98 330 Z" fill="#F3F5F8" stroke="#16233D" stroke-width="2.5"/><path d="M100 120 L260 120 L246 318 L114 318 Z" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><path d="M106 196 L254 196 L246 318 L114 318 Z" fill="#F7D8A8"/><rect x="74" y="96" width="212" height="16" rx="4" fill="#E6EBF0" stroke="#16233D" stroke-width="2"/><rect x="215" y="30" width="10" height="254" rx="5" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><circle cx="220" cy="290" r="9" fill="#D7263D" stroke="#16233D" stroke-width="1.5"/><rect x="217.5" y="200" width="5" height="88" rx="0" fill="#D7263D" stroke="none" stroke-width="0"/><path d="M150 40 L150 296 L130 296 L170 296" fill="none" stroke="#5B6B7F" stroke-width="3" stroke-linejoin="round"/><g data-anim="move" data-from="0,30" data-dur="1.4" data-rep="loop"><circle cx="160" cy="250" r="4" fill="#FFFFFF" stroke="#16233D" stroke-width="1"/><circle cx="130" cy="270" r="3" fill="#FFFFFF" stroke="#16233D" stroke-width="1"/></g><text class="tex" x="236" y="46" data-mix="온도계" data-size="25" data-anchor="start"></text><text class="tex" x="140" y="54" data-mix="젓개" data-size="25" data-anchor="end"></text><text class="tex" x="180" y="92" data-mix="뚜껑" data-size="25" data-anchor="middle" data-halo="1"></text><text class="tex" x="180" y="376" data-mix="대기압에서 반응" data-size="25" data-anchor="middle"></text></svg>
+      <p class="f21"><b>컵 열량계</b>: 압력 일정<br>잰 열 $q_P=\Delta H$</p>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21" data-q><b>토의</b> 화학 반응의 에너지 변화를 나타낼 때 $\Delta U$보다 $\Delta H$를 더 많이 쓰는 까닭은 무엇일까?</p></div>
+      <p class="f21 step">→ 반응은 대부분 대기압(압력 일정)에서 일어나고, 그때 출입한 열을 재면 바로 $\Delta H$이다.</p>
+      <p class="f21 step">$\Delta U$를 구하려면 팽창 일 $P\Delta V$를 따로 알아야 한다. 기체가 거의 생기거나 없어지지 않는 반응(용액·고체)은 $P\Delta V$가 매우 작아 $\Delta H\approx\Delta U$이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 발열·흡열 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="발열 반응과 흡열 반응의 ΔH">
+  <h2><span class="no">4</span>발열 반응과 흡열 반응의 $\Delta H$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <div class="formula sm">$\ce{Zn(s) + I2(s) -> ZnI2(s)}$<div class="unit">$\Delta H=-208\ \text{kJ}$</div></div>
+      <p class="f21">아연과 아이오딘으로 아이오딘화 아연이 생기는 반응은 일정 압력에서 $\ce{ZnI2}$ 1 mol당 주위로 $208\ \text{kJ}$을 방출한다 → 계의 엔탈피가 $208\ \text{kJ}$ 감소한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 흡열 반응이면 계의 엔탈피는 어떻게 될까?</p>
+        <p class="f21 step">→ 증가한다. 예: $\ce{N2(g) + O2(g) -> 2NO(g)}$ $\Delta H=+180\ \text{kJ}$</p></div>
+      <div class="answer step">발열 반응 $\Delta H&lt;0$, 흡열 반응 $\Delta H&gt;0$</div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 600 392" style="width:560px" aria-label="같은 비율의 엔탈피 도표: 아이오딘화 아연 생성은 208 kJ 발열, 일산화 질소 생성은 180 kJ 흡열"><g data-arw="24,350,24,26,muted,2"></g><text class="tex" x="34" y="38" data-mix="엔탈피 $H$" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="60" y1="96" x2="240" y2="96" stroke="#16233D" stroke-width="3"/><text class="tex" x="150" y="86" data-tex="\ce{Zn(s) + I2(s)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="60" y1="262.4" x2="240" y2="262.4" stroke="#16233D" stroke-width="3"/><text class="tex" x="150" y="292.4" data-tex="\ce{ZnI2(s)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur="1.1"><g data-arw="160,99,160,259.4,ink,4"></g></g><text class="tex" x="172" y="187.2" data-tex="-208\ \text{kJ}" data-size="21" data-anchor="start" data-halo="1"></text><g data-anim="fade" data-dur="1" data-rep="loop"><g data-arw="150,200,90,200,equi,4"></g></g><text class="tex" x="118" y="186" data-mix="열 방출" data-size="19" data-anchor="middle" fill="#E08A2C"></text><text class="tex" x="150" y="378" data-mix="발열: $\Delta H&lt;0$" data-size="21" data-anchor="middle" data-weight="700"></text><line x1="360" y1="300" x2="560" y2="300" stroke="#16233D" stroke-width="3"/><text class="tex" x="460" y="330" data-tex="\ce{N2(g) + O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="360" y1="156" x2="560" y2="156" stroke="#16233D" stroke-width="3"/><text class="tex" x="460" y="146" data-tex="\ce{2NO(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur="1.1" data-delay=".6"><g data-arw="460,297,460,159,ink,4"></g></g><text class="tex" x="472" y="236" data-tex="+180\ \text{kJ}" data-size="21" data-anchor="start" data-halo="1"></text><g data-anim="fade" data-dur="1" data-rep="loop"><g data-arw="392,252,450,252,equi,4"></g></g><text class="tex" x="420" y="238" data-mix="열 흡수" data-size="19" data-anchor="middle" fill="#E08A2C"></text><text class="tex" x="460" y="378" data-mix="흡열: $\Delta H&gt;0$" data-size="21" data-anchor="middle" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 9. 예제 Ⅲ-3 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="예제 Ⅲ-3">
+  <h2><span class="tag ex">예제 Ⅲ-3</span>$\Delta H$와 $\Delta U$ 구하기</h2>
+  <p class="f22">일정 압력에서 발열 반응으로 $50\ \text{kJ}$의 에너지가 방출되고, 계가 한 팽창 일이 $20\ \text{kJ}$이다. <b>Q</b> 이 과정에서 $\Delta H$와 $\Delta U$의 값은 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step"><b>생각</b> 압력이 일정하므로 출입한 열이 곧 $\Delta H$, 계가 일을 했으므로 $w&lt;0$</p>
+      <div class="answer step">$\Delta H=q=-50\ \text{kJ}$</div>
+      <p class="f21 step">$\Delta U=q+w=-50\ \text{kJ}+(-20\ \text{kJ})$</p>
+      <div class="answer step">$\Delta U=-70\ \text{kJ}$</div>
+      <p class="small step">계가 열로 $50\ \text{kJ}$, 일로 $20\ \text{kJ}$을 잃었다 → $\Delta U$가 $\Delta H$보다 $20\ \text{kJ}$ 더 작다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 430 262" style="width:400px" aria-label="계가 열 50 kJ을 방출하고 팽창 일 20 kJ을 한다"><rect x="130" y="60" width="170" height="150" rx="14" fill="#FFF4E8" stroke="#16233D" stroke-width="4"/><text class="tex" x="215" y="150" data-mix="계" data-size="24" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur="1" data-rep="loop"><g data-arw="215,56,215,8,equi,5"></g></g><text class="tex" x="228" y="30" data-mix="열 $50\ \text{kJ}$ 방출" data-size="20" data-anchor="start" fill="#E08A2C"></text><g data-arw="304,135,380,135,ink,6"></g><text class="tex" x="342" y="118" data-mix="일 $20\ \text{kJ}$" data-size="20" data-anchor="middle"></text><text class="tex" x="342" y="162" data-mix="(팽창)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="215" y="246" data-tex="q=-50\ \text{kJ},\ \ w=-20\ \text{kJ}" data-size="21" data-anchor="middle"></text></svg><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 10. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>흡열 반응의 $\Delta H$와 $\Delta U$</h2>
+  <p class="f22">일정 압력에서 흡열 반응이 일어나 계가 열 $30\ \text{kJ}$을 흡수하였다. 기체의 양이 줄어 부피가 감소하면서 계는 주위로부터 일 $5\ \text{kJ}$을 받았다. <b>Q</b> $\Delta H$와 $\Delta U$는?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="answer step">$\Delta H=q_P=+30\ \text{kJ}$</div>
+      <p class="f21 step">계가 일을 받았으므로 $w=+5\ \text{kJ}$</p>
+      <div class="answer step">$\Delta U=q+w=+30+(+5)=+35\ \text{kJ}$</div>
+      <p class="small step">부피가 줄어드는 반응은 $\Delta U&gt;\Delta H$, 부피가 늘어나는 반응(예제 Ⅲ-3)은 $\Delta U&lt;\Delta H$이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑤ 열화학 반응식 ════════ -->
+<section class="slide" data-sec="02 · 표준 상태와 반응 엔탈피" data-title="열화학 반응식">
+  <h2><span class="no">5</span>열화학 반응식</h2>
+  <p class="f21">천연가스의 주성분인 메테인 $\ce{CH4(g)}$ 1 mol이 $298\ \text{K}$, $1\ \text{atm}$에서 완전 연소하면 $890\ \text{kJ}$의 열을 방출한다.</p>
+  <div class="formula">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}\qquad\Delta H=-890\ \text{kJ}$</div>
+  <p class="f22"><mark>열화학 반응식</mark>: 화학 반응식과 반응 엔탈피 변화 $\Delta H$를 함께 나타낸 식</p>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 같은 반응의 계수를 2배 하여 쓰면 $\Delta H$는?</p>
+    <p class="f21 step">→ $\ce{2CH4(g) + 4O2(g) -> 2CO2(g) + 4H2O(l)}$ <span class="ans">$\Delta H=-1780\ \text{kJ}$</span> — 계수가 2배이면 $\Delta H$도 2배</p></div>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 역반응의 $\Delta H$는?</p>
+    <p class="f21 step">→ $\ce{CO2(g) + 2H2O(l) -> CH4(g) + 2O2(g)}$ <span class="ans">$\Delta H=+890\ \text{kJ}$</span> — 크기는 같고 부호가 반대</p></div>
+</section>
+
+<!-- ════════ 12. ⑥ 물질의 상태 ════════ -->
+<section class="slide" data-sec="02 · 표준 상태와 반응 엔탈피" data-title="물질의 상태와 반응 엔탈피">
+  <h2><span class="no">6</span>물질의 상태와 반응 엔탈피</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 570px">
+      <p class="f21">방출되거나 흡수되는 열은 반응물과 생성물의 <b>물리적 상태</b>에 따라 다르다.</p>
+      <div class="card"><p class="f21">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}$ $\ \Delta H=-802\ \text{kJ}$</p><p class="f21">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$ $\ \Delta H=-890\ \text{kJ}$</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 두 반응의 $\Delta H$ 차이 $88\ \text{kJ}$은 무엇일까?</p>
+        <p class="f21 step">→ $25\ {}^\circ\text{C}$에서 $\ce{H2O(g)}$ 1 mol의 엔탈피가 $\ce{H2O(l)}$ 1 mol보다 <span class="ans">$44\ \text{kJ}$ 높다</span>. 수증기 2 mol이 생기면 $88\ \text{kJ}$이 계에 남는다.</p></div>
+      <p class="f21 step">수증기 2 mol이 이어서 응축하면 $88\ \text{kJ}$을 더 방출한다. 이 열이 $\ce{H2O(l)}$ 2 mol의 <b>증발 엔탈피</b>이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 520 380" style="width:470px" aria-label="메테인 연소의 엔탈피 변화: 수증기가 생기면 −802 kJ, 물이 생기면 −890 kJ, 차이 88 kJ"><g data-arw="26,370,26,30,muted,2"></g><text class="tex" x="36" y="42" data-mix="엔탈피 $H$" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="60" y1="70" x2="420" y2="70" stroke="#16233D" stroke-width="3"/><text class="tex" x="240" y="60" data-tex="\ce{CH4(g) + 2O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="60" y1="310.6" x2="290" y2="310.6" stroke="#16233D" stroke-width="3"/><text class="tex" x="190" y="300.6" data-tex="\ce{CO2(g) + 2H2O(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="60" y1="337" x2="420" y2="337" stroke="#16233D" stroke-width="3"/><text class="tex" x="240" y="367" data-tex="\ce{CO2(g) + 2H2O(l)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur="1.1"><g data-arw="84,73,84,307.6,ink,4"></g></g><text class="tex" x="96" y="190" data-tex="-802\ \text{kJ}" data-size="21" data-anchor="start" data-halo="1"></text><g data-anim="draw" data-dur="1.2" data-delay=".4"><g data-arw="390,73,390,334,ink,4"></g></g><text class="tex" x="380" y="203.5" data-tex="-890\ \text{kJ}" data-size="21" data-anchor="end" data-halo="1"></text><line x1="290" y1="310.6" x2="336" y2="310.6" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="draw" data-dur=".6" data-delay="1.4"><g data-arw="316,312.6,316,335,equi,3"></g></g><text class="tex" x="328" y="330.8" data-tex="-88\ \text{kJ}" data-size="20" data-anchor="start" fill="#E08A2C" data-halo="1"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑦ 표준 상태 ════════ -->
+<section class="slide" data-sec="02 · 표준 상태와 반응 엔탈피" data-title="표준 상태와 표준 반응 엔탈피">
+  <h2><span class="no">7</span>표준 상태와 표준 반응 엔탈피</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">반응 엔탈피는 압력 조건에 따라 달라지므로 기준을 정한다. <mark>표준 상태</mark>는 $1\ \text{bar}$의 상태이고, 보통 $1\ \text{atm}$을 쓴다.</p>
+      <p class="f21">물(액체)의 표준 상태는 $1\ \text{atm}$의 순수한 액체, 얼음의 표준 상태는 $1\ \text{atm}$의 순수한 얼음이다.</p>
+      <p class="f21"><mark>표준 반응 엔탈피 변화</mark> $\Delta H^\circ$: 표준 상태의 반응물이 반응하여 표준 상태의 생성물로 될 때의 엔탈피 변화 (위첨자 $^\circ$ = 표준 상태에서 일어난 변화)</p>
+      <p class="f21">온도는 표준 상태의 정의에 들어가지 않는다 → 어느 온도에서나 정할 수 있고, 보통 $25\ {}^\circ\text{C}$(정확히 $298.15\ \text{K}$) 값을 쓴다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card"><p class="f21">예: $\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$<br>$\Delta H^\circ=-890\ \text{kJ}$ ($25\ {}^\circ\text{C}$)</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 표준 상태는 $0\ {}^\circ\text{C}$, $1\ \text{atm}$(STP)과 같은 뜻일까?</p>
+        <p class="f21 step">→ 아니다. STP는 기체의 부피를 비교하는 조건이고, 표준 상태는 압력($1\ \text{bar}$)과 순수한 물질·$1\ \text{M}$ 용액으로 정한 기준이다. 표준 반응 엔탈피는 보통 $25\ {}^\circ\text{C}$ 값이다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02" data-tpl="check">
+  <h2><span class="tag q">확인 문제 02</span>열화학 반응식 다루기</h2>
+  <p class="f21">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$ $\Delta H=-286\ \text{kJ}$일 때, 다음 반응의 $\Delta H$를 구하여라.</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>$\ce{2H2(g) + O2(g) -> 2H2O(l)}$의 $\Delta H$는? <span class="step">→ <span class="ans">$-572\ \text{kJ}$</span> (계수 2배)</span></li>
+    <li>$\ce{H2O(l) -> H2(g) + 1/2O2(g)}$의 $\Delta H$는? <span class="step">→ <span class="ans">$+286\ \text{kJ}$</span> (역반응)</span></li>
+    <li>앞 장의 −802 kJ을 이용하면 $\ce{CO2(g) + 2H2O(g) -> CH4(g) + 2O2(g)}$의 $\Delta H$는? <span class="step">→ <span class="ans">$+802\ \text{kJ}$</span></span></li>
+    <li>○, × : 「표준 상태는 $0\ {}^\circ\text{C}$, $1\ \text{atm}$인 상태이다.」 <span class="step">→ <span class="ans">×</span> $1\ \text{bar}$(보통 $1\ \text{atm}$)이고, 온도는 정의에 없다(보통 $25\ {}^\circ\text{C}$).</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 15. 탐구 활동 (고화-탐19) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 대체 연료와 수소 에너지">
+  <h2><span class="tag">탐구 활동</span>대체 연료와 수소 에너지 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>대체 연료 연구 현황과 수소 에너지의 이용 방안 및 활용 분야 — 모둠별로 대체 연료의 이용 방안과 수소 에너지의 활용 분야를 조사해서 발표하고, 각 대체 연료의 장단점을 900자 이내로 적어 보자.</div>
+  <p class="f21 mt8">촉망받는 대체 연료는 수소, 에탄올, 메테인, 바이오디젤이다. 연료의 자원이 태양 에너지로 해마다 다시 채워지므로 재생 가능하다. <b>Q</b> 각 연료의 장단점은?</p>
+  <table class="tight ac312-fuel mt8">
+    <tr><th>연료</th><th>얻는 방법</th><th>장점 (예시 결과)</th><th>단점 (예시 결과)</th></tr>
+    <tr><td>수소</td><td class="l">물의 전기 분해</td><td class="l step" data-g="f1">연소 생성물이 물뿐, 1 g당 연소열이 크다</td><td class="l step" data-g="f1">생산에 전기 에너지가 들고, 저장·운반이 어렵고 폭발 위험</td></tr>
+    <tr><td>에탄올</td><td class="l">생물 자원의 발효</td><td class="l step" data-g="f2">재생 가능, 휘발유에 섞어 쓴다</td><td class="l step" data-g="f2">원료가 식량 작물과 겹치고, 1 g당 연소열이 휘발유보다 작다</td></tr>
+    <tr><td>메테인</td><td class="l">하수·분뇨·폐기물의 미생물 분해</td><td class="l step" data-g="f3">폐기물 처리와 에너지 생산을 함께</td><td class="l step" data-g="f3">새어 나가면 강한 온실 기체, 연소하면 $\ce{CO2}$</td></tr>
+    <tr><td>바이오디젤</td><td class="l">식용유 같은 생물 원천</td><td class="l step" data-g="f4">재생 가능, 경유 엔진에 쓴다</td><td class="l step" data-g="f4">원료 확보·생산 비용, 낮은 온도에서 굳기 쉽다</td></tr>
+  </table>
+  <p class="f21 step mt8"><b>수소 활용 분야(예시)</b> 수소 연료 전지 자동차·버스, 발전용 연료 전지, 수소 환원 제철, 남는 전기를 수소로 저장 — 생산·저장·안전 기술 개발이 과제</p>
+</section>
+
+<!-- ════════ 16. 예제 Ⅲ-4 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="예제 Ⅲ-4">
+  <h2><span class="tag ex">예제 Ⅲ-4</span>흑연을 다이아몬드로 바꾸는 반응의 $\Delta H$</h2>
+  <p class="f21">열량계로 직접 재기 어렵거나 잴 수 없는 반응이 있다. 흑연 → 다이아몬드는 보통 조건에서 너무 느려 직접 잴 수 없다. <b>Q</b> 흑연과 다이아몬드의 연소열로 $\mathrm{C}_\text{흑연}(s)\ \ce{->}\ \mathrm{C}_\text{다이아몬드}(s)$의 $\Delta H$를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><p class="f21">$\mathrm{C}_\text{흑연}(s)+\ce{O2(g) -> CO2(g)}$ $\ \Delta H=-394\ \text{kJ}$</p><p class="f21">$\mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g) -> CO2(g)}$ $\ \Delta H=-396\ \text{kJ}$</p></div>
+      <p class="f21 step">둘째 식의 역반응: $\ce{CO2(g)}\ \ce{->}\ \mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g)}$ $\Delta H=-(-396\ \text{kJ})$</p>
+      <p class="f21 step">첫째 식과 더하면 양쪽의 $\ce{CO2(g)}$와 $\ce{O2(g)}$가 지워진다.</p>
+      <div class="answer step">$\mathrm{C}_\text{흑연}(s)\ \ce{->}\ \mathrm{C}_\text{다이아몬드}(s)\quad\Delta H=+2\ \text{kJ}$</div>
+      <p class="small step">계산으로 $\Delta H$를 구할 수 있다는 것이 얼마나 유용한지 보여 주는 예이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 520 410" style="width:480px" aria-label="흑연과 다이아몬드의 연소 엔탈피 도표: 다이아몬드가 흑연보다 2 kJ 높다(확대 원)"><g data-arw="26,396,26,24,muted,2"></g><text class="tex" x="36" y="36" data-mix="엔탈피 $H$" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="44" y1="94.6" x2="184" y2="94.6" stroke="#16233D" stroke-width="3"/><text class="tex" x="112" y="82.6" data-tex="\mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="214" y1="96" x2="364" y2="96" stroke="#16233D" stroke-width="3"/><text class="tex" x="302" y="84" data-tex="\mathrm{C}_\text{흑연}(s)+\ce{O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="44" y1="371.8" x2="364" y2="371.8" stroke="#16233D" stroke-width="3"/><text class="tex" x="204" y="401.8" data-tex="\ce{CO2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur="1.1"><g data-arw="110,97.6,110,368.8,bfield,4"></g></g><text class="tex" x="122" y="229" data-tex="-396\ \text{kJ}" data-size="21" data-anchor="start" fill="#7B4FC8" data-halo="1"></text><g data-anim="draw" data-dur="1.1" data-delay=".4"><g data-arw="300,99,300,368.8,field,4"></g></g><text class="tex" x="312" y="271" data-tex="-394\ \text{kJ}" data-size="21" data-anchor="start" fill="#2E9E6A" data-halo="1"></text><circle cx="200" cy="95.3" r="14" fill="none" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="213" y1="100.3" x2="393" y2="184" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="448" cy="196" r="58" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><line x1="404" y1="168" x2="444" y2="168" stroke="#16233D" stroke-width="3"/><line x1="452" y1="224" x2="492" y2="224" stroke="#16233D" stroke-width="3"/><line x1="444" y1="168" x2="492" y2="168" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 3"/><g data-anim="draw" data-dur=".6" data-delay="1.4"><g data-arw="472,221,472,171,ink,3"></g></g><text class="tex" x="448" y="278" data-tex="+2\ \text{kJ}" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="448" y="128" data-mix="확대 ×40" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑧ 표준 생성 엔탈피 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="표준 생성 엔탈피">
+  <h2><span class="no">8</span>표준 생성 엔탈피</h2>
+  <p class="f22">어느 화합물의 <mark>표준 생성 엔탈피</mark> $\Delta H_\mathrm{f}^\circ$: 표준 상태에서 화합물을 이루는 원소로부터 그 화합물 1 mol을 생성할 때의 엔탈피 변화</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">열역학 함숫값은 농도와 압력에 따라 변하므로, 두 물질을 비교하려면 명확한 기준이 필요하다.</p>
+      <table class="tight ac312-c">
+        <tr><th colspan="2">표 Ⅲ-1 몇 가지 표준 상태의 정의</th></tr>
+        <tr><td rowspan="3">화합물</td><td class="l">기체: 압력이 $1\ \text{atm}$인 기체</td></tr>
+        <tr><td class="l">응축 상태: 순수한 액체 또는 고체</td></tr>
+        <tr><td class="l">용액: 농도가 $1\ \text{M}$인 용액</td></tr>
+        <tr><td rowspan="2">원소</td><td class="l">$1\ \text{atm}$, $25\ {}^\circ\text{C}$에서 그 원소가 존재하는 상태</td></tr>
+        <tr><td class="l">예: 산소 $\ce{O2(g)}$, 나트륨 $\ce{Na(s)}$, 수은 $\ce{Hg(l)}$, 탄소는 흑연</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 표준 상태의 원소 $\ce{O2(g)}$가 「생성」될 때의 엔탈피 변화는?</p>
+        <p class="f21 step">→ <span class="ans">0</span> — 이미 표준 상태의 원소이므로 변화가 필요 없다.</p></div>
+      <p class="f21 step">그래서 표준 상태 원소를 기준(0)으로 삼아 화합물마다 $\Delta H_\mathrm{f}^\circ$를 표로 만든다. 엔탈피의 절댓값은 몰라도 된다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑨ 생성 반응식과 표 Ⅲ-2 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="생성 반응식과 표 Ⅲ-2">
+  <h2><span class="no">9</span>생성 반응식 쓰기와 표준 생성 엔탈피 값</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="card"><p class="f21">$\ce{1/2N2(g) + O2(g) -> NO2(g)}$<br>$\Delta H_\mathrm{f}^\circ=+34\ \text{kJ/mol}$</p><p class="f21 mt8">$\mathrm{C}_\text{흑연}(s)+\ce{2H2(g) + 1/2O2(g) -> CH3OH(l)}$<br>$\Delta H_\mathrm{f}^\circ=-239\ \text{kJ/mol}$</p></div>
+      <div class="card"><p class="f21">① 반응물은 모두 <b>표준 상태의 원소</b> (탄소는 흑연, 수소·산소·질소는 이원자 분자 기체)<br>② 생성물은 표준 상태로 <b>1 mol</b> → 분수 계수가 나올 수 있다</p></div>
+    </div>
+    <div class="col stack">
+      <h3>표 Ⅲ-2 $25\ {}^\circ\text{C}$에서의 표준 생성 엔탈피</h3>
+      <svg class="fig" viewBox="0 0 740 402" style="width:640px" aria-label="표 Ⅲ-2 25 °C 표준 생성 엔탈피 막대그래프: 이산화 질소만 양수, 산화 알루미늄이 가장 작다"><text class="tex" x="660" y="30" data-mix="원소 = 0" data-size="22" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="150" y="70" data-tex="\ce{NO2(g)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,64" data-dur="1" data-delay="0.0"><rect x="660" y="52" width="8.5" height="24" rx="0" fill="#D7263D" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="676.5" y="71" data-mix="+34" data-size="20" data-anchor="start" fill="#D7263D" data-weight="700"></text><text class="tex" x="150" y="108" data-tex="\ce{NH3(g)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,102" data-dur="1" data-delay="0.1"><rect x="648.5" y="90" width="11.5" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="640.5" y="109" data-mix="−46" data-size="20" data-anchor="end" data-weight="700"></text><text class="tex" x="150" y="146" data-tex="\ce{CH3OH(l)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,140" data-dur="1" data-delay="0.2"><rect x="600.2" y="128" width="59.8" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="592.2" y="147" data-mix="−239" data-size="20" data-anchor="end" data-weight="700"></text><text class="tex" x="150" y="184" data-tex="\ce{C8H18(l)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,178" data-dur="1" data-delay="0.3"><rect x="597.5" y="166" width="62.5" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="589.5" y="185" data-mix="−250" data-size="20" data-anchor="end" data-weight="700"></text><text class="tex" x="150" y="222" data-tex="\ce{H2O(l)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,216" data-dur="1" data-delay="0.4"><rect x="588.5" y="204" width="71.5" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="580.5" y="223" data-mix="−286" data-size="20" data-anchor="end" data-weight="700"></text><text class="tex" x="150" y="260" data-tex="\ce{CO2(g)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,254" data-dur="1" data-delay="0.5"><rect x="561.5" y="242" width="98.5" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="553.5" y="261" data-mix="−394" data-size="20" data-anchor="end" data-weight="700"></text><text class="tex" x="150" y="298" data-tex="\ce{Fe2O3(s)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,292" data-dur="1" data-delay="0.6"><rect x="453.5" y="280" width="206.5" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="445.5" y="299" data-mix="−826" data-size="20" data-anchor="end" data-weight="700"></text><text class="tex" x="150" y="336" data-tex="\ce{Al2O3(s)}" data-size="22" data-anchor="end"></text><g data-anim="scale" data-from="0,1" data-o="660,330" data-dur="1" data-delay="0.7"><rect x="241" y="318" width="419" height="24" rx="0" fill="#1F6FD1" stroke="none" stroke-width="0" fill-opacity=".75"/></g><text class="tex" x="233" y="337" data-mix="−1676" data-size="20" data-anchor="end" data-weight="700"></text><line x1="660" y1="40" x2="660" y2="354" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="400" y="386" data-mix="$\Delta H_\mathrm{f}^\circ$ (kJ/mol, 25 °C)" data-size="21" data-anchor="middle" fill="#5B6B7F"></text></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03" data-tpl="check">
+  <h2><span class="tag q">확인 문제 03</span>표준 생성 반응식 고르기</h2>
+  <p class="f21">반응 엔탈피가 생성물의 표준 생성 엔탈피 $\Delta H_\mathrm{f}^\circ$와 같은 반응식이면 ○, 아니면 ×를 하여라.</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$ 는? <span class="step">→ <span class="ans">○</span> ($-286\ \text{kJ/mol}$)</span></li>
+    <li>$\ce{2H2(g) + O2(g) -> 2H2O(l)}$ 는? <span class="step">→ <span class="ans">×</span> 생성물이 2 mol</span></li>
+    <li>$\mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g) -> CO2(g)}$ 는? <span class="step">→ <span class="ans">×</span> 탄소의 표준 상태는 흑연</span></li>
+    <li>$\ce{CO(g) + 1/2O2(g) -> CO2(g)}$ 는? <span class="step">→ <span class="ans">×</span> 반응물 $\ce{CO}$는 원소가 아니다</span></li>
+    <li>$\ce{1/2N2(g) + 3/2H2(g) -> NH3(g)}$ 는? <span class="step">→ <span class="ans">○</span> ($-46\ \text{kJ/mol}$)</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 20. ⑩ 그림 Ⅲ-13 경로 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="생성 엔탈피로 반응 엔탈피 구하기">
+  <h2><span class="no">10</span>생성 엔탈피로 반응 엔탈피 구하기</h2>
+  <p class="f21">엔탈피는 상태 함수 → 반응물에서 생성물로 가는 <b>경로를 골라</b> 각 단계의 $\Delta H$를 더한다. 1단계에서 반응물을 표준 상태의 원소로 분해하고, 2단계에서 원소로 생성물을 만든다(어느 반응에나 쓸 수 있다).</p>
+  <svg class="fig" viewBox="0 0 1060 372" style="width:1060px" aria-label="그림 Ⅲ-13 메테인 연소의 반응 경로: 반응물을 표준 상태 원소로 분해한 뒤 원소로부터 생성물을 만든다"><rect x="30" y="40" width="240" height="290" rx="12" fill="#EFE9F6" stroke="none" stroke-width="0"/><text class="tex" x="150" y="28" data-mix="반응물" data-size="21" data-anchor="middle" data-weight="700"></text><rect x="410" y="40" width="240" height="290" rx="12" fill="#FFF4D6" stroke="none" stroke-width="0"/><text class="tex" x="530" y="28" data-mix="원소" data-size="21" data-anchor="middle" data-weight="700"></text><rect x="790" y="40" width="240" height="290" rx="12" fill="#EEF3DF" stroke="none" stroke-width="0"/><text class="tex" x="910" y="28" data-mix="생성물" data-size="21" data-anchor="middle" data-weight="700"></text><g data-atom="120,88,18,H"></g><g data-atom="180,88,18,H"></g><g data-atom="120,132,18,H"></g><g data-atom="180,132,18,H"></g><g data-atom="150,110,24,C"></g><g data-atom="131,240,24,O"></g><g data-atom="169,240,24,O"></g><g data-atom="131,300,24,O"></g><g data-atom="169,300,24,O"></g><g data-anim="move" data-from="-40,0" data-dur="1.0" data-delay=".2" data-ease="out"><g data-atom="530,82,24,C"></g><g data-atom="487,150,18,H"></g><g data-atom="513,150,18,H"></g><g data-atom="547,150,18,H"></g><g data-atom="573,150,18,H"></g><g data-atom="511,240,24,O"></g><g data-atom="549,240,24,O"></g><g data-atom="511,300,24,O"></g><g data-atom="549,300,24,O"></g></g><g data-anim="move" data-from="-40,0" data-dur="1.0" data-delay="1.0" data-ease="out"><g data-atom="870,110,24,O"></g><g data-atom="950,110,24,O"></g><g data-atom="910,110,24,C"></g><g data-atom="842,264,18,H"></g><g data-atom="894,264,18,H"></g><g data-atom="868,246,24,O"></g><g data-atom="930,264,18,H"></g><g data-atom="982,264,18,H"></g><g data-atom="956,246,24,O"></g></g><g data-arw="272,96,398,80,ink,3"></g><g data-arw="272,124,398,150,ink,3"></g><g data-arw="272,270,398,270,ink,3"></g><g data-arw="660,82,778,104,ink,3"></g><g data-arw="660,150,778,236,ink,3"></g><g data-arw="660,250,778,124,ink,3"></g><g data-arw="660,282,778,252,ink,3"></g><text class="tex" x="335" y="358" data-mix="1단계" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="720" y="362" data-mix="2단계" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="335" y="118" data-mix="(가)" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" x="335" y="258" data-mix="(나)" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" x="720" y="74" data-mix="(다)" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" x="720" y="300" data-mix="(라)" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><g class="step" data-g="p1"><text class="tex" x="335" y="190" data-tex="\Delta H^\circ_{(\text{가})}=+75\ \text{kJ}" data-size="19" data-anchor="middle" data-halo="1"></text></g><g class="step" data-g="p2"><text class="tex" x="335" y="302" data-tex="\Delta H^\circ_{(\text{나})}=0\ \text{kJ}" data-size="19" data-anchor="middle" data-halo="1"></text></g><g class="step" data-g="p3"><text class="tex" x="720" y="44" data-tex="\Delta H^\circ_{(\text{다})}=-394\ \text{kJ}" data-size="19" data-anchor="middle" data-halo="1"></text></g><g class="step" data-g="p4"><text class="tex" x="720" y="332" data-tex="\Delta H^\circ_{(\text{라})}=-572\ \text{kJ}" data-size="19" data-anchor="middle" data-halo="1"></text></g></svg>
+  <p class="f21 step" data-g="p1">(가)는 메테인 생성 반응 $\mathrm{C}_\text{흑연}(s)+\ce{2H2(g) -> CH4(g)}$ ($\Delta H_\mathrm{f}^\circ=-75\ \text{kJ/mol}$)의 역반응 → 부호만 반대</p>
+</section>
+
+<!-- ════════ 21. ⑪ 단계의 합과 일반식 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="단계의 합과 일반식">
+  <h2><span class="no">11</span>단계의 합 → 반응 엔탈피의 일반식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><p class="f21">$\begin{aligned}\Delta H^\circ_\text{반응}&amp;=\Delta H^\circ_{(\text{가})}+\Delta H^\circ_{(\text{나})}+\Delta H^\circ_{(\text{다})}+\Delta H^\circ_{(\text{라})}\\&amp;=-\Delta H_\mathrm{f}^\circ(\ce{CH4})+\Delta H_\mathrm{f}^\circ(\ce{CO2})+2\Delta H_\mathrm{f}^\circ(\ce{H2O(l)})\\&amp;=-(-75\ \text{kJ})+0+(-394\ \text{kJ})+(-572\ \text{kJ})\end{aligned}$</p></div>
+      <div class="answer step">$\Delta H^\circ_\text{반응}=-891\ \text{kJ}$</div>
+      <p class="f21 step">생성물의 생성 엔탈피 총합에서 반응물의 생성 엔탈피 총합을 뺀다(계수만큼 곱한다).</p>
+      <div class="card step"><p class="f22">$\Delta H^\circ_\text{반응}=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$</p><div class="small">$\sum$(시그마): 총합, $n_\mathrm{p}$·$n_\mathrm{r}$: 생성물·반응물의 몰수(계수)</div></div>
+      <p class="small">측정값 −890 kJ과의 1 kJ 차이는 표 값의 반올림 때문이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 490 430" style="width:470px" aria-label="메테인 연소의 엔탈피 도표: 원소를 거치는 경로의 합이 −891 kJ"><g data-arw="24,392,24,22,muted,2"></g><text class="tex" x="34" y="34" data-mix="엔탈피 $H$" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="160" y1="56" x2="470" y2="56" stroke="#16233D" stroke-width="3"/><text class="tex" x="330" y="44" data-tex="\mathrm{C}_\text{흑연}+\ce{2H2 + 2O2}\ (\text{원소})" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="40" y1="81.5" x2="200" y2="81.5" stroke="#16233D" stroke-width="3"/><text class="tex" x="110" y="111.5" data-tex="\ce{CH4 + 2O2}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="250" y1="190" x2="470" y2="190" stroke="#16233D" stroke-width="3"/><text class="tex" x="380" y="178" data-tex="\ce{CO2 + 2H2 + O2}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="40" y1="384.4" x2="470" y2="384.4" stroke="#16233D" stroke-width="3"/><text class="tex" x="290" y="414.4" data-tex="\ce{CO2 + 2H2O(l)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur=".6"><g data-arw="190,79.5,190,58,field,3"></g></g><text class="tex" x="182" y="76.6" data-tex="+75" data-size="19" data-anchor="end" fill="#2E9E6A"></text><g data-anim="draw" data-dur=".9" data-delay=".5"><g data-arw="300,59,300,187,bfield,3"></g></g><text class="tex" x="310" y="124" data-tex="-394" data-size="19" data-anchor="start" fill="#7B4FC8"></text><g data-anim="draw" data-dur="1" data-delay="1.2"><g data-arw="430,193,430,381.4,bfield,3"></g></g><text class="tex" x="422" y="287.2" data-tex="-572" data-size="19" data-anchor="end" fill="#7B4FC8"></text><g data-anim="draw" data-dur="1.1" data-delay="2"><g data-arw="80,84.5,80,381.4,ink,4"></g></g><text class="tex" x="92" y="246.4" data-tex="\Delta H^\circ=-891\ \text{kJ}" data-size="21" data-anchor="start" data-halo="1" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 (고화-탐20) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 열을 발생하는 식물">
+  <h2><span class="tag">탐구 활동</span>열을 발생하는 식물 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>모둠별로 열을 발생하는 식물들을 조사하여 높은 열을 내는 목적이 무엇인지 토론하고 발표해 보자.</div>
+  <p class="f21 mt8">부두백합은 신진대사가 가장 활발할 때 꽃의 온도가 주위보다 약 $15\ {}^\circ\text{C}$ 높다. 이만큼 열을 내려면 신진대사율이 벌새와 맞먹어야 한다. <b>Q</b> 식물이 많은 열을 내는 목적은 무엇일까?</p>
+  <div class="stages mt8">
+    <div class="stage step"><h3>부두백합</h3><p class="f21">열로 악취 물질을 증발시켜 멀리 퍼뜨린다 → 썩은 냄새를 좋아하는 파리·딱정벌레를 불러 꽃가루받이</p></div>
+    <div class="stage step"><h3>앉은부채</h3><p class="f21">이른 봄, 기온이 영하일 때도 꽃 둘레를 따뜻하게 유지 → 주변 눈을 녹이고 꽃이 얼지 않으며 곤충이 모인다</p></div>
+    <div class="stage step"><h3>연꽃</h3><p class="f21">꽃의 온도를 며칠 동안 일정하게 높게 유지 → 밤에 꽃 속에 머무는 곤충에게 따뜻한 쉼터를 주어 꽃가루받이</p></div>
+  </div>
+  <p class="f21 step mt8"><b>화학 연결</b> 이 열은 세포 호흡(저장 녹말·지방의 산화)이라는 <b>발열 반응</b>에서 나온다 — 엔탈피가 큰 반응물이 엔탈피가 작은 $\ce{CO2}$와 $\ce{H2O}$로 바뀌며 열을 방출한다.</p>
+  <p class="small c-muted">예시 결과 — 모둠마다 식물 하나를 맡아 조사하고 발표한다.</p>
+</section>
+
+<!-- ════════ 23. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>표 Ⅲ-2로 테르밋 반응의 $\Delta H^\circ$ 구하기</h2>
+  <p class="f22">레일 용접에 쓰는 테르밋 반응의 표준 반응 엔탈피를 표 Ⅲ-2의 값으로 구하여라. <b>Q</b> $\Delta H^\circ$는?</p>
+  <div class="formula sm">$\ce{2Al(s) + Fe2O3(s) -> Al2O3(s) + 2Fe(s)}$<div class="unit">$\Delta H_\mathrm{f}^\circ$: $\ce{Al2O3(s)}$ $-1676\ \text{kJ/mol}$, $\ce{Fe2O3(s)}$ $-826\ \text{kJ/mol}$</div></div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">표준 상태의 원소 $\ce{Al(s)}$, $\ce{Fe(s)}$는 $\Delta H_\mathrm{f}^\circ=0$</p>
+      <p class="f21 step">$\Delta H^\circ=\left[\Delta H_\mathrm{f}^\circ(\ce{Al2O3})+2\times0\right]-\left[2\times0+\Delta H_\mathrm{f}^\circ(\ce{Fe2O3})\right]$<br>$\qquad=(-1676\ \text{kJ})-(-826\ \text{kJ})$</p>
+      <div class="answer step">$\Delta H^\circ=-850\ \text{kJ}$</div>
+      <p class="small step">많은 열을 방출해 생긴 철이 녹을 정도이다(01의 테르밋 반응).</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑫ 헤스 법칙 ════════ -->
+<section class="slide" data-sec="02 · 헤스 법칙" data-title="헤스 법칙">
+  <h2><span class="no">12</span>헤스 법칙</h2>
+  <p class="f21">엔탈피는 상태 함수 → 처음 상태에서 최종 상태로 가는 경로와 무관하다. 반응이 한 단계로 일어나든 여러 단계에 걸쳐 일어나든 엔탈피 변화량은 같다 = <mark>헤스 법칙</mark></p>
+  <div class="formula sm">$\begin{array}{rrcll}&amp;\ce{N2(g) + O2(g)}&amp;\ce{->}&amp;\ce{2NO(g)}&amp;\Delta H_2=+180\ \text{kJ}\\&amp;\ce{2NO(g) + O2(g)}&amp;\ce{->}&amp;\ce{2NO2(g)}&amp;\Delta H_3=-112\ \text{kJ}\\\hline\text{전체 반응:}&amp;\ce{N2(g) + 2O2(g)}&amp;\ce{->}&amp;\ce{2NO2(g)}&amp;\Delta H_2+\Delta H_3=+68\ \text{kJ}\end{array}$</div>
+  <svg class="fig" viewBox="0 0 990 140" style="width:960px" aria-label="원자 수 보존: 질소 분자와 산소 분자 둘이 일산화 질소 둘과 산소를 거쳐 이산화 질소 둘이 된다"><g data-atom="43,70,24,N"></g><g data-atom="77,70,24,N"></g><g data-atom="146,70,24,O"></g><g data-atom="184,70,24,O"></g><g data-atom="251,70,24,O"></g><g data-atom="289,70,24,O"></g><g data-arw="326,70,372,70,field,4"></g><g data-anim="move" data-from="-30,0" data-dur=".9" data-delay=".2" data-ease="out"><g data-atom="403,70,24,N"></g><g data-atom="437,70,24,O"></g><g data-atom="493,70,24,N"></g><g data-atom="527,70,24,O"></g><g data-atom="591,70,24,O"></g><g data-atom="629,70,24,O"></g></g><g data-arw="666,70,712,70,bfield,4"></g><g data-anim="move" data-from="-30,0" data-dur=".9" data-delay=".9" data-ease="out"><g data-atom="756,82,24,O"></g><g data-atom="824,82,24,O"></g><g data-atom="790,64,24,N"></g><g data-atom="886,82,24,O"></g><g data-atom="954,82,24,O"></g><g data-atom="920,64,24,N"></g></g><text class="tex" x="165" y="128" data-tex="\ce{N2 + 2O2}" data-size="20" data-anchor="middle"></text><text class="tex" x="515" y="128" data-tex="\ce{2NO + O2}" data-size="20" data-anchor="middle"></text><text class="tex" x="855" y="128" data-tex="\ce{2NO2}" data-size="20" data-anchor="middle"></text></svg>
+  <p class="f21" data-q><b>Q</b> 한 단계로 쓴 $\ce{N2(g) + 2O2(g) -> 2NO2(g)}$의 $\Delta H_1$은?</p>
+  <div class="answer step">$\Delta H_1=\Delta H_2+\Delta H_3=+68\ \text{kJ}$</div>
+</section>
+
+<!-- ════════ 25. ⑬ 헤스 법칙의 원리 ════════ -->
+<section class="slide" data-sec="02 · 헤스 법칙" data-title="헤스 법칙의 원리">
+  <h2><span class="no">13</span>헤스 법칙의 원리</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px"><svg class="fig" viewBox="0 0 680 370" style="width:640px" aria-label="그림 Ⅲ-14 헤스 법칙의 원리: 2단계 반응의 엔탈피 변화 합 +180 − 112와 1단계 반응의 +68 kJ이 같다"><g data-arw="24,350,24,30,muted,2"></g><text class="tex" x="34" y="42" data-mix="$H$ (kJ)" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="90" y1="330" x2="230" y2="330" stroke="#16233D" stroke-width="3"/><text class="tex" x="160" y="360" data-tex="\ce{N2(g), 2O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="110" y1="96" x2="270" y2="96" stroke="#16233D" stroke-width="3"/><text class="tex" x="190" y="86" data-tex="\ce{O2(g), 2NO(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="220" y1="241.6" x2="360" y2="241.6" stroke="#16233D" stroke-width="3"/><text class="tex" x="300" y="229.6" data-tex="\ce{2NO2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="230" y1="330" x2="290" y2="330" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="draw" data-dur="1"><g data-arw="150,327,150,99,field,4"></g></g><text class="tex" x="142" y="206.5" data-tex="\Delta H_2=+180" data-size="20" data-anchor="end" fill="#2E9E6A" data-halo="1"></text><g data-anim="draw" data-dur=".9" data-delay=".8"><g data-arw="250,99,250,238.6,bfield,4"></g></g><text class="tex" x="260" y="148" data-tex="\Delta H_3=-112" data-size="20" data-anchor="start" fill="#7B4FC8"></text><g data-anim="draw" data-dur=".7" data-delay="1.6"><g data-arw="280,327,280,244.6,ink,4"></g></g><text class="tex" x="290" y="297" data-tex="\Delta H_1" data-size="20" data-anchor="start"></text><text class="tex" x="190" y="22" data-mix="2단계 반응" data-size="21" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><line x1="470" y1="330" x2="660" y2="330" stroke="#16233D" stroke-width="3"/><text class="tex" x="565" y="360" data-tex="\ce{N2(g), 2O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="470" y1="241.6" x2="660" y2="241.6" stroke="#16233D" stroke-width="3"/><text class="tex" x="565" y="231.6" data-tex="\ce{2NO2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur=".8" data-delay="2.2"><g data-arw="520,327,520,244.6,ink,4"></g></g><text class="tex" x="532" y="293.8" data-tex="\Delta H_1=+68\ \text{kJ}" data-size="20" data-anchor="start" data-halo="1"></text><text class="tex" x="565" y="116" data-mix="1단계 반응" data-size="21" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><g class="step" data-g="h1"><text class="tex" x="565" y="161" data-tex="=\Delta H_2+\Delta H_3" data-size="20" data-anchor="middle"></text><text class="tex" x="565" y="191" data-tex="=180-112\ \text{(kJ)}" data-size="20" data-anchor="middle"></text></g></svg></div>
+    <div class="col stack">
+      <p class="f21">2단계 반응: $+180\ \text{kJ}$ 올라갔다가 $112\ \text{kJ}$ 내려온다. 1단계 반응: $+68\ \text{kJ}$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 반응 엔탈피는 반응 경로에 따라 달라질까?</p>
+        <p class="f21 step">→ 아니다. 처음 상태와 나중 상태가 같으면 경로와 관계없이 $\Delta H$가 같다.</p></div>
+      <p class="f21 step"><b>쓰임</b> 직접 재기 어려운 반응의 $\Delta H$를 잴 수 있는 반응들의 합으로 구한다(예제 Ⅲ-4).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 확인 문제 05 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 05">
+  <h2><span class="tag q">확인 문제 05</span>헤스 법칙으로 에탄올의 표준 생성 엔탈피 구하기</h2>
+  <p class="f21">다음 자료로 에탄올 $\ce{C2H5OH(l)}$의 표준 생성 엔탈피를 구하여라. <b>Q</b> $\Delta H_\mathrm{f}^\circ$는?</p>
+  <div class="formula sm">$\begin{aligned}&amp;(1)\ \mathrm{C}_\text{흑연}(s)+\ce{O2(g) -> CO2(g)}&amp;&amp;\Delta H^\circ=-393.5\ \text{kJ}\\&amp;(2)\ \ce{H2(g) + 1/2O2(g) -> H2O(l)}&amp;&amp;\Delta H^\circ=-285.8\ \text{kJ}\\&amp;(3)\ \ce{C2H5OH(l) + 3O2(g) -> 2CO2(g) + 3H2O(l)}&amp;&amp;\Delta H^\circ=-1366.8\ \text{kJ}\end{aligned}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21 step">목표: $2\mathrm{C}_\text{흑연}(s)+\ce{3H2(g) + 1/2O2(g) -> C2H5OH(l)}$</p>
+      <p class="f21 step">(1) × 2 + (2) × 3 + (3)의 역반응 → $\ce{CO2}$, $\ce{H2O}$, $\ce{O2}$가 지워진다.</p>
+      <p class="f21 step">$\Delta H_\mathrm{f}^\circ=2(-393.5)+3(-285.8)-(-1366.8)$</p>
+      <div class="answer step">$\Delta H_\mathrm{f}^\circ=-277.6\ \text{kJ/mol}$</div>
+    </div>
+    <div class="col stack">
+      <div class="card tip"><p class="f21"><b>헤스 법칙 계산 순서</b> ① 목표 반응식 쓰기 ② 목표 물질이 같은 쪽에 오게 뒤집기(부호 반대) ③ 계수가 맞게 곱하기($\Delta H$도) ④ 더하고 양쪽의 같은 물질 지우기</p></div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. ⑭ 결합 엔탈피 연결 ════════ -->
+<section class="slide" data-sec="02 · 헤스 법칙" data-title="결합 엔탈피로 반응 엔탈피 어림">
+  <h2><span class="tag alt">연결</span>결합 엔탈피로 반응 엔탈피 어림하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">Ⅰ-2의 <b>결합 엔탈피</b> $\Delta H_\mathrm{B}$: 기체 분자 1 mol의 결합을 끊는 엔탈피 변화(늘 양수). 헤스 법칙으로 경로를 「결합 끊기 → 결합 만들기」로 잡는다.</p>
+      <div class="card"><p class="f22">$\Delta H\approx\sum\Delta H_\mathrm{B}(\text{끊는 결합})-\sum\Delta H_\mathrm{B}(\text{생기는 결합})$</p></div>
+      <p class="f21"><b>Q</b> 표 Ⅰ-3 평균 결합 엔탈피($\ce{C-H}$ 413, $\ce{O=O}$ 498, $\ce{CO2}$의 $\ce{C=O}$ 799, $\ce{O-H}$ 467 kJ/mol)로 $\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}$의 $\Delta H$를 어림하면?</p>
+      <p class="f21 step">끊는 결합: $4(413)+2(498)=2648\ \text{kJ}$ · 생기는 결합: $2(799)+4(467)=3466\ \text{kJ}$</p>
+      <div class="answer step">$\Delta H\approx2648-3466=-818\ \text{kJ}$</div>
+      <p class="f21 step">측정값 $-802\ \text{kJ}$과 다른 까닭: 평균 결합 엔탈피는 여러 화합물에서 구한 평균값이고 기체 상태에만 쓸 수 있다 → <b>어림값</b></p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 490 398" style="width:470px" aria-label="결합 엔탈피 경로: 반응물의 결합을 모두 끊어 기체 원자로 만든 뒤 생성물의 결합을 만든다"><g data-arw="24,384,24,22,muted,2"></g><text class="tex" x="34" y="34" data-mix="엔탈피 $H$" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="60" y1="93.4" x2="470" y2="93.4" stroke="#16233D" stroke-width="3"/><text class="tex" x="265" y="83.4" data-tex="\ce{C(g) + 4H(g) + 4O(g)}\ (\text{기체 원자})" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="40" y1="292" x2="250" y2="292" stroke="#16233D" stroke-width="3"/><text class="tex" x="130" y="280" data-tex="\ce{CH4(g) + 2O2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="220" y1="353.4" x2="470" y2="353.4" stroke="#16233D" stroke-width="3"/><text class="tex" x="345" y="383.4" data-tex="\ce{CO2(g) + 2H2O(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="250" y1="292" x2="300" y2="292" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="draw" data-dur="1.1"><g data-arw="110,289,110,96.4,equi,4"></g></g><text class="tex" x="122" y="179.5" data-mix="결합 끊기||$+2648\ \text{kJ}$" data-size="19" data-anchor="start" fill="#E08A2C"></text><g data-anim="draw" data-dur="1.2" data-delay=".9"><g data-arw="420,96.4,420,350.4,minus,4"></g></g><text class="tex" x="410" y="202" data-mix="결합 만들기||$-3466\ \text{kJ}$" data-size="19" data-anchor="end" fill="#1F6FD1"></text><g data-anim="draw" data-dur=".7" data-delay="2"><g data-arw="280,295,280,350.4,ink,4"></g></g><text class="tex" x="268" y="331.5" data-tex="-818" data-size="20" data-anchor="end" data-halo="1" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 탐구 활동 (고화-탐21) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 화학 스프레이와 발열 생명체">
+  <h2><span class="tag">탐구 활동</span>화학 스프레이 반응의 엔탈피와 발열 생명체 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>모둠별로 제시된 반응의 반응 엔탈피를 구하는 방법을 토론하고, 발열 반응을 일으키는 생명체의 화학 반응을 조사하여 발표해 보자.</div>
+  <p class="f21 mt8">폭탄먼지 벌레는 위협을 받으면 효소의 작용으로 아래 발열 반응을 일으켜 끓는 증기 스프레이를 뿜고, 생성물 벤조퀴논 $\ce{C6H4O2}$로 적을 쫓는다.</p>
+  <p class="f22 mt4" style="text-align:center">$\ce{C6H4(OH)2(aq) + H2O2(aq) -> C6H4O2(aq) + 2H2O(l)}$</p>
+  <div class="row mt4">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card q"><p class="f21"><b>Q</b> 이 반응의 $\Delta H$는 어떻게 구할 수 있을까?</p>
+        <p class="f21 step">→ ① 헤스 법칙: $\Delta H$를 아는 반응들을 더해 이 반응식을 만든다 ② 표준 생성 엔탈피의 차로 계산한다</p></div>
+      <table class="tight ac312-fuel step">
+        <tr><th>더하는 반응(예시 자료, 상태 생략)</th><th>$\Delta H$ (kJ)</th></tr>
+        <tr><td class="l">$\ce{C6H4(OH)2 -> C6H4O2 + H2}$</td><td>+177.4</td></tr>
+        <tr><td class="l">$\ce{H2O2 -> H2 + O2}$</td><td>+191.2</td></tr>
+        <tr><td class="l">$\ce{2H2 + O2 -> 2H2O(g)}$ / $\ce{2H2O(g) -> 2H2O(l)}$</td><td>−483.6 / −87.6</td></tr>
+        <tr><td class="l"><b>합 → 위 반응</b></td><td><span class="ans">−202.6</span></td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card step"><h3>발열 생명체(예시)</h3><p class="f21">· 모든 생물: 세포 호흡(포도당·지방의 산화)<br>· 갈색 지방 조직(갓난 포유류·겨울잠 동물): 지방을 산화해 열만 낸다<br>· 꿀벌: 비행 근육을 떨어 벌집을 데우고, 뭉쳐서 낸 열로 말벌을 물리친다</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 화학사 ════════ -->
+<section class="slide" data-sec="02 · 화학사" data-title="화학사: 헤스와 열화학의 시작">
+  <h2><span class="tag">화학사</span>헤스와 열화학의 시작</h2>
+  <svg class="fig" viewBox="0 0 690 150" style="width:690px" aria-label="열화학 연표: 1783 얼음 열량계, 1840 헤스 법칙"><line x1="30" y1="70" x2="660" y2="70" stroke="#16233D" stroke-width="2.4"/><g data-anim="pop" data-o="90,70" data-dur=".5" data-delay="0.0"><circle cx="90" cy="70" r="11" fill="#FFFFFF" stroke="#E08A2C" stroke-width="2.6"/></g><text class="tex" x="90" y="46" data-mix="1783" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="90" y="108" data-mix="얼음 열량계" data-size="20" data-anchor="middle"></text><text class="tex" x="90" y="136" data-mix="라부아지에·라플라스" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="pop" data-o="360,70" data-dur=".5" data-delay="0.3"><circle cx="360" cy="70" r="11" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.6"/></g><text class="tex" x="360" y="46" data-mix="1840" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="360" y="108" data-mix="헤스 법칙 발표" data-size="20" data-anchor="middle"></text><text class="tex" x="360" y="136" data-mix="반응열 체계적 측정" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="pop" data-o="600,70" data-dur=".5" data-delay="0.6"><circle cx="600" cy="70" r="11" fill="#FFFFFF" stroke="#16233D" stroke-width="2.6"/></g><text class="tex" x="600" y="46" data-mix="오늘" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="600" y="108" data-mix="열화학 반응식" data-size="20" data-anchor="middle"></text><text class="tex" x="600" y="136" data-mix="표준 생성 엔탈피 표" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg>
+  <div class="card mt8">
+    <p class="f21">1783년 라부아지에와 라플라스는 <b>얼음 열량계</b>를 고안해 비열을 측정하고 처음으로 반응열도 측정하였다. 반응열이 녹인 얼음에서 생긴 물의 양으로 열량을 재는 방식이라 오차가 컸다.</p>
+    <p class="f21 mt8">1840년 스위스의 헤스(1802–1850)는 반응열로 <b>물의 온도를 올리는 방법</b>으로 여러 반응의 반응열을 정밀하게 측정하고, 체계적으로 모은 결과에서 일정한 법칙을 발견하였다.</p>
+    <p class="f21 mt8">반응 전과 후 물질의 상태가 정해지면 반응 경로가 달라도 출입하는 열량의 총합은 일정하다 — <b>헤스 법칙</b>. 반응열이 상태 함수인 엔탈피의 변화이기 때문이다.</p>
+  </div>
+</section>
+
+<!-- ════════ 30. 실험실 설계 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 설계">
+  <h2><span class="tag">실험실</span>온도 센서로 중화열을 측정하여 헤스 법칙 확인하기</h2>
+  <div class="std"><span class="code">디지털 탐구</span>고체 $\ce{NaOH}$의 용해열, $\ce{NaOH}$ 수용액과 염산의 중화열, 고체 $\ce{NaOH}$와 염산의 반응열을 온도 센서로 측정하고, 세 값이 헤스 법칙을 만족하는지 확인한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21"><b>탐구 문제</b> 같은 생성물을 얻는 다른 경로의 반응열은 같을까? <b>Q</b> 가설은?</p>
+      <p class="f21 step">→ 엔탈피는 상태 함수이므로 직접 반응의 반응열 = 용해열 + 중화열일 것이다.</p>
+      <table class="tight ac312-var">
+        <tr><th>조작 변인</th><td class="l">반응 경로 (① 용해 ② 중화 ③ 직접 반응)</td></tr>
+        <tr><th>종속 변인</th><td class="l">온도 변화, 반응 엔탈피</td></tr>
+        <tr><th>통제 변인</th><td class="l">$\ce{NaOH}$의 양(0.050 mol), 용액의 부피(100 mL), 처음 온도, 열량계의 종류</td></tr>
+      </table>
+      <div class="card tip"><p class="f21"><b>안전</b> 고체 $\ce{NaOH}$와 염산은 피부·눈을 손상시킨다 → 보안경·장갑. $\ce{NaOH}$는 수분을 흡수하므로 빠르게 재어 바로 넣는다. 쓴 용액은 중화해 폐수통에.</p></div>
+    </div>
+    <div class="col stack">
+      <svg class="fig" viewBox="0 0 440 366" style="width:400px" aria-label="디지털 탐구 장치: 뚜껑 덮은 2겹 스타이로폼 컵 열량계에 온도 센서를 꽂고 데이터 수집 장치로 기록"><path d="M60 120 L240 120 L224 320 L76 320 Z" fill="#F3F5F8" stroke="#16233D" stroke-width="2.5"/><path d="M78 130 L222 130 L210 308 L90 308 Z" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><path d="M84 200 L216 200 L210 308 L90 308 Z" fill="#DDEEF8"/><rect x="52" y="106" width="196" height="16" rx="4" fill="#E6EBF0" stroke="#16233D" stroke-width="2"/><line x1="180" y1="60" x2="180" y2="284" stroke="#16233D" stroke-width="4"/><circle cx="180" cy="288" r="6" fill="#16233D" stroke="#16233D" stroke-width="1.5"/><path d="M180 60 L180 40 L300 40 L300 90" fill="none" stroke="#16233D" stroke-width="2" stroke-linejoin="round"/><rect x="280" y="90" width="150" height="100" rx="8" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><g data-anim="draw" data-dur="1.6" data-rep="loop"><path d="M292 176 L316 176 L330 130 L346 120 L370 124 L418 132" fill="none" stroke="#D7263D" stroke-width="3" stroke-linejoin="round"/></g><text class="tex" x="355" y="214" data-mix="데이터 수집 장치" data-size="19" data-anchor="middle"></text><text class="tex" x="124" y="60" data-mix="온도 센서" data-size="19" data-anchor="middle"></text><text class="tex" x="150" y="352" data-mix="스타이로폼 컵 2겹 + 뚜껑" data-size="19" data-anchor="middle"></text></svg>
+      <p class="small">준비물: 온도 센서와 데이터 수집 장치, 스타이로폼 컵 2개(뚜껑), 눈금실린더, 전자저울, 고체 $\ce{NaOH}$, $1.0\ \text{M}$ $\ce{HCl}$, $1.0\ \text{M}$ $\ce{NaOH}$, 증류수</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 실험 과정과 보정 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 과정과 최고 온도 보정">
+  <h2><span class="tag">실험실</span>실험 과정과 최고 온도 보정</h2>
+  <div class="stages">
+    <div class="stage"><h3>① 용해 $\Delta H_1$</h3><p class="f19">증류수 100 mL + 고체 $\ce{NaOH}$ 2.00 g</p><p class="f19">$\ce{NaOH(s) -> Na+(aq) + OH-(aq)}$</p></div>
+    <div class="stage"><h3>② 중화 $\Delta H_2$</h3><p class="f19">$1.0\ \text{M}$ $\ce{NaOH}$ 50 mL + $1.0\ \text{M}$ $\ce{HCl}$ 50 mL</p><p class="f19">$\ce{OH-(aq) + H+(aq) -> H2O(l)}$</p></div>
+    <div class="stage"><h3>③ 직접 반응 $\Delta H_3$</h3><p class="f19">$0.50\ \text{M}$ $\ce{HCl}$ 100 mL + 고체 $\ce{NaOH}$ 2.00 g</p><p class="f19">$\ce{NaOH(s) + H+(aq) -> Na+(aq) + H2O(l)}$</p></div>
+  </div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="formula sm">$q=mc\Delta T,\quad\Delta H=-\dfrac{q}{n}$<div class="unit">1초 간격 기록, 밀도 $1.00\ \text{g/mL}$, 비열 $4.18\ \text{J/(g}\cdot{}^\circ\text{C)}$, $n=0.0500\ \text{mol}$</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 그래프의 냉각 구간을 혼합 시점까지 연장하여 최고 온도를 보정하는 까닭은?</p>
+        <p class="f21 step" data-g="c1">→ 혼합 직후에도 열이 주위로 빠져나가 온도가 서서히 내려가므로, 연장한 직선으로 열 손실이 없었을 때의 최고 온도를 추정한다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 470 310" style="width:440px" aria-label="온도–시간 그래프: 냉각 구간을 혼합 시점까지 연장해 최고 온도를 보정한다"><line x1="127.3" y1="250" x2="127.3" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="190.7" y1="250" x2="190.7" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="254" y1="250" x2="254" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="317.3" y1="250" x2="317.3" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="380.7" y1="250" x2="380.7" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="444" y1="250" x2="444" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="64" y1="197.5" x2="444" y2="197.5" stroke="#E2E7EC" stroke-width="1"/><line x1="64" y1="145" x2="444" y2="145" stroke="#E2E7EC" stroke-width="1"/><line x1="64" y1="92.5" x2="444" y2="92.5" stroke="#E2E7EC" stroke-width="1"/><line x1="64" y1="40" x2="444" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="64" y1="250" x2="452" y2="250" stroke="#5B6B7F" stroke-width="2"/><line x1="64" y1="250" x2="64" y2="32" stroke="#5B6B7F" stroke-width="2"/><line x1="64" y1="250" x2="64" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="64" y="276" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="127.3" y1="250" x2="127.3" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="127.3" y="276" data-tex="30" data-size="18" data-anchor="middle"></text><line x1="190.7" y1="250" x2="190.7" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="190.7" y="276" data-tex="60" data-size="18" data-anchor="middle"></text><line x1="254" y1="250" x2="254" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="254" y="276" data-tex="90" data-size="18" data-anchor="middle"></text><line x1="317.3" y1="250" x2="317.3" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="317.3" y="276" data-tex="120" data-size="18" data-anchor="middle"></text><line x1="380.7" y1="250" x2="380.7" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="380.7" y="276" data-tex="150" data-size="18" data-anchor="middle"></text><line x1="444" y1="250" x2="444" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="444" y="276" data-tex="180" data-size="18" data-anchor="middle"></text><line x1="58" y1="250" x2="64" y2="250" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="54" y="256" data-tex="20" data-size="18" data-anchor="end"></text><line x1="58" y1="197.5" x2="64" y2="197.5" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="54" y="203.5" data-tex="24" data-size="18" data-anchor="end"></text><line x1="58" y1="145" x2="64" y2="145" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="54" y="151" data-tex="28" data-size="18" data-anchor="end"></text><line x1="58" y1="92.5" x2="64" y2="92.5" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="54" y="98.5" data-tex="32" data-size="18" data-anchor="end"></text><line x1="58" y1="40" x2="64" y2="40" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="54" y="46" data-tex="36" data-size="18" data-anchor="end"></text><text class="tex" x="452" y="300" data-mix="$t$ [s]" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="70" y="22" data-mix="$T$ [°C]" data-size="19" data-anchor="start" fill="#5B6B7F"></text><g data-anim="draw" data-dur="1.6"><path d="M64 223.8 L65.6 223.8 L67.2 223.8 L68.8 223.8 L70.3 223.8 L71.9 223.8 L73.5 223.8 L75.1 223.8 L76.7 223.8 L78.2 223.8 L79.8 223.8 L81.4 223.8 L83 223.8 L84.6 223.8 L86.2 223.8 L87.8 223.8 L89.3 223.8 L90.9 223.8 L92.5 223.8 L94.1 223.8 L95.7 223.8 L97.2 223.8 L98.8 223.8 L100.4 223.8 L102 223.8 L103.6 223.8 L105.2 223.8 L106.8 223.8 L108.3 223.8 L109.9 223.8 L111.5 223.8 L113.1 223.8 L114.7 223.8 L116.2 223.8 L117.8 223.8 L119.4 223.8 L121 223.8 L122.6 223.8 L124.2 223.8 L125.8 223.8 L127.3 223.8 L128.9 210.3 L130.5 198.1 L132.1 187 L133.7 176.8 L135.2 167.6 L136.8 159.3 L138.4 151.6 L140 144.7 L141.6 138.4 L143.2 132.7 L144.8 127.5 L146.3 122.8 L147.9 118.5 L149.5 114.6 L151.1 111 L152.7 107.8 L154.2 104.9 L155.8 102.2 L157.4 99.8 L159 97.6 L160.6 95.6 L162.2 93.9 L163.8 92.2 L165.3 90.8 L166.9 89.4 L168.5 88.2 L170.1 87.2 L171.7 86.2 L173.2 85.3 L174.8 84.5 L176.4 83.8 L178 83.1 L179.6 82.6 L181.2 82 L182.8 81.6 L184.3 81.2 L185.9 80.8 L187.5 80.5 L189.1 80.2 L190.7 80 L192.2 79.7 L193.8 79.5 L195.4 79.4 L197 79.2 L198.6 79.1 L200.2 79 L201.8 78.9 L203.3 78.9 L204.9 78.8 L206.5 78.8 L208.1 78.7 L209.7 78.7 L211.2 78.7 L212.8 78.7 L214.4 78.7 L216 78.8 L217.6 78.8 L219.2 78.8 L220.8 78.9 L222.3 78.9 L223.9 79 L225.5 79 L227.1 79.1 L228.7 79.1 L230.2 79.2 L231.8 79.3 L233.4 79.3 L235 79.4 L236.6 79.5 L238.2 79.6 L239.8 79.6 L241.3 79.7 L242.9 79.8 L244.5 79.9 L246.1 80 L247.7 80.1 L249.2 80.1 L250.8 80.2 L252.4 80.3 L254 80.4 L255.6 80.5 L257.2 80.6 L258.8 80.7 L260.3 80.8 L261.9 80.9 L263.5 81 L265.1 81.1 L266.7 81.2 L268.2 81.3 L269.8 81.3 L271.4 81.4 L273 81.5 L274.6 81.6 L276.2 81.7 L277.8 81.8 L279.3 81.9 L280.9 82 L282.5 82.1 L284.1 82.2 L285.7 82.3 L287.2 82.4 L288.8 82.5 L290.4 82.6 L292 82.7 L293.6 82.8 L295.2 82.9 L296.8 83 L298.3 83.1 L299.9 83.2 L301.5 83.3 L303.1 83.4 L304.7 83.5 L306.2 83.6 L307.8 83.7 L309.4 83.8 L311 83.9 L312.6 84 L314.2 84.1 L315.8 84.2 L317.3 84.3 L318.9 84.4 L320.5 84.5 L322.1 84.6 L323.7 84.7 L325.2 84.8 L326.8 84.9 L328.4 85 L330 85.1 L331.6 85.2 L333.2 85.3 L334.8 85.4 L336.3 85.5 L337.9 85.5 L339.5 85.6 L341.1 85.7 L342.7 85.8 L344.2 85.9 L345.8 86 L347.4 86.1 L349 86.2 L350.6 86.3 L352.2 86.4 L353.8 86.5 L355.3 86.6 L356.9 86.7 L358.5 86.8 L360.1 86.9 L361.7 87 L363.2 87.1 L364.8 87.2 L366.4 87.3 L368 87.4 L369.6 87.5 L371.2 87.6 L372.8 87.7 L374.3 87.8 L375.9 87.9 L377.5 88 L379.1 88.1 L380.7 88.2 L382.2 88.3 L383.8 88.4 L385.4 88.5 L387 88.6 L388.6 88.7 L390.2 88.8 L391.8 88.9 L393.3 89 L394.9 89.1 L396.5 89.2 L398.1 89.3 L399.7 89.4 L401.2 89.5 L402.8 89.6 L404.4 89.7 L406 89.8 L407.6 89.9 L409.2 90 L410.8 90.1 L412.3 90.2 L413.9 90.3 L415.5 90.4 L417.1 90.5 L418.7 90.6 L420.2 90.7 L421.8 90.8 L423.4 90.9 L425 91 L426.6 91.1 L428.2 91.2 L429.8 91.3 L431.3 91.4 L432.9 91.5 L434.5 91.6 L436.1 91.7 L437.7 91.8 L439.2 91.8 L440.8 91.9 L442.4 92 L444 92.1" fill="none" stroke="#D7263D" stroke-width="3" stroke-linejoin="round"/></g><g class="step" data-g="c1"><line x1="127.3" y1="72.5" x2="444" y2="92.1" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 4"/><circle cx="127.3" cy="72.5" r="5" fill="#2E9E6A" stroke="#16233D" stroke-width="1.5"/><text class="tex" x="137.3" y="60.5" data-mix="보정한 최고 온도" data-size="18" data-anchor="start" fill="#2E9E6A" data-weight="700"></text></g><circle cx="211.4" cy="78.7" r="5" fill="#D7263D" stroke="#16233D" stroke-width="1.5"/><text class="tex" x="219.4" y="104.7" data-mix="측정 최고 온도" data-size="18" data-anchor="start" fill="#D7263D"></text><line x1="127.3" y1="250" x2="127.3" y2="202.7" stroke="#C2410C" stroke-width="1.5" stroke-dasharray="4 3"/><text class="tex" x="133.3" y="234.2" data-mix="혼합" data-size="18" data-anchor="start" fill="#C2410C"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 32. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 중화열과 헤스 법칙">
+  <h2><span class="tag">실험실</span>온도 센서 실험실 — 세 경로의 반응열 비교</h2>
+  <div class="lab" data-lab="ac312hess">
+    <div class="lab-ctl" style="flex-basis:420px">
+      <div class="ac312-seg"><span class="small">실험</span><button class="btn on" data-e="a">① 용해</button><button class="btn" data-e="b">② 중화</button><button class="btn" data-e="c">③ 직접</button></div>
+      <div class="ac312-seg"><span class="small">뚜껑</span><button class="btn on" data-l="on">덮음</button><button class="btn" data-l="off">안 덮음</button></div>
+      <div class="ac312-seg"><span class="small">최고 온도</span><button class="btn on" data-c="on">보정</button><button class="btn" data-c="off">보정 안 함</button></div>
+      <div class="ctl"><div class="lbl"><span>처음 온도</span><output data-o="t0"></output></div>
+        <input type="range" min="18" max="26" step="0.5" value="22" data-i="t0" aria-label="처음 온도"></div>
+      <table class="readout ac312-read">
+        <tr><th>처음 → 최고</th><td><output data-o="tt"></output></td></tr>
+        <tr><th>$\Delta T$</th><td><output data-o="dt"></output></td></tr>
+        <tr><th>열 $q$</th><td><output data-o="q"></output></td></tr>
+        <tr class="hl"><th>$\Delta H$</th><td><output data-o="h"></output></td></tr>
+      </table>
+      <div class="ac312-seg mt8"><button class="btn ac312-act" data-act="run">측정 시작</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="ac312-seg"><span class="small">보기</span><button class="btn on" data-v="tt">온도–시간</button><button class="btn" data-v="cmp">ΔH 비교</button></div>
+      <div class="lab-fig" style="width:640px;height:232px">
+        <svg viewBox="0 0 640 232" width="640" height="232" aria-label="스타이로폼 컵 열량계와 온도 센서의 온도–시간 그래프, 또는 경로 1과 경로 2의 반응 엔탈피 비교 막대"></svg>
+        <div class="ov" data-ov="ya" style="transform:none"></div>
+        <div class="ov" data-ov="xa" style="transform:none"></div>
+      </div>
+      <table class="tight ac312-log mt8"><thead><tr><th>회</th><th>실험</th><th>뚜껑</th><th>보정</th><th>처음 (°C)</th><th>최고 (°C)</th><th>ΔT (°C)</th><th>q (J)</th><th>ΔH (kJ/mol)</th></tr></thead><tbody data-o="log"></tbody></table>
+      <output class="kind ac312-msg" data-o="msg"></output>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 결과 정리 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 결과 정리">
+  <h2><span class="tag">실험실</span>결과 정리와 해석 (예시)</h2>
+  <table class="tight ac312-c">
+    <tr><th>실험</th><th>처음 온도 (°C)</th><th>보정한 최고 온도 (°C)</th><th>보정한 $\Delta T$ (°C)</th><th>$q$ (J)</th><th>$\Delta H$ (kJ/mol)</th></tr>
+    <tr><td class="l">① 용해 (102 g)</td><td>22.00</td><td>27.11</td><td>5.11</td><td>2180</td><td><span class="blank"><span class="step" data-g="r1">−43.6</span></span></td></tr>
+    <tr><td class="l">② 중화 (100 g)</td><td>22.00</td><td>28.54</td><td>6.54</td><td>2734</td><td><span class="blank"><span class="step" data-g="r1">−54.7</span></span></td></tr>
+    <tr><td class="l">③ 직접 반응 (102 g)</td><td>22.00</td><td>33.53</td><td>11.53</td><td>4915</td><td><span class="blank"><span class="step" data-g="r1">−98.3</span></span></td></tr>
+  </table>
+  <p class="small mt4">실험실 기본 조건(뚜껑 덮음·보정)의 예시 값. 수업에서 측정한 값으로 바꾸어 채운다.</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>세 반응의 엔탈피 사이에 어떤 관계가 성립할까? <span class="step">→ <span class="ans">$\Delta H_1+\Delta H_2=-43.6+(-54.7)=-98.3\ \text{kJ/mol}=\Delta H_3$</span> — 반응 엔탈피는 경로와 관계없이 처음과 나중 상태로 정해진다(헤스 법칙).</span></li>
+    <li>측정한 중화 엔탈피가 문헌값($-55.8\ \text{kJ/mol}$)보다 작게 나온 까닭은? <span class="step">→ 열량계 밖으로 열이 빠져나가거나 컵이 열을 흡수해 측정한 온도 변화가 실제보다 작기 때문이다.</span></li>
+    <li>뚜껑을 덮지 않거나 보정하지 않으면? <span class="step">→ 열 손실로 세 값의 크기가 모두 작아지고, 보정하지 않으면 온도가 천천히 오르는 용해에서 손실이 커서 두 경로가 어긋난다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 34. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1" data-tpl="check">
+  <h2><span class="tag q">연습 문제 1</span>열린계, 닫힌계, 고립계</h2>
+  <p class="f22">다음은 열린계, 닫힌계, 고립계 중 어느 것에 해당하는가?</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>외부와 열 출입이 차단된 보온병 안의 커피는? <span class="step">→ <span class="ans">고립계</span> 물질·에너지 출입 없음</span></li>
+    <li>냉각 코일 안의 냉매는? <span class="step">→ <span class="ans">닫힌계</span> 냉매는 갇혀 있고 열만 출입</span></li>
+    <li>벤젠이 연소되는 통열량계는? <span class="step">→ <span class="ans">고립계</span> 단열된 열량계 전체는 물질·에너지 출입이 없다고 본다</span></li>
+    <li>자동차 엔진 안에서 타고 있는 휘발유는? <span class="step">→ <span class="ans">열린계</span> 연료·공기·배기가스와 열이 드나든다</span></li>
+    <li>온도계 안의 수은은? <span class="step">→ <span class="ans">닫힌계</span> 수은은 갇혀 있고 열만 출입</span></li>
+    <li>살아 있는 식물은? <span class="step">→ <span class="ans">열린계</span> 물·기체·양분과 에너지가 드나든다</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 35. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>수소와 메테인의 1 g당 연소열</h2>
+  <p class="f21">열용량이 $11.3\ \text{kJ/}{}^\circ\text{C}$인 통열량계에서 충분한 산소로 메테인 $1.50\ \text{g}$을 연소시키면 온도가 $10.3\ {}^\circ\text{C}$, 수소 $1.150\ \text{g}$을 연소시키면 $14.3\ {}^\circ\text{C}$ 올라갔다. <b>Q</b> 수소와 메테인의 1 g당 연소열을 구하여 비교하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">메테인: $q=C_\text{열량계}\Delta T=(11.3\ \text{kJ/}{}^\circ\text{C})(10.3\ {}^\circ\text{C})=116.4\ \text{kJ}$</p>
+      <div class="answer step">$\dfrac{116.4\ \text{kJ}}{1.50\ \text{g}}=77.6\approx78\ \text{kJ/g}$</div>
+      <p class="f21 step">수소: $q=(11.3\ \text{kJ/}{}^\circ\text{C})(14.3\ {}^\circ\text{C})=161.6\ \text{kJ}$</p>
+      <div class="answer step">$\dfrac{161.6\ \text{kJ}}{1.150\ \text{g}}=140.5\approx141\ \text{kJ/g}$</div>
+      <p class="f21 step">수소의 1 g당 연소열이 메테인의 약 <b>1.8배</b> → 같은 질량이면 수소가 더 많은 열을 내는 유용한 연료이다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 420 392" style="width:330px" aria-label="통열량계: 물에 잠긴 단단한 강철 통 속에서 시료가 연소한다 — 부피 일정"><rect x="40" y="90" width="320" height="250" rx="10" fill="#F3F5F8" stroke="#16233D" stroke-width="3"/><rect x="56" y="104" width="288" height="222" rx="0" fill="#DDEEF8" stroke="none" stroke-width="0"/><rect x="150" y="170" width="100" height="120" rx="12" fill="#B7C0CA" stroke="#16233D" stroke-width="3"/><rect x="168" y="250" width="64" height="24" rx="3" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><rect x="180" y="240" width="40" height="12" rx="2" fill="#3A3F47" stroke="#16233D" stroke-width="1.5"/><line x1="176" y1="170" x2="176" y2="60" stroke="#16233D" stroke-width="2"/><line x1="224" y1="170" x2="224" y2="60" stroke="#16233D" stroke-width="2"/><circle cx="176" cy="56" r="5" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><circle cx="224" cy="56" r="5" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><g data-anim="pop" data-o="200,236" data-dur=".8" data-rep="loop"><circle cx="200" cy="236" r="9" fill="#FFE45C" stroke="#C2410C" stroke-width="1.5"/></g><line x1="176" y1="200" x2="192" y2="236" stroke="#16233D" stroke-width="1.5"/><line x1="224" y1="200" x2="208" y2="236" stroke="#16233D" stroke-width="1.5"/><rect x="295" y="40" width="10" height="260" rx="5" fill="#FFFFFF" stroke="#16233D" stroke-width="1.5"/><circle cx="300" cy="306" r="9" fill="#D7263D" stroke="#16233D" stroke-width="1.5"/><rect x="297.5" y="170" width="5" height="134" rx="0" fill="#D7263D" stroke="none" stroke-width="0"/><text class="tex" x="200" y="34" data-mix="점화 단자" data-size="25" data-anchor="middle"></text><text class="tex" x="312" y="62" data-mix="온도계" data-size="25" data-anchor="start"></text><text class="tex" x="100" y="318" data-mix="물" data-size="25" data-anchor="middle"></text><text class="tex" x="146" y="160" data-mix="강철 통" data-size="25" data-anchor="end"></text><text class="tex" x="200" y="376" data-mix="부피 일정" data-size="25" data-anchor="middle"></text></svg><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 36. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>등온 가역 압축의 $w$, $q$, $\Delta U$ <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">$2.00\ \text{atm}$, $300\ \text{K}$의 이산화 탄소 $2.00\ \text{mol}$을 처음 부피의 반이 되도록 등온 가역 압축하였다. $\ce{CO2}$를 이상 기체라고 가정하여 <b>Q</b> $w$, $q$, $\Delta U$를 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">이상 기체의 등온 과정 → 온도가 일정하므로 $\Delta U=0$</p>
+      <p class="f21 step">$w=-nRT\ln\dfrac{V_\text{나중}}{V_\text{처음}}=-(2.00\ \text{mol})(8.3145\ \text{J/(K}\cdot\text{mol)})(300\ \text{K})\ln\dfrac12$</p>
+      <div class="answer step">$w=+3.46\ \text{kJ}$ (압축 → 계가 일을 받음)</div>
+      <div class="answer step">$q=-w=-3.46\ \text{kJ}$, $\Delta U=0$</div>
+      <p class="small step">$2.00\ \text{atm}$은 처음 부피 $V=\dfrac{nRT}{P}=24.6\ \text{L}$를 정하는 조건이다. 계산에는 부피의 비만 필요하다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 460 310" style="width:430px" aria-label="이산화 탄소 2.00 mol, 300 K 등온 가역 압축: 24.6 L에서 12.3 L로, 곡선 아래 넓이가 받은 일"><line x1="160" y1="250" x2="160" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="250" y1="250" x2="250" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="340" y1="250" x2="340" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="430" y1="250" x2="430" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="210" x2="430" y2="210" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="170" x2="430" y2="170" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="130" x2="430" y2="130" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="90" x2="430" y2="90" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="50" x2="430" y2="50" stroke="#E2E7EC" stroke-width="1"/><line x1="70" y1="250" x2="438" y2="250" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="250" x2="70" y2="42" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="250" x2="70" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="276" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="160" y1="250" x2="160" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="160" y="276" data-tex="7" data-size="18" data-anchor="middle"></text><line x1="250" y1="250" x2="250" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="250" y="276" data-tex="14" data-size="18" data-anchor="middle"></text><line x1="340" y1="250" x2="340" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="340" y="276" data-tex="21" data-size="18" data-anchor="middle"></text><line x1="430" y1="250" x2="430" y2="256" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="430" y="276" data-tex="28" data-size="18" data-anchor="middle"></text><line x1="64" y1="250" x2="70" y2="250" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="256" data-tex="0" data-size="18" data-anchor="end"></text><line x1="64" y1="210" x2="70" y2="210" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="216" data-tex="1" data-size="18" data-anchor="end"></text><line x1="64" y1="170" x2="70" y2="170" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="176" data-tex="2" data-size="18" data-anchor="end"></text><line x1="64" y1="130" x2="70" y2="130" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="136" data-tex="3" data-size="18" data-anchor="end"></text><line x1="64" y1="90" x2="70" y2="90" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="96" data-tex="4" data-size="18" data-anchor="end"></text><line x1="64" y1="50" x2="70" y2="50" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="60" y="56" data-tex="5" data-size="18" data-anchor="end"></text><text class="tex" x="446" y="300" data-mix="$V$ [L]" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="76" y="30" data-mix="$P$ [atm]" data-size="19" data-anchor="start" fill="#5B6B7F"></text><g data-anim="fade" data-dur="1"><path d="M228.3 250 L228.3 90 L230.2 92 L232.2 93.9 L234.2 95.8 L236.2 97.6 L238.1 99.4 L240.1 101.2 L242.1 102.9 L244.1 104.5 L246.1 106.2 L248 107.8 L250 109.3 L252 110.9 L254 112.4 L256 113.8 L257.9 115.3 L259.9 116.7 L261.9 118 L263.9 119.4 L265.8 120.7 L267.8 122 L269.8 123.3 L271.8 124.5 L273.8 125.7 L275.7 126.9 L277.7 128.1 L279.7 129.2 L281.7 130.4 L283.6 131.5 L285.6 132.6 L287.6 133.6 L289.6 134.7 L291.6 135.7 L293.5 136.7 L295.5 137.7 L297.5 138.7 L299.5 139.7 L301.5 140.6 L303.4 141.5 L305.4 142.4 L307.4 143.3 L309.4 144.2 L311.3 145.1 L313.3 145.9 L315.3 146.8 L317.3 147.6 L319.3 148.4 L321.2 149.2 L323.2 150 L325.2 150.8 L327.2 151.5 L329.1 152.3 L331.1 153 L333.1 153.8 L335.1 154.5 L337.1 155.2 L339 155.9 L341 156.6 L343 157.2 L345 157.9 L347 158.6 L348.9 159.2 L350.9 159.9 L352.9 160.5 L354.9 161.1 L356.8 161.7 L358.8 162.3 L360.8 162.9 L362.8 163.5 L364.8 164.1 L366.7 164.7 L368.7 165.2 L370.7 165.8 L372.7 166.3 L374.6 166.9 L376.6 167.4 L378.6 167.9 L380.6 168.5 L382.6 169 L384.5 169.5 L386.5 170 L386.5 250 Z" fill="#2E9E6A" stroke="none" stroke-width="0" stroke-linejoin="round" fill-opacity=".2"/></g><g data-anim="draw" data-dur="1.2"><path d="M228.3 90 L229.8 91.6 L231.4 93.1 L233 94.7 L234.6 96.2 L236.2 97.6 L237.8 99.1 L239.3 100.5 L240.9 101.9 L242.5 103.2 L244.1 104.5 L245.7 105.9 L247.2 107.1 L248.8 108.4 L250.4 109.6 L252 110.9 L253.6 112.1 L255.2 113.2 L256.7 114.4 L258.3 115.5 L259.9 116.7 L261.5 117.8 L263.1 118.9 L264.7 119.9 L266.2 121 L267.8 122 L269.4 123 L271 124 L272.6 125 L274.2 126 L275.7 126.9 L277.3 127.9 L278.9 128.8 L280.5 129.7 L282.1 130.6 L283.6 131.5 L285.2 132.4 L286.8 133.2 L288.4 134.1 L290 134.9 L291.6 135.7 L293.1 136.5 L294.7 137.3 L296.3 138.1 L297.9 138.9 L299.5 139.7 L301.1 140.4 L302.6 141.2 L304.2 141.9 L305.8 142.6 L307.4 143.3 L309 144 L310.6 144.7 L312.1 145.4 L313.7 146.1 L315.3 146.8 L316.9 147.4 L318.5 148.1 L320 148.7 L321.6 149.4 L323.2 150 L324.8 150.6 L326.4 151.2 L328 151.8 L329.5 152.4 L331.1 153 L332.7 153.6 L334.3 154.2 L335.9 154.8 L337.5 155.3 L339 155.9 L340.6 156.4 L342.2 157 L343.8 157.5 L345.4 158 L347 158.6 L348.5 159.1 L350.1 159.6 L351.7 160.1 L353.3 160.6 L354.9 161.1 L356.4 161.6 L358 162.1 L359.6 162.6 L361.2 163 L362.8 163.5 L364.4 164 L365.9 164.4 L367.5 164.9 L369.1 165.3 L370.7 165.8 L372.3 166.2 L373.9 166.7 L375.4 167.1 L377 167.5 L378.6 167.9 L380.2 168.4 L381.8 168.8 L383.4 169.2 L384.9 169.6 L386.5 170" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/></g><g data-arw="314.3,146.3,296.3,138.1,ink,3"></g><circle cx="386.5" cy="170" r="6" fill="#D7263D" stroke="#16233D" stroke-width="2"/><circle cx="228.3" cy="90" r="6" fill="#D7263D" stroke="#16233D" stroke-width="2"/><text class="tex" x="390.5" y="154" data-mix="처음 (24.6 L, 2.00 atm)" data-size="18" data-anchor="end" data-halo="1"></text><text class="tex" x="238.3" y="82" data-mix="나중 (12.3 L, 4.00 atm)" data-size="18" data-anchor="start" data-halo="1"></text><text class="tex" x="306.6" y="226" data-mix="$w&gt;0$ (압축)" data-size="19" data-anchor="middle" data-halo="1"></text></svg><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 37. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>오염화 인의 표준 생성 엔탈피</h2>
+  <p class="f21">다음 열화학 반응식과 $\ce{PCl3(l)}$의 표준 생성 엔탈피 $\Delta H_\mathrm{f}^\circ=-319.7\ \text{kJ/mol}$을 이용하여 <b>Q</b> $\ce{PCl5(s)}$의 표준 생성 엔탈피를 구하여라.</p>
+  <div class="formula sm">$\ce{PCl3(l) + Cl2(g) -> PCl5(s)}\qquad\Delta H^\circ=-124\ \text{kJ}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step">$\Delta H^\circ=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$, $\ce{Cl2(g)}$는 원소 → 0</p>
+      <p class="f21 step">$-124\ \text{kJ}=\Delta H_\mathrm{f}^\circ(\ce{PCl5(s)})-(-319.7\ \text{kJ})$</p>
+      <div class="answer step" data-g="pc">$\Delta H_\mathrm{f}^\circ(\ce{PCl5(s)})=-443.7\ \text{kJ/mol}$</div>
+      <div class="board"></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 470 336" style="width:440px" aria-label="오염화 인의 표준 생성 엔탈피 도표: −319.7 kJ와 −124 kJ의 합"><g data-arw="24,330,24,20,muted,2"></g><text class="tex" x="34" y="32" data-mix="엔탈피 $H$" data-size="19" data-anchor="start" fill="#5B6B7F"></text><line x1="40" y1="52" x2="450" y2="52" stroke="#16233D" stroke-width="3"/><text class="tex" x="245" y="42" data-tex="\ce{P(s) + 5/2Cl2(g)}\ (\text{원소})" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="150" y1="227.8" x2="450" y2="227.8" stroke="#16233D" stroke-width="3"/><text class="tex" x="330" y="215.8" data-tex="\ce{PCl3(l) + Cl2(g)}" data-size="20" data-anchor="middle" data-halo="1"></text><line x1="40" y1="296" x2="450" y2="296" stroke="#16233D" stroke-width="3"/><text class="tex" x="245" y="326" data-tex="\ce{PCl5(s)}" data-size="20" data-anchor="middle" data-halo="1"></text><g data-anim="draw" data-dur="1"><g data-arw="200,55,200,224.8,field,4"></g></g><text class="tex" x="212" y="140" data-tex="-319.7\ \text{kJ}" data-size="20" data-anchor="start" fill="#2E9E6A" data-halo="1"></text><g data-anim="draw" data-dur=".7" data-delay=".9"><g data-arw="400,230.8,400,293,bfield,4"></g></g><text class="tex" x="390" y="270.1" data-tex="-124\ \text{kJ}" data-size="20" data-anchor="end" fill="#7B4FC8" data-halo="1"></text><g data-anim="draw" data-dur=".9" data-delay="1.6"><g data-arw="90,55,90,293,ink,4"></g></g><g class="step" data-g="pc"><text class="tex" x="102" y="167.5" data-tex="-443.7\ \text{kJ}" data-size="20" data-anchor="start" data-halo="1" data-weight="700"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 38. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>다이보레인 합성의 $\Delta H$</h2>
+  <p class="f21">로켓 추진체 연료로 고려되는 다이보레인 $\ce{B2H6}$을 합성할 때의 $\Delta H$를 자료 (가)–(라)로 계산하여라. <b>Q</b> $\ce{2B(s) + 3H2(g) -> B2H6(g)}$의 $\Delta H$는?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 590px">
+      <table class="tight ac312-c">
+        <tr><th>자료</th><th>화학 반응</th><th>$\Delta H$ (kJ)</th></tr>
+        <tr><td>(가)</td><td class="l">$\ce{2B(s) + 3/2O2(g) -> B2O3(s)}$</td><td>−1273</td></tr>
+        <tr><td>(나)</td><td class="l">$\ce{B2H6(g) + 3O2(g) -> B2O3(s) + 3H2O(g)}$</td><td>−2035</td></tr>
+        <tr><td>(다)</td><td class="l">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$</td><td>−286</td></tr>
+        <tr><td>(라)</td><td class="l">$\ce{H2O(l) -> H2O(g)}$</td><td>+44</td></tr>
+      </table>
+      <div class="board"></div>
+    </div>
+    <div class="col stack">
+      <p class="f21 step">(가) + (나)의 역반응 + (다) × 3 + (라) × 3</p>
+      <p class="f21 step">지워지는 물질: $\ce{B2O3(s)}$, $\ce{3O2(g)}$, $\ce{3H2O(l)}$, $\ce{3H2O(g)}$ → 목표 반응식</p>
+      <p class="f21 step">$\Delta H=(-1273)+(+2035)+3(-286)+3(+44)$</p>
+      <div class="answer step">$\Delta H=+36\ \text{kJ}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 엔탈피 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 화학 반응의 반응 엔탈피 — 02 엔탈피</h2>
+  <div class="ac312-map">
+    <div class="ac312-node ac312-dim">01 화학 반응과 에너지<br>$\Delta U=q+w$<br>부피 일정: $\Delta U=q_V$</div>
+    <div class="ac312-arr">→</div>
+    <div class="ac312-node ac312-main" data-q><b>02 엔탈피</b><br>❶ 정의: $H\equiv$ <span class="blank"><span class="step">$U+PV$</span></span>, 압력 일정: $\Delta H=$ <span class="blank"><span class="step">$q_P$</span></span><br>❷ 발열 반응 $\Delta H$ <span class="blank"><span class="step">$&lt;0$</span></span>, 계수 2배 → $\Delta H$ 2배, 역반응 → <span class="blank"><span class="step">부호 반대</span></span><br>❸ 표준 상태: <span class="blank"><span class="step">$1\ \text{bar}$(보통 $1\ \text{atm}$)</span></span>, 표준 반응 엔탈피 $\Delta H^\circ$<br>❹ 표준 상태 원소의 $\Delta H_\mathrm{f}^\circ=$ <span class="blank"><span class="step">0</span></span><br>❺ $\Delta H^\circ=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-$ <span class="blank"><span class="step">$\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$</span></span><br>❻ 경로와 관계없이 $\Delta H$의 합은 같다: <span class="blank"><span class="step">헤스 법칙</span></span></div>
+    <div class="ac312-arr">→</div>
+    <div class="ac312-node ac312-dim">Ⅲ-2 화학 반응의 자발성<br>엔트로피 $S$<br>깁스 자유 에너지<br><span class="small">(다음 중단원)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 40. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 엔탈피 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 엔탈피의 정의와 $\Delta H=q_P$, 표준 상태와 표준 생성 엔탈피, 헤스 법칙을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 표준 생성 엔탈피와 헤스 법칙으로 반응 엔탈피를 계산하고, 온도 센서 자료로 헤스 법칙을 확인했다.</button>
+    <button class="chk">[가치·태도] 대체 연료와 생명체의 발열 반응을 조사하며 에너지 문제에 관심을 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 표 Ⅲ-2로 $\ce{4NH3(g) + 7O2(g) -> 4NO2(g) + 6H2O(l)}$의 $\Delta H^\circ$는? <span class="step">→ <span class="ans">$4(+34)+6(-286)-4(-46)=-1396\ \text{kJ}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 일정 압력에서 열 $100\ \text{kJ}$을 방출한 반응의 $\Delta H$는? <span class="step">→ <span class="ans">$-100\ \text{kJ}$</span> ($\Delta H=q_P$)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 발열 반응은 모두 저절로 일어날까? 얼음은 열을 흡수하면서도 상온에서 저절로 녹는다. 반응의 자발성을 정하는 엔트로피를 알아보자.</div>
+</section>
