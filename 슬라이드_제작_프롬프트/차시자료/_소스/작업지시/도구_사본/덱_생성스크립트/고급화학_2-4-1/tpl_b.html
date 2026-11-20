@@ -1,0 +1,537 @@
+<!-- 고급화학 2-4-1b 용해도와 묽은 용액의 성질 — gen.py가 tpl_b.html에서 만든다 -->
+<!-- 1 표지 -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 4. 용액의 성질 › 02</div>
+    <h1 class="ac241-h1">용액의 농도와 용해도·<br>묽은 용액의 성질 <span class="acc">(2)</span></h1>
+    <p class="sub">용해도와 묽은 용액의 성질 — 녹는 까닭, 콜로이드, 증기 압력 내림과 끓는점 오름</p>
+    <p class="meta">고등학교 고급 화학 110–116쪽</p>
+  </div>
+  {{COVER_B}}
+</section>
+
+<!-- 2 다시 보기 -->
+<section class="slide" data-sec="02 용해도와 묽은 용액의 성질 · 도입" data-title="다시 보기: 용액의 농도">
+  <h2><span class="tag alt">다시 보기</span>01 용액의 농도</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>농도 단위</h3><p class="f21">몰농도 M(용액 L), 몰랄 농도 m(용매 kg), 질량 백분율·ppm·ppb, 몰분율 $X$</p></div>
+    <div class="stage"><h3>단위 변환</h3><p class="f21">기준(용액 1 L·100 g)을 정하고 차례로: $M=\dfrac{10\times d\times a}{A}$</p></div>
+    <div class="stage"><h3>희석</h3><p class="f21">$M_1V_1=M_2V_2$ — 희석 전후 용질의 몰수는 같다</p></div>
+    <div class="stage"><h3>흡광도</h3><p class="f21">흡광도는 농도에 비례 → 검량선으로 미지 농도</p></div>
+  </div>
+  <p class="f22 mt16"><b>Q</b> 0.15 m 설탕 수용액에서 물의 몰분율은? (물 1 kg = 55.51 mol)</p>
+  <p class="f21 step">$X_\text{물}=\dfrac{55.51}{55.51+0.15}$</p>
+  <div class="answer step">약 0.9973 — 오늘 이 값이 증기 압력을 바꾼다</div>
+</section>
+
+<!-- 3 학습 목표 -->
+<section class="slide" data-sec="02 용해도와 묽은 용액의 성질" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-06]</span>다양한 농도 단위를 이해하고, 용해도에 영향을 미치는 요인을 탐구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화02-07]</span>묽은 용액에서 나타나는 총괄성의 정의를 이해하고, 증기압 내림, 끓는점 오름, 어는점 내림, 삼투현상을 이용한 예를 탐색할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>용해를 동적 평형으로 설명하고, 용해도에 영향을 주는 요인을 <b>용해 엔탈피</b>와 극성으로 설명할 수 있다.</li>
+    <li>콜로이드 용액의 틴들 현상과 브라운 운동을 관찰할 수 있다.</li>
+    <li>라울 법칙으로 <b>증기 압력 내림</b>을 계산하고, 끓는점 오름과 총괄성의 예를 설명할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">용해도·용해 엔탈피</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 콜로이드</div><div class="farr">→</div>
+    <div class="fnode">증기 압력 내림</div><div class="farr">→</div>
+    <div class="fnode">끓는점 오름</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 증기 압력 측정</div>
+  </div>
+</section>
+
+<!-- 4 생각 열기 -->
+<section class="slide" data-sec="02 용해도와 묽은 용액의 성질 · 도입" data-title="생각 열기: 섞이는 것과 섞이지 않는 것">
+  <h2><span class="tag">생각 열기</span>설탕·에탄올·이산화 탄소는 녹는데, 식용유는?</h2>
+  <div style="text-align:center">{{SOLS}}</div>
+  <p class="f21 mt8">용액은 고체·액체·기체 상태로 모두 있을 수 있다. 수용액은 고체(설탕), 액체(에탄올), 기체(이산화 탄소)를 용질로 한다.</p>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 두 물질이 섞이면 무질서해지므로(엔트로피 증가) 섞임은 자발적인데, 식용유는 왜 물에 거의 녹지 않을까?</p></div>
+  <div class="answer step">용해는 분자 사이의 인력에도 의존하기 때문이다</div>
+</section>
+
+<!-- 5 ① 용해와 석출 -->
+<section class="slide" data-sec="02 · 용해 현상과 용해도" data-title="용해와 석출의 동적 평형">
+  <h2><span class="no">1</span>용해와 석출 — 동적 평형</h2>
+  <div class="stages mt8">
+    <div class="stage">{{DYN1}}<h3>처음</h3><p class="f21">결정 표면의 이온이 물 분자에 둘러싸여 떨어져 나온다(수화) — <b class="c-field">용해</b> 우세</p></div>
+    <div class="stage step">{{DYN2}}<h3>농도가 진해지면</h3><p class="f21">수화된 이온이 결정 표면으로 돌아오는 <b style="color:#7B4FC8">석출</b>도 빨라진다</p></div>
+    <div class="stage step">{{DYN3}}<h3>동적 평형</h3><p class="f21">용해 속도 = 석출 속도. 고체의 양은 변하지 않지만 두 과정은 계속된다</p></div>
+  </div>
+  <div class="formula sm mt8">$\ce{NaCl(s) <=> Na+(aq) + Cl-(aq)}$</div>
+  <p class="f21 step mt8"><mark>용해와 석출이 같은 속도로 일어나는 동적 평형 상태를 포화되었다고 한다.</mark></p>
+</section>
+
+<!-- 6 ② 용해도 -->
+<section class="slide" data-sec="02 · 용해 현상과 용해도" data-title="용해도">
+  <h2><span class="no">2</span>용해도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22"><mark>용해도는 포화 용액의 농도</mark>로, 몰농도인 <b>몰 용해도</b> 또는 일정량의 용매에 최대로 녹는 용질의 양으로 나타낸다.</p>
+      <table class="tight ac241-res">
+        <tr><th class="l">용질</th><th class="l">나타내는 방법</th></tr>
+        <tr><td class="l">몰 용해도</td><td class="l">포화 용액의 몰농도 (mol/L)</td></tr>
+        <tr><td class="l">고체</td><td class="l">물 100 g에 최대로 녹는 질량 (g/물 100 g)</td></tr>
+        <tr><td class="l">기체</td><td class="l">1기압에서 물 1 L에 최대로 녹는 양 (g/L, mol/L)</td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> 포화 용액에 고체를 더 넣으면 녹은 양은 늘어날까?</p></div>
+      <div class="answer step">늘지 않는다 — 더 넣은 고체도 용해·석출을 되풀이할 뿐이다</div>
+    </div>
+    <div class="col" style="flex:0 0 250px">{{SODA}}</div>
+  </div>
+</section>
+
+<!-- 7 예측 -->
+<section class="slide" data-sec="02 · 용해 현상과 용해도" data-title="예측: 포화 용액 속 깨진 결정">
+  <h2><span class="tag">예측</span>포화 용액 속 깨진 결정은 어떻게 될까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 330px">{{CRACK}}</div>
+    <div class="col stack">
+      <p class="f22">모서리가 깨진 소금 결정을 소금 포화 용액에 넣고 마개를 막아 며칠 둔다.</p>
+      <p class="f21">ㄱ. 아무 변화가 없다 &nbsp; ㄴ. 질량은 그대로이고 모양이 바뀐다 &nbsp; ㄷ. 결정이 모두 녹는다</p>
+      <div class="card q"><p class="f21"><b>Q</b> 어느 것일까?</p></div>
+      <div class="answer step" data-g="cr">ㄴ</div>
+      <p class="f21 step">포화되어도 용해와 석출은 멈추지 않는다. 깨진 면에서 녹고 다른 곳에 석출되어 모양이 바뀐다.</p>
+      <p class="small step">「포화되면 용해가 멈춘다」는 흔한 오개념이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 ③ 용해 엔탈피 -->
+<section class="slide" data-sec="02 · 용해도에 영향을 주는 요인" data-title="용해 엔탈피">
+  <h2><span class="no">3</span>용해 엔탈피 — 세 단계로 나누어 보기</h2>
+  <div style="text-align:center">{{DHSOL}}</div>
+  <div class="formula mt8">$\Delta H_\text{용해}=\Delta H_1+\Delta H_2+\Delta H_3$</div>
+  <div class="stages mt8">
+    <div class="stage step"><p class="f21">$\Delta H_1$ 용질의 팽창: 용질이 성분 입자로 분리 → <b>흡열</b></p></div>
+    <div class="stage step"><p class="f21">$\Delta H_2$ 용매의 팽창: 용질이 들어갈 빈 공간 형성 → <b>흡열</b></p></div>
+    <div class="stage step"><p class="f21">$\Delta H_3$ 혼합: 용질–용매 상호 작용으로 안정화 → <b>발열</b></p></div>
+  </div>
+</section>
+
+<!-- 9 ④ 발열·흡열 -->
+<section class="slide" data-sec="02 · 용해도에 영향을 주는 요인" data-title="발열 용해와 흡열 용해">
+  <h2><span class="no">4</span>발열 용해와 흡열 용해</h2>
+  <div class="row">
+    <div class="col">{{DHEXO}}</div>
+    <div class="col">{{DHENDO}}</div>
+  </div>
+  <p class="f21 mt8">용질–용매 상호 작용이 크면 $\Delta H_3$가 큰 음의 값 → 발열 용해, 약하면 $\Delta H_3$가 작은 음의 값 → 흡열 용해</p>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 용해 엔탈피가 0이거나 양의 값이어도 녹는 물질이 있다. 그 까닭은?</p></div>
+  <div class="answer step">섞이면서 엔트로피가 증가하는 효과가 함께 작용하기 때문이다</div>
+  <p class="small step">엔탈피와 엔트로피를 함께 따지는 방법(깁스 자유 에너지)은 Ⅲ 단원에서 배운다.</p>
+</section>
+
+<!-- 10 ⑤ 극성 -->
+<section class="slide" data-sec="02 · 용해도에 영향을 주는 요인" data-title="극성이 비슷한 물질끼리">
+  <h2><span class="no">5</span>극성이 비슷한 물질은 서로 잘 녹인다</h2>
+  <p class="f22">고체 용질은 용질–용매 상호 작용이 용매–용매, 용질–용질 상호 작용보다 커서 $\Delta H_\text{용해}&lt;0$이 되면 용액 형성에 유리하다.</p>
+  <table class="tight ac241-res mt12">
+    <tr><th class="l">용매</th><th class="l">잘 녹이는 것</th><th class="l">잘 녹이지 못하는 것</th></tr>
+    <tr><td class="l">극성 용매(물)</td><td class="l">이온성 화합물($\ce{NaCl}$), 극성 화합물(에탄올, 설탕)</td><td class="l">탄화수소, 기름</td></tr>
+    <tr><td class="l">무극성 용매(헥세인, 벤젠)</td><td class="l">탄화수소, 기름 등 무극성 화합물</td><td class="l">이온성 화합물</td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 기름이 물에 녹지 않는 까닭을 상호 작용으로 말하면?</p></div>
+  <div class="answer step">물 분자끼리의 수소 결합을 끊는 데 드는 에너지를 기름–물 사이 약한 인력이 채우지 못한다</div>
+</section>
+
+<!-- 11 예측: 아이오딘 -->
+<section class="slide" data-sec="02 · 용해도에 영향을 주는 요인" data-title="예측: 아이오딘은 어디에">
+  <h2><span class="tag">예측</span>아이오딘은 물과 헥세인 중 어디에 녹을까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 330px">{{IODINE}}</div>
+    <div class="col stack">
+      <p class="f22">아이오딘($\ce{I2}$)을 조금 녹인 물(연한 갈색)에 헥세인을 넣고 흔든 뒤 가만히 둔다. 헥세인은 물보다 가벼워 위층이 된다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 흔든 뒤 어느 층이 진한 색이 될까?</p></div>
+      <div class="answer step">위층(헥세인)이 보라색</div>
+      <p class="f21 step">무극성 분자인 $\ce{I2}$는 무극성 용매인 헥세인에 훨씬 잘 녹는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 ⑥ 비누 -->
+<section class="slide" data-sec="02 · 용해도에 영향을 주는 요인" data-title="비누와 마이셀">
+  <h2><span class="no">6</span>비누에 의한 세척 작용 — 마이셀</h2>
+  <div style="text-align:center">{{MICELLE}}</div>
+  <p class="f21 mt8">비누는 긴 탄화수소 사슬인 <b>무극성 꼬리</b>와 카복실산 음이온인 <b>이온 머리</b>로 이루어져 있다.</p>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 물속에서 비누 분자는 기름때를 어떻게 둘러쌀까?</p></div>
+  <p class="f21 step">무극성 꼬리는 기름때에, 이온 머리는 물에 녹는다 → 기름때를 가운데에 두고 <b>마이셀</b> 구조로 모여 물속에서 안정해진다.</p>
+</section>
+
+<!-- 13 ⑦ 온도·압력 -->
+<section class="slide" data-sec="02 · 용해도에 영향을 주는 요인" data-title="온도·압력과 용해도">
+  <h2><span class="no">7</span>온도·압력과 용해도</h2>
+  <div style="text-align:center">{{SOLCURVE}}</div>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21 step">고체: 온도가 올라가면 용해도가 <b>증가</b>하는 물질이 많다($\ce{NaCl}$은 거의 일정).</p>
+      <p class="f21 step">기체: 온도가 올라가면 용해도 <b>감소</b>, 압력이 커지면 용해도 <b>증가</b>.</p>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 따뜻한 사이다를 열면 왜 거품이 더 많이 날까?</p></div>
+      <p class="f21 step">→ 뚜껑을 열면 압력이 낮아지고, 온도가 높을수록 $\ce{CO2}$의 용해도가 더 작아 많이 빠져나온다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 14 탐구: 콜로이드 원리 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 콜로이드 (원리)">
+  <h2><span class="tag">탐구 활동</span>콜로이드 용액의 특성 관찰 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">고화-탐17</span>은 나노 콜로이드 용액을 만들어 틴들 현상을 관찰하고, 염화 나트륨 수용액을 떨어뜨렸을 때의 변화를 관찰한 뒤, 콜로이드를 조사하고 결과의 까닭을 토의·발표한다.</div>
+  {{SIZEBAND}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21">콜로이드의 용질 = <b>분산질</b>(약 1 μm 이하), 퍼져 있는 물질 = <b>분산매</b></p>
+      <p class="f21"><b>에어로솔</b>: 액체 방울·고체 미립자가 기체에 분산(안개, 연기) · <b>에멀션</b>: 액체 방울이 다른 액체에 분산(우유)</p>
+      <p class="f21 step">콜로이드는 빛을 산란시켜 빛의 길이 보이는 <b>틴들 현상</b>, 불규칙하게 움직이는 <b>브라운 운동</b>을 보인다.</p>
+    </div>
+    <div class="col" style="flex:0 0 200px">{{BROWN}}</div>
+  </div>
+</section>
+
+<!-- 15 탐구 과정 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>은 나노 콜로이드 — 과정과 안전</h2>
+  <div class="stages mt8">
+    <div class="stage">{{AG1}}</div>
+    <div class="stage">{{AG2}}</div>
+    <div class="stage">{{AG3}}</div>
+  </div>
+  <p class="small mt8">참고 반응: $\ce{2AgNO3 + 2NaBH4 -> 2Ag + H2 + B2H6 + 2NaNO3}$ — 은 이온이 환원되어 지름 수십 nm의 은 입자가 된다. 교반을 멈춘 뒤 레이저 포인터로 틴들 현상을 관찰한다.</p>
+  <div class="card mt8"><p class="f21"><b class="c-plus">안전</b> 보안경·장갑 착용. 수소화붕소나트륨은 물과 반응해 수소를 내고 피부를 부식시킨다. 질산 은은 피부를 검게 물들인다. 레이저를 사람의 눈에 비추지 않는다. 은이 든 폐액은 따로 모은다.</p></div>
+</section>
+
+<!-- 16 실험실 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 콜로이드 관찰">
+  <h2><span class="tag">탐구 활동</span>콜로이드 관찰 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac241col">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="ac241-seg"><button class="btn" data-s="water">증류수</button><button class="btn" data-s="cu">황산 구리 수용액</button><button class="btn on" data-s="ag">은 나노 콜로이드</button><button class="btn" data-s="milk">묽힌 우유</button></div>
+      <div class="ctl"><div class="lbl"><span>1.5 M NaCl 방울 수</span><output data-o="n"></output></div><input type="range" min="0" max="8" step="1" value="0" data-i="n" aria-label="염화 나트륨 방울 수"></div>
+      <label class="ac241-cb"><input type="checkbox" data-i="laser" checked> 레이저 비추기</label> &nbsp; <label class="ac241-cb"><input type="checkbox" data-i="later"> 10분 뒤</label>
+      <div class="res"><div class="small">관찰</div><div class="big"><output data-o="big"></output></div><output class="kind ac241-msg" data-o="msg"></output></div>
+      <div class="ac241-seg mt8"><button class="btn ac241-act" data-act="rec">관찰·기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 590px">
+      <div class="lab-fig" style="width:590px;height:260px"><svg viewBox="0 0 590 260" width="590" height="260" aria-label="레이저를 비춘 비커와 현미경 창"></svg></div>
+      <table class="tight ac241-log mt8"><thead><tr><th>회</th><th>시료</th><th>NaCl</th><th>빛의 길</th><th>색</th><th>브라운 운동</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- 17 탐구 결과 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과와 토의">
+  <h2><span class="tag">탐구 활동</span>콜로이드 — 결과(예시)와 토의</h2>
+  <table class="tight ac241-res">
+    <tr><th class="l">시료</th><th>틴들 현상</th><th>색</th><th class="l">NaCl을 떨어뜨린 뒤</th></tr>
+    <tr><td class="l">황산 구리 수용액</td><td>없음</td><td>파랑, 투명</td><td class="l">변화 없음</td></tr>
+    <tr><td class="l">은 나노 콜로이드</td><td>뚜렷함</td><td>노랑, 투명</td><td class="l">주황 → 회색, 엉겨 가라앉음 / 틴들: 직후 뚜렷, 가라앉은 뒤 위쪽은 약함</td></tr>
+  </table>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 염화 나트륨 수용액을 떨어뜨리면 왜 색이 바뀌고 가라앉을까?</p></div>
+  <p class="f21 step">은 입자는 표면에 같은 부호의 전하를 띠어 서로 밀어내며 흩어져 있다. 이온을 넣으면 전하가 가려져 입자끼리 엉기고, 커진 입자는 색이 바뀌며 가라앉는다.</p>
+  <div class="row mt8">
+    <div class="col stack"><p class="f21 step"><b>조사</b> 에어로솔: 안개·연기 · 에멀션: 우유·마요네즈 · 졸: 먹물·물감 · 젤: 젤리·두부</p></div>
+    <div class="col" style="flex:0 0 340px"><div class="chips"><button class="chk">까닭을 토의하고 발표했다</button></div></div>
+  </div>
+</section>
+
+<!-- 18 연결 -->
+<section class="slide" data-sec="02 · 증기 압력 내림과 끓는점 오름" data-title="연결: 용액의 증기압">
+  <h2><span class="tag alt">연결</span>바닷물과 민물의 증기압은 같을까?</h2>
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="card"><p class="f21"><span class="tag alt">다시 보기</span> 2-2-1 증기압: 닫힌 용기에서 증발과 응축이 동적 평형을 이룰 때 증기가 나타내는 압력. 증기압 = 외부 압력일 때 끓는다.</p></div>
+      <p class="f22 mt8">바닷물에 젖은 옷은 계곡물에 젖은 옷보다 잘 마르지 않는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 같은 온도에서 바닷물과 민물 중 증기압이 낮은 것은?</p></div>
+      <div class="answer step">바닷물(용액)</div>
+      <p class="f21 step">→ 비휘발성 용질이 녹으면 용매의 증기압이 낮아진다. 그 까닭을 입자로 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 19 ⑧ 증기 압력 내림 -->
+<section class="slide" data-sec="02 · 증기 압력 내림과 끓는점 오름" data-title="증기 압력 내림">
+  <h2><span class="no">8</span>증기 압력 내림</h2>
+  <div style="text-align:center">{{VPLMOL}}</div>
+  <p class="f21 mt8">용매 분자가 기화할 때는 표면의 용질 입자에 방해를 받지만, 기체 용매 분자가 응축할 때는 용질의 영향을 받지 않는다.</p>
+  <p class="f21 step"><mark>비휘발성 용질이 녹아 용액 속 용매의 증기 압력이 낮아지는 현상을 증기 압력 내림이라고 한다.</mark></p>
+  <p class="small step">「용질이 증발을 막는다」가 아니라, 표면에서 용매 분자가 차지하는 비율이 줄어 증발 속도가 줄어드는 것이다.</p>
+</section>
+
+<!-- 20 ⑨ 라울 법칙 -->
+<section class="slide" data-sec="02 · 증기 압력 내림과 끓는점 오름" data-title="라울 법칙">
+  <h2><span class="no">9</span>라울 법칙</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">{{RAOULT}}</div>
+    <div class="col stack">
+      <p class="f21">빨간 칸 = 용매 분자, 주황 칸 = 비휘발성 용질. 묽은 용액에서 용매의 증기 압력은 <b>용매의 몰분율에 비례</b>한다.</p>
+      <div class="formula">$P_\text{용매}=X_\text{용매}\times P_\text{순수 용매}$</div>
+      <p class="small">$P_\text{용매}$: 용액 속 용매의 증기 압력, $X_\text{용매}$: 용매의 몰분율, $P_\text{순수 용매}$: 순수한 용매의 증기 압력</p>
+      <div class="card q"><p class="f21"><b>Q</b> 증기 압력 내림 $\Delta P$를 용질의 몰분율로 나타내면?</p></div>
+      <div class="answer step">$\Delta P=P_\text{순수 용매}-P_\text{용매}=X_\text{용질}\times P_\text{순수 용매}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- 21 확인 문제 01 -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>포도당 수용액의 증기 압력</h2>
+  <p class="f22">물 90.0 g에 포도당($\ce{C6H12O6}$, 180.16 g/mol) 18.0 g을 녹였다. 25 °C에서 순수한 물의 증기압이 23.8 mmHg일 때 이 용액의 증기 압력은? ($\ce{H2O}$ 18.02 g/mol)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">몰수: 물 $90.0\div18.02=4.99\ \text{mol}$, 포도당 $18.0\div180.16=0.0999\ \text{mol}$</p>
+      <p class="f21 step">$X_\text{물}=\dfrac{4.99}{4.99+0.0999}=0.980$</p>
+      <p class="f21 step">$P_\text{물}=0.980\times23.8\ \text{mmHg}$</p>
+      <div class="answer step">약 23.3 mmHg</div>
+      <p class="f21 step">증기 압력 내림 $\Delta P\approx0.47\ \text{mmHg}$</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 22 ⑩ 끓는점 오름 -->
+<section class="slide" data-sec="02 · 증기 압력 내림과 끓는점 오름" data-title="끓는점 오름">
+  <h2><span class="no">10</span>끓는점 오름</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">{{BPE}}</div>
+    <div class="col stack">
+      <p class="f21">용액의 증기압은 순수한 용매보다 낮으므로, 순수한 용매의 끓는점 $T_\mathrm{b}$에서는 끓지 않는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 용액이 끓으려면 어떻게 해야 할까?</p></div>
+      <p class="f21 step" data-g="bpe1">→ 증기압이 대기압(1 atm)과 같아질 때까지 온도를 더 높여야 한다. 용액의 끓는점 $T_\mathrm{b}'$는 더 높다.</p>
+      <p class="f21 step"><mark>끓는점 차 $\Delta T_\mathrm{b}$를 끓는점 오름</mark>, 같은 온도에서 두 증기압의 차 $\Delta P$를 증기 압력 내림이라고 한다.</p>
+      <p class="small step" data-g="bpe2">예: 소금물은 증류수보다 높은 온도에서 끓는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 23 ⑪ 총괄성 -->
+<section class="slide" data-sec="02 · 증기 압력 내림과 끓는점 오름" data-title="묽은 용액의 총괄성">
+  <h2><span class="no">11</span>묽은 용액의 총괄성</h2>
+  <p class="f22"><mark>증기 압력 내림·끓는점 오름처럼 용질의 종류와 관계없이 녹아 있는 용질 입자 수에 따라 달라지는 성질을 묽은 용액의 총괄성</mark>이라고 한다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 450px">{{PARTIC}}</div>
+    <div class="col stack">
+      <div class="card ac241-supp"><p class="f21"><b>덱 보충</b> (「물질과 에너지」 연결)<br>$\Delta T_\mathrm{b}=K_\mathrm{b}\,m$, $\Delta T_\mathrm{f}=K_\mathrm{f}\,m$<br>물: $K_\mathrm{b}=0.51$, $K_\mathrm{f}=1.86\ {}^\circ\text{C}\cdot\text{kg/mol}$<br>전해질은 입자 수 배수 $i$(반트호프 인자)를 곱한다.</p></div>
+      <p class="small">여기서 $K_\mathrm{b}$는 끓는점 오름 상수(염기 이온화 상수 아님).</p>
+    </div>
+  </div>
+  <p class="f21 mt8" data-q><b>Q</b> 0.15 m 설탕 수용액의 끓는점 오름은? <span class="step">→ <span class="ans">$0.51\times0.15\approx0.077\ {}^\circ\text{C}$</span></span></p>
+</section>
+
+<!-- 24 총괄성의 예 -->
+<section class="slide" data-sec="02 · 증기 압력 내림과 끓는점 오름" data-title="총괄성의 예 탐색">
+  <h2><span class="no">12</span>총괄성을 이용한 예 탐색하기</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>증기 압력 내림</h3><p class="f21">바닷물에 젖은 옷이 계곡물에 젖은 옷보다 잘 마르지 않는다.</p></div>
+    <div class="stage"><h3>끓는점 오름</h3><p class="f21">소금물의 끓는점이 증류수보다 높다.</p></div>
+    <div class="stage"><h3>어는점 내림</h3><p class="f21">겨울에 바닷물이 강물보다 잘 얼지 않는다. 도로에 염화 칼슘을 뿌려 눈을 녹인다.</p></div>
+    <div class="stage"><h3>삼투 현상</h3><p class="f21">배추를 소금물에 담그면 물이 빠져나와 숨이 죽는다(용매가 반투과성 막을 지나 묽은 쪽 → 진한 쪽).</p></div>
+  </div>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 0.1 m $\ce{NaCl}$ 수용액과 0.1 m 포도당 수용액의 어는점 내림은 같을까?</p></div>
+  <div class="answer step">아니다 — $\ce{NaCl}$이 약 2배(약 0.37 °C, 포도당 약 0.19 °C)</div>
+  <p class="small step">$\ce{NaCl}$은 $\ce{Na+}$과 $\ce{Cl-}$로 나뉘어 입자 수가 약 2배이다.</p>
+</section>
+
+<!-- 25 탐구 원리·예측 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 증기 압력 내림 (원리)">
+  <h2><span class="tag">탐구 활동</span>증기 압력 내림과 끓는점 오름 측정 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">고화-탐18</span>0.15 m 염화 나트륨 수용액과 0.15 m 설탕 수용액의 증기 압력을 20–80 °C에서 측정하고 온도–증기 압력 그래프로 순수한 물과 비교하여 발표하며, 측정하지 않은 끓는점을 예측하는 방법을 토론해 500자 이내로 쓴다.</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 420px">{{APP}}<p class="small">2-2-1 탐구 활동의 주사기·압력계 장치에 물 대신 용액을 넣는다.</p></div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 80 °C(물 47.27 kPa)에서 0.15 m 설탕 수용액의 증기 압력은 물보다 얼마나 낮을까?</p></div>
+      <p class="f21 step">$X_\text{설탕}=\dfrac{0.15}{0.15+55.51}=0.0027$</p>
+      <div class="answer step">$\Delta P=0.0027\times47.27\approx0.13\ \text{kPa}$</div>
+      <p class="f21 step">$\ce{NaCl}$은 입자 수가 약 2배 → 약 0.25 kPa. 차이가 작으므로 압력계를 정밀하게 읽어야 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 26 탐구 설계 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 설계와 과정">
+  <h2><span class="tag">탐구 활동</span>증기 압력 측정 — 설계와 과정</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <table class="tight ac241-var">
+        <tr><th>조작 변인</th><td>용질의 종류(없음·설탕·$\ce{NaCl}$), 온도</td></tr>
+        <tr><th>종속 변인</th><td>증기 압력</td></tr>
+        <tr><th>통제 변인</th><td>몰랄 농도 0.15 m, 장치, 평형까지 기다리는 시간</td></tr>
+      </table>
+      <div class="card mt8"><p class="f21"><b class="c-plus">안전</b> 뜨거운 물중탕에 데지 않게 집게를 쓴다. 주사기 끝을 막은 채 피스톤을 세게 당기지 않는다. 유리 기구가 깨지지 않게 다룬다.</p></div>
+    </div>
+    <div class="col stack">
+      <ol class="ac241-ol f21">
+        <li>물 1.000 kg당 설탕 0.15 mol(51.3 g), $\ce{NaCl}$ 0.15 mol(8.77 g)의 비로 용액을 만든다.</li>
+        <li>주사기에 용액을 기포 없이 조금 넣고 입구를 막은 뒤 피스톤을 당긴다.</li>
+        <li>물중탕 온도를 20 °C부터 80 °C까지 10 °C씩 올리며, 평형이 된 뒤 압력을 읽는다.</li>
+        <li>순수한 물로 같은 측정을 하고, 세 곡선을 한 그래프에 그려 비교한다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 27 실험실 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 증기 압력 내림">
+  <h2><span class="tag">탐구 활동</span>증기 압력 내림·끓는점 오름 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac241vpl">
+    <div class="lab-ctl" style="flex-basis:440px">
+      <div class="ac241-seg"><button class="btn on" data-s="w">순수한 물</button><button class="btn" data-s="s">설탕 수용액</button><button class="btn" data-s="n">NaCl 수용액</button></div>
+      <div class="ctl"><div class="lbl"><span>몰랄 농도</span><output data-o="m"></output></div><input type="range" min="0.05" max="2" step="0.05" value="0.15" data-i="m" aria-label="몰랄 농도"></div>
+      <div class="ctl"><div class="lbl"><span>물중탕 온도</span><output data-o="t"></output></div><input type="range" min="20" max="80" step="10" value="20" data-i="t" aria-label="물중탕 온도"></div>
+      <svg class="ac241-app" viewBox="0 0 420 110" width="400" height="105" aria-label="물중탕 속 주사기와 압력계"></svg>
+      <div class="res"><div class="small">압력계 읽음</div><div class="big"><output data-o="big"></output></div><output class="kind ac241-msg" data-o="msg"></output></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="ac241-seg"><button class="btn ac241-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button><span class="small">그래프</span><button class="btn on" data-act="gp">$P$–$t$</button><button class="btn" data-act="gd">$\Delta P$–$t$</button><button class="btn" data-act="gb">끓는점 예측</button></div>
+      <div class="lab-fig" style="width:600px;height:260px"><svg viewBox="0 0 600 260" width="600" height="260" aria-label="증기 압력 그래프"></svg></div>
+      <table class="tight ac241-log mt8"><thead><tr><th>회</th><th>시료</th><th>m</th><th>t (°C)</th><th>P (kPa)</th><th>ΔP (kPa)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- 28 탐구 결과 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과">
+  <h2><span class="tag">탐구 활동</span>증기 압력 측정 — 결과(예시)</h2>
+  <table class="tight ac241-res">
+    <tr><th>온도 (°C)</th><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td></tr>
+    <tr><th>물 (kPa)</th><td>2.33</td><td>4.23</td><td>7.36</td><td>12.31</td><td>19.87</td><td>31.09</td><td>47.27</td></tr>
+    <tr><th>설탕 0.15 m</th><td>2.32</td><td>4.22</td><td>7.34</td><td>12.27</td><td>19.82</td><td>31.00</td><td>47.14</td></tr>
+    <tr><th>$\ce{NaCl}$ 0.15 m</th><td>2.32</td><td>4.21</td><td>7.32</td><td>12.24</td><td>19.77</td><td>30.93</td><td>47.03</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 680px">{{VPLRES}}</div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 온도가 높을수록 $\Delta P$가 커지는 까닭은?</p></div>
+      <p class="f21 step">$\Delta P=X_\text{용질}\times P_\text{순수}$ — $X_\text{용질}$은 일정하고 $P_\text{순수}$가 커지기 때문</p>
+    </div>
+  </div>
+</section>
+
+<!-- 29 탐구 결론 -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결론과 토론">
+  <h2><span class="tag">탐구 활동</span>측정하지 않은 끓는점을 예측하는 방법</h2>
+  <div class="card q"><p class="f21"><b>Q</b> 80 °C까지만 쟀다. 100 °C 근처의 끓는점 차이는 어떻게 예측할까?</p></div>
+  <div class="stages c2 mt8">
+    <div class="stage step"><h3>방법 1 · 그래프 연장</h3><p class="f21">$\ln P$–$\dfrac1T$가 직선(클라우지우스–클라페이롱 식)이므로 직선을 $P=101.3\ \text{kPa}$까지 연장해 끓는점을 읽는다.</p></div>
+    <div class="stage step"><h3>방법 2 · 라울 법칙</h3><p class="f21">측정한 $P_\text{용액}/P_\text{물}$ 비(0.9973)가 일정함을 확인하고, 100 °C 물의 증기압에 곱해 용액의 증기압이 1 atm보다 얼마나 낮은지 구한다.</p></div>
+  </div>
+  <div class="answer step mt8">예측: 설탕 약 100.08 °C, $\ce{NaCl}$ 약 100.15 °C — 끓는점 오름의 비 약 1 : 2</div>
+  <p class="small step">방법 1은 순수한 물도 약 99.0 °C로 낮게 예측된다(증발 엔탈피를 일정하다고 가정). 그래서 같은 방법으로 구한 물과의 차 $\Delta T_\mathrm{b}$로 비교한다.</p>
+  <p class="small step mt8">500자 글 예시(요약): 「세 곡선은 거의 겹쳤지만 같은 온도에서 용액이 항상 낮았고, 그 차는 온도가 높을수록 커졌다. $\ce{NaCl}$의 차가 설탕의 약 2배인 것은 입자 수 때문이다. 측정하지 않은 끓는점은 $\ln P$–$1/T$ 직선을 연장해 예측했다. 압력계의 분해능이 차보다 크지 않도록 정밀한 센서가 필요하다.」</p>
+</section>
+
+<!-- 30 확인 문제 02 -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02" data-tpl="check">
+  <h2><span class="tag q">확인 문제 02</span>맞으면 ○, 틀리면 ×</h2>
+  <ol class="ac241-ox f21">
+    <li>포화 용액에서는 용해와 석출이 모두 멈춘다. <span class="step">→ <span class="ans">× (같은 속도로 계속)</span></span></li>
+    <li>용해 엔탈피는 용질 팽창, 용매 팽창, 혼합 엔탈피의 합이다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>기체의 용해도는 온도가 높을수록 크다. <span class="step">→ <span class="ans">× (작다)</span></span></li>
+    <li>콜로이드 용액은 빛의 길이 보이는 틴들 현상을 나타낸다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>같은 몰랄 농도라면 설탕과 염화 나트륨 수용액의 끓는점 오름은 같다. <span class="step">→ <span class="ans">× (NaCl이 약 2배)</span></span></li>
+  </ol>
+</section>
+
+<!-- 31 연습 문제 1 -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>설탕물의 부피</h2>
+  <p class="f22">설탕 78.5 g이 녹아 있는 설탕물의 질량 백분율은 10.5 %이고 밀도는 1.04 g/mL이다. 설탕물의 부피(mL)를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$\dfrac{78.5\ \text{g}}{\text{설탕물의 질량}}\times100\ \%=10.5\ \%$ → 설탕물의 질량 = 748 g</p>
+      <p class="f21 step">$748\ \text{g}\times\dfrac{1\ \text{mL}}{1.04\ \text{g}}$</p>
+      <div class="answer step">719 mL</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 32 연습 문제 2 -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>에틸렌 글리콜 용액의 농도</h2>
+  <p class="f21">15.0 g의 에틸렌 글리콜($\ce{C2H6O2}$, 62.07 g/mol)을 0.500 kg의 물에 녹였다. 용액의 부피가 512 mL일 때 1) 몰농도 2) 몰랄 농도 3) 질량 백분율 4) 몰분율은?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step">$15.0\ \text{g}\div62.07\ \text{g/mol}=0.242\ \text{mol}$</p>
+      <p class="f21 step">1) $\dfrac{0.242\ \text{mol}}{0.512\ \text{L}}=$ <span class="ans">0.473 M</span> &nbsp; 2) $\dfrac{0.242\ \text{mol}}{0.500\ \text{kg}}=$ <span class="ans">0.484 m</span></p>
+      <p class="f21 step">3) $\dfrac{15.0\ \text{g}}{515\ \text{g}}\times100\ \%=$ <span class="ans">2.91 %</span> <span class="small">(부록 풀이 2.92 %)</span></p>
+      <p class="f21 step">4) 물 $500\ \text{g}\div18.02=27.7\ \text{mol}$, $\dfrac{0.242}{0.242+27.7}=$ <span class="ans">$8.66\times10^{-3}$</span></p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 33 연습 문제 3 -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>황산 구리의 질량</h2>
+  <p class="f22">0.040 M의 $\ce{CuSO4}$ 수용액 250 mL에 들어 있는 $\ce{CuSO4}$의 질량을 구하여라. ($\ce{CuSO4}$ 159.6 g/mol)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$0.040\ \text{mol/L}\times0.250\ \text{L}=0.010\ \text{mol}$</p>
+      <p class="f21 step">$0.010\ \text{mol}\times159.6\ \text{g/mol}$</p>
+      <div class="answer step">1.6 g</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- 34 연습 문제 4 -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>소금의 용해 엔탈피</h2>
+  <p class="f21">소금의 격자 엔탈피와 수화 엔탈피가 다음과 같을 때 용해 엔탈피를 계산하고, 소금이 물에 잘 녹는 까닭을 용해 엔탈피와 엔트로피로 설명하여라.</p>
+  <p class="f21">$\ce{NaCl(s) -> Na+(g) + Cl-(g)}$ $\quad\Delta H_\text{격자}=786\ \text{kJ/mol}$</p>
+  <p class="f21">$\ce{Na+(g) + Cl-(g) -> Na+(aq) + Cl-(aq)}$ $\quad\Delta H_\text{수화}=-783\ \text{kJ/mol}$</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 310px">{{Q4CYC}}</div>
+    <div class="col stack">
+      <p class="f21 step" data-g="q4">$\Delta H_\text{용해}=786+(-783)=$ <span class="ans">+3 kJ/mol</span> — 흡열 과정</p>
+      <p class="f21 step">그러나 용매와 용질이 섞이며 엔트로피가 증가하는 영향이 더 커서 깁스 자유 에너지 변화가 음이 되므로 잘 녹는다.</p>
+      <p class="small step">채점 요소: 계산값(+3 kJ/mol) · 흡열 · 엔트로피 증가가 더 큼</p>
+    </div>
+  </div>
+</section>
+
+<!-- 35 연습 문제 5 -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>두 휘발성 액체 혼합 용액의 증기압</h2>
+  <p class="f21">35 °C에서 이황화 탄소의 몰분율이 0.6, 아세톤의 몰분율이 0.4인 혼합 용액의 전체 증기압을 구하여라. (35 °C에서 순수한 이황화 탄소 515 mmHg, 아세톤 332 mmHg, 760 mmHg = 1 atm)</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 380px">{{Q5LINE}}</div>
+    <div class="col stack">
+      <p class="f21 step">$P_{\ce{CS2}}=0.600\times515=309\ \text{mmHg}$</p>
+      <p class="f21 step">$P_\text{아세톤}=0.400\times332=133\ \text{mmHg}$</p>
+      <p class="f21 step" data-g="q5">$P_\text{전체}=309+133$</p>
+      <div class="answer step">442 mmHg = 0.582 atm</div>
+      <p class="small step">두 성분 모두 휘발성이므로 각 성분에 라울 법칙을 적용하고 부분 압력을 더한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 36 스스로 정리 -->
+<section class="slide" data-sec="02 용해도와 묽은 용액의 성질 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 용액의 성질 — 02 용해도와 묽은 용액의 성질</h2>
+  <div class="ac241-map">
+    <div class="ac241-node ac241-dim">01<br>용액의 농도</div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-main" data-q><b>용해도</b><br>포화 = 용해와 석출의 <span class="blank"><span class="step">동적 평형</span></span><br>$\Delta H_\text{용해}=\Delta H_1+\Delta H_2+$<span class="blank"><span class="step">$\Delta H_3$</span></span><br>기체: 온도↑ → 용해도 <span class="blank"><span class="step">감소</span></span><br>콜로이드: <span class="blank"><span class="step">틴들</span></span> 현상</div>
+    <div class="ac241-arr">→</div>
+    <div class="ac241-node ac241-main" data-q><b>묽은 용액의 성질</b><br>$P_\text{용매}=$<span class="blank"><span class="step">$X_\text{용매}$</span></span>$\times P_\text{순수 용매}$<br>용액의 끓는점은 순수한 용매보다 <span class="blank"><span class="step">높다</span></span><br>총괄성은 용질 <span class="blank"><span class="step">입자 수</span></span>에 의존</div>
+  </div>
+</section>
+
+<!-- 37 스스로 점검하기 -->
+<section class="slide" data-sec="02 용해도와 묽은 용액의 성질 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 용해 엔탈피와 극성으로 용해도를 설명하고, 라울 법칙과 총괄성을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 콜로이드의 틴들 현상을 관찰하고, 용액의 증기 압력을 측정해 순수한 물과 비교했다.</button>
+    <button class="chk">[가치·태도] 김장, 도로 제설, 세탁처럼 생활 속 용액 현상에 관심을 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 겨울에 바닷물이 강물보다 잘 얼지 않는 까닭은? <span class="step">→ <span class="ans">녹아 있는 용질 입자 때문에 어는점이 내려가기 때문</span>(어는점 내림)</span></p>
+    <p class="f21 mt8"><b>Q</b> 물 1 kg에 $\ce{NaCl}$ 0.10 mol을 녹이면 끓는점은 약 몇 °C 오를까? <span class="step">→ <span class="ans">약 0.10 °C</span>($0.51\times0.10\times2$)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 대단원 Ⅱ 마무리 — 간이 분광 광도계로 농도를 판별할 수 있을까?</div>
+</section>

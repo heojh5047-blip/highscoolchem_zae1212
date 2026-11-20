@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":2,"severity":"medium","rule":"D8","problem":"오늘의 흐름 줄이 영역 밖으로 넘침","fix":"노드 6개로 줄이고 이름을 짧게"},
+{"slide":5,"severity":"medium","rule":"D8","problem":"껍질 그림 위 라벨 'n', '껍질' 잘림","fix":"그림을 아래로 내리고 라벨을 '주 양자수 n' / '껍질'로"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"연대표 라벨 겹침(1923·1927, 1926·1933)","fix":"연도+내용 한 줄 라벨을 위·아래로 엇갈리게, 그림 폭 900"},
+{"slide":12,"severity":"low","rule":"D8","problem":"'파장(nm)' 라벨 잘림","fix":"viewBox 높이 246"},
+{"slide":13,"severity":"medium","rule":"D8","problem":"'원자핵(핵전하 +11)'과 오른쪽 설명 라벨 겹침, '바깥 전자'가 궤도 점선과 겹침","fix":"라벨 위치 옮기고 그림 폭 460"},
+{"slide":16,"severity":"low","rule":"D8","problem":"'수소 원자살' 왼쪽 잘림","fix":"x 62로"},
+{"slide":18,"severity":"low","rule":"3.2","problem":"탄소 2p 상자 라벨 15.9px, 아래 잘림","fix":"1:1 크기(170px), viewBox 높이 84"},
+{"slide":21,"severity":"medium","rule":"D8","problem":"실험실 '에너지' 라벨이 1s와 겹치고 전자 배치 글줄이 그림 아래에서 잘림","fix":"'에너지'를 축 위로, 상자 계단을 12 올리고 배치 글줄 y 288"},
+{"slide":27,"severity":"low","rule":"3.2","problem":"이온화 에너지 눈금 라벨 15.9px","fix":"그림 1:1(610px)"},
+{"slide":29,"severity":"low","rule":"D8","problem":"3d·4s 라벨 아래 잘림","fix":"viewBox 높이 242"},
+{"slide":0,"severity":"medium","rule":"6.4","problem":"data-anim 56곳으로 권장(15–25)보다 많음 — 한 그림에 여러 움직임","fix":"단순 그림 8개는 그림 하나에 움직임 하나로 묶어 30곳"}
+],"summary":"자동 점검 14건(D8·3.2)과 실험실 겹침·잘림을 모두 고침. 오비탈 엽 그림은 투영 각도 때문에 2px·3dxz가 작게 보이지만 축·라벨로 구분되어 유지."}

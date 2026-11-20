@@ -1,0 +1,450 @@
+<!-- 고급화학 2-1-1b 실제 기체와 혼합 기체 — gen.py가 tpl_b.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 1. 기체 분자 › 02</div>
+    <h1 class="ac211-h1">기체 분자 운동론과<br>실제 기체·혼합 기체 <span class="acc">(2)</span></h1>
+    <p class="sub">실제 기체와 혼합 기체 — 이상 기체에서 벗어나는 까닭과 부분 압력</p>
+    <p class="meta">고등학교 고급 화학 79–84쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 470 390" style="width:430px" aria-label="실제 기체의 압축 인자 곡선(수소, 메테인)과 이상 기체 선"><rect x="30" y="20" width="420" height="350" rx="10" fill="#FFFFFF" stroke="#E2E7EC" stroke-width="1"/><line x1="60" y1="330" x2="430" y2="330" stroke="#5B6B7F" stroke-width="2"/><line x1="60" y1="330" x2="60" y2="50" stroke="#5B6B7F" stroke-width="2"/><line x1="60" y1="207.3" x2="420" y2="207.3" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="7 5"/><g data-anim="draw" data-dur="1.4" data-delay="0"><path d="M60.5 207.2 L62.7 206.8 L64.9 206.3 L67.2 205.9 L69.4 205.4 L71.7 205 L73.9 204.5 L76.2 204 L78.4 203.6 L80.7 203.1 L82.9 202.6 L85.2 202.1 L87.4 201.6 L89.7 201.1 L91.9 200.6 L94.2 200.1 L96.4 199.6 L98.7 199.1 L100.9 198.6 L103.1 198.1 L105.4 197.6 L107.6 197 L109.9 196.5 L112.1 195.9 L114.4 195.4 L116.6 194.9 L118.9 194.3 L121.1 193.8 L123.4 193.2 L125.6 192.6 L127.9 192.1 L130.1 191.5 L132.4 190.9 L134.6 190.3 L136.9 189.8 L139.1 189.2 L141.3 188.6 L143.6 188 L145.8 187.4 L148.1 186.8 L150.3 186.2 L152.6 185.6 L154.8 185 L157.1 184.4 L159.3 183.8 L161.6 183.2 L163.8 182.6 L166.1 182 L168.3 181.3 L170.6 180.7 L172.8 180.1 L175.1 179.5 L177.3 178.8 L179.6 178.2 L181.8 177.6 L184 176.9 L186.3 176.3 L188.5 175.6 L190.8 175 L193 174.4 L195.3 173.7 L197.5 173.1 L199.8 172.4 L202 171.8 L204.3 171.1 L206.5 170.5 L208.8 169.8 L211 169.1 L213.3 168.5 L215.5 167.8 L217.8 167.1 L220 166.5 L222.2 165.8 L224.5 165.1 L226.7 164.5 L229 163.8 L231.2 163.1 L233.5 162.5 L235.7 161.8 L238 161.1 L240.2 160.4 L242.5 159.7 L244.7 159.1 L247 158.4 L249.2 157.7 L251.5 157 L253.7 156.3 L256 155.6 L258.2 155 L260.4 154.3 L262.7 153.6 L264.9 152.9 L267.2 152.2 L269.4 151.5 L271.7 150.8 L273.9 150.1 L276.2 149.4 L278.4 148.7 L280.7 148 L282.9 147.3 L285.2 146.6 L287.4 145.9 L289.7 145.2 L291.9 144.5 L294.2 143.8 L296.4 143.1 L298.7 142.4 L300.9 141.7 L303.1 141 L305.4 140.3 L307.6 139.6 L309.9 138.9 L312.1 138.2 L314.4 137.5 L316.6 136.8 L318.9 136.1 L321.1 135.3 L323.4 134.6 L325.6 133.9 L327.9 133.2 L330.1 132.5 L332.4 131.8 L334.6 131.1 L336.9 130.4 L339.1 129.7 L341.3 128.9 L343.6 128.2 L345.8 127.5 L348.1 126.8 L350.3 126.1 L352.6 125.4 L354.8 124.6 L357.1 123.9 L359.3 123.2 L361.6 122.5 L363.8 121.8 L366.1 121 L368.3 120.3 L370.6 119.6 L372.8 118.9 L375.1 118.2 L377.3 117.4 L379.6 116.7 L381.8 116 L384 115.3 L386.3 114.6 L388.5 113.8 L390.8 113.1 L393 112.4 L395.3 111.7 L397.5 110.9 L399.8 110.2 L402 109.5 L404.3 108.8 L406.5 108 L408.8 107.3 L411 106.6 L413.3 105.9 L415.5 105.1 L417.8 104.4 L420 103.7" fill="none" stroke="#7B4FC8" stroke-width="4" stroke-linejoin="round"/></g><g data-anim="draw" data-dur="1.4" data-delay="0.5"><path d="M60.5 207.6 L62.7 209.2 L64.9 210.8 L67.2 212.5 L69.4 214.1 L71.7 215.8 L73.9 217.5 L76.2 219.2 L78.4 220.9 L80.7 222.6 L82.9 224.4 L85.2 226.1 L87.4 227.8 L89.7 229.5 L91.9 231.1 L94.2 232.7 L96.4 234.3 L98.7 235.7 L100.9 237.1 L103.1 238.3 L105.4 239.4 L107.6 240.3 L109.9 241.1 L112.1 241.6 L114.4 242 L116.6 242.2 L118.9 242.2 L121.1 242.1 L123.4 241.9 L125.6 241.5 L127.9 241 L130.1 240.4 L132.4 239.7 L134.6 238.9 L136.9 238.1 L139.1 237.2 L141.3 236.2 L143.6 235.2 L145.8 234.2 L148.1 233.1 L150.3 232 L152.6 230.9 L154.8 229.7 L157.1 228.5 L159.3 227.4 L161.6 226.1 L163.8 224.9 L166.1 223.7 L168.3 222.4 L170.6 221.2 L172.8 219.9 L175.1 218.6 L177.3 217.3 L179.6 216 L181.8 214.7 L184 213.4 L186.3 212.1 L188.5 210.8 L190.8 209.5 L193 208.2 L195.3 206.8 L197.5 205.5 L199.8 204.2 L202 202.9 L204.3 201.5 L206.5 200.2 L208.8 198.8 L211 197.5 L213.3 196.2 L215.5 194.8 L217.8 193.5 L220 192.1 L222.2 190.8 L224.5 189.5 L226.7 188.1 L229 186.8 L231.2 185.4 L233.5 184.1 L235.7 182.7 L238 181.4 L240.2 180 L242.5 178.7 L244.7 177.4 L247 176 L249.2 174.7 L251.5 173.3 L253.7 172 L256 170.6 L258.2 169.3 L260.4 168 L262.7 166.6 L264.9 165.3 L267.2 163.9 L269.4 162.6 L271.7 161.3 L273.9 159.9 L276.2 158.6 L278.4 157.2 L280.7 155.9 L282.9 154.6 L285.2 153.2 L287.4 151.9 L289.7 150.6 L291.9 149.2 L294.2 147.9 L296.4 146.6 L298.7 145.2 L300.9 143.9 L303.1 142.6 L305.4 141.2 L307.6 139.9 L309.9 138.6 L312.1 137.2 L314.4 135.9 L316.6 134.6 L318.9 133.3 L321.1 131.9 L323.4 130.6 L325.6 129.3 L327.9 128 L330.1 126.6 L332.4 125.3 L334.6 124 L336.9 122.7 L339.1 121.4 L341.3 120 L343.6 118.7 L345.8 117.4 L348.1 116.1 L350.3 114.8 L352.6 113.5 L354.8 112.1 L357.1 110.8 L359.3 109.5 L361.6 108.2 L363.8 106.9 L366.1 105.6 L368.3 104.3 L370.6 103 L372.8 101.6 L375.1 100.3 L377.3 99 L379.6 97.7 L381.8 96.4 L384 95.1 L386.3 93.8 L388.5 92.5 L390.8 91.2 L393 89.9 L395.3 88.6 L397.5 87.3 L399.8 86 L402 84.7 L404.3 83.4 L406.5 82.1 L408.8 80.8 L411 79.5 L413.3 78.2 L415.5 76.9 L417.8 75.6 L420 74.3" fill="none" stroke="#2E9E6A" stroke-width="4" stroke-linejoin="round"/></g><text class="tex" x="392" y="91.7" data-mix="$\ce{H2}$" data-size="20" data-anchor="end" fill="#7B4FC8" data-halo="1"></text><text class="tex" x="250" y="241" data-mix="$\ce{CH4}$" data-size="20" data-anchor="middle" fill="#2E9E6A" data-halo="1"></text><text class="tex" x="410" y="197.3" data-mix="이상 기체" data-size="19" data-anchor="end" fill="#5B6B7F"></text><text class="tex" x="36" y="46" data-tex="Z" data-size="22" data-anchor="start"></text><text class="tex" x="426" y="356" data-mix="압력 $P$" data-size="19" data-anchor="end" fill="#5B6B7F"></text></svg>
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 도입" data-title="다시 보기: 기체 분자 운동론">
+  <h2><span class="tag alt">다시 보기</span>01 기체 분자 운동론</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>기본 가정</h3><p class="f21">① 분자 부피 0 ② 무질서한 운동 ③ <b>인력·반발력 무시</b> ④ 완전 탄성 충돌</p></div>
+    <div class="stage"><h3>압력과 온도</h3><p class="f21">$PV=\tfrac13Nm\overline{v^2}=nRT$, $E_\mathrm{k}=\tfrac32RT$, $v_\text{rms}=\sqrt{3RT/M}$</p></div>
+    <div class="stage"><h3>속력 분포</h3><p class="f21">온도가 높을수록 봉우리가 빠른 쪽으로 옮겨 가고 낮게 퍼진다. 넓이는 1</p></div>
+    <div class="stage"><h3>기체 상수</h3><p class="f21">$R=0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}=8.314\ \text{J/(mol}\cdot\text{K)}$ — 탐구에서 측정</p></div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 가정 ①과 ③은 실제 분자에도 맞을까? <span class="small">→ 오늘 그 답을 찾는다.</span></p>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-02]</span>이상 기체 방정식을 이해하고, 혼합 기체의 부분 압력과 몰 분율의 관계를 설명할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화02-03]</span>이상 기체와 실제 기체의 차이를 이해하고, 실제 기체의 성질이 이상 기체와 다른 원인을 탐색할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>압축 인자로 이상 기체와 실제 기체의 차이를 비교하고, 그 원인을 <b>분자 사이의 인력과 분자의 부피</b>로 설명할 수 있다.</li>
+    <li>반데르발스 상태 방정식의 보정 항의 뜻을 설명하고 압력을 계산할 수 있다.</li>
+    <li>혼합 기체의 부분 압력과 몰분율의 관계를 설명하고, 기체 분자량 측정 실험을 수행할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">실제 기체</div><div class="farr">→</div>
+    <div class="fnode">압축 인자 $Z$</div><div class="farr">→</div>
+    <div class="fnode">반데르발스 식</div><div class="farr">→</div>
+    <div class="fnode">부분 압력·몰분율</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 분자량 측정</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 도입" data-title="생각 열기: 기체의 액화">
+  <h2><span class="tag">생각 열기</span>이상 기체는 액체가 될 수 있을까?</h2>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f22">천연가스(주성분 메테인 $\ce{CH4}$)는 약 $-162\ {}^\circ\text{C}$로 식혀 액체로 만들어 운반한다. 이산화 탄소도 압력을 높이면 액체가 된다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 기체 분자 운동론의 가정을 그대로 따르는 이상 기체라면, 아무리 압축하고 식혀도 액체가 될 수 있을까?</p></div>
+      <div class="answer step">될 수 없다 — 분자 사이의 인력이 없고 부피가 0이기 때문</div>
+      <p class="f22 step">→ 실제 기체가 액체로 되는 것은 분자 사이에 <b>인력</b>이 있고 분자에 <b>자체 부피</b>가 있다는 증거이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 실제 기체 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="실제 기체">
+  <h2><span class="no">1</span>실제 기체는 언제 이상 기체와 다를까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 430px"><svg class="fig" viewBox="0 0 420 252" style="width:420px" aria-label="낮은 압력·높은 온도와 높은 압력·낮은 온도에서 기체 분자의 거리와 인력(점선)"><rect x="10" y="20" width="200" height="170" rx="10" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/><g data-anim="move" data-from="6.7,4" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="59.5,101.1,37.9,88.2,ink,2"></g><circle cx="66.4" cy="105.3" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="6.4,-4.4" data-rep="alt" data-dur="1.3" data-ease="io"><g data-arw="45.9,154.6,18.5,173.4,ink,2"></g><circle cx="52.5" cy="150" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-7.7,-1.4" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="190.5,92.1,206,96.3,ink,2"></g><circle cx="182.5" cy="90.6" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-3.1,7.2" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="192.7,130,201.7,109.1,ink,2"></g><circle cx="189.5" cy="137.4" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="5.2,-5.8" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="112.7,129.1,92.2,151.7,ink,2"></g><circle cx="118.2" cy="123" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><text class="tex" x="110" y="214" data-mix="낮은 압력·높은 온도" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="110" y="240" data-mix="→ 이상 기체에 가깝다" data-size="19" data-anchor="middle" fill="#2E9E6A"></text><rect x="250" y="20" width="160" height="170" rx="10" fill="#FFFFFF" stroke="#D7263D" stroke-width="2.5"/><g data-anim="move" data-from="-1.7,2.5" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="274.5,63.3,276.9,59.7,ink,2"></g><circle cx="270" cy="70" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="0.2,-3" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="291.5,82.1,291.3,86,ink,2"></g><circle cx="292" cy="74" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-0.6,2.9" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="283.7,88.1,284.5,84.6,ink,2"></g><circle cx="282" cy="96" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.6,1.5" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="311,145.9,307.1,143.7,ink,2"></g><circle cx="318" cy="150" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="0.6,-2.9" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="338.4,155.9,337.5,160.1,ink,2"></g><circle cx="340" cy="148" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="0,-3" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="330,136.1,330,140.6,ink,2"></g><circle cx="330" cy="128" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1.1,2.8" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="375,76.5,376.7,72.3,ink,2"></g><circle cx="372" cy="84" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="0.4,3" data-rep="alt" data-dur="1.2" data-ease="io"><g data-arw="389,92,388.4,87.5,ink,2"></g><circle cx="390" cy="100" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="3,-0.5" data-rep="alt" data-dur="1.1" data-ease="io"><g data-arw="292,171.4,288.8,172,ink,2"></g><circle cx="300" cy="170" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="2.3,1.9" data-rep="alt" data-dur="1.4" data-ease="io"><g data-arw="345.8,170.8,342.3,167.9,ink,2"></g><circle cx="352" cy="176" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="3,-0.4" data-rep="alt" data-dur="1" data-ease="io"><g data-arw="254,141.2,254,141.8,ink,2"></g><circle cx="262" cy="140" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><g data-anim="move" data-from="-1,2.8" data-rep="alt" data-dur="0.9" data-ease="io"><g data-arw="382.7,152.4,384.1,148.6,ink,2"></g><circle cx="380" cy="160" r="9" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/></g><line x1="270" y1="70" x2="292" y2="74" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="292" y1="74" x2="282" y2="96" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="318" y1="150" x2="340" y2="148" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="340" y1="148" x2="330" y2="128" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="372" y1="84" x2="390" y2="100" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="300" y1="170" x2="352" y2="176" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><text class="tex" x="330" y="214" data-mix="높은 압력·낮은 온도" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="330" y="240" data-mix="→ 인력에 붙들린다" data-size="19" data-anchor="middle" fill="#D7263D"></text></svg></div>
+    <div class="col stack">
+      <p class="f21">실제 기체는 압력 $P$가 0에 가까워지는 조건에서만 이상 기체 법칙을 따른다.</p>
+      <p class="f21 step" data-q><b>Q</b> 높은 압력, 낮은 온도에서 벗어나는 까닭은?</p>
+      <p class="f21 step">→ 압축하면 분자 사이 거리가 가까워지고, 냉각하면 분자의 운동 속력이 느려져 이웃 분자의 <b>인력에 붙들리기 쉽다</b>.</p>
+      <p class="f21 step">→ 낮은 압력·높은 온도에서는 분자 사이가 멀고 운동 에너지가 커서 분자의 크기와 인력을 무시할 수 있다 → 이상 기체 방정식이 잘 맞는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 비교 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="이상 기체와 실제 기체 비교">
+  <h2><span class="no">2</span>이상 기체와 실제 기체</h2>
+  <table class="tight ac211-cmp mt8">
+    <tr><th>구분</th><th>이상 기체</th><th>실제 기체</th></tr>
+    <tr><td>분자 자체의 부피</td><td>없다(0)</td><td><span class="blank"><span class="step" data-g="c1">있다</span></span></td></tr>
+    <tr><td>분자 사이의 인력</td><td>없다</td><td><span class="blank"><span class="step" data-g="c2">있다</span></span></td></tr>
+    <tr><td>충돌</td><td>완전 탄성 충돌</td><td>인력·반발력이 작용</td></tr>
+    <tr><td>높은 압력·낮은 온도</td><td>$PV=nRT$ 그대로</td><td><span class="blank"><span class="step" data-g="c3">벗어나다가 결국 액체가 된다</span></span></td></tr>
+    <tr><td>낮은 압력·높은 온도</td><td>$PV=nRT$</td><td><span class="blank"><span class="step" data-g="c4">이상 기체에 가깝다</span></span></td></tr>
+  </table>
+  <p class="f22 mt16 step" data-q><b>Q</b> 실제 기체가 이상 기체에서 얼마나 벗어나는지 숫자 하나로 나타낼 수는 없을까? <span class="small">→ 압축 인자 $Z$</span></p>
+</section>
+
+<!-- ════════ 7. ③ 압축 인자 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="압축 인자">
+  <h2><span class="no">3</span>압축 인자 $Z$</h2>
+  <p class="f22"><mark>압축 인자</mark> $Z$는 같은 조건에서 실제 기체의 몰 부피와 이상 기체의 몰 부피의 비이다.</p>
+  <div class="formula mt8">$Z=\dfrac{PV}{nRT}=\dfrac{V_{\mathrm{m},\,\text{실제}}}{V_{\mathrm{m},\,\text{이상}}}$<div class="unit">$V_\mathrm{m}$: 몰 부피(기체 1 mol의 부피), 이상 기체는 언제나 $Z=1$</div></div>
+  <div class="stages c2 mt12">
+    <div class="stage step" data-g="z1"><h3>$Z&lt;1$</h3><p class="f21">실제 부피가 이상 기체보다 작다 → 분자 사이의 <b>인력</b>의 효과가 크다.</p></div>
+    <div class="stage step" data-g="z2"><h3>$Z&gt;1$</h3><p class="f21">실제 부피가 이상 기체보다 크다 → 분자 <b>자체 부피(반발)</b>의 효과가 크다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ Z–P 그래프 ════════ -->
+<section class="slide" data-sec="02 · 실제 기체와 이상 기체" data-title="압력과 압축 인자 그래프">
+  <h2><span class="no">4</span>압력에 따른 압축 인자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px"><svg class="fig" viewBox="0 0 580 398" style="width:560px" aria-label="반데르발스 식으로 계산한 0 ℃에서 압력과 압축 인자: 수소, 헬륨, 메테인, 산소"><line x1="197.5" y1="330" x2="197.5" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="315" y1="330" x2="315" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="432.5" y1="330" x2="432.5" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="550" y1="330" x2="550" y2="40" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="264.1" x2="550" y2="264.1" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="198.2" x2="550" y2="198.2" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="132.3" x2="550" y2="132.3" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="66.4" x2="550" y2="66.4" stroke="#E2E7EC" stroke-width="1"/><line x1="80" y1="330" x2="558" y2="330" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="330" x2="80" y2="32" stroke="#5B6B7F" stroke-width="2"/><line x1="80" y1="330" x2="80" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="80" y="356" data-tex="0" data-size="18" data-anchor="middle"></text><line x1="197.5" y1="330" x2="197.5" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="197.5" y="356" data-tex="200" data-size="18" data-anchor="middle"></text><line x1="315" y1="330" x2="315" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="315" y="356" data-tex="400" data-size="18" data-anchor="middle"></text><line x1="432.5" y1="330" x2="432.5" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="432.5" y="356" data-tex="600" data-size="18" data-anchor="middle"></text><line x1="550" y1="330" x2="550" y2="336" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="550" y="356" data-tex="800" data-size="18" data-anchor="middle"></text><line x1="74" y1="330" x2="80" y2="330" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="336" data-tex="0" data-size="18" data-anchor="end"></text><line x1="74" y1="264.1" x2="80" y2="264.1" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="270.1" data-tex="0.5" data-size="18" data-anchor="end"></text><line x1="74" y1="198.2" x2="80" y2="198.2" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="204.2" data-tex="1.0" data-size="18" data-anchor="end"></text><line x1="74" y1="132.3" x2="80" y2="132.3" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="138.3" data-tex="1.5" data-size="18" data-anchor="end"></text><line x1="74" y1="66.4" x2="80" y2="66.4" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="72.4" data-tex="2.0" data-size="18" data-anchor="end"></text><text class="tex" x="560" y="388" data-mix="압력 $P$ [atm]" data-size="19" data-anchor="end"></text><text class="tex" x="22" y="34" data-mix="압축 인자 $Z$" data-size="19" data-anchor="start"></text><line x1="80" y1="198.2" x2="550" y2="198.2" stroke="#5B6B7F" stroke-width="2.5" stroke-dasharray="8 6"/><text class="tex" x="547.6" y="224.2" data-mix="이상 기체" data-size="19" data-anchor="end" fill="#5B6B7F" data-halo="1"></text><g data-anim="draw" data-dur="1.3" data-delay="0.0"><path d="M80.3 198.1 L83.2 197.7 L86.2 197.2 L89.1 196.7 L92 196.2 L95 195.8 L97.9 195.3 L100.8 194.8 L103.8 194.3 L106.7 193.7 L109.7 193.2 L112.6 192.7 L115.5 192.2 L118.5 191.6 L121.4 191.1 L124.3 190.6 L127.3 190 L130.2 189.5 L133.1 188.9 L136.1 188.4 L139 187.8 L141.9 187.2 L144.9 186.6 L147.8 186.1 L150.7 185.5 L153.7 184.9 L156.6 184.3 L159.6 183.7 L162.5 183.1 L165.4 182.5 L168.4 181.9 L171.3 181.3 L174.2 180.7 L177.2 180.1 L180.1 179.4 L183 178.8 L186 178.2 L188.9 177.5 L191.8 176.9 L194.8 176.3 L197.7 175.6 L200.7 175 L203.6 174.3 L206.5 173.7 L209.5 173 L212.4 172.4 L215.3 171.7 L218.3 171 L221.2 170.4 L224.1 169.7 L227.1 169 L230 168.4 L232.9 167.7 L235.9 167 L238.8 166.3 L241.8 165.6 L244.7 164.9 L247.6 164.3 L250.6 163.6 L253.5 162.9 L256.4 162.2 L259.4 161.5 L262.3 160.8 L265.2 160.1 L268.2 159.4 L271.1 158.7 L274 158 L277 157.3 L279.9 156.5 L282.9 155.8 L285.8 155.1 L288.7 154.4 L291.7 153.7 L294.6 153 L297.5 152.3 L300.5 151.5 L303.4 150.8 L306.3 150.1 L309.3 149.4 L312.2 148.6 L315.1 147.9 L318.1 147.2 L321 146.4 L324 145.7 L326.9 145 L329.8 144.2 L332.8 143.5 L335.7 142.8 L338.6 142 L341.6 141.3 L344.5 140.5 L347.4 139.8 L350.4 139.1 L353.3 138.3 L356.2 137.6 L359.2 136.8 L362.1 136.1 L365.1 135.3 L368 134.6 L370.9 133.8 L373.9 133.1 L376.8 132.3 L379.7 131.6 L382.7 130.8 L385.6 130.1 L388.5 129.3 L391.5 128.6 L394.4 127.8 L397.3 127 L400.3 126.3 L403.2 125.5 L406.2 124.8 L409.1 124 L412 123.2 L415 122.5 L417.9 121.7 L420.8 121 L423.8 120.2 L426.7 119.4 L429.6 118.7 L432.6 117.9 L435.5 117.1 L438.4 116.4 L441.4 115.6 L444.3 114.8 L447.3 114.1 L450.2 113.3 L453.1 112.5 L456.1 111.8 L459 111 L461.9 110.2 L464.9 109.4 L467.8 108.7 L470.7 107.9 L473.7 107.1 L476.6 106.4 L479.5 105.6 L482.5 104.8 L485.4 104 L488.4 103.3 L491.3 102.5 L494.2 101.7 L497.2 100.9 L500.1 100.2 L503 99.4 L506 98.6 L508.9 97.8 L511.8 97.1 L514.8 96.3 L517.7 95.5 L520.6 94.7 L523.6 93.9 L526.5 93.2 L529.5 92.4 L532.4 91.6 L535.3 90.8 L538.3 90 L541.2 89.3 L544.1 88.5 L547.1 87.7 L550 86.9" fill="none" stroke="#7B4FC8" stroke-width="3.5" stroke-linejoin="round"/></g><text class="tex" x="456" y="139.8" data-mix="$\ce{H2}$" data-size="20" data-anchor="middle" fill="#7B4FC8" data-halo="1"></text><g data-anim="draw" data-dur="1.3" data-delay="0.3"><path d="M80.3 198.1 L83.2 197.5 L86.2 196.8 L89.1 196.1 L92 195.5 L95 194.8 L97.9 194.2 L100.8 193.5 L103.8 192.9 L106.7 192.2 L109.7 191.5 L112.6 190.9 L115.5 190.2 L118.5 189.5 L121.4 188.9 L124.3 188.2 L127.3 187.5 L130.2 186.9 L133.1 186.2 L136.1 185.5 L139 184.9 L141.9 184.2 L144.9 183.5 L147.8 182.9 L150.7 182.2 L153.7 181.5 L156.6 180.8 L159.6 180.2 L162.5 179.5 L165.4 178.8 L168.4 178.1 L171.3 177.5 L174.2 176.8 L177.2 176.1 L180.1 175.4 L183 174.8 L186 174.1 L188.9 173.4 L191.8 172.7 L194.8 172 L197.7 171.4 L200.7 170.7 L203.6 170 L206.5 169.3 L209.5 168.6 L212.4 168 L215.3 167.3 L218.3 166.6 L221.2 165.9 L224.1 165.2 L227.1 164.6 L230 163.9 L232.9 163.2 L235.9 162.5 L238.8 161.8 L241.8 161.1 L244.7 160.4 L247.6 159.8 L250.6 159.1 L253.5 158.4 L256.4 157.7 L259.4 157 L262.3 156.3 L265.2 155.6 L268.2 155 L271.1 154.3 L274 153.6 L277 152.9 L279.9 152.2 L282.9 151.5 L285.8 150.8 L288.7 150.1 L291.7 149.5 L294.6 148.8 L297.5 148.1 L300.5 147.4 L303.4 146.7 L306.3 146 L309.3 145.3 L312.2 144.6 L315.1 143.9 L318.1 143.2 L321 142.6 L324 141.9 L326.9 141.2 L329.8 140.5 L332.8 139.8 L335.7 139.1 L338.6 138.4 L341.6 137.7 L344.5 137 L347.4 136.3 L350.4 135.6 L353.3 134.9 L356.2 134.3 L359.2 133.6 L362.1 132.9 L365.1 132.2 L368 131.5 L370.9 130.8 L373.9 130.1 L376.8 129.4 L379.7 128.7 L382.7 128 L385.6 127.3 L388.5 126.6 L391.5 125.9 L394.4 125.2 L397.3 124.5 L400.3 123.8 L403.2 123.2 L406.2 122.5 L409.1 121.8 L412 121.1 L415 120.4 L417.9 119.7 L420.8 119 L423.8 118.3 L426.7 117.6 L429.6 116.9 L432.6 116.2 L435.5 115.5 L438.4 114.8 L441.4 114.1 L444.3 113.4 L447.3 112.7 L450.2 112 L453.1 111.3 L456.1 110.6 L459 109.9 L461.9 109.2 L464.9 108.5 L467.8 107.8 L470.7 107.1 L473.7 106.4 L476.6 105.8 L479.5 105.1 L482.5 104.4 L485.4 103.7 L488.4 103 L491.3 102.3 L494.2 101.6 L497.2 100.9 L500.1 100.2 L503 99.5 L506 98.8 L508.9 98.1 L511.8 97.4 L514.8 96.7 L517.7 96 L520.6 95.3 L523.6 94.6 L526.5 93.9 L529.5 93.2 L532.4 92.5 L535.3 91.8 L538.3 91.1 L541.2 90.4 L544.1 89.7 L547.1 89 L550 88.3" fill="none" stroke="#E08A2C" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 5"/></g><text class="tex" x="409" y="105.8" data-mix="$\ce{He}$" data-size="20" data-anchor="end" fill="#E08A2C" data-halo="1"></text><g data-anim="draw" data-dur="1.3" data-delay="0.6"><path d="M80.3 198.4 L83.2 200.1 L86.2 201.8 L89.1 203.6 L92 205.4 L95 207.2 L97.9 209 L100.8 210.8 L103.8 212.7 L106.7 214.5 L109.7 216.4 L112.6 218.2 L115.5 220.1 L118.5 221.9 L121.4 223.7 L124.3 225.4 L127.3 227.1 L130.2 228.6 L133.1 230.1 L136.1 231.4 L139 232.6 L141.9 233.6 L144.9 234.4 L147.8 235 L150.7 235.5 L153.7 235.7 L156.6 235.7 L159.6 235.6 L162.5 235.4 L165.4 235 L168.4 234.4 L171.3 233.8 L174.2 233 L177.2 232.2 L180.1 231.3 L183 230.4 L186 229.3 L188.9 228.3 L191.8 227.2 L194.8 226 L197.7 224.8 L200.7 223.6 L203.6 222.4 L206.5 221.1 L209.5 219.8 L212.4 218.5 L215.3 217.2 L218.3 215.9 L221.2 214.6 L224.1 213.2 L227.1 211.8 L230 210.5 L232.9 209.1 L235.9 207.7 L238.8 206.3 L241.8 204.9 L244.7 203.5 L247.6 202.1 L250.6 200.7 L253.5 199.2 L256.4 197.8 L259.4 196.4 L262.3 195 L265.2 193.5 L268.2 192.1 L271.1 190.7 L274 189.2 L277 187.8 L279.9 186.3 L282.9 184.9 L285.8 183.5 L288.7 182 L291.7 180.6 L294.6 179.1 L297.5 177.7 L300.5 176.2 L303.4 174.8 L306.3 173.3 L309.3 171.9 L312.2 170.5 L315.1 169 L318.1 167.6 L321 166.1 L324 164.7 L326.9 163.2 L329.8 161.8 L332.8 160.3 L335.7 158.9 L338.6 157.5 L341.6 156 L344.5 154.6 L347.4 153.1 L350.4 151.7 L353.3 150.3 L356.2 148.8 L359.2 147.4 L362.1 145.9 L365.1 144.5 L368 143.1 L370.9 141.6 L373.9 140.2 L376.8 138.8 L379.7 137.3 L382.7 135.9 L385.6 134.5 L388.5 133 L391.5 131.6 L394.4 130.2 L397.3 128.7 L400.3 127.3 L403.2 125.9 L406.2 124.4 L409.1 123 L412 121.6 L415 120.2 L417.9 118.7 L420.8 117.3 L423.8 115.9 L426.7 114.5 L429.6 113 L432.6 111.6 L435.5 110.2 L438.4 108.8 L441.4 107.4 L444.3 105.9 L447.3 104.5 L450.2 103.1 L453.1 101.7 L456.1 100.3 L459 98.9 L461.9 97.4 L464.9 96 L467.8 94.6 L470.7 93.2 L473.7 91.8 L476.6 90.4 L479.5 89 L482.5 87.6 L485.4 86.2 L488.4 84.8 L491.3 83.3 L494.2 81.9 L497.2 80.5 L500.1 79.1 L503 77.7 L506 76.3 L508.9 74.9 L511.8 73.5 L514.8 72.1 L517.7 70.7 L520.6 69.3 L523.6 67.9 L526.5 66.5 L529.5 65.1 L532.4 63.7 L535.3 62.3 L538.3 60.9 L541.2 59.5 L544.1 58.1 L547.1 56.7 L550 55.3" fill="none" stroke="#2E9E6A" stroke-width="3.5" stroke-linejoin="round"/></g><text class="tex" x="373.8" y="126.2" data-mix="$\ce{CH4}$" data-size="20" data-anchor="end" fill="#2E9E6A" data-halo="1"></text><g data-anim="draw" data-dur="1.3" data-delay="0.8999999999999999"><path d="M80.3 198.3 L83.2 199.1 L86.2 200 L89.1 200.8 L92 201.6 L95 202.5 L97.9 203.3 L100.8 204.1 L103.8 204.9 L106.7 205.7 L109.7 206.5 L112.6 207.3 L115.5 208.1 L118.5 208.8 L121.4 209.5 L124.3 210.2 L127.3 210.9 L130.2 211.6 L133.1 212.2 L136.1 212.8 L139 213.4 L141.9 214 L144.9 214.5 L147.8 214.9 L150.7 215.4 L153.7 215.8 L156.6 216.1 L159.6 216.4 L162.5 216.7 L165.4 216.9 L168.4 217.1 L171.3 217.2 L174.2 217.3 L177.2 217.3 L180.1 217.3 L183 217.2 L186 217.1 L188.9 217 L191.8 216.8 L194.8 216.5 L197.7 216.2 L200.7 215.9 L203.6 215.5 L206.5 215.1 L209.5 214.7 L212.4 214.2 L215.3 213.7 L218.3 213.1 L221.2 212.6 L224.1 212 L227.1 211.3 L230 210.7 L232.9 210 L235.9 209.3 L238.8 208.6 L241.8 207.9 L244.7 207.2 L247.6 206.4 L250.6 205.6 L253.5 204.8 L256.4 204 L259.4 203.2 L262.3 202.3 L265.2 201.5 L268.2 200.6 L271.1 199.8 L274 198.9 L277 198 L279.9 197.1 L282.9 196.2 L285.8 195.3 L288.7 194.4 L291.7 193.4 L294.6 192.5 L297.5 191.6 L300.5 190.6 L303.4 189.7 L306.3 188.7 L309.3 187.8 L312.2 186.8 L315.1 185.8 L318.1 184.9 L321 183.9 L324 182.9 L326.9 181.9 L329.8 181 L332.8 180 L335.7 179 L338.6 178 L341.6 177 L344.5 176 L347.4 175 L350.4 174 L353.3 173 L356.2 172 L359.2 171 L362.1 170 L365.1 169 L368 167.9 L370.9 166.9 L373.9 165.9 L376.8 164.9 L379.7 163.9 L382.7 162.9 L385.6 161.8 L388.5 160.8 L391.5 159.8 L394.4 158.8 L397.3 157.7 L400.3 156.7 L403.2 155.7 L406.2 154.7 L409.1 153.6 L412 152.6 L415 151.6 L417.9 150.6 L420.8 149.5 L423.8 148.5 L426.7 147.5 L429.6 146.4 L432.6 145.4 L435.5 144.4 L438.4 143.4 L441.4 142.3 L444.3 141.3 L447.3 140.3 L450.2 139.2 L453.1 138.2 L456.1 137.2 L459 136.1 L461.9 135.1 L464.9 134.1 L467.8 133 L470.7 132 L473.7 131 L476.6 129.9 L479.5 128.9 L482.5 127.9 L485.4 126.8 L488.4 125.8 L491.3 124.8 L494.2 123.8 L497.2 122.7 L500.1 121.7 L503 120.7 L506 119.6 L508.9 118.6 L511.8 117.6 L514.8 116.5 L517.7 115.5 L520.6 114.5 L523.6 113.4 L526.5 112.4 L529.5 111.4 L532.4 110.3 L535.3 109.3 L538.3 108.3 L541.2 107.2 L544.1 106.2 L547.1 105.2 L550 104.2" fill="none" stroke="#0E7490" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 5"/></g><text class="tex" x="273.9" y="228.9" data-mix="$\ce{O2}$" data-size="20" data-anchor="middle" fill="#0E7490" data-halo="1"></text></svg></div>
+    <div class="col stack">
+      <p class="f21">이상 기체는 압력과 관계없이 $Z=1$이지만, 실제 기체의 $Z$는 압력에 따라 달라진다.</p>
+      <p class="f21 step"><b>압력 → 0</b> 분자 사이가 매우 멀어 상호 작용을 무시할 수 있으므로 기체의 종류와 관계없이 $Z\to1$</p>
+      <p class="f21 step"><b>$\ce{CH4}$, $\ce{O2}$</b> 중간 압력에서 $Z&lt;1$(인력) → 높은 압력에서 $Z&gt;1$(분자 부피)</p>
+      <p class="f21 step"><b>$\ce{H2}$, $\ce{He}$</b> 인력이 매우 약해 처음부터 $Z&gt;1$</p>
+      <p class="small">0 °C에서 반데르발스 식(표 Ⅱ-1의 상수)으로 계산한 곡선</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 확인 문제 01 (그래프 해석) ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>압축 인자 그래프 해석</h2>
+  <p class="f22">앞 그래프에서 0 °C, 100 atm일 때 메테인의 $Z\approx0.74$, 수소의 $Z\approx1.08$이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21"><b>Q</b> (1) 같은 조건에서 메테인 1 mol의 실제 부피는 이상 기체로 계산한 부피보다 큰가, 작은가? 그 까닭은?</p>
+      <p class="f21 step">→ <span class="ans">작다</span> ($Z&lt;1$). 분자 사이의 인력이 분자를 서로 끌어당기는 효과가 크다.</p>
+      <p class="f21 mt8"><b>Q</b> (2) 수소가 $Z&gt;1$인 까닭은?</p>
+      <p class="f21 step">→ 수소 분자 사이의 인력은 매우 약하므로 <span class="ans">분자 자체 부피</span>의 효과가 더 크게 나타난다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 반데르발스 상태 방정식 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="반데르발스 상태 방정식">
+  <h2><span class="no">5</span>반데르발스 상태 방정식</h2>
+  <p class="f22">1873년 네덜란드의 물리학자 <b>반데르발스</b>는 분자 사이의 인력과 반발력을 보정하여 실제 기체를 설명하는 상태 방정식을 제안하였다.</p>
+  <div class="formula mt12">$\left[P+a\left(\dfrac{n}{V}\right)^2\right]\times(V-nb)=nRT$</div>
+  <div class="row mt12">
+    <div class="col"><div class="card"><h3>$a$ — 압력 보정</h3><p class="f21">분자 사이에 작용하는 <b>인력</b>의 정도</p></div></div>
+    <div class="col"><div class="card"><h3>$b$ — 부피 보정</h3><p class="f21">분자 <b>자체 부피</b>, 곧 분자 사이의 반발 정도</p></div></div>
+  </div>
+  <p class="f21 mt12"><mark>반데르발스 상수</mark> $a$와 $b$는 기체마다 다른 값을 가진다.</p>
+</section>
+
+<!-- ════════ 11. ⑥ 보정 항의 뜻 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="보정 항의 뜻">
+  <h2><span class="no">6</span>두 보정 항의 뜻</h2>
+  <div class="stages c2">
+    <div class="stage"><svg class="fig" viewBox="0 0 290 252" style="width:290px" aria-label="벽 가까이 온 분자를 안쪽 분자들이 잡아당겨 충돌이 약해짐"><rect x="10" y="20" width="250" height="190" rx="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><rect x="260" y="20" width="16" height="190" rx="0" fill="#C9D3DD" stroke="#8C99A6" stroke-width="1.5"/><circle cx="80" cy="70" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="140" cy="140" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="70" cy="170" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="180" cy="80" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="120" cy="100" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="200" cy="170" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><line x1="150" y1="110" x2="232" y2="118" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="120" y1="165" x2="232" y2="118" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="200" y1="140" x2="232" y2="118" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="232" cy="118" r="11" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><g data-arw="244,118,258,118,plus,3"></g><g data-arw="222,118,170,118,muted,3"></g><text class="tex" x="190" y="104" data-mix="인력" data-size="19" data-anchor="middle" fill="#5B6B7F" data-halo="1"></text><text class="tex" x="135" y="238" data-mix="벽에 부딪히는 힘이 약해진다" data-size="19" data-anchor="middle"></text></svg><h3>압력 보정 $+a\left(\dfrac{n}{V}\right)^2$</h3><p class="f21">인력이 분자의 운동을 방해하여 측정 압력 $P$가 이상 기체에서 예상한 값보다 <b>작다</b>. → 측정한 $P$에 <b>더해</b> 준다.</p></div>
+    <div class="stage"><svg class="fig" viewBox="0 0 290 252" style="width:290px" aria-label="분자 자체 부피 때문에 다른 분자가 들어갈 수 없는 영역(점선 원)"><rect x="10" y="20" width="250" height="190" rx="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><circle cx="60" cy="70" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="60" cy="70" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="130" cy="60" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="130" cy="60" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="205" cy="80" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="205" cy="80" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="90" cy="150" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="90" cy="150" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="170" cy="140" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="170" cy="140" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="220" cy="180" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="220" cy="180" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><circle cx="50" cy="185" r="24" fill="#E08A2C" stroke="#E08A2C" stroke-width="1.5" stroke-dasharray="4 3" fill-opacity=".14"/><circle cx="50" cy="185" r="12" fill="#F2A65A" stroke="#B4561C" stroke-width="1.5"/><text class="tex" x="135" y="238" data-mix="분자 부피만큼 공간이 준다" data-size="19" data-anchor="middle"></text></svg><h3>부피 보정 $-nb$</h3><p class="f21">분자 자체 부피가 있어 다른 분자가 들어갈 수 없으므로, 분자가 실제로 움직일 수 있는 공간은 측정 부피 $V$보다 <b>작다</b>. → $V$에서 $nb$를 <b>뺀다</b>.</p></div>
+  </div>
+  <p class="f21 mt8 step" data-q><b>Q</b> $a=0$, $b=0$이면 이 식은? → <span class="ans">$PV=nRT$ (이상 기체 방정식)</span></p>
+</section>
+
+<!-- ════════ 12. ⑦ 반데르발스 상수 표 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="반데르발스 상수 표">
+  <h2><span class="no">7</span>몇 가지 기체의 반데르발스 상수</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">
+      <table class="tight ac211-vdw">
+        <tr><th>물질</th><th>화학식</th><th>$a$</th><th>$b$</th><th>물질</th><th>화학식</th><th>$a$</th><th>$b$</th></tr>
+        <tr><td>물</td><td>$\ce{H2O}$</td><td>5.537</td><td>0.0305</td><td>네온</td><td>$\ce{Ne}$</td><td>0.208</td><td>0.0167</td></tr>
+        <tr><td>암모니아</td><td>$\ce{NH3}$</td><td>4.225</td><td>0.0371</td><td>이산화 탄소</td><td>$\ce{CO2}$</td><td>3.658</td><td>0.0429</td></tr>
+        <tr><td>황화 수소</td><td>$\ce{H2S}$</td><td>4.544</td><td>0.0434</td><td>수소</td><td>$\ce{H2}$</td><td>0.2452</td><td>0.0265</td></tr>
+        <tr><td>아르곤</td><td>$\ce{Ar}$</td><td>1.355</td><td>0.0320</td><td>산소</td><td>$\ce{O2}$</td><td>1.382</td><td>0.0319</td></tr>
+        <tr><td>헬륨</td><td>$\ce{He}$</td><td>0.0346</td><td>0.0238</td><td>메테인</td><td>$\ce{CH4}$</td><td>2.303</td><td>0.0431</td></tr>
+        <tr><td colspan="4"></td><td>벤젠</td><td>$\ce{C6H6}$</td><td>18.57</td><td>0.1193</td></tr>
+      </table>
+      <p class="small">$a$ [$\text{bar}\cdot\text{L}^2/\text{mol}^2$], $b$ [L/mol]</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (1) $a$가 가장 작은 기체와, 크게 나타나는 기체는?</p>
+      <p class="f21 step">→ <span class="ans">헬륨</span>이 가장 작다. 극성이 커 분자 사이의 힘이 큰 $\ce{H2O}$, $\ce{NH3}$와 분자가 큰 벤젠은 $a$가 크다.</p>
+      <p class="f21"><b>Q</b> (2) $b$가 가장 큰 기체와 그 까닭은?</p>
+      <p class="f21 step">→ <span class="ans">벤젠</span> — 분자 자체가 가장 크다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑧ 비리얼 방정식과 보일 온도 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="비리얼 방정식과 보일 온도">
+  <h2><span class="no">8</span>비리얼 방정식 꼴과 보일 온도</h2>
+  <p class="f21">반데르발스 식을 1 mol에 대해 $Z$로 정리하면 ($V_\mathrm{m}$: 몰 부피)</p>
+  <div class="step f21">$\begin{aligned}Z=\dfrac{PV_\mathrm{m}}{RT}&amp;=\dfrac{V_\mathrm{m}}{V_\mathrm{m}-b}-\dfrac{a}{RTV_\mathrm{m}}=\dfrac{1}{1-b/V_\mathrm{m}}-\dfrac{a}{RTV_\mathrm{m}}\\ &amp;=1+\left(b-\dfrac{a}{RT}\right)\dfrac{1}{V_\mathrm{m}}+\left(\dfrac{b}{V_\mathrm{m}}\right)^2+\cdots\qquad\left(\tfrac{1}{1-x}=1+x+x^2+\cdots\right)\end{aligned}$</div>
+  <div class="formula sm step">비리얼 방정식: $\dfrac{PV_\mathrm{m}}{RT}=1+\dfrac{B}{V_\mathrm{m}}+\dfrac{C}{V_\mathrm{m}^{\,2}}+\cdots$</div>
+  <p class="f21 step">$V_\mathrm{m}$이 클 때 $\dfrac{B}{V_\mathrm{m}}\gg\dfrac{C}{V_\mathrm{m}^{\,2}}$이므로, $B=0$이 되는 온도에서 실제 기체는 이상 기체처럼 행동한다. 이 온도가 <mark>보일 온도</mark> $T_\mathrm{B}$이다.</p>
+  <p class="f21 step">반데르발스 식에서 $B=b-\dfrac{a}{RT}=0$ → $T_\mathrm{B}=\dfrac{a}{Rb}$ <span class="small">(예: $\ce{N2}$ 약 430 K, $\ce{H2}$ 약 110 K — 실제 측정값과는 차이가 있다)</span></p>
+</section>
+
+<!-- ════════ 14. 다양한 상태 방정식 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="여러 가지 상태 방정식">
+  <h2><span class="tag alt">더 알아보기</span>여러 가지 실제 기체 상태 방정식</h2>
+  <p class="f21">반데르발스 식 말고도 실제 기체를 더 정확히 나타내려는 여러 상태 방정식이 있다. <b>식을 외우지 않고</b>, 무엇을 보정했는지만 살펴보자.</p>
+  <table class="tight ac211-eos mt8">
+    <tr><th>상태 방정식</th><th>식의 꼴</th><th>보정한 점</th></tr>
+    <tr><td>비리얼 방정식</td><td>$Z=1+\dfrac{B}{V_\mathrm{m}}+\dfrac{C}{V_\mathrm{m}^{\,2}}+\cdots$</td><td class="l">계수 $B$, $C$를 실험으로 정한다. 항을 늘릴수록 정확하다.</td></tr>
+    <tr><td>베르텔로 방정식</td><td>$\left(P+\dfrac{a}{TV_\mathrm{m}^{\,2}}\right)(V_\mathrm{m}-b)=RT$</td><td class="l">인력 보정이 온도가 높을수록 작아지게 했다.</td></tr>
+    <tr><td>레들리히–퀑 방정식</td><td>$P=\dfrac{RT}{V_\mathrm{m}-b}-\dfrac{a}{\sqrt T\,V_\mathrm{m}(V_\mathrm{m}+b)}$</td><td class="l">공학에서 기체·액체 계산에 널리 쓰인다.</td></tr>
+  </table>
+  <p class="f21 mt12 step">→ 모두 $P$가 작아지면 $PV_\mathrm{m}=RT$로 돌아간다. 이상적인 가정에서 출발한 식을 보정해 넓혀 가는 것이 상태 방정식의 확장성이다.</p>
+</section>
+
+<!-- ════════ 15. 예제 Ⅱ-2 ════════ -->
+<section class="slide" data-sec="02 · 반데르발스 상태 방정식" data-title="예제 Ⅱ-2">
+  <h2><span class="tag ex">예제 Ⅱ-2</span>반데르발스 식으로 압력 구하기</h2>
+  <p class="f21"><b>Q</b> 0 °C에서 부피 5.00 L인 용기에 어떤 기체 1.50 mol이 들어 있을 때, 반데르발스 상태 방정식으로 구한 압력 $P$는? ($R=8.314\times10^{-2}\ \text{L}\cdot\text{bar/(K}\cdot\text{mol)}$, $a=16.4\ \text{bar}\cdot\text{L}^2/\text{mol}^2$, $b=8.4\times10^{-2}\ \text{L/mol}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">$P=\dfrac{nRT}{V-nb}-a\left(\dfrac{n}{V}\right)^2$</p>
+      <div class="step f21">$\begin{aligned}P&amp;=\dfrac{1.50\times(8.314\times10^{-2})\times273}{5.00-1.50\times(8.4\times10^{-2})}-16.4\times\left(\dfrac{1.50}{5.00}\right)^2\\ &amp;=\dfrac{34.0}{4.874}-1.476=6.99-1.48\end{aligned}$</div>
+      <div class="answer step">$P\approx5.51\ \text{bar}$</div>
+      <p class="f21 step" data-q><b>Q</b> 이상 기체라면? → $\dfrac{nRT}{V}=6.81\ \text{bar}$. 실제 압력이 더 작다 → <span class="ans">인력의 효과가 크다</span></p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 돌턴의 부분 압력 법칙 ════════ -->
+<section class="slide" data-sec="02 · 혼합 기체의 부분 압력과 몰분율" data-title="돌턴의 부분 압력 법칙">
+  <h2><span class="no">9</span>돌턴의 부분 압력 법칙</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px"><svg class="fig" viewBox="0 0 500 320" style="width:460px" aria-label="같은 부피·온도에서 산소 2.0 atm과 질소 3.0 atm을 한 용기에 넣으면 5.0 atm (분자 수 4 + 6 = 10)"><path d="M10 92 Q10 70 40 66 L80 66 Q110 70 110 92 L110 270 Q110 280 100 280 L20 280 Q10 280 10 270 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/><rect x="52" y="48" width="16" height="18" rx="0" fill="#C9D3DD" stroke="#16233D" stroke-width="1.5"/><circle cx="60" cy="30" r="20" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><line x1="60" y1="30" x2="74" y2="30" stroke="#D7263D" stroke-width="2.5"/><text class="tex" x="86" y="36" data-tex="2.0\ \text{atm}" data-size="20" data-anchor="start"></text><g data-anim="move" data-from="1,1.3" data-rep="alt" data-dur="1"><g data-atom="41.5,182.7,8,O,-"></g><g data-atom="47.1,195.5,8,O,-"></g></g><g data-anim="move" data-from="-2.7,5" data-rep="alt" data-dur="1.3"><g data-atom="26,230.9,8,O,-"></g><g data-atom="35.6,241.1,8,O,-"></g></g><g data-anim="move" data-from="-3.5,1.3" data-rep="alt" data-dur="1.5"><g data-atom="83.1,171.9,8,O,-"></g><g data-atom="77.2,184.6,8,O,-"></g></g><g data-anim="move" data-from="-4.4,2.6" data-rep="alt" data-dur="1.4"><g data-atom="65,214.6,8,O,-"></g><g data-atom="57.8,226.6,8,O,-"></g></g><text class="tex" x="60" y="306" data-mix="$\ce{O2}$" data-size="20" data-anchor="middle"></text><path d="M170 92 Q170 70 200 66 L240 66 Q270 70 270 92 L270 270 Q270 280 260 280 L180 280 Q170 280 170 270 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/><rect x="212" y="48" width="16" height="18" rx="0" fill="#C9D3DD" stroke="#16233D" stroke-width="1.5"/><circle cx="220" cy="30" r="20" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><line x1="220" y1="30" x2="229.9" y2="39.9" stroke="#D7263D" stroke-width="2.5"/><text class="tex" x="246" y="36" data-tex="3.0\ \text{atm}" data-size="20" data-anchor="start"></text><g data-anim="move" data-from="4.4,2.4" data-rep="alt" data-dur="1.6"><g data-atom="233,216.5,8,N,-"></g><g data-atom="221.8,224.9,8,N,-"></g></g><g data-anim="move" data-from="1.5,4" data-rep="alt" data-dur="1.1"><g data-atom="198.6,175.3,8,N,-"></g><g data-atom="184.9,177.7,8,N,-"></g></g><g data-anim="move" data-from="0.7,-4.9" data-rep="alt" data-dur="1.1"><g data-atom="219.1,134.5,8,N,-"></g><g data-atom="217.2,148.4,8,N,-"></g></g><g data-anim="move" data-from="-3.4,3" data-rep="alt" data-dur="1.1"><g data-atom="212,243.9,8,N,-"></g><g data-atom="201.6,253.3,8,N,-"></g></g><g data-anim="move" data-from="4.6,0.4" data-rep="alt" data-dur="1.4"><g data-atom="244.6,236.1,8,N,-"></g><g data-atom="253.2,247.1,8,N,-"></g></g><g data-anim="move" data-from="-3.3,-3.5" data-rep="alt" data-dur="1"><g data-atom="240.7,143.5,8,N,-"></g><g data-atom="246.6,156.2,8,N,-"></g></g><text class="tex" x="220" y="306" data-mix="$\ce{N2}$" data-size="20" data-anchor="middle"></text><path d="M330 92 Q330 70 360 66 L400 66 Q430 70 430 92 L430 270 Q430 280 420 280 L340 280 Q330 280 330 270 Z" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/><rect x="372" y="48" width="16" height="18" rx="0" fill="#C9D3DD" stroke="#16233D" stroke-width="1.5"/><circle cx="380" cy="30" r="20" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><line x1="380" y1="30" x2="370.1" y2="39.9" stroke="#D7263D" stroke-width="2.5"/><text class="tex" x="406" y="36" data-tex="5.0\ \text{atm}" data-size="20" data-anchor="start"></text><g data-anim="move" data-from="-4.3,0.4" data-rep="alt" data-dur="1.2"><g data-atom="372.6,119.9,8,O,-"></g><g data-atom="366.2,132.4,8,O,-"></g></g><g data-anim="move" data-from="-0.7,-4.3" data-rep="alt" data-dur="1.1"><g data-atom="346.5,182.4,8,O,-"></g><g data-atom="360.4,184,8,O,-"></g></g><g data-anim="move" data-from="-2.8,1.3" data-rep="alt" data-dur="1.6"><g data-atom="369,231.6,8,O,-"></g><g data-atom="381.9,237,8,O,-"></g></g><g data-anim="move" data-from="-4.5,3.6" data-rep="alt" data-dur="1.2"><g data-atom="391.6,164.9,8,O,-"></g><g data-atom="377.6,166,8,O,-"></g></g><g data-anim="move" data-from="0.7,0.3" data-rep="alt" data-dur="1.5"><g data-atom="392.6,209,8,N,-"></g><g data-atom="402.7,218.7,8,N,-"></g></g><g data-anim="move" data-from="2.6,-3.5" data-rep="alt" data-dur="1.3"><g data-atom="407,114.1,8,N,-"></g><g data-atom="410.6,127.7,8,N,-"></g></g><g data-anim="move" data-from="0.7,3.8" data-rep="alt" data-dur="1.2"><g data-atom="357.5,204.2,8,N,-"></g><g data-atom="347.2,213.6,8,N,-"></g></g><g data-anim="move" data-from="1.6,-4.4" data-rep="alt" data-dur="1.4"><g data-atom="399.8,246.2,8,N,-"></g><g data-atom="401,260.1,8,N,-"></g></g><g data-anim="move" data-from="-3.5,-2.5" data-rep="alt" data-dur="1.2"><g data-atom="354,235.3,8,N,-"></g><g data-atom="349.1,248.4,8,N,-"></g></g><g data-anim="move" data-from="1.9,4.6" data-rep="alt" data-dur="1.3"><g data-atom="346.9,141.6,8,N,-"></g><g data-atom="356.5,151.8,8,N,-"></g></g><text class="tex" x="380" y="306" data-mix="혼합 기체" data-size="20" data-anchor="middle"></text><text class="tex" x="140" y="180" data-tex="+" data-size="30" data-anchor="middle"></text><text class="tex" x="300" y="180" data-tex="=" data-size="30" data-anchor="middle"></text></svg></div>
+    <div class="col stack">
+      <p class="f21">지구의 대기처럼 우리가 다루는 기체는 대부분 혼합 기체이다. 1802년 영국의 <b>돌턴</b>은 "서로 반응하지 않는 기체들의 혼합물은 한 가지 순수한 기체처럼 행동한다."라고 발표하였다.</p>
+      <p class="f21"><mark>돌턴의 부분 압력 법칙</mark>: 기체 혼합물의 전체 압력은 성분 기체들의 부분 압력의 합과 같다.</p>
+      <div class="formula sm">$P_\text{전체}=P_\mathrm{A}+P_\mathrm{B}+P_\mathrm{C}+\cdots$</div>
+      <p class="small">부분 압력: 그 성분 기체가 혼자 같은 용기 전체를 채울 때의 압력. 이상 기체 법칙이 성립하는 낮은 압력에서 잘 맞는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑩ 몰분율 ════════ -->
+<section class="slide" data-sec="02 · 혼합 기체의 부분 압력과 몰분율" data-title="부분 압력과 몰분율">
+  <h2><span class="no">10</span>부분 압력과 몰분율</h2>
+  <p class="f21">이상 기체의 압력은 분자의 종류와 관계없으므로, 혼합 기체의 전체 압력은 <b>전체 몰수</b>로 정해진다.</p>
+  <div class="formula sm">$P_\text{전체}=(n_\mathrm{A}+n_\mathrm{B}+n_\mathrm{C}+\cdots)\dfrac{RT}{V}=n_\text{전체}\dfrac{RT}{V}$</div>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21"><mark>몰분율</mark>: 혼합물에서 한 성분의 몰수를 전체 몰수로 나눈 값</p>
+      <div class="formula sm">$X_\mathrm{A}=\dfrac{n_\mathrm{A}}{n_\mathrm{A}+n_\mathrm{B}+n_\mathrm{C}+\cdots}=\dfrac{n_\mathrm{A}}{n_\text{전체}}$</div>
+    </div>
+    <div class="col stack">
+      <p class="f21">몰분율로 나타낸 성분 A의 부분 압력</p>
+      <div class="formula sm step">$P_\mathrm{A}=X_\mathrm{A}P_\text{전체}=X_\mathrm{A}\dfrac{n_\text{전체}RT}{V}=\dfrac{n_\mathrm{A}RT}{V}$</div>
+    </div>
+  </div>
+  <div class="note mt8"><b>Q</b> "부분 압력은 그 기체가 차지하는 부피의 비율이다." — 맞을까? <span class="step">→ <span class="ans">아니다.</span> 각 기체는 용기 <b>전체</b>를 채우며, 부분 압력은 전체 압력 가운데 그 기체가 기여하는 몫(몰분율에 비례)이다.</span></div>
+</section>
+
+<!-- ════════ 18. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>공기 속 산소의 부분 압력</h2>
+  <p class="f22">건조한 공기의 몰분율은 질소 0.78, 산소 0.21, 아르곤 0.01이다. 1.00 atm의 공기에서 산소의 부분 압력은? 또 이 공기를 압축하여 전체 압력이 5.00 atm이 되면 산소의 부분 압력은?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$P_{\ce{O2}}=X_{\ce{O2}}P_\text{전체}=0.21\times1.00\ \text{atm}=0.21\ \text{atm}$</p>
+      <p class="f21 step">압축해도 몰분율은 같다: $0.21\times5.00\ \text{atm}=1.05\ \text{atm}$</p>
+      <div class="answer step">0.21 atm, 1.05 atm</div>
+      <p class="small step">심해 잠수에서 산소 부분 압력이 너무 커지는 문제로 이어진다(연습 문제 4).</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 19. 탐구 활동: 목표·원리 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 기체 분자량 측정 (원리)">
+  <h2><span class="tag">탐구 활동</span>기체 분자량 측정 실험 방법 조사와 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐10]</span>모둠별로 아이소프로필 알코올을 기화시켜 기체 분자량을 측정하는 실험 방법을 조사해 수행하고, 결과를 토론하여 발표한다. 오차를 줄이기 위해 주의할 점을 500자 이내로 적는다.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>원리</b> 끓는 물에 담근 플라스크를 액체의 증기로 가득 채운 뒤 식혀서, 응축된 액체의 질량 $m$을 잰다. 증기의 $P$, $V$, $T$를 알면 이상 기체 방정식으로 몰질량을 구한다.</p>
+      <div class="formula sm step">$n=\dfrac{m}{M}=\dfrac{PV}{RT}\quad\Longrightarrow\quad M=\dfrac{mRT}{PV}$</div>
+      <p class="f21 step">$V$ = 플라스크 부피(물을 가득 채워 잰다), $T$ = 끓는 물의 온도, $P$ = 대기압(작은 구멍으로 남는 증기가 빠져나가 대기압과 같아진다)</p>
+      <p class="small">아이소프로필 알코올(프로판-2-올, $\ce{C3H7OH}$, 몰질량 60.10 g/mol, 끓는점 약 82 °C)</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 380 322" style="width:360px" aria-label="알루미늄 포일에 작은 구멍을 낸 플라스크를 끓는 물에 담가 아이소프로필 알코올을 모두 기화시키는 장치"><rect x="60" y="140" width="260" height="130" rx="8" fill="#DDEEF8" stroke="#7E8B98" stroke-width="2"/><line x1="62" y1="160" x2="318" y2="160" stroke="#9FC3DD" stroke-width="2"/><g data-anim="move" data-from="0,60" data-rep="loop" data-dur="1.4" data-delay="0.6"><circle cx="110" cy="190" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,60" data-rep="loop" data-dur="1.4" data-delay="0.3"><circle cx="160" cy="190" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,60" data-rep="loop" data-dur="1.4" data-delay="0.3"><circle cx="230" cy="190" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,60" data-rep="loop" data-dur="1.4" data-delay="0"><circle cx="280" cy="190" r="4" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><path d="M176 40 L176 110 A52 52 0 1 0 204 110 L204 40 Z" fill="#FFFFFF" fill-opacity=".85" stroke="#7E8B98" stroke-width="2.5"/><path d="M170 40 L210 40 L208 30 L172 30 Z" fill="#C9D3DD" stroke="#5B6B7F" stroke-width="1.5"/><line x1="190" y1="30" x2="190" y2="18" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="214" y="22" data-mix="작은 구멍" data-size="18" data-anchor="start" fill="#5B6B7F"></text><circle cx="178" cy="170" r="6" fill="#7B4FC8" stroke="#7B4FC8" stroke-width="1.2" fill-opacity=".35"/><circle cx="204" cy="182" r="6" fill="#7B4FC8" stroke="#7B4FC8" stroke-width="1.2" fill-opacity=".35"/><circle cx="186" cy="138" r="6" fill="#7B4FC8" stroke="#7B4FC8" stroke-width="1.2" fill-opacity=".35"/><circle cx="210" cy="150" r="6" fill="#7B4FC8" stroke="#7B4FC8" stroke-width="1.2" fill-opacity=".35"/><circle cx="168" cy="150" r="6" fill="#7B4FC8" stroke="#7B4FC8" stroke-width="1.2" fill-opacity=".35"/><text class="tex" x="190" y="250" data-mix="증기" data-size="18" data-anchor="middle" fill="#7B4FC8"></text><rect x="40" y="270" width="300" height="18" rx="3" fill="#C9D3DD" stroke="#16233D" stroke-width="1.5"/><text class="tex" x="190" y="312" data-mix="가열 장치 (불꽃 사용 금지)" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><rect x="272" y="60" width="12" height="130" rx="6" fill="#FFFFFF" stroke="#7E8B98" stroke-width="1.8"/><rect x="275" y="110" width="6" height="78" fill="#D7263D"/><text class="tex" x="290" y="74" data-tex="T" data-size="20" data-anchor="start"></text><text class="tex" x="30" y="110" data-mix="끓는 물||중탕" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 탐구 활동: 과정·안전 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>과정과 안전 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="f21"><b>준비물</b> 아이소프로필 알코올 3 mL, 둥근바닥 플라스크(250 mL), 알루미늄 포일, 고무줄, 바늘, 비커(1 L), 가열 장치, 온도계, 전자저울(0.001 g), 기압계</p>
+  <div class="stages mt8">
+    <div class="stage"><h3>① 빈 플라스크 재기</h3><p>포일 뚜껑과 고무줄을 씌운 마른 플라스크의 질량을 잰다. 포일 가운데에 바늘로 작은 구멍을 낸다.</p></div>
+    <div class="stage"><h3>② 기화시키기</h3><p>알코올 3 mL를 넣고 끓는 물에 목까지 담근다. 액체가 모두 사라지고 1–2분 더 둔 뒤 물의 온도를 잰다.</p></div>
+    <div class="stage"><h3>③ 식혀서 재기</h3><p>꺼내 바깥 물기를 닦고 실온으로 식힌 뒤 질량을 잰다. 마지막에 물을 가득 채워 부피를 잰다.</p></div>
+  </div>
+  <div class="note mt8"><b>안전</b> 보안경·실험용 장갑·실험복. 아이소프로필 알코올은 <b>인화성</b> — 불꽃이 없는 가열 장치(전기 가열기)를 쓰고 환기한다. 끓는 물에 데지 않게 집게를 쓴다. 남은 알코올은 유기 폐액 통에 모은다.</div>
+</section>
+
+<!-- ════════ 21. 실험실: 분자량 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 기체 분자량 측정">
+  <h2><span class="tag">탐구 활동</span>기체 분자량 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac211mm">
+    <div class="lab-ctl" style="flex-basis:440px">
+      <div class="ac211-seg"><span class="small">시료</span><button class="btn on" data-s="ipa">아이소프로필 알코올</button><button class="btn" data-s="etoh">에탄올</button><button class="btn" data-s="ace">아세톤</button><button class="btn" data-s="unk">미지 시료</button></div>
+      <div class="ctl"><div class="lbl"><span>플라스크 부피</span><output data-o="v"></output></div><input type="range" min="120" max="300" step="2" value="256" data-i="v" aria-label="플라스크 부피"></div>
+      <div class="ctl"><div class="lbl"><span>물중탕 온도</span><output data-o="t"></output></div><input type="range" min="90" max="100" step="0.5" value="99" data-i="t" aria-label="물중탕 온도"></div>
+      <div class="ctl"><div class="lbl"><span>대기압</span><output data-o="pa"></output></div><input type="range" min="740" max="780" step="1" value="760" data-i="pa" aria-label="대기압"></div>
+      <div class="ac211-cbs"><span class="small">오차 원인</span><br><label class="ac211-cb"><input type="checkbox" data-i="wet"> 바깥 물기를 닦지 않음</label><br><label class="ac211-cb"><input type="checkbox" data-i="early"> 액체가 남은 채로 꺼냄</label></div>
+      <div class="ac211-seg mt8"><button class="btn ac211-act" data-act="run">실험하기</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 590px">
+      <div class="lab-fig" style="width:590px;height:250px"><svg viewBox="0 0 590 250" width="590" height="250" aria-label="물중탕 속 플라스크와 측정값"></svg></div>
+      <div class="res mt8"><div class="small">계산한 몰질량 $M$ <output class="ac211-inl" data-o="big"></output></div><output class="kind ac211-msg" data-o="msg"></output></div>
+      <table class="tight ac211-log mt8"><thead><tr><th>회</th><th>시료</th><th>m (g)</th><th>V (L)</th><th>T (K)</th><th>P (atm)</th><th>M (g/mol)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동: 결과·토론 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과와 오차">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 오차 줄이기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><b>예시 값</b> $m=0.504\ \text{g}$, $V=0.256\ \text{L}$, $T=99+273=372\ \text{K}$, $P=760\ \text{mmHg}=1.00\ \text{atm}$</p>
+      <p class="f21" data-q><b>Q</b> 몰질량은?</p>
+      <div class="f21 step">$M=\dfrac{mRT}{PV}=\dfrac{0.504\times0.08206\times372}{1.00\times0.256}$</div>
+      <div class="answer step">$M\approx60.1\ \text{g/mol}$ — $\ce{C3H7OH}$(60.10)와 같다</div>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>오차를 줄이기 위한 주의 사항 <span class="small">(예시 답안 요약)</span></h3>
+        <ul class="f21 ac211-ul">
+          <li class="step">액체가 <b>모두 기화</b>한 것을 확인한 뒤 꺼낸다(남으면 $m$, $M$이 커진다).</li>
+          <li class="step">꺼낸 플라스크의 <b>바깥 물기</b>를 완전히 닦는다.</li>
+          <li class="step">플라스크를 목까지 담가 증기 전체가 물의 온도가 되게 하고, 그 온도를 정확히 잰다.</li>
+          <li class="step">포일 구멍은 작게 — 식는 동안 공기가 다시 들어와도 증기가 빠져나가지 않게 한다.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="small mt8">채점 요소(500자 글): 오차 원인 2가지 이상 · 결과($M$)가 커지는지 작아지는지 · 줄이는 방법. 발표는 모둠의 $M$과 문헌값의 차이(%)로 비교한다.</p>
+</section>
+
+<!-- ════════ 23. 화학사 ════════ -->
+<section class="slide" data-sec="02 · 화학사" data-title="화학사: 산소와 라부아지에">
+  <h2><span class="tag">화학사</span>산소와 라부아지에</h2>
+  <svg class="fig" viewBox="0 0 720 210" style="width:720px" aria-label="산소 발견과 명명의 역사: 보일, 메이오, 프리스틀리, 라부아지에"><line x1="30" y1="90" x2="690" y2="90" stroke="#5B6B7F" stroke-width="3"/><g data-anim="pop" data-o="60,90" data-delay="0"><circle cx="60" cy="90" r="9" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/></g><text class="tex" x="60" y="64" data-mix="1660" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="60" y="124" data-mix="보일" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="60" y="154" data-mix="연소에 공기가||필수" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="pop" data-o="195,90" data-delay="0.2"><circle cx="195" cy="90" r="9" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/></g><text class="tex" x="195" y="64" data-mix="1674" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="195" y="124" data-mix="메이오" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="195" y="154" data-mix="연소에 관여하는||성분이 따로" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="pop" data-o="350,90" data-delay="0.5"><circle cx="350" cy="90" r="9" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/></g><text class="tex" x="350" y="64" data-mix="1774" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="350" y="124" data-mix="프리스틀리" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="350" y="154" data-mix="$\ce{HgO}$를 가열 → 산소||(탈플로지스톤화 공기)" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="pop" data-o="500,90" data-delay="0.8"><circle cx="500" cy="90" r="9" fill="#E08A2C" stroke="#16233D" stroke-width="2"/></g><text class="tex" x="500" y="64" data-mix="1777" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="500" y="124" data-mix="라부아지에" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="500" y="154" data-mix="산소(oxygen)||이름 붙임" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="pop" data-o="640,90" data-delay="1"><circle cx="640" cy="90" r="9" fill="#E08A2C" stroke="#16233D" stroke-width="2"/></g><text class="tex" x="640" y="64" data-mix="1787" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="640" y="124" data-mix="라부아지에" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="640" y="154" data-mix="「화학물질 명명법」" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21">당시에는 물질이 탈 때 '플로지스톤'이 빠져나간다는 <b>플로지스톤설</b>이 정설이었지만, 금속을 가열하면 질량이 늘어나는 현상은 설명하지 못했다.</p>
+      <p class="f21">프리스틀리는 산화 수은을 가열해 산소를 처음 얻었으나 '탈플로지스톤화 공기'라 불렀다.</p>
+      <div class="formula sm">$\ce{2HgO(s) ->[\Delta] 2Hg(l) + O2(g)}$</div>
+    </div>
+    <div class="col stack">
+      <p class="f21">라부아지에는 이 기체와 반응한 금속의 질량이 늘고, 비금속과 반응한 생성물이 물에 녹아 산성을 띤다는 것을 알아내 <b>"산(oxy)을 만든다(genes)"</b>는 뜻으로 <b>산소(oxygen)</b>라고 이름 붙였다. 1780년 플로지스톤설을 반박하였고, 1787년 근대 화학 명명법의 기초를 세웠다.</p>
+      <p class="f21 step" data-q><b>Q</b> 오늘 탐구에서 산소의 양을 무엇으로 쟀을까? → <span class="ans">시험관의 질량 감소와 기체 부피</span> — 질량을 정확히 재는 라부아지에의 방법이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>헬륨의 속력</h2>
+  <p class="f22">25 °C에서 헬륨의 평균 제곱 속력과 제곱평균근 속력을 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$T=25+273=298\ \text{K}$, $M=4.00\ \text{g/mol}=4.00\times10^{-3}\ \text{kg/mol}$</p>
+      <p class="f21 step">$\overline{v^2}=\dfrac{3RT}{M}=\dfrac{3\times8.314\times298}{4.00\times10^{-3}}=1.86\times10^{6}\ \text{m}^2/\text{s}^2$</p>
+      <p class="f21 step">$v_\text{rms}=\sqrt{1.86\times10^{6}\ \text{m}^2/\text{s}^2}$</p>
+      <div class="answer step">$\overline{v^2}=1.86\times10^{6}\ \text{m}^2/\text{s}^2$, $v_\text{rms}=1.36\times10^{3}\ \text{m/s}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>두 기체를 한 용기에</h2>
+  <p class="f22">3기압의 산소 2 L와 4기압의 질소 3 L를 부피가 6 L인 용기에 함께 넣었다. 혼합 기체의 압력을 계산하여라. (단, 온도는 일정하다.)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 400px"><svg class="fig" viewBox="0 0 400 190" style="width:380px" aria-label="산소 2 L 3 atm과 질소 3 L 4 atm을 6 L 용기에 함께 넣음"><rect x="10" y="60" width="70" height="90" rx="6" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2.5"/><rect x="110" y="40" width="90" height="110" rx="6" fill="#FFFFFF" stroke="#1F6FD1" stroke-width="2.5"/><rect x="260" y="20" width="130" height="130" rx="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="45" y="44" data-mix="$\ce{O2}$" data-size="20" data-anchor="middle"></text><text class="tex" x="45" y="110" data-tex="2\ \text{L}" data-size="20" data-anchor="middle"></text><text class="tex" x="45" y="176" data-tex="3\ \text{atm}" data-size="19" data-anchor="middle"></text><text class="tex" x="155" y="28" data-mix="$\ce{N2}$" data-size="20" data-anchor="middle"></text><text class="tex" x="155" y="100" data-tex="3\ \text{L}" data-size="20" data-anchor="middle"></text><text class="tex" x="155" y="176" data-tex="4\ \text{atm}" data-size="19" data-anchor="middle"></text><text class="tex" x="325" y="90" data-tex="6\ \text{L}" data-size="22" data-anchor="middle"></text><text class="tex" x="325" y="176" data-tex="P=\ ?" data-size="19" data-anchor="middle"></text><g data-arw="205,95,252,95,ink,3"></g></svg></div>
+    <div class="col stack">
+      <p class="f21 step">보일 법칙 $PV=P'V'$: 산소 $3\times2=6\times P_{\ce{O2}}$ → $P_{\ce{O2}}=1$기압</p>
+      <p class="f21 step">질소 $4\times3=6\times P_{\ce{N2}}$ → $P_{\ce{N2}}=2$기압</p>
+      <div class="answer step">$P_\text{전체}=1+2=3$기압</div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>이상 기체와 반데르발스 기체의 압력</h2>
+  <p class="f21">300 °C에서 질소 기체 8.00 kg의 부피가 100 L이다. 이상 기체 방정식과 반데르발스 상태 방정식으로 압력을 계산하여 비교하여라. (질소: $a=1.40\ \text{atm}\cdot\text{L}^2/\text{mol}^2$, $b=0.04\ \text{L/mol}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step">$n=\dfrac{8.00\times10^{3}\ \text{g}}{28.02\ \text{g/mol}}=286\ \text{mol}$, $T=300+273=573\ \text{K}$</p>
+      <p class="f21 step">이상 기체: $P=\dfrac{nRT}{V}=\dfrac{286\times0.08206\times573}{100}=134\ \text{atm}$ <span class="small">(부록 풀이 135 atm)</span></p>
+      <p class="f21 step">반데르발스: $P=\dfrac{286\times0.08206\times573}{100-286\times0.04}-1.40\times\left(\dfrac{286}{100}\right)^2=151.8-11.5=140\ \text{atm}$</p>
+      <div class="answer step">이상 기체 약 134 atm &lt; 반데르발스 약 140 atm</div>
+      <p class="f21 step">→ 이 조건에서는 분자 사이의 인력보다 분자 자체 부피(반발)의 효과가 더 크다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>헬리옥스</h2>
+  <p class="f21">산소의 부분 압력이 0.1 atm 이하이거나 1.4 atm 이상이면 저산소증이나 산소 중독으로 위험하다. 심해 잠수부는 헬륨과 산소를 섞은 헬리옥스를 쓴다. 298 K에서 헬륨 24.2 g과 산소 4.32 g이 섞인 헬리옥스가 12.5 L 탱크에 들어 있다. 각 성분의 몰분율과 부분 압력, 전체 압력을 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step">$n_{\ce{He}}=\dfrac{24.2}{4.00}=6.05\ \text{mol}$, $n_{\ce{O2}}=\dfrac{4.32}{32.00}=0.135\ \text{mol}$</p>
+      <p class="f21 step">$X_{\ce{He}}=\dfrac{6.05}{6.185}=0.978$, $X_{\ce{O2}}=\dfrac{0.135}{6.185}=0.0218$</p>
+      <p class="f21 step">$P_\text{전체}=\dfrac{n_\text{전체}RT}{V}=\dfrac{6.185\times0.08206\times298}{12.5}=12.1\ \text{atm}$</p>
+      <div class="answer step">$P_{\ce{He}}=11.8\ \text{atm}$, $P_{\ce{O2}}=0.264\ \text{atm}$, $P_\text{전체}=12.1\ \text{atm}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>수상 치환으로 모은 산소</h2>
+  <p class="f21">산소 기체를 298 K, 760.0 mmHg에서 수상 치환으로 1.00 L 모았다. 생성된 산소의 질량(g)을 계산하여라. (298 K에서 수증기압 23.78 mmHg)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">$P_{\ce{O2}}=760.0-23.78=736.2\ \text{mmHg}=\dfrac{736.2}{760}\ \text{atm}=0.9687\ \text{atm}$</p>
+      <p class="f21 step">$n_{\ce{O2}}=\dfrac{P_{\ce{O2}}V}{RT}=\dfrac{0.9687\times1.00}{0.08206\times298}=3.96\times10^{-2}\ \text{mol}$</p>
+      <p class="f21 step">$m=3.96\times10^{-2}\ \text{mol}\times32.00\ \text{g/mol}$</p>
+      <div class="answer step">약 1.27 g</div>
+      <p class="small step">기체 상수 측정 탐구(01)와 같은 수증기 보정이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 기체 분자 — 02 실제 기체와 혼합 기체</h2>
+  <div class="ac211-map">
+    <div class="ac211-node ac211-dim">01 기체 분자 운동론<br>$PV=\tfrac13Nm\overline{v^2}$<br>$v_\text{rms}=\sqrt{3RT/M}$</div>
+    <div class="ac211-arr">→</div>
+    <div class="ac211-node ac211-main" data-q><b>실제 기체</b><br>❶ $Z=$ <span class="blank"><span class="step">$PV/nRT$</span></span><br>❷ $Z&lt;1$: <span class="blank"><span class="step">인력</span></span> 우세<br>❸ $a$: 인력, $b$: <span class="blank"><span class="step">분자 자체 부피</span></span><br>❹ $P\to0$이면 $Z\to$ <span class="blank"><span class="step">1</span></span></div>
+    <div class="ac211-arr">+</div>
+    <div class="ac211-node ac211-main" data-q><b>혼합 기체</b><br>❺ $P_\text{전체}=$ <span class="blank"><span class="step">$P_\mathrm{A}+P_\mathrm{B}+\cdots$</span></span><br>❻ $X_\mathrm{A}=$ <span class="blank"><span class="step">$n_\mathrm{A}/n_\text{전체}$</span></span><br>❼ $P_\mathrm{A}=$ <span class="blank"><span class="step">$X_\mathrm{A}P_\text{전체}$</span></span></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 실제 기체와 혼합 기체 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 압축 인자와 반데르발스 식으로 실제 기체가 이상 기체와 다른 원인을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 부분 압력과 몰분율을 계산하고, 기체 분자량을 실험으로 구했다.</button>
+    <button class="chk">[가치·태도] 이상적인 식을 보정해 실제를 설명하는 상태 방정식의 확장성에 흥미를 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 반데르발스 식에서 압력에는 더하고 부피에서는 빼는 까닭은? <span class="step">→ <span class="ans">인력은 측정 압력을 줄이고, 분자 부피는 움직일 공간을 줄이기</span> 때문이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 수상 치환으로 모은 기체의 압력을 구할 때 빼는 것은? <span class="step">→ <span class="ans">그 온도의 수증기압</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 2. 액체 분자 — 분자 사이의 힘이 커지면 증기압과 끓는점은 어떻게 될까?</div>
+</section>

@@ -1,0 +1,58 @@
+/* 2-M 대단원 Ⅱ 마무리 — 덱 전용 (모두 .rm29- 접두어, 산화·환원 글자색 2개) */
+.cover h1.rm29-h1{font-size:104px}
+.c-ox{color:#C2410C;font-weight:700}
+.c-rd{color:#0E7490;font-weight:700}
+.flow.rm29-flow .fnode{font-size:21px}
+/* 개념 정리 가지 그림 (교과서 70쪽 꼴) */
+.rm29-tree{display:grid;align-items:center;margin-top:4px}
+.rm29-t1{grid-template-columns:128px 26px 150px 26px 220px 26px 1fr;grid-auto-rows:minmax(64px,auto);row-gap:12px;margin-top:10px}
+.rm29-t2{grid-template-columns:128px 26px 170px 26px 200px 26px 1fr;grid-auto-rows:minmax(50px,auto);row-gap:7px}
+.rm29-n{background:#fff;border:2px dashed #C9D3DD;border-radius:14px;padding:4px 12px;font-size:20px;line-height:1.38;text-align:center;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0}
+p.rm29-n{display:block;align-self:center}
+.rm29-root{grid-column:1;background:#2E7D5B;color:#fff;border:0;border-radius:50%;font-weight:700;aspect-ratio:1;align-self:center;font-size:23px}
+.rm29-mid{background:#E8457F;color:#fff;border:0;font-weight:700;border-radius:40px}
+.rm29-tree .rm29-n:not(.rm29-root):not(.rm29-mid):not(.rm29-leaf){background:#D7F0DD;border:0;font-weight:600}
+.rm29-leaf{text-align:left;justify-content:flex-start}
+.rm29-a{text-align:center;font-size:24px;color:var(--muted)}
+.rm29-n .blank{min-width:96px}
+/* 연결 다섯 카드 */
+.stages.rm29-st5{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.stages.rm29-st5 .stage{min-width:0;padding:12px 10px}
+.stages.rm29-st5 h3{font-size:21px;margin:0 0 6px}
+.stages.rm29-st5 p{font-size:19px;line-height:1.45;margin:6px 0 0}
+/* 대응표 */
+table.rm29-map{width:100%}
+table.rm29-map th,table.rm29-map td{font-size:19px;padding:2px 10px}
+table.rm29-map td:nth-child(4){white-space:nowrap;color:var(--muted)}
+table.rm29-map td:last-child{white-space:nowrap;font-weight:700}
+table.rm29-map tr.rm29-here td{background:#FFF6C2}
+/* 글쓰기 */
+.rm29-src .card p{font-size:20px;line-height:1.45;margin:0}
+.stages.c2.rm29-two .stage p{font-size:20px;line-height:1.45;margin:4px 0 0}
+table.rm29-cmp{width:100%}
+table.rm29-cmp th,table.rm29-cmp td{font-size:21px;padding:7px 12px}
+table.rm29-cmp td:first-child{font-weight:700;white-space:nowrap}
+table.rm29-cmp tr.rm29-here td{background:#FFF6C2}
+.answer.rm29-left{text-align:left;font-weight:400;font-size:21px;line-height:1.55}
+.rm29-cards .card p{font-size:20px;line-height:1.45;margin:0 0 4px}
+.rm29-chips{display:flex;flex-wrap:wrap;gap:10px}
+.rm29-chips > span{background:#F3EBDD;border-radius:10px;padding:7px 14px;font-size:20px}
+table.rm29-phy{width:100%}
+table.rm29-phy td,table.rm29-phy th{font-size:20px;padding:4px 10px}
+.rm29-dot{display:inline-block;width:16px;height:16px;border-radius:50%;margin-right:8px;vertical-align:-2px;box-sizing:border-box}
+table.rm29-pol,table.rm29-plan{width:100%}
+table.rm29-pol td,table.rm29-pol th,table.rm29-plan td,table.rm29-plan th{font-size:20px;padding:6px 10px}
+table.rm29-plan td:first-child{font-weight:700;white-space:nowrap}
+table.rm29-eval{width:100%}
+table.rm29-eval td,table.rm29-eval th{font-size:20px;padding:5px 10px}
+table.rm29-eval td:not(.l){text-align:center;width:60px}
+/* 실험실 */
+.rm29-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:3px 0 5px}
+.rm29-seg .small{min-width:52px}
+.rm29-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 12px;font-size:19px}
+.rm29-seg .btn.rm29-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.readout.rm29-read{margin:4px 0 6px}
+table.readout.rm29-read td{white-space:nowrap}
+output.rm29-msg{font-size:19px;font-weight:600;line-height:1.45;margin-top:4px}
+table.rm29-log{width:100%;margin-top:6px}
+table.rm29-log td,table.rm29-log th{font-size:19px;padding:2px 6px;text-align:center}

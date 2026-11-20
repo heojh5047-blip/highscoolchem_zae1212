@@ -1,0 +1,66 @@
+/* 3-2-1 농도·압력 변화와 화학 평형 이동 — 덱 전용 (모두 .cm321- 접두어) */
+.cover h1.cm321-h1{font-size:84px;line-height:1.15}
+p.cm321-a{color:#1B5E3F;margin-top:6px}
+.answer.cm321-left{text-align:left}
+.cm321-bf{color:#7B4FC8}
+table.cm321-sub td,table.cm321-sub th{font-size:20px;padding:4px 10px}
+tr.cm321-cur td{background:#F2FAF5}
+table.cm321-core{width:100%}
+table.cm321-core td{font-size:22px;padding:8px 12px}
+table.cm321-core .blank{min-width:80px}
+.cm321-line{display:inline-block;width:220px;border-bottom:2px dotted var(--muted);height:1.1em;vertical-align:baseline}
+.cm321-goal{font-size:21px;line-height:1.5;margin-top:12px;padding:10px 14px;border:2px dashed var(--line);border-radius:12px;background:#fff}
+.cm321-k{display:inline-block;font-weight:700;font-size:19px;border:2px solid var(--ink);border-radius:14px;padding:0 10px;margin-right:10px}
+.cm321-flow .farr{position:relative}
+.cm321-fl{position:absolute;left:50%;top:-24px;transform:translateX(-50%);font-size:19px;color:var(--muted);white-space:nowrap}
+table.cm321-cond td,table.cm321-cond th{font-size:22px;padding:6px 20px;text-align:center}
+table.cm321-var th{font-size:20px;padding:5px 12px;width:130px}
+table.cm321-var td{font-size:20px;padding:5px 12px}
+ul.cm321-list{margin:4px 0 0 24px;padding:0}
+ul.cm321-list li{font-size:21px;line-height:1.55}
+.cm321-chip{display:inline-block;padding:0 10px;border-radius:10px;border:1.5px solid #9A9A9A;font-size:19px;background:#fff}
+.cm321-chip.cm321-or{background:#E8792B;color:#fff;border-color:#B45A1A}
+.cm321-chip.cm321-ye{background:#F2C230;border-color:#B8901A}
+.cm321-chip.cm321-br{background:#B5562A;color:#fff;border-color:#7E3A1C}
+.cm321-icons{display:flex;justify-content:space-around}
+.cm321-icons div{text-align:center}
+.cm321-icons p{font-size:20px;margin:2px 0 0;font-weight:700}
+table.cm321-waste td,table.cm321-waste th{font-size:20px;padding:6px 10px}
+.note.cm321-warn{border-left-color:#D7263D;background:#FFF1F2}
+.cm321-cards .stage{padding:8px 10px;text-align:center}
+.cm321-cards .stage svg{width:100%}
+.cm321-cards .stage p.key{font-size:19px;margin:2px 0 0;text-align:left}
+.cm321-proc .stage p.key{line-height:1.45}
+p.cm321-q{font-size:21px;text-align:center;margin:2px 0 0}
+table.cm321-four{width:100%}
+table.cm321-four td,table.cm321-four th{font-size:22px;padding:8px 12px;text-align:center}
+table.cm321-four td.l{text-align:left}
+table.cm321-four .blank{min-width:120px}
+.choices.cm321-col{display:flex;flex-direction:column;gap:12px}
+.choices.cm321-col span{font-size:23px}
+ol.cm321-ox li{margin-top:28px;font-size:23px;line-height:1.6}
+ol.cm321-ox li:first-child{margin-top:4px}
+ol.cm321-ox .blank{min-width:180px}
+table.cm321-syr{width:820px;margin:4px auto 0}
+table.cm321-syr td,table.cm321-syr th{font-size:21px;padding:5px 10px;text-align:center;width:33%}
+table.cm321-syr .blank{min-width:200px}
+.cm321-talk p{font-size:21px;margin:4px 0;padding:6px 12px;background:#F4F6F8;border-radius:12px}
+table.cm321-opt td,table.cm321-opt th{font-size:20px;padding:2px 14px;text-align:center}
+.cm321-map{display:flex;align-items:stretch;gap:16px}
+.cm321-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 20px;font-size:22px;line-height:1.6}
+.cm321-node.cm321-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm321-side{flex:0 0 220px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.cm321-node.cm321-dim{border-style:dashed;color:var(--muted);font-size:20px}
+p.cm321-ind{margin:6px 0 0 24px}
+.cm321-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.cm321-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 12px;font-size:19px}
+.cm321-seg .btn.cm321-act{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm321-seg .btn.cm321-add{border-color:var(--field);color:#1B5E3F;font-weight:700}
+.cm321-seg .btn.cm321-rs{margin-left:auto}
+.cm321-lab .lab-ctl p.small{margin:2px 0}
+.cm321-lab .res .big{font-size:32px}
+output.kind.cm321-msg{margin-top:4px;line-height:1.42;font-size:19px;font-weight:500;display:block}
+table.cm321-log{width:100%}
+table.cm321-log{table-layout:fixed}
+table.cm321-log th,table.cm321-log td{font-size:19px;padding:2px 5px;text-align:center;white-space:nowrap;overflow:hidden}
+table.cm321-log th:nth-child(1){width:48px}table.cm321-log th:nth-child(2){width:56px}table.cm321-log th:nth-child(3){width:176px}table.cm321-log th:nth-child(4){width:96px}table.cm321-log th:nth-child(5){width:112px}

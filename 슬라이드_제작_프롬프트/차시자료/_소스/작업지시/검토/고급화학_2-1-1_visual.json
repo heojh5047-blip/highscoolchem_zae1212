@@ -1,0 +1,20 @@
+{"findings":[
+{"slide":"a3","severity":"medium","rule":"D8","problem":"대기 질량 그림 오른쪽 라벨 잘림.","fix":"반영: viewBox 560으로 넓힘."},
+{"slide":"a10","severity":"medium","rule":"D8","problem":"v_xΔt 치수 라벨 위 잘림, 아래 설명 문장 왼쪽 잘림.","fix":"반영: 치수선 내림, 문장 줄여 가운데."},
+{"slide":"a12","severity":"medium","rule":"T4","problem":"E_k 식이 카드 밖으로 넘침.","fix":"반영: aligned 두 줄."},
+{"slide":"a16,a17,b8","severity":"medium","rule":"D8","problem":"축 이름이 눈금 숫자와 겹침.","fix":"반영: 축 이름을 아래로, viewBox 높이 늘림."},
+{"slide":"a17","severity":"medium","rule":"T4","problem":"분포 함수 식이 공식 상자를 넘침.","fix":"반영: 두 줄."},
+{"slide":"a18,a21","severity":"low","rule":"C1","problem":"「Q1」이 화학식으로 오검출.","fix":"반영: 「Q (1)」."},
+{"slide":"a22","severity":"low","rule":"6.5","problem":"→ 뒤 답에 .ans 없음.","fix":"반영."},
+{"slide":"a23","severity":"medium","rule":"D8","problem":"KClO3 + MnO2 라벨이 시험관과 겹침.","fix":"반영: 두 줄로 시험관 아래 왼쪽."},
+{"slide":"a14,a24","severity":"low","rule":"D8","problem":"「외부 압력 증가」, 「수면 맞춤」 라벨 잘림.","fix":"반영: 앞은 왼쪽 정렬로 옮김, 뒤는 카드 문장과 겹쳐 삭제."},
+{"slide":"a1","severity":"low","rule":"표지","problem":"표지 그림 위쪽이 표지 흐림 효과에 가려짐, 모서리 분자 두 개가 흐리게 보임.","fix":"반영: 그림을 40 내림. 모서리 흐림은 엔진 표지 그림 효과라 그대로(기각)."},
+{"slide":"b7","severity":"low","rule":"M1","problem":"\\mathrm 안 한글로 KaTeX 경고 4건.","fix":"반영: \\text{실제}, \\text{이상}."},
+{"slide":"b8","severity":"low","rule":"D8","problem":"H2·He 라벨이 겹쳐 붙음(두 곡선이 거의 같음).","fix":"반영: He는 곡선 위, H2는 아래로."},
+{"slide":"b12","severity":"high","rule":"T4","problem":"반데르발스 상수 표가 질문 칸과 겹침, 머리 칸에 유니코드 위첨자 ².","fix":"반영: 표 열 폭 640, 단위는 표 아래 KaTeX 줄로."},
+{"slide":"b14","severity":"high","rule":"D8","problem":"세 칸 상태 방정식 카드가 화면 밖으로 넘침.","fix":"반영: 표(이름·식·보정한 점)로 바꿈."},
+{"slide":"b16","severity":"medium","rule":"D8","problem":"혼합 기체 「5.0 atm」 잘림.","fix":"반영: viewBox 500."},
+{"slide":"b21","severity":"high","rule":"D8","problem":"분자량 실험실이 아래로 넘쳐 「실험하기」 버튼이 가려짐.","fix":"반영: 결과 칸을 오른쪽 열로 옮기고 오차 원인 체크를 세로로."},
+{"slide":"b23","severity":"medium","rule":"D8","problem":"연표 연도에 <b> 태그가 글자로 보임.","fix":"반영: data-weight로."},
+{"slide":"a27 등","severity":"low","rule":"S2","problem":"정답 상자가 슬라이드 가운데가 아니라 왼쪽 열 가운데.","fix":"기각: 같은 과목 완성 덱(1-1-1)과 같은 꼴(왼쪽 풀이 열 가운데 + 오른쪽 판서)."}
+],"summary":"첫 캡처의 자동 점검 a 17건·b 6건(+KaTeX 경고 4)을 모두 고쳐 0건. 전체 sheet 모음을 두 번(완성 직후·최종) 보았고 넘침·잘림·겹침이 남지 않았다."}

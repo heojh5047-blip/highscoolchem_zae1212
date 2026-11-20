@@ -1,0 +1,516 @@
+<!-- 화학_미래엔 1-2-1 화학 반응식의 의미 — 그림 좌표는 scratchpad 화학_미래엔_1-2-1/gen.py 로 계산해 넣었다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 화학의 언어" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 화학의 언어 › 2. 화학 반응식 › 01</div>
+    <h1 class="cm121-h1">화학 반응식의<br><span class="acc">의미</span></h1>
+    <p class="sub">화학 반응을 기호로 어떻게 나타낼까?</p>
+    <p class="meta">고등학교 화학 31–35쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="수소 분자 2개와 산소 분자 1개의 원자가 다시 결합해 물 분자 2개가 되는 모형"><circle cx="270" cy="270" r="250" fill="#EEF3F8"/><g data-atom="118,150,22.5,H,-,d"></g><g data-atom="162,150,22.5,H,-,d"></g><g data-atom="118,230,22.5,H,-,d"></g><g data-atom="162,230,22.5,H,-,d"></g><g data-atom="360,190,30,O,-,d"></g><g data-atom="407,190,30,O,-,d"></g><text class="tex" x="140" y="290" data-mix="$\ce{2H2}$" data-size="24" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="383" y="252" data-mix="$\ce{O2}$" data-size="24" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="262" y="200" data-mix="+" data-size="30" data-anchor="middle" fill="#5B6B7F"></text><g data-arw="270,268,270,318,ink,3"></g><g data-anim="move" data-from="-39.6,-255.1" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="157.6,405.1,22.5,H"></g></g><g data-anim="move" data-from="-60.4,-255.1" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="222.4,405.1,22.5,H"></g></g><g data-anim="move" data-from="170,-190" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="190,380,30,O"></g></g><g data-anim="move" data-from="-199.6,-175.1" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="317.6,405.1,22.5,H"></g></g><g data-anim="move" data-from="-220.4,-175.1" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="382.4,405.1,22.5,H"></g></g><g data-anim="move" data-from="57,-190" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="350,380,30,O"></g></g><text class="tex" x="270" y="478" data-mix="$\ce{2H2 + O2 -&gt; 2H2O}$" data-size="28" data-anchor="middle" data-weight="700"></text><text class="tex" x="270" y="510" data-mix="원자의 종류와 수는 그대로" data-size="21" data-anchor="middle" fill="#5B6B7F"></text></svg>
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 화학 반응식 · 도입" data-title="단원 도입: 화학 반응식">
+  <h2><span class="tag ink">단원 도입</span>2. 화학 반응식</h2>
+  <svg class="fig" viewBox="0 0 1112 150" style="width:1112px" aria-label="대단원 Ⅰ의 단원 지도, 오늘은 중단원 2의 첫 소단원"><text class="tex" x="230" y="26" data-mix="1. 생활 속 화학과 물질의 양" data-size="19" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><path d="M70 44 V36 H390 V44" fill="none" stroke="#9FB0C2" stroke-width="2.5"/><text class="tex" x="710" y="26" data-mix="2. 화학 반응식" data-size="19" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text><path d="M550 44 V36 H870 V44" fill="none" stroke="#2E9E6A" stroke-width="2.5"/><line x1="40" y1="60" x2="1072" y2="60" stroke="#C9D3DD" stroke-width="6" stroke-linecap="round"/><path d="M40 60 H600" stroke="#2E9E6A" stroke-width="6" stroke-linecap="round" fill="none" data-anim="draw" data-dur="1.2" data-delay=".3"/><circle cx="120" cy="60" r="11" fill="#2E9E6A"/><text class="tex" x="120" y="104" data-mix="01 화학과 현대||과학·기술·사회" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="340" cy="60" r="11" fill="#2E9E6A"/><text class="tex" x="340" y="104" data-mix="02 몰과||물질의 양" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="600" cy="60" r="14" fill="#2E9E6A"/><text class="tex" x="600" y="104" data-mix="01 화학 반응식의||의미" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><circle cx="820" cy="60" r="11" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="4"/><text class="tex" x="820" y="104" data-mix="02 화학 반응의||양적 관계" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><circle cx="1010" cy="60" r="11" fill="#FFFFFF" stroke="#9FB0C2" stroke-width="4"/><text class="tex" x="1010" y="104" data-mix="대단원 마무리||과학 역량·프로젝트" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><rect x="622" y="47" width="58" height="26" rx="13" fill="#FFE45C"/><text class="tex" x="651" y="66" data-mix="오늘" data-size="18" data-anchor="middle" data-weight="700"></text></svg>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 560 190" style="width:540px" aria-label="빵 2개, 패티 1장, 치즈 1장이 모여 햄버거 1개가 된다"><path d="M20 70 Q20 36 60.0 34 Q100 36 100 70 Z" fill="#E7B46A" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="44.0" cy="52.8" rx="3.5" ry="2" fill="#FFF6DD"/><ellipse cx="60.0" cy="50.0" rx="3.5" ry="2" fill="#FFF6DD"/><ellipse cx="76.0" cy="52.8" rx="3.5" ry="2" fill="#FFF6DD"/><path d="M20 110 H100 Q100 130 90 130 H30 Q20 130 20 110 Z" fill="#E7B46A" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><text class="tex" x="60" y="168" data-mix="빵 2" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="122" y="100" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><rect x="142" y="82" width="80" height="16" rx="8" fill="#7A4A2A" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="182" y="168" data-mix="패티 1" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="244" y="100" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><path d="M264 84 H344 L336 94 L304.0 100 L272 94 Z" fill="#F2C230" stroke="#16233D" stroke-width="2" stroke-linejoin="round"/><text class="tex" x="304" y="168" data-mix="치즈 1" data-size="20" data-anchor="middle" data-weight="700"></text><g data-arw="356,92,404,92,ink,3"></g><g data-anim="pop" data-o="474,90" data-dur=".8" data-delay=".9" data-ease="back"><path d="M424 66 Q424 32 474.0 30 Q524 32 524 66 Z" fill="#E7B46A" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="454.0" cy="48.8" rx="3.5" ry="2" fill="#FFF6DD"/><ellipse cx="474.0" cy="46.0" rx="3.5" ry="2" fill="#FFF6DD"/><ellipse cx="494.0" cy="48.8" rx="3.5" ry="2" fill="#FFF6DD"/><path d="M424 68 H524 L516 78 L474.0 84 L432 78 Z" fill="#F2C230" stroke="#16233D" stroke-width="2" stroke-linejoin="round"/><rect x="426" y="80" width="96" height="16" rx="8" fill="#7A4A2A" stroke="#16233D" stroke-width="2.5"/><path d="M424 98 H524 Q524 118 514 118 H434 Q424 118 424 98 Z" fill="#E7B46A" stroke="#16233D" stroke-width="2.5" stroke-linejoin="round"/></g><text class="tex" x="474" y="168" data-mix="햄버거 1" data-size="20" data-anchor="middle" data-weight="700"></text></svg></div>
+    <div class="col">
+      <div class="card q"><p class="f21">햄버거를 만들 때 정해진 비율대로 재료를 넣는 것처럼, 화학 반응에서도 반응물과 생성물 사이에 <b>일정한 양적 관계</b>가 성립한다.</p>
+      <p class="f21 mt8"><b>Q</b> 화학 반응의 양적 관계를 어떻게 알 수 있을까?</p></div>
+      <table class="tight cm121-sub mt12">
+        <tr><th>소단원</th><th>쪽</th></tr>
+        <tr class="cm121-cur"><td class="l">01 화학 반응식의 의미</td><td><b>31–35 (오늘)</b></td></tr>
+        <tr><td class="l">02 화학 반응의 양적 관계</td><td>36–40</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 스스로 학습 계획 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 화학 반응식 · 도입" data-title="스스로 학습 계획">
+  <h2><span class="tag ink">단원 도입</span>학습할 내용을 알아보고, 스스로 학습 계획 세우기</h2>
+  <table class="tight cm121-plan">
+    <tr><th>이전 학습 내용</th><td class="l"><span class="small c-muted">알고 있는 내용에 ✓</span><div class="chips mt8"><button class="chk">화학 반응식</button><button class="chk">화학 반응의 규칙성</button><button class="chk">몰</button><button class="chk">몰질량</button></div></td></tr>
+    <tr><th>이 단원의 핵심 내용</th><td class="l" data-q>본문에서 찾아보자: 화학 반응식의 의미 <span class="blank"><span class="step">31</span></span>쪽 · 화학 반응의 양적 관계 <span class="blank"><span class="step">36</span></span>쪽</td></tr>
+    <tr><th>이 단원의 학습 목표</th><td class="l"><p class="f21"><b>[지식·이해]</b> 여러 가지 반응의 화학 반응식을 쓰고, 반응물과 생성물의 양적 관계를 설명할 수 있다.</p>
+      <p class="f21"><b>[과정·기능]</b> 화학 반응의 양적 관계를 확인하는 실험을 설계·수행하고, 결과를 분석할 수 있다.</p>
+      <p class="f21"><b>[가치·태도]</b> 생활 속 화학 반응을 화학 반응식으로 이해하고, 관련된 문제를 탐구로 해결하려는 태도를 지닌다.</p></td></tr>
+    <tr><th>나의 학습 계획</th><td class="l">나는 이 단원에서 <span class="cm121-line"></span> 을/를 알고 싶다.</td></tr>
+  </table>
+</section>
+
+<!-- ════════ 4. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 화학 반응식의 의미" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12화학01-03]</span>여러 가지 반응을 화학 반응식으로 나타내고, 화학 반응에서 물질의 양적 관계를 설명할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>여러 가지 화학 반응을 <b>화학 반응식</b>으로 나타낼 수 있다.</li>
+    <li>화학 반응식에서 반응물과 생성물의 <b>몰비·분자 수 비·부피비·질량비</b>를 읽을 수 있다.</li>
+    <li>화학 반응식을 사용할 때의 <b>편리성과 유용성</b>을 인식할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">생각 열기</div><div class="farr">→</div>
+    <div class="fnode hl">화학 반응식 쓰기</div><div class="farr">→</div>
+    <div class="fnode">해 보기 · 과학 마당</div><div class="farr">→</div>
+    <div class="fnode hl">화학 반응식의 의미</div><div class="farr">→</div>
+    <div class="fnode">중단원 마무리</div>
+  </div>
+</section>
+
+<!-- ════════ 5. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 화학 반응식의 의미 · 도입" data-title="생각 열기: 화학식으로 통한다">
+  <h2><span class="tag">생각 열기</span>언어가 달라도 화학식으로 통한다</h2>
+  <svg class="fig" viewBox="0 0 1112 250" style="width:1040px" aria-label="화학식이 적힌 그릇 세 개와 서로 다른 언어로 말하지만 화학식으로 통하는 요리사들의 말풍선"><rect x="40" y="200" width="1032" height="16" rx="6" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><path d="M242 158 H358 Q354 198 300 198 Q246 198 242 158 Z" fill="#F4F8FC" stroke="#7E8B98" stroke-width="2.5"/><ellipse cx="300" cy="158" rx="58" ry="9" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><rect x="250" y="168" width="100" height="26" rx="6" fill="#FFF8D6" stroke="#E08A2C" stroke-width="1.6"/><text class="tex" x="300" y="187" data-mix="$\ce{NaCl}$" data-size="19" data-anchor="middle" data-weight="700"></text><path d="M498 158 H614 Q610 198 556 198 Q502 198 498 158 Z" fill="#F4F8FC" stroke="#7E8B98" stroke-width="2.5"/><ellipse cx="556" cy="158" rx="58" ry="9" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><rect x="506" y="168" width="100" height="26" rx="6" fill="#FFF8D6" stroke="#E08A2C" stroke-width="1.6"/><text class="tex" x="556" y="187" data-mix="$\ce{C12H22O11}$" data-size="19" data-anchor="middle" data-weight="700"></text><path d="M754 158 H870 Q866 198 812 198 Q758 198 754 158 Z" fill="#F4F8FC" stroke="#7E8B98" stroke-width="2.5"/><ellipse cx="812" cy="158" rx="58" ry="9" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><rect x="762" y="168" width="100" height="26" rx="6" fill="#FFF8D6" stroke="#E08A2C" stroke-width="1.6"/><text class="tex" x="812" y="187" data-mix="$\ce{H2O}$" data-size="19" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-o="200.0,90" data-dur=".6" data-delay="0.2" data-ease="back"><path d="M94 20 H306 Q320 20 320 34 V76 Q320 90 306 90 H262 L250 124 L244 90 H94 Q80 90 80 76 V34 Q80 20 94 20 Z" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="200" y="51" data-mix="그릇에 화학식이||표시되어 있어." data-size="20" data-anchor="middle"></text></g><g data-anim="pop" data-o="556.0,80" data-dur=".6" data-delay="0.5" data-ease="back"><path d="M450 20 H662 Q676 20 676 34 V66 Q676 80 662 80 H572 L560 118 L554 80 H450 Q436 80 436 66 V34 Q436 20 450 20 Z" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="556" y="58" data-mix="This is salt." data-size="20" data-anchor="middle"></text></g><g data-anim="pop" data-o="922.0,90" data-dur=".6" data-delay="0.8" data-ease="back"><path d="M806 20 H1038 Q1052 20 1052 34 V76 Q1052 90 1038 90 H872 L860 124 L854 90 H806 Q792 90 792 76 V34 Q792 20 806 20 Z" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="922" y="51" data-mix="언어가 달라도||화학식으로 통하네!" data-size="20" data-anchor="middle"></text></g><text class="tex" x="300" y="242" data-mix="소금" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="556" y="242" data-mix="설탕" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="812" y="242" data-mix="물" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg>
+  <p class="f22 mt12">언어가 통하지 않아도 화학식을 알면 서로 소통할 수 있다.</p>
+  <p class="f22"><b>Q</b> 말로 표현하기 어려운 복잡한 화학 반응도 화학식으로 나타내면 쉽게 알아볼 수 있을까?</p>
+  <div class="answer step">→ 화학식과 기호로 반응을 나타내면 무엇이 무엇으로 바뀌는지 누구나 한눈에 안다 — <b>화학 반응식</b></div>
+</section>
+
+<!-- ════════ 6. 연결: 화학 반응 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식" data-title="화학 반응이란">
+  <h2><span class="tag alt">연결</span>화학 반응이 일어나면 원자는 어떻게 될까?</h2>
+  <p class="f22"><mark>물질 사이에 상호작용이 일어나 성질이 다른 새로운 물질이 생성되는 현상을 화학 반응이라고 한다.</mark></p>
+  <p class="f21 mt8"><b>현상</b> 수소 기체와 산소 기체를 섞고 불꽃을 대면 물이 생긴다. <span class="small c-muted">(연계: 중학교 과학 '화학 반응의 규칙성')</span></p>
+  <div class="mt8"><svg class="fig" viewBox="0 0 1112 236" style="width:1060px" aria-label="수소 분자 2개와 산소 분자 1개가 원자로 나뉜 뒤 다시 결합하여 물 분자 2개가 된다"><rect x="20" y="14" width="300" height="180" rx="14" fill="#F4F8FC" stroke="#9FC3DD" stroke-width="2"/><text class="tex" x="170" y="222" data-mix="반응 전: $\ce{H2}$ 2개, $\ce{O2}$ 1개" data-size="21" data-anchor="middle" data-weight="700"></text><g data-atom="76,60,18,H"></g><g data-atom="104,60,18,H"></g><g data-atom="76,140,18,H"></g><g data-atom="104,140,18,H"></g><g data-atom="211.3,100,24,O"></g><g data-atom="248.7,100,24,O"></g><g data-arw="334,104,384,104,ink,3"></g><g class="step" data-g="m1"><rect x="398" y="14" width="300" height="180" rx="14" fill="#F4F8FC" stroke="#9FC3DD" stroke-width="2"/><text class="tex" x="548" y="222" data-mix="결합이 끊어짐: H 4개, O 2개" data-size="21" data-anchor="middle" data-weight="700"></text><g data-atom="450,60,18,H"></g><g data-atom="530,60,18,H"></g><g data-atom="450,148,18,H"></g><g data-atom="530,148,18,H"></g><g data-atom="620,72,24,O"></g><g data-atom="620,140,24,O"></g><g data-arw="712,104,762,104,ink,3"></g></g><g class="step" data-g="m2"><rect x="776" y="14" width="316" height="180" rx="14" fill="#F4F8FC" stroke="#9FC3DD" stroke-width="2"/><text class="tex" x="934" y="222" data-mix="새 결합: $\ce{H2O}$ 2개 (H 4개, O 2개)" data-size="21" data-anchor="middle" data-weight="700"></text><g data-anim="move" data-from="-384.1,-30.1" data-dur="1.4" data-on="step" data-ease="io"><g data-atom="834.1,90.1,18,H"></g></g><g data-anim="move" data-from="-355.9,-30.1" data-dur="1.4" data-on="step" data-ease="io"><g data-atom="885.9,90.1,18,H"></g></g><g data-anim="move" data-from="-240,2" data-dur="1.4" data-on="step" data-ease="io"><g data-atom="860,70,24,O"></g></g><g data-anim="move" data-from="-514.1,7.9" data-dur="1.4" data-on="step" data-ease="io"><g data-atom="964.1,140.1,18,H"></g></g><g data-anim="move" data-from="-485.9,7.9" data-dur="1.4" data-on="step" data-ease="io"><g data-atom="1015.9,140.1,18,H"></g></g><g data-anim="move" data-from="-370,20" data-dur="1.4" data-on="step" data-ease="io"><g data-atom="990,120,24,O"></g></g></g></svg></div>
+  <div class="answer step" data-g="m2">원자 사이의 결합이 끊어지고 새로운 결합이 생긴다 → 반응 전후에 <b>원자의 종류와 개수는 변하지 않는다.</b></div>
+</section>
+
+<!-- ════════ 7. 화학 반응식 1단계 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식" data-title="화학 반응식 쓰기 1단계">
+  <h2><span class="no">1</span>화학 반응식 — 1단계: 화학식과 →, +</h2>
+  <p class="f22"><mark>화학 반응에 참여하는 반응물과 생성물의 화학식을 이용하여 화학 반응을 나타낸 것을 화학 반응식이라고 한다.</mark></p>
+  <div class="row mt12">
+    <div class="col" style="flex:0 0 520px"><svg class="fig" viewBox="0 0 520 210" style="width:500px" aria-label="반응물 수소와 산소는 화살표 왼쪽, 생성물 물은 오른쪽"><g data-atom="78,80,18,H"></g><g data-atom="106.1,80,18,H"></g><text class="tex" x="158.1" y="89" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><g data-atom="216.1,80,24,O"></g><g data-atom="253.5,80,24,O"></g><g data-arw="297.5,80,353.5,80,ink,3"></g><g data-atom="391.5,93,18,H"></g><g data-atom="443.3,93,18,H"></g><g data-atom="417.4,73,24,O"></g><path d="M54 140 V152 H280 V140" fill="none" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="167" y="180" data-mix="반응물 (왼쪽)" data-size="21" data-anchor="middle" data-weight="700"></text><path d="M372 140 V152 H470 V140" fill="none" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="421" y="180" data-mix="생성물 (오른쪽)" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="326" y="52" data-mix="반응의 진행" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+    <div class="col">
+      <ul class="cm121-ul">
+        <li>반응물: 수소($\ce{H2}$), 산소($\ce{O2}$) → 화살표 <b>왼쪽</b></li>
+        <li>생성물: 물($\ce{H2O}$) → 화살표 <b>오른쪽</b></li>
+        <li>화살표(→)는 반응의 진행, 물질이 두 가지 이상이면 '+'로 잇는다.</li>
+      </ul>
+      <div class="formula sm mt12">$\ce{H2 + O2 -> H2O}$<div class="unit">아직 계수를 맞추지 않은 식</div></div>
+    </div>
+  </div>
+  <p class="f22 mt8"><b>Q</b> 이 식의 반응 전후 원자 수는 같을까?</p>
+  <p class="f22 step">→ 수소 원자 2개 = 2개 <span class="c-field">✓</span>, 산소 원자 <span class="ans">2개 ≠ 1개</span> <span class="c-plus">✗</span> — 산소 원자 수가 맞지 않는다.</p>
+</section>
+
+<!-- ════════ 8. 화학 반응식 2단계 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식" data-title="화학 반응식 쓰기 2단계: 계수">
+  <h2><span class="no">1</span>2단계: 원자 수가 같아지도록 계수 맞추기</h2>
+  <p class="f22">반응 전후에 원자의 종류와 수가 항상 같아지도록 화학식 앞의 <b>계수</b>를 맞춘다.</p>
+  <div class="stages mt12">
+    <div class="stage"><h3>① 원자 수 세기</h3><svg viewBox="0 0 289 140" aria-label="수소 분자 1개, 산소 분자 1개, 물 분자 1개"><g data-anim="pop" data-o="141.57105407022596,70" data-dur=".6" data-on="step" data-ease="back"><g data-atom="23.2,70,11.2,H,-"></g><g data-atom="40.6,70,11.2,H,-"></g><text class="tex" x="73.7" y="79" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><g data-atom="110.6,70,14.9,O,-"></g><g data-atom="133.8,70,14.9,O,-"></g><g data-arw="156.7,70,212.7,70,ink,3"></g><g data-atom="231.9,78.1,11.2,H,-"></g><g data-atom="264,78.1,11.2,H,-"></g><g data-atom="247.9,65.6,14.9,O,-"></g></g></svg><p class="key">$\ce{H2 + O2 -> H2O}$</p><p>H 2 = 2 <span class="c-field">✓</span> · O 2 ≠ 1 <span class="c-plus">✗</span></p></div>
+    <div class="stage step"><h3>② O 맞추기</h3><svg viewBox="0 0 289 140" aria-label="수소 분자 1개, 산소 분자 1개, 물 분자 2개"><g data-anim="pop" data-o="141.57105407022596,70" data-dur=".6" data-on="step" data-ease="back"><g data-atom="23.2,70,11.2,H,-"></g><g data-atom="40.6,70,11.2,H,-"></g><text class="tex" x="73.7" y="79" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><g data-atom="110.6,70,14.9,O,-"></g><g data-atom="133.8,70,14.9,O,-"></g><g data-arw="156.7,70,212.7,70,ink,3"></g><g data-atom="231.9,55.8,11.2,H,-"></g><g data-atom="264,55.8,11.2,H,-"></g><g data-atom="247.9,43.4,14.9,O,-"></g><g data-atom="231.9,100.3,11.2,H,-"></g><g data-atom="264,100.3,11.2,H,-"></g><g data-atom="247.9,87.9,14.9,O,-"></g></g></svg><p class="key">$\ce{H2 + O2 -> 2H2O}$</p><p>$\ce{H2O}$ 앞에 2 → O 2 = 2 <span class="c-field">✓</span> · 이제 H 2 ≠ 4 <span class="c-plus">✗</span></p></div>
+    <div class="stage step"><h3>③ H 맞추기</h3><svg viewBox="0 0 289 140" aria-label="수소 분자 2개, 산소 분자 1개, 물 분자 2개"><g data-anim="pop" data-o="141.57105407022596,70" data-dur=".6" data-on="step" data-ease="back"><g data-atom="23.2,55.8,11.2,H,-"></g><g data-atom="40.6,55.8,11.2,H,-"></g><g data-atom="23.2,84.2,11.2,H,-"></g><g data-atom="40.6,84.2,11.2,H,-"></g><text class="tex" x="73.7" y="79" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><g data-atom="110.6,70,14.9,O,-"></g><g data-atom="133.8,70,14.9,O,-"></g><g data-arw="156.7,70,212.7,70,ink,3"></g><g data-atom="231.9,55.8,11.2,H,-"></g><g data-atom="264,55.8,11.2,H,-"></g><g data-atom="247.9,43.4,14.9,O,-"></g><g data-atom="231.9,100.3,11.2,H,-"></g><g data-atom="264,100.3,11.2,H,-"></g><g data-atom="247.9,87.9,14.9,O,-"></g></g></svg><p class="key">$\ce{2H2 + O2 -> 2H2O}$</p><p>$\ce{H2}$ 앞에 2 → H 4 = 4 <span class="c-field">✓</span> · O 2 = 2 <span class="c-field">✓</span> 완성!</p></div>
+  </div>
+  <div class="note mt12">계수는 <b>가장 간단한 정수</b>로 나타내고, 계수가 1이면 생략한다.</div>
+</section>
+
+<!-- ════════ 9. 예측: 아래 첨자 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식" data-title="예측: 아래 첨자를 바꿔도 될까?">
+  <h2><span class="tag q">예측</span>아래 첨자를 바꾸어 맞춰도 될까?</h2>
+  <p class="f22"><b>Q</b> 계수 대신 화학식의 아래 첨자를 바꾸어 $\ce{H2 + O2 -> H2O2}$로 쓰면 원자 수가 맞는다. 이렇게 써도 될까?</p>
+  <div class="row mt12">
+    <div class="col">
+      <div class="choices cm121-c1"><span>(가) 된다 — 원자 수가 맞으니까.</span><span>(나) 안 된다.</span></div>
+      <p class="f21 mt16 step" data-g="p1">$\ce{H2O2}$는 물이 아니라 <b>과산화 수소</b>(소독약)이다. 물이 생기는 반응을 나타낸 식이 아니다.</p>
+    </div>
+    <div class="col" style="flex:0 0 520px"><div class="step" data-g="p1"><svg class="fig" viewBox="0 0 520 200" style="width:520px" aria-label="물 분자와 과산화 수소 분자 모형 비교"><rect x="10" y="10" width="240" height="180" rx="14" fill="#F4F8FC" stroke="#9FC3DD" stroke-width="2"/><g data-atom="104.1,100.1,18,H"></g><g data-atom="155.9,100.1,18,H"></g><g data-atom="130,80,24,O"></g><text class="tex" x="130" y="150" data-mix="물 $\ce{H2O}$" data-size="22" data-anchor="middle" data-weight="700"></text><text class="tex" x="130" y="178" data-mix="마시는 물" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><rect x="270" y="10" width="240" height="180" rx="14" fill="#FFF4EC" stroke="#E08A2C" stroke-width="2"/><g data-atom="354.9,112.4,18,H"></g><g data-atom="425.1,55.6,18,H"></g><g data-atom="371.3,84,24,O"></g><g data-atom="408.7,84,24,O"></g><text class="tex" x="390" y="150" data-mix="과산화 수소 $\ce{H2O2}$" data-size="22" data-anchor="middle" data-weight="700"></text><text class="tex" x="390" y="178" data-mix="소독약 — 다른 물질" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div></div>
+  </div>
+  <div class="answer step">(나) — 아래 첨자를 바꾸면 <b>다른 물질</b>이 된다. 원자 수는 <b>계수</b>로만 맞춘다.</div>
+</section>
+
+<!-- ════════ 10. 상태 기호 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식" data-title="물질의 상태 나타내기">
+  <h2><span class="no">1</span>3단계: 물질의 상태 나타내기</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">반응물과 생성물의 상태를 나타내려고 화학식 뒤에 기호를 쓸 수도 있다.</p>
+      <table class="tight cm121-st mt8">
+        <tr><th>상태</th><th>기호</th><th>뜻 (영어)</th></tr>
+        <tr><td>고체</td><td>(s)</td><td>solid</td></tr>
+        <tr><td>액체</td><td>(l)</td><td>liquid</td></tr>
+        <tr><td>기체</td><td>(g)</td><td>gas</td></tr>
+        <tr><td>수용액</td><td>(aq)</td><td>aqueous solution</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 440px">
+      <div class="card tip"><h3>화학 반응식 쓰기</h3>
+        <p class="f21">① 반응물·생성물의 화학식을 쓰고 →, +로 잇는다.</p>
+        <p class="f21">② 원자의 종류와 수가 같도록 계수를 맞춘다.</p>
+        <p class="f21">③ 물질의 상태를 (s), (l), (g), (aq)로 나타낸다.</p></div>
+    </div>
+  </div>
+  <div class="cm121-fig mt12"><svg class="fig" viewBox="0 0 700 130" style="width:700px" aria-label="상태 기호를 붙인 화학 반응식과 각 물질의 상태"><text class="tex" x="110" y="50" data-mix="$\ce{2H2(g)}$" data-size="30" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="0.30"><line x1="110" y1="64" x2="110" y2="86" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="110" y="112" data-mix="수소 기체" data-size="20" data-anchor="middle" fill="#5B6B7F"></text></g><text class="tex" x="225" y="50" data-mix="+" data-size="30" data-anchor="middle"></text><text class="tex" x="330" y="50" data-mix="$\ce{O2(g)}$" data-size="30" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="0.80"><line x1="330" y1="64" x2="330" y2="86" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="330" y="112" data-mix="산소 기체" data-size="20" data-anchor="middle" fill="#5B6B7F"></text></g><g data-arw="416,40,484,40,ink,3"></g><text class="tex" x="580" y="50" data-mix="$\ce{2H2O(l)}$" data-size="30" data-anchor="middle" data-weight="700"></text><g data-anim="fade" data-dur=".6" data-delay="1.30"><line x1="580" y1="64" x2="580" y2="86" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="580" y="112" data-mix="액체인 물" data-size="20" data-anchor="middle" fill="#5B6B7F"></text></g></svg></div>
+</section>
+
+<!-- ════════ 11. 직접 해 보기 ════════ -->
+<section class="slide" data-sec="01 · 직접 해 보기" data-title="직접 해 보기: 일산화 탄소의 연소">
+  <h2><span class="tag ex">직접 해 보기</span>일산화 탄소와 산소의 반응</h2>
+  <p class="f22">일산화 탄소($\ce{CO}$) 기체와 산소($\ce{O2}$) 기체가 반응해 이산화 탄소($\ce{CO2}$) 기체를 생성하는 반응을 물질의 상태를 포함한 화학 반응식으로 나타내 보자.</p>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21 step">① $\ce{CO + O2 -> CO2}$ → O 3 ≠ 2 <span class="c-plus">✗</span></p>
+      <p class="f21 step">② $\ce{CO + O2 -> 2CO2}$ → O 3 ≠ 4, C 1 ≠ 2 <span class="c-plus">✗</span></p>
+      <p class="f21 step">③ $\ce{2CO + O2 -> 2CO2}$ → C 2 = 2, O 4 = 4 <span class="c-field">✓</span></p>
+      <div class="step mt8" data-g="c4"><svg class="fig" viewBox="0 0 336 140" style="width:336px" aria-label="일산화 탄소 분자 2개와 산소 분자 1개가 이산화 탄소 분자 2개가 된다"><g data-atom="24.9,51.1,14.9,C,-"></g><g data-atom="48.1,51.1,14.9,O,-"></g><g data-atom="24.9,88.9,14.9,C,-"></g><g data-atom="48.1,88.9,14.9,O,-"></g><text class="tex" x="87" y="79" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F" data-weight="700"></text><g data-atom="125.9,70,14.9,O,-"></g><g data-atom="149.1,70,14.9,O,-"></g><g data-arw="173.9,70,229.9,70,ink,3"></g><g data-atom="254.8,51.1,14.9,O,-"></g><g data-atom="301.3,51.1,14.9,O,-"></g><g data-atom="278,51.1,14.9,C,-"></g><g data-atom="254.8,88.9,14.9,O,-"></g><g data-atom="301.3,88.9,14.9,O,-"></g><g data-atom="278,88.9,14.9,C,-"></g></svg></div>
+    </div>
+    <div class="col stack" style="flex:0 0 340px"><div class="board" style="min-height:220px"></div></div>
+  </div>
+  <div class="answer step" data-g="c4">$\ce{2CO(g) + O2(g) -> 2CO2(g)}$</div>
+</section>
+
+<!-- ════════ 12. 실험실 ════════ -->
+<section class="slide" data-sec="01 · 실험실" data-title="실험실: 계수 맞추기">
+  <h2><span class="tag">실험실</span>계수를 바꾸며 원자 수 맞추기</h2>
+  <div class="lab" data-lab="cm121bal">
+    <div class="lab-ctl" style="flex-basis:400px">
+      <div class="cm121-seg"><button class="btn on" data-r="w">물 생성</button><button class="btn" data-r="co">일산화 탄소 연소</button><button class="btn" data-r="nh">암모니아 생성</button><button class="btn" data-r="ch">메테인 연소</button><button class="btn" data-r="wd">물 분해</button></div>
+      <div class="ctl" data-c="0"><div class="lbl"><span data-o="n0"></span><output data-o="c0"></output></div><input type="range" min="1" max="6" step="1" value="1" data-i="c0" aria-label="첫째 물질의 계수"></div>
+      <div class="ctl" data-c="1"><div class="lbl"><span data-o="n1"></span><output data-o="c1"></output></div><input type="range" min="1" max="6" step="1" value="1" data-i="c1" aria-label="둘째 물질의 계수"></div>
+      <div class="ctl" data-c="2"><div class="lbl"><span data-o="n2"></span><output data-o="c2"></output></div><input type="range" min="1" max="6" step="1" value="1" data-i="c2" aria-label="셋째 물질의 계수"></div>
+      <div class="ctl" data-c="3"><div class="lbl"><span data-o="n3"></span><output data-o="c3"></output></div><input type="range" min="1" max="6" step="1" value="1" data-i="c3" aria-label="넷째 물질의 계수"></div>
+      <div class="cm121-seg mt8"><button class="btn cm121-act" data-act="rec">확인 기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind cm121-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="lab-fig" style="width:640px;height:278px">
+        <svg viewBox="0 0 640 278" width="640" height="278" aria-label="반응 전 상자와 반응 후 상자 속 분자 모형"></svg>
+        <div class="ov" data-ov="eq" style="font-size:24px;font-weight:700"></div>
+      </div>
+      <p class="small c-muted">원자 모형: 흰 공 H · 검은 공 C · 파란 공 N · 빨간 공 O</p>
+      <div class="row cm121-lrow mt8">
+        <table class="tight cm121-cnt cm121-cnt2"><thead><tr><th>원소</th><th>반응 전</th><th>반응 후</th><th></th></tr></thead><tbody data-o="cnt"></tbody></table>
+        <table class="tight cm121-log"><thead><tr><th>반응</th><th>계수</th><th>결과</th></tr></thead><tbody data-o="log"></tbody></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 해 보기 ① 녹 ════════ -->
+<section class="slide" data-sec="01 · 해 보기" data-title="해 보기: 철의 녹">
+  <h2><span class="tag">해 보기</span>생활 속 화학 반응을 화학 반응식으로 ① 녹</h2>
+  <p class="small c-muted">탐구 능력 | 의사 결정 능력</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 400px"><svg class="fig" viewBox="0 0 420 220" style="width:400px" aria-label="욕실의 철핀에 붉은 녹이 생긴 모습"><rect x="10" y="10" width="400" height="200" rx="16" fill="#EAF4F7" stroke="#9FC3DD" stroke-width="2"/><line x1="30" y1="10" x2="30" y2="210" stroke="#D3E6EC" stroke-width="2"/><line x1="94" y1="10" x2="94" y2="210" stroke="#D3E6EC" stroke-width="2"/><line x1="158" y1="10" x2="158" y2="210" stroke="#D3E6EC" stroke-width="2"/><line x1="222" y1="10" x2="222" y2="210" stroke="#D3E6EC" stroke-width="2"/><line x1="286" y1="10" x2="286" y2="210" stroke="#D3E6EC" stroke-width="2"/><line x1="350" y1="10" x2="350" y2="210" stroke="#D3E6EC" stroke-width="2"/><g transform="rotate(-14 210 110)"><rect x="70" y="96" width="280" height="22" rx="11" fill="#9AA5B1" stroke="#16233D" stroke-width="2.5"/><path d="M350 96 Q384 96 384 107 Q384 118 350 118" fill="#9AA5B1" stroke="#16233D" stroke-width="2.5"/><g data-anim="fade" data-dur="1.6" data-delay=".5"><ellipse cx="110" cy="106" rx="16" ry="7" fill="#B5562A" opacity=".85"/><ellipse cx="160" cy="110" rx="22" ry="7" fill="#B5562A" opacity=".85"/><ellipse cx="232" cy="104" rx="14" ry="7" fill="#B5562A" opacity=".85"/><ellipse cx="290" cy="109" rx="20" ry="7" fill="#B5562A" opacity=".85"/><ellipse cx="340" cy="105" rx="12" ry="7" fill="#B5562A" opacity=".85"/></g></g><text class="tex" x="210" y="196" data-mix="붉은색 녹 = 산화 철(III) $\ce{Fe2O3}$" data-size="20" data-anchor="middle" data-weight="700" data-halo="1"></text></svg><p class="f21 mt8">"욕실에 놓아둔 철핀에 붉은색 녹이 생겼어."</p></div>
+    <div class="col">
+      <p class="f21"><b>단서</b> 철($\ce{Fe}$)이 공기 속 산소($\ce{O2}$)와 반응해 녹의 주성분인 산화 철(III)($\ce{Fe2O3}$)이 된다.</p>
+      <p class="f21 mt8"><b>Q</b> 이 반응을 화학 반응식으로 나타내면?</p>
+      <p class="f21 step">① $\ce{Fe + O2 -> Fe2O3}$ — O 2 ≠ 3</p>
+      <p class="f21 step">② O는 2와 3의 최소공배수 6 → $\ce{Fe + 3O2 -> 2Fe2O3}$</p>
+      <p class="f21 step">③ Fe 4개 → $\ce{4Fe + 3O2 -> 2Fe2O3}$ (Fe 4 = 4, O 6 = 6)</p>
+      <div class="answer step">$\ce{4Fe(s) + 3O2(g) -> 2Fe2O3(s)}$</div>
+      <p class="small c-muted mt8">실제 녹이 생길 때는 물도 함께 관여하지만, 여기서는 철과 산소만으로 나타낸다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 해 보기 ② 호흡 ════════ -->
+<section class="slide" data-sec="01 · 해 보기" data-title="해 보기: 호흡">
+  <h2><span class="tag">해 보기</span>생활 속 화학 반응을 화학 반응식으로 ② 호흡</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px"><svg class="fig" viewBox="0 0 420 230" style="width:400px" aria-label="세포가 포도당과 산소를 받아 이산화 탄소와 물을 내보낸다"><ellipse cx="210" cy="118" rx="120" ry="84" fill="#FDECEC" stroke="#D99" stroke-width="2.5"/><ellipse cx="236" cy="128" rx="30" ry="22" fill="#F6C7C7" stroke="#C88" stroke-width="2"/><text class="tex" x="190" y="104" data-mix="세포" data-size="22" data-anchor="middle" data-weight="700"></text><g data-arw="40,62,112,92,ink,3"></g><text class="tex" x="20" y="40" data-mix="$\ce{C6H12O6}$, $\ce{O2}$" data-size="20" data-anchor="start" data-weight="700"></text><g data-arw="310,150,400,184,ink,3"></g><text class="tex" x="410" y="214" data-mix="$\ce{CO2}$, $\ce{H2O}$" data-size="20" data-anchor="end" data-weight="700"></text></svg><p class="f21 mt8">"호흡은 산소를 들이마시고, 이산화 탄소를 내보내는 반응이야!"</p></div>
+    <div class="col">
+      <p class="f21"><b>단서</b> 세포 속에서 포도당($\ce{C6H12O6}$)과 산소가 반응해 이산화 탄소와 물이 생긴다.</p>
+      <p class="f21 mt8 step">① C 6개 → $\ce{6CO2}$</p>
+      <p class="f21 step">② H 12개 → $\ce{6H2O}$</p>
+      <p class="f21 step">③ 오른쪽 O $12+6=18$개 → 왼쪽 $6+2\times6$ → $\ce{6O2}$</p>
+      <div class="answer step">$\ce{C6H12O6(s) + 6O2(g) -> 6CO2(g) + 6H2O(l)}$</div>
+      <div class="note mt8">원자가 많을 때는 한 물질에만 나오는 원소(C, H)부터, 홑원소 물질($\ce{O2}$)은 마지막에 맞추면 쉽다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 해 보기 2 · 정리 ════════ -->
+<section class="slide" data-sec="01 · 해 보기" data-title="해 보기: 주변의 화학 반응과 정리">
+  <h2><span class="tag">해 보기</span>주변의 화학 반응 찾기와 정리</h2>
+  <p class="f22">2. 주변에서 찾을 수 있는 화학 반응 한 가지를 화학 반응식으로 나타내 보자.</p>
+  <div class="stages mt8">
+    <div class="stage step"><h3>가스레인지 불꽃</h3><p>메테인의 연소</p><p class="key">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$</p></div>
+    <div class="stage step"><h3>숯불 구이</h3><p>탄소의 연소</p><p class="key">$\ce{C(s) + O2(g) -> CO2(g)}$</p></div>
+    <div class="stage step"><h3>불꽃놀이의 흰 빛</h3><p>마그네슘의 연소</p><p class="key">$\ce{2Mg(s) + O2(g) -> 2MgO(s)}$</p></div>
+  </div>
+  <p class="f22 mt16"><b>정리</b> 화학 반응을 화학 반응식으로 나타낼 때 유용한 점은 무엇일까?</p>
+  <div class="answer step">반응물·생성물의 <b>종류와 상태</b>, 원자 수 보존, 반응하는 입자 수의 비를 <b>짧은 식으로 정확하게</b>, 언어와 관계없이 전할 수 있다.</div>
+</section>
+
+<!-- ════════ 16. 과학 마당 ════════ -->
+<section class="slide" data-sec="01 · 과학 마당" data-title="과학 마당: 내 입속의 화학 반응">
+  <h2><span class="tag">과학 마당</span>생활 속 과학 | 내 입속의 화학 반응</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px"><svg class="fig" viewBox="0 0 420 250" style="width:400px" aria-label="입속 침에 녹은 사탕에서 이산화 탄소 기포가 생겨 터진다"><path d="M30 200 Q210 250 390 200 V236 H30 Z" fill="#F7C9C9" stroke="#C88" stroke-width="2"/><text class="tex" x="210" y="232" data-mix="침" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><rect x="167.7" y="183.3" width="14" height="9" rx="4" fill="#F48FB1" stroke="#16233D" stroke-width="1.2" transform="rotate(-34 174.7 187.3)"/><rect x="107.4" y="191.8" width="14" height="9" rx="4" fill="#81D4FA" stroke="#16233D" stroke-width="1.2" transform="rotate(6 114.4 195.8)"/><rect x="229.9" y="200" width="14" height="9" rx="4" fill="#FFF176" stroke="#16233D" stroke-width="1.2" transform="rotate(-13 236.9 204)"/><rect x="99" y="189.5" width="14" height="9" rx="4" fill="#A5D6A7" stroke="#16233D" stroke-width="1.2" transform="rotate(-32 106 193.5)"/><rect x="147.8" y="192.1" width="14" height="9" rx="4" fill="#CE93D8" stroke="#16233D" stroke-width="1.2" transform="rotate(-33 154.8 196.1)"/><rect x="288.4" y="182.7" width="14" height="9" rx="4" fill="#F48FB1" stroke="#16233D" stroke-width="1.2" transform="rotate(-12 295.4 186.7)"/><rect x="241.4" y="192.8" width="14" height="9" rx="4" fill="#81D4FA" stroke="#16233D" stroke-width="1.2" transform="rotate(-33 248.4 196.8)"/><rect x="228.5" y="188.7" width="14" height="9" rx="4" fill="#FFF176" stroke="#16233D" stroke-width="1.2" transform="rotate(-12 235.5 192.7)"/><rect x="101.2" y="198.9" width="14" height="9" rx="4" fill="#A5D6A7" stroke="#16233D" stroke-width="1.2" transform="rotate(-3 108.2 202.9)"/><rect x="190.6" y="191.9" width="14" height="9" rx="4" fill="#CE93D8" stroke="#16233D" stroke-width="1.2" transform="rotate(33 197.6 195.9)"/><rect x="164" y="198" width="14" height="9" rx="4" fill="#F48FB1" stroke="#16233D" stroke-width="1.2" transform="rotate(-17 171 202)"/><rect x="114.7" y="192.6" width="14" height="9" rx="4" fill="#81D4FA" stroke="#16233D" stroke-width="1.2" transform="rotate(-16 121.7 196.6)"/><rect x="179.4" y="192.1" width="14" height="9" rx="4" fill="#FFF176" stroke="#16233D" stroke-width="1.2" transform="rotate(-32 186.4 196.1)"/><rect x="225.4" y="193.6" width="14" height="9" rx="4" fill="#A5D6A7" stroke="#16233D" stroke-width="1.2" transform="rotate(23 232.4 197.6)"/><g data-anim="move" data-from="0,75" data-dur="2.0" data-delay="0.00" data-rep="loop" data-ease="out"><circle cx="105.4" cy="104.2" r="9.5" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,86" data-dur="2.1" data-delay="0.15" data-rep="loop" data-ease="out"><circle cx="129.6" cy="94" r="13.4" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,64" data-dur="2.3" data-delay="0.30" data-rep="loop" data-ease="out"><circle cx="154" cy="116" r="11.2" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,86" data-dur="1.5" data-delay="0.45" data-rep="loop" data-ease="out"><circle cx="183.8" cy="93" r="14.8" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,49" data-dur="1.9" data-delay="0.60" data-rep="loop" data-ease="out"><circle cx="207.3" cy="130.6" r="8.2" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,56" data-dur="2.0" data-delay="0.75" data-rep="loop" data-ease="out"><circle cx="230.3" cy="123.5" r="13.1" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,84" data-dur="2.0" data-delay="0.90" data-rep="loop" data-ease="out"><circle cx="263" cy="95.1" r="12.6" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,73" data-dur="2.3" data-delay="1.05" data-rep="loop" data-ease="out"><circle cx="286.6" cy="106.5" r="13.7" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><g data-anim="move" data-from="0,56" data-dur="2.1" data-delay="1.20" data-rep="loop" data-ease="out"><circle cx="311.8" cy="123.1" r="7.5" fill="#FFFFFF" fill-opacity=".6" stroke="#7FB6D9" stroke-width="2"/></g><text class="tex" x="210" y="40" data-mix="$\ce{CO2}$ 기포 — 톡톡!" data-size="22" data-anchor="middle" data-weight="700" data-halo="1"></text></svg></div>
+    <div class="col">
+      <p class="f21">톡톡 튀는 사탕 속 탄산수소 나트륨($\ce{NaHCO3}$)과 시트르산($\ce{C6H8O7}$)이 침에 녹으면 반응한다.</p>
+      <p class="small c-muted">시트르산: 레몬·귤 속 산으로 구연산이라고도 하며, 식품·의약품 첨가제로 쓴다.</p>
+      <p class="f21 mt8"><b>Q</b> 이 반응식의 원자 수는 맞을까?</p>
+      <table class="tight cm121-cnt cm121-w step"><tr><th>원소</th><th>Na</th><th>H</th><th>C</th><th>O</th></tr><tr><td>반응 전</td><td>3</td><td>3 + 8 = 11</td><td>3 + 6 = 9</td><td>9 + 7 = 16</td></tr><tr><td>반응 후</td><td>3</td><td>5 + 6 = 11</td><td>6 + 3 = 9</td><td>7 + 6 + 3 = 16</td></tr></table>
+    </div>
+  </div>
+  <div class="formula sm mt8">$\ce{3NaHCO3(aq) + C6H8O7(aq) -> Na3C6H5O7(aq) + 3CO2(g) + 3H2O(l)}$</div>
+  <p class="f21 step">→ 생긴 이산화 탄소 기포가 터지면서 입속에서 톡톡 튀는 느낌이 난다.</p>
+</section>
+
+<!-- ════════ 17. 과학 마당: 발포 바이타민 ════════ -->
+<section class="slide" data-sec="01 · 과학 마당" data-title="과학 마당: 발포 바이타민">
+  <h2><span class="tag">과학 마당</span>발포 바이타민도 같은 반응</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px"><svg class="fig" viewBox="0 0 520 250" style="width:500px" aria-label="물컵 속 발포 바이타민에서 기포가 올라오고, 용기 뚜껑에 제습제가 들어 있다"><path d="M40 40 L58 220 H182 L200 40" fill="#EEF8E4" stroke="#7E8B98" stroke-width="3"/><rect x="50" y="70" width="140" height="6" fill="#CFE8B8"/><path d="M46 76 L58 220 H182 L194 76 Z" fill="#DDF0C8" opacity=".9"/><ellipse cx="120" cy="208" rx="34" ry="8" fill="#F5E6B8" stroke="#B9A24A" stroke-width="2"/><g data-anim="move" data-from="0,90" data-dur="1.30" data-delay="0.00" data-rep="loop" data-ease="out"><circle cx="92" cy="110" r="5" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><g data-anim="move" data-from="0,77" data-dur="1.42" data-delay="0.18" data-rep="loop" data-ease="out"><circle cx="105" cy="123" r="6" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><g data-anim="move" data-from="0,64" data-dur="1.54" data-delay="0.36" data-rep="loop" data-ease="out"><circle cx="110" cy="136" r="7" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><g data-anim="move" data-from="0,51" data-dur="1.66" data-delay="0.54" data-rep="loop" data-ease="out"><circle cx="123" cy="149" r="5" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><g data-anim="move" data-from="0,38" data-dur="1.78" data-delay="0.72" data-rep="loop" data-ease="out"><circle cx="128" cy="162" r="6" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><g data-anim="move" data-from="0,25" data-dur="1.90" data-delay="0.90" data-rep="loop" data-ease="out"><circle cx="141" cy="175" r="7" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><g data-anim="move" data-from="0,82" data-dur="2.02" data-delay="1.08" data-rep="loop" data-ease="out"><circle cx="146" cy="118" r="5" fill="#FFFFFF" fill-opacity=".7" stroke="#7FB6D9" stroke-width="1.8"/></g><text class="tex" x="120" y="246" data-mix="물에 넣은 알약" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><rect x="270" y="120" width="200" height="60" rx="10" fill="#7CC36E" stroke="#16233D" stroke-width="2.5"/><rect x="470" y="114" width="36" height="72" rx="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><rect x="478" y="126" width="20" height="48" rx="4" fill="#E3EEFB" stroke="#1F6FD1" stroke-width="1.8" stroke-dasharray="4 3"/><text class="tex" x="488" y="216" data-mix="뚜껑 속 제습제" data-size="19" data-anchor="end" data-weight="700"></text><line x1="488" y1="174" x2="480" y2="196" stroke="#5B6B7F" stroke-width="1.8"/><text class="tex" x="370" y="158" data-mix="발포 바이타민" data-size="20" data-anchor="middle" fill="#FFFFFF" data-weight="700"></text></svg></div>
+    <div class="col">
+      <p class="f21">발포 바이타민 알약에도 탄산수소 나트륨과 시트르산이 들어 있다. 물에 넣으면 이산화 탄소가 생기면서 알약이 잘게 쪼개져 잘 녹고, 녹은 약은 몸에 빠르게 흡수된다.</p>
+      <p class="f21 mt12"><b>생각 펼치기</b> 발포 바이타민 용기 뚜껑에는 제습제가 들어 있어 일반 용기 뚜껑보다 두껍다. 뚜껑에 제습제를 넣는 까닭은 무엇일까?</p>
+    </div>
+  </div>
+  <div class="answer step">공기 속 습기가 닿으면 알약 속 탄산수소 나트륨과 시트르산이 녹아 <b>미리 반응</b>해 버린다. 제습제가 습기를 흡수해 반응을 막는다.</div>
+</section>
+
+<!-- ════════ 18. 확인하기 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 화학 반응식" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>화학 반응식</h2>
+  <ol class="cm121-ox mt12">
+    <li class="f22">화학 반응 전후에 <span class="blank"><span class="step">원자</span></span>의 종류와 개수는 변하지 않는다.</li>
+    <li class="f22" data-q>탄산수소 나트륨이 분해되는 반응의 화학 반응식이다. (　) 안에 계수나 화학식을 써서 완성해 보자.
+      <div class="formula sm mt8"><span class="blank"><span class="step">2</span></span>$\ce{NaHCO3(s) -> Na2CO3(s) + H2O(l)}$ + <span class="blank"><span class="step">$\ce{CO2}$</span></span>$(g)$</div></li>
+  </ol>
+  <table class="tight cm121-cnt cm121-w step mt12"><tr><th>원소</th><th>Na</th><th>H</th><th>C</th><th>O</th></tr><tr><td>반응 전</td><td>2</td><td>2</td><td>2</td><td>6</td></tr><tr><td>반응 후</td><td>2</td><td>2</td><td>1 + 1 = 2</td><td>3 + 1 + 2 = 6</td></tr></table>
+</section>
+
+<!-- ════════ 19. 연결: 무엇을 읽을까 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식의 의미" data-title="화학 반응식에서 무엇을 읽을까?">
+  <h2><span class="tag alt">연결</span>화학 반응식에서 무엇을 알 수 있을까?</h2>
+  <div class="formula">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$<div class="unit">질소 + 수소 → 암모니아</div></div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 620px"><svg class="fig" viewBox="0 0 640 230" style="width:620px" aria-label="질소 분자 1개와 수소 분자 3개의 원자가 다시 결합해 암모니아 분자 2개가 된다"><g data-atom="51.6,110,21.6,N,-,d"></g><g data-atom="85.3,110,21.6,N,-,d"></g><g data-atom="195.1,67.6,16.2,H,-,d"></g><g data-atom="220.4,67.6,16.2,H,-,d"></g><g data-atom="195.1,110,16.2,H,-,d"></g><g data-atom="220.4,110,16.2,H,-,d"></g><g data-atom="195.1,152.4,16.2,H,-,d"></g><g data-atom="220.4,152.4,16.2,H,-,d"></g><text class="tex" x="68.4" y="212" data-mix="질소 $\ce{N2}$" data-size="20" data-anchor="middle"></text><text class="tex" x="207.7" y="212" data-mix="수소 $\ce{3H2}$" data-size="20" data-anchor="middle"></text><g data-arw="258.6,110,314.6,110,ink,3"></g><g data-anim="move" data-from="-203.5,-31.9" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="398.6,99.5,16.2,H,-"></g></g><g data-anim="move" data-from="-152.7,12.3" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="373,55.3,16.2,H,-"></g></g><g data-anim="move" data-from="-229,54.7" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="424.1,55.3,16.2,H,-"></g></g><g data-anim="move" data-from="-347,40" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="398.6,70,21.6,N"></g></g><g data-anim="move" data-from="-178.2,-69.5" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="398.6,179.5,16.2,H,-"></g></g><g data-anim="move" data-from="-177.9,17.1" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="373,135.3,16.2,H,-"></g></g><g data-anim="move" data-from="-203.7,17.1" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="424.1,135.3,16.2,H,-"></g></g><g data-anim="move" data-from="-313.3,-40" data-dur="1.6" data-delay=".4" data-ease="io"><g data-atom="398.6,150,21.6,N"></g></g><text class="tex" x="398.6" y="212" data-mix="암모니아 $\ce{2NH3}$" data-size="20" data-anchor="middle"></text><text class="tex" x="138.1" y="120" data-mix="+" data-size="28" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+    <div class="col">
+      <p class="f22"><b>Q</b> 이 화학 반응식으로부터 무엇을 알 수 있을까?</p>
+      <p class="f21 step mt8">→ 반응물(질소, 수소)과 생성물(암모니아)의 <b>종류</b>와 상태</p>
+      <p class="f21 step mt8">→ 질소 분자 <b>1개</b>가 수소 분자 <b>3개</b>와 반응해 암모니아 분자 <b>2개</b>가 생긴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 자료 읽기 1 ════════ -->
+<section class="slide" data-sec="01 · 자료 읽기" data-title="자료 읽기: 몰비와 분자 수 비">
+  <h2><span class="no">2</span>화학 반응식의 의미 — 몰비와 분자 수 비</h2>
+  <p class="f22"><mark>화학 반응에 참여하는 분자의 개수비 또는 몰비는 화학 반응식의 계수비와 같다.</mark></p>
+  <table class="tight cm121-dt mt8">
+    <tr><th>화학 반응식</th><td>$\ce{N2(g)}$</td><td>+</td><td>$\ce{3H2(g)}$</td><td>→</td><td>$\ce{2NH3(g)}$</td></tr>
+    <tr><th>물질의 양</th><td colspan="5"><svg class="fig" viewBox="0 0 900 132" style="width:860px" aria-label="질소 1 몰, 수소 3 몰, 암모니아 2 몰의 더미"><g data-anim="pop" data-o="110,96" data-dur=".6" data-ease="back"><path d="M70.0 80 Q110.0 10 150.0 80 Z" fill="#4F6BD8" stroke="#2E46A8" stroke-width="2"/><ellipse cx="110.0" cy="84" rx="46" ry="7" fill="#E8D7A6" stroke="#B9A24A" stroke-width="2"/></g><g data-anim="pop" data-o="420,96" data-dur=".6" data-delay=".3" data-ease="back"><path d="M288.0 80 Q328.0 10 368.0 80 Z" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="2"/><ellipse cx="328.0" cy="84" rx="46" ry="7" fill="#E8D7A6" stroke="#B9A24A" stroke-width="2"/><path d="M380.0 80 Q420.0 10 460.0 80 Z" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="2"/><ellipse cx="420.0" cy="84" rx="46" ry="7" fill="#E8D7A6" stroke="#B9A24A" stroke-width="2"/><path d="M472.0 80 Q512.0 10 552.0 80 Z" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="2"/><ellipse cx="512.0" cy="84" rx="46" ry="7" fill="#E8D7A6" stroke="#B9A24A" stroke-width="2"/></g><g data-anim="pop" data-o="760,96" data-dur=".6" data-delay=".6" data-ease="back"><path d="M674.0 80 Q714.0 10 754.0 80 Z" fill="#8FA4E8" stroke="#2E46A8" stroke-width="2"/><ellipse cx="714.0" cy="84" rx="46" ry="7" fill="#E8D7A6" stroke="#B9A24A" stroke-width="2"/><path d="M766.0 80 Q806.0 10 846.0 80 Z" fill="#8FA4E8" stroke="#2E46A8" stroke-width="2"/><ellipse cx="806.0" cy="84" rx="46" ry="7" fill="#E8D7A6" stroke="#B9A24A" stroke-width="2"/></g><text class="tex" x="110" y="118" data-mix="1 몰" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="420" y="118" data-mix="3 몰" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="760" y="118" data-mix="2 몰" data-size="20" data-anchor="middle" data-weight="700"></text></svg></td></tr>
+    <tr><th>분자 수</th><td>$1\ \text{mol}\times6.02\times10^{23}$</td><td></td><td>$3\ \text{mol}\times6.02\times10^{23}$</td><td></td><td>$2\ \text{mol}\times6.02\times10^{23}$</td></tr>
+  </table>
+  <p class="small c-muted">분자 수의 단위: 개 (아보가드로수 $6.02\times10^{23}$ 개/mol)</p>
+  <p class="f22 mt8" data-q><span class="tag cm121-tg">자료 읽기</span> 몰비 $\ce{N2}:\ce{H2}:\ce{NH3}=$ <span class="blank"><span class="step">1 : 3 : 2</span></span> &nbsp; 분자 수 비 $\ce{N2}:\ce{H2}:\ce{NH3}=$ <span class="blank"><span class="step">1 : 3 : 2</span></span></p>
+</section>
+
+<!-- ════════ 21. 자료 읽기 2: 부피비 ════════ -->
+<section class="slide" data-sec="01 · 자료 읽기" data-title="자료 읽기: 기체의 부피비">
+  <h2><span class="no">2</span>화학 반응식의 의미 — 기체의 부피비</h2>
+  <p class="f22"><b>아보가드로 법칙</b> 같은 온도와 압력에서 같은 양(mol)의 기체 부피는 기체의 종류와 관계없이 같다.</p>
+  <p class="f22">→ 온도와 압력이 일정할 때, 반응에 참여하는 <mark>기체의 몰비는 부피비와 같다.</mark></p>
+  <table class="tight cm121-dt mt8">
+    <tr><th>화학 반응식</th><td>$\ce{N2(g)}$</td><td>+</td><td>$\ce{3H2(g)}$</td><td>→</td><td>$\ce{2NH3(g)}$</td></tr>
+    <tr><th>기체의 부피<br><span class="small">(0 °C, 1 기압)</span></th><td colspan="5"><svg class="fig" viewBox="0 0 900 110" style="width:860px" aria-label="22.4 L 상자 1개, 3개, 2개"><g data-anim="pop" data-o="110,86" data-dur=".5" data-delay="0.00" data-ease="back"><rect x="70" y="20" width="70" height="70" fill="#E3F2F8" stroke="#7FB6D9" stroke-width="2"/><path d="M70 20 l14 -14 h70 l-14 14 z M140 20 l14 -14 v70 l-14 14 z" fill="#CBE6F2" stroke="#7FB6D9" stroke-width="2"/><text class="tex" x="105" y="62" data-mix="22.4 L" data-size="18" data-anchor="middle" data-weight="700"></text></g><g data-anim="pop" data-o="340,86" data-dur=".5" data-delay="0.25" data-ease="back"><rect x="300" y="20" width="70" height="70" fill="#E3F2F8" stroke="#7FB6D9" stroke-width="2"/><path d="M300 20 l14 -14 h70 l-14 14 z M370 20 l14 -14 v70 l-14 14 z" fill="#CBE6F2" stroke="#7FB6D9" stroke-width="2"/><text class="tex" x="335" y="62" data-mix="22.4 L" data-size="18" data-anchor="middle" data-weight="700"></text></g><g data-anim="pop" data-o="432,86" data-dur=".5" data-delay="0.40" data-ease="back"><rect x="392" y="20" width="70" height="70" fill="#E3F2F8" stroke="#7FB6D9" stroke-width="2"/><path d="M392 20 l14 -14 h70 l-14 14 z M462 20 l14 -14 v70 l-14 14 z" fill="#CBE6F2" stroke="#7FB6D9" stroke-width="2"/><text class="tex" x="427" y="62" data-mix="22.4 L" data-size="18" data-anchor="middle" data-weight="700"></text></g><g data-anim="pop" data-o="524,86" data-dur=".5" data-delay="0.55" data-ease="back"><rect x="484" y="20" width="70" height="70" fill="#E3F2F8" stroke="#7FB6D9" stroke-width="2"/><path d="M484 20 l14 -14 h70 l-14 14 z M554 20 l14 -14 v70 l-14 14 z" fill="#CBE6F2" stroke="#7FB6D9" stroke-width="2"/><text class="tex" x="519" y="62" data-mix="22.4 L" data-size="18" data-anchor="middle" data-weight="700"></text></g><g data-anim="pop" data-o="720,86" data-dur=".5" data-delay="0.80" data-ease="back"><rect x="680" y="20" width="70" height="70" fill="#E3F2F8" stroke="#7FB6D9" stroke-width="2"/><path d="M680 20 l14 -14 h70 l-14 14 z M750 20 l14 -14 v70 l-14 14 z" fill="#CBE6F2" stroke="#7FB6D9" stroke-width="2"/><text class="tex" x="715" y="62" data-mix="22.4 L" data-size="18" data-anchor="middle" data-weight="700"></text></g><g data-anim="pop" data-o="812,86" data-dur=".5" data-delay="0.95" data-ease="back"><rect x="772" y="20" width="70" height="70" fill="#E3F2F8" stroke="#7FB6D9" stroke-width="2"/><path d="M772 20 l14 -14 h70 l-14 14 z M842 20 l14 -14 v70 l-14 14 z" fill="#CBE6F2" stroke="#7FB6D9" stroke-width="2"/><text class="tex" x="807" y="62" data-mix="22.4 L" data-size="18" data-anchor="middle" data-weight="700"></text></g></svg></td></tr>
+    <tr><th>계산</th><td>$1\ \text{mol}\times22.4\ \text{L/mol}$</td><td></td><td>$3\ \text{mol}\times22.4\ \text{L/mol}$</td><td></td><td>$2\ \text{mol}\times22.4\ \text{L/mol}$</td></tr>
+  </table>
+  <p class="f22 mt8" data-q><span class="tag cm121-tg">자료 읽기</span> 부피비 $\ce{N2}:\ce{H2}:\ce{NH3}=$ <span class="blank"><span class="step">22.4 : 67.2 : 44.8 = 1 : 3 : 2</span></span></p>
+</section>
+
+<!-- ════════ 22. 예측 + 질량비 ════════ -->
+<section class="slide" data-sec="01 · 자료 읽기" data-title="자료 읽기: 질량비">
+  <h2><span class="no">2</span>질량비도 1 : 3 : 2일까?</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22"><b>Q</b> 계수비가 1 : 3 : 2이면 질량비도 1 : 3 : 2일까? <span class="small c-muted">(몰질량 $\ce{N2}$ 28, $\ce{H2}$ 2, $\ce{NH3}$ 17 g/mol)</span></p>
+      <div class="choices cm121-c1"><span>(가) 그렇다.</span><span>(나) 아니다.</span></div>
+      <div class="step mt8" data-g="g1"><p class="f21">$\ce{N2}$: $1\ \text{mol}\times28\ \text{g/mol}=28\ \text{g}$</p><p class="f21">$\ce{H2}$: $3\ \text{mol}\times2\ \text{g/mol}=6\ \text{g}$</p><p class="f21">$\ce{NH3}$: $2\ \text{mol}\times17\ \text{g/mol}=34\ \text{g}$</p></div>
+      <p class="f22 step" data-q><span class="tag cm121-tg">자료 읽기</span> 질량비 = 28 : 6 : 34 = <span class="blank"><span class="step">14 : 3 : 17</span></span></p>
+      <div class="note mt8 step"><b>오개념 바로잡기</b> 몰질량은 물질마다 달라 몰비와 질량비는 같지 않다. 몰비에 각각의 몰질량을 곱하면 질량비를 알 수 있다.</div>
+    </div>
+    <div class="col" style="flex:0 0 440px"><div class="step" data-g="g1"><svg class="fig" viewBox="0 0 470 280" style="width:440px" aria-label="질소 28 g과 수소 6 g이 반응해 암모니아 34 g이 된다, 막대 길이는 질량에 비례"><line x1="40" y1="240" x2="450" y2="240" stroke="#5B6B7F" stroke-width="2"/><g data-anim="scale" data-from="1,0" data-o="110,240" data-dur="1" data-on="step"><rect x="80" y="83.20000000000002" width="60" height="156.79999999999998" fill="#4F6BD8"/><rect x="80" y="49.60000000000002" width="60" height="33.599999999999994" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="2"/></g><text class="tex" x="110" y="169.6" data-mix="28 g" data-size="20" data-anchor="middle" fill="#FFFFFF" data-weight="700"></text><text class="tex" x="110" y="73.4" data-mix="6 g" data-size="19" data-anchor="middle" data-weight="700"></text><text class="tex" x="110" y="266" data-mix="$\ce{N2}$ + $\ce{3H2}$" data-size="20" data-anchor="middle"></text><g data-anim="scale" data-from="1,0" data-o="330,240" data-dur="1" data-delay=".4" data-on="step"><rect x="300" y="49.60000000000002" width="60" height="190.39999999999998" fill="#8FA4E8"/></g><text class="tex" x="330" y="152.8" data-mix="34 g" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="330" y="266" data-mix="$\ce{2NH3}$" data-size="20" data-anchor="middle"></text><line x1="150" y1="49.60000000000002" x2="290" y2="49.60000000000002" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 5"/><text class="tex" x="220" y="39.6" data-mix="같은 높이 = 질량 보존" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div></div>
+  </div>
+  <div class="answer step">(나) — 반응 전 $28+6=34\ \text{g}$ = 반응 후 $34\ \text{g}$: 전체 질량은 보존되지만, 질량비는 계수비와 다르다.</div>
+</section>
+
+<!-- ════════ 23. 정리 ════════ -->
+<section class="slide" data-sec="01 · 화학 반응식의 의미" data-title="정리: 화학 반응식이 주는 정보">
+  <h2><span class="no">2</span>정리: 화학 반응식이 주는 정보</h2>
+  <div class="flow mt12">
+    <div class="fnode hl"><b>계수비</b></div><div class="farr">=</div>
+    <div class="fnode"><b>몰비</b></div><div class="farr">=</div>
+    <div class="fnode"><b>분자 수 비</b></div><div class="farr">=</div>
+    <div class="fnode"><b>기체의 부피비</b><br><span class="small">(온도·압력 일정)</span></div>
+  </div>
+  <div class="cm121-down step"><span>× 각 물질의 몰질량</span>↓</div>
+  <div class="flow step"><div class="fnode hl"><b>질량비</b> <span class="small">예) $\ce{N2}:\ce{H2}:\ce{NH3}=14:3:17$</span></div></div>
+  <p class="f22 mt16"><mark>화학 반응식으로부터 반응물과 생성물의 종류, 물질의 몰비와 질량비, 기체의 부피비를 알 수 있다.</mark></p>
+  <div class="note puzzle mt12">화학 반응식은 화학 반응에서 반응물과 생성물의 양에 관한 다양한 정보를 주는 <b>유용한 도구</b>이다. → 다음 시간(02)에 이 관계로 필요한 양을 계산한다.</div>
+</section>
+
+<!-- ════════ 24. 확인하기 1 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 계수비와 같은 것" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>계수비와 같은 것은?</h2>
+  <p class="f22">다음 중 화학 반응식에서 계수비와 같은 것을 있는 대로 골라 보자. (단, 온도와 압력은 일정하다.)</p>
+  <div class="chips mt16"><button class="chk">몰비</button><button class="chk">분자 수 비</button><button class="chk">질량비</button><button class="chk">기체의 부피비</button></div>
+  <div class="answer step mt16">몰비, 분자 수 비, 기체의 부피비</div>
+  <p class="f21 step mt8">→ 질량비는 몰비에 각 물질의 몰질량을 곱해야 구할 수 있다.</p>
+  <table class="tight cm121-dt step mt16"><tr><th>예</th><td>$\ce{N2(g)}$</td><td>$\ce{3H2(g)}$</td><td>$\ce{2NH3(g)}$</td></tr>
+    <tr><th>계수비 = 몰비 = 분자 수 비 = 부피비</th><td>1</td><td>3</td><td>2</td></tr>
+    <tr><th>질량비</th><td>14</td><td>3</td><td>17</td></tr></table>
+</section>
+
+<!-- ════════ 25. 확인하기 2 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기: 메탄올의 연소">
+  <h2><span class="tag q">확인하기</span>메탄올의 연소 반응식에서 알 수 있는 정보</h2>
+  <p class="f22">다음 메탄올($\ce{CH3OH}$)의 연소 반응식에서 알 수 있는 정보를 세 가지 써 보자.</p>
+  <div class="formula sm">$\ce{2CH3OH(l) + 3O2(g) -> 2CO2(g) + 4H2O(l)}$</div>
+  <div class="row">
+    <div class="col">
+      <p class="f21 step">① 반응물은 메탄올(액체)과 산소(기체), 생성물은 이산화 탄소(기체)와 물(액체)이다.</p>
+      <p class="f21 step">② 몰비(분자 수 비) $\ce{CH3OH}:\ce{O2}:\ce{CO2}:\ce{H2O}=2:3:2:4$</p>
+      <p class="f21 step">③ 질량비 $64:96:88:72=8:12:11:9$ — 반응 전 160 g = 반응 후 160 g</p>
+      <p class="f21 step">④ 기체끼리의 부피비 $\ce{O2}:\ce{CO2}=3:2$ <span class="small c-muted">(액체인 메탄올·물에는 22.4 L를 쓰지 않는다)</span></p>
+    </div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 소단원 마무리: 창의력 ════════ -->
+<section class="slide" data-sec="01 · 소단원 마무리" data-title="소단원 마무리: 창의력 키우기">
+  <h2><span class="tag">소단원 마무리</span>창의력 키우기 — 클레오파트라의 진주</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f21">고대 이집트의 왕 클레오파트라는 진주를 식초에 녹여 마셨다는 일화가 있다. 진주의 주성분인 탄산 칼슘($\ce{CaCO3}$)과 식초의 주성분인 아세트산($\ce{CH3COOH}$)의 화학 반응식을 찾아보고, 이 일화가 실제로 가능할지 토의해 보자.</p>
+      <div class="card tip step mt12" data-g="e2"><p class="f21"><b>토의 예</b> 반응은 일어나 기포가 생기지만, 식초는 묽고 진주는 단단해서 통째로는 녹는 데 매우 오래 걸린다. 진주를 갈아 넣으면 가능성이 커진다.</p></div>
+    </div>
+    <div class="col" style="flex:0 0 340px"><svg class="fig" viewBox="0 0 360 240" style="width:340px" aria-label="식초가 담긴 컵 속 진주 표면에서 기포가 생긴다"><path d="M60 30 L80 220 H280 L300 30" fill="#FFFDF3" stroke="#7E8B98" stroke-width="3"/><path d="M68 80 L80 220 H280 L292 80 Z" fill="#F6EFD2"/><circle cx="180" cy="196" r="22" fill="#FBFBFF" stroke="#B8B8D0" stroke-width="2"/><circle cx="173" cy="189" r="6" fill="#FFFFFF"/><g data-anim="move" data-from="0,20" data-dur="1.50" data-delay="0.00" data-rep="loop" data-ease="out"><circle cx="166" cy="150" r="5" fill="#FFFFFF" stroke="#C9B48A" stroke-width="1.6"/></g><g data-anim="move" data-from="0,32" data-dur="1.65" data-delay="0.25" data-rep="loop" data-ease="out"><circle cx="173" cy="138" r="5" fill="#FFFFFF" stroke="#C9B48A" stroke-width="1.6"/></g><g data-anim="move" data-from="0,44" data-dur="1.80" data-delay="0.50" data-rep="loop" data-ease="out"><circle cx="180" cy="126" r="5" fill="#FFFFFF" stroke="#C9B48A" stroke-width="1.6"/></g><g data-anim="move" data-from="0,56" data-dur="1.95" data-delay="0.75" data-rep="loop" data-ease="out"><circle cx="187" cy="114" r="5" fill="#FFFFFF" stroke="#C9B48A" stroke-width="1.6"/></g><g data-anim="move" data-from="0,68" data-dur="2.10" data-delay="1.00" data-rep="loop" data-ease="out"><circle cx="194" cy="102" r="5" fill="#FFFFFF" stroke="#C9B48A" stroke-width="1.6"/></g><text class="tex" x="180" y="64" data-mix="식초 (아세트산)" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="250" y="200" data-mix="진주" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg></div>
+  </div>
+  <span class="step" data-g="e1"></span>
+  <div class="formula sm mt8 step" data-g="e1">$\ce{CaCO3(s) + 2CH3COOH(aq) -> (CH3COO)2Ca(aq) + H2O(l) + CO2(g)}$<div class="unit">Ca 1 = 1, C 5 = 5, H 8 = 8, O 7 = 7 · 생성물: 아세트산 칼슘, 물, 이산화 탄소</div></div>
+</section>
+
+<!-- ════════ 27. 소단원 마무리: 디지털 ════════ -->
+<section class="slide" data-sec="01 · 소단원 마무리" data-title="소단원 마무리: 디지털 소양 키우기">
+  <h2><span class="tag">소단원 마무리</span>디지털 소양 키우기 — 과학사 속 화학 반응식</h2>
+  <p class="f22">과학사에서 찾을 수 있는 흥미로운 화학 반응식을 조사하고, 공유 플랫폼을 활용하여 공유해 보자.</p>
+  <div class="stages mt12">
+    <div class="stage step"><h3>산소의 발견 (1774)</h3><p class="key">$\ce{2HgO(s) -> 2Hg(l) + O2(g)}$</p><p>산화 수은(II)을 가열해 산소를 얻었다(프리스틀리, 라부아지에).</p></div>
+    <div class="stage step"><h3>물의 합성</h3><p class="key">$\ce{2H2(g) + O2(g) -> 2H2O(l)}$</p><p>라부아지에가 물이 수소와 산소로 이루어진 화합물임을 밝혔다.</p></div>
+    <div class="stage step"><h3>암모니아 합성 (1909)</h3><p class="key">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$</p><p>하버가 공기 속 질소로 비료 원료를 만들었다.</p></div>
+  </div>
+  <div class="note mt16"><b>카드 틀</b> 화학 반응식 · 누가, 언제 · 왜 중요한가 · 참고한 자료(출처)</div>
+</section>
+
+<!-- ════════ 28. 중단원 마무리 01 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 01">
+  <h2><span class="tag q">중단원 마무리 01</span>화학 반응식</h2>
+  <p class="f22">화학 반응식에 대한 설명으로 옳지 <u>않은</u> 것은?</p>
+  <div class="row">
+    <div class="col">
+      <div class="choices cm121-c1"><span>① 반응물은 화살표(→)의 왼쪽에 쓴다.</span><span>② 화학 반응 전후 원자의 종류는 변하지 않는다.</span><span>③ 수용액을 나타낼 경우 화학식 뒤에 (aq)를 쓴다.</span><span>④ 반응 전후 분자 수가 같아지도록 화학식의 계수를 맞춘다.</span><span>⑤ 반응물과 생성물의 화학식을 이용하여 화학 반응을 간단히 나타낸 것이다.</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board" style="min-height:240px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ④</b> <span class="small">분자 수가 아니라 원자의 종류와 수가 같도록 맞춘다 ($\ce{2H2 + O2 -> 2H2O}$: 분자 3개 → 2개)</span></div>
+</section>
+
+<!-- ════════ 29. 중단원 마무리 02 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 02">
+  <h2><span class="tag q">중단원 마무리 02</span>산성비의 형성</h2>
+  <p class="f22">다음은 산성비의 형성과 관련된 화학 반응식이다. $a\sim c$는 반응 계수이다.</p>
+  <div class="row">
+    <div class="col">
+      <div class="bogi cm121-nob"><p>(가) $a\ce{S(s)} + b\ce{O2(g)} \ce{->} c\ce{SO3(g)}$</p><p>(나) $\ce{SO3(g) + H2O(l) ->}$ ㉠$(aq)$</p></div>
+      <p class="f21 mt12">$a+b+c$의 값과 ㉠에 들어갈 화학식을 옳게 짝 지은 것은?</p>
+      <table class="tight cm121-ch mt8"><tr><th></th><th>$a+b+c$</th><th>㉠</th></tr><tr><td>①</td><td>4</td><td>$\ce{2HSO2}$</td></tr><tr><td>②</td><td>5</td><td>$\ce{H2SO3}$</td></tr><tr><td>③</td><td>5</td><td>$\ce{H2SO4}$</td></tr><tr><td>④</td><td>7</td><td>$\ce{2HSO2}$</td></tr><tr><td>⑤</td><td>7</td><td>$\ce{H2SO4}$</td></tr></table>
+    </div>
+    <div class="col stack" style="flex:0 0 360px"><div class="board" style="min-height:200px"></div>
+      <p class="f21 step mt8">(가) $\ce{2S + 3O2 -> 2SO3}$ → $2+3+2=7$</p>
+      <p class="f21 step">(나) $\ce{SO3 + H2O -> H2SO4}$</p></div>
+  </div>
+  <div class="answer step"><b>정답 ⑤</b></div>
+</section>
+
+<!-- ════════ 30. 중단원 마무리 03 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 03">
+  <h2><span class="tag q">중단원 마무리 03</span>메테인의 연소 반응식</h2>
+  <p class="f22">다음 화학 반응식으로부터 알 수 있는 정보로 옳지 <u>않은</u> 것은? (단, 반응 전후 온도와 압력은 일정하다.)</p>
+  <div class="formula sm">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$</div>
+  <div class="row">
+    <div class="col">
+      <div class="choices cm121-c1"><span>① 반응물은 두 가지이다.</span><span>② 반응물은 모두 기체 상태이다.</span><span>③ 반응물의 몰비는 $\ce{CH4}:\ce{O2}=1:2$이다.</span><span>④ 생성물의 부피비는 $\ce{CO2}:\ce{H2O}=1:2$이다.</span><span>⑤ 생성물의 분자 수 비는 $\ce{CO2}:\ce{H2O}=1:2$이다.</span></div>
+    </div>
+    <div class="col stack" style="flex:0 0 340px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+  <div class="answer step"><b>정답 ④</b> <span class="small">물은 액체 $(l)$이므로 기체의 부피비로 나타낼 수 없다.</span></div>
+</section>
+
+<!-- ════════ 31. 중단원 마무리 04 서술형 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 04 (서술형)">
+  <h2><span class="tag q">중단원 마무리 04</span>서술형 — 에테인의 완전 연소</h2>
+  <p class="f21">에테인($\ce{C2H6}$) 기체는 완전 연소 하여 이산화 탄소($\ce{CO2}$) 기체와 물($\ce{H2O}$)을 생성한다.</p>
+  <p class="f21">(1) 에테인이 완전 연소 할 때의 반응을 상태를 포함하여 화학 반응식으로 나타내 보자.</p>
+  <p class="f21">(2) 0 °C, 1 기압에서 에테인 3 g이 완전 연소 했을 때 발생하는 이산화 탄소 기체의 부피(L)를 구하고, 계산 과정을 설명해 보자. <span class="small c-muted">(단, 온도와 압력은 일정하고, H와 C의 몰질량은 각각 1 g/mol, 12 g/mol, 0 °C, 1 기압에서 기체 1 몰의 부피는 22.4 L이다.)</span></p>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21 step">(1) $\ce{2C2H6(g) + 7O2(g) -> 4CO2(g) + 6H2O(l)}$</p>
+      <p class="f21 step">(2) 몰질량 $2\times12+6\times1=30\ \text{g/mol}$ → $\dfrac{3\ \text{g}}{30\ \text{g/mol}}=0.1\ \text{mol}$</p>
+      <p class="f21 step">계수비 $\ce{C2H6}:\ce{CO2}=2:4$ → $\ce{CO2}$ $0.2\ \text{mol}$ → $0.2\ \text{mol}\times22.4\ \text{L/mol}=4.48\ \text{L}$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board" style="min-height:150px"></div></div>
+  </div>
+  <div class="answer step"><b>예시 답안</b> 4.48 L <span class="small">채점 요소: 반응식(계수·상태) · 몰 환산 · 계수비 · 부피 환산</span></div>
+</section>
+
+<!-- ════════ 32. 중단원 마무리 05 ════════ -->
+<section class="slide" data-sec="01 · 중단원 마무리" data-title="중단원 마무리 05">
+  <h2><span class="tag q">중단원 마무리 05</span>반응 모형 읽기</h2>
+  <p class="f21">그림은 $\ce{A2(g)}$와 $\ce{B2(g)}$가 반응하여 $\ce{X(g)}$가 생성되는 반응을 모형으로 나타낸 것이다. 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (단, $\mathrm{A}$와 $\mathrm{B}$는 임의의 원소 기호이다.)</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 560 220" style="width:560px" aria-label="반응 전 A2 분자 3개와 B2 분자 3개, 반응 후 AB3 분자 2개와 A2 분자 2개"><rect x="10" y="10" width="220" height="170" rx="10" fill="#E8F5F3" stroke="#4FB3A6" stroke-width="2.5"/><g data-anim="move" data-from="5,4" data-rep="alt" data-dur="1.8" data-ease="sine"><g data-atom="56,48,18,N,-"></g><g data-atom="84,48,18,N,-"></g></g><g data-anim="move" data-from="-5,5" data-rep="alt" data-dur="2.0" data-ease="sine"><g data-atom="168.9,40.7,13.5,H,-"></g><g data-atom="187.1,51.3,13.5,H,-"></g></g><g data-anim="move" data-from="5,-4" data-rep="alt" data-dur="2.2" data-ease="sine"><g data-atom="53.5,102,13.5,H,-"></g><g data-atom="74.5,102,13.5,H,-"></g></g><g data-anim="move" data-from="-4,-5" data-rep="alt" data-dur="2.4" data-ease="sine"><g data-atom="155.3,109.9,18,N,-"></g><g data-atom="180.7,98.1,18,N,-"></g></g><g data-anim="move" data-from="4,5" data-rep="alt" data-dur="2.6" data-ease="sine"><g data-atom="66.2,147.6,18,N,-"></g><g data-atom="93.8,152.4,18,N,-"></g></g><g data-anim="move" data-from="-5,-4" data-rep="alt" data-dur="2.8" data-ease="sine"><g data-atom="170.1,153.6,13.5,H,-"></g><g data-atom="189.9,146.4,13.5,H,-"></g></g><g data-arw="242,95,312,95,grav,6"></g><rect x="328" y="10" width="220" height="170" rx="10" fill="#E8F5F3" stroke="#4FB3A6" stroke-width="2.5"/><g data-anim="move" data-from="5,4" data-rep="alt" data-dur="1.8" data-ease="sine"><g data-atom="388,82.6,13.5,H,-"></g><g data-atom="366.7,45.7,13.5,H,-"></g><g data-atom="409.3,45.7,13.5,H,-"></g><g data-atom="388,58,18,N,-"></g></g><g data-anim="move" data-from="-5,5" data-rep="alt" data-dur="2.0" data-ease="sine"><g data-atom="474.2,47.6,18,N,-"></g><g data-atom="501.8,52.4,18,N,-"></g></g><g data-anim="move" data-from="5,-4" data-rep="alt" data-dur="2.2" data-ease="sine"><g data-atom="378.4,143.6,18,N,-"></g><g data-atom="405.6,136.4,18,N,-"></g></g><g data-anim="move" data-from="-4,-5" data-rep="alt" data-dur="2.4" data-ease="sine"><g data-atom="490,152.6,13.5,H,-"></g><g data-atom="468.7,115.7,13.5,H,-"></g><g data-atom="511.3,115.7,13.5,H,-"></g><g data-atom="490,128,18,N,-"></g></g><text class="tex" x="120" y="206" data-mix="반응 전" data-size="20" data-anchor="middle"></text><text class="tex" x="438" y="206" data-mix="반응 후" data-size="20" data-anchor="middle"></text></svg><p class="small c-muted">큰 파란 공 $\mathrm{A}$, 작은 흰 공 $\mathrm{B}$</p></div>
+    <div class="col">
+      <div class="bogi"><p>ㄱ. $\ce{X}$의 화학식은 $\ce{AB3}$이다.</p><p>ㄴ. $\ce{A2(g)}$와 $\ce{B2(g)}$는 1 : 1의 몰비로 반응한다.</p><p>ㄷ. 온도와 압력이 일정할 때 반응 후 기체 부피는 감소한다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+      <p class="f21 step mt8">$\ce{A2 + 3B2 -> 2AB3}$ ($\ce{A2}$ 2개는 남음) — 분자 6개 → 4개</p>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ③</b> <span class="small">ㄴ: 몰비 1 : 3</span></div>
+</section>
+
+<!-- ════════ 33. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 화학 반응식의 의미 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">함께 풀어 보기</span>Ⅰ. 화학의 언어 — 개념 지도</h2>
+  <div class="cm121-map">
+    <div class="cm121-side">
+      <div class="cm121-node cm121-done"><b>1-01 화학의 유용성</b></div>
+      <div class="cm121-node cm121-done"><b>1-02 몰과 물질의 양</b><p class="small">몰 · 몰질량 · 22.4 L</p></div>
+    </div>
+    <div class="cm121-arr">→</div>
+    <div class="cm121-node cm121-main">
+      <b>2-01 화학 반응식의 의미</b>
+      <p class="f21 mt8">(1) 화학 반응식: 반응물과 생성물의 화학식으로 화학 반응을 나타낸 것</p>
+      <p class="f21" data-q>(2) ① →의 왼쪽에 ❶ <span class="blank"><span class="step">반응물의 화학식</span></span>, 오른쪽에 생성물의 화학식 ② 원자의 종류·개수가 같도록 계수 ③ 상태 (s), (l), (g), (aq)</p>
+      <p class="f21" data-q>예) ❷ <span class="blank"><span class="step">$\ce{2H2}$</span></span>$(g)$ $\ce{+ O2(g) -> 2H2O(l)}$</p>
+      <p class="f21" data-q>(3) $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$: 반응 계수비·몰비·부피비 = ❸ <span class="blank"><span class="step">1</span></span> : ❹ <span class="blank"><span class="step">3</span></span> : ❺ <span class="blank"><span class="step">2</span></span>, 질량비 14 : 3 : 17</p>
+    </div>
+    <div class="cm121-arr">→</div>
+    <div class="cm121-node cm121-dim" style="flex:0 0 170px">2-02 화학 반응의 양적 관계<br><span class="small">(다음 시간)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 34. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 화학 반응식의 의미 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 여러 가지 반응의 화학 반응식을 썼다.</button>
+    <button class="chk">[과정·기능] 화학 반응식에서 몰비·부피비·질량비를 읽어 냈다.</button>
+    <button class="chk">[가치·태도] 생활 속 화학 반응을 화학 반응식으로 이해하려 했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 질소와 수소가 반응해 암모니아가 되는 화학 반응식은? <span class="step">→ <span class="ans">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 화학 반응식의 계수비와 같은 것 세 가지는? <span class="step">→ <span class="ans">몰비, 분자 수 비, 기체의 부피비</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 계수를 맞출 때 바꾸면 안 되는 것은? <span class="step">→ <span class="ans">화학식의 아래 첨자</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 수소 4 g이 모두 반응하려면 산소는 몇 g 필요할까? — 2-02 화학 반응의 양적 관계</div>
+</section>

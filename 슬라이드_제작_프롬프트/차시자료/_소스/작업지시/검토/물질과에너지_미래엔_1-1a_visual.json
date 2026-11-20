@@ -1,0 +1,40 @@
+{
+ "findings": [
+  {
+   "slide": 9,
+   "severity": "medium",
+   "rule": "3.2/D8",
+   "problem": "세 열 배치로 그림이 줄어 라벨 14.4px, 760 mm 라벨 잘림.",
+   "fix": "반영: 글을 위로 올리고 viewBox를 표시 폭에 맞춤."
+  },
+  {
+   "slide": 15,
+   "severity": "medium",
+   "rule": "D8/3.2",
+   "problem": "x축 라벨과 마지막 눈금 겹침, 아래 문장 넘침, 라벨 15.3px.",
+   "fix": "반영: 축 범위 넓힘·문장 줄임·viewBox 조정."
+  },
+  {
+   "slide": 2,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "정답 상자가 아래로 넘침.",
+   "fix": "반영: 그림 축소."
+  },
+  {
+   "slide": 23,
+   "severity": "low",
+   "rule": "실험실",
+   "problem": "정지 캡처에서 분자가 바닥에 몰려 보임.",
+   "fix": "반영: 정지 모드에서 기체 영역에 고르게 배치."
+  },
+  {
+   "slide": 14,
+   "severity": "low",
+   "rule": "지도서 대조",
+   "problem": "답 상자 길어짐 확인.",
+   "fix": "캡처 확인: 넘침 없음."
+  }
+ ],
+ "summary": "자동 점검 0건까지 고침. 전체 캡처 모음 두 번 확인. (11/13) 고친 장 S5·S14 캡처 확인."
+}

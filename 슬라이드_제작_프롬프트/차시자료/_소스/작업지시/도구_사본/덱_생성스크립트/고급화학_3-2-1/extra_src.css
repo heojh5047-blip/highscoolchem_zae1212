@@ -1,0 +1,31 @@
+/* 고급화학 3-2-1 — 덱 전용 (모두 .ac321- 접두어) */
+.cover h1.ac321-h1{font-size:88px;line-height:1.15}
+table.ac321-c td{text-align:center}
+table.ac321-c td.l{text-align:left}
+table.ac321-var th{width:120px}
+table.ac321-sm th,table.ac321-sm td{font-size:20px;padding:3px 10px}
+table.ac321-sm td{text-align:right}
+table.ac321-sm td.l{text-align:left}
+table.ac321-life th,table.ac321-life td{font-size:20px;padding:5px 8px}
+table.ac321-life td{text-align:center}
+table.ac321-life td.l{text-align:left}
+ol.ac321-ox{padding-left:1.4em}
+ol.ac321-ox li{margin-top:12px}
+ol.ac321-ox li:first-child{margin-top:0}
+/* 개념 지도 */
+.ac321-map{display:flex;align-items:center;gap:12px;margin-top:16px}
+.ac321-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.7;flex:0 0 170px}
+.ac321-node.ac321-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac321-node.ac321-dim{flex:0 0 180px;border-style:dashed;color:var(--muted)}
+.ac321-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.ac321-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.ac321-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.ac321-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac321-seg .btn.ac321-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.ac321-read th,table.ac321-read td{font-size:19px;padding:3px 8px}
+table.ac321-read th{text-align:left;width:110px}
+table.ac321-read tr.hl td{font-size:24px;font-weight:700}
+output.kind.ac321-msg{margin-top:4px;line-height:1.4;font-size:19px;display:block}
+table.ac321-log th,table.ac321-log td{font-size:19px;padding:2px 6px;text-align:center;white-space:nowrap}
+table.ac321-frz td:first-child{white-space:nowrap}

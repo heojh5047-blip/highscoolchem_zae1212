@@ -1,0 +1,578 @@
+<!-- 고급화학 2-3-1 고체 결정의 종류와 특성 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 3. 고체 › 01·02</div>
+    <h1 class="ac231-h1">고체 결정의 종류와 특성</h1>
+    <p class="sub">X선 회절, 결정의 종류, 단위세포·배위수·원자 점유 비율, 이온 결정의 구조 — 입자의 배열로 고체의 성질을 설명하기</p>
+    <p class="meta">고등학교 고급 화학 97–104쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅱ-3. 고체 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>3. 고체</h2>
+  <div class="row">
+    <div class="col stack">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 고체 결정의 종류 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b class="c-plus">02</b> 고체 결정의 특성 <span class="small c-plus">← 오늘</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">분자 사이의 인력이 열운동보다 크면, 입자들은 인력이 가장 크게 작용하는 방향으로 최대한 가까이 모여 <b>규칙적인 배열(결정)</b>을 이룬다. 입자가 제자리를 지키므로 모양과 부피가 일정한 <b>고체</b>가 된다.</p>
+        <p class="f21 mt8">고체의 종류와 특성, 단위세포로 본 금속 결정 모형, 이온 결정의 구조와 화학식을 알아보자.</p>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 320px;text-align:center">{{SNOW}}</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 고체 결정의 종류" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-05]</span>고체의 단위세포 개념을 이해하고, 결정성 고체의 다양한 단위세포를 비교하여 고체의 특성과 연관 지을 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>X선 회절과 <b>브래그 법칙</b>으로 결정 속 원자층 사이의 거리를 구할 수 있다.</li>
+    <li>결정을 이온·금속·공유·분자 결정으로 나누고, 입자 사이의 힘으로 성질을 설명할 수 있다.</li>
+    <li>단위세포 속 원자 수, <b>배위수</b>, 원자 점유 비율을 구하고, <b>3D 모형</b>으로 비교할 수 있다.</li>
+    <li>반지름 비로 이온 결정의 구조를 설명하고, 이온 결정의 특성을 <b>실험</b>으로 확인할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">결정성·비결정성</div><div class="farr">→</div>
+    <div class="fnode">X선 회절</div><div class="farr">→</div>
+    <div class="fnode">결정의 종류</div><div class="farr">→</div>
+    <div class="fnode">단위세포·배위수</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 3D 단위세포</div><div class="farr">→</div>
+    <div class="fnode">이온 결정</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 이온 결정</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 고체 결정의 종류 · 도입" data-title="생각 열기: 소금 알갱이">
+  <h2><span class="tag">생각 열기</span>소금 알갱이는 왜 정육면체 모양일까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 520px">{{SALT}}</div>
+    <div class="col stack">
+      <p class="f22">굵은 소금 알갱이를 돋보기로 보면 모서리가 반듯한 <b>정육면체</b> 모양이 많다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 알갱이를 아무리 작게 부숴도 정육면체 모양이 나오는 까닭은 무엇일까?</p></div>
+      <div class="answer step">$\ce{Na+}$과 $\ce{Cl-}$이 정육면체 꼴로 규칙적으로 되풀이하여 배열되어 있기 때문</div>
+      <p class="f21 step">→ 겉모양은 속의 <b>입자 배열</b>을 닮는다. 오늘은 고체 속 입자 배열을 알아내는 방법과 배열의 종류를 다룬다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 고체와 결정 ════════ -->
+<section class="slide" data-sec="01 · 고체 결정의 종류" data-title="결정성 고체와 비결정성 고체">
+  <h2><span class="no">1</span>고체의 성질과 결정성·비결정성 고체</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">온도가 낮아지면 입자의 운동 에너지가 이웃 입자와의 인력을 벗어나지 못해 위치가 고정되고, 물질은 <b>응고</b>하여 고체가 된다.</p>
+      <p class="f21"><b>고체의 성질은 고체 내부의 힘으로 정해진다.</b> 금속성 고체와 이온성 고체의 성질이 다른 것은 입자 사이의 힘이 금속 결합과 이온 결합으로 다르기 때문이다.</p>
+      <table class="tight ac231-t">
+        <tr><th class="l">분류 기준</th><th class="l">종류</th></tr>
+        <tr><td class="l">배열의 규칙성</td><td class="l"><b>결정성 고체</b>(규칙적) · <b>비결정성 고체</b>(불규칙)</td></tr>
+        <tr><td class="l">입자 사이의 힘<br><span class="small">(결정성 고체)</span></td><td class="l">이온 결정 · 금속 결정 · 공유 결정 · 분자 결정</td></tr>
+      </table>
+    </div>
+    <div class="col stack" style="flex:0 0 500px">
+      {{CRYS}}
+      <p class="f21" data-q><b>Q</b> 유리를 가열하면 얼음처럼 일정한 온도에서 녹을까? <span class="step">→ <span class="ans">아니다.</span> 배열이 불규칙해 입자 사이 힘의 세기가 제각각이므로 일정한 녹는점 없이 서서히 물러진다.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 결정의 종류 ════════ -->
+<section class="slide" data-sec="01 · 고체 결정의 종류" data-title="결정의 종류">
+  <h2><span class="no">2</span>결정의 종류 — 기본 입자와 입자 사이의 힘</h2>
+  <table class="tight ac231-t ac231-kind">
+    <tr><th>결정</th><th>모형</th><th class="l">기본 입자</th><th class="l">입자 사이의 힘</th><th class="l">예</th></tr>
+    <tr><td><b>이온 결정</b></td><td>{{ICO_ION}}</td><td class="l">양이온, 음이온</td><td class="l">이온 결합</td><td class="l">$\ce{NaCl}$, $\ce{CsCl}$, $\ce{ZnS}$</td></tr>
+    <tr><td><b>금속 결정</b></td><td>{{ICO_MET}}</td><td class="l">금속 양이온, 자유 전자</td><td class="l">금속 결합</td><td class="l">구리 $\ce{Cu}$, 금 $\ce{Au}$</td></tr>
+    <tr><td><b>공유 결정</b></td><td>{{ICO_COV}}</td><td class="l">원자</td><td class="l">공유 결합(그물 구조)</td><td class="l">다이아몬드, 흑연, 수정</td></tr>
+    <tr><td><b>분자 결정</b></td><td>{{ICO_MOL}}</td><td class="l">분자</td><td class="l">분자 사이의 인력</td><td class="l">얼음, 드라이아이스</td></tr>
+  </table>
+  <p class="f21 mt8 step" data-q><b>Q</b> 같은 고체라도 성질이 크게 다른 까닭은? <span class="step">→ 기본 입자와 <span class="ans">입자 사이 힘의 종류·세기</span>가 다르기 때문이다(02에서 녹는점·전기 전도성으로 비교).</span></p>
+</section>
+
+<!-- ════════ 7. ③ X선 회절 실험 ════════ -->
+<section class="slide" data-sec="01 · 고체 결정의 종류" data-title="X선 회절 실험">
+  <h2><span class="no">3</span>X선 회절 — 결정 속 원자 배열 알아내기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px">{{XRD}}</div>
+    <div class="col stack">
+      <p class="f21">고체 결정에 <b>X선</b>을 통과시키면서 결정을 회전시키면, 결정면에서 <b>회절</b>이 일어나 필름에 회절 무늬(점)가 나타난다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 필름의 어떤 방향에만 점이 생기는 까닭은?</p></div>
+      <div class="answer step">여러 원자층에서 산란된 X선이 그 방향에서만 보강 간섭하기 때문</div>
+      <p class="f21 step">다른 방향에서는 상쇄 간섭한다. 회절 광선의 <b>세기와 각도 분포</b>를 여러 각도에서 분석하면 고체의 결정 구조를 알 수 있다(X선 회절법).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 브래그 법칙 ════════ -->
+<section class="slide" data-sec="01 · 고체 결정의 종류" data-title="브래그 법칙">
+  <h2><span class="no">4</span>브래그 법칙</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px">{{BRAGG}}</div>
+    <div class="col stack">
+      <p class="f21">거리 $d$만큼 떨어진 두 원자층에 파장 $\lambda$인 X선 두 줄기가 각 $\theta$로 들어온다.</p>
+      <p class="f21 step" data-g="b1">아래층에서 산란된 X선이 더 지나는 길: 경로 차이 $=2a$</p>
+      <p class="f21 step">직각삼각형에서 $a=d\sin\theta$ → 경로 차이 $2a=2d\sin\theta$</p>
+      <p class="f21 step">경로 차이가 파장의 정수배($2a=n\lambda$)이면 보강 간섭한다.</p>
+      <div class="formula step">$n\lambda=2d\sin\theta$<div class="unit">$n=1,\ 2,\ 3,\ \cdots$ · 브래그 법칙</div></div>
+      <p class="small step">보강 간섭이 일어나는 $\theta$를 재면 $d$를 구한다. 원자층 사이의 간격이 약 $10^{2}\ \text{pm}$이므로 파장이 비슷한 X선을 쓴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. ⑤ 공유 결정 ════════ -->
+<section class="slide" data-sec="01 · 고체 결정의 종류" data-title="다이아몬드와 흑연">
+  <h2><span class="no">5</span>공유 결정 — 다이아몬드와 흑연</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{DIAG}}</div>
+    <div class="col stack">
+      <p class="f21">둘 다 탄소 원자만으로 된 공유 결정이지만 배열이 다르다.</p>
+      <p class="f21"><b>다이아몬드</b>: 탄소 원자 하나가 이웃 4개와 공유 결합한 입체 그물 → 매우 단단하고 전기가 통하지 않는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 흑연은 왜 옆으로 밀면 쉽게 부서지고, 전기가 통할까?</p></div>
+      <div class="answer step">판 안은 강한 공유 결합, 판과 판 사이는 약한 힘</div>
+      <p class="f21 step">→ 수평 방향의 힘에 판이 미끄러져 부서지기 쉽고, 판을 따라 움직일 수 있는 전자가 있어 전기 전도성이 있다. 대다수 공유 결정과 다른 성질이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑥ 고체 결정의 특성 ════════ -->
+<section class="slide" data-sec="02 · 고체 결정의 특성" data-title="고체 결정의 특성">
+  <h2><span class="no">6</span>고체 결정의 특성 — 녹는점 비교</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{MPBAR}}</div>
+    <div class="col stack">
+      <p class="f21"><b>금속 결정</b>: 금속 결합이 강해 녹는점이 높고, <b>연성·전성</b>이 있다. 원자가 조밀하게 쌓여 밀도가 크다.</p>
+      <p class="f21"><b>이온 결정</b>: 이온 사이의 인력이 분자 사이의 인력보다 커서 분자 결정보다 녹는점이 높다.</p>
+      <p class="f21" data-q><b>Q</b> 질산 칼륨($\ce{KNO3}$)이 나프탈렌보다 높은 온도에서 녹는 까닭은? <span class="step">→ <span class="ans">이온 사이의 쿨롱 인력</span>이 나프탈렌 분자 사이의 인력보다 강하기 때문이다.</span></p>
+      <p class="small">녹는점은 일반 자료값(1 atm). 같은 종류의 결정 안에서도 결합 세기에 따라 차이가 크다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑦ 결정격자와 단위세포 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="결정격자와 단위세포">
+  <h2><span class="no">7</span>결정격자와 단위세포</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{LATT}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>결정을 이루는 원자들의 규칙적 배열 상태를 결정격자</mark>라고 한다.</p>
+      <p class="f21"><mark>결정격자를 이루는 가장 기본이 되는 최소 단위를 단위세포</mark>라고 한다. 단위세포를 상하·좌우·앞뒤로 되풀이하면 결정 전체가 된다.</p>
+      <p class="f21 step">단위세포에는 <b>7가지 결정계</b>가 있다. 그중 모서리 사이의 각이 모두 90°이고 모서리 길이가 모두 같은 것이 <b>입방 정계</b>이다.</p>
+      <p class="f21 step">결정격자의 배열은 구성 원자의 크기, 모양, 결합력, 결합의 방향 등으로 정해진다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑧ 입방 정계 3가지 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="입방 정계의 세 단위세포">
+  <h2><span class="no">8</span>입방 정계의 세 가지 단위세포</h2>
+  <div style="text-align:center">{{CUB3}}</div>
+  <div class="row mt8">
+    <div class="col"><div class="card"><h3>단순 입방 구조</h3><p class="f21">꼭짓점에만 원자. 예: 폴로늄 $\ce{Po}$(공유 결합성이 강한 준금속)</p></div></div>
+    <div class="col"><div class="card"><h3>체심 입방 구조</h3><p class="f21">꼭짓점 + 입방체 중심. 예: $\ce{Li}$, $\ce{Na}$, $\ce{K}$, $\ce{Fe}$</p></div></div>
+    <div class="col"><div class="card"><h3>면심 입방 구조</h3><p class="f21">꼭짓점 + 여섯 면의 중심. 예: $\ce{Cu}$, $\ce{Ag}$, $\ce{Au}$ (입방 밀집 구조)</p></div></div>
+  </div>
+  <p class="small mt8">금속 결정은 금속 양이온이 전자의 바다와 상호 작용하여 결합하므로, 양이온 배열을 <b>단단한 공이 쌓인 모형</b>으로 해석한다.</p>
+</section>
+
+<!-- ════════ 13. ⑨ 단위세포 속 원자 수 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="단위세포 속 원자 수">
+  <h2><span class="no">9</span>단위세포 속 원자 수 세기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 380px">{{SHARE}}</div>
+    <div class="col stack">
+      <table class="tight ac231-t">
+        <tr><th class="l">원자의 자리</th><th>나누어 가지는 단위세포 수</th><th>한 단위세포의 몫</th></tr>
+        <tr><td class="l">꼭짓점</td><td>8</td><td>$\tfrac18$</td></tr>
+        <tr><td class="l">모서리</td><td>4</td><td>$\tfrac14$</td></tr>
+        <tr><td class="l">면 중심</td><td>2</td><td>$\tfrac12$</td></tr>
+        <tr><td class="l">내부(체심)</td><td>1</td><td>1</td></tr>
+      </table>
+      <p class="f21" data-q><b>Q</b> 단순 입방 구조의 단위세포 속 원자 수는? <span class="step">→ $8\times\tfrac18=$ <span class="ans">1개</span></span></p>
+      <p class="f21" data-q><b>Q</b> 체심 입방 구조는? <span class="step">→ $8\times\tfrac18+1=$ <span class="ans">2개</span></span></p>
+      <p class="f21" data-q><b>Q</b> 면심 입방 구조는? <span class="step">→ $8\times\tfrac18+6\times\tfrac12=$ <span class="ans">4개</span></span></p>
+      <p class="small">꼭짓점 원자 8개가 모두 한 단위세포에 속하는 것이 아니다 — 평면 그림만 보고 세지 말고 3D 모형에서 확인한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑩ 배위수 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="배위수">
+  <h2><span class="no">10</span>배위수 — 한 원자를 둘러싼 원자의 수</h2>
+  <p class="f21"><mark>배위수는 결정 구조에서 한 원자를 가장 가까이에서 둘러싸고 있는 다른 원자의 수</mark>이다. <span class="small">(흐린 점선 공: 이웃 단위세포의 원자)</span></p>
+  <div style="text-align:center">{{COORD3}}</div>
+  <p class="f21 step" data-q><b>Q</b> 배위수가 클수록 원자는 어떻게 쌓여 있을까? <span class="step">→ 한 원자에 닿는 이웃이 많을수록 <span class="ans">더 빽빽하게</span> 쌓인다. 면심 입방(12)이 가장 빽빽하다.</span></p>
+</section>
+
+<!-- ════════ 15. ⑪ 단위세포 크기와 원자 반지름 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="단위세포 크기와 원자 반지름">
+  <h2><span class="no">11</span>단위세포 크기와 원자 반지름의 관계</h2>
+  <div style="text-align:center">{{AR3}}</div>
+  <p class="f21 mt8">원자가 서로 맞닿는 방향을 찾아 모서리 길이 $a$를 원자 반지름 $r$로 나타낸다. <span class="small">($b$: 몸 대각선, $f$: 면 대각선)</span></p>
+  <div class="row mt8">
+    <div class="col"><p class="f21 step"><b>단순 입방</b> 모서리에서 맞닿음: $a=2r$</p></div>
+    <div class="col"><p class="f21 step"><b>체심 입방</b> $b=\sqrt{3}a=4r$ → $a=\dfrac{4}{\sqrt{3}}r$</p></div>
+    <div class="col"><p class="f21 step"><b>면심 입방</b> $f=\sqrt{2}a=4r$ → $a=2\sqrt{2}\,r$</p></div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑫ 원자 점유 비율 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="원자 점유 비율">
+  <h2><span class="no">12</span>결정 구조별 원자 점유 비율</h2>
+  <p class="f21">원자 점유 비율(충전율) $=\dfrac{\text{단위세포 속 원자의 부피}}{\text{단위세포의 부피}}\times100\ \%$ <span class="small">— 원자를 단단한 공으로 볼 때</span></p>
+  <table class="tight ac231-t ac231-pf mt8">
+    <tr><th class="l">결정 구조</th><th>원자 수</th><th>한 변의 길이 $a$</th><th>단위세포 부피</th><th>원자 부피</th><th>원자 점유 비율</th></tr>
+    <tr><td class="l">단순 입방</td><td>1</td><td>$2r$</td><td>$8r^3$</td><td>$\tfrac43\pi r^3$</td><td class="step"><b>52.4 %</b></td></tr>
+    <tr><td class="l">체심 입방</td><td>2</td><td>$\dfrac{4}{\sqrt3}r$</td><td>$\dfrac{64}{3\sqrt3}r^3$</td><td>$2\times\tfrac43\pi r^3$</td><td class="step"><b>68.0 %</b></td></tr>
+    <tr><td class="l">면심 입방</td><td>4</td><td>$2\sqrt2\,r$</td><td>$16\sqrt2\,r^3$</td><td>$4\times\tfrac43\pi r^3$</td><td class="step"><b>74.0 %</b></td></tr>
+  </table>
+  <p class="f21 mt8 step">예: 체심 입방 $\dfrac{2\times\frac43\pi r^3}{\frac{64}{3\sqrt3}r^3}=\dfrac{\sqrt3\,\pi}{8}=0.680$</p>
+  <p class="f21 step" data-q><b>Q</b> 같은 원자라면 어느 구조의 금속이 밀도가 클까? <span class="step">→ 원자 점유 비율이 큰 <span class="ans">면심 입방 구조</span>(원자 질량이 같을 때). 서로 다른 금속은 원자량과 반지름도 함께 따진다.</span></p>
+</section>
+
+<!-- ════════ 17. 예제 Ⅱ-4 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="예제 Ⅱ-4">
+  <h2><span class="tag ex">예제 Ⅱ-4</span>체심 입방 금속의 원자 반지름</h2>
+  <p class="f22"><b>Q</b> 체심 입방 구조인 어떤 금속 결정의 단위세포 부피가 $4.32\times10^{-23}\ \text{cm}^3$이다. 이 금속 원자의 반지름은 몇 pm인가? (단, $1\ \text{pm}=1\times10^{-12}\ \text{m}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>모서리 길이</b> $l=\sqrt[3]{4.32\times10^{-23}\ \text{cm}^3}=3.51\times10^{-8}\ \text{cm}$</p>
+      <p class="f21 step"><b>관계식</b> 몸 대각선에서 맞닿음: $\sqrt3\,l=4r$ → $r=\dfrac{\sqrt3\,l}{4}$</p>
+      <p class="f21 step"><b>계산</b> $r=\dfrac{\sqrt3\times(3.51\times10^{-8}\ \text{cm})}{4}=1.52\times10^{-8}\ \text{cm}$</p>
+      <div class="answer step">$r=152\ \text{pm}$</div>
+      <p class="small step">$1\ \text{cm}=10^{-2}\ \text{m}=10^{10}\ \text{pm}$이므로 $1.52\times10^{-8}\ \text{cm}=152\ \text{pm}$</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑬ 조밀 쌓임과 육방 밀집 ════════ -->
+<section class="slide" data-sec="02 · 금속 결정의 구조와 특성" data-title="조밀 쌓임과 육방 밀집 구조">
+  <h2><span class="no">13</span>조밀 쌓임 — 육방 밀집 구조와 입방 밀집 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{HCP}}</div>
+    <div class="col stack">
+      <p class="f21">같은 크기의 공을 한 층에 가장 빽빽하게 놓고(A), 그 우묵한 곳에 둘째 층(B)을 얹는다. 셋째 층을 놓는 방법이 두 가지이다.</p>
+      <p class="f21 step"><b>육방 밀집 구조</b>(ABAB…) 단위세포 속 원자 수 $12\times\tfrac16+2\times\tfrac12+3=6$개, 배위수 12</p>
+      <p class="f21 step"><b>입방 밀집 구조</b>(ABCABC…) = 면심 입방 구조, 배위수 12</p>
+      <p class="f21 step" data-q><b>Q</b> 육방 밀집 구조가 면심 입방 구조보다 더 빽빽할까? <span class="step">→ <span class="ans">아니다.</span> 둘 다 원자 점유 비율 74 %로 같고, <b>쌓는 순서만</b> 다르다.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 탐구 활동 (3D 모형) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 3D 단위세포 모형">
+  <h2><span class="tag">탐구 활동</span>3D 단위세포 모형 만들기와 배위수 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐14]</span>3D 모델링 프로그램으로 고체 결정의 단위세포 모형을 만들고, 각 결정격자에서 한 원자를 둘러싼 원자 수(배위수)를 조사하여 발표한다.</div>
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="card"><h3>과정 (모둠별)</h3><ol class="f21 ac231-ol">
+        <li>단순 입방, 체심 입방, 면심 입방, 육방 밀집 구조의 단위세포를 3D 모델링 프로그램으로 만든다.</li>
+        <li>모형을 돌려 보며 단위세포 경계에 걸친 원자의 몫을 세어 원자 수를 구한다.</li>
+        <li>한 원자를 골라 가장 가까운 원자를 세어 배위수를 구한다(이웃 단위세포까지).</li>
+        <li>원자가 맞닿는 방향에서 $a$와 $r$의 관계를 쓰고 원자 점유 비율을 계산하여 발표한다.</li></ol></div>
+      <div class="note"><b>준비·안전</b> 3D 모델링 프로그램(또는 스티로폼 공), 스프레드시트. 3D 프린터의 노즐·출력판은 뜨거우므로 출력 중 손을 넣지 않고, 스티로폼 공을 자를 때 칼날 방향에 주의한다.</div>
+    </div>
+    <div class="col" style="flex:0 0 220px;text-align:center">{{FCC14}}<p class="small">면심 입방 공 모형(14개)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 실험실: 3D 단위세포 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 3D 단위세포">
+  <h2><span class="tag">탐구 활동</span>3D 단위세포 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac231cell">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="ac231-seg"><button class="btn on" data-k="sc">단순 입방</button><button class="btn" data-k="bcc">체심 입방</button><button class="btn" data-k="fcc">면심 입방</button><button class="btn" data-k="hcp">육방 밀집</button>
+      <button class="btn" data-k="nacl">$\ce{NaCl}$</button><button class="btn" data-k="cscl">$\ce{CsCl}$</button><button class="btn" data-k="zns">$\ce{ZnS}$</button></div>
+      <div class="ctl"><div class="lbl"><span>공 크기(맞닿을 때 = 100 %)</span><output data-o="sz"></output></div><input type="range" min="30" max="100" step="10" value="40" data-i="sz" aria-label="공 크기"></div>
+      <div class="ctl"><div class="lbl"><span>내 예측 배위수</span><output data-o="pr"></output></div><input type="range" min="2" max="14" step="1" value="6" data-i="pr" aria-label="예측 배위수"></div>
+      <div class="ac231-seg"><button class="btn ac231-act" data-act="count">입자 수 세기</button><button class="btn ac231-act" data-act="coord">배위수 보기</button><button class="btn" data-act="rec">표에 기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <div class="res"><div class="small">결과</div><div class="big"><output data-o="big"></output></div><output class="kind ac231-msg" data-o="msg"></output></div>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="lab-fig" style="width:560px;height:300px"><svg viewBox="0 0 560 300" width="560" height="300" aria-label="회전하는 단위세포 모형"></svg><div class="ov" data-ov="leg"></div><div class="ov" data-ov="hint">끌어서 돌리기</div></div>
+      <table class="tight ac231-log mt8"><thead><tr><th>회</th><th>구조</th><th>단위세포 속 입자 수</th><th>배위수(예측)</th><th>원자 점유 비율</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 결과 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과와 발표">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 발표 <span class="small c-muted">[필수 탐구]</span></h2>
+  <table class="tight ac231-t ac231-pf">
+    <tr><th class="l">구조</th><th>원자 수</th><th>배위수</th><th>맞닿는 방향 · $a$와 $r$</th><th>원자 점유 비율</th></tr>
+    <tr><td class="l">단순 입방</td><td>1</td><td class="step" data-g="r1">6</td><td>모서리 · $a=2r$</td><td>52 %</td></tr>
+    <tr><td class="l">체심 입방</td><td>2</td><td class="step" data-g="r1">8</td><td>몸 대각선 · $\sqrt3a=4r$</td><td>68 %</td></tr>
+    <tr><td class="l">면심 입방</td><td>4</td><td class="step" data-g="r1">12</td><td>면 대각선 · $\sqrt2a=4r$</td><td>74 %</td></tr>
+    <tr><td class="l">육방 밀집</td><td>6</td><td class="step" data-g="r1">12</td><td>한 층 안·위아래 층 · $a=2r$</td><td>74 %</td></tr>
+  </table>
+  <p class="f21 mt8" data-q><b>Q</b> 세 입방 구조에서 맞닿는 방향이 원자 점유 비율에 어떤 영향을 줄까? <span class="step">→ 대각선 방향으로 맞닿을수록 같은 크기의 원자를 <span class="ans">더 빽빽하게</span> 채워 점유 비율이 크다.</span></p>
+  <p class="f21 mt8" data-q><b>Q</b> 3D 모형이 실제 결정과 다른 점(모형의 한계)은? <span class="step">→ 원자를 <span class="ans">경계가 분명한 단단한 공</span>으로 나타내지만, 실제 원자는 경계가 뚜렷하지 않고 결정에는 결함도 있다.</span></p>
+</section>
+
+<!-- ════════ 22. ⑭ 이온 결정의 구조 ════════ -->
+<section class="slide" data-sec="02 · 이온 결정의 구조와 특성" data-title="이온 결정의 구조">
+  <h2><span class="no">14</span>이온 결정의 구조 — 음이온의 쌓임과 틈새 자리</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{HOLES}}</div>
+    <div class="col stack">
+      <p class="f21">이온 결정은 대부분 입방 정계이다. 크기가 큰 <b>음이온</b>이 조밀 쌓임 구조를 이루고, 그 틈새 자리에 작은 <b>양이온</b>이 채워진다.</p>
+      <p class="f21">단위세포 속 이온들은 <b>전기적 중성</b>이며, 그 수의 비는 화학식의 비와 같다.</p>
+      <p class="f21 step">쿨롱 인력으로 에너지가 낮아지므로, 결정은 전기적 중성을 지키면서 이온의 크기에 맞게 <b>배위수를 최대로</b> 하려 한다.</p>
+      <p class="f21 step"><mark>이온 결정의 배위수는 한 이온을 가장 가까이에서 둘러싼 반대 전하 이온의 수</mark>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. ⑮ 반지름 비 ════════ -->
+<section class="slide" data-sec="02 · 이온 결정의 구조와 특성" data-title="반지름 비와 배위수">
+  <h2><span class="no">15</span>반지름 비로 이온 결정의 구조 예상하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{RATIO}}</div>
+    <div class="col stack">
+      <p class="f21">양이온과 음이온의 반지름이 비슷할수록(반지름 비 $r^+/r^-$가 1에 가까울수록) 더 많은 음이온이 양이온을 둘러쌀 수 있다.</p>
+      <table class="tight ac231-t">
+        <tr><th class="l">결정</th><th>$r^+$ (pm)</th><th>$r^-$ (pm)</th><th>$r^+/r^-$</th></tr>
+        <tr><td class="l">$\ce{ZnS}$</td><td>74</td><td>184</td><td class="step" data-g="r0">0.40</td></tr>
+        <tr><td class="l">$\ce{NaCl}$</td><td>97</td><td>181</td><td class="step" data-g="r1">0.54</td></tr>
+        <tr><td class="l">$\ce{CsCl}$</td><td>167</td><td>181</td><td class="step" data-g="r2">0.92</td></tr>
+      </table>
+      <p class="small">반지름 비 규칙은 이온을 단단한 공으로 본 모형이라 맞지 않는 예외도 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑯ ZnS ════════ -->
+<section class="slide" data-sec="02 · 이온 결정의 구조와 특성" data-title="황화 아연 결정">
+  <h2><span class="no">16</span>황화 아연($\ce{ZnS}$) 결정 — 사면체 자리, 배위수 4</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">반지름 비가 0.414보다 작다: $\ce{S^2-}$이 면심 입방 구조를 이루고, 그 <b>사면체 틈새 자리</b>(8곳 중 4곳)에 $\ce{Zn^2+}$이 들어간다.</p>
+      <p class="f21" data-q><b>Q</b> 단위세포 속 $\ce{S^2-}$의 수는? <span class="step">→ $8\times\tfrac18+6\times\tfrac12=$ <span class="ans">4개</span></span></p>
+      <p class="f21" data-q><b>Q</b> $\ce{Zn^2+}$의 수는? <span class="step">→ 단위세포 안에 <span class="ans">4개</span> → $\ce{Zn^2+}:\ce{S^2-}=1:1$, 화학식 $\ce{ZnS}$</span></p>
+      <p class="f21 step" data-g="cn">$\ce{Zn^2+}$ 하나를 $\ce{S^2-}$ 4개가 둘러싼다 → <b>배위수 4</b></p>
+    </div>
+    <div class="col" style="flex:0 0 440px;order:-1">{{ZNS}}</div>
+  </div>
+</section>
+
+<!-- ════════ 25. ⑰ NaCl ════════ -->
+<section class="slide" data-sec="02 · 이온 결정의 구조와 특성" data-title="염화 나트륨 결정">
+  <h2><span class="no">17</span>염화 나트륨($\ce{NaCl}$) 결정 — 팔면체 자리, 배위수 6</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">반지름 비가 0.414보다 크다: $\ce{Cl-}$의 면심 입방 구조에서 $\ce{Na+}$이 <b>팔면체 틈새 자리</b>(모서리 중점과 체심)에 들어간다.</p>
+      <p class="f21" data-q><b>Q</b> 단위세포 속 $\ce{Cl-}$의 수는? <span class="step">→ $8\times\tfrac18+6\times\tfrac12=$ <span class="ans">4개</span></span></p>
+      <p class="f21" data-q><b>Q</b> $\ce{Na+}$의 수는? <span class="step">→ $12\times\tfrac14+1=$ <span class="ans">4개</span> → $1:1$, 화학식 $\ce{NaCl}$</span></p>
+      <p class="f21 step" data-g="cn">체심의 $\ce{Na+}$을 면 중심의 $\ce{Cl-}$ 6개가 둘러싼다 → <b>배위수 6</b>($\ce{Cl-}$도 6)</p>
+    </div>
+    <div class="col" style="flex:0 0 440px;order:-1">{{NACL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 26. ⑱ CsCl ════════ -->
+<section class="slide" data-sec="02 · 이온 결정의 구조와 특성" data-title="염화 세슘 결정">
+  <h2><span class="no">18</span>염화 세슘($\ce{CsCl}$) 결정 — 입방체 자리, 배위수 8</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">두 이온의 크기가 비슷하다(반지름 비가 0.732보다 큼): $\ce{Cl-}$의 단순 입방 격자 중심에 $\ce{Cs+}$이 놓인다.</p>
+      <p class="f21" data-q><b>Q</b> 단위세포 속 이온의 수는? <span class="step">→ $\ce{Cl-}$ $8\times\tfrac18=1$개, $\ce{Cs+}$ <span class="ans">1개</span> → $1:1$</span></p>
+      <p class="f21 step" data-g="cn">$\ce{Cs+}$ 하나를 $\ce{Cl-}$ 8개가 둘러싼다 → <b>배위수 8</b></p>
+      <p class="f21 step" data-q><b>Q</b> $\ce{CsCl}$ 결정은 체심 입방 구조일까? <span class="step">→ <span class="ans">아니다.</span> 체심과 꼭짓점의 입자가 다르다. $\ce{Cl-}$과 $\ce{Cs+}$의 단순 입방 격자 두 개가 겹친 구조이다(체심과 꼭짓점이 같은 입자일 때만 체심 입방).</span></p>
+    </div>
+    <div class="col" style="flex:0 0 440px;order:-1">{{CSCL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 탐구 활동 (이온 결정) 원리 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 이온 결정의 특성">
+  <h2><span class="tag">탐구 활동</span>이온 결정의 특성 관찰 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐15]</span>굵은 소금으로 이온 결정의 깨짐 현상을 관찰하고, 질산 칼륨($\ce{KNO3}$)의 고체 상태와 용융 상태에서 전기 전도성을 측정하여 이온 결정의 특성을 토론·발표하고 400자 이내로 적는다.</div>
+  <div class="mt8" style="text-align:center">{{CLEAVE}}</div>
+  <p class="f21 mt8" data-q><b>Q</b> 이온 결정에 강한 힘을 가하면 쉽게 깨지는 까닭은? <span class="step">→ 이온의 위치가 밀려 <span class="ans">같은 전하끼리 가까워지면 반발력</span>이 작용하기 때문이다.</span></p>
+  <p class="f21 step">고체에서는 전기장이 걸려도 이온이 움직이지 못해 전기가 통하지 않지만, 녹이면 양이온은 (−)극, 음이온은 (+)극 쪽으로 이동할 수 있어 전기가 통한다.</p>
+</section>
+
+<!-- ════════ 28. 탐구 과정·안전 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>과정과 안전 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">{{APP}}</div>
+    <div class="col stack">
+      <div class="card"><h3>과정</h3><ol class="f21 ac231-ol">
+        <li><b>깨짐</b> 굵은 소금 알갱이를 비닐에 싸서 칼날(또는 망치)로 한 방향으로 힘을 가하고 깨진 면을 돋보기로 관찰한다.</li>
+        <li><b>고체</b> 도가니에 $\ce{KNO3}$ 고체를 담고 전극 두 개를 꽂아 전구(전류계)에 불이 켜지는지 본다.</li>
+        <li><b>용융</b> 가열하여 $\ce{KNO3}$을 녹인 뒤(약 334 °C) 다시 전기 전도성을 확인한다.</li>
+        <li>결과를 바탕으로 모둠별로 토론하고 발표한 뒤 400자 이내로 적는다.</li></ol></div>
+      <div class="note"><b>안전</b> 보안경·내열 장갑을 낀다. 녹은 $\ce{KNO3}$은 매우 뜨겁고 산화제이므로 종이·유기물에 닿지 않게 한다. 전원은 낮은 전압을 쓰고, 다 쓴 $\ce{KNO3}$은 식혀서 정해진 통에 모은다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 실험실: 이온 결정 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 이온 결정의 특성">
+  <h2><span class="tag">탐구 활동</span>이온 결정의 특성 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac231ion">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="ac231-seg"><span class="small">실험</span><button class="btn on" data-m="cut">① 힘 가하기</button><button class="btn" data-m="ec">② 전기 전도성</button></div>
+      <div class="ac231-seg" data-show="cut"><span class="small">결정</span><button class="btn on" data-s="salt">굵은 소금</button><button class="btn" data-s="metal">구리(금속)</button></div>
+      <div class="ctl" data-show="cut"><div class="lbl"><span>윗층이 밀린 거리(이온 간격 기준)</span><output data-o="sh"></output></div><input type="range" min="0" max="1" step="0.25" value="0" data-i="sh" aria-label="밀린 거리"></div>
+      <div class="ac231-seg" data-show="ec"><span class="small">물질</span><button class="btn on" data-s="kno3">질산 칼륨</button><button class="btn" data-s="nacl">굵은 소금</button><button class="btn" data-s="sugar">설탕</button></div>
+      <div class="ctl" data-show="ec"><div class="lbl"><span>가열 온도</span><output data-o="t"></output></div><input type="range" min="25" max="400" step="25" value="25" data-i="t" aria-label="가열 온도"></div>
+      <label class="ac231-cb" data-show="ec"><input type="checkbox" data-i="aq"> 물에 녹여 수용액으로(가열하지 않음)</label>
+      <div class="res"><div class="small" data-o="rlab">윗층–아랫층 사이 힘</div><div class="big"><output data-o="big"></output></div><output class="kind ac231-msg" data-o="msg"></output></div>
+      <div class="ac231-seg"><button class="btn ac231-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="lab-fig" style="width:560px;height:290px"><svg viewBox="0 0 560 290" width="560" height="290" aria-label="이온 결정 실험 장치"></svg></div>
+      <table class="tight ac231-log mt8"><thead><tr><th>회</th><th>실험</th><th>물질·상태</th><th>조건</th><th>결과</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 결과·토론 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과와 토론">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 토론 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <table class="tight ac231-t">
+        <tr><th class="l">관찰·측정</th><th class="l">결과(예)</th></tr>
+        <tr><td class="l">굵은 소금에 힘을 가함</td><td class="l step" data-g="e1">평평한 면을 따라 쪼개진다</td></tr>
+        <tr><td class="l">$\ce{KNO3}$ 고체</td><td class="l step" data-g="e1">전구가 켜지지 않음</td></tr>
+        <tr><td class="l">$\ce{KNO3}$ 용융 상태</td><td class="l step" data-g="e1">전구가 켜짐</td></tr>
+        <tr><td class="l">$\ce{KNO3}$ 수용액 <span class="small">(덧붙인 비교)</span></td><td class="l step" data-g="e1">전구가 켜짐</td></tr>
+        <tr><td class="l">녹인 설탕 <span class="small">(분자 결정)</span></td><td class="l step" data-g="e1">전구가 켜지지 않음</td></tr>
+      </table>
+      <p class="small">결과는 실험실 모형의 예시이다. 모둠 실험 결과로 바꾸어 쓴다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>400자 정리 (예시)</h3>
+        <p class="f21 step">이온 결정은 양이온과 음이온이 쿨롱 인력으로 번갈아 규칙적으로 배열되어 있다. 굵은 소금에 힘을 주면 한 층이 밀려 같은 전하의 이온끼리 마주 보게 되고, 반발력 때문에 평평한 면을 따라 깨졌다. 고체 질산 칼륨은 이온이 제자리에 묶여 있어 전류가 흐르지 않았지만, 녹인 질산 칼륨에서는 이온이 반대 전하의 전극 쪽으로 이동해 전구가 켜졌다. 금속처럼 전자가 아니라 <b>이온</b>이 전하를 옮긴다는 점이 다르다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 진로 ════════ -->
+<section class="slide" data-sec="02 · 진로" data-title="진로: 플라즈마 연구">
+  <h2><span class="tag">진로</span>물질의 4번째 상태인 플라즈마 연구</h2>
+  <div style="text-align:center">{{PLASMA}}</div>
+  <p class="f21 mt8">기체에 충분한 에너지를 더 가하면 분자가 원자로, 원자가 다시 <b>이온과 전자</b>로 나뉜다. 양전하와 음전하의 수가 같아 전체로는 중성인 이 기체가 <b>플라즈마</b>(제4의 물질 상태)이다.</p>
+  <div class="row mt8">
+    <div class="col"><p class="f21">자연: 번개, 태양의 코로나 질량 방출, 오로라. 우주 물질의 대부분이 플라즈마 상태이다.</p></div>
+    <div class="col"><p class="f21">활용: 반도체 공정 장비, 핵융합 장치, 물질 가공, 의료, 분석 기기(아르곤 약 10000 K의 유도결합 플라즈마 원자방출 분광기, ICP-AES).</p></div>
+  </div>
+  <p class="f21 mt8" data-q><b>Q</b> 플라즈마가 보통 기체와 전기적 성질이 다른 까닭은? <span class="step">→ 움직일 수 있는 <span class="ans">이온과 전자</span>가 있어 전기가 통하고 전기장·자기장에 반응하기 때문이다.</span></p>
+  <p class="small">차세대 반도체 생산에서 플라즈마 측정·해석(시뮬레이션, 인공 지능) 기술을 다룰 전문 인력의 수요가 늘어날 것이다.</p>
+</section>
+
+<!-- ════════ 32. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>X선 회절로 원자층 사이의 거리 구하기</h2>
+  <p class="f22">파장 $\lambda$가 154 pm인 X선으로 어떤 결정의 회절 실험을 하였더니, $\theta=28.3^\circ$에서 보강 간섭이 일어났다. 이 회절과 관련된 원자층 사이의 거리를 구하여라. (단, $n=1$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>관계식</b> 브래그 법칙 $n\lambda=2d\sin\theta$ → $d=\dfrac{n\lambda}{2\sin\theta}$</p>
+      <p class="f21 step"><b>계산</b> $d=\dfrac{1\times154\ \text{pm}}{2\sin28.3^\circ}=\dfrac{154\ \text{pm}}{2\times0.474}$</p>
+      <div class="answer step">$d\approx162\ \text{pm}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 33. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>금속 단위세포 속 원자 수</h2>
+  <p class="f22">다음 금속의 단위세포 안에 몇 개의 원자가 있는지 구하여라.</p>
+  <p class="f22 mt8">1) 폴로늄: 단순 입방 구조 &nbsp;&nbsp; 2) 텅스텐: 체심 입방 구조 &nbsp;&nbsp; 3) 니켈: 면심 입방 구조</p>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">1) $8\times\tfrac18=$ <span class="ans">1개</span></p>
+      <p class="f21 step">2) $8\times\tfrac18+1=$ <span class="ans">2개</span></p>
+      <p class="f21 step">3) $8\times\tfrac18+6\times\tfrac12=$ <span class="ans">4개</span></p>
+      <p class="small step">꼭짓점 $\tfrac18$, 면 중심 $\tfrac12$, 내부 1로 센다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 34. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>백금의 모서리 길이와 밀도</h2>
+  <p class="f21">단위세포가 면심 입방 구조인 백금($\ce{Pt}$) 원자의 반지름은 139 pm이다. 백금의 단위세포 모서리의 길이와 밀도(g/cm³)를 구하여라. (단, $\ce{Pt}$의 원자량은 195.08, $N_\mathrm{A}=6.022\times10^{23}/\text{mol}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 760px">
+      <p class="f21 step"><b>모서리</b> 면 대각선에서 맞닿음: $\sqrt2\,l=4r$ → $l=2\sqrt2\,r=2\sqrt2\times139\ \text{pm}=3.93\times10^{-10}\ \text{m}$</p>
+      <p class="f21 step"><b>부피</b> $V=l^3=(3.93\times10^{-8}\ \text{cm})^3=6.07\times10^{-23}\ \text{cm}^3$</p>
+      <p class="f21 step"><b>질량</b> 원자 4개: $4\times\dfrac{195.08\ \text{g/mol}}{6.022\times10^{23}/\text{mol}}=1.296\times10^{-21}\ \text{g}$</p>
+      <div class="answer step">$l=3.93\times10^{-10}\ \text{m}\ (393\ \text{pm})$, &nbsp; 밀도 $=\dfrac{1.296\times10^{-21}\ \text{g}}{6.07\times10^{-23}\ \text{cm}^3}\approx21.4\ \text{g/cm}^3$</div>
+      <p class="small step">부피를 반올림하지 않고 계산하면 $21.3\ \text{g/cm}^3$ — 반올림 자리에 따른 차이이다(실제 백금 $21.45\ \text{g/cm}^3$).</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 35. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>면심 입방 구조의 틈새 자리 수</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 200px;text-align:center">{{Q4FIG}}</div>
+    <div class="col stack">
+      <p class="f21">그림과 같은 입체 배열을 가지는 구조의 단위세포 안에 포함된 사면체 자리와 팔면체 자리의 개수를 구하여라. (단, 온전한 사면체 또는 팔면체 자리 공간을 1개로 하여 계산한다.)</p>
+      <p class="f21 step" data-g="t"><b>사면체 자리</b> 단위세포를 작은 정육면체 8개로 나누면 그 중심마다 하나 → <span class="ans">8개</span></p>
+      <p class="f21 step" data-g="o"><b>팔면체 자리</b> 체심 1 + 모서리 중점 $12\times\tfrac14$ → $1+3=$ <span class="ans">4개</span></p>
+      <p class="small step">원자 4개당 사면체 자리 8, 팔면체 자리 4 — $\ce{ZnS}$는 사면체 자리의 절반, $\ce{NaCl}$은 팔면체 자리 전부를 채운다.</p>
+    </div>
+    <div class="col" style="flex:0 0 290px">{{Q4HOLE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 36. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>타이타늄 산화물의 화학식</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 300px">{{RUTILE}}</div>
+    <div class="col stack">
+      <p class="f21">그림은 타이타늄($\ce{Ti}$) 산화물의 단위세포 구조이다. 단위세포 안의 타이타늄과 산소 원자 수를 구하고 화학식을 제시하여라.</p>
+      <p class="f21 step"><b>타이타늄</b> 꼭짓점 8 + 체심 1: $8\times\tfrac18+1=$ <span class="ans">2개</span></p>
+      <p class="f21 step"><b>산소</b> 윗면·아랫면 위 4 + 내부 2: $4\times\tfrac12+2=$ <span class="ans">4개</span></p>
+      <div class="answer step">$\ce{Ti}:\ce{O}=2:4=1:2$ → 화학식 $\ce{TiO2}$</div>
+      <div class="board" style="min-height:90px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 37. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 고체 결정의 특성 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>3. 고체 — 01 고체 결정의 종류 · 02 고체 결정의 특성</h2>
+  <div class="ac231-map">
+    <div class="ac231-node ac231-main" data-q><b>01 고체 결정의 종류</b><br>❶ 결정 구조 분석: <span class="blank"><span class="step">X선 회절</span></span><br>❷ 브래그 법칙 <span class="blank"><span class="step">$n\lambda=2d\sin\theta$</span></span><br>❸ 결정의 종류: 이온·금속·<span class="blank"><span class="step">공유</span></span>·분자 결정</div>
+    <div class="ac231-arr">→</div>
+    <div class="ac231-node ac231-main" data-q><b>02 금속 결정</b><br>❹ 단위세포 속 원자 수: 단순 1, 체심 2, 면심 <span class="blank"><span class="step">4</span></span><br>❺ 배위수: 6, 8, <span class="blank"><span class="step">12</span></span><br>❻ 원자 점유 비율: 52.4, 68.0, <span class="blank"><span class="step">74.0</span></span> %</div>
+    <div class="ac231-arr">→</div>
+    <div class="ac231-node ac231-main" data-q><b>02 이온 결정</b><br>❼ 반지름 비 클수록 배위수 <span class="blank"><span class="step">커짐</span></span><br>❽ $\ce{ZnS}$ 4 · $\ce{NaCl}$ 6 · $\ce{CsCl}$ <span class="blank"><span class="step">8</span></span><br>❾ 용융 상태에서 <span class="blank"><span class="step">이온</span></span>이 움직여 전기가 통함</div>
+  </div>
+  <p class="small mt12">다음 중단원: 4. 용액의 성질</p>
+</section>
+
+<!-- ════════ 38. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 고체 결정의 특성 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 브래그 법칙, 결정의 종류, 단위세포 속 원자 수·배위수·원자 점유 비율, 반지름 비와 이온 결정 구조를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 3D 모형으로 단위세포를 비교하고, 이온 결정의 깨짐과 전기 전도성을 실험으로 확인했다.</button>
+    <button class="chk">[가치·태도] 모둠별로 모형과 실험 결과를 토론하고 발표했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 철($\ce{Fe}$, 체심 입방) 결정에서 철 원자 하나에 가장 가까운 철 원자는 몇 개일까? <span class="step">→ <span class="ans">8개</span>(배위수 8)</span></p>
+    <p class="f21 mt8"><b>Q</b> 고체 $\ce{NaCl}$은 전기가 통하지 않는데 녹이면 통하는 까닭은? <span class="step">→ 녹으면 <span class="ans">이온이 움직일 수 있기</span> 때문이다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 바닷물이 강물보다 늦게 어는 까닭은? — 4. 용액의 성질</div>
+</section>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>화학 수업 슬라이드</title>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/config.js"></script>
+</head>
+<body>
+<div class="top">
+  <h1 id="title">화학 수업 슬라이드</h1><span class="sub" id="school"></span>
+  <span class="sp"></span>
+  <span class="who" id="who"></span>
+  <button id="login">관리자 로그인</button>
+</div>
+<div class="wrap">
+  <div id="msg"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="list"><div class="empty">덱 목록을 불러오는 중…</div></div>
+</div>
+<script type="module">
+import { getFB, isAdmin, IS_LOCAL } from './js/fb.js';
+import { dbKey } from './js/deckio.js';
+const C = window.SITE_CONFIG || {};
+const $ = s => document.querySelector(s);
+document.title = $('#title').textContent = C.SITE_TITLE || '화학 수업 슬라이드';
+$('#school').textContent = C.SCHOOL || '';
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let decks = [], meta = {}, admin = false, tab = null;
+const q = IS_LOCAL ? '&local' : '';
+
+function render() {
+  const keys = [...new Set(decks.map(d => d.key))];
+  if (!tab || !keys.includes(tab)) { try { tab = localStorage.getItem('chemSlides:tab'); } catch (e) { } if (!keys.includes(tab)) tab = keys[0]; }
+  $('#tabs').innerHTML = keys.map(k => `<button data-k="${esc(k)}" class="${k === tab ? 'on' : ''}">${esc(decks.find(d => d.key === k).label)}</button>`).join('');
+  const list = decks.filter(d => d.key === tab);
+  if (!list.length) { $('#list').innerHTML = '<div class="empty">아직 빌드한 덱이 없습니다.</div>'; return; }
+  let html = '', unit = null;
+  for (const d of list) {
+    if (d.unit !== unit) { if (unit !== null) html += '</div>'; unit = d.unit; html += `<h2 class="unit">${esc(d.unitName || d.unit)}</h2><div class="grid">`; }
+    const id = d.key + '/' + d.file, m = meta[dbKey(id)];
+    html += `<div class="card"><div class="id">${esc(d.id)}${m ? ' <span class="badge edit">웹 수정본</span>' : ''}</div>
+      <div class="t">${esc(d.title)}</div><div class="h">${esc(d.pages || '')}</div>
+      <div class="acts"><a class="go" href="view.html?deck=${encodeURIComponent(id)}${q}">수업 열기</a>
+      ${admin ? `<a href="edit.html?deck=${encodeURIComponent(id)}${q}">수정</a>` : ''}</div></div>`;
+  }
+  $('#list').innerHTML = html + '</div>';
+}
+$('#tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; tab = b.dataset.k; try { localStorage.setItem('chemSlides:tab', tab); } catch (e) { } render(); });
+
+(async () => {
+  try { decks = (await (await fetch('decks.json', { cache: 'no-cache' })).json()).decks || []; }
+  catch (e) { $('#msg').innerHTML = '<div class="note err">decks.json을 읽지 못했습니다. <code>_소스/tools/site_index.py</code>를 실행한 뒤 다시 배포하세요.</div>'; }
+  const fb = await getFB();
+  if (fb.mode === 'local') $('#msg').insertAdjacentHTML('beforeend', '<div class="note"><span class="badge local">시험 모드</span> Firebase 없이 이 브라우저 안에서만 동작합니다. 수정은 학생에게 보이지 않습니다.</div>');
+  if (fb.mode === 'unset') $('#msg').insertAdjacentHTML('beforeend', '<div class="note">js/config.js에 Firebase 설정이 아직 없습니다. 수업 열기는 되지만 로그인·웹 수정은 배포 설정 후에 됩니다. (시험해 보려면 주소 끝에 <code>?local</code>)</div>');
+  try { meta = (await fb.get('meta')) || {}; } catch (e) { meta = {}; }
+  fb.onUser(u => {
+    admin = isAdmin(u) && fb.mode !== 'unset';
+    $('#who').innerHTML = u ? esc(u.email) + (admin ? ' <span class="badge">관리자</span>' : ' (관리자 아님)') : '';
+    $('#login').textContent = u ? '로그아웃' : '관리자 로그인';
+    $('#login').onclick = () => (u ? fb.signOut() : fb.signIn().catch(err => alert('로그인 실패: ' + err.message)));
+    $('#login').disabled = fb.mode === 'unset';
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

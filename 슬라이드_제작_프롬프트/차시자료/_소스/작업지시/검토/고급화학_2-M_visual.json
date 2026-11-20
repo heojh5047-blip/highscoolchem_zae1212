@@ -1,0 +1,11 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 그림이 제목 「대단원 Ⅱ」와 겹치고 그림 라벨이 화면 16px 미만","fix":"그림 너비 420px, h1 86px, 라벨 21–24 — 반영"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"단위 인자 사슬 화살표 라벨이 viewBox 위로 잘리고 본문이 아래로 넘침","fix":"viewBox 아래로 옮기고 두 열 배치 — 반영"},
+{"slide":12,"severity":"medium","rule":"T4","problem":"분출 속도비 식이 칸을 넘고 열이 넘침","fix":"몰질량 계산을 .unit 줄로, 문항을 전체 폭으로 — 반영"},
+{"slide":13,"severity":"medium","rule":"D8","problem":"「12.0 °C, ln P2」 라벨이 x축 눈금과 겹침, 왼쪽 열 넘침","fix":"라벨을 점선 위 왼쪽으로, 문항을 전체 폭으로 — 반영"},
+{"slide":14,"severity":"medium","rule":"D23","problem":"처음 고른 몸 대각선이 시선 방향에 가까워 짧게 보여 a < l처럼 보임","fix":"화면에서 가장 길게 보이는 몸 대각선을 gen.py가 고르게 함, 라벨 a 위치 조정 — 반영"},
+{"slide":16,"severity":"low","rule":"D8","problem":"「순수한 물」 라벨이 y축 눈금 1.1과 겹침","fix":"라벨 위치 이동 — 반영"},
+{"slide":19,"severity":"medium","rule":"T4","problem":"부품 표가 폭을 다 차지해 오른쪽 질문 열이 한 글자 폭으로 눌림","fix":"표를 700px 열에 넣음 — 반영"},
+{"slide":20,"severity":"low","rule":"D8","problem":"x축 이름 잘림, 원점 눈금 400과 0 겹침","fix":"viewBox 높이, y 눈금 0 생략 — 반영"},
+{"slide":11,"severity":"low","rule":"S2","problem":"정답 2개 이상 장(11–15, 18, 23)에 판서 공간 없음","fix":".board(min-height 30px) 추가 — 반영"}
+],"summary":"전체 sheet 2회(완성 직후·최종)와 단계 캡처(13, 23)로 확인. 최종 render 자동 점검 0·콘솔 0, motion 0(data-anim 180), ask 0(질문 강조 69)."}

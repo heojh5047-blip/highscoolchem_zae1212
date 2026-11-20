@@ -1,0 +1,530 @@
+<!-- 고급화학 2-2-1a 액체의 증발과 증기압·끓는점 — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 2. 액체 분자 › 01·02</div>
+    <h1 class="ac221-h1">액체의 증기압·끓는점과<br>물의 특성 <span class="acc">(1)</span></h1>
+    <p class="sub">액체의 증발과 증기압, 액체의 끓는점 — 분자 사이의 힘으로 액체의 성질을 설명하기</p>
+    <p class="meta">고등학교 고급 화학 85–91쪽</p>
+  </div>
+  {{COVER_A}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅱ-2. 액체 분자 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>2. 액체 분자</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 380px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 액체의 증발과 증기압 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b class="c-plus">02</b> 액체의 끓는점 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>03</b> 물의 분자 구조와 특성 <span class="small">(다음 시간)</span></p>
+      </div>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">액체 분자는 이웃 분자와의 인력 때문에 서로 가까이 있지만, 위치를 바꾸고 회전할 수 있는 에너지를 가져 <b>유동성</b>이 있다. 액체 분자 사이의 인력, 증발과 증기압, 끓는점, 표면 장력과 모세관 현상, 물 분자의 구조와 수소 결합에 따른 물의 성질을 알아보자.</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt12" style="text-align:center">{{PHASES}}</div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 액체의 증발과 증기압" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-04]</span>물질의 증기압, 끓는점, 표면 장력, 모세관 현상을 이해하고, 이를 다양한 분자 간 상호 작용으로 설명할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>이온–쌍극자 힘, 쌍극자–쌍극자 상호 작용, 분산력을 <b>비교</b>하여 물질의 끓는점 차이를 설명할 수 있다.</li>
+    <li>증기압을 동적 평형으로 설명하고, <b>클라우지우스–클라페이롱 식</b>으로 증기압을 계산할 수 있다.</li>
+    <li>끓는점, 표면 장력, 모세관 현상을 분자 사이의 상호 작용으로 설명하고, 물의 증기압과 액체의 표면 장력을 <b>실험으로 측정</b>할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">분자 사이 상호 작용</div><div class="farr">→</div>
+    <div class="fnode">증발·증기압</div><div class="farr">→</div>
+    <div class="fnode">클라우지우스–클라페이롱 식</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 증기압 측정</div><div class="farr">→</div>
+    <div class="fnode">끓는점</div><div class="farr">→</div>
+    <div class="fnode">표면 장력·모세관</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 표면 장력 측정</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 액체의 증발과 증기압 · 도입" data-title="생각 열기: 물과 메테인">
+  <h2><span class="tag">생각 열기</span>분자량이 비슷한데 끓는점이 260 °C나 다른 까닭은?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 440px">{{BPBAR}}</div>
+    <div class="col stack">
+      <p class="f22">메테인($\ce{CH4}$, 분자량 16)은 −162 °C에서, 물($\ce{H2O}$, 분자량 18)은 100 °C에서 끓는다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 액체가 끓을 때 끊어지는 것은 무엇일까?</p></div>
+      <div class="answer step">분자 사이의 인력 (분자 안의 공유 결합은 그대로)</div>
+      <p class="f21 step">→ 물 분자 사이의 인력이 메테인보다 훨씬 강하다. 오늘은 액체 분자 사이에 작용하는 힘의 <b>종류와 세기</b>를 비교한다.</p>
+      <p class="small step">얼음이 녹아 물이 될 때 수소 결합은 약 10 %만 끊어지고, 나머지는 끊어지기와 결합하기를 되풀이한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 액체 분자 사이의 상호 작용 ════════ -->
+<section class="slide" data-sec="01 · 액체 분자 사이의 상호 작용" data-title="액체 분자 사이의 상호 작용">
+  <h2><span class="no">1</span>액체 분자 사이의 상호 작용</h2>
+  <p class="f22">액체 분자 사이의 상호 작용은 분자 구조에 따라 종류와 세기가 다르며, <b>두 전하 사이의 쿨롱 상호 작용</b>으로 설명한다.</p>
+  <table class="tight ac221-res mt12">
+    <tr><th class="l">상호 작용</th><th class="l">무엇과 무엇 사이</th><th>퍼텐셜 에너지</th><th class="l">예</th></tr>
+    <tr><td class="l">이온–쌍극자 힘</td><td class="l">이온의 전하 $z$ – 극성 분자의 쌍극자 모멘트 $\mu$</td><td>$E_\mathrm{p}\propto-\dfrac{z\mu}{r^2}$</td><td class="l">물에 녹은 이온의 수화</td></tr>
+    <tr><td class="l">쌍극자–쌍극자 상호 작용</td><td class="l">극성 분자 – 극성 분자</td><td>정지 $-\dfrac{\mu_1\mu_2}{r^3}$ · 회전 $-\dfrac{\mu_1\mu_2}{r^6}$</td><td class="l">$\ce{HCl}$, $\ce{NO}$</td></tr>
+    <tr><td class="l">분산력</td><td class="l">모든 분자(무극성 분자 포함)</td><td>$E_\mathrm{p}\propto-\dfrac{\alpha_1\alpha_2}{r^6}$</td><td class="l">$\ce{O2}$, $\ce{N2}$</td></tr>
+  </table>
+  <p class="small mt8">$r$: 거리, $\alpha$: 편극도. 퍼텐셜 에너지 식은 계산하지 않고, 어떤 상호 작용이 <b>더 가까이에서만</b> 작용하는지 비교하는 데 쓴다. 물의 수소 결합은 03에서 다룬다.</p>
+  <p class="f21 mt8" data-q><b>Q</b> 분자 사이 거리가 2배가 되면 가장 많이 약해지는 상호 작용은? <span class="step">→ <span class="ans">$r^6$에 반비례하는 회전 쌍극자 상호 작용과 분산력</span> ($\tfrac{1}{64}$로 줄어 아주 가까이에서만 작용)</span></p>
+</section>
+
+<!-- ════════ 6. ② 이온–쌍극자 힘 ════════ -->
+<section class="slide" data-sec="01 · 액체 분자 사이의 상호 작용" data-title="이온–쌍극자 힘">
+  <h2><span class="no">2</span>이온–쌍극자 힘 — 이온의 수화</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{IONDIP}}</div>
+    <div class="col stack">
+      <p class="f21">이온성 고체가 물에 녹으면 극성인 물 분자가 이온을 둘러싼다(수화). 이 현상은 <b>이온–쌍극자 힘</b>으로 설명한다.</p>
+      <div class="formula sm">$E_\mathrm{p}\propto-\dfrac{z\mu}{r^2}$<div class="unit">$z$: 이온의 전하량, $\mu$: 극성 분자의 쌍극자 모멘트, $r$: 거리</div></div>
+      <p class="f21">아주 가까운 거리에서만 작용한다.</p>
+      <p class="f21 step" data-q><b>Q</b> 양이온과 음이온 둘레에서 물 분자의 방향은 왜 반대일까? <span class="small">→ 양이온에는 부분 음전하(O), 음이온에는 부분 양전하(H)를 향해야 끌어당긴다.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 쌍극자–쌍극자 상호 작용 ════════ -->
+<section class="slide" data-sec="01 · 액체 분자 사이의 상호 작용" data-title="쌍극자–쌍극자 상호 작용">
+  <h2><span class="no">3</span>쌍극자–쌍극자 상호 작용</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{HCL}}</div>
+    <div class="col stack">
+      <p class="f21">$\ce{H-Cl}$처럼 극성 결합을 가진 비대칭 분자는 쌍극자 모멘트 $\mu$를 가진다. 퍼텐셜 에너지는 <b>$\mu$가 클수록, 거리 $r$가 작을수록</b> 커지고, 분자의 운동 형태에 따라 달라진다.</p>
+      <div class="formula sm">$\begin{aligned}\text{정지한 분자}\quad E_\mathrm{p}&amp;\propto-\dfrac{\mu_1\mu_2}{r^3}\\[4pt]\text{회전하는 분자}\quad E_\mathrm{p}&amp;\propto-\dfrac{\mu_1\mu_2}{r^6}\end{aligned}$</div>
+    </div>
+  </div>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 극성 분자인 일산화 질소($\ce{NO}$)의 끓는점(−152 °C)이 분자량이 비슷한 무극성 분자 $\ce{N2}$(−196 °C), $\ce{O2}$(−183 °C)보다 높은 까닭은?</p>
+    <p class="f21 step">→ $\ce{NO}$ 분자 사이에는 분산력에 더해 <span class="ans">쌍극자–쌍극자 상호 작용</span>이 작용하기 때문이다.</p></div>
+</section>
+
+<!-- ════════ 8. ④ 분산력 ════════ -->
+<section class="slide" data-sec="01 · 액체 분자 사이의 상호 작용" data-title="분산력">
+  <h2><span class="no">4</span>분산력 — 무극성 분자 사이의 힘</h2>
+  <div style="text-align:center">{{DISP}}</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 420px">{{HALO}}</div>
+    <div class="col stack">
+      <p class="f21">무극성 분자도 어느 순간 전자 구름이 한쪽으로 치우쳐 작은 극성을 띠고, 이웃 분자의 편극을 유도해 서로 끌어당긴다. 이 힘이 <mark>분산력</mark>이다.</p>
+      <div class="formula sm">$E_\mathrm{p}\propto-\dfrac{\alpha_1\alpha_2}{r^6}$<div class="unit">$\alpha$: 편극도 — 분자의 <b>표면적·분자량</b>이 클수록 크다</div></div>
+      <p class="f21 step">→ 할로젠 분자는 모두 무극성이지만, 분자량이 클수록 분산력이 커서 끓는점이 높다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 예측: 세 물질의 끓는점 ════════ -->
+<section class="slide" data-sec="01 · 액체 분자 사이의 상호 작용" data-title="예측: 분자량이 비슷한 세 물질">
+  <h2><span class="tag">예측</span>분자량이 비슷한 세 물질의 끓는점 순서는?</h2>
+  <table class="tight ac221-res mt8">
+    <tr><th>물질</th><th>구조</th><th>분자량</th><th>분자 사이에 작용하는 힘</th><th>끓는점</th></tr>
+    <tr><td>프로페인</td><td>$\ce{CH3CH2CH3}$</td><td>44</td><td class="l step" data-g="p1">분산력만 (무극성)</td><td class="step" data-g="p1">−42 °C</td></tr>
+    <tr><td>다이메틸 에터</td><td>$\ce{CH3OCH3}$</td><td>46</td><td class="l step" data-g="p2">분산력 + 쌍극자–쌍극자</td><td class="step" data-g="p2">−24 °C</td></tr>
+    <tr><td>에탄올</td><td>$\ce{C2H5OH}$</td><td>46</td><td class="l step" data-g="p3">분산력 + 쌍극자–쌍극자 + 수소 결합</td><td class="step" data-g="p3">78 °C</td></tr>
+  </table>
+  <p class="f22 mt16"><b>Q</b> 끓는점이 높은 순서대로 예측해 보자. 판단 근거는?</p>
+  <div class="answer step">에탄올 &gt; 다이메틸 에터 &gt; 프로페인</div>
+  <p class="f21 step">분자량이 비슷하면 분산력의 크기가 비슷하므로, <b>분자 사이 상호 작용의 종류</b>가 끓는점을 결정한다.</p>
+</section>
+
+<!-- ════════ 10. ⑤ 증발 ════════ -->
+<section class="slide" data-sec="01 · 액체의 증발과 증기압" data-title="증발">
+  <h2><span class="no">5</span>액체의 증발</h2>
+  <div class="row">
+    <div class="col">{{EVAP}}</div>
+    <div class="col">{{KEDIST}}</div>
+  </div>
+  <p class="f21 mt8">일정 온도에서도 액체 분자의 운동 에너지는 다양하다. 표면 분자는 내부 분자보다 상호 작용이 약하므로, 큰 운동 에너지를 가진 표면 분자는 표면에서 떨어져 나와 기체가 된다. 이 현상이 <mark>증발</mark>이다.</p>
+  <p class="f21 step" data-q><b>Q</b> 온도를 높이면 증발은 어떻게 될까? <span class="small">→ 표면을 떠날 만큼 운동 에너지가 큰 분자의 비율(노란 부분)이 커져 증발이 잘 일어난다.</span></p>
+</section>
+
+<!-- ════════ 11. ⑥ 증기압 ════════ -->
+<section class="slide" data-sec="01 · 액체의 증발과 증기압" data-title="증기압과 동적 평형">
+  <h2><span class="no">6</span>증기압 — 증발과 응축의 동적 평형</h2>
+  <div class="stages mt8">
+    <div class="stage"><h3>① 처음</h3>{{EQ1}}<p>닫힌 용기에서 증발만 일어난다.</p></div>
+    <div class="stage step"><h3>② 시간이 지나면</h3>{{EQ2}}<p>증기 분자가 늘어 응축도 일어난다.</p></div>
+    <div class="stage step"><h3>③ 동적 평형</h3>{{EQ3}}<p>증발 속도 = 응축 속도, 증기 분자 수 일정</p></div>
+  </div>
+  <p class="f21 mt8 step">증발로 생긴 증기가 액체와 <b>동적 평형</b>을 이룰 때 증기의 압력을 <mark>증기압</mark>이라고 한다. 분자 사이의 인력이 작을수록 증기압이 높고, 상온에서 증기압이 큰 액체일수록 휘발성이 크다.</p>
+  <p class="small">초록 화살표: 증발, 보라 화살표: 응축(길이 ∝ 속도). 평형에서도 증발과 응축은 멈추지 않는다.</p>
+</section>
+
+<!-- ════════ 12. 예측: 세 용기 ════════ -->
+<section class="slide" data-sec="01 · 액체의 증발과 증기압" data-title="예측: 증기압과 액체의 양">
+  <h2><span class="tag">예측</span>어느 용기의 증기압이 가장 클까?</h2>
+  <div style="text-align:center">{{THREE}}</div>
+  <div class="answer step mt8">셋 모두 같다</div>
+  <p class="f21 step">증기압은 <b>온도와 액체의 종류</b>에 따라 달라지며, 액체의 양·표면적·용기 부피와는 관계가 없다. 표면적이 넓으면 증발 속도와 응축 속도가 함께 커져 평형에 <b>더 빨리</b> 이를 뿐이다.</p>
+  <p class="small step">오개념 「증기압은 액체의 양이 많을수록 크다」 → 동적 평형에서 단위 표면적당 증발 속도와 응축 속도를 비교해 보자.</p>
+</section>
+
+<!-- ════════ 13. ⑦ 온도와 물질 종류 ════════ -->
+<section class="slide" data-sec="01 · 온도와 물질의 종류에 따른 증기압 변화" data-title="온도와 물질에 따른 증기압">
+  <h2><span class="no">7</span>온도와 물질의 종류에 따른 증기압 변화</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{VPC}}</div>
+    <div class="col stack">
+      <p class="f21">온도가 높을수록 운동 에너지가 큰 분자의 비율이 늘어 증기압 $P_\text{vap}$가 <b>비선형으로</b> 증가한다.</p>
+      <p class="f21">분자 사이의 인력이 약한 액체일수록 낮은 온도에서도 증발이 쉽게 일어난다.</p>
+      <p class="f21 step" data-q><b>Q</b> 30 °C에서 증기압이 큰 순서는? <span class="step">→ <span class="ans">다이에틸 에터 &gt; 에탄올 &gt; 물</span></span></p>
+      <p class="f21 step">→ 분자 사이 인력은 그 반대 순서: 물 &gt; 에탄올 &gt; 다이에틸 에터</p>
+      <p class="small step">곡선이 760 mmHg와 만나는 온도(34.6, 78.4, 100.0 °C)는 02에서 다시 본다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ ln P – 1/T ════════ -->
+<section class="slide" data-sec="01 · 온도와 물질의 종류에 따른 증기압 변화" data-title="ln P와 1/T의 직선">
+  <h2><span class="no">8</span>$\ln P_\text{vap}$와 $\dfrac{1}{T}$은 직선 관계</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{LNP}}</div>
+    <div class="col stack">
+      <div class="formula sm">$\ln P_\text{vap}=-\left(\dfrac{\Delta H^\circ_\text{vap}}{R}\right)\dfrac{1}{T}+C$<div class="unit">$\Delta H^\circ_\text{vap}$: 증발 엔탈피, $R=8.314\ \text{J/(K}\cdot\text{mol)}$, $T$: 절대 온도, $C$: 상수</div></div>
+      <p class="f21 step">기울기 $=-\dfrac{\Delta H^\circ_\text{vap}}{R}$ → 기울기는 <b>음수</b>이고 단위는 K이다. 크기가 증발 엔탈피에 비례한다.</p>
+      <p class="f21 step" data-q><b>Q</b> 세 직선 가운데 가장 가파른 것은? <span class="step">→ <span class="ans">물</span> — 증발 엔탈피가 가장 크다(분자 사이 인력이 가장 강하다).</span></p>
+      <p class="small">온도는 반드시 절대 온도(K)를 쓴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑨ 클라우지우스–클라페이롱 식 ════════ -->
+<section class="slide" data-sec="01 · 온도와 물질의 종류에 따른 증기압 변화" data-title="클라우지우스–클라페이롱 식">
+  <h2><span class="no">9</span>클라우지우스–클라페이롱 식</h2>
+  <p class="f22">두 온도 $T_1$, $T_2$에서 직선 식을 쓰고 빼면, 다른 온도의 증기압을 계산하는 식을 얻는다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21 step">$\ln P_2=-\dfrac{\Delta H^\circ_\text{vap}}{R}\cdot\dfrac{1}{T_2}+C$, &nbsp; $\ln P_1=-\dfrac{\Delta H^\circ_\text{vap}}{R}\cdot\dfrac{1}{T_1}+C$</p>
+      <div class="formula step">$\ln\left(\dfrac{P_2}{P_1}\right)=-\dfrac{\Delta H^\circ_\text{vap}}{R}\left(\dfrac{1}{T_2}-\dfrac{1}{T_1}\right)$</div>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>쓸 때 약속</h3><ul class="f21 ac221-ul">
+        <li>증발 엔탈피는 온도에 따라 크게 변하지 않는 <b>상수</b>로 본다.</li>
+        <li>$R=8.314\ \text{J/(K}\cdot\text{mol)}$ → $\Delta H^\circ_\text{vap}$는 J/mol로 넣는다.</li>
+        <li>$T$는 절대 온도(K), 압력은 두 값의 단위만 같으면 된다.</li></ul></div>
+    </div>
+  </div>
+  <p class="f21 mt8 step">→ 증발 엔탈피가 큰 물질일수록 온도가 오를 때 증기압이 <b>더 크게</b> 증가한다.</p>
+</section>
+
+<!-- ════════ 16. 예제 Ⅱ-3 ════════ -->
+<section class="slide" data-sec="01 · 온도와 물질의 종류에 따른 증기압 변화" data-title="예제 Ⅱ-3">
+  <h2><span class="tag ex">예제 Ⅱ-3</span>테트라클로로메테인의 증기압</h2>
+  <p class="f22"><b>Q</b> 테트라클로로메테인($\ce{CCl4}$)의 증발 엔탈피는 $33.05\ \text{kJ/mol}$이고, 증기압은 57.8 °C에서 405 mmHg이다. 25.0 °C에서 증기압은 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>주어진 것</b> $T_1=331.0\ \text{K}$, $P_1=405\ \text{mmHg}$, $T_2=298.2\ \text{K}$, $\Delta H^\circ_\text{vap}=3.305\times10^{4}\ \text{J/mol}$</p>
+      <div class="f21 step">$\ln\dfrac{P_2}{P_1}=-\dfrac{3.305\times10^{4}\ \text{J/mol}}{8.314\ \text{J/(K}\cdot\text{mol)}}\left(\dfrac{1}{298.2\ \text{K}}-\dfrac{1}{331.0\ \text{K}}\right)=-1.321$</div>
+      <p class="f21 step">$P_2=405\ \text{mmHg}\times e^{-1.321}$</p>
+      <div class="answer step">$P_2\approx108\ \text{mmHg}$</div>
+      <p class="small step">온도가 낮아졌으므로 증기압이 작아진 것이 맞다($\ln$ 값이 음수).</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 활동 원리 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 증기압 측정 (원리)">
+  <h2><span class="tag">탐구 활동</span>주사기와 압력계를 이용한 물의 증기압 측정 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐11]</span>주사기와 압력계를 이용한 물의 증기압 측정 실험 방법을 모둠별로 조사해서 실험을 설계하고, 온도에 따른 물의 증기압을 측정하여 물의 증기압 곡선을 그린다.</div>
+  <div class="mt12" style="text-align:center">{{SYR}}</div>
+  <p class="f21 mt8">닫힌계 내부에는 <b>물만</b> 있어야 한다. 충분한 시간이 지나 동적 평형에 이르면 피스톤 안쪽의 압력이 그 온도에서 물의 증기압이다.</p>
+  <p class="f21 step" data-q><b>Q</b> 주사기 속에 공기 방울이 남아 있으면 측정값은? <span class="step">→ <span class="ans">공기의 압력이 더해져 실제 증기압보다 크게</span> 측정된다.</span></p>
+</section>
+
+<!-- ════════ 18. 탐구 설계·과정·안전 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 설계와 과정">
+  <h2><span class="tag">탐구 활동</span>실험 방법 조사와 설계 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <div class="card"><h3>조사한 방법(예)</h3><ul class="f21 ac221-ul">
+        <li><b>주사기 + 압력계</b>: 물만 넣고 당겨 만든 공간의 압력을 잰다.</li>
+        <li><b>플라스크 + 압력 센서</b>: 처음 공기만의 압력을 재 두고, 측정값에서 공기 압력(온도 보정)을 뺀다.</li></ul></div>
+      <table class="tight ac221-var">
+        <tr><th>조작 변인</th><td class="l">물중탕의 온도(20–80 °C)</td></tr>
+        <tr><th>종속 변인</th><td class="l">압력계가 가리키는 증기압</td></tr>
+        <tr><th>통제 변인</th><td class="l">물만 넣기(기포 없음), 평형까지 기다리는 시간, 같은 압력계</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>과정</h3><ol class="f21 ac221-ol">
+        <li>주사기를 물중탕에 담그고 온도계로 온도를 잰다.</li>
+        <li>압력계 눈금이 더 변하지 않을 때(평형) 압력을 읽는다.</li>
+        <li>온도를 10 °C씩 바꾸며 되풀이하고 표에 기록한다.</li>
+        <li>온도–증기압 그래프(증기압 곡선)를 그린다.</li></ol></div>
+      <div class="note"><b>안전</b> 뜨거운 물에 데지 않게 장갑을 끼고, 피스톤을 당긴 채 고정할 때 손가락이 끼지 않게 한다. 압력계의 측정 범위를 넘기지 않는다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 실험실: 증기압 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="실험실: 증기압 측정">
+  <h2><span class="tag">탐구 활동</span>물의 증기압 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac221vp" data-mode="pt">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <div class="ac221-seg"><span class="small">액체</span><button class="btn on" data-liq="water">물</button><button class="btn" data-liq="ethanol">에탄올</button><button class="btn" data-liq="ether">다이에틸 에터</button></div>
+      <div class="ctl"><div class="lbl"><span>물중탕 온도</span><output data-o="t"></output></div><input type="range" min="10" max="90" step="5" value="20" data-i="t" aria-label="물중탕 온도"></div>
+      <label class="ac221-cb"><input type="checkbox" data-i="air"> 주사기에 공기 방울이 남음</label>
+      <svg class="ac221-app" viewBox="0 0 420 130" width="388" height="120" aria-label="물중탕 속 주사기와 압력계"></svg>
+      <div class="res"><div class="small">압력계 읽음</div><div class="big"><output data-o="big"></output></div><output class="kind ac221-msg" data-o="msg"></output></div>
+      <div class="ac221-seg mt8"><button class="btn ac221-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="ac221-seg"><span class="small">그래프</span><button class="btn" data-act="pt">$P$–$t$</button><button class="btn" data-act="cc">$\ln P$–$1/T$</button></div>
+      <div class="lab-fig" style="width:600px;height:260px"><svg viewBox="0 0 600 260" width="600" height="260" aria-label="증기압 그래프"></svg><div class="ov halo" data-ov="xpt">온도 $t$ (°C)</div><div class="ov" data-ov="ypt">증기압 $P$ (kPa)</div><div class="ov halo" data-ov="xcc">$1/T$ ($10^{-3}\ \text{K}^{-1}$)</div><div class="ov" data-ov="ycc">$\ln P$ ($P$: kPa)</div></div>
+      <table class="tight ac221-log mt8"><thead><tr><th>회</th><th>액체</th><th>t (°C)</th><th>P (kPa)</th><th>$1/T$ ($10^{-3}\ \text{K}^{-1}$)</th><th>$\ln P$</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 탐구 결과 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과 정리">
+  <h2><span class="tag">탐구 활동</span>결과 정리: 물의 증기압 곡선 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 460px">{{VPRES}}</div>
+    <div class="col stack">
+      <table class="tight ac221-res">
+        <tr><th>t (°C)</th><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td></tr>
+        <tr><th>P (kPa)</th><td>2.3</td><td>4.2</td><td>7.4</td><td>12.3</td><td>19.9</td><td>31.1</td><td>47.3</td></tr>
+      </table>
+      <p class="small">예시 값(문헌값에 가까운 측정 예)</p>
+      <p class="f21" data-q><b>Q</b> 그래프의 모양은? <span class="step">→ 온도가 오를수록 <span class="ans">점점 가파르게(비선형으로)</span> 증가한다.</span></p>
+      <p class="f21 mt8"><b>Q</b> 같은 방법으로 100 °C에서 재면? <span class="step">→ 약 101 kPa — 대기압과 같아진다(02 끓는점으로).</span></p>
+      <p class="f21 mt8 step"><b>오차</b> 남은 공기 방울, 평형에 이르기 전에 읽음, 주사기 속 물과 물중탕의 온도 차</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. ⑩ 끓음 ════════ -->
+<section class="slide" data-sec="02 · 끓는점과 액체 분자 사이의 상호 작용" data-title="끓음">
+  <h2><span class="no">10</span>끓음 — 액체 내부에서도 기화가 일어남</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{BOIL}}</div>
+    <div class="col stack">
+      <p class="f21">액체를 가열하면 증기압이 계속 커지다가 <b>외부 압력과 같아지면</b>, 표면뿐 아니라 내부의 분자들도 인력을 극복하고 기체로 변한다. 내부에서도 기포가 생기며 격하게 기화하는 현상이 <mark>끓음</mark>이다.</p>
+      <p class="f21 step" data-q><b>Q</b> 물이 끓을 때 생기는 기포 속에는 수소와 산소가 들어 있을까? <span class="step">→ <span class="ans">아니다. 수증기($\ce{H2O}$ 분자)</span>이다. 끊어지는 것은 분자 사이의 인력뿐이다.</span></p>
+      <div class="ac221-side"><p class="f21"><b>끓기 전 액체 내부의 기포</b> 100 °C가 되기 전에 용기 안쪽 면에 생기는 기포는 끓음이 아니라, 온도가 오르면 기체의 용해도가 작아져 물에 녹아 있던 공기가 빠져나온 것이다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. ⑪ 끓는점과 외부 압력 ════════ -->
+<section class="slide" data-sec="02 · 끓는점과 액체 분자 사이의 상호 작용" data-title="끓는점과 외부 압력">
+  <h2><span class="no">11</span>끓는점과 외부 압력</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{PEXT}}</div>
+    <div class="col stack">
+      <p class="f21">증기압이 외부 압력과 같아졌을 때의 온도가 <mark>끓는점</mark>이다.</p>
+      <p class="f21">끓는점에 이르면 열을 더 가해도 더 빨리 끓을 뿐 액체의 온도는 오르지 않는다(1 atm에서 물은 100 °C로 일정). 모두 기체가 된 뒤에야 기체의 온도가 오른다.</p>
+      <p class="f21 step" data-g="pe0">높은 산(외부 압력↓) → 더 낮은 온도에서 증기압이 외부 압력에 이르러 <b>끓는점이 낮아진다</b>.</p>
+      <span class="step" data-g="pe1"></span>
+      <p class="f21 step" data-g="pe2">압력솥(외부 압력↑) → 더 높은 온도가 되어야 끓으므로 <b>끓는점이 높아진다</b>.</p>
+      <p class="small">곡선은 물의 증기압을 계산하여 그렸다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. ⑫ 기준 끓는점 ════════ -->
+<section class="slide" data-sec="02 · 끓는점과 액체 분자 사이의 상호 작용" data-title="기준 끓는점">
+  <h2><span class="no">12</span>기준 끓는점 — 분자 사이 인력을 비교하는 잣대</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">{{FIG11}}</div>
+    <div class="col stack">
+      <p class="f21">외부 압력이 1 atm일 때의 끓는점을 <mark>기준 끓는점</mark>이라고 한다. 증기압 곡선에서 101.325 kPa의 수평선을 그어 곡선과 만나는 온도를 찾는다.</p>
+      <div class="card"><h3>압력의 단위</h3><p class="f21">1 atm = 760 mmHg = 760 Torr = 101.325 kPa</p></div>
+      <p class="f21 step">분자 사이의 인력이 강할수록 증기압이 낮아 기준 끓는점이 높다.</p>
+      <table class="tight ac221-res step">
+        <tr><th>다이에틸 에터</th><th>에탄올</th><th>물</th></tr>
+        <tr><td>34.6 °C</td><td>78.4 °C</td><td>100.0 °C</td></tr>
+      </table>
+      <p class="f21 step">→ 기준 끓는점을 비교하면 <b>분자 사이 인력의 크기</b>를 비교할 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑬ 표면 장력 ════════ -->
+<section class="slide" data-sec="02 · 액체의 표면 장력과 모세관 현상" data-title="표면 장력">
+  <h2><span class="no">13</span>표면 장력</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{SURF}}</div>
+    <div class="col stack">
+      <p class="f21">표면 분자는 옆과 아래로만 당겨져 <b>액체 안쪽으로 알짜 인력</b>을 받는다. 그래서 액체 표면은 둥글고 팽팽해지고, 공기 중의 물방울은 공 모양이 된다.</p>
+      <p class="f21">이러한 액체 표면의 탄성력의 척도가 <mark>표면 장력</mark>이다. 표면적을 늘리려면 안정한 내부 분자를 표면으로 옮겨야 하므로 에너지가 필요하다.</p>
+      <div class="formula sm step">$dw=\gamma\,d\sigma$<div class="unit">넓이 $\sigma$를 $d\sigma$만큼 늘리는 일 $dw$, 비례 상수 $\gamma$ = 표면 장력 [$\text{N}\cdot\text{m}^{-1}$ 또는 $\text{J}\cdot\text{m}^{-2}$]</div></div>
+      <p class="small step">→ 표면 장력 = 단위 면적만큼 표면적을 늘리는 데 필요한 에너지</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. ⑭ 표면 장력의 효과와 크기 ════════ -->
+<section class="slide" data-sec="02 · 액체의 표면 장력과 모세관 현상" data-title="표면 장력의 효과와 크기">
+  <h2><span class="no">14</span>표면 장력의 효과와 크기 비교</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 460px">{{CLIP}}
+      <p class="f21">클립이 가라앉으려면 물의 표면적이 조금 늘어나야 하는데, 표면 장력이 이를 막아 밀도가 큰 클립도 물에 뜬다.</p>
+    </div>
+    <div class="col stack">
+      <p class="f21">표면 장력이 큰 액체일수록 분자 사이의 상호 작용이 강하다.</p>
+      <table class="tight ac221-res">
+        <tr><th>액체</th><th>표면 장력 ($\text{N}\cdot\text{m}^{-1}$)</th></tr>
+        <tr><td>벤젠</td><td>$2.89\times10^{-2}$</td></tr>
+        <tr><td>물</td><td>$7.28\times10^{-2}$</td></tr>
+      </table>
+      <p class="f21 step" data-q><b>Q</b> 물의 표면 장력이 벤젠보다 큰 까닭은? <span class="step">→ <span class="ans">물 분자 사이의 수소 결합</span>으로 인력이 강하기 때문</span></p>
+      <p class="f21 step"><b>Q</b> 같은 액체를 가열하면 표면 장력은? <span class="step">→ 분자 운동이 활발해져 <span class="ans">작아진다</span>.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. ⑮ 모세관 현상 ════════ -->
+<section class="slide" data-sec="02 · 액체의 표면 장력과 모세관 현상" data-title="모세관 현상과 메니스커스">
+  <h2><span class="no">15</span>모세관 현상과 메니스커스</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{MENIS}}</div>
+    <div class="col stack">
+      <p class="f21">좁은 유리관에서 물이 스스로 올라오는 현상이 <mark>모세관 현상</mark>이다.</p>
+      <ol class="f21 ac221-ol">
+        <li class="step">유리관 벽과 물 분자 사이의 <b>부착력</b>으로 물이 벽에 달라붙어 표면적이 늘어난다.</li>
+        <li class="step">물의 <b>표면 장력</b>이 표면적을 다시 줄이며 물이 관을 따라 올라간다.</li>
+      </ol>
+      <p class="f21 step">부착력이 클수록, 관의 지름이 작을수록 더 높이 올라간다.</p>
+      <p class="f21 step">물은 부착력 &gt; 응집력 → <b>오목</b>, 수은은 응집력 &gt; 부착력 → <b>볼록</b>하고 바깥 액면보다 내려가기도 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 탐구 활동 원리 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 표면 장력 측정 (원리)">
+  <h2><span class="tag">탐구 활동</span>액체의 표면 장력 측정 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐12]</span>모둠별로 알루미늄 캔을 활용한 둥근 원통과 전자저울을 이용하여 다양한 액체의 표면 장력을 측정하고 문헌값과 비교한다.</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 470px">{{STAPP}}</div>
+    <div class="col stack">
+      <p class="f21">표면 장력은 에너지($\text{J/m}^2$)로 정의되지만, <b>힘을 재는 것이 더 간편</b>하다.</p>
+      <p class="f21">원통이 액체에서 떨어지기 직전의 힘을 $F_\text{max}$, 원통의 원주 길이를 $l$이라고 하면</p>
+      <div class="formula">$\gamma=\dfrac{F_\text{max}}{2l}\ \ (\text{N/m})$</div>
+      <p class="f21 step" data-q><b>Q</b> 왜 $2l$로 나눌까? <span class="step">→ 얇은 원통 벽의 <span class="ans">안쪽과 바깥쪽 두 면</span>에 액체 막이 붙어 당기기 때문</span></p>
+      <p class="f21 step">액체 막이 원통을 아래로 당기는 만큼 액체는 위로 당겨지므로, 저울 눈금이 $F_\text{max}/g$만큼 줄어든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 탐구 과정·안전 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>과정과 안전 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="f21"><b>준비물</b> 알루미늄 캔 윗부분을 잘라 만든 둥근 원통, 실, 도르래와 스탠드, 전자저울(0.001 g), 비커, 물·에탄올·아세톤·글리세롤 등, 온도계, 줄자</p>
+  <div class="stages mt8">
+    <div class="stage"><h3>① 원주 재기</h3><p>원통의 지름 $d$를 재어 $l=\pi d$를 구한다. 원통을 세제로 씻어 말린다.</p></div>
+    <div class="stage"><h3>② 영점 맞추기</h3><p>액체 비커를 저울에 올리고, 원통 아랫면이 액면에 수평으로 닿게 한 뒤 영점을 맞춘다.</p></div>
+    <div class="stage"><h3>③ 천천히 당기기</h3><p>실을 아주 천천히 당겨 원통이 떨어지기 직전 저울의 <b>가장 큰 감소량</b> $\Delta m$을 읽는다. $F_\text{max}=\Delta m\,g$</p></div>
+  </div>
+  <p class="f21 mt8">세 번 되풀이하여 평균을 내고, 액체를 바꾸어 측정한 뒤 문헌값과 비교한다.</p>
+  <div class="note mt8"><b>안전</b> 에탄올·아세톤은 불이 붙기 쉬우므로 불꽃을 멀리하고 환기한다. 캔을 자른 모서리에 베이지 않게 테이프로 감싼다. 쓴 유기 용매는 폐액 통에 모은다.</div>
+</section>
+
+<!-- ════════ 29. 실험실: 표면 장력 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="실험실: 표면 장력 측정">
+  <h2><span class="tag">탐구 활동</span>표면 장력·모세관 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac221st">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <div class="ac221-seg"><button class="btn on" data-liq="water">물</button><button class="btn" data-liq="ethanol">에탄올</button><button class="btn" data-liq="acetone">아세톤</button><button class="btn" data-liq="glycerol">글리세롤</button><button class="btn" data-liq="hexane">헥세인</button></div>
+      <div class="ctl"><div class="lbl"><span>액체 온도</span><output data-o="t"></output></div><input type="range" min="10" max="50" step="5" value="20" data-i="t" aria-label="액체 온도"></div>
+      <div class="ctl"><div class="lbl"><span>원통 지름</span><output data-o="d"></output></div><input type="range" min="4.0" max="8.0" step="0.2" value="6.6" data-i="d" aria-label="원통 지름"></div>
+      <div class="ctl"><div class="lbl"><span>모세관 안지름</span><output data-o="r"></output></div><input type="range" min="0.4" max="2.0" step="0.2" value="1.0" data-i="r" aria-label="모세관 안지름"></div>
+      <div class="res"><div class="small">측정한 표면 장력 $\gamma$</div><div class="big"><output data-o="big"></output></div><output class="kind ac221-msg" data-o="msg"></output></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:270px"><svg viewBox="0 0 600 270" width="600" height="270" aria-label="표면 장력 측정 장치와 모세관"></svg></div>
+      <table class="tight ac221-log mt8"><thead><tr><th>회</th><th>액체</th><th>t (°C)</th><th>$l$ (m)</th><th>$F_\text{max}$ (N)</th><th>$\gamma$ 측정 (N/m)</th><th>문헌값</th></tr></thead><tbody data-o="log"></tbody></table>
+      <div class="ac221-seg mt8"><button class="btn ac221-act" data-act="pull">천천히 당기기(측정)</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 결과 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 결과와 비교">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 문헌값 비교 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <table class="tight ac221-res">
+        <tr><th>20 °C, $l=0.207\ \text{m}$</th><th>물</th><th>글리세롤</th><th>아세톤</th><th>에탄올</th></tr>
+        <tr><td class="l">저울 감소량 $\Delta m$ (g)</td><td>3.07</td><td>2.69</td><td>0.99</td><td>0.95</td></tr>
+        <tr><td class="l">$F_\text{max}$ (N)</td><td>0.0301</td><td>0.0264</td><td>0.0097</td><td>0.0093</td></tr>
+        <tr><td class="l">$\gamma$ 측정 ($10^{-2}$ N/m)</td><td class="step" data-g="r1">7.27</td><td class="step" data-g="r1">6.37</td><td class="step" data-g="r1">2.34</td><td class="step" data-g="r1">2.25</td></tr>
+        <tr><td class="l">문헌값 ($10^{-2}$ N/m)</td><td>7.28</td><td>6.34</td><td>2.37</td><td>2.23</td></tr>
+      </table>
+      <p class="small">덱이 만든 예시 값($g=9.80\ \text{m/s}^2$, 원통 지름 6.6 cm)</p>
+      <p class="f21 step" data-g="r1">물: $\gamma=\dfrac{(3.07\times10^{-3})(9.80)}{2\times0.207}=7.27\times10^{-2}\ \text{N/m}$</p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 표면 장력의 크기 순서와 그 까닭은?</p>
+      <p class="f21 step">→ 물 &gt; 글리세롤 &gt; 아세톤 ≈ 에탄올. 수소 결합을 많이 하는 물과 글리세롤은 분자 사이 인력이 강하다.</p>
+      <p class="f21 step"><b>오차</b> 원통이 수평이 아님, 원통에 묻은 기름, 너무 빨리 당김, 온도 차, 증발이 빠른 액체(아세톤)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>높은 산에서 물의 끓는점</h2>
+  <p class="f22">물의 기준 끓는점은 100 °C이고 증발 엔탈피는 $40.7\ \text{kJ/mol}$이다. 외부 압력이 0.70 atm인 높은 산에서 물의 끓는점(°C)을 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">끓는점에서 증기압 = 외부 압력: $P_1=1.00\ \text{atm}$, $T_1=373.15\ \text{K}$, $P_2=0.70\ \text{atm}$</p>
+      <p class="f21 step">$\dfrac{1}{T_2}=\dfrac{1}{T_1}-\dfrac{R}{\Delta H^\circ_\text{vap}}\ln\dfrac{P_2}{P_1}=\dfrac{1}{373.15}-\dfrac{8.314}{4.07\times10^{4}}\ln0.70$</p>
+      <p class="f21 step">$=2.680\times10^{-3}+7.29\times10^{-5}=2.753\times10^{-3}\ \text{K}^{-1}$</p>
+      <div class="answer step">$T_2\approx363\ \text{K}\approx90\ {}^\circ\text{C}$</div>
+      <p class="small step">채점 요소: 끓는점 조건(증기압 = 외부 압력) · 절대 온도 · J 단위 맞춤 · 계산 값</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 32. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02" data-tpl="check">
+  <h2><span class="tag q">확인 문제 02</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac221-ox f21">
+    <li>같은 온도에서 액체의 양이 많을수록 증기압이 크다. <span class="step">→ <span class="ans">×</span> 증기압은 온도와 액체의 종류에만 의존한다.</span></li>
+    <li>같은 온도에서 증기압이 큰 액체일수록 기준 끓는점이 낮다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>물이 끓을 때 생기는 기포는 물이 분해되어 생긴 수소와 산소이다. <span class="step">→ <span class="ans">×</span> 수증기이다.</span></li>
+    <li>$\ln P_\text{vap}$–$\dfrac1T$ 그래프의 기울기가 가파를수록 증발 엔탈피가 크다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>유리관 속 수은은 응집력이 부착력보다 커서 볼록한 메니스커스를 만든다. <span class="step">→ <span class="ans">○</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 33. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 액체의 끓는점 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 액체 분자 — 01 증발과 증기압 · 02 끓는점</h2>
+  <div class="ac221-map">
+    <div class="ac221-node">분자 사이 상호 작용<br><span class="small">이온–쌍극자 ($1/r^2$)<br>쌍극자–쌍극자<br>분산력 ($\alpha$, $1/r^6$)</span></div>
+    <div class="ac221-arr">→</div>
+    <div class="ac221-node ac221-main" data-q><b>01 증발과 증기압</b><br>❶ 증기압: 증발과 응축이 <span class="blank"><span class="step">동적 평형</span></span>일 때 증기의 압력<br>❷ 증기압은 <span class="blank"><span class="step">온도</span></span>와 액체 종류에 의존<br>❸ $\ln P_\text{vap}$–$\tfrac1T$ 기울기 $=$ <span class="blank"><span class="step">$-\Delta H^\circ_\text{vap}/R$</span></span></div>
+    <div class="ac221-node ac221-main" data-q><b>02 끓는점</b><br>❹ 끓는점: 증기압 $=$ <span class="blank"><span class="step">외부 압력</span></span><br>❺ 기준 끓는점: 외부 압력 <span class="blank"><span class="step">1 atm</span></span><br>❻ 표면 장력 단위 <span class="blank"><span class="step">$\text{N}\cdot\text{m}^{-1}$</span></span><br>❼ 물은 부착력 &gt; 응집력 → <span class="blank"><span class="step">오목</span></span></div>
+    <div class="ac221-arr">→</div>
+    <div class="ac221-node ac221-dim">03 물의 분자 구조와 특성<br>수소 결합, 얼음 구조<br><span class="small">(다음 시간)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 34. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 액체의 끓는점 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 분자 사이 상호 작용의 종류를 비교하고, 증기압·끓는점·표면 장력·모세관 현상을 그것으로 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 물의 증기압을 측정해 증기압 곡선을 그리고, 액체의 표면 장력을 측정해 문헌값과 비교했다.</button>
+    <button class="chk">[가치·태도] 모둠별로 실험 방법을 조사·설계하고 오차의 원인을 함께 토의했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 압력솥으로 밥이 빨리 되는 까닭은? <span class="step">→ <span class="ans">외부 압력이 커서 물의 끓는점이 높아지기</span> 때문이다(약 120 °C).</span></p>
+    <p class="f21 mt8"><b>Q</b> 25 °C에서 증기압이 가장 큰 액체는 다이에틸 에터·에탄올·물 가운데 무엇일까? <span class="step">→ <span class="ans">다이에틸 에터</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 분자량이 18밖에 안 되는 물은 왜 상온에서 액체이고, 얼음은 왜 물에 뜰까?</div>
+</section>

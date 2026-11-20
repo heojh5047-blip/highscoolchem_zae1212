@@ -1,0 +1,37 @@
+/* 2-1 경이로운 물의 성질 — 덱 전용 (모두 .em21- 접두어) */
+.cover h1.em21-h1{font-size:110px}
+table.em21-pre{width:100%}
+table.em21-pre td{font-size:22px}
+table.em21-pre th:first-child,table.em21-pre td:first-child{width:80px;text-align:center}
+table.em21-pre td:nth-child(2){width:330px}
+.em21-st .stage p{font-size:19px;line-height:1.5}
+table.em21-res,table.em21-chk{width:100%}
+table.em21-res td{text-align:center}
+table.em21-res .blank{min-width:150px}
+table.em21-chk td{font-size:21px}
+table.em21-chk td.l .blank{min-width:440px}
+table.em21-coin{width:100%}
+table.em21-coin td{text-align:center}
+table.em21-st2{width:100%}
+table.em21-st2 td{text-align:center}
+table.em21-dat td,table.em21-dat th{font-size:19px;padding:4px 6px;text-align:center}
+.answer.em21-left{text-align:left}
+/* 실험실 */
+.em21-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.em21-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 14px;font-size:20px}
+.em21-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em21-seg .btn.em21-act{background:var(--field);color:#fff;border-color:var(--field)}
+.em21-seg .small{margin-right:4px}
+table.em21-read{width:100%}
+table.em21-read th{font-size:19px;padding:5px 10px;text-align:left}
+table.em21-read td{font-size:21px;width:190px;padding:5px 10px;text-align:center}
+output.kind.em21-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.em21-log{width:100%}
+table.em21-log th,table.em21-log td{font-size:19px;padding:3px 8px;text-align:center}
+/* 개념 지도 */
+.em21-map{display:flex;align-items:center;gap:14px}
+.em21-col{display:flex;flex-direction:column;gap:10px;flex:1 1 0}
+.em21-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
+.em21-node.em21-main{flex:0 0 400px;border-color:var(--field);background:#F2FAF5}
+.em21-node.em21-dim{flex:1 1 0;border-style:dashed;color:var(--muted)}
+.em21-arr{font-size:28px;color:var(--muted)}

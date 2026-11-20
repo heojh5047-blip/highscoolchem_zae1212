@@ -1,0 +1,488 @@
+<!-- 고급화학 3-2-2 깁스 자유 에너지와 반응의 자발성 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 2. 화학 반응의 자발성 › 02</div>
+    <h1 class="ac322-h1">깁스 자유 에너지와 반응의 자발성</h1>
+    <p class="sub">계의 성질만으로 자발성을 판단한다 — $\Delta G=\Delta H-T\Delta S$, 온도에 따른 자발성, 자발성이 바뀌는 온도</p>
+    <p class="meta">고등학교 고급 화학 151–156쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 깁스 자유 에너지와 반응의 자발성" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-04]</span>깁스 자유 에너지의 정의를 이해하고, 이를 활용하여 반응의 자발성을 예측할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>일정한 온도와 압력에서 $\Delta S_\text{전체}=-\Delta G/T$를 이끌어 내고, 깁스 자유 에너지 $G\equiv H-TS$의 뜻을 설명할 수 있다.</li>
+    <li>$\Delta G$의 부호로 반응의 자발성과 평형을 판단하고, 자발적 변화의 방향이 $G$가 감소하는 방향임을 설명할 수 있다.</li>
+    <li>$\Delta H^\circ$·$\Delta S^\circ$의 부호와 온도로 $\Delta G^\circ$를 구하고, $\Delta G^\circ$–$T$ 그래프로 자발성이 바뀌는 온도를 예측할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">$\Delta S_\text{전체}$</div><div class="farr">→</div>
+    <div class="fnode">$G\equiv H-TS$</div><div class="farr">→</div>
+    <div class="fnode">$\Delta G$의 부호</div><div class="farr">→</div>
+    <div class="fnode">표 Ⅲ-4 네 경우</div><div class="farr">→</div>
+    <div class="fnode hl">$\Delta G^\circ$–$T$ 실험실</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+  <p class="small mt12">지난 시간: $\Delta S_\text{전체}=\Delta S+\Delta S_\text{주위}&gt;0$이면 자발적, $\Delta S_\text{주위}=-\Delta H/T$ (01 엔트로피)</p>
+</section>
+
+<!-- ════════ 3. 화학사 ════════ -->
+<section class="slide" data-sec="02 · 화학사" data-title="화학사: 클라우지우스와 엔트로피">
+  <h2><span class="tag">화학사</span>클라우지우스와 엔트로피 개념의 등장</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">카르노는 열기관에서 높은 온도에서 낮은 온도로 옮겨 가며 일을 만드는 칼로릭이 <b>보존된다</b>고 했고, 줄은 일을 만드는 본질이 열이며 <b>열과 일의 총량이 보존된다</b>고 했다. 클라우지우스(1822–1888)는 두 주장 사이의 모순을 알아차렸다.</p>
+      <p class="f21">1850년 그는 「열은 높은 온도에서 낮은 온도로 흐른다」는 카르노의 생각은 지키고, 칼로릭이 보존된다는 생각은 버려 열기관을 에너지 보존 법칙과 모순 없이 설명하였다. 1865년에는 열을 온도로 나눈 양으로 <b>엔트로피</b>를 정량적으로 정의하였다.</p>
+      <p class="small">교과서는 잉크가 물 전체로 퍼지는 변화를 「무질서한 상태로 나아가는 경향」이라고 소개한다. 지난 시간처럼 「에너지와 입자가 퍼진 정도(미시 상태의 수)」로 읽자.</p>
+    </div>
+    <div class="col stack">
+      {{HIST}}
+      <div class="card q"><p class="f21"><b>Q</b> 엔트로피는 처음에 무엇을 설명하려고 도입되었을까?</p>
+        <p class="f21 step">→ 열의 성질(열기관)이다. 지금은 자연에서 일어나는 변화의 방향을 알려 주는 중요한 물리량이 되었다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 깁스 자유 에너지와 반응의 자발성 · 도입" data-title="생각 열기">
+  <h2><span class="tag">생각 열기</span>주위의 엔트로피까지 매번 구해야 할까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">01에서는 전체 엔트로피 변화로 자발성을 판단하였다. 암모니아 합성 $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$은 $298\ \text{K}$에서</p>
+      <div class="formula sm">$\Delta S_\text{전체}=\underbrace{-198.9}_{\Delta S}+\underbrace{308.7}_{\Delta S_\text{주위}}=+109.8\ \text{J/K}&gt;0$<div class="unit">01 확인 문제 05 — 계와 주위를 따로 계산했다</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 계의 성질만으로 자발성을 판단할 수는 없을까?</p>
+        <p class="f21 step">→ 주위를 고려하지 않고 계의 상태 함수 하나로 자발성을 예측할 수 있다면 더욱 편리하다. 이 새로운 상태 함수가 <b>깁스 자유 에너지</b>이다.</p></div>
+      <p class="f21 step">깁스 자유 에너지 변화는 ① 반응의 자발성 여부 ② 자발적 변화의 방향(자유 에너지 감소) ③ 온도에 따라 자발성이 달라지는 까닭을 알려 준다.</p>
+    </div>
+    <div class="col">{{OPEN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 전체 엔트로피를 계의 정보로 ════════ -->
+<section class="slide" data-sec="02 · 깁스 자유 에너지" data-title="전체 엔트로피를 계의 정보로">
+  <h2><span class="no">1</span>전체 엔트로피 변화를 계의 정보로 나타내기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">일정한 온도와 압력에서 주위의 엔트로피 변화는 계의 엔탈피 변화로 나타낼 수 있다: $\Delta S_\text{주위}=-\Delta H/T$</p>
+      <div class="formula">$\Delta S_\text{전체}=\Delta S+\underbrace{\Delta S_\text{주위}}_{-\Delta H/T}=\Delta S-\dfrac{\Delta H}{T}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 오른쪽 식에 주위에 관한 값이 남아 있을까?</p>
+        <p class="f21 step">→ 없다. $\Delta S$, $\Delta H$, $T$는 모두 계의 값이다. 계의 정보만으로 전체 엔트로피 변화를 계산할 수 있다.</p></div>
+      <p class="small step">「일정한 온도와 압력」 조건은 $\Delta S_\text{주위}=-\Delta H/T$에 쓰였다 — 압력이 일정해야 계가 주고받은 열이 $\Delta H$이고, 온도가 일정해야 하나의 $T$로 나눌 수 있다.</p>
+    </div>
+    <div class="col">{{BLOCK}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 깁스 자유 에너지 ════════ -->
+<section class="slide" data-sec="02 · 깁스 자유 에너지" data-title="깁스 자유 에너지의 정의">
+  <h2><span class="no">2</span>깁스 자유 에너지 $G\equiv H-TS$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">미국의 물리 화학자 깁스는 계의 성질만으로 과정의 자발성을 알 수 있도록 다음 함수를 제안하였다. 이것을 <mark>깁스 자유 에너지</mark>라 하고, 깁스를 기념하여 $G$로 나타낸다.</p>
+      <div class="formula">$G\equiv H-TS$<div class="unit">$\equiv$: 이렇게 정의한다 · $H$, $S$, $T$가 상태량이므로 $G$도 상태 함수</div></div>
+      <p class="f21 step">일정한 온도와 압력에서 일어나는 과정의 깁스 자유 에너지 변화: $\Delta G=\Delta H-T\Delta S$</p>
+      <div class="formula sm step">$\Delta S_\text{전체}=\dfrac{-(\Delta H-T\Delta S)}{T}=\dfrac{-\Delta G}{T}$<div class="unit">$\Delta S-\dfrac{\Delta H}{T}$를 통분한 꼴</div></div>
+    </div>
+    <div class="col">{{SYS}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ ΔG의 부호와 자발성 ════════ -->
+<section class="slide" data-sec="02 · 깁스 자유 에너지" data-title="ΔG의 부호와 자발성">
+  <h2><span class="no">3</span>$\Delta G$의 부호로 자발성 판단하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">절대 온도 $T$는 항상 양수이므로, $\Delta S_\text{전체}=-\Delta G/T$에서 $\Delta S_\text{전체}$와 $\Delta G$는 일정한 온도와 압력에서 <b>반드시 반대 부호</b>이다.</p>
+      <div class="ac322-sign">
+        <div class="sp">$\Delta G&lt;0$<br><b>자발적 반응</b></div>
+        <div>$\Delta G=0$<br><b>평형 상태</b></div>
+        <div class="ns">$\Delta G&gt;0$<br><b>비자발적 반응</b><br><span class="small">(역반응이 자발적)</span></div>
+      </div>
+      <div class="card q"><p class="f21"><b>Q</b> $298\ \text{K}$에서 암모니아 합성의 $\Delta S_\text{전체}=+109.8\ \text{J/K}$이다. $\Delta G$는 얼마일까?</p>
+        <p class="f21 step">→ $\Delta G=-T\Delta S_\text{전체}=-(298\ \text{K})(+109.8\ \text{J/K})=-32.7\ \text{kJ}$ → <span class="ans">자발적</span></p>
+        <p class="small step">$\Delta H-T\Delta S=-92\ \text{kJ}-(298\ \text{K})(-0.1989\ \text{kJ/K})=-32.7\ \text{kJ}$ — 같은 값이다($\text{J}$를 $\text{kJ}$로 맞춘다).</p></div>
+    </div>
+    <div class="col">{{MIRROR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 8. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>$\Delta G$의 부호와 자발성</h2>
+  <ol class="ac322-ox f22">
+    <li>$300\ \text{K}$에서 어떤 반응의 $\Delta S_\text{전체}=+50\ \text{J/K}$이다. $\Delta G$는? <span class="step">→ <span class="ans">$-(300)(+50)=-1.5\times10^{4}\ \text{J}=-15\ \text{kJ}$</span>, 자발적</span></li>
+    <li>$\Delta G=+10\ \text{kJ}$인 반응은 그대로 일어날까? <span class="step">→ <span class="ans">비자발적</span> — 반대 방향(역반응)이 자발적이다.</span></li>
+    <li>$\Delta G=0$인 계에서는 반응이 멈춘 것일까? <span class="step">→ <span class="ans">평형 상태</span> — 정반응과 역반응이 같은 빠르기로 계속 일어나 겉으로 변화가 보이지 않을 뿐이다.</span></li>
+    <li>$\Delta G$가 큰 음수인 반응은 빠르게 일어날까? <span class="step">→ <span class="ans">알 수 없다</span>. $\Delta G$는 방향만 알려 준다. 빠르기는 반응 속도의 문제이다(다이아몬드 → 흑연은 자발적이지만 매우 느리다).</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 9. ④ 자유 에너지 변화와 계의 안정성 ════════ -->
+<section class="slide" data-sec="02 · 자유 에너지 변화와 계의 안정성" data-title="자발적 변화의 방향">
+  <h2><span class="no">4</span>자유 에너지 변화와 계의 안정성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="formula">일정 온도와 압력에서 $\Delta G=-T\Delta S_\text{전체}$</div>
+      <p class="f21">음의 부호는 온도와 압력이 일정할 때 <b>전체 엔트로피의 증가</b>가 <b>깁스 자유 에너지의 감소</b>에 해당함을 알려 준다. 따라서 일정한 온도와 압력에서 <mark>자발적 변화의 방향은 깁스 자유 에너지가 감소하는 방향</mark>이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 평형에 이른 계의 $G$는 어떤 값일까?</p>
+        <p class="f21 step">→ <span class="ans">가장 작다</span>. 평형의 어느 쪽에서 출발해도 $G$가 감소하는 쪽으로 변하여 평형에 이른다 — 계의 안정성이 증가한다.</p></div>
+    </div>
+    <div class="col stack">{{CURVE}}<p class="small">그림 Ⅲ-22 자발적 변화의 방향 (새로 그림)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 표 Ⅲ-4 ════════ -->
+<section class="slide" data-sec="02 · 자유 에너지 변화와 계의 안정성" data-title="표 Ⅲ-4 자발성에 관여하는 인자">
+  <h2><span class="no">5</span>자발성에 관여하는 인자 — 표 Ⅲ-4</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 650px">
+      <div class="formula sm">$\Delta G=-T\left(\Delta S-\dfrac{\Delta H}{T}\right)=\Delta H-T\Delta S$</div>
+      <p class="f21" data-q>$\Delta G$가 음수가 되는 $\Delta H$, $\Delta S$, $T$를 찾으면 된다. <b>Q</b> 네 경우의 자발성은?</p>
+      <table class="tight ac322-sm">
+        <tr><th>엔탈피 변화</th><th>엔트로피 변화</th><th>자발성</th></tr>
+        <tr><td>발열($\Delta H&lt;0$)</td><td>증가($\Delta S&gt;0$)</td><td class="l"><span class="blank"><span class="step">$\Delta G&lt;0$, 자발적</span></span></td></tr>
+        <tr><td>발열($\Delta H&lt;0$)</td><td>감소($\Delta S&lt;0$)</td><td class="l"><span class="blank"><span class="step">$|\Delta H|&gt;|T\Delta S|$이면 $\Delta G&lt;0$, 자발적</span></span></td></tr>
+        <tr><td>흡열($\Delta H&gt;0$)</td><td>증가($\Delta S&gt;0$)</td><td class="l"><span class="blank"><span class="step">$|\Delta H|&lt;|T\Delta S|$이면 $\Delta G&lt;0$, 자발적</span></span></td></tr>
+        <tr><td>흡열($\Delta H&gt;0$)</td><td>감소($\Delta S&lt;0$)</td><td class="l"><span class="blank"><span class="step">$\Delta G&gt;0$, 비자발적</span></span></td></tr>
+      </table>
+      <p class="small">부호가 같은 두 경우는 $\Delta H$와 $T\Delta S$의 크기 싸움 — 온도 $T$가 결정한다.</p>
+    </div>
+    <div class="col">{{QUAD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑥ ΔG = 0과 평형 ════════ -->
+<section class="slide" data-sec="02 · 자유 에너지 변화와 계의 안정성" data-title="ΔG = 0과 평형">
+  <h2><span class="no">6</span>$\Delta G=0$ — 평형 상태</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">$\Delta S_\text{전체}=0$이면 평형이므로, 일정한 온도와 압력에서 평형이 되려면 $\Delta G=0$이어야 한다. 예를 들어 $1\ \text{atm}$, $0\ {}^\circ\text{C}$에서 얼음과 물이 평형을 이루면 <b>물 $1\ \text{mol}$과 얼음 $1\ \text{mol}$의 깁스 자유 에너지가 같다</b>.</p>
+      <p class="f21" data-q><b>Q</b> 얼음이 녹을 때 $\Delta H=+6.01\ \text{kJ/mol}$, $\Delta S=+22.0\ \text{J/(K}\cdot\text{mol)}$이다. 세 온도에서 $\Delta G$는?</p>
+      <table class="tight ac322-sm">
+        <tr><th>$T$</th><th>$\Delta G=6010-22.0\,T$ [J/mol]</th><th>판단</th></tr>
+        <tr><td>$263.15\ \text{K}$</td><td><span class="blank"><span class="step" data-g="w1">$+220\ \text{J/mol}$</span></span></td><td><span class="blank"><span class="step" data-g="w1">비자발적(물이 언다)</span></span></td></tr>
+        <tr><td>$273.15\ \text{K}$</td><td><span class="blank"><span class="step" data-g="w2">$\approx0$</span></span></td><td><span class="blank"><span class="step" data-g="w2">평형</span></span></td></tr>
+        <tr><td>$283.15\ \text{K}$</td><td><span class="blank"><span class="step" data-g="w3">$-219\ \text{J/mol}$</span></span></td><td><span class="blank"><span class="step" data-g="w3">자발적(얼음이 녹는다)</span></span></td></tr>
+      </table>
+      <p class="small">연결: Ⅳ 화학 평형에서 표준 깁스 자유 에너지 변화와 평형 상수의 관계($\Delta G^\circ=-RT\ln K$)로 이어진다.</p>
+    </div>
+    <div class="col">{{ICE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ ΔG°–T 직선 ════════ -->
+<section class="slide" data-sec="02 · 온도에 따른 자발적 변화의 방향" data-title="ΔG°–T 직선">
+  <h2><span class="no">7</span>온도에 따른 자발적 변화 — $\Delta G^\circ$–$T$ 직선</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">반응물과 생성물의 엔탈피·엔트로피는 온도의 영향을 받지만 그 차이는 크지 않다. 그래서 $\Delta H^\circ$와 $\Delta S^\circ$는 온도에 따라 크게 변하지 않는다고 본다.</p>
+      <div class="formula">$\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ$<div class="unit">$T$를 가로축, $\Delta G^\circ$를 세로축으로 하면 직선</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 이 직선의 세로축 절편과 기울기는 무엇일까?</p>
+        <p class="f21 step" data-g="i1">→ 절편 $=\Delta H^\circ$ ($T=0$일 때의 값)</p>
+        <p class="f21 step" data-g="i2">→ 기울기 $=-\Delta S^\circ$: $\Delta S^\circ&gt;0$이면 오른쪽 아래로, $\Delta S^\circ&lt;0$이면 오른쪽 위로 기운다.</p></div>
+      <p class="small">단위 주의: $\Delta S^\circ$(J/K)를 kJ/K로 바꾸어($\div1000$) $\Delta H^\circ$(kJ)와 맞춘다.</p>
+    </div>
+    <div class="col stack">{{LINE}}<p class="small">가상의 반응: $\Delta H^\circ=+60\ \text{kJ}$, $\Delta S^\circ=+100\ \text{J/K}$</p></div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑧ 그림 Ⅲ-23 (가)(나) ════════ -->
+<section class="slide" data-sec="02 · 온도에 따른 자발적 변화의 방향" data-title="온도와 자발성 (가)(나)">
+  <h2><span class="no">8</span>발열 반응 — 그림 Ⅲ-23 (가)(나)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{CASE_AB}}<p class="small">실제 반응의 계산값으로 다시 그림. 값은 표준 생성 엔탈피·표준 몰 엔트로피 자료로 구했다.</p></div>
+    <div class="col stack">
+      <div class="card"><p class="f21"><b>(가)</b> $\Delta S^\circ&lt;0$이면 $-T\Delta S^\circ&gt;0$ → 낮은 온도에서는 $\Delta G^\circ&lt;0$으로 자발적, 높은 온도에서는 $\Delta G^\circ&gt;0$으로 비자발적</p></div>
+      <div class="card"><p class="f21"><b>(나)</b> $\Delta S^\circ&gt;0$이면 $-T\Delta S^\circ&lt;0$ → 모든 온도에서 $\Delta G^\circ&lt;0$, 항상 자발적</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> (가) 암모니아 합성을 $600\ \text{K}$에서 하면 자발적일까?</p>
+        <p class="f21 step">→ $\Delta G^\circ=-92-600(-0.1989)=+27.3\ \text{kJ}&gt;0$ — <span class="ans">비자발적</span>($463\ \text{K}$보다 높음)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑨ 그림 Ⅲ-23 (다)(라) ════════ -->
+<section class="slide" data-sec="02 · 온도에 따른 자발적 변화의 방향" data-title="온도와 자발성 (다)(라)">
+  <h2><span class="no">9</span>흡열 반응 — 그림 Ⅲ-23 (다)(라)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{CASE_CD}}<p class="small">(라)의 $1110\ \text{K}$: 석회석이 분해되기 시작하는 온도의 계산값</p></div>
+    <div class="col stack">
+      <div class="card"><p class="f21"><b>(다)</b> $\Delta S^\circ&lt;0$이면 $-T\Delta S^\circ&gt;0$ → 모든 온도에서 $\Delta G^\circ&gt;0$, 항상 비자발적</p></div>
+      <div class="card"><p class="f21"><b>(라)</b> $\Delta S^\circ&gt;0$이면 $-T\Delta S^\circ&lt;0$ → 낮은 온도에서는 비자발적, 높은 온도에서는 $\Delta G^\circ&lt;0$으로 자발적</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 산소에서 오존이 저절로 생기지 않는 까닭은?</p>
+        <p class="f21 step">→ (다)의 경우라 <span class="ans">모든 온도에서 $\Delta G^\circ&gt;0$</span>이다. 오존은 자외선이나 방전처럼 외부에서 에너지를 공급할 때만 생긴다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑩ 자발성이 바뀌는 온도 ════════ -->
+<section class="slide" data-sec="02 · 온도에 따른 자발적 변화의 방향" data-title="자발성이 바뀌는 온도">
+  <h2><span class="no">10</span>자발성이 바뀌는 온도 $T=\Delta H^\circ/\Delta S^\circ$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">$\Delta H^\circ$와 $\Delta S^\circ$의 부호가 같은 (가)·(라)에서는 직선이 가로축($\Delta G^\circ=0$)과 만나는 온도에서 자발성이 바뀐다.</p>
+      <div class="formula sm">$\Delta H^\circ-T\Delta S^\circ=0\ \Rightarrow\ T=\dfrac{\Delta H^\circ}{\Delta S^\circ}$</div>
+      <p class="f21 step">(가) $T&lt;\dfrac{\Delta H^\circ}{\Delta S^\circ}$에서 자발적 &nbsp;·&nbsp; (라) $T&gt;\dfrac{\Delta H^\circ}{\Delta S^\circ}$에서 자발적</p>
+      <div class="card q"><p class="f21"><b>Q</b> (나)·(다)에도 이런 온도가 있을까?</p>
+        <p class="f21 step">→ <span class="ans">없다</span>. $\Delta H^\circ/\Delta S^\circ$가 음수라서, 직선이 양의 온도에서 가로축과 만나지 않는다.</p></div>
+      <p class="small">$\Delta H^\circ$와 $\Delta S^\circ$가 온도에 따라 거의 변하지 않는다고 본 근삿값이다.</p>
+    </div>
+    <div class="col stack">{{TSTAR}}<p class="small">가상의 두 반응: (가) $-60\ \text{kJ}$, $-100\ \text{J/K}$ · (라) $+60\ \text{kJ}$, $+100\ \text{J/K}$</p></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 예제 Ⅲ-8 ════════ -->
+<section class="slide" data-sec="02 · 온도에 따른 자발적 변화의 방향" data-title="예제 Ⅲ-8">
+  <h2><span class="tag ex">예제 Ⅲ-8</span>브로민이 증발하는 온도 범위와 기준 끓는점</h2>
+  <p class="f21">$\ce{Br2(l) -> Br2(g)}$ &nbsp; $\Delta H^\circ=+31.0\ \text{kJ/mol}$, $\Delta S^\circ=+93.0\ \text{J/(K}\cdot\text{mol)}$ — <b>Q</b> $1\ \text{atm}$에서 이 과정이 자발적이려면 온도 범위는 얼마인가? 액체 브로민의 기준 끓는점은 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>생각</b> 끓는점에서는 증발과 응축이 균형을 이루어 액체와 기체 $\ce{Br2}$이 평형 → $\Delta G^\circ=0$</p>
+      <p class="f21 step">$T=\dfrac{\Delta H^\circ}{\Delta S^\circ}=\dfrac{+3.10\times10^{4}\ \text{J/mol}}{+93.0\ \text{J/(K}\cdot\text{mol)}}=333\ \text{K}$</p>
+      <div class="answer step">$T&gt;333\ \text{K}$에서 $\Delta G^\circ&lt;0$ → 증발이 자발적 ($T&lt;333\ \text{K}$에서는 비자발적)</div>
+      <div class="answer step" data-g="b4">기준 끓는점 $=333\ \text{K}$ ($\Delta G^\circ=0$, 액체와 기체가 공존)</div>
+    </div>
+    <div class="col stack">{{BR2}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 17. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>암모니아 합성의 $\Delta G^\circ$와 합성 온도</h2>
+  <p class="f21">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$의 $\Delta H^\circ=-92\ \text{kJ}$, $\Delta S^\circ=-198.9\ \text{J/K}$이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21"><b>Q</b> ① $25\ {}^\circ\text{C}$에서 $\Delta G^\circ$는? <span class="step">→ <span class="ans">$-92-298(-0.1989)=-32.7\ \text{kJ}$</span>, 자발적</span></p>
+      <p class="f21"><b>Q</b> ② 자발성이 바뀌는 온도는? <span class="step">→ <span class="ans">$T=\dfrac{92000\ \text{J}}{198.9\ \text{J/K}}=463\ \text{K}$</span> (약 $190\ {}^\circ\text{C}$), 이보다 높으면 비자발적</span></p>
+      <p class="f21"><b>Q</b> ③ 그런데도 공업적으로 약 $450\ {}^\circ\text{C}$에서 합성하는 까닭은?</p>
+      <p class="f21 step">→ 낮은 온도에서는 반응이 너무 느리다. 촉매가 잘 작용하는 온도에서 반응 속도를 높이고, 기체 몰수가 줄어드는 반응이므로 높은 압력으로 수율을 보완한다 — 열역학과 반응 속도의 타협이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>석회석은 몇 도에서 분해될까?</h2>
+  <p class="f21">$\ce{CaCO3(s) -> CaO(s) + CO2(g)}$의 $\Delta H^\circ=+178.3\ \text{kJ}$, $\Delta S^\circ=+160.6\ \text{J/K}$(01 확인 문제 04)이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21"><b>Q</b> ① $25\ {}^\circ\text{C}$에서 $\Delta G^\circ$는? <span class="step">→ <span class="ans">$178.3-298(0.1606)=+130.4\ \text{kJ}$</span>, 비자발적</span></p>
+      <p class="f21"><b>Q</b> ② 표준 상태에서 자발적으로 일어나기 시작하는 온도는? <span class="step">→ <span class="ans">$T=\dfrac{178300\ \text{J}}{160.6\ \text{J/K}}=1110\ \text{K}$</span> (약 $837\ {}^\circ\text{C}$)보다 높은 온도</span></p>
+      <p class="f21 step">석회석을 약 $900\ {}^\circ\text{C}$의 가마에서 구워 생석회($\ce{CaO}$)를 얻는 까닭이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 19. 탐구 활동 (고화-탐23) 1 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: ΔG° 그래프 작성 (1)">
+  <h2><span class="tag">탐구 활동</span>$\Delta G^\circ$ 그래프 작성과 자발적 과정 온도 범위 토의 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>깁스 자유 에너지 그래프 작성과 자발적 과정 온도 범위 토의 — $\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ$는 $T$를 $x$축, $\Delta G^\circ$를 $y$축으로 하는 그래프로 나타낼 수 있다. 모둠별로 $y$축 절편이 $+40\ \text{kJ/mol}$이고 기울기가 $-100\ \text{J/(K}\cdot\text{mol)}$인 $\Delta G^\circ$의 변화를 온도에 따라 그래프로 그리고, 기울기의 의미와 $\Delta H^\circ$·$\Delta S^\circ$의 부호, 이 반응이 자발적 과정이 되는 온도 범위를 토의한 후 발표해 보자.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><h3>과정</h3>
+        <p class="f21">① 단위 맞추기: $-100\ \text{J/(K}\cdot\text{mol)}=-0.100\ \text{kJ/(K}\cdot\text{mol)}$ → ② $0$, $200$, $400$, $600$, $800\ \text{K}$에서 $\Delta G^\circ$를 계산해 점 찍기 → ③ 직선 긋기 → ④ 토의 → ⑤ 실험실로 확인하고 발표</p></div>
+      <div class="card q"><p class="f21"><b>예측</b> 이 반응은 낮은 온도와 높은 온도 중 어디에서 자발적일까?</p></div>
+      <p class="small">자료 탐구라 실험 기구를 쓰지 않는다. $\Delta H^\circ$·$\Delta S^\circ$를 온도와 관계없이 일정하다고 본 가정을 결과에 밝힌다.</p>
+    </div>
+    <div class="col">{{INQ0}}</div>
+  </div>
+</section>
+
+<!-- ════════ 20. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: ΔG°–T 그래프">
+  <h2><span class="tag">실험실</span>$\Delta G^\circ$–$T$ 그래프 — 자발성이 바뀌는 온도 찾기</h2>
+  <div class="lab" data-lab="ac322gibbs">
+    <div class="lab-ctl" style="flex-basis:390px">
+      <div class="ac322-seg"><button class="btn" data-p="inq">탐구 활동</button><button class="btn" data-p="caco3">석회석 분해</button><button class="btn" data-p="nh3">암모니아 합성</button><button class="btn" data-p="h2o2">과산화 수소 분해</button><button class="btn" data-p="o3">오존 생성</button><button class="btn" data-p="br2">브로민 증발</button></div>
+      <div class="ctl"><div class="lbl"><span>$\Delta H^\circ$</span><output data-o="h"></output></div><input type="range" min="-300" max="500" step="0.1" value="40" data-i="h" aria-label="표준 반응 엔탈피"></div>
+      <div class="ctl"><div class="lbl"><span>$\Delta S^\circ$</span><output data-o="s"></output></div><input type="range" min="-300" max="600" step="0.1" value="100" data-i="s" aria-label="표준 반응 엔트로피"></div>
+      <div class="ctl"><div class="lbl"><span>온도 $T$</span><output data-o="t"></output></div><input type="range" min="0" max="1500" step="10" value="300" data-i="t" aria-label="온도"></div>
+      <table class="readout ac322-read">
+        <tr class="hl"><th>$\Delta G^\circ$</th><td><output data-o="g"></output></td></tr>
+        <tr><th>바뀌는 온도</th><td><output data-o="ts"></output></td></tr>
+        <tr><th>경우</th><td><output data-o="case"></output></td></tr>
+      </table>
+      <div class="ac322-seg mt8"><button class="btn ac322-act" data-act="pt">점 찍기</button><button class="btn ac322-act" data-act="keep">비교로 남기기</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="lab-fig" style="width:640px;height:312px">
+        <svg viewBox="0 0 640 312" width="640" height="312" aria-label="온도에 따른 ΔG° 직선, ΔH° 선, 자발 구간 음영과 자발성이 바뀌는 온도, 찍은 점"></svg>
+      </div>
+      <output class="kind ac322-msg" data-o="msg"></output>
+      <table class="tight ac322-log mt4"><thead><tr><th>회</th><th>반응</th><th>ΔH° [kJ]</th><th>ΔS° [J/K]</th><th>T [K]</th><th>ΔG° [kJ]</th><th>자발성</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 활동 (고화-탐23) 2 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: ΔG° 그래프 작성 (2)">
+  <h2><span class="tag">탐구 활동</span>결과 예시와 토의 정리 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <table class="tight ac322-sm">
+        <tr><th>$T$ [K]</th><td>0</td><td>200</td><td>400</td><td>600</td><td>800</td></tr>
+        <tr><th>$\Delta G^\circ$ [kJ/mol]</th><td><span class="blank"><span class="step" data-g="p0">$+40$</span></span></td><td><span class="blank"><span class="step" data-g="p0">$+20$</span></span></td><td><span class="blank"><span class="step" data-g="p0">$0$</span></span></td><td><span class="blank"><span class="step" data-g="p0">$-20$</span></span></td><td><span class="blank"><span class="step" data-g="p0">$-40$</span></span></td></tr>
+      </table>
+      <ol class="ac322-ox f21">
+        <li>기울기의 의미는? <span class="step">→ 기울기 $=-\Delta S^\circ$이므로 <span class="ans">$\Delta S^\circ=+100\ \text{J/(K}\cdot\text{mol)}$</span> — 엔트로피가 증가하는 반응</span></li>
+        <li>$\Delta H^\circ$와 $\Delta S^\circ$의 부호는? <span class="step">→ 절편 <span class="ans">$\Delta H^\circ=+40\ \text{kJ/mol}&gt;0$</span>(흡열), $\Delta S^\circ&gt;0$ — 그림 Ⅲ-23 (라)</span></li>
+        <li>자발적 과정이 되는 온도 범위는? <span class="step" data-g="p1">→ $T=\dfrac{40000}{100}=400\ \text{K}$ → <span class="ans">$T&gt;400\ \text{K}$</span>에서 $\Delta G^\circ&lt;0$</span></li>
+      </ol>
+      <div class="note puzzle step"><b>토의 정리</b> 높은 온도일수록 $-T\Delta S^\circ$가 커져 흡열을 이긴다. 다만 $\Delta H^\circ$·$\Delta S^\circ$가 일정하다는 가정 때문에 $400\ \text{K}$는 근삿값이다. 모둠별 그래프를 비교해 발표한다.</div>
+    </div>
+    <div class="col">{{INQ1}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 실험실 결과 정리 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 결과 정리">
+  <h2><span class="tag">실험실</span>여러 반응의 자발성이 바뀌는 온도 (결과 예시)</h2>
+  <table class="tight ac322-c">
+    <tr><th>반응</th><th>$\Delta H^\circ$ [kJ]</th><th>$\Delta S^\circ$ [J/K]</th><th>경우</th><th>바뀌는 온도</th><th>자발적인 온도</th></tr>
+    <tr><td class="l">석회석 분해 $\ce{CaCO3 -> CaO + CO2}$</td><td>$+178.3$</td><td>$+160.6$</td><td>(라)</td><td><span class="blank"><span class="step" data-g="r1">$1110\ \text{K}$</span></span></td><td><span class="blank"><span class="step" data-g="r1">$T&gt;1110\ \text{K}$</span></span></td></tr>
+    <tr><td class="l">암모니아 합성 $\ce{N2 + 3H2 -> 2NH3}$</td><td>$-92.0$</td><td>$-198.9$</td><td>(가)</td><td><span class="blank"><span class="step" data-g="r2">$463\ \text{K}$</span></span></td><td><span class="blank"><span class="step" data-g="r2">$T&lt;463\ \text{K}$</span></span></td></tr>
+    <tr><td class="l">과산화 수소 분해 $\ce{2H2O2(l) -> 2H2O(l) + O2}$</td><td>$-196.1$</td><td>$+125.8$</td><td>(나)</td><td><span class="blank"><span class="step" data-g="r3">없음</span></span></td><td><span class="blank"><span class="step" data-g="r3">모든 온도</span></span></td></tr>
+    <tr><td class="l">오존 생성 $\ce{3O2 -> 2O3}$</td><td>$+285.4$</td><td>$-137.6$</td><td>(다)</td><td><span class="blank"><span class="step" data-g="r4">없음</span></span></td><td><span class="blank"><span class="step" data-g="r4">없음</span></span></td></tr>
+    <tr><td class="l">브로민 증발 (1 mol)</td><td>$+31.0$</td><td>$+93.0$</td><td>(라)</td><td><span class="blank"><span class="step" data-g="r5">$333\ \text{K}$</span></span></td><td><span class="blank"><span class="step" data-g="r5">$T&gt;333\ \text{K}$</span></span></td></tr>
+  </table>
+  <ol class="ac322-ox f21 mt12">
+    <li>$\Delta H^\circ$·$\Delta S^\circ$가 일정하다고 본 가정은 결과에 어떤 영향을 줄까? <span class="step">→ 실제 값은 온도에 따라 조금 변하므로 <span class="ans">높은 온도일수록 예측 온도와 차이</span>가 생길 수 있다.</span></li>
+    <li>실제 공정 온도는 열역학만으로 정해질까? <span class="step">→ <span class="ans">아니다</span>. 반응 속도와 경제성도 함께 고려한다(암모니아 합성 약 $450\ {}^\circ\text{C}$, 석회 가마 약 $900\ {}^\circ\text{C}$).</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 23. ⑪ 표준 생성 깁스 자유 에너지 (보충) ════════ -->
+<section class="slide" data-sec="02 · 표준 생성 깁스 자유 에너지" data-title="표준 생성 깁스 자유 에너지 (보충)">
+  <h2><span class="no">11</span>표준 생성 깁스 자유 에너지 <span class="small c-muted">[보충]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">표준 상태에서 화합물 $1\ \text{mol}$이 가장 안정한 형태의 원소로부터 생성될 때의 깁스 자유 에너지 변화를 <b>표준 생성 깁스 자유 에너지</b> $\Delta G_\mathrm{f}^\circ$라고 한다. 가장 안정한 원소는 $0$이다.</p>
+      <div class="formula sm">$\Delta G^\circ=\sum n_\mathrm{p}\Delta G_\mathrm{f}^\circ(\text{생성물})-\sum n_\mathrm{r}\Delta G_\mathrm{f}^\circ(\text{반응물})$<div class="unit">표준 생성 엔탈피로 $\Delta H^\circ$를 구한 방법과 같다</div></div>
+      <p class="f21" data-q><b>Q</b> $\ce{2H2O2(l) -> 2H2O(l) + O2(g)}$의 $25\ {}^\circ\text{C}$ $\Delta G^\circ$를 두 방법으로 구하면? ($\Delta G_\mathrm{f}^\circ$: $\ce{H2O(l)}$ $-237.13$, $\ce{H2O2(l)}$ $-120.35\ \text{kJ/mol}$)</p>
+      <p class="f21 step">① $2(-237.13)-2(-120.35)-0=$ <span class="ans">$-233.6\ \text{kJ}$</span></p>
+      <p class="f21 step">② $\Delta H^\circ-T\Delta S^\circ=-196.1-298.15(0.1258)=$ <span class="ans">$-233.6\ \text{kJ}$</span> → 같은 값($G$는 상태 함수)</p>
+      <p class="small">$\Delta G_\mathrm{f}^\circ$ 표는 $25\ {}^\circ\text{C}$ 값이다. 다른 온도에서는 $\Delta H^\circ-T\Delta S^\circ$로 구한다.</p>
+    </div>
+    <div class="col">{{GF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>표준 생성 깁스 자유 에너지로 자발성 판단하기</h2>
+  <p class="f21">$\ce{2NO(g) + O2(g) -> 2NO2(g)}$ &nbsp; $\Delta G_\mathrm{f}^\circ(\ce{NO})=+86.6\ \text{kJ/mol}$, $\Delta G_\mathrm{f}^\circ(\ce{NO2})=+51.3\ \text{kJ/mol}$ — <b>Q</b> $25\ {}^\circ\text{C}$ 표준 상태에서 이 반응의 $\Delta G^\circ$와 자발성은?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>생각</b> $\ce{O2}$는 가장 안정한 형태의 원소 → $\Delta G_\mathrm{f}^\circ(\ce{O2})=0$</p>
+      <p class="f21 step">$\Delta G^\circ=2(+51.3)-[2(+86.6)+0]$</p>
+      <div class="answer step">$\Delta G^\circ=-70.6\ \text{kJ}&lt;0$ → 자발적</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 진로 ════════ -->
+<section class="slide" data-sec="02 · 진로" data-title="진로: 수소 에너지 연구 개발">
+  <h2><span class="tag">진로</span>수소 에너지 연구 개발</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">수소를 만드는 방법: 화석 연료의 고온 열분해인 <b>개질</b>, 물을 전기 분해하는 <b>수전해</b>(PEM형, 고온 수증기 전해, 알칼라인), 태양 열화학이나 아이오딘과 황을 이용한 <b>열화학 사이클</b> 등.</p>
+      <p class="f21">우리나라 수소는 대부분 화석 연료에서 얻은 「개질 수소」라 생산 과정에서 이산화 탄소가 생길 수 있다. 수전해는 이산화 탄소나 대기 오염 물질이 생기지 않고 원료인 물도 풍부하다. 수소의 생산·저장·방출을 연구하는 전문 인력의 수요가 많아질 것이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 물의 분해는 $25\ {}^\circ\text{C}$에서 저절로 일어날까?</p>
+        <p class="f21 step">→ 흡열이고 기체가 생겨 $\Delta S^\circ&gt;0$인 (라)이지만, $25\ {}^\circ\text{C}$에서 $\Delta G^\circ=+474\ \text{kJ}$로 비자발적이다. 그래서 전기 에너지를 공급하거나(전기 분해) 매우 높은 온도의 열화학 공정이 필요하다.</p></div>
+    </div>
+    <div class="col">{{H2}}</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>온도가 다른 두 구리 덩어리</h2>
+  <p class="f21">온도가 다른 두 구리 금속 덩어리를 접촉하면 자발적인 방향은 온도가 같아지는 쪽임을 설명하여라. 한 곳에서 다른 곳으로 $1\ \text{J}$의 에너지가 열로 전달될 때 엔트로피 변화의 부호는? (금속의 온도는 일정하게 유지된다고 가정)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21 step">열이 가역적으로 전달된다고 보면 $\Delta S_1=\dfrac{q_1}{T_1}$, $\Delta S_2=\dfrac{q_2}{T_2}$이다. 금속 2 → 금속 1로 $1\ \text{J}$: $q_1=+1\ \text{J}$, $q_2=-1\ \text{J}$</p>
+      <p class="f21 step">$\Delta S=\Delta S_1+\Delta S_2=\dfrac{1}{T_1}-\dfrac{1}{T_2}$ [J/K]</p>
+      <div class="answer step">자발적이려면 $\Delta S&gt;0$ → $T_2&gt;T_1$: 높은 온도에서 낮은 온도로 열이 이동해 온도가 같아지는 쪽이 자발적, 엔트로피 변화의 부호는 $+$</div>
+    </div>
+    <div class="col stack">{{CU}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>아르곤의 비가역 압축과 엔트로피 변화</h2>
+  <p class="f21">$\ce{Ar}$ 기체 $1.00\ \text{mol}$이 피스톤에 의해 $5.00\ \text{L}$에서 $1.00\ \text{L}$로 갑자기 비가역적으로 압축되고, 온도가 $20.0\ {}^\circ\text{C}$에서 $25.2\ {}^\circ\text{C}$로 올라갔다. <b>Q</b> $\Delta S$는? (이상 기체, $C_{V,\mathrm{m}}=12.47\ \text{J/(K}\cdot\text{mol)}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>생각</b> 엔트로피는 상태 함수 → 같은 처음·나중 상태를 잇는 가역 경로 두 단계로 계산한다.</p>
+      <p class="f21 step">1단계 등온 압축: $nR\ln\dfrac{V_2}{V_1}=(1.00)(8.314)\ln\dfrac{1.00}{5.00}=-13.4\ \text{J/K}$</p>
+      <p class="f21 step">2단계 부피 일정 가열: $nC_{V,\mathrm{m}}\ln\dfrac{T_2}{T_1}=(1.00)(12.47)\ln\dfrac{298.4}{293.2}=+0.22\ \text{J/K}$</p>
+      <div class="answer step">$\Delta S=(-13.4+0.22)\ \text{J/K}=-13.2\ \text{J/K}$</div>
+    </div>
+    <div class="col stack">{{AR}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>마그네슘 연소 반응의 자발성</h2>
+  <p class="f21">$25\ {}^\circ\text{C}$ 표준 상태 &nbsp; $\ce{2Mg(s) + O2(g) -> 2MgO(s)}$ &nbsp; $\Delta S^\circ=-217\ \text{J/K}$, $\Delta H^\circ=-1202\ \text{kJ}$ — <b>Q</b> 이 반응의 자발성을 설명하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$\Delta S^\circ_\text{주위}=-\dfrac{\Delta H^\circ}{T}=-\dfrac{-1.202\times10^{6}\ \text{J}}{298\ \text{K}}=+4.03\times10^{3}\ \text{J/K}$</p>
+      <p class="f21 step">$\Delta S^\circ_\text{전체}=\Delta S^\circ+\Delta S^\circ_\text{주위}=-217+4034$</p>
+      <div class="answer step">$\Delta S^\circ_\text{전체}=+3.82\times10^{3}\ \text{J/K}&gt;0$ → 자발적</div>
+      <p class="small step">교과서 풀이는 $+3.81\times10^{3}\ \text{J/K}$($298.15\ \text{K}$로 계산한 값). $\Delta G^\circ=-1202-298(-0.217)=-1137\ \text{kJ}&lt;0$으로도 같은 결론 — 발열이 커서 계의 엔트로피 감소(그림 Ⅲ-23 (가))를 이긴다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>탄소로 산화 철(Ⅲ)을 환원시키는 온도</h2>
+  <p class="f21">표준 상태 &nbsp; $\ce{2Fe2O3(s) + 3C(s) -> 4Fe(s) + 3CO2(g)}$ &nbsp; $\Delta S^\circ=+558.4\ \text{J/K}$, $\Delta H^\circ=+467.9\ \text{kJ}$ — <b>Q</b> 이 흡열 반응으로 철을 얻는 것이 가능한 열역학적 온도는?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21 step"><b>생각</b> $\Delta H^\circ&gt;0$, $\Delta S^\circ&gt;0$ → 그림 Ⅲ-23 (라): 높은 온도에서 자발적</p>
+      <p class="f21 step">$T=\dfrac{\Delta H^\circ}{\Delta S^\circ}=\dfrac{4.679\times10^{5}\ \text{J}}{558.4\ \text{J/K}}=838\ \text{K}$</p>
+      <div class="answer step" data-g="e3">$838\ \text{K}$(약 $565\ {}^\circ\text{C}$)보다 높은 온도</div>
+      <p class="small step">1기압에서 환원이 일어나는 온도가 매우 높다.</p>
+    </div>
+    <div class="col stack">{{FE}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 깁스 자유 에너지와 반응의 자발성 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 화학 반응의 자발성 — 02 깁스 자유 에너지와 반응의 자발성</h2>
+  <div class="ac322-map">
+    <div class="ac322-node ac322-dim">01 엔트로피<br>$\Delta S_\text{전체}$<br>$=\Delta S+\Delta S_\text{주위}$<br>$\Delta S_\text{주위}=-\Delta H/T$</div>
+    <div class="ac322-arr">→</div>
+    <div class="ac322-node ac322-main" data-q><b>02 깁스 자유 에너지와 반응의 자발성</b><br>❶ $G\equiv$ <span class="blank"><span class="step">$H-TS$</span></span>, 일정한 온도에서 $\Delta G=$ <span class="blank"><span class="step">$\Delta H-T\Delta S$</span></span><br>❷ 일정한 온도와 압력: $\Delta S_\text{전체}=$ <span class="blank"><span class="step">$-\Delta G/T$</span></span><br>❸ $\Delta G&lt;0$ <span class="blank"><span class="step">자발적</span></span>, $\Delta G=0$ <span class="blank"><span class="step">평형</span></span> — 자발적 변화는 $G$가 <span class="blank"><span class="step">감소</span></span>하는 방향<br>❹ $\Delta H&lt;0$, $\Delta S&gt;0$: <span class="blank"><span class="step">모든 온도에서 자발적</span></span> · $\Delta H&gt;0$, $\Delta S&lt;0$: <span class="blank"><span class="step">항상 비자발적</span></span><br>❺ 부호가 같으면 $T=$ <span class="blank"><span class="step">$\Delta H^\circ/\Delta S^\circ$</span></span>에서 자발성이 바뀐다<br>❻ <span class="small">[보충]</span> $\Delta G^\circ=\sum n_\mathrm{p}\Delta G_\mathrm{f}^\circ(\text{생성물})-$ <span class="blank"><span class="step">$\sum n_\mathrm{r}\Delta G_\mathrm{f}^\circ(\text{반응물})$</span></span></div>
+    <div class="ac322-arr">→</div>
+    <div class="ac322-node ac322-dim">Ⅲ-4 화학 전지<br>$\Delta G^\circ=-nFE^\circ$<br>Ⅳ 화학 평형<br>$\Delta G^\circ=-RT\ln K$</div>
+  </div>
+</section>
+
+<!-- ════════ 31. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 깁스 자유 에너지와 반응의 자발성 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 깁스 자유 에너지의 정의와 $\Delta S_\text{전체}=-\Delta G/T$의 뜻을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] $\Delta G^\circ$–$T$ 그래프를 그리고, 자발성이 바뀌는 온도와 자발적인 온도 범위를 구했다.</button>
+    <button class="chk">[가치·태도] 모둠 토의에서 그래프의 기울기·절편의 의미를 근거로 의견을 나누고 발표했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\Delta H=+50\ \text{kJ}$, $\Delta S=+200\ \text{J/K}$인 반응이 자발적인 온도는? <span class="step">→ <span class="ans">$T&gt;\dfrac{50000}{200}=250\ \text{K}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $\Delta G^\circ$–$T$ 직선의 기울기가 양수이면 $\Delta S^\circ$의 부호는? <span class="step">→ <span class="ans">음수</span> (기울기 $=-\Delta S^\circ$)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 전자를 주고받는 반응 — Ⅲ-3 산화 환원 반응. 화학 전지 반응의 자발성은 Ⅲ-4에서 깁스 자유 에너지와 다시 연결한다.</div>
+</section>

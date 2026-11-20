@@ -1,0 +1,710 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 화학 변화의 자발성" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 화학 변화의 자발성 › 01</div>
+    <h1>화학 반응과<br><span class="acc">엔탈피</span></h1>
+    <p class="sub">반응이 내놓거나 흡수하는 열을 어떻게 나타낼까?</p>
+    <p class="meta">고등학교 물질과 에너지 70–75쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="메테인이 연소하는 반응의 에너지 도표: 반응물의 엔탈피가 생성물보다 높고, 그 차이 890 킬로줄만큼 열을 방출한다. 오른쪽에 가스 불꽃">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <g data-arw="88,448,88,92,muted,2.5"></g><g data-arw="80,440,486,440,muted,2.5"></g>
+    <text class="tex" x="100" y="104" data-mix="엔탈피 $H$" data-size="22" fill="#5B6B7F"></text>
+    <text class="tex" x="482" y="474" data-mix="반응의 진행" data-size="22" data-anchor="end" fill="#5B6B7F"></text>
+    <line x1="118" y1="170" x2="330" y2="170" stroke="#16233D" stroke-width="5" stroke-linecap="round"/>
+    <text class="tex" x="224" y="152" data-tex="\ce{CH4(g) + 2O2(g)}" data-size="24" data-anchor="middle"></text>
+    <line x1="230" y1="388" x2="470" y2="388" stroke="#16233D" stroke-width="5" stroke-linecap="round"/>
+    <text class="tex" x="350" y="424" data-tex="\ce{CO2(g) + 2H2O(l)}" data-size="24" data-anchor="middle"></text>
+    <line x1="330" y1="170" x2="470" y2="170" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="6 6"/>
+    <g data-arw="282,178,282,380,ink,4"></g>
+    <text class="tex" x="268" y="286" data-tex="\Delta H=-890\ \text{kJ}" data-size="26" data-anchor="end"></text>
+    <g data-anim="rot" data-from="5" data-o="420,330" data-rep="swing" data-dur=".7">
+      <path d="M420 330 C390 312 392 276 420 232 C448 276 450 312 420 330 Z" fill="#F6A623"/>
+      <path d="M420 326 C403 313 405 290 420 264 C435 290 437 313 420 326 Z" fill="#FFD45C"/>
+    </g>
+    <rect x="396" y="330" width="48" height="14" rx="3" fill="#7E8B98"/><rect x="408" y="344" width="24" height="22" fill="#A9B4BF"/>
+    <g data-anim="fade" data-dur="1" data-delay="1.2"><g data-arw="450,268,494,244,equi,3.5"></g><g data-arw="452,300,500,300,equi,3.5"></g><g data-arw="390,268,350,246,equi,3.5"></g>
+    <text class="tex" x="490" y="350" data-mix="열 방출" data-size="22" data-anchor="middle" fill="#B5651D"></text></g>
+  </svg>
+</section>
+
+<!-- ════════ 2. 대단원 도입: 학습할 내용 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 변화의 자발성 · 도입" data-title="대단원 도입: 학습할 내용">
+  <h2>Ⅲ. 화학 변화의 자발성 — 이 단원에서 학습할 내용</h2>
+  <p class="f22">우주 왕복선은 물질이 화학 반응을 할 때 출입하는 에너지로 추진력을 얻는다. 이처럼 반응에서 출입하는 에너지는 우리 삶에 유용하게 쓰인다. 이 단원에서는 화학 반응과 함께 일어나는 <b>엔탈피</b>와 <b>엔트로피</b> 변화를 알아보고, 이를 이용해 우리 주위의 반응이 <b>자발적으로</b> 일어날지 예측해 본다.</p>
+  <div class="stages mt16">
+    <div class="stage"><h3>01 화학 반응과 엔탈피</h3>
+      <svg viewBox="0 0 300 180" aria-label="반응물이 생성물보다 높은 에너지 도표와 불꽃">
+        <g data-anim="pop" data-o="150,90" data-dur=".9" data-delay=".3" data-ease="back">
+        <line x1="30" y1="40" x2="130" y2="40" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <line x1="150" y1="140" x2="270" y2="140" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <g data-arw="140,46,140,134,ink,3"></g>
+        <text class="tex" x="152" y="98" data-tex="\Delta H" data-size="22"></text>
+        <path d="M70 150 C52 138 54 116 70 90 C86 116 88 138 70 150 Z" fill="#F6A623"/><path d="M70 147 C60 139 61 126 70 110 C79 126 80 139 70 147 Z" fill="#FFD45C"/>
+        </g>
+      </svg>
+      <p>발열 반응과 흡열 반응, 열화학 반응식<br><b>탐구</b> 연료의 연소 엔탈피 비교</p></div>
+    <div class="stage"><h3>02 반응 경로와 반응 엔탈피</h3>
+      <svg viewBox="0 0 300 180" aria-label="같은 출발점과 도착점을 잇는 두 반응 경로">
+        <g data-anim="pop" data-o="150,90" data-dur=".9" data-delay=".6" data-ease="back">
+        <line x1="20" y1="34" x2="100" y2="34" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <line x1="110" y1="92" x2="190" y2="92" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <line x1="200" y1="150" x2="280" y2="150" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <g data-arw="70,40,220,144,ink,3"></g>
+        <g data-arw="40,40,130,86,ink,2.5,d"></g><g data-arw="160,98,250,144,ink,2.5,d"></g>
+        <text class="tex" x="178" y="62" data-mix="경로 1" data-size="18"></text>
+        <text class="tex" x="28" y="112" data-mix="경로 2" data-size="18" fill="#5B6B7F"></text>
+        </g>
+      </svg>
+      <p>헤스 법칙<br><b>탐구</b> 중화 반응으로 헤스 법칙 확인</p></div>
+    <div class="stage"><h3>03 화학 변화의 자발성</h3>
+      <svg viewBox="0 0 300 180" aria-label="규칙적으로 모인 입자들이 저절로 흩어지는 모습">
+        <g data-anim="pop" data-o="150,90" data-dur=".9" data-delay=".9" data-ease="back">
+        <rect x="18" y="40" width="104" height="104" rx="10" fill="#fff" stroke="#9FB0C2" stroke-width="2"/>
+        <circle cx="46" cy="68" r="10" fill="#6E9CCB"/><circle cx="70" cy="68" r="10" fill="#6E9CCB"/><circle cx="94" cy="68" r="10" fill="#6E9CCB"/>
+        <circle cx="46" cy="92" r="10" fill="#6E9CCB"/><circle cx="70" cy="92" r="10" fill="#6E9CCB"/><circle cx="94" cy="92" r="10" fill="#6E9CCB"/>
+        <circle cx="46" cy="116" r="10" fill="#6E9CCB"/><circle cx="70" cy="116" r="10" fill="#6E9CCB"/><circle cx="94" cy="116" r="10" fill="#6E9CCB"/>
+        <g data-arw="130,92,170,92,ink,3"></g>
+        <rect x="178" y="40" width="104" height="104" rx="10" fill="#fff" stroke="#9FB0C2" stroke-width="2"/>
+        <circle cx="198" cy="58" r="10" fill="#6E9CCB"/><circle cx="252" cy="62" r="10" fill="#6E9CCB"/><circle cx="226" cy="84" r="10" fill="#6E9CCB"/>
+        <circle cx="264" cy="100" r="10" fill="#6E9CCB"/><circle cx="196" cy="100" r="10" fill="#6E9CCB"/><circle cx="238" cy="126" r="10" fill="#6E9CCB"/>
+        <circle cx="206" cy="128" r="10" fill="#6E9CCB"/><circle cx="268" cy="132" r="10" fill="#6E9CCB"/><circle cx="222" cy="56" r="10" fill="#6E9CCB"/>
+        </g>
+      </svg>
+      <p>엔트로피의 의미<br>엔탈피·엔트로피와 자발적인 변화</p></div>
+  </div>
+</section>
+
+<!-- ════════ 3. 대단원 도입: 연계와 목표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 화학 변화의 자발성 · 도입" data-title="대단원 도입: 단원 연계와 목표">
+  <h2>단원 연계와 이 단원의 학습 목표</h2>
+  <h3>단원 연계</h3>
+  <div class="flow">
+    <div class="fnode">중학교 과학 · 물질의 상태 변화, 화학 반응의 규칙성</div><div class="farr">→</div>
+    <div class="fnode">통합과학2 · 변화와 다양성</div><div class="farr">→</div>
+    <div class="fnode hl">물질과 에너지 Ⅲ</div>
+  </div>
+  <h3 class="mt16">이 단원의 학습 목표</h3>
+  <table class="tight em31-var">
+    <tr><th>지식·이해</th><td class="l">엔탈피와 엔트로피의 의미를 알고, 엔탈피와 엔트로피 변화로 화학 변화의 자발성을 설명할 수 있다.</td></tr>
+    <tr><th>과정·기능</th><td class="l">중화 반응 실험으로 헤스 법칙을 확인하고, 직접 측정하기 어려운 반응의 반응 엔탈피를 헤스 법칙으로 구할 수 있다.</td></tr>
+    <tr><th>가치·태도</th><td class="l">주변의 변화를 엔탈피와 엔트로피 변화로 설명할 수 있음을 알고 화학의 중요성을 인식할 수 있다.</td></tr>
+  </table>
+  <div class="note mt12"><b>학습 과제물</b> 이 단원을 배우며 나만의 특기를 발휘한 학습 과제물을 만들어 보자 — 86쪽 과학사 이야기 · 87쪽 화학과 나의 미래 · 92–93쪽 프로젝트</div>
+</section>
+
+<!-- ════════ 4. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 화학 반응과 엔탈피" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12물에03-01]</span>엔탈피의 의미를 알고, 엔탈피를 이용하여 열화학 반응식을 표현할 수 있다.</div>
+  <ol class="goals mt12">
+    <li><b>엔탈피</b>의 의미를 알고, 반응물과 생성물의 엔탈피 차이로 <b>반응 엔탈피</b>를 설명할 수 있다.</li>
+    <li>엔탈피를 이용하여 <b>열화학 반응식</b>을 표현할 수 있다.</li>
+    <li>연소 엔탈피로 대체 연료와 화석 연료의 <b>효율성</b>을 비교할 수 있다. <span class="small c-muted">(탐구)</span></li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">열의 출입</div><div class="farr">→</div>
+    <div class="fnode hl">엔탈피</div><div class="farr">→</div>
+    <div class="fnode hl">열화학 반응식</div><div class="farr">→</div>
+    <div class="fnode">연소 엔탈피</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 연료의 효율성</div>
+  </div>
+  <div class="note mt16"><b>연계</b> 통합과학2 「변화와 다양성」에서 화학 변화가 일어날 때 에너지가 출입한다는 것을 배웠다. 오늘은 그 열의 출입을 <b>엔탈피</b>로 나타내고 식으로 표현한다.</div>
+</section>
+
+<!-- ════════ 5. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 화학 반응과 엔탈피 · 도입" data-title="생각 열기: 손난로와 냉각 팩">
+  <h2><span class="tag">생각 열기</span>손난로는 따뜻하고, 냉각 팩은 차갑다</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card em31-warm"><h3>손난로 <span class="small c-muted">“손이 따뜻해졌어.”</span></h3>
+        <svg class="fig" viewBox="0 0 460 170" style="width:460px" aria-label="손 위의 손난로에서 열이 바깥으로 나가는 모습">
+          <path d="M70 150 C60 110 70 96 96 96 L330 96 C360 96 372 112 368 150 Z" fill="#F3D3B8" stroke="#C9A07F" stroke-width="2"/>
+          <text class="tex" x="352" y="138" data-mix="손" data-size="20" data-anchor="end" fill="#8A6040"></text>
+          <rect x="140" y="52" width="160" height="58" rx="12" fill="#fff" stroke="#7E8B98" stroke-width="2.5"/>
+          <text class="tex" x="220" y="88" data-mix="철 가루" data-size="20" data-anchor="middle"></text>
+          <g data-anim="move" data-from="-14,10" data-dur="1.2" data-delay=".4" data-rep="loop"><g data-arw="140,62,92,30,equi,3.5"></g></g>
+          <g data-anim="move" data-from="0,14" data-dur="1.2" data-delay=".4" data-rep="loop"><g data-arw="220,48,220,12,equi,3.5"></g></g>
+          <g data-anim="move" data-from="14,10" data-dur="1.2" data-delay=".4" data-rep="loop"><g data-arw="300,62,348,30,equi,3.5"></g></g>
+          <text class="tex" x="400" y="40" data-mix="열" data-size="20" data-anchor="middle" fill="#B5651D"></text>
+        </svg>
+        <p class="f21">철 가루가 공기 중의 산소와 반응한다.</p>
+        <p class="small">$\ce{4Fe(s) + 3O2(g) -> 2Fe2O3(s)}$</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card em31-cold"><h3>냉각 팩 <span class="small c-muted">“나는 녹고 있어!”</span></h3>
+        <svg class="fig" viewBox="0 0 460 170" style="width:460px" aria-label="손 위의 냉각 팩으로 손의 열이 들어가는 모습">
+          <path d="M70 150 C60 110 70 96 96 96 L330 96 C360 96 372 112 368 150 Z" fill="#F3D3B8" stroke="#C9A07F" stroke-width="2"/>
+          <text class="tex" x="352" y="138" data-mix="손" data-size="20" data-anchor="end" fill="#8A6040"></text>
+          <rect x="140" y="52" width="160" height="58" rx="12" fill="#fff" stroke="#7E8B98" stroke-width="2.5"/>
+          <text class="tex" x="220" y="88" data-mix="$\ce{NH4NO3}$ + 물" data-size="20" data-anchor="middle"></text>
+          <g data-anim="move" data-from="-14,-10" data-dur="1.2" data-delay=".4" data-rep="loop"><g data-arw="92,30,138,60,equi,3.5"></g></g>
+          <g data-anim="move" data-from="0,-14" data-dur="1.2" data-delay=".4" data-rep="loop"><g data-arw="220,10,220,46,equi,3.5"></g></g>
+          <g data-anim="move" data-from="14,-10" data-dur="1.2" data-delay=".4" data-rep="loop"><g data-arw="348,30,302,60,equi,3.5"></g></g>
+          <text class="tex" x="400" y="40" data-mix="열" data-size="20" data-anchor="middle" fill="#B5651D"></text>
+        </svg>
+        <p class="f21">질산 암모늄($\ce{NH4NO3}$)이 물에 녹는다.</p>
+        <p class="small">$\ce{NH4NO3(s) -> NH4+(aq) + NO3-(aq)}$</p>
+      </div>
+    </div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 손난로에서는 열을 방출하는 반응이, 냉각 팩에서는 열을 흡수하는 반응이 일어난다. 이처럼 화학 반응이 일어날 때 열이 출입하는 까닭은 무엇일까?</p>
+  <div class="answer step">반응물과 생성물이 가진 <b>에너지가 서로 다르기</b> 때문이다.<br><span class="small">손난로는 열을 주위(손)로 내보내고, 냉각 팩은 주위(손)에서 열을 흡수한다. 오늘은 이 에너지를 엔탈피로 나타낸다.</span></div>
+</section>
+
+<!-- ════════ 7. 발열 반응과 흡열 반응 ════════ -->
+<section class="slide" data-sec="01 · 엔탈피" data-title="발열 반응과 흡열 반응">
+  <h2><span class="tag alt">연결</span>발열 반응과 흡열 반응</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card em31-warm"><h3>발열 반응</h3>
+        <div class="row">
+          <div class="col" style="flex:0 0 110px">
+            <svg class="fig" viewBox="0 0 110 240" style="width:110px" aria-label="온도계 액주가 올라감">
+              <rect x="47" y="14" width="16" height="190" rx="8" fill="#fff" stroke="#7E8B98" stroke-width="2"/>
+              <g data-anim="scale" data-from="1,0.45" data-o="55,206" data-dur="1.6" data-delay=".4" data-ease="out"><rect x="51" y="44" width="8" height="166" fill="#E0664F"/></g>
+              <circle cx="55" cy="214" r="15" fill="#E0664F" stroke="#7E8B98" stroke-width="2"/>
+              <g data-arw="88,150,88,60,ink,3"></g>
+              <line x1="63" y1="60" x2="72" y2="60" stroke="#5B6B7F" stroke-width="2"/><line x1="63" y1="100" x2="72" y2="100" stroke="#5B6B7F" stroke-width="2"/><line x1="63" y1="140" x2="72" y2="140" stroke="#5B6B7F" stroke-width="2"/><line x1="63" y1="180" x2="72" y2="180" stroke="#5B6B7F" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="col">
+            <p class="f22"><mark>열을 방출하여 주위의 온도가 높아지는 반응</mark></p>
+            <p class="f21 mt8"><b>예</b> 연료의 연소, 산과 염기의 중화 반응, 철의 산화(손난로), 산화 칼슘과 물의 반응(발열 도시락)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card em31-cold"><h3>흡열 반응</h3>
+        <div class="row">
+          <div class="col" style="flex:0 0 110px">
+            <svg class="fig" viewBox="0 0 110 240" style="width:110px" aria-label="온도계 액주가 내려감">
+              <rect x="47" y="14" width="16" height="190" rx="8" fill="#fff" stroke="#7E8B98" stroke-width="2"/>
+              <g data-anim="scale" data-from="1,1.9" data-o="55,206" data-dur="1.6" data-delay=".4" data-ease="out"><rect x="51" y="140" width="8" height="70" fill="#E0664F"/></g>
+              <circle cx="55" cy="214" r="15" fill="#E0664F" stroke="#7E8B98" stroke-width="2"/>
+              <g data-arw="88,60,88,150,ink,3"></g>
+              <line x1="63" y1="60" x2="72" y2="60" stroke="#5B6B7F" stroke-width="2"/><line x1="63" y1="100" x2="72" y2="100" stroke="#5B6B7F" stroke-width="2"/><line x1="63" y1="140" x2="72" y2="140" stroke="#5B6B7F" stroke-width="2"/><line x1="63" y1="180" x2="72" y2="180" stroke="#5B6B7F" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="col">
+            <p class="f22"><mark>열을 흡수하여 주위의 온도가 낮아지는 반응</mark></p>
+            <p class="f21 mt8"><b>예</b> 광합성, 탄산수소 나트륨의 열분해, 질산 암모늄의 용해(냉각 팩)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="f22 mt16"><b>Q</b> 흡열 반응이 계속 일어나려면 무엇이 필요할까?</p>
+  <div class="answer step">흡열 반응은 열(가열)이나 빛 같은 에너지를 <b>계속 공급해야</b> 진행되는 경우가 많다.</div>
+  <p class="small mt8"><b>주의</b> 발열 반응이 열을 내놓는다고 반응 용기 안(계)의 온도가 낮아지는 것이 아니다. 반응으로 계의 온도가 먼저 높아지고, 그 열이 주위로 이동해 주위의 온도가 높아진다.</p>
+</section>
+
+<!-- ════════ 9. 연결: 열은 어디에서 ════════ -->
+<section class="slide" data-sec="01 · 엔탈피" data-title="반응의 열은 어디에서 올까?">
+  <h2><span class="tag alt">연결</span>반응에서 나오는 열은 어디에서 올까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 320" style="width:520px" aria-label="높은 계단의 공이 낮은 계단으로 내려오면서 높이 차이만큼 에너지를 내놓는 비유 그림">
+        <path d="M30 120 L230 120 L230 270 L490 270 L490 300 L30 300 Z" fill="#E7ECF1" stroke="#9FB0C2" stroke-width="2"/>
+        <circle cx="130" cy="98" r="22" fill="none" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="5 4"/>
+        <g data-anim="move" data-from="-230,-172" data-dur="1.4" data-delay=".5" data-ease="in"><circle cx="360" cy="248" r="22" fill="#6E9CCB" stroke="#3E6E9E" stroke-width="2"/></g>
+        <line x1="40" y1="76" x2="500" y2="76" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <g data-arw="470,84,470,262,muted,2.5"></g><g data-arw="470,262,470,84,muted,2.5"></g>
+        <text class="tex" x="458" y="160" data-mix="높이||차이" data-size="20" data-anchor="end" fill="#5B6B7F"></text>
+        <text class="tex" x="130" y="150" data-mix="높은 곳" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="340" y="295" data-mix="낮은 곳" data-size="20" data-anchor="middle"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22">높은 곳의 공이 낮은 곳으로 내려오면 높이 차이만큼 에너지를 내놓는다.</p>
+      <p class="f22 mt12">물질도 저마다 <b>화학 에너지</b>를 지닌다. 반응물과 생성물이 가진 에너지가 다르면, <b>그 차이만큼</b> 열이 출입한다.</p>
+      <p class="f22 mt12"><b>Q</b> 물질이 가진 에너지를 나타내는 양을 무엇이라고 할까?</p>
+    </div>
+  </div>
+  <div class="answer step">→ 물질이 가진 에너지를 나타내는 양: <b>엔탈피</b></div>
+</section>
+
+<!-- ════════ 10. 엔탈피와 반응 엔탈피 ════════ -->
+<section class="slide" data-sec="01 · 엔탈피" data-title="엔탈피와 반응 엔탈피">
+  <h2><span class="no">1</span>엔탈피와 반응 엔탈피</h2>
+  <p class="f22"><mark><b>엔탈피($H$)</b>: 특정 온도와 압력에서 물질이 가지는 고유한 에너지</mark>이다. 각 물질의 엔탈피는 직접 측정할 수 없지만, 일정한 압력에서 반응할 때 출입하는 열을 측정하여 반응물과 생성물의 <b>엔탈피 차이</b>를 알 수 있다.</p>
+  <p class="f22 mt12"><mark><b>반응 엔탈피($\Delta H$)</b>: 생성물의 엔탈피 합과 반응물의 엔탈피 합의 차</mark></p>
+  <div class="formula mt8">$\Delta H=H_\text{생성물}-H_\text{반응물}$</div>
+  <div class="row mt12">
+    <div class="col"><div class="card em31-warm"><h3>열을 방출하면 (발열)</h3><p class="f22">$H_\text{생성물}&lt;H_\text{반응물}$ → 엔탈피 감소, $\Delta H&lt;0$</p></div></div>
+    <div class="col"><div class="card em31-cold"><h3>열을 흡수하면 (흡열)</h3><p class="f22">$H_\text{생성물}&gt;H_\text{반응물}$ → 엔탈피 증가, $\Delta H&gt;0$</p></div></div>
+  </div>
+  <p class="small mt12">부호 약속: 일정한 압력에서 반응할 때 출입하는 열이 $\Delta H$이고, 계가 열을 잃으면 (−), 얻으면 (+)이다. 이 과목에서 엔탈피는 화학 반응의 열 출입을 나타내는 데 쓴다.</p>
+</section>
+
+<!-- ════════ 11. 에너지 도표 ════════ -->
+<section class="slide" data-sec="01 · 엔탈피" data-title="에너지 도표">
+  <h2><span class="no">1</span>에너지 도표로 나타내기</h2>
+  <div class="row">
+    <div class="col">
+      <h3 class="center">발열 반응</h3>
+      <svg class="fig" viewBox="0 0 520 290" style="width:440px" aria-label="발열 반응의 에너지 도표: 반응물이 위, 생성물이 아래, 아래로 향한 델타 H 화살표, 열 방출">
+        <g data-arw="50,276,50,24,muted,2.5"></g><g data-arw="42,268,508,268,muted,2.5"></g>
+        <text class="tex" x="62" y="34" data-mix="엔탈피 $H$" data-size="20" fill="#5B6B7F"></text>
+        <text class="tex" x="506" y="252" data-mix="반응의 진행" data-size="20" data-anchor="end" fill="#5B6B7F"></text>
+        <line x1="80" y1="80" x2="230" y2="80" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="155" y="66" data-mix="반응물" data-size="21" data-anchor="middle"></text>
+        <line x1="230" y1="80" x2="300" y2="80" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <line x1="300" y1="210" x2="470" y2="210" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="385" y="198" data-mix="생성물" data-size="21" data-anchor="middle"></text>
+        <g data-arw="265,86,265,204,ink,3.5"></g>
+        <text class="tex" x="252" y="152" data-tex="\Delta H&lt;0" data-size="22" data-anchor="end"></text>
+        <g data-anim="move" data-from="-24,0" data-dur="1.2" data-delay=".5" data-ease="out"><g data-arw="282,140,350,140,equi,3.5"></g><text class="tex" x="358" y="147" data-mix="열 방출" data-size="21" fill="#B5651D"></text></g>
+      </svg>
+      <div class="formula sm step em31-fs" data-g="e1">$\ce{C(s) + O2(g) -> CO2(g)}\quad\Delta H=-393.5\ \text{kJ}$</div>
+    </div>
+    <div class="col">
+      <h3 class="center">흡열 반응</h3>
+      <svg class="fig" viewBox="0 0 520 290" style="width:440px" aria-label="흡열 반응의 에너지 도표: 반응물이 아래, 생성물이 위, 위로 향한 델타 H 화살표, 열 흡수">
+        <g data-arw="50,276,50,24,muted,2.5"></g><g data-arw="42,268,508,268,muted,2.5"></g>
+        <text class="tex" x="62" y="34" data-mix="엔탈피 $H$" data-size="20" fill="#5B6B7F"></text>
+        <text class="tex" x="506" y="252" data-mix="반응의 진행" data-size="20" data-anchor="end" fill="#5B6B7F"></text>
+        <line x1="80" y1="210" x2="230" y2="210" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="155" y="240" data-mix="반응물" data-size="21" data-anchor="middle"></text>
+        <line x1="230" y1="80" x2="300" y2="80" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <line x1="300" y1="80" x2="470" y2="80" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="385" y="66" data-mix="생성물" data-size="21" data-anchor="middle"></text>
+        <g data-arw="265,204,265,86,ink,3.5"></g>
+        <text class="tex" x="252" y="152" data-tex="\Delta H&gt;0" data-size="22" data-anchor="end"></text>
+        <g data-anim="move" data-from="24,0" data-dur="1.2" data-delay=".5" data-ease="out"><g data-arw="350,150,282,150,equi,3.5"></g><text class="tex" x="358" y="157" data-mix="열 흡수" data-size="21" fill="#B5651D"></text></g>
+      </svg>
+      <div class="formula sm step em31-fs" data-g="e1">$\ce{N2(g) + O2(g) -> 2NO(g)}\quad\Delta H=180.6\ \text{kJ}$</div>
+    </div>
+  </div>
+  <p class="f22 mt8"><b>Q</b> 발열 반응에서 엔탈피가 더 큰 쪽은 반응물일까, 생성물일까?</p>
+  <div class="answer step"><b>반응물</b> — 남는 에너지를 열로 내놓는다. 엔탈피가 낮은 생성물이 더 안정하다.</div>
+</section>
+
+<!-- ════════ 12. 입자 수준 ════════ -->
+<section class="slide" data-sec="01 · 엔탈피" data-title="입자 수준에서 본 반응 엔탈피">
+  <h2><span class="no">1</span>반응 엔탈피는 왜 생길까?</h2>
+  <div class="stages">
+    <div class="stage"><h3>현상</h3>
+      <svg viewBox="0 0 300 200" aria-label="염소 기체가 든 병 속에서 수소가 타는 모습">
+        <path d="M95 40 L95 180 Q95 192 107 192 L193 192 Q205 192 205 180 L205 40" fill="#EEF5D6" stroke="#7E8B98" stroke-width="3"/>
+        <line x1="88" y1="40" x2="212" y2="40" stroke="#7E8B98" stroke-width="3"/>
+        <line x1="150" y1="6" x2="150" y2="118" stroke="#7E8B98" stroke-width="6" stroke-linecap="round"/>
+        <g data-anim="rot" data-from="6" data-o="150,150" data-rep="swing" data-dur=".6"><path d="M150 152 C134 140 136 128 150 118 C164 128 166 140 150 152 Z" fill="#F6A623" transform="rotate(180 150 135)"/></g>
+        <text class="tex" x="228" y="110" data-tex="\ce{Cl2}" data-size="20" data-anchor="start"></text>
+        <text class="tex" x="166" y="24" data-tex="\ce{H2}" data-size="20" data-anchor="start"></text>
+      </svg>
+      <p>수소가 염소 속에서 타며 열과 빛을 낸다. 주위가 뜨거워진다.</p></div>
+    <div class="stage"><h3>입자 모형</h3>
+      <svg viewBox="0 0 300 200" aria-label="수소 분자와 염소 분자가 결합을 끊고 염화 수소 분자 두 개로 재배열되는 입자 모형">
+        <g data-atom="46,50,18,H"></g><g data-atom="76,50,18,H"></g>
+        <text class="tex" x="118" y="58" data-tex="+" data-size="24" data-anchor="middle"></text>
+        <g data-atom="168,50,29,Cl"></g><g data-atom="214,50,29,Cl"></g>
+        <g data-arw="150,92,150,120,ink,3"></g>
+        <g data-anim="move" data-from="-14,-114" data-dur="1.3" data-delay=".5" data-ease="io"><g data-atom="60,164,18,H"></g></g>
+        <g data-anim="move" data-from="68,-114" data-dur="1.3" data-delay=".5" data-ease="io"><g data-atom="100,164,29,Cl"></g></g>
+        <g data-anim="move" data-from="-104,-114" data-dur="1.3" data-delay=".5" data-ease="io"><g data-atom="180,164,18,H"></g></g>
+        <g data-anim="move" data-from="-6,-114" data-dur="1.3" data-delay=".5" data-ease="io"><g data-atom="220,164,29,Cl"></g></g>
+      </svg>
+      <p>결합이 끊어질 때 에너지를 <b>흡수</b>하고, 새 결합이 생길 때 에너지를 <b>방출</b>한다.</p></div>
+    <div class="stage"><h3>화학 반응식</h3>
+      <div class="em31-sym"><p class="f22">$\ce{H2(g) + Cl2(g) -> 2HCl(g)}$</p><p class="f22 mt8">$\Delta H=-185\ \text{kJ}$</p><p class="small mt8">원자 수: $\mathrm{H}$ 2 = 2, $\mathrm{Cl}$ 2 = 2</p></div>
+      <p>결합이 생길 때 내놓는 에너지가 더 크므로 발열 반응이다.</p></div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 흡수한 에너지보다 방출한 에너지가 크면 $\Delta H$의 부호는?</p>
+  <div class="answer step">$\Delta H&lt;0$ (발열) — 반대로 흡수한 에너지가 더 크면 $\Delta H&gt;0$ (흡열)<br><span class="small">결합의 세기로 반응 엔탈피를 구하는 방법은 02에서 다룬다.</span></div>
+</section>
+
+<!-- ════════ 14. 열화학 반응식 ════════ -->
+<section class="slide" data-sec="01 · 열화학 반응식" data-title="열화학 반응식">
+  <h2><span class="no">2</span>열화학 반응식</h2>
+  <p class="f22"><mark><b>열화학 반응식</b>: 화학 반응식에 반응 엔탈피($\Delta H$)를 함께 나타낸 식</mark></p>
+  <p class="f21 mt8">예: $25\ {}^\circ\text{C}$, 1 기압에서 흑연 1 mol의 연소(393.5 kJ 방출), 질소 1 mol과 산소의 반응(180.6 kJ 흡수)</p>
+  <div class="row mt8">
+    <div class="col"><div class="card em31-warm"><h3>발열 반응</h3><p class="f22 center">$\ce{C(s) + O2(g) -> CO2(g)}$<br>$\Delta H=-393.5\ \text{kJ}$</p></div></div>
+    <div class="col"><div class="card em31-cold"><h3>흡열 반응</h3><p class="f22 center">$\ce{N2(g) + O2(g) -> 2NO(g)}$<br>$\Delta H=180.6\ \text{kJ}$</p></div></div>
+  </div>
+  <div class="card mt12"><h3>쓸 때 유의할 점</h3>
+    <p class="f21">① 반응 엔탈피는 온도와 압력에 따라 달라지므로 조건을 표시한다. 표시가 없으면 $25\ {}^\circ\text{C}$, 1 기압에서의 반응이다. &nbsp;② 반응물과 생성물의 <b>상태</b>를 함께 나타낸다. &nbsp;③ 계수가 달라지면 반응 엔탈피의 <b>크기</b>도 달라진다.</p>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 흑연의 열화학 반응식을 말로 읽으면?</p>
+  <div class="answer step">흑연 1 mol이 산소 1 mol과 반응하여 이산화 탄소 1 mol이 생길 때 <b>393.5 kJ의 열을 방출</b>한다.</div>
+</section>
+
+<!-- ════════ 17. 유의점 ② 상태 ════════ -->
+<section class="slide" data-sec="01 · 열화학 반응식" data-title="물질의 상태와 ΔH">
+  <h2><span class="no">2</span>유의할 점 ② 물질의 상태</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 320" style="width:520px" aria-label="수소와 산소에서 수증기가 될 때 241.8 킬로줄, 액체 물이 될 때 285.8 킬로줄을 방출하며 두 생성물의 차이는 44.0 킬로줄">
+        <g data-arw="40,306,40,24,muted,2.5"></g>
+        <text class="tex" x="52" y="24" data-mix="엔탈피 $H$" data-size="20" fill="#5B6B7F"></text>
+        <line x1="80" y1="70" x2="230" y2="70" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="170" y="58" data-tex="\ce{H2(g) + 1/2O2(g)}" data-size="21" data-anchor="middle"></text>
+        <g data-anim="move" data-from="0,-60" data-dur="1.2" data-delay=".4" data-ease="out"><line x1="270" y1="214" x2="410" y2="214" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="420" y="221" data-tex="\ce{H2O(g)}" data-size="21"></text></g>
+        <line x1="270" y1="266" x2="410" y2="266" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="420" y="273" data-tex="\ce{H2O(l)}" data-size="21"></text>
+        <line x1="230" y1="70" x2="370" y2="70" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <g data-arw="300,76,300,208,ink,3"></g>
+        <text class="tex" x="288" y="148" data-tex="-241.8\ \text{kJ}" data-size="20" data-anchor="end"></text>
+        <g data-arw="360,76,360,260,ink,3"></g>
+        <text class="tex" x="372" y="148" data-tex="-285.8\ \text{kJ}" data-size="20"></text>
+        <g data-arw="258,262,258,218,muted,2"></g><g data-arw="258,218,258,262,muted,2"></g>
+        <text class="tex" x="248" y="247" data-tex="44.0\ \text{kJ}" data-size="19" fill="#5B6B7F" data-anchor="end"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <div class="formula sm">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$<br>$\Delta H=-285.8\ \text{kJ}$</div>
+      <div class="formula sm mt8">$\ce{H2(g) + 1/2O2(g) -> H2O(g)}$<br>$\Delta H=-241.8\ \text{kJ}$</div>
+      <p class="f22 mt12"><b>Q</b> 생성물이 수증기일 때 방출하는 열이 더 적은 까닭은?</p>
+      <div class="card tip step mt8"><p class="f21">같은 물질이라도 엔탈피는 <b>고체 &lt; 액체 &lt; 기체</b> 순으로 크다. 수증기가 액체 물보다 엔탈피가 44.0 kJ 크므로 방출하는 열이 그만큼 적다. 그래서 상태를 꼭 쓴다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 유의점 ③ 계수 ════════ -->
+<section class="slide" data-sec="01 · 열화학 반응식" data-title="계수와 ΔH">
+  <h2><span class="no">2</span>유의할 점 ③ 계수와 $\Delta H$</h2>
+  <div class="formula sm">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}\qquad\Delta H=-285.8\ \text{kJ}$</div>
+  <div class="formula sm mt8">$\ce{2H2(g) + O2(g) -> 2H2O(l)}\qquad\Delta H=-571.6\ \text{kJ}$</div>
+  <div class="row mt12">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 170" style="width:560px" aria-label="방출하는 열의 크기를 막대 길이로 비교: 물 2몰 생성 571.6 킬로줄 막대가 1몰 생성 285.8 킬로줄 막대의 두 배">
+        <text class="tex" x="10" y="54" data-mix="물 2 mol" data-size="20"></text>
+        <g data-anim="scale" data-from="0,1" data-o="110,40" data-dur="1.2" data-delay=".4" data-ease="out"><rect x="110" y="24" width="400" height="34" rx="6" fill="#F6C28B" stroke="#E08A2C" stroke-width="2"/></g>
+        <text class="tex" x="310" y="48" data-tex="571.6\ \text{kJ}" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="10" y="114" data-mix="물 1 mol" data-size="20"></text>
+        <g data-anim="scale" data-from="0,1" data-o="110,100" data-dur="1.2" data-delay=".4" data-ease="out"><rect x="110" y="84" width="200" height="34" rx="6" fill="#F6C28B" stroke="#E08A2C" stroke-width="2"/></g>
+        <text class="tex" x="210" y="108" data-tex="285.8\ \text{kJ}" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="110" y="158" data-mix="방출하는 열 (막대 길이 비례)" data-size="19" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <div class="card"><p class="f22">반응 엔탈피는 반응에 참여한 물질의 양에 비례한다. 계수를 $n$배 하면 $\Delta H$도 $n$배가 된다.</p>
+      <p class="small mt8">생성물 1 mol을 기준으로 나타내려고 분수 계수를 쓰기도 한다.</p></div>
+    </div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> $\ce{4H2(g) + 2O2(g) -> 4H2O(l)}$의 $\Delta H$는 얼마일까?</p>
+  <div class="answer step">$\Delta H=4\times(-285.8)=-1143.2\ \text{kJ}$</div>
+</section>
+
+<!-- ════════ 16. 성질 ② 역반응 ════════ -->
+<section class="slide" data-sec="01 · 열화학 반응식" data-title="역반응의 ΔH">
+  <h2><span class="no">2</span>더 알아보기 — 역반응의 $\Delta H$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 320" style="width:520px" aria-label="수소와 산소가 물이 되는 정반응은 아래로 571.6 킬로줄, 물이 분해되는 역반응은 위로 571.6 킬로줄">
+        <g data-arw="50,306,50,24,muted,2.5"></g>
+        <text class="tex" x="62" y="34" data-mix="엔탈피 $H$" data-size="20" fill="#5B6B7F"></text>
+        <line x1="90" y1="80" x2="470" y2="80" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="280" y="64" data-tex="\ce{2H2(g) + O2(g)}" data-size="22" data-anchor="middle"></text>
+        <line x1="90" y1="250" x2="470" y2="250" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="280" y="286" data-tex="\ce{2H2O(l)}" data-size="22" data-anchor="middle"></text>
+        <g data-arw="210,86,210,244,field,4"></g>
+        <text class="tex" x="196" y="150" data-mix="정반응" data-size="20" data-anchor="end" fill="#2E9E6A"></text>
+        <text class="tex" x="196" y="184" data-tex="-571.6\ \text{kJ}" data-size="21" data-anchor="end" fill="#2E9E6A"></text>
+        <g data-arw="350,244,350,86,bfield,4" data-delay=".9"></g>
+        <text class="tex" x="364" y="150" data-mix="역반응" data-size="20" fill="#7B4FC8"></text>
+        <text class="tex" x="364" y="184" data-tex="+571.6\ \text{kJ}" data-size="21" fill="#7B4FC8"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <div class="card"><p class="f22">역반응의 $\Delta H$는 <b>크기가 같고 부호가 반대</b>이다.</p></div>
+      <div class="formula sm mt12">$\ce{2H2O(l) -> 2H2(g) + O2(g)}$<br>$\Delta H=+571.6\ \text{kJ}$</div>
+      <p class="f22 mt12"><b>Q</b> 물을 수소와 산소로 분해하려면 에너지가 얼마나 필요할까?</p>
+      <div class="card tip step mt8"><p class="f21">물 2 mol이 생길 때 내놓은 만큼, 즉 571.6 kJ의 에너지를 다시 넣어야 한다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 해 보기: 탄산 칼슘 ════════ -->
+<section class="slide" data-sec="01 · 열화학 반응식" data-title="해 보기: 탄산 칼슘의 분해">
+  <h2><span class="tag">해 보기</span>탄산 칼슘의 분해를 열화학 반응식으로</h2>
+  <p class="f22" data-q>탄산 칼슘($\ce{CaCO3}$) 고체 1 mol이 분해되어 산화 칼슘($\ce{CaO}$) 고체와 이산화 탄소($\ce{CO2}$) 기체가 생성될 때 178.3 kJ의 열을 흡수한다. 이 반응을 열화학 반응식으로 나타내 보자.</p>
+  <div class="row stretch mt8" style="height:270px">
+    <div class="col stack" style="flex:0 0 480px"><div class="board"></div></div>
+    <div class="col">
+      <h3>풀이 따라가기</h3>
+      <p class="f21 step"><b>1</b> 반응식과 상태: $\ce{CaCO3(s) -> CaO(s) + CO2(g)}$</p>
+      <p class="f21 mt8 step"><b>2</b> 원자 수 확인: $\mathrm{Ca}$ 1 = 1, $\mathrm{C}$ 1 = 1, $\mathrm{O}$ 3 = 1 + 2</p>
+      <p class="f21 mt8 step"><b>3</b> 열을 흡수하므로 $\Delta H&gt;0$ → $\Delta H=178.3\ \text{kJ}$</p>
+    </div>
+  </div>
+  <div class="answer step">$\ce{CaCO3(s) -> CaO(s) + CO2(g)}\quad\Delta H=178.3\ \text{kJ}$</div>
+</section>
+
+<!-- ════════ 확인하기 ════════ -->
+<section class="slide" data-sec="01 · 확인하기" data-title="확인하기" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>엔탈피와 반응 엔탈피</h2>
+  <div class="card">
+    <p class="f22" data-q><b>1</b> 일정한 압력과 온도에서 물질이 가지는 고유한 에너지를 <span class="blank"><span class="step">엔탈피</span></span>(이)라고 한다.</p>
+  </div>
+  <div class="card mt16">
+    <p class="f22"><b>2</b> 발열 반응과 흡열 반응에서 반응물과 생성물의 엔탈피 크기를 부등호($&gt;$, $&lt;$)로 비교해 보자.</p>
+    <div class="row mt12">
+      <div class="col"><div class="card em31-warm"><h3>발열 반응</h3><p class="f22 center" data-q>반응물의 엔탈피 합 <span class="blank"><span class="step">$&gt;$</span></span> 생성물의 엔탈피 합</p></div></div>
+      <div class="col"><div class="card em31-cold"><h3>흡열 반응</h3><p class="f22 center" data-q>반응물의 엔탈피 합 <span class="blank"><span class="step">$&lt;$</span></span> 생성물의 엔탈피 합</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 연습 해 보기 2 ════════ -->
+<section class="slide" data-sec="01 · 열화학 반응식" data-title="연습 해 보기: 방출하는 열">
+  <h2><span class="tag ex">연습 해 보기</span>메테인이 타며 내놓는 열</h2>
+  <div class="formula sm">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}\qquad\Delta H=-890\ \text{kJ}$</div>
+  <p class="f22 mt8" data-q>메테인 8.0 g이 완전 연소하면서 방출하는 열은 몇 kJ인가? <span class="small">(원자량: H 1, C 12)</span></p>
+  <div class="row stretch mt8" style="height:280px">
+    <div class="col stack" style="flex:0 0 480px"><div class="board"></div></div>
+    <div class="col">
+      <h3>풀이 따라가기</h3>
+      <p class="f21 step"><b>1</b> 주어진 것: 질량 8.0 g, 1 mol당 890 kJ 방출 · 구할 것: 방출하는 열</p>
+      <p class="f21 mt8 step"><b>2</b> 몰질량 $16\ \text{g/mol}$ → $n=\dfrac{8.0}{16}=0.50\ \text{mol}$</p>
+      <p class="f21 mt8 step"><b>3</b> 방출하는 열 $=0.50\times890=445\ \text{kJ}$</p>
+    </div>
+  </div>
+  <div class="answer step"><b>445 kJ</b> <span class="small">(질량 → 몰 → 열: 몰수에 비례)</span></div>
+</section>
+
+<!-- ════════ 연소 엔탈피와 지속가능한 에너지 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="연소 엔탈피와 대체 연료">
+  <h2><span class="tag alt">연결</span>화석 연료를 대신할 연료는?</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">화석 연료가 연소할 때 방출하는 열은 일상생활과 산업에 중요하게 쓰여 왔다. 그러나 <b>기후 위기</b>와 <b>자원 고갈</b> 때문에 화석 연료를 대체할 지속가능한 에너지 개발이 필수 과제가 되었다.</p>
+      <div class="card mt12"><p class="f22"><mark><b>연소 엔탈피</b>: 물질 1 mol이 완전 연소할 때의 반응 엔탈피</mark></p>
+      <p class="f21 mt8"><b>지속가능한 에너지 개발</b>: 미래 세대의 필요를 충족할 수 있는 범위에서 현재 세대의 필요를 충족하는 에너지 개발</p></div>
+      <p class="f22 mt12"><b>Q</b> 연소 엔탈피로 연료의 효율성을 비교하려면 무엇을 따져야 할까?</p>
+      <div class="answer step">같은 <b>질량</b>이나 같은 <b>부피</b>를 태울 때 방출하는 열, 그리고 연소 생성물(이산화 탄소)을 함께 따진다.</div>
+    </div>
+    <div class="col" style="flex:0 0 340px">
+      <svg class="fig" viewBox="0 0 340 300" style="width:330px" aria-label="휘발유 주유기, 에탄올, 수소 연료 아이콘">
+        <rect x="20" y="30" width="90" height="150" rx="10" fill="#E9EEF3" stroke="#3A3F47" stroke-width="3"/><rect x="34" y="48" width="62" height="34" rx="4" fill="#fff" stroke="#3A3F47" stroke-width="2"/>
+        <text class="tex" x="65" y="214" data-mix="휘발유" data-size="20" data-anchor="middle"></text><text class="tex" x="65" y="240" data-tex="\ce{C8H18}" data-size="20" data-anchor="middle"></text>
+        <path d="M165 60 L195 60 L195 90 L210 120 L210 180 L150 180 L150 120 L165 90 Z" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="3"/>
+        <text class="tex" x="180" y="214" data-mix="에탄올" data-size="20" data-anchor="middle"></text><text class="tex" x="180" y="240" data-tex="\ce{C2H5OH}" data-size="20" data-anchor="middle"></text>
+        <g data-anim="pop" data-o="285,120" data-dur=".9" data-delay=".4" data-ease="back"><rect x="250" y="50" width="70" height="130" rx="30" fill="#E6F4EC" stroke="#2E9E6A" stroke-width="3"/><text class="tex" x="285" y="126" data-tex="\ce{H2}" data-size="26" data-anchor="middle" fill="#2E9E6A"></text></g>
+        <text class="tex" x="285" y="214" data-mix="수소" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="65" y="284" data-mix="화석 연료" data-size="19" data-anchor="middle" fill="#3A3F47"></text>
+        <text class="tex" x="232" y="284" data-mix="대체 연료" data-size="19" data-anchor="middle" fill="#2E9E6A"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 탐구: 목표·자료 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="탐구: 목표와 자료">
+  <h2><span class="tag">탐구</span>대체 연료와 화석 연료의 효율성 비교하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[탐구]</span>대체 연료와 화석 연료의 효율성을 비교하는 탐구하기 <span class="small">(12물에03)</span></div>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21"><b>목표</b> 연소 엔탈피로 대체 연료와 화석 연료의 효율성을 비교하고, 대체 연료가 갖추어야 할 요건을 설명할 수 있다.</p>
+      <p class="f21 mt8"><b>자료</b> 휘발유의 주성분인 옥테인과, 대체 연료로 개발되고 있는 에탄올·수소</p>
+      <table class="tight mt8 em31-fuel">
+        <tr><th>구분</th><th>옥테인</th><th>에탄올</th><th>수소</th></tr>
+        <tr><th>화학식</th><td>$\ce{C8H18(l)}$</td><td>$\ce{C2H5OH(l)}$</td><td>$\ce{H2(g)}$</td></tr>
+        <tr><th>몰당 연소 엔탈피 (kJ/mol)</th><td>−5470</td><td>−1367</td><td>−285.8</td></tr>
+        <tr><th>밀도 (g/L) <span class="small">25 °C, 1 기압</span></th><td>703</td><td>785</td><td>0.0813</td></tr>
+        <tr><th>몰질량 (g/mol)</th><td>114</td><td>46</td><td>2</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 330px">
+      <div class="card"><h3>준비물</h3><p class="f21">스마트 기기, 참고 도서, 계산기</p></div>
+      <div class="card mt12"><h3>탐구 능력</h3><p class="f21">자료 분석·추론, 결론 도출, 의사소통·협업 · 문제 해결 능력 · 의사 결정 능력</p></div>
+      <div class="note q mt12"><b>유의</b> 시약을 쓰지 않는 자료 탐구이다. 자료를 찾을 때는 믿을 만한 출처를 쓰고 출처를 밝힌다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 탐구: 과정 1 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="탐구: 과정 및 결과 1">
+  <h2><span class="tag">탐구</span>과정 및 결과 1 — 연소 반응의 열화학 반응식</h2>
+  <p class="f22" data-q>옥테인, 에탄올, 수소의 연소 반응을 각각 열화학 반응식으로 나타내 보자. <span class="small">(도움말: 연소 생성물인 $\ce{H2O}$은 액체 상태로)</span></p>
+  <table class="tight mt12 em31-res">
+    <tr><th style="width:120px">옥테인</th><td class="l"><span class="blank em31-eq"><span class="step" data-g="q1">$\ce{C8H18(l) + 25/2O2(g) -> 8CO2(g) + 9H2O(l)}\quad\Delta H=-5470\ \text{kJ}$</span></span></td></tr>
+    <tr><th>에탄올</th><td class="l"><span class="blank em31-eq"><span class="step" data-g="q2">$\ce{C2H5OH(l) + 3O2(g) -> 2CO2(g) + 3H2O(l)}\quad\Delta H=-1367\ \text{kJ}$</span></span></td></tr>
+    <tr><th>수소</th><td class="l"><span class="blank em31-eq"><span class="step" data-g="q3">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}\quad\Delta H=-285.8\ \text{kJ}$</span></span></td></tr>
+  </table>
+  <p class="small mt8">연소 엔탈피는 연료 1 mol 기준이므로 산소의 계수가 분수가 될 수 있다. 원자 수: 옥테인 O 25 = 16 + 9, 에탄올 O 1 + 6 = 4 + 3.</p>
+  <p class="f22 mt12"><b>Q</b> 연소 생성물로 판단할 때 가장 친환경적인 연료는 어느 것인가?</p>
+  <div class="answer step"><b>수소</b> — 연소 생성물이 물뿐이고 이산화 탄소를 내놓지 않는다.</div>
+</section>
+
+<!-- ════════ 실험실: 연소 엔탈피 변환 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="실험실: 연료의 효율성 비교">
+  <h2><span class="tag">탐구</span>실험실 — 연소 엔탈피를 바꾸어 연료 비교하기</h2>
+  <div class="lab" data-lab="em31conv">
+    <div class="lab-ctl" style="flex-basis:450px">
+      <div class="em31-seg"><span class="small">연료</span><button class="btn on" data-f="C8H18">옥테인</button><button class="btn" data-f="C2H5OH">에탄올</button><button class="btn" data-f="H2">수소</button></div>
+      <div class="em31-seg"><span class="small">더 해 보기</span><button class="btn" data-f="CH4">메테인</button><button class="btn" data-f="CH3OH">메탄올</button></div>
+      <table class="readout em31-read">
+        <tr><th>몰당 연소 엔탈피</th><td><output data-o="H"></output></td></tr>
+        <tr><th>몰질량 · 밀도</th><td><output data-o="M"></output></td></tr>
+        <tr class="hl"><th>단위 질량당 (kJ/g)</th><td><output data-o="g"></output></td></tr>
+        <tr class="hl"><th>단위 부피당 (kJ/L)</th><td><output data-o="L"></output></td></tr>
+        <tr><th>열 1000 kJ당 $\ce{CO2}$</th><td><output data-o="c"></output></td></tr>
+      </table>
+      <div class="em31-seg mt8"><button class="btn em31-act" data-act="rec">계산 기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind em31-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 620px">
+      <div class="em31-seg"><span class="small">그래프</span><button class="btn on" data-u="g">단위 질량당</button><button class="btn" data-u="L">단위 부피당</button><button class="btn" data-u="co2">이산화 탄소</button></div>
+      <div class="lab-fig" style="width:620px;height:280px">
+        <svg viewBox="0 0 620 280" width="620" height="280" aria-label="기록한 연료의 단위 질량당·단위 부피당 연소 엔탈피와 이산화 탄소 발생량 막대그래프"></svg>
+        <div class="ov" data-ov="ax" style="font-size:19px;color:#5B6B7F;transform:none"></div>
+      </div>
+      <table class="tight em31-log mt8"><thead><tr><th>연료</th><th>kJ/g</th><th>kJ/L</th><th>$\ce{CO2}$ (g/1000 kJ)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 탐구: 과정 2 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="탐구: 과정 및 결과 2">
+  <h2><span class="tag">탐구</span>과정 및 결과 2 — 단위 질량당·단위 부피당 연소 엔탈피</h2>
+  <table class="tight em31-res">
+    <tr><th>구분</th><th>옥테인</th><th>에탄올</th><th>수소</th></tr>
+    <tr><th>단위 질량당 연소 엔탈피 (kJ/g)</th><td><span class="blank"><span class="step" data-g="r1">$-48.0$</span></span></td><td><span class="blank"><span class="step" data-g="r1">$-29.7$</span></span></td><td><span class="blank"><span class="step" data-g="r1">$-142.9$</span></span></td></tr>
+    <tr><th>단위 부피당 연소 엔탈피 (kJ/L)</th><td><span class="blank"><span class="step" data-g="r2">$-33731.7$</span></span></td><td><span class="blank"><span class="step" data-g="r2">$-23328.2$</span></span></td><td><span class="blank"><span class="step" data-g="r2">$-11.6$</span></span></td></tr>
+  </table>
+  <p class="small mt8">부호(−)는 열 방출을 뜻하고, 효율은 크기로 비교한다. 단위 질량당 $=\dfrac{\text{몰당 연소 엔탈피}}{\text{몰질량}}$, 단위 부피당 $=$ 단위 질량당 $\times$ 밀도 (예: 수소 $-142.9\times0.0813\approx-11.6$)</p>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21"><b>Q</b> 몰당 연소 엔탈피를 단위 질량당 또는 단위 부피당으로 바꾸는 까닭은?</p>
+      <p class="f21 step em31-a">→ 효율을 비교하려면 <b>같은 질량이나 같은 부피</b>의 연료끼리 비교해야 한다. 같은 질량·부피가 연소할 때 방출하는 열이 클수록 효율이 크다.</p>
+    </div>
+    <div class="col">
+      <p class="f21"><b>Q</b> 이 자료로 판단할 때 어느 연료가 가장 효율적일까?</p>
+      <p class="f21 step em31-a">→ 단위 질량 기준으로는 <b>수소</b>, (25 °C, 1 기압에서) 단위 부피 기준으로는 <b>옥테인</b>이 가장 효율적이다. 수소는 기체라 부피당 열이 매우 작다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 탐구: 과정 3·정리 ════════ -->
+<section class="slide" data-sec="01 · 탐구" data-title="탐구: 과정 3과 정리">
+  <h2><span class="tag">탐구</span>과정 및 결과 3 · 정리</h2>
+  <p class="f21"><b>3.</b> 대체 연료의 효율성을 판단할 때 연소 엔탈피 외에 고려할 사항을 모둠별로 조사해 보자. <span class="small">(도움말: 환경 영향 및 탄소 중립, 활용 분야, 생산·저장·수송, 비용)</span></p>
+  <table class="tight mt8 em31-var em31-t3">
+    <tr><th>관점</th><th>수소</th><th>에탄올(바이오 에탄올)</th></tr>
+    <tr><td>환경·탄소 중립</td><td class="l step" data-g="c1">연소 생성물이 물뿐</td><td class="l step" data-g="c1">식물이 자랄 때 흡수한 이산화 탄소를 내놓아 탄소 중립에 기여</td></tr>
+    <tr><td>생산</td><td class="l step" data-g="c2">물의 전기 분해 등 — 전기를 무엇으로 얻는지가 중요</td><td class="l step" data-g="c2">옥수수·사탕수수 발효 — 식량·농지와 경쟁</td></tr>
+    <tr><td>저장·수송</td><td class="l step" data-g="c3">기체라 고압 압축·액화 필요, 충전소 부족</td><td class="l step" data-g="c3">액체라 기존 주유 시설 사용, 휘발유에 섞어 씀</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col"><p class="f21"><b>정리</b> 과정 및 결과 1–3을 바탕으로 옥테인, 에탄올, 수소 중 어느 연료가 가장 효율적일지 토의해 보자.</p>
+      <p class="small mt8 step">예: 가장 효율적인 연료는 쓰이는 용도, 그 분야의 기술 수준, 인프라 구축 정도에 따라 달라진다. 지금은 옥테인(휘발유)이 가장 널리 쓰이지만, 환경 보호와 에너지 절약을 위해 에탄올·수소 같은 대체 연료의 연구·개발이 활발하다.</p></div>
+    <div class="col" style="flex:0 0 430px"><div class="card"><h3>스스로 평가하기</h3>
+      <p class="small">[지식·이해] 열화학 반응식을 옳게 완성했는가?<br>[과정·기능] 단위를 옳게 변환하고, 이를 이용해 연료의 효율성을 판단했는가?<br>[가치·태도] 과학적·경제적·환경적 가치를 고려해 합리적으로 의사 결정을 했는가?</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>암모니아 생성 반응의 에너지 도표</h2>
+  <p class="f22">그림은 $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$ 반응의 에너지 도표이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 470 250" style="width:460px" aria-label="질소와 수소가 위, 암모니아 2몰이 아래인 에너지 도표, 델타 H는 −92 킬로줄">
+        <g data-arw="40,240,40,16,muted,2.5"></g>
+        <text class="tex" x="52" y="28" data-mix="엔탈피 $H$" data-size="20" fill="#5B6B7F"></text>
+        <line x1="70" y1="70" x2="440" y2="70" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="255" y="56" data-tex="\ce{N2(g) + 3H2(g)}" data-size="22" data-anchor="middle"></text>
+        <line x1="70" y1="190" x2="440" y2="190" stroke="#16233D" stroke-width="4" stroke-linecap="round"/>
+        <text class="tex" x="255" y="226" data-tex="\ce{2NH3(g)}" data-size="22" data-anchor="middle"></text>
+        <g data-arw="160,76,160,184,ink,3.5"></g>
+        <text class="tex" x="174" y="138" data-tex="\Delta H=-92\ \text{kJ}" data-size="22"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <div class="bogi" style="margin-top:8px"><p>ㄱ. 발열 반응이다.</p><p>ㄴ. $\ce{NH3(g)}$ 1 mol이 생성될 때 92 kJ의 열을 방출한다.</p><p>ㄷ. $\ce{2NH3(g) -> N2(g) + 3H2(g)}$의 $\Delta H$는 $+92\ \text{kJ}$이다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+  </div>
+  <div class="board mt8" style="min-height:70px"></div>
+  <div class="answer step"><b>정답 ③ ㄱ, ㄷ</b> <span class="small">ㄴ: $\ce{NH3}$ 2 mol일 때 92 kJ이므로 1 mol이면 46 kJ</span></div>
+</section>
+
+<!-- ════════ 30. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>프로페인의 연소</h2>
+  <div class="formula sm">$\ce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)}\qquad\Delta H=-2220\ \text{kJ}$</div>
+  <p class="f22 mt8" data-q>프로페인 11 g이 완전 연소할 때 방출하는 열과 생성되는 이산화 탄소의 질량을 구하시오. <span class="small">(원자량: H 1, C 12, O 16)</span></p>
+  <div class="row stretch mt8" style="height:260px">
+    <div class="col stack" style="flex:0 0 520px"><div class="board"></div></div>
+    <div class="col">
+      <p class="f21 step"><b>1</b> $\ce{C3H8}$ 몰질량 $44\ \text{g/mol}$ → $n=\dfrac{11}{44}=0.25\ \text{mol}$</p>
+      <p class="f21 mt8 step"><b>2</b> 방출하는 열 $=0.25\times2220=555\ \text{kJ}$</p>
+      <p class="f21 mt8 step"><b>3</b> $\ce{CO2}$ $=0.25\times3=0.75\ \text{mol}$ → $0.75\times44=33\ \text{g}$</p>
+    </div>
+  </div>
+  <div class="answer step" data-ask="no">열 $555\ \text{kJ}$ · 이산화 탄소 $33\ \text{g}$</div>
+</section>
+
+<!-- ════════ 확인 문제 03 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 03" data-tpl="check">
+  <h2><span class="tag q">확인 문제 03</span>○, ×로 점검하기</h2>
+  <div class="card">
+    <ol class="em31-ox">
+      <li>흡열 반응의 $\Delta H$는 0보다 작다. <span class="step">→ <b class="c-plus">×</b> <span class="small">엔탈피가 증가하므로 $\Delta H&gt;0$이다.</span></span></li>
+      <li>발열 반응에서는 반응물의 엔탈피 합이 생성물의 엔탈피 합보다 크다. <span class="step">→ <b class="c-field">○</b></span></li>
+      <li>물질의 엔탈피를 직접 측정하여 반응 엔탈피를 구한다. <span class="step">→ <b class="c-plus">×</b> <span class="small">엔탈피는 직접 잴 수 없고, 출입하는 열을 재어 엔탈피 차이를 안다.</span></span></li>
+      <li>$\ce{H2O(g)}$가 생성될 때가 $\ce{H2O(l)}$가 생성될 때보다 방출하는 열이 많다. <span class="step">→ <b class="c-plus">×</b> <span class="small">수증기의 엔탈피가 더 커서 방출하는 열이 적다.</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════════ 소단원 마무리 ════════ -->
+<section class="slide" data-sec="01 · 소단원 마무리" data-title="소단원 마무리">
+  <h2><span class="tag">소단원 마무리</span>수소를 어떻게 저장할까?</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>창의력 키우기</h3>
+        <p class="f21">상용화된 수소 자동차가 100 km를 달리려면 수소 기체 1 kg 정도가 필요한데, 실온·대기압에서 그 부피는 약 12200 L나 된다. 연료 탱크에 이렇게 큰 부피의 수소를 어떻게 저장할 수 있을지 생각해 보자.</p>
+        <p class="small mt8 step">예: 높은 압력으로 압축(약 700 기압 탱크), 매우 낮은 온도로 냉각해 액화, 금속 등에 흡착·결합시켜 저장, 암모니아 같은 화합물로 바꾸어 운반</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>디지털 소양 키우기</h3>
+        <p class="f21">여러 가지 탄소 중립 연료를 조사하고 공유 플랫폼을 활용하여 공유해 보자.</p>
+        <p class="small mt8 step">예: 바이오 에탄올, 바이오디젤, 그린 수소, 암모니아, 이퓨얼(e-Fuel) — 원료, 연소 생성물, 장단점을 표로 정리하고 출처를 밝힌다.</p>
+      </div>
+    </div>
+  </div>
+  <p class="small mt12">확인: 수소 1 kg = 500 mol, 25 °C·1 기압에서 1 mol ≈ 24.5 L → 약 12200 L</p>
+</section>
+
+<!-- ════════ 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 화학 반응과 엔탈피 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>화학 변화의 자발성 — 개념 지도</h2>
+  <div class="em31-map">
+    <div class="em31-node em31-main"><b>01 화학 반응과 엔탈피</b><br>
+      발열 반응: 열 ❶ <span class="blank"><span class="step">방출</span></span>, $\Delta H$ ❷ <span class="blank"><span class="step">$&lt;0$</span></span> &nbsp;·&nbsp; 흡열 반응: 열 흡수, $\Delta H$ ❸ <span class="blank"><span class="step">$&gt;0$</span></span></div>
+    <div class="em31-node em31-dim">02 반응 경로와 반응 엔탈피<br><span class="small">헤스 법칙 (다음 시간)</span></div>
+    <div class="em31-node em31-dim">03 화학 변화의 자발성<br><span class="small">엔트로피</span></div>
+  </div>
+  <table class="tight mt12 em31-sum">
+    <tr><th>반응 엔탈피</th><td class="l" data-q>$\Delta H=$ ❹ <span class="blank em31-wide"><span class="step">생성물의 엔탈피 합 − 반응물의 엔탈피 합</span></span></td></tr>
+    <tr><th>열화학 반응식</th><td class="l" data-q>화학 반응식 + $\Delta H$, 온도·압력과 물질의 ❺ <span class="blank"><span class="step">상태</span></span>를 나타낸다.</td></tr>
+    <tr><th>계수</th><td class="l" data-q>계수를 2배 하면 $\Delta H$ ❻ <span class="blank"><span class="step">2배</span></span></td></tr>
+    <tr><th>연소 엔탈피</th><td class="l" data-q>물질 ❼ <span class="blank"><span class="step">1 mol</span></span>이 완전 연소할 때의 반응 엔탈피</td></tr>
+    <tr><th>연료의 효율성</th><td class="l" data-q>몰당 연소 엔탈피를 단위 ❽ <span class="blank"><span class="step">질량</span></span>당·단위 부피당으로 바꾸어 비교</td></tr>
+  </table>
+</section>
+
+<!-- ════════ 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 화학 반응과 엔탈피 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 엔탈피와 반응 엔탈피의 의미를 설명하고 열화학 반응식을 쓸 수 있다.</button>
+    <button class="chk">[과정·기능] 연소 엔탈피의 단위를 바꾸어 연료의 효율성을 비교하였다.</button>
+    <button class="chk">[가치·태도] 과학적·경제적·환경적 가치를 고려해 연료를 판단하였다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\Delta H=44.0\ \text{kJ}$인 변화는 발열일까, 흡열일까? <span class="step">→ <span class="ans">흡열</span> ($\Delta H&gt;0$)</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{H2(g) + 1/2O2(g) -> H2O(l)}$, $\Delta H=-285.8\ \text{kJ}$일 때 수소 4 g이 타면 방출하는 열은? <span class="step">→ <span class="ans">571.6 kJ</span> (2 mol)</span></p>
+    <p class="f21 mt8"><b>Q</b> 수소가 단위 질량당 열이 큰데도 자동차 연료로 쓰기 어려운 까닭은? <span class="step">→ <span class="ans">단위 부피당 열이 작아 저장·운반이 어렵다</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 흑연이 타서 일산화 탄소만 생기게 하기는 어려워(이산화 탄소도 함께 생김) 그 $\Delta H$를 직접 재기 어렵다. 어떻게 구할 수 있을까?</div>
+</section>
+

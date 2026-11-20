@@ -1,0 +1,47 @@
+/* 3-4 탄소 화합물의 유용성 — 덱 전용 (모두 .rm34- 접두어) */
+.cover h1.rm34-h1{font-size:92px}
+
+/* 4칸 격자 */
+.rm34-g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rm34-g4 .stage{padding:12px 14px}
+.rm34-g4 .stage svg{max-height:200px}
+.rm34-g4 .stage h3{font-size:22px}
+.rm34-g4 .stage p{font-size:19px;line-height:1.5}
+.stages .stage svg{max-height:210px}
+
+/* 표 */
+table.rm34-var th,table.rm34-var td{font-size:19px;padding:6px 10px;text-align:center}
+table.rm34-safe{width:100%}
+table.rm34-safe th,table.rm34-safe td{font-size:19px;padding:6px 10px;line-height:1.45}
+table.rm34-safe td:first-child{width:200px;text-align:center}
+table.rm34-res{width:100%}
+table.rm34-res th,table.rm34-res td{font-size:20px;padding:6px 10px;text-align:center}
+table.rm34-sum{width:100%}
+table.rm34-sum th,table.rm34-sum td{font-size:20px;padding:8px 10px;text-align:center;line-height:1.45}
+.rm34-chs{flex-wrap:wrap;gap:6px 22px}
+.rm34-chs span{font-size:21px}
+
+/* 개념 지도 */
+.rm34-map{display:flex;gap:16px;align-items:stretch;margin-top:8px}
+.rm34-mnode{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.45}
+.rm34-mnode.rm34-cur{flex:1 1 0;border-color:var(--field);background:#F7FCF9;padding:18px 22px}
+.rm34-side{flex:0 0 300px;display:flex;flex-direction:column;gap:12px}
+.rm34-mnode.rm34-dim{border-style:dashed;color:var(--muted);flex:1}
+.rm34-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rm34-two > div{border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:20px;line-height:1.45;background:#fff}
+
+/* 실험실 */
+.rm34-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:7px}
+.rm34-lb{font-weight:700;font-size:20px;color:var(--muted);margin-right:2px}
+.rm34-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 9px;font-size:19px}
+.rm34-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm34-seg .btn.rm34-act{border-color:#9FC3DD;background:#DDEEF8}
+.rm34-seg .btn.rm34-rec{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm34-read{width:100%}
+table.rm34-read th{font-size:19px;padding:4px 10px;width:170px}
+table.rm34-read td{font-size:19px;padding:4px 10px;text-align:center;width:auto}
+output.kind.rm34-msg{display:block;margin:6px 0;line-height:1.4;font-size:19px;min-height:52px}
+table.rm34-log{width:100%}
+table.rm34-log th,table.rm34-log td{font-size:19px;padding:3px 6px;text-align:center}
+.ov.rm34-ov{font-size:20px;white-space:nowrap}
+.ov.rm34-prop{white-space:normal;width:610px;text-align:center;line-height:1.4}

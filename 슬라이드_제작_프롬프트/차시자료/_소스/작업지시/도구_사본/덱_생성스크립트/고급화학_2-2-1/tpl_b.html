@@ -1,0 +1,406 @@
+<!-- 고급화학 2-2-1b 물의 분자 구조와 특성 — gen.py가 tpl_b.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 2. 액체 분자 › 03</div>
+    <h1 class="ac221-h1">액체의 증기압·끓는점과<br>물의 특성 <span class="acc">(2)</span></h1>
+    <p class="sub">물의 분자 구조와 특성 — 수소 결합으로 물의 특별한 성질을 설명하기</p>
+    <p class="meta">고등학교 고급 화학 92–96쪽</p>
+  </div>
+  {{COVER_B}}
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="03 물의 분자 구조와 특성 · 도입" data-title="다시 보기: 증기압과 끓는점">
+  <h2><span class="tag alt">다시 보기</span>01 증발과 증기압 · 02 끓는점</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>분자 사이 상호 작용</h3><p class="f21">이온–쌍극자 힘, 쌍극자–쌍극자 상호 작용, 분산력 — 종류와 세기를 <b>비교</b></p></div>
+    <div class="stage"><h3>증기압</h3><p class="f21">증발과 응축의 동적 평형. 온도·액체 종류에 의존. $\ln P_\text{vap}=-\dfrac{\Delta H^\circ_\text{vap}}{R}\cdot\dfrac1T+C$</p></div>
+    <div class="stage"><h3>끓는점</h3><p class="f21">증기압 = 외부 압력. 기준 끓는점(1 atm)으로 분자 사이 인력 비교</p></div>
+    <div class="stage"><h3>표면 장력·모세관</h3><p class="f21">표면 분자의 안쪽 알짜 인력, $\gamma=F_\text{max}/2l$, 부착력과 응집력</p></div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 물은 끓는점·표면 장력이 모두 컸다. 그 공통 원인은? <span class="small">→ 오늘 그 답, 수소 결합을 자세히 본다.</span></p>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="03 물의 분자 구조와 특성" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-04]</span>물질의 증기압, 끓는점, 표면 장력, 모세관 현상을 이해하고, 이를 다양한 분자 간 상호 작용으로 설명할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>물 분자의 구조와 <b>수소 결합</b>으로 물의 높은 끓는점·비열·증발열·표면 장력과 얼음의 구조를 설명할 수 있다.</li>
+    <li>물의 상평형 그림과 밀도 변화를 해석하여 자연 현상과 생명 현상에서 물의 역할을 설명할 수 있다.</li>
+    <li>측정한 물의 증기압으로 $\ln P$–$\dfrac1T$ 그래프를 그려 <b>증발열을 계산</b>하고 토의·발표할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">수소 결합</div><div class="farr">→</div>
+    <div class="fnode">사면체·얼음 구조</div><div class="farr">→</div>
+    <div class="fnode">물의 특성</div><div class="farr">→</div>
+    <div class="fnode">상평형·밀도</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 증발열 계산</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="03 물의 분자 구조와 특성 · 도입" data-title="생각 열기: 수소 화합물의 끓는점">
+  <h2><span class="tag">생각 열기</span>물은 정말 특별한 물질일까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 500px">{{HYD}}</div>
+    <div class="col stack">
+      <p class="f21">지구 표면의 70 % 이상을 덮은 물 덕분에 생명체가 번성한다. 화성에도 과거에 물이 풍부했다는 가설이 있어, 생명체의 흔적을 찾고 있다.</p>
+      <p class="f21" data-q><b>Q</b> 같은 족의 수소 화합물은 대개 분자량이 클수록 끓는점이 높다. 그래프에서 예외는?</p>
+      <div class="answer step">2주기의 $\ce{H2O}$, $\ce{HF}$, $\ce{NH3}$</div>
+      <p class="f21 step">→ 특히 물은 분자량이 비슷한 물질과 달리 상온에서 액체이다. 그 까닭이 <b>수소 결합</b>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 수소 결합 ════════ -->
+<section class="slide" data-sec="03 · 물의 분자 구조와 수소 결합" data-title="수소 결합">
+  <h2><span class="no">1</span>물 분자 사이의 수소 결합</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{HB2}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>수소 결합</mark>은 전기음성도가 큰 원자($\ce{O}$, $\ce{N}$, $\ce{F}$ 등)에 결합한 수소 원자와, 비공유 전자쌍을 가진 원자 또는 이온 사이에서 형성된다.</p>
+      <p class="f21">물의 녹는점·끓는점이 높고, 비열·증발열·표면 장력이 큰 까닭은 수소 결합 때문이다.</p>
+    </div>
+  </div>
+  <div class="card q mt12"><p class="f21"><b>Q</b> 수소 결합은 공유 결합의 한 종류일까?</p>
+    <p class="f21 step">→ <span class="ans">아니다.</span> 분자 <b>사이</b>의 강한 쌍극자–쌍극자 상호 작용이다. 세기도 크게 다르다: $\ce{O-H}$ 공유 결합 약 463 kJ/mol, 수소 결합 약 20 kJ/mol.</p></div>
+</section>
+
+<!-- ════════ 6. ② 사면체 배열 ════════ -->
+<section class="slide" data-sec="03 · 물의 분자 구조와 수소 결합" data-title="물 분자의 사면체 배열">
+  <h2><span class="no">2</span>물 분자 하나는 이웃 4개와 수소 결합</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">{{TETRA}}</div>
+    <div class="col stack">
+      <p class="f21">물 분자는 비공유 전자쌍 2개를 가진 산소 원자와 수소 원자 2개로 이루어진다.</p>
+      <ul class="f21 ac221-ul">
+        <li class="step">수소 원자 2개 → 이웃 분자의 비공유 전자쌍과 수소 결합 <b>2개</b></li>
+        <li class="step">비공유 전자쌍 2개 → 이웃 분자의 수소 원자와 수소 결합 <b>2개</b></li>
+      </ul>
+      <p class="f21 step">→ 모두 수소 결합하면 물 분자 주위의 이웃 4개는 <b>사면체</b> 배열이 된다.</p>
+      <p class="small">그림은 평면에 펼쳐 그린 것으로, 실제로는 입체적인 사면체 방향이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 얼음 구조 ════════ -->
+<section class="slide" data-sec="03 · 물의 분자 구조와 수소 결합" data-title="얼음의 결정 구조">
+  <h2><span class="no">3</span>얼음 — 열린 육각형 결정 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{ICE}}</div>
+    <div class="col stack">
+      <p class="f21">얼음 속 물 분자도 사면체 구조를 이루므로 <b>열린 육각형</b> 결정이 되고, 육각형 안에 빈 공간이 생긴다.</p>
+      <p class="f21 step">→ 물이 얼면 액체일 때보다 부피가 약 <b>9 %</b> 늘어난다.</p>
+      <p class="f21 step">대부분의 물질은 고체가 될 때 최대한 가까이 모여 밀도가 커지지만, 물은 수소 결합을 더 많이 하는 육각형 결정을 만들어 부피가 커진다.</p>
+      <p class="f21 step" data-q><b>Q</b> 얼음이 물에 뜨는 까닭은? <span class="step">→ <span class="ans">빈 공간 때문에 얼음의 밀도가 물보다 작아서</span></span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 수소 결합과 물의 성질 ════════ -->
+<section class="slide" data-sec="03 · 물의 분자 구조와 수소 결합" data-title="수소 결합과 물의 성질">
+  <h2><span class="no">4</span>수소 결합으로 큰 값을 갖는 물의 성질</h2>
+  <table class="tight ac221-res mt8">
+    <tr><th class="l">성질</th><th>물</th><th>비교 물질</th><th class="l">뜻</th></tr>
+    <tr><td class="l">끓는점</td><td>100 °C</td><td>황화 수소($\ce{H2S}$) −60 °C</td><td class="l">분자 사이 인력을 끊는 데 필요한 온도</td></tr>
+    <tr><td class="l">증발열(기준 끓는점)</td><td>40.7 kJ/mol</td><td>황화 수소 18.7 kJ/mol</td><td class="l">액체 1 mol을 기체로 바꾸는 열</td></tr>
+    <tr><td class="l">비열</td><td>$4.18\ \text{J/(g}\cdot{}^\circ\text{C)}$</td><td>에탄올 $2.44\ \text{J/(g}\cdot{}^\circ\text{C)}$</td><td class="l">1 g을 1 °C 올리는 열</td></tr>
+    <tr><td class="l">표면 장력(20 °C)</td><td>$7.28\times10^{-2}$ N/m</td><td>벤젠 $2.89\times10^{-2}$ N/m</td><td class="l">표면적을 늘리는 데 드는 에너지</td></tr>
+  </table>
+  <p class="small mt8">비교 물질의 값은 일반 자료값이다.</p>
+  <p class="f21 mt12" data-q><b>Q</b> 물을 데우거나 증발시킬 때 큰 에너지가 드는 까닭을 분자 수준에서 말해 보자. <span class="step">→ 들어온 에너지의 상당 부분이 분자의 운동을 빠르게 하기 전에 <b>수소 결합을 끊는 데</b> 쓰이기 때문이다.</span></p>
+</section>
+
+<!-- ════════ 9. ⑤ 용매로서의 물 ════════ -->
+<section class="slide" data-sec="03 · 자연 현상과 생명 현상에서 물의 특성" data-title="용매로서의 물">
+  <h2><span class="no">5</span>생명체의 용매, 물</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">{{SOLV}}</div>
+    <div class="col stack">
+      <p class="f21">물 분자는 극성이 커서 여러 가지 염과 극성 물질을 잘 녹인다.</p>
+      <p class="f21 step">물의 강한 극성은 무극성 분자에 <b>쌍극자를 유도</b>하여, 산소·이산화 탄소 같은 무극성 기체도 녹인다.</p>
+      <p class="f21 step">→ 생명체에서 용매로 작용해 영양분과 호흡에 필요한 물질을 운반한다. 수중 동물은 물에 녹은 산소로 호흡하고, 수중 식물은 녹은 이산화 탄소로 광합성을 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑥ 높은 비열과 기후 ════════ -->
+<section class="slide" data-sec="03 · 자연 현상과 생명 현상에서 물의 특성" data-title="높은 비열과 기후">
+  <h2><span class="no">6</span>물의 높은 비열과 지구의 기후</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">{{CLIM}}</div>
+    <div class="col stack">
+      <p class="f21">지구 표면의 약 2/3가 물로 덮여 있어, 바다에 접한 해안 도시는 내륙보다 일교차·연교차가 작고, 지구 전체의 평균 일교차도 다른 행성보다 작다.</p>
+      <p class="f21 step" data-q><b>Q</b> 지구에 물이 없다면? <span class="step">→ 표면에 물이 없는 화성은 정오와 새벽의 온도 차가 60 °C 이상이다. 지구도 일교차가 매우 커져 생태계가 크게 달라질 것이다.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑦ 상평형 그림 ════════ -->
+<section class="slide" data-sec="03 · 자연 현상과 생명 현상에서 물의 특성" data-title="물의 상평형 그림">
+  <h2><span class="no">7</span>물의 상평형 그림 — 융해 곡선의 음의 기울기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">{{PHASE}}</div>
+    <div class="col stack">
+      <p class="f21">물의 <b>융해 곡선</b>은 다른 물질과 달리 <b>음의 기울기</b>를 가진다. 얼음의 부피가 물보다 크기 때문이다.</p>
+      <p class="f21" data-q><b>Q</b> 0 °C 바로 아래의 얼음에 큰 압력을 가하면? <span class="step" data-g="ph1">→ 융해 곡선을 넘어 <span class="ans">물로 녹는다</span>. 압력을 높이면 부피가 작은 물이 되는 쪽이 유리하다.</span></p>
+      <p class="f21 step">삼중점(0.01 °C, 4.6 mmHg)에서는 얼음·물·수증기가 함께 평형을 이룬다. 1 atm(760 mmHg)에서 물의 끓는점은 100 °C이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑧ 밀도 변화 ════════ -->
+<section class="slide" data-sec="03 · 자연 현상과 생명 현상에서 물의 특성" data-title="온도에 따른 물의 밀도">
+  <h2><span class="no">8</span>4 °C에서 밀도가 가장 큰 물</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">{{DENS}}</div>
+    <div class="col stack">
+      {{LAKE}}
+      <p class="f21">물은 <b>4 °C에서 밀도가 최대</b>이다. 더 차가워지면 수소 결합이 늘어 밀도가 작아진다.</p>
+      <p class="f21 step">→ 0 °C에 가까운 물이 표면에 모여 표면부터 얼고, 얼음 밑에는 액체인 물이 남아 수중 생물이 살아갈 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑨ 얼 때 팽창 ════════ -->
+<section class="slide" data-sec="03 · 자연 현상과 생명 현상에서 물의 특성" data-title="얼 때 팽창과 급속 냉동">
+  <h2><span class="no">9</span>얼 때 부피가 늘어나는 물과 급속 냉동</h2>
+  <div class="stages mt8">
+    <div class="stage"><h3>수도관 동파</h3><p>물이 얼며 부피가 약 9 % 늘어 관을 밀어 터뜨린다.</p></div>
+    <div class="stage step"><h3>세포 손상</h3><p>세포 속 물이 얼면 같은 까닭으로 세포가 파괴된다. 물이 많은 음식을 얼렸다 녹이면 품질이 나빠진다.</p></div>
+    <div class="stage step"><h3>급속 냉동</h3><p>물 분자가 열린 육각형 결정을 만들기 전에 빠르게 얼리면 팽창이 거의 없어 세포가 덜 손상되고 신선도가 유지된다.</p></div>
+  </div>
+  <p class="f21 mt16" data-q><b>Q</b> 급속 냉동이 효과적인 까닭을 「수소 결합」과 「결정 구조」라는 말을 넣어 설명해 보자.</p>
+  <p class="f21 step">→ 천천히 얼면 물 분자가 수소 결합으로 열린 육각형 결정을 이루며 부피가 커지지만, 급속 냉동하면 그 결정 구조가 자랄 시간이 없어 부피 팽창이 거의 일어나지 않는다.</p>
+</section>
+
+<!-- ════════ 14. 탐구 활동 원리 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 증발열 계산 (원리)">
+  <h2><span class="tag">탐구 활동</span>물의 증기압 측정 실험과 증발열 계산 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐13]</span>모둠별로 클라우지우스–클라페이롱 식과 실험으로 측정한 물의 증기압의 자연로그 값을 $\dfrac1T$에 관한 그래프로 나타낸 직선의 기울기로부터 물의 증발열을 계산하여 토의한 후 발표한다.</div>
+  <div class="formula mt12">$\ln\left(\dfrac{P_2}{P_1}\right)=-\dfrac{\Delta H^\circ_\text{vap}}{R}\left(\dfrac{1}{T_2}-\dfrac{1}{T_1}\right)\ \Longleftrightarrow\ \ln P=-\dfrac{\Delta H^\circ_\text{vap}}{R}\cdot\dfrac{1}{T}+C$</div>
+  <div class="stages mt12">
+    <div class="stage"><h3>① 측정</h3><p>01 탐구처럼 물중탕 온도를 바꾸며 증기압 $P$를 잰다(5개 이상).</p></div>
+    <div class="stage step"><h3>② 변환</h3><p>$T=t+273.15$, $\dfrac1T$과 $\ln P$를 계산하여 표에 적는다.</p></div>
+    <div class="stage step"><h3>③ 기울기 → 증발열</h3><p>추세선의 기울기 $=-\dfrac{\Delta H^\circ_\text{vap}}{R}$ → $\Delta H^\circ_\text{vap}=-\text{기울기}\times R$</p></div>
+  </div>
+</section>
+
+<!-- ════════ 15. 탐구 과정·유의점 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 과정과 유의점">
+  <h2><span class="tag">탐구 활동</span>자료 처리와 유의점 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><h3>자료 처리</h3><ol class="f21 ac221-ol">
+        <li>스프레드시트에 $t$, $P$를 입력하고 $\dfrac1T$, $\ln P$ 열을 만든다.</li>
+        <li>가로축 $\dfrac1T$, 세로축 $\ln P$로 산점도를 그리고 추세선(직선)을 넣는다.</li>
+        <li>추세선 식 $y=ax+b$의 기울기 $a$로 증발열을 구한다.</li>
+        <li>모둠의 값을 문헌값과 비교하여 토의하고 발표한다.</li></ol></div>
+    </div>
+    <div class="col stack">
+      <div class="note"><b>유의점</b><ul class="f21 ac221-ul">
+        <li>온도는 반드시 <b>절대 온도</b>, 기울기의 부호(−)와 단위(K)를 확인한다.</li>
+        <li>압력 단위(kPa, mmHg)는 하나로 맞춘다. 기울기에서 구한 증발열은 압력 단위와 관계없다.</li>
+        <li>결정 계수 $R^2$가 0.99 이상인지 보고 직선 관계를 판단한다.</li></ul></div>
+      <div class="note"><b>안전</b> 뜨거운 물중탕에 데지 않게 하고, 압력 센서를 쓸 때는 측정 범위를 확인한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 실험실: 증발열 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="실험실: 증발열 계산">
+  <h2><span class="tag">탐구 활동</span>증기압 → 증발열 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac221vp" data-mode="cc">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <div class="ac221-seg"><span class="small">액체</span><button class="btn on" data-liq="water">물</button><button class="btn" data-liq="ethanol">에탄올</button><button class="btn" data-liq="ether">다이에틸 에터</button></div>
+      <div class="ctl"><div class="lbl"><span>물중탕 온도</span><output data-o="t"></output></div><input type="range" min="10" max="90" step="5" value="20" data-i="t" aria-label="물중탕 온도"></div>
+      <label class="ac221-cb"><input type="checkbox" data-i="air"> 주사기에 공기 방울이 남음</label>
+      <svg class="ac221-app" viewBox="0 0 420 130" width="388" height="120" aria-label="물중탕 속 주사기와 압력계"></svg>
+      <div class="res"><div class="small">압력계 읽음</div><div class="big"><output data-o="big"></output></div><output class="kind ac221-msg" data-o="msg"></output></div>
+      <div class="ac221-seg mt8"><button class="btn ac221-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="ac221-seg"><span class="small">그래프</span><button class="btn" data-act="pt">$P$–$t$</button><button class="btn" data-act="cc">$\ln P$–$1/T$</button></div>
+      <div class="lab-fig" style="width:600px;height:260px"><svg viewBox="0 0 600 260" width="600" height="260" aria-label="ln P와 1/T 그래프"></svg><div class="ov halo" data-ov="xpt">온도 $t$ (°C)</div><div class="ov" data-ov="ypt">증기압 $P$ (kPa)</div><div class="ov halo" data-ov="xcc">$1/T$ ($10^{-3}\ \text{K}^{-1}$)</div><div class="ov" data-ov="ycc">$\ln P$ ($P$: kPa)</div></div>
+      <table class="tight ac221-log mt8"><thead><tr><th>회</th><th>액체</th><th>t (°C)</th><th>P (kPa)</th><th>$1/T$ ($10^{-3}\ \text{K}^{-1}$)</th><th>$\ln P$</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 결과 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 결과와 계산">
+  <h2><span class="tag">탐구 활동</span>결과: 기울기에서 증발열 구하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">{{CCFIG}}</div>
+    <div class="col stack">
+      <table class="tight ac221-res">
+        <tr><th>t (°C)</th><th>P (kPa)</th><th>$1/T$ ($10^{-3}\ \text{K}^{-1}$)</th><th>ln P</th></tr>
+        <tr><td>20</td><td>2.3</td><td>3.411</td><td>0.833</td></tr>
+        <tr><td>40</td><td>7.4</td><td>3.193</td><td>2.001</td></tr>
+        <tr><td>60</td><td>19.9</td><td>3.002</td><td>2.991</td></tr>
+        <tr><td>80</td><td>47.3</td><td>2.832</td><td>3.857</td></tr>
+      </table>
+      <p class="small">01 탐구 예시 값 7개(20–80 °C) 가운데 4개를 보였다.</p>
+      <p class="f21 step" data-g="ccf">추세선: 기울기 $=-5.21\times10^{3}\ \text{K}$ ($R^2=0.9999$)</p>
+      <p class="f21 step">$\Delta H^\circ_\text{vap}=-(-5.21\times10^{3}\ \text{K})\times8.314\ \text{J/(K}\cdot\text{mol)}$</p>
+      <div class="answer step">$\Delta H^\circ_\text{vap}\approx4.33\times10^{4}\ \text{J/mol}=43.3\ \text{kJ/mol}$</div>
+      <p class="small step">문헌값: 25 °C에서 44.0 kJ/mol, 100 °C에서 40.7 kJ/mol</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 토의·발표 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 토의와 발표">
+  <h2><span class="tag">탐구 활동</span>토의하고 발표하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="f21">
+    <p><b>Q</b> (1) 실험실에서 에탄올·다이에틸 에터도 측정해 증발열을 비교하면? 그 순서를 분자 사이의 힘으로 설명해 보자.</p>
+    <p class="step">→ 물(약 43 kJ/mol) &gt; 에탄올(약 42 kJ/mol) &gt; 다이에틸 에터(약 28 kJ/mol). 물은 분자 하나가 최대 4개의 수소 결합을 하고, 에탄올은 수소 결합을 하지만 그 수가 적으며, 다이에틸 에터는 수소 결합 없이 쌍극자–쌍극자 상호 작용과 분산력만 작용한다.</p>
+    <p class="mt12"><b>Q</b> (2) 우리 값(43.3 kJ/mol)이 100 °C의 문헌값(40.7 kJ/mol)보다 큰 까닭은?</p>
+    <p class="step">→ 증발 엔탈피는 온도가 낮을수록 조금 크다. 20–80 °C 자료로 구한 값은 그 범위의 평균에 가깝다. 넓은 온도 범위에서는 그래프가 직선에서 조금 벗어난다.</p>
+    <p class="mt12"><b>Q</b> (3) 직선을 연장해 $\ln P=\ln101.3$인 온도를 구하면 기준 끓는점을 예측할 수 있다. 예측값과 실제값이 다른 까닭은?</p>
+    <p class="step">→ 측정 범위 밖으로 연장한 외삽과, 증발 엔탈피를 일정하다고 본 가정 때문이다.</p>
+  </div>
+  <p class="small mt12">발표: 모둠의 그래프·기울기·증발열과 문헌값의 차이(%), 오차 원인을 2분 안에 소개한다.</p>
+</section>
+
+<!-- ════════ 19. 진로 ════════ -->
+<section class="slide" data-sec="03 · 진로" data-title="진로: 추진체 연구 개발">
+  <h2><span class="tag">진로</span>추진체 연구 개발</h2>
+  <p class="f21">200톤이 넘는 한국형 발사체 누리호는 연료가 연소하며 내뿜는 가스의 반작용으로 추진력을 얻는다. 누리호는 <b>등유</b>를 연료로, <b>액체 산소</b>를 산화제로 쓰는 액체 추진체를 사용했다.</p>
+  <table class="tight ac221-res mt8">
+    <tr><th class="l">추진체</th><th class="l">연료 / 산화제</th><th class="l">장점</th><th class="l">단점</th></tr>
+    <tr><td class="l">고체</td><td class="l">$\ce{Mg}$·$\ce{Al}$ 분말 / $\ce{NH4NO3}$, $\ce{NH4ClO4}$</td><td class="l">구조가 단순하고 가볍다</td><td class="l">점화 뒤 멈출 수 없고 추력 제어가 어렵다</td></tr>
+    <tr><td class="l">액체</td><td class="l">등유, 액화 수소, 액화 메테인, $\ce{N2H4}$ / 액체 산소, $\ce{KNO3}$, $\ce{N2O4}$</td><td class="l">소화·점화를 되풀이하고 추력을 제어한다</td><td class="l">구조가 복잡하고 저장·보관이 어렵다</td></tr>
+    <tr><td class="l">하이브리드</td><td class="l">고체 연료 + 액체 산화제 분사</td><td class="l">산화제 양으로 추력 제어, 저장이 비교적 쉽다</td><td class="l">—</td></tr>
+  </table>
+  <p class="f21 mt8" data-q><b>Q</b> 액체 산소($-183\ {}^\circ\text{C}$)와 액화 수소($-253\ {}^\circ\text{C}$)를 보관하기 어려운 까닭을 오늘 배운 말로 설명해 보자. <span class="step">→ 기준 끓는점이 매우 낮아 상온에서 <b>증기압이 아주 크므로</b>, 아주 차갑게 유지해야 한다.</span></p>
+  <p class="small">이온 추진체, 홀 효과 추진체, 태양 돛 등 미래 추진체와 우주 탐사 산업에서 추진체 연구 인력이 많이 필요하다.</p>
+</section>
+
+<!-- ════════ 20. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac221-ox f21">
+    <li>물이 끓을 때 물 분자 안의 $\ce{O-H}$ 공유 결합이 끊어진다. <span class="step">→ <span class="ans">×</span> 분자 사이의 수소 결합이 끊어진다.</span></li>
+    <li>얼음은 열린 육각형 구조여서 같은 질량의 물보다 부피가 크다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>물의 융해 곡선은 양의 기울기를 가진다. <span class="step">→ <span class="ans">×</span> 음의 기울기이다.</span></li>
+    <li>물의 밀도는 0 °C에서 가장 크다. <span class="step">→ <span class="ans">×</span> 4 °C에서 가장 크다.</span></li>
+    <li>물은 극성이 커서 무극성 분자에 쌍극자를 유도하여 산소 기체도 녹인다. <span class="step">→ <span class="ans">○</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 21. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>쌍극자–쌍극자 상호 작용</h2>
+  <p class="f22">다음 분자 중 분자 사이에 쌍극자–쌍극자 상호 작용이 존재하는 것을 선택하여라.</p>
+  <p class="f22 mt8">1) $\ce{HCl}$ &nbsp;&nbsp; 2) $\ce{CH4}$ &nbsp;&nbsp; 3) $\ce{NH3}$ &nbsp;&nbsp; 4) $\ce{C2H5OH}$ &nbsp;&nbsp; 5) $\ce{CCl4}$</p>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">극성 분자(쌍극자 모멘트 ≠ 0)끼리 쌍극자–쌍극자 상호 작용을 한다.</p>
+      <p class="f21 step">$\ce{CH4}$, $\ce{CCl4}$는 정사면체로 대칭이라 결합의 쌍극자가 상쇄되어 <b>무극성</b>이다.</p>
+      <div class="answer step">1) $\ce{HCl}$, 3) $\ce{NH3}$, 4) $\ce{C2H5OH}$</div>
+      <p class="small step">$\ce{NH3}$와 $\ce{C2H5OH}$는 수소 결합도 한다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 22. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>측정값으로 증발 엔탈피 구하기</h2>
+  <p class="f21">온도에 따른 다이클로로메테인의 증기압 측정 결과가 다음과 같다. 다이클로로메테인의 증발 엔탈피 $\Delta H^\circ_\text{vap}$를 구하여라.</p>
+  <table class="tight ac221-res mt8">
+    <tr><th>온도 (K)</th><td>200</td><td>220</td><td>240</td><td>260</td><td>280</td><td>300</td></tr>
+    <tr><th>증기압 (mmHg)</th><td>0.80</td><td>4.50</td><td>21.0</td><td>71.0</td><td>197</td><td>391</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 400px">{{P2FIG}}</div>
+    <div class="col stack">
+      <p class="f21 step">$\ln P_\text{vap}=-\dfrac{\Delta H^\circ_\text{vap}}{R}\cdot\dfrac1T+C$ → $\ln P$와 $\dfrac1T$로 그래프를 그린다.</p>
+      <p class="f21 step" data-g="p2f">추세선 $y=-3773.5x+18.69$ → 기울기 $-3773.5\ \text{K}$</p>
+      <p class="f21 step">$\Delta H^\circ_\text{vap}=-\text{기울기}\times R=3773.5\ \text{K}\times8.314\ \text{J/(K}\cdot\text{mol)}$</p>
+      <div class="answer step">$\Delta H^\circ_\text{vap}\approx3.14\times10^{4}\ \text{J/mol}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>에탄올의 정상 끓는점</h2>
+  <p class="f21">에탄올의 증기압은 34.9 °C에서 13.3 kPa이다. 에탄올의 증발 엔탈피가 $4.35\times10^{4}\ \text{J/mol}$일 때, 정상 끓는점을 구하여라. (단, 1 atm = $1.013\times10^{5}$ Pa)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step">$T_1=34.9+273.15=308.1\ \text{K}$, $P_1=1.33\times10^{4}\ \text{Pa}$, 정상 끓는점에서 $P_2=1.013\times10^{5}\ \text{Pa}$</p>
+      <p class="f21 step">$\dfrac{1}{T_2}=\dfrac{1}{T_1}-\dfrac{R}{\Delta H^\circ_\text{vap}}\ln\dfrac{P_2}{P_1}=\dfrac{1}{308.1}-\dfrac{8.314}{4.35\times10^{4}}\ln\dfrac{1.013\times10^{5}}{1.33\times10^{4}}$</p>
+      <p class="f21 step">$=3.246\times10^{-3}-3.88\times10^{-4}=2.86\times10^{-3}\ \text{K}^{-1}$</p>
+      <div class="answer step">$T_2\approx350\ \text{K}$ (약 77 °C)</div>
+      <p class="small step">실제 기준 끓는점 78.4 °C(351.6 K)와 비슷하다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>표면 장력이 더 큰 것</h2>
+  <p class="f21">다음 액체 쌍 중 표면 장력이 더 큰 것을 선택하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 440px">
+      <p class="f21">1) 시스-다이클로로에텐과 트랜스-다이클로로에텐</p>
+      {{DCE}}
+      <p class="f21">2) 10 °C 헥세인과 40 °C 헥세인</p>
+    </div>
+    <div class="col stack">
+      <p class="f21 step" data-g="q4c">1) 시스형은 두 $\ce{C-Cl}$ 결합의 쌍극자가 더해져 <b>극성</b>, 트랜스형은 상쇄되어 무극성 → 시스형은 쌍극자–쌍극자 상호 작용이 더해진다.</p>
+      <p class="f21 step">2) 온도가 낮을수록 분자 운동이 느려 분자 사이 인력의 효과가 크다.</p>
+      <div class="answer step">1) 시스-다이클로로에텐 &nbsp; 2) 10 °C 헥세인</div>
+      <p class="small step">표면 장력은 극성이 클수록, 온도가 낮을수록 크다.</p>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>같은 분자끼리 수소 결합</h2>
+  <p class="f22">다음 분자 중 같은 분자 사이에 수소 결합을 할 수 있는 것은 어느 것인가?</p>
+  <p class="f22 mt8">1) $\ce{H2O2}$ &nbsp;&nbsp; 2) $\ce{CH3OCH3}$ &nbsp;&nbsp; 3) $\ce{CH3COOH}$ &nbsp;&nbsp; 4) $\ce{CH3OH}$</p>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">같은 분자끼리 수소 결합하려면 $\ce{O-H}$(또는 $\ce{N-H}$, $\ce{F-H}$)의 H와, 이웃 분자의 비공유 전자쌍이 모두 있어야 한다.</p>
+      <p class="f21 step">$\ce{CH3OCH3}$는 O에 비공유 전자쌍은 있지만 모든 H가 C에 결합해 있어, 같은 분자끼리는 수소 결합하지 못한다.</p>
+      <div class="answer step">1) $\ce{H2O2}$, 3) $\ce{CH3COOH}$, 4) $\ce{CH3OH}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 스스로 정리 ════════ -->
+<section class="slide" data-sec="03 물의 분자 구조와 특성 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 액체 분자 — 03 물의 분자 구조와 특성</h2>
+  <div class="ac221-map">
+    <div class="ac221-node ac221-dim">01·02<br>증기압, 끓는점,<br>표면 장력, 모세관</div>
+    <div class="ac221-arr">→</div>
+    <div class="ac221-node ac221-main" data-q><b>물의 분자 구조</b><br>❶ 수소 결합: $\ce{O}$, $\ce{N}$, $\ce{F}$에 결합한 <span class="blank"><span class="step">H</span></span>와 비공유 전자쌍 사이<br>❷ 이웃 분자 <span class="blank"><span class="step">4</span></span>개와 결합 → 사면체<br>❸ 얼음: 열린 <span class="blank"><span class="step">육각형</span></span> 구조, 부피 약 9 % 증가</div>
+    <div class="ac221-node ac221-main" data-q><b>물의 특성</b><br>❹ 밀도 최대 <span class="blank"><span class="step">4 °C</span></span><br>❺ 융해 곡선 기울기 <span class="blank"><span class="step">음수</span></span><br>❻ 높은 <span class="blank"><span class="step">비열</span></span> → 작은 일교차<br>❼ $\Delta H^\circ_\text{vap}=-$<span class="blank"><span class="step">기울기</span></span>$\times R$</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="03 물의 분자 구조와 특성 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 수소 결합으로 물의 높은 끓는점·비열·표면 장력과 얼음의 밀도를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 증기압 자료로 $\ln P$–$\tfrac1T$ 그래프를 그리고 기울기로 증발열을 계산했다.</button>
+    <button class="chk">[가치·태도] 물의 특성이 지구의 기후와 생명 현상에 주는 의미를 생각해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 겨울에 호수의 물고기가 살아남는 까닭은? <span class="step">→ <span class="ans">물은 4 °C에서 밀도가 가장 커서 표면부터 얼고</span>, 얼음 밑에 물이 남기 때문이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ln P$–$\tfrac1T$ 기울기가 $-5.0\times10^{3}\ \text{K}$이면 증발열은? <span class="step">→ <span class="ans">약 41.6 kJ/mol</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 3. 고체 — 고체 속 입자는 어떤 규칙으로 배열될까?</div>
+</section>

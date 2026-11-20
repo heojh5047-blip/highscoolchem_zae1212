@@ -1,0 +1,38 @@
+/* 고급화학 2-M 대단원 Ⅱ 마무리 — 덱 전용 (모두 .ac29- 접두어) */
+.cover h1.ac29-h1{font-size:86px;line-height:1.12}
+table.ac29-std td,table.ac29-std th{font-size:20px;padding:2px 10px}
+table.ac29-std td:first-child{white-space:nowrap;color:var(--muted);width:150px}
+/* 개념 지도 */
+.ac29-top{display:flex;align-items:center;gap:10px;margin-top:4px}
+.ac29-top .ac29-u{border:2px dashed #C9D3DD;border-radius:12px;padding:4px 12px;font-size:19px;color:var(--muted)}
+.ac29-top .ac29-u.ac29-now{border:2px solid var(--field);background:#EAF6EF;color:var(--ink);font-weight:700}
+.ac29-top .ac29-ar{font-size:22px;color:var(--muted)}
+.ac29-map{display:flex;align-items:stretch;gap:16px;margin-top:14px}
+.ac29-node{flex:1 1 0;background:#F2FAF5;border:2px solid var(--field);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.85}
+.ac29-node h3{font-size:22px;margin:0 0 2px}
+.ac29-node h3 .small{font-weight:400}
+.ac29-band{margin-top:10px;font-size:20px;color:var(--muted);border:2px dashed #C9D3DD;border-radius:10px;padding:4px 12px}
+/* 대응표 */
+table.ac29-map th,table.ac29-map td{font-size:19px;padding:2px 8px}
+table.ac29-map td.ac29-sec{white-space:nowrap;font-weight:700;color:var(--muted)}
+table.ac29-map td.ac29-deck{white-space:nowrap;color:var(--muted)}
+table.ac29-map td.ac29-key{font-weight:700}
+table.ac29-ov th,table.ac29-ov td{font-size:20px;padding:4px 10px}
+table.ac29-ov td:first-child{white-space:nowrap;font-weight:700}
+table.ac29-ov td:last-child{white-space:nowrap;text-align:center}
+/* 종합 문제 */
+.answer.ac29-left{text-align:left;font-weight:400;font-size:21px;line-height:1.5}
+.ac29-sub{font-size:21px;margin:2px 0}
+/* STEAM */
+.tag .ac29-st{font-weight:400}
+table.ac29-act th,table.ac29-act td{font-size:19px;padding:3px 10px}
+table.ac29-act td:first-child{white-space:nowrap;font-weight:700}
+table.ac29-dat th,table.ac29-dat td{font-size:20px;padding:3px 10px;text-align:center}
+table.ac29-col th,table.ac29-col td{font-size:19px;padding:3px 8px;text-align:center}
+table.ac29-col td.l{text-align:left}
+table.ac29-part th,table.ac29-part td{font-size:19px;padding:2px 8px}
+table.ac29-part td:first-child{white-space:nowrap;font-weight:700}
+.ac29-cards{display:flex;gap:14px;align-items:stretch}
+.ac29-cards>.card{flex:1 1 0;font-size:20px;line-height:1.5}
+.ac29-cards>.card h3{font-size:22px;margin:0 0 4px}
+.ac29-essay{font-size:19px;line-height:1.5;text-align:left;font-weight:400}

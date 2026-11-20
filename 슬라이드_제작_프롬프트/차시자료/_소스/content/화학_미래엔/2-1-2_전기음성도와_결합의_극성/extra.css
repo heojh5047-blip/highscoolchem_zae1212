@@ -1,0 +1,49 @@
+/* 2-1-2 전기음성도와 결합의 극성 — 덱 전용 (모두 .cm212- 접두어) */
+.cover h1.cm212-h1{font-size:96px}
+
+/* 표 */
+table.cm212-en{width:100%}
+table.cm212-en th,table.cm212-en td{text-align:center;font-size:21px;padding:6px 6px}
+table.cm212-en .blank{min-width:48px}
+table.cm212-en3{width:100%}
+table.cm212-en3 th{font-size:21px;width:90px}
+table.cm212-en3 td{font-size:21px;text-align:center}
+table.cm212-en3 .blank{min-width:48px}
+table.cm212-q6{margin-top:4px}
+table.cm212-q6 th{font-size:21px;padding:6px 14px}
+table.cm212-q6 td{font-size:21px;text-align:center;width:90px}
+
+/* 연습 해 보기 비교 칸 */
+.cm212-cmp{text-align:center}
+.cm212-cmp .blank{min-width:44px}
+
+/* 객관식 선택지 목록 */
+ol.cm212-opt{list-style:none;padding-left:0}
+ol.cm212-opt li{margin-top:8px;padding-left:1.4em;text-indent:-1.4em;line-height:1.5}
+ol.cm212-opt li:first-child{margin-top:0}
+
+/* 답·예시 */
+p.cm212-a{color:#1B5E3F}
+.answer.cm212-left{text-align:left}
+
+/* 개념 지도 (2-1-1 .cm211-map 과 같은 꼴) */
+.cm212-map{display:flex;align-items:center;gap:14px}
+.cm212-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.6}
+.cm212-node.cm212-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm212-node.cm212-dim{flex:0 0 300px;border-style:dashed;color:var(--muted)}
+.cm212-arr{font-size:28px;color:var(--muted)}
+
+/* 실험실 */
+.cm212-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.cm212-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.cm212-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm212-seg .btn.cm212-act{background:var(--field);color:#fff;border-color:var(--field)}
+.cm212-seg .small{margin:0 4px 0 0;min-width:64px}
+table.cm212-read{width:100%}
+table.cm212-read th{font-size:19px;padding:5px 10px;text-align:left}
+table.cm212-read td{font-size:21px;width:190px;padding:5px 10px;text-align:center}
+output.kind.cm212-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.cm212-log{width:100%}
+table.cm212-log th,table.cm212-log td{font-size:19px;padding:3px 6px;text-align:center}
+.cm212-seg.cm212-wrap .small{flex:0 0 100%;margin-bottom:-2px}
+.cm212-seg.cm212-wrap .btn{padding:3px 9px}

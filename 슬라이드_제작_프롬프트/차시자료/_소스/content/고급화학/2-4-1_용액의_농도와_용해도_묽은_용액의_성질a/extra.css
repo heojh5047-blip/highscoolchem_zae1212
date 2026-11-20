@@ -1,0 +1,41 @@
+/* 고급화학 2-4-1 — 덱 전용 (a·b 같은 파일, 모두 .ac241- 접두어) */
+.cover h1.ac241-h1{font-size:58px;line-height:1.15}
+table.ac241-res td{text-align:center}
+table.ac241-res td.l,table.ac241-res th.l{text-align:left}
+table.ac241-res th,table.ac241-res td{font-size:20px;padding:4px 8px}
+table.ac241-var th{width:130px}
+table.ac241-var td,table.ac241-var th{font-size:20px}
+ol.ac241-ol{padding-left:1.4em}
+ol.ac241-ol li{margin-top:10px}
+ol.ac241-ol li:first-child{margin-top:0}
+ul.ac241-ul{padding-left:1.2em;margin:4px 0}
+ul.ac241-ul li{margin-top:8px}
+ol.ac241-ox{padding-left:1.4em}
+ol.ac241-ox li{margin-top:16px}
+ol.ac241-ox li:first-child{margin-top:0}
+.ac241-side{border-left:5px solid var(--equi);background:#FFF8EF;padding:10px 14px;border-radius:8px}
+/* 개념 지도 */
+.ac241-map{display:flex;align-items:center;gap:10px;margin-top:16px}
+.ac241-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 12px;font-size:20px;line-height:1.7;flex:0 0 170px}
+.ac241-node.ac241-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac241-node.ac241-dim{flex:0 0 170px;border-style:dashed;color:var(--muted)}
+.ac241-arr{font-size:26px;color:var(--muted)}
+/* 실험실 */
+.ac241-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.ac241-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.ac241-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac241-seg .btn.ac241-act{background:var(--field);color:#fff;border-color:var(--field)}
+.ac241-seg .small{margin:0 2px 0 4px}
+.ac241-cb{font-size:19px;cursor:pointer;display:inline-block;margin:2px 0 6px}
+svg.ac241-app{display:block;margin:2px 0 6px;background:#fff;border:2px solid #16233D;border-radius:6px}
+output.kind.ac241-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.ac241-log th,table.ac241-log td{font-size:19px;padding:2px 6px;text-align:center}
+.lab-ctl .ctl{margin-bottom:6px}
+.stages.ac241-c4{grid-template-columns:repeat(4,1fr);gap:14px}
+.stages.ac241-c4 .stage{padding:10px 10px}
+.stages.ac241-c4 .stage p{font-size:19px;line-height:1.45}
+.ac241-map .ac241-node.ac241-main{font-size:20px}
+.ac241-scope{display:block;margin:0 auto;background:#FFFBEA;border:2px solid #16233D;border-radius:50%}
+.ac241-supp{border-left:5px solid var(--equi);background:#FFF8EF}
+.slide .col.stack > p.f21.step{margin-top:6px}
+.slide .col.stack > p.f21.step + p.f21.step{margin-top:12px}

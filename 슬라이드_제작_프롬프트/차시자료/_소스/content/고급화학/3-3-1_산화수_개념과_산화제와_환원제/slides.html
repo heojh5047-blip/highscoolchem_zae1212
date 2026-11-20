@@ -1,0 +1,522 @@
+<!-- 고급화학 3-3-1 산화수 개념과 산화제와 환원제 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 3. 산화 환원 반응 › 01–02</div>
+    <h1 class="ac331-h1">산화수 개념과 산화제와 환원제</h1>
+    <p class="sub">전자의 이동을 산화수로 추적한다 — 산화수 규칙, 반쪽 반응법, 산화제·환원제</p>
+    <p class="meta">고등학교 고급 화학 158–163쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 480 480" style="width:500px" aria-label="아연 원자가 전자 두 개를 하이드로늄 이온의 수소에 주어 아연의 산화수는 0에서 +2로 늘고 수소의 산화수는 +1에서 0으로 준다"><g data-atom="125,225,30,Zn"></g><text class="tex" x="125" y="286" data-mix="$\ce{Zn}$ 원자 (0)" data-size="19" data-anchor="middle"></text><g data-atom="350,215,24,O"></g><g data-atom="320,187,18,H,-"></g><g data-atom="380,187,18,H,-"></g><g data-atom="350,253,18,H,-"></g><text class="tex" x="350" y="300" data-mix="$\ce{H3O+}$의 H (+1)" data-size="19" data-anchor="middle"></text><g data-arw="160,222,318,214,minus,3"></g><g data-anim="move" data-from="-50,3" data-dur="1.4" data-delay="0" data-rep="loop" data-ease="io"><circle cx="205" cy="203" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="205" y="209" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="move" data-from="-50,3" data-dur="1.4" data-delay="0.5" data-rep="loop" data-ease="io"><circle cx="262" cy="203" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="262" y="209" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><text class="tex" x="238" y="170" data-mix="전자 $2$개 이동" data-size="20" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><rect x="125" y="318" width="230" height="80" rx="12" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="240" y="350" data-mix="$\ce{Zn}$ $0\rightarrow+2$ 산화" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="240" y="384" data-mix="$\ce{H}$ $+1\rightarrow0$ 환원" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg>
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 산화 환원 반응 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>3. 산화 환원 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 580px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 산화수 개념 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b class="c-plus">02</b> 산화제와 환원제 <span class="small c-plus">← 오늘</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">금속 표면에 녹이 생길 때와 식물이 빛과 이산화 탄소로 산소를 만들 때 공통으로 일어나는 반응이 <b>산화 환원 반응</b>이다. 이 장에서는 전기 화학의 기초인 산화 환원 반응과 전자의 이동, 산화수와 형식 전하의 차이, 산화수 변화와 산화 환원 반응, 산화제와 환원제의 특성을 알아본다.</p>
+      </div>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 500 320" style="width:480px" aria-label="철의 녹, 광합성의 산소 발생, 배터리 충전은 모두 산화 환원 반응이다"><rect x="20" y="60" width="130" height="90" rx="8" fill="#B7C0C9" stroke="#6B7480" stroke-width="2"/><g data-anim="fade" data-delay="0" data-dur=".5"><circle cx="58.8" cy="107.9" r="8.6" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="0.1" data-dur=".5"><circle cx="95.4" cy="113.3" r="6.5" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="0.3" data-dur=".5"><circle cx="36.3" cy="127.3" r="7.8" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="0.4" data-dur=".5"><circle cx="58.4" cy="137.7" r="9.3" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="0.6" data-dur=".5"><circle cx="118.6" cy="103.4" r="10.5" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="0.8" data-dur=".5"><circle cx="50.1" cy="113.9" r="12.1" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="0.9" data-dur=".5"><circle cx="87.3" cy="120.9" r="10.7" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="1.1" data-dur=".5"><circle cx="41.4" cy="122" r="10.1" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><g data-anim="fade" data-delay="1.2" data-dur=".5"><circle cx="65.1" cy="74" r="12.1" fill="#B8561F" stroke="#8A3B12" stroke-width="1" opacity=".85"/></g><text class="tex" x="85" y="184" data-mix="철의 녹" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="85" y="212" data-mix="$\ce{Fe2O3}$ 생성" data-size="18" data-anchor="middle"></text><path d="M205 150 L225 80 L290 60 L300 120 L255 155 Z" fill="#7CC48F" stroke="#2E7D4F" stroke-width="2.5" stroke-linejoin="round"/><line x1="210" y1="148" x2="288" y2="72" stroke="#2E7D4F" stroke-width="2"/><g data-anim="move" data-from="0,30" data-rep="loop" data-dur="1.4" data-ease="lin"><circle cx="300" cy="52" r="6" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,30" data-rep="loop" data-dur="1.7" data-ease="lin"><circle cx="318" cy="72" r="6" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,30" data-rep="loop" data-dur="2" data-ease="lin"><circle cx="310" cy="34" r="6" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><text class="tex" x="255" y="184" data-mix="광합성" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="255" y="212" data-mix="$\ce{O2}$ 발생" data-size="18" data-anchor="middle"></text><rect x="370" y="72" width="110" height="64" rx="8" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><rect x="480" y="92" width="10" height="24" rx="2" fill="#16233D" stroke="#16233D" stroke-width="2"/><g data-anim="fade" data-delay="0.3" data-dur=".4"><rect x="378" y="80" width="20" height="48" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><g data-anim="fade" data-delay="0.6" data-dur=".4"><rect x="403" y="80" width="20" height="48" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><g data-anim="fade" data-delay="0.9" data-dur=".4"><rect x="428" y="80" width="20" height="48" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><g data-anim="fade" data-delay="1.2" data-dur=".4"><rect x="453" y="80" width="20" height="48" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="0"/></g><text class="tex" x="425" y="184" data-mix="배터리" data-size="20" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="212" data-mix="충전·방전" data-size="18" data-anchor="middle"></text><rect x="30" y="240" width="440" height="64" rx="12" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="250" y="280" data-mix="공통점: 전자를 주고받는 산화 환원 반응" data-size="20" data-anchor="middle" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-05]</span>산화·환원 반응에서 산화수 정의를 이해하고, 산화수 변화를 통해 산화·환원 반응식을 완성할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>산화수의 정의를 형식 전하와 비교하여 설명하고, 규칙에 따라 분자와 이온 속 원자의 산화수를 정할 수 있다.</li>
+    <li>전자의 이동과 산화수 변화로 산화·환원을 정의하고, 산화제와 환원제를 구분할 수 있다.</li>
+    <li>반쪽 반응법과 산화수 변화를 이용하여 산화 환원 반응식의 원자 수와 전하를 맞출 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">전자의 이동</div><div class="farr">→</div>
+    <div class="fnode">산화수 정의·규칙</div><div class="farr">→</div>
+    <div class="fnode">산화수 변화</div><div class="farr">→</div>
+    <div class="fnode hl">반응식 완성</div><div class="farr">→</div>
+    <div class="fnode">산화제·환원제</div><div class="farr">→</div>
+    <div class="fnode">조사 활동</div>
+  </div>
+  <p class="small mt12">「화학」에서: 산소를 얻으면 산화, 전자를 잃으면 산화 · Ⅰ-2에서: 형식 전하로 루이스 구조 고르기</p>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제 · 도입" data-title="생각 열기">
+  <h2><span class="tag">생각 열기</span>산소가 없어도 산화일까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">마그네슘이 산소와 결합하는 반응은 산화이다. 그렇다면 산소가 전혀 없는 $\ce{2Na(s) + Cl2(g) -> 2NaCl(s)}$에서는 어느 것이 산화되었을까?</p>
+      <div class="card q"><p class="f21"><b>Q</b> 「산소와 결합하는 반응만 산화이다」는 맞는 말일까?</p>
+        <p class="f21 step">→ 아니다. $\ce{Na}$은 산소 없이도 전자를 잃어 $\ce{Na+}$이 되므로 산화된다. 산화의 정의는 산소 → <b>전자</b> → <b>산화수</b>로 넓어졌다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 그러면 전자가 완전히 옮겨 가지 않는 공유 결합 물질(예: $\ce{H2 + Cl2 -> 2HCl}$)의 산화·환원은 어떻게 판단할까?</p>
+        <p class="f21 step">→ 공유 전자를 전기음성도가 큰 원자가 가진다고 보고 매긴 가상의 전하, <b>산화수</b>로 판단한다.</p></div>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 460 330" style="width:440px" aria-label="산화의 정의는 산소를 얻는 것에서 전자를 잃는 것, 산화수가 증가하는 것으로 넓어졌다"><g data-anim="fade" data-delay="0" data-dur=".6"><rect x="20" y="20" width="120" height="76" rx="12" fill="#FFF3EC" stroke="#C2410C" stroke-width="2.5"/><text class="tex" x="80" y="66" data-mix="산소" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="160" y="52" data-mix="산소를 얻으면 산화" data-size="20" data-anchor="start"></text><text class="tex" x="160" y="84" data-mix="$\ce{2Mg + O2 -> 2MgO}$" data-size="19" data-anchor="start" fill="#5B6B7F"></text></g><g data-anim="draw" data-delay="0.4" data-dur=".3"><g data-arw="80,100,80,122,ink,2.5"></g></g><g data-anim="fade" data-delay="0.5" data-dur=".6"><rect x="20" y="124" width="120" height="76" rx="12" fill="#FFF3EC" stroke="#C2410C" stroke-width="2.5"/><text class="tex" x="80" y="170" data-mix="전자" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="160" y="156" data-mix="전자를 잃으면 산화" data-size="20" data-anchor="start"></text><text class="tex" x="160" y="188" data-mix="$\ce{2Na + Cl2 -> 2NaCl}$" data-size="19" data-anchor="start" fill="#5B6B7F"></text></g><g data-anim="draw" data-delay="0.9" data-dur=".3"><g data-arw="80,204,80,226,ink,2.5"></g></g><g data-anim="fade" data-delay="1" data-dur=".6"><rect x="20" y="228" width="120" height="76" rx="12" fill="#FFF3EC" stroke="#C2410C" stroke-width="2.5"/><text class="tex" x="80" y="274" data-mix="산화수" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="160" y="260" data-mix="산화수가 늘면 산화" data-size="20" data-anchor="start"></text><text class="tex" x="160" y="292" data-mix="공유 결합 물질에도" data-size="19" data-anchor="start" fill="#5B6B7F"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 산화 환원 반응과 전자의 이동 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응과 전자의 이동" data-title="산화 환원 반응과 전자의 이동">
+  <h2><span class="no">1</span>산화 환원 반응과 전자의 이동</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">원소에서 이온 결합 화합물이 만들어질 때는 먼저 중성 원자가 전자를 잃거나 얻어 이온이 되고, 그 뒤 이온 사이의 전기적 인력으로 이온 결합이 생긴다.</p>
+      <div class="formula sm">$\ce{Na -> Na+ + e-}$ &nbsp;(전자 잃음) &nbsp;&nbsp; $\ce{Cl2 + 2e- -> 2Cl-}$ &nbsp;(전자 얻음)</div>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{2Na + Cl2 -> 2NaCl}$에서 $\ce{Na}$이 잃은 전자 수와 $\ce{Cl2}$가 얻은 전자 수는?</p>
+        <p class="f21 step">→ 둘 다 $2$개로 같다. 전자는 생기거나 없어지지 않고 옮겨 갈 뿐이다.</p></div>
+      <p class="f21 step"><mark>산화 환원 반응은 잃은 전자 수와 얻은 전자 수가 같은 반응</mark>이다 — 원자 보존에 따른 <b>질량 균형</b>과 함께 <b>전하 균형</b>이 이루어진다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 480 370" style="width:440px" aria-label="나트륨 원자가 전자를 잃어 나트륨 이온이 되고 염소 원자가 그 전자를 얻어 염화 이온이 되어 이온 결합을 형성한다"><g data-atom="80,110,32,Na"></g><g data-atom="300,110,29,Cl"></g><g data-anim="move" data-from="-80,0" data-dur="1.6" data-rep="loop" data-ease="io"><circle cx="190" cy="106" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="190" y="112" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-arw="118,136,260,136,minus,3"></g><text class="tex" x="80" y="172" data-mix="$\ce{Na}$ 원자" data-size="19" data-anchor="middle"></text><text class="tex" x="300" y="172" data-mix="$\ce{Cl}$ 원자" data-size="19" data-anchor="middle"></text><text class="tex" x="190" y="40" data-mix="전자 이동" data-size="20" data-anchor="middle" fill="#1F6FD1" data-weight="700"></text><g data-arw="190,200,190,236,ink,3"></g><g data-anim="pop" data-o="110,290" data-delay=".2"><g data-atom="110,290,19,Na,-"></g><text class="tex" x="110" y="260" data-tex="\ce{Na+}" data-size="21" data-anchor="middle"></text></g><g data-anim="pop" data-o="270,290" data-delay=".4"><g data-atom="270,290,32,Cl,\mathrm{Cl}^{-}"></g></g><text class="tex" x="190" y="296" data-mix="인력" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="110" y="342" data-mix="전자 잃음" data-size="19" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="270" y="346" data-mix="전자 얻음" data-size="19" data-anchor="middle" fill="#0E7490" data-weight="700"></text><text class="tex" x="400" y="150" data-mix="잃은 전자 수||$=$||얻은 전자 수" data-size="20" data-anchor="middle" fill="#16233D"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 산화수의 정의 ════════ -->
+<section class="slide" data-sec="01 · 산화수의 개념" data-title="산화수의 정의">
+  <h2><span class="no">2</span>산화수의 개념</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <p class="f21"><mark>산화수는 분자나 이온 안의 결합에서 전기음성도가 큰 원자가 공유 전자를 완전히 차지한다고 가정할 때 각 원자가 가지는 가상의 전하</mark>이다.</p>
+      <p class="f21">이렇게 가정하면 원자가 가진 전자 수가 중성 원자일 때와 달라지므로, 각 원자는 $0$ 또는 양(+)·음(−)의 정수 산화수를 가진다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 물 분자에서 $\ce{O}$와 $\ce{H}$의 산화수는?</p>
+        <p class="f21 step">→ 전기음성도가 큰 $\ce{O}$가 공유 전자쌍 두 개를 모두 가지면 전자가 $8$개($6$개보다 $2$개 많음) → $\ce{O}$ $-2$, 전자를 모두 내준 $\ce{H}$는 $+1$</p></div>
+      <p class="small step">산화수는 원래 전이 금속의 산화 상태를 나타내던 말이며, 산화수와 산화 상태는 구분하지 않고 쓴다. 산화수는 실제 전하가 아니라 전자의 이동을 따라가기 위한 「장부」이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 480 316" style="width:470px" aria-label="물 분자에서 전기음성도가 큰 산소가 공유 전자쌍을 모두 차지한다고 가정하면 산소의 산화수는 −2, 수소는 +1이다"><text class="tex" x="110" y="142.2" data-tex="\mathrm{O}" data-size="34" data-anchor="middle"></text><text class="tex" x="34" y="142.2" data-tex="\mathrm{H}" data-size="34" data-anchor="middle"></text><text class="tex" x="186" y="142.2" data-tex="\mathrm{H}" data-size="34" data-anchor="middle"></text><circle cx="103.9" cy="104.5" r="4" fill="#16233D"/><circle cx="116.1" cy="104.5" r="4" fill="#16233D"/><circle cx="103.9" cy="155.5" r="4" fill="#16233D"/><circle cx="116.1" cy="155.5" r="4" fill="#16233D"/><circle cx="79" cy="130" r="4" fill="#16233D"/><circle cx="65" cy="130" r="4" fill="#16233D"/><circle cx="141" cy="130" r="4" fill="#16233D"/><circle cx="155" cy="130" r="4" fill="#16233D"/><text class="tex" x="360" y="142.2" data-tex="\mathrm{O}" data-size="34" data-anchor="middle"></text><text class="tex" x="284" y="142.2" data-tex="\mathrm{H}" data-size="34" data-anchor="middle"></text><text class="tex" x="436" y="142.2" data-tex="\mathrm{H}" data-size="34" data-anchor="middle"></text><circle cx="353.9" cy="104.5" r="4" fill="#16233D"/><circle cx="366.1" cy="104.5" r="4" fill="#16233D"/><circle cx="353.9" cy="155.5" r="4" fill="#16233D"/><circle cx="366.1" cy="155.5" r="4" fill="#16233D"/><circle cx="325" cy="130" r="4" fill="#16233D"/><circle cx="337" cy="130" r="4" fill="#16233D"/><circle cx="383" cy="130" r="4" fill="#16233D"/><circle cx="395" cy="130" r="4" fill="#16233D"/><g data-anim="pop" data-o="360,130"><ellipse cx="360" cy="130" rx="50" ry="40" fill="#0E7490" fill-opacity=".10" stroke="#0E7490" stroke-width="2" stroke-dasharray="6 4"/></g><text class="tex" x="360" y="80" data-tex="-2" data-size="22" data-anchor="middle" fill="#0E7490" data-weight="700"></text><text class="tex" x="284" y="96" data-tex="+1" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="436" y="96" data-tex="+1" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text><g data-arw="222,130,262,130,ink,3"></g><text class="tex" x="110" y="222" data-mix="실제 루이스 구조||공유 전자쌍을 함께 가짐" data-size="18" data-anchor="middle"></text><text class="tex" x="360" y="222" data-mix="산화수의 가정||O가 공유 전자를 모두 차지" data-size="18" data-anchor="middle"></text><text class="tex" x="240" y="300" data-mix="O: 원자가 전자 6, 가진 전자 8 → $-2$ &nbsp; H: 1, 0 → $+1$" data-size="18" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 산화수와 형식 전하 ════════ -->
+<section class="slide" data-sec="01 · 산화수와 형식 전하의 개념 차이" data-title="산화수와 형식 전하">
+  <h2><span class="no">3</span>산화수와 형식 전하의 개념 차이</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <table class="ac331-c">
+        <tr><th></th><th>형식 전하</th><th>산화수</th></tr>
+        <tr><td class="l">결합 전자</td><td>두 원자가 <b>공평하게</b> 반씩</td><td>전기음성도가 큰 원자가 <b>모두</b></td></tr>
+        <tr><td class="l">결합을 보는 눈</td><td>완전한 공유 결합</td><td>완전한 이온 결합처럼</td></tr>
+        <tr><td class="l">쓰임</td><td>공명 구조 중 기여도가 큰 루이스 구조 고르기</td><td>산화 환원 정도의 척도</td></tr>
+      </table>
+      <div class="card q mt8"><p class="f21"><b>Q</b> 일산화 탄소 $\ce{CO}$에서 $\ce{C}$의 형식 전하와 산화수는?</p>
+        <p class="f21 step">→ 형식 전하: $4-2-\tfrac12\times6=-1$ &nbsp; 산화수: 결합 전자 6개를 $\ce{O}$가 가지므로 $4-2=+2$</p></div>
+      <p class="f21 step">같은 원자라도 두 값은 다를 수 있다. <b>산화수는 형식 전하와는 무관</b>하다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 470 320" style="width:470px" aria-label="일산화 탄소에서 형식 전하는 탄소 −1, 산소 +1이지만 산화수는 탄소 +2, 산소 −2이다"><text class="tex" x="20" y="34" data-mix="형식 전하" data-size="20" data-anchor="start" data-weight="700"></text><text class="tex" x="110" y="113" data-tex="\mathrm{C}" data-size="36" data-anchor="middle"></text><text class="tex" x="250" y="113" data-tex="\mathrm{O}" data-size="36" data-anchor="middle"></text><circle cx="84.8" cy="93.5" r="4" fill="#16233D"/><circle cx="84.8" cy="106.5" r="4" fill="#16233D"/><circle cx="275.2" cy="93.5" r="4" fill="#16233D"/><circle cx="275.2" cy="106.5" r="4" fill="#16233D"/><circle cx="173" cy="86" r="4" fill="#16233D"/><circle cx="187" cy="86" r="4" fill="#16233D"/><circle cx="173" cy="100" r="4" fill="#16233D"/><circle cx="187" cy="100" r="4" fill="#16233D"/><circle cx="173" cy="114" r="4" fill="#16233D"/><circle cx="187" cy="114" r="4" fill="#16233D"/><line x1="180" y1="64" x2="180" y2="136" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="6 4"/><text class="tex" x="110" y="66" data-tex="-1" data-size="22" data-anchor="middle" fill="#1F6FD1" data-weight="700"></text><text class="tex" x="250" y="66" data-tex="+1" data-size="22" data-anchor="middle" fill="#D7263D" data-weight="700"></text><text class="tex" x="380" y="94" data-mix="결합 전자를||반씩 나눔" data-size="19" data-anchor="middle"></text><line x1="20" y1="160" x2="460" y2="160" stroke="#E2E7EC" stroke-width="2"/><text class="tex" x="20" y="200" data-mix="산화수" data-size="20" data-anchor="start" data-weight="700"></text><text class="tex" x="110" y="281" data-tex="\mathrm{C}" data-size="36" data-anchor="middle"></text><text class="tex" x="250" y="281" data-tex="\mathrm{O}" data-size="36" data-anchor="middle"></text><circle cx="84.8" cy="261.5" r="4" fill="#16233D"/><circle cx="84.8" cy="274.5" r="4" fill="#16233D"/><circle cx="275.2" cy="261.5" r="4" fill="#16233D"/><circle cx="275.2" cy="274.5" r="4" fill="#16233D"/><circle cx="173" cy="254" r="4" fill="#16233D"/><circle cx="187" cy="254" r="4" fill="#16233D"/><circle cx="173" cy="268" r="4" fill="#16233D"/><circle cx="187" cy="268" r="4" fill="#16233D"/><circle cx="173" cy="282" r="4" fill="#16233D"/><circle cx="187" cy="282" r="4" fill="#16233D"/><g data-anim="pop" data-o="250,268"><rect x="160" y="234" width="129.2" height="68" rx="14" fill="#0E7490" stroke="#0E7490" stroke-width="2" stroke-dasharray="6 4" fill-opacity=".10"/></g><text class="tex" x="110" y="234" data-tex="+2" data-size="22" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="250" y="224" data-tex="-2" data-size="22" data-anchor="middle" fill="#0E7490" data-weight="700"></text><text class="tex" x="380" y="262" data-mix="결합 전자를||O가 모두 가짐" data-size="19" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 8. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>암모늄 이온의 질소</h2>
+  <p class="f21">암모늄 이온 $\ce{NH4+}$에서 질소 원자의 <b>형식 전하</b>와 <b>산화수</b>를 각각 구하여라. (전기음성도 $\ce{N}&gt;\ce{H}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">형식 전하: 원자가 전자 $5$ − 비결합 전자 $0$ − $\tfrac12\times8$ $=+1$</p>
+      <p class="f21 step">산화수: 공유 전자 $8$개를 모두 $\ce{N}$이 가짐 → $5-8=-3$ &nbsp;(확인: $-3+4(+1)=+1$ = 이온의 전하)</p>
+      <div class="answer step">형식 전하 $+1$, 산화수 $-3$</div>
+      <p class="small step">이온의 $+$ 전하를 형식 전하로는 질소가 지지만, 산화수로는 네 수소가 $+1$씩 나눠 가진다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 400 320" style="width:330px" aria-label="암모늄 이온의 루이스 구조: 질소 둘레에 수소 네 개가 공유 전자쌍으로 결합하고 전체 전하는 +1이다"><text class="tex" x="200" y="183.7" data-tex="\mathrm{N}" data-size="38" data-anchor="middle"></text><text class="tex" x="200" y="85.7" data-tex="\mathrm{H}" data-size="38" data-anchor="middle"></text><circle cx="200" cy="128" r="4" fill="#16233D"/><circle cx="200" cy="114" r="4" fill="#16233D"/><text class="tex" x="200" y="281.7" data-tex="\mathrm{H}" data-size="38" data-anchor="middle"></text><circle cx="200" cy="212" r="4" fill="#16233D"/><circle cx="200" cy="226" r="4" fill="#16233D"/><text class="tex" x="102" y="183.7" data-tex="\mathrm{H}" data-size="38" data-anchor="middle"></text><circle cx="158" cy="170" r="4" fill="#16233D"/><circle cx="144" cy="170" r="4" fill="#16233D"/><text class="tex" x="298" y="183.7" data-tex="\mathrm{H}" data-size="38" data-anchor="middle"></text><circle cx="242" cy="170" r="4" fill="#16233D"/><circle cx="256" cy="170" r="4" fill="#16233D"/><path d="M78 62 L66 62 L66 282 L78 282" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><path d="M322 62 L334 62 L334 282 L322 282" fill="none" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><text class="tex" x="352" y="72" data-tex="+" data-size="30" data-anchor="middle"></text></svg><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 산화수의 변화와 산화 환원 반응 ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="산화수의 변화와 산화 환원">
+  <h2><span class="no">4</span>산화수의 변화와 산화 환원 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">어떤 원자의 산화수 변화는 그 원자가 가진 전자 수의 변화와 같다. 그래서 산화·환원을 두 가지로 정의할 수 있다.</p>
+      <table class="ac331-c">
+        <caption class="small">표 Ⅲ-5 산화 환원 반응의 전자 이동과 산화수 변화</caption>
+        <tr><th>정의</th><th class="ac331-cox">산화</th><th class="ac331-crd">환원</th></tr>
+        <tr><td>전자의 이동</td><td><span class="blank"><span class="step">전자 잃음</span></span></td><td><span class="blank"><span class="step">전자 얻음</span></span></td></tr>
+        <tr><td>산화수의 변화</td><td><span class="blank"><span class="step">산화수 증가</span></span></td><td><span class="blank"><span class="step">산화수 감소</span></span></td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{CuO(s) + H2(g) -> Cu(s) + H2O(l)}$에서 산화된 원자와 환원된 원자는?</p>
+        <p class="f21 step">→ <span class="ans">$\ce{H}$: $0\rightarrow+1$ 산화, $\ce{Cu}$: $+2\rightarrow0$ 환원</span> ($\ce{O}$는 $-2$ 그대로)</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 420 366" style="width:380px" aria-label="산화수 수직선에서 수소는 0에서 +1로 올라가 산화되고 구리는 +2에서 0으로 내려가 환원된다"><line x1="120" y1="340" x2="120" y2="56" stroke="#5B6B7F" stroke-width="2.5"/><line x1="112" y1="320" x2="128" y2="320" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="327" data-tex="-2" data-size="20" data-anchor="end"></text><line x1="112" y1="260" x2="128" y2="260" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="267" data-tex="-1" data-size="20" data-anchor="end"></text><line x1="112" y1="200" x2="128" y2="200" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="207" data-tex="0" data-size="20" data-anchor="end"></text><line x1="112" y1="140" x2="128" y2="140" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="147" data-tex="+1" data-size="20" data-anchor="end"></text><line x1="112" y1="80" x2="128" y2="80" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="87" data-tex="+2" data-size="20" data-anchor="end"></text><text class="tex" x="120" y="44" data-mix="산화수" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="draw" data-dur=".6"><g data-arw="154,200,154,140,ox,4"></g></g><text class="tex" x="212" y="177" data-mix="$\ce{H}$ $0\rightarrow+1$ 산화" data-size="19" data-anchor="start" fill="#C2410C" data-weight="700"></text><g data-anim="draw" data-dur=".8" data-delay=".6"><g data-arw="190,80,190,200,rd,4"></g></g><text class="tex" x="212" y="111" data-mix="$\ce{Cu}$ $+2\rightarrow0$ 환원" data-size="19" data-anchor="start" fill="#0E7490" data-weight="700"></text><text class="tex" x="160" y="308" data-mix="증가 = 전자 잃음||감소 = 전자 얻음" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 산화수 규칙 (1) ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="산화수 규칙 (1)">
+  <h2><span class="no">5</span>산화수를 정하는 규칙 (1) — 원소·이온·분자</h2>
+  <p class="f21">국제 순수 및 응용 화학 연합(IUPAC)의 규칙으로 반응 전후 각 원자의 산화수를 정한다.</p>
+  <table class="ac331-c mt8">
+    <caption class="small">표 Ⅲ-6 산화수를 지정하는 몇 가지 규칙 (1)</caption>
+    <tr><th>원소와 이온 종류</th><th>예</th><th>산화수</th></tr>
+    <tr><td class="l">순수 원소</td><td>$\ce{Ag}$, $\ce{O2}$</td><td><span class="blank"><span class="step">$0$</span></span></td></tr>
+    <tr><td class="l">단원자 이온</td><td>$\ce{I-}$, $\ce{Cr^3+}$</td><td><span class="blank"><span class="step">이온의 전하와 같음 ($-1$, $+3$)</span></span></td></tr>
+    <tr><td class="l">다원자 분자(중성)</td><td>$\ce{CO2}$, $\ce{H2O}$</td><td><span class="blank"><span class="step">산화수의 총합은 $0$</span></span></td></tr>
+    <tr><td class="l">다원자 이온</td><td>$\ce{Cr2O7^2-}$, $\ce{MnO4-}$</td><td><span class="blank"><span class="step">산화수의 총합은 이온의 전하와 같음</span></span></td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> $\ce{CO2}$에서 $\ce{O}$가 $-2$이면 $\ce{C}$의 산화수는? <span class="step">→ <span class="ans">$x+2(-2)=0$, $x=+4$</span></span></p></div>
+</section>
+
+<!-- ════════ 11. ⑥ 산화수 규칙 (2) ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="산화수 규칙 (2)">
+  <h2><span class="no">6</span>산화수를 정하는 규칙 (2) — 분자 속 특정 원소</h2>
+  <table class="ac331-c ac331-sm">
+    <caption class="small">표 Ⅲ-6 산화수를 지정하는 몇 가지 규칙 (2)</caption>
+    <tr><th>원소</th><th>산화수</th><th>예외·주의</th></tr>
+    <tr><td>플루오린 $\ce{F}$</td><td>$-1$</td><td class="l">언제나 $-1$ (전기음성도가 가장 큼)</td></tr>
+    <tr><td>$\ce{F}$ 외의 할로젠</td><td>$-1$</td><td class="l">$\ce{O}$, $\ce{N}$이나 전기음성도가 더 큰 할로젠과 결합하면 $+1$, $+3$, $+5$, $+7$</td></tr>
+    <tr><td>수소 $\ce{H}$</td><td>$+1$</td><td class="l">$\ce{H2}$에서 $0$, $\ce{Na}$·$\ce{Al}$·$\ce{B}$와 결합하면 $-1$ (예: $\ce{NaH}$)</td></tr>
+    <tr><td>산소 $\ce{O}$</td><td>$-2$</td><td class="l">과산화물($\ce{H2O2}$ 등) $-1$, $\ce{OF2}$에서 $+2$, $\ce{O2F2}$에서 $+1$</td></tr>
+    <tr><td>알칼리 금속</td><td>대부분 $+1$</td><td class="l">$\ce{Li}$, $\ce{Na}$, $\ce{K}$ …</td></tr>
+    <tr><td>알칼리 토금속</td><td>대부분 $+2$</td><td class="l">$\ce{Mg}$, $\ce{Ca}$ …</td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> $\ce{NaH}$에서 「$\ce{H}$는 $+1$」과 「$\ce{Na}$는 $+1$」이 부딪친다. 어느 규칙을 먼저 따를까?</p>
+    <p class="f21 step">→ 표의 수소 예외가 바로 이 경우이다. 알칼리 금속 $\ce{Na}$ $+1$, 총합 $0$ → $\ce{H}$ $-1$ (전기음성도가 큰 $\ce{H}$가 전자를 가진다)</p></div>
+</section>
+
+<!-- ════════ 12. ⑦ 규칙으로 산화수 정하기 ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="규칙으로 산화수 정하기">
+  <h2><span class="no">7</span>규칙으로 산화수 정하기</h2>
+  <div class="row"><div class="col stack" style="flex:0 0 760px">
+  <div class="stages c2">
+    <div class="stage"><h3>① 다이크로뮴산 이온 $\ce{Cr2O7^2-}$</h3>
+      <p class="f21">$\ce{O}$는 $-2$, 총합은 이온의 전하 $-2$</p>
+      <p class="f21 step">$2x+7(-2)=-2$</p>
+      <div class="answer step">$x=+6$</div></div>
+    <div class="stage"><h3>② 과망가니즈산 이온 $\ce{MnO4-}$</h3>
+      <p class="f21">$\ce{O}$는 $-2$, 총합은 $-1$</p>
+      <p class="f21 step">$x+4(-2)=-1$</p>
+      <div class="answer step">$x=+7$</div></div>
+  </div>
+  <div class="note mt12 step"><b>순서</b> ① 값이 정해진 원소($\ce{F}$, 알칼리·알칼리 토금속, $\ce{H}$, $\ce{O}$)부터 적는다 → ② 총합 = 0 또는 이온의 전하로 식을 세운다 → ③ 남은 원자의 산화수를 구한다 → ④ 반응식 위에 적어 둔다.</div>
+  <p class="small mt8 step">같은 원소라도 화합물에 따라 산화수가 달라진다: $\ce{Mn}$은 $\ce{MnO4-}$ $+7$, $\ce{MnO2}$ $+4$, $\ce{Mn^2+}$ $+2$.</p>
+  </div><div class="col stack"><div class="board ac331-b"></div></div></div>
+</section>
+
+<!-- ════════ 13. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>밑줄 친 원자의 산화수</h2>
+  <p class="f21">다음 화학종에서 표시한 원자의 산화수를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">(1) $\ce{H2SO4}$의 $\ce{S}$ &nbsp;<span class="step">→ $2(+1)+x+4(-2)=0$, <span class="ans">$+6$</span></span></p>
+      <p class="f21">(2) $\ce{H2O2}$의 $\ce{O}$ &nbsp;<span class="step">→ 과산화물, $2(+1)+2x=0$, <span class="ans">$-1$</span></span></p>
+      <p class="f21">(3) $\ce{OF2}$의 $\ce{O}$ &nbsp;<span class="step">→ $\ce{F}$가 $-1$, $x+2(-1)=0$, <span class="ans">$+2$</span></span></p>
+      <p class="f21">(4) $\ce{Fe3O4}$의 $\ce{Fe}$ &nbsp;<span class="step">→ $3x+4(-2)=0$, <span class="ans">$+\tfrac83$</span></span></p>
+      <p class="small step">(4)는 <b>평균</b> 산화수이다. 실제로는 $\ce{Fe^2+}$ 1개와 $\ce{Fe^3+}$ 2개가 들어 있다($2+3+3=8$). 원자 하나의 산화수는 정수이다.</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 연결: 왜 전하 균형까지 맞춰야 할까 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응 계수 맞추기" data-title="계수 맞추기: 두 가지 균형">
+  <h2><span class="tag alt">연결</span>산화 환원 반응 계수 맞추기 — 두 가지 균형</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">반응식의 계수는 「원자 수가 같게」 맞추었다. 산화 환원 반응에서는 전자가 생기거나 없어지지 않고 주고받으며 보존되므로 하나를 더 살펴야 한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 오른쪽 위 반응식은 원자 수가 맞는다. 그런데도 맞지 않는 것은?</p>
+        <p class="f21 step">→ 전하: 왼쪽 $+1$, 오른쪽 $+2$. $\ce{Cu}$는 전자 2개를 잃는데 $\ce{Ag+}$ 하나는 전자 1개만 받는다.</p></div>
+      <p class="f21 step" data-g="b2">$\ce{Ag+}$와 $\ce{Ag}$의 계수를 $2$로 → <mark>화학량론적 균형(원자 수)과 전하의 균형</mark>을 함께 맞춘다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 480 420" style="width:460px" aria-label="구리와 은 이온의 반응은 원자 수가 맞아도 전하가 +1과 +2로 다르므로, 은 이온과 은의 계수를 2로 맞추어야 전하 균형도 이룬다"><text class="tex" x="240" y="30" data-tex="\ce{Cu(s) + Ag+(aq) -> Cu^2+(aq) + Ag(s)}" data-size="20" data-anchor="middle"></text><path d="M224 150 L240 86 L256 150 Z" fill="#E8EDF2" stroke="#5B6B7F" stroke-width="2.5" stroke-linejoin="round"/><line x1="91.8" y1="56.5" x2="388.2" y2="103.5" stroke="#16233D" stroke-width="4"/><line x1="91.8" y1="56.5" x2="91.8" y2="82.5" stroke="#5B6B7F" stroke-width="1.5"/><rect x="45.8" y="82.5" width="92" height="34" rx="8" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><text class="tex" x="91.8" y="106.5" data-mix="전하 $+1$" data-size="19" data-anchor="middle"></text><line x1="388.2" y1="103.5" x2="388.2" y2="129.5" stroke="#5B6B7F" stroke-width="1.5"/><rect x="342.2" y="129.5" width="92" height="34" rx="8" fill="#FFFFFF" stroke="#D7263D" stroke-width="2"/><text class="tex" x="388.2" y="153.5" data-mix="전하 $+2$" data-size="19" data-anchor="middle"></text><text class="tex" x="240" y="180" data-mix="계수 전: 전하가 맞지 않음" data-size="19" data-anchor="middle" fill="#D7263D" data-weight="700"></text><g class="step" data-g="b2"><text class="tex" x="240" y="240" data-tex="\ce{Cu(s) + 2Ag+(aq) -> Cu^2+(aq) + 2Ag(s)}" data-size="20" data-anchor="middle"></text></g><g class="step" data-g="b2"><g data-anim="rot" data-o="240,282" data-from="-9" data-dur=".9" data-on="step"><path d="M224 352 L240 288 L256 352 Z" fill="#E8EDF2" stroke="#5B6B7F" stroke-width="2.5" stroke-linejoin="round"/><line x1="90" y1="282" x2="390" y2="282" stroke="#16233D" stroke-width="4"/><line x1="90" y1="282" x2="90" y2="308" stroke="#5B6B7F" stroke-width="1.5"/><rect x="44" y="308" width="92" height="34" rx="8" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="90" y="332" data-mix="전하 $+2$" data-size="19" data-anchor="middle"></text><line x1="390" y1="282" x2="390" y2="308" stroke="#5B6B7F" stroke-width="1.5"/><rect x="344" y="308" width="92" height="34" rx="8" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="390" y="332" data-mix="전하 $+2$" data-size="19" data-anchor="middle"></text><text class="tex" x="240" y="382" data-mix="계수 후: 원자 수·전하 모두 맞음" data-size="19" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text></g></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑧ 반쪽 반응법 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응 계수 맞추기" data-title="반쪽 반응법">
+  <h2><span class="no">8</span>반쪽 반응법</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21"><b>반쪽 반응법</b>: 전체 반응을 산화 반쪽 반응과 환원 반쪽 반응으로 나눈 뒤, 각 반쪽 반응에서 원자 수와 전하를 맞추고 더한다.</p>
+      <div class="formula sm ac331-eq">$\square\ce{Zn(s)} + \square\ce{H3O+(aq) -> }\square\ce{Zn^2+(aq)} + \square\ce{H2(g)} + \square\ce{H2O(l)}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 환원 반쪽 반응에 왜 $2$를 곱할까?</p>
+        <p class="f21 step" data-g="h2">→ $\ce{Zn}$이 잃는 전자는 $2$개, $\ce{H3O+}$ 하나가 얻는 전자는 $1$개 → <span class="ans">전자 수를 같게 하려고 $\times2$</span></p></div>
+      <div class="formula sm ac331-eq step">$\ce{Zn(s) + 2H3O+(aq) -> Zn^2+(aq) + H2(g) + 2H2O(l)}$<div class="unit">균형 전체 반응 — 원자 수 $\ce{Zn}$ 1, $\ce{H}$ 6, $\ce{O}$ 2 · 전하 $+2=+2$</div></div>
+      <p class="small step">핵심: ① 산화 환원 반응은 두 반쪽 반응으로 나누어 쓸 수 있다 ② 반쪽 반응마다 원자와 전하가 보존된다 ③ 한쪽에서 잃은 전자를 다른 쪽이 동시에 얻는다. 화학 전지(Ⅲ-4)를 이해하는 바탕이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 480 350" style="width:460px" aria-label="산화 반쪽 반응에서 아연이 내놓은 전자 두 개를 환원 반쪽 반응의 하이드로늄 이온 두 개가 받는다"><rect x="20" y="20" width="440" height="96" rx="12" fill="#FFF3EC" stroke="#C2410C" stroke-width="2.5"/><text class="tex" x="40" y="52" data-mix="산화 반쪽 반응" data-size="19" data-anchor="start" fill="#C2410C" data-weight="700"></text><text class="tex" x="240" y="94" data-tex="\ce{Zn(s) -> Zn^2+(aq) + 2e-}" data-size="21" data-anchor="middle"></text><rect x="20" y="214" width="440" height="120" rx="12" fill="#ECF6F8" stroke="#0E7490" stroke-width="2.5"/><text class="tex" x="40" y="246" data-mix="환원 반쪽 반응 (× 2)" data-size="19" data-anchor="start" fill="#0E7490" data-weight="700"></text><text class="tex" x="240" y="284" data-tex="\ce{H3O+(aq) + e- -> 1/2 H2(g) + H2O(l)}" data-size="20" data-anchor="middle"></text><g class="step" data-g="h2"><text class="tex" x="240" y="320" data-tex="\ce{2H3O+(aq) + 2e- -> H2(g) + 2H2O(l)}" data-size="20" data-anchor="middle"></text></g><g data-anim="move" data-from="0,-58" data-dur="1.3" data-delay="0" data-rep="loop" data-ease="io"><circle cx="200" cy="166" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="200" y="172" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="move" data-from="0,-58" data-dur="1.3" data-delay="0.2" data-rep="loop" data-ease="io"><circle cx="280" cy="166" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="280" y="172" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-arw="240,118,240,208,minus,3"></g><text class="tex" x="300" y="172" data-mix="전자 $2$개 이동" data-size="19" data-anchor="start" fill="#1F6FD1"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 산화수 변화로 계수 맞추기 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응 계수 맞추기" data-title="산화수 변화로 계수 맞추기">
+  <h2><span class="no">9</span>산화수 변화로 계수 맞추기</h2>
+  <p class="f21">산성 용액: $\ce{MnO4-(aq) + Fe^2+(aq) -> Mn^2+(aq) + Fe^3+(aq)}$ — 산화수의 증가량과 감소량이 같도록 계수를 정한다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="stages c2 ac331-st">
+        <div class="stage"><h3>① 산화수 적기</h3><p class="f21">$\ce{Mn}$ $+7\rightarrow+2$<br>$\ce{Fe}$ $+2\rightarrow+3$</p></div>
+        <div class="stage step"><h3>② 증가 = 감소</h3><p class="f21">$-5$와 $+1$ → $\ce{Fe^2+}$, $\ce{Fe^3+}$ 계수 $5$</p></div>
+        <div class="stage step"><h3>③ O·H 맞추기</h3><p class="f21">$\ce{O}$는 $\ce{H2O}$로, $\ce{H}$는 $\ce{H+}$로</p></div>
+        <div class="stage step"><h3>④ 확인</h3><p class="f21">원자 수, 전하 $+17=+17$</p></div>
+      </div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 500 340" style="width:490px" aria-label="과망가니즈산 이온의 망가니즈 산화수는 +7에서 +2로 5만큼 줄고 철은 +2에서 +3으로 1만큼 늘므로 철의 계수를 5로 맞춘다"><text class="tex" x="70" y="150" data-tex="\ce{MnO4-}" data-size="26" data-anchor="middle"></text><text class="tex" x="140" y="150" data-tex="+" data-size="26" data-anchor="middle"></text><text class="tex" x="205" y="150" data-tex="\ce{Fe^2+}" data-size="26" data-anchor="middle"></text><text class="tex" x="268" y="150" data-tex="\ce{->}" data-size="26" data-anchor="middle"></text><text class="tex" x="330" y="150" data-tex="\ce{Mn^2+}" data-size="26" data-anchor="middle"></text><text class="tex" x="388" y="150" data-tex="+" data-size="26" data-anchor="middle"></text><text class="tex" x="445" y="150" data-tex="\ce{Fe^3+}" data-size="26" data-anchor="middle"></text><text class="tex" x="58" y="112" data-tex="+7" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><text class="tex" x="197" y="194" data-tex="+2" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><text class="tex" x="320" y="112" data-tex="+2" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><text class="tex" x="437" y="194" data-tex="+3" data-size="20" data-anchor="middle" fill="#16233D" data-weight="700"></text><g data-anim="draw" data-dur=".7"><path d="M58 90 L58 66 L320 66 L320 90" fill="none" stroke="#0E7490" stroke-width="3" stroke-linejoin="round"/></g><text class="tex" x="189" y="56" data-mix="$\ce{Mn}$ : $-5$ (전자 5개 얻음, 환원)" data-size="19" data-anchor="middle" fill="#0E7490" data-halo="1" data-weight="700"></text><g data-anim="draw" data-dur=".7" data-delay=".6"><path d="M197 216 L197 240 L437 240 L437 216" fill="none" stroke="#C2410C" stroke-width="3" stroke-linejoin="round"/></g><text class="tex" x="317" y="272" data-mix="$\ce{Fe}$ : $+1$ (전자 1개 잃음, 산화)" data-size="19" data-anchor="middle" fill="#C2410C" data-halo="1" data-weight="700"></text><g class="step" data-g="m3"><text class="tex" x="250" y="322" data-mix="$-5\times1$ 과 $+1\times5$ → $\ce{Fe}$의 계수 $5$" data-size="20" data-anchor="middle" data-weight="700"></text></g></svg></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{MnO4-(aq) + 5Fe^2+(aq) + 8H+(aq) -> Mn^2+(aq) + 5Fe^3+(aq) + 4H2O(l)}$</div>
+</section>
+
+<!-- ════════ 17. ⑩ 02 산화제와 환원제 ════════ -->
+<section class="slide" data-sec="02 · 산화제와 환원제" data-title="산화제와 환원제">
+  <h2><span class="no">10</span>02 산화제와 환원제</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">산화와 환원은 쌍을 이루어 같은 수의 전자를 주고받으며 동시에 일어난다. 그래서 반응에는 전자를 잃는 화학종과 얻는 화학종이 반드시 함께 있다.</p>
+      <table class="ac331-c">
+        <caption class="small">표 Ⅲ-7 산화제와 환원제의 전자 이동과 산화수의 관계</caption>
+        <tr><th>물질</th><th>전자</th><th>산화수</th><th>작용</th></tr>
+        <tr><td class="ac331-crd"><b>산화제</b></td><td>얻음(환원됨)</td><td>감소</td><td>상대를 산화시킴</td></tr>
+        <tr><td class="ac331-cox"><b>환원제</b></td><td>잃음(산화됨)</td><td>증가</td><td>상대를 환원시킴</td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> 「산화제는 산화되는 물질이다」는 옳을까?</p>
+        <p class="f21 step">→ 아니다. 산화제는 상대를 <b>산화시키고</b> 자신은 전자를 얻어 <b>환원된다</b>.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 480 282" style="width:460px" aria-label="환원제는 전자를 잃어 산화되면서 상대를 환원시키고, 산화제는 전자를 얻어 환원되면서 상대를 산화시킨다"><rect x="20" y="60" width="170" height="120" rx="14" fill="#FFF3EC" stroke="#C2410C" stroke-width="3"/><text class="tex" x="105" y="104" data-mix="환원제" data-size="24" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="105" y="138" data-mix="전자를 잃음||(산화됨)" data-size="19" data-anchor="middle"></text><rect x="290" y="60" width="170" height="120" rx="14" fill="#ECF6F8" stroke="#0E7490" stroke-width="3"/><text class="tex" x="375" y="104" data-mix="산화제" data-size="24" data-anchor="middle" fill="#0E7490" data-weight="700"></text><text class="tex" x="375" y="138" data-mix="전자를 얻음||(환원됨)" data-size="19" data-anchor="middle"></text><g data-arw="196,110,284,110,minus,4"></g><g data-anim="move" data-from="-36,0" data-dur="1.2" data-delay="0" data-rep="loop" data-ease="lin"><circle cx="240" cy="88" r="8" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/></g><g data-anim="move" data-from="-36,0" data-dur="1.2" data-delay="0.6" data-rep="loop" data-ease="lin"><circle cx="240" cy="88" r="8" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/></g><text class="tex" x="240" y="148" data-tex="e^-" data-size="20" data-anchor="middle" fill="#1F6FD1"></text><text class="tex" x="105" y="226" data-mix="상대를 환원시킴" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="375" y="226" data-mix="상대를 산화시킴" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text><text class="tex" x="105" y="262" data-mix="산화수 증가" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><text class="tex" x="375" y="262" data-mix="산화수 감소" data-size="19" data-anchor="middle" fill="#5B6B7F"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑪ 표 Ⅲ-8 ════════ -->
+<section class="slide" data-sec="02 · 산화제와 환원제" data-title="산화수로 산화제·환원제 찾기">
+  <h2><span class="no">11</span>산화수로 산화제와 환원제 찾기</h2>
+  <div class="formula sm ac331-ox">$\overset{0}{\ce{Zn}}\ce{(s)} + 2\,\overset{+1}{\ce{H3}}\overset{-2}{\ce{O+}}\ce{(aq) -> }\overset{+2}{\ce{Zn^2+}}\ce{(aq)} + \overset{0}{\ce{H2}}\ce{(g)} + 2\,\overset{+1}{\ce{H2}}\overset{-2}{\ce{O}}\ce{(l)}$</div>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <table class="ac331-c">
+        <caption class="small">표 Ⅲ-8 $\ce{Zn(s)}$과 $\ce{H3O+(aq)}$의 반응에서 산화수와 산화제·환원제</caption>
+        <tr><th>원자</th><th>반응 전</th><th>반응 후</th><th>증감</th><th>산화제·환원제</th></tr>
+        <tr><td>$\ce{Zn}$</td><td>$0$</td><td>$+2$</td><td><span class="blank"><span class="step">$+2$</span></span></td><td><span class="blank"><span class="step">환원제</span></span></td></tr>
+        <tr><td>$\ce{H}$</td><td>$+1$</td><td>$0$</td><td><span class="blank"><span class="step">$-1$</span></span></td><td><span class="blank"><span class="step">산화제</span></span></td></tr>
+        <tr><td>$\ce{O}$</td><td>$-2$</td><td>$-2$</td><td><span class="blank"><span class="step">$0$</span></span></td><td><span class="blank"><span class="step">무관함</span></span></td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> 산화제는 「$\ce{H}$」일까, 「$\ce{H3O+}$」일까?</p>
+        <p class="f21 step">→ 산화제·환원제는 화학종으로 말한다. 환원된 $\ce{H}$가 들어 있는 화학종 $\ce{H3O+}$가 산화제, $\ce{Zn}$이 환원제이다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 460 330" style="width:400px" aria-label="묽은 산에 넣은 아연판 표면에서 수소 기체 기포가 생긴다"><rect x="112" y="130" width="236" height="158" rx="0" fill="#E9F3FB" stroke="none" stroke-width="0"/><line x1="112" y1="130" x2="348" y2="130" stroke="#9FC3DD" stroke-width="1.5"/><rect x="202" y="60" width="56" height="190" rx="4" fill="#AEB7C1" stroke="#6B7480" stroke-width="2.5"/><path d="M110 70 L110 290 L350 290 L350 70" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><g data-anim="move" data-from="0,56.4" data-rep="loop" data-dur="1.2" data-ease="lin"><circle cx="275.4" cy="197.6" r="4.1" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,48.4" data-rep="loop" data-dur="1.3" data-ease="lin"><circle cx="194.9" cy="185" r="4.3" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,52.6" data-rep="loop" data-dur="1.6" data-ease="lin"><circle cx="264.7" cy="209.6" r="6.8" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,40.9" data-rep="loop" data-dur="1.8" data-ease="lin"><circle cx="190.9" cy="197.8" r="6.9" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,51.2" data-rep="loop" data-dur="1.6" data-ease="lin"><circle cx="269" cy="207.8" r="5.7" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,51" data-rep="loop" data-dur="1.2" data-ease="lin"><circle cx="191" cy="214.7" r="5.1" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,55.5" data-rep="loop" data-dur="1.5" data-ease="lin"><circle cx="191.4" cy="204.7" r="5.6" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,55.6" data-rep="loop" data-dur="1.2" data-ease="lin"><circle cx="268.3" cy="187.4" r="4.5" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><g data-anim="move" data-from="0,45.8" data-rep="loop" data-dur="1.9" data-ease="lin"><circle cx="270.3" cy="231.3" r="6.2" fill="#FFFFFF" stroke="#9FC3DD" stroke-width="1.5"/></g><text class="tex" x="230" y="48" data-mix="아연판" data-size="21" data-anchor="middle"></text><text class="tex" x="362" y="200" data-mix="$\ce{H2}$ 기포" data-size="21" data-anchor="start"></text><text class="tex" x="230" y="324" data-mix="묽은 산 ($\ce{H3O+}$)" data-size="21" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 19. ⑫ 세기 경향 ════════ -->
+<section class="slide" data-sec="02 · 강한 산화제와 환원제의 특성" data-title="산화제와 환원제의 세기">
+  <h2><span class="no">12</span>강한 산화제와 환원제의 특성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <ul class="f21 ac331-ul">
+        <li>강한 산화제는 전자를 얻는 성질이 강하고, 강한 환원제는 전자를 내주는 성질이 강하다.</li>
+        <li>같은 원자를 포함하는 화학종에서는 <mark>큰 산화수의 원자를 포함한 화학종이 강한 산화제, 작은 산화수의 원자를 포함한 화학종이 강한 환원제</mark>이다.</li>
+      </ul>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{MnO4-}$는 산화제와 환원제 가운데 무엇으로 쓰일까?</p>
+        <p class="f21 step">→ $\ce{Mn}$이 가장 큰 산화수 $+7$이라 더 늘 수 없고 줄기만 한다 → <span class="ans">강한 산화제</span></p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 산소의 산화수가 $-1$인 $\ce{H2O2}$는?</p>
+        <p class="f21 step">→ $0$($\ce{O2}$)으로 늘 수도, $-2$($\ce{H2O}$)로 줄 수도 있다 → <span class="ans">상대에 따라 산화제도 환원제도 된다</span>. 다음 예제에서는 환원제!</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 490 350" style="width:470px" aria-label="같은 원소를 포함하는 화학종 가운데 산화수가 큰 과망가니즈산 이온이 강한 산화제이고, 중간 산화수의 과산화 수소는 산화제도 환원제도 될 수 있다"><line x1="60" y1="338" x2="60" y2="42" stroke="#5B6B7F" stroke-width="2.5"/><circle cx="60" cy="50" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="46" y="57" data-tex="+7" data-size="19" data-anchor="end"></text><text class="tex" x="76" y="57" data-mix="$\ce{MnO4-}$" data-size="20" data-anchor="start"></text><circle cx="60" cy="170" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="46" y="177" data-tex="+4" data-size="19" data-anchor="end"></text><text class="tex" x="76" y="177" data-mix="$\ce{MnO2}$" data-size="20" data-anchor="start"></text><circle cx="60" cy="250" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="46" y="257" data-tex="+2" data-size="19" data-anchor="end"></text><text class="tex" x="76" y="257" data-mix="$\ce{Mn^2+}$" data-size="20" data-anchor="start"></text><circle cx="60" cy="330" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="46" y="337" data-tex="0" data-size="19" data-anchor="end"></text><text class="tex" x="76" y="337" data-mix="$\ce{Mn}$" data-size="20" data-anchor="start"></text><text class="tex" x="60" y="24" data-mix="$\ce{Mn}$의 산화수" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><line x1="300" y1="338" x2="300" y2="42" stroke="#5B6B7F" stroke-width="2.5"/><circle cx="300" cy="50" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="286" y="57" data-tex="0" data-size="19" data-anchor="end"></text><text class="tex" x="316" y="57" data-mix="$\ce{O2}$" data-size="20" data-anchor="start"></text><circle cx="300" cy="190" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="286" y="197" data-tex="-1" data-size="19" data-anchor="end"></text><text class="tex" x="316" y="197" data-mix="$\ce{H2O2}$" data-size="20" data-anchor="start"></text><circle cx="300" cy="330" r="6" fill="#FFFFFF" stroke="#16233D" stroke-width="2"/><text class="tex" x="286" y="337" data-tex="-2" data-size="19" data-anchor="end"></text><text class="tex" x="316" y="337" data-mix="$\ce{H2O}$" data-size="20" data-anchor="start"></text><text class="tex" x="300" y="24" data-mix="$\ce{O}$의 산화수" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="draw" data-dur=".8"><line x1="200" y1="70" x2="200" y2="320" stroke="#5B6B7F" stroke-width="3" stroke-dasharray="8 6"/></g><text class="tex" x="212" y="110" data-mix="강한||산화제" data-size="19" data-anchor="start" fill="#0E7490" data-weight="700"></text><text class="tex" x="212" y="280" data-mix="강한||환원제" data-size="19" data-anchor="start" fill="#C2410C" data-weight="700"></text><g data-anim="pop" data-o="432,182" data-delay=".6"><rect x="386" y="165" width="92" height="34" rx="8" fill="#F3EEFB" stroke="#7B4FC8" stroke-width="2"/><text class="tex" x="432" y="188" data-mix="둘 다" data-size="19" data-anchor="middle" fill="#7B4FC8" data-weight="700"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 예제 Ⅲ-9 (1) ════════ -->
+<section class="slide" data-sec="02 · 예제" data-title="예제 Ⅲ-9 (1)">
+  <h2><span class="tag ex">예제 Ⅲ-9</span>산성 용액에서 반응식 완성하기 (1)</h2>
+  <p class="f21">산성 용액에서 다음 반응의 균형 반응식을 완성하고, 산화제와 환원제를 구분하여라. &nbsp; $\ce{MnO4-(aq) + H2O2(aq) -> Mn^2+(aq) + O2(g)}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>풀이 1</b> 산성 용액에서는 $\ce{H2O}$와 $\ce{H+}$를 써서 맞춘다. 두 반쪽으로 나눈다.<br>&nbsp; 환원 반쪽: $\ce{MnO4-(aq) -> Mn^2+(aq)}$ &nbsp;&nbsp; 산화 반쪽: $\ce{H2O2(aq) -> O2(g)}$</p>
+      <p class="f21 step"><b>풀이 2</b> $\ce{O}$는 $\ce{H2O}$로, $\ce{H}$는 $\ce{H+}$로, 전하는 $\ce{e-}$로 맞춘다.</p>
+      <div class="formula sm ac331-eq step">$\ce{MnO4-(aq) + 8H+(aq) + 5e- -> Mn^2+(aq) + 4H2O(l)}$<div class="unit">전하: $-1+8-5=+2$ ✓</div></div>
+      <div class="formula sm ac331-eq step">$\ce{H2O2(aq) -> O2(g) + 2H+(aq) + 2e-}$<div class="unit">전하: $0=+2-2$ ✓</div></div>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. 예제 Ⅲ-9 (2) ════════ -->
+<section class="slide" data-sec="02 · 예제" data-title="예제 Ⅲ-9 (2)">
+  <h2><span class="tag ex">예제 Ⅲ-9</span>산성 용액에서 반응식 완성하기 (2)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">환원 반쪽은 전자 $5$개를 얻고, 산화 반쪽은 $2$개를 잃는다.</p>
+      <p class="f21 step">전하 균형: 환원 반쪽 $\times2$, 산화 반쪽 $\times5$ → 전자 $10$개씩</p>
+      <p class="f21 step">더하면 $\ce{2MnO4- + 16H+ + 5H2O2 -> 2Mn^2+ + 8H2O + 5O2 + 10H+}$ → 양쪽의 $\ce{H+}$를 정리</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 460 244" style="width:440px" aria-label="환원 반쪽 반응 두 번이 얻는 전자 10개와 산화 반쪽 반응 다섯 번이 잃는 전자 10개가 같다"><text class="tex" x="20" y="36" data-mix="환원 반쪽 $\times2$ : 얻은 전자" data-size="19" data-anchor="start" fill="#0E7490"></text><g data-anim="fade" data-delay="0" data-dur=".4"><rect x="30" y="48" width="196" height="40" rx="6" fill="#ECF6F8" stroke="#0E7490" stroke-width="2"/><text class="tex" x="130" y="75" data-tex="5e^-" data-size="19" data-anchor="middle"></text></g><g data-anim="fade" data-delay="0.3" data-dur=".4"><rect x="230" y="48" width="196" height="40" rx="6" fill="#ECF6F8" stroke="#0E7490" stroke-width="2"/><text class="tex" x="330" y="75" data-tex="5e^-" data-size="19" data-anchor="middle"></text></g><text class="tex" x="20" y="132" data-mix="산화 반쪽 $\times5$ : 잃은 전자" data-size="19" data-anchor="start" fill="#C2410C"></text><g data-anim="fade" data-delay="0.6" data-dur=".4"><rect x="30" y="144" width="76" height="40" rx="6" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="70" y="171" data-tex="2e^-" data-size="19" data-anchor="middle"></text></g><g data-anim="fade" data-delay="0.8" data-dur=".4"><rect x="110" y="144" width="76" height="40" rx="6" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="150" y="171" data-tex="2e^-" data-size="19" data-anchor="middle"></text></g><g data-anim="fade" data-delay="1" data-dur=".4"><rect x="190" y="144" width="76" height="40" rx="6" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="230" y="171" data-tex="2e^-" data-size="19" data-anchor="middle"></text></g><g data-anim="fade" data-delay="1.2" data-dur=".4"><rect x="270" y="144" width="76" height="40" rx="6" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="310" y="171" data-tex="2e^-" data-size="19" data-anchor="middle"></text></g><g data-anim="fade" data-delay="1.4" data-dur=".4"><rect x="350" y="144" width="76" height="40" rx="6" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="390" y="171" data-tex="2e^-" data-size="19" data-anchor="middle"></text></g><text class="tex" x="230" y="226" data-mix="$2\times5=5\times2=10$ 개" data-size="21" data-anchor="middle" data-weight="700"></text></svg></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{2MnO4-(aq) + 6H+(aq) + 5H2O2(aq) -> 2Mn^2+(aq) + 8H2O(l) + 5O2(g)}$<div class="unit">$\ce{Mn}$ 2, $\ce{O}$ 18, $\ce{H}$ 16 · 전하 $+4=+4$</div></div>
+  <div class="answer step">산화제 $\ce{MnO4-}$ ($\ce{Mn}$ $+7\rightarrow+2$), 환원제 $\ce{H2O2}$ ($\ce{O}$ $-1\rightarrow0$)</div>
+</section>
+
+<!-- ════════ 22. ⑬ [보충] 염기성 용액 ════════ -->
+<section class="slide" data-sec="02 · 산화 환원 반응 계수 맞추기" data-title="[보충] 염기성 용액">
+  <h2><span class="no">13</span>염기성 용액에서 맞추기 <span class="small c-muted">[보충]</span></h2>
+  <p class="f21">염기성 용액에는 $\ce{H+}$가 거의 없다. 산성처럼 맞춘 뒤 남은 $\ce{H+}$ 수만큼 $\ce{OH-}$를 양쪽에 더해 $\ce{H2O}$로 바꾼다. &nbsp; 예: $\ce{MnO4- + I- -> MnO2 + IO3-}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step" data-g="hx1">환원 반쪽($\times2$): $\ce{MnO4- + 4H+ + 3e- -> MnO2 + 2H2O}$</p>
+      <p class="f21 step" data-g="hx1">산화 반쪽: $\ce{I- + 3H2O -> IO3- + 6H+ + 6e-}$</p>
+      <p class="f21 step">더해 정리(산성 꼴): $\ce{2MnO4- + I- + 2H+ -> 2MnO2 + IO3- + H2O}$</p>
+      <p class="f21 step">양쪽에 $\ce{2OH-}$를 더하면 왼쪽 $\ce{2H+ + 2OH- -> 2H2O}$</p>
+    </div>
+    <div class="col stack"><div class="note small">교과서 본문은 산성 용액의 반쪽 반응법까지 다룬다. 이 장은 성취기준 해설(산성과 염기성 용액)을 따라 덧붙인 [보충]이다.</div><div class="board"></div></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{2MnO4-(aq) + I-(aq) + H2O(l) -> 2MnO2(s) + IO3-(aq) + 2OH-(aq)}$<div class="unit">$\ce{Mn}$ 2, $\ce{I}$ 1, $\ce{O}$ 9, $\ce{H}$ 2 · 전하 $-3=-3$</div></div>
+</section>
+
+<!-- ════════ 23. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>과망가니즈산 칼륨과 염산</h2>
+  <p class="f21">$\ce{2KMnO4 + 16HCl -> 2KCl + 2MnCl2 + 5Cl2 + 8H2O}$에서 산화수가 변하는 원소와 그 변화를 쓰고, 산화제와 환원제를 고르시오. 또 $\ce{HCl}$ 16개 가운데 환원제로 작용한 것은 몇 개인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$\ce{Mn}$: $+7\rightarrow+2$ (환원) &nbsp; $\ce{Cl}$: $-1\rightarrow0$ (산화) &nbsp; $\ce{K}$, $\ce{H}$, $\ce{O}$는 변하지 않음</p>
+      <p class="f21 step">산화제 $\ce{KMnO4}$, 환원제 $\ce{HCl}$</p>
+      <p class="f21 step">$\ce{Mn}$ $2$개가 $5$개씩 → 전자 $10$개를 얻음 = $\ce{Cl}$ $10$개가 $1$개씩 잃음($\ce{5Cl2}$)</p>
+      <div class="answer step">$16$개 중 $10$개 — 나머지 $6$개는 $\ce{KCl}$·$\ce{MnCl2}$의 $\ce{Cl-}$로 남는다(산으로 작용)</div>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 탐구 활동 (지시) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 응용 기술 조사">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 산화 환원 반응의 응용 기술이 적용된 분야 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">철이 녹스는 과정, 식물의 광합성, 산소로 하는 세포 호흡처럼 매우 많은 산화 환원 반응이 우리 삶을 떠받친다. 그 반응을 응용한 기술 가운데 하나가 화학 전지이다.</p>
+      <h3>과정</h3>
+      <ol class="f21 ac331-ol">
+        <li>모둠별로 응용 기술을 <b>적용 분야별</b>로 조사한다.</li>
+        <li>각 기술에 쓰이는 산화 환원 반응식을 찾고, 산화수 변화로 <b>산화제와 환원제</b>를 표시한다.</li>
+        <li>그 반응이 왜 그 기술에 알맞은지 <b>토론</b>한 뒤 <b>발표</b>한다.</li>
+      </ol>
+      <p class="small">조사 자료는 출처를 적는다. 반응식은 원자 수와 전하가 맞는지 확인한 뒤 발표 자료에 넣는다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 480 360" style="width:450px" aria-label="산화 환원 반응의 응용 분야: 에너지, 금속 제련, 부식과 방지, 생명 현상, 분석과 측정, 표백과 소독"><rect x="148" y="150" width="184" height="60" rx="30" fill="#FFF3EC" stroke="#C2410C" stroke-width="3"/><text class="tex" x="240" y="188" data-mix="산화 환원 반응" data-size="21" data-anchor="middle" fill="#C2410C" data-weight="700"></text><line x1="240" y1="150" x2="240" y2="70" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="pop" data-o="240,52" data-delay="0.2"><rect x="178" y="32" width="124" height="40" rx="20" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="240" y="59" data-mix="에너지" data-size="19" data-anchor="middle"></text></g><line x1="315.7" y1="165" x2="368.2" y2="125" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="pop" data-o="413.2,116" data-delay="0.4"><rect x="351.2" y="96" width="124" height="40" rx="20" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="413.2" y="123" data-mix="금속 제련" data-size="19" data-anchor="middle"></text></g><line x1="315.7" y1="195" x2="368.2" y2="235" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="pop" data-o="413.2,244" data-delay="0.6"><rect x="351.2" y="224" width="124" height="40" rx="20" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="413.2" y="251" data-mix="부식과 방지" data-size="19" data-anchor="middle"></text></g><line x1="240" y1="210" x2="240" y2="290" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="pop" data-o="240,308" data-delay="0.8"><rect x="178" y="288" width="124" height="40" rx="20" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="240" y="315" data-mix="생명 현상" data-size="19" data-anchor="middle"></text></g><line x1="164.3" y1="195" x2="111.8" y2="235" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="pop" data-o="66.8,244" data-delay="1"><rect x="4.8" y="224" width="124" height="40" rx="20" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="66.8" y="251" data-mix="분석·측정" data-size="19" data-anchor="middle"></text></g><line x1="164.3" y1="165" x2="111.8" y2="125" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><g data-anim="pop" data-o="66.8,116" data-delay="1.2"><rect x="4.8" y="96" width="124" height="40" rx="20" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="66.8" y="123" data-mix="표백·소독" data-size="19" data-anchor="middle"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 탐구 활동 (예시 결과) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 예시 결과">
+  <h2><span class="tag">탐구 활동</span>조사 결과 예시</h2>
+  <table class="ac331-c ac331-sm">
+    <tr><th>분야</th><th>기술</th><th>산화 환원 반응</th><th>환원제 → 산화제</th></tr>
+    <tr><td>에너지</td><td class="l">알칼리 전지</td><td class="l">$\ce{Zn + MnO2 + H2O -> ZnO + Mn(OH)2}$</td><td class="step">$\ce{Zn}$ → $\ce{MnO2}$</td></tr>
+    <tr><td>에너지</td><td class="l">수소 연료 전지</td><td class="l">$\ce{2H2 + O2 -> 2H2O}$</td><td class="step">$\ce{H2}$ → $\ce{O2}$</td></tr>
+    <tr><td>금속 제련</td><td class="l">용광로 제철</td><td class="l">$\ce{Fe2O3 + 3CO -> 2Fe + 3CO2}$</td><td class="step">$\ce{CO}$ → $\ce{Fe2O3}$</td></tr>
+    <tr><td>부식과 방지</td><td class="l">철의 부식, 아연 도금</td><td class="l">$\ce{2Fe + O2 + 2H2O -> 2Fe(OH)2}$ (아연이 먼저 산화되어 철을 보호)</td><td class="step">$\ce{Fe}$ → $\ce{O2}$</td></tr>
+    <tr><td>생명 현상</td><td class="l">세포 호흡</td><td class="l">$\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O}$ (광합성은 역방향)</td><td class="step">$\ce{C6H12O6}$ → $\ce{O2}$</td></tr>
+    <tr><td>분석·측정</td><td class="l">음주 측정기</td><td class="l">$\ce{2Cr2O7^2- + 3C2H5OH + 16H+ -> 4Cr^3+ + 3CH3COOH + 11H2O}$</td><td class="step">$\ce{C2H5OH}$ → $\ce{Cr2O7^2-}$</td></tr>
+  </table>
+  <p class="f21 mt12 step"><b>토론 정리 예</b> 전지는 환원제((−)극 물질)와 산화제((+)극 물질)를 떼어 놓고 전자를 도선으로 흐르게 한 장치이다. 산화수 변화를 따라가면 어느 물질이 전자를 내주는지 바로 알 수 있다.</p>
+</section>
+
+<!-- ════════ 26. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>산화와 환원의 정의</h2>
+  <p class="f21">전자의 이동과 산화수 변화로 산화와 환원을 정의하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <div class="answer step"><b>산화</b>: 전자를 잃는 반응 = 산화수가 증가하는 반응</div>
+      <div class="answer step"><b>환원</b>: 전자를 얻는 반응 = 산화수가 감소하는 반응</div>
+      <p class="f21 step">산화와 환원은 같은 수의 전자를 주고받으며 동시에 일어난다(표 Ⅲ-5).</p>
+      <p class="small step">채점 요소(덱): ① 전자의 이동 ② 산화수의 변화 — 산화·환원 각각 두 관점을 모두 쓰면 완전한 답이다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 420 366" style="width:380px" aria-label="산화수 수직선에서 수소는 0에서 +1로 올라가 산화되고 구리는 +2에서 0으로 내려가 환원된다"><line x1="120" y1="340" x2="120" y2="56" stroke="#5B6B7F" stroke-width="2.5"/><line x1="112" y1="320" x2="128" y2="320" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="327" data-tex="-2" data-size="20" data-anchor="end"></text><line x1="112" y1="260" x2="128" y2="260" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="267" data-tex="-1" data-size="20" data-anchor="end"></text><line x1="112" y1="200" x2="128" y2="200" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="207" data-tex="0" data-size="20" data-anchor="end"></text><line x1="112" y1="140" x2="128" y2="140" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="147" data-tex="+1" data-size="20" data-anchor="end"></text><line x1="112" y1="80" x2="128" y2="80" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="102" y="87" data-tex="+2" data-size="20" data-anchor="end"></text><text class="tex" x="120" y="44" data-mix="산화수" data-size="19" data-anchor="middle" fill="#5B6B7F"></text><g data-anim="draw" data-dur=".6"><g data-arw="154,200,154,140,ox,4"></g></g><text class="tex" x="212" y="177" data-mix="$\ce{H}$ $0\rightarrow+1$ 산화" data-size="19" data-anchor="start" fill="#C2410C" data-weight="700"></text><g data-anim="draw" data-dur=".8" data-delay=".6"><g data-arw="190,80,190,200,rd,4"></g></g><text class="tex" x="212" y="111" data-mix="$\ce{Cu}$ $+2\rightarrow0$ 환원" data-size="19" data-anchor="start" fill="#0E7490" data-weight="700"></text><text class="tex" x="160" y="308" data-mix="증가 = 전자 잃음||감소 = 전자 얻음" data-size="19" data-anchor="start" fill="#5B6B7F"></text></svg><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 2 (1) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2 (1)">
+  <h2><span class="tag q">연습 문제 2</span>산성 용액에서 반응식 완성 (1)</h2>
+  <p class="f21">산성 용액에서 균형 반응식을 완성하고, 산화제와 환원제를 구분하여라. &nbsp; 1) $\ce{O2(g) + NO(g) -> NO3-(aq)}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">산화수: $\ce{O}$ $0\rightarrow-2$ (환원), $\ce{N}$ $+2\rightarrow+5$ (산화)</p>
+      <p class="f21 step" data-g="hx2">환원($\times3$): $\ce{O2 + 4H+ + 4e- -> 2H2O}$</p>
+      <p class="f21 step" data-g="hx2">산화($\times4$): $\ce{NO + 2H2O -> NO3- + 4H+ + 3e-}$</p>
+      <p class="f21 step">전자 $12$개씩 → 더하고 $\ce{H2O}$·$\ce{H+}$ 정리</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{3O2(g) + 4NO(g) + 2H2O(l) -> 4NO3-(aq) + 4H+(aq)}$<div class="unit">$\ce{O}$ 12, $\ce{N}$ 4, $\ce{H}$ 4 · 전하 $0=0$</div></div>
+  <div class="answer step">산화제 $\ce{O2}$, 환원제 $\ce{NO}$</div>
+</section>
+
+<!-- ════════ 28. 연습 문제 2 (2) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2 (2)">
+  <h2><span class="tag q">연습 문제 2</span>산성 용액에서 반응식 완성 (2)</h2>
+  <p class="f21">산성 용액에서 균형 반응식을 완성하고, 산화제와 환원제를 구분하여라. &nbsp; 2) $\ce{CrO4^2-(aq) + N2O(g) -> Cr^3+(aq) + NO(g)}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">산화수: $\ce{Cr}$ $+6\rightarrow+3$ (환원), $\ce{N}$ $+1\rightarrow+2$ (산화)</p>
+      <p class="f21 step" data-g="hx3">환원($\times2$): $\ce{CrO4^2- + 8H+ + 3e- -> Cr^3+ + 4H2O}$</p>
+      <p class="f21 step" data-g="hx3">산화($\times3$): $\ce{N2O + H2O -> 2NO + 2H+ + 2e-}$</p>
+      <p class="f21 step">전자 $6$개씩 → 더하고 정리</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{2CrO4^2-(aq) + 3N2O(g) + 10H+(aq) -> 2Cr^3+(aq) + 6NO(g) + 5H2O(l)}$<div class="unit">$\ce{Cr}$ 2, $\ce{O}$ 11, $\ce{N}$ 6, $\ce{H}$ 10 · 전하 $+6=+6$</div></div>
+  <div class="answer step">산화제 $\ce{CrO4^2-}$, 환원제 $\ce{N2O}$</div>
+</section>
+
+<!-- ════════ 29. 연습 문제 3 (1) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3 (1)">
+  <h2><span class="tag q">연습 문제 3</span>알칼리 전지의 반쪽 반응 (1)</h2>
+  <p class="f21">알칼리 전지 반응: $\ce{Zn(s) + MnO2(s) + H2O(l) -> ZnO(s) + Mn(OH)2(s)}$<br>1) 산화 반쪽 반응과 환원 반쪽 반응에서 반응물 $1\ \text{mol}$당 전자의 몰수비는 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">산화수: $\ce{Zn}$ $0\rightarrow+2$, $\ce{Mn}$ $+4\rightarrow+2$</p>
+      <p class="f21 step">산화 반쪽: $\ce{Zn(s) + H2O(l) -> ZnO(s) + 2H+(aq) + 2e-}$</p>
+      <p class="f21 step">환원 반쪽: $\ce{2H+(aq) + MnO2(s) + 2e- -> Mn(OH)2(s)}$</p>
+      <div class="answer step">반응물 $1\ \text{mol}$당 전자 $2\ \text{mol}$ — 몰수비 $2$</div>
+      <p class="small step">$\ce{Zn}$ $1\ \text{mol}$이 잃는 전자 $2\ \text{mol}$을 $\ce{MnO2}$ $1\ \text{mol}$이 얻는다 → 두 반쪽 반응의 전자 수가 같다($1:1$).</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 470 360" style="width:400px" aria-label="알칼리 전지 단면: 가운데 아연 가루가 산화되고 바깥쪽 이산화 망가니즈가 환원된다"><rect x="130" y="56" width="200" height="284" rx="14" fill="#D9DEE4" stroke="#6B7480" stroke-width="3"/><rect x="200" y="40" width="60" height="18" rx="4" fill="#B7C0C9" stroke="#6B7480" stroke-width="2.5"/><rect x="144" y="70" width="172" height="256" rx="8" fill="#5A5A5A" stroke="#3B3B3B" stroke-width="2"/><rect x="170" y="88" width="120" height="218" rx="6" fill="#F1F3F5" stroke="#9FA7B0" stroke-width="2"/><circle cx="225.4" cy="208.4" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="270.7" cy="190.5" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="230.8" cy="213.6" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="199.7" cy="199.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="242.5" cy="252.7" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="191" cy="159.6" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="190.7" cy="255.8" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="248.6" cy="110" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="276.3" cy="285.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="244.8" cy="219" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="197.1" cy="104.9" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="232.7" cy="113.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="200.3" cy="148" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="184.9" cy="190.1" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="224.3" cy="262.1" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="231.8" cy="223.7" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="230" cy="227.9" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="225.9" cy="154.9" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="277.8" cy="291.2" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="262.7" cy="236.5" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="212.3" cy="145.6" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="209.7" cy="115.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="255.6" cy="178.1" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="263.3" cy="175.4" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="274" cy="263" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="182.1" cy="141.8" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="269.4" cy="191.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="276.1" cy="177.5" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="189" cy="221.6" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="256.7" cy="153.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="190.4" cy="165.2" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="274.6" cy="246" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="193.3" cy="148.8" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="191.7" cy="113.4" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="258.5" cy="135.8" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="235.7" cy="187" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="200.3" cy="241.1" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="194.6" cy="224.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="193.2" cy="181.9" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><circle cx="202.4" cy="153.3" r="3.2" fill="#C9D0D8" stroke="#7E8B98" stroke-width="1"/><line x1="230" y1="110" x2="230" y2="300" stroke="#8C6D3F" stroke-width="4"/><text class="tex" x="346" y="52" data-mix="(+)극" data-size="19" data-anchor="start" fill="#16233D" data-weight="700"></text><text class="tex" x="346" y="346" data-mix="(−)극" data-size="19" data-anchor="start" fill="#16233D" data-weight="700"></text><line x1="316" y1="130" x2="344" y2="130" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="348" y="137" data-mix="$\ce{MnO2}$ (환원)" data-size="19" data-anchor="start" fill="#0E7490"></text><line x1="260" y1="210" x2="344" y2="210" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="348" y="217" data-mix="$\ce{Zn}$ 가루 (산화)" data-size="19" data-anchor="start" fill="#C2410C"></text><line x1="170" y1="280" x2="116" y2="280" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="112" y="287" data-mix="분리막" data-size="19" data-anchor="end"></text><line x1="148" y1="160" x2="116" y2="160" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="112" y="167" data-mix="전해질||$\ce{KOH}$" data-size="19" data-anchor="end"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 연습 문제 3 (2) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3 (2)">
+  <h2><span class="tag q">연습 문제 3</span>알칼리 전지의 양적 관계 (2)</h2>
+  <p class="f21">2) 아연 $9.00\ \text{g}$이 반응하였을 때 이산화 망가니즈와 물의 소모량은 각각 몇 g인가? (단, $\ce{Zn}$과 $\ce{MnO2}$의 화학식량은 각각 $65.41$, $86.94$이다.)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">계수비 $\ce{Zn} : \ce{MnO2} : \ce{H2O}=1:1:1$</p>
+      <p class="f21 step">$n_{\ce{Zn}}=\dfrac{9.00\ \text{g}}{65.41\ \text{g/mol}}=0.1376\ \text{mol}$</p>
+      <p class="f21 step">$\ce{MnO2}$: $0.1376\ \text{mol}\times86.94\ \text{g/mol}=12.0\ \text{g}$</p>
+      <p class="f21 step">$\ce{H2O}$: $0.1376\ \text{mol}\times18.02\ \text{g/mol}=2.48\ \text{g}$</p>
+      <div class="answer step">이산화 망가니즈 $12.0\ \text{g}$, 물 $2.48\ \text{g}$</div>
+      <p class="small step">교과서 풀이는 몰수를 $0.138\ \text{mol}$로 반올림한 뒤 곱해 $12.00\ \text{g}$, $2.49\ \text{g}$이다. 중간값을 반올림하지 않으면 위 값이 된다($\ce{H2O}$ 화학식량 $18.02$).</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 31. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>3. 산화 환원 반응 — 01 산화수 개념 · 02 산화제와 환원제</h2>
+  <div class="ac331-map">
+    <div class="ac331-node ac331-dim">Ⅲ-2<br>$\Delta G&lt;0$<br>자발적 반응</div>
+    <div class="ac331-arr">→</div>
+    <div class="ac331-node ac331-main"><b>01 산화수 개념 · 02 산화제와 환원제</b><br>❶ 산화수: 전기음성도가 큰 원자가 공유 전자를 <span class="blank"><span class="step">완전히 차지</span></span>한다고 가정한 가상의 전하 (형식 전하는 <span class="blank"><span class="step">공평하게 나눔</span></span>)<br>❷ 산화 = 전자 <span class="blank"><span class="step">잃음</span></span> = 산화수 <span class="blank"><span class="step">증가</span></span> · 환원 = 전자 얻음 = 산화수 감소<br>❸ 다원자 이온의 산화수 총합 = <span class="blank"><span class="step">이온의 전하</span></span>, $\ce{O}$ 보통 $-2$ (과산화물 <span class="blank"><span class="step">$-1$</span></span>)<br>❹ 반쪽 반응법: 반쪽마다 원자 수와 <span class="blank"><span class="step">전하</span></span>를 맞추고, 잃은 전자 수 = 얻은 전자 수<br>❺ 산화제는 자신이 <span class="blank"><span class="step">환원</span></span>되며 상대를 산화시킨다 · 큰 산화수 화학종 → 강한 <span class="blank"><span class="step">산화제</span></span></div>
+    <div class="ac331-arr">→</div>
+    <div class="ac331-node ac331-dim">Ⅲ-4 화학 전지<br>반쪽 전지·전극 반응<br>$\Delta G^\circ=-nFE^\circ$</div>
+  </div>
+</section>
+
+<!-- ════════ 32. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 산화수의 정의를 형식 전하와 비교하여 설명하고, 산화제와 환원제를 구분할 수 있다.</button>
+    <button class="chk">[과정·기능] 산화수 규칙과 반쪽 반응법으로 산성 용액의 산화 환원 반응식을 완성했다.</button>
+    <button class="chk">[가치·태도] 모둠 조사에서 산화 환원 반응의 응용 기술을 찾아 근거를 들어 토론하고 발표했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{SO4^2-}$에서 $\ce{S}$의 산화수는? <span class="step">→ <span class="ans">$+6$</span> ($x+4(-2)=-2$)</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{Cu + 2Ag+ -> Cu^2+ + 2Ag}$에서 환원제는? <span class="step">→ <span class="ans">$\ce{Cu}$</span> (산화수 $0\rightarrow+2$, 전자를 내줌)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 산화 반쪽 반응과 환원 반쪽 반응을 서로 다른 전극에서 따로 일어나게 하면? — Ⅲ-4 화학 전지</div>
+</section>

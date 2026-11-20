@@ -1,0 +1,471 @@
+<!-- 고급화학 2-1-1a 기체 분자 운동론 — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 1. 기체 분자 › 01</div>
+    <h1 class="ac211-h1">기체 분자 운동론과<br>실제 기체·혼합 기체 <span class="acc">(1)</span></h1>
+    <p class="sub">기체 분자 운동론 — 보이지 않는 분자의 운동으로 압력과 온도를 설명하기</p>
+    <p class="meta">고등학교 고급 화학 72–79쪽</p>
+  </div>
+  {{COVER_A}}
+</section>
+
+<!-- ════════ 2. 대단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 도입" data-title="대단원 도입">
+  <h2><span class="tag">대단원 도입</span>Ⅱ. 물질의 성질</h2>
+  <div class="std"><span class="code">단원 안내</span>물질의 상태는 분자의 열운동과 분자 사이의 상호 작용으로 정해진다. 기체는 분자 사이의 상호 작용이 작고 운동 에너지가 커서 이상 기체 방정식으로 설명할 수 있지만, 액체와 고체는 분자의 크기와 상호 작용을 무시할 수 없다. 기체·액체·고체의 특성을 분자 수준에서 이해하고, 용액의 농도·용해도·증기 압력 등 용액의 성질을 설명해 보자.</div>
+  <div class="ac211-units mt16">
+    <div class="card ac211-now"><h3>1. 기체 분자 <span class="small c-plus">← 오늘</span></h3><p class="small">74–84쪽</p></div>
+    <div class="card"><h3>2. 액체 분자</h3><p class="small">85–96쪽</p></div>
+    <div class="card"><h3>3. 고체</h3><p class="small">97–104쪽</p></div>
+    <div class="card"><h3>4. 용액의 성질</h3><p class="small">105–117쪽</p></div>
+  </div>
+  <div class="note puzzle mt16"><b>생각해 보기</b> 천연가스는 액체로 바꾸면 부피가 약 600분의 1로 줄어 배로 실어 나른다. 같은 물질이 기체일 때와 액체일 때 분자는 어떻게 다를까?</div>
+</section>
+
+<!-- ════════ 3. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅱ-1. 기체 분자 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>1. 기체 분자</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 기체 분자 운동론 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 실제 기체와 혼합 기체 <span class="small">(다음 시간)</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">거시적인 기체 법칙을 기체 분자 운동론과 속력 분포로 설명하여, 분자 수준에서 기체의 온도·압력·부피 사이의 관계를 이해한다. 반데르발스 상태 방정식으로 이상 기체와 실제 기체의 차이를, 혼합 기체에서 부분 압력과 몰분율의 관계를 알아본다.</p>
+      </div>
+    </div>
+    <div class="col">{{ATM}}<p class="small">대기의 기체는 생명 현상에 필요한 물질을 주고 우주 방사선을 막으며, 기체의 압력 변화는 바람과 날씨로 나타난다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 4. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화02-01]</span>기체의 온도, 압력, 부피 사이의 관계를 기체 분자 운동론으로 이해하고, 온도에 따른 기체 분자의 속력 분포 변화를 예측할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화02-02]</span>이상 기체 방정식을 이해하고, 혼합 기체의 부분 압력과 몰 분율의 관계를 설명할 수 있다.</div>
+  <ol class="goals mt8 f22">
+    <li>기체 분자 운동론의 가정으로 압력을 유도하고, 온도·압력·부피의 관계를 분자 운동으로 설명할 수 있다.</li>
+    <li>제곱평균근 속력을 계산하고, 온도와 몰질량에 따른 <b>속력 분포의 변화</b>를 예측할 수 있다.</li>
+    <li>기체 상수를 측정하는 실험을 조사·수행하고, 기체 상숫값을 계산하여 발표할 수 있다.</li>
+  </ol>
+  <h3 class="mt12">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">기본 가정</div><div class="farr">→</div>
+    <div class="fnode">압력 유도</div><div class="farr">→</div>
+    <div class="fnode">$v_\text{rms}$</div><div class="farr">→</div>
+    <div class="fnode">속력 분포</div><div class="farr">→</div>
+    <div class="fnode hl">디지털 탐구</div><div class="farr">→</div>
+    <div class="fnode">기체 상수</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 기체 상수 측정</div>
+  </div>
+</section>
+
+<!-- ════════ 5. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 도입" data-title="생각 열기: 여름철 타이어">
+  <h2><span class="tag">생각 열기</span>여름에 자전거 타이어가 더 팽팽해지는 까닭은?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 460px">{{TIRE}}</div>
+    <div class="col stack">
+      <p class="f22">공기를 같은 양 넣은 타이어도 더운 날에는 압력이 높아진다. 타이어 속 공기 분자에게는 무슨 일이 일어났을까?</p>
+      <div class="card q"><p class="f22"><b>Q</b> 기체의 압력을 분자의 움직임으로 설명하면?</p></div>
+      <div class="answer step">분자가 벽에 부딪히며 미는 힘</div>
+      <p class="f22 step">→ 온도가 높으면 분자가 더 빠르게 움직여 벽에 <b>더 세게, 더 자주</b> 부딪힌다. 이 생각을 식으로 바꾼 것이 <b>기체 분자 운동론</b>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 연결: 기체 법칙 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 도입" data-title="연결: 기체 법칙">
+  <h2><span class="tag alt">연결</span>「물질과 에너지」에서 배운 기체 법칙</h2>
+  <div class="stages mt8">
+    <div class="stage"><h3>보일 법칙</h3><div class="formula sm">$V\propto\dfrac{1}{P}$</div><p>온도·몰수가 일정할 때</p></div>
+    <div class="stage"><h3>샤를 법칙</h3><div class="formula sm">$V\propto T$</div><p>압력·몰수가 일정할 때 ($T$: 절대 온도)</p></div>
+    <div class="stage"><h3>아보가드로 법칙</h3><div class="formula sm">$V\propto n$</div><p>온도·압력이 일정할 때</p></div>
+  </div>
+  <div class="formula mt16">$V=R\left(\dfrac{nT}{P}\right)\ \Longrightarrow\ PV=nRT$</div>
+  <p class="f22 mt12">이 법칙들은 측정으로 얻은 <b>거시적</b> 관계이다.</p>
+  <p class="f22 step" data-q><b>Q</b> 그렇다면 분자 하나하나는 어떻게 움직이기에 이런 관계가 나올까? <span class="small">→ 오늘은 분자의 운동(미시)에서 출발해 이 식에 도착한다.</span></p>
+</section>
+
+<!-- ════════ 7. ① 기체 분자 운동론 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="기체 분자 운동론">
+  <h2><span class="no">1</span>기체 분자 운동론</h2>
+  <p class="f22"><mark>기체 분자 운동론</mark>은 기체 분자들의 미시적인 운동으로 거시적 현상인 기체 법칙을 설명하는 이론이다.</p>
+  <div class="row mt12">
+    <div class="col stack">
+      <div class="card"><h3>발전 과정</h3><p class="f21">18세기 <b>베르누이</b>가 제안 → 19세기 <b>클라우지우스, 맥스웰, 볼츠만</b>이 발전시켰다.</p></div>
+      <div class="card"><h3>쓰임</h3><p class="f21">확산을 이용한 동위원소의 분리, 반응 속도 등 여러 현상을 설명한다.</p></div>
+    </div>
+    <div class="col stack">
+      <div class="card"><h3>압력이란?</h3><p class="f21">기체 분자가 용기 벽에 충돌하여 벽의 넓이 $A$에 작용하는 힘 $F$</p>
+        <div class="formula">$P=\dfrac{F}{A}$</div></div>
+      <p class="f21 step"><b>계획</b> 분자 한 개의 충돌 → 충돌하는 분자 수 → 힘 → 압력 순서로 계산한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ② 기본 가정 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="기본 가정">
+  <h2><span class="no">2</span>기체 분자 운동론의 기본 가정</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">{{ASSUME}}</div>
+    <div class="col">
+      <ol class="ac211-ol f21">
+        <li>분자 사이의 거리가 분자의 크기보다 훨씬 커서, 기체 부피에 비해 <b>분자의 부피는 0</b>으로 본다.</li>
+        <li>분자는 특별한 방향 없이 <b>무질서하게 끊임없이</b> 움직이며, 일정한 속력 분포를 가진다.</li>
+        <li>충돌할 때를 빼면 분자 사이의 <b>인력과 반발력을 무시</b>한다.</li>
+        <li>분자와 용기 벽의 충돌은 <b>완전 탄성 충돌</b>이다.</li>
+      </ol>
+      <p class="f21 mt12 step"><b>Q</b> 이 가정 가운데 실제 기체에서 가장 먼저 맞지 않게 되는 것은? <span class="small">→ 02에서 1과 3을 다시 본다.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. ③ 운동량 변화 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="압력 유도 ① 운동량 변화">
+  <h2><span class="no">3</span>압력 유도 ① 분자 한 개의 운동량 변화</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{MOM}}</div>
+    <div class="col stack">
+      <p class="f22">질량 $m$인 분자가 $x$축 방향 속도 $v_x$로 벽에 수직으로 부딪히면, 완전 탄성 충돌이므로 같은 빠르기로 튀어 나온다.</p>
+      <div class="formula step">$\Delta p=|p_\mathrm{f}-p_\mathrm{i}|=|m(-v_x)-mv_x|=2mv_x$</div>
+      <p class="f21 step">→ 쓴 가정: <b>4. 완전 탄성 충돌</b> (빠르기가 줄지 않음)</p>
+      <p class="small">$p$: 운동량($p=mv$), 아래 첨자 i 처음, f 나중</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. ④ 충돌 수 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="압력 유도 ② 충돌 수">
+  <h2><span class="no">4</span>압력 유도 ② $\Delta t$ 동안 벽에 충돌하는 분자 수</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">{{COLL}}</div>
+    <div class="col stack">
+      <p class="f21">$\Delta t$ 동안 벽까지 올 수 있는 분자는 벽에서 거리 $v_x\Delta t$ 안, 곧 부피 $Av_x\Delta t$ 속에 있다. 용기 부피 $V$, 전체 분자 수 $N$이면</p>
+      <div class="formula sm step">$\text{분자 수}=\dfrac{Av_x\Delta t}{V}\times N$</div>
+      <p class="f21 step">그 가운데 벽 쪽으로 움직이는 분자는 절반이다.</p>
+      <div class="formula sm step">$\text{충돌 수}=\dfrac{NAv_x\Delta t}{2V}$</div>
+      <p class="f21 step">→ 쓴 가정: <b>2. 무질서한 운동</b> (방향이 고르게 섞임)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑤ 힘과 압력 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="압력 유도 ③ 힘과 압력">
+  <h2><span class="no">5</span>압력 유도 ③ 힘과 압력</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">총운동량 변화 $=$ (분자 하나의 $2mv_x$) $\times$ (충돌 수) $=\dfrac{NAv_x\Delta t}{2V}\times2mv_x=\dfrac{NmAv_x^{\,2}\Delta t}{V}$</p>
+      <p class="f21 step">뉴턴 제2법칙: 힘 = 시간에 따른 운동량 변화 $\Rightarrow F=\dfrac{NmAv_x^{\,2}}{V}$</p>
+      <p class="f21 step">$P=\dfrac{F}{A}$이고, 분자마다 속력이 다르므로 $v_x^{\,2}$ 대신 평균값 $\overline{v_x^{\,2}}$를 쓴다.</p>
+      <div class="formula sm step">$P=\dfrac{Nm\overline{v_x^{\,2}}}{V}$</div>
+      <p class="f21 step">3차원에서 $v^2=v_x^{\,2}+v_y^{\,2}+v_z^{\,2}$, 방향이 고르므로 $\overline{v^2}=3\overline{v_x^{\,2}}$ → $\overline{v_x^{\,2}}=\dfrac{1}{3}\overline{v^2}$</p>
+      <div class="formula step">$PV=\dfrac{1}{3}Nm\overline{v^2}$</div>
+    </div>
+    <div class="col">{{VEC}}<p class="small">$\overline{v^2}$: 평균 제곱 속력</p></div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑥ 온도와 운동 에너지 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="이론식과 실험식 비교">
+  <h2><span class="no">6</span>이론식 = 실험식 → 온도의 뜻</h2>
+  <p class="f22">$N$개의 분자 $=n$ mol이므로 $Nm=nM$ ($M$: 몰질량). 분자 운동에서 얻은 식을 실험식 $PV=nRT$와 같게 놓는다.</p>
+  <div class="formula mt8">$PV=\dfrac{1}{3}Nm\overline{v^2}=\dfrac{1}{3}nM\overline{v^2}=nRT$</div>
+  <div class="row mt12">
+    <div class="col stack">
+      <div class="card step" data-g="t1"><h3>평균 제곱 속력</h3><div class="formula sm">$\overline{v^2}=\dfrac{3RT}{M}$</div><p class="f21">온도에 비례, 몰질량에 반비례</p></div>
+    </div>
+    <div class="col stack">
+      <div class="card step" data-g="t2"><h3>기체 1 mol의 평균 운동 에너지</h3><div class="formula sm">$\begin{aligned}E_\mathrm{k}&amp;=\dfrac{1}{2}m\overline{v^2}\times N_\mathrm{A}\\&amp;=\dfrac{1}{2}M\left(\dfrac{3RT}{M}\right)=\dfrac{3}{2}RT\end{aligned}$</div><p class="f21">기체의 종류와 관계없이 <b>온도에만</b> 의존</p></div>
+    </div>
+  </div>
+  <div class="note big mt12 step">절대 온도는 기체 분자의 <b>평균 운동 에너지의 척도</b>이다. <span class="small">(25 °C: $E_\mathrm{k}=\tfrac32\times8.314\times298\approx3.72\times10^{3}\ \text{J/mol}$)</span></div>
+</section>
+
+<!-- ════════ 13. ⑦ 제곱평균근 속력 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="제곱평균근 속력">
+  <h2><span class="no">7</span>제곱평균근 속력 $v_\text{rms}$</h2>
+  <p class="f22">평균 제곱 속력에 제곱근을 취하면 <mark>제곱평균근 속력</mark>을 얻는다. 같은 온도에서 기체 분자의 속력을 비교할 수 있다.</p>
+  <div class="formula mt8">$v_\text{rms}=\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}$<div class="unit">$R=8.314\ \text{J/(mol}\cdot\text{K)}$, $M$: 몰질량 [kg/mol], $T$ [K] → $v_\text{rms}$ [m/s]</div></div>
+  <div class="note mt12"><b>주의</b> $\text{J}=\text{kg}\cdot\text{m}^2/\text{s}^2$이므로 몰질량은 반드시 <b>kg/mol</b>로 넣는다. ($\ce{N2}$: $28.02\ \text{g/mol}=2.802\times10^{-2}\ \text{kg/mol}$)</div>
+  <div class="row mt12">
+    <div class="col"><p class="f21" data-q><b>Q</b> 절대 온도를 2배로 높이면 $v_\text{rms}$는 몇 배가 될까?</p><p class="f21 step">→ <span class="ans">$\sqrt2\approx1.4$배</span> (2배가 되는 것은 평균 운동 에너지)</p></div>
+    <div class="col"><p class="f21"><b>Q</b> 같은 온도에서 $\ce{He}$와 $\ce{N2}$ 중 $v_\text{rms}$가 큰 것은?</p><p class="f21 step">→ <span class="ans">몰질량이 작은 $\ce{He}$</span></p></div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 기체 법칙의 분자 해석 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="기체 법칙의 분자 해석">
+  <h2><span class="no">8</span>기체 법칙을 분자 운동으로 설명하기</h2>
+  <div class="row">
+    <div class="col stack">
+      <h3>부피 일정 — $P\propto T$</h3>
+      {{LAW_T}}
+      <p class="f21 step">온도가 높아지면 평균 속력이 빨라져 벽에 충돌하는 <b>횟수와 힘</b>이 커지므로 압력이 커진다.</p>
+    </div>
+    <div class="col stack">
+      <h3>온도 일정 — $V\propto\dfrac{1}{P}$</h3>
+      {{LAW_P}}
+      <p class="f21 step">평균 속력은 그대로이지만 부피가 줄어 <b>단위 부피당 충돌하는 분자 수</b>가 늘어난다. 기체 압력이 외부 압력과 같아질 때까지 부피가 줄어든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 예제 Ⅱ-1 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자 운동론과 기체의 법칙" data-title="예제 Ⅱ-1">
+  <h2><span class="tag ex">예제 Ⅱ-1</span>질소 분자의 제곱평균근 속력</h2>
+  <p class="f22"><b>Q</b> 20 °C에서 질소 분자들의 제곱평균근 속력 $v_\text{rms}$는 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step"><b>주어진 것</b> $T=20+273=293\ \text{K}$, $M=28.02\ \text{g/mol}=2.802\times10^{-2}\ \text{kg/mol}$</p>
+      <p class="f21 step"><b>관계식</b> $v_\text{rms}=\sqrt{\dfrac{3RT}{M}}$</p>
+      <div class="step f21">$v_\text{rms}=\sqrt{\dfrac{3\times8.314\ \text{J/(mol}\cdot\text{K)}\times293\ \text{K}}{2.802\times10^{-2}\ \text{kg/mol}}}=\sqrt{2.61\times10^{5}\ \text{m}^2/\text{s}^2}$</div>
+      <div class="answer step">$v_\text{rms}\approx511\ \text{m/s}$</div>
+      <p class="small step">시속 약 1800 km — 소리의 빠르기(약 340 m/s)보다 빠르다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 속력 분포 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자의 속력 분포" data-title="맥스웰의 속력 분포">
+  <h2><span class="no">9</span>기체 분자의 속력 분포</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 570px">{{MB3}}</div>
+    <div class="col stack">
+      <p class="f21">같은 온도에서도 분자의 속력은 모두 같지 않다. <b>맥스웰</b>은 어떤 순간에 속력 $v$를 가진 분자의 비율을 계산하는 식을 유도했고, 실험으로 측정한 분포와 일치하였다.</p>
+      <p class="f21 step" data-q><b>Q</b> 온도가 높아질수록 곡선은 어떻게 변할까?</p>
+      <p class="f21 step">→ 봉우리가 <b>빠른 쪽</b>으로 옮겨 가고, <b>낮아지며 넓게</b> 퍼진다. 빠른 분자의 비율이 커진다.</p>
+      <p class="small">질소($\ce{N2}$)에 대해 식으로 계산하여 그린 곡선</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑩ 속력 분포 함수 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자의 속력 분포" data-title="속력 분포 함수">
+  <h2><span class="no">10</span>맥스웰의 속력 분포 함수</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\dfrac{\Delta N}{N}=f(v)\,\Delta v$<br>$f(v)=4\pi\left(\dfrac{m}{2\pi k_\mathrm{B}T}\right)^{\frac{3}{2}}v^2e^{-mv^2/2k_\mathrm{B}T}$<div class="unit">$\Delta N/N$: 속력이 $v$와 $v+\Delta v$ 사이인 분자의 분율, 볼츠만 상수 $k_\mathrm{B}=1.38\times10^{-23}\ \text{J/K}$</div></div>
+      <ul class="f21 ac211-ul">
+        <li class="step">$v$가 매우 크면 지수 인자 $e^{-mv^2/2k_\mathrm{B}T}\to0$ → 아주 빠른 분자는 적다.</li>
+        <li class="step">$v\to0$이면 $v^2\to0$ → 아주 느린 분자도 적다.</li>
+        <li class="step">앞의 계수 $4\pi\left(\frac{m}{2\pi k_\mathrm{B}T}\right)^{3/2}$는 0부터 무한대까지의 확률(곡선 아래 넓이)이 <b>1</b>이 되게 한다.</li>
+      </ul>
+      <p class="small">식은 유도하지 않고 각 인자의 뜻을 해석한다.</p>
+    </div>
+    <div class="col">{{MB1}}<p class="small">$v_\text{p}$: 가장 많은 분자의 속력(최빈 속력), $\bar v$: 평균 속력</p></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 예측 ════════ -->
+<section class="slide" data-sec="01 · 기체 분자의 속력 분포" data-title="예측: 온도와 몰질량">
+  <h2><span class="tag">예측</span>속력 분포는 어떻게 바뀔까?</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (1) 질소의 온도를 200 K에서 600 K로 높이면 곡선은? (봉우리 위치·높이·넓이)</p>
+      {{PRED_T}}
+      <p class="f21 step" data-g="pr1">→ 봉우리가 오른쪽으로 $\sqrt3\approx1.7$배 옮겨 가고 낮아진다. 넓이(=1)는 그대로이다.</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (2) 같은 300 K에서 질소 대신 헬륨이면 곡선은?</p>
+      {{PRED_M}}
+      <p class="f21 step" data-g="pr2">→ 평균 운동 에너지가 같으므로 가벼운 헬륨은 훨씬 빠른 쪽에 넓게 퍼진다($\sqrt{28.02/4.00}\approx2.6$배).</p>
+    </div>
+  </div>
+  <p class="small mt8">예측한 뒤 디지털 탐구 실험실에서 확인한다.</p>
+</section>
+
+<!-- ════════ 19. 디지털 탐구 설계 ════════ -->
+<section class="slide" data-sec="01 · 디지털 탐구" data-title="디지털 탐구: 설계">
+  <h2><span class="tag">디지털 탐구</span>시뮬레이션으로 온도에 따른 기체 분자의 속력 분포 탐구하기</h2>
+  <div class="std"><span class="code">탐구 목표</span>온도와 몰질량을 바꾸며 속력 분포 곡선을 그리고, 봉우리의 위치·높이·곡선 아래 넓이의 변화를 해석한다. [12고화02-01 「속력 분포 변화 예측」]</div>
+  <table class="tight ac211-var mt12">
+    <tr><th>조작 변인</th><td class="l">온도 $T$ (100–1000 K), 기체 종류(몰질량)</td></tr>
+    <tr><th>종속 변인</th><td class="l">최빈 속력 $v_\text{p}$, $v_\text{rms}$, 봉우리 높이, 1000 m/s보다 빠른 분자의 비율</td></tr>
+    <tr><th>통제 변인</th><td class="l">한 번에 하나만 바꾼다(온도를 바꿀 때 기체는 그대로).</td></tr>
+  </table>
+  <div class="stages mt12">
+    <div class="stage"><h3>① 예측</h3><p>200 K → 300 K → 600 K에서 곡선 모양을 먼저 그려 본다.</p></div>
+    <div class="stage"><h3>② 곡선 고정·비교</h3><p>온도마다 「곡선 고정」으로 겹쳐 그리고 「기록」으로 표에 남긴다.</p></div>
+    <div class="stage"><h3>③ 해석</h3><p>최빈 속력과 $\sqrt T$의 관계, 넓이가 일정한 까닭, 몰질량의 영향을 설명한다.</p></div>
+  </div>
+  <p class="small mt8">시뮬레이션 결과는 측정값이 아니므로, 보고서에 사용한 프로그램 이름과 설정값을 밝히고 이론값과 구별해 적는다.</p>
+</section>
+
+<!-- ════════ 20. 실험실: 속력 분포 ════════ -->
+<section class="slide" data-sec="01 · 디지털 탐구" data-title="실험실: 속력 분포">
+  <h2><span class="tag">디지털 탐구</span>속력 분포 실험실</h2>
+  <div class="lab" data-lab="ac211spd">
+    <div class="lab-ctl" style="flex-basis:440px">
+      <div class="ac211-seg"><span class="small">기체</span><button class="btn" data-gas="He">헬륨</button><button class="btn on" data-gas="N2">질소</button><button class="btn" data-gas="O2">산소</button><button class="btn" data-gas="CO2">이산화 탄소</button></div>
+      <div class="ctl"><div class="lbl"><span>온도 $T$</span><output data-o="T"></output></div><input type="range" min="100" max="1000" step="10" value="300" data-i="T" aria-label="온도"></div>
+      <svg class="ac211-box" viewBox="0 0 420 96" width="420" height="96" aria-label="상자 속 분자 운동(빠른 분자일수록 붉은색)"></svg>
+      <div class="res"><div class="small">제곱평균근 속력 $v_\text{rms}$</div><div class="big"><output data-o="big"></output></div><output class="kind ac211-msg" data-o="msg"></output></div>
+      <div class="ac211-seg mt8"><button class="btn ac211-act" data-act="pin">곡선 고정</button><button class="btn ac211-act" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:300px"><svg viewBox="0 0 600 300" width="600" height="300" aria-label="속력 분포 곡선 그래프"></svg></div>
+      <table class="tight ac211-log mt8"><thead><tr><th>기체</th><th>T (K)</th><th>최빈 속력 (m/s)</th><th>v_rms (m/s)</th><th>봉우리 높이 (s/m)</th><th>1000 m/s 초과</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 디지털 탐구 결과 ════════ -->
+<section class="slide" data-sec="01 · 디지털 탐구" data-title="디지털 탐구: 결과 해석">
+  <h2><span class="tag">디지털 탐구</span>결과 정리와 해석</h2>
+  <table class="tight ac211-res">
+    <tr><th>질소</th><th>200 K</th><th>300 K</th><th>600 K</th><th>헬륨 300 K</th></tr>
+    <tr><td>최빈 속력 (m/s)</td><td>345</td><td>422</td><td>597</td><td>1117</td></tr>
+    <tr><td>$v_\text{rms}$ (m/s)</td><td>422</td><td>517</td><td>731</td><td>1368</td></tr>
+    <tr><td>봉우리 높이 (s/m)</td><td>0.00241</td><td>0.00197</td><td>0.00139</td><td>0.00074</td></tr>
+  </table>
+  <div class="f21 mt12">
+    <p><b>Q</b> (1) 온도가 2배(300 K → 600 K)가 되면 최빈 속력은 몇 배인가? <span class="step">→ <span class="ans">$597/422\approx1.41=\sqrt2$배</span> — 최빈 속력은 $\sqrt T$에 비례한다.</span></p>
+    <p class="mt8"><b>Q</b> (2) 온도가 달라져도 곡선 아래 넓이가 일정한 까닭은? <span class="step">→ 넓이는 모든 분자의 분율을 더한 값, 곧 <span class="ans">1</span>이다. 봉우리가 낮아지는 만큼 넓게 퍼진다.</span></p>
+    <p class="mt8"><b>Q</b> (3) 같은 온도에서 헬륨의 분포가 질소와 다른 까닭은? <span class="step">→ 같은 온도에서 평균 운동 에너지 $\tfrac12m\overline{v^2}$가 같으므로, 질량이 작은 분자일수록 속력이 크다.</span></p>
+  </div>
+  <p class="small mt8">값은 맥스웰 분포 식으로 계산한 이론값이다(최빈 속력 $v_\text{p}=\sqrt{2RT/M}$).</p>
+</section>
+
+<!-- ════════ 22. ⑪ 이상 기체 방정식과 기체 상수 ════════ -->
+<section class="slide" data-sec="01 · 이상 기체 방정식과 기체 상수" data-title="이상 기체 방정식과 기체 상수">
+  <h2><span class="no">11</span>이상 기체 방정식과 기체 상수</h2>
+  <p class="f22"><mark>이상 기체 방정식</mark> $PV=nRT$는 보일 법칙, 샤를 법칙, 아보가드로 법칙을 조합하여 비례 상수인 기체 상수 $R$로 나타낸 식이다.</p>
+  <div class="formula mt8">$R=0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}=8.314\ \text{J/(mol}\cdot\text{K)}$</div>
+  <div class="row mt12">
+    <div class="col stack">
+      <div class="card"><h3>기체 상수의 성질</h3><p class="f21">기체의 종류나 조건과 관계없이 일정하고, 단위에 따라 값이 다르다. 기체 1 mol의 온도를 1 K 올리는 데 쓰이는 에너지로 설명하기도 한다.</p></div>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 두 값이 같은 상수임을 단위 환산으로 확인하면? ($1\ \text{atm}\cdot\text{L}=101.325\ \text{J}$)</p>
+      <p class="f21 step">→ <span class="ans">$0.08206\times101.325=8.315\approx8.314$</span> $\text{J/(mol}\cdot\text{K)}$</p>
+      <p class="f21 step"><b>탐구로 잇기</b> $R=\dfrac{PV}{nT}$ — 기체의 $P$, $V$, $n$, $T$를 재면 $R$을 실험으로 구할 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 탐구 활동: 목표·원리 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 기체 상수 측정 (원리)">
+  <h2><span class="tag">탐구 활동</span>기체 상수를 측정하는 실험 방법 조사와 실험 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐09]</span>모둠별로 염소산 칼륨($\ce{KClO3}$)과 이산화 망가니즈($\ce{MnO2}$)를 반응시켜 발생한 산소를 수상 치환으로 모아 기체 상수를 결정하는 실험 방법을 조사하여 수행하고, 기체 상숫값을 계산하여 발표한다.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\ce{2KClO3(s) ->[\ce{MnO2}] 2KCl(s) + 3O2(g)}$</div>
+      <p class="f21">$\ce{MnO2}$는 촉매로, 반응 뒤에도 그대로 남는다. 시험관의 <b>질량 감소</b> = 빠져나간 산소의 질량</p>
+      <div class="formula sm step">$n_{\ce{O2}}=\dfrac{\text{질량 감소}}{32.00\ \text{g/mol}},\qquad R=\dfrac{P_{\ce{O2}}V}{n_{\ce{O2}}T}$</div>
+      <p class="f21 step"><b>수증기 보정</b> 물 위에서 모은 기체에는 수증기가 섞인다. 돌턴의 부분 압력 법칙: $P_{\ce{O2}}=P_\text{대기}-P_{\ce{H2O}}$</p>
+    </div>
+    <div class="col">{{RAPP}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. 탐구 활동: 준비·과정·안전 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>준비물·과정·안전 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="f21"><b>준비물</b> 염소산 칼륨 0.5 g, 이산화 망가니즈 약간, 시험관, 고무마개와 유리관·고무관, 눈금실린더(250 mL), 수조, 가열 장치, 전자저울, 온도계, 기압계(또는 그날의 기압 자료)</p>
+  <div class="stages mt8">
+    <div class="stage"><h3>① 질량 재기</h3>{{IC_BAL}}<p>시료를 넣은 시험관의 질량을 잰다.</p></div>
+    <div class="stage"><h3>② 산소 모으기</h3>{{IC_COL}}<p>가열하여 산소를 모은다. 다 식힌 뒤 실린더 안팎의 수면 높이를 맞추고 부피를 읽는다.</p></div>
+    <div class="stage"><h3>③ 조건 재기</h3>{{IC_TEM}}<p>시험관 질량을 다시 재고, 물의 온도와 대기압을 기록한다.</p></div>
+  </div>
+  <div class="note mt8"><b>안전</b> 보안경·실험용 장갑·실험복. $\ce{KClO3}$는 강한 산화제 — 유기물·종이와 섞지 않는다. 가열을 멈추기 전에 유리관을 물에서 빼서 <b>물이 거꾸로 빨려 들어가지 않게</b> 한다. 남은 고체는 지정된 폐기물 통에 모은다.</div>
+  <p class="small mt8 step">수면을 맞추는 까닭: 실린더 속 기체의 압력이 대기압과 같아지게 하려고.</p>
+</section>
+
+<!-- ════════ 25. 실험실: 기체 상수 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="실험실: 기체 상수 측정">
+  <h2><span class="tag">탐구 활동</span>기체 상수 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="ac211gasR">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <div class="ctl"><div class="lbl"><span>염소산 칼륨 질량</span><output data-o="m"></output></div><input type="range" min="0.20" max="1.00" step="0.05" value="0.50" data-i="m" aria-label="염소산 칼륨 질량"></div>
+      <div class="ctl"><div class="lbl"><span>물의 온도</span><output data-o="t"></output></div><input type="range" min="15" max="30" step="1" value="25" data-i="t" aria-label="물의 온도"></div>
+      <div class="ctl"><div class="lbl"><span>대기압</span><output data-o="pa"></output></div><input type="range" min="740" max="780" step="1" value="760" data-i="pa" aria-label="대기압"></div>
+      <label class="ac211-cb"><input type="checkbox" data-i="corr" checked> 수증기압 보정 (돌턴 법칙)</label>
+      <div class="res"><div class="small">이번 실험의 기체 상수 $R$</div><div class="big"><output data-o="big"></output></div><output class="kind ac211-msg" data-o="msg"></output></div>
+      <div class="ac211-seg mt8"><button class="btn ac211-act" data-act="run">실험하기</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 600px">
+      <div class="lab-fig" style="width:600px;height:250px"><svg viewBox="0 0 600 250" width="600" height="250" aria-label="수상 치환 장치와 측정값"></svg></div>
+      <table class="tight ac211-log mt8"><thead><tr><th>회</th><th>질량 감소 (g)</th><th>V (mL)</th><th>t (°C)</th><th>산소 압력 (mmHg)</th><th>R (atm·L/(mol·K))</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 탐구 활동: 결과 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과 정리와 발표">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 발표 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="tight ac211-res">
+        <tr><th>측정한 양</th><th>예시 값</th></tr>
+        <tr><td>시험관 질량 감소</td><td>0.196 g</td></tr>
+        <tr><td>모은 기체 부피</td><td>154 mL</td></tr>
+        <tr><td>물의 온도 / 수증기압</td><td>25 °C / 23.8 mmHg</td></tr>
+        <tr><td>대기압</td><td>760 mmHg</td></tr>
+      </table>
+      <p class="small">0.50 g의 $\ce{KClO3}$가 모두 분해되면 산소 $0.196\ \text{g}$이 나온다(덱이 계산한 예시 값).</p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 예시 값으로 $R$을 계산하면?</p>
+      <div class="f21 step">$\begin{aligned}n_{\ce{O2}}&amp;=\dfrac{0.196}{32.00}=6.13\times10^{-3}\ \text{mol}\\ P_{\ce{O2}}&amp;=\dfrac{760-23.8}{760}=0.969\ \text{atm}\\ R&amp;=\dfrac{0.969\times0.154}{(6.13\times10^{-3})\times298}\end{aligned}$</div>
+      <div class="answer step">$R\approx0.0817\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}$ (오차 약 −0.4 %)</div>
+    </div>
+  </div>
+  <p class="f21 mt8 step"><b>토론</b> 수증기압을 빼지 않으면 $R$이 약 3 % 커진다. 그 밖의 오차: 관 속에 남은 공기, 수면 높이 차, 물에 녹은 산소, 덜 분해된 시료. 모둠별로 결과와 오차 원인을 발표하자.</p>
+</section>
+
+<!-- ════════ 27. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>헬륨과 질소의 속력 비교</h2>
+  <p class="f22">같은 온도에서 헬륨($\ce{He}$, 4.00 g/mol)의 제곱평균근 속력은 질소($\ce{N2}$, 28.02 g/mol)의 몇 배인가? 또 두 기체 1 mol의 평균 운동 에너지를 비교하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$\dfrac{v_\text{rms}(\ce{He})}{v_\text{rms}(\ce{N2})}=\sqrt{\dfrac{M_{\ce{N2}}}{M_{\ce{He}}}}=\sqrt{\dfrac{28.02}{4.00}}=\sqrt{7.005}$</p>
+      <div class="answer step">약 2.65배, 평균 운동 에너지는 $\tfrac32RT$로 같다</div>
+      <p class="small step">채점 요소: $v_\text{rms}\propto1/\sqrt M$ · 계산 값 · 운동 에너지는 온도에만 의존</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02" data-tpl="check">
+  <h2><span class="tag q">확인 문제 02</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac211-ox f21">
+    <li>온도가 같으면 기체 분자들의 속력은 모두 같다. <span class="step">→ <span class="ans">×</span> 평균 운동 에너지가 같을 뿐 속력은 넓게 분포한다.</span></li>
+    <li>절대 온도가 높아지면 속력 분포 곡선의 봉우리는 빠른 쪽으로 옮겨 가고 낮아진다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>속력 분포 곡선 아래의 넓이는 온도가 높을수록 커진다. <span class="step">→ <span class="ans">×</span> 전체 분자의 분율이므로 늘 1이다.</span></li>
+    <li>압력 유도에서 $\overline{v^2}=3\overline{v_x^{\,2}}$는 분자 운동이 무질서하다는 가정에서 나온다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>$v_\text{rms}$를 계산할 때 몰질량을 g/mol로 넣으면 m/s 단위의 값이 나온다. <span class="step">→ <span class="ans">×</span> kg/mol로 넣어야 한다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 29. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 기체 분자 — 01 기체 분자 운동론</h2>
+  <div class="ac211-map">
+    <div class="ac211-node">기본 가정<br><span class="small">부피 0, 무질서, 인력 없음, 탄성 충돌</span></div>
+    <div class="ac211-arr">→</div>
+    <div class="ac211-node ac211-main" data-q><b>01 기체 분자 운동론</b><br>❶ $PV=$ <span class="blank"><span class="step">$\tfrac13Nm\overline{v^2}$</span></span><br>❷ $E_\mathrm{k}=$ <span class="blank"><span class="step">$\tfrac32RT$</span></span> (1 mol)<br>❸ $v_\text{rms}=$ <span class="blank"><span class="step">$\sqrt{3RT/M}$</span></span><br>❹ 온도↑ → 봉우리 <span class="blank"><span class="step">빠른 쪽·낮게</span></span><br>❺ $R=$ <span class="blank"><span class="step">$0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}$</span></span></div>
+    <div class="ac211-arr">→</div>
+    <div class="ac211-node ac211-dim">02 실제 기체와 혼합 기체<br>압축 인자, 반데르발스 식, 부분 압력<br><span class="small">(다음 시간)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 기체 분자 운동론 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 기체 분자 운동론의 가정으로 압력을 설명하고, 온도가 평균 운동 에너지의 척도임을 안다.</button>
+    <button class="chk">[과정·기능] 속력 분포 곡선을 그려 온도·몰질량의 영향을 해석하고, 기체 상수를 실험으로 구했다.</button>
+    <button class="chk">[가치·태도] 이상적인 가정에서 유도한 식이 실제 기체의 이해에 도움이 된다는 점에 흥미를 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 압력 유도의 네 단계는? <span class="step">→ <span class="ans">운동량 변화 → 충돌 수 → 힘 → 압력</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 25 °C 헬륨의 $v_\text{rms}$는 약 몇 m/s일까? <span class="step">→ <span class="ans">약 $1.36\times10^{3}\ \text{m/s}$</span> (연습 문제 1에서 확인)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 높은 압력·낮은 온도에서 실제 기체는 왜 이상 기체처럼 행동하지 않을까?</div>
+</section>

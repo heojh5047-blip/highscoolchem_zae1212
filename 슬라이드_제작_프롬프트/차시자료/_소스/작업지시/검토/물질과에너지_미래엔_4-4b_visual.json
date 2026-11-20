@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":1,"severity":"low","rule":"D8","problem":"'촉매' 라벨이 점선 경로와 겹침","fix":"두 곡선 사이 빈 곳으로 옮김 — 반영"},
+{"slide":8,"severity":"medium","rule":"D8","problem":"실험실 에너지 도표의 E_a 라벨이 세로축과, '생성물'이 '반응의 진행' 라벨과 겹침","fix":"E_a 라벨을 치수선 오른쪽, 생성물은 선 위, 축 라벨은 축 아래로 — 반영"},
+{"slide":12,"severity":"medium","rule":"D8","problem":"'생성물'과 ΔH 라벨 겹침(자동 점검), 경로 이름 라벨이 곡선 위에 얹힘","fix":"ΔH를 화살표 오른쪽, 경로 라벨을 x=345로 — 반영"},
+{"slide":16,"severity":"high","rule":"D8","problem":"배기가스 라벨이 왼쪽으로 잘리고 변환기 상자와 겹침","fix":"라벨을 상자 위(y=52), 왼쪽·오른쪽 정렬 — 반영"},
+{"slide":17,"severity":"low","rule":"D8","problem":"H2·O2 라벨이 분자 모형과, '빛' 라벨이 화살표와 겹침","fix":"라벨 위치 옮김 — 반영"},
+{"slide":18,"severity":"medium","rule":"D8","problem":"'기질 B' 라벨과 삼각형이 화살표 선 위에 놓임","fix":"선 아래로 옮김 — 반영"},
+{"slide":22,"severity":"low","rule":"C·표기","problem":"오지선다 선택지 상자에 '보기' 머리표가 붙어 <보기> 문항처럼 보임","fix":"보기 상자 대신 카드로 — 반영"},
+{"slide":"전체","severity":"medium","rule":"6.4","problem":"data-anim 11개로 덱 기준(15–25곳)에 모자람","fix":"곡선·경로 draw, 효소 생성물 move, 기질 B damp 등 추가 → 22개 — 반영"}
+],"summary":"라벨 겹침·잘림과 움직임 부족을 고쳤다. 최종 자동 점검 0건, 캡처 모음 전체 2회 확인."}

@@ -1,0 +1,23 @@
+(()=>{ const r=document.querySelector('[data-lab="cm222model"]'); const q=s=>r.querySelector(s); const o=k=>q(`[data-o="${k}"]`).textContent;
+ const snap=t=>console.warn('LAB '+t+' | '+o('pairs')+' | '+o('geo')+' | '+o('shape')+' | '+o('msg'));
+ const click=s=>q(s).click();
+ snap('CH4'); click('[data-act="rec"]');
+ click('[data-c="N"]'); snap('NH3'); click('[data-act="rec"]');
+ click('[data-c="O"]'); snap('H2O'); click('[data-act="rec"]');
+ click('[data-t="F"]'); snap('OF2');
+ click('[data-c="Be"]'); snap('BeF2(H 비활성:'+q('[data-t="H"]').disabled+')');
+ click('[data-c="B"]'); click('[data-t="Cl"]'); snap('BCl3'); click('[data-act="rec"]'); click('[data-c="Be"]'); snap('BeCl2'); click('[data-act="rec"]');
+ click('[data-c="N"]'); click('[data-t="F"]'); snap('NF3');
+ click('[data-p="CO2"]'); snap('CO2'); click('[data-act="rec"]');
+ click('[data-p="HCHO"]'); snap('HCHO'); click('[data-act="rec"]');
+ console.warn('LAB 기록행 '+q('[data-o="log"]').children.length+' : '+[...q('[data-o="log"]').children].map(tr=>tr.textContent.replace(/\s+/g,' ')).join(' / '));
+ click('[data-m="vsepr"]'); const nb=q('[data-i="nb"]'), nl=q('[data-i="nl"]');
+ nb.value=2; nl.value=1; nb.dispatchEvent(new Event('input')); snap('AB2E');
+ nb.value=4; nl.value=2; nb.dispatchEvent(new Event('input')); snap('AB4E2');
+ nb.value=2; nl.value=2; nb.dispatchEvent(new Event('input')); snap('AB2E2');
+ const svg=q('svg'), b=svg.getBoundingClientRect(); const before=svg.innerHTML.length+q('svg circle').getAttribute('cx');
+ svg.dispatchEvent(new PointerEvent('pointerdown',{clientX:b.x+200,clientY:b.y+150,pointerId:1,bubbles:true}));
+ svg.dispatchEvent(new PointerEvent('pointermove',{clientX:b.x+280,clientY:b.y+170,pointerId:1,bubbles:true}));
+ svg.dispatchEvent(new PointerEvent('pointerup',{clientX:b.x+280,clientY:b.y+170,pointerId:1,bubbles:true}));
+ console.warn('LAB 회전 후 그림 바뀜: '+(before!==svg.innerHTML.length+q('svg circle').getAttribute('cx'))+' 현재 슬라이드:'+Harness.cur());
+ return 1; })()

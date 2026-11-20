@@ -1,0 +1,459 @@
+<!-- 고급화학 2-M 대단원 Ⅱ 마무리 — gen.py가 tpl.html에서 만든다(그림 자리표). 이 파일을 직접 고치지 말고 SCRATCH/고급화학_2-M/tpl.html을 고친다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 성질 › 대단원 마무리</div>
+    <h1 class="ac29-h1">대단원 Ⅱ<br><span class="acc">마무리</span></h1>
+    <p class="sub">기체·액체·고체·용액, 그리고 빛으로 재는 농도</p>
+    <p class="meta">고등학교 고급 화학 118–119쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <table class="tight ac29-std">
+    <tr><td>[12고화02-01]</td><td class="l">기체의 온도·압력·부피 관계를 기체 분자 운동론으로 이해, 온도에 따른 속력 분포 변화 예측</td></tr>
+    <tr><td>[12고화02-02]</td><td class="l">이상 기체 방정식, 혼합 기체의 부분 압력과 몰분율의 관계</td></tr>
+    <tr><td>[12고화02-03]</td><td class="l">이상 기체와 실제 기체의 차이, 실제 기체가 이상 기체와 다른 원인 탐색</td></tr>
+    <tr><td>[12고화02-04]</td><td class="l">증기압·끓는점·표면 장력·모세관 현상을 분자 간 상호 작용으로 설명</td></tr>
+    <tr><td>[12고화02-05]</td><td class="l">단위세포 개념, 결정성 고체의 단위세포 비교와 고체의 특성</td></tr>
+    <tr><td>[12고화02-06]</td><td class="l">다양한 농도 단위, 용해도에 영향을 미치는 요인 탐구</td></tr>
+    <tr><td>[12고화02-07]</td><td class="l">묽은 용액의 총괄성 — 증기압 내림·끓는점 오름·어는점 내림·삼투 현상의 예</td></tr>
+  </table>
+  <ol class="goals mt8 f21">
+    <li>대단원 Ⅱ의 핵심 개념을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li><b>종합 문제</b>를 풀며 기체·액체·고체·용액의 양적 관계를 설명할 수 있다.</li>
+    <li><b>간이 분광 광도계</b>의 원리를 이해하고, 표준 검증 곡선으로 미지 용액의 농도를 판별할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">대응표</div><div class="farr">→</div>
+    <div class="fnode">종합 문제 1–5</div><div class="farr">→</div>
+    <div class="fnode hl">STEAM: 간이 분광 광도계</div><div class="farr">→</div>
+    <div class="fnode">스스로 점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="개념 정리 ① 기체 분자">
+  <h2><span class="tag ink">개념 정리</span>1. 기체 분자</h2>
+  <div class="ac29-top"><span class="ac29-u ac29-now">1. 기체 분자</span><span class="ac29-ar">→</span><span class="ac29-u">2. 액체 분자</span><span class="ac29-ar">→</span><span class="ac29-u">3. 고체</span><span class="ac29-ar">→</span><span class="ac29-u">4. 용액의 성질</span></div>
+  <div class="ac29-map">
+    <div class="ac29-node" data-q><h3>01 기체 분자 운동론 <span class="small c-muted">(2-1-1a)</span></h3>
+      ❶ $PV=$ <span class="blank"><span class="step">$\tfrac13Nm\overline{v^2}$</span></span><br>
+      ❷ 기체 1 mol의 평균 운동 에너지 $E_\mathrm{k}=$ <span class="blank"><span class="step">$\tfrac32RT$</span></span><br>
+      ❸ $v_\text{rms}=$ <span class="blank"><span class="step">$\sqrt{3RT/M}$</span></span><br>
+      ❹ 온도↑ → 속력 분포의 봉우리가 <span class="blank"><span class="step">빠른 쪽으로, 낮게</span></span><br>
+      ❺ $R=$ <span class="blank"><span class="step">$0.08206\ \text{atm}\cdot\text{L/(mol}\cdot\text{K)}$</span></span></div>
+    <div class="ac29-node" data-q><h3>02 실제 기체와 혼합 기체 <span class="small c-muted">(2-1-1b)</span></h3>
+      ❻ $Z=$ <span class="blank"><span class="step">$PV/nRT$</span></span>, $Z&lt;1$이면 <span class="blank"><span class="step">인력</span></span> 우세<br>
+      ❼ 반데르발스 상수 $a$는 <span class="blank"><span class="step">인력</span></span>, $b$는 <span class="blank"><span class="step">분자 자체 부피</span></span><br>
+      ❽ $P_\text{전체}=$ <span class="blank"><span class="step">$P_\mathrm{A}+P_\mathrm{B}+\cdots$</span></span><br>
+      ❾ $P_\mathrm{A}=$ <span class="blank"><span class="step">$X_\mathrm{A}P_\text{전체}$</span></span> ($X_\mathrm{A}$: 몰분율)</div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(2-1-1a #29, 2-1-1b #29)와 같은 내용이다.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="개념 정리 ② 액체 분자">
+  <h2><span class="tag ink">개념 정리</span>2. 액체 분자</h2>
+  <div class="ac29-top"><span class="ac29-u">1. 기체 분자</span><span class="ac29-ar">→</span><span class="ac29-u ac29-now">2. 액체 분자</span><span class="ac29-ar">→</span><span class="ac29-u">3. 고체</span><span class="ac29-ar">→</span><span class="ac29-u">4. 용액의 성질</span></div>
+  <div class="ac29-band">분자 사이 상호 작용(비교): 이온–쌍극자 · 수소 결합 · 쌍극자–쌍극자 · 분산력 — 클수록 증기압 ↓, 끓는점 ↑, 표면 장력 ↑</div>
+  <div class="ac29-map">
+    <div class="ac29-node" data-q><h3>01 증발과 증기압 · 02 끓는점 <span class="small c-muted">(2-2-1a)</span></h3>
+      ❶ 증기압: 증발과 응축이 <span class="blank"><span class="step">동적 평형</span></span>일 때 증기의 압력<br>
+      ❷ $\ln P_\text{vap}$–$\tfrac1T$ 기울기 $=$ <span class="blank"><span class="step">$-\Delta H^\circ_\text{vap}/R$</span></span><br>
+      ❸ 끓는점: 증기압 $=$ <span class="blank"><span class="step">외부 압력</span></span>, 기준 끓는점은 <span class="blank"><span class="step">1 atm</span></span>에서<br>
+      ❹ 물은 부착력 &gt; 응집력 → 메니스커스가 <span class="blank"><span class="step">오목</span></span></div>
+    <div class="ac29-node" data-q><h3>03 물의 분자 구조와 특성 <span class="small c-muted">(2-2-1b)</span></h3>
+      ❺ 수소 결합: O, N, F에 결합한 <span class="blank"><span class="step">H</span></span>와 비공유 전자쌍 사이<br>
+      ❻ 물 분자 하나가 이웃 <span class="blank"><span class="step">4</span></span>개와 결합 → 사면체<br>
+      ❼ 얼음: 열린 육각형 구조, 부피 약 <span class="blank"><span class="step">9 %</span></span> 증가<br>
+      ❽ 밀도 최대 <span class="blank"><span class="step">4 °C</span></span>, 높은 <span class="blank"><span class="step">비열</span></span> → 작은 일교차</div>
+  </div>
+  <p class="small c-muted mt8">2-2-1a #33, 2-2-1b #26 「스스로 정리」</p>
+</section>
+
+<!-- ════════ 5. 개념 정리 ③ ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="개념 정리 ③ 고체">
+  <h2><span class="tag ink">개념 정리</span>3. 고체</h2>
+  <div class="ac29-top"><span class="ac29-u">1. 기체 분자</span><span class="ac29-ar">→</span><span class="ac29-u">2. 액체 분자</span><span class="ac29-ar">→</span><span class="ac29-u ac29-now">3. 고체</span><span class="ac29-ar">→</span><span class="ac29-u">4. 용액의 성질</span></div>
+  <div class="ac29-map">
+    <div class="ac29-node" data-q><h3>01 고체 결정의 종류 <span class="small c-muted">(2-3-1)</span></h3>
+      ❶ 결정 구조 분석: <span class="blank"><span class="step">X선 회절</span></span><br>
+      ❷ 브래그 법칙 <span class="blank"><span class="step">$n\lambda=2d\sin\theta$</span></span><br>
+      ❸ 이온·금속·<span class="blank"><span class="step">공유</span></span>·분자 결정</div>
+    <div class="ac29-node" data-q><h3>02 금속 결정 <span class="small c-muted">(2-3-1)</span></h3>
+      단순 입방 · 체심 입방 · 면심 입방<br>
+      ❹ 단위세포 속 원자 수 <span class="blank"><span class="step">1</span></span>, <span class="blank"><span class="step">2</span></span>, <span class="blank"><span class="step">4</span></span><br>
+      ❺ 배위수 <span class="blank"><span class="step">6, 8, 12</span></span><br>
+      ❻ 원자 점유 비율 52.4, <span class="blank"><span class="step">68.0</span></span>, 74.0 %</div>
+    <div class="ac29-node" data-q><h3>02 이온 결정 <span class="small c-muted">(2-3-1)</span></h3>
+      ❼ 반지름 비가 클수록 배위수 <span class="blank"><span class="step">커짐</span></span><br>
+      ❽ $\ce{ZnS}$ <span class="blank"><span class="step">4</span></span> · $\ce{NaCl}$ <span class="blank"><span class="step">6</span></span> · $\ce{CsCl}$ <span class="blank"><span class="step">8</span></span><br>
+      ❾ 용융 상태: <span class="blank"><span class="step">이온</span></span>이 움직여 전기가 통함</div>
+  </div>
+  <p class="small c-muted mt8">2-3-1 #37 「스스로 정리」</p>
+</section>
+
+<!-- ════════ 6. 개념 정리 ④ ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="개념 정리 ④ 용액의 성질">
+  <h2><span class="tag ink">개념 정리</span>4. 용액의 성질</h2>
+  <div class="ac29-top"><span class="ac29-u">1. 기체 분자</span><span class="ac29-ar">→</span><span class="ac29-u">2. 액체 분자</span><span class="ac29-ar">→</span><span class="ac29-u">3. 고체</span><span class="ac29-ar">→</span><span class="ac29-u ac29-now">4. 용액의 성질</span></div>
+  <div class="ac29-map">
+    <div class="ac29-node" data-q><h3>01 용액의 농도 <span class="small c-muted">(2-4-1a)</span></h3>
+      ❶ 몰농도 = 용질 mol ÷ <span class="blank"><span class="step">용액의 부피(L)</span></span><br>
+      ❷ 몰랄 농도 = 용질 mol ÷ <span class="blank"><span class="step">용매의 질량(kg)</span></span><br>
+      ❸ 희석: <span class="blank"><span class="step">$M_1V_1=M_2V_2$</span></span><br>
+      ❹ 흡광도는 농도에 <span class="blank"><span class="step">비례</span></span> (검량선)</div>
+    <div class="ac29-node" data-q><h3>02 용해도와 묽은 용액의 성질 <span class="small c-muted">(2-4-1b)</span></h3>
+      ❺ 포화 = 용해와 석출의 <span class="blank"><span class="step">동적 평형</span></span><br>
+      ❻ 기체의 용해도: 온도↑ → <span class="blank"><span class="step">감소</span></span> · 콜로이드: <span class="blank"><span class="step">틴들 현상</span></span><br>
+      ❼ $P_\text{용매}=$ <span class="blank"><span class="step">$X_\text{용매}$</span></span> $\times P_\text{순수 용매}$ (라울 법칙)<br>
+      ❽ 끓는점 오름·어는점 내림은 <span class="blank"><span class="step">용질 입자 수</span></span>에 의존 (총괄성)</div>
+  </div>
+  <p class="small c-muted mt8">2-4-1a #26, 2-4-1b #36 「스스로 정리」</p>
+</section>
+
+<!-- ════════ 7. 연결 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="연결: 입자의 운동과 입자 사이 힘">
+  <h2><span class="tag alt">연결</span>입자의 운동과 입자 사이의 힘</h2>
+  {{STATES}}
+  <p class="f22 mt8"><b>Q</b> 대단원 Ⅱ의 네 중단원을 한 줄로 이으면 어떻게 될까?</p>
+  <div class="answer step">물질의 상태와 성질은 입자의 운동 에너지와 입자 사이 힘의 크기 비교로 정해지고, 용액의 성질은 녹아 있는 용질 입자의 수와 종류로 정해진다.</div>
+  <p class="small step mt8">오늘의 종합 문제: 2 → 기체, 3 → 액체, 4 → 고체, 1·5 → 용액 · STEAM → 용액이 흡수하는 빛</p>
+</section>
+
+<!-- ════════ 8. 연습 문제 대응표 ① ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="연습 문제 대응표 ① Ⅱ-1·Ⅱ-2">
+  <h2><span class="tag alt">연습 문제 대응표</span>Ⅱ-1 기체 분자 · Ⅱ-2 액체 분자</h2>
+  <table class="tight ac29-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac29-sec" rowspan="5">Ⅱ-1 (84쪽)</td><td>1</td><td class="l">25 °C 헬륨의 $\overline{v^2}$, $v_\text{rms}$</td><td class="ac29-deck">2-1-1b #24</td><td class="l ac29-key"><span class="step" data-g="k1">$1.86\times10^{6}\ \text{m}^2/\text{s}^2$, $1.36\times10^{3}\ \text{m/s}$</span></td></tr>
+    <tr><td>2</td><td class="l">두 기체를 6 L 용기에</td><td class="ac29-deck">#25</td><td class="l ac29-key"><span class="step" data-g="k1">3기압</span></td></tr>
+    <tr><td>3</td><td class="l">이상 기체와 반데르발스 기체의 압력</td><td class="ac29-deck">#26</td><td class="l ac29-key"><span class="step" data-g="k1">약 134 atm(부록 135) &lt; 약 140 atm</span></td></tr>
+    <tr><td>4</td><td class="l">헬리옥스의 몰분율과 부분 압력</td><td class="ac29-deck">#27</td><td class="l ac29-key"><span class="step" data-g="k1">0.978, 0.0218 / 11.8, 0.264, 12.1 atm</span></td></tr>
+    <tr><td>5</td><td class="l">수상 치환으로 모은 산소의 질량</td><td class="ac29-deck">#28</td><td class="l ac29-key"><span class="step" data-g="k1">약 1.27 g</span></td></tr>
+    <tr><td class="ac29-sec" rowspan="5">Ⅱ-2 (96쪽)</td><td>1</td><td class="l">쌍극자–쌍극자 상호 작용이 있는 분자</td><td class="ac29-deck">2-2-1b #21</td><td class="l ac29-key"><span class="step" data-g="k1">$\ce{HCl}$, $\ce{NH3}$, $\ce{C2H5OH}$</span></td></tr>
+    <tr><td>2</td><td class="l">다이클로로메테인의 증발 엔탈피</td><td class="ac29-deck">#22</td><td class="l ac29-key"><span class="step" data-g="k1">약 $3.14\times10^{4}\ \text{J/mol}$</span></td></tr>
+    <tr><td>3</td><td class="l">에탄올의 정상 끓는점</td><td class="ac29-deck">#23</td><td class="l ac29-key"><span class="step" data-g="k1">약 350 K (77 °C)</span></td></tr>
+    <tr><td>4</td><td class="l">표면 장력이 더 큰 것</td><td class="ac29-deck">#24</td><td class="l ac29-key"><span class="step" data-g="k1">시스-다이클로로에텐, 10 °C 헥세인</span></td></tr>
+    <tr><td>5</td><td class="l">같은 분자끼리 수소 결합</td><td class="ac29-deck">#25</td><td class="l ac29-key"><span class="step" data-g="k1">$\ce{H2O2}$, $\ce{CH3COOH}$, $\ce{CH3OH}$</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">풀이·그림은 각 덱의 그 장에 있다. 정답은 한 번에 열린다.</p>
+</section>
+
+<!-- ════════ 9. 연습 문제 대응표 ② ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="연습 문제 대응표 ② Ⅱ-3·Ⅱ-4">
+  <h2><span class="tag alt">연습 문제 대응표</span>Ⅱ-3 고체 · Ⅱ-4 용액의 성질</h2>
+  <table class="tight ac29-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac29-sec" rowspan="5">Ⅱ-3 (104쪽)</td><td>1</td><td class="l">X선 회절로 원자층 사이의 거리</td><td class="ac29-deck">2-3-1 #32</td><td class="l ac29-key"><span class="step" data-g="k2">약 162 pm</span></td></tr>
+    <tr><td>2</td><td class="l">단순·체심·면심 입방 단위세포 속 원자 수</td><td class="ac29-deck">#33</td><td class="l ac29-key"><span class="step" data-g="k2">1개, 2개, 4개</span></td></tr>
+    <tr><td>3</td><td class="l">백금의 모서리 길이와 밀도</td><td class="ac29-deck">#34</td><td class="l ac29-key"><span class="step" data-g="k2">393 pm, 약 $21.4\ \text{g/cm}^3$</span></td></tr>
+    <tr><td>4</td><td class="l">면심 입방 구조의 틈새 자리 수</td><td class="ac29-deck">#35</td><td class="l ac29-key"><span class="step" data-g="k2">사면체 8개, 팔면체 4개</span></td></tr>
+    <tr><td>5</td><td class="l">타이타늄 산화물의 화학식</td><td class="ac29-deck">#36</td><td class="l ac29-key"><span class="step" data-g="k2">Ti 2, O 4 → $\ce{TiO2}$</span></td></tr>
+    <tr><td class="ac29-sec" rowspan="5">Ⅱ-4 (116쪽)</td><td>1</td><td class="l">설탕물의 부피</td><td class="ac29-deck">2-4-1b #31</td><td class="l ac29-key"><span class="step" data-g="k2">719 mL</span></td></tr>
+    <tr><td>2</td><td class="l">에틸렌 글리콜 용액의 네 가지 농도</td><td class="ac29-deck">#32</td><td class="l ac29-key"><span class="step" data-g="k2">0.473 M, 0.484 m, 2.91 %, $8.66\times10^{-3}$</span></td></tr>
+    <tr><td>3</td><td class="l">$\ce{CuSO4}$ 수용액 속 용질의 질량</td><td class="ac29-deck">#33</td><td class="l ac29-key"><span class="step" data-g="k2">1.6 g</span></td></tr>
+    <tr><td>4</td><td class="l">소금의 용해 엔탈피와 잘 녹는 까닭</td><td class="ac29-deck">#34</td><td class="l ac29-key"><span class="step" data-g="k2">+3 kJ/mol, 엔트로피 증가가 더 큼</span></td></tr>
+    <tr><td>5</td><td class="l">$\ce{CS2}$–아세톤 용액의 증기압</td><td class="ac29-deck">#35</td><td class="l ac29-key"><span class="step" data-g="k2">442 mmHg = 0.582 atm</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">2-4-1b 연습 문제 2의 질량 백분율은 부록 풀이 2.92 % · 종합 문제 1은 Ⅱ-4 연습 문제 1과 같은 문항이다.</p>
+</section>
+
+<!-- ════════ 10. 종합 문제 대응표 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 대단원 마무리" data-title="종합 문제 대응표">
+  <h2><span class="tag alt">종합 문제 대응표</span>종합 문제는 어느 소단원 덱과 이어질까?</h2>
+  <table class="tight ac29-ov">
+    <tr><th>종합 문제</th><th>내용</th><th>같은·비슷한 내용을 다룬 소단원 덱 (#장)</th><th>이 덱</th></tr>
+    <tr><td>1</td><td class="l">음료(설탕물)의 부피</td><td class="l"><b>2-4-1b 연습 문제 1(#31)과 같은 문항·같은 수치</b></td><td>#11</td></tr>
+    <tr><td>2</td><td class="l">$\ce{UF6}$ 동위원소 분자의 분출 속도비</td><td class="l">2-1-1a 제곱평균근 속력(#13) · 확인 문제 01(#27, $\sqrt{M}$의 비)</td><td>#12</td></tr>
+    <tr><td>3</td><td class="l">메탄올의 증기압</td><td class="l">2-2-1a 예제 Ⅱ-3(#16) · 2-2-1b 연습 문제 3(#23)</td><td>#13</td></tr>
+    <tr><td>4</td><td class="l">체심 입방 단위세포의 길이 관계</td><td class="l">2-3-1 단위세포 크기와 원자 반지름(#15) · 예제 Ⅱ-4(#17) · 3D 단위세포 실험실(#20)</td><td>#14–15</td></tr>
+    <tr><td>5</td><td class="l">에틸렌 글리콜 부동액의 끓는점 오름</td><td class="l">2-4-1b 끓는점 오름·총괄성(#22–23) · 연습 문제 2(#32, 같은 물질)</td><td>#16</td></tr>
+  </table>
+  <div class="note mt16"><b>종합 문제 1</b>은 이미 풀었던 문항이다 — 오늘은 단위 인자를 이어 한 줄로 풀어 확인한다. 2–5는 이 덱에서 한 장씩 푼다.</div>
+</section>
+
+<!-- ════════ 11. 종합 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 종합 문제" data-title="종합 문제 1">
+  <h2><span class="tag q">종합 문제 1</span>음료의 부피</h2>
+  <p class="f21">어떤 음료 한 잔에 설탕 $\ce{C12H22O11}$이 78.5 g 들어 있다. 음료의 설탕 질량 백분율이 10.5 %일 때, 이 음료의 양을 mL로 구하여라. (단, 음료의 밀도는 1.04 g/mL이다.)</p>
+  {{CHAIN1}}
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 질량 백분율 10.5 %를 단위 인자로 쓰면 어떻게 될까?</p>
+      <div class="answer step">$\dfrac{100\ \text{g 음료}}{10.5\ \text{g 설탕}}$ — 음료 100 g마다 설탕 10.5 g</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col stack">
+      <div class="formula sm step">$78.5\ \text{g 설탕}\times\dfrac{100\ \text{g 음료}}{10.5\ \text{g 설탕}}\times\dfrac{1\ \text{mL}}{1.04\ \text{g 음료}}$<span class="unit">단위가 차례로 지워져 mL만 남는다</span></div>
+      <div class="answer step">719 mL</div>
+      <p class="small c-muted">2-4-1b 연습 문제 1(#31)과 같다 — 거기서는 음료의 질량 748 g을 먼저 구했다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 종합 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 종합 문제" data-title="종합 문제 2">
+  <h2><span class="tag q">종합 문제 2</span>우라늄 동위원소 분자의 분출 속도비</h2>
+  <p class="f21">우라늄의 동위원소 U-235와 U-238을 포함한 $\ce{UF6}$ 분자는 확산 속도와 분출 속도의 차이로 분리할 수 있다. $\ce{^{235}UF6}$와 $\ce{^{238}UF6}$의 분출 속도비를 구하여라. <span class="small">(U-235 235.044 amu, U-238 238.051 amu, F 18.998 amu — F의 동위원소는 1가지)</span></p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 같은 온도에서 분출 속도는 무엇에 비례할까?</p>
+      <div class="answer step ac29-left">구멍에 부딪히는 빈도 ∝ 분자의 속력 → $v_\text{rms}=\sqrt{\dfrac{3RT}{M}}\propto\dfrac{1}{\sqrt M}$</div>
+      <div class="formula sm step">$\dfrac{v_{\ce{^{235}UF6}}}{v_{\ce{^{238}UF6}}}=\sqrt{\dfrac{M_{\ce{^{238}UF6}}}{M_{\ce{^{235}UF6}}}}=\sqrt{\dfrac{352.039}{349.032}}$<span class="unit">$M=235.044+6\times18.998=349.032$, $\ 238.051+6\times18.998=352.039$</span></div>
+      <div class="answer step">1.004 <span class="small">(가벼운 $\ce{^{235}UF6}$가 약 0.4 % 빠르다)</span></div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">{{EFFUSE}}
+      <p class="small step">차이가 아주 작아 분출(확산)을 수백 번 되풀이해야 U-235를 모을 수 있다. 분출 속도가 $\sqrt{M}$에 반비례하는 관계를 그레이엄 법칙이라고 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 종합 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 종합 문제" data-title="종합 문제 3">
+  <h2><span class="tag q">종합 문제 3</span>메탄올의 증기압</h2>
+  <p class="f21">메탄올의 정상 끓는점은 64.6 °C이고, 증발열 $\Delta H^\circ_\text{증발}$은 35.2 kJ/mol이다. 12.0 °C에서 메탄올의 증기압을 구하여라.</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 정상 끓는점에서 메탄올의 증기압은 얼마일까?</p>
+      <div class="answer step">1 atm <span class="small">($P_1=1\ \text{atm}$, $T_1=337.8\ \text{K}$, $T_2=285.2\ \text{K}$)</span></div>
+      <div class="formula sm step" data-g="c2">$\ln\left(\dfrac{P_2}{P_1}\right)=\dfrac{-\Delta H^\circ_\text{vap}}{R}\left(\dfrac{1}{T_2}-\dfrac{1}{T_1}\right)$<span class="unit">$\ln P_2=\dfrac{-35.2\times10^{3}\ \text{J/mol}}{8.314\ \text{J/(mol}\cdot\text{K)}}\left(\dfrac{1}{285.2}-\dfrac{1}{337.8}\right)+\ln1=-2.31$</span></div>
+      <div class="answer step">$P_2=e^{-2.31}=9.93\times10^{-2}\ \text{atm}$ <span class="small">(약 75 mmHg)</span></div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col stack" style="flex:0 0 420px">{{CLAUS}}
+      <p class="small step">kJ을 J로 바꾸어 넣는다. 온도가 낮아졌으니 증기압이 1 atm보다 작은 것이 맞다 — 예제 Ⅱ-3(2-2-1a #16)과 같은 꼴.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 종합 문제 4 (1)(2) ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 종합 문제" data-title="종합 문제 4 (1)(2)">
+  <h2><span class="tag q">종합 문제 4</span>체심 입방 단위세포의 대각선</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 400px">{{BCC}}
+      <p class="small c-muted">원자 크기는 줄여 그림(꼭짓점 8 + 체심 1). 문항 기호: $a$ 몸 대각선, $b$ 면 대각선, $l$ 모서리 — 2-3-1(#15)의 기호와 다르다.</p>
+    </div>
+    <div class="col stack">
+      <p class="ac29-sub">1) 한 꼭짓점에서 중심을 지나 다른 꼭짓점까지 이어지는 선 $a$의 길이를 원자 반지름 $r$로 나타내어라.</p>
+      <p class="f21"><b>Q</b> 선 $a$ 위에서 서로 맞닿는 원자는 무엇일까?</p>
+      <div class="answer step ac29-left">꼭짓점 원자 – 체심 원자 – 꼭짓점 원자: $r+2r+r$</div>
+      <div class="answer step">1) $a=4r$</div>
+      <p class="ac29-sub mt8">2) 한 면의 대각선 $b$를 피타고라스 정리로 모서리 $l$에 대한 식으로 나타내어라.</p>
+      <div class="formula sm step">$b^2=l^2+l^2=2l^2$</div>
+      <div class="answer step">2) $b=\sqrt2\,l$</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 종합 문제 4 (3) ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 종합 문제" data-title="종합 문제 4 (3)">
+  <h2><span class="tag q">종합 문제 4</span>모서리 길이를 원자 반지름으로</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{BCCSEC}}</div>
+    <div class="col stack">
+      <p class="ac29-sub">3) 위 결과를 이용하여 모서리의 길이 $l$을 원자 반지름 $r$로 나타내어라.</p>
+      <p class="f21 mt8"><b>Q</b> $a$, $b$, $l$은 어떤 직각삼각형을 이룰까?</p>
+      <div class="answer step">$a^2=l^2+b^2$ (빗변 $a$)</div>
+      <div class="formula sm step">$(4r)^2=l^2+2l^2=3l^2$</div>
+      <div class="answer step">3) $l=\dfrac{4r}{\sqrt3}=\dfrac{4\sqrt3}{3}r$</div>
+      <p class="small step">확인: 예제 Ⅱ-4의 $r=\tfrac{\sqrt3}{4}l$(2-3-1 #17)과 같은 관계다. 원자 점유 비율 $\dfrac{2\times\tfrac43\pi r^3}{l^3}=\dfrac{\sqrt3\,\pi}{8}=0.680$ → 68.0 %</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 종합 문제 5 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 종합 문제" data-title="종합 문제 5">
+  <h2><span class="tag q">종합 문제 5</span>에틸렌 글리콜 부동액의 끓는점 오름</h2>
+  <p class="f21">에틸렌 글리콜 $\ce{C2H6O2}$는 물과 섞어 부동액을 만든다. 물 1.0 kg에 에틸렌 글리콜을 녹여 끓는점을 5.0 °C 올리려면 몇 g을 녹여야 하는지 구하여라. <span class="small">(물의 끓는점 오름 상수 $K_\mathrm{b}=0.512\ {}^\circ\text{C}/m$, $\ce{C2H6O2}$의 화학식량 62.07)</span></p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 끓는점을 5.0 °C 올리는 용액의 몰랄 농도는?</p>
+      <div class="formula sm step">$\Delta T_\mathrm{b}=m\times K_\mathrm{b}$ → $m=\dfrac{5.00\ {}^\circ\text{C}}{0.512\ {}^\circ\text{C}/m}=9.77\ m$<span class="unit">$m$: 몰랄 농도, $K_\mathrm{b}$: 끓는점 오름 상수</span></div>
+      <div class="formula sm step">$\dfrac{9.77\ \text{mol}\ \ce{C2H6O2}}{1\ \text{kg 물}}\times\dfrac{62.07\ \text{g}\ \ce{C2H6O2}}{1\ \text{mol}\ \ce{C2H6O2}}$</div>
+      <div class="answer step">606 g (물 1 kg에)</div>
+      <p class="small step">덱 보충: 어는점 내림은 $1.86\times9.77\approx18\ {}^\circ\text{C}$ → 약 −18 °C까지 얼지 않는다. 이만큼 진한 용액은 묽은 용액이 아니어서 어림값이다.</p>
+    </div>
+    <div class="col" style="flex:0 0 400px">{{BPE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. STEAM 원리 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 간이 분광 광도계의 원리">
+  <h2><span class="tag">STEAM</span>간이 분광 광도계 만들기와 농도 판별</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      {{BEAM}}
+      <div class="formula sm">$T=I/I_0$, &nbsp; $A=-\log(I/I_0)=-\log T$<span class="unit">투광도 $T$, 흡광도 $A$ — 분광기로 나눈 단색광을 쓴다</span></div>
+      <div class="formula sm">비어 법칙 $A=\varepsilon bc$<span class="unit">$\varepsilon$: 몰 흡광계수, $b$: 흡수 용기의 두께 [cm], $c$: 농도 [M]</span></div>
+    </div>
+    <div class="col stack">
+      <table class="tight ac29-act">
+        <tr><td>상황 제시</td><td class="l">① 색의 진한 정도로 농도 비교 ② 분광 광도계의 원리와 농도 판별 방법 ③ 농도를 모르는 염화 코발트(Ⅱ) 수용액의 농도 판별</td></tr>
+        <tr><td>창의적 설계</td><td class="l">① 브레드 보드·RGB LED·IC 회로·광센서로 회로 설계 ② 제작 → 표준 용액 흡광도 → 표준 검증 곡선 → 미지 농도 ③ 앙금 생성·색 변화·발광 반응에 활용 토의</td></tr>
+        <tr><td>감성적 체험</td><td class="l">① RGB 빛을 조합해 흡광도 측정 → 알맞은 빛 찾기 ② 빛의 흡수와 색(보색) ③ 모둠 발표, 900자 이내로 쓰기</td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> 빛의 50 %가 용액을 통과하면 흡광도는 얼마일까?</p>
+      <div class="answer step">$A=-\log0.50=0.30$ <span class="small">(10 % 통과 → 1.0, 1 % → 2.0)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 상황 제시 1·2 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 색의 진하기에서 빛의 세기로">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 상황 제시 1·2</span></span>색의 진하기에서 빛의 세기로</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 460px">{{TUBES}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 표준 용액과 눈으로 색을 견주는 방법의 한계는 무엇일까?</p>
+      <div class="answer step ac29-left">사람·조명마다 다르게 보이고, 비슷한 진하기는 구별하기 어렵다. 결과가 숫자로 나오지 않는다.</div>
+      <p class="f21 mt8"><b>Q</b> 분광 광도계는 무엇을 재어 농도를 알아낼까?</p>
+      <div class="answer step ac29-left">용액을 통과한 빛의 세기 $I$를 광센서로 재고 바탕(증류수)의 $I_0$와 비교해 흡광도를 숫자로 구한다. 흡광도는 농도에 비례하므로(비어 법칙) 표준 용액으로 그린 <b>표준 검증 곡선</b>에서 미지 농도를 읽는다.</div>
+      <p class="small c-muted mt8">2-4-1a #21–25에서 실험실 분광 광도계로 황산 구리 수용액을 쟀다(#23 실험실). 오늘은 그 장치를 직접 만든다.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 창의적 설계 1 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 회로 설계">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 창의적 설계 1</span></span>간이 분광 광도계의 회로 설계</h2>
+  {{CIRCUIT}}
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 700px"><table class="tight ac29-part">
+      <tr><th>부품</th><th class="l">하는 일</th></tr>
+      <tr><td>RGB LED + 저항</td><td class="l">빨강·초록·파랑 빛을 따로 또는 함께 낸다(저항은 전류 제한)</td></tr>
+      <tr><td>광센서</td><td class="l">받은 빛의 세기를 전압으로 바꾼다(조도 센서·포토다이오드)</td></tr>
+      <tr><td>IC 회로</td><td class="l">센서 전압을 숫자로 읽고 LED를 켜고 끈다(마이크로컨트롤러)</td></tr>
+    </table></div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 왜 상자로 바깥 빛을 막아야 할까?</p>
+      <div class="answer step ac29-left">센서가 바깥 빛까지 받으면 $I$와 $I_0$가 함께 커져 흡광도가 작게 나온다 — LED 빛만 재야 한다.</div>
+      <p class="small step">큐벳은 늘 같은 방향·같은 자리에(빛이 지나는 길이 $b$ 일정), 증류수로 먼저 $I_0$를 잰다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 감성적 체험 1 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 어떤 빛으로 잴까">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 감성적 체험 1</span></span>RGB 빛을 조합해 흡광도 비교하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">{{SPEC}}</div>
+    <div class="col" style="flex:0 0 440px">{{BARS}}</div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> 염화 코발트(Ⅱ) 수용액의 농도 판별에 알맞은 빛은 무엇일까?</p>
+  <div class="answer step">초록 빛 하나 — 흡광도가 가장 커서 농도 차이가 크게 드러난다</div>
+  <p class="small step">빛을 섞으면 잘 흡수되지 않는 빛도 센서에 들어가 흡광도가 작아지고 비어 법칙 직선에서 벗어난다 → 분광 광도법은 <b>단색광</b>을 쓴다. (값은 덱이 만든 예시)</p>
+</section>
+
+<!-- ════════ 21. 감성적 체험 2 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 빛의 흡수와 보색">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 감성적 체험 2</span></span>용액에서 빛의 흡수와 색 — 보색</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{WHEEL}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 용액의 색은 흡수한 빛과 어떤 관계일까?</p>
+      <div class="answer step ac29-left">흡수한 빛을 뺀 나머지 빛이 눈에 들어오므로, 용액은 흡수한 빛의 <b>보색</b>으로 보인다.</div>
+      <table class="tight ac29-col mt8">
+        <tr><th>물질</th><th>보이는 색</th><th>많이 흡수하는 빛</th></tr>
+        <tr><td class="l">염화 코발트(Ⅱ) 수용액</td><td>분홍</td><td>초록</td></tr>
+        <tr><td class="l">황산 구리(Ⅱ) 수용액 <span class="small c-muted">(2-4-1a #25)</span></td><td>파랑</td><td>주황–빨강</td></tr>
+        <tr><td class="l">과망가니즈산 칼륨 수용액</td><td>보라</td><td>초록–노랑</td></tr>
+        <tr><td class="l">엽록소(초록 잎)</td><td>초록</td><td>빨강, 파랑</td></tr>
+        <tr><td class="l">베타카로틴(당근)</td><td>주황</td><td>파랑</td></tr>
+      </table>
+      <p class="small step mt8">그래서 간이 분광 광도계에는 용액 색의 보색에 가까운 LED를 고른다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 측정값 처리 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 측정값을 흡광도로">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 상황 제시 3 · 창의적 설계 2</span></span>측정값을 흡광도로 바꾸기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 400px">
+      <p class="f21"><b>Q</b> 0.10 M 용액의 흡광도는 어떻게 구할까?</p>
+      <div class="answer step">$A=-\log\dfrac{324}{820}=0.403$</div>
+      <div class="card mt8"><p class="f21"><b>안전</b> 염화 코발트(Ⅱ)는 독성이 있어 피부에 닿거나 삼키면 해롭다 → 장갑·보안경을 쓰고, 폐액은 중금속 폐액통에 모은다. 회로는 낮은 전압(USB 전원)으로.</p></div>
+    </div>
+    <div class="col stack">
+      {{DATA}}
+      <p class="small c-muted">초록 LED, 흡수 용기 두께 1 cm. 센서 값은 상대값이고 표의 값은 덱이 만든 예시이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 표준 검증 곡선 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 표준 검증 곡선과 미지 농도">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 창의적 설계 2</span></span>표준 검증 곡선으로 미지 농도 판별하기</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 표준 검증 곡선이 원점을 지나는 직선이 되는 까닭은?</p>
+      <div class="answer step ac29-left">비어 법칙 $A=\varepsilon bc$에서 $\varepsilon$과 $b$가 일정하므로 $A\propto c$이다. 기울기 $=\varepsilon b$ → $\varepsilon\approx4.0\ \text{M}^{-1}\text{cm}^{-1}$</div>
+      <p class="f21 mt8"><b>Q</b> 미지 용액의 농도는?</p>
+      <div class="formula sm step" data-g="u1">$c=\dfrac{A}{\text{기울기}}=\dfrac{0.479}{4.00\ \text{M}^{-1}}$</div>
+      <div class="answer step">약 0.120 M</div>
+      <p class="small step">표준 검증 곡선은 2-4-1a의 검량선과 같은 것이다. 미지 흡광도가 표준 범위를 넘으면 희석해서 다시 잰다.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 560px">{{CURVE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. 창의적 설계 3 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 다른 반응에 활용하기">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 창의적 설계 3</span></span>다른 반응에도 쓸 수 있을까? — 토의</h2>
+  <p class="f21"><b>Q</b> 세 가지 반응에서 간이 분광 광도계의 센서는 각각 무엇을 잴까?</p>
+  <div class="ac29-cards mt8">
+    <div class="card"><h3>① 앙금 생성 반응</h3>
+      <p class="step">앙금 알갱이가 빛을 흩뜨려 통과하는 빛이 줄어든다(흐림 정도). 시간에 따른 $I$의 감소로 앙금이 생기는 빠르기를 비교한다.</p>
+      <p class="small step">예: 싸이오황산 나트륨 수용액 + 묽은 염산(황 앙금). 흡수가 아니라 산란이라 비어 법칙 직선은 맞지 않는다.</p></div>
+    <div class="card"><h3>② 색이 변하는 반응</h3>
+      {{FADE}}
+      <p class="step">색을 띤 물질의 흡광도를 시간마다 재면 농도 변화 → 반응 속도를 구할 수 있다(Ⅳ 반응 속도와 이어짐).</p></div>
+    <div class="card"><h3>③ 발광 반응</h3>
+      <p class="step">LED를 끄고 광센서만으로 반응이 내는 빛의 세기를 잰다(예: 루미놀 반응). 흡광도가 아니라 빛의 세기 자체를 잰다.</p>
+      <p class="small step">공통점: 빛의 세기 변화를 숫자로 기록해 그래프로 나타낸다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 감성적 체험 3 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · STEAM" data-title="STEAM: 발표와 글쓰기 예시">
+  <h2><span class="tag">STEAM<span class="ac29-st"> · 감성적 체험 3</span></span>모둠 발표와 900자 이내로 쓰기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 300px">
+      <div class="card"><p class="f21"><b>발표 길잡이</b></p>
+        <p class="small">① 회로와 부품이 하는 일<br>② 알맞은 빛을 고른 까닭(보색)<br>③ 표준 검증 곡선과 미지 농도<br>④ 다른 반응에 쓰는 방법</p></div>
+      <p class="f21 mt8"><b>Q</b> 간이 분광 광도계의 활용 방법을 글로 쓰면?</p>
+      <p class="small step">채점 요소: 회로 구성 · 흡광도 식 · 보색으로 빛 선택 · 표준 검증 곡선과 미지 농도 · 다른 활용 1가지 이상 · 900자 이내 (예시 글은 덱이 씀)</p>
+    </div>
+    <div class="col stack">
+      <div class="answer step ac29-essay" data-ask>(예시 글) 우리 모둠은 RGB LED, 광센서, IC 회로를 브레드 보드에 연결하고 바깥 빛을 막는 상자를 씌워 간이 분광 광도계를 만들었다. 증류수를 넣고 잰 빛의 세기를 $I_0$, 용액을 통과한 빛의 세기를 $I$라 하고 흡광도 $A=-\log(I/I_0)$를 계산하였다. 염화 코발트(Ⅱ) 수용액은 분홍색이므로 보색인 초록 빛을 가장 많이 흡수할 것이라 예상했고, 실제로 초록 LED에서 흡광도가 가장 컸다. 빛을 섞으면 흡광도가 작아져 한 가지 빛만 쓰기로 하였다. 0.05–0.25 M 표준 용액의 흡광도로 표준 검증 곡선을 그렸더니 원점을 지나는 직선이 되어 비어 법칙이 성립함을 확인하였다. 미지 용액의 흡광도 0.479를 곡선에 대어 농도가 약 0.12 M임을 알아냈다. 이 장치는 색을 띤 물질이 있는 곳이면 어디든 쓸 수 있다. 색이 변하는 반응에서는 시간에 따른 흡광도로 반응 속도를, 앙금 생성 반응에서는 흐려지는 정도를, 발광 반응에서는 LED를 끄고 빛의 세기를 잴 수 있다. 값비싼 기기가 없어도 원리를 알면 측정 도구를 직접 만들 수 있다는 점이 인상 깊었다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅱ. 물질의 성질 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅱ. 물질의 성질 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 기체 분자 운동론, 액체의 증기압과 끓는점, 고체의 단위세포, 용액의 농도와 총괄성을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 종합 문제를 식과 그림으로 풀고, 간이 분광 광도계로 표준 검증 곡선을 그려 미지 농도를 구할 수 있다.</button>
+    <button class="chk">[가치·태도] 직접 만든 측정 도구의 한계와 오차를 알고, 모둠 활동에 협력하며 결과를 발표한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 같은 온도에서 가벼운 기체가 더 빨리 분출되는 까닭은? <span class="step">→ <span class="ans">$v_\text{rms}=\sqrt{3RT/M}$ — 몰질량이 작을수록 빠르다</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 체심 입방 구조에서 원자가 맞닿는 방향은? <span class="step">→ <span class="ans">몸 대각선 ($4r=\sqrt3\,l$)</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 분홍색 염화 코발트(Ⅱ) 수용액의 농도를 잴 때 알맞은 빛은? <span class="step">→ <span class="ans">초록 빛 (보색, 흡광도가 가장 큼)</span></span></p>
+  </div>
+  <p class="small c-muted mt8">점검 결과가 아쉬우면 대응표(#8–10)의 소단원 덱 장을 다시 보자.</p>
+  <div class="note puzzle mt8"><b>다음 시간</b> Ⅲ. 물질의 변화와 에너지 — 계와 주위 사이에서 열과 일이 어떻게 오가는지 알아본다.</div>
+</section>

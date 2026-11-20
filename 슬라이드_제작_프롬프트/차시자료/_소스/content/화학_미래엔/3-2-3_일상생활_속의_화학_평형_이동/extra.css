@@ -1,0 +1,35 @@
+/* 3-2-3 일상생활 속의 화학 평형 이동 — 덱 전용 (모두 .cm323- 접두어) */
+.cover h1.cm323-h1{font-size:84px;line-height:1.15}
+p.cm323-a{color:#1B5E3F;margin-top:6px}
+.answer.cm323-left{text-align:left}
+.cm323-bf{color:#7B4FC8}
+ul.cm323-list{margin:4px 0 0 24px;padding:0}
+ul.cm323-list li{font-size:21px;line-height:1.5;margin-top:6px}
+table.cm323-tb{width:100%}
+table.cm323-tb td,table.cm323-tb th{font-size:21px;padding:7px 10px;text-align:center}
+table.cm323-tb td.l{text-align:left}
+table.cm323-tb .blank{min-width:120px}
+.cm323-cards .stage{padding:8px 10px;text-align:center}
+.cm323-cards .stage svg{width:100%}
+.cm323-cards .stage p.key{font-size:19px;margin:2px 0 0;text-align:left;line-height:1.45}
+ol.cm323-ox li{margin-top:28px;font-size:23px;line-height:1.6}
+ol.cm323-ox li:first-child{margin-top:4px}
+ol.cm323-ox .blank{min-width:140px}
+.choices.cm323-col{display:flex;flex-direction:column;gap:6px}
+.choices.cm323-col span{font-size:21px}
+.cm323-map{display:flex;align-items:stretch;gap:16px}
+.cm323-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 18px;font-size:22px;line-height:1.55}
+.cm323-node.cm323-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm323-side{flex:0 0 230px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.cm323-node.cm323-dim{border-style:dashed;color:var(--muted);font-size:20px}
+.cm323-node .blank{min-width:90px}
+.cm323-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.cm323-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 12px;font-size:19px}
+.cm323-seg .btn.cm323-act{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm323-seg .btn.cm323-add{border-color:var(--field);color:#1B5E3F;font-weight:700}
+.cm323-seg .btn.cm323-rs{margin-left:auto}
+.cm323-lab .res .big{font-size:32px}
+.cm323-lab .res p.small{margin:2px 0}
+output.kind.cm323-msg{margin-top:4px;line-height:1.42;font-size:19px;font-weight:500;display:block}
+table.cm323-log{width:100%;table-layout:fixed}
+table.cm323-log th,table.cm323-log td{font-size:19px;padding:2px 5px;text-align:center;white-space:nowrap;overflow:hidden}

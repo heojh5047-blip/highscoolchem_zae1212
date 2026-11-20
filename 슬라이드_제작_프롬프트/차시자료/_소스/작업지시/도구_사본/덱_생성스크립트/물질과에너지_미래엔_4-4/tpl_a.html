@@ -1,0 +1,725 @@
+<!-- 4-4a 농도, 온도, 촉매에 따른 반응 속도의 변화 (1) 농도와 온도 — 이 파일은 scratchpad 물질과에너지_미래엔_4-4/gen.py 가 tpl_a.html 에서 만든다 -->
+
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 반응 속도" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 반응 속도 › 04</div>
+    <h1 class="em44-h1">농도, 온도, 촉매에 따른<br><span class="acc">반응 속도의 변화</span></h1>
+    <p class="sub">(1) 농도와 온도 — 무엇이 유효 충돌을 늘릴까?</p>
+    <p class="meta">고등학교 물질과 에너지 108–119쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="두 온도에서 분자 운동 에너지 분포 곡선과 활성화 에너지 경계">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    ⟪axes(80,420,390,300)⟫
+    <path d="⟪tail(80,420,390,300,1.7,3.6)⟫" fill="#D7263D" opacity=".22" data-anim="fade" data-delay="1.6"/>
+    <path d="⟪tail(80,420,390,300,1.0,3.6)⟫" fill="#1F6FD1" opacity=".35" data-anim="fade" data-delay="1.6"/>
+    <path d="⟪dist(80,420,390,300,1.0)⟫" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-linecap="round" data-anim="draw" data-dur="1.1"/>
+    <path d="⟪dist(80,420,390,300,1.7)⟫" fill="none" stroke="#D7263D" stroke-width="4" stroke-linecap="round" data-anim="draw" data-dur="1.1" data-delay=".6"/>
+    <line x1="⟪ex(80,390,3.6)⟫" y1="420" x2="⟪ex(80,390,3.6)⟫" y2="150" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="7 6"/>
+    ⟪T(ex(80,390,3.6)+8,180,'$E_\\mathrm{a}$',26,'start',EQT)⟫
+    ⟪T(150,140,'저온',22,'start',MINUS)⟫
+    ⟪T(210,236,'고온',22,'start',PLUS)⟫
+    ⟪T(470,454,'운동 에너지',22,'end',MUTED)⟫
+    ⟪T(90,100,'분자 수',22,'start',MUTED)⟫
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12물에04-04]</span>농도, 온도, 촉매에 따라 반응 속도가 달라짐을 이해하고, 일상생활에서 각각의 예를 찾아 화학의 유용성을 인식할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>농도, 온도, 촉매에 따라 반응 속도가 달라짐을 설명할 수 있다.</li>
+    <li>일상생활에서 농도, 온도, 촉매에 따라 반응 속도가 달라지는 예를 찾아 화학의 유용성을 인식할 수 있다.</li>
+  </ol>
+  <div class="std mt12"><span class="code">[필수 탐구]</span>농도, 온도, 촉매와 반응 속도의 관계를 탐구하는 실험하기 — 이번 시간: 농도, 온도 / 다음 시간: 촉매</div>
+  <h3 class="mt20">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">탐구: 농도</div><div class="farr">→</div>
+    <div class="fnode hl">농도·압력·표면적과 충돌 횟수</div><div class="farr">→</div>
+    <div class="fnode">탐구: 온도</div><div class="farr">→</div>
+    <div class="fnode hl">운동 에너지 분포와 $E_\mathrm{a}$</div><div class="farr">→</div>
+    <div class="fnode">생활 속 예</div>
+  </div>
+  <div class="note mt16"><b>연계</b> 03에서 반응이 일어나려면 입자가 <b>유효 충돌</b>을 해야 하고, 충돌 에너지가 <b>활성화 에너지</b> 이상이어야 한다는 것을 배웠다.</div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 도입" data-title="생각 열기: 숯불과 부채질">
+  <h2><span class="tag">생각 열기</span>부채질하면 숯불이 왜 세질까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">
+      <svg class="fig" viewBox="0 0 480 320" style="width:480px" aria-label="부채로 숯불에 공기를 보내는 그림">
+        <rect x="170" y="196" width="290" height="70" rx="8" fill="#4A4F57"/>
+        <rect x="160" y="186" width="310" height="14" rx="5" fill="#2F343B"/>
+        <line x1="200" y1="266" x2="190" y2="304" stroke="#2F343B" stroke-width="8" stroke-linecap="round"/>
+        <line x1="430" y1="266" x2="440" y2="304" stroke="#2F343B" stroke-width="8" stroke-linecap="round"/>
+        <g>
+          <ellipse cx="315" cy="176" rx="140" ry="22" fill="#F28C28" opacity=".45"/>
+          <rect x="196" y="160" width="62" height="30" rx="12" fill="#2B2B2B"/><rect x="262" y="156" width="66" height="34" rx="13" fill="#333"/>
+          <rect x="332" y="160" width="58" height="30" rx="12" fill="#2B2B2B"/><rect x="394" y="162" width="56" height="28" rx="12" fill="#333"/>
+          <rect x="204" y="166" width="40" height="8" rx="4" fill="#F26B1D" opacity=".85"/><rect x="276" y="164" width="40" height="8" rx="4" fill="#F26B1D" opacity=".85"/><rect x="342" y="167" width="34" height="8" rx="4" fill="#F26B1D" opacity=".85"/><rect x="404" y="168" width="32" height="7" rx="3" fill="#F26B1D" opacity=".85"/>
+        </g>
+        <g data-anim="scale" data-from="1,0.55" data-o="320,160" data-dur=".9" data-rep="alt" data-ease="sine">
+          <path d="M230 158 C220 128 246 112 240 84 C262 104 268 128 258 158 Z" fill="#F9A13A"/>
+          <path d="M290 156 C276 116 304 92 300 52 C330 84 336 122 322 156 Z" fill="#F9A13A"/>
+          <path d="M352 158 C340 126 362 108 360 76 C384 104 388 130 378 158 Z" fill="#F9A13A"/>
+          <path d="M300 156 C294 130 308 114 306 92 C322 112 324 136 316 156 Z" fill="#FFE45C"/>
+        </g>
+        <g data-anim="rot" data-from="-14" data-o="80,260" data-dur=".6" data-rep="alt" data-ease="sine">
+          <path d="M80 260 L40 130 Q80 100 130 128 Z" fill="#E8D9B5" stroke="#B59A64" stroke-width="2"/>
+          <line x1="80" y1="260" x2="80" y2="300" stroke="#8C6E3A" stroke-width="8" stroke-linecap="round"/>
+        </g>
+        <g data-anim="move" data-from="-40,0" data-dur="1.6" data-rep="loop" data-ease="lin">
+          <g data-atom="150,128,8,O,-"></g><g data-atom="162,128,8,O,-"></g>
+          <g data-atom="165,170,8,O,-"></g><g data-atom="177,170,8,O,-"></g>
+          <g data-atom="140,212,8,O,-"></g><g data-atom="152,212,8,O,-"></g>
+        </g>
+        ⟪T(150,96,'공기 속 $\\ce{O2}$',21,'middle',INK)⟫
+        ⟪T(315,240,'숯($\\ce{C}$)',22,'middle','#FFFFFF')⟫
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22">숯불을 향해 부채질하면 불꽃이 커진다. 이는 숯이 빠르게 연소하기 때문이다.</p>
+      <div class="formula sm mt12">$\ce{C(s) + O2(g) -> CO2(g)}$<div class="unit">숯의 주성분은 탄소이다.</div></div>
+      <p class="f22 mt16"><b>Q</b> 부채질할 때 숯이 빠르게 연소하는 까닭은 무엇일까?</p>
+      <div class="answer step mt8">부채질로 공기가 계속 들어와 숯 주변의 <b>산소 농도</b>가 커진다 → 숯과 산소의 충돌이 많아져 연소 반응이 빨라진다.</div>
+      <p class="f21 mt16 step">다른 화학 반응에서도 농도에 따라 반응 속도가 달라질까? 실험으로 확인해 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 연결 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 도입" data-title="반응 속도를 바꾸는 요인">
+  <h2><span class="tag alt">연결</span>유효 충돌을 늘리는 세 가지 방법</h2>
+  <div class="formula sm">반응 속도가 빠르다 = 단위 시간당 <b>유효 충돌</b>이 많다</div>
+  <p class="f22 mt12"><b>Q</b> 03에서 배운 유효 충돌의 두 조건은 무엇일까? <span class="step">→ 반응에 <b>적합한 방향</b>으로, <b>활성화 에너지 이상</b>의 에너지로 충돌</span></p>
+  <p class="f22 mt8"><b>Q</b> 그렇다면 유효 충돌을 늘리려면 무엇을 바꾸면 될까?</p>
+  <div class="stages mt12">
+    <div class="stage step" data-g="c1"><span class="ph c-minus">이번 시간</span><h3 class="mt8">농도</h3><p>입자를 더 빽빽하게 → <b>충돌 횟수</b>가 늘어난다.</p></div>
+    <div class="stage step" data-g="c2"><span class="ph c-plus">이번 시간</span><h3 class="mt8">온도</h3><p>입자를 더 빠르게 → <b>$E_\mathrm{a}$ 이상의 에너지</b>를 가진 입자가 늘어난다.</p></div>
+    <div class="stage step" data-g="c3"><span class="ph c-field">다음 시간</span><h3 class="mt8">촉매</h3><p>반응 경로를 바꾸어 → <b>활성화 에너지</b>의 크기가 달라진다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 5. 탐구 ① 목표와 준비 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 농도 — 목표와 준비">
+  <h2><span class="tag">탐구</span>농도에 따른 반응 속도 측정하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[탐구]</span>농도, 온도, 촉매와 반응 속도의 관계를 탐구하는 실험하기 — ① 농도</div>
+  <p class="f21 mt8"><b>목표</b> 농도에 따른 반응 속도를 측정하고 농도와 반응 속도의 관계를 설명할 수 있다.</p>
+  <div class="row mt8">
+    <div class="col">
+      <h3>준비</h3>
+      <p class="f21">아이오딘산 칼륨($\ce{KIO3}$) 수용액과 아황산수소 나트륨($\ce{NaHSO3}$) 수용액의 반응이 완결되면 아이오딘($\ce{I2}$)이 생성된다. 아이오딘이 녹말과 반응하면 <b>청람색</b>으로 변한다.</p>
+      <p class="small mt8 c-muted">도움말: ‘아이오딘 시계 반응’을 검색해 영상으로 반응을 확인할 수 있다.</p>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <p class="f21"><b>1</b> 이 반응의 반응 속도를 어떤 방법으로 측정할 수 있을까?</p>
+      <p class="f21 step em44-a">→ 섞은 순간부터 용액이 청람색으로 변할 때까지 걸린 시간 $t$를 잰다. 빠를수록 $t$가 짧으므로 반응 속도를 $\dfrac{1}{t}$로 나타낸다.</p>
+      <p class="f21 mt12"><b>2</b> $\ce{KIO3}$ 수용액의 농도가 반응 속도에 미치는 영향을 알아보려면 어떤 요인을 통제해야 할까?</p>
+      <p class="f21 step em44-a">→ 온도, $\ce{NaHSO3}$ 수용액·녹말 수용액의 양, 혼합 용액의 전체 부피, 섞는 방법을 모두 같게 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 탐구 ① 준비물과 안전 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 농도 — 준비물과 안전">
+  <h2><span class="tag">탐구</span>준비물과 안전 — 농도에 따른 반응 속도</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>준비물</h3>
+        <p class="f21">0.1 M 아이오딘산 칼륨 수용액, 0.05 M 아황산수소 나트륨 수용액, 1 % 녹말 수용액, 증류수, 12홈판, 비커, 피펫, 피펫 채우개, 유리병, 이름 붙임 딱지, 초시계, 계산기, 실험복, 보안경, 실험용 고무장갑</p>
+        <p class="small mt8">도움 자료: 128–129쪽 실험실 안전 수칙</p>
+      </div>
+      <table class="tight em44-var mt12">
+        <tr><th>조작 변인</th><td class="l">$\ce{KIO3}$ 수용액의 농도(넣는 부피 0.5–2.0 mL)</td></tr>
+        <tr><th>종속 변인</th><td class="l">청람색으로 변할 때까지 걸린 시간</td></tr>
+        <tr><th>통제 변인</th><td class="l">온도, $\ce{NaHSO3}$·녹말 혼합 용액 2.0 mL, 전체 부피 4.0 mL</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <div class="card q"><h3>안전</h3>
+        <p class="f21">· 실험복, 보안경, 실험용 고무장갑을 반드시 착용한다.</p>
+        <p class="f21">· 피펫은 피펫 채우개로 채우고, 입으로 빨지 않는다.</p>
+        <p class="f21">· 용액이 피부나 눈에 닿으면 바로 많은 물로 씻는다.</p>
+      </div>
+      <div class="note mt12"><b>폐수 처리</b> 실험 후 남은 용액은 폐수 처리 기준과 방법에 따라 처리한다 — 아이오딘이 생긴 용액은 개수대에 버리지 않고 지정된 폐수 통에 모은다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 탐구 ① 과정 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 농도 — 과정">
+  <h2><span class="tag">탐구</span>과정 — 농도에 따른 반응 속도</h2>
+  <svg class="fig" viewBox="0 0 1100 250" style="width:1100px" aria-label="유리병 네 개와 12홈판의 홈 네 개, 아이오딘산 칼륨 수용액 부피가 0.5에서 2.0 밀리리터로 늘어남">
+    ⟪!
+def well(x,v,lab):
+    top=70; bot=190; h=(bot-top)
+    k=v/2.0*h
+    s=f'<path d="M{x-48} {top} L{x-48} {bot-10} Q{x-48} {bot} {x-38} {bot} L{x+38} {bot} Q{x+48} {bot} {x+48} {bot-10} L{x+48} {top}" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/>'
+    s+=f'<rect x="{x-46}" y="{bot-h*0.98:.1f}" width="92" height="{max(0,h*0.98-k):.1f}" fill="#F4F8FB"/>'
+    s+=f'<rect x="{x-46}" y="{bot-k:.1f}" width="92" height="{k-2:.1f}" fill="#BFDDF2"/>'
+    s+=T(x,top-14,lab,24,'middle',INK)
+    return s
+⟫
+    <rect x="300" y="60" width="790" height="140" rx="14" fill="#F1F4F7" stroke="#C9D3DD" stroke-width="2"/>
+    ⟪well(390,0.5,'①')⟫ ⟪well(580,1.0,'②')⟫ ⟪well(770,1.5,'③')⟫ ⟪well(960,2.0,'④')⟫
+    ⟪T(390,228,'$\\ce{KIO3}$ 0.5 + 물 1.5',19,'middle',INK)⟫ ⟪T(580,228,'1.0 + 1.0',19,'middle',INK)⟫ ⟪T(770,228,'1.5 + 0.5',19,'middle',INK)⟫ ⟪T(960,228,'2.0 + 0',19,'middle',INK)⟫
+    <g>
+      <rect x="40" y="70" width="80" height="120" rx="12" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/>
+      <rect x="54" y="48" width="52" height="24" rx="5" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/>
+      <rect x="43" y="120" width="74" height="67" rx="9" fill="#EAF2F8"/>
+      ⟪T(80,112,'①',22,'middle',INK)⟫
+      ⟪T(30,228,'$\\ce{NaHSO3}$ + 녹말 2.0 mL',19,'start',INK)⟫
+    </g>
+    <g data-arw="135,130,325,130,ink,3"></g>
+    ⟪T(230,116,'붓는 순간 시작',19,'middle',INK)⟫
+    <g data-anim="fade" data-dur=".8" data-delay="1.4"><rect x="344" y="96" width="92" height="92" fill="#22306E" opacity=".9"/>⟪T(390,148,'청람색',19,'middle','#FFFFFF')⟫</g>
+    
+  </svg>
+  <div class="stages em44-s4 mt8">
+    <div class="stage"><span class="ph">1</span><p class="mt8">$\ce{NaHSO3}$ 수용액 18 mL와 녹말 수용액 2 mL를 섞고, 유리병 ①–④에 2.0 mL씩 담는다.</p></div>
+    <div class="stage"><span class="ph">2</span><p class="mt8">홈 ①–④에 $\ce{KIO3}$ 수용액을 0.5, 1.0, 1.5, 2.0 mL씩 넣고 증류수로 전체 2.0 mL를 맞춘 뒤 살짝 흔든다.</p></div>
+    <div class="stage"><span class="ph">3</span><p class="mt8">유리병 ①의 용액을 홈 ①에 넣는 동시에 초시계를 누르고, 색이 변할 때까지 걸린 시간을 잰다.</p></div>
+    <div class="stage"><span class="ph">4</span><p class="mt8">유리병 ②–④로 홈 ②–④에 과정 3을 반복한다. 역할을 나누고, 촬영하면 더 정확하다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 8. 실험실: 농도 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="실험실: 농도와 반응 시간">
+  <h2><span class="tag">탐구</span>농도 실험실 — 아이오딘 시계 반응 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="em44conc">
+    <div class="lab-ctl" style="flex-basis:390px">
+      <div class="em44-seg"><span class="small">홈</span><button class="btn on" data-w="1">①</button><button class="btn" data-w="2">②</button><button class="btn" data-w="3">③</button><button class="btn" data-w="4">④</button></div>
+      <table class="readout em44-read">
+        <tr><th>$\ce{KIO3}$ + 증류수</th><td><output data-o="vol"></output></td></tr>
+        <tr><th>상대 농도</th><td><output data-o="rc"></output></td></tr>
+        <tr><th>초시계</th><td><output data-o="clk"></output></td></tr>
+        <tr class="hl"><th>반응 속도 ($\frac{1}{t}$)</th><td><output data-o="rate"></output></td></tr>
+      </table>
+      <div class="em44-seg mt8"><button class="btn em44-act" data-act="run">섞고 측정</button><button class="btn" data-act="reset">초기화</button></div>
+      <p class="small mt4">같게 한 것: 온도 25 °C, $\ce{NaHSO3}$·녹말 2.0 mL, 전체 4.0 mL</p>
+      <output class="kind em44-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="row" style="gap:12px">
+        <div class="lab-fig" style="width:250px;height:250px"><svg viewBox="0 0 250 250" width="250" height="250" aria-label="홈 속 용액과 초시계"></svg></div>
+        <div class="lab-fig" style="width:378px;height:250px"><svg viewBox="0 0 378 250" width="378" height="250" aria-label="상대 농도와 반응 속도 그래프"></svg>
+          <div class="ov" data-ov="yl" style="font-size:19px"></div><div class="ov" data-ov="xl" style="font-size:19px"></div></div>
+      </div>
+      <table class="tight em44-log mt8"><thead><tr><th>홈</th><th>상대 농도</th><th>걸린 시간 (s)</th><th>반응 속도 (1/s)</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 탐구 ① 결과 및 정리 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 농도 — 결과 및 정리">
+  <h2><span class="tag">탐구</span>결과 및 정리 — 농도에 따른 반응 속도</h2>
+  <p class="f21" data-q><b>1</b> 홈 ①의 상대 농도를 1이라 할 때 홈 ②–④의 상대 농도를 구하고, <b>2</b> 걸린 시간과 반응 속도를 써 보자. <span class="small c-muted">(예시 값)</span></p>
+  <table class="tight em44-res mt8">
+    <tr><th>홈의 번호</th><td>①</td><td>②</td><td>③</td><td>④</td></tr>
+    <tr><th>$\ce{KIO3}(aq)$ 부피(mL)</th><td>0.5</td><td>1.0</td><td>1.5</td><td>2.0</td></tr>
+    <tr><th>증류수 부피(mL)</th><td>1.5</td><td>1.0</td><td>0.5</td><td>0</td></tr>
+    <tr><th>$\ce{KIO3}(aq)$의 상대 농도</th><td>1</td><td><span class="blank"><span class="step" data-g="r1">2</span></span></td><td><span class="blank"><span class="step" data-g="r1">3</span></span></td><td><span class="blank"><span class="step" data-g="r1">4</span></span></td></tr>
+    <tr><th>걸린 시간(s)</th><td><span class="blank"><span class="step" data-g="r2">3.66</span></span></td><td><span class="blank"><span class="step" data-g="r2">1.70</span></span></td><td><span class="blank"><span class="step" data-g="r2">0.85</span></span></td><td><span class="blank"><span class="step" data-g="r2">0.50</span></span></td></tr>
+    <tr><th>반응 속도($\frac{1}{\text{s}}$)</th><td><span class="blank"><span class="step" data-g="r3">0.27</span></span></td><td><span class="blank"><span class="step" data-g="r3">0.59</span></span></td><td><span class="blank"><span class="step" data-g="r3">1.18</span></span></td><td><span class="blank"><span class="step" data-g="r3">2.00</span></span></td></tr>
+  </table>
+  <p class="f21 mt12"><b>3</b> 실험 결과를 바탕으로 반응물의 농도와 반응 속도는 어떤 관계인지 설명해 볼까?</p>
+  <div class="answer step mt8">$\ce{KIO3}$ 수용액의 농도가 클수록 색이 변할 때까지 걸린 시간이 짧아진다 → <b>반응물의 농도가 클수록 반응 속도는 빨라진다.</b></div>
+  <p class="small mt12 c-muted"><b>스스로 평가하기</b> 지식·이해: 반응물의 농도와 반응 속도의 관계를 설명했는가? · 과정·기능: $\ce{KIO3}$ 수용액의 농도를 제외한 다른 변인을 일정하게 통제했는가? · 가치·태도: 관심을 가지고 실험에 참여했는가?</p>
+</section>
+
+<!-- ════════ 10. ① 농도와 충돌 횟수 ════════ -->
+<section class="slide" data-sec="04 · 농도가 반응 속도에 미치는 영향" data-title="농도와 충돌 횟수">
+  <h2><span class="no">1</span>농도가 커지면 왜 빨라질까?</h2>
+  <p class="f22">일반적으로 반응물의 농도가 커지면 반응 속도가 빨라진다. 같은 부피 속 입자 수를 늘려 보자.</p>
+  ⟪!
+def panel(As,Bs,n):
+    s=f'<svg class="fig" viewBox="0 0 240 170" style="width:236px" aria-label="A 입자 {len(As)}개, B 입자 {len(Bs)}개, 충돌할 수 있는 쌍 {n}개">'
+    s+='<rect x="3" y="3" width="234" height="164" rx="14" fill="#F4F8FB" stroke="#9FB0C2" stroke-width="2"/>'
+    for a in As:
+        for b in Bs:
+            s+=f'<line x1="{a[0]}" y1="{a[1]}" x2="{b[0]}" y2="{b[1]}" stroke="{PLUS}" stroke-width="2" stroke-dasharray="6 5" opacity=".75"/>'
+    for i,a in enumerate(As): s+=ab(a[0],a[1],'A',16,f' data-anim="move" data-from="{(-1)**i*4},{3}" data-dur=".7" data-rep="alt" data-ease="sine"')
+    for i,b in enumerate(Bs): s+=ab(b[0],b[1],'B',16,f' data-anim="move" data-from="{(-1)**(i+1)*4},{-3}" data-dur=".8" data-rep="alt" data-ease="sine"')
+    return s+'</svg>'
+⟫
+  <div class="stages em44-s4 mt12">
+    <div class="stage em44-c">⟪panel([(65,85)],[(175,85)],1)⟫<p class="key">A 1, B 1 → 쌍 <b>1</b></p></div>
+    <div class="stage em44-c">⟪panel([(60,48),(60,124)],[(178,86)],2)⟫<p class="key">A 2, B 1 → 쌍 <b>2</b></p></div>
+    <div class="stage em44-c">⟪panel([(58,46),(62,126)],[(180,50),(176,124)],4)⟫<p class="key">A 2, B 2 → 쌍 <b>4</b></p></div>
+    <div class="stage em44-c">⟪panel([(52,36),(46,86),(56,138)],[(184,56),(180,120)],6)⟫<p class="key">A 3, B 2 → 쌍 <b>6</b></p></div>
+  </div>
+  <p class="small c-muted mt4">빨간 점선: 서로 충돌할 수 있는 A–B 쌍 (그림 IV-5를 다시 그림)</p>
+  <div class="flow mt12 step">
+    <div class="fnode">농도 증가</div><div class="farr">→</div>
+    <div class="fnode hl">단위 시간당 충돌 횟수 증가</div><div class="farr">→</div>
+    <div class="fnode">반응하는 입자 수 증가</div><div class="farr">→</div>
+    <div class="fnode hl">반응 속도 빨라짐</div>
+  </div>
+</section>
+
+<!-- ════════ 11. ① 압력과 기체의 농도 ════════ -->
+<section class="slide" data-sec="04 · 농도가 반응 속도에 미치는 영향" data-title="압력과 기체의 충돌 횟수">
+  <h2><span class="no">1</span>기체의 반응: 압력을 높이면?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      ⟪!
+def cyl(x,pis,nw,seed,extra=''):
+    s=f'<rect x="{x}" y="40" width="10" height="245" fill="#C9D3DD"/><rect x="{x+190}" y="40" width="10" height="245" fill="#C9D3DD"/><rect x="{x}" y="285" width="200" height="10" fill="#C9D3DD"/>'
+    s+=f'<rect x="{x+10}" y="{pis+14}" width="180" height="{271-pis}" fill="#EEF4FA"/>'
+    for (px,py) in pts(seed,12,x+12,pis+16,x+188,284,8,6): s+=gas(px,py,8)
+    g=f'<g{extra}><rect x="{x+10}" y="{pis}" width="180" height="14" fill="#8C99A6"/>'
+    for k in range(nw): g+=f'<rect x="{x+70}" y="{pis-28*(k+1)}" width="60" height="26" rx="4" fill="#C9A227" stroke="#8C6E1A" stroke-width="1.5"/>'
+    return s+g+'</g>'
+⟫
+      <svg class="fig" viewBox="0 0 560 330" style="width:560px" aria-label="추 하나를 얹은 실린더와 추 둘을 얹어 부피가 절반이 된 실린더, 기체 분자 수는 12개로 같음">
+        ⟪cyl(20,70,1,11)⟫
+        ⟪cyl(340,168,2,12,' data-anim="move" data-from="0,-98" data-dur="1.4" data-ease="out" data-on="g:p1"')⟫
+        <g data-arw="236,178,324,178,ink,3"></g>
+        ⟪T(280,160,'압력 증가',21,'middle',INK)⟫
+        ⟪T(120,320,'부피 $V$, 분자 12개',20,'middle',INK)⟫
+        ⟪T(440,320,'부피 $\\frac{1}{2}V$, 분자 12개',20,'middle',INK)⟫
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22"><b>Q</b> 온도가 일정할 때 압력을 높이면 기체의 농도는 어떻게 될까?</p>
+      <p class="f22 mt8 step" data-g="p1">→ 기체의 부피가 줄어 <b>단위 부피 속 입자 수</b>가 많아진다 = 기체의 농도가 커진다.</p>
+      <p class="f22 mt12 step">→ 단위 시간당 입자의 충돌 횟수가 많아져 <b>반응 속도가 빨라진다</b>.</p>
+      <div class="note mt16 step"><b>다시 보기</b> Ⅰ단원 보일 법칙: 압력이 2배가 되면 부피는 $\frac{1}{2}$배 → 같은 분자 수가 절반 부피에 들어가 농도는 2배가 된다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. ① 고체의 표면적 ════════ -->
+<section class="slide" data-sec="04 · 농도가 반응 속도에 미치는 영향" data-title="고체의 표면적과 충돌 횟수">
+  <h2><span class="no">1</span>반응물이 고체일 때: 표면적</h2>
+  <p class="f22">반응물이 고체이면 반응은 <b>고체의 표면</b>에서만 일어난다. 같은 양의 고체를 잘게 쪼개면?</p>
+  <div class="row mt8">
+    <div class="col em44-c" style="flex:0 0 330px">
+      <svg class="fig" viewBox="0 0 330 260" style="width:330px" aria-label="한 변이 2 센티미터인 정육면체와 둘레의 기체 분자">
+        ⟪''.join(gas(x,y,7) for x,y in pts(21,14,8,8,322,252,7,10,avoid=[(165,140),(165,95),(120,120),(210,120),(165,180),(130,170),(200,170),(130,80),(200,80)]))⟫
+        ⟪cube(165,225,100)⟫
+      </svg>
+      <p class="f21">한 변 2 cm 정육면체 1개<br>겉넓이 $6\times(2\ \text{cm})^2=24\ \text{cm}^2$</p>
+    </div>
+    <div class="col em44-c" style="flex:0 0 90px">
+      <svg class="fig" viewBox="0 0 90 120" style="width:90px" aria-label="표면적을 늘림"><g data-arw="6,60,84,60,ink,3"></g>⟪T(45,40,'쪼갬',20,'middle',INK)⟫</svg>
+    </div>
+    <div class="col em44-c" style="flex:0 0 360px">
+      <svg class="fig" viewBox="0 0 360 260" style="width:360px" aria-label="한 변이 1 센티미터인 정육면체 8개로 쪼갠 모습">
+        ⟪!cs=[(55,120),(140,120),(225,120),(310,120),(55,245),(140,245),(225,245),(310,245)]⟫
+        ⟪''.join(gas(x,y,7) for x,y in pts(22,14,8,8,352,252,7,10,avoid=[(a,b-50) for a,b in cs]+[(a,b-25) for a,b in cs]+[(a-30,b-40) for a,b in cs]+[(a+30,b-40) for a,b in cs]))⟫
+        ⟪''.join(f'<g data-anim="move" data-from="{(165-x)*0.6:.0f},{(150-y)*0.6:.0f}" data-dur="1.2" data-ease="out" data-delay=".3">'+cube(x,y,50)+'</g>' for x,y in cs)⟫
+      </svg>
+      <p class="f21">한 변 1 cm 정육면체 8개<br>겉넓이 $8\times6\times(1\ \text{cm})^2=48\ \text{cm}^2$</p>
+    </div>
+    <div class="col">
+      <p class="f21"><b>Q</b> 잘게 쪼개면 반응 속도는 어떻게 될까?</p>
+      <p class="f21 mt8 step">→ 표면적이 커져 반응물 사이의 <b>접촉 면적</b>이 늘고, 단위 시간당 충돌 횟수가 많아져 <b>반응 속도가 빨라진다</b>.</p>
+      <div class="note mt12 step">표면적을 늘리면 농도가 커지는 것처럼 충돌 횟수가 늘어난다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 자료 읽기 ════════ -->
+<section class="slide" data-sec="04 · 자료 읽기" data-title="자료 읽기: 농도·표면적 조절">
+  <h2><span class="tag">자료 읽기</span>농도, 표면적을 변화시켜 반응 속도를 조절하는 예</h2>
+  <p class="f21" data-q>그림 IV-8의 반응 속도 변화를 농도, 표면적과 관련지어 정리해 보자.</p>
+  <div class="em44-g2 mt8">
+    <div class="card em44-ic"><svg class="fig" viewBox="0 0 120 80" style="width:120px" aria-hidden="true"><rect x="6" y="22" width="108" height="44" rx="22" fill="#E3EEFB" stroke="#7E8B98" stroke-width="2.5"/><circle cx="34" cy="44" r="11" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><g data-atom="66,44,7,O,-"></g><g data-atom="76,44,7,O,-"></g><g data-atom="90,34,7,O,-"></g><g data-atom="100,34,7,O,-"></g><g data-atom="92,56,7,O,-"></g><g data-atom="102,56,7,O,-"></g></svg>
+      <div><p class="f21"><b>고압 산소실에서 저산소증을 치료한다.</b></p><p class="f21 step em44-a">→ 압력을 높여 산소의 <b>농도</b>를 크게 하면 산소가 관여하는 반응이 빨라진다.</p></div></div>
+    <div class="card em44-ic"><svg class="fig" viewBox="0 0 120 80" style="width:120px" aria-hidden="true"><ellipse cx="34" cy="42" rx="26" ry="16" fill="#F3D9E3" stroke="#B4738C" stroke-width="2"/>⟪''.join(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="3.5" fill="#F3D9E3" stroke="#B4738C" stroke-width="1"/>' for x,y in pts(5,16,72,16,116,70,3.5,2))⟫</svg>
+      <div><p class="f21"><b>가루약이 알약보다 빨리 흡수된다.</b></p><p class="f21 step em44-a">→ 가루약은 <b>표면적</b>이 커서 녹고 흡수되는 반응이 빠르다.</p></div></div>
+    <div class="card em44-ic"><svg class="fig" viewBox="0 0 120 80" style="width:120px" aria-hidden="true"><rect x="14" y="30" width="92" height="44" rx="6" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/><rect x="8" y="18" width="104" height="14" rx="4" fill="#9FC3DD" stroke="#7E8B98" stroke-width="2"/><circle cx="44" cy="54" r="12" fill="#F2A65A"/><circle cx="72" cy="56" r="10" fill="#8FD19E"/></svg>
+      <div><p class="f21"><b>음식물을 밀폐 용기에 보관한다.</b></p><p class="f21 step em44-a">→ 새 공기가 들어오지 못해 산소와의 접촉(<b>농도</b>)이 줄어 음식물이 변질되는 반응이 느려진다.</p></div></div>
+    <div class="card em44-ic"><svg class="fig" viewBox="0 0 120 80" style="width:120px" aria-hidden="true"><rect x="6" y="28" width="46" height="40" rx="6" fill="#C4A27A" stroke="#7A5A34" stroke-width="2"/><circle cx="29" cy="48" r="13" fill="#E3C79E" stroke="#7A5A34" stroke-width="1.5"/><rect x="66" y="16" width="22" height="26" rx="4" fill="#C4A27A" stroke="#7A5A34" stroke-width="2"/><rect x="92" y="16" width="22" height="26" rx="4" fill="#C4A27A" stroke="#7A5A34" stroke-width="2"/><rect x="66" y="46" width="22" height="26" rx="4" fill="#C4A27A" stroke="#7A5A34" stroke-width="2"/><rect x="92" y="46" width="22" height="26" rx="4" fill="#C4A27A" stroke="#7A5A34" stroke-width="2"/></svg>
+      <div><p class="f21"><b>통나무를 쪼개면 더 잘 연소한다.</b></p><p class="f21 step em44-a">→ 쪼개면 <b>표면적</b>이 커져 산소와 닿는 면이 넓어지므로 연소가 빨라진다.</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 자료 읽기 ⑵ 분진 폭발 ════════ -->
+<section class="slide" data-sec="04 · 자료 읽기" data-title="자료 읽기: 탄광과 밀가루 공장">
+  <h2><span class="tag">자료 읽기</span>작은 불씨로도 폭발이 일어나는 까닭</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 300" style="width:400px" aria-label="공기 중에 떠 있는 미세한 가루와 작은 불씨">
+        <rect x="4" y="4" width="392" height="292" rx="16" fill="#F7F3EC" stroke="#C9B99A" stroke-width="2"/>
+        ⟪''.join(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="4" fill="#B79A6C" opacity=".85"/>' for x,y in pts(31,70,14,14,386,286,4,10,avoid=[(200,170)]*1))⟫
+        <g data-anim="pop" data-o="200,170" data-dur=".6" data-rep="alt" data-ease="sine">
+          <circle cx="200" cy="170" r="30" fill="#FFE45C" opacity=".55"/>
+          <polygon points="200,146 207,163 224,163 210,174 216,192 200,181 184,192 190,174 176,163 193,163" fill="#F28C28"/>
+        </g>
+        ⟪T(200,282,'공기 중에 떠 있는 석탄 가루·밀가루',20,'middle',INK,' data-halo="1"')⟫
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> 탄광이나 밀가루 공장에서 작은 불씨로도 폭발 사고가 일어나기 쉬운 까닭은 무엇일까?</p>
+      <div class="board mt8"></div>
+      <div class="answer step mt8">공기 중에 떠 있는 석탄 가루·밀가루는 알갱이가 매우 작아 <b>표면적이 매우 크다</b> → 산소와 닿는 면이 넓어 불씨가 닿으면 연소 반응이 순식간에 일어나고, 열과 기체가 한꺼번에 생겨 폭발한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 확인하기 ════════ -->
+<section class="slide" data-sec="04 · 확인하기" data-title="확인하기: 농도와 반응 속도" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>농도와 반응 속도</h2>
+  <ol class="em44-ox f22">
+    <li>반응물의 농도가 커지면 단위 시간당 입자의 충돌 횟수가 ( 많아지므로, 적어지므로 ) 반응 속도가 빨라진다. <span class="blank"><span class="step">많아지므로</span></span></li>
+    <li>크기가 같은 마그네슘 리본을 0.1 M 염산, 0.5 M 염산, 1 M 염산과 반응시켰을 때 반응 속도가 빠른 것부터 순서대로 나열해 보자. (단, 용액의 온도는 모두 같다.)<br><span class="blank em44-wide"><span class="step">1 M 염산 &gt; 0.5 M 염산 &gt; 0.1 M 염산</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 16. 연결: 온도 ════════ -->
+<section class="slide" data-sec="04 · 온도가 반응 속도에 미치는 영향" data-title="온도와 반응 속도: 예측">
+  <h2><span class="tag alt">연결</span>여름철 음식물이 더 빨리 상하는 까닭</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 470 280" style="width:470px" aria-label="여름과 겨울의 온도계와 상한 정도가 다른 음식물">
+        ⟪!
+def thermo(x,lvl,col):
+    s=f'<rect x="{x-9}" y="30" width="18" height="170" rx="9" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2.5"/>'
+    s+=f'<circle cx="{x}" cy="212" r="18" fill="{col}" stroke="#7E8B98" stroke-width="2.5"/>'
+    s+=f'<rect x="{x-4}" y="{200-lvl}" width="8" height="{lvl+8}" fill="{col}"/>'
+    return s
+⟫
+        <rect x="8" y="10" width="220" height="262" rx="14" fill="#FDE2E4"/><rect x="242" y="10" width="220" height="262" rx="14" fill="#E3EEFB"/>
+        ⟪thermo(50,140,PLUS)⟫ ⟪thermo(284,40,MINUS)⟫
+        <ellipse cx="148" cy="190" rx="58" ry="30" fill="#F2E2C4" stroke="#B59A64" stroke-width="2"/>
+        <g data-anim="fade" data-dur="1.4" data-delay=".4"><circle cx="130" cy="182" r="9" fill="#7C8F4E" opacity=".85"/><circle cx="160" cy="196" r="12" fill="#7C8F4E" opacity=".85"/><circle cx="170" cy="176" r="7" fill="#7C8F4E" opacity=".85"/><circle cx="142" cy="202" r="6" fill="#7C8F4E" opacity=".85"/></g>
+        <ellipse cx="382" cy="190" rx="58" ry="30" fill="#F2E2C4" stroke="#B59A64" stroke-width="2"/>
+        ⟪T(148,62,'여름 30 °C',22,'middle',PLUS)⟫ ⟪T(382,62,'겨울 5 °C',22,'middle',MINUS)⟫
+        ⟪T(148,250,'하루 만에 상함',20,'middle',INK)⟫ ⟪T(382,250,'더 오래 감',20,'middle',INK)⟫
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22">여름철에는 겨울철보다 음식물이 더 빨리 상한다. 이는 <b>온도</b>가 반응 속도에 영향을 미치기 때문이다.</p>
+      <p class="f22 mt16"><b>Q</b> 예측해 보자. 온도를 25 °C에서 35 °C로 10 °C 높이면 반응 속도는 대략 얼마나 빨라질까?</p>
+      <div class="choices mt8"><span>① 약 1.02배</span><span>② 약 1.1배</span><span>③ 약 2배</span></div>
+      <p class="f21 mt16 step">→ 실험과 자료로 확인해 보자(정답은 온도와 충돌 횟수에서).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 ② 목표와 준비 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 온도 — 목표와 준비">
+  <h2><span class="tag">탐구</span>온도에 따른 반응 속도 측정하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[탐구]</span>농도, 온도, 촉매와 반응 속도의 관계를 탐구하는 실험하기 — ② 온도</div>
+  <p class="f21 mt8"><b>목표</b> 온도에 따른 반응 속도를 측정하고, 온도와 반응 속도의 관계를 설명할 수 있다.</p>
+  <div class="formula sm mt8">$\ce{CaCl2(aq) + 2NaHCO3(aq) -> 2NaCl(aq) + CaCO3(s) + CO2(g) + H2O(l)}$<div class="unit">염화 칼슘 수용액과 탄산수소 나트륨 수용액의 반응</div></div>
+  <p class="f21 mt12"><b>1</b> 두 수용액을 1 mL씩 섞으면 어떤 변화가 보일까?</p>
+  <p class="f21 step em44-a">→ 흰색 앙금(탄산 칼슘)이 생겨 용액이 뿌옇게 흐려지고, 기포(이산화 탄소)가 생긴다.</p>
+  <p class="f21 mt8"><b>2</b> 이 반응의 반응 속도를 어떤 방법으로 측정할 수 있을까?</p>
+  <p class="f21 step em44-a">→ 앙금이 생길수록 용액이 흐려지므로, 위에서 쏜 레이저 빛이 아래 흰 종이에 보이지 않을 때까지 걸린 시간 $t$를 잰다(반응 속도 $\frac{1}{t}$).</p>
+</section>
+
+<!-- ════════ 18. 탐구 ② 준비물과 안전 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 온도 — 준비물과 안전">
+  <h2><span class="tag">탐구</span>준비물과 안전 — 온도에 따른 반응 속도</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>준비물</h3>
+        <p class="f21">0.1 M 염화 칼슘 수용액, 0.1 M 탄산수소 나트륨 수용액, 얼음물, 실온의 물, 더운물, 시험관, 시험관대, 레이저, 페트리 접시, 비커, 눈금실린더, 흰 종이, 삼각 플라스크, 스포이트, 초시계, 계산기, 온도계, 실험복, 보안경, 실험용 고무장갑</p>
+      </div>
+      <table class="tight em44-var mt12">
+        <tr><th>조작 변인</th><td class="l">물(용액)의 온도: 얼음물, 실온의 물, 더운물</td></tr>
+        <tr><th>종속 변인</th><td class="l">레이저 빛이 보이지 않을 때까지 걸린 시간</td></tr>
+        <tr><th>통제 변인</th><td class="l">두 수용액의 농도·부피(각 20 mL), 플라스크, 레이저 위치</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 470px">
+      <div class="card q"><h3>안전</h3>
+        <p class="f21">· 실험복, 보안경, 실험용 고무장갑을 반드시 착용한다.</p>
+        <p class="f21">· <b>레이저 빛을 눈에 비추지 않도록</b> 주의한다.</p>
+        <p class="f21">· 더운물에 데지 않도록 조심한다.</p>
+      </div>
+      <div class="note mt12"><b>폐수 처리</b> 실험 후 남은 용액은 폐수 처리 기준과 방법에 따라 처리한다 — 앙금(탄산 칼슘)은 걸러 고체 폐기물로, 거른 용액은 폐수 통에 모은다.</div>
+      <p class="small mt8">도움 자료: 128–129쪽 실험실 안전 수칙</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 탐구 ② 과정 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 온도 — 과정">
+  <h2><span class="tag">탐구</span>과정 — 온도에 따른 반응 속도</h2>
+  <div class="row">
+    <div class="col">
+      <ol class="em44-steps f21">
+        <li>삼각 플라스크 3개에 염화 칼슘 수용액을 20 mL씩, 시험관 3개에 탄산수소 나트륨 수용액을 20 mL씩 넣는다.</li>
+        <li>얼음물에 삼각 플라스크와 시험관을 1개씩 넣어 용액과 물의 온도가 같아지게 둔 뒤 물의 온도를 잰다.</li>
+        <li>흰 종이 위에 페트리 접시를 뒤집어 놓고, 겉면의 물기를 닦은 삼각 플라스크를 올린다.</li>
+        <li>시험관의 수용액을 플라스크에 재빨리 넣고, 레이저를 위에서 아래로 쏘며 흰 종이에 빛이 보이지 않을 때까지 걸린 시간을 잰다.</li>
+        <li>실온의 물, 더운물로 과정 2–4를 반복한다.</li>
+      </ol>
+      <p class="small mt8 c-muted">도움말: 용액을 넣는 동시에 초시계를 눌러야 하므로 모둠원끼리 역할을 나눈다.</p>
+    </div>
+    <div class="col" style="flex:0 0 330px">
+      <svg class="fig" viewBox="0 0 330 380" style="width:330px" aria-label="흰 종이 위 페트리 접시에 올린 삼각 플라스크와 위에서 쏜 레이저">
+        <rect x="140" y="8" width="30" height="46" rx="5" fill="#2F343B"/>
+        <line x1="155" y1="54" x2="155" y2="336" stroke="#D7263D" stroke-width="3" opacity=".8"/>
+        <path d="M134 96 L134 160 L64 300 Q58 316 76 318 L234 318 Q252 316 246 300 L176 160 L176 96" fill="#FFFFFF" stroke="#7E8B98" stroke-width="3"/>
+        <path d="M100 236 L210 236 L246 300 Q252 316 234 318 L76 318 Q58 316 64 300 Z" fill="#EEF6FB"/>
+        <path d="M100 236 L210 236 L246 300 Q252 316 234 318 L76 318 Q58 316 64 300 Z" fill="#E8E4DC" data-anim="fade" data-dur="2.4" data-delay=".5"/>
+        <line x1="155" y1="236" x2="155" y2="318" stroke="#D7263D" stroke-width="3" opacity=".35"/>
+        <path d="M134 96 L134 160 L64 300 Q58 316 76 318 L234 318 Q252 316 246 300 L176 160 L176 96" fill="none" stroke="#7E8B98" stroke-width="3"/>
+        <ellipse cx="155" cy="326" rx="110" ry="9" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="2"/>
+        <rect x="20" y="334" width="290" height="14" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/>
+        <ellipse cx="155" cy="341" rx="10" ry="4" fill="#D7263D" opacity=".3"/>
+        ⟪T(180,38,'레이저',20,'start',INK)⟫
+        ⟪T(165,372,'흰 종이 — 빛이 사라질 때까지',19,'middle',INK)⟫
+        ⟪T(250,230,'흐려짐',20,'start',MUTED)⟫
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 실험실: 온도 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="실험실: 온도와 반응 시간">
+  <h2><span class="tag">탐구</span>온도 실험실 — 레이저가 사라지는 시간 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="em44temp">
+    <div class="lab-ctl" style="flex-basis:380px">
+      <div class="em44-seg"><button class="btn" data-p="1.8">얼음물</button><button class="btn on" data-p="18">실온의 물</button><button class="btn" data-p="40">더운물</button></div>
+      <div class="ctl"><div class="lbl"><span>물의 온도</span><output data-o="T"></output></div><input type="range" min="0" max="50" step="0.1" value="18" data-i="T" aria-label="물의 온도"></div>
+      <table class="readout em44-read">
+        <tr><th>초시계</th><td><output data-o="clk"></output></td></tr>
+        <tr class="hl"><th>반응 속도 ($\frac{1}{t}$)</th><td><output data-o="rate"></output></td></tr>
+      </table>
+      <div class="em44-seg mt8"><button class="btn em44-act" data-act="run">섞고 측정</button><button class="btn" data-act="reset">초기화</button></div>
+      <p class="small mt4">같게 한 것: 두 수용액 각 20 mL, 농도 0.1 M, 플라스크·레이저 위치</p>
+      <output class="kind em44-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 660px">
+      <div class="row" style="gap:10px">
+        <div class="lab-fig" style="width:200px;height:258px"><svg viewBox="0 0 200 258" width="200" height="258" aria-label="삼각 플라스크와 레이저 빛"></svg></div>
+        <div class="lab-fig" style="width:446px;height:258px"><svg viewBox="0 0 446 258" width="446" height="258" aria-label="분자 운동 에너지 분포 곡선과 활성화 에너지"></svg>
+          <div class="ov" data-ov="ea" style="font-size:19px"></div><div class="ov" data-ov="ky" style="font-size:19px"></div><div class="ov" data-ov="kx" style="font-size:19px"></div></div>
+      </div>
+      <div class="row mt8" style="gap:10px">
+        <div class="col" style="flex:0 0 320px"><table class="tight em44-log"><thead><tr><th>온도 (°C)</th><th>걸린 시간 (s)</th><th>반응 속도 (1/s)</th></tr></thead><tbody data-o="log"></tbody></table></div>
+        <div class="lab-fig" style="width:326px;height:180px;flex:0 0 326px"><svg viewBox="0 0 326 180" width="326" height="180" aria-label="온도와 반응 속도 그래프"></svg>
+          <div class="ov" data-ov="gy" style="font-size:19px"></div><div class="ov" data-ov="gx" style="font-size:19px"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 ② 결과 및 정리 ════════ -->
+<section class="slide" data-sec="04 · 탐구" data-title="탐구: 온도 — 결과 및 정리">
+  <h2><span class="tag">탐구</span>결과 및 정리 — 온도에 따른 반응 속도</h2>
+  <p class="f21" data-q><b>1</b> 물의 온도와 레이저 빛이 보이지 않을 때까지 걸린 시간을 쓰고, 반응 속도를 계산해 보자. <span class="small c-muted">(예시 값)</span></p>
+  <table class="tight em44-res mt8">
+    <tr><th>온도</th><td>얼음물( <span class="blank"><span class="step" data-g="t1">1.8</span></span> °C)</td><td>실온의 물( <span class="blank"><span class="step" data-g="t1">18</span></span> °C)</td><td>더운물( <span class="blank"><span class="step" data-g="t1">40</span></span> °C)</td></tr>
+    <tr><th>걸린 시간(s)</th><td><span class="blank"><span class="step" data-g="t2">151</span></span></td><td><span class="blank"><span class="step" data-g="t2">39</span></span></td><td><span class="blank"><span class="step" data-g="t2">9</span></span></td></tr>
+    <tr><th>반응 속도($\frac{1}{\text{s}}$)</th><td><span class="blank"><span class="step" data-g="t3">0.0066</span></span></td><td><span class="blank"><span class="step" data-g="t3">0.026</span></span></td><td><span class="blank"><span class="step" data-g="t3">0.11</span></span></td></tr>
+  </table>
+  <p class="f21 mt16"><b>2</b> 실험 결과를 바탕으로 온도와 반응 속도는 어떤 관계인지 설명해 볼까?</p>
+  <div class="answer step mt8">온도가 높을수록 레이저 빛이 보이지 않을 때까지 걸린 시간이 짧아진다 → <b>온도가 높을수록 반응 속도는 빨라진다.</b></div>
+  <p class="small mt16 c-muted"><b>스스로 평가하기</b> 지식·이해: 온도와 반응 속도의 관계를 설명했는가? · 과정·기능: 레이저 빛이 보이지 않을 때까지 걸린 시간을 정확히 측정했는가? · 가치·태도: 관심을 가지고 실험에 참여했는가?</p>
+</section>
+
+<!-- ════════ 22. ② 온도와 충돌 횟수 ════════ -->
+<section class="slide" data-sec="04 · 온도가 반응 속도에 미치는 영향" data-title="온도와 충돌 횟수">
+  <h2><span class="no">2</span>온도가 높아지면 왜 빨라질까?</h2>
+  <p class="f22">온도가 높아지면 분자들의 평균 속력이 커지므로 충돌 횟수가 증가한다. 그런데 충돌 횟수만으로 설명할 수 있을까?</p>
+  <div class="row mt12">
+    <div class="col" style="flex:0 0 600px">
+      <svg class="fig" viewBox="0 0 600 260" style="width:600px" aria-label="25도에서 35도로 높일 때 충돌 횟수는 1.02배, 반응 속도는 2배인 막대그래프">
+        ⟪T(0,40,'충돌 횟수',22,'start',INK)⟫
+        <rect x="150" y="14" width="180" height="30" fill="#1F6FD1" opacity=".8"/><rect x="150" y="52" width="184" height="30" fill="#D7263D" opacity=".8" data-anim="scale" data-from="0,1" data-o="150,67" data-dur="1"/>
+        ⟪T(342,40,'1 (25 °C)',20,'start',MINUS)⟫ ⟪T(346,78,'약 1.02 (35 °C)',20,'start',PLUS)⟫
+        ⟪T(0,170,'반응 속도',22,'start',INK)⟫
+        <rect x="150" y="144" width="180" height="30" fill="#1F6FD1" opacity=".8"/><rect x="150" y="182" width="360" height="30" fill="#D7263D" opacity=".8" data-anim="scale" data-from="0,1" data-o="150,197" data-dur="1.4" data-delay=".4"/>
+        ⟪T(342,170,'1 (25 °C)',20,'start',MINUS)⟫ ⟪T(520,208,'약 2',20,'start',PLUS)⟫
+        <line x1="150" y1="6" x2="150" y2="222" stroke="#5B6B7F" stroke-width="2"/>
+        ⟪T(150,250,'25 °C일 때를 1로 한 상대값 (막대 길이 비례)',19,'start',MUTED)⟫
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f21"><b>Q</b> 충돌 횟수는 약 2 %밖에 늘지 않는데, 반응 속도는 왜 약 2배나 빨라질까?</p>
+      <p class="f21 mt8 step">→ 충돌 횟수의 증가로만은 설명하기 어렵다. 충돌하는 분자가 가진 <b>에너지</b>를 살펴보아야 한다.</p>
+      <p class="f21 mt12 step c-muted">예측 질문의 답: ③ 약 2배</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. ② 운동 에너지 분포 곡선 ════════ -->
+<section class="slide" data-sec="04 · 온도가 반응 속도에 미치는 영향" data-title="분자 운동 에너지 분포 곡선">
+  <h2><span class="no">2</span>온도에 따른 기체 분자의 운동 에너지 분포</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">
+      <svg class="fig" viewBox="0 0 600 410" style="width:600px" aria-label="T1과 T2에서 분자 운동 에너지 분포 곡선, 활성화 에너지보다 큰 부분 색칠">
+        ⟪axes(60,360,500,300)⟫
+        <g class="step" data-g="d4"><path d="⟪tail(60,360,500,300,1.7,3.6)⟫" fill="#D7263D" opacity=".22"/><path d="⟪tail(60,360,500,300,1.0,3.6)⟫" fill="#1F6FD1" opacity=".38"/></g>
+        <path d="⟪dist(60,360,500,300,1.0)⟫" fill="none" stroke="#1F6FD1" stroke-width="3.5" data-anim="draw" data-dur="1.2"/>
+        ⟪T(98,72,'$T_1$',24,'start',MINUS)⟫
+        <g class="step" data-g="d2"><path d="⟪dist(60,360,500,300,1.7)⟫" fill="none" stroke="#D7263D" stroke-width="3.5"/>⟪T(222,198,'$T_2$',24,'start',PLUS)⟫⟪T(330,110,'$T_1&lt;T_2$',24,'start',INK)⟫</g>
+        <g class="step" data-g="d3"><line x1="⟪ex(60,500,3.6)⟫" y1="360" x2="⟪ex(60,500,3.6)⟫" y2="150" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="7 6"/>⟪T(ex(60,500,3.6),386,'$E_\\mathrm{a}$',24,'middle',EQT)⟫</g>
+        ⟪T(568,400,'운동 에너지',21,'end',MUTED)⟫
+        ⟪T(72,40,'분자 수',21,'start',MUTED)⟫
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f21 step" data-g="d1">① 같은 온도에서도 기체 분자들의 운동 에너지는 서로 다르다.</p>
+      <p class="f21 mt12 step" data-g="d2">② 온도가 높아지면($T_2$) 곡선이 낮아지며 오른쪽으로 퍼진다 — 큰 운동 에너지를 가진 분자 수가 늘어난다. (전체 분자 수 = 곡선 아래 넓이는 같다.)</p>
+      <p class="f21 mt12 step" data-g="d3">③ 활성화 에너지 $E_\mathrm{a}$는 온도가 높아져도 <b>변하지 않는다</b>.</p>
+      <p class="f21 mt12 step" data-g="d4">④ $E_\mathrm{a}$ 이상의 에너지를 가진 분자(색칠한 부분) = <b>반응할 수 있는 분자 수</b>: $T_2$에서가 $T_1$에서보다 많다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. ② 온도와 반응 속도 정리 ════════ -->
+<section class="slide" data-sec="04 · 온도가 반응 속도에 미치는 영향" data-title="온도와 반응 속도 정리">
+  <h2><span class="no">2</span>온도가 높아지면 반응 속도가 빨라지는 까닭</h2>
+  <div class="flow mt8">
+    <div class="fnode">온도 증가</div><div class="farr">→</div>
+    <div class="fnode">큰 운동 에너지를 가진 분자 수 증가</div><div class="farr">→</div>
+    <div class="fnode hl">$E_\mathrm{a}$ 이상의 에너지를 가진 분자 수 증가</div><div class="farr">→</div>
+    <div class="fnode">유효 충돌을 하는 분자 수 증가</div><div class="farr">→</div>
+    <div class="fnode hl">반응 속도 빨라짐</div>
+  </div>
+  <div class="row mt20">
+    <div class="col">
+      <div class="card"><h3>농도와 비교</h3>
+        <p class="f21">농도·압력·표면적 → <b>충돌 횟수</b>가 늘어난다.</p>
+        <p class="f21 mt8">온도 → 충돌 횟수도 조금 늘지만, 주로 <b>유효 충돌을 할 수 있는 분자의 비율</b>이 늘어난다.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card q"><h3>오개념 점검</h3>
+        <p class="f21"><b>Q</b> 온도가 높아지면 활성화 에너지가 작아질까?</p>
+        <p class="f21 mt8 step">→ 아니다. 활성화 에너지는 그대로이고, <b>분자 운동 에너지 분포</b>가 달라져 $E_\mathrm{a}$를 넘는 분자가 많아진다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. ② 생명 현상 ════════ -->
+<section class="slide" data-sec="04 · 온도가 반응 속도에 미치는 영향" data-title="생명 현상과 온도">
+  <h2><span class="no">2</span>생명 현상 속 온도와 반응 속도</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card"><h3>귀뚜라미의 울음소리</h3>
+        <svg class="fig mt8" viewBox="0 0 500 150" style="width:500px" aria-label="기온이 높을 때 울음소리 간격이 더 짧음">
+          ⟪T(0,42,'15 °C',21,'start',MINUS)⟫ ⟪T(0,112,'25 °C',21,'start',PLUS)⟫
+          ⟪''.join(f'<rect x="{80+i*84}" y="20" width="22" height="30" rx="4" fill="#1F6FD1" opacity=".75"/>' for i in range(5))⟫
+          <g data-anim="fade" data-dur=".6">⟪''.join(f'<rect x="{80+i*42}" y="90" width="22" height="30" rx="4" fill="#D7263D" opacity=".75"/>' for i in range(10))⟫</g>
+          ⟪T(290,146,'시간 →  (막대 = 울음소리 한 번)',19,'middle',MUTED)⟫
+        </svg>
+        <p class="f21 mt8">날개 근육이 수축하는 반응은 온도가 높을수록 빨라진다.</p>
+        <p class="f21 step em44-a">→ 기온이 높을수록 울음소리의 간격이 짧아진다.</p>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 440px">
+      <div class="card"><h3>개구리·뱀의 겨울잠</h3>
+        <p class="f21">겨울철에는 체온이 낮아져 물질대사 속도가 느려진다.</p>
+        <p class="f21 mt8 step em44-a">→ 활동하는 데 필요한 에너지를 만들기 어려우므로 활동을 줄이거나 겨울잠을 자기도 한다.</p>
+      </div>
+      <div class="note mt12"><b>Q</b> 사람의 체온이 일정하게 유지되는 것은 몸속 반응에 어떤 도움이 될까? <span class="step">→ 반응 속도가 일정하게 유지되어 생명 활동이 안정적으로 이어진다.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 해 보기 ════════ -->
+<section class="slide" data-sec="04 · 해 보기" data-title="해 보기: 온도로 반응 속도 조절">
+  <h2><span class="tag">해 보기</span>온도를 변화시켜 반응 속도를 조절하는 예 조사하기</h2>
+  <p class="f21" data-q>일상생활이나 산업 현장에서 온도를 변화시켜 반응 속도를 조절하는 사례를 찾아 설명해 보자.</p>
+  <table class="tight em44-do mt12">
+    <tr><th>음식물을 냉장고에 보관한다.</th><td class="l">예 음식물을 낮은 온도에 보관해 음식물이 변질되는 속도를 느리게 한다.</td></tr>
+    <tr><th>비닐하우스에서 작물을 재배한다.</th><td class="l"><span class="blank em44-full"><span class="step">온도를 높게 유지해 작물이 자라는 데 필요한 반응(광합성 등)을 빠르게 한다.</span></span></td></tr>
+    <tr><th>종자를 냉동하여 보관한다.</th><td class="l"><span class="blank em44-full"><span class="step">낮은 온도에서 종자의 호흡 등 물질대사 반응을 느리게 해 오래 보관한다.</span></span></td></tr>
+    <tr><th>더 찾아보기</th><td class="l"><span class="blank em44-full"><span class="step">생선을 얼음 위에 올려 판매(생선의 온도를 낮춰 신선함을 오래 유지), 김치냉장고(낮은 온도로 발효를 느리게 함)</span></span></td></tr>
+  </table>
+</section>
+
+<!-- ════════ 27. 확인하기 ════════ -->
+<section class="slide" data-sec="04 · 확인하기" data-title="확인하기: 온도와 반응 속도" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>온도와 반응 속도</h2>
+  <ol class="em44-ox f22">
+    <li>온도가 높아지면 <span class="blank"><span class="step">활성화 에너지</span></span>보다 큰 에너지를 갖는 분자 수가 많아져서 반응 속도가 빨라진다.</li>
+    <li>다음 중 온도를 조절해 반응 속도를 변화시키는 예를 있는 대로 골라 보자.<br>냉장고 · 비닐하우스 · 고압 산소실 <span class="blank em44-wide"><span class="step">냉장고, 비닐하우스</span></span></li>
+  </ol>
+  <p class="small mt20 c-muted step">고압 산소실은 산소의 농도(압력)를 조절하는 예이다.</p>
+</section>
+
+<!-- ════════ 28. 대단원 마무리 06 ════════ -->
+<section class="slide" data-sec="04 · 대단원 마무리" data-title="대단원 마무리 06">
+  <h2><span class="tag q">대단원 마무리 06</span>압력을 높인 실린더</h2>
+  <p class="f21">그림은 일정한 온도에서 일정량의 기체가 들어 있는 실린더의 압력을 증가시켰을 때 실린더 내부 입자의 변화를 모형으로 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 0 560 330" style="width:470px" aria-label="(가) 추 하나, (나) 추 둘로 부피가 줄어든 실린더">
+        ⟪cyl(20,70,1,11)⟫ ⟪cyl(340,168,2,12)⟫
+        <g data-arw="236,178,324,178,ink,3"></g>
+        ⟪T(280,160,'압력 증가',22,'middle',INK)⟫
+        ⟪T(120,322,'(가)',24,'middle',INK)⟫ ⟪T(440,322,'(나)',24,'middle',INK)⟫
+      </svg>
+    </div>
+    <div class="col">
+      <div class="bogi"><p>ㄱ. 반응 속도는 (나)가 (가)보다 빠르다.</p><p>ㄴ. 단위 시간당 입자의 충돌 횟수는 (가)가 (나)보다 많다.</p><p>ㄷ. 음식물을 냉장고에 넣어 두면 오래 보관할 수 있는 까닭을 이 모형으로 설명할 수 있다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+      <div class="board mt8" style="min-height:40px"></div>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ① ㄱ</b> <span class="small">ㄱ: (나)는 농도가 커 충돌 횟수가 많으므로 빠르다 · ㄴ: (나)가 많다 · ㄷ: 냉장고는 <b>온도</b>를 낮춘 예이므로 압력(농도) 모형으로 설명할 수 없다</span></div>
+</section>
+
+<!-- ════════ 29. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>운동 에너지 분포 곡선 읽기</h2>
+  <p class="f21">그림은 같은 기체의 두 온도 (가), (나)에서 분자 운동 에너지 분포 곡선과 어떤 반응의 활성화 에너지($E_\mathrm{a}$)를 나타낸 것이다. 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 460px">
+      <svg class="fig" viewBox="0 0 520 330" style="width:460px" aria-label="두 분포 곡선 가와 나, 활성화 에너지 선">
+        ⟪axes(50,290,430,240)⟫
+        <path d="⟪dist(50,290,430,240,1.0)⟫" fill="none" stroke="#16233D" stroke-width="3.5"/>
+        <path d="⟪dist(50,290,430,240,1.7)⟫" fill="none" stroke="#16233D" stroke-width="3.5" stroke-dasharray="10 7"/>
+        <line x1="⟪ex(50,430,3.6)⟫" y1="290" x2="⟪ex(50,430,3.6)⟫" y2="120" stroke="#E08A2C" stroke-width="2.5" stroke-dasharray="7 6"/>
+        ⟪T(ex(50,430,3.6),316,'$E_\\mathrm{a}$',24,'middle',EQT)⟫
+        ⟪T(92,50,'(가)',22,'start',INK)⟫ ⟪T(200,168,'(나)',22,'start',INK)⟫
+        ⟪T(500,318,'운동 에너지',20,'end',MUTED)⟫ ⟪T(62,26,'분자 수',20,'start',MUTED)⟫
+      </svg>
+    </div>
+    <div class="col">
+      <div class="bogi"><p>ㄱ. 온도는 (나)가 (가)보다 높다.</p><p>ㄴ. $E_\mathrm{a}$ 이상의 에너지를 가진 분자 수는 (나)가 (가)보다 많다.</p><p>ㄷ. (나)에서는 (가)에서보다 활성화 에너지가 작다.</p></div>
+      <div class="choices"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+      <div class="board mt8" style="min-height:40px"></div>
+    </div>
+  </div>
+  <div class="answer step"><b>정답 ③ ㄱ, ㄴ</b> <span class="small">(나)는 곡선이 낮고 오른쪽으로 퍼졌으므로 고온 · ㄷ: 활성화 에너지는 온도에 따라 변하지 않는다</span></div>
+</section>
+
+<!-- ════════ 30. 스스로 정리 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>Ⅳ. 반응 속도 — 개념 지도</h2>
+  <div class="em44-map">
+    <div class="em44-node em44-hub"><span>Ⅳ<br>반응 속도</span></div>
+    <div class="em44-node em44-main">
+      <b>04 농도, 온도, 촉매에 따른 반응 속도의 변화</b>
+      <div class="em44-pair"><div class="em44-key">농도와 반응 속도</div><div class="em44-val" data-q>반응물의 농도 증가 → 충돌 횟수 증가 → 반응 속도 ❺ <span class="blank"><span class="step">증가</span></span></div></div>
+      <div class="em44-pair"><div class="em44-key">온도와 반응 속도</div><div class="em44-val" data-q>온도 증가 → 유효 충돌을 할 수 있는 입자 수 증가 → 반응 속도 ❻ <span class="blank"><span class="step">증가</span></span></div></div>
+      <div class="em44-pair"><div class="em44-key em44-dimk">촉매와 반응 속도</div><div class="em44-val em44-dimv">❼ ❽ ❾ — 다음 시간</div></div>
+    </div>
+    <div class="em44-side">
+      <div class="em44-node em44-dim"><span>01 화학 반응 속도</span></div>
+      <div class="em44-node em44-dim"><span>02 일차 반응의 반감기</span></div>
+      <div class="em44-node em44-dim"><span>03 유효 충돌과 활성화 에너지</span></div>
+    </div>
+  </div>
+  <p class="small mt8 c-muted">❺, ❻은 대단원 마무리 개념 정리의 빈칸 번호이다. 압력(기체)·표면적(고체)도 충돌 횟수를 늘려 반응 속도를 빠르게 한다.</p>
+</section>
+
+<!-- ════════ 31. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="04 농도, 온도, 촉매에 따른 반응 속도의 변화 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 농도·압력·표면적과 온도에 따라 반응 속도가 달라지는 까닭을 충돌 횟수와 운동 에너지 분포로 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 농도 또는 온도만 바꾸고 다른 변인을 통제하며 반응 시간을 측정해 반응 속도를 비교했다.</button>
+    <button class="chk">[가치·태도] 농도, 온도에 따라 반응 속도가 달라지는 예를 생활에서 찾아 화학의 유용성을 인식했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 기체 반응에서 온도가 일정할 때 압력을 높이면 반응 속도는? <span class="step">→ 기체의 농도가 커져 <span class="ans">빨라진다</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 같은 양의 마그네슘 덩어리와 가루 중 염산과 더 빨리 반응하는 것은? <span class="step">→ 표면적이 큰 <span class="ans">가루</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 온도를 높이면 분포 곡선과 $E_\mathrm{a}$ 중 무엇이 달라질까? <span class="step">→ <span class="ans">분포 곡선</span> ($E_\mathrm{a}$는 그대로)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 과산화 수소수에 아이오딘화 칼륨을 조금 넣으면 어떤 일이 일어날까? 농도와 온도를 바꾸지 않고도 반응을 빠르게 할 수 있을까?</div>
+</section>

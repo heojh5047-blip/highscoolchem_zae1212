@@ -1,0 +1,61 @@
+{
+ "findings": [
+  {
+   "slide": "a11",
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "질량 백분율·ppm·ppb 식 세 칸이 좁아 넘침",
+   "fix": "왼쪽에 세로로 쌓고 문항을 오른쪽에(반영)"
+  },
+  {
+   "slide": "b27",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "실험실 왼쪽 칸이 무대 아래로 넘침, 그래프 x축 제목 잘림",
+   "fix": "측정 버튼을 그래프 위 줄로, 그래프 원점 위로(반영, a23도)"
+  },
+  {
+   "slide": "a·b 여러 장",
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "이온 +/− 라벨이 화면 14px",
+   "fix": "+/− 부호를 선으로 그림(반영)"
+  },
+  {
+   "slide": "a24·b28 등",
+   "severity": "low",
+   "rule": "D8",
+   "problem": "세로축 제목이 맨 위 눈금 숫자와 겹침",
+   "fix": "축 제목을 축 오른쪽으로(반영)"
+  },
+  {
+   "slide": "b8",
+   "severity": "low",
+   "rule": "D8",
+   "problem": "팽창 ΔH2·혼합 ΔH3 라벨이 입자와 겹침",
+   "fix": "라벨 위치·용액 입자 범위 조정(반영)"
+  },
+  {
+   "slide": "a14",
+   "severity": "low",
+   "rule": "정리",
+   "problem": "단계 카드 그림 속 설명과 카드 글이 중복",
+   "fix": "그림 속 설명 삭제(반영)"
+  },
+  {
+   "slide": "a1·a21·b13·b22·b35",
+   "severity": "low",
+   "rule": "D8",
+   "problem": "표지 그래프 아래 잘림, 색상환 위 라벨 잘림, 산소 라벨·「크기 비례 아님」·P아세톤 라벨이 곡선과 겹침",
+   "fix": "위치 조정(반영)"
+  },
+  {
+   "slide": "a6·a8·a13 등",
+   "severity": "low",
+   "rule": "빈 공간",
+   "problem": "아래쪽 빈 공간이 큼",
+   "fix": "판서 공간으로 둠(유지)"
+  }
+ ],
+ "summary": "자동 점검 0·콘솔 0·motion 0·ask 0. 화면 지적 8건 중 7건 반영."
+}

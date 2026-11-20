@@ -1,0 +1,37 @@
+/* 3-1-3 화학 반응의 진행 방향 예측 — 덱 전용 (모두 .cm313- 접두어) */
+.cover h1.cm313-h1{font-size:100px}
+p.cm313-a{color:#1B5E3F;margin-top:6px}
+.answer.cm313-left{text-align:left}
+.cm313-bf{color:#7B4FC8}
+table.cm313-data{width:100%}
+table.cm313-data td,table.cm313-data th{text-align:center;font-size:21px;padding:3px 10px}
+table.cm313-calc .blank{min-width:150px}
+table.cm313-kq{width:100%}
+table.cm313-kq td,table.cm313-kq th{font-size:22px;padding:10px 14px;text-align:center}
+table.cm313-kq td.l{text-align:left;font-weight:700;width:200px}
+table.cm313-kq .blank{min-width:220px}
+.cm313-three .stage{text-align:center}
+.cm313-three .stage p{font-size:21px;line-height:1.45}
+.cm313-cards .stage{padding:8px 10px}
+.cm313-cards .stage svg{width:100%}
+.cm313-cards .stage p.key{font-size:19px;margin:0}
+p.cm313-q{font-size:21px;text-align:center;margin:2px 0 0}
+.stage.cm313-eqc{border-color:#E0C44A;background:#FFFCEB}
+.choices.cm313-col{display:flex;flex-direction:column;gap:10px}
+.choices.cm313-col span{font-size:23px}
+ol.cm313-ox li{margin-top:26px;font-size:23px}
+ol.cm313-ox li:first-child{margin-top:4px}
+ol.cm313-ox .blank{min-width:180px}
+.cm313-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.cm313-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.cm313-seg .btn.cm313-act{background:var(--ink);color:#fff;border-color:var(--ink)}
+output.kind.cm313-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.cm313-log{width:100%}
+table.cm313-log th,table.cm313-log td{font-size:19px;padding:2px 5px;text-align:center}
+.cm313-map{display:flex;align-items:center;gap:14px}
+.cm313-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:18px 22px;font-size:22px;line-height:1.6}
+.cm313-node.cm313-main{flex:1 1 0;margin-top:10px;border-color:var(--field);background:#F2FAF5}
+.cm313-node.cm313-dim{flex:0 0 160px;border-style:dashed;color:var(--muted)}
+.cm313-arr{font-size:28px;color:var(--muted)}
+table.cm313-rel td{font-size:22px;padding:10px 14px}
+table.cm313-rel .blank{min-width:120px}

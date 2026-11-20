@@ -1,0 +1,12 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 그래프 오른쪽 끝(1500, T [K])이 표지 그림 흐림 영역에 걸려 잘려 보임","fix":"축 너비를 줄이고 가로축 이름을 안쪽으로 (반영)"},
+{"slide":12,"severity":"medium","rule":"D8","problem":"그래프 가로축 이름이 마지막 눈금과 겹침(12–16·19·21·27·29)","fix":"가로축 이름을 눈금 아래 줄로 내리고 viewBox를 늘림 (반영)"},
+{"slide":6,"severity":"medium","rule":"T4","problem":"ΔS전체 = −ΔG/T 유도식 칸 넘침(10·15도)","fix":"식을 줄이고 unit 줄로 설명 (반영)"},
+{"slide":20,"severity":"high","rule":"D8","problem":"실험실 조작부가 아래로 넘치고 가로 너비 초과","fix":"조작부 390px·그래프 640px, 경우 출력 짧게 (반영)"},
+{"slide":20,"severity":"low","rule":"D8","problem":"바뀌는 온도 라벨이 지금 온도 점과 겹칠 때가 있음","fix":"라벨을 0선 아래 빈 쪽으로 옮김 (반영)"},
+{"slide":15,"severity":"low","rule":"D8","problem":"T = ΔH°/ΔS° 라벨이 교차점 선과 겹치고 (라) 라벨 둘이 겹침","fix":"라벨을 교차점 아래로, (라)는 왼쪽 끝으로 (반영)"},
+{"slide":23,"severity":"medium","rule":"3.2","problem":"준위 그림·전기 분해·아르곤 경로·Fe₂O₃ 그래프 라벨 16px 미만(23·25·27·29)","fix":"표시 폭·라벨 크기 키움 (반영)"},
+{"slide":7,"severity":"low","rule":"D8","problem":"+109.8 J/K 라벨 왼쪽 잘림","fix":"왼쪽 축을 안쪽으로 이동 (반영)"},
+{"slide":17,"severity":"low","rule":"C1","problem":"「Q1」이 화학식으로 잡힘(17·18)","fix":"「Q ①」로 바꿈 (반영)"},
+{"slide":17,"severity":"low","rule":"레이아웃","problem":"Q ② 답이 두 줄로 어색하게 끊김","fix":"읽기에 지장 없어 유지 (기각)"}
+],"summary":"10건: 반영 9, 기각 1. 최종 render 0·콘솔 0·motion 0·ask 0."}

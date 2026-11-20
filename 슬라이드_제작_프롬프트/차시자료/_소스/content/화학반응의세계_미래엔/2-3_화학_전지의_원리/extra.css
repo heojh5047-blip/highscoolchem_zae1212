@@ -1,0 +1,36 @@
+/* 2-3 화학 전지의 원리 — 덱 전용 (모두 .rm23- 접두어) */
+.rm23-ox{color:#C2410C;font-weight:700}
+.rm23-rd{color:#0E7490;font-weight:700}
+table.rm23-t{width:100%}
+table.rm23-t th,table.rm23-t td{font-size:20px;padding:7px 10px;text-align:center;line-height:1.45}
+table.rm23-e{width:100%}
+table.rm23-e th,table.rm23-e td{font-size:20px;padding:4px 12px;text-align:center}
+table.rm23-e tr.rm23-h td{background:#EEF1F4}
+.rm23-cond{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rm23-cond .card h3{font-size:22px}
+.rm23-cond .card p{margin-top:6px}
+.rm23-ch p{font-size:21px;line-height:1.5;margin-top:10px}
+.rm23-ch p:first-child{margin-top:0}
+/* 개념 지도 */
+.rm23-map{display:flex;gap:14px;align-items:stretch}
+.rm23-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:21px;line-height:1.5}
+.rm23-node.rm23-main{flex:1 1 0;border-color:#C2410C;background:#FFF7F2}
+.rm23-node.rm23-main p{margin-top:9px}
+.rm23-side{flex:0 0 190px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.rm23-node.rm23-dim{border-style:dashed;color:var(--muted)}
+/* 실험실 */
+.rm23-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.rm23-sl{font-size:19px;font-weight:700;width:118px}
+.rm23-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 9px;font-size:19px}
+.rm23-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rm23-seg .btn.rm23-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.rm23-read{width:100%}
+table.rm23-read th{font-size:19px;padding:4px 8px;text-align:left}
+table.rm23-read td{font-size:21px;padding:4px 8px;text-align:center;width:auto}
+output.kind.rm23-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.rm23-log{width:100%}
+table.rm23-log th,table.rm23-log td{font-size:19px;padding:2px 5px;text-align:center}
+.rm23-bar{display:inline-block;height:14px;background:var(--minus);border-radius:3px;vertical-align:middle}
+.formula.rm23-fs{font-size:23px;padding:8px 18px;margin:8px auto 10px}
+.rm23-dat{padding:8px 16px}
+.rm23-dat p{font-size:20px;margin-top:2px}

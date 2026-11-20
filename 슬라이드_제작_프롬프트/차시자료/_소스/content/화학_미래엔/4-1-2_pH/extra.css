@@ -1,0 +1,41 @@
+/* 4-1-2 pH — 덱 전용 (모두 .cm412- 접두어) */
+.cover h1.cm412-h1{font-size:150px}
+table.cm412-log{width:100%}
+table.cm412-log td{text-align:center}
+table.cm412-log th{width:80px}
+table.cm412-ph{width:100%}
+table.cm412-ph td{text-align:center}
+table.cm412-ph th{width:110px}
+table.cm412-ph .blank{min-width:56px;text-align:center}
+p.cm412-ind{padding-left:28px}
+.blank.cm412-b{min-width:90px;text-align:center}
+.blank.cm412-w{min-width:200px;text-align:center}
+.cm412-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cm412-s4 .stage p{font-size:19px;line-height:1.5}
+table.cm412-var{width:100%}
+table.cm412-var th{width:120px}
+table.cm412-col{width:100%}
+table.cm412-col td{text-align:center}
+table.cm412-col .blank{min-width:110px}
+.answer.cm412-left{text-align:left}
+ol.cm412-opt{list-style:none;padding-left:0}
+ol.cm412-opt li{margin-top:10px}
+/* 개념 지도 */
+.cm412-map{display:flex;align-items:center;gap:12px}
+.cm412-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:21px;line-height:1.55}
+.cm412-node.cm412-dim{flex:1 1 0;border-style:dashed;color:var(--muted)}
+/* 실험실 */
+.cm412-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.cm412-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 11px;font-size:19px}
+.cm412-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm412-seg .btn:disabled{opacity:.35;cursor:not-allowed}
+.cm412-seg .btn.cm412-act{background:var(--field);color:#fff;border-color:var(--field)}
+.cm412-seg .btn.cm412-act:disabled{background:#9DB8A9;border-color:#9DB8A9}
+.cm412-seg .small{margin:0 2px 0 4px}
+table.cm412-read{width:100%}
+table.cm412-read th{font-size:19px;padding:5px 10px;text-align:left}
+table.cm412-read td{font-size:21px;width:200px;padding:5px 10px;text-align:center}
+output.kind.cm412-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.cm412-tab{width:100%}
+table.cm412-tab th,table.cm412-tab td{font-size:19px;padding:3px 6px;text-align:center}
+.formula.cm412-fs{font-size:22px;padding:8px 12px}

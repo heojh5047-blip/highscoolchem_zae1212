@@ -1,0 +1,31 @@
+/* 고급화학 3-1-1 — 덱 전용 (모두 .ac311- 접두어) */
+.cover h1.ac311-h1{font-size:76px;line-height:1.15}
+.ac311-units{display:flex;flex-direction:column;gap:8px}
+.ac311-units .card{padding:7px 14px;font-size:21px}
+.ac311-units .card b{display:inline-block;width:28px;color:var(--muted)}
+.ac311-units .card.ac311-now{border-color:var(--plus);border-width:2px}
+.ac311-units .card.ac311-now b{color:var(--plus)}
+.ac311-choice{display:flex;gap:12px}
+.ac311-choice .card{padding:6px 16px;font-size:21px}
+table.ac311-cmp td,table.ac311-res td,table.ac311-sign td{text-align:center}
+table.ac311-res td.l{text-align:left}
+table.ac311-var th{width:150px}
+ol.ac311-ox{padding-left:1.4em}
+ol.ac311-ox li{margin-top:14px}
+ol.ac311-ox li:first-child{margin-top:0}
+/* 심화 상자 (대단원 Ⅰ 약속 이어받음) */
+.card.ac311-deep,.ac311-deep{border:2px dashed #5B6B7F;background:#F7F8FA}
+/* 개념 지도 */
+.ac311-map{display:flex;align-items:center;gap:12px;margin-top:20px}
+.ac311-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75;flex:0 0 190px}
+.ac311-node.ac311-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac311-node.ac311-dim{flex:0 0 200px;border-style:dashed;color:var(--muted)}
+.ac311-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.ac311-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.ac311-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 11px;font-size:19px}
+.ac311-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac311-seg .btn.ac311-act{background:var(--field);color:#fff;border-color:var(--field)}
+.lab .ctl.ac311-off{opacity:.35}
+output.kind.ac311-msg{margin-top:8px;line-height:1.45;font-size:19px;display:block}
+table.ac311-log th,table.ac311-log td{font-size:19px;padding:3px 7px;text-align:center}

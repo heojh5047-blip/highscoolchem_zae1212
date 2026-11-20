@@ -1,0 +1,68 @@
+{
+ "findings": [
+  {
+   "slide": 3,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "(초안) 물 분자 공간 채움 모형에서 H 라벨이 O 공에 가려 겹침.",
+   "fix": "작은 물 분자는 라벨 없이 그리고 범례·캡션으로 대신."
+  },
+  {
+   "slide": 6,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "정답 상자가 아래 안전 영역을 넘침, 석영 Si 라벨 화면 15px.",
+   "fix": "그림 폭·여백 조정, Si 반지름 25로."
+  },
+  {
+   "slide": 7,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "(+)극/(−)극 라벨이 관 유리 테와 겹침.",
+   "fix": "라벨을 관 바깥 아래로 옮김."
+  },
+  {
+   "slide": 10,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "실험실 버튼 줄이 두 줄로 넘쳐 영역 밖, 그래프 범례 글이 표식과 겹침, 전극 라벨이 건전지 기호와 겹침.",
+   "fix": "버튼 글 줄임, .ov 가운데 기준으로 위치 다시 잡음."
+  },
+  {
+   "slide": 13,
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "입자 모형 라벨 13–15px.",
+   "fix": "원자 라벨 빼고 범례, 캡션 20으로."
+  },
+  {
+   "slide": 16,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "'염소 Cl2' 라벨이 '(+)극'과 겹침.",
+   "fix": "염소 라벨을 전극 왼쪽 아래로."
+  },
+  {
+   "slide": 19,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "알루미늄 모식도 'Al2O3' 라벨이 전극과 겹침.",
+   "fix": "전극 간격을 넓힘."
+  },
+  {
+   "slide": 9,
+   "severity": "low",
+   "rule": "D27",
+   "problem": "빨대 장치 그림의 도선이 단순 모식도라 침핀 연결이 약식.",
+   "fix": "모식도로 두고 aria·캡션 유지(남은 문제)."
+  },
+  {
+   "slide": 9,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "지도서 대조로 답이 길어져 S9·S12 넘침(자동 점검 2건).",
+   "fix": "답 문장을 줄여 0건."
+  }
+ ],
+ "summary": "전체 캡처를 sheet 모음으로 두 번 확인. 자동 점검 0·콘솔 0·motion 0·ask 0."
+}

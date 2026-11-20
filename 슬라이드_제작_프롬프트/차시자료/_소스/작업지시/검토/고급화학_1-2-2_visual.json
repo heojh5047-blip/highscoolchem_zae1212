@@ -1,0 +1,14 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 제목이 4줄로 넘침.","fix":"extra.css .ac122-h1 68px, 두 줄."},
+{"slide":9,"severity":"high","rule":"D8","problem":"본-하버 도표 위쪽 준위가 잘리고 라벨이 겹침.","fix":"에너지 눈금을 다시 잡고(0.31 px/kJ, 위 40px 여백) 준위선 가로 위치를 겹치게 배치, 라벨 좌우·위아래로 나눔."},
+{"slide":11,"severity":"medium","rule":"D8","problem":"본–란데 장 아래로 넘침, 이온 라벨 16px 미만.","fix":"정답을 오른쪽 열로 옮기고 문장 줄임, Na⁺ 반지름 26·그림 1:1."},
+{"slide":12,"severity":"medium","rule":"D8","problem":"표·문장이 아래로 넘치고 축 라벨이 눈금 숫자와 겹침.","fix":"표 글자 20px, 축 이름을 아래로 10px, 문장 줄임."},
+{"slide":14,"severity":"low","rule":"D8","problem":"'자유롭게 이동하는 전자'·'작은 에너지로 들뜸' 라벨이 띠·화살표와 겹침.","fix":"라벨을 띠 위·오른쪽으로 옮김."},
+{"slide":16,"severity":"low","rule":"D8","problem":"채워진 띠의 전자 점이 '원자가띠' 라벨을 가림.","fix":"이 장은 전자 점 없이 칠만, 라벨은 첫 칸 안에."},
+{"slide":26,"severity":"medium","rule":"S1","problem":"SVG 라벨에 <b>가 글자로 보이고, '저스핀/고스핀'이 단계 전에 보임.","fix":"굵게는 data-weight로, 두 라벨을 각 단계 묶음에 넣음."},
+{"slide":29,"severity":"medium","rule":"D8","problem":"제목이 두 줄로 넘치고 맨 아래 안내문이 잘림.","fix":"h2를 줄이고(전체 이름은 .std에), 출처 안내를 모둠 활동 ④에 합침."},
+{"slide":31,"severity":"low","rule":"D8","problem":"I₃⁻ 형식 전하 0 라벨이 그림 위에서 잘림.","fix":"viewBox 위 여백 16px 늘림."},
+{"slide":33,"severity":"low","rule":"D8","problem":"NO₃⁻ 위쪽 O의 형식 전하 원이 잘리고 N의 + 원이 O 전자점에 붙음.","fix":"위 여백 늘리고 N 형식 전하를 아래(빈 방향)로."},
+{"slide":38,"severity":"high","rule":"T4","problem":"개념 지도 CSS가 없어 노드가 한 줄 글로 흩어짐.","fix":"extra.css에 .ac122-top/.ac122-map/.ac122-node 추가, 흐린 노드는 위 줄, 세 소단원 노드는 아래 줄."},
+{"slide":0,"severity":"low","rule":"6.4","problem":"data-anim 33곳으로 많음.","fix":"n형·p형 전자 묶음, 띠 세 칸 fade, 그래프 점 pop을 정리해 25곳."}
+],"summary":"render 자동 점검 28건 → 0건, 콘솔 0, motion_check 0(data-anim 25), ask_check 0(질문 강조 56회). 전체 sheet 모음은 완성 직후와 최종에 보았고, S9·S26·S28은 --steps로 공개 순서를 확인했다."}

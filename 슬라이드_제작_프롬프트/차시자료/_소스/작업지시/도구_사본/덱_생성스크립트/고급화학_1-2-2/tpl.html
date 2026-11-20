@@ -1,0 +1,618 @@
+<!-- 고급화학 1-2-2 이온 결합·금속 결합과 전이 금속의 결합 — gen.py가 tpl.html에서 만든다(그림 자리표) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 물질의 구조 › 2. 화학 결합과 에너지 › 02–04</div>
+    <h1 class="ac122-h1">이온 결합·금속 결합과<br><span class="acc">전이 금속의 결합</span></h1>
+    <p class="sub">이온, 금속 원자, 전이 금속 이온은 어떻게 결합할까?</p>
+    <p class="meta">고등학교 고급 화학 36–45쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 이온 결합" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화01-02]</span>전형 원소와 전이 원소에 속하는 원자의 바닥 상태의 전자 배치를 나타내고, 공통점과 차이점을 비교할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화01-03]</span>다양한 화학 결합의 원리를 이해하고, 입자 간 거리와 에너지 관계를 추론할 수 있다.</div>
+  <ol class="goals mt8 f21">
+    <li>이온 결합의 형성을 설명하고, <b>본-하버 회로</b>로 이온 결정의 격자 에너지를 구할 수 있다.</li>
+    <li>이온의 전하와 크기로 <b>격자 에너지</b>와 녹는점을 비교할 수 있다.</li>
+    <li><b>띠 이론</b>으로 금속 결합과 도체·반도체·부도체의 전기 전도성을 설명할 수 있다.</li>
+    <li>첫 주기 전이 금속의 전자 배치를 나타내고, 배위 화합물의 <b>배위수와 리간드</b>를 설명할 수 있다.</li>
+    <li><span class="c-muted">[심화]</span> <b>결정장 이론</b>으로 착이온의 색과 자기적 성질을 설명할 수 있다.</li>
+    <li>항암제 시스플라틴의 특성과 연구 동향을 조사하여 발표할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">격자 에너지</div><div class="farr">→</div>
+    <div class="fnode">띠 이론</div><div class="farr">→</div>
+    <div class="fnode">배위 화합물</div><div class="farr">→</div>
+    <div class="fnode">결정장(심화)</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 시스플라틴</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 이온 결합 · 도입" data-title="생각 열기: 소금과 구리">
+  <h2><span class="tag">생각 열기</span>소금은 부서지고 구리는 펴지는 까닭은?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 330px">
+      <div class="card"><h3><span class="tag alt">다시 보기</span></h3>
+        <p class="f21">두 원자의 <b>전기음성도 차</b>가 클수록 결합의 <b>이온성</b>이 커진다. (01 공유 결합)</p></div>
+      <p class="f22 mt16"><b>Q</b> 둘 다 단단한 고체인데, 망치로 칠 때 왜 다르게 행동할까?</p>
+    </div>
+    <div class="col">{{OPEN}}</div>
+  </div>
+  <div class="answer step mt8">입자를 묶는 결합의 종류가 다르다 — 소금은 이온 결합, 구리는 금속 결합</div>
+  <p class="small step">입자 모형으로 본 까닭은 03 금속 결합에서 확인한다.</p>
+</section>
+
+<!-- ════════ 4. 퍼센트 이온성 ════════ -->
+<section class="slide" data-sec="01 · 결합의 극성과 쌍극자 모멘트 및 전기음성도" data-title="퍼센트 이온성과 전기음성도 차">
+  <h2><span class="tag alt">다시 보기</span>결합의 퍼센트 이온성과 전기음성도 차이</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{IONPCT}}</div>
+    <div class="col stack">
+      <p class="f21">2원자 분자에서 전기음성도 차이 $\Delta\chi$가 클수록 쌍극자 모멘트로 나타나는 결합의 <b>이온성이 증가</b>하는 경향을 보인다.</p>
+      <p class="f22 mt8"><b>Q</b> 이온성이 50 %를 넘는 결합은 어떤 원소들 사이의 결합일까?</p>
+      <div class="answer step">Li, K, Cs(금속)와 할로젠(비금속) 사이 — 전기음성도 차가 약 1.7보다 크다.</div>
+      <p class="f21 step">→ 전기음성도 차가 매우 큰 금속–비금속 사이의 결합이 <b>이온 결합</b>(02)이다.</p>
+      <p class="small">그림 Ⅰ-19를 다시 그린 것(가로: 그림 Ⅰ-18 전기음성도의 차)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 무극성 분자 ════════ -->
+<section class="slide" data-sec="01 · 결합의 극성과 쌍극자 모멘트 및 전기음성도" data-title="극성 공유 결합과 무극성 분자">
+  <h2><span class="no">1</span>극성 공유 결합과 무극성 분자</h2>
+  <p class="f21">다원자 분자에서 극성 공유 결합을 하더라도 모두 <mark>극성 분자</mark>가 되는 것은 아니다. 분자의 대칭 구조로 쌍극자 모멘트가 서로 상쇄되어 0이 되면 <mark>무극성 분자</mark>이다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 520px">{{CO2DIP}}</div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> $\ce{CO2}$는 C–O 극성 공유 결합을 한다. 극성 분자일까?</p>
+      <div class="answer step" data-g="c1">무극성 분자 — 직선형 구조라 두 C–O 쌍극자 모멘트가 상쇄된다.</div>
+      <div class="note step mt8">'극성 결합이 있으면 극성 분자'는 틀린 생각이다. 결합 쌍극자의 합(벡터 합)이 0이면 무극성 분자이다. 분자 모양과 극성은 3. 원자가 결합과 혼성 오비탈에서 더 다룬다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 이온 결합 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="이온 결합">
+  <h2><span class="no">2</span>이온 결합</h2>
+  <p class="f21"><mark>이온 결합</mark>: 전기음성도 차이가 매우 큰 금속 원소와 비금속 원소 사이의 결합</p>
+  <div class="mt8" style="text-align:center">{{ETRANS}}</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">금속 원소 M은 원자가 전자 수가 작아 전자를 잃고 <b class="c-plus">양이온</b>, 비금속 원소 X는 원자가 전자 수가 커서 전자를 얻어 <b class="c-minus">음이온</b>이 된다 — 둘 다 18족 비활성 기체의 전자 배치</p>
+      <div class="formula sm step">$\ce{M+(g) + X-(g) -> MX(s)}$<div class="unit">양이온과 음이온 사이의 전기적 인력으로 결합한다.</div></div>
+    </div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> $\ce{Na+}$와 $\ce{Cl-}$는 각각 어떤 비활성 기체와 전자 배치가 같을까?</p>
+      <div class="answer step">$\ce{Na+}$: Ne, $\ce{Cl-}$: Ar</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 이온 결정과 격자 에너지 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="이온 결정과 격자 에너지">
+  <h2><span class="no">3</span>이온 결정과 격자 에너지</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{NACL}}</div>
+    <div class="col stack">
+      <p class="f21">이온 결합 물질은 이온 한 쌍이 아니라, 양이온과 음이온이 3차원으로 규칙적으로 계속 쌓인 구조이다.</p>
+      <p class="f21">NaCl 결정이 안정한 까닭: 모든 $\ce{Na+}$와 모든 $\ce{Cl-}$ 사이의 인력 + 같은 이온끼리의 반발력 → 결정 전체의 <b>알짜 에너지 감소</b></p>
+      <p class="f21 step"><mark>격자 에너지</mark>: 기체 상태의 이온들이 무한히 떨어진 상태에서 모여 이온 결정을 만들 때 방출되는 에너지 (= 결정을 이루는 이온들을 무한히 떼어 놓는 데 필요한 에너지)</p>
+      <p class="f21 step">격자 에너지가 크면 이온들이 강하게 상호 작용하여 단단히 결합한 고체가 된다.</p>
+      <p class="f22 mt8"><b>Q</b> 결정 속 $\ce{Na+}$ 하나를 가장 가까이 둘러싼 $\ce{Cl-}$는 몇 개일까?</p>
+      <div class="answer step">6개 (위·아래·앞·뒤·왼쪽·오른쪽)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 본-하버 회로 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="본-하버 회로">
+  <h2><span class="no">4</span>본-하버 회로 — NaF의 다섯 단계</h2>
+  <p class="f21">격자 에너지는 직접 잴 수 없어 <mark>본-하버 회로</mark>로 간접적으로 구한다. 반응을 다섯 단계로 나누어 생각한다.</p>
+  <div class="formula sm">$\ce{Na(s) + 1/2F2(g) -> NaF(s)}$</div>
+  <table class="tight ac122-bh mt8">
+    <tr><th>단계</th><th>과정</th><th>반응</th><th>엔탈피 변화 (kJ/mol)</th></tr>
+    <tr class="step"><td>1</td><td class="l">고체 Na의 승화</td><td>$\ce{Na(s) -> Na(g)}$</td><td>$\Delta H_1=109$ (승화 엔탈피)</td></tr>
+    <tr class="step"><td>2</td><td class="l">Na의 이온화</td><td>$\ce{Na(g) -> Na+(g) + e-}$</td><td>$\Delta H_2=495$ (이온화 에너지)</td></tr>
+    <tr class="step"><td>3</td><td class="l">$\ce{F2}$의 해리</td><td>$\ce{1/2F2(g) -> F(g)}$</td><td>$\Delta H_3=\tfrac12\times154=77$ (결합 에너지의 $\tfrac12$)</td></tr>
+    <tr class="step"><td>4</td><td class="l">$\ce{F-}$의 형성</td><td>$\ce{F(g) + e- -> F-(g)}$</td><td>$\Delta H_4=-328$ (전자 친화도)</td></tr>
+    <tr class="step ac122-hl"><td>5</td><td class="l">이온 결정 형성</td><td>$\ce{Na+(g) + F-(g) -> NaF(s)}$</td><td>$\Delta H_5=-923$ (<b>격자 에너지</b>)</td></tr>
+  </table>
+  <p class="small mt8">부호는 각 과정의 엔탈피 변화로 쓴다: 에너지를 흡수하면 +, 방출하면 −.</p>
+</section>
+
+<!-- ════════ 9. 엔탈피 도표 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="NaF 생성의 엔탈피 도표">
+  <h2><span class="no">5</span>NaF 생성 반응의 엔탈피 변화</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{BHDIAG}}</div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> 다섯 단계의 엔탈피 변화를 모두 더하면?</p>
+      <div class="formula sm step" data-g="h6">$109+495+77-328-923$<br>$=-570\ \text{kJ/mol}$</div>
+      <div class="answer step">$\ce{Na(s)}$와 $\ce{F2(g)}$에서 $\ce{NaF(s)}$가 생기는 과정은 매우 큰 발열 반응</div>
+      <p class="f21 step">→ 큰 음의 격자 에너지(−923 kJ/mol)를 갖기 때문이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 이온화 오개념 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="이온이 될 때 에너지가 나올까">
+  <h2><span class="no">6</span>이온이 될 때 에너지가 나올까?</h2>
+  <p class="f22"><b>Q</b> $\ce{Na(g)}$와 $\ce{F(g)}$가 전자를 주고받아 $\ce{Na+(g)}$와 $\ce{F-(g)}$가 되는 과정은 발열일까, 흡열일까?</p>
+  <p class="f21"><b>(가)</b> 발열 &nbsp;&nbsp; <b>(나)</b> 흡열</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">{{IONBAR}}</div>
+    <div class="col stack">
+      <div class="formula sm step" data-g="b1">$\Delta H_2+\Delta H_4=495+(-328)$<br>$=+167\ \text{kJ/mol}$</div>
+      <div class="answer step">(나) 흡열 — 전자를 주고받는 것만으로는 에너지가 낮아지지 않는다.</div>
+      <div class="note step" data-g="b2">이온 결합을 안정하게 하는 것은 이온들이 모여 결정을 이룰 때 방출되는 큰 <b>격자 에너지</b>이다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 본–란데 식 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="본–란데 식">
+  <h2><span class="no">7</span>격자 에너지의 이론식 — 본–란데 식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 740px">
+      <p class="f21">독일의 본과 란데는 이온 결정의 격자 에너지를 이론식으로 처음 유도했다.</p>
+      <div class="card step"><p class="f21"><b>① 이온쌍 하나</b> 전하가 $Z^+$, $Z^-$인 이온쌍이 $r$만큼 떨어져 있을 때 $\Delta E_\text{coul}=-\dfrac{Z^+Z^-e^2}{4\pi\varepsilon_0 r}$</p></div>
+      <div class="card step"><p class="f21"><b>② 결정 속 상호 작용</b> $\ce{Na+}$ 하나는 가장 가까운 음이온 6개와 인력, 그다음 양이온 12개와 반발, … → 기하 구조로 정해지는 상호 작용의 합 = <mark>마델룽 상수</mark> $M$ (NaCl 1.748, CsCl 1.763)</p></div>
+      <div class="formula sm step">③ $\Delta U=-\dfrac{N_\mathrm{A}MZ^+Z^-e^2}{4\pi\varepsilon_0 r_0}\left(1-\dfrac1n\right)$<div class="unit">$N_\mathrm{A}$: 아보가드로수, $\varepsilon_0$: 진공 유전 상수, $r_0$: 평형 거리, $n$: 본 지수(주 양자수와 다른 뜻)</div></div>
+    </div>
+    <div class="col stack">{{MADEL}}
+      <div class="answer step">크기 $\propto Z^+Z^-/r_0$</div>
+      <p class="f21 step">전하가 클수록, 거리가 짧을수록 크다.</p>
+      <p class="small step">NaCl 대입값 약 750 kJ/mol(본-하버 787). 유도는 다루지 않는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 격자 에너지와 녹는점 ════════ -->
+<section class="slide" data-sec="02 · 이온 결합" data-title="격자 에너지와 녹는점">
+  <h2><span class="no">8</span>격자 에너지와 녹는점</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">{{LATG}}</div>
+    <div class="col stack">
+      <table class="tight ac122-c ac122-sm">
+        <tr><th>화합물</th><th>$r_0$ (pm)</th><th>격자 에너지 (kJ/mol)</th><th>녹는점 (°C)</th></tr>
+        <tr><td>NaF</td><td>231</td><td>923</td><td>993</td></tr>
+        <tr><td>NaCl</td><td>282</td><td>787</td><td>801</td></tr>
+        <tr><td>NaBr</td><td>298</td><td>747</td><td>747</td></tr>
+        <tr><td>NaI</td><td>323</td><td>704</td><td>661</td></tr>
+        <tr><td>MgO</td><td>210</td><td>3791</td><td>2852</td></tr>
+      </table>
+      <p class="small">문헌값(NaF 923은 교과서 값). 녹는점은 결정 구조·공유 결합성의 영향도 받는다.</p>
+      <p class="f21">이온 반지름이 작을수록, 전하가 클수록 격자 에너지가 커서 <b>녹는점이 높다</b>.</p>
+      <p class="f21"><b>Q</b> NaF → NaCl → NaBr → NaI로 갈수록 격자 에너지와 녹는점은?</p>
+      <div class="answer step">작아진다 — 음이온이 커져 이온 사이 거리가 길어진다.</div>
+      <p class="f21 step">MgO: 전하의 곱 $2\times2=4$ → 격자 에너지가 NaF의 약 4배</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 띠 형성 ════════ -->
+<section class="slide" data-sec="03 · 금속 결합" data-title="원자 오비탈에서 에너지 띠로">
+  <h2><span class="no">9</span>원자 오비탈에서 에너지 띠로</h2>
+  <p class="f22"><b>Q</b> Na나 Mg 같은 금속 원자들은 어떻게 결합하여 안정한 고체가 될까?</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 600px">{{BANDS}}</div>
+    <div class="col stack">
+      <p class="f21 step">금속 원자들의 가장 바깥 원자 오비탈이 상호 작용하여 <b>분자 오비탈</b>이 생긴다.</p>
+      <p class="f21 step">원자 수가 많아질수록 분자 오비탈의 에너지 준위가 점점 가까워지다가 마침내 연속된 <mark>띠</mark>를 이룬다.</p>
+      <p class="f22 mt8"><b>Q</b> 원자 오비탈 $6.02\times10^{23}$개가 상호 작용하면 분자 오비탈은 몇 개 생길까?</p>
+      <div class="answer step">$6.02\times10^{23}$개 — 상호 작용하는 원자 오비탈 수만큼</div>
+      <p class="small step">분자 오비탈은 3. 원자가 결합과 혼성 오비탈에서 더 자세히 다룬다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 띠와 전기 전도성 ════════ -->
+<section class="slide" data-sec="03 · 금속 결합" data-title="띠와 금속의 전기 전도성">
+  <h2><span class="no">10</span>띠와 금속의 전기 전도성</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{BANDCOND}}</div>
+    <div class="col stack">
+      <p class="f21 step">금속 원자의 수많은 원자가 전자는 <b>결합성 띠</b> 쪽에 채워져 안정화되는 에너지가 커진다.</p>
+      <p class="f21 step">원자가띠의 전자는 극히 적은 에너지로 전도띠의 빈 오비탈로 쉽게 들뜬다.</p>
+      <p class="f21 step">전도띠의 전자는 고체를 자유롭게 지나가 전류를 흐르게 한다 → 금속은 전기 전도성이 매우 큰 <mark>도체</mark>이다.</p>
+      <p class="f22 mt8"><b>Q</b> 금속에 전압을 걸었을 때 전류를 나르는 것은 어느 띠의 전자일까?</p>
+      <div class="answer step">전도띠로 들뜬 전자</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 자유 전자와 금속 결합 ════════ -->
+<section class="slide" data-sec="03 · 금속 결합" data-title="자유 전자와 금속 결합">
+  <h2><span class="no">11</span>자유 전자와 금속 결합</h2>
+  <p class="f21">띠를 이루는 오비탈의 전자는 원자핵에 구속되지 않고 원자들 사이를 자유롭게 이동한다 = <mark>자유 전자</mark>. 금속 결합의 안정성은 금속 양이온과 자유 전자 사이의 전기적 인력이며, 특정한 방향성 없이 결합한다.</p>
+  <div class="mt8" style="text-align:center">{{MALLE}}</div>
+  <p class="f22 mt8"><b>Q</b> 구리는 두드리면 펴지고, 소금은 부서지는 까닭은?</p>
+  <div class="answer step">금속 결합은 방향성이 없어 층이 밀려도 결합이 유지된다. 이온 결정은 층이 어긋나면 같은 전하끼리 마주쳐 반발하므로 부서진다.</div>
+</section>
+
+<!-- ════════ 16. 도체·반도체·부도체 ════════ -->
+<section class="slide" data-sec="03 · 금속 결합" data-title="도체·반도체·부도체">
+  <h2><span class="no">12</span>도체·반도체·부도체</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 620px">{{BANDS3}}</div>
+    <div class="col stack">
+      <p class="f21 step"><b>부도체</b>(유리): 원자가띠와 전도띠 사이의 에너지 차가 커서 전자가 들뜨려면 매우 큰 에너지가 필요하다 → 전기가 잘 통하지 않는다.</p>
+      <p class="f21 step"><b>반도체</b>: 두 띠 사이 간격이 부도체보다 훨씬 작다. 높은 온도에서나 소량의 다른 원소를 넣으면 도체가 된다.</p>
+      <p class="f22 mt8"><b>Q</b> 온도를 높이면 반도체의 전기 전도성은 어떻게 변할까?</p>
+      <div class="answer step">커진다 — 전도띠로 들뜬 전자 수가 늘어난다.</div>
+      <p class="small step">금속은 온도가 오르면 원자의 진동이 전자의 흐름을 방해하여 전기 전도성이 조금 작아진다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. n형·p형 ════════ -->
+<section class="slide" data-sec="03 · 금속 결합" data-title="n형 반도체와 p형 반도체">
+  <h2><span class="no">13</span>n형 반도체와 p형 반도체</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{NPTYPE}}</div>
+    <div class="col stack">
+      <p class="f21 step"><mark>n형 반도체</mark>: 주 결정의 원자보다 원자가 전자가 더 많은 원자를 소량 <b>도핑</b> → 여분 전자의 에너지가 전도띠에 매우 가까워 쉽게 전도띠로 들떠 전류를 흐르게 한다.</p>
+      <p class="f21 step"><mark>p형 반도체</mark>: 원자가 전자가 더 적은 원자를 도핑 → 원자가띠에 양전하의 <b>구멍</b>이 생기고, 구멍을 전하 운반체로 본다.</p>
+      <p class="f22 mt8"><b>Q</b> 규소에 붕소를 소량 도핑하면 어떤 반도체가 될까?</p>
+      <div class="answer step">p형 — 붕소는 원자가 전자가 3개라 구멍이 생긴다.</div>
+      <p class="small">예: 규소(14족)에 인(15족) → n형, 붕소(13족) → p형</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 진로 ════════ -->
+<section class="slide" data-sec="03 · 진로" data-title="진로: 반도체 연구 개발">
+  <h2><span class="tag">진로</span>반도체 연구 개발</h2>
+  <div class="row mt8">
+    <div class="col"><div class="card"><h3>반도체의 시작</h3>
+      <p class="f21">평상시에는 전기가 통하지 않지만 열을 가하거나 특정 물질을 넣으면 전기가 통한다. 1947년 벨 연구소의 <b>트랜지스터</b>(전류·전압의 흐름을 조절하는 스위치)에서 시작되어, "2년마다 칩 용량이 두 배"(무어의 법칙)로 빠르게 발전했다.</p></div></div>
+    <div class="col"><div class="card"><h3>메모리와 시스템 반도체</h3>
+      <p class="f21"><b>메모리</b>: 정보를 저장 — D램(전원이 꺼지면 데이터가 사라짐), 낸드 플래시(보존되지만 느림)<br><b>시스템 반도체</b>: 기기의 핵심 기능 수행, AI·IoT 등 4차 산업혁명의 핵심 부품</p></div></div>
+    <div class="col"><div class="card"><h3>산업 구조</h3>
+      <p class="f21">설계 전문 <b>팹리스</b>, 생산 전문 <b>파운드리</b>, 둘 다 하는 종합 반도체 기업(IDM)</p>
+      <p class="f21 mt8">연구 개발비는 늘지만 연구 인력이 그만큼 늘지 못해 우수한 설계 인력과 기술 확보가 중요하다.</p></div></div>
+  </div>
+  <p class="f22 mt12"><b>Q</b> 반도체 연구 개발에서 화학을 배운 사람은 어떤 일을 할 수 있을까?</p>
+  <div class="answer step">예: 도핑 원소와 박막 재료의 설계, 식각·세정에 쓰는 화학 물질(플루오린화 수소산 등)의 개발과 안전 관리</div>
+</section>
+
+<!-- ════════ 19. 전이 금속 도입 ════════ -->
+<section class="slide" data-sec="04 · 배위 화합물" data-title="전이 금속의 결합">
+  <h2><span class="no">14</span>전이 금속의 결합</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{GEMS}}</div>
+    <div class="col stack">
+      <p class="f21">전이 금속은 산업에서 중요할 뿐 아니라 생물체 안에서 생체 분자로서 중요한 역할을 한다.</p>
+      <p class="f21">루비·사파이어 같은 보석의 색은 광물 속에 있는 <b>미량의 전이 금속 이온</b> 때문이다.</p>
+      <p class="f21">프러시안블루(페로시안화 철의 수화물)는 18세기 초 대량 합성되면서 모네, 반 고흐, 피카소 등이 즐겨 썼다.</p>
+    </div>
+  </div>
+  <p class="f22 mt8"><b>Q</b> 전이 금속 화합물은 왜 이렇게 다양한 색을 띨까?</p>
+  <div class="answer step">중심 금속 이온의 d 오비탈 에너지가 리간드 때문에 갈라지고, 그 차이만큼의 빛을 흡수하기 때문이다(결정장 이론).</div>
+  <div class="flow mt8">
+    <div class="fnode">전자 배치</div><div class="farr">→</div>
+    <div class="fnode">산화 상태·배위수·리간드</div><div class="farr">→</div>
+    <div class="fnode">결정장 이론: 색·자기적 성질 (심화)</div>
+  </div>
+</section>
+
+<!-- ════════ 20. 표 Ⅰ-4 ════════ -->
+<section class="slide" data-sec="04 · 배위 화합물" data-title="첫 주기 전이 금속의 전자 배치">
+  <h2><span class="no">15</span>첫 주기 전이 금속의 전자 배치 (표 Ⅰ-4)</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{TMTAB}}</div>
+    <div class="col stack">
+      <p class="f21">원자 번호 21 스칸듐 ~ 30 아연 = <mark>첫 주기 전이 금속</mark>. 대부분 비슷한 성질을 가지며, 거의 2개 이상의 안정한 산화 상태와 자기적 성질을 가진다.</p>
+      <p class="f22 mt8"><b>Q</b> Cr과 Cu는 왜 4s 전자가 1개일까?</p>
+      <div class="answer step" data-g="t1">3d 오비탈이 반만 채워지거나($3d^5$) 모두 채워질 때($3d^{10}$) 더 안정하기 때문이다.</div>
+      <p class="small step" data-g="t1">1-1-3 「04 원자의 전자 배치」의 예외와 같다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 배위 화합물과 리간드 ════════ -->
+<section class="slide" data-sec="04 · 배위 화합물" data-title="배위 화합물과 리간드">
+  <h2><span class="no">16</span>배위 화합물과 리간드</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">{{FECN}}</div>
+    <div class="col stack">
+      <p class="f21 step"><mark>리간드</mark>: 전이 금속 이온과 배위 공유 결합을 하는 데 쓸 수 있는 고립 전자쌍(비공유 전자쌍)이 있는 중성 분자나 이온</p>
+      <p class="f21 step"><mark>배위 화합물</mark>: 전이 금속 이온과 리간드가 배위 공유 결합한 <mark>착이온</mark> + 알짜 전하를 0으로 만드는 <mark>상대 이온</mark></p>
+      <p class="f21 step">$\ce{K4[Fe(CN)6]}$: 착이온 $\ce{[Fe(CN)6]^4-}$, 상대 이온 $\ce{K+}$</p>
+      <p class="small">배위 공유 결합: 한 원자가 내놓은 비공유 전자쌍을 두 원자가 공유하는 결합(01, $\ce{F3BNH3}$)</p>
+      <p class="f22 mt8"><b>Q</b> $\ce{[Fe(CN)6]^4-}$에서 Fe의 산화수는?</p>
+      <div class="answer step">$x+6\times(-1)=-4$ → $x=+2$ ($\ce{Fe^2+}$)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 배위수와 구조 ════════ -->
+<section class="slide" data-sec="04 · 배위 화합물" data-title="배위수와 기하 구조">
+  <h2><span class="no">17</span>배위수와 기하 구조 (표 Ⅰ-5)</h2>
+  <p class="f21"><mark>배위수</mark>: 착이온 안에서 전이 금속 이온과 리간드 사이의 결합 수 — 중심 이온의 크기·전하·전자 배치에 따라 2개에서 8개까지</p>
+  <div class="mt8" style="text-align:center">{{GEOM}}</div>
+  <div class="row mt8">
+    <div class="col"><p class="small">아래 착이온은 예로 고른 것이다. 가장 흔한 배위수는 6(팔면체형)이다.</p></div>
+    <div class="col stack"><p class="f22"><b>Q</b> $\ce{[Fe(CN)6]^4-}$의 배위수와 기하 구조는?</p>
+      <div class="answer step">6, 팔면체형</div></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 리간드의 종류 ════════ -->
+<section class="slide" data-sec="04 · 배위 화합물" data-title="리간드의 종류">
+  <h2><span class="no">18</span>여러 가지 리간드 (표 Ⅰ-6)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <table class="tight ac122-lig">
+        <tr><th>유형</th><th>예</th></tr>
+        <tr><td>한 자리 리간드</td><td class="l">$\ce{H2O}$, $\ce{NH3}$, $\ce{CN-}$, $\ce{NO2-}$, $\ce{SCN-}$, $\ce{OH-}$, $\ce{X-}$($\ce{F-}$, $\ce{Cl-}$ 등)</td></tr>
+        <tr><td>두 자리 리간드</td><td class="l">en (에틸렌다이아민, $\ce{H2N-CH2-CH2-NH2}$)</td></tr>
+        <tr><td>여러 자리 리간드</td><td class="l">EDTA</td></tr>
+      </table>
+      <p class="f22 mt12"><b>Q</b> en 한 개는 금속 이온과 배위 공유 결합을 몇 개 만들까?</p>
+      <div class="answer step" data-g="l1">2개 — 두 N 원자의 비공유 전자쌍</div>
+      <p class="f21 step">EDTA는 N 2개와 O 4개, 모두 6개 원자로 결합할 수 있다.</p>
+    </div>
+    <div class="col">{{LIG}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. 결정장 갈라짐 (심화) ════════ -->
+<section class="slide" data-sec="04 · 결정장 이론" data-title="[심화] 결정장 이론과 d 오비탈 갈라짐">
+  <h2><span class="tag alt">심화</span>결정장 이론과 d 오비탈의 갈라짐 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21"><mark>결정장 이론</mark>: 리간드를 음의 점전하로 보고, 양전하를 띤 중심 금속 이온과 전기적 인력으로 결합한다고 본다. 그런데 d 전자는 오비탈의 방향에 따라 리간드와 다르게 상호 작용하므로 d 오비탈의 에너지가 갈라진다.</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 440px">{{DLOBE}}</div>
+    <div class="col stack">
+      {{CFSPLIT}}
+      <p class="f22"><b>Q</b> 팔면체 착물에서 리간드와 더 세게 반발하는 d 오비탈은?</p>
+      <div class="answer step" data-g="d1">배위축 위를 향한 $d_{x^2-y^2}$, $d_{z^2}$ → 에너지가 높아짐 = $e_g$</div>
+      <p class="f21 step" data-g="d2">배위축 사이를 향한 $d_{xy}$, $d_{yz}$, $d_{xz}$ → 상대적으로 낮아짐 = $t_{2g}$</p>
+      <p class="f21 step">갈라지는 정도 = <mark>결정장 갈라짐</mark> $\Delta_\mathrm{o}$</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 착이온의 색 (심화) ════════ -->
+<section class="slide" data-sec="04 · 결정장 이론" data-title="[심화] 착이온의 색">
+  <h2><span class="tag alt">심화</span>착이온의 색 — $\ce{[Ti(H2O)6]^3+}$ <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{TICOL}}</div>
+    <div class="col stack">
+      <p class="f21 step" data-g="t1">$\ce{Ti^3+}$는 d 전자 1개 → 바닥상태 전자 배치 $t_{2g}^1$</p>
+      <p class="f21 step" data-g="t2">d 전자가 $\Delta_\mathrm{o}$의 에너지를 가진 광자를 흡수하면 $e_g$ 오비탈로 들뜬다.</p>
+      <div class="formula sm step" data-g="t2">$\Delta_\mathrm{o}=h\nu=\dfrac{hc}{\lambda}$</div>
+      <p class="f21 step" data-g="t3">가시광선 중 <b>황록색</b> 빛을 흡수 → 그 보색인 <b>보라색</b>을 띤다.</p>
+      <p class="f22 mt8"><b>Q</b> $\Delta_\mathrm{o}$가 더 큰 착화합물은 어떤 빛을 흡수할까?</p>
+      <div class="answer step">더 짧은 파장의 빛 → 보색도 바뀌어 다른 색을 띤다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 분광학적 계열 (심화) ════════ -->
+<section class="slide" data-sec="04 · 결정장 이론" data-title="[심화] 분광학적 계열과 강한 장·약한 장">
+  <h2><span class="tag alt">심화</span>분광학적 계열과 강한 장·약한 장 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">$\Delta_\mathrm{o}$는 금속의 산화수, 리간드의 종류, 착화합물의 구조 등에 따라 변하며, 금속의 산화수가 커질수록 증가한다. 결정장 갈라짐의 정도에 따라 리간드를 배열한 것 = <mark>분광학적 계열</mark></p>
+  <div class="mt8" style="text-align:center">{{SERIES}}</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 470px">{{D4}}</div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> $d^4$에서 넷째 전자는 짝을 지을까, $e_g$로 올라갈까?</p>
+      <p class="f21 step" data-g="s1"><b>강한 장</b>(갈라짐이 큼): $\Delta_\mathrm{o}$가 짝 사이 반발보다 커서 $t_{2g}$에서 짝 → <mark>저스핀 착물</mark></p>
+      <p class="f21 step" data-g="s2"><b>약한 장</b>(갈라짐이 작음): $e_g$로 들어가 짝짓지 않은 전자가 많은 <mark>고스핀 착물</mark></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. Co(Ⅲ) (심화) ════════ -->
+<section class="slide" data-sec="04 · 결정장 이론" data-title="[심화] 저스핀·고스핀과 자기적 성질">
+  <h2><span class="tag alt">심화</span>저스핀·고스핀과 자기적 성질 — Co(Ⅲ) 화합물 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{COIII}}</div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> $\ce{Co^3+}$의 d 전자는 몇 개일까?</p>
+      <div class="answer step">6개 ($d^6$)</div>
+      <p class="small step">Co $[\mathrm{Ar}]4s^2 3d^7$에서 4s 전자 2개와 3d 전자 1개를 잃는다.</p>
+      <table class="tight ac122-c step mt8">
+        <tr><th>착이온</th><th>배치</th><th>홀전자</th><th>자성</th></tr>
+        <tr><td>$\ce{[Co(NH3)6]^3+}$</td><td>저스핀 $t_{2g}^6$</td><td>0</td><td>반자성</td></tr>
+        <tr><td>$\ce{[CoF6]^3-}$</td><td>고스핀 $t_{2g}^4e_g^2$</td><td>4</td><td>상자성</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="note step mt8">홀전자가 있으면 자석에 끌리는 <b>상자성</b>, 모두 짝을 이루면 <b>반자성</b>이다. 착이온의 자성과 색으로 $\Delta_\mathrm{o}$의 크기를 추리할 수 있다.</div>
+</section>
+
+<!-- ════════ 28. 예제 Ⅰ-2 ════════ -->
+<section class="slide" data-sec="04 · 예제" data-title="예제 Ⅰ-2">
+  <h2><span class="tag ex">예제 Ⅰ-2</span>철(Ⅲ) 착이온의 전자 배치와 CFSE <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">정팔면체 착이온 $\ce{[FeCl6]^3-}$와 $\ce{[Fe(CN)6]^3-}$는 둘 다 상자성이지만, $\ce{[FeCl6]^3-}$는 고스핀이고 $\ce{[Fe(CN)6]^3-}$는 저스핀이다. 두 착이온의 d 오비탈 전자 배치를 나타내고, $\Delta_\mathrm{o}$의 크기를 비교하여라. 그리고 결정장 안정화 에너지 CFSE 값을 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>풀이</b> $\ce{Fe^3+}$: d 전자 5개</p>
+      <p class="f21 step" data-g="e2">고스핀 $\ce{[FeCl6]^3-}$: $t_{2g}^3e_g^2$, 홀전자 5개 / 저스핀 $\ce{[Fe(CN)6]^3-}$: $t_{2g}^5$, 홀전자 1개</p>
+      <p class="f21 step">$\Delta_\mathrm{o}$: $\ce{CN-}$ 리간드 &gt; $\ce{Cl-}$ 리간드</p>
+      <p class="small step" data-g="e4">CFSE: 갈라지기 전보다 낮아진 d 전자의 에너지 — $t_{2g}$ 전자 1개당 $-0.4\Delta_\mathrm{o}$, $e_g$ 전자 1개당 $+0.6\Delta_\mathrm{o}$</p>
+      <p class="f21 step" data-g="e4">$\ce{[FeCl6]^3-}$: $3(-0.4\Delta_\mathrm{o})+2(+0.6\Delta_\mathrm{o})=0$ &nbsp; $\ce{[Fe(CN)6]^3-}$: $5(-0.4\Delta_\mathrm{o})$</p>
+      <div class="answer step">CFSE: $\ce{[FeCl6]^3-}$ 0, $\ce{[Fe(CN)6]^3-}$ $-2\Delta_\mathrm{o}$</div>
+    </div>
+    <div class="col"><div class="step" data-g="e2" data-ask="no">{{FEEX}}</div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 탐구 활동 1 ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 시스플라틴 조사">
+  <h2><span class="tag">탐구 활동</span>시스플라틴의 특성과 항암제 연구 동향 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[필수 탐구]</span>고화-탐04 항암제 시스플라틴 착화합물의 특성과 항암제 연구 동향 조사 (교과서 45쪽, 모둠 조사·발표·900자 정리)</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 420px">{{CISPT}}</div>
+    <div class="col stack">
+      <div class="card"><p class="f21">1964년 로젠버그는 두 백금 전극 사이에 박테리아를 두고 전류를 흘렸더니 세포 분열이 멈추는 것을 발견했다. 원인이 백금 함유 물질임을 알고 $\ce{NH3}$와 $\ce{Cl-}$를 넣은 백금 화합물들을 합성했는데, 항암 효과가 가장 큰 것이 <b>시스플라틴</b>(시스-$\ce{[Pt(NH3)2Cl2]}$)이었다.</p></div>
+      <div class="card q"><h3>모둠 활동</h3><p class="f21">① 시스플라틴의 구조(중심 이온, 배위수, 기하 구조, 시스·트랜스)와 성질 조사<br>② 암세포에 작용하는 원리 조사<br>③ 부작용과 새 항암제 연구 동향 조사<br>④ 발표하고, 900자 이내로 정리(자료 출처를 함께 적기)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 활동 2 ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 예시 결과">
+  <h2><span class="tag">탐구 활동</span>시스플라틴 조사 — 예시 결과 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step"><b>① 구조</b> $\ce{Pt^2+}$($d^8$) 중심, 배위수 4, 평면사각형. 같은 리간드가 이웃한 시스 이성질체이며, 트랜스 이성질체는 항암 효과가 거의 없다.</p>
+      <p class="f21 step" data-g="r2"><b>② 작용</b> $\ce{Cl-}$ 농도가 낮은 세포 안에서 $\ce{Cl-}$가 물 분자로 바뀌고, Pt가 DNA 염기(구아닌)의 N 원자와 배위 공유 결합한다 → DNA가 구부러져 복제가 막히고 세포가 죽는다.</p>
+      <p class="f21 step"><b>③ 한계</b> 신장 독성, 구토 같은 부작용과 암세포의 내성</p>
+      <p class="f21 step"><b>④ 연구 동향</b> 부작용을 줄인 카보플라틴, 내성을 줄인 옥살리플라틴, 암세포에만 약을 보내는 나노 입자 전달, 몸 안에서 활성화되는 백금(Ⅳ) 화합물</p>
+    </div>
+    <div class="col"><div class="step" data-g="r2" data-ask="no">{{DNA}}</div></div>
+  </div>
+  <div class="note step mt8"><b>정리 예시</b> 시스플라틴은 리간드 배치(시스·트랜스)라는 작은 구조 차이가 약효를 결정함을 보여 준다. 배위 화학으로 금속 착화합물의 구조를 설계하면 더 안전한 항암제를 만들 수 있다.</div>
+</section>
+
+<!-- ════════ 31. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>삼아이오딘화 이온의 루이스 구조</h2>
+  <p class="f21">삼아이오딘화 이온($\ce{I3-}$)의 루이스 구조를 그리고 형식 전하를 나타내어라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step">원자가 전자 총수: $7\times3+1=22$개</p>
+      <p class="f21 step">골격 I–I–I: 결합 2쌍(4개), 남은 18개 = 9쌍 → 바깥 I에 3쌍씩, 가운데 I에 3쌍(확장된 원자가 껍질, 전자 10개)</p>
+      <p class="f21 step" data-g="i3">형식 전하: 바깥 I $7-(6+1)=0$, 가운데 I $7-(6+2)=-1$</p>
+      <div class="answer step">가운데 I $-1$, 양 끝 I 0 (합 $-1$)</div>
+    </div>
+    <div class="col stack"><div class="step" data-g="i3" data-ask="no">{{I3}}</div><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 32. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>옥텟 규칙을 만족시키지 못하는 중심 원자</h2>
+  <p class="f21">다음 분자 중 중심 원자가 옥텟 규칙을 만족시키지 못하는 것을 모두 고르면?</p>
+  <p class="f22 ac122-ch">1) $\ce{O3}$ &nbsp;&nbsp; 2) $\ce{BF3}$ &nbsp;&nbsp; 3) $\ce{PCl3}$ &nbsp;&nbsp; 4) $\ce{COCl2}$ &nbsp;&nbsp; 5) $\ce{ClF3}$</p>
+  <div class="row mt8">
+    <div class="col"><div class="step" data-g="o1" data-ask="no">{{BFCLF}}</div></div>
+    <div class="col stack" style="flex:0 0 440px">
+      <p class="f21 step" data-g="o1">루이스 구조를 그려 중심 원자 둘레의 전자를 센다: $\ce{BF3}$의 B 6개, $\ce{ClF3}$의 Cl 10개</p>
+      <div class="answer step">2), 5)</div>
+      <p class="f21 step">$\ce{BF3}$는 전자가 부족하고, $\ce{ClF3}$는 확장된 원자가 껍질을 갖는다. $\ce{O3}$, $\ce{PCl3}$, $\ce{COCl2}$의 중심 원자는 8개이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>질산 이온의 공명 구조</h2>
+  <p class="f21">질산 이온($\ce{NO3-}$)은 실험에 의하면 3개의 동등한 N–O 결합 길이를 가진다. 질산 이온의 공명 구조를 루이스 구조로 나타내어라.</p>
+  <p class="f21 step">원자가 전자 총수: $5+6\times3+1=24$개 → 2중 결합 1개, 단일 결합 2개</p>
+  <div class="step mt8" style="text-align:center" data-ask="no">{{NO3}}</div>
+  <div class="answer step mt8">2중 결합의 위치만 다른 세 공명 구조</div>
+  <p class="f21 step">실제 구조는 세 구조의 공명 혼성체 — N–O 결합 차수 $\tfrac43$, 각 O의 형식 전하 $-\tfrac23$이므로 세 결합 길이가 같다.</p>
+</section>
+
+<!-- ════════ 34. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>염화 칼륨의 격자 에너지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 400px">
+      <p class="f21">다음 자료를 이용하여 염화 칼륨(KCl)의 격자 에너지를 계산하여라.</p>
+      <p class="f21">• 표준 생성 엔탈피: −437 kJ/mol<br>• K의 이온화 에너지: 418 kJ/mol<br>• K의 승화 엔탈피: 89 kJ/mol<br>• Cl의 전자 친화도: 349 kJ/mol<br>• $\ce{Cl2}$의 결합 엔탈피: 244 kJ/mol</p>
+      <p class="small">전자 친화도 349 kJ/mol은 방출되는 에너지의 크기 → 과정의 엔탈피 변화는 −349</p>
+    </div>
+    <div class="col stack">
+      <table class="tight ac122-c">
+        <tr><th>화학 반응 단계</th><th>$\Delta H$ (kJ/mol)</th></tr>
+        <tr><td>$\ce{KCl(s) -> K(s) + 1/2Cl2(g)}$</td><td><span class="blank"><span class="step">437</span></span></td></tr>
+        <tr><td>$\ce{K(s) -> K(g)}$</td><td><span class="blank"><span class="step">89</span></span></td></tr>
+        <tr><td>$\ce{K(g) -> K+(g) + e-}$</td><td><span class="blank"><span class="step">418</span></span></td></tr>
+        <tr><td>$\ce{1/2Cl2(g) -> Cl(g)}$</td><td><span class="blank"><span class="step">$244/2=122$</span></span></td></tr>
+        <tr><td>$\ce{Cl(g) + e- -> Cl-(g)}$</td><td><span class="blank"><span class="step">$-349$</span></span></td></tr>
+        <tr class="ac122-hl"><td>$\ce{KCl(s) -> K+(g) + Cl-(g)}$</td><td><span class="blank"><span class="step">717</span></span></td></tr>
+      </table>
+      <div class="answer step">격자 에너지 717 kJ/mol</div>
+      <p class="f21 step">$\ce{K+(g) + Cl-(g) -> KCl(s)}$ &nbsp; $\Delta H=-717\ \text{kJ/mol}$</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 35. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="04 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>철(Ⅱ) 착이온의 홀전자 수 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">착이온 $\ce{[Fe(CN)6]^4-}$와 $\ce{[Fe(H2O)6]^2+}$에 존재하는 홀전자 수는 각각 몇 개인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21 step">$\ce{Fe^2+}$: d 전자 6개($d^6$)</p>
+      <p class="f21 step" data-g="f2">$\ce{CN-}$는 강한 장 리간드 → 저스핀 $t_{2g}^6$</p>
+      <p class="f21 step" data-g="f3">$\ce{H2O}$는 약한 장 리간드 → 고스핀 $t_{2g}^4e_g^2$</p>
+      <div class="answer step">$\ce{[Fe(CN)6]^4-}$ 0개, $\ce{[Fe(H2O)6]^2+}$ 4개</div>
+    </div>
+    <div class="col">{{FE5}}</div>
+  </div>
+</section>
+
+<!-- ════════ 36. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac122-ox f21">
+    <li>$\ce{Na(g) -> Na+(g)}$와 $\ce{Cl(g) -> Cl-(g)}$를 합한 과정은 발열 과정이다. <span class="step">→ <span class="ans">×</span> 흡열이다. 이온 결정을 안정하게 하는 것은 격자 에너지이다.</span></li>
+    <li>이온의 전하가 클수록, 이온 반지름이 작을수록 격자 에너지가 크다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>금속이 늘어나거나 펴지는 것은 금속 결합에 방향성이 없기 때문이다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>규소에 원자가 전자가 더 적은 원자를 도핑하면 n형 반도체가 된다. <span class="step">→ <span class="ans">×</span> p형 반도체가 된다.</span></li>
+    <li><span class="c-muted">[심화]</span> 강한 장 리간드가 결합한 착이온은 고스핀 착물이 되기 쉽다. <span class="step">→ <span class="ans">×</span> 저스핀 착물이 되기 쉽다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 37. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>NaCl의 생성 엔탈피와 격자 에너지 비교</h2>
+  <p class="f21">다음 자료로 NaCl(s)의 표준 생성 엔탈피를 구하고, NaCl, NaF, MgO의 격자 에너지 크기를 부등호로 비교하여 근거를 써라.</p>
+  <p class="f21">자료(kJ/mol): Na(s)의 승화 +108, $\ce{Cl2(g)}$의 결합 해리 +244, Na(g)의 이온화 +496, Cl(g)의 전자 친화도 −349, 기체 이온에서 NaCl(s) 생성 −787</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$\Delta H_\mathrm{f}^\circ=108+\tfrac12(244)+496+(-349)+(-787)$</p>
+      <div class="answer step">$\Delta H_\mathrm{f}^\circ=-410\ \text{kJ/mol}$</div>
+      <div class="answer step">MgO &gt; NaF &gt; NaCl</div>
+      <p class="f21 step">MgO는 이온 전하가 ±2로 전하의 곱이 4배, NaF는 NaCl보다 음이온이 작아 이온 사이 거리가 짧다($\Delta U\propto Z^+Z^-/r_0$).</p>
+      <p class="small">채점 요소: $\ce{Cl2}$는 $\tfrac12$만 사용 · 부호 · 비교와 근거</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 38. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02–04 이온 결합·금속 결합과 전이 금속의 결합 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 화학 결합과 에너지 — 02–04</h2>
+  <div class="ac122-top">
+    <div class="ac122-node ac122-dim">01 공유 결합 <span class="small">(지난 시간)</span></div>
+    <div class="ac122-arr">→</div>
+    <div class="ac122-node ac122-dim" style="border-style:solid;border-color:var(--field);color:var(--ink)"><b>02–04 오늘</b></div>
+    <div class="ac122-arr">→</div>
+    <div class="ac122-node ac122-dim">3. 원자가 결합과 혼성 오비탈 <span class="small">(다음 중단원)</span></div>
+  </div>
+  <div class="ac122-map">
+    <div class="ac122-node ac122-main" data-q><b>02 이온 결합</b><br>❶ 격자 에너지: 기체 이온이 모여 결정이 될 때 <span class="blank"><span class="step">방출</span></span>되는 에너지<br>❷ <span class="blank"><span class="step">본-하버 회로</span></span>로 간접적으로 구함<br>❸ 크기 $\propto$ <span class="blank"><span class="step">$Z^+Z^-/r_0$</span></span>, 클수록 녹는점 <span class="blank"><span class="step">높음</span></span></div>
+    <div class="ac122-node ac122-main" data-q><b>03 금속 결합</b><br>❹ 원자 오비탈 → 연속된 <span class="blank"><span class="step">띠</span></span><br>❺ 금속 양이온과 <span class="blank"><span class="step">자유 전자</span></span>의 인력<br>❻ 두 띠 사이 간격: 부도체 &gt; <span class="blank"><span class="step">반도체</span></span><br>❼ 여분 전자 <span class="blank"><span class="step">n형</span></span>, 구멍 <span class="blank"><span class="step">p형</span></span></div>
+    <div class="ac122-node ac122-main" data-q><b>04 전이 금속의 결합</b><br>❽ 배위 화합물 = <span class="blank"><span class="step">착이온</span></span> + 상대 이온<br>❾ 가장 흔한 배위수 <span class="blank"><span class="step">6</span></span>(팔면체형)
+      <div class="ac122-deep mt8"><b>심화</b> ❿ 위로 <span class="blank"><span class="step">$e_g$</span></span>, 아래로 $t_{2g}$<br>강한 장 → <span class="blank"><span class="step">저스핀</span></span></div></div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02–04 이온 결합·금속 결합과 전이 금속의 결합 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 격자 에너지, 띠 이론, 배위 화합물의 개념으로 이온 결합·금속 결합·전이 금속의 결합을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 본-하버 회로로 격자 에너지를 계산하고, 이온의 전하·크기 자료로 녹는점을 추론할 수 있다.</button>
+    <button class="chk">[가치·태도] 시스플라틴과 반도체 사례를 조사하며 화학 결합 연구가 사회에 기여함을 인식하였다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> KCl의 격자 에너지 크기는? <span class="step">→ <span class="ans">717 kJ/mol</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 반도체에 원자가 전자가 더 많은 원자를 도핑하면? <span class="step">→ <span class="ans">n형 반도체</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{[Fe(H2O)6]^2+}$의 홀전자 수는? <span class="step">→ <span class="ans">4개</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 공유 결합을 오비탈의 겹침으로 보면 분자의 모양을 어떻게 설명할 수 있을까? (3. 원자가 결합과 혼성 오비탈)</div>
+</section>

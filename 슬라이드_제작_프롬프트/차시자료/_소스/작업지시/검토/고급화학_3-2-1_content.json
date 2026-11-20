@@ -1,0 +1,10 @@
+{"findings":[
+{"slide":5,"severity":"medium","rule":"C1","problem":"동소체 반응을 \\ce{C(다이아몬드) -> C(흑연)}으로 써서 KaTeX가 한글을 수식 문자로 처리(콘솔 경고 7건)","fix":"3-1-2 꼴 \\mathrm{C}_\\text{다이아몬드}(s)\\rightarrow\\mathrm{C}_\\text{흑연}(s)로 바꿈 — 반영"},
+{"slide":20,"severity":"medium","rule":"S12","problem":"실험실 해석 문장이 b≠a일 때도 「가운데(고르게 퍼진) 분포가 가장 많다」라고 써서 a=2, b=4처럼 분포가 치우친 경우와 맞지 않음","fix":"이론 확률이 가장 큰 왼쪽 입자 수 nmax를 계산해 「확률이 가장 큰 것은 왼쪽 n개(부피 비율대로 퍼진 분포)」로 바꾸고, W 배수도 숫자로(2^4 = 16배) — 반영, PRE 재시험"},
+{"slide":21,"severity":"low","rule":"S9","problem":"해석 1·2의 답에 .ans 강조가 없음","fix":".ans 추가 — 반영"},
+{"slide":26,"severity":"low","rule":"S9","problem":"부호 어림의 답(기체의 몰수)에 .ans가 없음","fix":".ans 추가 — 반영"},
+{"slide":27,"severity":"low","rule":"M3","problem":"예제 Ⅲ-7 대입 줄 끝에 J/(K·mol)만 붙어 결과 단위 J/K와 이어지지 않음","fix":"단위 줄 「J/(K·mol) × mol = J/K」를 따로 둠 — 반영"},
+{"slide":24,"severity":"low","rule":"C6","problem":"교과서 148쪽 ΔS° 식이 ΔS°m으로 인쇄됨(표 Ⅲ-3 기호는 S°m)","fix":"덱은 S°m으로 쓰고 plan.md 7절 2에 기록 — 기록"},
+{"slide":33,"severity":"low","rule":"S8","problem":"−10 °C, +10 °C에서도 ΔS = −22.0, ΔH = −6.01 kJ/mol로 본 근사이고 6.01 kJ/mol은 교과서에 없는 값","fix":"문제 문장에 「~로 본다」로 근사를 밝히고 plan.md 7절 3에 기록(6.01/273.15 = 22.0으로 교과서 값과 맞음) — 기록"},
+{"slide":20,"severity":"low","rule":"범위","problem":"덱목록 labCandidate는 「없음」인데 실험실이 있음","fix":"선생님(관리자) 지시로 넣음 — plan.md 0절·7절 1에 기록"}
+],"summary":"교과서 142–150쪽의 모든 개념·식·그림(Ⅲ-16–Ⅲ-20)·예제 Ⅲ-5–Ⅲ-7·표 Ⅲ-3(21개 값)·탐구 활동(고화-탐22)이 들어갔고, 반응식 14개와 계산 13개를 calc.py로 검산해 모두 맞았다. 지도서 유의점·오개념(무질서도 표현, 자발성≠빠르기, 원소의 S°m≠0, 계 엔트로피 감소도 자발 가능, kJ/J 환산)을 반영했다. 고친 것: 한글 \\ce 경고, 실험실 해석 문장, .ans 누락, 단위 줄."}

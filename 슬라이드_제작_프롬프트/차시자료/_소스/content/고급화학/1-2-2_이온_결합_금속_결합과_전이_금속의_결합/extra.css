@@ -1,0 +1,22 @@
+/* 고급화학 1-2-2 — 덱 전용 (모두 .ac122- 접두어) */
+.cover h1.ac122-h1{font-size:68px;line-height:1.18}
+table.ac122-c td,table.ac122-c th{text-align:center}
+table.ac122-bh td,table.ac122-bh th{font-size:21px;padding:4px 12px;text-align:center}
+table.ac122-bh td.l{text-align:left}
+table tr.ac122-hl td{background:#FFF8D6}
+table.ac122-lig td{font-size:21px}
+table.ac122-lig td.l{text-align:left}
+ol.ac122-ox{padding-left:1.4em}
+ol.ac122-ox li{margin-top:16px}
+ol.ac122-ox li:first-child{margin-top:0}
+.ac122-ch{margin-top:6px}
+/* 개념 지도 */
+.ac122-top{display:flex;align-items:center;gap:12px;margin-top:8px}
+.ac122-map{display:flex;align-items:stretch;gap:14px;margin-top:14px}
+.ac122-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75}
+.ac122-node.ac122-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac122-node.ac122-dim{border-style:dashed;color:var(--muted);padding:6px 14px}
+.ac122-arr{font-size:26px;color:var(--muted)}
+/* 심화 상자 (대단원 Ⅰ 약속) */
+.ac122-deep{border:2px dashed #5B6B7F;background:#F7F8FA;border-radius:10px;padding:4px 10px}
+table.ac122-sm td,table.ac122-sm th{font-size:20px;padding:3px 10px}
