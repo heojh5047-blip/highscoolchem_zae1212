@@ -2,7 +2,7 @@
    ac312hess : ◆ 디지털 탐구 Ⅲ-1 「온도 센서로 중화열을 측정하여 헤스 법칙 확인하기」
      · 실험 ① NaOH(s) 2.00 g + 물 100 mL (용해) ② 1.0 M NaOH 50 mL + 1.0 M HCl 50 mL (중화) ③ NaOH(s) 2.00 g + 0.50 M HCl 100 mL (직접 반응)
      · 모형 참값 ΔH: ① −44.5 ② −55.8 ③ −100.3 kJ/mol (①+② = ③), n = 0.0500 mol, 용액 질량 102/100/102 g, c = 4.18 J/(g·°C)
-     · 열량계 효율(뚜껑 덮음 0.98 / 안 덮음 0.92), 냉각 기울기(0.010 / 0.035 °C/s), 오름 시간 상수 τ(① 14 s ② 3 s ③ 8 s)
+     · 열량계 효율(뚜껑 덮음 0.98 / 안 덮음 0.92), 냉각 기울기(0.010 / 0.035 °C/s), 오름 시간 상수 τ(① 10 s ② 3 s ③ 8 s)
        T(t) = T0 + ΔTeff(1 − e^{−(t−30)/τ}) − k(t − 30)  (t ≥ 30 s, 혼합 30 s) + 고정 시드 센서 잡음 ±0.03 °C
      · 보정 함: 90–180 s 냉각 구간 최소 제곱 직선을 30 s로 연장 / 보정 안 함: 측정 최고 온도
      · q = m × 4.18 × ΔT, ΔH = −q / n */
@@ -11,7 +11,7 @@ const M='−';
 const fx=(v,d)=>(v<0?M:'')+Math.abs(v).toFixed(d);
 window.DECK_LABS = {
   ac312hess(root, API){
-    const EX={a:{name:'① 용해',H:44.5,m:102.0,tau:14},b:{name:'② 중화',H:55.8,m:100.0,tau:3},c:{name:'③ 직접 반응',H:100.3,m:102.0,tau:8}};
+    const EX={a:{name:'① 용해',H:44.5,m:102.0,tau:10},b:{name:'② 중화',H:55.8,m:100.0,tau:3},c:{name:'③ 직접 반응',H:100.3,m:102.0,tau:8}};
     const LID={on:{name:'덮음',eff:0.98,k:0.010},off:{name:'안 덮음',eff:0.92,k:0.035}};
     const COR={on:'보정',off:'보정 안 함'};
     const N=0.0500, CS=4.18, TMIX=30, TEND=180, TMIN=16, TMAX=40;
@@ -45,7 +45,7 @@ window.DECK_LABS = {
       if(!r){ O('tt').textContent='측정 전'; O('dt').textContent='–'; O('q').textContent='–'; O('h').textContent='–'; return; }
       O('tt').textContent=`${r.T0.toFixed(2)} → ${r.Tmax.toFixed(2)} °C`;
       O('dt').textContent=`${r.dT.toFixed(2)} °C (${COR[r.cor]})`;
-      O('q').textContent=`${EX[r.e].m.toFixed(0)} × 4.18 × ${r.dT.toFixed(2)} = ${Math.round(r.q)} J`;
+      O("q").textContent=`${Math.round(r.q)} J`;
       O('h').textContent=`${fx(r.h,1)} kJ/mol`;
     }
     const key=()=>st.lid+'|'+st.cor;
@@ -112,8 +112,8 @@ window.DECK_LABS = {
     }
     function draw(){ while(g.firstChild) g.removeChild(g.firstChild); st.view==='tt'?drawTT():drawCmp(); }
     function renderLog(){ const tb=O('log'); tb.innerHTML='';
-      log.slice(-4).forEach(r=>{ const tr=document.createElement('tr');
-        tr.innerHTML=`<td>${r.no}</td><td>${EX[r.e].name}</td><td>${LID[r.lid].name}</td><td>${r.cor==='on'?'함':'안 함'}</td><td>${r.T0.toFixed(2)}</td><td>${r.Tmax.toFixed(2)}</td><td>${r.dT.toFixed(2)}</td><td>${Math.round(r.q)}</td><td>${fx(r.h,1)}</td>`; tb.appendChild(tr); }); }
+      log.slice(-3).forEach(r=>{ const tr=document.createElement('tr');
+        tr.innerHTML=`<td>${r.no}</td><td>${EX[r.e].name.slice(0,1)}</td><td>${r.lid==='on'?'○':'×'}</td><td>${r.cor==='on'?'○':'×'}</td><td>${r.T0.toFixed(2)}</td><td>${r.Tmax.toFixed(2)}</td><td>${r.dT.toFixed(2)}</td><td>${Math.round(r.q)}</td><td>${fx(r.h,1)}</td>`; tb.appendChild(tr); }); }
     function finish(){
       const r=run; run=null; cur=r; log.push(r); r.no=log.length; (last[r.lid+'|'+r.cor]=last[r.lid+'|'+r.cor]||{})[r.e]=r; renderLog(); readout(r);
       let m=`${EX[r.e].name}: 온도가 ${r.dT.toFixed(2)} °C 올라갔다(${COR[r.cor]}) → 발열, ΔH = ${fx(r.h,1)} kJ/mol.`;
