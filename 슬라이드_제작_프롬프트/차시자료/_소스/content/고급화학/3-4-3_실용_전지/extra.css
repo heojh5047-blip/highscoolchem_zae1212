@@ -1,0 +1,23 @@
+/* 고급화학 3-4-3 — 덱 전용 (모두 .ac343- 접두어) */
+.cover h1.ac343-h1{font-size:64px;line-height:1.18}
+.ac343-cox{color:#C2410C}
+.ac343-crd{color:#0E7490}
+th.ac343-cox,th.ac343-crd,b.ac343-cox,b.ac343-crd{font-weight:700}
+table.ac343-c td,table.ac343-c th{text-align:center}
+table.ac343-c td.l{text-align:left}
+table.ac343-sm th,table.ac343-sm td{font-size:20px;padding:5px 10px}
+table.ac343-tab td,table.ac343-tab th{font-size:19px;padding:2px 10px;line-height:1.35}
+ul.ac343-ul{padding-left:1.3em;margin:0}
+ul.ac343-ul li{margin-top:8px}
+.formula.ac343-eq{font-size:22px;padding:8px 14px}
+.board.ac343-b{min-height:150px}
+/* 개념 지도 */
+.ac343-map{display:flex;align-items:center;gap:12px;margin-top:14px}
+.ac343-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75}
+.ac343-node.ac343-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac343-node.ac343-dim{flex:0 0 170px;border-style:dashed;color:var(--muted)}
+.ac343-arr{font-size:28px;color:var(--muted)}
+table.ac343-eq{border-collapse:collapse}
+table.ac343-eq th{font-size:20px;padding:4px 12px;text-align:left;white-space:nowrap;background:none;border:none}
+table.ac343-eq td{font-size:21px;padding:4px 10px;text-align:left;border:none}
+table.ac343-eq tr.tot td,table.ac343-eq tr.tot th{border-top:2px solid var(--line)}
