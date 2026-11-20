@@ -1,0 +1,17 @@
+{"findings":[
+{"slide":9,"severity":"medium","rule":"D8","problem":"h2의 분수식(dfrac)으로 제목이 높아지고 본문 열이 아래로 넘침, 그림 라벨 15.4px","fix":"h2를 q가역/T 꼴로, 왼쪽 열 650px·그림 410px, 문장 줄임, 라벨 21 — 반영"},
+{"slide":10,"severity":"medium","rule":"D8","problem":"가로축 이름 T2 [K]가 눈금 400과 겹치고 잘림","fix":"축 이름을 축 위 오른쪽으로 옮김 — 반영"},
+{"slide":11,"severity":"medium","rule":"T4","problem":"유도식 한 줄이 formula 칸을 넘고 그림과 겹침, 「열 흡수」 라벨이 실린더 벽과 겹침","fix":"유도식은 본문 줄로, 결과식만 formula(단계), 라벨을 두 실린더 사이 아래로 — 반영"},
+{"slide":15,"severity":"low","rule":"3.2","problem":"비문 설명 라벨 15.8px","fix":"크기 22 — 반영"},
+{"slide":16,"severity":"medium","rule":"D8","problem":"동전 3개 줄의 W = 8 라벨이 마지막 묶음과 겹침","fix":"묶음 간격 124, viewBox 690·라벨 x 684 — 반영"},
+{"slide":17,"severity":"medium","rule":"T4","problem":"Q 카드 답 수식이 카드 밖으로 넘침","fix":"두 줄로 나누고 왼쪽 열 640px — 반영"},
+{"slide":18,"severity":"medium","rule":"T4","problem":"예제 Ⅲ-6 답 수식이 answer 칸을 넘음","fix":"대입 줄과 답(3.83×10⁻²³ J/K)을 나눔 — 반영"},
+{"slide":20,"severity":"low","rule":"D8","problem":"분포 그래프의 축 이름이 눈금 숫자와 겹치고 범례 「섞은 결과 100회」가 오른쪽에서 잘림","fix":"그래프 바닥 y 250, 범례를 왼쪽으로 — 반영(PRE 캡처 확인)"},
+{"slide":22,"severity":"medium","rule":"D8","problem":"S(T) 식 칸 넘침, 본문 열 아래 넘침, 그래프 라벨 15.8px","fix":"(P=일정)을 단위 줄로, 물 25 °C 예를 그림 아래로, 라벨 20–21 — 반영"},
+{"slide":31,"severity":"low","rule":"D8","problem":"ΔS주위 라벨과 반응식 라벨 겹침","fix":"반응식을 비커 위로 — 반영"},
+{"slide":32,"severity":"medium","rule":"D8","problem":"h2 분수식과 그림 높이로 본문 넘침, 그림 라벨 15px","fix":"h2를 −ΔH/T 꼴로, 그림 420px·라벨 22 — 반영"},
+{"slide":33,"severity":"low","rule":"D8","problem":"온도 칸이 세 줄로 접히고 가로축 이름이 눈금 295와 겹침","fix":"온도 칸 줄바꿈 금지·두 줄, 축 이름 위로 — 반영"},
+{"slide":34,"severity":"low","rule":"D8","problem":"그림 Ⅲ-20의 계·주위·전체 라벨이 블록 화살표와 겹침","fix":"라벨을 화살표 머리 위·관 왼쪽으로 — 반영"},
+{"slide":37,"severity":"low","rule":"T4","problem":"광합성 반응식이 첫 칸을 넘음","fix":"첫 칸 너비 390px — 반영"},
+{"slide":1,"severity":"low","rule":"D7","problem":"표지 둘째 줄 초록 글씨가 흰 테(halo) 때문에 조금 옅어 보임","fix":"읽기에 지장 없어 그대로 둠 — 기각"}
+],"summary":"첫 캡처의 자동 점검 16건(넘침·겹침·라벨 크기)과 콘솔 경고 7건을 모두 고쳐 render 0건·콘솔 0건, motion 0, ask 0(질문 강조 57회). 전체 sheet 모음을 두 번(완성 직후·최종) 보았고, 그림 26개는 직접 그린 SVG(그림 Ⅲ-16–Ⅲ-20 새로 그림)이다."}

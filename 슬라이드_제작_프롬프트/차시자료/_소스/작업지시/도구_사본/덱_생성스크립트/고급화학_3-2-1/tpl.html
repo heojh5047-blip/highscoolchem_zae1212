@@ -1,0 +1,611 @@
+<!-- 고급화학 3-2-1 엔트로피 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 2. 화학 반응의 자발성 › 01</div>
+    <h1 class="ac321-h1">엔트로피</h1>
+    <p class="sub">변화는 왜 한쪽으로만 일어날까 — 미시 상태의 수, 열역학 제2·3법칙, 주위의 엔트로피</p>
+    <p class="meta">고등학교 고급 화학 142–150쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 화학 반응의 자발성 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>2. 화학 반응의 자발성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 엔트로피 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 깁스 자유 에너지와 반응의 자발성 <span class="small">(다음 시간)</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">열역학 제1법칙(에너지 보존)은 에너지가 형태만 바뀐다는 것을 알려 주지만, 어떤 반응이 <b>왜 한 방향으로</b> 일어나는지는 알려 주지 못한다. 이 장에서는 화학 반응의 자발성을 알아보고, 엔트로피 증가 법칙에서 깁스 자유 에너지 변화를 구하는 식을 이끌어 내어 반응의 자발성을 판단하고 예측한다.</p>
+      </div>
+    </div>
+    <div class="col stack">
+      {{MID}}
+      <p class="small">드라이아이스를 물에 넣으면 기포가 생기며 이산화 탄소가 빠져나온다. 안개는 찬 공기 속 수증기가 응축된 것이다. 두 변화 모두 저절로 일어난다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 엔트로피" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-03]</span>엔트로피의 정의를 이해하고 화학 변화에서 엔트로피의 변화를 예측할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>자발성의 뜻을 알고, 엔트로피를 열($\Delta S=q_\text{가역}/T$)과 미시 상태의 수($S=k\ln W$)로 설명할 수 있다.</li>
+    <li>온도·부피·상태 변화에 따른 엔트로피 변화와 표준 몰 엔트로피로 반응의 $\Delta S^\circ$를 예측하고 계산할 수 있다.</li>
+    <li>열역학 제2법칙과 $\Delta S_\text{주위}=-\Delta H/T$로 변화의 자발성을 판단할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">자발성</div><div class="farr">→</div>
+    <div class="fnode">$\Delta S=q_\text{가역}/T$</div><div class="farr">→</div>
+    <div class="fnode">$S=k\ln W$</div><div class="farr">→</div>
+    <div class="fnode hl">미시 상태 실험실</div><div class="farr">→</div>
+    <div class="fnode">표준 몰 엔트로피</div><div class="farr">→</div>
+    <div class="fnode">$\Delta S_\text{전체}$</div>
+  </div>
+  <p class="small mt12">지난 시간: 엔탈피 $H\equiv U+PV$, 압력 일정 $\Delta H=q_P$, 헤스 법칙 (Ⅲ-1 02 엔탈피)</p>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 엔트로피 · 도입" data-title="생각 열기">
+  <h2><span class="tag">생각 열기</span>발열 반응이면 저절로 일어날까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">열역학이 발전하던 초기에는 「발열 반응이면 저절로 일어난다」고 생각했다. 실제로 철이 녹스는 반응 $\ce{4Fe(s) + 3O2(g) -> 2Fe2O3(s)}$처럼 많은 발열 반응은 저절로 일어난다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 그렇다면 열을 흡수하는(흡열) 변화는 저절로 일어날 수 없을까?</p></div>
+      <p class="f21 step">→ 아니다. $25\ {}^\circ\text{C}$의 방에서 얼음은 열을 흡수하며 저절로 녹고, 질산 암모늄은 열을 흡수하며 물에 저절로 녹는다(냉찜질 팩).</p>
+      <p class="f21 step">$\Delta H$의 부호만으로는 변화의 방향을 알 수 없다. 방향을 알려 주는 <b>새로운 열역학적 양</b>이 필요하다 → <b>엔트로피</b></p>
+    </div>
+    <div class="col">{{OPEN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 자발성 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="자발성">
+  <h2><span class="no">1</span>자발성 — 외부의 간섭 없이 일어나는 경향</h2>
+  <p class="f22">화학 반응이 외부의 간섭 없이 일어나는 경향을 <mark>자발성</mark>이라고 한다. 언덕 위의 공은 저절로 굴러 내려오지만, 저절로 다시 올라가지는 않는다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><p class="f21">공이 굴러 내려오는 것은 중력으로 설명하지만, 못이 녹슬고 물이 어는 현상은 중력으로 설명할 수 없다. 열역학은 반응이 <b>일어나는 방향</b>을 알려 준다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 자발적 반응은 빠르게 일어날까?</p>
+        <p class="f21 step">→ 그렇지 않다. 다이아몬드가 흑연으로 바뀌는 반응 $\mathrm{C}_\text{다이아몬드}(s)\rightarrow\mathrm{C}_\text{흑연}(s)$은 자발적이지만 매우 느리다. 자발성은 열역학, 빠르기는 반응 속도의 문제이다.</p></div>
+    </div>
+    <div class="col">{{SPON}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 엔트로피 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="엔트로피">
+  <h2><span class="no">2</span>변화의 방향을 알려 주는 엔트로피</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">숲의 나무가 타는 것은 자발적이지만, 이산화 탄소와 물로부터 나무가 자라려면 태양 에너지를 끊임없이 공급해야 한다. 자연의 변화는 모두 한 방향을 가진다.</p>
+      <p class="f22"><mark>엔트로피</mark> $S$는 무질서도를 나타내는 척도로, 계의 에너지가 가능한 여러 방법에 걸쳐 <b>얼마나 분산되어 있는가</b>를 나타낸다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 자연에서 저절로 일어나는 변화는 어느 쪽으로 진행할까?</p>
+        <p class="f21 step">→ 질서 있는 상태 → 무질서한 상태, 즉 <b>낮은 엔트로피 → 높은 엔트로피</b> 쪽이다.</p></div>
+      <p class="small step">「무질서」라는 말은 오해를 낳기 쉽다. 이 덱에서는 <b>에너지와 입자가 퍼진 정도</b>, 곧 뒤에서 셀 <b>미시 상태의 수</b>로 생각한다.</p>
+    </div>
+    <div class="col">{{ENT}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 금속의 냉각과 기체의 확산 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="금속의 냉각과 기체의 확산">
+  <h2><span class="no">3</span>금속의 냉각과 기체의 확산</h2>
+  <div class="row">
+    <div class="col">{{METAL}}</div>
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21">뜨거운 금속은 격렬하게 진동하는 금속 원자들의 에너지가 주위로 퍼지면서 냉각된다. 금속과 바로 이웃한 주위를 합한 <b>우주</b>는 고립계이다.</p>
+      <p class="f21">기체 분자들이 빈 공간으로 퍼져 나가는 <b>확산</b>도 엔트로피가 증가하는 자발적 과정이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 냉각된 금속이 주위의 에너지를 모아 저절로 다시 뜨거워질까?</p>
+        <p class="f21 step">→ 자연 상태에서 일어나지 않는 <b>비자발적 과정</b>이다. 에너지가 한곳에 모이면 엔트로피가 줄어든다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 열역학 제2법칙 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="열역학 제2법칙">
+  <h2><span class="no">4</span>열역학 제2법칙</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <p class="f22">계와 그 주위를 합한 우주라는 고립계에서 자발적 변화는 낮은 엔트로피에서 높은 엔트로피 쪽으로 일어난다. 이것이 <mark>열역학 제2법칙</mark>이다.</p>
+      <div class="formula">자발적 변화: 고립계(우주)의 엔트로피 증가<div class="unit">고립계: 물질도 에너지도 드나들지 않는 계 (Ⅲ-1 01)</div></div>
+      <p class="f21">우주 전체를 잴 수는 없으므로, 단열되고 밀봉된 플라스크나 열량계 같은 <b>작은 고립된 영역</b>이 우주를 나타낸다고 가정한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 무질서를 재고 변화를 정확히 예측하려면 무엇이 더 필요할까?</p>
+        <p class="f21 step">→ 엔트로피를 <b>숫자로 정의</b>해야 한다. 열로 정의하는 방법과 미시 상태의 수로 정의하는 방법을 차례로 알아보자.</p></div>
+    </div>
+    <div class="col">{{LAW2}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. ⑤ ΔS = q가역/T ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="엔트로피의 정량적 정의">
+  <h2><span class="no">5</span>엔트로피 변화 $\Delta S=q_\text{가역}/T$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 650px">
+      <div class="formula">$\Delta S=\dfrac{q_\text{가역}}{T}$<div class="unit">온도 일정, $q_\text{가역}$: 가역 과정으로 전달된 열, 단위 J/K</div></div>
+      <p class="f21 step">① $q_\text{가역}$이 클수록 엔트로피가 크게 증가한다.</p>
+      <p class="f21 step">② 같은 열이라도 온도가 <b>낮을 때</b> 엔트로피 변화가 더 크다(차가운 계의 분자들이 더 크게 흐트러진다).</p>
+      <p class="small step">조용한 도서관의 재채기는 주의를 끌지만, 소란스러운 거리에서는 그렇지 않다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 열 $1000\ \text{J}$이 가역적으로 $300\ \text{K}$, $600\ \text{K}$의 계에 들어가면 $\Delta S$는?</p>
+        <p class="f21 step">→ <span class="ans">$+3.33\ \text{J/K}$</span>, <span class="ans">$+1.67\ \text{J/K}$</span> — 차가운 계의 엔트로피가 2배 더 증가한다.</p></div>
+    </div>
+    <div class="col">{{QT}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑥ 온도와 엔트로피 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="온도가 높아질 때">
+  <h2><span class="no">6</span>온도가 높아지면 엔트로피가 증가한다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">일정한 열용량 $C$를 가진 계를 $T_1$에서 $T_2$까지 가열할 때, 아주 작은 열 $dq_\text{가역}=C\,dT$마다 $dS=\dfrac{dq_\text{가역}}{T}$를 더하면</p>
+      <div class="formula">$\Delta S=C\displaystyle\int_{T_1}^{T_2}\frac{dT}{T}=C\ln\frac{T_2}{T_1}$<div class="unit">$T_2&gt;T_1$이면 $\ln\dfrac{T_2}{T_1}&gt;0$ → $\Delta S&gt;0$</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 물 $1\ \text{mol}$($C=75.3\ \text{J/K}$)을 $25\ {}^\circ\text{C}$에서 $75\ {}^\circ\text{C}$로 가열할 때 $\Delta S$는?</p>
+        <p class="f21 step">→ $75.3\ \text{J/K}\times\ln\dfrac{348\ \text{K}}{298\ \text{K}}=$ <span class="ans">$+11.7\ \text{J/K}$</span></p>
+        <p class="small step">온도는 반드시 절대 온도(K)로 넣는다. $\ln\dfrac{75}{25}$로 계산하면 틀린다.</p></div>
+    </div>
+    <div class="col">{{HEAT}}</div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑦ 부피와 엔트로피 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="부피가 커질 때">
+  <h2><span class="no">7</span>부피가 커지면 엔트로피가 증가한다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <p class="f21">이상 기체가 <b>등온 가역 팽창</b>할 때 내부 에너지는 변하지 않으므로 $q_\text{가역}=-w_\text{가역}$이다. Ⅲ-1 01의 $w_\text{가역}=-nRT\ln\dfrac{V_2}{V_1}$를 넣으면</p>
+      <p class="f21">$\Delta S=\dfrac{q_\text{가역}}{T}=\dfrac{-w_\text{가역}}{T}=\dfrac{nRT\ln(V_2/V_1)}{T}$</p>
+      <div class="formula step">$\Delta S=nR\ln\dfrac{V_2}{V_1}$<div class="unit">$V_2&gt;V_1$(팽창) → $\Delta S&gt;0$, $V_2&lt;V_1$(압축) → $\Delta S&lt;0$</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 기체가 팽창하면 왜 엔트로피가 커질까?</p>
+        <p class="f21 step">→ 분자가 머무를 공간이 넓어져, 퍼져 있을 수 있는 방법(뒤의 미시 상태)이 많아지기 때문이다.</p></div>
+    </div>
+    <div class="col">{{VOL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. 예제 Ⅲ-5 ════════ -->
+<section class="slide" data-sec="01 · 자발성과 엔트로피" data-title="예제 Ⅲ-5">
+  <h2><span class="tag ex">예제 Ⅲ-5</span>등온 팽창의 엔트로피 변화</h2>
+  <p class="f22">질소 기체 $1.00\ \text{mol}$이 $22.0\ \text{L}$에서 $44.0\ \text{L}$로 등온 팽창을 할 때 <b>Q</b> 엔트로피 변화는 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>생각</b> 온도가 일정하고 부피만 2배가 된다 → $\Delta S=nR\ln\dfrac{V_2}{V_1}$</p>
+      <p class="f21 step">$\Delta S=(1.00\ \text{mol})\times\big(8.314\ \text{J/(K}\cdot\text{mol)}\big)\times\ln\dfrac{44.0\ \text{L}}{22.0\ \text{L}}$</p>
+      <div class="answer step">$\Delta S=+5.76\ \text{J/K}$</div>
+      <p class="small step">$\ln2=0.693$. 부피가 2배가 될 때 $1\ \text{mol}$의 엔트로피는 언제나 $R\ln2=5.76\ \text{J/K}$만큼 늘어난다 — 이 값을 기억해 두자.</p>
+    </div>
+    <div class="col stack">{{EX5}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 13. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>열과 부피로 엔트로피 변화 구하기</h2>
+  <ol class="ac321-ox f22">
+    <li>이상 기체 $2.00\ \text{mol}$을 일정한 온도에서 $30.0\ \text{L}$에서 $10.0\ \text{L}$로 압축하였다. $\Delta S$는? <span class="step">→ <span class="ans">$2.00\times8.314\times\ln\dfrac{10.0}{30.0}=-18.3\ \text{J/K}$</span> (압축 → 감소)</span></li>
+    <li>$0\ {}^\circ\text{C}$($273.15\ \text{K}$)에서 얼음 $1\ \text{mol}$이 녹을 때 열 $6.01\ \text{kJ}$을 가역적으로 흡수한다. $\Delta S$는? <span class="step">→ <span class="ans">$\dfrac{6010\ \text{J}}{273.15\ \text{K}}=+22.0\ \text{J/K}$</span> (kJ을 J로 바꾸어 넣는다)</span></li>
+    <li>같은 열 $q_\text{가역}$이 들어갈 때 엔트로피가 더 크게 증가하는 쪽은 차가운 계일까, 뜨거운 계일까? <span class="step">→ <span class="ans">차가운 계</span> ($T$가 분모)</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 14. ⑧ 절대 엔트로피와 제3법칙 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="열역학 제3법칙">
+  <h2><span class="no">8</span>엔트로피의 영점 — 열역학 제3법칙</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 570px">
+      <p class="f21">절대 온도 $0\ \text{K}$을 정하듯 엔트로피에도 영점을 정할 수 있다. 위치상의 무질서도와 열적 무질서도가 모두 없는 완전한 질서 상태가 그 영점이다.</p>
+      <p class="f22"><mark>열역학 제3법칙</mark>: 모든 완전 결정의 엔트로피는 절대 온도가 $0\ \text{K}$에 가까워질수록 0으로 접근한다. 즉, $S(0\ \text{K})=0$</p>
+      <div class="card"><p class="f21"><b>완전 결정</b>: 결정 속 모든 원자가 완전하게 질서 있게 배열되어 위치상의 무질서도가 전혀 없는 물질. $0\ \text{K}$은 열운동이 없음을 뜻한다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> $0\ \text{K}$보다 높은 온도에서 물질의 엔트로피는?</p>
+        <p class="f21 step">→ 온도가 오르면 분자들의 진동·배향이 많아져 열적 무질서도가 생기므로 <span class="ans">$S&gt;0$</span>이다.</p></div>
+    </div>
+    <div class="col">{{CRYST}}</div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑨ 볼츠만 식 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="볼츠만 식">
+  <h2><span class="no">9</span>분자 수준의 엔트로피 — 볼츠만 식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">오스트리아의 물리학자 볼츠만은 1877년에 엔트로피를 분자 수준에서 정의하였다. 이 식으로 측정이 불가능한 엔트로피도 계산할 수 있다.</p>
+      <div class="formula">$S=k\ln W$<div class="unit">볼츠만 상수 $k=1.381\times10^{-23}\ \text{J/K}$, 기체 상수 $R=kN_\mathrm{A}$</div></div>
+      <p class="f21">$W$: 시료 속 원자나 분자들이 <b>같은 총에너지를 가지면서</b> 배열할 수 있는 가짓수. 분자들의 배열 하나하나를 <mark>미시적 상태</mark>라고 한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 배열 방법이 단 1가지($W=1$)인 계의 엔트로피는?</p>
+        <p class="f21 step">→ <span class="ans">$S=k\ln1=0$</span> — 제3법칙의 완전 결정($0\ \text{K}$)이 바로 이 경우이다.</p></div>
+    </div>
+    <div class="col">{{STONE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑩ 미시 상태 세기: 동전 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="미시 상태 세기: 동전">
+  <h2><span class="no">10</span>미시 상태를 세어 보자 — 동전 모형</h2>
+  <p class="f21">동전마다 앞면 또는 뒷면, 두 가지 상태가 있다(동전들의 총에너지는 같다고 본다). 눈을 감고 동전을 섞을 때 나올 수 있는 배열은 몇 가지일까?</p>
+  <div class="row mt8">
+    <div class="col">{{COINS}}</div>
+    <div class="col stack" style="flex:0 0 380px">
+      <div class="card q"><p class="f21"><b>Q</b> 동전 $N$개이면 $W$는?</p>
+        <p class="f21 step" data-g="cn">→ 동전마다 2가지이므로 <span class="ans">$W=2^N$</span></p></div>
+      <p class="f21 step">모든 동전이 같은 면으로만 놓이는 방식 하나뿐이면 $W=1$, $S=0$이다.</p>
+      <p class="f21 step">미시적 상태가 $1000$가지이면 특정한 하나를 가질 확률은 $\dfrac{1}{1000}$이고, 무질서와 엔트로피는 $W=1$일 때보다 크다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑪ 동전 20개와 아보가드로수 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="동전 20개와 1 mol">
+  <h2><span class="no">11</span>동전 20개, 그리고 아보가드로수만큼의 동전</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="card"><p class="f21"><b>동전 20개</b> $W=2^{20}=1048576$</p>
+        <p class="f21 step">$S=k\ln(2^{20})=(1.381\times10^{-23}\ \text{J/K})\times20\ln2$<br>$=$ <span class="ans">$1.91\times10^{-22}\ \text{J/K}$</span></p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 동전이 아보가드로수 $N_\mathrm{A}$개이면 엔트로피는?</p>
+        <p class="f21 step">→ $S=k\ln(2^{N_\mathrm{A}})=kN_\mathrm{A}\ln2=R\ln2$<br>$=(8.314\ \text{J/K})\times0.693=$ <span class="ans">$5.76\ \text{J/K}$</span></p></div>
+      <p class="f21 step">무질서한 상태의 엔트로피는 질서 정연한 상태보다 $5.76\ \text{J/K}$만큼 높다.</p>
+      <p class="f21 step"><b>연결</b> 예제 Ⅲ-5의 답도 $5.76\ \text{J/K}$였다! 부피가 2배가 되면 분자 하나하나가 <b>왼쪽·오른쪽 두 가지</b> 자리를 가지게 되므로, 동전 $N_\mathrm{A}$개와 똑같이 $W$가 $2^{N_\mathrm{A}}$배가 된다.</p>
+    </div>
+    <div class="col">{{MOLE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 18. 예제 Ⅲ-6 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="예제 Ⅲ-6">
+  <h2><span class="tag ex">예제 Ⅲ-6</span>일산화 탄소 분자 4개의 배열과 엔트로피</h2>
+  <p class="f21">그림은 이원자 분자인 일산화 탄소($\ce{CO}$) 분자 4개가 나란히 배열하는 방식이다. $T=0\ \text{K}$에서 $\ce{CO}$ 분자 4개로 이루어진 작은 고체의 엔트로피를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>1.</b> 모든 분자의 $\ce{C}$ 원자가 맨 위 왼쪽 칸처럼 왼쪽에 놓일 때 $S$는?</p>
+      <p class="f21 step">→ 완전 결정에서 배열 방식이 1가지뿐 → $W=1$, <span class="ans">$S=k\ln1=0$</span></p>
+      <p class="f21 mt8"><b>2.</b> 4개의 분자가 모두 나란하지만 방향은 무질서할 때 $S$는?</p>
+      <p class="f21 step">→ 분자마다 2가지 방향 → $W=2^4=16$</p>
+      <p class="f21 step">$S=k\ln2^4=(1.381\times10^{-23}\ \text{J/K})\times\ln16$</p>
+      <div class="answer step">$S=3.83\times10^{-23}\ \text{J/K}$</div>
+      <p class="small step">교과서 풀이는 $3.8289\times10^{-23}\ \text{J/K}$(유효 숫자 4자리로는 $3.829\times10^{-23}\ \text{J/K}$).</p>
+    </div>
+    <div class="col">{{CO16}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. 실험실 설계 ════════ -->
+<section class="slide" data-sec="01 · 실험실" data-title="실험실: 설계와 예측">
+  <h2><span class="tag">실험실</span>미시 상태 세기 실험실 — 무엇을 바꾸고 무엇을 볼까?</h2>
+  <div class="std"><span class="code">목표</span>입자 수와 칸 수를 바꾸며 미시 상태의 수 $W$와 입자 분포의 확률을 세고, $S=k\ln W$로 기체가 퍼질 때의 엔트로피 변화를 구한다.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 620px">
+      <table class="tight ac321-var">
+        <tr><th>바꾸는 것</th><td class="l">입자 수 $N$ (1–8개, 번호로 구별), 왼쪽 칸 수 $a$ (처음 부피), 오른쪽 칸 수 $b$ (칸막이를 열면 더해지는 부피)</td></tr>
+        <tr><th>세는 것</th><td class="l">칸막이를 열기 전 $W_\text{처음}=a^N$, 연 뒤 $W_\text{나중}=(a+b)^N$, 모두 왼쪽에 모일 확률, 왼쪽 입자 수의 분포</td></tr>
+        <tr><th>구하는 것</th><td class="l">$\Delta S=k\ln\dfrac{W_\text{나중}}{W_\text{처음}}$ ($k$의 몇 배인지)</td></tr>
+        <tr><th>규칙</th><td class="l">입자 하나는 어느 칸에나 들어갈 수 있고, 한 칸에 여러 개가 들어가도 된다(이상 기체).</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>예측</b> ① 입자 4개, 왼쪽 2칸 → 오른쪽 2칸을 열면 4개가 모두 왼쪽에 모여 있을 확률은? ② 입자가 8개로 늘면 그 확률은 커질까, 작아질까? ③ 칸을 잘게(3칸 + 3칸) 나누면 $\Delta S$가 달라질까?</p></div>
+      {{PLAN}}
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 실험실 ════════ -->
+<section class="slide" data-sec="01 · 실험실" data-title="실험실: 미시 상태 세기">
+  <h2><span class="tag">실험실</span>미시 상태 세기 — 경우의 수와 확률 분포</h2>
+  <div class="lab" data-lab="ac321micro">
+    <div class="lab-ctl" style="flex-basis:400px">
+      <div class="ctl"><div class="lbl"><span>입자 수 $N$</span><output data-o="n"></output></div><input type="range" min="1" max="8" step="1" value="4" data-i="n" aria-label="입자 수"></div>
+      <div class="ctl"><div class="lbl"><span>왼쪽 칸 수 $a$</span><output data-o="a"></output></div><input type="range" min="1" max="5" step="1" value="2" data-i="a" aria-label="왼쪽 칸 수"></div>
+      <div class="ctl"><div class="lbl"><span>오른쪽 칸 수 $b$</span><output data-o="b"></output></div><input type="range" min="0" max="5" step="1" value="2" data-i="b" aria-label="오른쪽 칸 수"></div>
+      <table class="readout ac321-read">
+        <tr><th>$W_\text{처음}$</th><td><output data-o="w1"></output></td></tr>
+        <tr><th>$W_\text{나중}$</th><td><output data-o="w2"></output></td></tr>
+        <tr><th>모두 왼쪽</th><td><output data-o="p"></output></td></tr>
+        <tr class="hl"><th>$\Delta S$</th><td><output data-o="ds"></output></td></tr>
+      </table>
+      <div class="ac321-seg mt8"><button class="btn ac321-act" data-act="one">1번 섞기</button><button class="btn ac321-act" data-act="many">100번 섞기</button><button class="btn" data-act="auto">자동 섞기</button></div>
+      <div class="ac321-seg"><button class="btn ac321-act" data-act="rec">기록</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 660px">
+      <div class="lab-fig" style="width:660px;height:300px">
+        <svg viewBox="0 0 660 300" width="660" height="300" aria-label="칸막이가 있는 상자 속 번호 붙은 입자의 배열과, 왼쪽 입자 수에 따른 확률 분포(이론 막대와 섞은 결과 막대)"></svg>
+      </div>
+      <output class="kind ac321-msg" data-o="msg"></output>
+      <table class="tight ac321-log mt4"><thead><tr><th>회</th><th>N</th><th>a</th><th>b</th><th>W처음</th><th>W나중</th><th>모두 왼쪽 확률</th><th>ΔS</th><th>섞은 횟수</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 실험실 결과 정리 ════════ -->
+<section class="slide" data-sec="01 · 실험실" data-title="실험실: 결과 정리">
+  <h2><span class="tag">실험실</span>결과 정리와 해석 (예시)</h2>
+  <table class="tight ac321-c">
+    <tr><th>$N$</th><th>$a$ → $a+b$</th><th>$W_\text{처음}$</th><th>$W_\text{나중}$</th><th>모두 왼쪽에 모일 확률</th><th>$\Delta S$</th></tr>
+    <tr><td>4</td><td>2 → 4</td><td>16</td><td>256</td><td><span class="blank"><span class="step" data-g="r1">$\tfrac{1}{16}=0.0625$</span></span></td><td><span class="blank"><span class="step" data-g="r1">$4k\ln2=2.77k$</span></span></td></tr>
+    <tr><td>8</td><td>2 → 4</td><td>256</td><td>65536</td><td><span class="blank"><span class="step" data-g="r2">$\tfrac{1}{256}=0.0039$</span></span></td><td><span class="blank"><span class="step" data-g="r2">$8k\ln2=5.55k$</span></span></td></tr>
+    <tr><td>4</td><td>3 → 6</td><td>81</td><td>1296</td><td><span class="blank"><span class="step" data-g="r3">$0.0625$</span></span></td><td><span class="blank"><span class="step" data-g="r3">$2.77k$</span></span></td></tr>
+    <tr><td>4</td><td>2 → 6</td><td>16</td><td>1296</td><td><span class="blank"><span class="step" data-g="r4">$\tfrac{1}{81}=0.0123$</span></span></td><td><span class="blank"><span class="step" data-g="r4">$4k\ln3=4.39k$</span></span></td></tr>
+  </table>
+  <ol class="ac321-ox f21 mt12">
+    <li>입자 수가 늘면 모두 한쪽에 모일 확률은 어떻게 될까? <span class="step">→ <span class="ans">$\left(\tfrac12\right)^N$로 급격히 줄어든다</span>. 입자가 $10^{23}$개이면 사실상 0 — 기체가 저절로 한쪽에 모이지 않는 까닭이다.</span></li>
+    <li>칸을 잘게 나누어도($2\to4$ 대신 $3\to6$) $\Delta S$가 같은 까닭은? <span class="step">→ $\dfrac{W_\text{나중}}{W_\text{처음}}=\left(\dfrac{a+b}{a}\right)^N=\left(\dfrac{V_2}{V_1}\right)^N$ — <span class="ans">부피비에만 달려 있다</span>.</span></li>
+    <li>$1\ \text{mol}$($N=N_\mathrm{A}$)이면? <span class="step">→ $\Delta S=N_\mathrm{A}k\ln\dfrac{V_2}{V_1}=R\ln\dfrac{V_2}{V_1}$ — 열로 구한 $\Delta S=nR\ln\dfrac{V_2}{V_1}$와 <span class="ans">같은 식</span>이다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 22. ⑫ 0 K부터 가열과 상전이 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="절대 엔트로피와 상전이">
+  <h2><span class="no">12</span>절대 엔트로피 — $0\ \text{K}$부터 가열하며 더하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">$S(0\ \text{K})=0$이라는 기준이 정해졌으므로, 주어진 온도와 상태에서 엔트로피의 절대적 크기, 곧 <mark>절대 엔트로피</mark>를 구할 수 있다.</p>
+      <div class="formula sm">$S(T)=S(0\ \text{K})+\Delta S=\displaystyle\int_0^T\frac{C_p}{T}\,dT$<div class="unit">압력 $P$가 일정할 때, $C_p$: 일정 압력의 열용량</div></div>
+      <p class="f21">가열하는 동안 상전이가 있으면 상전이의 엔트로피 변화를 더한다.</p>
+      <div class="formula sm">$\Delta S^\circ_\text{용융}=\dfrac{\Delta H^\circ_\text{용융}}{T_\mathrm{f}},\qquad\Delta S^\circ_\text{증발}=\dfrac{\Delta H^\circ_\text{증발}}{T_\mathrm{b}}$<div class="unit">$T_\mathrm{f}$: 녹는점, $T_\mathrm{b}$: 끓는점</div></div>
+    </div>
+    <div class="col stack">{{PHASE}}
+      <p class="small step"><b>예</b> $25\ {}^\circ\text{C}$ 물의 $S$: ① $0$–$273.15\ \text{K}$ 얼음의 열용량 측정 → ② $273.15\ \text{K}$ 용융 엔탈피로 용융 엔트로피 → ③ $273.15$–$298.15\ \text{K}$ 액체 물의 열용량 측정 → 모두 더한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>증발 엔트로피</h2>
+  <p class="f22">벤젠의 기준 끓는점은 $80.1\ {}^\circ\text{C}$이고 증발 엔탈피는 $30.8\ \text{kJ/mol}$이다. <b>Q</b> 끓는점에서 벤젠 $1\ \text{mol}$이 기화할 때 $\Delta S$는?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$T_\mathrm{b}=80.1+273.15=353.25\ \text{K}$, $\Delta H=30.8\ \text{kJ/mol}=30800\ \text{J/mol}$</p>
+      <div class="answer step">$\Delta S_\text{증발}=\dfrac{30800\ \text{J/mol}}{353.25\ \text{K}}=+87.2\ \text{J/(K}\cdot\text{mol)}$</div>
+      <p class="f21 mt8"><b>Q</b> 물의 증발 엔트로피($109\ \text{J/(K}\cdot\text{mol)}$)가 벤젠보다 큰 까닭은?</p>
+      <p class="f21 step">→ 액체 물은 수소 결합으로 분자들이 더 질서 있게 배열되어 있어(액체의 $S$가 작다), 기체가 될 때 엔트로피 증가가 더 크다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑬ 표준 몰 엔트로피 표 Ⅲ-3 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="표준 몰 엔트로피">
+  <h2><span class="no">13</span>표준 몰 엔트로피 $S^\circ_\mathrm{m}$</h2>
+  <p class="f21">표준 상태에서 물질 $1\ \text{mol}$의 절대 엔트로피를 <mark>표준 몰 엔트로피</mark> $S^\circ_\mathrm{m}$이라고 한다(단위 $\text{J/(K}\cdot\text{mol)}$).</p>
+  <table class="tight ac321-sm mt8">
+    <tr><th colspan="2">기체</th><th colspan="2">액체</th><th colspan="2">고체</th></tr>
+    <tr><td class="l">암모니아($\ce{NH3}$)</td><td>192.4</td><td class="l">벤젠($\ce{C6H6}$)</td><td>173.3</td><td class="l">다이아몬드($\ce{C}$)</td><td>2.4</td></tr>
+    <tr><td class="l">일산화 탄소($\ce{CO}$)</td><td>197.5</td><td class="l">메탄올($\ce{CH3OH}$)</td><td>127.0</td><td class="l">흑연($\ce{C}$)</td><td>5.7</td></tr>
+    <tr><td class="l">이산화 탄소($\ce{CO2}$)</td><td>213.7</td><td class="l">에탄올($\ce{C2H5OH}$)</td><td>160.7</td><td class="l">납($\ce{Pb}$)</td><td>64.8</td></tr>
+    <tr><td class="l">수소($\ce{H2}$)</td><td>130.7</td><td class="l">물($\ce{H2O}$)</td><td>69.9</td><td class="l">칼슘($\ce{Ca}$)</td><td>41.4</td></tr>
+    <tr><td class="l">염소($\ce{Cl2}$)</td><td>223.0</td><td class="l">사염화 탄소($\ce{CCl4}$)</td><td>214.4</td><td class="l">산화 칼슘($\ce{CaO}$)</td><td>39.8</td></tr>
+    <tr><td class="l">질소($\ce{N2}$)</td><td>191.6</td><td class="l">아세트산($\ce{CH3COOH}$)</td><td>159.8</td><td class="l">탄산 칼슘($\ce{CaCO3}$)</td><td>92.9</td></tr>
+    <tr><td class="l">산소($\ce{O2}$)</td><td>205.1</td><td class="l">옥테인($\ce{C8H18}$)</td><td>358.0</td><td class="l">염화 나트륨($\ce{NaCl}$)</td><td>72.1</td></tr>
+  </table>
+  <p class="small mt4">표 Ⅲ-3 $25\ {}^\circ\text{C}$에서의 표준 몰 엔트로피($S^\circ_\mathrm{m}$, $\text{J/(K}\cdot\text{mol)}$)</p>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 표에서 0인 물질이 있을까? <span class="step">→ 없다. 원소($\ce{H2}$, $\ce{O2}$, 흑연)도 0이 아니다 — 표준 생성 엔탈피(원소는 0)와 달리 $S^\circ_\mathrm{m}$은 제3법칙으로 정한 <b>절댓값</b>이다.</span></p></div>
+</section>
+
+<!-- ════════ 25. ⑭ 표준 몰 엔트로피의 경향 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="표준 몰 엔트로피의 경향">
+  <h2><span class="no">14</span>표준 몰 엔트로피의 경향</h2>
+  <div class="row">
+    <div class="col">{{SMBAR}}</div>
+    <div class="col stack" style="flex:0 0 430px">
+      <div class="card q"><p class="f21"><b>Q</b> 같은 온도에서 상태에 따라 $S^\circ_\mathrm{m}$은 어떻게 다를까?</p>
+        <p class="f21 step">→ <span class="ans">기체 &gt; 액체 &gt; 고체</span> — 기체 분자는 퍼질 수 있는 방법(미시 상태)이 훨씬 많다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 메탄올, 에탄올, 옥테인을 비교하면?</p>
+        <p class="f21 step">→ 물질의 <b>복잡성</b>(원자 수)이 커질수록 $S^\circ_\mathrm{m}$이 증가한다. 원자가 많으면 진동·회전할 방법이 많다.</p></div>
+      <p class="small step">다이아몬드($2.4$)보다 흑연($5.7$)이 큰 것은 흑연의 층 사이가 약하게 결합해 원자가 더 자유롭게 움직이기 때문이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. ⑮ 표준 반응 엔트로피 변화 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="표준 반응 엔트로피 변화">
+  <h2><span class="no">15</span>표준 반응 엔트로피 변화 $\Delta S^\circ$</h2>
+  <p class="f22">어떤 화학 반응의 <mark>표준 반응 엔트로피 변화</mark> $\Delta S^\circ$는 생성물의 표준 몰 엔트로피 합에서 반응물의 표준 몰 엔트로피 합을 뺀 값이다.</p>
+  <div class="formula mt8">$\Delta S^\circ=\sum n_\mathrm{p}S^\circ_\mathrm{m}(\text{생성물})-\sum n_\mathrm{r}S^\circ_\mathrm{m}(\text{반응물})$<div class="unit">$n_\mathrm{p}$, $n_\mathrm{r}$: 반응식의 계수(몰수). 원소도 $S^\circ_\mathrm{m}$을 빼먹지 않고 넣는다.</div></div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card q"><p class="f21"><b>Q</b> 계산하지 않고 $\Delta S^\circ$의 부호를 어림하려면 무엇을 볼까?</p>
+        <p class="f21 step">→ <span class="ans">기체의 몰수</span>: 기체 몰수가 증가하면 엔트로피 증가, 감소하면 엔트로피 감소</p></div>
+      <p class="small step">$\Delta H^\circ$(kJ)와 달리 $\Delta S^\circ$는 보통 J/K로 나타낸다. 두 값을 한 식에 쓸 때 단위를 맞추지 않으면 1000배 오차가 난다.</p>
+    </div>
+    <div class="col">{{GASN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 예제 Ⅲ-7 ════════ -->
+<section class="slide" data-sec="01 · 절대 엔트로피" data-title="예제 Ⅲ-7">
+  <h2><span class="tag ex">예제 Ⅲ-7</span>암모니아 생성 반응의 엔트로피 변화</h2>
+  <p class="f21">암모니아 생성 반응은 $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21"><b>1.</b> 계산하지 않고 엔트로피 변화의 부호를 예측하면? 그 이유는?</p>
+      <p class="f21 step">→ <span class="ans">음수</span> — 기체 분자 4 mol이 2 mol로, 기체 몰수가 감소한다.</p>
+      <p class="f21 mt8"><b>2.</b> $25\ {}^\circ\text{C}$에서 표준 반응 엔트로피 변화를 표 Ⅲ-3으로 계산하면?</p>
+      <p class="f21 step">$\Delta S^\circ=(2\ \text{mol})(192.4)-[(1\ \text{mol})(191.6)+(3\ \text{mol})(130.7)]$<br><span class="small">(단위 $\text{J/(K}\cdot\text{mol)}$ × mol = J/K)</span></p>
+      <div class="answer step">$\Delta S^\circ=384.8-583.7=-198.9\ \text{J/K}$</div>
+    </div>
+    <div class="col stack">{{NH3}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 03" data-tpl="check">
+  <h2><span class="tag q">확인 문제 03</span>$\Delta S$의 부호 예측하기</h2>
+  <p class="f21">다음 변화에서 계의 $\Delta S$ 부호를 예측하고, 미시 상태의 수와 관련지어 근거를 말해 보자.</p>
+  <ol class="ac321-ox f21 mt8">
+    <li>$\ce{2SO2(g) + O2(g) -> 2SO3(g)}$의 부호는? <span class="step">→ <span class="ans">$-$</span> 기체 3 mol → 2 mol, 분자가 배열될 수 있는 방법($W$)이 줄어든다.</span></li>
+    <li>$\ce{NH4NO3(s) -> N2O(g) + 2H2O(g)}$의 부호는? <span class="step">→ <span class="ans">$+$</span> 고체에서 기체 3 mol이 생긴다.</span></li>
+    <li>$\ce{Ag+(aq) + Cl-(aq) -> AgCl(s)}$의 부호는? <span class="step">→ <span class="ans">$-$</span> 용액 속에 흩어져 있던 이온이 규칙적인 고체 격자로 묶인다.</span></li>
+    <li>$\ce{H2O(l) -> H2O(g)}$의 부호는? <span class="step">→ <span class="ans">$+$</span> 액체보다 기체의 분자 배치·운동 상태 수가 훨씬 많다. $S=k\ln W$이므로 $W$가 커지면 $S$가 커진다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 29. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>석회석 분해의 $\Delta S^\circ$</h2>
+  <p class="f22">석회석을 가열하면 $\ce{CaCO3(s) -> CaO(s) + CO2(g)}$ 반응이 일어난다. 표 Ⅲ-3을 이용하여 <b>Q</b> $25\ {}^\circ\text{C}$에서 이 반응의 $\Delta S^\circ$를 구하면?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>어림</b> 고체 → 고체 + 기체 1 mol: 기체 몰수 증가 → $\Delta S^\circ&gt;0$</p>
+      <p class="f21 step">$\Delta S^\circ=[(1)(39.8)+(1)(213.7)]-(1)(92.9)\ \text{J/K}$</p>
+      <div class="answer step">$\Delta S^\circ=+160.6\ \text{J/K}$</div>
+      <p class="small step">이 반응은 흡열 반응인데도 높은 온도에서 일어난다. 엔트로피가 크게 증가하기 때문이다 — 02 깁스 자유 에너지에서 다시 다룬다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 30. ⑯ 전체 엔트로피 변화 ════════ -->
+<section class="slide" data-sec="01 · 엔트로피 변화와 자발성" data-title="전체 엔트로피 변화">
+  <h2><span class="no">16</span>전체 엔트로피 변화 $\Delta S_\text{전체}$</h2>
+  <p class="f22">계와 그 주위가 고립계를 이루면 열역학 제2법칙이 적용되어, <b>전체 엔트로피 변화가 양수일 때만</b> 그 변화가 자발적이다.</p>
+  <div class="formula mt8">$\underbrace{\Delta S_\text{전체}}_{\text{전체 엔트로피 변화}}=\underbrace{\Delta S}_{\text{계의 엔트로피 변화}}+\underbrace{\Delta S_\text{주위}}_{\text{주위의 엔트로피 변화}}$<div class="unit">보통 계의 성질은 아래 첨자 없이 쓴다.</div></div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card q"><p class="f21"><b>Q</b> 계의 엔트로피가 감소하는 변화는 자발적으로 일어날 수 없을까?</p>
+        <p class="f21 step">→ 일어날 수 있다. 주위의 엔트로피가 크게 증가하여 $\Delta S_\text{전체}$가 양수이면 자발적이다.</p></div>
+    </div>
+    <div class="col">{{TOTAL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 31. ⑰ 물이 어는 과정 ════════ -->
+<section class="slide" data-sec="01 · 엔트로피 변화와 자발성" data-title="물이 얼 때 주위의 역할">
+  <h2><span class="no">17</span>물이 얼 때 — 주위의 역할</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 580px">
+      <p class="f21">$0\ {}^\circ\text{C}$에서 물의 몰 엔트로피는 $0\ {}^\circ\text{C}$ 얼음보다 $22.0\ \text{J/(K}\cdot\text{mol)}$만큼 높다. 따라서 물이 얼면 계의 엔트로피가 $22.0\ \text{J/(K}\cdot\text{mol)}$만큼 <b>감소</b>한다.</p>
+      <p class="f21">상전이나 반응의 엔트로피 변화는 온도에 따라 크게 변하지 않으므로, $0\ {}^\circ\text{C}$ 바로 아래에서도 거의 같은 양이 감소한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 그런데도 $0\ {}^\circ\text{C}$ 아래에서 물이 저절로 어는 까닭은?</p>
+        <p class="f21 step">→ 물이 얼 때 내놓은 열을 받은 <b>주위의 엔트로피</b>가 $22.0\ \text{J/(K}\cdot\text{mol)}$보다 더 많이 증가하면, 전체 엔트로피 변화가 양수가 되기 때문이다.</p></div>
+      <p class="f21 step">주위의 엔트로피 변화를 계의 성질($\Delta H$, $T$)로 구하는 식이 필요하다.</p>
+    </div>
+    <div class="col">{{FREEZE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 32. ⑱ ΔS주위 = −ΔH/T ════════ -->
+<section class="slide" data-sec="01 · 엔트로피 변화와 자발성" data-title="주위의 엔트로피 변화">
+  <h2><span class="no">18</span>주위의 엔트로피 변화 $\Delta S_\text{주위}=-\Delta H/T$</h2>
+  <div class="stages c2 f21">
+    <div class="stage step"><b>① 주위는 매우 크다</b><br>열을 얼마나 주고받든 온도가 일정 → $\Delta S_\text{주위}=\dfrac{q_\text{주위, 가역}}{T}$</div>
+    <div class="stage step"><b>② 계에서 나간 열은 주위가 받는다</b><br>$q_\text{주위}=-q$</div>
+    <div class="stage step"><b>③ 압력이 일정하다</b><br>계에서 나온 열은 계의 엔탈피 → $q=\Delta H$, $q_\text{주위}=-\Delta H$</div>
+    <div class="stage step"><b>④ 주위에게는 아주 작은 양</b><br>계와의 열 교환은 주위에게 가역적 → $q_\text{주위, 가역}=-\Delta H$</div>
+  </div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="answer step">일정 온도와 압력에서 $\Delta S_\text{주위}=-\dfrac{\Delta H}{T}$</div>
+      <p class="f21 step">발열($\Delta H&lt;0$) → 주위의 엔트로피 증가. 같은 열이면 온도가 <b>낮을 때</b> 더 많이 증가한다.</p>
+      <p class="small step"><b>Q</b> 이 식을 얻는 데 「일정한 온도」와 「일정한 압력」은 어디에 쓰였을까? → 온도: ①, 압력: ③</p>
+    </div>
+    <div class="col">{{SURR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 33. ⑲ 물이 어는 과정의 자발성 ════════ -->
+<section class="slide" data-sec="01 · 엔트로피 변화와 자발성" data-title="물이 어는 과정의 계산">
+  <h2><span class="no">19</span>물이 어는 과정의 자발성 계산하기</h2>
+  <p class="f21">물이 얼 때 $\Delta H=-6.01\ \text{kJ/mol}$, $\Delta S=-22.0\ \text{J/(K}\cdot\text{mol)}$로 본다. <b>Q</b> 세 온도에서 $\Delta S_\text{전체}$와 자발성은?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 650px">
+      <table class="tight ac321-c ac321-frz">
+        <tr><th>온도</th><th>$\Delta S$</th><th>$\Delta S_\text{주위}=-\dfrac{\Delta H}{T}$</th><th>$\Delta S_\text{전체}$</th><th>판단</th></tr>
+        <tr><td>$-10\ {}^\circ\text{C}$<br>263.15 K</td><td>$-22.0$</td><td><span class="blank"><span class="step" data-g="f1">$+22.8$</span></span></td><td><span class="blank"><span class="step" data-g="f1">$+0.8$</span></span></td><td><span class="step" data-g="f1">어는 것이<br>자발적</span></td></tr>
+        <tr><td>$0\ {}^\circ\text{C}$<br>273.15 K</td><td>$-22.0$</td><td><span class="blank"><span class="step" data-g="f2">$+22.0$</span></span></td><td><span class="blank"><span class="step" data-g="f2">$0$</span></span></td><td><span class="step" data-g="f2">평형</span></td></tr>
+        <tr><td>$+10\ {}^\circ\text{C}$<br>283.15 K</td><td>$-22.0$</td><td><span class="blank"><span class="step" data-g="f3">$+21.2$</span></span></td><td><span class="blank"><span class="step" data-g="f3">$-0.8$</span></span></td><td><span class="step" data-g="f3">비자발적<br>(녹는 것이 자발적)</span></td></tr>
+      </table>
+      <p class="small mt4">단위: $\text{J/(K}\cdot\text{mol)}$. $\Delta S_\text{주위}=\dfrac{+6010\ \text{J/mol}}{T}$ — kJ을 J로 바꾸어 계산한다.</p>
+    </div>
+    <div class="col">{{FRZG}}</div>
+  </div>
+</section>
+
+<!-- ════════ 34. ⑳ 자발성의 판단 ════════ -->
+<section class="slide" data-sec="01 · 엔트로피 변화와 자발성" data-title="자발성의 판단">
+  <h2><span class="no">20</span>전체 엔트로피로 자발성 판단하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><p class="f21">$\Delta S_\text{전체}&gt;0$ → 그 과정은 <b>자발적</b>이다.</p>
+        <p class="f21">$\Delta S_\text{전체}&lt;0$ → 비자발적이고, <b>역과정이 자발적</b>이다.</p>
+        <p class="f21">$\Delta S_\text{전체}=0$ → 어느 방향으로도 진행하려는 경향이 없다. 즉, <b>평형</b>이다.</p></div>
+      <p class="f21">(가) 발열 반응에서 계의 엔트로피가 증가하면 전체 엔트로피는 당연히 증가한다.</p>
+      <p class="f21 step">(나) 계의 엔트로피가 감소해도 $\Delta H$가 큰 음수이면, 주위로 방출한 열이 주위의 엔트로피를 크게 늘려 전체 엔트로피가 증가한다 — 암모니아 합성, 기체가 고체·액체로 되는 연소 반응.</p>
+    </div>
+    <div class="col">{{FIG20}}</div>
+  </div>
+</section>
+
+<!-- ════════ 35. 확인 문제 05 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 05">
+  <h2><span class="tag q">확인 문제 05</span>암모니아 합성은 자발적일까?</h2>
+  <p class="f22">$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$의 $\Delta H^\circ=-92\ \text{kJ}$(02 엔탈피 표 Ⅲ-2), $\Delta S^\circ=-198.9\ \text{J/K}$(예제 Ⅲ-7)이다. <b>Q</b> $298\ \text{K}$, 표준 상태에서 이 반응은 자발적일까?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 650px">
+      <p class="f21 step">$\Delta S_\text{주위}=-\dfrac{\Delta H^\circ}{T}=-\dfrac{-92000\ \text{J}}{298\ \text{K}}=+308.7\ \text{J/K}$</p>
+      <p class="f21 step">$\Delta S_\text{전체}=\Delta S^\circ+\Delta S_\text{주위}=-198.9+308.7$</p>
+      <div class="answer step">$\Delta S_\text{전체}=+109.8\ \text{J/K}&gt;0$ → 자발적</div>
+      <p class="small step">계의 엔트로피는 줄지만, 방출한 열이 주위의 엔트로피를 더 크게 늘린다 — 그림 Ⅲ-20 (나)의 경우이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 36. 탐구 활동 (고화-탐22) 1 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 생명체와 제2법칙 (1)">
+  <h2><span class="tag">탐구 활동</span>생명체의 물질대사와 열역학 제2법칙 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>자연계 생명체 물질대사 활동에 관한 열역학 제2법칙 설명 자료 조사 — 모둠별로 자연계 생명체의 물질대사 활동을 열역학 제2법칙으로 어떻게 설명할 수 있는지 자료를 조사하여 토론하고 발표해 보자.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card q"><p class="f21"><b>Q</b> 생명체는 복잡하고 질서 정연해질수록 엔트로피가 낮아진다. 그렇다면 생명체의 진화는 제2법칙에 어긋날까?</p>
+        <p class="f21 step">→ 어긋나지 않는다. 생명체(계)의 엔트로피가 감소해도 주위의 엔트로피가 훨씬 더 크게 증가하면 전체 엔트로피는 증가한다.</p></div>
+      <div class="card"><h3>조사·토론 순서</h3>
+        <p class="f21">① 물질대사 하나 고르기(세포 호흡, 광합성, 단백질 합성 등) → ② 계와 주위 정하기 → ③ $\Delta S$, $\Delta S_\text{주위}$의 부호와 까닭 → ④ $\Delta S_\text{전체}$로 설명 → ⑤ 모둠 발표</p></div>
+    </div>
+    <div class="col">{{LIFE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 37. 탐구 활동 (고화-탐22) 2 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 생명체와 제2법칙 (2)">
+  <h2><span class="tag">탐구 활동</span>조사 결과 예시와 토론 정리 <span class="small c-muted">[필수 탐구]</span></h2>
+  <table class="tight ac321-life">
+    <tr><th style="width:390px">물질대사</th><th>계의 엔트로피 $\Delta S$</th><th>주위의 엔트로피 $\Delta S_\text{주위}$</th><th>전체</th></tr>
+    <tr><td class="l">세포 호흡<br>$\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O}$</td><td class="l step" data-g="l1">증가: 큰 분자 1개 → 작은 분자 12개</td><td class="l step" data-g="l1">증가: 방출한 열이 주위로 퍼진다</td><td class="step" data-g="l1">증가</td></tr>
+    <tr><td class="l">단백질·DNA 합성<br>(동물)</td><td class="l step" data-g="l2">감소: 작은 분자 → 복잡하고 질서 있는 큰 분자</td><td class="l step" data-g="l2">크게 증가: 포도당을 분해해 얻은 에너지 일부가 열로, $\ce{CO2}$와 $\ce{H2O}$를 배출</td><td class="step" data-g="l2">증가</td></tr>
+    <tr><td class="l">광합성 (식물)<br>$\ce{6CO2 + 6H2O -> C6H12O6 + 6O2}$</td><td class="l step" data-g="l3">감소: 작은 분자 → 포도당</td><td class="l step" data-g="l3">증가: 흡수한 햇빛 에너지의 상당 부분이 열로 주위에 퍼진다(햇빛을 내는 태양까지 넣으면 크게 증가)</td><td class="step" data-g="l3">증가</td></tr>
+  </table>
+  <p class="small mt4">예시 결과는 덱이 정리한 것이다. 모둠이 조사한 자료로 바꾸어 발표한다.</p>
+  <div class="note puzzle mt8 step"><b>토론 정리</b> 생명체는 고립계가 아니다. 먹이나 햇빛으로 에너지를 받아 질서를 만들고, 그 대가로 열과 작은 분자를 주위로 내보내 우주의 엔트로피를 늘린다. 그래서 생명 활동은 끊임없이 에너지를 공급받아야 유지된다.</div>
+</section>
+
+<!-- ════════ 38. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 엔트로피 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 화학 반응의 자발성 — 01 엔트로피</h2>
+  <div class="ac321-map">
+    <div class="ac321-node ac321-dim">Ⅲ-1 반응 엔탈피<br>$\Delta U=q+w$<br>$\Delta H=q_P$<br>헤스 법칙</div>
+    <div class="ac321-arr">→</div>
+    <div class="ac321-node ac321-main" data-q><b>01 엔트로피</b><br>❶ 외부 간섭 없이 일어나는 경향: <span class="blank"><span class="step">자발성</span></span> (빠르기와 무관)<br>❷ $\Delta S=$ <span class="blank"><span class="step">$q_\text{가역}/T$</span></span>, 등온 팽창 $\Delta S=$ <span class="blank"><span class="step">$nR\ln(V_2/V_1)$</span></span><br>❸ 볼츠만 식 $S=$ <span class="blank"><span class="step">$k\ln W$</span></span> ($W$: 미시적 상태의 수)<br>❹ 제3법칙: 완전 결정의 $S(0\ \text{K})=$ <span class="blank"><span class="step">0</span></span> → 원소도 $S^\circ_\mathrm{m}\neq0$<br>❺ $\Delta S^\circ=\sum n_\mathrm{p}S^\circ_\mathrm{m}(\text{생성물})-$ <span class="blank"><span class="step">$\sum n_\mathrm{r}S^\circ_\mathrm{m}(\text{반응물})$</span></span><br>❻ 제2법칙: $\Delta S_\text{전체}=\Delta S+\Delta S_\text{주위}$ <span class="blank"><span class="step">$&gt;0$</span></span>이면 자발적, $\Delta S_\text{주위}=$ <span class="blank"><span class="step">$-\Delta H/T$</span></span></div>
+    <div class="ac321-arr">→</div>
+    <div class="ac321-node ac321-dim">02 깁스 자유 에너지와 반응의 자발성<br>$G\equiv H-TS$<br><span class="small">(다음 시간)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 엔트로피 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 자발성, 엔트로피, 열역학 제2법칙·제3법칙, 볼츠만 식의 뜻을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 미시 상태의 수를 세고, 표준 몰 엔트로피와 $\Delta S_\text{주위}=-\Delta H/T$로 엔트로피 변화와 자발성을 계산했다.</button>
+    <button class="chk">[가치·태도] 생명체의 물질대사를 제2법칙으로 설명하는 자료를 조사하고 토론에 참여했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 기체 몰수가 늘어나는 반응의 $\Delta S$ 부호는? <span class="step">→ <span class="ans">$+$</span> (미시 상태의 수 증가)</span></p>
+    <p class="f21 mt8"><b>Q</b> $300\ \text{K}$에서 $\Delta H=-30\ \text{kJ}$인 반응의 $\Delta S_\text{주위}$는? <span class="step">→ <span class="ans">$-\dfrac{-30000\ \text{J}}{300\ \text{K}}=+100\ \text{J/K}$</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> $\Delta S_\text{주위}$를 매번 따로 구하지 않고, 계의 성질 $\Delta H$, $\Delta S$, $T$만으로 자발성을 판단할 수는 없을까? 깁스 자유 에너지 $G$를 알아보자.</div>
+</section>
