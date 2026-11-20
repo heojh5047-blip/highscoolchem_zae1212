@@ -12,9 +12,9 @@ ul.ac343-ul li{margin-top:8px}
 .formula.ac343-eq{font-size:22px;padding:8px 14px}
 .board.ac343-b{min-height:150px}
 /* 개념 지도 */
-.ac343-map{display:flex;align-items:center;gap:12px;margin-top:14px}
+.ac343-map{width:100%;display:flex;align-items:center;gap:12px;margin-top:14px}
 .ac343-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75}
-.ac343-node.ac343-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac343-node.ac343-main{flex:1 1 720px;border-color:var(--field);background:#F2FAF5}
 .ac343-node.ac343-dim{flex:0 0 170px;border-style:dashed;color:var(--muted)}
 .ac343-arr{font-size:28px;color:var(--muted)}
 table.ac343-eq{border-collapse:collapse}
