@@ -1,0 +1,522 @@
+<!-- 고급화학 3-3-1 산화수 개념과 산화제와 환원제 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 3. 산화 환원 반응 › 01–02</div>
+    <h1 class="ac331-h1">산화수 개념과 산화제와 환원제</h1>
+    <p class="sub">전자의 이동을 산화수로 추적한다 — 산화수 규칙, 반쪽 반응법, 산화제·환원제</p>
+    <p class="meta">고등학교 고급 화학 158–163쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 산화 환원 반응 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>3. 산화 환원 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 580px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 산화수 개념 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b class="c-plus">02</b> 산화제와 환원제 <span class="small c-plus">← 오늘</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">금속 표면에 녹이 생길 때와 식물이 빛과 이산화 탄소로 산소를 만들 때 공통으로 일어나는 반응이 <b>산화 환원 반응</b>이다. 이 장에서는 전기 화학의 기초인 산화 환원 반응과 전자의 이동, 산화수와 형식 전하의 차이, 산화수 변화와 산화 환원 반응, 산화제와 환원제의 특성을 알아본다.</p>
+      </div>
+    </div>
+    <div class="col stack">{{INTRO}}</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-05]</span>산화·환원 반응에서 산화수 정의를 이해하고, 산화수 변화를 통해 산화·환원 반응식을 완성할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>산화수의 정의를 형식 전하와 비교하여 설명하고, 규칙에 따라 분자와 이온 속 원자의 산화수를 정할 수 있다.</li>
+    <li>전자의 이동과 산화수 변화로 산화·환원을 정의하고, 산화제와 환원제를 구분할 수 있다.</li>
+    <li>반쪽 반응법과 산화수 변화를 이용하여 산화 환원 반응식의 원자 수와 전하를 맞출 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">전자의 이동</div><div class="farr">→</div>
+    <div class="fnode">산화수 정의·규칙</div><div class="farr">→</div>
+    <div class="fnode">산화수 변화</div><div class="farr">→</div>
+    <div class="fnode hl">반응식 완성</div><div class="farr">→</div>
+    <div class="fnode">산화제·환원제</div><div class="farr">→</div>
+    <div class="fnode">조사 활동</div>
+  </div>
+  <p class="small mt12">「화학」에서: 산소를 얻으면 산화, 전자를 잃으면 산화 · Ⅰ-2에서: 형식 전하로 루이스 구조 고르기</p>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제 · 도입" data-title="생각 열기">
+  <h2><span class="tag">생각 열기</span>산소가 없어도 산화일까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">마그네슘이 산소와 결합하는 반응은 산화이다. 그렇다면 산소가 전혀 없는 $\ce{2Na(s) + Cl2(g) -> 2NaCl(s)}$에서는 어느 것이 산화되었을까?</p>
+      <div class="card q"><p class="f21"><b>Q</b> 「산소와 결합하는 반응만 산화이다」는 맞는 말일까?</p>
+        <p class="f21 step">→ 아니다. $\ce{Na}$은 산소 없이도 전자를 잃어 $\ce{Na+}$이 되므로 산화된다. 산화의 정의는 산소 → <b>전자</b> → <b>산화수</b>로 넓어졌다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 그러면 전자가 완전히 옮겨 가지 않는 공유 결합 물질(예: $\ce{H2 + Cl2 -> 2HCl}$)의 산화·환원은 어떻게 판단할까?</p>
+        <p class="f21 step">→ 공유 전자를 전기음성도가 큰 원자가 가진다고 보고 매긴 가상의 전하, <b>산화수</b>로 판단한다.</p></div>
+    </div>
+    <div class="col stack">{{HIST}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 산화 환원 반응과 전자의 이동 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응과 전자의 이동" data-title="산화 환원 반응과 전자의 이동">
+  <h2><span class="no">1</span>산화 환원 반응과 전자의 이동</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">원소에서 이온 결합 화합물이 만들어질 때는 먼저 중성 원자가 전자를 잃거나 얻어 이온이 되고, 그 뒤 이온 사이의 전기적 인력으로 이온 결합이 생긴다.</p>
+      <div class="formula sm">$\ce{Na -> Na+ + e-}$ &nbsp;(전자 잃음) &nbsp;&nbsp; $\ce{Cl2 + 2e- -> 2Cl-}$ &nbsp;(전자 얻음)</div>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{2Na + Cl2 -> 2NaCl}$에서 $\ce{Na}$이 잃은 전자 수와 $\ce{Cl2}$가 얻은 전자 수는?</p>
+        <p class="f21 step">→ 둘 다 $2$개로 같다. 전자는 생기거나 없어지지 않고 옮겨 갈 뿐이다.</p></div>
+      <p class="f21 step"><mark>산화 환원 반응은 잃은 전자 수와 얻은 전자 수가 같은 반응</mark>이다 — 원자 보존에 따른 <b>질량 균형</b>과 함께 <b>전하 균형</b>이 이루어진다.</p>
+    </div>
+    <div class="col">{{TR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 산화수의 정의 ════════ -->
+<section class="slide" data-sec="01 · 산화수의 개념" data-title="산화수의 정의">
+  <h2><span class="no">2</span>산화수의 개념</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <p class="f21"><mark>산화수는 분자나 이온 안의 결합에서 전기음성도가 큰 원자가 공유 전자를 완전히 차지한다고 가정할 때 각 원자가 가지는 가상의 전하</mark>이다.</p>
+      <p class="f21">이렇게 가정하면 원자가 가진 전자 수가 중성 원자일 때와 달라지므로, 각 원자는 $0$ 또는 양(+)·음(−)의 정수 산화수를 가진다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 물 분자에서 $\ce{O}$와 $\ce{H}$의 산화수는?</p>
+        <p class="f21 step">→ 전기음성도가 큰 $\ce{O}$가 공유 전자쌍 두 개를 모두 가지면 전자가 $8$개($6$개보다 $2$개 많음) → $\ce{O}$ $-2$, 전자를 모두 내준 $\ce{H}$는 $+1$</p></div>
+      <p class="small step">산화수는 원래 전이 금속의 산화 상태를 나타내던 말이며, 산화수와 산화 상태는 구분하지 않고 쓴다. 산화수는 실제 전하가 아니라 전자의 이동을 따라가기 위한 「장부」이다.</p>
+    </div>
+    <div class="col">{{OXDEF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 산화수와 형식 전하 ════════ -->
+<section class="slide" data-sec="01 · 산화수와 형식 전하의 개념 차이" data-title="산화수와 형식 전하">
+  <h2><span class="no">3</span>산화수와 형식 전하의 개념 차이</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <table class="ac331-c">
+        <tr><th></th><th>형식 전하</th><th>산화수</th></tr>
+        <tr><td class="l">결합 전자</td><td>두 원자가 <b>공평하게</b> 반씩</td><td>전기음성도가 큰 원자가 <b>모두</b></td></tr>
+        <tr><td class="l">결합을 보는 눈</td><td>완전한 공유 결합</td><td>완전한 이온 결합처럼</td></tr>
+        <tr><td class="l">쓰임</td><td>공명 구조 중 기여도가 큰 루이스 구조 고르기</td><td>산화 환원 정도의 척도</td></tr>
+      </table>
+      <div class="card q mt8"><p class="f21"><b>Q</b> 일산화 탄소 $\ce{CO}$에서 $\ce{C}$의 형식 전하와 산화수는?</p>
+        <p class="f21 step">→ 형식 전하: $4-2-\tfrac12\times6=-1$ &nbsp; 산화수: 결합 전자 6개를 $\ce{O}$가 가지므로 $4-2=+2$</p></div>
+      <p class="f21 step">같은 원자라도 두 값은 다를 수 있다. <b>산화수는 형식 전하와는 무관</b>하다.</p>
+    </div>
+    <div class="col">{{FC}}</div>
+  </div>
+</section>
+
+<!-- ════════ 8. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>암모늄 이온의 질소</h2>
+  <p class="f21">암모늄 이온 $\ce{NH4+}$에서 질소 원자의 <b>형식 전하</b>와 <b>산화수</b>를 각각 구하여라. (전기음성도 $\ce{N}&gt;\ce{H}$)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">형식 전하: 원자가 전자 $5$ − 비결합 전자 $0$ − $\tfrac12\times8$ $=+1$</p>
+      <p class="f21 step">산화수: 공유 전자 $8$개를 모두 $\ce{N}$이 가짐 → $5-8=-3$ &nbsp;(확인: $-3+4(+1)=+1$ = 이온의 전하)</p>
+      <div class="answer step">형식 전하 $+1$, 산화수 $-3$</div>
+      <p class="small step">이온의 $+$ 전하를 형식 전하로는 질소가 지지만, 산화수로는 네 수소가 $+1$씩 나눠 가진다.</p>
+    </div>
+    <div class="col stack">{{NH4}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 산화수의 변화와 산화 환원 반응 ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="산화수의 변화와 산화 환원">
+  <h2><span class="no">4</span>산화수의 변화와 산화 환원 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">어떤 원자의 산화수 변화는 그 원자가 가진 전자 수의 변화와 같다. 그래서 산화·환원을 두 가지로 정의할 수 있다.</p>
+      <table class="ac331-c">
+        <caption class="small">표 Ⅲ-5 산화 환원 반응의 전자 이동과 산화수 변화</caption>
+        <tr><th>정의</th><th class="ac331-cox">산화</th><th class="ac331-crd">환원</th></tr>
+        <tr><td>전자의 이동</td><td><span class="blank"><span class="step">전자 잃음</span></span></td><td><span class="blank"><span class="step">전자 얻음</span></span></td></tr>
+        <tr><td>산화수의 변화</td><td><span class="blank"><span class="step">산화수 증가</span></span></td><td><span class="blank"><span class="step">산화수 감소</span></span></td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{CuO(s) + H2(g) -> Cu(s) + H2O(l)}$에서 산화된 원자와 환원된 원자는?</p>
+        <p class="f21 step">→ <span class="ans">$\ce{H}$: $0\rightarrow+1$ 산화, $\ce{Cu}$: $+2\rightarrow0$ 환원</span> ($\ce{O}$는 $-2$ 그대로)</p></div>
+    </div>
+    <div class="col">{{LAD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 산화수 규칙 (1) ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="산화수 규칙 (1)">
+  <h2><span class="no">5</span>산화수를 정하는 규칙 (1) — 원소·이온·분자</h2>
+  <p class="f21">국제 순수 및 응용 화학 연합(IUPAC)의 규칙으로 반응 전후 각 원자의 산화수를 정한다.</p>
+  <table class="ac331-c mt8">
+    <caption class="small">표 Ⅲ-6 산화수를 지정하는 몇 가지 규칙 (1)</caption>
+    <tr><th>원소와 이온 종류</th><th>예</th><th>산화수</th></tr>
+    <tr><td class="l">순수 원소</td><td>$\ce{Ag}$, $\ce{O2}$</td><td><span class="blank"><span class="step">$0$</span></span></td></tr>
+    <tr><td class="l">단원자 이온</td><td>$\ce{I-}$, $\ce{Cr^3+}$</td><td><span class="blank"><span class="step">이온의 전하와 같음 ($-1$, $+3$)</span></span></td></tr>
+    <tr><td class="l">다원자 분자(중성)</td><td>$\ce{CO2}$, $\ce{H2O}$</td><td><span class="blank"><span class="step">산화수의 총합은 $0$</span></span></td></tr>
+    <tr><td class="l">다원자 이온</td><td>$\ce{Cr2O7^2-}$, $\ce{MnO4-}$</td><td><span class="blank"><span class="step">산화수의 총합은 이온의 전하와 같음</span></span></td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> $\ce{CO2}$에서 $\ce{O}$가 $-2$이면 $\ce{C}$의 산화수는? <span class="step">→ <span class="ans">$x+2(-2)=0$, $x=+4$</span></span></p></div>
+</section>
+
+<!-- ════════ 11. ⑥ 산화수 규칙 (2) ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="산화수 규칙 (2)">
+  <h2><span class="no">6</span>산화수를 정하는 규칙 (2) — 분자 속 특정 원소</h2>
+  <table class="ac331-c ac331-sm">
+    <caption class="small">표 Ⅲ-6 산화수를 지정하는 몇 가지 규칙 (2)</caption>
+    <tr><th>원소</th><th>산화수</th><th>예외·주의</th></tr>
+    <tr><td>플루오린 $\ce{F}$</td><td>$-1$</td><td class="l">언제나 $-1$ (전기음성도가 가장 큼)</td></tr>
+    <tr><td>$\ce{F}$ 외의 할로젠</td><td>$-1$</td><td class="l">$\ce{O}$, $\ce{N}$이나 전기음성도가 더 큰 할로젠과 결합하면 $+1$, $+3$, $+5$, $+7$</td></tr>
+    <tr><td>수소 $\ce{H}$</td><td>$+1$</td><td class="l">$\ce{H2}$에서 $0$, $\ce{Na}$·$\ce{Al}$·$\ce{B}$와 결합하면 $-1$ (예: $\ce{NaH}$)</td></tr>
+    <tr><td>산소 $\ce{O}$</td><td>$-2$</td><td class="l">과산화물($\ce{H2O2}$ 등) $-1$, $\ce{OF2}$에서 $+2$, $\ce{O2F2}$에서 $+1$</td></tr>
+    <tr><td>알칼리 금속</td><td>대부분 $+1$</td><td class="l">$\ce{Li}$, $\ce{Na}$, $\ce{K}$ …</td></tr>
+    <tr><td>알칼리 토금속</td><td>대부분 $+2$</td><td class="l">$\ce{Mg}$, $\ce{Ca}$ …</td></tr>
+  </table>
+  <div class="card q mt12"><p class="f21"><b>Q</b> $\ce{NaH}$에서 「$\ce{H}$는 $+1$」과 「$\ce{Na}$는 $+1$」이 부딪친다. 어느 규칙을 먼저 따를까?</p>
+    <p class="f21 step">→ 표의 수소 예외가 바로 이 경우이다. 알칼리 금속 $\ce{Na}$ $+1$, 총합 $0$ → $\ce{H}$ $-1$ (전기음성도가 큰 $\ce{H}$가 전자를 가진다)</p></div>
+</section>
+
+<!-- ════════ 12. ⑦ 규칙으로 산화수 정하기 ════════ -->
+<section class="slide" data-sec="01 · 산화수의 변화와 산화 환원 반응" data-title="규칙으로 산화수 정하기">
+  <h2><span class="no">7</span>규칙으로 산화수 정하기</h2>
+  <div class="row"><div class="col stack" style="flex:0 0 760px">
+  <div class="stages c2">
+    <div class="stage"><h3>① 다이크로뮴산 이온 $\ce{Cr2O7^2-}$</h3>
+      <p class="f21">$\ce{O}$는 $-2$, 총합은 이온의 전하 $-2$</p>
+      <p class="f21 step">$2x+7(-2)=-2$</p>
+      <div class="answer step">$x=+6$</div></div>
+    <div class="stage"><h3>② 과망가니즈산 이온 $\ce{MnO4-}$</h3>
+      <p class="f21">$\ce{O}$는 $-2$, 총합은 $-1$</p>
+      <p class="f21 step">$x+4(-2)=-1$</p>
+      <div class="answer step">$x=+7$</div></div>
+  </div>
+  <div class="note mt12 step"><b>순서</b> ① 값이 정해진 원소($\ce{F}$, 알칼리·알칼리 토금속, $\ce{H}$, $\ce{O}$)부터 적는다 → ② 총합 = 0 또는 이온의 전하로 식을 세운다 → ③ 남은 원자의 산화수를 구한다 → ④ 반응식 위에 적어 둔다.</div>
+  <p class="small mt8 step">같은 원소라도 화합물에 따라 산화수가 달라진다: $\ce{Mn}$은 $\ce{MnO4-}$ $+7$, $\ce{MnO2}$ $+4$, $\ce{Mn^2+}$ $+2$.</p>
+  </div><div class="col stack"><div class="board ac331-b"></div></div></div>
+</section>
+
+<!-- ════════ 13. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>밑줄 친 원자의 산화수</h2>
+  <p class="f21">다음 화학종에서 표시한 원자의 산화수를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">(1) $\ce{H2SO4}$의 $\ce{S}$ &nbsp;<span class="step">→ $2(+1)+x+4(-2)=0$, <span class="ans">$+6$</span></span></p>
+      <p class="f21">(2) $\ce{H2O2}$의 $\ce{O}$ &nbsp;<span class="step">→ 과산화물, $2(+1)+2x=0$, <span class="ans">$-1$</span></span></p>
+      <p class="f21">(3) $\ce{OF2}$의 $\ce{O}$ &nbsp;<span class="step">→ $\ce{F}$가 $-1$, $x+2(-1)=0$, <span class="ans">$+2$</span></span></p>
+      <p class="f21">(4) $\ce{Fe3O4}$의 $\ce{Fe}$ &nbsp;<span class="step">→ $3x+4(-2)=0$, <span class="ans">$+\tfrac83$</span></span></p>
+      <p class="small step">(4)는 <b>평균</b> 산화수이다. 실제로는 $\ce{Fe^2+}$ 1개와 $\ce{Fe^3+}$ 2개가 들어 있다($2+3+3=8$). 원자 하나의 산화수는 정수이다.</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 연결: 왜 전하 균형까지 맞춰야 할까 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응 계수 맞추기" data-title="계수 맞추기: 두 가지 균형">
+  <h2><span class="tag alt">연결</span>산화 환원 반응 계수 맞추기 — 두 가지 균형</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">반응식의 계수는 「원자 수가 같게」 맞추었다. 산화 환원 반응에서는 전자가 생기거나 없어지지 않고 주고받으며 보존되므로 하나를 더 살펴야 한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 오른쪽 위 반응식은 원자 수가 맞는다. 그런데도 맞지 않는 것은?</p>
+        <p class="f21 step">→ 전하: 왼쪽 $+1$, 오른쪽 $+2$. $\ce{Cu}$는 전자 2개를 잃는데 $\ce{Ag+}$ 하나는 전자 1개만 받는다.</p></div>
+      <p class="f21 step" data-g="b2">$\ce{Ag+}$와 $\ce{Ag}$의 계수를 $2$로 → <mark>화학량론적 균형(원자 수)과 전하의 균형</mark>을 함께 맞춘다.</p>
+    </div>
+    <div class="col">{{BAL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑧ 반쪽 반응법 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응 계수 맞추기" data-title="반쪽 반응법">
+  <h2><span class="no">8</span>반쪽 반응법</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21"><b>반쪽 반응법</b>: 전체 반응을 산화 반쪽 반응과 환원 반쪽 반응으로 나눈 뒤, 각 반쪽 반응에서 원자 수와 전하를 맞추고 더한다.</p>
+      <div class="formula sm ac331-eq">$\square\ce{Zn(s)} + \square\ce{H3O+(aq) -> }\square\ce{Zn^2+(aq)} + \square\ce{H2(g)} + \square\ce{H2O(l)}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 환원 반쪽 반응에 왜 $2$를 곱할까?</p>
+        <p class="f21 step" data-g="h2">→ $\ce{Zn}$이 잃는 전자는 $2$개, $\ce{H3O+}$ 하나가 얻는 전자는 $1$개 → <span class="ans">전자 수를 같게 하려고 $\times2$</span></p></div>
+      <div class="formula sm ac331-eq step">$\ce{Zn(s) + 2H3O+(aq) -> Zn^2+(aq) + H2(g) + 2H2O(l)}$<div class="unit">균형 전체 반응 — 원자 수 $\ce{Zn}$ 1, $\ce{H}$ 6, $\ce{O}$ 2 · 전하 $+2=+2$</div></div>
+      <p class="small step">핵심: ① 산화 환원 반응은 두 반쪽 반응으로 나누어 쓸 수 있다 ② 반쪽 반응마다 원자와 전하가 보존된다 ③ 한쪽에서 잃은 전자를 다른 쪽이 동시에 얻는다. 화학 전지(Ⅲ-4)를 이해하는 바탕이다.</p>
+    </div>
+    <div class="col">{{HALF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 산화수 변화로 계수 맞추기 ════════ -->
+<section class="slide" data-sec="01 · 산화 환원 반응 계수 맞추기" data-title="산화수 변화로 계수 맞추기">
+  <h2><span class="no">9</span>산화수 변화로 계수 맞추기</h2>
+  <p class="f21">산성 용액: $\ce{MnO4-(aq) + Fe^2+(aq) -> Mn^2+(aq) + Fe^3+(aq)}$ — 산화수의 증가량과 감소량이 같도록 계수를 정한다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="stages c2 ac331-st">
+        <div class="stage"><h3>① 산화수 적기</h3><p class="f21">$\ce{Mn}$ $+7\rightarrow+2$<br>$\ce{Fe}$ $+2\rightarrow+3$</p></div>
+        <div class="stage step"><h3>② 증가 = 감소</h3><p class="f21">$-5$와 $+1$ → $\ce{Fe^2+}$, $\ce{Fe^3+}$ 계수 $5$</p></div>
+        <div class="stage step"><h3>③ O·H 맞추기</h3><p class="f21">$\ce{O}$는 $\ce{H2O}$로, $\ce{H}$는 $\ce{H+}$로</p></div>
+        <div class="stage step"><h3>④ 확인</h3><p class="f21">원자 수, 전하 $+17=+17$</p></div>
+      </div>
+    </div>
+    <div class="col">{{OXM}}</div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{MnO4-(aq) + 5Fe^2+(aq) + 8H+(aq) -> Mn^2+(aq) + 5Fe^3+(aq) + 4H2O(l)}$</div>
+</section>
+
+<!-- ════════ 17. ⑩ 02 산화제와 환원제 ════════ -->
+<section class="slide" data-sec="02 · 산화제와 환원제" data-title="산화제와 환원제">
+  <h2><span class="no">10</span>02 산화제와 환원제</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">산화와 환원은 쌍을 이루어 같은 수의 전자를 주고받으며 동시에 일어난다. 그래서 반응에는 전자를 잃는 화학종과 얻는 화학종이 반드시 함께 있다.</p>
+      <table class="ac331-c">
+        <caption class="small">표 Ⅲ-7 산화제와 환원제의 전자 이동과 산화수의 관계</caption>
+        <tr><th>물질</th><th>전자</th><th>산화수</th><th>작용</th></tr>
+        <tr><td class="ac331-crd"><b>산화제</b></td><td>얻음(환원됨)</td><td>감소</td><td>상대를 산화시킴</td></tr>
+        <tr><td class="ac331-cox"><b>환원제</b></td><td>잃음(산화됨)</td><td>증가</td><td>상대를 환원시킴</td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> 「산화제는 산화되는 물질이다」는 옳을까?</p>
+        <p class="f21 step">→ 아니다. 산화제는 상대를 <b>산화시키고</b> 자신은 전자를 얻어 <b>환원된다</b>.</p></div>
+    </div>
+    <div class="col">{{AG}}</div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑪ 표 Ⅲ-8 ════════ -->
+<section class="slide" data-sec="02 · 산화제와 환원제" data-title="산화수로 산화제·환원제 찾기">
+  <h2><span class="no">11</span>산화수로 산화제와 환원제 찾기</h2>
+  <div class="formula sm ac331-ox">$\overset{0}{\ce{Zn}}\ce{(s)} + 2\,\overset{+1}{\ce{H3}}\overset{-2}{\ce{O+}}\ce{(aq) -> }\overset{+2}{\ce{Zn^2+}}\ce{(aq)} + \overset{0}{\ce{H2}}\ce{(g)} + 2\,\overset{+1}{\ce{H2}}\overset{-2}{\ce{O}}\ce{(l)}$</div>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <table class="ac331-c">
+        <caption class="small">표 Ⅲ-8 $\ce{Zn(s)}$과 $\ce{H3O+(aq)}$의 반응에서 산화수와 산화제·환원제</caption>
+        <tr><th>원자</th><th>반응 전</th><th>반응 후</th><th>증감</th><th>산화제·환원제</th></tr>
+        <tr><td>$\ce{Zn}$</td><td>$0$</td><td>$+2$</td><td><span class="blank"><span class="step">$+2$</span></span></td><td><span class="blank"><span class="step">환원제</span></span></td></tr>
+        <tr><td>$\ce{H}$</td><td>$+1$</td><td>$0$</td><td><span class="blank"><span class="step">$-1$</span></span></td><td><span class="blank"><span class="step">산화제</span></span></td></tr>
+        <tr><td>$\ce{O}$</td><td>$-2$</td><td>$-2$</td><td><span class="blank"><span class="step">$0$</span></span></td><td><span class="blank"><span class="step">무관함</span></span></td></tr>
+      </table>
+      <div class="card q"><p class="f21"><b>Q</b> 산화제는 「$\ce{H}$」일까, 「$\ce{H3O+}$」일까?</p>
+        <p class="f21 step">→ 산화제·환원제는 화학종으로 말한다. 환원된 $\ce{H}$가 들어 있는 화학종 $\ce{H3O+}$가 산화제, $\ce{Zn}$이 환원제이다.</p></div>
+    </div>
+    <div class="col">{{ZN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. ⑫ 세기 경향 ════════ -->
+<section class="slide" data-sec="02 · 강한 산화제와 환원제의 특성" data-title="산화제와 환원제의 세기">
+  <h2><span class="no">12</span>강한 산화제와 환원제의 특성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <ul class="f21 ac331-ul">
+        <li>강한 산화제는 전자를 얻는 성질이 강하고, 강한 환원제는 전자를 내주는 성질이 강하다.</li>
+        <li>같은 원자를 포함하는 화학종에서는 <mark>큰 산화수의 원자를 포함한 화학종이 강한 산화제, 작은 산화수의 원자를 포함한 화학종이 강한 환원제</mark>이다.</li>
+      </ul>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{MnO4-}$는 산화제와 환원제 가운데 무엇으로 쓰일까?</p>
+        <p class="f21 step">→ $\ce{Mn}$이 가장 큰 산화수 $+7$이라 더 늘 수 없고 줄기만 한다 → <span class="ans">강한 산화제</span></p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 산소의 산화수가 $-1$인 $\ce{H2O2}$는?</p>
+        <p class="f21 step">→ $0$($\ce{O2}$)으로 늘 수도, $-2$($\ce{H2O}$)로 줄 수도 있다 → <span class="ans">상대에 따라 산화제도 환원제도 된다</span>. 다음 예제에서는 환원제!</p></div>
+    </div>
+    <div class="col">{{STR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 20. 예제 Ⅲ-9 (1) ════════ -->
+<section class="slide" data-sec="02 · 예제" data-title="예제 Ⅲ-9 (1)">
+  <h2><span class="tag ex">예제 Ⅲ-9</span>산성 용액에서 반응식 완성하기 (1)</h2>
+  <p class="f21">산성 용액에서 다음 반응의 균형 반응식을 완성하고, 산화제와 환원제를 구분하여라. &nbsp; $\ce{MnO4-(aq) + H2O2(aq) -> Mn^2+(aq) + O2(g)}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>풀이 1</b> 산성 용액에서는 $\ce{H2O}$와 $\ce{H+}$를 써서 맞춘다. 두 반쪽으로 나눈다.<br>&nbsp; 환원 반쪽: $\ce{MnO4-(aq) -> Mn^2+(aq)}$ &nbsp;&nbsp; 산화 반쪽: $\ce{H2O2(aq) -> O2(g)}$</p>
+      <p class="f21 step"><b>풀이 2</b> $\ce{O}$는 $\ce{H2O}$로, $\ce{H}$는 $\ce{H+}$로, 전하는 $\ce{e-}$로 맞춘다.</p>
+      <div class="formula sm ac331-eq step">$\ce{MnO4-(aq) + 8H+(aq) + 5e- -> Mn^2+(aq) + 4H2O(l)}$<div class="unit">전하: $-1+8-5=+2$ ✓</div></div>
+      <div class="formula sm ac331-eq step">$\ce{H2O2(aq) -> O2(g) + 2H+(aq) + 2e-}$<div class="unit">전하: $0=+2-2$ ✓</div></div>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. 예제 Ⅲ-9 (2) ════════ -->
+<section class="slide" data-sec="02 · 예제" data-title="예제 Ⅲ-9 (2)">
+  <h2><span class="tag ex">예제 Ⅲ-9</span>산성 용액에서 반응식 완성하기 (2)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">환원 반쪽은 전자 $5$개를 얻고, 산화 반쪽은 $2$개를 잃는다.</p>
+      <p class="f21 step">전하 균형: 환원 반쪽 $\times2$, 산화 반쪽 $\times5$ → 전자 $10$개씩</p>
+      <p class="f21 step">더하면 $\ce{2MnO4- + 16H+ + 5H2O2 -> 2Mn^2+ + 8H2O + 5O2 + 10H+}$ → 양쪽의 $\ce{H+}$를 정리</p>
+    </div>
+    <div class="col stack">{{EBAR}}</div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{2MnO4-(aq) + 6H+(aq) + 5H2O2(aq) -> 2Mn^2+(aq) + 8H2O(l) + 5O2(g)}$<div class="unit">$\ce{Mn}$ 2, $\ce{O}$ 18, $\ce{H}$ 16 · 전하 $+4=+4$</div></div>
+  <div class="answer step">산화제 $\ce{MnO4-}$ ($\ce{Mn}$ $+7\rightarrow+2$), 환원제 $\ce{H2O2}$ ($\ce{O}$ $-1\rightarrow0$)</div>
+</section>
+
+<!-- ════════ 22. ⑬ [보충] 염기성 용액 ════════ -->
+<section class="slide" data-sec="02 · 산화 환원 반응 계수 맞추기" data-title="[보충] 염기성 용액">
+  <h2><span class="no">13</span>염기성 용액에서 맞추기 <span class="small c-muted">[보충]</span></h2>
+  <p class="f21">염기성 용액에는 $\ce{H+}$가 거의 없다. 산성처럼 맞춘 뒤 남은 $\ce{H+}$ 수만큼 $\ce{OH-}$를 양쪽에 더해 $\ce{H2O}$로 바꾼다. &nbsp; 예: $\ce{MnO4- + I- -> MnO2 + IO3-}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21 step" data-g="hx1">환원 반쪽($\times2$): $\ce{MnO4- + 4H+ + 3e- -> MnO2 + 2H2O}$</p>
+      <p class="f21 step" data-g="hx1">산화 반쪽: $\ce{I- + 3H2O -> IO3- + 6H+ + 6e-}$</p>
+      <p class="f21 step">더해 정리(산성 꼴): $\ce{2MnO4- + I- + 2H+ -> 2MnO2 + IO3- + H2O}$</p>
+      <p class="f21 step">양쪽에 $\ce{2OH-}$를 더하면 왼쪽 $\ce{2H+ + 2OH- -> 2H2O}$</p>
+    </div>
+    <div class="col stack"><div class="note small">교과서 본문은 산성 용액의 반쪽 반응법까지 다룬다. 이 장은 성취기준 해설(산성과 염기성 용액)을 따라 덧붙인 [보충]이다.</div><div class="board"></div></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{2MnO4-(aq) + I-(aq) + H2O(l) -> 2MnO2(s) + IO3-(aq) + 2OH-(aq)}$<div class="unit">$\ce{Mn}$ 2, $\ce{I}$ 1, $\ce{O}$ 9, $\ce{H}$ 2 · 전하 $-3=-3$</div></div>
+</section>
+
+<!-- ════════ 23. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>과망가니즈산 칼륨과 염산</h2>
+  <p class="f21">$\ce{2KMnO4 + 16HCl -> 2KCl + 2MnCl2 + 5Cl2 + 8H2O}$에서 산화수가 변하는 원소와 그 변화를 쓰고, 산화제와 환원제를 고르시오. 또 $\ce{HCl}$ 16개 가운데 환원제로 작용한 것은 몇 개인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$\ce{Mn}$: $+7\rightarrow+2$ (환원) &nbsp; $\ce{Cl}$: $-1\rightarrow0$ (산화) &nbsp; $\ce{K}$, $\ce{H}$, $\ce{O}$는 변하지 않음</p>
+      <p class="f21 step">산화제 $\ce{KMnO4}$, 환원제 $\ce{HCl}$</p>
+      <p class="f21 step">$\ce{Mn}$ $2$개가 $5$개씩 → 전자 $10$개를 얻음 = $\ce{Cl}$ $10$개가 $1$개씩 잃음($\ce{5Cl2}$)</p>
+      <div class="answer step">$16$개 중 $10$개 — 나머지 $6$개는 $\ce{KCl}$·$\ce{MnCl2}$의 $\ce{Cl-}$로 남는다(산으로 작용)</div>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 탐구 활동 (지시) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 응용 기술 조사">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 산화 환원 반응의 응용 기술이 적용된 분야 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">철이 녹스는 과정, 식물의 광합성, 산소로 하는 세포 호흡처럼 매우 많은 산화 환원 반응이 우리 삶을 떠받친다. 그 반응을 응용한 기술 가운데 하나가 화학 전지이다.</p>
+      <h3>과정</h3>
+      <ol class="f21 ac331-ol">
+        <li>모둠별로 응용 기술을 <b>적용 분야별</b>로 조사한다.</li>
+        <li>각 기술에 쓰이는 산화 환원 반응식을 찾고, 산화수 변화로 <b>산화제와 환원제</b>를 표시한다.</li>
+        <li>그 반응이 왜 그 기술에 알맞은지 <b>토론</b>한 뒤 <b>발표</b>한다.</li>
+      </ol>
+      <p class="small">조사 자료는 출처를 적는다. 반응식은 원자 수와 전하가 맞는지 확인한 뒤 발표 자료에 넣는다.</p>
+    </div>
+    <div class="col stack">{{WEB}}</div>
+  </div>
+</section>
+
+<!-- ════════ 25. 탐구 활동 (예시 결과) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 예시 결과">
+  <h2><span class="tag">탐구 활동</span>조사 결과 예시</h2>
+  <table class="ac331-c ac331-sm">
+    <tr><th>분야</th><th>기술</th><th>산화 환원 반응</th><th>환원제 → 산화제</th></tr>
+    <tr><td>에너지</td><td class="l">알칼리 전지</td><td class="l">$\ce{Zn + MnO2 + H2O -> ZnO + Mn(OH)2}$</td><td class="step">$\ce{Zn}$ → $\ce{MnO2}$</td></tr>
+    <tr><td>에너지</td><td class="l">수소 연료 전지</td><td class="l">$\ce{2H2 + O2 -> 2H2O}$</td><td class="step">$\ce{H2}$ → $\ce{O2}$</td></tr>
+    <tr><td>금속 제련</td><td class="l">용광로 제철</td><td class="l">$\ce{Fe2O3 + 3CO -> 2Fe + 3CO2}$</td><td class="step">$\ce{CO}$ → $\ce{Fe2O3}$</td></tr>
+    <tr><td>부식과 방지</td><td class="l">철의 부식, 아연 도금</td><td class="l">$\ce{2Fe + O2 + 2H2O -> 2Fe(OH)2}$ (아연이 먼저 산화되어 철을 보호)</td><td class="step">$\ce{Fe}$ → $\ce{O2}$</td></tr>
+    <tr><td>생명 현상</td><td class="l">세포 호흡</td><td class="l">$\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O}$ (광합성은 역방향)</td><td class="step">$\ce{C6H12O6}$ → $\ce{O2}$</td></tr>
+    <tr><td>분석·측정</td><td class="l">음주 측정기</td><td class="l">$\ce{2Cr2O7^2- + 3C2H5OH + 16H+ -> 4Cr^3+ + 3CH3COOH + 11H2O}$</td><td class="step">$\ce{C2H5OH}$ → $\ce{Cr2O7^2-}$</td></tr>
+  </table>
+  <p class="f21 mt12 step"><b>토론 정리 예</b> 전지는 환원제((−)극 물질)와 산화제((+)극 물질)를 떼어 놓고 전자를 도선으로 흐르게 한 장치이다. 산화수 변화를 따라가면 어느 물질이 전자를 내주는지 바로 알 수 있다.</p>
+</section>
+
+<!-- ════════ 26. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>산화와 환원의 정의</h2>
+  <p class="f21">전자의 이동과 산화수 변화로 산화와 환원을 정의하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 660px">
+      <div class="answer step"><b>산화</b>: 전자를 잃는 반응 = 산화수가 증가하는 반응</div>
+      <div class="answer step"><b>환원</b>: 전자를 얻는 반응 = 산화수가 감소하는 반응</div>
+      <p class="f21 step">산화와 환원은 같은 수의 전자를 주고받으며 동시에 일어난다(표 Ⅲ-5).</p>
+      <p class="small step">채점 요소(덱): ① 전자의 이동 ② 산화수의 변화 — 산화·환원 각각 두 관점을 모두 쓰면 완전한 답이다.</p>
+    </div>
+    <div class="col stack">{{LAD}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 2 (1) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2 (1)">
+  <h2><span class="tag q">연습 문제 2</span>산성 용액에서 반응식 완성 (1)</h2>
+  <p class="f21">산성 용액에서 균형 반응식을 완성하고, 산화제와 환원제를 구분하여라. &nbsp; 1) $\ce{O2(g) + NO(g) -> NO3-(aq)}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">산화수: $\ce{O}$ $0\rightarrow-2$ (환원), $\ce{N}$ $+2\rightarrow+5$ (산화)</p>
+      <p class="f21 step" data-g="hx2">환원($\times3$): $\ce{O2 + 4H+ + 4e- -> 2H2O}$</p>
+      <p class="f21 step" data-g="hx2">산화($\times4$): $\ce{NO + 2H2O -> NO3- + 4H+ + 3e-}$</p>
+      <p class="f21 step">전자 $12$개씩 → 더하고 $\ce{H2O}$·$\ce{H+}$ 정리</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{3O2(g) + 4NO(g) + 2H2O(l) -> 4NO3-(aq) + 4H+(aq)}$<div class="unit">$\ce{O}$ 12, $\ce{N}$ 4, $\ce{H}$ 4 · 전하 $0=0$</div></div>
+  <div class="answer step">산화제 $\ce{O2}$, 환원제 $\ce{NO}$</div>
+</section>
+
+<!-- ════════ 28. 연습 문제 2 (2) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2 (2)">
+  <h2><span class="tag q">연습 문제 2</span>산성 용액에서 반응식 완성 (2)</h2>
+  <p class="f21">산성 용액에서 균형 반응식을 완성하고, 산화제와 환원제를 구분하여라. &nbsp; 2) $\ce{CrO4^2-(aq) + N2O(g) -> Cr^3+(aq) + NO(g)}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">산화수: $\ce{Cr}$ $+6\rightarrow+3$ (환원), $\ce{N}$ $+1\rightarrow+2$ (산화)</p>
+      <p class="f21 step" data-g="hx3">환원($\times2$): $\ce{CrO4^2- + 8H+ + 3e- -> Cr^3+ + 4H2O}$</p>
+      <p class="f21 step" data-g="hx3">산화($\times3$): $\ce{N2O + H2O -> 2NO + 2H+ + 2e-}$</p>
+      <p class="f21 step">전자 $6$개씩 → 더하고 정리</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+  <div class="formula sm ac331-eq step">$\ce{2CrO4^2-(aq) + 3N2O(g) + 10H+(aq) -> 2Cr^3+(aq) + 6NO(g) + 5H2O(l)}$<div class="unit">$\ce{Cr}$ 2, $\ce{O}$ 11, $\ce{N}$ 6, $\ce{H}$ 10 · 전하 $+6=+6$</div></div>
+  <div class="answer step">산화제 $\ce{CrO4^2-}$, 환원제 $\ce{N2O}$</div>
+</section>
+
+<!-- ════════ 29. 연습 문제 3 (1) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3 (1)">
+  <h2><span class="tag q">연습 문제 3</span>알칼리 전지의 반쪽 반응 (1)</h2>
+  <p class="f21">알칼리 전지 반응: $\ce{Zn(s) + MnO2(s) + H2O(l) -> ZnO(s) + Mn(OH)2(s)}$<br>1) 산화 반쪽 반응과 환원 반쪽 반응에서 반응물 $1\ \text{mol}$당 전자의 몰수비는 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">산화수: $\ce{Zn}$ $0\rightarrow+2$, $\ce{Mn}$ $+4\rightarrow+2$</p>
+      <p class="f21 step">산화 반쪽: $\ce{Zn(s) + H2O(l) -> ZnO(s) + 2H+(aq) + 2e-}$</p>
+      <p class="f21 step">환원 반쪽: $\ce{2H+(aq) + MnO2(s) + 2e- -> Mn(OH)2(s)}$</p>
+      <div class="answer step">반응물 $1\ \text{mol}$당 전자 $2\ \text{mol}$ — 몰수비 $2$</div>
+      <p class="small step">$\ce{Zn}$ $1\ \text{mol}$이 잃는 전자 $2\ \text{mol}$을 $\ce{MnO2}$ $1\ \text{mol}$이 얻는다 → 두 반쪽 반응의 전자 수가 같다($1:1$).</p>
+    </div>
+    <div class="col stack">{{ALK}}</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 연습 문제 3 (2) ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3 (2)">
+  <h2><span class="tag q">연습 문제 3</span>알칼리 전지의 양적 관계 (2)</h2>
+  <p class="f21">2) 아연 $9.00\ \text{g}$이 반응하였을 때 이산화 망가니즈와 물의 소모량은 각각 몇 g인가? (단, $\ce{Zn}$과 $\ce{MnO2}$의 화학식량은 각각 $65.41$, $86.94$이다.)</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">계수비 $\ce{Zn} : \ce{MnO2} : \ce{H2O}=1:1:1$</p>
+      <p class="f21 step">$n_{\ce{Zn}}=\dfrac{9.00\ \text{g}}{65.41\ \text{g/mol}}=0.1376\ \text{mol}$</p>
+      <p class="f21 step">$\ce{MnO2}$: $0.1376\ \text{mol}\times86.94\ \text{g/mol}=12.0\ \text{g}$</p>
+      <p class="f21 step">$\ce{H2O}$: $0.1376\ \text{mol}\times18.02\ \text{g/mol}=2.48\ \text{g}$</p>
+      <div class="answer step">이산화 망가니즈 $12.0\ \text{g}$, 물 $2.48\ \text{g}$</div>
+      <p class="small step">교과서 풀이는 몰수를 $0.138\ \text{mol}$로 반올림한 뒤 곱해 $12.00\ \text{g}$, $2.49\ \text{g}$이다. 중간값을 반올림하지 않으면 위 값이 된다($\ce{H2O}$ 화학식량 $18.02$).</p>
+    </div>
+    <div class="col stack"><div class="board ac331-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 31. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>3. 산화 환원 반응 — 01 산화수 개념 · 02 산화제와 환원제</h2>
+  <div class="ac331-map">
+    <div class="ac331-node ac331-dim">Ⅲ-2<br>$\Delta G&lt;0$<br>자발적 반응</div>
+    <div class="ac331-arr">→</div>
+    <div class="ac331-node ac331-main"><b>01 산화수 개념 · 02 산화제와 환원제</b><br>❶ 산화수: 전기음성도가 큰 원자가 공유 전자를 <span class="blank"><span class="step">완전히 차지</span></span>한다고 가정한 가상의 전하 (형식 전하는 <span class="blank"><span class="step">공평하게 나눔</span></span>)<br>❷ 산화 = 전자 <span class="blank"><span class="step">잃음</span></span> = 산화수 <span class="blank"><span class="step">증가</span></span> · 환원 = 전자 얻음 = 산화수 감소<br>❸ 다원자 이온의 산화수 총합 = <span class="blank"><span class="step">이온의 전하</span></span>, $\ce{O}$ 보통 $-2$ (과산화물 <span class="blank"><span class="step">$-1$</span></span>)<br>❹ 반쪽 반응법: 반쪽마다 원자 수와 <span class="blank"><span class="step">전하</span></span>를 맞추고, 잃은 전자 수 = 얻은 전자 수<br>❺ 산화제는 자신이 <span class="blank"><span class="step">환원</span></span>되며 상대를 산화시킨다 · 큰 산화수 화학종 → 강한 <span class="blank"><span class="step">산화제</span></span></div>
+    <div class="ac331-arr">→</div>
+    <div class="ac331-node ac331-dim">Ⅲ-4 화학 전지<br>반쪽 전지·전극 반응<br>$\Delta G^\circ=-nFE^\circ$</div>
+  </div>
+</section>
+
+<!-- ════════ 32. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01–02 산화수 개념과 산화제와 환원제 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 산화수의 정의를 형식 전하와 비교하여 설명하고, 산화제와 환원제를 구분할 수 있다.</button>
+    <button class="chk">[과정·기능] 산화수 규칙과 반쪽 반응법으로 산성 용액의 산화 환원 반응식을 완성했다.</button>
+    <button class="chk">[가치·태도] 모둠 조사에서 산화 환원 반응의 응용 기술을 찾아 근거를 들어 토론하고 발표했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{SO4^2-}$에서 $\ce{S}$의 산화수는? <span class="step">→ <span class="ans">$+6$</span> ($x+4(-2)=-2$)</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{Cu + 2Ag+ -> Cu^2+ + 2Ag}$에서 환원제는? <span class="step">→ <span class="ans">$\ce{Cu}$</span> (산화수 $0\rightarrow+2$, 전자를 내줌)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 산화 반쪽 반응과 환원 반쪽 반응을 서로 다른 전극에서 따로 일어나게 하면? — Ⅲ-4 화학 전지</div>
+</section>
