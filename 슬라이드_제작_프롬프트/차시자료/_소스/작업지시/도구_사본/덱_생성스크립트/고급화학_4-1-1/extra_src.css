@@ -1,0 +1,44 @@
+/* 고급화학 4-1-1 — 덱 전용 (모두 .ac411- 접두어) */
+.cover h1.ac411-h1{font-size:66px;line-height:1.18}
+table.ac411-c td{text-align:center}
+table.ac411-c td.l{text-align:left}
+table.ac411-var th{width:120px}
+table.ac411-sm th,table.ac411-sm td{font-size:20px;padding:4px 10px}
+table.ac411-sm td{text-align:center}
+table.ac411-sm td.l{text-align:left}
+ol.ac411-ox{padding-left:1.4em}
+ol.ac411-ox li{margin-top:12px}
+ol.ac411-ox li:first-child{margin-top:0}
+.ac411-sign{display:flex;gap:10px;margin-top:8px}
+.ac411-sign>div{flex:1 1 0;border:2px solid var(--line);border-radius:12px;padding:8px 10px;text-align:center;font-size:21px;background:#fff}
+.ac411-sign>div.sp{border-color:var(--field);background:#F2FAF5}
+.ac411-sign>div.ns{border-color:var(--plus);background:#FDF1F3}
+/* 개념 지도 */
+.ac411-map{display:flex;align-items:center;gap:12px;margin-top:14px}
+.ac411-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.7;flex:0 0 170px}
+.ac411-node.ac411-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac411-node.ac411-dim{flex:0 0 175px;border-style:dashed;color:var(--muted)}
+.ac411-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.ac411-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.ac411-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 9px;font-size:19px}
+.ac411-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac411-seg .btn.ac411-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.ac411-read th,table.ac411-read td{font-size:19px;padding:3px 8px}
+table.ac411-read th{text-align:left;width:120px}
+table.ac411-read tr.hl td{font-size:24px;font-weight:700}
+output.kind.ac411-msg{margin-top:2px;line-height:1.4;font-size:19px;display:block}
+table.ac411-log th,table.ac411-log td{font-size:19px;padding:2px 6px;text-align:center;white-space:nowrap}
+.cover h1.ac411-h1{font-size:72px;line-height:1.15}
+.ac411-units{display:flex;flex-direction:column;gap:8px}
+.ac411-units .card{padding:8px 14px;font-size:21px}
+.ac411-units .card.ac411-now{border-color:var(--field);background:#F2FAF5}
+table.ac411-ice th,table.ac411-ice td{font-size:21px;padding:4px 10px;text-align:center}
+table.ac411-ice th.l,table.ac411-ice td.l{text-align:left}
+.ac411-box{border:2px solid var(--line);border-radius:12px;padding:8px 12px;background:#fff}
+.ac411-supp{border-left:5px solid var(--equi);background:#FFF8EF;padding:8px 12px;border-radius:8px}
+.stages.ac411-c3 .stage p{font-size:20px;line-height:1.45}
+table.ac411-log th,table.ac411-log td{font-size:19px;padding:2px 5px;text-align:center;white-space:nowrap}
+table.ac411-read th,table.ac411-read td{font-size:19px;padding:2px 8px}
+table.ac411-read th{text-align:left}
+table.ac411-read tr.hl td{font-size:23px;font-weight:700}
