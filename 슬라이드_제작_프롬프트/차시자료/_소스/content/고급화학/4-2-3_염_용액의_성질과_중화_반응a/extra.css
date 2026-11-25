@@ -1,0 +1,33 @@
+/* 고급화학 4-2-3 a·b — 덱 전용 (모두 .ac423- 접두어) */
+.cover h1.ac423-h1{font-size:60px;line-height:1.15}
+table.ac423-sm th,table.ac423-sm td{font-size:20px;padding:3px 10px;text-align:center}
+table.ac423-sm td.l,table.ac423-sm th.l{text-align:left}
+table.ac423-ice th,table.ac423-ice td{font-size:20px;padding:3px 10px;text-align:center}
+table.ac423-ice th.l,table.ac423-ice td.l{text-align:left}
+ol.ac423-ox{padding-left:1.4em}
+ol.ac423-ox li{margin-top:10px}
+ol.ac423-ox li:first-child{margin-top:0}
+.stages.ac423-c4 .stage p,.stages.ac423-c4 .stage{font-size:20px;line-height:1.45}
+.stages.ac423-c4 .stage h3{font-size:21px}
+.ac423-tri{display:flex;gap:10px}
+.ac423-tri>div{flex:1 1 0;border:2px solid var(--line);border-radius:12px;padding:6px 10px;text-align:center;font-size:21px;background:#fff}
+.ac423-tri>div.ac423-acid{border-color:var(--plus);background:#FDF1F3}
+.ac423-tri>div.ac423-base{border-color:var(--minus);background:#EEF4FD}
+.ac423-supp{border-left:5px solid var(--equi);background:#FFF8EF;padding:6px 12px;border-radius:8px}
+/* 개념 지도 */
+.ac423-map{display:flex;align-items:center;gap:10px;margin-top:14px}
+.ac423-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:20px;line-height:1.7;flex:0 0 150px}
+.ac423-node.ac423-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac423-node.ac423-dim{flex:0 0 150px;border-style:dashed;color:var(--muted)}
+.ac423-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.ac423-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.ac423-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 9px;font-size:19px}
+.ac423-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac423-seg .btn.ac423-p{border-color:var(--plus);color:var(--plus)}
+.ac423-seg .btn.ac423-m{border-color:var(--minus);color:var(--minus)}
+table.ac423-read th,table.ac423-read td{font-size:19px;padding:2px 8px}
+table.ac423-read th{text-align:left;width:130px}
+table.ac423-read tr.hl td{font-size:23px;font-weight:700}
+output.kind.ac423-msg{margin-top:4px;line-height:1.4;font-size:19px;display:block}
+table.ac423-log th,table.ac423-log td{font-size:19px;padding:2px 6px;text-align:center;white-space:nowrap}

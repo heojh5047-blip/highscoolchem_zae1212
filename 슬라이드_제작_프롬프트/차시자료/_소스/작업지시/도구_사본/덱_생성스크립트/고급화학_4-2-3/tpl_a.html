@@ -1,0 +1,568 @@
+<!-- 고급화학 4-2-3a 염 용액의 성질과 중화 반응 (1) — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 2. 산과 염기의 평형 › 03 · 04</div>
+    <h1 class="ac423-h1">염 용액의 성질과<br>중화 반응 (1)</h1>
+    <p class="sub">염의 가수 분해와 염 수용액의 액성, 중화 반응의 양적 관계, 강산–강염기·약산–강염기 적정 곡선, 당량점과 반당량점(pH = $\mathrm{p}K_\mathrm{a}$), 지시약 선택</p>
+    <p class="meta">고등학교 고급 화학 218–226쪽</p>
+  </div>
+  {{COVER_A}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="03 염 용액의 산과 염기의 성질 · 04 중화 반응" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-05]</span>약산과 약염기의 중화 반응 시 특징을 이해하고, pH를 $\mathrm{p}K_\mathrm{a}$ 값으로부터 구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화04-06]</span>다양한 산 염기 중화 적정 곡선을 이해하고, 완충 용액의 pH 변화를 관찰하여 완충 용액의 유용성을 인식할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>염을 이루는 이온의 산 염기 성질로 염 수용액의 액성을 예측하고, 가수 분해 평형으로 pH를 구할 수 있다.</li>
+    <li>중화 반응의 양적 관계 $nMV=n'M'V'$로 농도를 모르는 산의 농도를 구할 수 있다.</li>
+    <li>강산–강염기·약산–강염기 적정 곡선에서 당량점, 반당량점(pH = $\mathrm{p}K_\mathrm{a}$), 완충 구간을 읽고 알맞은 지시약을 고를 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">염 수용액의 액성</div><div class="farr">→</div>
+    <div class="fnode">염의 가수 분해</div><div class="farr">→</div>
+    <div class="fnode">중화 반응의 양적 관계</div><div class="farr">→</div>
+    <div class="fnode">적정 곡선</div><div class="farr">→</div>
+    <div class="fnode">반당량점과 지시약</div><div class="farr">→</div>
+    <div class="fnode hl">식초 적정 실험실</div>
+  </div>
+  <p class="small mt8">완충 용액·완충 용량 탐구·혈액의 완충 작용·연습 문제는 다음 시간 (2)에서 다룬다.</p>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="03 염 용액의 산과 염기의 성질 · 도입" data-title="생각 열기: 염 수용액의 색">
+  <h2><span class="tag">생각 열기</span>중화 반응으로 생긴 염의 수용액은 모두 중성일까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">{{BTB3}}</div>
+    <div class="col stack">
+      <p class="f21">세 염은 모두 산과 염기의 중화 반응으로 만들 수 있는 물질이다.</p>
+      <p class="small">$\ce{HCl + NaOH -&gt; NaCl + H2O}$ · $\ce{HCl + NH3 -&gt; NH4Cl}$ · $\ce{CH3COOH + NaOH -&gt; CH3COONa + H2O}$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 그런데 왜 BTB 용액의 색이 서로 다를까?</p></div>
+      <p class="f21 step">→ 염을 이루는 이온이 물과 반응해 $\ce{H3O+}$나 $\ce{OH-}$를 만들기 때문 — <span class="ans">염의 가수 분해</span></p>
+      <div class="answer step">염 수용액이 항상 중성인 것은 아니다</div>
+      <p class="small">BTB: 산성 노랑 · 중성 초록 · 염기성 파랑</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 연결 ════════ -->
+<section class="slide" data-sec="03 염 용액의 산과 염기의 성질 · 도입" data-title="연결: 짝산과 짝염기">
+  <h2><span class="tag alt">연결</span>01 · 02에서 배운 짝산과 짝염기</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>짝산과 짝염기</h3><p>$\ce{H+}$ 하나 차이인 쌍: $\ce{CH3COOH}$ / $\ce{CH3COO-}$, $\ce{NH4+}$ / $\ce{NH3}$</p></div>
+    <div class="stage"><h3>$K_\mathrm{a}\times K_\mathrm{b}=K_\mathrm{w}$</h3><p>산이 강할수록 그 짝염기는 약하다. $K_\mathrm{w}=1.0\times10^{-14}$ (25 °C)</p></div>
+  </div>
+  <p class="f22 mt16"><b>Q</b> $\ce{CH3COOH}$의 $K_\mathrm{a}=1.8\times10^{-5}$이면 짝염기 $\ce{CH3COO-}$의 $K_\mathrm{b}$는?</p>
+  <p class="f22 step">→ $K_\mathrm{b}=\dfrac{1.0\times10^{-14}}{1.8\times10^{-5}}=$ <span class="ans">$5.6\times10^{-10}$</span> — 작지만 0이 아니다. 물과 조금 반응한다.</p>
+  <p class="f22 mt8"><b>Q</b> 강산 $\ce{HCl}$의 짝염기 $\ce{Cl-}$는 어떨까?</p>
+  <p class="f22 step">→ $K_\mathrm{b}$가 사실상 0 — <span class="ans">염기로 작용하지 못한다</span>.</p>
+</section>
+
+<!-- ════════ 5. ① 염 용액 ════════ -->
+<section class="slide" data-sec="03 · 염 용액의 산과 염기의 성질" data-title="염과 염의 용해">
+  <h2><span class="no">1</span>염 용액의 산과 염기의 성질</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21">산과 염기의 반응에서 생기는 산의 음이온과 염기의 양이온이 결합한 이온성 고체가 <mark>염</mark>이다.</p>
+      <p class="f21">염의 양이온: $\ce{H+}$가 아닌 양이온 · 염의 음이온: $\ce{OH-}$, $\ce{O^2-}$가 아닌 음이온</p>
+      <p class="f21" data-q><b>Q</b> 염 수용액의 액성(산성·중성·염기성)은 무엇이 정할까?</p>
+      <p class="f21 step">→ 녹아 생긴 양이온과 음이온이 물과 반응하는지 — <span class="ans">가수 분해</span> 여부</p>
+      <div class="note step"><b>염의 가수 분해</b>: 염에서 나온 이온이 물과 반응하여 $\ce{H3O+}$나 $\ce{OH-}$를 만드는 반응</div>
+    </div>
+    <div class="col stack">
+      <div class="formula sm">$\ce{NaCl(s) -&gt;[H2O] Na+(aq) + Cl-(aq)}$<br>$\ce{K2CO3(s) -&gt;[H2O] 2K+(aq) + CO3^2-(aq)}$<br>$\ce{KClO4(s) -&gt;[H2O] K+(aq) + ClO4^-(aq)}$<br>$\ce{Al(NO3)3(s) -&gt;[H2O] Al^3+(aq) + 3NO3^-(aq)}$<div class="unit">염은 물에 녹아 양이온과 음이온이 된다(강한 전해질)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 강산·약산의 음이온 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="강산의 음이온과 약산의 음이온">
+  <h2><span class="no">2</span>강산의 음이온과 약산의 음이온</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 480px">
+      <div class="formula sm">$\ce{HNO3(aq) + H2O(l)}$<br>$\ce{-&gt; NO3^-(aq) + H3O+(aq)}$</div>
+      <p class="f21">정반응이 완결된다: $\ce{HNO3}$는 $\ce{H3O+}$보다 강산, $\ce{H2O}$는 $\ce{NO3-}$보다 강한 염기 → $\ce{NO3-}$는 반응하지 않고 수화된다.</p>
+      <div class="formula sm">$\ce{CH3COOH(aq) + H2O(l)}$<br>$\ce{&lt;=&gt; CH3COO^-(aq) + H3O+(aq)}$</div>
+      <p class="f21">평형이 왼쪽으로 치우친다: $\ce{CH3COO-}$는 $\ce{H2O}$보다 강한 염기이다.</p>
+      <p class="f21" data-q><b>Q</b> $\ce{CH3COO-}$가 물속에 있으면 어떤 반응이 일어날까?</p>
+      <p class="f21 step">→ $\ce{CH3COO- + H2O &lt;=&gt; CH3COOH + OH-}$ — <span class="ans">$\ce{OH-}$가 생긴다</span></p>
+    </div>
+    <div class="col">{{LADDER}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 이온의 작용 요약 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="표 Ⅳ-6 이온의 산과 염기의 성질">
+  <h2><span class="no">3</span>산과 염기의 반응에서 생기는 이온의 작용</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <ul class="f21">
+        <li>강산의 음이온은 <b>염기로 작용하지 못한다</b>.</li>
+        <li>약산의 음이온은 <b class="c-minus">염기로 작용한다</b>.</li>
+        <li>강염기의 양이온은 <b>산으로 작용하지 못한다</b>.</li>
+        <li>약염기의 양이온은 <b class="c-plus">산으로 작용한다</b>.</li>
+      </ul>
+      <p class="f21" data-q><b>Q</b> $\ce{Cl-}$와 $\ce{F-}$ 가운데 물에서 염기로 작용하는 것은?</p>
+      <p class="f21 step">→ <span class="ans">$\ce{F-}$</span> — 약산 $\ce{HF}$의 짝염기이다. $\ce{Cl-}$는 강산 $\ce{HCl}$의 짝염기라 구경꾼.</p>
+    </div>
+    <div class="col stack">
+      <p class="small"><b>표 Ⅳ-6</b> 수용액에서 이온의 산과 염기의 성질</p>
+      <table class="tight ac423-sm">
+        <tr><th>구분</th><th>구경꾼</th><th class="c-minus">염기성</th><th class="c-plus">산성</th></tr>
+        <tr><th>음이온</th><td>$\ce{Cl-}$ $\ce{Br-}$ $\ce{I-}$<br>$\ce{NO3-}$ $\ce{ClO4-}$</td><td>$\ce{CH3COO-}$ $\ce{F-}$<br>$\ce{CO3^2-}$ $\ce{PO4^3-}$</td><td>—</td></tr>
+        <tr><th>양이온</th><td>$\ce{Li+}$ $\ce{Na+}$ $\ce{K+}$<br>$\ce{Ca^2+}$ $\ce{Sr^2+}$ $\ce{Ba^2+}$</td><td>—</td><td>$\ce{NH4+}$ $\ce{Al^3+}$ $\ce{Mg^2+}$<br>전이 금속 이온</td></tr>
+      </table>
+      <p class="small">구경꾼 이온: 물과 반응하지 않고 수화되어 pH에 영향을 주지 않는 이온</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 염의 네 경우 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="염 수용액의 액성 예측">
+  <h2><span class="no">4</span>염을 이루는 이온으로 액성 예측하기</h2>
+  <div class="stages c2 ac423-c4">
+    <div class="stage"><h3>강산의 음이온 + 강염기의 양이온</h3><p>두 이온 모두 물과 반응하지 않고 수화 → <span class="blank"><span class="step" data-g="c1">중성</span></span><br>예: $\ce{NaCl}$, $\ce{KBr}$, $\ce{Ba(NO3)2}$</p></div>
+    <div class="stage"><h3>강산의 음이온 + 약염기의 양이온</h3><p>양이온이 산으로 작용 → <span class="blank"><span class="step" data-g="c2">산성</span></span><br>예: $\ce{NH4Cl}$, $\ce{NH4NO3}$</p></div>
+    <div class="stage"><h3>약산의 음이온 + 강염기의 양이온</h3><p>음이온이 염기로 작용 → <span class="blank"><span class="step" data-g="c3">염기성</span></span><br>예: $\ce{CH3COONa}$, $\ce{K2CO3}$</p></div>
+    <div class="stage"><h3>약산의 음이온 + 약염기의 양이온</h3><p>두 이온 모두 물과 반응 → $K_\mathrm{a}$(양이온)와 $K_\mathrm{b}$(음이온) 비교<br><span class="step" data-g="c4">$K_\mathrm{a}&gt;K_\mathrm{b}$: <b class="c-plus">산성</b> · $K_\mathrm{a}&lt;K_\mathrm{b}$: <b class="c-minus">염기성</b></span></p></div>
+  </div>
+  <p class="f21 mt12" data-q><b>Q</b> 생각 열기의 세 염은 각각 어느 경우일까? <span class="step">→ $\ce{NaCl}$ 중성(초록), $\ce{NH4Cl}$ 산성(노랑), $\ce{CH3COONa}$ 염기성(파랑) — <span class="ans">BTB 색과 일치</span></span></p>
+</section>
+
+<!-- ════════ 9. ⑤ 가수 분해 입자 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="가수 분해 입자 모형">
+  <h2><span class="no">5</span>염의 가수 분해를 입자로 보기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 480px">
+      <div class="formula sm">$\ce{CH3COO^-(aq) + H2O(l)}$<br>$\ce{&lt;=&gt; CH3COOH(aq) + OH^-(aq)}$<div class="unit">평형 상수 = $K_\mathrm{b}(\ce{CH3COO-})=5.6\times10^{-10}$</div></div>
+      <div class="formula sm">$\ce{NH4+(aq) + H2O(l)}$<br>$\ce{&lt;=&gt; NH3(aq) + H3O+(aq)}$<div class="unit">평형 상수 = $K_\mathrm{a}(\ce{NH4+})=5.6\times10^{-10}$</div></div>
+      <p class="f21" data-q><b>Q</b> 그림에서 $\ce{Na+}$와 $\ce{Cl-}$는 왜 반응하지 않을까?</p>
+      <p class="f21 step">→ 강염기의 양이온·강산의 음이온은 물보다 약한 산·염기라 <span class="ans">수화만 된다</span>(구경꾼 이온).</p>
+      <p class="small step">$K$가 매우 작아 가수 분해되는 이온은 아주 일부 — 그래도 $[\ce{H3O+}]$와 $[\ce{OH-}]$의 균형이 깨진다.</p>
+    </div>
+    <div class="col">{{HYD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑥ 표 Ⅳ-7 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="표 Ⅳ-7 물에서 염의 산과 염기 행동">
+  <h2><span class="no">6</span>물에서 염의 산과 염기 행동 <span class="small c-muted">(표 Ⅳ-7)</span></h2>
+  <table class="tight ac423-sm">
+    <tr><th class="l">염 용액 예</th><th>pH</th><th class="l">이온의 성질</th><th class="l">물과 반응하는 이온 예</th></tr>
+    <tr><td class="l">중성: $\ce{NaCl}$, $\ce{KBr}$, $\ce{Ba(NO3)2}$</td><td>7.0</td><td class="l">강염기의 양이온 · 강산의 음이온</td><td class="l">없음</td></tr>
+    <tr><td class="l">산성: $\ce{NH4Cl}$, $\ce{NH4NO3}$, $\ce{CH3NH3Br}$</td><td>&lt; 7.0</td><td class="l">약염기의 양이온 · 강산의 음이온</td><td class="l">$\ce{NH4+ + H2O &lt;=&gt; NH3 + H3O+}$</td></tr>
+    <tr><td class="l">산성: $\ce{Al(NO3)3}$, $\ce{CrBr3}$, $\ce{FeCl3}$</td><td>&lt; 7.0</td><td class="l">작고 전하량이 큰 양이온 · 강산의 음이온</td><td class="l">$\ce{Al(H2O)6^3+ + H2O &lt;=&gt; Al(H2O)5OH^2+ + H3O+}$</td></tr>
+    <tr><td class="l">산성/염기성: $\ce{NH4ClO2}$, $\ce{NH4CN}$, $\ce{Pb(CH3COO)2}$</td><td>$K_\mathrm{a}$, $K_\mathrm{b}$ 비교</td><td class="l">약염기의 양이온(또는 작고 전하량이 큰 양이온) · 약산의 음이온</td><td class="l">$\ce{NH4+ + H2O &lt;=&gt; NH3 + H3O+}$<br>$\ce{CN- + H2O &lt;=&gt; HCN + OH-}$</td></tr>
+    <tr><td class="l">산성/염기성: $\ce{NaH2PO4}$, $\ce{KHCO3}$, $\ce{NaHSO3}$</td><td>$K_\mathrm{a}$, $K_\mathrm{b}$ 비교</td><td class="l">강염기의 양이온 · 다양성자산의 음이온</td><td class="l">$\ce{HSO3- + H2O &lt;=&gt; SO3^2- + H3O+}$<br>$\ce{HSO3- + H2O &lt;=&gt; H2SO3 + OH-}$</td></tr>
+  </table>
+  <p class="f21 mt8" data-q><b>Q</b> $\ce{FeCl3}$의 $\ce{Fe^3+}$는 $\ce{H+}$를 가지고 있지 않은데 왜 산성일까? <span class="step">→ 다음 장: 작고 전하량이 큰 양이온에 배위한 <span class="ans">물 분자가 $\ce{H+}$를 내놓는다</span></span></p>
+</section>
+
+<!-- ════════ 11. ⑦ Al 가수 분해 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="작고 전하량이 큰 양이온">
+  <h2><span class="no">7</span>작고 전하량이 큰 양이온의 가수 분해</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">$\ce{Al^3+}$은 물에서 물 분자 6개에 둘러싸인 $\ce{[Al(H2O)6]^3+}$로 있다.</p>
+      <div class="formula sm">$\ce{[Al(H2O)6]^3+(aq) + H2O(l)}$<br>$\ce{&lt;=&gt; [Al(H2O)5OH]^2+(aq) + H3O+(aq)}$</div>
+      <p class="f21" data-q><b>Q</b> 배위한 물 분자의 $\ce{H+}$가 왜 쉽게 떨어질까?</p>
+      <p class="f21 step">→ 작고 전하량이 큰 $\ce{Al^3+}$가 $\ce{O}$의 전자를 끌어당겨 <span class="ans">$\ce{O-H}$ 결합이 약해지기</span> 때문 — 배위한 물 분자가 산으로 작용한다.</p>
+      <p class="f21 step">→ 같은 까닭으로 $\ce{Fe^3+}$, $\ce{Cr^3+}$ 같은 전이 금속 이온의 염 수용액도 산성이다.</p>
+    </div>
+    <div class="col">{{ALAQ}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑧ Ka와 Kb 비교 ════════ -->
+<section class="slide" data-sec="03 · 염의 가수 분해와 산과 염기의 평형" data-title="양이온과 음이온이 모두 반응할 때">
+  <h2><span class="no">8</span>두 이온이 모두 물과 반응할 때 — $K_\mathrm{a}$와 $K_\mathrm{b}$ 비교</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <p class="f21"><b>약염기의 양이온 + 약산의 음이온</b>: $\ce{NH4CN}$에서 $K_\mathrm{a}(\ce{NH4+})=5.6\times10^{-10}$, $K_\mathrm{b}(\ce{CN-})=1.6\times10^{-5}$</p>
+      <p class="f21" data-q><b>Q</b> $\ce{NH4CN}$ 수용액의 액성은?</p>
+      <p class="f21 step">→ $K_\mathrm{b}&gt;K_\mathrm{a}$ — $\ce{CN-}$이 만드는 $\ce{OH-}$가 더 많아 <span class="ans">염기성</span></p>
+      <p class="f21 mt8"><b>다양성자산의 음이온</b>은 산으로도 염기로도 작용한다.</p>
+      <table class="tight ac423-sm">
+        <tr><th>이온</th><th>$K_\mathrm{a}$</th><th>$K_\mathrm{b}$</th><th>예</th><th>액성</th></tr>
+        <tr><td>$\ce{HSO3-}$</td><td>$6.4\times10^{-8}$</td><td>$7.1\times10^{-13}$</td><td>$\ce{NaHSO3}$</td><td><span class="blank"><span class="step">산성</span></span></td></tr>
+        <tr><td>$\ce{HCO3-}$</td><td>$4.7\times10^{-11}$</td><td>$2.2\times10^{-8}$</td><td>$\ce{KHCO3}$</td><td><span class="blank"><span class="step">염기성</span></span></td></tr>
+      </table>
+      <p class="small">$K_\mathrm{b}=K_\mathrm{w}/K_\mathrm{a1}$ ($\ce{H2SO3}$ $K_\mathrm{a1}=1.4\times10^{-2}$, $\ce{H2CO3}$ $4.5\times10^{-7}$), 25 °C 문헌값</p>
+    </div>
+    <div class="col">{{KBAR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>염 수용액의 액성 예측</h2>
+  <p class="f22">다음 염을 물에 녹였을 때 수용액이 산성, 중성, 염기성 가운데 무엇인지 분류하여라.</p>
+  <p class="f22 mt8">(가) $\ce{KNO3}$ &nbsp; (나) $\ce{NH4NO3}$ &nbsp; (다) $\ce{Na2CO3}$ &nbsp; (라) $\ce{FeCl3}$ &nbsp; (마) $\ce{NaF}$ &nbsp; (바) $\ce{NaH2PO4}$</p>
+  <p class="small">$\ce{H2PO4-}$: $K_\mathrm{a}=6.2\times10^{-8}$, $K_\mathrm{b}=1.3\times10^{-12}$</p>
+  <div class="row mt12">
+    <div class="col stack">
+      <p class="f21 step">강산·강염기 이온만: (가) → 중성</p>
+      <p class="f21 step">약염기의 양이온 $\ce{NH4+}$, 작고 전하량이 큰 $\ce{Fe^3+}$, $K_\mathrm{a}&gt;K_\mathrm{b}$인 $\ce{H2PO4-}$: (나), (라), (바) → 산성</p>
+      <p class="f21 step">약산의 음이온 $\ce{CO3^2-}$, $\ce{F-}$: (다), (마) → 염기성</p>
+      <div class="ac423-tri step"><div>중성: (가)</div><div class="ac423-acid">산성: (나), (라), (바)</div><div class="ac423-base">염기성: (다), (마)</div></div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 예제 Ⅳ-3 (1) ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅳ-3 (1)">
+  <h2><span class="tag ex">예제 Ⅳ-3</span>아세트산 칼슘 수용액의 pH (1) 평형 세우기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">아세트산 칼슘 $\ce{Ca(CH3COO)2}$ 수용액은 혈중 인산 이온 농도가 높아지는 신장병 환자의 치료에 쓰인다(인산 이온이 칼슘 이온과 결합해 배설). 합병증을 막으려면 pH를 알아야 한다.</p>
+      <p class="f22" data-q><b>Q</b> 25 °C에서 $0.15\ \text{M}$ 아세트산 칼슘 수용액의 pH는? ($\ce{CH3COOH}$ $K_\mathrm{a}=1.8\times10^{-5}$)</p>
+      <p class="f21 step">$\ce{Ca^2+}$는 구경꾼, 염기 $\ce{CH3COO-}$의 평형: $\ce{CH3COO- + H2O &lt;=&gt; CH3COOH + OH-}$</p>
+      <p class="f21 step">$\ce{CH3COO-}$의 처음 농도 $=2\times0.15\ \text{M}=0.30\ \text{M}$ ($\ce{Ca(CH3COO)2}$ 1 mol에 2 mol)</p>
+    </div>
+    <div class="col stack">
+      <table class="ac423-ice step">
+        <tr><th class="l"></th><th>$\ce{CH3COO-}$</th><th>$\ce{CH3COOH}$</th><th>$\ce{OH-}$</th></tr>
+        <tr><td class="l">처음 (M)</td><td>0.30</td><td>0</td><td>0</td></tr>
+        <tr><td class="l">변화 (M)</td><td>$-x$</td><td>$+x$</td><td>$+x$</td></tr>
+        <tr><td class="l">평형 (M)</td><td>$0.30-x$</td><td>$x$</td><td>$x$</td></tr>
+      </table>
+      <p class="f21 step">$K_\mathrm{b}=\dfrac{K_\mathrm{w}}{K_\mathrm{a}}=\dfrac{1.0\times10^{-14}}{1.8\times10^{-5}}=5.5\times10^{-10}$</p>
+      <p class="small">교과서는 $5.55\times10^{-10}$을 $5.5\times10^{-10}$으로 썼다(이 덱의 다른 곳은 $5.6\times10^{-10}$).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 예제 Ⅳ-3 (2) ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅳ-3 (2)">
+  <h2><span class="tag ex">예제 Ⅳ-3</span>아세트산 칼슘 수용액의 pH (2) 풀이</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f22" data-q><b>Q</b> $K_\mathrm{b}=\dfrac{[\ce{CH3COOH}][\ce{OH-}]}{[\ce{CH3COO-}]}=\dfrac{x^2}{0.30-x}=5.5\times10^{-10}$에서 pH는?</p>
+      <p class="f21 step">$x\ll0.30$으로 근사: $x=\sqrt{0.30\times(5.5\times10^{-10})}=1.29\times10^{-5}\ \text{M}=[\ce{OH-}]$</p>
+      <p class="f21 step">$\text{pOH}=-\log(1.29\times10^{-5})=4.89$, $\ \mathrm{p}K_\mathrm{w}=\text{pH}+\text{pOH}=14.00$</p>
+      <div class="answer step">pH $=14.00-4.89=9.11$</div>
+      <p class="f21 step">근사 확인: $\dfrac{1.29\times10^{-5}}{0.30}=0.004\ \%$ — 5 % 보다 훨씬 작다. 정확히 풀어도 9.11이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>염화 암모늄 수용액의 pH</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22">25 °C에서 $0.10\ \text{M}$ $\ce{NH4Cl}$ 수용액의 pH를 구하여라. ($\ce{NH3}$의 $K_\mathrm{b}=1.8\times10^{-5}$)</p>
+      <p class="f21 step">$\ce{NH4+ + H2O &lt;=&gt; NH3 + H3O+}$, $\ K_\mathrm{a}=\dfrac{K_\mathrm{w}}{K_\mathrm{b}}=\dfrac{1.0\times10^{-14}}{1.8\times10^{-5}}=5.6\times10^{-10}$</p>
+      <p class="f21 step">$\dfrac{x^2}{0.10-x}=5.6\times10^{-10}$, $\ x\ll0.10$ → $x=[\ce{H3O+}]=\sqrt{5.6\times10^{-11}}=7.5\times10^{-6}\ \text{M}$</p>
+      <div class="answer step">pH $=-\log(7.5\times10^{-6})=5.13$ (산성)</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑨ 중화 반응의 양적 관계 ════════ -->
+<section class="slide" data-sec="04 · 중화 반응의 양적 관계" data-title="중화 반응과 평형 상수">
+  <h2><span class="no">9</span>중화 반응의 양적 관계</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산에서 나온 $\ce{H+}$(또는 $\ce{H3O+}$)와 염기에서 나온 $\ce{OH-}$는 물을 만들고, 남은 음이온과 양이온은 염을 이룬다.</p>
+      <div class="formula sm">$\ce{H+(aq) + OH-(aq) -&gt; H2O(l)}$<div class="unit">물의 자동 이온화의 역반응</div></div>
+      <p class="f21" data-q><b>Q</b> 이 반응의 평형 상수 $K$는?</p>
+      <p class="f21 step">→ $K=\dfrac{1}{K_\mathrm{w}}=$ <span class="ans">$1.0\times10^{14}$</span></p>
+      <p class="f21 step">→ $K$가 매우 크므로 중화 반응은 <span class="ans">완결되는 반응</span>: 넣은 $\ce{OH-}$만큼 $\ce{H+}$가 없어진다. 염의 가수 분해가 없으면 완전히 중화된 용액의 pH = 7.0</p>
+    </div>
+    <div class="col stack">{{NEUT}}
+      <p class="small">그림: $\ce{H3O+}$가 $\ce{OH-}$에 $\ce{H+}$를 넘겨 물 분자 2개가 된다($\ce{H3O+ + OH- -&gt; 2H2O}$).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑩ 중화 적정 ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="중화 적정과 당량점">
+  <h2><span class="no">10</span>중화 적정을 이용한 산과 염기의 농도 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21">농도를 아는 표준 강염기를 조금씩 넣어, 처음 산의 $\ce{H+}$ 몰수와 같은 몰수의 $\ce{OH-}$를 넣은 점 — <mark>당량점</mark> — 까지의 부피를 정확히 잰다.</p>
+      <div class="formula sm">$MV=M'V'$ $\quad\to\quad$ $nMV=n'M'V'$<div class="unit">$M$, $V$: 산의 몰농도·부피 · $M'$, $V'$: 염기의 몰농도·부피 · $n$: 산 1 mol이 내놓는 $\ce{H+}$ 수 · $n'$: 염기 1 mol이 내놓는 $\ce{OH-}$ 수</div></div>
+      <p class="f21" data-q><b>Q</b> 산을 적정할 때 표준 용액으로 강염기를 쓰는 까닭은?</p>
+      <p class="f21 step">→ 강염기는 모두 이온화하므로 <span class="ans">넣은 $\ce{OH-}$ 몰수 = 넣은 염기 몰수</span> — 당량점을 정확히 계산할 수 있다.</p>
+      <div class="note step"><b>당량점 ≠ 종말점</b> 종말점은 지시약의 색이 변하는 점이다. 알맞은 지시약을 고르면 두 점이 거의 일치한다.</div>
+    </div>
+    <div class="col">{{TITSET}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>중화 반응의 양적 관계</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22">$0.050\ \text{M}$ 황산($\ce{H2SO4}$) $20.0\ \text{mL}$를 완전히 중화하는 데 필요한 $0.10\ \text{M}$ $\ce{NaOH}$ 수용액의 부피를 구하여라.</p>
+      <p class="f21 step">$\ce{H2SO4}$는 $\ce{H+}$ 2개($n=2$), $\ce{NaOH}$는 $\ce{OH-}$ 1개($n'=1$)</p>
+      <p class="f21 step">$2\times0.050\ \text{M}\times20.0\ \text{mL}=1\times0.10\ \text{M}\times V'$</p>
+      <div class="answer step">$V'=20.0\ \text{mL}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 20. ⑪ 그림 Ⅳ-20 ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="강산–강염기 적정 곡선">
+  <h2><span class="no">11</span>강산을 강염기로 적정할 때 pH 곡선 <span class="small c-muted">(그림 Ⅳ-20)</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{CURVE_S}}</div>
+    <div class="col stack">
+      <p class="small">$0.100\ \text{M}$ $\ce{HCl}$ $50.0\ \text{mL}$ + $0.100\ \text{M}$ $\ce{NaOH}$ (계산값)</p>
+      <div class="stages c2 ac423-c4">
+        <div class="stage"><h3>① 적정 전</h3><p>$\ce{HCl(aq)}$만 있음</p></div>
+        <div class="stage"><h3>② 당량점 전</h3><p>$\ce{OH-}$가 $\ce{H+}$를 줄이고 $\ce{H2O}$ 생성, pH &lt; 7.0</p></div>
+        <div class="stage"><h3>③ 당량점</h3><p>$\ce{H+}$가 완전히 중화, $\ce{NaCl(aq)}$, pH = 7.0</p></div>
+        <div class="stage"><h3>④ 당량점 후</h3><p>남은 $\ce{H+}$ 없음, 넣은 $\ce{OH-}$가 남음, pH &gt; 7.0</p></div>
+      </div>
+      <p class="f21" data-q><b>Q</b> 당량점 근처에서 pH가 갑자기 크게 변하는 까닭은?</p>
+      <p class="f21 step">→ 남은 $\ce{H+}$가 아주 적어 $\ce{NaOH}$ 몇 방울로도 $[\ce{H+}]$가 <span class="ans">몇 자릿수씩</span> 바뀐다(pH는 로그).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. ⑫ 강산 ①② ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="강산 적정의 pH 계산 ①②">
+  <h2><span class="no">12</span>강산–강염기 적정의 pH 계산 ① ②</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21"><b>① 처음 pH</b>: 강산의 처음 농도로 정한다. $[\ce{H+}]=0.100\ \text{M}$ → pH $=-\log0.100=1.000$</p>
+      <p class="f21" data-q><b>② 당량점 전</b> — <b>Q</b> $\ce{NaOH}$ $49.0\ \text{mL}$를 넣었을 때 pH는?</p>
+      <table class="ac423-ice step">
+        <tr><th class="l"></th><th>$\ce{H+(aq)}$</th><th>$\ce{OH-(aq)}$</th><th>→ $\ce{H2O(l)}$</th></tr>
+        <tr><td class="l">반응 전 (mol)</td><td>$5.00\times10^{-3}$</td><td>$4.90\times10^{-3}$</td><td>—</td></tr>
+        <tr><td class="l">변화 (mol)</td><td>$-4.90\times10^{-3}$</td><td>$-4.90\times10^{-3}$</td><td>—</td></tr>
+        <tr><td class="l">반응 후 (mol)</td><td>$0.10\times10^{-3}$</td><td>0</td><td>—</td></tr>
+      </table>
+      <p class="f21 step">부피 $50.0+49.0=99.0\ \text{mL}$ → $[\ce{H+}]=\dfrac{0.10\times10^{-3}\ \text{mol}}{0.0990\ \text{L}}=1.0\times10^{-3}\ \text{M}$</p>
+      <div class="answer step">pH = 3.00</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 22. ⑬ 강산 ③④ ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="강산 적정의 pH 계산 ③④">
+  <h2><span class="no">13</span>강산–강염기 적정의 pH 계산 ③ ④</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21"><b>③ 당량점</b> ($50.0\ \text{mL}$): $\ce{NaCl}$만 남는다. $\ce{Na+}$와 $\ce{Cl-}$는 가수 분해하지 않으므로 pH = 7.00</p>
+      <p class="f21" data-q><b>④ 당량점 후</b> — <b>Q</b> $\ce{NaOH}$ $51.0\ \text{mL}$를 넣었을 때 pH는?</p>
+      <p class="f21 step">남은 $\ce{OH-}=5.10\times10^{-3}-5.00\times10^{-3}=0.10\times10^{-3}\ \text{mol}$, 부피 $101.0\ \text{mL}$</p>
+      <p class="f21 step">$[\ce{OH-}]=\dfrac{0.10\times10^{-3}\ \text{mol}}{0.1010\ \text{L}}=1.0\times10^{-3}\ \text{M}$ → pOH = 3.00</p>
+      <div class="answer step">pH = 14.00 − 3.00 = 11.00</div>
+      <p class="f21 step">→ $49.0\ \text{mL}$에서 $51.0\ \text{mL}$까지 단 2 mL에 pH가 3.00 → 11.00으로 <span class="ans">8만큼</span> 커진다.</p>
+    </div>
+    <div class="col">{{PTS_S}}</div>
+  </div>
+</section>
+
+<!-- ════════ 23. ⑭ 그림 Ⅳ-21 ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="약산–강염기 적정 곡선">
+  <h2><span class="no">14</span>약산을 강염기로 적정할 때 pH 곡선 <span class="small c-muted">(그림 Ⅳ-21)</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{CURVE_W}}</div>
+    <div class="col stack">
+      <p class="small">$0.100\ \text{M}$ $\ce{CH3COOH}$ $50.0\ \text{mL}$ + $0.100\ \text{M}$ $\ce{NaOH}$ (계산값)</p>
+      <div class="stages c2 ac423-c4">
+        <div class="stage"><h3>① 적정 전</h3><p>$\ce{CH3COOH(aq)}$ 용액</p></div>
+        <div class="stage"><h3>② 당량점 전</h3><p>$\ce{OH-}$가 $\ce{CH3COOH}$를 $\ce{CH3COO-}$로 바꿈 → 완충 용액</p></div>
+        <div class="stage"><h3>③ 당량점</h3><p>산이 완전히 중화, $\ce{CH3COONa(aq)}$ 용액</p></div>
+        <div class="stage"><h3>④ 당량점 후</h3><p>남은 산 없음, 넣은 $\ce{OH-}$가 남음</p></div>
+      </div>
+      <p class="f21" data-q><b>Q</b> 당량점의 pH가 7보다 큰 까닭은?</p>
+      <p class="f21 step">→ $\ce{CH3COO-}$가 약염기로서 물과 반응해 <span class="ans">$\ce{OH-}$를 만들기</span> 때문</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑮ 약산 ①② ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="약산 적정의 pH 계산 ①②">
+  <h2><span class="no">15</span>약산–강염기 적정의 pH 계산 ① ②</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21"><b>① 처음 pH</b>: $K_\mathrm{a}$로 구한다(01·02의 약산 pH). $0.100\ \text{M}$ $\ce{CH3COOH}$ → pH = 2.88 <span class="small">(교과서는 2.89로 적음)</span></p>
+      <p class="f21" data-q><b>② 당량점 전</b> — <b>Q</b> $\ce{NaOH}$ $45.0\ \text{mL}$를 넣었을 때 pH는?</p>
+      <table class="ac423-ice step">
+        <tr><th class="l"></th><th>$\ce{CH3COOH(aq)}$</th><th>$\ce{OH-(aq)}$</th><th>→ $\ce{CH3COO-(aq)}$</th></tr>
+        <tr><td class="l">반응 전 (mol)</td><td>$5.00\times10^{-3}$</td><td>$4.50\times10^{-3}$</td><td>0</td></tr>
+        <tr><td class="l">변화 (mol)</td><td>$-4.50\times10^{-3}$</td><td>$-4.50\times10^{-3}$</td><td>$+4.50\times10^{-3}$</td></tr>
+        <tr><td class="l">반응 후 (mol)</td><td>$0.50\times10^{-3}$</td><td>0</td><td>$4.50\times10^{-3}$</td></tr>
+      </table>
+      <p class="f21 step">부피 $95.0\ \text{mL}$: $[\ce{CH3COOH}]=0.0053\ \text{M}$, $[\ce{CH3COO-}]=0.0474\ \text{M}$</p>
+      <p class="f21 step">$K_\mathrm{a}=\dfrac{(0.0474)[\ce{H+}]}{(0.0053)}=1.8\times10^{-5}$ → $[\ce{H+}]=2.0\times10^{-6}\ \text{M}$</p>
+      <div class="answer step">pH = 5.70</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. ⑯ 약산 ③④ ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="약산 적정의 pH 계산 ③④">
+  <h2><span class="no">16</span>약산–강염기 적정의 pH 계산 ③ ④</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21" data-q><b>③ 당량점</b> ($50.0\ \text{mL}$) — <b>Q</b> $5.00\times10^{-3}\ \text{mol}$ $\ce{CH3COONa}$ 용액 $100.0\ \text{mL}$의 pH는?</p>
+      <p class="f21 step">$[\ce{CH3COO-}]=\dfrac{5.00\times10^{-3}\ \text{mol}}{0.1000\ \text{L}}=0.0500\ \text{M}$</p>
+      <p class="f21 step">$K_\mathrm{b}=\dfrac{[\ce{CH3COOH}][\ce{OH-}]}{[\ce{CH3COO-}]}=\dfrac{x^2}{0.0500-x}=5.6\times10^{-10}$ → $x=[\ce{OH-}]=5.3\times10^{-6}\ \text{M}$</p>
+      <div class="answer step">pOH = 5.28, pH = 8.72</div>
+      <p class="f21 step"><b>④ 당량점 후</b>: $\ce{CH3COO-}$가 만드는 $\ce{OH-}$는 넣은 $\ce{NaOH}$의 $\ce{OH-}$에 비해 무시할 만하다 → 강산 적정과 같다. $51.0\ \text{mL}$에서 pH = 11.00</p>
+    </div>
+    <div class="col">{{PTS_W}}</div>
+  </div>
+</section>
+
+<!-- ════════ 26. ⑰ 반당량점과 곡선 비교 ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="반당량점 pH = pKa">
+  <h2><span class="no">17</span>반당량점에서 pH = $\mathrm{p}K_\mathrm{a}$ — 두 곡선 비교</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21" data-q><b>Q</b> 당량점 부피의 절반(25.0 mL)을 넣으면 $[\ce{CH3COOH}]$와 $[\ce{CH3COO-}]$는?</p>
+      <p class="f21 step">→ 산의 절반이 짝염기로 바뀌어 <span class="ans">$[\ce{CH3COOH}]=[\ce{CH3COO-}]$</span></p>
+      <p class="f21 step">$K_\mathrm{a}=\dfrac{[\ce{CH3COO-}][\ce{H3O+}]}{[\ce{CH3COOH}]}=[\ce{H3O+}]$ → <mark>반당량점에서 pH = $\mathrm{p}K_\mathrm{a}$</mark> $=4.74$</p>
+      <table class="tight ac423-sm step">
+        <tr><th></th><th>강산 $\ce{HCl}$</th><th>약산 $\ce{CH3COOH}$</th></tr>
+        <tr><td>처음 pH</td><td>1.00</td><td>2.88</td></tr>
+        <tr><td>완충 구간</td><td>없다</td><td>있다 (pH ≈ p$K_\mathrm{a}$ 부근)</td></tr>
+        <tr><td>당량점 pH</td><td>7.00</td><td>8.72</td></tr>
+        <tr><td>49 → 51 mL 변화</td><td>8.0</td><td>4.6</td></tr>
+      </table>
+      <p class="small step">적정 곡선 하나로 당량점 부피에서 농도를, 반당량점 pH에서 $\mathrm{p}K_\mathrm{a}$(산의 세기)를 읽는다.</p>
+    </div>
+    <div class="col">{{CMP}}</div>
+  </div>
+</section>
+
+<!-- ════════ 27. ⑱ [보충] 지시약 선택 ════════ -->
+<section class="slide" data-sec="04 · 중화 적정을 이용한 산과 염기의 농도 구하기" data-title="지시약 선택 (보충)">
+  <h2><span class="no">18</span>적정에 알맞은 지시약 고르기 <span class="small c-muted">[보충]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">지시약도 약산이다: $\ce{HIn &lt;=&gt; H+ + In-}$ — $\ce{HIn}$과 $\ce{In-}$의 색이 달라, 대개 pH $\approx\mathrm{p}K_\mathrm{HIn}\pm1$에서 색이 바뀐다.</p>
+      <p class="f21"><mark>당량점 근처 pH 급변 구간 안에 변색 범위가 드는 지시약</mark>을 고른다.</p>
+      <p class="f21" data-q><b>Q</b> 아세트산 적정에 메틸 오렌지를 쓰면 어떻게 될까?</p>
+      <p class="f21 step">→ pH 4.4에 닿는 약 $15.5\ \text{mL}$에서 이미 변색 — 종말점이 당량점(50.0 mL)보다 훨씬 앞이라 <span class="ans">농도를 실제보다 작게</span> 구한다.</p>
+      <p class="f21 step">→ 약산–강염기: <b>페놀프탈레인</b> · 강산–강염기: 급변 구간(약 pH 4–10)이 넓어 세 지시약 모두 쓸 수 있다.</p>
+    </div>
+    <div class="col">{{IND}}</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>적정 곡선 해석하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21">약산 $\ce{HA}$ 수용액 $25.0\ \text{mL}$를 $0.100\ \text{M}$ $\ce{NaOH}$로 적정하였더니 당량점까지 $20.0\ \text{mL}$가 들었고, $10.0\ \text{mL}$를 넣었을 때 pH는 4.20이었다. ① $\ce{HA}$의 처음 농도 ② $\mathrm{p}K_\mathrm{a}$ ③ 당량점의 pH ④ 알맞은 지시약을 구하여라.</p>
+      <p class="f21 step">① $\ce{NaOH}$ $2.00\ \text{mmol}$ = $\ce{HA}$ → $\dfrac{2.00\ \text{mmol}}{25.0\ \text{mL}}=0.0800\ \text{M}$</p>
+      <p class="f21 step">② $10.0\ \text{mL}$는 반당량점 → pH = $\mathrm{p}K_\mathrm{a}$ = 4.20 ($K_\mathrm{a}=6.3\times10^{-5}$)</p>
+      <p class="f21 step">③ $[\ce{A-}]=\dfrac{2.00}{45.0}=0.0444\ \text{M}$, $K_\mathrm{b}=1.6\times10^{-10}$, $[\ce{OH-}]=\sqrt{K_\mathrm{b}\times0.0444}=2.7\times10^{-6}\ \text{M}$ → pH 8.42</p>
+      <div class="answers step"><div class="answer">① 0.0800 M ② 4.20 ③ 8.42</div><div class="answer">④ 페놀프탈레인</div></div>
+    </div>
+    <div class="col stack">{{Q04}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 실험실 설계 ════════ -->
+<section class="slide" data-sec="04 · 실험실" data-title="실험실: 탐구 설계">
+  <h2><span class="tag">실험실</span>pH 센서로 식초 속 아세트산의 $\mathrm{p}K_\mathrm{a}$와 농도 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="small">디지털 탐구 「pH 센서로 적정 곡선을 그려 식초 속 아세트산의 $\mathrm{p}K_\mathrm{a}$와 농도 구하기」</p>
+      <p class="f21"><b>탐구 문제</b> 적정 곡선 하나로 산의 농도와 세기를 모두 알아낼 수 있을까?</p>
+      <table class="tight ac423-sm">
+        <tr><th class="l">조작 변인</th><td class="l">넣은 $\ce{NaOH}$ 용액의 부피</td></tr>
+        <tr><th class="l">종속 변인</th><td class="l">용액의 pH</td></tr>
+        <tr><th class="l">통제 변인</th><td class="l">시료 부피(10배 희석한 식초 25.0 mL), $\ce{NaOH}$ 농도(0.100 M), 온도, 젓는 속도</td></tr>
+      </table>
+      <ol class="ac423-ox f21">
+        <li>pH 센서를 보정하고, 희석한 식초 25.0 mL에 센서와 교반 막대를 넣는다.</li>
+        <li>$\ce{NaOH}$를 1.0 mL씩(급변 구간은 0.2 mL씩) 넣으며 pH가 11을 넘을 때까지 기록한다.</li>
+        <li>$\Delta\text{pH}/\Delta V$ 최대 = 당량점 → 농도 · 당량점 절반의 pH → $\mathrm{p}K_\mathrm{a}$</li>
+      </ol>
+      <div class="note"><b>안전</b> $\ce{NaOH}$ 용액은 피부·눈을 손상시킨다 — 보안경·장갑. 유리 전극이 교반 막대에 닿지 않게 설치한다.</div>
+    </div>
+    <div class="col">{{LABSET_A}}</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 실험실 ════════ -->
+<section class="slide" data-sec="04 · 실험실" data-title="실험실: 적정 곡선과 pKa">
+  <h2><span class="tag">실험실</span>$\ce{NaOH}$를 넣으며 적정 곡선 그리기</h2>
+  <div class="lab" data-lab="ac423titr">
+    <div class="lab-ctl" style="flex-basis:420px">
+      <div class="ac423-seg"><span class="small">시료</span><button class="btn on" data-a="0">염산</button><button class="btn" data-a="1">아세트산</button><button class="btn" data-a="2">희석한 식초</button></div>
+      <div class="ac423-seg"><span class="small">지시약</span><button class="btn on" data-ind="0">없음</button><button class="btn" data-ind="1">메틸 오렌지</button><button class="btn" data-ind="2">BTB</button><button class="btn" data-ind="3">페놀프탈레인</button></div>
+      <div class="ac423-seg"><span class="small">$\ce{NaOH}$</span><button class="btn ac423-m" data-add="5">+5.0 mL</button><button class="btn ac423-m" data-add="1">+1.0</button><button class="btn ac423-m" data-add="0.2">+0.2</button><button class="btn" data-act="reset">초기화</button></div>
+      <p class="small">시료 25.0 mL(염산·아세트산 0.100 M, 식초는 농도 모름) · 표준 용액 0.100 M $\ce{NaOH}$</p>
+      <table class="readout ac423-read">
+        <tr><th>넣은 부피</th><td><output data-o="v"></output></td></tr>
+        <tr class="hl"><th>측정 pH</th><td><output data-o="ph"></output></td></tr>
+        <tr><th>기록한 점</th><td><output data-o="n"></output></td></tr>
+      </table>
+      <output class="kind ac423-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 660px">
+      <div class="lab-fig" style="width:660px;height:300px">
+        <svg viewBox="0 0 660 300" width="660" height="300" aria-label="뷰렛과 pH 센서를 꽂은 비커, 넣은 수산화 나트륨 부피에 따른 pH 그래프"></svg>
+      </div>
+      <table class="tight ac423-log mt4"><thead><tr><th>회</th><th>시료</th><th>$V$ (mL)</th><th>pH</th><th>$\Delta\text{pH}/\Delta V$</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 실험실 결과 ════════ -->
+<section class="slide" data-sec="04 · 실험실" data-title="실험실: 결과와 해석">
+  <h2><span class="tag">실험실</span>결과 정리와 해석 (예시)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="tight ac423-sm">
+        <tr><th>당량점</th><td>$20.5\ \text{mL}$ → $\dfrac{0.100\times20.5}{25.0}=$ <span class="blank"><span class="step" data-g="r1">$0.0820\ \text{M}$</span></span></td></tr>
+        <tr><th>원래 식초</th><td>$10\times0.0820=0.820\ \text{M}$ → <span class="blank"><span class="step" data-g="r1">약 4.9 %</span></span> <span class="small">(60.05 g/mol, 밀도 1.00 g/mL 가정)</span></td></tr>
+        <tr><th>반당량점</th><td>$10.25\ \text{mL}$에서 pH 4.75 → $\mathrm{p}K_\mathrm{a}\approx$ <span class="blank"><span class="step" data-g="r1">4.75</span></span> (문헌 4.74)</td></tr>
+      </table>
+      <ol class="ac423-ox f21">
+        <li>당량점의 pH가 7보다 큰 까닭은? <span class="step">→ 아세트산이 모두 $\ce{CH3COO-}$가 되고, $\ce{CH3COO- + H2O &lt;=&gt; CH3COOH + OH-}$로 $\ce{OH-}$가 생긴다.</span></li>
+        <li>당량점 절반에서 pH = $\mathrm{p}K_\mathrm{a}$인 까닭은? <span class="step">→ $[\ce{CH3COOH}]=[\ce{CH3COO-}]$이므로 <span class="ans">$K_\mathrm{a}=[\ce{H3O+}]$</span>이다.</span></li>
+        <li>메틸 오렌지를 쓰면 어떤 오차가 생길까? <span class="step">→ pH 3.1–4.4에서 변색 — 종말점이 당량점보다 훨씬 앞이라 농도가 작게 계산된다. 페놀프탈레인(8.2–10.0)이 알맞다.</span></li>
+      </ol>
+    </div>
+    <div class="col">{{LABRES_A}}</div>
+  </div>
+</section>
+
+<!-- ════════ 32. 스스로 정리 ════════ -->
+<section class="slide" data-sec="03·04 염 용액의 성질과 중화 적정 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 산과 염기의 평형 — 03 · 04 (1)</h2>
+  <div class="ac423-map">
+    <div class="ac423-node ac423-dim">01 · 02<br>짝산과 짝염기<br>$K_\mathrm{a}K_\mathrm{b}=K_\mathrm{w}$<br>pH</div>
+    <div class="ac423-arr">→</div>
+    <div class="ac423-node ac423-main" data-q><b>03 염 용액의 산과 염기의 성질</b><br>❶ 약산의 음이온은 <span class="blank"><span class="step">염기</span></span>로, 약염기의 양이온은 산으로 작용 → <span class="blank"><span class="step">가수 분해</span></span><br>❷ $\ce{CH3COONa}$ 수용액: <span class="blank"><span class="step">염기성</span></span> · $\ce{NH4Cl}$ 수용액: <span class="blank"><span class="step">산성</span></span><br>❸ 두 이온 모두 반응하면 <span class="blank"><span class="step">$K_\mathrm{a}$와 $K_\mathrm{b}$</span></span> 비교</div>
+    <div class="ac423-node ac423-main" data-q><b>04 중화 반응</b><br>❹ 당량점: $nMV=$ <span class="blank"><span class="step">$n'M'V'$</span></span><br>❺ 약산–강염기 당량점 pH <span class="blank"><span class="step">&gt; 7</span></span><br>❻ 반당량점: pH = <span class="blank"><span class="step">$\mathrm{p}K_\mathrm{a}$</span></span><br>❼ 변색 범위가 <span class="blank"><span class="step">급변 구간</span></span> 안인 지시약</div>
+    <div class="ac423-arr">→</div>
+    <div class="ac423-node ac423-dim">완충 용액<br>완충 용량<br>혈액의 완충<br>(다음 시간)</div>
+  </div>
+</section>
+
+<!-- ════════ 33. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="03·04 염 용액의 성질과 중화 적정 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 염을 이루는 이온의 성질로 염 수용액의 액성을 예측하고, 가수 분해 반응식을 쓸 수 있다.</button>
+    <button class="chk">[과정·기능] 적정 곡선에서 당량점·반당량점을 읽어 산의 농도와 $\mathrm{p}K_\mathrm{a}$를 구하고, 알맞은 지시약을 골랐다.</button>
+    <button class="chk">[가치·태도] 신장병 치료제, 식초 함량 분석처럼 염 용액과 적정이 생활·의료에 쓰이는 예를 찾아보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 중화점에서는 항상 pH가 7일까? <span class="step">→ <span class="ans">아니다</span> — 약산–강염기의 당량점은 짝염기의 가수 분해로 pH &gt; 7이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 같은 농도의 $\ce{NaF}$와 $\ce{NaCl}$ 수용액 중 pH가 큰 것은? <span class="step">→ <span class="ans">$\ce{NaF}$</span> — $\ce{F-}$가 약염기로 작용한다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 적정 곡선의 완충 구간에서는 왜 염기를 넣어도 pH가 잘 변하지 않을까? — (2) 완충 용액</div>
+</section>
