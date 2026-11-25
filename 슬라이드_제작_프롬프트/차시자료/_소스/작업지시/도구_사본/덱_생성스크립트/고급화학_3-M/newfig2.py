@@ -1,0 +1,11 @@
+def hdiag():
+    s=[]; Y=lambda H: 100-H*(300/25937)
+    s.append(A(40,410,40,20,'muted',2)); s.append(T(50,26,mix='엔탈피 $H$',size=20,anchor='start',fill=MUTED))
+    s.append(L(60,Y(2326),300,Y(2326),INK,3)); s.append(L(300,Y(0),560,Y(0),INK,3)); s.append(L(60,Y(-23610.6),560,Y(-23610.6),INK,3))
+    s.append(L(300,Y(2326),560,Y(2326),MUTED,1.5,dash='5 4'))
+    s.append(T(62,Y(2326)-10,mix='$\\ce{C60(s) + 60O2(g)}$',size=20,anchor='start')+T(558,Y(0)+28,mix='$\\ce{60C(s)}$(흑연) + $\\ce{60O2(g)}$',size=20,anchor='end')+T(310,Y(-23610.6)+30,mix='$\\ce{60CO2(g)}$',size=20))
+    s.append(draw(A(130,Y(2326)+2,130,Y(-23610.6)-2,'ink',3),delay='.2')); s.append(T(140,230,mix='연소 $-25937$ kJ',size=20,anchor='start',halo=True))
+    s.append(draw(A(400,Y(0)+2,400,Y(-23610.6)-2,'ink',3),delay='.6')); s.append(T(410,250,mix='$60\\times(-393.51)$',size=20,anchor='start',halo=True)+T(410,278,mix='$=-23610.6$ kJ',size=20,anchor='start',halo=True))
+    s.append(stp('h1',[A(520,Y(0)-2,520,Y(2326)+1,'plus',3),T(510,Y(2326)-10,mix='$\\Delta H_\\mathrm{f}^\\circ=+2326$ kJ',size=20,anchor='end',fill=PLUS,halo=True)]))
+    return svg((580,440),520,'엔탈피 도표: C60과 산소가 흑연과 산소보다 2326 kJ 높고, 연소하면 25937 kJ 낮은 이산화 탄소가 된다',s)
+FIG['HDIAG']=hdiag()

@@ -1,0 +1,545 @@
+<!-- 고급화학 3-M 대단원 Ⅲ 마무리 — gen.py가 tpl.html에서 만든다(그림 자리표). 이 파일을 직접 고치지 말고 SCRATCH/고급화학_3-M/tpl.html을 고친다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 대단원 마무리</div>
+    <h1 class="ac39-h1">대단원 Ⅲ<br><span class="acc">마무리</span></h1>
+    <p class="sub">열과 일, 자발성, 그리고 전자의 이동</p>
+    <p class="meta">고등학교 고급 화학 157, 185–187쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <table class="tight ac39-std">
+    <tr><td>[12고화03-01]</td><td class="l">계의 내부 에너지 변화를 열과 일로 나타내고, 에너지 보존 법칙 설명</td></tr>
+    <tr><td>[12고화03-02]</td><td class="l">엔탈피의 정의, 헤스 법칙으로 반응 엔탈피 예측</td></tr>
+    <tr><td>[12고화03-03]</td><td class="l">엔트로피의 정의, 화학 변화에서 엔트로피 변화 예측</td></tr>
+    <tr><td>[12고화03-04]</td><td class="l">깁스 자유 에너지의 정의, 반응의 자발성 예측</td></tr>
+    <tr><td>[12고화03-05]</td><td class="l">산화수의 정의, 산화수 변화로 산화 환원 반응식 완성</td></tr>
+    <tr><td>[12고화03-06]</td><td class="l">표준 환원 전위의 정의, 화학 전지의 표준 전지 전위 구하기</td></tr>
+    <tr><td>[12고화03-07]</td><td class="l">표준 전지 전위와 깁스 자유 에너지의 관계, 다양한 화학 전지</td></tr>
+    <tr><td>[12고화03-08]</td><td class="l">전기 분해의 원리, 전기량과 생성물의 양적 관계</td></tr>
+  </table>
+  <ol class="goals mt8 f21">
+    <li>대단원 Ⅲ의 핵심 개념을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li><b>종합 문제</b>를 풀며 열역학 함수와 전지 전위를 계산하고 반응의 자발성을 판단할 수 있다.</li>
+    <li><b>고무줄</b>과 <b>화학 전지</b> STEAM 활동을 설계하고 결과를 발표할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">개념 정리</div><div class="farr">→</div>
+    <div class="fnode">대응표</div><div class="farr">→</div>
+    <div class="fnode">종합 문제 1–10</div><div class="farr">→</div>
+    <div class="fnode hl">STEAM: 고무줄 · 화학 전지 예술</div><div class="farr">→</div>
+    <div class="fnode">스스로 점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="개념 정리 ① 반응 엔탈피">
+  <h2><span class="tag ink">개념 정리</span>1. 화학 반응의 반응 엔탈피</h2>
+  <div class="ac39-top"><span class="ac39-u ac39-now">1. 반응 엔탈피</span><span class="ac39-ar">→</span><span class="ac39-u">2. 자발성</span><span class="ac39-ar">→</span><span class="ac39-u">3. 산화 환원</span><span class="ac39-ar">→</span><span class="ac39-u">4. 화학 전지</span><span class="ac39-ar">→</span><span class="ac39-u">5. 전기 분해</span></div>
+  <div class="ac39-map">
+    <div class="ac39-node" data-q><h3>01 화학 반응과 에너지 <span class="small c-muted">(3-1-1)</span></h3>
+      ❶ 열량계: $q=$ <span class="blank"><span class="step">$C_\text{열량계}\Delta T$</span></span><br>
+      ❷ 팽창 일: $w=$ <span class="blank"><span class="step">$-P_\text{외부}\Delta V$</span></span><br>
+      ❸ 열역학 제1법칙: $\Delta U=$ <span class="blank"><span class="step">$q+w$</span></span><br>
+      ❹ <span class="blank"><span class="step">$U$</span></span>는 상태 함수, $q$와 $w$는 아님<br>
+      ❺ <span class="ac39-deeptag">심화</span>등온 가역: $w=$ <span class="blank"><span class="step">$-nRT\ln\frac{V_\text{나중}}{V_\text{처음}}$</span></span></div>
+    <div class="ac39-node" data-q><h3>02 엔탈피 <span class="small c-muted">(3-1-2)</span></h3>
+      ❻ $H\equiv$ <span class="blank"><span class="step">$U+PV$</span></span>, 압력 일정: $\Delta H=$ <span class="blank"><span class="step">$q_P$</span></span><br>
+      ❼ 발열 반응의 $\Delta H$ <span class="blank"><span class="step">$&lt;0$</span></span><br>
+      ❽ 표준 상태 원소의 $\Delta H_\mathrm{f}^\circ=$ <span class="blank"><span class="step">0</span></span><br>
+      ❾ $\Delta H^\circ=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-$ <span class="blank"><span class="step">$\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$</span></span><br>
+      ❿ 경로와 관계없이 $\Delta H$의 합이 같다: <span class="blank"><span class="step">헤스 법칙</span></span></div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(3-1-1 #37, 3-1-2 #39)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="개념 정리 ② 자발성">
+  <h2><span class="tag ink">개념 정리</span>2. 화학 반응의 자발성</h2>
+  <div class="ac39-top"><span class="ac39-u">1. 반응 엔탈피</span><span class="ac39-ar">→</span><span class="ac39-u ac39-now">2. 자발성</span><span class="ac39-ar">→</span><span class="ac39-u">3. 산화 환원</span><span class="ac39-ar">→</span><span class="ac39-u">4. 화학 전지</span><span class="ac39-ar">→</span><span class="ac39-u">5. 전기 분해</span></div>
+  <div class="ac39-map">
+    <div class="ac39-node" data-q><h3>01 엔트로피 <span class="small c-muted">(3-2-1)</span></h3>
+      ❶ $\Delta S=$ <span class="blank"><span class="step">$q_\text{가역}/T$</span></span>, 등온 팽창 $\Delta S=$ <span class="blank"><span class="step">$nR\ln(V_2/V_1)$</span></span><br>
+      ❷ 볼츠만 식 $S=$ <span class="blank"><span class="step">$k\ln W$</span></span><br>
+      ❸ 제3법칙: 완전 결정의 $S(0\ \text{K})=$ <span class="blank"><span class="step">0</span></span><br>
+      ❹ $\Delta S^\circ=\sum n_\mathrm{p}S^\circ_\mathrm{m}-$ <span class="blank"><span class="step">$\sum n_\mathrm{r}S^\circ_\mathrm{m}$</span></span><br>
+      ❺ $\Delta S_\text{전체}$ <span class="blank"><span class="step">$&gt;0$</span></span>이면 자발적, $\Delta S_\text{주위}=$ <span class="blank"><span class="step">$-\Delta H/T$</span></span></div>
+    <div class="ac39-node" data-q><h3>02 깁스 자유 에너지 <span class="small c-muted">(3-2-2)</span></h3>
+      ❻ $G\equiv$ <span class="blank"><span class="step">$H-TS$</span></span>, $\Delta G=$ <span class="blank"><span class="step">$\Delta H-T\Delta S$</span></span><br>
+      ❼ 온도·압력 일정: $\Delta S_\text{전체}=$ <span class="blank"><span class="step">$-\Delta G/T$</span></span><br>
+      ❽ $\Delta G&lt;0$ <span class="blank"><span class="step">자발적</span></span>, $\Delta G=0$ <span class="blank"><span class="step">평형</span></span><br>
+      ❾ $\Delta H&lt;0$, $\Delta S&gt;0$: <span class="blank"><span class="step">모든 온도에서 자발적</span></span><br>
+      ❿ 부호가 같으면 $T=$ <span class="blank"><span class="step">$\Delta H^\circ/\Delta S^\circ$</span></span>에서 자발성이 바뀐다</div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(3-2-1 #38, 3-2-2 #30)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 5. 개념 정리 ③ ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="개념 정리 ③ 산화 환원">
+  <h2><span class="tag ink">개념 정리</span>3. 산화 환원 반응</h2>
+  <div class="ac39-top"><span class="ac39-u">1. 반응 엔탈피</span><span class="ac39-ar">→</span><span class="ac39-u">2. 자발성</span><span class="ac39-ar">→</span><span class="ac39-u ac39-now">3. 산화 환원</span><span class="ac39-ar">→</span><span class="ac39-u">4. 화학 전지</span><span class="ac39-ar">→</span><span class="ac39-u">5. 전기 분해</span></div>
+  <div class="row mt8">
+    <div class="col">
+      <div class="ac39-node" data-q><h3>01 산화수 개념 · 02 산화제와 환원제 <span class="small c-muted">(3-3-1)</span></h3>
+        ❶ 산화수: 전기음성도가 큰 원자가 공유 전자를 <span class="blank"><span class="step">완전히 차지</span></span>한다고 가정한 가상의 전하 (형식 전하는 <span class="blank"><span class="step">공평하게 나눔</span></span>)<br>
+        ❷ 산화 = 전자 <span class="blank"><span class="step">잃음</span></span> = 산화수 <span class="blank"><span class="step">증가</span></span><br>
+        ❸ 다원자 이온의 산화수 합 = <span class="blank"><span class="step">이온의 전하</span></span>, $\ce{O}$는 보통 <span class="blank"><span class="step">$-2$</span></span><br>
+        ❹ 반쪽 반응법: <span class="blank"><span class="step">원자 수와 전하</span></span>를 맞추고, 잃은 $e^-$ <span class="blank"><span class="step">=</span></span> 얻은 $e^-$<br>
+        ❺ 산화제는 자신이 <span class="blank"><span class="step">환원</span></span>되며 상대를 산화시킨다</div>
+    </div>
+    <div class="col stack" style="flex:0 0 400px">{{ELTR}}
+      <div class="ac39-band">$\ce{Zn + Cu^2+ -> Zn^2+ + Cu}$ — 환원제 $\ce{Zn}$, 산화제 $\ce{Cu^2+}$</div>
+    </div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(3-3-1 #31)와 같다.</p>
+</section>
+
+<!-- ════════ 6. 개념 정리 ④ ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="개념 정리 ④ 화학 전지">
+  <h2><span class="tag ink">개념 정리</span>4. 화학 전지</h2>
+  <div class="ac39-top"><span class="ac39-u">1. 반응 엔탈피</span><span class="ac39-ar">→</span><span class="ac39-u">2. 자발성</span><span class="ac39-ar">→</span><span class="ac39-u">3. 산화 환원</span><span class="ac39-ar">→</span><span class="ac39-u ac39-now">4. 화학 전지</span><span class="ac39-ar">→</span><span class="ac39-u">5. 전기 분해</span></div>
+  <div class="ac39-map">
+    <div class="ac39-node" data-q><h3>01 화학 전지의 개요 <span class="small c-muted">(3-4-1a)</span></h3>
+      ❶ 산화 전극 = <span class="blank"><span class="step">(−)극</span></span>, 환원 전극 = (+)극<br>
+      ❷ 염다리: 음이온 → <span class="blank"><span class="step">산화 전극 쪽</span></span><br>
+      ❸ 전지 표기: <span class="blank"><span class="step">산화</span></span> 반쪽 전지가 왼쪽, $\|$ 염다리</div>
+    <div class="ac39-node" data-q><h3>02 전지 전위 <span class="small c-muted">(3-4-1b)</span></h3>
+      ❹ 표준 수소 전극 $E^\circ=$ <span class="blank"><span class="step">$0.00\ \text{V}$</span></span><br>
+      ❺ $E^\circ_\text{전지}=E^\circ_\text{환원 전극}-$ <span class="blank"><span class="step">$E^\circ_\text{산화 전극}$</span></span><br>
+      ❻ $\Delta G^\circ=$ <span class="blank"><span class="step">$-nFE^\circ_\text{전지}$</span></span><br>
+      ❼ <span class="ac39-deeptag">심화</span>$E_\text{전지}=E^\circ_\text{전지}-$ <span class="blank"><span class="step">$(0.0592/n)\log Q$</span></span></div>
+    <div class="ac39-node" data-q><h3>03 실용 전지 <span class="small c-muted">(3-4-3)</span></h3>
+      ❽ 2차 전지: 역반응을 일으켜 <span class="blank"><span class="step">충전</span></span><br>
+      ❾ 연료 전지: 연료와 산화제를 <span class="blank"><span class="step">바깥에서 공급</span></span><br>
+      ❿ 전지 전위가 클수록 전자 1 mol당 최대 일 $FE$가 <span class="blank"><span class="step">크다</span></span></div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(3-4-1a #27, 3-4-1b #27, 3-4-3 #29)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 7. 개념 정리 ⑤ ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="개념 정리 ⑤ 전기 분해">
+  <h2><span class="tag ink">개념 정리</span>5. 전기 분해</h2>
+  <div class="ac39-top"><span class="ac39-u">1. 반응 엔탈피</span><span class="ac39-ar">→</span><span class="ac39-u">2. 자발성</span><span class="ac39-ar">→</span><span class="ac39-u">3. 산화 환원</span><span class="ac39-ar">→</span><span class="ac39-u">4. 화학 전지</span><span class="ac39-ar">→</span><span class="ac39-u ac39-now">5. 전기 분해</span></div>
+  <div class="row mt8">
+    <div class="col">
+      <div class="ac39-node" data-q><h3>01 전기 분해와 전해 전지 <span class="small c-muted">(3-5-1)</span></h3>
+        ❶ 전해 전지: $\Delta G$ <span class="blank"><span class="step">$&gt;0$</span></span>, $E_\text{전지}$ <span class="blank"><span class="step">$&lt;0$</span></span>인 반응을 외부 전기 에너지로<br>
+        ❷ 전해 전지의 산화 전극은 <span class="blank"><span class="step">(+)극</span></span>, 환원 전극은 <span class="blank"><span class="step">(−)극</span></span><br>
+        ❸ 물: 환원 전극 <span class="blank"><span class="step">$\ce{H2}$</span></span>, 산화 전극 <span class="blank"><span class="step">$\ce{O2}$</span></span>, 부피비 <span class="blank"><span class="step">2 : 1</span></span><br>
+        ❹ $\ce{NaCl}$ 수용액: $\ce{Na+}$ 대신 <span class="blank"><span class="step">물</span></span>이 환원된다<br>
+        ❺ 전자의 양 $n_{e^-}=$ <span class="blank"><span class="step">$\dfrac{It}{F}$</span></span> → 계수비로 생성물의 양<br>
+        ❻ 도금: 도금할 물체를 <span class="blank"><span class="step">환원 전극</span></span>에 연결</div>
+    </div>
+    <div class="col" style="flex:0 0 340px">{{ELEC}}</div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(3-5-1 #27)와 같다.</p>
+</section>
+
+<!-- ════════ 8. 연결 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="연결: 에너지로 잇는 대단원 Ⅲ">
+  <h2><span class="tag alt">연결</span>에너지로 잇는 대단원 Ⅲ</h2>
+  {{FLOW}}
+  <p class="f21 mt8"><b>Q</b> 대단원 Ⅲ를 한 줄로 이으면 어떻게 될까?</p>
+  <div class="answer step ac39-left">열과 일로 나타낸 에너지 변화($\Delta H$)와 엔트로피 변화($\Delta S$)를 깁스 자유 에너지($\Delta G=\Delta H-T\Delta S$)로 묶으면 자발성을 판단할 수 있고, 산화 환원 반응에서는 그 자유 에너지가 전지 전위로 나타난다($\Delta G^\circ=-nFE^\circ_\text{전지}$).</div>
+  <p class="small step mt8">종합 문제 1·2 → Ⅲ-1 · 3·4·5 → Ⅲ-2 · 6 → Ⅲ-3 · 7–10 → Ⅲ-4 · STEAM ① 고무줄 → Ⅲ-2 · STEAM ② 화학 전지 예술 → Ⅲ-4·Ⅲ-5</p>
+</section>
+
+<!-- ════════ 9. 연습 문제 대응표 ① ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="연습 문제 대응표 ① Ⅲ-1·Ⅲ-2">
+  <h2><span class="tag alt">연습 문제 대응표</span>Ⅲ-1 반응 엔탈피 · Ⅲ-2 자발성</h2>
+  <table class="tight ac39-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac39-sec" rowspan="5">Ⅲ-1 (141쪽)</td><td>1</td><td class="l">열린계, 닫힌계, 고립계</td><td class="ac39-deck">3-1-2 #34</td><td class="l ac39-key"><span class="step" data-g="k1">고립계 · 닫힌계 · 고립계 · 열린계 · 닫힌계 · 열린계</span></td></tr>
+    <tr><td>2</td><td class="l">수소와 메테인의 1 g당 연소열</td><td class="ac39-deck">#35</td><td class="l ac39-key"><span class="step" data-g="k1">메테인 약 78 kJ/g, 수소 약 141 kJ/g</span></td></tr>
+    <tr><td>3</td><td class="l">등온 가역 압축의 $w$, $q$, $\Delta U$ [심화]</td><td class="ac39-deck">#36</td><td class="l ac39-key"><span class="step" data-g="k1">$w=+3.46$ kJ, $q=-3.46$ kJ, $\Delta U=0$</span></td></tr>
+    <tr><td>4</td><td class="l">$\ce{PCl5(s)}$의 표준 생성 엔탈피</td><td class="ac39-deck">#37</td><td class="l ac39-key"><span class="step" data-g="k1">$-443.7$ kJ/mol</span></td></tr>
+    <tr><td>5</td><td class="l">다이보레인 합성의 $\Delta H$</td><td class="ac39-deck">#38</td><td class="l ac39-key"><span class="step" data-g="k1">$+36$ kJ</span></td></tr>
+    <tr><td class="ac39-sec" rowspan="4">Ⅲ-2 (156쪽)</td><td>1</td><td class="l">온도가 다른 두 구리 덩어리</td><td class="ac39-deck">3-2-2 #26</td><td class="l ac39-key"><span class="step" data-g="k1">$\Delta S=\frac1{T_1}-\frac1{T_2}&gt;0$, 부호 $+$</span></td></tr>
+    <tr><td>2</td><td class="l">아르곤의 비가역 압축</td><td class="ac39-deck">#27</td><td class="l ac39-key"><span class="step" data-g="k1">$\Delta S=-13.2$ J/K</span></td></tr>
+    <tr><td>3</td><td class="l">마그네슘 연소의 자발성</td><td class="ac39-deck">#28</td><td class="l ac39-key"><span class="step" data-g="k1">$\Delta S_\text{전체}=+3.82\times10^{3}$ J/K, 자발적</span></td></tr>
+    <tr><td>4</td><td class="l">탄소로 산화 철(Ⅲ)을 환원하는 온도</td><td class="ac39-deck">#29</td><td class="l ac39-key"><span class="step" data-g="k1">838 K(약 565 °C)보다 높은 온도</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">풀이·그림은 각 덱의 그 장에 있다. 정답은 한 번에 열린다.</p>
+</section>
+
+<!-- ════════ 10. 연습 문제 대응표 ② ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="연습 문제 대응표 ② Ⅲ-3·Ⅲ-4·Ⅲ-5">
+  <h2><span class="tag alt">연습 문제 대응표</span>Ⅲ-3 산화 환원 · Ⅲ-4 화학 전지 · Ⅲ-5 전기 분해</h2>
+  <table class="tight ac39-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac39-sec" rowspan="3">Ⅲ-3 (163쪽)</td><td>1</td><td class="l">산화·환원의 정의</td><td class="ac39-deck">3-3-1 #26</td><td class="l ac39-key"><span class="step" data-g="k2">전자 잃음·산화수 증가 / 전자 얻음·산화수 감소</span></td></tr>
+    <tr><td>2</td><td class="l">산성 용액 반응식</td><td class="ac39-deck">#27–28</td><td class="l ac39-key"><span class="step" data-g="k2">$\ce{3O2 + 4NO + 2H2O -> 4NO3- + 4H+}$<br>$\ce{2CrO4^2- + 3N2O + 10H+ -> 2Cr^3+ + 6NO + 5H2O}$</span></td></tr>
+    <tr><td>3</td><td class="l">알칼리 전지 양적 관계</td><td class="ac39-deck">#29–30</td><td class="l ac39-key"><span class="step" data-g="k2">전자 몰수비 1 : 1 · $\ce{MnO2}$ 12.0 g, $\ce{H2O}$ 2.48 g</span></td></tr>
+    <tr><td class="ac39-sec" rowspan="5">Ⅲ-4 (180쪽)</td><td>1</td><td class="l">염다리의 작용</td><td class="ac39-deck">3-4-3 #24</td><td class="l ac39-key"><span class="step" data-g="k2">음이온 → $\ce{Zn}$ 쪽, 양이온 → $\ce{Cu}$ 쪽 — 전기적 중성 유지</span></td></tr>
+    <tr><td>2</td><td class="l">비표준 전지 전위 [심화]</td><td class="ac39-deck">#25</td><td class="l ac39-key"><span class="step" data-g="k2">$0.069$ V</span></td></tr>
+    <tr><td>3</td><td class="l">은–카드뮴 전지의 $E^\circ$</td><td class="ac39-deck">#26</td><td class="l ac39-key"><span class="step" data-g="k2">$+1.201$ V</span></td></tr>
+    <tr><td>4</td><td class="l">반응식과 자발성</td><td class="ac39-deck">#27</td><td class="l ac39-key"><span class="step" data-g="k2">$+0.28$ V 자발적 / $-0.11$ V 비자발적</span></td></tr>
+    <tr><td>5</td><td class="l">$K$로 $\Delta G^\circ$, $E^\circ$ 구하기</td><td class="ac39-deck">#28</td><td class="l ac39-key"><span class="step" data-g="k2">$-2.85\times10^{4}$ J/mol, $0.148$ V</span></td></tr>
+    <tr><td class="ac39-sec" rowspan="3">Ⅲ-5 (185쪽)</td><td>1</td><td class="l">볼타·전해 전지의 전극 반응</td><td class="ac39-deck">3-5-1 #24</td><td class="l ac39-key"><span class="step" data-g="k2">주어진 반응 = 전해 전지($\ce{Cu}$ 산화), 역반응 = 볼타 전지($\ce{Sn}$ 산화)</span></td></tr>
+    <tr><td>2</td><td class="l">전해 전지의 부호</td><td class="ac39-deck">#25</td><td class="l ac39-key"><span class="step" data-g="k2">산화 전극 (+)극, 환원 전극 (−)극, $\Delta G&gt;0$, $E_\text{전지}&lt;0$</span></td></tr>
+    <tr><td>3</td><td class="l">묽은 산의 전기 분해</td><td class="ac39-deck">#26</td><td class="l ac39-key"><span class="step" data-g="k2">(+)극 $\ce{O2}$, (−)극 $\ce{H2}$ · 전체 $\ce{2H2O -> 2H2 + O2}$</span></td></tr>
+  </table>
+</section>
+
+<!-- ════════ 11. 종합 문제 대응표 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 대단원 마무리" data-title="종합 문제 대응표">
+  <h2><span class="tag alt">종합 문제 대응표</span>종합 문제는 어느 소단원 덱과 이어질까?</h2>
+  <table class="tight ac39-ov">
+    <tr><th>종합</th><th>내용</th><th>같은·비슷한 내용을 다룬 소단원 덱 (#장)</th><th>이 덱</th></tr>
+    <tr><td>1</td><td class="l">펌프로 공기를 압축하는 일</td><td class="l">3-1-1 팽창 일(#18) · 예제 Ⅲ-1(#20) · 피스톤 실험실(#29)</td><td>#12</td></tr>
+    <tr><td>2</td><td class="l">$\ce{C60}$의 표준 생성 엔탈피</td><td class="l">3-1-2 생성 엔탈피로 반응 엔탈피(#20) · 연습 문제 4(#37)</td><td>#13</td></tr>
+    <tr><td>3</td><td class="l">표준 몰 엔트로피 비교</td><td class="l">3-2-1 볼츠만 식(#15) · 표준 몰 엔트로피의 경향(#25)</td><td>#14</td></tr>
+    <tr><td>4</td><td class="l">두 경로의 $\Delta S$, $\Delta S_\text{주위}$, $\Delta S_\text{전체}$</td><td class="l">3-2-1 부피가 커질 때(#11) · 전체 엔트로피 변화(#30) · 3-1-1 [심화] 등온 가역 팽창(#22)</td><td>#15</td></tr>
+    <tr><td>5</td><td class="l">메탄올 합성의 $\Delta G^\circ$와 온도</td><td class="l">3-2-2 자발성이 바뀌는 온도(#15) · 예제 Ⅲ-8(#16) · ΔG°–T 실험실(#20)</td><td>#16</td></tr>
+    <tr><td>6</td><td class="l">산성 용액의 산화 환원 반응식</td><td class="l">3-3-1 반쪽 반응법(#15) · 예제 Ⅲ-9(#20–21) · 연습 문제 2(#27–28)</td><td>#17</td></tr>
+    <tr><td>7</td><td class="l">$\ce{Ag}$–$\ce{Pb}$ 다니엘 전지</td><td class="l">3-4-1a 전자와 이온의 이동(#11) · 염다리(#16) · 실험실(#23)</td><td>#18</td></tr>
+    <tr><td>8</td><td class="l">전지 표기로 전체 반응 쓰기</td><td class="l">3-4-1a 전지 표기법(#14) · 예제 Ⅲ-10(#18–19)</td><td>#19</td></tr>
+    <tr><td>9</td><td class="l">$E^\circ_\text{전지}$로 자발성 판단</td><td class="l">3-4-1b 표준 전지 전위 구하기(#13) · 예제 Ⅲ-11(#16–17) · 3-4-3 연습 문제 4(#27)</td><td>#20</td></tr>
+    <tr><td>10</td><td class="l">농도가 다른 전지의 전위 [심화]</td><td class="l">3-4-1b [심화] 네른스트 식(#23) · 예제 Ⅲ-12(#25)</td><td>#21</td></tr>
+  </table>
+  <div class="note mt8">Ⅲ-5 전기 분해는 종합 문제에 없다 — <b>STEAM ②</b>(#25–28)에서 다니엘 전지와 함께 쓴다.</div>
+</section>
+
+<!-- ════════ 12. 종합 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 1">
+  <h2><span class="tag q">종합 문제 1</span>자전거 펌프로 공기를 압축하는 일</h2>
+  <p class="f21">자전거 펌프 손잡이를 밀어서 공기를 압축하였다. 펌프의 내부 지름이 3.0 cm이고, 2.00 atm의 압력으로 20 cm를 밀어 압축시켰다. 1) 압축 과정에서 한 일은 얼마인가? 2) 이 일은 펌프 안의 공기 측면에서 양수인가 또는 음수인가?</p>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{PUMP}}
+      <p class="f21"><b>Q</b> 2) 공기(계)가 받은 일은 양수일까, 음수일까?</p>
+      <div class="answer step ac39-left">양수 — 압축($\Delta V&lt;0$)이므로 계가 일을 받는다($w&gt;0$).</div>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 부피 변화 $\Delta V$는 얼마일까?</p>
+      <p class="f21 step">$\Delta V=-\pi r^2d=-\pi(1.5\ \text{cm})^2(20\ \text{cm})$<br>$\phantom{\Delta V}=-141\ \text{cm}^3=-0.141\ \text{L}$</p>
+      <p class="f21 step">$w=-P_\text{외부}\Delta V=-(2.00\ \text{atm})(-0.141\ \text{L})$<br>$\phantom{w}=+0.283\ \text{L}\cdot\text{atm}\times101.325\ \text{J/(L}\cdot\text{atm)}$</p>
+      <div class="answer step">$w\approx+28.7\ \text{J}$ (약 $+29\ \text{J}$)</div>
+      <p class="small c-muted step">부록 풀이는 $\Delta V$를 $-0.14\ \text{L}$로 반올림한 뒤 곱해 $+28.4\ \text{J}$이다.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 종합 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 2">
+  <h2><span class="tag q">종합 문제 2</span>풀러렌의 표준 생성 엔탈피</h2>
+  <p class="f21">축구공 모양의 분자인 풀러렌 $\ce{C60}$의 연소 반응 엔탈피는 $-25937\ \text{kJ/mol}$이다. $\ce{C60(s)}$의 연소 반응식을 쓰고, $\ce{C60(s)}$의 표준 생성 엔탈피를 구하여라. (단, $\ce{CO2(g)}$의 표준 생성 엔탈피는 $-393.51\ \text{kJ/mol}$이다.)</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 연소 반응식은?</p>
+      <div class="answer step">$\ce{C60(s) + 60O2(g) -> 60CO2(g)}$</div>
+      <p class="f21 step">$\Delta H^\circ=60\Delta H_\mathrm{f}^\circ(\ce{CO2})-\Delta H_\mathrm{f}^\circ(\ce{C60})$ &nbsp;<span class="small">($\ce{O2}$는 원소 → 0)</span></p>
+      <p class="f21 step">$-25937=60\times(-393.51)-\Delta H_\mathrm{f}^\circ(\ce{C60})$</p>
+      <div class="answer step">$\Delta H_\mathrm{f}^\circ(\ce{C60},\,s)=+2326\ \text{kJ/mol}$</div>
+      <p class="small step">양수 — $\ce{C60}$은 같은 탄소로 된 흑연보다 엔탈피가 높다.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 520px">{{HDIAG}}</div>
+  </div>
+</section>
+
+<!-- ════════ 14. 종합 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 3">
+  <h2><span class="tag q">종합 문제 3</span>표준 몰 엔트로피가 더 큰 쪽은?</h2>
+  <p class="f21">298 K에서 다음 2개 물질 중 어느 것의 표준 몰 엔트로피 값이 더 크다고 예상하는가? 그 이유를 설명하여라.</p>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 380px">{{ENT3}}
+      <div class="board" style="min-height:30px"></div></div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 아이오딘 $\ce{I2}$ 증기와 브로민 $\ce{Br2}$ 증기 중 큰 쪽은?</p>
+      <div class="answer step ac39-left"><b>$\ce{I2}$ 증기</b> — 분자량이 커서 원자를 이루는 입자 수(전자 수)가 많고, 가능한 미시 상태 수가 더 많다. <span class="small">(문헌 값 260.7, 245.5 J/(K·mol))</span></div>
+      <p class="f21"><b>Q</b> 2) 사이클로펜테인 액체와 1-펜텐 액체 중 큰 쪽은?</p>
+      <div class="answer step ac39-left"><b>1-펜텐</b> — 고리로 닫힌 사이클로펜테인보다 열린 사슬이라 회전·진동 운동이 더 자유롭다.</div>
+      <p class="f21"><b>Q</b> 3) 같은 질량의 에틸렌과 폴리에틸렌 중 큰 쪽은?</p>
+      <div class="answer step ac39-left"><b>에틸렌</b> — 기체이고, 같은 질량이면 분자 수가 훨씬 많다(폴리에틸렌은 고체 고분자).</div>
+      <p class="small c-muted">$S=k\ln W$ — 미시 상태 수 $W$가 많을수록 엔트로피가 크다(3-2-1 #15).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 종합 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 4">
+  <h2><span class="tag q">종합 문제 4</span>두 경로로 팽창한 기체의 엔트로피 변화</h2>
+  <p class="f21">어떤 이상 기체가 초기에 323 K, 4.95 atm에서 1.67 L를 차지한다. 이 기체를 두 경로에 따라서 7.33 L까지 팽창시켰다. 각 경로의 $\Delta S$와 $\Delta S_\text{전체}$, 그리고 $\Delta S_\text{주위}$를 계산하여라. 1) 등온 가역 팽창 2) 등온 비가역 자유 팽창</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21 step">$n=\dfrac{PV}{RT}=\dfrac{(4.95)(1.67)}{(0.08206)(323)}=0.312\ \text{mol}$</p>
+      <p class="f21 step">$\Delta S=nR\ln\dfrac{V_2}{V_1}=(0.312)(8.314)\ln\dfrac{7.33}{1.67}=+3.84\ \text{J/K}$ — 상태 함수라 두 경로가 같다</p>
+      <p class="f21"><b>Q</b> 두 경로에서 주위의 엔트로피 변화는 어떻게 다를까?</p>
+      <table class="tight ac39-t">
+        <tr><th>경로 (J/K)</th><th>$\Delta S$</th><th>$\Delta S_\text{주위}$</th><th>$\Delta S_\text{전체}$</th></tr>
+        <tr><td class="l">1) 등온 가역</td><td>$+3.84$</td><td><span class="step" data-g="p4">$-3.84$</span></td><td><span class="step" data-g="p4">$0$</span></td></tr>
+        <tr><td class="l">2) 자유 팽창</td><td>$+3.84$</td><td><span class="step" data-g="p4">$0$</span></td><td><span class="step" data-g="p4">$+3.84$</span></td></tr>
+      </table>
+      <p class="small step">가역: 주위가 $q=T\Delta S\approx1.24\ \text{kJ}$를 내줌 · 자유 팽창: $w=0$, $\Delta U=0$ → $q=0$, 주위 변화 없음 → 자발적. (부록의 $R=0.0826$은 0.08206의 오식)</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 360px">{{PATHS}}</div>
+  </div>
+</section>
+
+<!-- ════════ 16. 종합 문제 5 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 5">
+  <h2><span class="tag q">종합 문제 5</span>메탄올 합성의 자발성</h2>
+  <p class="f21">메탄올은 $\ce{CO(g) + 2H2(g) -> CH3OH(g)}$로 합성한다. 1) 25 °C에서 $\Delta G^\circ$는? 2) 25 °C에서 자발적인가? 3) 정반응과 역반응 모두 자발적이 되는 온도는?</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21 step">$\Delta H^\circ=-201-(-111)=-90\ \text{kJ}$, $\ \Delta S^\circ=240-(198+2\times131)=-220\ \text{J/K}$</p>
+      <p class="f21 step"><b>1)</b> $\Delta G^\circ=-90-(298)(-0.220)=$ <b>$-24.4\ \text{kJ}$</b> &nbsp; <b>2)</b> $\Delta G^\circ&lt;0$ → <b>자발적</b></p>
+      <p class="f21"><b>Q</b> 3) 어느 온도에서 자발성이 바뀔까?</p>
+      <div class="answer step ac39-left">$T=\Delta H^\circ/\Delta S^\circ=(-90\ \text{kJ})/(-0.220\ \text{kJ/K})=409\ \text{K}$ (약 136 °C)</div>
+      <p class="small step">409 K에서 $\Delta G^\circ=0$(평형), 더 높으면 역반응이 자발적. 부록의 「−24.44 J/K」는 kJ의 오식.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 440px"><table class="tight ac39-t">
+        <tr><th>물질</th><th>$\Delta H_\mathrm{f}^\circ$ (kJ/mol)</th><th>$S^\circ_\mathrm{m}$ (J/(K·mol))</th></tr>
+        <tr><td>$\ce{CO(g)}$</td><td>$-111$</td><td>198</td></tr>
+        <tr><td>$\ce{H2(g)}$</td><td>0</td><td>131</td></tr>
+        <tr><td>$\ce{CH3OH(g)}$</td><td>$-201$</td><td>240</td></tr>
+      </table>
+      {{GT}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. 종합 문제 6 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 6">
+  <h2><span class="tag q">종합 문제 6</span>산성 용액에서 산화 환원 반응식 완성</h2>
+  <p class="f21">균형 반응식을 완성하고, 산화제와 환원제를 판명하여라. &nbsp;1) $\ce{Cu(s) + NO3-(aq) -> Cu^2+(aq) + NO(g)}$ &nbsp;2) $\ce{H2O2(aq) + Fe^2+(aq) -> H2O(l) + Fe^3+(aq)}$</p>
+  <p class="f21 mt8"><b>Q</b> 1) 산화수가 변하는 원자는? <span class="step">$\ce{Cu}$ $0\rightarrow+2$ (산화), $\ce{N}$ $+5\rightarrow+2$ (환원)</span></p>
+  <p class="f21 step">환원 $\ce{NO3- + 4H+ + 3e- -> NO + 2H2O}$ $(\times2)$ &nbsp;·&nbsp; 산화 $\ce{Cu -> Cu^2+ + 2e-}$ $(\times3)$</p>
+  <div class="answer step ac39-left">$\ce{3Cu(s) + 8H+(aq) + 2NO3-(aq) -> 3Cu^2+(aq) + 2NO(g) + 4H2O(l)}$ — 산화제 $\ce{NO3-}$, 환원제 $\ce{Cu}$ <span class="small">(검산: Cu 3, H 8, N 2, O 6 · 전하 +6 = +6)</span></div>
+  <p class="f21 mt8"><b>Q</b> 2) 산화수가 변하는 원자는? <span class="step">$\ce{O}$ $-1\rightarrow-2$ (환원), $\ce{Fe}$ $+2\rightarrow+3$ (산화)</span></p>
+  <p class="f21 step">환원 $\ce{H2O2 + 2H+ + 2e- -> 2H2O}$ &nbsp;·&nbsp; 산화 $\ce{Fe^2+ -> Fe^3+ + e-}$ $(\times2)$</p>
+  <div class="answer step ac39-left">$\ce{H2O2(aq) + 2H+(aq) + 2Fe^2+(aq) -> 2H2O(l) + 2Fe^3+(aq)}$ — 산화제 $\ce{H2O2}$, 환원제 $\ce{Fe^2+}$ <span class="small">(검산: H 4, O 2, Fe 2 · 전하 +6 = +6)</span></div>
+  <div class="board" style="min-height:30px"></div>
+</section>
+
+<!-- ════════ 18. 종합 문제 7 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 7">
+  <h2><span class="tag q">종합 문제 7</span>$\ce{Ag}$/$\ce{Ag+}$–$\ce{Pb}$/$\ce{Pb^2+}$ 전지</h2>
+  <p class="f21">$\ce{Ag}$/$\ce{Ag+}$ 반쪽 전지와 $\ce{Pb}$/$\ce{Pb^2+}$ 반쪽 전지로 구성된 다니엘 전지의 균형 반쪽 반응식과 전체 반응식을 적어라. 은 전극이 (+)극이다. 회로에 전자의 이동 방향을 그리고, 염다리에 이온의 이동 방향을 표시하여라.</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 은 전극이 (+)극이면, 산화 전극은 어느 쪽일까?</p>
+      <p class="f21 step">산화 전극((−)극): $\ce{Pb(s) -> Pb^2+(aq) + 2e-}$</p>
+      <p class="f21 step">환원 전극((+)극): $\ce{Ag+(aq) + e- -> Ag(s)}$ $(\times2)$</p>
+      <div class="answer step">$\ce{Pb(s) + 2Ag+(aq) -> Pb^2+(aq) + 2Ag(s)}$</div>
+      <p class="small step" data-g="c7">전자: $\ce{Pb}$ → 도선 → $\ce{Ag}$ · 염다리: $\ce{NO3-}$ → $\ce{Pb}$ 쪽, $\ce{K+}$ → $\ce{Ag}$ 쪽. 염다리에 $\ce{KCl}$을 쓰면 $\ce{AgCl}$ 앙금이 생기므로 $\ce{KNO3}$를 쓴다. $E^\circ_\text{전지}=0.80-(-0.13)=0.93\ \text{V}$</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 520px">{{CELL7}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. 종합 문제 8 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 8">
+  <h2><span class="tag q">종합 문제 8</span>전지 표기로 전체 반응 쓰기</h2>
+  <p class="f21">다음 화학 전지들의 전체 반응을 제시하여라. &nbsp;1) $\ce{Mg(s)}\,|\,\ce{Mg^2+(aq)}\,\|\,\ce{Sc^3+(aq)}\,|\,\ce{Sc(s)}$ &nbsp;2) $\ce{Zn(s)}\,|\,\ce{Zn^2+(aq)}\,\|\,\ce{H+(aq)}\,|\,\ce{H2(g)}\,|\,\ce{Pt(s)}$</p>
+  {{NOTE8}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 주고받는 전자 수를 맞추면?</p>
+      <p class="f21 step">$\ce{Mg -> Mg^2+ + 2e-}$ $(\times3)$, $\ \ce{Sc^3+ + 3e- -> Sc}$ $(\times2)$ — 전자 6개</p>
+      <div class="answer step ac39-left">$\ce{3Mg(s) + 2Sc^3+(aq) -> 3Mg^2+(aq) + 2Sc(s)}$</div>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 2) $\ce{Pt}$는 무슨 일을 할까?</p>
+      <p class="f21 step">$\ce{Zn -> Zn^2+ + 2e-}$, $\ \ce{2H+ + 2e- -> H2}$ — $\ce{Pt}$는 전자만 전하는 비활성 전극</p>
+      <div class="answer step ac39-left">$\ce{Zn(s) + 2H+(aq) -> Zn^2+(aq) + H2(g)}$</div>
+    </div>
+  </div>
+  <div class="board" style="min-height:30px"></div>
+</section>
+
+<!-- ════════ 20. 종합 문제 9 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 9">
+  <h2><span class="tag q">종합 문제 9</span>표준 전지 전위로 자발성 판단</h2>
+  <p class="f21">25 °C에서 균형 반응식을 완성하고, 반응의 자발성을 판명하여라. &nbsp;1) $\ce{Ag(s) + Cu^2+(aq) -> Ag+(aq) + Cu(s)}$ &nbsp;2) $\ce{Cl2(g) + Pb(s) -> Cl-(aq) + Pb^2+(aq)}$</p>
+  <div class="row">
+    <div class="col stack">
+      <div class="answer step ac39-left">1) $\ce{2Ag(s) + Cu^2+(aq) -> 2Ag+(aq) + Cu(s)}$</div>
+      <p class="f21 step">$E^\circ_\text{전지}=E^\circ(\ce{Cu^2+}/\ce{Cu})-E^\circ(\ce{Ag+}/\ce{Ag})$<br>$\phantom{E^\circ_\text{전지}}=0.34-0.80=-0.46\ \text{V}$ → <b>비자발적</b>(역반응이 자발적)</p>
+      <div class="answer step ac39-left">2) $\ce{Cl2(g) + Pb(s) -> 2Cl-(aq) + Pb^2+(aq)}$</div>
+      <p class="f21 step">$E^\circ_\text{전지}=E^\circ(\ce{Cl2}/\ce{Cl-})-E^\circ(\ce{Pb^2+}/\ce{Pb})$<br>$\phantom{E^\circ_\text{전지}}=1.36-(-0.13)=+1.49\ \text{V}$ → <b>자발적</b></p>
+      <p class="small c-muted">부록 풀이는 산화 반쪽 반응 옆에 부호를 바꾼 값($-0.80$, $+0.13\ \text{V}$)을 적었다. 이 덱은 늘 표준 환원 전위로 쓴다 — 결과는 같다.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 440px">{{LAD9}}</div>
+  </div>
+</section>
+
+<!-- ════════ 21. 종합 문제 10 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 종합 문제" data-title="종합 문제 10 (심화)">
+  <h2><span class="tag q">종합 문제 10</span>농도가 표준이 아닌 전지의 처음 전위 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">25 °C에서 $\ce{Ni}$/$\ce{Ni^2+}$ 반쪽 전지와 $\ce{Co}$/$\ce{Co^2+}$ 반쪽 전지로 구성된 다니엘 전지에서 처음 $[\ce{Ni^2+}]=0.40\ \text{M}$, $[\ce{Co^2+}]=0.10\ \text{M}$일 때, 처음의 전지 전위는 얼마인가? (표준 환원 전위 $\ce{Ni^2+}/\ce{Ni}$ $-0.26\ \text{V}$, $\ce{Co^2+}/\ce{Co}$ $-0.28\ \text{V}$)</p>
+  <div class="row">
+    <div class="col stack ac39-deep"><span class="ac39-dh">심화 · 네른스트 식 (3-4-1b #23)</span>
+      <p class="f21"><b>Q</b> 어느 쪽이 산화 전극일까?</p>
+      <p class="f21 step">환원 전위가 작은 $\ce{Co}$가 산화: $\ce{Co(s) + Ni^2+(aq) -> Co^2+(aq) + Ni(s)}$, $n=2$<br>$E^\circ_\text{전지}=-0.26-(-0.28)=+0.02\ \text{V}$</p>
+      <p class="f21 step">$Q=\dfrac{[\ce{Co^2+}]}{[\ce{Ni^2+}]}=\dfrac{0.10}{0.40}=0.25$, $\quad E_\text{전지}=0.02-\dfrac{0.0592}{2}\log0.25$</p>
+      <div class="answer step">$E_\text{전지}\approx0.038\ \text{V}$ ($0.0378\ \text{V}$)</div>
+      <p class="small step">$Q&lt;1$(생성물 이온이 묽음) → 표준 전지 전위보다 크다. 부록의 「$E^\circ=+0.28\ \text{V}$」($\ce{Co}$ 산화)는 산화 방향으로 부호를 바꾼 값이다.</p>
+    </div>
+    <div class="col" style="flex:0 0 360px">{{BAR10}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. STEAM ① 상황 제시 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 고무줄의 열역학 — 상황 제시">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 상황 제시</span></span>고무줄 분자 구조의 열역학</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">{{RUB}}
+      <div class="formula sm">$\Delta G=\Delta H-T\Delta S$<span class="unit">고무는 교차 결합으로 묶인 긴 사슬 분자 — 스파게티 면발이 군데군데 붙은 모양</span></div>
+    </div>
+    <div class="col stack">
+      <table class="tight ac39-act">
+        <tr><td>상황 제시</td><td class="l">① 고무줄을 재빨리 늘려 입술에 대면 따뜻하다 ② 늘인 채 기다렸다 재빨리 놓아 입술에 대면 차갑다</td></tr>
+        <tr><td>창의적 설계</td><td class="l">① $\Delta S$ 부호 알아내기 ② $\Delta H$ 부호 알아내기 ③ 두 부호를 재는 실험 설계</td></tr>
+        <tr><td>감성적 체험</td><td class="l">① 열역학 함숫값의 부호 표 ② 분자 구조로 설명 · 500자 이내 글</td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> 늘일 때 따뜻해지는 것은 무엇을 뜻할까?</p>
+      <div class="answer step ac39-left">늘어날 때 고무줄이 열을 내놓는다(발열) → $\Delta H&lt;0$</div>
+      <p class="f21"><b>Q</b> 줄어들 때 차가워지면?</p>
+      <div class="answer step ac39-left">줄어들 때 주위에서 열을 흡수한다(흡열) → $\Delta H&gt;0$</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. STEAM ① 창의적 설계 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 고무줄의 열역학 — 창의적 설계">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 창의적 설계 1–3</span></span>$\Delta S$와 $\Delta H$의 부호를 알아내는 방법</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 늘일 때 엔트로피는 커질까, 작아질까?</p>
+      <div class="answer step ac39-left">사슬이 펴져 나란히 놓이면 배열 가짓수(미시 상태 수 $W$)가 준다 → 늘이기 $\Delta S&lt;0$, 줄어들기 $\Delta S&gt;0$ <span class="small">(3-2-1 #15, #20)</span></div>
+      <p class="f21"><b>Q</b> 2) $\Delta H$의 부호는 무엇으로 알 수 있을까?</p>
+      <div class="answer step ac39-left">온도 변화 — 늘일 때 열 방출($\Delta H&lt;0$), 줄 때 열 흡수($\Delta H&gt;0$)</div>
+      <p class="f21"><b>Q</b> 3) 두 부호를 재는 실험을 설계하면?</p>
+      <table class="tight ac39-sg step">
+        <tr><th>실험</th><th>방법</th><th>결과 → 부호</th></tr>
+        <tr><td>A ($\Delta H$)</td><td class="l">온도 센서를 대고 빠르게 늘이기·줄이기</td><td class="l">늘이면 올라감 → 늘이기 $\Delta H&lt;0$</td></tr>
+        <tr><td>B ($\Delta S$)</td><td class="l">추를 매단 고무줄을 가열, 길이 측정</td><td class="l">줄어듦 → 줄어들기 $\Delta S&gt;0$</td></tr>
+      </table>
+      <p class="small step">B: 흡열인 줄어들기가 높은 온도에서 잘 일어남 → $\Delta S&gt;0$(3-2-2 그림 Ⅲ-23 (라)). 통제 변인: 같은 고무줄·길이·빠르기. 안전: 보안경, 드라이어 화상 주의.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 360px">{{DRYER}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. STEAM ① 감성적 체험 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 고무줄의 열역학 — 감성적 체험">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 감성적 체험 1·2</span></span>열역학 함숫값의 부호와 분자 구조</h2>
+  <table class="tight ac39-sg">
+    <tr><th>고무줄의 형태 변화 과정</th><th>$\Delta H$</th><th>$\Delta G$</th><th>$\Delta S$</th><th>고무줄의 분자 구조 변화</th></tr>
+    <tr><td class="l">고무줄이 갑자기 늘어나는 과정</td><td><span class="step" data-g="s1">−</span></td><td><span class="step" data-g="s1">+</span></td><td><span class="step" data-g="s1">−</span></td><td class="l"><span class="step" data-g="s1">엉킨 사슬이 펴져 나란히 정렬 — 배열 가짓수 감소</span></td></tr>
+    <tr><td class="l">고무줄이 원래 상태로 돌아가는 과정</td><td><span class="step" data-g="s1">+</span></td><td><span class="step" data-g="s1">−</span></td><td><span class="step" data-g="s1">+</span></td><td class="l"><span class="step" data-g="s1">사슬이 다시 엉킴 — 배열 가짓수 증가</span></td></tr>
+  </table>
+  <p class="f21 mt8"><b>Q</b> 줄어드는 과정은 흡열인데 왜 저절로 일어날까?</p>
+  <div class="answer step ac39-left">$\Delta S&gt;0$이 커서 $-T\Delta S$의 크기가 $\Delta H$보다 크다 → $\Delta G&lt;0$. 엔트로피가 이끄는 변화이다.</div>
+  <div class="card step ac39-essay mt8">(예시 글, 덱이 씀) 고무는 긴 사슬 분자들이 교차 결합으로 군데군데 묶인 구조이다. 늘이지 않은 고무줄에서는 사슬이 제멋대로 엉켜 있어 가능한 배열의 가짓수가 매우 많다. 고무줄을 늘이면 사슬이 펴지며 나란히 정렬되므로 배열의 가짓수가 줄어 엔트로피가 감소한다. 이때 고무줄이 따뜻해지는 것으로 보아 열을 내놓으므로 엔탈피도 감소한다. 늘이는 과정은 힘을 주어야만 일어나므로 깁스 자유 에너지 변화는 양수이다. 손을 놓으면 사슬이 다시 엉키며 엔트로피가 커지고, 고무줄은 주위에서 열을 흡수해 차가워진다. 흡열인데도 저절로 줄어드는 까닭은 엔트로피 증가가 커서 $\Delta G$가 음수가 되기 때문이다. 추를 매단 고무줄을 가열하면 줄어드는 것도 온도가 높을수록 엔트로피 항이 커지기 때문이다.</div>
+</section>
+
+<!-- ════════ 25. STEAM ② 상황 제시 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 화학 전지 예술 — 상황 제시">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 상황 제시 1–4</span></span>화학 전지를 이용한 예술 창작 활동</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 480px">{{DAN}}
+      <table class="tight ac39-act">
+        <tr><td>창의적 설계</td><td class="l">① 다니엘 전지 제작 ② 금속판·염다리 바꿔 전압 측정 ③ 전해질 고르기 ④ 지시약 색을 평면에 고정 ⑤ 예술 창작 장치</td></tr>
+        <tr><td>감성적 체험</td><td class="l">① 다른 작품 조사 ② 경제적 효율성 ③ 발표, 700자 이내 글</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 다니엘 전지의 전압에 영향을 주는 요인은?</p>
+      <div class="answer step ac39-left">금속의 표준 환원 전위 차(가장 큼), 이온 농도(심화), 저항</div>
+      <p class="f21"><b>Q</b> 2) 물을 전기 분해할 때 전해질에 따라 생성물은?</p>
+      <div class="answer step ac39-left">$\ce{Na2SO4}$: 물만 분해 — (−)극 $\ce{H2}$·$\ce{OH-}$, (+)극 $\ce{O2}$·$\ce{H+}$ · 진한 $\ce{NaCl}$: $\ce{Cl2}$(유독) · $\ce{CuSO4}$: $\ce{Cu}$</div>
+      <p class="f21"><b>Q</b> 3) 직접 만든 다니엘 전지로 그림을 그릴 수 있을까?</p>
+      <div class="answer step ac39-left">2개를 직렬로 이으면 약 2.2 V — 물을 분해해 지시약 색을 바꾼다.</div>
+      <p class="f21"><b>Q</b> 4) 염다리는 꼭 필요할까?</p>
+      <div class="answer step ac39-left">필요 — 없으면 전하가 쌓여 전류가 멈춘다(3-4-1a #15–16).</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. STEAM ② 창의적 설계 1·2 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 화학 전지 예술 — 가장 높은 전압">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 창의적 설계 1·2</span></span>어떤 금속판이 가장 높은 전압을 낼까?</h2>
+  <div class="row">
+    <div class="col stack">
+      <table class="tight ac39-sg">
+        <tr><th>산화 전극</th><th>환원 전극</th><th>이론 $E^\circ_\text{전지}$ (V)</th></tr>
+        <tr><td>$\ce{Zn}$</td><td>$\ce{Cu}$</td><td><span class="step" data-g="v1">1.10</span></td></tr>
+        <tr><td>$\ce{Fe}$</td><td>$\ce{Cu}$</td><td><span class="step" data-g="v1">0.78</span></td></tr>
+        <tr><td>$\ce{Pb}$</td><td>$\ce{Ag}$</td><td><span class="step" data-g="v1">0.93</span></td></tr>
+        <tr><td>$\ce{Zn}$</td><td>$\ce{Ag}$</td><td><span class="step" data-g="v1">1.56</span></td></tr>
+        <tr><td>$\ce{Mg}$</td><td>$\ce{Cu}$</td><td><span class="step" data-g="v1">2.71</span></td></tr>
+        <tr><td>$\ce{Mg}$</td><td>$\ce{Ag}$</td><td><span class="step" data-g="v1">3.17</span></td></tr>
+      </table>
+      <p class="small c-muted">표준 환원 전위로 계산한 값이다 — 실제로 잰 전압은 이보다 작다.</p>
+      <p class="f21"><b>Q</b> 가장 높은 전압을 내는 구성은?</p>
+      <div class="answer step ac39-left">전위 차가 가장 큰 $\ce{Mg}$–$\ce{Ag}$ — 다만 $\ce{Mg}$는 물과도 반응해 빨리 닳고 $\ce{Ag}$는 비싸다.</div>
+      <p class="small step">염다리 전해질: 은 쪽에는 $\ce{KNO3}$($\ce{KCl}$은 $\ce{AgCl}$ 앙금). 전해질 종류는 이론 전위를 바꾸지 않고 저항(측정값)에 영향을 준다. 안전: 질산 은·황산 구리 용액은 피부에 닿지 않게 장갑과 보안경을 쓴다.</p>
+    </div>
+    <div class="col" style="flex:0 0 470px">{{LAD26}}</div>
+  </div>
+</section>
+
+<!-- ════════ 27. STEAM ② 창의적 설계 3–5 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 화학 전지 예술 — 전기 분해 그림 장치">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 창의적 설계 3–5</span></span>전기 분해와 지시약으로 그림 그리기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{ART}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 흑연 펜((−)극)이 지나간 자리는 왜 붉어질까?</p>
+      <p class="f21 step">(−)극: $\ce{2H2O(l) + 2e- -> H2(g) + 2OH-(aq)}$<br>→ $\ce{OH-}$ 때문에 염기성 → 페놀프탈레인 붉은색</p>
+      <p class="f21 step">(+)극: $\ce{2H2O(l) -> O2(g) + 4H+(aq) + 4e-}$</p>
+      <p class="f21"><b>Q</b> 펜을 (+)극에 바꾸어 연결하면?</p>
+      <div class="answer step ac39-left">펜 자리가 산성이 된다 → BTB를 쓰면 노란 선(염기성 쪽은 파랑)</div>
+      <p class="f21"><b>Q</b> 색을 평면에 고정하려면?</p>
+      <div class="answer step ac39-left">지시약을 적신 종이(거름종이·한지)에 그리고 말린 뒤 사진으로 남긴다.</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. STEAM ② 감성적 체험 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · STEAM" data-title="STEAM: 화학 전지 예술 — 감성적 체험">
+  <h2><span class="tag">STEAM<span class="ac39-st"> · 감성적 체험 1–3</span></span>작품 조사, 경제성, 발표와 글쓰기</h2>
+  <div class="ac39-cards">
+    <div class="card"><h3>① 다른 작품은?</h3><p class="step">전기 분해 그림, 전기 도금으로 만든 금속 조형, 과일 전지로 LED를 켜는 설치 작품</p></div>
+    <div class="card" style="flex:1.6 1 0"><h3>② 경제적 효율성</h3>
+      <table class="tight ac39-sg step">
+        <tr><th>구성</th><th>전압</th><th>금속 값·재사용</th></tr>
+        <tr><td>$\ce{Zn}$–$\ce{Cu}$</td><td>1.10 V</td><td class="l">값싸다, 구리판 재사용(아연판은 닳음)</td></tr>
+        <tr><td>$\ce{Mg}$–$\ce{Cu}$</td><td>2.71 V</td><td class="l">마그네슘이 빨리 닳는다</td></tr>
+        <tr><td>$\ce{Zn}$–$\ce{Ag}$</td><td>1.56 V</td><td class="l">은이 비싸다, 은판 재사용</td></tr>
+      </table></div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> 직접 만든 화학 전지로 쓸 도구를 고안해 700자 이내로 쓰면?</p>
+  <div class="card step ac39-essay mt8">(예시 글, 덱이 씀) 우리 모둠은 아연–구리 다니엘 전지 두 개를 직렬로 이어 「전기 분해 붓」을 만들었다. 흑연 연필심을 (−)극에, 알루미늄 포일 판을 (+)극에 연결하고, 황산 나트륨 수용액과 페놀프탈레인을 적신 거름종이를 판 위에 올렸다. 연필심으로 그리면 물이 환원되어 수산화 이온이 생기므로 지나간 자리가 붉게 변했다. 극을 바꾸고 BTB를 쓰면 노란 선도 그릴 수 있었다. 금속판을 바꾸어 재 보니 마그네슘–은 조합의 전압이 가장 높았지만, 마그네슘은 빨리 닳고 은은 비싸서 값싼 아연–구리 전지를 여러 개 잇는 것이 경제적이었다. 구리판은 다시 쓸 수 있었다. 화학 반응으로 만든 전기로 다시 화학 반응을 일으켜 그림을 그린다는 점이 신기했다.</div>
+</section>
+
+<!-- ════════ 29. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅲ. 물질의 변화와 에너지 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅲ. 물질의 변화와 에너지 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 열과 일, 엔탈피, 엔트로피, 깁스 자유 에너지와 산화수, 전지 전위, 전기 분해를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 종합 문제에서 $\Delta H^\circ$, $\Delta S$, $\Delta G^\circ$, $E^\circ_\text{전지}$를 계산하고 반응의 자발성을 판단할 수 있다.</button>
+    <button class="chk">[가치·태도] 고무줄과 화학 전지 STEAM 활동을 모둠원과 협력해 설계하고 결과를 발표한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 늘인 고무줄이 저절로 줄어드는 까닭은? <span class="step">→ <span class="ans">흡열이지만 엔트로피가 크게 늘어 $\Delta G&lt;0$이다</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $E^\circ_\text{전지}$가 음수인 반응은 어떻게 일으킬까? <span class="step">→ <span class="ans">비자발적 — 전해 전지에서 외부 전기 에너지로</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 표준 몰 엔트로피가 더 큰 물질은? <span class="step">→ <span class="ans">기체이거나 분자가 커서 미시 상태 수가 많은 쪽</span></span></p>
+  </div>
+  <p class="small c-muted mt8">점검 결과가 아쉬우면 대응표(#9–11)의 소단원 덱 장을 다시 보자.</p>
+  <div class="note puzzle mt8"><b>다음 시간</b> Ⅳ. 물질의 변화와 화학 평형 — $\Delta G^\circ=-RT\ln K$로 평형 상수와 자유 에너지를 잇는다.</div>
+</section>
