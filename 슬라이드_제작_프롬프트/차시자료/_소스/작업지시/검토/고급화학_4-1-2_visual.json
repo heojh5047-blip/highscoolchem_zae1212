@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":2,"severity":"medium","rule":"D8","problem":"「생성물 증가」 라벨 왼쪽 잘림","fix":"그래프 원점을 오른쪽으로"},
+{"slide":4,"severity":"low","rule":"D8","problem":"「막음」 라벨 잘림","fix":"anchor start"},
+{"slide":8,"severity":"medium","rule":"D8","problem":"온도 라벨이 직선과 겹침, 20 °C 잘림","fix":"직선 위쪽으로, 20 °C는 왼쪽"},
+{"slide":10,"severity":"medium","rule":"D8","problem":"패널 제목과 P [atm] 축 라벨 겹침","fix":"축을 아래로 20px"},
+{"slide":11,"severity":"low","rule":"D8","problem":"융해·승화 곡선 라벨이 눈금·점과 겹침","fix":"자리 옮김"},
+{"slide":16,"severity":"medium","rule":"T4","problem":"Ksp 수식 상자 넘침","fix":"formula sm + 온도를 unit 줄로"},
+{"slide":19,"severity":"medium","rule":"D8","problem":"막대 아래 화학식 라벨 겹침","fix":"막대 간격 넓히고 둘째 라벨을 한 줄 아래로"},
+{"slide":26,"severity":"low","rule":"3.2","problem":"그림 Ⅳ-14 눈금 글자 16px 미만","fix":"그림 배율 1:1"},
+{"slide":28,"severity":"high","rule":"M2","problem":"\\text{} 안 가운뎃점이 KaTeX 오류(빨간 \\cdotp)","fix":"\\cdot로 (S32도)"},
+{"slide":31,"severity":"low","rule":"레이아웃","problem":"반응식 상자에서 (전기 분해) 줄바꿈","fix":"이름: 식 두 줄 카드로"},
+{"slide":34,"severity":"low","rule":"D8","problem":"원자 수 범례 잘림","fix":"두 줄로"}
+],"summary":"첫 캡처 자동 점검 19건과 눈으로 본 겹침을 모두 고쳐 0건."}
