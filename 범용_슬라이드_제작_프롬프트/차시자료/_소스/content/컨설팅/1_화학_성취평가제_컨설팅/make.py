@@ -23,7 +23,7 @@ S.append(f'''<section class="slide cover cs1-cover" data-sec="표지" data-title
     <circle cx="200" cy="60" r="16" fill="#fff" stroke="{MINUS}" stroke-width="5"/><circle cx="520" cy="60" r="16" fill="#fff" stroke="{MINUS}" stroke-width="5"/><circle cx="840" cy="60" r="16" fill="#fff" stroke="{MINUS}" stroke-width="5"/><circle cx="1120" cy="60" r="22" fill="{FIELD}"/>
     {tx(200,112,'이해',22,'middle','700')}{tx(520,112,'진단',22,'middle','700')}{tx(840,112,'설계',22,'middle','700')}{tx(1120,24,'협의',24,'middle','800',FIELD)}
   </svg>
-  <div class="who"><span><b>여수고등학교</b> · 교사 허재형</span><span class="cs1-muted">2026. 11. 27.(금)</span></div>
+  <div class="who"><span class="cs1-muted">2026. 11. 27.(금)</span></div>
 </section>''')
 
 # 2 목차
@@ -383,7 +383,6 @@ S.append('''<section class="slide cs1-qa" data-sec="질의응답" data-title="�
   <div class="cs1-qawrap">
     <p class="cs1-qabig">질의응답</p>
     <p class="f22 cs1-muted">우리 학교의 평가 결과는 학생이 무엇을 알고 할 수 있는지 충분히 설명하고 있는가?</p>
-    <p class="cs1-who"><b>여수고등학교</b> · 교사 허재형</p>
   </div>
 </section>''')
 
