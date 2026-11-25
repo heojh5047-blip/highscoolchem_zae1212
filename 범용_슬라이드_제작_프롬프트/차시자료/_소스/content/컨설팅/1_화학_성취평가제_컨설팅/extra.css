@@ -1,0 +1,45 @@
+/* 컨설팅 덱 (접두어 cs1-) */
+.cs1-muted{color:var(--muted)}
+.cs1-src{margin-top:12px;color:var(--muted)}
+.cs1-ok{color:var(--field)} .cs1-no{color:var(--plus)}
+.cs1-pill{display:inline-block;padding:7px 18px;border-radius:999px;font-size:20px;font-weight:700;background:#EAF6EF;color:var(--field)}
+/* 표지 — 성과보고회 시안 E 재구성 */
+.cs1-cover{background:#fff !important}
+.cs1-cover .wrap{position:absolute;left:96px;top:104px;width:1000px}
+.cs1-cover h1{font-size:76px;line-height:1.15;letter-spacing:-.02em;margin:22px 0 16px}
+.cs1-cover h1 .pre{font-size:40px;font-weight:700;color:var(--muted);letter-spacing:-.01em}
+.cs1-cover .sub{font-size:24px;color:var(--muted)}
+.cs1-cover .road{position:absolute;left:0;right:0;bottom:150px}
+.cs1-cover .who{position:absolute;left:96px;right:96px;bottom:58px;display:flex;justify-content:space-between;font-size:21px}
+/* 목차 */
+.cs1-toc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px}
+.cs1-toc .it{background:#fff;border:1.5px solid var(--line);border-top:8px solid var(--minus);border-radius:14px;padding:16px 18px;min-height:300px}
+.cs1-toc .it h3{font-size:30px;color:var(--minus);margin-bottom:10px}
+.cs1-toc .it p{font-size:21px;line-height:1.8}
+.cs1-toc .it.hl{border-top-color:var(--field)} .cs1-toc .it.hl h3{color:var(--field)}
+/* 연표·단계 */
+.cs1-tl3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cs1-tl3 .it{background:#fff;border:1.5px solid var(--line);border-top:6px solid var(--minus);border-radius:12px;padding:12px 14px}
+.cs1-tl3 .it b{font-size:30px;color:var(--minus)} .cs1-tl3 .it.hl{border-top-color:var(--field)} .cs1-tl3 .it.hl b{color:var(--field)}
+.cs1-tl3 .it p{font-size:19px;line-height:1.45;margin-top:4px}
+.cs1-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cs1-steps.c5{grid-template-columns:repeat(5,1fr);gap:12px}
+.cs1-steps .it{position:relative;background:#fff;border:2px solid #4950B8;border-radius:14px;padding:24px 14px 14px;text-align:center}
+.cs1-steps .it.hl{border-color:var(--field);background:#F1F8F4}
+.cs1-steps .it .n{position:absolute;top:-16px;left:50%;margin-left:-16px;width:32px;height:32px;line-height:32px;border-radius:50%;background:#2B2F7E;color:#fff;font-weight:800;font-size:18px}
+.cs1-steps .it p{font-size:20px;line-height:1.45}
+.cs1-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+/* 성취수준 동그라미 */
+.cs1-lv{display:inline-block;width:30px;height:30px;line-height:30px;border-radius:50%;text-align:center;font-weight:800;font-size:17px;vertical-align:middle}
+.cs1-lvlist{list-style:none;padding:0;margin:8px 0 0}
+.cs1-lvlist li{font-size:20px;line-height:1.4;margin-top:8px}
+.cs1-lvlist li .cs1-lv{margin-right:10px}
+.slide table.cs1-mini td,.slide table.cs1-mini th{font-size:17px;padding:4px 6px;line-height:1.3}
+.slide table.cs1-mini .cs1-lv{width:26px;height:26px;line-height:26px;font-size:15px}
+.cs1-stat{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:6px 14px;margin-bottom:8px}
+.cs1-stat > span{display:block;font-size:18px;color:var(--muted)} .cs1-stat > b{font-size:26px;color:#2B2F7E}
+/* 질의응답 */
+.cs1-qa{background:#fff !important}
+.cs1-qawrap{position:absolute;left:96px;right:96px;top:200px;text-align:center}
+.cs1-qabig{font-size:120px;font-weight:800;letter-spacing:-.03em;color:#2B2F7E;line-height:1.1;margin-bottom:24px}
+.cs1-who{font-size:22px;margin-top:60px}
