@@ -1,0 +1,6 @@
+/* 3-3-3 세포 내 정보의 흐름 — 덱 전용 (.is1333-) */
+.slide.cover h1.is1333-h1{font-size:100px}
+.is1333-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1333-btns .btn{font-size:19px;padding:5px 12px}
+.is1333-btns .btn:disabled{opacity:.35}
+.is1333-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}

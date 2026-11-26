@@ -1,0 +1,420 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 시스템과 상호작용" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ-3 생명 시스템 › 03</div>
+    <h1 class="is1333-h1">세포 내<br><span class="acc">정보의 흐름</span></h1>
+    <p class="sub">DNA → RNA → 단백질</p>
+    <p class="meta">고등학교 통합과학1 154–161쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="DNA에서 RNA로, RNA에서 아미노산 사슬로 이어지는 그림">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <g fill="none" stroke-width="7"><path d="M90 120 C150 160 150 200 90 240 C30 280 30 320 90 360" stroke="#7B4FC8"/><path d="M90 120 C30 160 30 200 90 240 C150 280 150 320 90 360" stroke="#D7263D"/></g>
+    <g data-arw="160,240,230,240,ink,4"></g>
+    <g data-anim="draw" data-dur="1.6"><path d="M250 150 C300 190 240 230 290 270 C340 310 280 350 300 390" fill="none" stroke="#2E9E6A" stroke-width="7"/></g>
+    <g data-arw="330,270,380,270,ink,4"></g>
+    <g data-anim="pop" data-o="440,270"><circle cx="410" cy="200" r="16" fill="#F08A97"/><rect x="398" y="230" width="28" height="28" fill="#7FB3E6"/><path d="M412 270 l16 26 h-32 Z" fill="#F7C548"/><circle cx="450" cy="320" r="16" fill="#8BD3A7"/></g>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="03 세포 내 정보의 흐름" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[10통과1-03-06]</span>생명 시스템의 유지에 필요한 세포 내 정보의 흐름을 유전자로부터 단백질이 만들어지는 과정을 중심으로 설명할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>생명 시스템 유지를 위해 세포 내 정보의 흐름이 필요함을 설명할 수 있다.</li>
+    <li>세포 내 정보의 흐름을 유전자로부터 단백질이 만들어지는 과정을 중심으로 설명할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">형질과 유전자</div><div class="farr">→</div>
+    <div class="fnode">유전자 → 단백질 → 형질</div><div class="farr">→</div>
+    <div class="fnode">전사와 번역</div><div class="farr">→</div>
+    <div class="fnode">3염기조합과 코돈</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 주사위로 단백질</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 도입 ════════ -->
+<section class="slide" data-sec="03 세포 내 정보의 흐름 · 도입" data-title="도입: 두 고양이">
+  <h2>두 고양이의 털색과 무늬가 다른 까닭은?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">
+      <svg class="fig" viewBox="0 0 440 260" style="width:440px" aria-label="줄무늬 회색 고양이와 얼룩무늬 주황 고양이">
+        <g data-anim="pop" data-o="120,150"><ellipse cx="120" cy="170" rx="70" ry="50" fill="#9FA6AE"/><circle cx="120" cy="100" r="40" fill="#9FA6AE"/><path d="M88 70 l6 -26 l16 22 Z M152 70 l-6 -26 l-16 22 Z" fill="#9FA6AE"/><g stroke="#5B6B7F" stroke-width="5"><line x1="80" y1="150" x2="80" y2="195"/><line x1="105" y1="140" x2="105" y2="210"/><line x1="135" y1="140" x2="135" y2="210"/><line x1="160" y1="150" x2="160" y2="195"/></g></g>
+        <g data-anim="pop" data-o="320,150" data-delay=".3"><ellipse cx="320" cy="170" rx="70" ry="50" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/><circle cx="320" cy="100" r="40" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/><path d="M288 70 l6 -26 l16 22 Z M352 70 l-6 -26 l-16 22 Z" fill="#E08A2C"/><g fill="#E08A2C"><ellipse cx="300" cy="160" rx="22" ry="16"/><ellipse cx="350" cy="185" rx="18" ry="14"/><ellipse cx="335" cy="95" rx="16" ry="14"/></g></g>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22">두 고양이는 모두 짧고 굵은 털을 가졌지만 털색과 무늬가 다르다.</p>
+      <p class="f22 mt16"><b>Q</b> 두 고양이의 털색과 무늬가 다른 까닭은 무엇일까?</p>
+      <div class="answer step">털색과 무늬를 결정하는 <b>유전정보</b>가 서로 다르기 때문이다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 유전자 ════════ -->
+<section class="slide" data-sec="03 · 유전자와 단백질" data-title="형질, 유전자, 단백질">
+  <h2><span class="no">1</span>유전자 → 단백질 → 형질</h2>
+  <svg class="fig" viewBox="0 0 1100 260" style="width:1100px" aria-label="세포 속 염색체의 DNA에 유전자 A, B가 있고, 각 유전자에서 단백질 A, B가 만들어져 형질 A, B가 나타난다">
+    <circle cx="90" cy="130" r="80" fill="#FCE8EA" stroke="#D7263D" stroke-width="3"/><path d="M70 100 l40 60 M110 100 l-40 60" stroke="#7B4FC8" stroke-width="10" stroke-linecap="round"/>
+    <text class="tex" x="90" y="238" data-mix="세포 · 염색체" data-size="17" data-anchor="middle"></text>
+    <g data-arw="180,130,230,130,ink,3"></g>
+    <rect x="240" y="100" width="380" height="60" rx="12" fill="#F1ECFB" stroke="#7B4FC8" stroke-width="2"/>
+    <g data-anim="fade" data-dur="1"><rect x="280" y="104" width="110" height="52" rx="8" fill="#F7C548" opacity=".85"/><rect x="460" y="104" width="110" height="52" rx="8" fill="#8BD3A7" opacity=".85"/></g>
+    <text class="tex" x="335" y="138" data-mix="유전자 A" data-size="18" data-anchor="middle" data-weight="700"></text><text class="tex" x="515" y="138" data-mix="유전자 B" data-size="18" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="430" y="90" data-mix="DNA" data-size="17" data-anchor="middle"></text>
+    <g data-arw="335,162,335,200,ink,3"></g><g data-arw="515,162,515,200,ink,3"></g>
+    <text class="tex" x="335" y="226" data-mix="단백질 A" data-size="18" data-anchor="middle"></text><text class="tex" x="515" y="226" data-mix="단백질 B" data-size="18" data-anchor="middle"></text>
+    <g data-arw="640,130,720,130,ink,3"></g>
+    <rect x="730" y="80" width="340" height="110" rx="14" fill="#E8F5EE" stroke="#2E9E6A" stroke-width="2"/>
+    <text class="tex" x="900" y="126" data-mix="형질 A · 형질 B" data-size="20" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="900" y="160" data-mix="(털색, 피부색, 혈액형 …)" data-size="17" data-anchor="middle"></text>
+  </svg>
+  <div class="row mt8">
+    <div class="col"><p class="f21"><mark>형질</mark>: 생물의 모양, 크기, 성질 같은 고유한 특징 · 부모에게 물려받는 유전형질은 DNA의 유전정보로 결정</p></div>
+    <div class="col"><p class="f21"><mark>유전자</mark>: DNA에서 각 형질의 유전정보가 저장된 특정 부위 — 하나의 DNA에 수많은 유전자, 각 유전자에 특정 단백질을 만드는 정보</p></div>
+  </div>
+</section>
+
+<!-- ════════ 5. 해 보기: 꽃 색깔 ════════ -->
+<section class="slide" data-sec="03 · 유전자와 단백질" data-title="해 보기: 유전자, 단백질, 형질의 관계">
+  <h2><span class="tag alt">해 보기</span>유전자, 단백질, 형질 사이의 관계 알아보기</h2>
+  <div class="flow"><div class="fnode">붉은 색소 합성 효소 유전자(DNA)</div><div class="farr">→</div><div class="fnode">붉은 색소 합성 효소</div><div class="farr">→</div><div class="fnode">붉은 색소</div><div class="farr">→</div><div class="fnode hl">붉은색 꽃</div></div>
+  <p class="small mt4">효소의 주성분은 단백질</p>
+  <div class="card mt12"><p class="f21"><b>1</b> 붉은 색소 합성 효소 유전자에 저장된 정보는? <span class="step">→ 붉은 색소 합성 <b>효소를 만드는 데 필요한 유전정보</b></span></p></div>
+  <div class="card mt12"><p class="f21"><b>2</b> 「유전자, 효소, 색소」를 넣어 노란 꽃이 되는 과정을 설명하면? <span class="step">→ 노란 색소 합성 효소 <b>유전자</b>의 정보로 노란 색소 합성 <b>효소</b>가 만들어지고, 그 효소의 작용으로 노란 <b>색소</b>가 만들어져 꽃이 노란색이 된다.</span></p></div>
+  <div class="card mt12"><p class="f21"><b>3</b> 형질이 나타나는 과정을 유전자와 단백질로 설명하면? <span class="step">→ 유전자의 정보로 효소 같은 특정 <b>단백질</b>이 만들어지고, 그 단백질의 작용으로 형질이 나타난다.</span></p></div>
+</section>
+
+<!-- ════════ 6. 정보의 흐름이 필요한 까닭 ════════ -->
+<section class="slide" data-sec="03 · 유전자와 단백질" data-title="생명 시스템과 정보의 흐름">
+  <h2><span class="no">1</span>생명 시스템은 세포 내 정보의 흐름으로 유지된다</h2>
+  <div class="stages" style="grid-template-columns:repeat(3,1fr)">
+    <div class="stage"><h3>수많은 유전자</h3><p class="key">한 생명체는 수많은 유전자를 가진다</p></div>
+    <div class="stage"><h3>다양한 단백질</h3><p class="key">서로 다른 유전자의 정보로 다양한 단백질이 만들어진다</p></div>
+    <div class="stage"><h3>생명활동과 형질</h3><p class="key">영양소 소화, 적혈구의 산소 운반 같은 생명활동 · 피부색, 혈액형 같은 형질</p></div>
+  </div>
+  <p class="f21 mt16"><b>Q</b> 2-2-1에서 배운 DNA·단백질과 어떻게 연결될까? <span class="step">→ DNA의 <span class="ans">염기 배열</span>이 단백질의 <span class="ans">아미노산 배열</span>을 정하고, 아미노산 배열이 단백질의 입체 구조와 기능을 정한다.</span></p>
+</section>
+
+<!-- ════════ 7. 스스로 확인하기 155 ════════ -->
+<section class="slide" data-sec="03 · 확인하기" data-title="스스로 확인하기 (155쪽)">
+  <h2><span class="tag q">스스로 확인하기</span>유전자와 단백질</h2>
+  <div class="card mt8"><p class="f22">➊ (&nbsp;<span class="blank"><span class="step">유전자</span></span>&nbsp;)은/는 DNA에서 각각의 형질에 대한 유전정보가 저장되어 있는 특정 부위이다.</p></div>
+  <div class="card mt16"><p class="f22">➋ 세포 내에서 유전정보를 이용해 만들어진 단백질의 작용으로 형질이 나타난다. (&nbsp;◯,&nbsp;×&nbsp;) <span class="answer step" style="display:inline-block">◯</span></p></div>
+  <div class="board mt16" style="min-height:110px"></div>
+</section>
+
+<!-- ════════ 8. 전사와 번역 ════════ -->
+<section class="slide" data-sec="03 · 세포 내 유전정보의 흐름" data-title="전사와 번역">
+  <h2><span class="no">2</span>DNA → RNA → 단백질: 전사와 번역</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 300" style="width:560px" aria-label="핵 안의 DNA에서 RNA가 만들어지고(전사), RNA가 핵 밖으로 나와 라이보솜에서 단백질이 만들어진다(번역)">
+        <ellipse cx="280" cy="150" rx="270" ry="140" fill="#FCE8EA" stroke="#D7263D" stroke-width="3"/>
+        <circle cx="160" cy="150" r="90" fill="#F1ECFB" stroke="#7B4FC8" stroke-width="3"/>
+        <text class="tex" x="160" y="76" data-mix="핵" data-size="17" data-anchor="middle"></text>
+        <g stroke-width="5" fill="none"><path d="M110 110 C140 130 140 150 110 170" stroke="#7B4FC8"/><path d="M110 110 C80 130 80 150 110 170" stroke="#D7263D"/></g>
+        <text class="tex" x="110" y="200" data-mix="DNA" data-size="17" data-anchor="middle"></text>
+        <g data-arw="135,140,190,140,ink,2.5"></g><text class="tex" x="162" y="128" data-mix="전사" data-size="16" data-anchor="middle" fill="#D7263D"></text>
+        <path d="M200 150 q12 -14 24 0 t24 0" fill="none" stroke="#2E9E6A" stroke-width="5"/>
+        <g data-anim="move" data-from="-130,0" data-rep="loop" data-dur="3"><path d="M330 150 q12 -14 24 0 t24 0" fill="none" stroke="#2E9E6A" stroke-width="5"/></g>
+        <text class="tex" x="290" y="190" data-mix="RNA가 핵 밖으로" data-size="16" data-anchor="middle"></text>
+        <ellipse cx="440" cy="150" rx="40" ry="26" fill="#C9D3DD" stroke="#5B6B7F" stroke-width="2"/>
+        <text class="tex" x="440" y="196" data-mix="라이보솜: 번역" data-size="16" data-anchor="middle" fill="#D7263D"></text>
+        <g data-anim="pop" data-o="480,90" data-delay="1"><circle cx="470" cy="100" r="10" fill="#F08A97"/><rect x="482" y="80" width="18" height="18" fill="#7FB3E6"/><path d="M510 70 l10 16 h-20 Z" fill="#F7C548"/></g>
+        <text class="tex" x="500" y="58" data-mix="단백질" data-size="16" data-anchor="middle"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21"><mark>전사</mark>(「옮겨 적다」): DNA의 유전정보를 이용해 <b>RNA</b>를 만드는 과정</p>
+      <p class="f21 mt12"><mark>번역</mark>(「다른 언어로 옮기다」): RNA의 정보를 이용해 <b>단백질</b>을 만드는 과정 — 세포 안의 <b>라이보솜</b>에서</p>
+      <div class="answer mt12">유전정보는 <b>DNA → RNA → 단백질</b> 순으로 흐른다.</div>
+      <p class="small mt8">DNA 전체가 아니라 필요한 단백질의 유전자 부위만 전사된다(지도서 오개념 지도).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 해 보기: 유전부호 ════════ -->
+<section class="slide" data-sec="03 · 세포 내 유전정보의 흐름" data-title="해 보기: 유전부호의 특징 추론">
+  <h2><span class="tag alt">해 보기</span>유전부호는 염기 몇 개로 이루어질까?</h2>
+  <p class="f21">DNA 염기는 <b>4종류</b>(A, T, G, C), 단백질을 이루는 아미노산은 약 <b>20종류</b>이다.</p>
+  <table class="tight mt12">
+    <thead><tr><th style="width:260px">유전부호를 이루는 염기 수</th><th>만들 수 있는 유전부호</th><th style="width:300px">20종류를 지정할 수 있나?</th></tr></thead>
+    <tbody>
+      <tr><td>1개</td><td><span class="step" data-g="c1">4가지</span></td><td><span class="step" data-g="c1">×</span></td></tr>
+      <tr><td>2개</td><td><span class="step" data-g="c2">4 × 4 = 16가지</span></td><td><span class="step" data-g="c2">×</span></td></tr>
+      <tr><td>3개</td><td><span class="step" data-g="c3">4 × 4 × 4 = <b>64가지</b></span></td><td><span class="step" data-g="c3"><b>◯</b></span></td></tr>
+    </tbody>
+  </table>
+  <div class="answer mt16 step" data-g="c4">DNA의 연속된 <b>3개의 염기</b>가 1개의 아미노산을 암호화한다 → <mark>3염기조합</mark></div>
+</section>
+
+<!-- ════════ 10. 전사·번역 과정 ════════ -->
+<section class="slide" data-sec="03 · 세포 내 유전정보의 흐름" data-title="3염기조합과 코돈">
+  <h2><span class="no">2</span>3염기조합 → 코돈 → 아미노산</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 300" style="width:560px" aria-label="전사에 사용되는 DNA 가닥 TAC GGT CTG가 RNA 코돈 AUG CCA GAC로 전사되고, 코돈마다 아미노산이 하나씩 연결된다">
+        <text class="tex" x="10" y="52" data-mix="DNA" data-size="17"></text>
+        <text class="tex" x="10" y="142" data-mix="RNA" data-size="17"></text>
+        <text class="tex" x="10" y="232" data-mix="단백질" data-size="17"></text>
+        <g font-size="20">
+          <g fill="#F1ECFB" stroke="#7B4FC8" stroke-width="2"><rect x="100" y="24" width="130" height="40" rx="8"/><rect x="240" y="24" width="130" height="40" rx="8"/><rect x="380" y="24" width="130" height="40" rx="8"/></g>
+          <g data-anim="fade" data-delay=".6"><g fill="#E8F5EE" stroke="#2E9E6A" stroke-width="2"><rect x="100" y="114" width="130" height="40" rx="8"/><rect x="240" y="114" width="130" height="40" rx="8"/><rect x="380" y="114" width="130" height="40" rx="8"/></g></g>
+        </g>
+        <text class="tex" x="165" y="52" data-tex="\mathrm{TAC}" data-size="22" data-anchor="middle"></text><text class="tex" x="305" y="52" data-tex="\mathrm{GGT}" data-size="22" data-anchor="middle"></text><text class="tex" x="445" y="52" data-tex="\mathrm{CTG}" data-size="22" data-anchor="middle"></text>
+        <text class="tex" x="165" y="142" data-tex="\mathrm{AUG}" data-size="22" data-anchor="middle"></text><text class="tex" x="305" y="142" data-tex="\mathrm{CCA}" data-size="22" data-anchor="middle"></text><text class="tex" x="445" y="142" data-tex="\mathrm{GAC}" data-size="22" data-anchor="middle"></text>
+        <g data-arw="305,68,305,110,ink,2.5"></g><g data-arw="305,158,305,200,ink,2.5"></g>
+        <text class="tex" x="320" y="94" data-mix="전사" data-size="16" fill="#D7263D"></text><text class="tex" x="320" y="184" data-mix="번역" data-size="16" fill="#D7263D"></text>
+        <g data-anim="pop" data-o="305,230" data-delay="1.2"><circle cx="165" cy="226" r="20" fill="#F08A97"/><rect x="285" y="206" width="40" height="40" fill="#7FB3E6"/><path d="M445 204 l22 38 h-44 Z" fill="#F7C548"/><g stroke="#16233D" stroke-width="4"><line x1="185" y1="226" x2="285" y2="226"/><line x1="325" y1="226" x2="425" y2="226"/></g></g>
+        <text class="tex" x="560" y="290" data-mix="아미노산 모양은 모형(실제 구조 아님)" data-size="16" data-anchor="end" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">DNA 이중나선 중 <b>한 가닥</b>으로 전사: 전사에 쓰이는 가닥의 A, G, C, T → RNA의 <b>U</b>, C, G, A</p>
+      <p class="f21 mt12"><mark>코돈</mark>: RNA에서 1개의 아미노산을 지정하는 연속된 <b>3개의 염기</b></p>
+      <p class="f21 mt12">라이보솜에서 코돈이 지정하는 아미노산이 차례로 연결되어 단백질이 된다.</p>
+      <p class="f21 mt12"><b>Q</b> DNA 가닥 AGC의 코돈은? <span class="step">→ <span class="ans">UCG</span></span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 사고력 ════════ -->
+<section class="slide" data-sec="03 · 세포 내 유전정보의 흐름" data-title="사고력: 세균이 만드는 사람의 단백질">
+  <h2><span class="tag alt">사고력</span>사람의 유전자를 세균에 넣으면?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">
+      <svg class="fig" viewBox="0 0 440 240" style="width:440px" aria-label="사람 유전자 조각을 넣은 세균이 사람의 단백질을 만들어 내는 그림">
+        <rect x="20" y="60" width="160" height="40" rx="10" fill="#F7C548" stroke="#C2410C" stroke-width="2"/><text class="tex" x="100" y="86" data-mix="사람의 유전자" data-size="16" data-anchor="middle"></text>
+        <g data-arw="190,80,240,110,ink,3"></g>
+        <ellipse cx="320" cy="140" rx="100" ry="60" fill="#E8F5EE" stroke="#2E9E6A" stroke-width="3"/><text class="tex" x="320" y="146" data-mix="세균" data-size="18" data-anchor="middle"></text>
+        <g data-anim="pop" data-o="380,220" data-rep="alt" data-dur="1.2"><circle cx="370" cy="220" r="10" fill="#F08A97"/><rect x="384" y="210" width="20" height="20" fill="#7FB3E6"/></g>
+        <text class="tex" x="300" y="232" data-mix="사람의 단백질" data-size="16" data-anchor="end"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22">사람의 유전자를 세균에 넣으면 세균에서 사람의 단백질이 만들어진다.</p>
+      <p class="f22 mt12"><b>Q</b> 그 까닭은?</p>
+      <div class="answer step">세균에서 사람까지 대부분의 생명체가 <b>같은 유전부호</b>를 사용하기 때문이다.</div>
+      <p class="f21 mt8 step">→ 이 원리로 세균에게 인슐린 같은 의약품 단백질을 만들게 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 스스로 확인하기 157 ════════ -->
+<section class="slide" data-sec="03 · 확인하기" data-title="스스로 확인하기 (157쪽)">
+  <h2><span class="tag q">스스로 확인하기</span>유전정보의 흐름</h2>
+  <div class="card mt8"><p class="f22">➊ 세포 내에서 유전정보는 DNA → (&nbsp;<span class="blank"><span class="step">RNA</span></span>&nbsp;) → (&nbsp;<span class="blank"><span class="step">단백질</span></span>&nbsp;) 순으로 흐른다.</p></div>
+  <div class="card mt16"><p class="f22">➋ 1개의 아미노산을 암호화하는 DNA의 유전부호는 연속된 2개의 염기로 이루어져 있다. (&nbsp;◯,&nbsp;×&nbsp;) <span class="answer step" style="display:inline-block">×</span></p>
+    <p class="f21 step mt8">연속된 <b>3개</b>의 염기(3염기조합)이다.</p></div>
+  <div class="board mt12" style="min-height:80px"></div>
+</section>
+
+<!-- ════════ 13. 펼치기 ════════ -->
+<section class="slide" data-sec="03 · 펼치기" data-title="펼치기: 정보 흐름 모식도">
+  <h2><span class="tag alt">펼치기</span>세포 내 유전정보의 흐름 모식도 그리기</h2>
+  <p class="f22">세포 내 유전정보의 흐름을 나타내는 모식도를 그려 공유 플랫폼에 올리고, 친구들의 모식도에서 공통점을 찾아보자.</p>
+  <div class="flow mt16"><div class="fnode">DNA</div><div class="farr">— 전사 →</div><div class="fnode">RNA</div><div class="farr">— 번역 →</div><div class="fnode hl">단백질</div></div>
+  <div class="row mt12">
+    <div class="col"><div class="card"><p class="f21"><b>전사</b> 전사에 쓰이는 DNA 가닥의 A, G, C, T → RNA의 U, C, G, A</p></div></div>
+    <div class="col"><div class="card"><p class="f21"><b>번역</b> RNA의 각 코돈이 지정하는 아미노산이 차례로 연결</p></div></div>
+  </div>
+  <div class="board mt12" style="min-height:90px"></div>
+</section>
+
+<!-- ════════ 14. 탐구 ① ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구: 세포 내 유전정보의 흐름 확인하기">
+  <h2><span class="tag">탐구</span>세포 내 유전정보의 흐름 확인하기</h2>
+  <p class="small">탐구 설계 및 수행 | 의사소통과 협업 · 준비물: 주사위</p>
+  <div class="row mt8">
+    <div class="col"><p class="f21"><b>목표</b> DNA의 유전정보로부터 단백질이 만들어지는 과정을 표현할 수 있다.</p>
+      <p class="f21 mt8"><b>1</b> 표의 빈칸에 알맞은 3염기조합과 코돈을 쓴다.</p>
+      <p class="f21 mt8"><b>2</b> 돌아가며 주사위를 던져 나온 숫자의 3염기조합을 DNA 가닥 빈칸에 쓴다.</p>
+      <p class="f21 mt8"><b>3</b> 전사된 RNA의 코돈을 쓰고, 번역된 단백질의 아미노산 모형을 그린다.</p></div>
+    <div class="col">
+      <table class="tight">
+        <thead><tr><th>주사위</th><th>3염기조합</th><th>코돈</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>AGC</td><td>UCG</td></tr>
+          <tr><td>2</td><td>ACG</td><td><span class="step" data-g="d1">UGC</span></td></tr>
+          <tr><td>3</td><td>GTA</td><td>CAU</td></tr>
+          <tr><td>4</td><td>GAC</td><td><span class="step" data-g="d2">CUG</span></td></tr>
+          <tr><td>5</td><td>CCA</td><td><span class="step" data-g="d3">GGU</span></td></tr>
+          <tr><td>6</td><td>TAC</td><td>AUG</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="small mt8">교과서 탐구(158쪽) — 성취기준 필수 탐구 목록에는 없지만 정보 흐름을 직접 표현하는 활동</p>
+</section>
+
+<!-- ════════ 15. 실험실 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="실험실: 주사위로 단백질 만들기">
+  <h2><span class="tag">탐구</span>주사위 전사·번역 실험실</h2>
+  <div class="lab" data-lab="is1333dice">
+    <div class="lab-ctl">
+      <div class="is1333-btns"><button class="btn" data-act="roll">주사위 던지기</button><button class="btn" data-act="undo">하나 지우기</button></div>
+      <div class="small mt8">단계</div>
+      <div class="is1333-btns"><button class="btn" data-act="tx">전사</button><button class="btn" data-act="tl">번역</button></div>
+      <div class="is1333-btns mt8"><button class="btn" data-act="other">다른 모둠과 비교</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind is1333-msg" data-o="msg"></output>
+    </div>
+    <div class="lab-fig" style="width:563px;height:443px">
+      <svg viewBox="0 0 560 440" width="560" height="440" aria-label="주사위 눈, DNA 가닥의 3염기조합, 전사된 RNA 코돈, 번역된 아미노산 모형 사슬"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 정리 ════════ -->
+<section class="slide" data-sec="03 · 탐구" data-title="탐구: 정리">
+  <h2><span class="tag">탐구</span>정리</h2>
+  <div class="card"><p class="f21"><b>1</b> 단백질의 아미노산 배열 순서가 다른 모둠과 다르다면 그 까닭은?</p>
+    <p class="f21 step mt8" data-g="z1">전사에 쓰인 DNA 가닥의 염기 배열(3염기조합 순서)이 달라 → RNA 코돈 순서가 다르고 → 아미노산 배열 순서가 달라진다.</p></div>
+  <div class="card mt12"><p class="f21"><b>2</b> 생명 시스템 유지를 위해 필요한 세포 내 정보의 흐름은?</p>
+    <p class="f21 step mt8" data-g="z2">DNA의 3염기조합 배열이 RNA의 코돈 배열로 바뀌는 <b>전사</b>, 코돈 배열이 단백질의 아미노산 배열로 바뀌는 <b>번역</b>으로 단백질이 합성되고, 그 단백질의 작용으로 생명 현상이 유지된다.</p></div>
+  <div class="chips mt12"><button class="chk">지식·이해 DNA → 단백질 과정 설명</button><button class="chk">과정·기능 염기·아미노산 배열 순서 작성</button><button class="chk">가치·태도 활동에 적극 참여</button></div>
+  <p class="small mt8">가치·태도 길잡이: 체계적인 유전정보의 흐름에서 생명 시스템의 정교함을 느껴 보자.</p>
+</section>
+
+<!-- ════════ 17. 중단원 핵심 정리 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 마무리: 핵심 정리">
+  <h2><span class="tag q">중단원 마무리</span>핵심 정리</h2>
+  <div class="stages" style="grid-template-columns:repeat(3,1fr)">
+    <div class="stage"><h3>01 화학 반응</h3><ul class="f21"><li>(<span class="blank"><span class="step">물질대사</span></span>): 생명체의 모든 화학 반응 — 합성(흡수)·분해(방출)</li><li>효소는 (<span class="blank"><span class="step">활성화에너지</span></span>)를 낮춤</li></ul></div>
+    <div class="stage"><h3>02 물질 출입</h3><ul class="f21"><li>세포막 = (<span class="blank"><span class="step">인지질</span></span>) + 단백질</li><li>선택적 투과성</li><li>물: 용질 농도 낮은 곳 → 높은 곳</li></ul></div>
+    <div class="stage"><h3>03 정보의 흐름</h3><ul class="f21"><li>유전자로 만들어진 (<span class="blank"><span class="step">단백질</span></span>)의 작용 → 형질</li><li>DNA → RNA(전사) → 단백질((<span class="blank"><span class="step">번역</span></span>))</li><li>DNA 3염기조합 · RNA (<span class="blank"><span class="step">코돈</span></span>)</li></ul></div>
+  </div>
+</section>
+
+<!-- ════════ 18. ○× ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 마무리: 기본 개념 확인하기">
+  <h2><span class="tag q">기본 개념 확인하기</span>옳은 것은 ○, 옳지 않은 것은 ×</h2>
+  <table class="tight">
+    <tbody>
+      <tr><td class="l">(1) 효소가 있을 때 화학 반응의 활성화에너지가 높아진다.</td><td style="width:260px"><span class="step">× <span class="small">낮아진다</span></span></td></tr>
+      <tr><td class="l">(2) 아미노산은 주로 세포막의 인지질 이중층을 직접 통과한다.</td><td><span class="step">× <span class="small">막단백질</span></span></td></tr>
+      <tr><td class="l">(3) 식물 세포는 세포 안과 용질의 농도가 같은 용액에서 원래의 형태를 유지한다.</td><td><span class="step">○</span></td></tr>
+      <tr><td class="l">(4) 전사가 일어나면 DNA의 유전정보가 RNA로 옮겨진다.</td><td><span class="step">○</span></td></tr>
+      <tr><td class="l">(5) RNA의 유전부호는 연속된 3개의 염기로 이루어져 있다.</td><td><span class="step">○</span></td></tr>
+    </tbody>
+  </table>
+  <div class="board mt16" style="min-height:80px"></div>
+</section>
+
+<!-- ════════ 19. 문항 1 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 마무리 1">
+  <h2><span class="tag q">중단원 마무리 1</span>물질대사</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22"><b>Q</b> 물질대사에 대한 설명으로 옳지 <b>않은</b> 것은?</p>
+      <div class="f21 mt8">① 효소가 관여한다.<br>② 물질을 합성할 때 에너지를 흡수한다.<br>③ 물질을 분해할 때 에너지를 방출한다.<br>④ 생명체 밖에서 일어나는 모든 화학 반응이다.<br>⑤ 생명활동 유지를 위한 물질과 에너지를 얻거나 사용한다.</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">④ <span class="small">물질대사는 생명체 <b>안</b>에서 일어나는 모든 화학 반응이다.</span></div>
+</section>
+
+<!-- ════════ 20. 문항 2 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 마무리 2">
+  <h2><span class="tag q">중단원 마무리 2</span>카탈레이스 실험</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 680px">
+      <table class="tight"><thead><tr><th>구분</th><th>(가)</th><th>(나)</th><th>(다)</th></tr></thead><tbody><tr><td>넣은 물질</td><td>3 % 과산화 수소수 + 증류수</td><td>3 % 과산화 수소수 + 감자즙</td><td>3 % 에탄올 + 감자즙</td></tr><tr><td>반응 여부</td><td>×</td><td>◯</td><td>×</td></tr></tbody></table>
+      <div class="bogi f21 mt8">ㄱ. 반응의 활성화에너지는 (나)에서가 (가)에서보다 높다.<br>ㄴ. (나)에서 산소가 발생한다.<br>ㄷ. 카탈레이스는 에탄올을 분해하는 화학 반응에 관여한다.</div>
+      <div class="choices f22 mt8"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄷ</span><span>④ ㄱ, ㄴ</span><span>⑤ ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">② <span class="small">ㄱ. 효소가 있는 (나)에서 더 낮다 · ㄷ. 카탈레이스는 과산화 수소만 분해</span></div>
+</section>
+
+<!-- ════════ 21. 문항 3 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 마무리 3">
+  <h2><span class="tag q">중단원 마무리 3</span>세포 내 유전정보의 흐름</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="flow"><div class="fnode">(가)</div><div class="farr">→</div><div class="fnode">RNA</div><div class="farr">— ㉠ →</div><div class="fnode">(나)</div></div>
+      <div class="bogi f21 mt12">ㄱ. (가)의 특정 부위에 단백질을 암호화하는 유전자가 있다.<br>ㄴ. ㉠에서 코돈 순서에 따라 아미노산이 차례대로 연결된다.<br>ㄷ. (나)의 작용으로 형질이 나타난다.</div>
+      <p class="f21 mt8">옳은 것만을 &lt;보기&gt;에서 있는 대로 골라 보자.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">ㄱ, ㄴ, ㄷ <span class="small">(가) DNA, ㉠ 번역, (나) 단백질</span></div>
+</section>
+
+<!-- ════════ 22. 문항 4 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 마무리 4">
+  <h2><span class="tag q">중단원 마무리 4</span>단백질 합성 과정</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <svg class="fig" viewBox="0 0 460 190" style="width:460px" aria-label="DNA 두 가닥 ACCTTTCCG / TGGAAAGGC 중 위 가닥(ACCTTTCCG)을 전사해 RNA UGGAAAGGC가 만들어지고(가), 아미노산 3개로 번역(나)된다. ㉠은 RNA의 첫 염기 하나를 가리킨다">
+        <text class="tex" x="20" y="30" data-tex="\mathrm{ACCTTTCCG}" data-size="22"></text>
+        <text class="tex" x="20" y="58" data-tex="\mathrm{TGGAAAGGC}" data-size="22"></text>
+        <g data-arw="80,66,80,96,ink,2.5"></g><text class="tex" x="92" y="88" data-mix="(가)" data-size="16"></text>
+        <text class="tex" x="20" y="122" data-tex="\mathrm{UGGAAAGGC}" data-size="22"></text>
+        <text class="tex" x="20" y="148" data-mix="㉠ ↑(첫 염기 1개)" data-size="16"></text>
+        <g data-arw="230,112,290,112,ink,2.5"></g><text class="tex" x="240" y="100" data-mix="(나)" data-size="16"></text>
+        <g><circle cx="320" cy="112" r="16" fill="#F08A97"/><rect x="345" y="96" width="32" height="32" fill="#7FB3E6"/><path d="M405 96 l16 32 h-32 Z" fill="#F7C548"/></g>
+      </svg>
+      <div class="bogi f21 mt8">ㄱ. (가)는 번역이다.<br>ㄴ. ㉠은 1개의 코돈이다.<br>ㄷ. (나)에서 RNA의 정보를 이용해 단백질이 합성된다.</div>
+      <div class="choices f22 mt8"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">② <span class="small">(가)는 전사 · 코돈은 3개 염기라 ㉠(염기 1개)은 코돈이 아니다.</span></div>
+</section>
+
+<!-- ════════ 23. 중단원 스스로 점검 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 중단원 마무리" data-title="중단원 스스로 점검하기">
+  <h2><span class="tag q">중단원 스스로 점검하기</span>생명 시스템</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 세포에서 일어나는 화학 반응, 물질 출입, 정보의 흐름을 설명할 수 있나요?</button>
+    <button class="chk">[과정·기능] 생명 시스템의 생명활동을 확인하는 실험을 수행했나요?</button>
+    <button class="chk">[가치·태도] 생명 시스템에서 나타나는 다양한 생명 현상에 흥미를 느꼈나요?</button>
+  </div>
+  <div class="card tip mt16"><p class="f21"><span class="tag ex">디지털</span> <b>상호 평가</b> 「생명 시스템」 단원에서 배운 내용으로 친구들과 질문과 답을 주고받으며 점검해 보자.</p></div>
+</section>
+
+<!-- ════════ 24. 창의력 키움 활동 ════════ -->
+<section class="slide" data-sec="Ⅲ-3. 생명 시스템 · 창의력 키움 활동" data-title="창의력 키움 활동: 과학 노래">
+  <h2><span class="tag alt">창의력 키움 활동</span>생명 시스템을 주제로 과학 노래 만들기</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">어려운 과학 내용을 가사로 쓰고 반복되는 멜로디를 붙이면 더 쉽고 재미있게 배울 수 있다.</p>
+      <p class="f21 mt12"><b>❶</b> 어떤 음악을 쓸지 정한다 — 잘 알려진 동요·가요·광고 음악, 또는 직접 작곡이나 인공지능 작곡 앱</p>
+      <p class="f21 mt8"><b>❷</b> 물질대사·효소, 세포막, 유전정보의 흐름 등 <b>핵심 용어</b>로 가사를 쓴다(과학적 사실에 근거, 박자 고려).</p>
+      <p class="f21 mt8"><b>❸</b> <span class="tag ex">디지털</span> 발표 자료로 만들어 공유 플랫폼에 올리고, 친구들의 노래도 함께 불러 보자.</p>
+    </div>
+    <div class="col" style="flex:0 0 400px">
+      <div class="card"><h3>가사 예시</h3><p class="f21">「효소는 물질대사 도와주는 생체촉매 ♪<br>효소가 작용하면 화학 반응 빨라지지 ♪」</p><p class="f21 mt8 step">「DNA에서 RNA로 옮겨 적고(전사) ♪<br>세 글자씩 읽어 단백질을 만든다네(번역) ♪」</p></div>
+      <p class="small mt8">두 번째 가사는 덱이 보탬 · 활동돌아보기: 기억에 오래 남는 창의적인 노래인지 되돌아보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 스스로 정리 ════════ -->
+<section class="slide" data-sec="03 세포 내 정보의 흐름 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>세포 내 정보의 흐름</h2>
+  <table class="tight">
+    <thead><tr><th style="width:200px">단계</th><th>어디서</th><th>무엇이 무엇으로</th><th style="width:260px">유전부호</th></tr></thead>
+    <tbody>
+      <tr><td>유전자</td><td>DNA의 특정 부위</td><td class="l"><span class="step" data-g="t1">형질의 유전정보 저장</span></td><td>3염기조합(DNA)</td></tr>
+      <tr><td>전사</td><td><span class="step" data-g="t2">핵</span></td><td class="l"><span class="step" data-g="t2">DNA 한 가닥 → RNA(A→U, G→C, C→G, T→A)</span></td><td>코돈(RNA)</td></tr>
+      <tr><td>번역</td><td><span class="step" data-g="t3">라이보솜</span></td><td class="l"><span class="step" data-g="t3">RNA 코돈 → 아미노산 차례로 연결 → 단백질</span></td><td>코돈 1개 = 아미노산 1개</td></tr>
+    </tbody>
+  </table>
+  <p class="f21 mt12">단백질의 작용 → 생명활동과 형질 → 생명 시스템 유지</p>
+  <p class="small mt8">다음: Ⅲ 대단원 마무리</p>
+</section>
+
+<!-- ════════ 26. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="03 세포 내 정보의 흐름 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 유전자, 단백질, 형질의 관계를 설명할 수 있다.</button>
+    <button class="chk">[지식·이해] 전사와 번역으로 DNA → RNA → 단백질 정보가 흐름을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] DNA 가닥에서 코돈과 아미노산 배열을 써 낼 수 있다.</button>
+  </div>
+  <div class="card mt16"><p class="f21"><b>Q</b> 전사에 쓰이는 DNA 가닥이 TAC CCA이면 RNA 코돈은? <span class="step">→ <span class="ans">AUG GGU</span></span></p></div>
+</section>
