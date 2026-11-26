@@ -1,0 +1,7 @@
+/* 3-1-2 지권의 변화와 판 구조론 — 덱 전용 (.is1312-) */
+.slide.cover h1.is1312-h1{font-size:96px}
+.is1312-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1312-btns.col{flex-direction:column;align-items:stretch}
+.is1312-btns .btn{font-size:19px;padding:5px 12px;text-align:left}
+.is1312-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1312-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}
