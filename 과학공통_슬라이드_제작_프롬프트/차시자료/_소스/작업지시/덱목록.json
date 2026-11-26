@@ -41,41 +41,523 @@
   "level": "고등",
   "units": {
    "Ⅰ": {
-    "name": "〔과학의 기초 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
-    "bookPages": "〔NN–MM〕",
+    "name": "과학의 기초",
+    "bookPages": "10–43",
     "textbook": "_자료/통합과학1_미래엔_교과서_1.pdf",
     "textbookTxt": "_추출/통합과학1_미래엔_교과서_1.txt",
-    "pdfOffset": null,
+    "pdfOffset": 9,
     "guide": "_자료/통합과학1_미래엔_지도서_1.pdf",
     "guideTxt": "_추출/통합과학1_미래엔_지도서_1.txt",
-    "guideOffset": null,
-    "note": "〔중단원 구성과 쪽〕"
+    "guideOffset": 71,
+    "note": "1 과학의 기본량(12–25: 1. 시간과 공간 14–17, 2. 기본량과 단위 18–22, 중단원 마무리 23–24, 키움 활동 25) · 2 측정 표준과 정보(26–39: 1. 측정과 측정 표준 28–31, 2. 신호와 정보 32–36, 중단원 마무리 37–38, 키움 활동 39) · 대단원 마무리 40–43. 대단원 도입 10–11. 지도서 쪽 = PDF 쪽 + guideOffset(지도서 자체 쪽 번호, 교과서 쪽은 지도서 본문의 「교과서 N쪽」 표시로 찾음)"
    },
    "Ⅱ": {
-    "name": "〔물질과 규칙성 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
-    "bookPages": "〔NN–MM〕",
+    "name": "물질과 규칙성",
+    "bookPages": "44–99",
     "textbook": "_자료/통합과학1_미래엔_교과서_2.pdf",
     "textbookTxt": "_추출/통합과학1_미래엔_교과서_2.txt",
-    "pdfOffset": null,
+    "pdfOffset": 43,
     "guide": "_자료/통합과학1_미래엔_지도서_2.pdf",
     "guideTxt": "_추출/통합과학1_미래엔_지도서_2.txt",
-    "guideOffset": null,
-    "note": "〔중단원 구성과 쪽〕"
+    "guideOffset": 117,
+    "note": "1 원소의 생성과 규칙성(46–77: 1. 우주 초기에 생성된 원소 48–53, 2. 별의 진화와 원소의 생성 54–59, 3. 원소의 주기성과 결합 60–67, 4. 이온 결합과 공유 결합 68–74, 중단원 마무리 75–76, 키움 활동 77) · 2 자연의 구성 물질(78–95: 1. 지각과 생명체를 구성하는 물질 80–87, 2. 물질의 전기적 성질 88–92, 중단원 마무리 93–94, 키움 활동 95) · 대단원 마무리 96–99. 대단원 도입 44–45"
    },
    "Ⅲ": {
-    "name": "〔시스템과 상호작용 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
-    "bookPages": "〔NN–MM〕",
+    "name": "시스템과 상호작용",
+    "bookPages": "100–165",
     "textbook": "_자료/통합과학1_미래엔_교과서_3.pdf",
     "textbookTxt": "_추출/통합과학1_미래엔_교과서_3.txt",
-    "pdfOffset": null,
+    "pdfOffset": 99,
     "guide": "_자료/통합과학1_미래엔_지도서_3.pdf",
     "guideTxt": "_추출/통합과학1_미래엔_지도서_3.txt",
-    "guideOffset": null,
-    "note": "〔중단원 구성과 쪽〕"
+    "guideOffset": 193,
+    "note": "1 지구시스템(102–121: 1. 지구시스템의 구성과 상호작용 104–111, 2. 지권의 변화와 판 구조론 112–118, 중단원 마무리 119–120, 키움 활동 121) · 2 역학 시스템(122–141: 1. 중력의 작용 124–131, 2. 역학 시스템과 안전 132–138, 중단원 마무리 139–140, 키움 활동 141) · 3 생명 시스템(142–161: 1. 생명 시스템에서의 화학 반응 144–149, 2. 세포막을 통한 물질 출입 150–153, 3. 세포 내 정보의 흐름 154–158, 중단원 마무리 159–160, 키움 활동 161) · 대단원 마무리 162–165. 대단원 도입 100–101"
    }
   },
-  "decks": [],
-  "requiredInquiry": []
+  "decks": [
+   {
+    "id": "1-1-1",
+    "unit": "Ⅰ",
+    "folder": "1-1-1_시간과_공간",
+    "title": "시간과 공간",
+    "header": "Ⅰ-1-1 시간과 공간 (고등 통합과학1 10–17쪽)",
+    "bookPages": "10–17",
+    "standard": [
+     "10통과1-01-01"
+    ],
+    "area": "융합",
+    "idPrefix": "is1111-",
+    "requiredInquiry": [
+     "통1-탐01"
+    ],
+    "withUnitIntro": "대단원 도입 10–11, 중단원 도입 12–13",
+    "slides": "25–30",
+    "note": "과학의 기초 첫 덱 — 모든 영역의 표기(단위·유효 숫자·축) 약속을 처음 정한다(통합과학_약속 6절). 성취기준 적용 시 고려 사항: 개념 설명 지양, 사례 중심"
+   },
+   {
+    "id": "1-1-2",
+    "unit": "Ⅰ",
+    "folder": "1-1-2_기본량과_단위",
+    "title": "기본량과 단위",
+    "header": "Ⅰ-1-2 기본량과 단위 (고등 통합과학1 18–25쪽)",
+    "bookPages": "18–25",
+    "standard": [
+     "10통과1-01-02"
+    ],
+    "area": "융합",
+    "idPrefix": "is1112-",
+    "requiredInquiry": [],
+    "review": "중단원 1 마무리 23–24, 키움 활동 25",
+    "slides": "30–36",
+    "note": "기본량은 초·중학교 학습 내용 중심(해설). 덱 끝에 중단원 마무리 문항"
+   },
+   {
+    "id": "1-2-1",
+    "unit": "Ⅰ",
+    "folder": "1-2-1_측정과_측정_표준",
+    "title": "측정과 측정 표준",
+    "header": "Ⅰ-2-1 측정과 측정 표준 (고등 통합과학1 26–31쪽)",
+    "bookPages": "26–31",
+    "standard": [
+     "10통과1-01-03"
+    ],
+    "area": "융합",
+    "idPrefix": "is1121-",
+    "requiredInquiry": [
+     "통1-탐02"
+    ],
+    "withUnitIntro": "중단원 도입 26–27",
+    "slides": "25–30"
+   },
+   {
+    "id": "1-2-2",
+    "unit": "Ⅰ",
+    "folder": "1-2-2_신호와_정보",
+    "title": "신호와 정보",
+    "header": "Ⅰ-2-2 신호와 정보 (고등 통합과학1 32–39쪽)",
+    "bookPages": "32–39",
+    "standard": [
+     "10통과1-01-04"
+    ],
+    "area": "융합",
+    "idPrefix": "is1122-",
+    "requiredInquiry": [
+     "통1-탐03"
+    ],
+    "review": "중단원 2 마무리 37–38, 키움 활동 39(액체 타이머 만들기)",
+    "slides": "32–38",
+    "note": "센서의 작동 원리는 다루지 않는다(해설). 과학 소양 기르기 36"
+   },
+   {
+    "id": "1-M",
+    "unit": "Ⅰ",
+    "folder": "1-M_대단원_Ⅰ_마무리",
+    "title": "대단원 Ⅰ 마무리",
+    "header": "Ⅰ 대단원 마무리 (고등 통합과학1 40–43쪽)",
+    "bookPages": "40–43",
+    "standard": [],
+    "area": "융합",
+    "idPrefix": "is119-",
+    "requiredInquiry": [],
+    "review": "대단원 마무리 문항 40–41, 토론·활동 42–43",
+    "slides": "20–28",
+    "note": "과학공통 약속 9절 — 개념 정리 → 문항(대응표) → 단원 활동"
+   },
+   {
+    "id": "2-1-1",
+    "unit": "Ⅱ",
+    "folder": "2-1-1_우주_초기에_생성된_원소",
+    "title": "우주 초기에 생성된 원소",
+    "header": "Ⅱ-1-1 우주 초기에 생성된 원소 (고등 통합과학1 44–53쪽)",
+    "bookPages": "44–53",
+    "standard": [
+     "10통과1-02-01"
+    ],
+    "area": [
+     "지구",
+     "물리"
+    ],
+    "idPrefix": "is1211-",
+    "requiredInquiry": [
+     "통1-탐04"
+    ],
+    "withUnitIntro": "대단원 도입 44–45, 중단원 도입 46–47",
+    "slides": "34–40",
+    "note": "스펙트럼(물리 관점) + 빅뱅·우주 초기 원소(지구 관점)"
+   },
+   {
+    "id": "2-1-2",
+    "unit": "Ⅱ",
+    "folder": "2-1-2_별의_진화와_원소의_생성",
+    "title": "별의 진화와 원소의 생성",
+    "header": "Ⅱ-1-2 별의 진화와 원소의 생성 (고등 통합과학1 54–59쪽)",
+    "bookPages": "54–59",
+    "standard": [
+     "10통과1-02-02"
+    ],
+    "area": "지구",
+    "idPrefix": "is1212-",
+    "requiredInquiry": [
+     "통1-탐05"
+    ],
+    "slides": "30–36",
+    "note": "별 내부 핵융합은 정성적으로(해설)"
+   },
+   {
+    "id": "2-1-3",
+    "unit": "Ⅱ",
+    "folder": "2-1-3_원소의_주기성과_결합",
+    "title": "원소의 주기성과 결합",
+    "header": "Ⅱ-1-3 원소의 주기성과 결합 (고등 통합과학1 60–67쪽)",
+    "bookPages": "60–67",
+    "standard": [
+     "10통과1-02-03"
+    ],
+    "area": "화학",
+    "idPrefix": "is1213-",
+    "requiredInquiry": [
+     "통1-탐06"
+    ],
+    "slides": "34–40",
+    "note": "동족 원소는 1족·17족 중심(해설). 전자껍질 모형 전자배치"
+   },
+   {
+    "id": "2-1-4",
+    "unit": "Ⅱ",
+    "folder": "2-1-4_이온_결합과_공유_결합",
+    "title": "이온 결합과 공유 결합",
+    "header": "Ⅱ-1-4 이온 결합과 공유 결합 (고등 통합과학1 68–77쪽)",
+    "bookPages": "68–77",
+    "standard": [
+     "10통과1-02-04"
+    ],
+    "area": "화학",
+    "idPrefix": "is1214-",
+    "requiredInquiry": [
+     "통1-탐07"
+    ],
+    "review": "중단원 1 마무리 75–76, 키움 활동 77(원소의 자기소개서)",
+    "slides": "36–40",
+    "note": "결합 물질의 성질은 전기 전도성에 한정(해설). 과학 소양 기르기 74"
+   },
+   {
+    "id": "2-2-1",
+    "unit": "Ⅱ",
+    "folder": "2-2-1_지각과_생명체를_구성하는_물질",
+    "title": "지각과 생명체를 구성하는 물질",
+    "header": "Ⅱ-2-1 지각과 생명체를 구성하는 물질 (고등 통합과학1 78–87쪽)",
+    "bookPages": "78–87",
+    "standard": [
+     "10통과1-02-05"
+    ],
+    "area": [
+     "지구",
+     "생명"
+    ],
+    "idPrefix": "is1221-",
+    "requiredInquiry": [
+     "통1-탐08"
+    ],
+    "withUnitIntro": "중단원 도입 78–79",
+    "slides": "36–40",
+    "note": "규산염 광물(지구 관점) + 단백질·핵산(생명 관점). 구조식·화학식 다루지 않음(해설)"
+   },
+   {
+    "id": "2-2-2",
+    "unit": "Ⅱ",
+    "folder": "2-2-2_물질의_전기적_성질",
+    "title": "물질의 전기적 성질",
+    "header": "Ⅱ-2-2 물질의 전기적 성질 (고등 통합과학1 88–95쪽)",
+    "bookPages": "88–95",
+    "standard": [
+     "10통과1-02-06"
+    ],
+    "area": [
+     "물리",
+     "화학"
+    ],
+    "idPrefix": "is1222-",
+    "requiredInquiry": [],
+    "review": "중단원 2 마무리 93–94, 키움 활동 95",
+    "slides": "30–36",
+    "note": "반도체는 불순물로 전기적 성질 제어 수준, 접합 원리 다루지 않음(해설). 과학 소양 기르기 92"
+   },
+   {
+    "id": "2-M",
+    "unit": "Ⅱ",
+    "folder": "2-M_대단원_Ⅱ_마무리",
+    "title": "대단원 Ⅱ 마무리",
+    "header": "Ⅱ 대단원 마무리 (고등 통합과학1 96–99쪽)",
+    "bookPages": "96–99",
+    "standard": [],
+    "area": "융합",
+    "idPrefix": "is129-",
+    "requiredInquiry": [],
+    "review": "대단원 마무리 문항 96–97, 토론 98, 진로 99",
+    "slides": "20–28",
+    "note": "과학공통 약속 9절"
+   },
+   {
+    "id": "3-1-1",
+    "unit": "Ⅲ",
+    "folder": "3-1-1_지구시스템의_구성과_상호작용",
+    "title": "지구시스템의 구성과 상호작용",
+    "header": "Ⅲ-1-1 지구시스템의 구성과 상호작용 (고등 통합과학1 100–111쪽)",
+    "bookPages": "100–111",
+    "standard": [
+     "10통과1-03-01"
+    ],
+    "area": "지구",
+    "idPrefix": "is1311-",
+    "requiredInquiry": [],
+    "withUnitIntro": "대단원 도입 100–101, 중단원 도입 102–103",
+    "slides": "36–40",
+    "note": "권역별 성층 구조, 물질 순환·에너지 흐름"
+   },
+   {
+    "id": "3-1-2",
+    "unit": "Ⅲ",
+    "folder": "3-1-2_지권의_변화와_판_구조론",
+    "title": "지권의 변화와 판 구조론",
+    "header": "Ⅲ-1-2 지권의 변화와 판 구조론 (고등 통합과학1 112–121쪽)",
+    "bookPages": "112–121",
+    "standard": [
+     "10통과1-03-02"
+    ],
+    "area": "지구",
+    "idPrefix": "is1312-",
+    "requiredInquiry": [
+     "통1-탐09"
+    ],
+    "review": "중단원 1 마무리 119–120, 키움 활동 121(작은 지구 만들기)",
+    "slides": "36–40"
+   },
+   {
+    "id": "3-2-1",
+    "unit": "Ⅲ",
+    "folder": "3-2-1_중력의_작용",
+    "title": "중력의 작용",
+    "header": "Ⅲ-2-1 중력의 작용 (고등 통합과학1 122–131쪽)",
+    "bookPages": "122–131",
+    "standard": [
+     "10통과1-03-03"
+    ],
+    "area": "물리",
+    "idPrefix": "is1321-",
+    "requiredInquiry": [
+     "통1-탐10"
+    ],
+    "withUnitIntro": "중단원 도입 122–123",
+    "slides": "36–40",
+    "note": "낙하·원운동 모두 지구 중심 방향 가속도 운동(해설)"
+   },
+   {
+    "id": "3-2-2",
+    "unit": "Ⅲ",
+    "folder": "3-2-2_역학_시스템과_안전",
+    "title": "역학 시스템과 안전",
+    "header": "Ⅲ-2-2 역학 시스템과 안전 (고등 통합과학1 132–141쪽)",
+    "bookPages": "132–141",
+    "standard": [
+     "10통과1-03-04"
+    ],
+    "area": "물리",
+    "idPrefix": "is1322-",
+    "requiredInquiry": [
+     "통1-탐11"
+    ],
+    "review": "중단원 2 마무리 139–140, 키움 활동 141",
+    "slides": "36–40",
+    "note": "관성 법칙·충격량으로 안전장치 고안(프로젝트 136–137). 과학 소양 기르기 138"
+   },
+   {
+    "id": "3-3-1",
+    "unit": "Ⅲ",
+    "folder": "3-3-1_생명_시스템에서의_화학_반응",
+    "title": "생명 시스템에서의 화학 반응",
+    "header": "Ⅲ-3-1 생명 시스템에서의 화학 반응 (고등 통합과학1 142–149쪽)",
+    "bookPages": "142–149",
+    "standard": [
+     "10통과1-03-05"
+    ],
+    "area": "생명",
+    "idPrefix": "is1331-",
+    "requiredInquiry": [
+     "통1-탐13"
+    ],
+    "withUnitIntro": "중단원 도입 142–143",
+    "slides": "32–38",
+    "note": "효소(카탈레이스) 실험"
+   },
+   {
+    "id": "3-3-2",
+    "unit": "Ⅲ",
+    "folder": "3-3-2_세포막을_통한_물질_출입",
+    "title": "세포막을 통한 물질 출입",
+    "header": "Ⅲ-3-2 세포막을 통한 물질 출입 (고등 통합과학1 150–153쪽)",
+    "bookPages": "150–153",
+    "standard": [
+     "10통과1-03-05"
+    ],
+    "area": "생명",
+    "idPrefix": "is1332-",
+    "requiredInquiry": [
+     "통1-탐12"
+    ],
+    "slides": "25–30"
+   },
+   {
+    "id": "3-3-3",
+    "unit": "Ⅲ",
+    "folder": "3-3-3_세포_내_정보의_흐름",
+    "title": "세포 내 정보의 흐름",
+    "header": "Ⅲ-3-3 세포 내 정보의 흐름 (고등 통합과학1 154–161쪽)",
+    "bookPages": "154–161",
+    "standard": [
+     "10통과1-03-06"
+    ],
+    "area": "생명",
+    "idPrefix": "is1333-",
+    "requiredInquiry": [],
+    "review": "중단원 3 마무리 159–160, 키움 활동 161(과학 노래 만들기)",
+    "slides": "32–38",
+    "note": "교과서 탐구 「세포 내 유전정보의 흐름 확인하기」(158)는 성취기준 탐구 아님 — 탐구 장"
+   },
+   {
+    "id": "3-M",
+    "unit": "Ⅲ",
+    "folder": "3-M_대단원_Ⅲ_마무리",
+    "title": "대단원 Ⅲ 마무리",
+    "header": "Ⅲ 대단원 마무리 (고등 통합과학1 162–165쪽)",
+    "bookPages": "162–165",
+    "standard": [],
+    "area": "융합",
+    "idPrefix": "is139-",
+    "requiredInquiry": [],
+    "review": "대단원 마무리 문항 162–163, 토론 164, 포트폴리오 165",
+    "slides": "20–28",
+    "note": "과학공통 약속 9절"
+   }
+  ],
+  "requiredInquiry": [
+   {
+    "id": "통1-탐01",
+    "standards": "10통과1-01-01",
+    "activity": "미시세계와 거시세계의 물체의 크기에 따른 차이점 분석하기",
+    "decks": "1-1-1",
+    "bookPages": "17",
+    "textbookActivity": "미시 세계와 거시 세계의 물체의 크기에 따른 차이점 분석하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐02",
+    "standards": "10통과1-01-03",
+    "activity": "일상생활에서 측정 표준이 활용되는 사례 탐색하기",
+    "decks": "1-2-1",
+    "bookPages": "30",
+    "textbookActivity": "일상생활에서 측정 표준이 활용되는 사례 탐색하기",
+    "form": "탐구 슬라이드(조사·토의)"
+   },
+   {
+    "id": "통1-탐03",
+    "standards": "10통과1-01-04",
+    "activity": "스마트 기기를 활용하여 여러 가지 기본량을 측정하고 분석하기",
+    "decks": "1-2-2",
+    "bookPages": "35",
+    "textbookActivity": "스마트 기기를 활용해 기본량을 측정하고 분석하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐04",
+    "standards": "10통과1-02-01",
+    "activity": "분광기를 활용하여 다양한 물질이 방출하는 스펙트럼을 관찰⋅비교하기",
+    "decks": "2-1-1",
+    "bookPages": "50",
+    "textbookActivity": "분광기를 활용하여 다양한 물질이 방출하는 스펙트럼 관찰ㆍ비교하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐05",
+    "standards": "10통과1-02-02",
+    "activity": "지구와 생명체의 구성 성분을 비교하여, 우주와 지구 역사를 통한 구성 성분의 유래 탐구하기",
+    "decks": "2-1-2",
+    "bookPages": "59",
+    "textbookActivity": "지구와 생명체의 구성 성분을 비교하고 성분의 유래 탐구하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐06",
+    "standards": "10통과1-02-03",
+    "activity": "같은 족 원소들의 유사성을 탐구하는 실험 설계하기",
+    "decks": "2-1-3",
+    "bookPages": "63",
+    "textbookActivity": "같은 족 원소들의 유사성을 탐구하는 실험 설계하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐07",
+    "standards": "10통과1-02-04",
+    "activity": "이온 결합 화합물과 공유 결합 화합물의 성질을 비교하는 실험하기",
+    "decks": "2-1-4",
+    "bookPages": "72–73",
+    "textbookActivity": "이온 결합 물질과 공유 결합 물질의 성질 비교하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐08",
+    "standards": "10통과1-02-05",
+    "activity": "DNA 모형을 제작하고 DNA의 구조적 특징과 규칙성 탐구하기",
+    "decks": "2-2-1",
+    "bookPages": "86–87",
+    "textbookActivity": "DNA 모형을 제작하고 DNA의 구조적 특징과 규칙성 탐구하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐09",
+    "standards": "10통과1-03-02",
+    "activity": "화산 분출로 인한 환경⋅사회경제적 피해의 종류를 조사하고, 지구와 생명 시스템 측면에서 피해를 줄이기 위한 대책 수립하기",
+    "decks": "3-1-2",
+    "bookPages": "118",
+    "textbookActivity": "화산 분출로 인한 피해의 종류를 조사하고 피해 대책 수립하기",
+    "form": "탐구 슬라이드(조사·토의)"
+   },
+   {
+    "id": "통1-탐10",
+    "standards": "10통과1-03-03",
+    "activity": "자유 낙하와 수평으로 던진 물체의 운동을 시각화하여 비교하기",
+    "decks": "3-2-1",
+    "bookPages": "126–127",
+    "textbookActivity": "자유 낙하와 수평으로 던진 물체의 운동을 시각화하여 비교하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐11",
+    "standards": "10통과1-03-04",
+    "activity": "교통수단과 스포츠 등에서 충격을 줄이는 방법 탐색하기",
+    "decks": "3-2-2",
+    "bookPages": "136–137",
+    "textbookActivity": "교통수단과 스포츠 등에서 충격을 줄이는 방법 탐색하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐12",
+    "standards": "10통과1-03-05",
+    "activity": "막을 통한 물질의 이동을 실험하고 생명 활동 유지에서 세포막의 역할 탐구하기",
+    "decks": "3-3-2",
+    "bookPages": "152–153",
+    "textbookActivity": "막을 통한 물질의 이동을 실험하고 세포막의 역할 탐구하기",
+    "form": "실험실 + 탐구 슬라이드"
+   },
+   {
+    "id": "통1-탐13",
+    "standards": "10통과1-03-05",
+    "activity": "효소 작용의 원리에 관한 실험하기",
+    "decks": "3-3-1",
+    "bookPages": "147",
+    "textbookActivity": "효소 작용의 원리에 관한 실험하기",
+    "form": "실험실 + 탐구 슬라이드"
+   }
+  ]
  },
  "통합과학2_미래엔": {
   "course": "통합과학2",
@@ -87,10 +569,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/통합과학2_미래엔_교과서_1.pdf",
     "textbookTxt": "_추출/통합과학2_미래엔_교과서_1.txt",
-    "pdfOffset": null,
+    "pdfOffset": 9,
     "guide": "_자료/통합과학2_미래엔_지도서_1.pdf",
     "guideTxt": "_추출/통합과학2_미래엔_지도서_1.txt",
-    "guideOffset": null,
+    "guideOffset": 71,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅱ": {
@@ -98,10 +580,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/통합과학2_미래엔_교과서_2.pdf",
     "textbookTxt": "_추출/통합과학2_미래엔_교과서_2.txt",
-    "pdfOffset": null,
+    "pdfOffset": 67,
     "guide": "_자료/통합과학2_미래엔_지도서_2.pdf",
     "guideTxt": "_추출/통합과학2_미래엔_지도서_2.txt",
-    "guideOffset": null,
+    "guideOffset": 141,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅲ": {
@@ -109,10 +591,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/통합과학2_미래엔_교과서_3.pdf",
     "textbookTxt": "_추출/통합과학2_미래엔_교과서_3.txt",
-    "pdfOffset": null,
+    "pdfOffset": 125,
     "guide": "_자료/통합과학2_미래엔_지도서_3.pdf",
     "guideTxt": "_추출/통합과학2_미래엔_지도서_3.txt",
-    "guideOffset": null,
+    "guideOffset": 213,
     "note": "〔중단원 구성과 쪽〕"
    }
   },
@@ -129,10 +611,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_1.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_1.txt",
-    "pdfOffset": null,
+    "pdfOffset": 11,
     "guide": "_자료/과학1_미래엔_지도서_1.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_1.txt",
-    "guideOffset": null,
+    "guideOffset": 91,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅱ": {
@@ -140,10 +622,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_2.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_2.txt",
-    "pdfOffset": null,
+    "pdfOffset": 33,
     "guide": "_자료/과학1_미래엔_지도서_2.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_2.txt",
-    "guideOffset": null,
+    "guideOffset": 119,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅲ": {
@@ -151,10 +633,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_3.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_3.txt",
-    "pdfOffset": null,
+    "pdfOffset": 77,
     "guide": "_자료/과학1_미래엔_지도서_3.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_3.txt",
-    "guideOffset": null,
+    "guideOffset": 173,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅳ": {
@@ -162,10 +644,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_4.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_4.txt",
-    "pdfOffset": null,
+    "pdfOffset": 111,
     "guide": "_자료/과학1_미래엔_지도서_4.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_4.txt",
-    "guideOffset": null,
+    "guideOffset": 217,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅴ": {
@@ -173,10 +655,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_5.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_5.txt",
-    "pdfOffset": null,
+    "pdfOffset": 151,
     "guide": "_자료/과학1_미래엔_지도서_5.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_5.txt",
-    "guideOffset": null,
+    "guideOffset": 267,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅵ": {
@@ -184,10 +666,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_6.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_6.txt",
-    "pdfOffset": null,
+    "pdfOffset": 193,
     "guide": "_자료/과학1_미래엔_지도서_6.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_6.txt",
-    "guideOffset": null,
+    "guideOffset": 321,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅶ": {
@@ -195,10 +677,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학1_미래엔_교과서_7.pdf",
     "textbookTxt": "_추출/과학1_미래엔_교과서_7.txt",
-    "pdfOffset": null,
+    "pdfOffset": 223,
     "guide": "_자료/과학1_미래엔_지도서_7.pdf",
     "guideTxt": "_추출/과학1_미래엔_지도서_7.txt",
-    "guideOffset": null,
+    "guideOffset": 361,
     "note": "〔중단원 구성과 쪽〕"
    }
   },
@@ -215,10 +697,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_1.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_1.txt",
-    "pdfOffset": null,
+    "pdfOffset": 11,
     "guide": "_자료/과학2_미래엔_지도서_1.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_1.txt",
-    "guideOffset": null,
+    "guideOffset": 91,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅱ": {
@@ -226,10 +708,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_2.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_2.txt",
-    "pdfOffset": null,
+    "pdfOffset": 51,
     "guide": "_자료/과학2_미래엔_지도서_2.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_2.txt",
-    "guideOffset": null,
+    "guideOffset": 143,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅲ": {
@@ -237,10 +719,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_3.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_3.txt",
-    "pdfOffset": null,
+    "pdfOffset": 93,
     "guide": "_자료/과학2_미래엔_지도서_3.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_3.txt",
-    "guideOffset": null,
+    "guideOffset": 195,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅳ": {
@@ -248,10 +730,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_4.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_4.txt",
-    "pdfOffset": null,
+    "pdfOffset": 133,
     "guide": "_자료/과학2_미래엔_지도서_4.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_4.txt",
-    "guideOffset": null,
+    "guideOffset": 245,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅴ": {
@@ -259,10 +741,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_5.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_5.txt",
-    "pdfOffset": null,
+    "pdfOffset": 167,
     "guide": "_자료/과학2_미래엔_지도서_5.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_5.txt",
-    "guideOffset": null,
+    "guideOffset": 289,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅵ": {
@@ -270,10 +752,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_6.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_6.txt",
-    "pdfOffset": null,
+    "pdfOffset": 197,
     "guide": "_자료/과학2_미래엔_지도서_6.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_6.txt",
-    "guideOffset": null,
+    "guideOffset": 329,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅶ": {
@@ -281,10 +763,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_7.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_7.txt",
-    "pdfOffset": null,
+    "pdfOffset": 239,
     "guide": "_자료/과학2_미래엔_지도서_7.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_7.txt",
-    "guideOffset": null,
+    "guideOffset": 381,
     "note": "〔중단원 구성과 쪽〕"
    },
    "Ⅷ": {
@@ -292,10 +774,10 @@
     "bookPages": "〔NN–MM〕",
     "textbook": "_자료/과학2_미래엔_교과서_8.pdf",
     "textbookTxt": "_추출/과학2_미래엔_교과서_8.txt",
-    "pdfOffset": null,
+    "pdfOffset": 277,
     "guide": "_자료/과학2_미래엔_지도서_8.pdf",
     "guideTxt": "_추출/과학2_미래엔_지도서_8.txt",
-    "guideOffset": null,
+    "guideOffset": 429,
     "note": "〔중단원 구성과 쪽〕"
    }
   },
