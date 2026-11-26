@@ -123,13 +123,13 @@ window.DECK_LABS = {
       T(model, 300, 60, `${NAME[cur - 1]}(${SYM[cur - 1]})`, {size: 24, mix: true, weight: 700});
       T(model, 300, 98, `전자 배치: ${sh.join(', ')}`, {size: 20, mix: true});
       T(model, 300, 132, `${p}주기 ${g}족`, {size: 20, mix: true});
-      T(model, 300, 166, g === 18 ? '18족: 바깥 껍질이 꽉 참' : `원자가 전자: ${sh[sh.length - 1]}개`, {size: 20, mix: true, fill: API.COL.ox});
+      T(model, 300, 166, g === 18 ? `최외각 전자 ${sh[sh.length - 1]}개 · 원자가 전자 0개` : `최외각 = 원자가 전자: ${sh[sh.length - 1]}개`, {size: 20, mix: true, fill: API.COL.ox});
     }
     function draw(){
       O('zs').querySelectorAll('[data-z]').forEach(b => b.classList.toggle('on', +b.dataset.z === cur));
       drawModel(); drawMini();
       if (!cur) O('info').textContent = '원자 번호를 눌러 보자.';
-      else { const [p, g] = pos(cur), sh = shells(cur); O('info').textContent = `${NAME[cur - 1]}: 껍질 ${sh.length}개(→ ${p}주기), ${g === 18 ? '가장 바깥 전자 ' + sh[sh.length - 1] + '개로 안정' : '원자가 전자 ' + sh[sh.length - 1] + '개'}(→ ${g}족)`; }
+      else { const [p, g] = pos(cur), sh = shells(cur); O('info').textContent = `${NAME[cur - 1]}: 껍질 ${sh.length}개(→ ${p}주기), ${g === 18 ? '최외각 전자 ' + sh[sh.length - 1] + '개로 안정, 원자가 전자 0개' : '원자가 전자 ' + sh[sh.length - 1] + '개'}(→ ${g}족)`; }
     }
     O('zs').querySelectorAll('[data-z]').forEach(b => b.addEventListener('click', () => { cur = +b.dataset.z; if (!picked.includes(cur)) picked.push(cur); O('msg').textContent = ''; draw(); }));
     $('[data-act="cmp"]').addEventListener('click', () => {
