@@ -1,0 +1,6 @@
+/* 3-3-2 세포막을 통한 물질 출입 — 덱 전용 (.is1332-) */
+.slide.cover h1.is1332-h1{font-size:96px}
+.is1332-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1332-btns .btn{font-size:19px;padding:5px 10px}
+.is1332-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1332-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}

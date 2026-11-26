@@ -1,0 +1,326 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 시스템과 상호작용" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ-3 생명 시스템 › 02</div>
+    <h1 class="is1332-h1">세포막을 통한<br><span class="acc">물질 출입</span></h1>
+    <p class="sub">선택적 투과성, 확산, 삼투</p>
+    <p class="meta">고등학교 통합과학1 150–153쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="인지질 이중층 사이를 지나가는 작은 분자와 막단백질 통로">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <g fill="#F7C548" stroke="#C2410C" stroke-width="1.5">
+      <circle cx="80" cy="230" r="14"/><circle cx="112" cy="230" r="14"/><circle cx="144" cy="230" r="14"/><circle cx="176" cy="230" r="14"/><circle cx="364" cy="230" r="14"/><circle cx="396" cy="230" r="14"/><circle cx="428" cy="230" r="14"/><circle cx="460" cy="230" r="14"/>
+      <circle cx="80" cy="310" r="14"/><circle cx="112" cy="310" r="14"/><circle cx="144" cy="310" r="14"/><circle cx="176" cy="310" r="14"/><circle cx="364" cy="310" r="14"/><circle cx="396" cy="310" r="14"/><circle cx="428" cy="310" r="14"/><circle cx="460" cy="310" r="14"/>
+    </g>
+    <rect x="210" y="210" width="120" height="120" rx="30" fill="#F08A97" stroke="#D7263D" stroke-width="3"/>
+    <rect x="258" y="210" width="24" height="120" fill="#EEF3F8"/>
+    <g data-anim="move" data-from="0,-120" data-rep="loop" data-dur="2"><path d="M262 360 l8 -14 l8 14 l-8 14 Z" fill="#1F6FD1"/></g>
+    <g data-anim="move" data-from="0,-130" data-rep="loop" data-dur="1.6"><circle cx="128" cy="370" r="9" fill="#E5533D"/></g>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 세포막을 통한 물질 출입" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[10통과1-03-05]</span>생명 시스템을 유지하기 위해서 다양한 화학 반응과 물질 출입이 필요함을 이해하고, 일상생활에서 활용되는 화학 반응 사례를 조사하여 발표할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>세포막의 구조를 이해하고 세포막의 선택적 투과성을 설명할 수 있다.</li>
+    <li>생명 시스템을 유지하기 위해 세포막을 경계로 물질이 출입함을 설명할 수 있다.</li>
+    <li>(탐구) 막을 통한 물질의 이동을 실험하고 세포막의 역할을 탐구할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">세포막의 구조</div><div class="farr">→</div>
+    <div class="fnode">선택적 투과성</div><div class="farr">→</div>
+    <div class="fnode">확산</div><div class="farr">→</div>
+    <div class="fnode">삼투</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 양파·적혈구</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 도입 ════════ -->
+<section class="slide" data-sec="02 세포막을 통한 물질 출입 · 도입" data-title="도입: 지하철 개찰구">
+  <h2>세포에도 개찰구가 있을까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">
+      <svg class="fig" viewBox="0 0 440 280" style="width:440px" aria-label="교통 카드를 댄 사람만 통과하는 지하철 개찰구">
+        <rect x="0" y="230" width="440" height="50" fill="#C9D3DD"/>
+        <g fill="#5B6B7F"><rect x="60" y="120" width="40" height="110" rx="6"/><rect x="200" y="120" width="40" height="110" rx="6"/><rect x="340" y="120" width="40" height="110" rx="6"/></g>
+        <g data-anim="rot" data-o="100,170" data-from="-80" data-rep="alt" data-dur="1.6"><rect x="100" y="166" width="90" height="10" rx="5" fill="#D7263D"/></g>
+        <rect x="240" y="166" width="90" height="10" rx="5" fill="#D7263D"/>
+        <g data-anim="move" data-from="-120,0" data-rep="loop" data-dur="3"><circle cx="150" cy="120" r="14" fill="#16233D"/><rect x="138" y="136" width="24" height="60" rx="10" fill="#16233D"/></g>
+        <g fill="#2E9E6A"><circle cx="80" cy="110" r="8"/></g><g fill="#D7263D"><circle cx="220" cy="110" r="8"/></g>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22">지하철 개찰구의 출입 관리 시스템처럼, 세포에도 물질의 출입을 조절하는 구조가 있다.</p>
+      <p class="f22 mt16"><b>Q</b> 세포막에서 물질 출입을 조절하는 구조는 무엇일까?</p>
+      <div class="answer step">세포막의 <b>인지질 이중층</b>과 <b>막단백질</b>이 세포 안팎의 물질 출입을 조절해 생명활동을 유지한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 세포막의 구조 ════════ -->
+<section class="slide" data-sec="02 · 세포막의 구조와 선택적 투과성" data-title="세포막의 구조">
+  <h2><span class="no">1</span>세포막: 인지질 이중층 + 막단백질</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">
+      <svg class="fig" viewBox="0 0 540 300" style="width:540px" aria-label="친수성 머리가 바깥, 소수성 꼬리가 안쪽으로 마주 보는 인지질 이중층과 그 사이에 박힌 막단백질">
+        <rect x="0" y="0" width="540" height="80" fill="#DDEEF8"/><rect x="0" y="220" width="540" height="80" fill="#DDEEF8"/>
+        <text class="tex" x="20" y="40" data-mix="세포 밖(물이 많음)" data-size="17"></text><text class="tex" x="20" y="290" data-mix="세포 안(물이 많음)" data-size="17"></text>
+        <g id="pl">
+          <g stroke="#C2410C" stroke-width="2.5" fill="none">
+            <path d="M40 106 v40 M50 106 v40 M80 106 v40 M90 106 v40 M120 106 v40 M130 106 v40 M160 106 v40 M170 106 v40 M360 106 v40 M370 106 v40 M400 106 v40 M410 106 v40 M440 106 v40 M450 106 v40 M480 106 v40 M490 106 v40"/>
+            <path d="M40 154 v40 M50 154 v40 M80 154 v40 M90 154 v40 M120 154 v40 M130 154 v40 M160 154 v40 M170 154 v40 M360 154 v40 M370 154 v40 M400 154 v40 M410 154 v40 M440 154 v40 M450 154 v40 M480 154 v40 M490 154 v40"/>
+          </g>
+          <g fill="#F7C548" stroke="#C2410C" stroke-width="1.5">
+            <circle cx="45" cy="96" r="13"/><circle cx="85" cy="96" r="13"/><circle cx="125" cy="96" r="13"/><circle cx="165" cy="96" r="13"/><circle cx="365" cy="96" r="13"/><circle cx="405" cy="96" r="13"/><circle cx="445" cy="96" r="13"/><circle cx="485" cy="96" r="13"/>
+            <circle cx="45" cy="204" r="13"/><circle cx="85" cy="204" r="13"/><circle cx="125" cy="204" r="13"/><circle cx="165" cy="204" r="13"/><circle cx="365" cy="204" r="13"/><circle cx="405" cy="204" r="13"/><circle cx="445" cy="204" r="13"/><circle cx="485" cy="204" r="13"/>
+          </g>
+        </g>
+        <g data-anim="pop" data-o="270,150"><path d="M200 80 Q200 60 235 60 L305 60 Q340 60 340 80 L340 220 Q340 240 305 240 L235 240 Q200 240 200 220 Z" fill="#F08A97" stroke="#D7263D" stroke-width="3"/></g>
+        <text class="tex" x="270" y="156" data-mix="막단백질" data-size="18" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="530" y="100" data-mix="친수성 머리" data-size="16" data-anchor="end"></text>
+        <text class="tex" x="530" y="156" data-mix="소수성 꼬리" data-size="16" data-anchor="end"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">세포막은 <b>인지질</b>과 <b>단백질</b>로 이루어져 있다.</p>
+      <p class="f21 mt12">인지질 = 물과 잘 결합하는 <b>친수성</b> 부위 + 그 반대인 <b>소수성</b> 부위</p>
+      <p class="f21 mt12">세포 안과 밖은 물이 많으므로 친수성 부위는 <b>바깥쪽</b>(물 쪽), 소수성 부위는 <b>안쪽</b>으로 마주 보며 배열 → <mark>인지질 이중층</mark></p>
+      <p class="f21 mt12"><mark>막단백질</mark>은 인지질 이중층 곳곳에 박혀 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 선택적 투과성 ════════ -->
+<section class="slide" data-sec="02 · 세포막의 구조와 선택적 투과성" data-title="선택적 투과성">
+  <h2><span class="no">1</span>선택적 투과성: 물질마다 지나가는 길이 다르다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">
+      <svg class="fig" viewBox="0 0 560 324" style="width:560px" aria-label="산소는 인지질 이중층을 직접 통과하고, 포도당과 나트륨 이온은 서로 다른 막단백질을 통과한다">
+        <rect x="0" y="110" width="560" height="80" fill="#FDE8C8"/>
+        <g fill="#F7C548"><rect x="0" y="110" width="560" height="10"/><rect x="0" y="180" width="560" height="10"/></g>
+        <rect x="230" y="96" width="70" height="108" rx="18" fill="#F7A85A" stroke="#C2410C" stroke-width="2.5"/><rect x="258" y="96" width="14" height="108" fill="#FDE8C8"/>
+        <rect x="400" y="96" width="70" height="108" rx="18" fill="#F08A97" stroke="#D7263D" stroke-width="2.5"/><rect x="428" y="96" width="14" height="108" fill="#FDE8C8"/>
+        <text class="tex" x="20" y="40" data-mix="세포 밖" data-size="17"></text><text class="tex" x="20" y="270" data-mix="세포 안" data-size="17"></text>
+        <g data-anim="move" data-from="0,-170" data-rep="loop" data-dur="2.2"><g fill="#E5533D"><circle cx="100" cy="240" r="9"/><circle cx="116" cy="240" r="9"/></g></g>
+        <g data-anim="move" data-from="0,-180" data-rep="loop" data-dur="2.6"><path d="M265 250 l12 -7 l12 7 v14 l-12 7 l-12 -7 Z" fill="#1F6FD1"/></g>
+        <g data-anim="move" data-from="0,-180" data-rep="loop" data-dur="2.4"><circle cx="435" cy="250" r="10" fill="#8C99A6"/></g>
+        <text class="tex" x="108" y="300" data-mix="산소: 이중층 직접" data-size="16" data-anchor="middle"></text>
+        <text class="tex" x="277" y="300" data-mix="포도당: 막단백질" data-size="16" data-anchor="middle"></text>
+        <text class="tex" x="465" y="300" data-mix="나트륨 이온: 막단백질" data-size="16" data-anchor="middle"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">세포에서 화학 반응이 일어나려면 필요한 물질을 받아들이고 노폐물을 내보내야 한다 → 출입을 조절하는 것이 <b>세포막</b></p>
+      <p class="f22 mt12"><mark>선택적 투과성</mark>: 물질의 종류, 크기 등에 따라 세포막을 통한 이동 방식이 다르게 나타나는 특성</p>
+      <ul class="f21 mt12">
+        <li>크기가 작은 기체(산소, 이산화 탄소): 인지질 이중층을 <b>직접</b> 통과</li>
+        <li>포도당, 이온, 아미노산: 인지질 이중층을 지나기 어려워 <b>막단백질</b>을 통해 이동</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 확산 ════════ -->
+<section class="slide" data-sec="02 · 세포막을 통한 물질 이동" data-title="확산">
+  <h2><span class="no">2</span>확산: 농도가 높은 곳 → 낮은 곳</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 304" style="width:520px" aria-label="폐포 쪽 산소 농도가 높고 세포 안 산소 농도가 낮아 산소가 세포 안으로 확산하고, 이산화 탄소는 반대 방향으로 확산한다">
+        <rect x="20" y="20" width="200" height="240" rx="14" fill="#DDEEF8" stroke="#1F6FD1" stroke-width="2"/>
+        <rect x="300" y="20" width="200" height="240" rx="14" fill="#FCE8EA" stroke="#D7263D" stroke-width="2"/>
+        <line x1="260" y1="20" x2="260" y2="260" stroke="#C2410C" stroke-width="6" stroke-dasharray="14 8"/>
+        <g fill="#E5533D"><circle cx="60" cy="60" r="7"/><circle cx="110" cy="80" r="7"/><circle cx="170" cy="60" r="7"/><circle cx="70" cy="130" r="7"/><circle cx="140" cy="140" r="7"/><circle cx="190" cy="120" r="7"/><circle cx="90" cy="200" r="7"/><circle cx="160" cy="210" r="7"/><circle cx="380" cy="140" r="7"/></g>
+        <g data-anim="move" data-from="-180,0" data-rep="loop" data-dur="2.4"><circle cx="360" cy="90" r="7" fill="#E5533D"/></g>
+        <g data-anim="move" data-from="180,0" data-rep="loop" data-dur="2.8"><rect x="150" y="226" width="14" height="14" fill="#5B6B7F"/></g>
+        <g fill="#5B6B7F"><rect x="330" y="200" width="14" height="14"/><rect x="420" y="220" width="14" height="14"/><rect x="460" y="170" width="14" height="14"/><rect x="400" y="60" width="14" height="14"/></g>
+        <text class="tex" x="120" y="16" data-mix="세포 밖" data-size="16" data-anchor="middle"></text><text class="tex" x="400" y="16" data-mix="세포 안" data-size="16" data-anchor="middle"></text>
+        <circle cx="40" cy="274" r="6" fill="#E5533D"/><text class="tex" x="52" y="284" data-mix="산소" data-size="16"></text>
+        <rect x="104" y="268" width="12" height="12" fill="#5B6B7F"/><text class="tex" x="122" y="284" data-mix="이산화 탄소" data-size="16"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22">산소, 이산화 탄소 같은 작은 기체 분자는 인지질 이중층을 통해 용질의 농도가 <b>높은 곳에서 낮은 곳</b>으로 <mark>확산</mark>한다.</p>
+      <p class="f21 mt12">산소는 세포 밖 → 안, 세포호흡으로 생긴 이산화 탄소는 세포 안 → 밖으로 확산한다.</p>
+      <p class="f21 mt12"><b>Q</b> 세포가 산소를 계속 받아들일 수 있는 까닭은? <span class="step">→ 세포호흡으로 산소를 계속 써서 세포 안 산소 농도가 <span class="ans">늘 낮기</span> 때문</span></p>
+      <p class="small mt8">세포는 에너지를 써서 농도에 거슬러 물질을 옮기기도 한다(지도서 오개념 지도) — 확산·삼투만 있는 것은 아니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 삼투 ════════ -->
+<section class="slide" data-sec="02 · 세포막을 통한 물질 이동" data-title="삼투">
+  <h2><span class="no">2</span>삼투: 물이 용질 농도가 낮은 곳 → 높은 곳</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">세포막을 경계로 안팎의 용질 농도가 다를 때, <b>물 분자</b>가 세포막을 통해 용질의 농도가 <b>낮은 곳에서 높은 곳</b>으로 이동하는 현상 → <mark>삼투</mark></p>
+      <p class="f21 mt12">용질 입자가 커서 세포막을 통과할 수 없을 때 일어난다.</p>
+      <p class="f21 mt12">세포 안과 농도가 같은 용액 속 세포는 드나드는 물의 양이 같아 <b>형태를 유지</b> → 생명활동을 원활하게 수행</p>
+      <p class="f21 mt12"><b>Q</b> 확산과 삼투에서 움직이는 것은? <span class="step">→ 확산: <span class="ans">용질</span>(농도 높음→낮음) · 삼투: <span class="ans">물</span>(용질 농도 낮음→높음)</span></p>
+    </div>
+    <div class="col" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 300" style="width:420px" aria-label="반투과성 막 양쪽: 용질이 적은 쪽에서 많은 쪽으로 물 분자가 이동해 용질이 많은 쪽 수면이 올라간다">
+        <path d="M20 40 V250 H400 V40" fill="none" stroke="#5B6B7F" stroke-width="3"/>
+        <line x1="210" y1="60" x2="210" y2="250" stroke="#C2410C" stroke-width="4" stroke-dasharray="8 6"/>
+        <rect x="23" y="120" width="185" height="128" fill="#DDEEF8"/>
+        <g data-anim="scale" data-from="0.8" data-o="305,248" data-dur="2"><rect x="212" y="90" width="185" height="158" fill="#CFE3F7"/></g>
+        <g fill="#7B4FC8"><circle cx="250" cy="150" r="10"/><circle cx="320" cy="190" r="10"/><circle cx="360" cy="140" r="10"/><circle cx="280" cy="220" r="10"/><circle cx="100" cy="200" r="10"/></g>
+        <g data-anim="move" data-from="-60,0" data-rep="loop" data-dur="1.6"><g fill="#1F6FD1"><circle cx="230" cy="170" r="5"/><circle cx="240" cy="210" r="5"/></g></g>
+        <text class="tex" x="110" y="276" data-mix="용질 농도 낮음" data-size="16" data-anchor="middle"></text>
+        <text class="tex" x="310" y="276" data-mix="용질 농도 높음" data-size="16" data-anchor="middle"></text>
+        <g data-arw="150,100,260,100,minus,3"></g><text class="tex" x="205" y="30" data-mix="물의 이동" data-size="16" data-anchor="middle" fill="#1F6FD1"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 식물 세포의 삼투 ════════ -->
+<section class="slide" data-sec="02 · 세포막을 통한 물질 이동" data-title="식물 세포에서 일어나는 삼투">
+  <h2><span class="no">2</span>식물 세포에서 일어나는 삼투</h2>
+  <div class="stages" style="grid-template-columns:repeat(3,1fr)">
+    <div class="stage"><h3>세포 안과 농도가 같은 용액</h3><svg viewBox="0 0 200 120" aria-hidden="true"><rect x="40" y="15" width="120" height="90" rx="8" fill="none" stroke="#2E9E6A" stroke-width="5"/><rect x="48" y="23" width="104" height="74" rx="6" fill="#F7E3A8"/><g data-arw="20,50,44,58,minus,2.5"></g><g data-arw="160,58,184,50,minus,2.5"></g></svg><p class="key">드나드는 물의 양이 같아 <b>부피 변화 없음</b></p></div>
+    <div class="stage"><h3>세포 안보다 농도가 높은 용액</h3><svg viewBox="0 0 200 120" aria-hidden="true"><rect x="40" y="15" width="120" height="90" rx="8" fill="none" stroke="#2E9E6A" stroke-width="5"/><g data-anim="scale" data-from="1.4" data-o="100,60" data-dur="2"><path d="M70 40 Q100 25 130 40 Q140 60 130 80 Q100 95 70 80 Q60 60 70 40 Z" fill="#F7E3A8" stroke="#D7263D" stroke-width="2"/></g><g data-arw="120,40,180,20,minus,2.5"></g></svg><p class="key">물이 빠져나가 <b>세포막과 세포벽이 분리</b>(원형질 분리)</p></div>
+    <div class="stage"><h3>세포 안보다 농도가 낮은 용액</h3><svg viewBox="0 0 200 120" aria-hidden="true"><rect x="40" y="15" width="120" height="90" rx="8" fill="none" stroke="#2E9E6A" stroke-width="6"/><rect x="45" y="20" width="110" height="80" rx="6" fill="#F7E3A8"/><g data-arw="10,30,46,46,minus,2.5"></g><g data-arw="190,90,154,74,minus,2.5"></g></svg><p class="key">물이 들어와 <b>부피가 커진다</b> — 세포벽 때문에 터지지 않음</p></div>
+  </div>
+  <p class="f21 mt16"><b>Q</b> 배추를 소금에 절이면 숨이 죽는 까닭은? <span class="step">→ 소금물(농도 높음)로 배추 세포 안의 <span class="ans">물이 빠져나가기</span> 때문(삼투)</span></p>
+  <p class="small mt8">식물 세포는 단단한 세포벽이 있어 일정 크기 이상 커지지 않는다(지도서 오개념 지도).</p>
+</section>
+
+<!-- ════════ 9. 스스로 확인하기 151 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="스스로 확인하기 (151쪽)">
+  <h2><span class="tag q">스스로 확인하기</span>세포막과 물질 출입</h2>
+  <div class="card mt8"><p class="f22">➊ 물질의 종류, 크기 등에 따라 물질의 이동 방식이 다르게 나타나는 세포막의 특성을 (&nbsp;<span class="blank"><span class="step">선택적 투과성</span></span>&nbsp;)(이)라고 한다.</p></div>
+  <div class="card mt16"><p class="f22">➋ 식물 세포는 세포 안보다 용질의 농도가 낮은 용액에 있을 때 세포막과 세포벽이 분리된다. (&nbsp;◯,&nbsp;×&nbsp;) <span class="answer step" style="display:inline-block">×</span></p>
+    <p class="f21 step mt8">농도가 <b>높은</b> 용액에 있을 때 물이 빠져나가 분리된다.</p></div>
+  <div class="board mt12" style="min-height:80px"></div>
+</section>
+
+<!-- ════════ 10. 펼치기 ════════ -->
+<section class="slide" data-sec="02 · 펼치기" data-title="펼치기: 생활 속 물질 출입">
+  <h2><span class="tag alt">펼치기</span>세포막을 통한 물질 출입, 생활 속에서 찾기</h2>
+  <p class="f22">세포막을 통한 물질 출입을 보여 주는 사례를 찾아 공유 플랫폼에 올리고, 친구들과 이야기해 보자.</p>
+  <div class="card mt12"><p class="f21"><b>예시</b> 과일·채소를 소금이나 설탕에 절이면 삼투로 안의 물이 빠져나와, 미생물이 쓸 수 있는 수분이 줄어 미생물이 잘 번식하지 못한다 → 식품 저장에 이용(장아찌, 잼)</p></div>
+  <div class="card mt12"><p class="f21"><b>더 찾아보기</b> 시든 채소를 물에 담가 두면? 민물고기를 바닷물에 넣으면? 수액은 왜 생리식염수로 만들까?</p></div>
+  <div class="board mt12" style="min-height:100px"></div>
+  <p class="small">「더 찾아보기」 질문은 덱이 보탬</p>
+</section>
+
+<!-- ════════ 11. 탐구 ① ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 목표와 준비물">
+  <h2><span class="tag">탐구</span>막을 통한 물질의 이동을 실험하고 세포막의 역할 탐구하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="small">탐구 설계 및 수행 | 의사소통과 협업</p>
+  <div class="std mt8"><span class="code">[10통과1-03-05]</span>&lt;탐구 활동&gt; 막을 통한 물질의 이동을 실험하고 생명 활동 유지에서 세포막의 역할 탐구하기</div>
+  <div class="row mt12">
+    <div class="col"><h3>목표</h3><p class="f21">세포막을 통한 물질의 이동을 실험으로 확인하고, 세포막의 역할을 설명할 수 있다.</p>
+      <h3 class="mt12">준비물</h3><p class="f21">적양파, 면도칼, 핀셋, 증류수, 10 % 소금물, 페트리접시, 받침 유리, 덮개 유리, 현미경, 현미경용 스마트 기기 거치대, 스마트 기기, 실험복, 보안경, 실험용 고무장갑</p></div>
+    <div class="col"><div class="card q"><h3>안전</h3><p class="f21">실험복·보안경·고무장갑 착용 · 면도칼로 양파를 자를 때 손 조심 · 남은 물질은 정해진 곳에</p></div>
+      <div class="card tip mt12"><p class="f21">가치·태도 길잡이: 결과를 조작하지 않고 <b>정직하게</b> 기록하고, 뒷정리를 잘한다.</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 12. 탐구 ② 과정 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구 1: 양파 표피세포">
+  <h2><span class="tag">탐구 1</span>양파 표피세포의 세포막을 통한 물질의 이동</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>1</b> 적양파 비늘잎에 가로·세로 5 mm 칼집을 내고 핀셋으로 표피 조각 2개를 벗긴다.</p>
+      <p class="f21 mt8"><b>2</b> 1개는 <b>증류수</b>, 1개는 <b>10 % 소금물</b>이 든 페트리접시에 5분 동안 담근다.</p>
+      <p class="f21 mt8"><b>3</b> 각각 현미경 표본으로 만들어 관찰한다.</p>
+      <p class="f21 mt8"><b>4</b> <span class="tag ex">디지털</span> 스마트 기기로 촬영해 공유 플랫폼에 올린다.</p>
+      <p class="f21 mt8"><b>5</b> 두 경우 세포막을 통한 물의 이동 방향을 설명한다.</p>
+    </div>
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 260" style="width:400px" aria-label="증류수에 담근 양파 표피세포는 붉은 부분이 꽉 차 있고, 소금물에 담근 세포는 붉은 부분이 쪼그라들어 세포벽에서 떨어져 있다">
+        <g stroke="#2E9E6A" stroke-width="3" fill="#FFFFFF"><rect x="20" y="30" width="80" height="50"/><rect x="100" y="30" width="80" height="50"/><rect x="20" y="80" width="80" height="50"/><rect x="100" y="80" width="80" height="50"/></g>
+        <g fill="#C04878"><rect x="24" y="34" width="72" height="42"/><rect x="104" y="34" width="72" height="42"/><rect x="24" y="84" width="72" height="42"/><rect x="104" y="84" width="72" height="42"/></g>
+        <g stroke="#2E9E6A" stroke-width="3" fill="#FFFFFF"><rect x="220" y="30" width="80" height="50"/><rect x="300" y="30" width="80" height="50"/><rect x="220" y="80" width="80" height="50"/><rect x="300" y="80" width="80" height="50"/></g>
+        <g fill="#C04878" data-anim="scale" data-from="1.6" data-o="300,80" data-dur="2"><ellipse cx="260" cy="55" rx="22" ry="13"/><ellipse cx="340" cy="55" rx="20" ry="12"/><ellipse cx="260" cy="105" rx="21" ry="13"/><ellipse cx="340" cy="105" rx="22" ry="12"/></g>
+        <text class="tex" x="100" y="160" data-mix="증류수" data-size="18" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="300" y="160" data-mix="10 % 소금물" data-size="18" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="100" y="190" data-mix="세포 밖 → 안으로 물" data-size="16" data-anchor="middle" fill="#1F6FD1"></text>
+        <text class="tex" x="300" y="190" data-mix="세포 안 → 밖으로 물" data-size="16" data-anchor="middle" fill="#1F6FD1"></text>
+        <text class="tex" x="200" y="240" data-mix="관찰 모식도(실험실에서 직접 해 보자)" data-size="16" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="실험실: 삼투 관찰">
+  <h2><span class="tag">탐구</span>삼투 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="is1332osm">
+    <div class="lab-ctl">
+      <div class="small">① 세포</div>
+      <div class="is1332-btns" data-o="cell"><button class="btn" data-c="onion">양파 표피세포</button><button class="btn" data-c="rbc">적혈구</button><button class="btn" data-c="egg">껍데기 없는 달걀</button></div>
+      <div class="small mt8">② 담글 용액</div>
+      <div class="is1332-btns" data-o="sol"><button class="btn" data-s="0">증류수</button><button class="btn" data-s="1">생리식염수(같은 농도)</button><button class="btn" data-s="2">10 % 소금물</button></div>
+      <div class="is1332-btns mt8"><button class="btn" data-act="go">담가 두기</button><button class="btn" data-act="sum">정리하기</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind is1332-msg" data-o="msg"></output>
+    </div>
+    <div class="lab-fig" style="width:563px;height:443px">
+      <svg viewBox="0 0 560 440" width="560" height="440" aria-label="세포 모양 변화와 물 분자의 이동 방향 화살표, 결과 기록 표"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 탐구 2: 적혈구 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구 2: 적혈구 예측">
+  <h2><span class="tag">탐구 2</span>적혈구 세포막을 통한 물질의 이동 예측하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">
+      <svg class="fig" viewBox="0 0 540 220" style="width:540px" aria-label="생리식염수의 정상 적혈구, 증류수에서 부풀어 터진 적혈구(가), 10 % 소금물에서 쭈그러든 적혈구(나)">
+        <g><ellipse cx="260" cy="90" rx="50" ry="40" fill="#F08A97" stroke="#D7263D" stroke-width="3"/><ellipse cx="260" cy="90" rx="22" ry="16" fill="#E05A6E"/></g>
+        <text class="tex" x="260" y="206" data-mix="정상 적혈구(생리식염수)" data-size="16" data-anchor="middle"></text>
+        <g data-anim="scale" data-from="0.7" data-o="80,90" data-dur="1.6"><circle cx="80" cy="90" r="58" fill="#F6C0C6" stroke="#D7263D" stroke-width="3" stroke-dasharray="10 6"/></g>
+        <text class="tex" x="80" y="176" data-mix="(가) 증류수: 터진다" data-size="16" data-anchor="middle"></text>
+        <g data-anim="scale" data-from="1.4" data-o="440,90" data-dur="1.6"><path d="M410 70 l12 -14 l10 14 l16 -8 l2 16 l16 6 l-12 12 l8 14 l-18 2 l-6 16 l-12 -10 l-14 6 l-2 -16 l-14 -8 l12 -10 Z" fill="#E05A6E" stroke="#D7263D" stroke-width="2"/></g>
+        <text class="tex" x="430" y="176" data-mix="(나) 10 % 소금물: 쭈그러든다" data-size="16" data-anchor="middle"></text>
+      </svg>
+      <p class="small">생리식염수: 사람 세포 안과 용질의 농도가 같은 용액</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> (가)와 (나)에서 적혈구 세포막을 통한 물의 이동 방향은?</p>
+      <p class="f21 step mt8" data-g="b1">(가) 증류수: 물이 세포 <b>밖 → 안</b>으로 많이 들어와 부피가 커지다가 터진다(세포벽이 없음).</p>
+      <p class="f21 step mt8" data-g="b2">(나) 10 % 소금물: 물이 세포 <b>안 → 밖</b>으로 빠져나가 쭈그러든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 탐구 정리 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 정리">
+  <h2><span class="tag">탐구</span>정리</h2>
+  <div class="card"><p class="f21"><b>1</b> 증류수에 넣었을 때 양파 표피세포와 적혈구의 물질 출입은?</p>
+    <p class="f21 step mt8" data-g="z1">두 세포 모두 들어오는 물이 많아 부피가 커진다. 그러나 양파 표피세포는 세포막 바깥에 <b>세포벽</b>이 있어 터지지 않고, 세포벽이 없는 적혈구는 <b>터진다</b>.</p></div>
+  <div class="card mt12"><p class="f21"><b>2</b> 세포막은 생명활동 유지에 어떤 역할을 할까?</p>
+    <p class="f21 step mt8" data-g="z2">세포와 둘러싼 환경 사이에서 <b>물질의 출입을 조절</b>해 세포가 생명활동을 원활하게 수행하게 한다.</p></div>
+  <div class="card tip mt12"><p class="f21"><b>더하기 탐구</b> 식초로 겉껍데기를 녹인 날달걀 2개의 질량을 잰 뒤 증류수와 10 % 소금물에 20분 넣었다 다시 잰다 → <span class="step">증류수 쪽은 물이 들어와 질량 <b>증가</b>, 소금물 쪽은 물이 빠져 질량 <b>감소</b></span></p></div>
+  <div class="chips mt12"><button class="chk">지식·이해 세포막의 역할 설명</button><button class="chk">과정·기능 현미경으로 관찰</button><button class="chk">가치·태도 안전에 유의</button></div>
+</section>
+
+<!-- ════════ 16. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 세포막을 통한 물질 출입 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>세포막을 통한 물질 출입</h2>
+  <table class="tight">
+    <thead><tr><th style="width:220px"></th><th>무엇이</th><th>어디로</th><th style="width:300px">예</th></tr></thead>
+    <tbody>
+      <tr><td>확산(인지질 이중층)</td><td><span class="step" data-g="t1">작은 기체 분자</span></td><td><span class="step" data-g="t1">용질 농도 높은 곳 → 낮은 곳</span></td><td>산소, 이산화 탄소</td></tr>
+      <tr><td>막단백질을 통한 이동</td><td><span class="step" data-g="t2">포도당, 이온, 아미노산</span></td><td><span class="step" data-g="t2">물질마다 다른 막단백질</span></td><td>포도당, 나트륨 이온</td></tr>
+      <tr><td>삼투</td><td><span class="step" data-g="t3">물</span></td><td><span class="step" data-g="t3">용질 농도 낮은 곳 → 높은 곳</span></td><td>절인 배추, 적혈구</td></tr>
+    </tbody>
+  </table>
+  <p class="f21 mt12">세포막(인지질 이중층 + 막단백질)의 <b>선택적 투과성</b> → 물질 출입 조절 → 생명 시스템 유지</p>
+  <p class="small mt8">다음: 3-3-3 세포 내 정보의 흐름</p>
+</section>
+
+<!-- ════════ 17. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 세포막을 통한 물질 출입 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 인지질 이중층과 막단백질로 된 세포막의 구조를 설명할 수 있다.</button>
+    <button class="chk">[지식·이해] 선택적 투과성과 확산·삼투를 구분해 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 양파 표피세포에서 삼투에 의한 변화를 관찰하고 물의 이동 방향을 설명할 수 있다.</button>
+  </div>
+  <div class="card mt16"><p class="f21"><b>Q</b> 바다에서 조난한 사람이 바닷물을 마시면 안 되는 까닭은? <span class="step">→ 몸속보다 농도가 높은 바닷물 때문에 세포의 <span class="ans">물이 빠져나가</span> 오히려 탈수가 심해진다.</span></p></div>
+</section>
