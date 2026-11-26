@@ -1,0 +1,7 @@
+/* 3-2-1 중력의 작용 — 덱 전용 (.is1321-) */
+.is1321-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1321-btns .btn{font-size:19px;padding:5px 10px}
+.is1321-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1321-row{display:flex;align-items:center;gap:10px;font-size:20px}
+.is1321-row input{flex:1}
+.is1321-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}

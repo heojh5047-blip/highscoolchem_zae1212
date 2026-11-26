@@ -1,0 +1,1 @@
+{"findings":[{"slide":9,"severity":"med","rule":"D8","problem":"표와 질문 겹침","fix":"세로 표 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0, 실험실 PRE 통과."}
