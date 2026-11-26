@@ -1,0 +1,1 @@
+{"findings":[{"slide":1,"severity":"med","rule":"D8","problem":"표지 제목 3줄로 부제와 겹침","fix":"제목 96px — 반영"},{"slide":16,"severity":"low","rule":"D8","problem":"껍질 라벨 잘림","fix":"화살표 라벨 재배치 — 반영"},{"slide":18,"severity":"med","rule":"lab","problem":"다시 그린 글자 미조판, 미니 표 열 오류","fix":"일반 SVG 글자, 열 계산 수정 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0, 실험실 2개 PRE 통과."}
