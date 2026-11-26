@@ -467,6 +467,13 @@ def screen():
 F['SCREEN'] = screen()
 
 
+# (11/26 선생님 요청) CH4 정육면체 그림 — cube.py
+import cube
+_cf = cube.cube_figs(arw)
+_cf['S14CUBE'] += '<g class="step" data-g="n14c">' + lab(318, 430, '두 합: 크기 같고 방향 반대 → 전체 합 $=0$', 20, PLUS, mix=True) + '</g>'
+F.update({k: v for k, v in _cf.items() if not k.startswith('_')})
+
+
 # ───────── 끼워 넣기 ─────────
 here = os.path.dirname(os.path.abspath(__file__))
 tpl = open(os.path.join(here, 'slides.tpl.html'), encoding='utf-8').read()
@@ -475,5 +482,6 @@ if miss:
     print('없는 그림', miss)
 out = re.sub(r'@@([A-Za-z0-9_]+)@@', lambda m: F.get(m.group(1), ''), tpl)
 dst = '/home/user/highscoolchem_zae1212/슬라이드_제작_프롬프트/차시자료/_소스/content/화학_미래엔/2-2-3_분자_구조에_따른_물질의_성질/slides.html'
+assert dst.endswith('content/화학_미래엔/2-2-3_분자_구조에_따른_물질의_성질/slides.html'), dst
 open(dst, 'w', encoding='utf-8').write(out)
 print('ok', len(out), 'V4', V4, 'V31', V31)

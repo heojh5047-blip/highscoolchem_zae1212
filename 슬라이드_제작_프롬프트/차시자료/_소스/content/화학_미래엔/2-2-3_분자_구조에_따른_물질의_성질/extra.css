@@ -58,3 +58,7 @@ table.cm223-read td{font-size:21px;width:210px;padding:6px 10px;text-align:cente
 output.kind.cm223-msg{margin-top:8px;line-height:1.45;font-size:19px}
 table.cm223-log{width:100%}
 table.cm223-log th,table.cm223-log td{font-size:19px;padding:4px 8px;text-align:center}
+
+/* (11/26) CH4 정육면체 벡터 합: 짝 합 색 */
+.cm223-pur{color:#7B3FB5}
+.cm223-teal{color:#0E8A7E}
