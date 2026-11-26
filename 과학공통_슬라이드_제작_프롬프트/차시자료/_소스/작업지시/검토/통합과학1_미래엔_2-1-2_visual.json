@@ -1,0 +1,1 @@
+{"findings":[{"slide":6,"severity":"low","rule":"D8","problem":"중성자·에너지 라벨 잘림/겹침","fix":"위치 조정 — 반영"},{"slide":8,"severity":"low","rule":"D8","problem":"층 이름표 잘림","fix":"별 중심을 왼쪽으로 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0."}
