@@ -1,0 +1,7 @@
+/* 1-2-1 측정과 측정 표준 — 덱 전용 (.is1121-) */
+.is1121-places,.is1121-btns,.is1121-cases{display:flex;flex-wrap:wrap;gap:8px}
+.is1121-places .btn.on,.is1121-case.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1121-case{font-size:19px}
+table.is1121-rec{width:100%}
+table.is1121-rec th,table.is1121-rec td{font-size:19px;padding:3px 6px;text-align:center}
+.is1121-msg{display:block;font-size:19px;line-height:1.45;margin-top:6px}
