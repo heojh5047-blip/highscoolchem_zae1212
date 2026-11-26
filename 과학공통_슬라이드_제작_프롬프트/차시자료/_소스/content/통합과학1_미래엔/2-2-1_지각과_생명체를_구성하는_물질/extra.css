@@ -1,0 +1,6 @@
+/* 2-2-1 지각과 생명체를 구성하는 물질 — 덱 전용 (.is1221-) */
+.slide.cover h1.is1221-h1{font-size:92px}
+.is1221-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1221-btns .btn{font-size:19px;padding:5px 12px}
+.is1221-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1221-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}

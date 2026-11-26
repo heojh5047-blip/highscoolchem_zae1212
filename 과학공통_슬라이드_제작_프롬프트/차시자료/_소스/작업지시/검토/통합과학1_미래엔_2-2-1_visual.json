@@ -1,0 +1,1 @@
+{"findings":[{"slide":7,"severity":"low","rule":"D8","problem":"사면체 원자 겹침","fix":"꼭짓점 조정 — 반영"},{"slide":8,"severity":"low","rule":"D8","problem":"공유 산소 위치 어긋남","fix":"위치 조정 — 반영"},{"slide":25,"severity":"low","rule":"D8","problem":"제목 줄바꿈","fix":"제목 줄임 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0, 실험실 PRE 통과."}
