@@ -1,0 +1,6 @@
+/* 1-1-1 시간과 공간 — 덱 전용 (모두 .is1111- 접두어) */
+.is1111-btns{display:flex;gap:10px}
+table.is1111-rec{width:100%}
+table.is1111-rec th{font-size:19px;padding:4px 6px}
+table.is1111-rec td{font-size:19px;text-align:center;padding:3px 6px}
+.is1111-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}

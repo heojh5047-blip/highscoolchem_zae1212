@@ -1,0 +1,8 @@
+{"findings":[
+{"slide":4,"severity":"medium","rule":"D8","problem":"'27.3 일' 라벨이 그림 오른쪽에서 잘림, '1 일' 라벨이 자전 화살표와 겹침","fix":"라벨 위치를 안쪽·위로 옮기고 호를 낮춤 — 반영"},
+{"slide":5,"severity":"low","rule":"T","problem":"'들어가기 활동디지털' 붙어 보임","fix":"띄어 씀 — 반영"},
+{"slide":16,"severity":"low","rule":"D8","problem":"'벽' 라벨이 벽 아래 가장자리와 겹침","fix":"벽 왼쪽 위로 옮김 — 반영"},
+{"slide":22,"severity":"low","rule":"D8","problem":"'사람' 라벨이 눈금 10^2 라벨과 겹침","fix":"그림 라벨을 빼고 실험실 아래 설명 줄에 '검은 점선 = 사람 키' — 반영"},
+{"slide":27,"severity":"low","rule":"D8","problem":"'규모에 맞는 측정 방법' 글이 상자보다 넓음, 경험 확장 노드가 떨어져 있음","fix":"상자를 넓히고 화살표 연결 — 반영"},
+{"slide":26,"severity":"low","rule":"T5","problem":".choices 안에 글자 직접","fix":"선택지마다 span — 반영"}
+],"summary":"전체 캡처 2회 확인. 자동 점검 0·콘솔 0, motion_check 0, ask_check 0. data-anim 24곳."}
