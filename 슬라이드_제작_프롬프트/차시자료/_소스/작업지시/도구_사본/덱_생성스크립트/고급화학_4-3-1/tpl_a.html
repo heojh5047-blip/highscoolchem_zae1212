@@ -1,0 +1,425 @@
+<!-- 고급화학 4-3-1a 반응 속도의 표현과 반응 속도식 (1) — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 3. 화학 반응 속도식 › 01 · 02</div>
+    <h1 class="ac431-h1">반응 속도의 표현과<br>반응 속도식 (1)</h1>
+    <p class="sub">평균 반응 속도와 순간 반응 속도, 계수와 반응 속도의 관계, 반응 속도식과 반응 차수, 초기 속도로 반응 차수 구하기, 반응 속도 상수의 단위</p>
+    <p class="meta">고등학교 고급 화학 230–235쪽</p>
+  </div>
+  {{COVER_A}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅳ-3. 화학 반응 속도식 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>3. 화학 반응 속도식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 반응 속도의 표현 · <b class="c-plus">02</b> 반응 속도식과 반응 차수 <span class="small c-plus">← 오늘 (1)</span></p>
+        <p class="f21">02의 뒷부분 — 적분 속도식과 반감기 <span class="small">(다음 시간 (2))</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">수소와 산소의 혼합 기체는 몇 년이고 그대로 있지만, 불꽃이나 전기 스파크를 만나면 아주 짧은 시간에 폭발하며 반응한다. 반응 속도는 반응 조건에 따라 크게 다르다. 반응 시간에 따른 농도 변화로 <b>반응 속도식</b>과 <b>적분 속도식</b>, <b>반감기</b>를 구하고, 반응 속도가 반응물의 농도에 어떻게 의존하는지 알아본다.</p>
+      </div>
+    </div>
+    <div class="col stack">{{INTRO}}
+      <p class="small">같은 반응물이라도 조건에 따라 속도가 크게 다르다 — 빠르기를 수로 나타내 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 반응 속도의 표현 · 02 반응 속도식과 반응 차수" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-07]</span>화학 반응 속도에 영향을 미치는 요인을 이해하고, 아레니우스 식을 이용하여 반응 속도의 변화를 설명할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화04-08]</span>0, 1, 2차 반응의 적분 속도식을 이해하고, 이를 반응 속도 예측에 활용할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>반응 속도를 농도 변화로 나타내고, 평균 반응 속도·순간 반응 속도·초기 반응 속도를 구별할 수 있다.</li>
+    <li>균형 화학 반응식의 계수로 반응물과 생성물의 속도 사이의 관계를 등식으로 나타낼 수 있다.</li>
+    <li>초기 반응 속도 자료로 반응 속도식과 반응 차수, 반응 속도 상수와 그 단위를 구할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">농도 변화</div><div class="farr">→</div>
+    <div class="fnode">평균·순간 속도</div><div class="farr">→</div>
+    <div class="fnode">계수와 속도</div><div class="farr">→</div>
+    <div class="fnode">반응 속도식</div><div class="farr">→</div>
+    <div class="fnode">초기 속도법</div><div class="farr">→</div>
+    <div class="fnode hl">$k$의 단위</div>
+  </div>
+  <p class="small mt12">다음 시간 (2): 적분 속도식과 반감기, 크리스털 바이올렛 반응 차수 실험실, 연습 문제</p>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 반응 속도의 표현 · 도입" data-title="생각 열기: 빠르기를 수로">
+  <h2><span class="tag">생각 열기</span>어느 반응이 더 빠를까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">{{THINK_A}}</div>
+    <div class="col stack">
+      <p class="f21">두 반응 (가)와 (나)에서 반응물의 몰농도가 시간에 따라 줄어든다.</p>
+      <p class="f21" data-q><b>Q</b> 어느 반응이 더 빠른가? 무엇을 비교해서 판단했는가?</p>
+      <p class="f21 step">→ <span class="ans">(가)</span> — 같은 시간 동안 줄어든 농도가 더 크다.</p>
+      <p class="f21" data-q><b>Q</b> 그렇다면 '빠르기'를 하나의 수로 나타내려면?</p>
+      <p class="f21 step">→ 단위 시간 동안의 <span class="ans">농도 변화</span>로 나타낸다 — 단위는 $\text{mol/(L}\cdot\text{s)}$</p>
+      <p class="small step">(가)도 시간이 지날수록 기울기가 완만해진다 — 반응 속도는 시간에 따라 변한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 연결 ════════ -->
+<section class="slide" data-sec="01 반응 속도의 표현 · 도입" data-title="연결: 평형과 반응 속도">
+  <h2><span class="tag alt">연결</span>평형에서 만난 반응 속도</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><h3>이미 배운 것</h3>
+        <p class="f21">· 반응 속도 = 일정 시간 동안 변한 양 ÷ 걸린 시간 (기체 부피, 질량, 농도)</p>
+        <p class="f21">· 화학 평형(Ⅳ-1): 정반응 속도 = 역반응 속도인 동적 평형</p>
+      </div>
+      <p class="f21" data-q><b>Q</b> 평형에 이르는 동안 정반응 속도는 왜 점점 느려졌을까?</p>
+      <p class="f21 step">→ 반응물의 <span class="ans">농도</span>가 줄었기 때문 — 반응 속도는 농도에 의존한다.</p>
+      <div class="note puzzle step">오늘의 질문: 반응 속도는 농도에 <b>어떻게</b> 의존할까? → 식으로 나타낸 것이 <b>반응 속도식</b>이다.</div>
+    </div>
+    <div class="col">{{LINK}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ① 반응 속도의 정의 ════════ -->
+<section class="slide" data-sec="01 · 반응 속도의 의미" data-title="반응 속도의 정의">
+  <h2><span class="no">1</span>반응 속도는 시간에 따른 농도 변화이다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">화학 반응에서 반응 속도는 반응 시간에 따른 물질의 농도 변화, 곧 <mark>반응물의 농도 감소량이나 생성물의 농도 증가량</mark>을 측정하여 나타낸다.</p>
+      <div class="formula sm">$\begin{aligned}\text{반응 속도}&=\dfrac{\text{반응물의 농도 감소량}}{\text{반응 시간}}\\&=\dfrac{\text{생성물의 농도 증가량}}{\text{반응 시간}}\end{aligned}$<div class="unit">농도의 단위 mol/L(M), 시간의 단위 s → 반응 속도의 단위 $\text{mol/(L}\cdot\text{s)}$</div></div>
+      <p class="f21" data-q><b>Q</b> 반응물의 농도 변화 $\Delta[\ce{A}]$는 음수이다. 반응 속도를 양수로 나타내려면?</p>
+      <p class="f21 step">→ 반응물의 농도 변화에는 <span class="ans">(−) 부호</span>를 붙인다: $-\dfrac{\Delta[\ce{A}]}{\Delta t}$</p>
+    </div>
+    <div class="col">{{RATEDEF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ② 그림 Ⅳ-23 ════════ -->
+<section class="slide" data-sec="01 · 반응 속도의 의미" data-title="오산화 이질소의 분해">
+  <h2><span class="no">2</span>오산화 이질소의 분해 반응</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{FIG23}}</div>
+    <div class="col stack">
+      <div class="formula sm">$\ce{2N2O5(g) -> 4NO2(g) + O2(g)}$<div class="unit">무색의 $\ce{N2O5}$ 기체가 $\ce{NO2}$와 $\ce{O2}$로 분해된다</div></div>
+      <p class="f21">$\ce{N2O5}$ 분해 속도 $=-\dfrac{\Delta[\ce{N2O5}]}{\Delta t}$</p>
+      <p class="f21">$\ce{NO2}$ 생성 속도 $=\dfrac{\Delta[\ce{NO2}]}{\Delta t}$, &nbsp;$\ce{O2}$ 생성 속도 $=\dfrac{\Delta[\ce{O2}]}{\Delta t}$</p>
+      <p class="f21" data-q><b>Q</b> 같은 시간 동안 세 물질의 농도 변화는 같은가?</p>
+      <p class="f21 step">→ <span class="ans">다르다</span> — $\ce{NO2}$가 가장 크게, $\ce{O2}$가 가장 작게 변한다. 반응식의 <b>계수</b>를 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 계수와 반응 속도 ════════ -->
+<section class="slide" data-sec="01 · 반응 속도의 의미" data-title="계수와 반응 속도의 관계">
+  <h2><span class="no">3</span>물질마다 속도가 다르면 반응 속도는 하나로 어떻게?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">$\ce{N2O5}$ 2몰이 분해되면 $\ce{NO2}$ 4몰과 $\ce{O2}$ 1몰이 생긴다 → $\ce{NO2}$ 생성 속도는 $\ce{N2O5}$ 감소 속도의 <b>2배</b>, $\ce{O2}$ 생성 속도의 <b>4배</b>이다.</p>
+      <div class="formula sm">$\dfrac{\Delta[\ce{NO2}]}{\Delta t}=-\dfrac{2\Delta[\ce{N2O5}]}{\Delta t}=\dfrac{4\Delta[\ce{O2}]}{\Delta t}$</div>
+      <p class="f21" data-q><b>Q</b> 어느 물질로 재도 같은 값이 되게 하려면?</p>
+      <p class="f21 step">→ 각 물질의 속도를 <span class="ans">계수로 나눈다</span>.</p>
+      <div class="formula sm step">$a\ce{A} + b\ce{B} \ce{->} c\ce{C} + d\ce{D}$<br>$\begin{aligned}\text{반응 속도}&=-\dfrac{1}{a}\dfrac{\Delta[\ce{A}]}{\Delta t}=-\dfrac{1}{b}\dfrac{\Delta[\ce{B}]}{\Delta t}\\&=\dfrac{1}{c}\dfrac{\Delta[\ce{C}]}{\Delta t}=\dfrac{1}{d}\dfrac{\Delta[\ce{D}]}{\Delta t}\end{aligned}$</div>
+    </div>
+    <div class="col">{{COEF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>평균 반응 속도 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">$\ce{2N2O5(g) -> 4NO2(g) + O2(g)}$에서 측정한 $[\ce{N2O5}]$이다(그림 Ⅳ-23과 같은 조건).</p>
+      <table class="tight ac431-sm"><tr><th>시간 (min)</th><td>0</td><td>2</td><td>4</td></tr><tr><th>$[\ce{N2O5}]$ (M)</th><td>0.160</td><td>0.0878</td><td>0.0482</td></tr></table>
+      <p class="f21" data-q><b>Q</b> 0–2 min 동안 (1) $\ce{N2O5}$ 분해 속도, (2) $\ce{NO2}$·$\ce{O2}$ 생성 속도, (3) 반응 속도는?</p>
+      <p class="f21 step">(1) $-\dfrac{0.0878-0.160}{2}=3.61\times10^{-2}\ \text{M/min}$</p>
+      <p class="f21 step">(2) $\ce{NO2}$: $2\times3.61\times10^{-2}=7.22\times10^{-2}\ \text{M/min}$, $\ce{O2}$: $\tfrac12\times3.61\times10^{-2}=1.80\times10^{-2}\ \text{M/min}$</p>
+      <div class="answer step">(3) 반응 속도 $=\tfrac12\times3.61\times10^{-2}=1.80\times10^{-2}\ \text{M/min}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div><p class="small step">2–4 min 동안의 분해 속도는 $1.98\times10^{-2}\ \text{M/min}$ — 시간이 지나면 느려진다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ④ 평균 반응 속도와 순간 반응 속도 ════════ -->
+<section class="slide" data-sec="01 · 반응 속도의 의미" data-title="평균 반응 속도와 순간 반응 속도">
+  <h2><span class="no">4</span>평균 반응 속도와 순간 반응 속도</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{TANGENT}}</div>
+    <div class="col stack">
+      <p class="f21">반응은 처음에 빠르다가 점점 느려진다. $\dfrac{\Delta[\ce{NO2}]}{\Delta t}$는 주어진 $\Delta t$ 동안의 <mark>평균 반응 속도</mark>이다(할선의 기울기).</p>
+      <p class="f21" data-q><b>Q</b> $\Delta t$를 점점 작게 잡으면 할선은 어떤 선에 가까워질까?</p>
+      <p class="f21 step">→ 시간 $t$에서 곡선의 <span class="ans">접선</span>. 그 기울기 $\dfrac{d[\ce{NO2}]}{dt}$가 시간 $t$에서의 <mark>순간 반응 속도</mark>이다.</p>
+      <p class="small step">보통 '반응 속도'라고 하면 순간 반응 속도를 뜻한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑤ 순간 반응 속도와 초기 반응 속도 ════════ -->
+<section class="slide" data-sec="01 · 반응 속도의 의미" data-title="순간 반응 속도와 초기 반응 속도">
+  <h2><span class="no">5</span>순간 반응 속도의 관계와 초기 반응 속도</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="formula sm">순간 반응 속도: $\dfrac{d[\ce{NO2}]}{dt}=-\dfrac{2d[\ce{N2O5}]}{dt}=\dfrac{4d[\ce{O2}]}{dt}$<div class="unit">평균 반응 속도의 $\Delta$를 $d$로 바꾼 꼴 — 계수 관계는 같다</div></div>
+      <p class="f21">생성물이 생기면 역반응도 함께 일어나므로, 반응 속도를 정하려면 정반응과 역반응을 모두 생각해야 한다.</p>
+      <p class="f21" data-q><b>Q</b> 역반응을 생각하지 않아도 되는 순간은 언제일까?</p>
+      <p class="f21 step">→ 반응물을 처음 섞은 순간($t=0$) — 이때의 순간 반응 속도가 <mark>초기 반응 속도</mark>이며, $t=0$에서 그은 접선의 기울기로 정한다.</p>
+    </div>
+    <div class="col">{{INIT}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>그래프에서 세 가지 속도 읽기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">오른쪽은 $\ce{2N2O5(g) -> 4NO2(g) + O2(g)}$에서 $[\ce{NO2}]$의 변화이다.</p>
+      <p class="f21" data-q><b>Q</b> (1) 0–4 min 동안 $\ce{NO2}$의 평균 생성 속도는? (2) 4 min에서 그은 접선의 기울기가 $0.0289\ \text{M/min}$일 때, 이 순간 $\ce{N2O5}$의 분해 속도는?</p>
+      <p class="f21 step">(1) 4 min에서 $[\ce{NO2}]=0.224\ \text{M}$ → $\dfrac{0.224-0}{4-0}=5.59\times10^{-2}\ \text{M/min}$</p>
+      <div class="answer step">(2) $-\dfrac{d[\ce{N2O5}]}{dt}=\tfrac12\times0.0289=1.45\times10^{-2}\ \text{M/min}$</div>
+      <p class="f21 mt8" data-q><b>Q</b> 초기 반응 속도(0 min 접선)가 4 min의 순간 속도보다 큰 까닭은?</p>
+      <p class="f21 step">→ 처음에는 반응물 $\ce{N2O5}$의 <span class="ans">농도가 커서</span> 더 빠르다.</p>
+    </div>
+    <div class="col stack">{{Q02}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑥ 반응 속도와 반응물의 농도·상태 ════════ -->
+<section class="slide" data-sec="01 · 반응 속도와 반응물의 농도" data-title="반응물의 농도와 상태">
+  <h2><span class="no">6</span>반응물의 농도와 상태에 따라 속도가 달라진다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">보통 반응물의 농도가 증가하면 반응 속도는 빨라진다. 그러나 어떤 반응은 반응물이 일정량 이상만 있으면 농도가 속도에 영향을 주지 않는다.</p>
+      <table class="tight ac431-sm"><tr><th class="l">반응물의 상태</th><th class="l">농도를 조절하는 방법</th></tr>
+        <tr><td class="l">기체</td><td class="l">압력</td></tr>
+        <tr><td class="l">액체(용액)</td><td class="l">용액의 농도</td></tr>
+        <tr><td class="l">고체</td><td class="l">물리적 형태 — <b>표면적</b></td></tr></table>
+      <p class="f21" data-q><b>Q</b> 철 가루는 공기 중에서 빨리 산화되지만 쇠못은 아주 느리게 산화된다. 까닭은?</p>
+      <p class="f21 step">→ 잘게 나눌수록 공기와 닿는 <span class="ans">표면적</span>이 커진다(분필 가루가 덩어리보다 묽은 염산과 빨리 반응하는 것도 같다).</p>
+    </div>
+    <div class="col">{{SURF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 14. 예제 Ⅳ-4 ════════ -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅳ-4">
+  <h2><span class="tag ex">예제 Ⅳ-4</span>수소의 연소 반응 속도</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21">$\ce{2H2(g) + O2(g) -> 2H2O(g)}$ — 생성물이 수증기라 수소는 환경친화 연료이다. 반응 속도를 농도 변화로 나타내고, 산소의 농도가 $0.24\ \text{mol/(L}\cdot\text{s)}$의 속도로 감소한다면 수증기의 농도 증가 속도는?</p>
+      <p class="f21 step"><b>풀이</b> ① $\text{반응 속도}=-\dfrac12\dfrac{\Delta[\ce{H2}]}{\Delta t}=-\dfrac{\Delta[\ce{O2}]}{\Delta t}=\dfrac12\dfrac{\Delta[\ce{H2O}]}{\Delta t}$</p>
+      <p class="f21 step">② $\dfrac12\dfrac{\Delta[\ce{H2O}]}{\Delta t}=-\dfrac{\Delta[\ce{O2}]}{\Delta t}=0.24\ \text{mol/(L}\cdot\text{s)}$</p>
+      <div class="answer step">수증기의 농도 증가 속도 $=2\times0.24=0.48\ \text{mol/(L}\cdot\text{s)}$</div>
+      <p class="small step">수소의 농도 감소 속도도 $0.48\ \text{mol/(L}\cdot\text{s)}$이다.</p>
+    </div>
+    <div class="col stack">{{EX4}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 15. 02 도입 ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="농도가 커지면 왜 빨라질까">
+  <h2><span class="tag alt">연결</span>농도가 커지면 왜 빨라질까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{CONC}}</div>
+    <div class="col stack">
+      <p class="f21">반응물의 농도가 증가하면 <b>단위 부피 속 분자 수</b>가 늘어나 반응 속도가 증가한다.</p>
+      <p class="f21" data-q><b>Q</b> 그렇다면 반응 속도를 나타내는 식에는 무엇이 들어가야 할까?</p>
+      <p class="f21 step">→ 반응물의 <span class="ans">농도 항</span> — 반응 속도식은 반응물의 농도로 나타낸다.</p>
+      <p class="f21" data-q><b>Q</b> 농도를 2배로 하면 속도도 꼭 2배가 될까?</p>
+      <p class="f21 step">→ 반응마다 <span class="ans">다르다</span> — 실험으로 정해야 한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑦ 반응 속도식 ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="반응 속도식과 반응 차수">
+  <h2><span class="no">7</span>반응 속도식과 반응 차수</h2>
+  <p class="f21">실험으로 구한 반응 속도와 반응물의 농도 사이의 관계식을 <mark>반응 속도식</mark>(반응 속도 법칙)이라고 한다.</p>
+  <div class="formula">$a\ce{A} + b\ce{B} \ce{->} c\ce{C} + d\ce{D}$, &nbsp;&nbsp;$\text{반응 속도}=k[\ce{A}]^m[\ce{B}]^n$</div>
+  <div class="stages mt8">
+    <div class="stage"><h3>$k$ 반응 속도 상수</h3><p class="f21">비례 상수. 반응 <b>온도</b>에 따라 변하고, 농도와는 관계없다.</p></div>
+    <div class="stage"><h3>$m$, $n$ 반응 차수</h3><p class="f21">농도가 변할 때 속도가 어떻게 변하는지 알려 준다. 계수 $a$, $b$와 관계없이 <b>실험으로만</b> 정한다.</p></div>
+    <div class="stage"><h3>전체 반응 차수</h3><p class="f21">$\ce{A}$에 $m$차, $\ce{B}$에 $n$차 → 전체 반응 차수 $m+n$차</p></div>
+  </div>
+  <p class="f21 mt12" data-q><b>Q</b> $m$, $n$을 반응식의 계수 $a$, $b$로 바로 정하면 안 되는 까닭은?</p>
+  <p class="f21 step">→ 반응식은 처음과 끝만 보여 줄 뿐, 반응이 실제로 어떤 단계를 거치는지는 알려 주지 않는다 — 반응 차수는 <span class="ans">실험</span>으로 정한다.</p>
+</section>
+
+<!-- ════════ 17. ⑧ 표 Ⅳ-9 ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="표 Ⅳ-9 반응 속도식">
+  <h2><span class="no">8</span>몇 가지 반응의 반응 속도식 (표 Ⅳ-9)</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 700px">
+      <table class="tight ac431-sm"><tr><th class="l">화학 반응식</th><th>반응 속도</th><th>전체 차수</th></tr>
+        <tr><td class="l">$\ce{2N2O5(g) -> 4NO2(g) + O2(g)}$</td><td>$k[\ce{N2O5}]$</td><td><span class="blank"><span class="step">1</span></span></td></tr>
+        <tr><td class="l">$\ce{O2(g) + 2NO(g) -> 2NO2(g)}$</td><td>$k[\ce{O2}][\ce{NO}]^2$</td><td><span class="blank"><span class="step">3</span></span></td></tr>
+        <tr><td class="l">$\ce{CH3CHO(g) -> CH4(g) + CO(g)}$</td><td>$k[\ce{CH3CHO}]^{3/2}$</td><td><span class="blank"><span class="step">3/2</span></span></td></tr>
+        <tr><td class="l">$\ce{2NO2(g) -> 2NO(g) + O2(g)}$</td><td>$k[\ce{NO2}]^2$</td><td><span class="blank"><span class="step">2</span></span></td></tr>
+        <tr><td class="l">$\ce{2NH3(g) -> N2(g) + 3H2(g)}$</td><td>$k[\ce{NH3}]^0=k$</td><td><span class="blank"><span class="step">0</span></span></td></tr>
+        <tr><td class="l">$\ce{CHCl3(g) + Cl2(g) -> CCl4(g) + HCl(g)}$</td><td>$k[\ce{CHCl3}][\ce{Cl2}]^{1/2}$</td><td><span class="blank"><span class="step">3/2</span></span></td></tr>
+        <tr><td class="l">$\ce{2O3(g) -> 3O2(g)}$</td><td>$k[\ce{O3}]^2[\ce{O2}]^{-1}$</td><td><span class="blank"><span class="step">1</span></span></td></tr></table>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 표에서 차수가 계수와 다른 반응을 찾아보자. 차수는 어떤 값이 될 수 있을까?</p>
+      <p class="f21 step">→ 차수는 1, 2가 많지만 <span class="ans">0, 분수, 음수</span>도 있다($\ce{CH3CHO}$ 3/2, $\ce{NH3}$ 0, $\ce{O2}$ −1).</p>
+      <div class="note step"><b>오개념</b> "반응 차수 = 반응식의 계수" (×) — $\ce{2N2O5}$인데 1차, $\ce{2NH3}$인데 0차이다. 차수는 반응식으로 추론할 수 없다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑨ 반응 차수의 의미 ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="반응 차수의 의미">
+  <h2><span class="no">9</span>반응 차수는 농도에 대한 민감도이다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{ORDER}}</div>
+    <div class="col stack">
+      <p class="f21">$\text{반응 속도}=k[\ce{A}]^m$에서 $[\ce{A}]$를 2배로 하면 속도는 $2^m$배가 된다.</p>
+      <table class="tight ac431-sm"><tr><th>차수 $m$</th><th>0</th><th>1</th><th>2</th></tr><tr><th>$[\ce{A}]$ 2배 →</th><td><span class="blank"><span class="step">1배</span></span></td><td><span class="blank"><span class="step">2배</span></span></td><td><span class="blank"><span class="step">4배</span></span></td></tr><tr><th>$[\ce{A}]$ 3배 →</th><td><span class="blank"><span class="step">1배</span></span></td><td><span class="blank"><span class="step">3배</span></span></td><td><span class="blank"><span class="step">9배</span></span></td></tr></table>
+      <p class="f21" data-q><b>Q</b> 0차 반응은 무엇을 뜻할까?</p>
+      <p class="f21 step">→ 그 반응물의 농도가 바뀌어도 <span class="ans">속도가 일정</span>하다(일정량 이상만 있으면 된다).</p>
+      <p class="small step">음수 차수($[\ce{O2}]^{-1}$): 그 물질이 많을수록 오히려 느려진다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>반응 속도식 읽기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21">$\ce{CHCl3(g) + Cl2(g) -> CCl4(g) + HCl(g)}$의 반응 속도 $=k[\ce{CHCl3}][\ce{Cl2}]^{1/2}$이다.</p>
+      <p class="f21" data-q><b>Q</b> (1) 각 반응물에 대한 차수와 전체 반응 차수는? (2) $[\ce{Cl2}]$만 4배로 하면 반응 속도는 몇 배? (3) $[\ce{CHCl3}]$와 $[\ce{Cl2}]$를 모두 4배로 하면?</p>
+      <p class="f21 step">(1) $\ce{CHCl3}$에 1차, $\ce{Cl2}$에 $\tfrac12$차 → 전체 $\tfrac32$차</p>
+      <p class="f21 step">(2) $4^{1/2}=2$배</p>
+      <div class="answer step">(3) $4\times4^{1/2}=8$배</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 20. ⑩ 초기 속도법 (1) ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="초기 반응 속도로 차수 구하기 (1)">
+  <h2><span class="no">10</span>초기 반응 속도로 반응 차수 구하기</h2>
+  <p class="f21">반응물의 초기 농도를 바꾼 일련의 실험에서 <b>초기 반응 속도</b>를 얻어 비교한다 — 처음 순간에는 역반응을 생각하지 않아도 되고, 농도를 정확히 안다.</p>
+  <div class="formula sm">$\ce{O2(g) + 2NO(g) -> 2NO2(g)}$, &nbsp;$\text{반응 속도}=k[\ce{O2}]^m[\ce{NO}]^n$</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 720px">
+      <table class="tight ac431-sm"><caption class="small">표 Ⅳ-10 $\ce{O2}$와 $\ce{NO}$의 초기 농도에 따른 초기 반응 속도</caption>
+        <tr><th>실험</th><th>$[\ce{O2}]$ (mol/L)</th><th>$[\ce{NO}]$ (mol/L)</th><th>초기 반응 속도 $\text{mol/(L}\cdot\text{s)}$</th></tr>
+        <tr><td>1</td><td>$1.10\times10^{-2}$</td><td>$1.30\times10^{-2}$</td><td>$3.20\times10^{-3}$</td></tr>
+        <tr><td>2</td><td class="ac431-hl">$2.20\times10^{-2}$</td><td>$1.30\times10^{-2}$</td><td>$6.40\times10^{-3}$</td></tr>
+        <tr><td>3</td><td>$2.20\times10^{-2}$</td><td class="ac431-hl">$2.60\times10^{-2}$</td><td>$2.56\times10^{-2}$</td></tr></table>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 실험 1 → 2: 무엇이 같고 무엇이 몇 배가 되었나?</p>
+      <p class="f21 step">→ $[\ce{NO}]$ 같음, $[\ce{O2}]$ 2배 → 속도 <span class="ans">2배</span> → $2^m=2$, $m=1$</p>
+      <p class="f21" data-q><b>Q</b> 실험 2 → 3에서는?</p>
+      <p class="f21 step">→ $[\ce{O2}]$ 같음, $[\ce{NO}]$ 2배 → 속도 <span class="ans">4배</span> → $2^n=4$, $n=2$</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. ⑪ 초기 속도법 (2) ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="초기 반응 속도로 차수 구하기 (2)">
+  <h2><span class="no">11</span>반응 속도식과 반응 속도 상수 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <div class="formula">$\text{반응 속도}=k[\ce{O2}][\ce{NO}]^2$<div class="unit">$\ce{O2}$에 1차, $\ce{NO}$에 2차, 전체 3차 반응</div></div>
+      <p class="f21" data-q><b>Q</b> 실험 1의 값을 대입하면 $k$는?</p>
+      <p class="f21 step">$3.20\times10^{-3}\ \text{mol/(L}\cdot\text{s)}=k\times(1.10\times10^{-2}\ \text{mol/L})\times(1.30\times10^{-2}\ \text{mol/L})^2$</p>
+      <div class="answer step">$k=1.72\times10^{3}\ \text{L}^2\text{/(mol}^2\cdot\text{s)}$</div>
+      <p class="f21 step mt8">검산: 실험 2·3의 값을 넣어도 $k=1.72\times10^{3}$ — 한 반응에서 $k$는 실험마다 같다(같은 온도).</p>
+    </div>
+    <div class="col stack">{{STEPS10}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. ⑫ k의 성질과 단위 ════════ -->
+<section class="slide" data-sec="02 · 반응 속도식의 의미와 반응 차수" data-title="반응 속도 상수의 단위">
+  <h2><span class="no">12</span>반응 속도 상수 $k$의 성질과 단위</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">$k$는 순수한 의미의 상수가 아니라 반응 조건에 따른 반응 속도의 <b>척도</b>이다 — 반응 <b>온도</b>나 <b>촉매</b>에 따라 변하고, 농도와는 관계없다.</p>
+      <p class="f21" data-q><b>Q</b> 반응 속도의 단위가 항상 $\text{mol/(L}\cdot\text{s)}$라면, $k$의 단위는 왜 차수마다 다를까?</p>
+      <p class="f21 step">→ $k=\dfrac{\text{반응 속도}}{[\ce{A}]^{\text{전체 차수}}}$이므로 $\dfrac{\text{mol/(L}\cdot\text{s)}}{(\text{mol/L})^{x}}$ — <span class="ans">전체 반응 차수</span>에 따라 달라진다.</p>
+    </div>
+    <div class="col">
+      <table class="tight ac431-sm"><caption class="small">표 Ⅳ-11 전체 반응 차수에 따른 $k$의 단위</caption>
+        <tr><th>전체 반응 차수</th><th>$k$의 단위</th></tr>
+        <tr><td>0차</td><td><span class="blank"><span class="step">$\text{mol/(L}\cdot\text{s)}$</span></span></td></tr>
+        <tr><td>1차</td><td><span class="blank"><span class="step">$\text{s}^{-1}$</span></span></td></tr>
+        <tr><td>2차</td><td><span class="blank"><span class="step">$\text{L/(mol}\cdot\text{s)}$</span></span></td></tr>
+        <tr><td>3차</td><td><span class="blank"><span class="step">$\text{L}^2\text{/(mol}^2\cdot\text{s)}$</span></span></td></tr></table>
+      <p class="small mt8">거꾸로, $k$의 단위만 보고도 전체 반응 차수를 알 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>초기 반응 속도 자료로 반응 속도식 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21">일정한 온도에서 $\ce{2NO(g) + 2H2(g) -> N2(g) + 2H2O(g)}$의 초기 반응 속도를 측정하였다.</p>
+      <table class="tight ac431-sm"><tr><th>실험</th><th>$[\ce{NO}]$ (M)</th><th>$[\ce{H2}]$ (M)</th><th>초기 반응 속도 $\text{M/s}$</th></tr>
+        <tr><td>1</td><td>0.10</td><td>0.10</td><td>$1.23\times10^{-3}$</td></tr>
+        <tr><td>2</td><td>0.10</td><td>0.20</td><td>$2.46\times10^{-3}$</td></tr>
+        <tr><td>3</td><td>0.20</td><td>0.10</td><td>$4.92\times10^{-3}$</td></tr></table>
+      <p class="f21" data-q><b>Q</b> 반응 속도식과 반응 속도 상수(단위 포함)를 구하여라.</p>
+      <p class="f21 step">실험 1 → 2: $[\ce{H2}]$ 2배, 속도 2배 → $\ce{H2}$에 1차 · 실험 1 → 3: $[\ce{NO}]$ 2배, 속도 4배 → $\ce{NO}$에 2차</p>
+      <div class="answer step">$\text{반응 속도}=k[\ce{NO}]^2[\ce{H2}]$, &nbsp;$k=\dfrac{1.23\times10^{-3}}{(0.10)^2(0.10)}=1.23\ \text{L}^2\text{/(mol}^2\cdot\text{s)}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div><p class="small step">계수는 $\ce{H2}$도 2이지만 차수는 1 — 차수는 실험으로 정한다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 확인 문제 05 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 05">
+  <h2><span class="tag q">확인 문제 05</span>반응 속도 상수에 대한 옳은 설명은?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">$\ce{O2(g) + 2NO(g) -> 2NO2(g)}$, 반응 속도 $=k[\ce{O2}][\ce{NO}]^2$에 대한 설명이다.</p>
+      <div class="bogi f21">
+        <p>ㄱ. $[\ce{NO}]$를 3배, $[\ce{O2}]$를 $\tfrac12$배로 하면 반응 속도는 4.5배가 된다.</p>
+        <p>ㄴ. $[\ce{NO}]$를 2배로 하면 $k$도 4배가 된다.</p>
+        <p>ㄷ. 온도를 높이면 $k$가 달라진다.</p>
+        <p>ㄹ. $k$의 단위는 $\text{s}^{-1}$이다.</p>
+      </div>
+      <p class="f21" data-q><b>Q</b> 옳은 것을 모두 고르면?</p>
+      <div class="answer step">ㄱ, ㄷ</div>
+      <p class="small step">ㄱ: $3^2\times\tfrac12=4.5$ · ㄴ: $k$는 농도와 관계없다 · ㄹ: 전체 3차이므로 $\text{L}^2\text{/(mol}^2\cdot\text{s)}$</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01·02 반응 속도와 반응 속도식 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>3. 화학 반응 속도식 — 01 · 02 (1)</h2>
+  <div class="ac431-map">
+    <div class="ac431-node ac431-dim">Ⅳ-1·2<br>화학 평형<br>(정반응 속도<br>= 역반응 속도)</div>
+    <div class="ac431-arr">→</div>
+    <div class="ac431-node ac431-main" data-q><b>01 반응 속도의 표현</b><br>❶ 물질별 속도를 <span class="blank"><span class="step">계수</span></span>로 나누면 반응 속도가 하나로<br>❷ 접선의 기울기 = <span class="blank"><span class="step">순간 반응 속도</span></span><br>❸ $t=0$의 접선 기울기 = <span class="blank"><span class="step">초기 반응 속도</span></span></div>
+    <div class="ac431-node ac431-main" data-q><b>02 반응 속도식과 반응 차수</b><br>❹ 반응 속도 $=k[\ce{A}]^m[\ce{B}]^n$, 차수는 <span class="blank"><span class="step">실험</span></span>으로 정함<br>❺ 전체 반응 차수 = <span class="blank"><span class="step">$m+n$</span></span><br>❻ $k$는 <span class="blank"><span class="step">온도</span></span>·촉매에 따라 변함<br>❼ 1차 $k$의 단위 <span class="blank"><span class="step">$\text{s}^{-1}$</span></span></div>
+    <div class="ac431-arr">→</div>
+    <div class="ac431-node ac431-dim">(2) 적분 속도식<br>반감기<br>(다음 시간)</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01·02 반응 속도와 반응 속도식 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 평균·순간·초기 반응 속도를 구별하고, 계수로 물질별 속도 관계를 나타낼 수 있다.</button>
+    <button class="chk">[과정·기능] 초기 반응 속도 자료를 비교하여 반응 차수와 반응 속도 상수, 그 단위를 구할 수 있다.</button>
+    <button class="chk">[가치·태도] 반응 차수를 반응식이 아닌 실험 자료로 정해야 하는 까닭을 이해하고 자료를 근거로 판단한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{2N2O5}$의 반응 속도식은 왜 $k[\ce{N2O5}]^2$가 아닐까? <span class="step">→ <span class="ans">차수는 실험으로 정한다</span> — 측정 결과 1차였다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 1차 반응에서 $[\ce{A}]$가 절반이 되면 순간 반응 속도는? <span class="step">→ <span class="ans">절반</span>이 된다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 반응 속도식으로 "10분 뒤 농도"를 예측할 수 있을까? — 적분 속도식과 반감기</div>
+</section>

@@ -1,0 +1,12 @@
+{"findings":[
+{"slide":"a1,b1","severity":"high","rule":"D8","problem":"표지 그림이 제목·부제와 겹침","fix":"svg에 cover-fig 클래스(반영)"},
+{"slide":"a1–b27 그래프 전체","severity":"medium","rule":"D8/D4","problem":"가로축 이름이 마지막 눈금 숫자와 겹치고 오른쪽이 잘림","fix":"축 이름을 축 아래 가운데로, 그림 높이 늘림(반영)"},
+{"slide":"a6,a8,b28","severity":"medium","rule":"T4","problem":"긴 식이 칸을 넘침","fix":"aligned 두 줄(반영)"},
+{"slide":"a10","severity":"medium","rule":"D8","problem":"할선 Δt 라벨과 접선 라벨 겹침","fix":"접선 라벨 왼쪽 위로, Δt=6만 라벨 + 범례 줄(반영)"},
+{"slide":"a21","severity":"low","rule":"D8","problem":"막대 위 ×2·[O2]×2 주석이 막대와 겹침","fix":"위치 조정(반영)"},
+{"slide":"a25,b29","severity":"low","rule":"T4","problem":"개념 지도 빈칸 속 분수가 눌려 작게 보임","fix":"글자·인라인 식 빈칸으로(반영)"},
+{"slide":"b8","severity":"medium","rule":"D8","problem":"내용이 영역 밖으로 넘침","fix":"그림을 1/[A]–t 한 판으로, 유도 문장을 식 상자 설명 줄로(반영)"},
+{"slide":"b9,b27","severity":"low","rule":"D8","problem":"「기다리는 NH3」 라벨이 분자와, 기울기 라벨이 직선과 겹침","fix":"라벨 위치 조정(반영)"},
+{"slide":"b24","severity":"medium","rule":"T4","problem":"반응식·정답 상자 칸 넘침","fix":"반응식을 전체 폭으로, 정답 줄임(반영)"},
+{"slide":"b12","severity":"low","rule":"3.2","problem":"그림 라벨 화면 16px 미만","fix":"왼쪽 열 폭 줄여 그림 확대(반영)"}
+],"summary":"최종 render a 26·b 30장 자동 점검 0·콘솔 0, motion 0, ask 0. 전체 sheet 두 번 확인."}
