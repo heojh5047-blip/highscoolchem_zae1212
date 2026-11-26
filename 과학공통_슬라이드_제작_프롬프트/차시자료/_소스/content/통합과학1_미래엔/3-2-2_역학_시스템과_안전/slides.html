@@ -1,0 +1,493 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 시스템과 상호작용" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ-2 역학 시스템 › 02</div>
+    <h1 class="is1322-h1">역학 시스템과<br><span class="acc">안전</span></h1>
+    <p class="sub">관성, 운동량, 충격량으로 충돌을 이해하고 몸을 지킨다</p>
+    <p class="meta">고등학교 통합과학1 132–141쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="같은 높이에서 떨어진 달걀 두 개: 딱딱한 판에서는 깨지고 방석에서는 깨지지 않는다">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <rect x="80" y="380" width="160" height="26" rx="4" fill="#C8A27A" stroke="#8B5E34" stroke-width="2"/>
+    <path d="M300 380 Q380 350 460 380 L460 406 L300 406 Z" fill="#8BD3A7" stroke="#2E9E6A" stroke-width="2"/>
+    <g data-anim="move" data-from="0,-200" data-dur="1.2"><ellipse cx="160" cy="355" rx="22" ry="28" fill="#FDF1E4" stroke="#C2410C" stroke-width="2"/><path d="M142 350 l8 6 l6 -8 l7 8 l7 -6" fill="none" stroke="#C2410C" stroke-width="2.5"/></g>
+    <g data-anim="move" data-from="0,-200" data-dur="1.2"><ellipse cx="380" cy="342" rx="22" ry="28" fill="#FDF1E4" stroke="#C2410C" stroke-width="2"/></g>
+    <g data-anim="pop" data-o="160,320" data-delay="1.2"><path d="M160 300 l6 12 l13 2 l-10 9 l3 13 l-12 -7 l-12 7 l3 -13 l-10 -9 l13 -2 Z" fill="#F7C548"/></g>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 역학 시스템과 안전" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[10통과1-03-04]</span>상호작용이 없을 때 물체가 가속되지 않음을 알고, 충격량과 운동량의 관계를 충돌 관련 안전장치와 스포츠에 적용할 수 있다.</div>
+  <ol class="goals mt12">
+    <li>상호작용이 없을 때 물체가 운동 상태를 유지함을 설명할 수 있다.</li>
+    <li>충격량과 운동량의 관계를 충돌 관련 안전장치와 스포츠에 적용할 수 있다.</li>
+    <li>(탐구) 교통수단과 스포츠 등에서 충격을 줄이는 방법을 탐색할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">관성</div><div class="farr">→</div>
+    <div class="fnode">운동량</div><div class="farr">→</div>
+    <div class="fnode">충격량</div><div class="farr">→</div>
+    <div class="fnode">충돌 시간과 힘</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 안전장치 고안</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 도입 ════════ -->
+<section class="slide" data-sec="02 역학 시스템과 안전 · 도입" data-title="도입: 고속 열차에 안전띠가 없는 까닭">
+  <h2>고속 열차에는 왜 안전띠가 없을까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 460px">
+      <svg class="fig" viewBox="0 0 460 260" style="width:460px" aria-label="길고 무거운 고속 열차와 작은 자동차를 비교한 그림">
+        <g data-anim="move" data-from="-80,0" data-dur="1.6"><path d="M20 120 H300 Q360 120 400 170 H20 Z" fill="#E6EBF0" stroke="#5B6B7F" stroke-width="3"/><g fill="#7FB3E6"><rect x="40" y="132" width="40" height="20" rx="4"/><rect x="100" y="132" width="40" height="20" rx="4"/><rect x="160" y="132" width="40" height="20" rx="4"/><rect x="220" y="132" width="40" height="20" rx="4"/></g><rect x="300" y="140" width="60" height="12" fill="#D7263D"/></g>
+        <line x1="0" y1="180" x2="460" y2="180" stroke="#5B6B7F" stroke-width="4"/>
+        <g><path d="M300 225 H380 Q395 225 400 240 H300 Z" fill="#F08A97" stroke="#D7263D" stroke-width="2"/><circle cx="320" cy="244" r="8" fill="#16233D"/><circle cx="380" cy="244" r="8" fill="#16233D"/></g>
+        <text class="tex" x="200" y="210" data-mix="고속 열차" data-size="18" data-anchor="middle"></text><text class="tex" x="290" y="246" data-mix="자동차" data-size="16" data-anchor="end"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22">고속 열차에는 앞부분의 충격 완충 장치 등 여러 안전장치가 있지만, 의자에는 자동차와 달리 <b>안전띠가 없다</b>.</p>
+      <p class="f22 mt12"><b>Q</b> 그 까닭은 무엇일까?</p>
+      <div class="answer step">질량이 큰 고속 열차는 달리다 멈추기 어려워 급정거해도 멈출 때까지 <b>시간이 오래 걸리므로</b> 사람이 받는 충격이 작기 때문이다.</div>
+      <p class="f21 mt8 step">→ 질량, 속도, 시간이 충격과 어떤 관계일까?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 관성 ════════ -->
+<section class="slide" data-sec="02 · 관성" data-title="상호작용이 없을 때의 운동: 관성">
+  <h2><span class="no">1</span>관성: 운동 상태를 유지하려는 성질</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 260" style="width:520px" aria-label="버스가 출발하면 사람이 뒤로, 버스가 멈추면 앞으로 쏠린다">
+        <rect x="10" y="40" width="230" height="130" rx="14" fill="#F6F9FC" stroke="#5B6B7F" stroke-width="3"/>
+        <rect x="280" y="40" width="230" height="130" rx="14" fill="#F6F9FC" stroke="#5B6B7F" stroke-width="3"/>
+        <g data-anim="rot" data-o="125,160" data-from="15" data-rep="alt" data-dur="1"><line x1="125" y1="160" x2="125" y2="90" stroke="#16233D" stroke-width="6"/><circle cx="125" cy="80" r="14" fill="#16233D"/></g>
+        <g data-anim="rot" data-o="395,160" data-from="-15" data-rep="alt" data-dur="1"><line x1="395" y1="160" x2="395" y2="90" stroke="#16233D" stroke-width="6"/><circle cx="395" cy="80" r="14" fill="#16233D"/></g>
+        <g data-arw="60,200,200,200,field,3"></g><text class="tex" x="125" y="230" data-mix="버스 출발 → 몸은 뒤로" data-size="17" data-anchor="middle"></text>
+        <g data-arw="330,200,470,200,plus,3"></g><text class="tex" x="395" y="230" data-mix="버스 정지 → 몸은 앞으로" data-size="17" data-anchor="middle"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">피겨 선수는 얼음을 계속 밀지 않아도 일직선으로 나아간다. 버스가 출발하면 몸이 뒤로 쏠린다.</p>
+      <p class="f22 mt12"><mark>관성</mark>: 외부에서 힘이 작용하지 않을 때 정지한 물체는 계속 정지해 있고, 운동하던 물체는 계속 같은 속도로 운동하려는 성질</p>
+      <p class="f21 mt12">외부와 상호작용 하지 않으면 운동 상태가 <b>일정</b>, 상호작용 하면 운동 상태가 <b>변한다</b>.</p>
+      <p class="f21 mt8"><mark>역학 시스템</mark>: 여러 힘이 물체 사이에 작용하며 전체적으로 일정한 질서를 유지하는 운동 체계</p>
+    </div>
+  </div>
+  <p class="small mt8">힘은 물체가 「가진」 것이 아니라 두 물체 사이의 <b>상호작용</b>이다 · 질량이 클수록 관성이 크다(지도서)</p>
+</section>
+
+<!-- ════════ 5. 운동량 ════════ -->
+<section class="slide" data-sec="02 · 운동량" data-title="운동량">
+  <h2><span class="no">2</span>운동량 = 질량 × 속도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">같은 속도라도 <b>질량이 큰</b> 물체, 같은 질량이라도 <b>빠른</b> 물체가 운동 상태를 바꾸기 어렵다(볼링공).</p>
+      <div class="card mt12"><p class="f22">$\text{운동량} = \text{질량} \times \text{속도}$ <span class="small">(단위: kg·m/s, 방향은 속도 방향)</span></p></div>
+      <ul class="f21 mt12">
+        <li>달리는 고속 열차: 질량↑ 속도↑ → 운동량이 매우 크다</li>
+        <li>정지한 고속 열차: 속도 0 → 운동량 <b>0</b></li>
+        <li>여러 명이 탄 배 모양 놀이기구는 혼자 미끄러질 때보다 질량이 커서 운동량이 크다</li>
+      </ul>
+    </div>
+    <div class="col" style="flex:0 0 400px">
+      <table class="tight">
+        <thead><tr><th>물체</th><th>질량</th><th>속도</th><th>운동량</th></tr></thead>
+        <tbody>
+          <tr><td>야구공</td><td>0.15 kg</td><td>40 m/s</td><td><span class="step" data-g="p1">6 kg·m/s</span></td></tr>
+          <tr><td>달리는 사람</td><td>60 kg</td><td>5 m/s</td><td><span class="step" data-g="p2">300 kg·m/s</span></td></tr>
+          <tr><td>자동차</td><td>1000 kg</td><td>20 m/s</td><td><span class="step" data-g="p3">20000 kg·m/s</span></td></tr>
+        </tbody>
+      </table>
+      <p class="small mt8">값은 덱이 정한 예</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 스스로 확인하기 133 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="스스로 확인하기 (133쪽)">
+  <h2><span class="tag q">스스로 확인하기</span>관성과 운동량</h2>
+  <div class="card mt8"><p class="f22">➊ 외부와 상호작용이 없으면 운동하던 물체는 계속 속도가 (&nbsp;일정한, 변하는&nbsp;) 운동을 한다. <span class="answer step" style="display:inline-block">일정한</span></p></div>
+  <div class="card mt16"><p class="f22">➋ 질량이 3 kg이고 속력이 5 m/s일 때 물체의 운동량의 크기는? <span class="answer step" style="display:inline-block">3 × 5 = 15 kg·m/s</span></p></div>
+  <div class="card mt16"><p class="f22"><b>확인 문제</b> 운동하던 물체의 질량과 속도가 모두 2배가 되면 운동량은 (&nbsp;<span class="blank"><span class="step">4</span></span>&nbsp;)배가 된다.</p></div>
+  <div class="board mt12" style="min-height:70px"></div>
+</section>
+
+<!-- ════════ 7. 충격량 ════════ -->
+<section class="slide" data-sec="02 · 충격량" data-title="충격량">
+  <h2><span class="no">3</span>충격량 = 힘 × 시간</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 260" style="width:420px" aria-label="일정한 힘 F가 시간 t 동안 작용할 때 힘–시간 그래프 아래 직사각형 넓이가 충격량">
+        <g data-arw="50,220,400,220,muted,2.5"></g><g data-arw="50,220,50,20,muted,2.5"></g>
+        <g data-anim="fade" data-dur="1.2"><rect x="50" y="80" width="260" height="140" fill="#7FB3E6" opacity=".55"/></g>
+        <line x1="50" y1="80" x2="310" y2="80" stroke="#1F6FD1" stroke-width="3.5"/>
+        <text class="tex" x="180" y="160" data-mix="넓이 = 충격량" data-size="20" data-anchor="middle" data-weight="700"></text>
+        <text class="tex" x="40" y="86" data-tex="F" data-size="18" data-anchor="end"></text><text class="tex" x="310" y="244" data-tex="t" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="60" y="20" data-mix="힘" data-size="16"></text><text class="tex" x="410" y="244" data-mix="시간" data-size="16" data-anchor="end"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">충돌하는 두 물체는 충돌하는 시간 동안 서로 힘을 작용하며 충격을 받는다.</p>
+      <div class="card mt12"><p class="f22">$\text{충격량} = \text{힘} \times \text{시간}$ <span class="small">(단위: N·s, 방향은 힘의 방향)</span></p></div>
+      <p class="f21 mt12">힘이 <b>클수록</b>, 작용 시간이 <b>길수록</b> 충격량이 크다 → 축구, 테니스, 골프에서 공을 빠르게 보내려면 <b>큰 힘을 긴 시간</b> 작용한다(끝까지 밀어 치기, 팔로스루).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 충격량 = 운동량의 변화량 ════════ -->
+<section class="slide" data-sec="02 · 충격량" data-title="충격량과 운동량의 변화량">
+  <h2><span class="no">3</span>충격량 = 운동량의 변화량</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">자유 낙하 하는 물체(처음 속도 0)로 생각해 보자.</p>
+      <div class="card mt8"><p class="f21">받은 충격량 = 중력 × 낙하 시간 = (질량 × 중력 가속도) × 낙하 시간</p></div>
+      <div class="card mt8"><p class="f21">운동량의 변화량 = 질량 × 속도 변화량 = 질량 × (중력 가속도 × 낙하 시간)</p></div>
+      <div class="answer mt12">$\text{충격량} = \text{운동량의 변화량}$ — 자유 낙하뿐 아니라 <b>모든 운동</b>에서 받은 충격량만큼 운동량이 변한다.</div>
+    </div>
+    <div class="col" style="flex:0 0 360px">
+      <svg class="fig" viewBox="0 0 360 280" style="width:360px" aria-label="A(100 g, 낮은 곳), B(100 g, 높은 곳), C(200 g, 높은 곳)에서 떨어진 공의 바닥 도달 속도">
+        <line x1="20" y1="250" x2="340" y2="250" stroke="#8C6A4F" stroke-width="4"/>
+        <circle cx="70" cy="150" r="12" fill="#F08A97"/><circle cx="180" cy="50" r="12" fill="#F08A97"/><circle cx="290" cy="50" r="16" fill="#D7263D"/>
+        <g data-arw="70,165,70,215,ink,3"></g><g data-arw="180,65,180,235,ink,3"></g><g data-arw="290,70,290,235,ink,3"></g>
+        <text class="tex" x="70" y="274" data-mix="A 100 g" data-size="16" data-anchor="middle"></text><text class="tex" x="180" y="274" data-mix="B 100 g" data-size="16" data-anchor="middle"></text><text class="tex" x="290" y="274" data-mix="C 200 g" data-size="16" data-anchor="middle"></text>
+      </svg>
+      <p class="f21 mt8"><b>Q</b> 운동량의 변화량이 큰 순서는? <span class="step">→ <span class="ans">C &gt; B &gt; A</span> (높을수록 속도↑, 질량이 크면 ↑)</span></p>
+    </div>
+  </div>
+  <p class="small mt8">운동 제2법칙(F = ma)은 아직 배우지 않았으므로 자유 낙하로 설명한다(지도서 유의점).</p>
+</section>
+
+<!-- ════════ 9. 달걀 낙하 ════════ -->
+<section class="slide" data-sec="02 · 충돌과 안전" data-title="충격량이 같을 때 힘을 줄이는 방법">
+  <h2><span class="no">4</span>충격량이 같으면, 시간이 길수록 힘이 작다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">
+      <svg class="fig" viewBox="0 0 480 290" style="width:480px" aria-label="힘–시간 그래프: 나무판(A)은 짧고 높은 봉우리, 방석(B)은 길고 낮은 봉우리이며 두 넓이는 같다">
+        <g data-arw="50,250,460,250,muted,2.5"></g><g data-arw="50,250,50,20,muted,2.5"></g>
+        <g data-anim="fade" data-dur="1"><path d="M60 250 Q90 30 120 250 Z" fill="#E08A2C" opacity=".6" stroke="#C2410C" stroke-width="2.5"/></g>
+        <g data-anim="fade" data-dur="1" data-delay=".6"><path d="M60 250 Q210 120 380 250 Z" fill="#7FB3E6" opacity=".55" stroke="#1F6FD1" stroke-width="2.5"/></g>
+        <text class="tex" x="130" y="80" data-mix="A 나무판: 짧고 큰 힘" data-size="17" fill="#C2410C"></text>
+        <text class="tex" x="290" y="170" data-mix="B 방석: 길고 작은 힘" data-size="17" fill="#1F6FD1"></text>
+        <text class="tex" x="60" y="20" data-mix="힘" data-size="16"></text><text class="tex" x="460" y="274" data-mix="시간" data-size="16" data-anchor="end"></text>
+        <text class="tex" x="250" y="230" data-mix="두 넓이(충격량)는 같다" data-size="16" data-anchor="middle"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21">같은 높이에서 떨어뜨린 같은 달걀: 나무판에서는 깨지고 방석에서는 깨지지 않는다.</p>
+      <ul class="f21 mt8">
+        <li class="step" data-g="e1">충돌 직전 운동량이 같고, 충돌 후 정지 → 운동량의 변화량 같음 → <b>충격량 같음</b></li>
+        <li class="step" data-g="e2">방석은 멈출 때까지 <b>시간이 길다</b> → 받는 <b>힘이 작다</b> → 깨지지 않음</li>
+      </ul>
+      <table class="tight mt12"><thead><tr><th>충격량</th><th>충돌 시간</th><th>힘의 크기</th></tr></thead><tbody><tr><td>A = B</td><td>A &lt; B</td><td>A &gt; B</td></tr></tbody></table>
+      <p class="small mt8">깨지는지는 힘의 <b>최댓값</b>이 버틸 수 있는 한계를 넘는지로 정해진다(지도서 오개념 지도).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 충돌과 안전" data-title="실험실: 달걀 낙하와 충돌 시간">
+  <h2><span class="tag alt">실험실</span>달걀을 지켜라: 충돌 시간과 힘 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="is1322egg">
+    <div class="lab-ctl">
+      <div class="small">떨어뜨리는 높이 $h$ [m]</div>
+      <div class="is1322-row"><input type="range" min="0.2" max="1.5" step="0.1" value="0.8" data-i="h"><output data-o="h">0.8</output></div>
+      <div class="small mt8">바닥</div>
+      <div class="is1322-btns" data-o="surf"><button class="btn" data-s="0">나무판</button><button class="btn" data-s="1">방석</button><button class="btn" data-s="2">스펀지</button><button class="btn" data-s="3">에어 매트</button></div>
+      <div class="is1322-btns mt8"><button class="btn" data-act="drop">떨어뜨리기</button><button class="btn" data-act="sum">정리하기</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind is1322-msg" data-o="msg"></output>
+    </div>
+    <div class="lab-fig" style="width:563px;height:443px">
+      <svg viewBox="0 0 560 440" width="560" height="440" aria-label="달걀 낙하 장면, 힘–시간 그래프(넓이 = 충격량), 깨짐 한계선, 기록 표"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 안전장치 ════════ -->
+<section class="slide" data-sec="02 · 충돌과 안전" data-title="안전사고 예방을 위한 안전장치">
+  <h2><span class="no">4</span>우리 주변의 안전장치</h2>
+  <div class="stages" style="grid-template-columns:repeat(4,1fr)">
+    <div class="stage"><h3>도로 보호 난간</h3><svg viewBox="0 0 200 80" aria-hidden="true"><g stroke="#8C99A6" stroke-width="5"><line x1="20" y1="30" x2="180" y2="30"/><line x1="20" y1="50" x2="180" y2="50"/><line x1="40" y1="30" x2="40" y2="78"/><line x1="160" y1="30" x2="160" y2="78"/></g></svg><p class="key">자동차 충돌 시간을 길게</p></div>
+    <div class="stage"><h3>안전 매트</h3><svg viewBox="0 0 200 80" aria-hidden="true"><rect x="20" y="40" width="160" height="34" rx="8" fill="#7FB3E6"/><g data-anim="move" data-from="0,-20" data-rep="alt" data-dur="1"><circle cx="100" cy="30" r="10" fill="#16233D"/></g></svg><p class="key">높이뛰기 선수의 충돌 시간을 길게</p></div>
+    <div class="stage"><h3>무릎 보호대·안전모</h3><svg viewBox="0 0 200 80" aria-hidden="true"><path d="M60 60 Q100 0 140 60 Z" fill="#E08A2C"/><rect x="55" y="58" width="90" height="8" fill="#C2410C"/></svg><p class="key">운동 중 충돌 시간을 길게</p></div>
+    <div class="stage"><h3>안전 거리</h3><svg viewBox="0 0 200 80" aria-hidden="true"><rect x="20" y="40" width="40" height="20" fill="#F08A97"/><rect x="140" y="40" width="40" height="20" fill="#7FB3E6"/><g data-arw="62,50,138,50,muted,2"></g></svg><p class="key">충돌 자체를 예방</p></div>
+  </div>
+  <div class="answer mt16">안전장치는 관성에 의해 몸이 쏠리는 것을 막거나, <b>충돌 시간을 길게</b> 하여 사람이 받는 힘을 줄인다. 충돌 직전 <b>속력을 줄이면</b> 운동량 변화량(충격량) 자체가 줄어든다.</div>
+  <p class="f21 mt12"><b>Q</b> 안전띠와 에어백은 각각 어떤 원리일까? <span class="step">→ 안전띠: 관성으로 몸이 앞으로 튀어 나가는 것을 막고 늘어나며 시간을 늘림 · 에어백: <span class="ans">충돌 시간을 길게</span></span></p>
+</section>
+
+<!-- ════════ 12. 스스로 확인하기 135 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="스스로 확인하기 (135쪽)">
+  <h2><span class="tag q">스스로 확인하기</span>충격량과 안전</h2>
+  <div class="card mt8"><p class="f22">➊ 물체가 충돌할 때 충격량은 (&nbsp;<span class="blank"><span class="step">운동량</span></span>&nbsp;)의 변화량과 같다.</p></div>
+  <div class="card mt16"><p class="f22">➋ 충격량이 같을 때 물체가 받는 힘을 줄이려면 힘을 받는 시간을 짧게 한다. (&nbsp;◯,&nbsp;×&nbsp;) <span class="answer step" style="display:inline-block">×</span></p>
+    <p class="f21 step mt8">시간을 <b>길게</b> 해야 힘이 줄어든다.</p></div>
+  <div class="board mt12" style="min-height:80px"></div>
+</section>
+
+<!-- ════════ 13. 확인 문제 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인 문제: 평균 힘과 안전모">
+  <h2><span class="tag q">확인 문제</span>평균 힘과 안전모</h2>
+  <div class="card mt8"><p class="f22">➊ 물체의 운동량 변화량이 같을 때 힘이 작용하는 시간이 길수록 물체에 작용하는 평균 힘의 크기는 작다. (&nbsp;◯,&nbsp;×&nbsp;) <span class="answer step" style="display:inline-block">◯</span></p></div>
+  <div class="card mt16"><p class="f22">➋ 안전모를 쓰면 자전거를 타다 넘어져 바닥에 충돌할 때 충격량을 줄여 준다. (&nbsp;◯,&nbsp;×&nbsp;) <span class="answer step" style="display:inline-block">×</span></p>
+    <p class="f21 step mt8">충격량은 운동량 변화량과 같아 안전모와 관계없다. 안전모는 충돌 <b>시간</b>을 길게 하여 <b>힘</b>을 줄인다.</p></div>
+  <div class="board mt12" style="min-height:70px"></div>
+</section>
+
+<!-- ════════ 14. 펼치기 ════════ -->
+<section class="slide" data-sec="02 · 펼치기" data-title="펼치기: 교통안전 안내문">
+  <h2><span class="tag alt">펼치기</span>교통안전 안내문 만들기</h2>
+  <p class="f22">충돌과 관련한 안전사고를 예방하는 교통안전 안내문을 만들어 공유 플랫폼에 올리고, 친구들과 소통해 보자.</p>
+  <div class="stages mt16" style="grid-template-columns:repeat(2,1fr)">
+    <div class="stage"><h3>예시 1</h3><p class="key">「과속은 저승길 따라 가고, 안전 속도는 생명길 따라 간다.」</p><p class="f21 mt8 step" data-g="s1">원리: 속력을 줄이면 운동량 → 충격량이 줄어든다</p></div>
+    <div class="stage"><h3>예시 2</h3><p class="key">「출발 전 안전띠, 달리는 동안 행복띠」</p><p class="f21 mt8 step" data-g="s2">원리: 관성으로 몸이 쏠리는 것을 막는다</p></div>
+  </div>
+  <div class="board mt16" style="min-height:90px"></div>
+</section>
+
+<!-- ════════ 15. 탐구 ① ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 목표와 주제 선정">
+  <h2><span class="tag">탐구</span>교통수단과 스포츠 등에서 충격을 줄이는 방법 탐색하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="small">문제 인식 및 가설 설정 | 자료 수집·분석·해석 | 의사소통과 협업 · 프로젝트</p>
+  <div class="std mt8"><span class="code">[10통과1-03-04]</span>&lt;탐구 활동&gt; 교통수단과 스포츠 등에서 충격을 줄이는 방법 탐색하기</div>
+  <div class="row mt12">
+    <div class="col"><h3>목표</h3><p class="f21">일상생활에서 충돌로 인한 안전사고를 예방할 대비책을 세우고 안전장치를 고안해 충격을 줄이는 방법을 탐색할 수 있다.</p>
+      <h3 class="mt12">주제 선정</h3><p class="f21">1 교통안전, 스포츠 안전, 학교생활 안전 중 한 분야 선택 → 2 많이 발생하는 충돌 사고를 조사하고 피해를 줄일 방안 토의</p></div>
+    <div class="col"><div class="card tip"><p class="f21"><span class="tag ex">디지털 탐색</span> 학교안전공제중앙회, 스포츠안전재단, 한국소비자원 등 공신력 있는 누리집에서 사고 통계를 찾고 <b>출처를 밝힌다</b>.</p></div>
+      <p class="f21 mt12">준비물: 스마트 기기, 참고 도서, 그림 도구</p></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 ② 실행 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 실행 — 안전장치 고안">
+  <h2><span class="tag">탐구</span>실행: 안전장치 고안하기</h2>
+  <div class="flow"><div class="fnode">1 충돌 사고 상황 분석</div><div class="farr">→</div><div class="fnode">2 위험 요소 찾기</div><div class="farr">→</div><div class="fnode hl">3 피해를 줄일 방안 탐색</div></div>
+  <div class="row mt16">
+    <div class="col"><div class="card"><h3>고려 사항</h3><ul class="f21">
+      <li>충돌 상황의 특성과 위험 요소</li><li>기존 제품과 차별되는 독창성</li><li><b>관성, 운동량, 충격량</b> 등 과학 원리 적용</li><li>친환경·지속가능, 인체에 해롭지 않은 재료</li></ul></div></div>
+    <div class="col"><div class="card"><h3>예시: 스포츠 안전 — 다리 보호대</h3>
+      <p class="f21 step" data-g="x1">사고 유형: 인라인스케이트·스케이트보드를 타다 부딪히거나 앞으로 넘어짐</p>
+      <p class="f21 step mt4" data-g="x2">위험 요소: 무릎이 바닥에 먼저 닿아 충격 집중(다친 부위 무릎·발목·머리 순)</p>
+      <p class="f21 step mt4" data-g="x3">방안: 벌집 구조로 충돌 시간을 늘리는 무릎·종아리 보호대, 재활용 플라스틱·섬유 사용</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 ③ 발표와 평가 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 발표와 평가">
+  <h2><span class="tag">탐구</span>발표와 평가</h2>
+  <p class="f21">1 안전사고 대비책과 고안한 안전장치의 특징을 발표 자료로 만들어 발표한다. 2 <span class="tag ex">디지털</span> 포스터나 카드 뉴스로 만들어 공유 플랫폼에 올린다.</p>
+  <table class="tight mt12">
+    <thead><tr><th style="width:200px">항목</th><th>평가 기준</th><th style="width:220px">우수 · 보통 · 미흡</th></tr></thead>
+    <tbody>
+      <tr><td>과학 원리</td><td class="l">관성, 운동량, 충격량 등 적절한 과학 원리를 적용했는가?</td><td>□ □ □</td></tr>
+      <tr><td>실현 가능성</td><td class="l">제작 방법·비용 면에서 실제로 만들 수 있는가?</td><td>□ □ □</td></tr>
+      <tr><td>유용성</td><td class="l">사용하기 편리하고 디자인도 보기 좋은가?</td><td>□ □ □</td></tr>
+      <tr><td>창의성</td><td class="l">창의적인 아이디어를 포함했는가?</td><td>□ □ □</td></tr>
+    </tbody>
+  </table>
+  <div class="row mt12">
+    <div class="col"><div class="chips"><button class="chk">지식·이해 안전장치의 과학 원리 설명</button><button class="chk">과정·기능 안전장치 고안</button><button class="chk">가치·태도 결과 정리·발표</button></div></div>
+    <div class="col"><p class="small">가치·태도 길잡이: 기존 안전장치를 보완·개선하고, 고안 과정은 특징이 드러나게 간결히 그린다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 과학 이야기 ════════ -->
+<section class="slide" data-sec="02 · 과학 이야기" data-title="과학 이야기: 다누리 탐사선">
+  <h2><span class="tag alt">과학 이야기</span>곡선 경로를 따라 돌아간 다누리 탐사선</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">우리나라 최초의 달 탐사선 <b>다누리</b>(2022년 8월 5일 발사)는 지구에서 달까지 직선으로 가지 않고, 나비 모양의 복잡한 곡선 경로를 따라갔다.</p>
+      <p class="f21 mt12">태양을 중심으로 보면 <b>천체들의 중력</b>을 고려한 단순한 경로 — 태양·지구 등의 위치와 중력 효과를 이용해 직선으로 갈 때보다 <b>연료(에너지)를 아낀다</b>.</p>
+      <div class="card tip mt12"><p class="f21"><b>과학 소양 기르기</b> 보이저 탐사선이 목성을 스치듯 지나간 까닭은? <span class="step">→ 목성에 다가가며 중력으로 속력이 빨라지고, 스치듯 지나며 목성의 중력을 이용해 매우 빠른 속력을 얻는다(<b>중력 도움</b>, 스윙바이).</span></p></div>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 300" style="width:380px" aria-label="지구에서 출발해 멀리 크게 돌아 달 궤도로 들어가는 나비 모양 경로">
+        <rect x="0" y="0" width="380" height="300" rx="14" fill="#0E1A30"/>
+        <circle cx="270" cy="170" r="16" fill="#7FB3E6"/><circle cx="270" cy="170" r="70" fill="none" stroke="#5B6B7F" stroke-dasharray="4 5"/>
+        <circle cx="270" cy="100" r="8" fill="#C9D3DD"/>
+        <g data-anim="draw" data-dur="2.6"><path d="M270 186 Q160 250 60 200 Q10 150 60 60 Q120 20 160 120 Q190 200 300 230 Q350 230 340 170 Q330 110 270 100" fill="none" stroke="#F7C548" stroke-width="3"/></g>
+        <text class="tex" x="270" y="206" data-mix="지구" data-size="16" data-anchor="middle" fill="#FFFFFF"></text>
+        <text class="tex" x="290" y="96" data-mix="달" data-size="16" fill="#FFFFFF"></text>
+        <text class="tex" x="40" y="40" data-mix="최대 약 155만 km" data-size="16" fill="#F7C548"></text>
+      </svg>
+      <p class="small">모식도(경로 모양만 나타냄) · 한국항공우주연구원 누리집에서 다누리가 찍은 사진을 찾아보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 연결 ════════ -->
+<section class="slide" data-sec="02 역학 시스템과 안전 · 연결" data-title="연결: 역학 시스템 정리">
+  <h2><span class="tag alt">연결</span>힘은 상호작용 — 운동을 바꾸고, 우리를 다치게도 지키게도 한다</h2>
+  <table class="tight">
+    <thead><tr><th style="width:220px">상황</th><th>상호작용</th><th>결과</th></tr></thead>
+    <tbody>
+      <tr><td>상호작용 없음</td><td class="l">힘이 작용하지 않음</td><td class="l"><span class="step" data-g="l1">관성 — 운동 상태 유지(운동량 일정)</span></td></tr>
+      <tr><td>지구의 중력(3-2-1)</td><td class="l">지구–물체</td><td class="l"><span class="step" data-g="l2">지구 중심 방향 가속도 — 낙하, 포물선, 원운동</span></td></tr>
+      <tr><td>충돌</td><td class="l">물체–물체, 짧은 시간 큰 힘</td><td class="l"><span class="step" data-g="l3">충격량 = 운동량 변화량 → 시간을 늘려 힘을 줄임</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ════════ 20. 중단원 핵심 정리 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 마무리: 핵심 정리">
+  <h2><span class="tag q">중단원 마무리</span>핵심 정리</h2>
+  <div class="row">
+    <div class="col">
+      <h3>01 중력의 작용</h3>
+      <ul class="f21">
+        <li>속도: 물체의 빠르기와 운동 방향 · (<span class="blank"><span class="step">가속도</span></span>): 단위 시간 동안 속도 변화량</li>
+        <li>자유 낙하와 수평으로 던진 물체: (<span class="blank"><span class="step">중력</span></span>)에 의해 가속도가 일정한 운동</li>
+        <li>낙하 운동과 지구 주위 원운동: 지구 중심 방향의 (<span class="blank"><span class="step">가속도</span></span>) 운동</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>02 역학 시스템과 안전</h3>
+      <ul class="f21">
+        <li>관성: 상호작용이 없을 때 운동 상태를 유지하려는 성질</li>
+        <li>(<span class="blank"><span class="step">운동량</span></span>) = 질량 × 속도 · (<span class="blank"><span class="step">충격량</span></span>) = 힘 × 시간</li>
+        <li>(<span class="blank"><span class="step">충격량</span></span>)은 운동량의 변화량과 같다(힘–시간 그래프 넓이)</li>
+        <li>충격량이 같을 때 충돌 시간이 길수록 힘이 작다</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. ○× ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 마무리: 기본 개념 확인하기">
+  <h2><span class="tag q">기본 개념 확인하기</span>옳은 것은 ○, 옳지 않은 것은 ×</h2>
+  <table class="tight">
+    <tbody>
+      <tr><td class="l">(1) 지표면에서 중력을 받아 낙하하는 물체의 속력은 일정하다.</td><td style="width:260px"><span class="step">× <span class="small">점점 빨라짐</span></span></td></tr>
+      <tr><td class="l">(2) 지표면에서 자유 낙하 하는 물체와 수평 방향으로 던진 물체의 가속도는 서로 같다.</td><td><span class="step">○</span></td></tr>
+      <tr><td class="l">(3) 운동하는 물체의 속도가 빠를수록 운동량이 크다.</td><td><span class="step">○</span></td></tr>
+      <tr><td class="l">(4) 물체가 충돌할 때 받는 충격량은 운동량 변화량보다 크다.</td><td><span class="step">× <span class="small">같다</span></span></td></tr>
+      <tr><td class="l">(5) 충격량이 일정할 때 충돌 시간이 길수록 물체가 받는 힘의 크기가 작다.</td><td><span class="step">○</span></td></tr>
+    </tbody>
+  </table>
+  <div class="board mt16" style="min-height:80px"></div>
+</section>
+
+<!-- ════════ 22. 문항 1 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 마무리 1">
+  <h2><span class="tag q">중단원 마무리 1</span>수평으로 던진 세 공</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 680px">
+      <svg class="fig" viewBox="0 0 400 180" style="width:400px" aria-label="질량이 다른 공 A, B, C를 같은 높이에서 동시에 수평으로 던져 일정한 시간 간격으로 나타낸 위치: 매 순간 높이가 같고 C가 가장 멀리">
+        <rect x="10" y="20" width="50" height="150" fill="#C8A27A"/><line x1="10" y1="170" x2="390" y2="170" stroke="#8C99A6" stroke-width="3"/>
+        <g fill="#D7263D"><circle cx="70" cy="24" r="6"/><circle cx="95" cy="48" r="6"/><circle cx="120" cy="96" r="6"/><circle cx="145" cy="166" r="6"/></g>
+        <g fill="#F7C548"><circle cx="76" cy="24" r="6"/><circle cx="130" cy="48" r="6"/><circle cx="184" cy="96" r="6"/><circle cx="238" cy="166" r="6"/></g>
+        <g fill="#7FB3E6"><circle cx="82" cy="24" r="6"/><circle cx="165" cy="48" r="6"/><circle cx="248" cy="96" r="6"/><circle cx="330" cy="166" r="6"/></g>
+      </svg>
+      <p class="f21 mt4">(A 빨강, B 노랑, C 파랑 · 질량은 서로 다름) 옳은 것은? (공기 저항 무시)</p>
+      <div class="f21">① 중력의 크기는 모두 같다. ② 가속도는 C가 가장 크다. ③ A가 가장 먼저 바닥에 닿는다.<br>④ 수평 방향으로 던진 속도는 모두 같다. ⑤ 떨어지는 동안 B와 C의 높이는 서로 같다.</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">⑤ <span class="small">질량이 달라 중력은 다르지만 가속도는 같고, 연직 방향은 자유 낙하라 매 순간 높이가 같다 · 던진 속도는 C가 가장 크다.</span></div>
+</section>
+
+<!-- ════════ 23. 문항 2 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 마무리 2">
+  <h2><span class="tag q">중단원 마무리 2</span>원운동과 자유 낙하</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22">지구 둘레를 원궤도로 공전하는 물체 A가 P점을 지난 뒤, P점에 정지해 있던 물체 B가 자유 낙하 한다. A, B가 운동하는 동안, 옳은 것만을 &lt;보기&gt;에서 고르면?</p>
+      <div class="bogi f21 mt8">ㄱ. A의 운동 방향은 일정하다.<br>ㄴ. A와 B의 가속도 방향은 같다.<br>ㄷ. A와 B 모두 중력에 의한 운동이다.</div>
+      <div class="choices f22 mt8"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">② <span class="small">A는 운동 방향이 계속 변하고, 위치에 따라 중력(가속도) 방향도 변한다. B의 가속도 방향은 일정하다.</span></div>
+</section>
+
+<!-- ════════ 24. 문항 3 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 마무리 3">
+  <h2><span class="tag q">중단원 마무리 3</span>접시와 스펀지에 떨어진 달걀</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22">같은 높이에서 동일한 달걀 A, B를 떨어뜨렸더니 접시에 떨어진 A는 깨졌고, 스펀지에 떨어진 B는 깨지지 않았다.</p>
+      <div class="bogi f21 mt8">ㄱ. 충돌 직전 운동량의 크기는 A와 B가 같다.<br>ㄴ. 충돌 과정에서 받은 충격량의 크기는 A가 B보다 크다.<br>ㄷ. 충돌하는 동안 받은 힘의 최대 크기는 A가 B보다 크다.</div>
+      <div class="choices f22 mt8"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄷ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">③ <span class="small">ㄴ. 둘 다 충돌 후 정지하므로 운동량 변화량 = 충격량이 같다.</span></div>
+</section>
+
+<!-- ════════ 25. 문항 4 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 마무리 4">
+  <h2><span class="tag q">중단원 마무리 4</span>원리가 다른 안전 행동</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22"><b>Q</b> 안전을 위한 행동이나 장치 중 원리가 <b>다른</b> 것은?</p>
+      <div class="f21 mt8">① 자동차에 에어백을 설치한다.<br>② 배 테두리에 타이어를 달아 둔다.<br>③ 도로에서 자동차의 속력을 낮춘다.<br>④ 자전거를 탈 때 안전모를 착용한다.<br>⑤ 체육관 벽면에 충격 흡수용 보호대를 설치한다.</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">③ <span class="small">속력을 낮추면 운동량(→ 충격량)이 줄어든다. 나머지는 충돌 시간을 길게 하여 힘을 줄인다.</span></div>
+</section>
+
+<!-- ════════ 26. 중단원 스스로 점검 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 중단원 마무리" data-title="중단원 스스로 점검하기">
+  <h2><span class="tag q">중단원 스스로 점검하기</span>역학 시스템</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 중력에 의한 운동과 충격량·운동량의 관계를 설명할 수 있나요?</button>
+    <button class="chk">[과정·기능] 운동을 시각화해 분석하고, 충격을 줄이는 방법을 탐색했나요?</button>
+    <button class="chk">[가치·태도] 역학 시스템을 안전하고 편리한 삶에 활용하려는 태도를 가졌나요?</button>
+  </div>
+  <div class="card tip mt16"><p class="f21"><span class="tag ex">디지털</span> <b>상호 평가</b> 「역학 시스템」 단원에서 배운 내용으로 문제를 만들어 친구들과 공유하고, 서로 풀면서 점검해 보자.</p></div>
+  <p class="small mt8">점검 항목 문구는 교과서 점검표를 바탕으로 덱이 정리함</p>
+</section>
+
+<!-- ════════ 27. 창의력 키움 활동 ════════ -->
+<section class="slide" data-sec="Ⅲ-2. 역학 시스템 · 창의력 키움 활동" data-title="창의력 키움 활동: 드론의 안전">
+  <h2><span class="tag alt">창의력 키움 활동</span>충돌 사고에서 드론의 안전을 지켜라</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">드론은 험한 곳에서도 다양한 역할을 하지만, 좁은 공간에서 여러 대가 가까이 날면 오작동이나 충돌로 안전 문제가 생길 수 있다.</p>
+      <p class="f21 mt12"><b>❶</b> 드론의 구조와 비행 원리를 정리하자. <span class="step">→ 구조: 몸체, 프로펠러, 랜딩 기어, GPS·무선 통신기, 카메라·센서 / 비행: 대각선 짝 프로펠러가 서로 반대로 돌며 양력으로 뜨고, 회전 속력을 달리해 이동</span></p>
+      <p class="f21 mt8"><b>❷</b> 드론 안전사고 예를 찾고 드론이 입은 피해를 조사하자(다른 드론·장애물과 충돌, 비행 제어·통신 두절).</p>
+      <p class="f21 mt8"><b>❸</b> 안전한 비행을 위한 안전장치를 고안하고 사용 설명서를 만들자 — 관성, 운동량, 충격량 원리를 적용했는지 돌아보기.</p>
+    </div>
+    <div class="col" style="flex:0 0 340px">
+      <svg class="fig" viewBox="0 0 340 260" style="width:340px" aria-label="프로펠러 네 개 둘레에 둥근 보호 범퍼를 단 드론">
+        <rect x="140" y="110" width="60" height="40" rx="10" fill="#E6EBF0" stroke="#5B6B7F" stroke-width="2.5"/>
+        <g stroke="#5B6B7F" stroke-width="5"><line x1="150" y1="115" x2="90" y2="70"/><line x1="190" y1="115" x2="250" y2="70"/><line x1="150" y1="145" x2="90" y2="190"/><line x1="190" y1="145" x2="250" y2="190"/></g>
+        <g data-anim="spin" data-o="90,70" data-speed="2"><line x1="60" y1="70" x2="120" y2="70" stroke="#16233D" stroke-width="4"/></g>
+        <g data-anim="spin" data-o="250,70" data-speed="2"><line x1="220" y1="70" x2="280" y2="70" stroke="#16233D" stroke-width="4"/></g>
+        <g data-anim="spin" data-o="90,190" data-speed="2"><line x1="60" y1="190" x2="120" y2="190" stroke="#16233D" stroke-width="4"/></g>
+        <g data-anim="spin" data-o="250,190" data-speed="2"><line x1="220" y1="190" x2="280" y2="190" stroke="#16233D" stroke-width="4"/></g>
+        <g fill="none" stroke="#2E9E6A" stroke-width="5"><circle cx="90" cy="70" r="38"/><circle cx="250" cy="70" r="38"/><circle cx="90" cy="190" r="38"/><circle cx="250" cy="190" r="38"/></g>
+        <text class="tex" x="170" y="250" data-mix="예: 프로펠러 보호 범퍼" data-size="16" data-anchor="middle"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 역학 시스템과 안전 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>역학 시스템과 안전</h2>
+  <table class="tight">
+    <thead><tr><th style="width:200px">개념</th><th>뜻</th><th style="width:360px">안전에의 활용</th></tr></thead>
+    <tbody>
+      <tr><td>관성</td><td class="l"><span class="step" data-g="t1">운동 상태를 유지하려는 성질</span></td><td class="l"><span class="step" data-g="t1">안전띠 — 몸이 앞으로 쏠리는 것 방지</span></td></tr>
+      <tr><td>운동량</td><td class="l"><span class="step" data-g="t2">질량 × 속도 (kg·m/s)</span></td><td class="l"><span class="step" data-g="t2">속력 줄이기 — 운동량·충격량 감소</span></td></tr>
+      <tr><td>충격량</td><td class="l"><span class="step" data-g="t3">힘 × 시간 (N·s) = 운동량의 변화량</span></td><td class="l"><span class="step" data-g="t3">에어백·매트·보호대 — 충돌 시간 ↑ → 힘 ↓</span></td></tr>
+    </tbody>
+  </table>
+  <p class="small mt12">다음: Ⅲ-3 생명 시스템 — 3-3-1 생명 시스템에서의 화학 반응</p>
+</section>
+
+<!-- ════════ 29. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 역학 시스템과 안전 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 관성으로 버스 안에서 몸이 쏠리는 현상을 설명할 수 있다.</button>
+    <button class="chk">[지식·이해] 운동량과 충격량을 구하고, 충격량 = 운동량의 변화량임을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 충돌 시간을 늘려 힘을 줄이는 원리로 안전장치를 고안할 수 있다.</button>
+  </div>
+  <div class="card mt16"><p class="f21"><b>Q</b> 야구공을 받을 때 글러브를 뒤로 빼며 받는 까닭은? <span class="step">→ 공이 멈추는 <span class="ans">시간을 길게</span> 해 손이 받는 힘을 줄이려고</span></p></div>
+</section>
