@@ -1,0 +1,38 @@
+<script>/* 색 이름(D7, 가이드 2.4): 그림·부품·실험실은 hex 대신 이 이름을 쓴다. 새 색은 여기에 이름을 더한다 */
+window.HARNESS_COL={ink:'#16233D',plus:'#D7263D',minus:'#1F6FD1',field:'#2E9E6A',equi:'#E08A2C',grav:'#8C99A6',muted:'#5B6B7F',white:'#FFFFFF',bfield:'#7B4FC8',ox:'#C2410C',rd:'#0E7490'};
+/* 원자 모형 색(화학, 가이드 2.4·D21): data-atom이 쓴다. 바꾸려면 window.HARNESS_ATOM={O:['칠','테'],…} (엔진 기본값은 harness.js의 ATOM) */</script>
+<div id="hud"></div>
+<div id="nav">
+  <button data-a="prev" title="이전 (←)" aria-label="이전">◀</button>
+  <button data-a="next" title="다음 (→)" aria-label="다음">▶</button>
+  <button data-a="toc" title="목차 (O)">목차</button>
+  <button data-a="pen" title="판서 펜 (P)">펜</button>
+  <button data-a="fs" title="전체 화면 (F)">전체 화면</button>
+  <button data-a="help" title="도움말 (H)" aria-label="도움말">?</button>
+</div>
+<div id="penbar">
+  <button class="sw on" data-c="#D7263D" style="background:#D7263D" aria-label="빨강 펜"></button>
+  <button class="sw" data-c="#1F6FD1" style="background:#1F6FD1" aria-label="파랑 펜"></button>
+  <button class="sw" data-c="#16233D" style="background:#16233D" aria-label="검정 펜"></button>
+  <button class="sw" data-c="#2E9E6A" style="background:#2E9E6A" aria-label="초록 펜"></button>
+  <button class="er" data-c="erase">지우개</button>
+  <button data-a="clear">모두 지우기 (X)</button>
+  <button data-a="penoff">펜 끄기 (P)</button>
+</div>
+<div id="toc" class="ui-overlay"><div class="panel"><h3>목차</h3><ol></ol></div></div>
+<div id="help" class="ui-overlay"><div class="panel">
+  <h3>조작 방법</h3>
+  <table>
+    <tr><th>다음 단계 / 슬라이드</th><td><kbd>→</kbd> <kbd>스페이스</kbd> 짧게 클릭(끌기·길게 누르기는 넘기지 않음), 터치는 옆으로 밀기</td></tr>
+    <tr><th>이전</th><td><kbd>←</kbd></td></tr>
+    <tr><th>처음 / 끝</th><td><kbd>Home</kbd> <kbd>End</kbd></td></tr>
+    <tr><th>목차</th><td><kbd>O</kbd></td></tr>
+    <tr><th>전체 화면</th><td><kbd>F</kbd></td></tr>
+    <tr><th>판서 펜 켜기·끄기 / 지우기</th><td><kbd>P</kbd> / <kbd>X</kbd> — 스타일러스 펜은 P 없이 바로 필기(지우개 끝으로 지움)</td></tr>
+    <tr><th>화면 가리기</th><td><kbd>B</kbd></td></tr>
+    <tr><th>자동 점검</th><td><kbd>D</kbd> (주소 뒤에 ?audit)</td></tr>
+    <tr><th>인쇄·PDF (모든 단계 펼침)</th><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td></tr>
+  </table>
+</div></div>
+<div id="audit" class="ui-overlay"><div class="panel"><h3>자동 점검</h3><div class="list"></div></div></div>
+<div id="black"></div>

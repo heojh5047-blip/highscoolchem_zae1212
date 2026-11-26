@@ -1,0 +1,7 @@
+# 만들 때 생기는 캡처·임시 파일
+차시자료/_소스/_render/
+# 선생님이 준 자료(저작권·개인 정보가 있을 수 있음)
+차시자료/_소스/content/**/자료/
+node_modules/
+.DS_Store
+Thumbs.db

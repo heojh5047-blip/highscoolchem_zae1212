@@ -1,0 +1,448 @@
+<!-- 고급화학 4-2-3b 염 용액의 성질과 중화 반응 (2) 완충 용액 — gen.py가 tpl_b.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 2. 산과 염기의 평형 › 04</div>
+    <h1 class="ac423-h1">염 용액의 성질과<br>중화 반응 (2)</h1>
+    <p class="sub">완충 작용과 완충 용액, 공통 이온 효과, 헨더슨·하셀발흐 식의 응용, 완충 용량 실험 설계, 혈액의 완충 작용, 중단원 Ⅳ-2 연습 문제</p>
+    <p class="meta">고등학교 고급 화학 226–229쪽</p>
+  </div>
+  {{COVER_B}}
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="04 중화 반응 · 도입" data-title="다시 보기: 염 용액과 적정 곡선">
+  <h2><span class="tag alt">다시 보기</span>(1) 염 용액의 성질과 중화 적정</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <div class="stages c2 ac423-c4">
+        <div class="stage"><h3>염의 가수 분해</h3><p>약산의 음이온 → 염기성, 약염기의 양이온 → 산성</p></div>
+        <div class="stage"><h3>중화 적정</h3><p>당량점: $nMV=n'M'V'$</p></div>
+        <div class="stage"><h3>약산–강염기 적정</h3><p>당량점 pH &gt; 7, 완충 구간이 있다</p></div>
+        <div class="stage"><h3>반당량점</h3><p>$[\ce{HA}]=[\ce{A-}]$ → pH = $\mathrm{p}K_\mathrm{a}$</p></div>
+      </div>
+      <p class="f22 mt12"><b>Q</b> 완충 구간에서 염기를 10 mL 더 넣어도 pH가 1도 안 변하는 까닭은?</p>
+      <div class="answer step">약산과 짝염기가 함께 있는 완충 용액이기 때문 — 오늘 그 원리를 알아본다</div>
+    </div>
+    <div class="col">{{REVIEW}}</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="04 중화 반응" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-05]</span>약산과 약염기의 중화 반응 시 특징을 이해하고, pH를 $\mathrm{p}K_\mathrm{a}$ 값으로부터 구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화04-06]</span>다양한 산 염기 중화 적정 곡선을 이해하고, 완충 용액의 pH 변화를 관찰하여 완충 용액의 유용성을 인식할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>완충 용액의 구성과 공통 이온 효과로 완충 작용을 반응식으로 설명할 수 있다.</li>
+    <li>헨더슨·하셀발흐 식으로 완충 용액의 pH와 $\mathrm{p}K_\mathrm{a}$, 농도비의 관계를 해석할 수 있다.</li>
+    <li>완충 용액의 조성과 완충 용량의 관계를 실험으로 설계·확인하고, 혈액의 완충 작용을 조사할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">완충 작용</div><div class="farr">→</div>
+    <div class="fnode">공통 이온 효과</div><div class="farr">→</div>
+    <div class="fnode">산·염기를 넣으면</div><div class="farr">→</div>
+    <div class="fnode">헨더슨·하셀발흐 식</div><div class="farr">→</div>
+    <div class="fnode">완충 용량</div><div class="farr">→</div>
+    <div class="fnode hl">완충 용량 실험 · 혈액 조사</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="04 중화 반응 · 도입" data-title="생각 열기: 그림 Ⅳ-22">
+  <h2><span class="tag">생각 열기</span>같은 pH 5.00인데 산과 염기에 대한 반응이 다르다</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 320px">{{METERS}}</div>
+    <div class="col stack">
+      <p class="f21">pH 5.00인 두 용액 100 mL에 1 M 염산이나 1 M 수산화 나트륨 수용액을 1 mL씩 넣었다(그림 Ⅳ-22).</p>
+      <p class="f21" data-q><b>Q</b> 비완충 용액의 pH는 3이나 7이나 바뀌는데, 완충 용액은 왜 0.02밖에 바뀌지 않을까?</p>
+      <p class="f21 step">→ 완충 용액에는 넣은 $\ce{H3O+}$를 받을 <span class="ans">염기</span>와 넣은 $\ce{OH-}$를 중화할 <span class="ans">산</span>이 함께 들어 있다.</p>
+      <p class="f21 step">→ 외부 힘의 영향을 완화하는 현상을 <mark>완충 작용</mark>이라 하고, 산이나 염기를 넣어도 pH가 급격히 변하지 않게 하는 물질을 <b>완충제</b>, 그런 용액을 <mark>완충 용액</mark>이라 한다.</p>
+      <p class="small step">세포 속 용액도 완충 용액이다 — pH에 민감한 효소가 일하도록 pH를 지킨다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 완충 용액의 구성 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="완충 용액의 구성">
+  <h2><span class="no">1</span>완충 용액은 약산과 짝염기의 쌍으로 만든다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">완충 용액에는 크게 늘어나는 $\ce{H3O+}$와 $\ce{OH-}$를 모두 중화할 산과 염기가 있어야 한다 → 많이 쓰는 성분: <mark>약산과 그 짝염기의 쌍</mark></p>
+      <div class="formula sm">$\ce{CH3COOH(aq) + H2O(l)}$<br>$\ce{&lt;=&gt; CH3COO^-(aq) + H3O+(aq)}$<div class="unit">아세트산은 물에서 아주 조금만 이온화한다</div></div>
+      <div class="formula sm">$\ce{CH3COONa(s) -&gt;[H2O] Na+(aq) + CH3COO^-(aq)}$<div class="unit">짝염기는 염으로 넣는다 — 강한 전해질이라 모두 이온화, $\ce{Na+}$는 수화된 구경꾼</div></div>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> $\ce{CH3COONa}$를 넣어 $[\ce{CH3COO-}]$가 크게 늘면 아세트산의 이온화 평형은 어느 쪽으로 이동할까?</p>
+      <p class="f21 step">→ 르샤틀리에 원리에 따라 <span class="ans">왼쪽(역반응)</span>으로 이동해 새 평형에 이른다.</p>
+      <p class="f21 step">→ 이온화하지 않은 $\ce{CH3COOH}$와 $\ce{CH3COO-}$가 <b>둘 다 많이</b> 있는 용액이 된다 — 산과 염기를 모두 견딜 준비.</p>
+      <p class="small step">약염기와 그 짝산(예: $\ce{NH3}$ + $\ce{NH4Cl}$)으로도 완충 용액을 만든다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 공통 이온 효과 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="표 Ⅳ-8 공통 이온 효과">
+  <h2><span class="no">2</span>공통 이온 효과 <span class="small c-muted">(표 Ⅳ-8)</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="tight ac423-sm">
+        <tr><th>$[\ce{CH3COOH}]_\text{초기}$</th><th>$[\ce{CH3COO-}]_\text{첨가}$</th><th>해리 백분율 (%)</th><th>pH</th></tr>
+        <tr><td>0.10</td><td>0.00</td><td>1.3</td><td>2.88</td></tr>
+        <tr><td>0.10</td><td>0.050</td><td>0.036</td><td>4.44</td></tr>
+        <tr><td>0.10</td><td>0.10</td><td>0.018</td><td>4.74</td></tr>
+        <tr><td>0.10</td><td>0.15</td><td>0.012</td><td>4.92</td></tr>
+      </table>
+      <p class="small">해리 백분율 $=\dfrac{[\ce{CH3COOH}]_\text{해리}}{[\ce{CH3COOH}]_\text{초기}}\times100$ · 평형을 정확히 풀어 다시 계산한 값(첫 줄 pH는 교과서 2.89)</p>
+      <p class="f21" data-q><b>Q</b> $\ce{CH3COO-}$를 더 넣을수록 해리 백분율과 pH는 어떻게 될까?</p>
+      <p class="f21 step">→ 해리 백분율은 <span class="ans">작아지고</span> pH는 <span class="ans">커진다</span> — 평형이 역반응 쪽으로 이동</p>
+      <p class="f21 step">짝산과 짝염기가 가진 <b>공통 이온</b> 때문에 이온화 정도가 변하는 현상 = <mark>공통 이온 효과</mark> — 완충 용액은 공통 이온 효과로 만들어진다.</p>
+    </div>
+    <div class="col">{{COMMON}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 산을 넣으면 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="완충 용액에 산을 넣으면">
+  <h2><span class="no">3</span>완충 용액에 산을 넣으면</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21" data-q><b>Q</b> 넣은 $\ce{H3O+}$는 완충 용액 속 무엇과 반응할까?</p>
+      <p class="f21 step">→ 완충 용액에 들어 있던 <span class="ans">짝염기 $\ce{CH3COO-}$</span></p>
+      <div class="formula sm step">$\ce{CH3COO-}$(aq, 완충 용액에 포함된) + $\ce{H3O+}$(aq, 첨가된)<br>$\ce{-&gt; CH3COOH(aq) + H2O(l)}$</div>
+      <p class="f21 step">넣은 $\ce{H3O+}$는 물이 되며 소모되고, $\ce{CH3COOH}$는 조금 늘고 $\ce{CH3COO-}$는 조금 준다 → <b>pH는 거의 변하지 않는다</b>.</p>
+    </div>
+    <div class="col">{{ADDACID}}</div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 염기를 넣으면 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="완충 용액에 염기를 넣으면">
+  <h2><span class="no">4</span>완충 용액에 염기를 넣으면</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21" data-q><b>Q</b> 넣은 $\ce{OH-}$는 완충 용액 속 무엇과 반응할까?</p>
+      <p class="f21 step">→ 완충 용액에 들어 있던 <span class="ans">약산 $\ce{CH3COOH}$</span></p>
+      <div class="formula sm step">$\ce{CH3COOH}$(aq, 완충 용액에 포함된) + $\ce{OH-}$(aq, 첨가된)<br>$\ce{-&gt; CH3COO^-(aq) + H2O(l)}$</div>
+      <p class="f21 step">넣은 $\ce{OH-}$는 중화되어 물이 되고, $\ce{CH3COO-}$가 조금 는 뒤 다시 평형에 이른다 → <b>pH는 거의 변하지 않는다</b>.</p>
+      <p class="small step">많은 양의 산·염기에도 견디려면 짝산과 짝염기의 농도가 충분히 높아야 한다(⑦ 완충 용량).</p>
+    </div>
+    <div class="col">{{ADDBASE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. ⑤ 그림 Ⅳ-22를 수로 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="그림 Ⅳ-22를 수로 확인">
+  <h2><span class="no">5</span>그림 Ⅳ-22를 수로 확인하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21"><b>비완충 용액</b> 100 mL + 1 M $\ce{HCl}$ 1 mL ($1.0\ \text{mmol}$): $[\ce{H3O+}]=\dfrac{1.0\ \text{mmol}}{101\ \text{mL}}=9.9\times10^{-3}\ \text{M}$ → pH 2.00 — $[\ce{H3O+}]$가 약 1000배</p>
+      <p class="f21"><b>완충 용액</b>의 예(덱 계산): $\ce{CH3COOH}$ $0.330\ \text{M}$ + $\ce{CH3COONa}$ $0.596\ \text{M}$ 100 mL → pH 5.00</p>
+      <p class="f21" data-q><b>Q</b> 1.0 mmol의 $\ce{HCl}$을 넣으면 $\ce{CH3COO-}$와 $\ce{CH3COOH}$의 몰수는?</p>
+      <p class="f21 step">→ $\ce{CH3COO-}$ $59.6\to58.6\ \text{mmol}$, $\ce{CH3COOH}$ $33.0\to34.0\ \text{mmol}$ — 비가 1.81에서 <span class="ans">1.72</span>로 조금만 바뀐다 → pH 4.98</p>
+      <p class="f21 step">→ $\ce{NaOH}$ 1.0 mmol이면 비 1.89 → <span class="ans">pH 5.02</span>. 넣은 양보다 완충 성분이 훨씬 많아 <b>농도비가 거의 그대로</b>다.</p>
+    </div>
+    <div class="col">{{RATIO22}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>완충 용액 찾기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f22">다음 혼합 용액 가운데 완충 용액을 모두 골라라.</p>
+      <ol class="ac423-ox f21">
+        <li>(가) $0.10\ \text{M}$ $\ce{CH3COOH}$ + $0.10\ \text{M}$ $\ce{CH3COONa}$</li>
+        <li>(나) $0.10\ \text{M}$ $\ce{HCl}$ + $0.10\ \text{M}$ $\ce{NaCl}$</li>
+        <li>(다) $0.20\ \text{M}$ $\ce{NH3}$ + $0.10\ \text{M}$ $\ce{NH4Cl}$</li>
+        <li>(라) $0.10\ \text{M}$ $\ce{CH3COOH}$ $50\ \text{mL}$ + $0.10\ \text{M}$ $\ce{NaOH}$ $25\ \text{mL}$</li>
+        <li>(마) $0.10\ \text{M}$ $\ce{CH3COOH}$ $50\ \text{mL}$ + $0.10\ \text{M}$ $\ce{NaOH}$ $50\ \text{mL}$</li>
+      </ol>
+      <p class="f21 step">(나) $\ce{Cl-}$는 강산의 짝염기라 $\ce{H3O+}$를 받지 못한다. (마) 당량점 — $\ce{CH3COOH}$가 남지 않는다.</p>
+      <p class="f21 step">(라) 반당량점 — $\ce{CH3COOH}$와 $\ce{CH3COO-}$가 같은 양</p>
+      <div class="answer step">(가), (다), (라)</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑥ 헨더슨·하셀발흐 식 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="헨더슨·하셀발흐 식의 응용">
+  <h2><span class="no">6</span>헨더슨·하셀발흐 식으로 완충 용액 읽기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\ce{HA(aq) + H2O(l) &lt;=&gt; A^-(aq) + H3O+(aq)}$<br>$\text{pH}=\mathrm{p}K_\mathrm{a}+\log\dfrac{[\ce{A-}]}{[\ce{HA}]}$<div class="unit">01 · 02에서 $K_\mathrm{a}$ 식의 양변에 로그를 취해 얻은 식</div></div>
+      <p class="f21">공통 이온 효과로 서로의 이온화가 억제되므로, 완충 용액에서는 $[\ce{HA}]$, $[\ce{A-}]$에 넣은 농도를 그대로 쓸 수 있다.</p>
+      <p class="f21" data-q><b>Q</b> $[\ce{A-}]/[\ce{HA}]$가 10배가 되면 pH는?</p>
+      <p class="f21 step">→ <span class="ans">1만큼 커진다</span>. 비가 1이면 pH = $\mathrm{p}K_\mathrm{a}$ (반당량점과 같다)</p>
+      <p class="f21 step">→ 비가 $\tfrac{1}{10}$–$10$일 때 완충이 잘 된다: <b>완충 범위 pH ≈ $\mathrm{p}K_\mathrm{a}\pm1$</b></p>
+    </div>
+    <div class="col">{{HHLINE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ 완충 용량 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="완충 용량">
+  <h2><span class="no">7</span>완충 용량 — 얼마나 많이 견딜까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><mark>완충 용량</mark>: 완충 용액이 pH를 크게 바꾸지 않고 중화할 수 있는 산이나 염기의 양 (여기서는 처음 pH ± 1까지)</p>
+      <p class="f21" data-q><b>Q</b> 짝산·짝염기의 농도가 다르면 완충 용량은 어떻게 다를까?</p>
+      <p class="f21 step">→ 농도가 높을수록 <span class="ans">완충 용량이 크다</span>: 각 0.010 M은 약 0.4 mmol, 각 0.20 M은 약 8.2 mmol까지 견딘다(50 mL).</p>
+      <p class="f21 step">→ 완충 용량을 넘으면 완충 용액의 pH도 <b>크게 변한다</b>. 완충 용액의 pH가 “전혀 변하지 않는” 것은 아니다.</p>
+      <p class="small step">짝산과 짝염기의 농도가 같을 때(비 1 : 1) 산과 염기 양쪽에 고르게 크다.</p>
+    </div>
+    <div class="col">{{CAPC}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑧ 완충 용액 제조하기 ════════ -->
+<section class="slide" data-sec="04 · 완충 용액과 헨더슨·하셀발흐 식의 응용" data-title="완충 용액 제조하기">
+  <h2><span class="no">8</span>원하는 pH의 완충 용액 만들기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <ol class="ac423-ox f21">
+        <li><b>완충계 고르기</b>: 원하는 pH에 가까운 $\mathrm{p}K_\mathrm{a}$를 가진 짝산–짝염기 쌍</li>
+        <li><b>비 정하기</b>: 헨더슨·하셀발흐 식으로 넣을 염의 농도 결정</li>
+        <li><b>완충 농도 정하기</b>: 필요한 산과 염의 양 계산 — 농도가 높을수록 완충 용량이 크다</li>
+        <li><b>섞기</b>: 계산한 양을 섞어 용액을 만든다</li>
+        <li><b>맞추기</b>: pH 미터를 보며 산이나 염기로 미세하게 조정</li>
+      </ol>
+      <p class="f21" data-q><b>Q</b> 혈액과 같은 pH 7.4의 완충 용액을 만들려면 그림의 어느 쌍이 알맞을까?</p>
+      <p class="f21 step">→ <span class="ans">$\ce{H2PO4-}$ / $\ce{HPO4^2-}$</span> ($\mathrm{p}K_\mathrm{a}$ 7.21 — 범위 6.2–8.2 안)</p>
+    </div>
+    <div class="col">{{PREP}}<p class="small">$\mathrm{p}K_\mathrm{a}$는 25 °C 값 · 띠 = $\mathrm{p}K_\mathrm{a}\pm1$</p></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="04 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>완충계 고르기와 완충 용량</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f22">pH 9.3 근처를 유지하는 완충 용액을 만들려고 한다.</p>
+      <p class="f21">(1) $\ce{CH3COOH}$/$\ce{CH3COO-}$($\mathrm{p}K_\mathrm{a}$ 4.74), $\ce{H2PO4-}$/$\ce{HPO4^2-}$(7.21), $\ce{NH4+}$/$\ce{NH3}$(9.26) 가운데 알맞은 쌍은?</p>
+      <p class="f21">(2) 그 쌍으로 만든 (가) 각 $0.050\ \text{M}$ 용액과 (나) 각 $0.50\ \text{M}$ 용액 가운데 완충 용량이 큰 것은?</p>
+      <p class="f21 step">(1) pH 9.3이 $\mathrm{p}K_\mathrm{a}\pm1$ 안에 드는 쌍 — $\mathrm{p}K_\mathrm{a}$ 9.26</p>
+      <p class="f21 step">(2) 두 용액의 pH는 같지만(비 1 : 1), 넣은 산·염기를 중화할 성분이 (나)에 10배 많다.</p>
+      <div class="answers step"><div class="answer">(1) $\ce{NH4+}$/$\ce{NH3}$</div><div class="answer">(2) (나)</div></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 15. 탐구 활동 (1) ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 완충 용량 실험 설계">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span>완충 용액의 조성과 완충 용량 사이의 상관관계 실험 설계 및 실험</h2>
+  <div class="std">모둠별로 여러 농도의 짝산과 짝염기를 갖는 완충 용액에 강산이나 강염기를 넣을 때, pH ±1 범위 안에서 완충 작용을 하는 산·염기의 양과 짝산·짝염기의 농도 관계를 알아보는 실험을 설계·수행하고, 토론 후 발표한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>가설 예시</b> 짝산과 짝염기의 농도가 높을수록 넣은 산·염기를 중화할 성분이 많으므로, pH ±1 안에서 견디는 산·염기의 양(완충 용량)이 클 것이다.</p>
+      <table class="tight ac423-sm">
+        <tr><th class="l">조작 변인</th><td class="l">$[\ce{CH3COOH}]$와 $[\ce{CH3COONa}]$ (같은 비로 농도만 · 또는 비만 바꿈)</td></tr>
+        <tr><th class="l">종속 변인</th><td class="l">처음 pH ± 1이 될 때까지 넣은 $\ce{HCl}$·$\ce{NaOH}$의 양(mmol)</td></tr>
+        <tr><th class="l">통제 변인</th><td class="l">완충 용액 부피 50.0 mL, 넣는 산·염기 농도 1.0 M, 온도, 같은 완충계</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 농도와 완충 용량의 관계만 보려면 어떤 용액들을 비교해야 할까?</p>
+      <p class="f21 step">→ 비는 1 : 1로 두고 농도만 다르게: 각 0.010, 0.050, 0.10, 0.20 M — <span class="ans">한 번에 한 변인만</span></p>
+      <p class="f21 step">→ 대조군: 증류수 50.0 mL에 같은 산·염기를 넣어 비교</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 활동 (2) ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span>과정과 안전</h2>
+  <div class="stages ac423-c4">
+    <div class="stage"><h3>① 만들기</h3><p>빙초산과 아세트산 나트륨으로 설계한 농도의 완충 용액을 만들고 50.0 mL씩 비커에 담는다.</p></div>
+    <div class="stage"><h3>② 처음 pH</h3><p>보정한 pH 미터(또는 pH 센서)로 처음 pH를 잰다.</p></div>
+    <div class="stage"><h3>③ 산 넣기</h3><p>1.0 M $\ce{HCl}$을 0.1–1.0 mL씩 넣고 저으며 pH를 기록한다. 처음 pH보다 1 낮아질 때까지.</p></div>
+    <div class="stage"><h3>④ 염기 넣기</h3><p>새 비커의 같은 용액에 1.0 M $\ce{NaOH}$를 넣으며 pH가 1 높아질 때까지 기록한다.</p></div>
+    <div class="stage"><h3>⑤ 비교</h3><p>농도가 다른 용액·증류수로 반복하고, 넣은 양–pH 그래프와 완충 용량 표를 만든다.</p></div>
+    <div class="stage"><h3>⑥ 토론·발표</h3><p>완충 용량과 짝산·짝염기 농도의 상관관계를 토론하고 발표한다.</p></div>
+  </div>
+  <div class="note mt12"><b>안전</b> 1.0 M 염산·수산화 나트륨은 피부와 눈을 상하게 한다 — 보안경·장갑 착용. 빙초산은 냄새가 강하고 부식성이 있어 환기하며 다룬다. 쓴 용액은 중화한 뒤 폐액통에 모은다.</div>
+</section>
+
+<!-- ════════ 17. 실험실 ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="실험실: 완충 용량 비교">
+  <h2><span class="tag">실험실</span>조성을 바꾸며 완충 용량 재기</h2>
+  <div class="lab" data-lab="ac423buf">
+    <div class="lab-ctl" style="flex-basis:420px">
+      <p class="small">50.0 mL · 농도 단위 M · 완충 용량 단위 mmol</p>
+      <div class="ac423-seg"><span class="small">$\ce{CH3COOH}$</span><button class="btn" data-ha="0.01">0.010</button><button class="btn" data-ha="0.05">0.050</button><button class="btn on" data-ha="0.1">0.10</button><button class="btn" data-ha="0.2">0.20</button></div>
+      <div class="ac423-seg"><span class="small">$\ce{CH3COONa}$</span><button class="btn" data-ba="0.01">0.010</button><button class="btn" data-ba="0.05">0.050</button><button class="btn on" data-ba="0.1">0.10</button><button class="btn" data-ba="0.2">0.20</button></div>
+      <div class="ac423-seg"><button class="btn" data-act="water">증류수(대조)</button><button class="btn" data-act="fresh">새 비커</button><button class="btn" data-act="reset">초기화</button></div>
+      <div class="ac423-seg"><span class="small">1.0 M, mL</span><button class="btn ac423-p" data-add="-0.1">$\ce{HCl}$ 0.1</button><button class="btn ac423-p" data-add="-1">$\ce{HCl}$ 1.0</button><button class="btn ac423-m" data-add="0.1">$\ce{NaOH}$ 0.1</button><button class="btn ac423-m" data-add="1">$\ce{NaOH}$ 1.0</button></div>
+      <table class="readout ac423-read">
+        <tr><th>용액</th><td><output data-o="comp"></output></td></tr>
+        <tr><th>처음 pH</th><td><output data-o="p0"></output></td></tr>
+        <tr><th>넣은 것</th><td><output data-o="add"></output></td></tr>
+        <tr class="hl"><th>측정 pH</th><td><output data-o="ph"></output></td></tr>
+        <tr><th>처음과의 차이</th><td><output data-o="dp"></output></td></tr>
+      </table>
+      <output class="kind ac423-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 650px">
+      <div class="lab-fig" style="width:650px;height:300px">
+        <svg viewBox="0 0 650 300" width="650" height="300" aria-label="넣은 산과 염기의 양에 따른 완충 용액의 pH 그래프, 처음 pH ± 1 띠"></svg>
+      </div>
+      <div class="row" style="gap:10px">
+        <table class="tight ac423-log"><thead><tr><th>넣은 것 (mmol)</th><th>pH</th><th>차이</th></tr></thead><tbody data-o="log"></tbody></table>
+        <table class="tight ac423-log"><thead><tr><th>용액 (M)</th><th>처음 pH</th><th>산 쪽</th><th>염기 쪽</th></tr></thead><tbody data-o="cap"></tbody></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 탐구 활동 (3) 결과 ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 결과와 토론">
+  <h2><span class="tag">탐구 활동</span>결과 정리와 토론 (예시)</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <table class="tight ac423-sm">
+        <tr><th>$[\ce{CH3COOH}]$ / $[\ce{CH3COONa}]$ (M)</th><th>처음 pH</th><th>산 쪽 (mmol)</th><th>염기 쪽 (mmol)</th></tr>
+        <tr><td>0.010 / 0.010</td><td>4.75</td><td>0.42</td><td>0.41</td></tr>
+        <tr><td>0.050 / 0.050</td><td>4.75</td><td>2.05</td><td>2.05</td></tr>
+        <tr><td>0.10 / 0.10</td><td>4.74</td><td>4.10</td><td>4.09</td></tr>
+        <tr><td>0.20 / 0.20</td><td>4.74</td><td>8.19</td><td>8.18</td></tr>
+        <tr><td>0.10 / 0.020</td><td>4.05</td><td>0.93</td><td>3.01</td></tr>
+        <tr><td>증류수</td><td>7.00</td><td colspan="2">0.0001 미만</td></tr>
+      </table>
+      <p class="small">50.0 mL, 1.0 M 산·염기, 평형을 정확히 풀어 계산한 예시값(측정값은 모둠마다 조금 다르다)</p>
+      <ol class="ac423-ox f21">
+        <li>농도와 완충 용량의 관계는? <span class="step">→ 짝산·짝염기 농도에 <b>비례</b>한다(20배 → 약 20배).</span></li>
+        <li>비가 1 : 1이 아니면? <span class="step">→ 적은 성분 쪽이 먼저 바닥나 그 방향의 용량이 작다($\ce{CH3COONa}$가 적으면 산에 약함).</span></li>
+      </ol>
+    </div>
+    <div class="col stack">{{CAPRES}}
+      <div class="answer step">발표: 완충 용량은 짝산·짝염기의 농도가 높을수록 크고, 두 농도가 같을 때 산과 염기 양쪽에 고르게 크다</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 탐구 활동 혈액 (1) ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 혈액의 완충 작용">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span>혈액의 완충 작용이 인체에 미치는 영향과 주사용 용액의 역할 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21">심한 부상·화상에서 가장 긴박한 위협은 혈액의 pH 변화이다. 세포가 젖산 같은 카복실산을 내놓아도 혈액의 pH는 <b>7.35–7.45</b>로 유지된다.</p>
+      <p class="f21"><b>조사</b> ① 완충 작용 이온화 반응 ② 혈액 속 이온의 비율 ③ 정맥 주사용 용액의 역할 → 모둠별 발표</p>
+      <div class="formula sm">$\ce{CO2(aq) + H2O(l) &lt;=&gt; H2CO3(aq)}$<br>$\ce{H2CO3(aq) + H2O(l)}$<br>$\ce{&lt;=&gt; HCO3^-(aq) + H3O+(aq)}$</div>
+      <p class="f21" data-q><b>Q</b> $\mathrm{p}K_\mathrm{a}$ 6.1(체온의 혈장)일 때 pH 7.40에서 $[\ce{HCO3-}]/[\ce{H2CO3}]$는?</p>
+      <p class="f21 step">→ $10^{7.40-6.1}=10^{1.3}\approx$ <span class="ans">20</span> — 짝염기가 훨씬 많아 산에 특히 강하다.</p>
+    </div>
+    <div class="col">{{BLOOD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 20. 탐구 활동 혈액 (2) ════════ -->
+<section class="slide" data-sec="04 · 탐구 활동" data-title="탐구 활동: 조사 예시 결과">
+  <h2><span class="tag">탐구 활동</span>조사 결과 예시와 발표</h2>
+  <div class="stages ac423-c4">
+    <div class="stage"><h3>혈액의 완충계</h3><p>탄산–탄산수소 이온(혈장의 주된 완충계), 인산 이수소 이온–인산 수소 이온(세포 안, $\mathrm{p}K_\mathrm{a}$ 약 6.8), 헤모글로빈·혈장 단백질</p></div>
+    <div class="stage"><h3>pH가 벗어나면</h3><p>7.35 아래 <b class="c-plus">산증</b>, 7.45 위 <b class="c-minus">알칼리증</b>. 과호흡으로 $\ce{CO2}$를 많이 내보내면 평형이 왼쪽으로 이동해 pH가 오른다.</p></div>
+    <div class="stage"><h3>폐와 콩팥</h3><p>폐는 호흡으로 $\ce{CO2}$를, 콩팥은 $\ce{HCO3-}$ 재흡수와 $\ce{H+}$ 배설로 비를 조절한다.</p></div>
+    <div class="stage"><h3>생리 식염수</h3><p>0.9 % $\ce{NaCl}$ — 혈액과 삼투압이 같아 쇼크 때 잃은 혈액량을 채운다.</p></div>
+    <div class="stage"><h3>젖산 링거액</h3><p>젖산 이온이 간에서 대사되어 $\ce{HCO3-}$가 생긴다 → 수액을 보충하며 산증을 완화</p></div>
+    <div class="stage"><h3>탄산수소 나트륨 주사액</h3><p>심한 대사성 산증에서 $\ce{HCO3-}$를 직접 보충한다(의사의 판단으로 사용).</p></div>
+  </div>
+  <p class="f21 mt8" data-q><b>Q</b> 발표를 평가할 때 무엇을 볼까? <span class="step">→ 완충 반응식과 이온 비율을 정확한 용어·식으로 썼는가, 자료의 출처를 밝혔는가, 주사용 용액의 역할을 pH·삼투압과 연결했는가</span></p>
+</section>
+
+<!-- ════════ 21. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅳ-2 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>해리 백분율과 pH로 $K_\mathrm{a}$ 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f22">약한 일양성자산 $\ce{HA}$는 물에 녹으면 0.8 % 해리되며, 이때의 pH는 3.50이다. 이 산의 $K_\mathrm{a}$ 값을 구하여라.</p>
+      <p class="f21 step">$[\ce{H+}]=10^{-3.50}=3.16\times10^{-4}\ \text{M}=[\ce{A-}]$</p>
+      <p class="f21 step">0.8 % 해리 → $[\ce{HA}]_0=\dfrac{3.16\times10^{-4}}{0.008}=3.95\times10^{-2}\ \text{M}$, $[\ce{HA}]=3.95\times10^{-2}-3.16\times10^{-4}=3.92\times10^{-2}\ \text{M}$</p>
+      <p class="f21 step">$K_\mathrm{a}=\dfrac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}=\dfrac{(3.16\times10^{-4})^2}{3.92\times10^{-2}}$</p>
+      <div class="answer step">$K_\mathrm{a}\approx2.5\times10^{-6}$</div>
+      <p class="small step">계산값 $2.55\times10^{-6}$ — 교과서 풀이는 $2.5499\times10^{-6}$으로 적었다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 22. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅳ-2 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>염산과 같은 pH의 아세트산 농도</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f22">$3\times10^{-3}\ \text{M}$ 염산과 같은 pH를 만드는 아세트산 수용액의 농도를 구하여라. (아세트산의 $K_\mathrm{a}=1.8\times10^{-5}$)</p>
+      <p class="f21 step">염산은 완전히 이온화: $[\ce{H+}]=3\times10^{-3}\ \text{M}$ → 아세트산 수용액도 $[\ce{H+}]=[\ce{CH3COO-}]=3\times10^{-3}\ \text{M}$</p>
+      <p class="f21 step">$K_\mathrm{a}=\dfrac{[\ce{H+}][\ce{CH3COO-}]}{[\ce{CH3COOH}]}=\dfrac{(3\times10^{-3})^2}{[\ce{CH3COOH}]}=1.8\times10^{-5}$</p>
+      <div class="answer step">$[\ce{CH3COOH}]=0.5\ \text{M}$</div>
+      <p class="small step">이온화한 양($0.003\ \text{M}$)을 더한 처음 농도도 $0.503\ \text{M}\approx0.5\ \text{M}$ — 강산과 같은 pH를 내려면 약산은 훨씬 진해야 한다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅳ-2 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>암모니아 완충 용액의 pH</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f22">25 °C에서 $0.50\ \text{M}$ $\ce{NH3}$와 $0.25\ \text{M}$ $\ce{NH4Cl}$로 이루어진 완충 용액의 pH를 구하여라. ($\ce{NH3}$의 $\mathrm{p}K_\mathrm{b}=4.75$)</p>
+      <table class="ac423-ice step">
+        <tr><th class="l"></th><th>$\ce{NH3(aq)}$</th><th>$\ce{NH4+(aq)}$</th><th>$\ce{OH-(aq)}$</th></tr>
+        <tr><td class="l">처음 (M)</td><td>0.50</td><td>0.25</td><td>0</td></tr>
+        <tr><td class="l">평형 (M)</td><td>$0.50-x$</td><td>$0.25+x$</td><td>$x$</td></tr>
+      </table>
+      <p class="f21 step">$K_\mathrm{b}=10^{-4.75}=1.78\times10^{-5}\approx\dfrac{0.25\,x}{0.50}$ → $x=[\ce{OH-}]=3.56\times10^{-5}\ \text{M}$ (근사 유효)</p>
+      <p class="f21 step">또는 $\text{pOH}=\mathrm{p}K_\mathrm{b}+\log\dfrac{[\ce{NH4+}]}{[\ce{NH3}]}=4.75+\log\dfrac{0.25}{0.50}=4.45$</p>
+      <div class="answer step">pH $=14.00-4.45=9.55$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅳ-2 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>아세트산 적정의 당량점</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f22">25 °C에서 $0.10\ \text{M}$ 아세트산 $40\ \text{mL}$를 $0.02\ \text{M}$ $\ce{NaOH}$로 적정할 때, 당량점까지 필요한 $\ce{NaOH}$의 부피와 당량점의 pH를 구하여라. ($K_\mathrm{a}=1.8\times10^{-5}$)</p>
+      <p class="f21 step">$\ce{CH3COOH}$ $0.10\ \text{M}\times40\ \text{mL}=4.0\ \text{mmol}$ → $V'=\dfrac{4.0\ \text{mmol}}{0.02\ \text{M}}=200\ \text{mL}$</p>
+      <p class="f21 step">당량점: $[\ce{CH3COO-}]=\dfrac{4.0\ \text{mmol}}{240\ \text{mL}}=1.67\times10^{-2}\ \text{M}$, $K_\mathrm{b}=\dfrac{K_\mathrm{w}}{K_\mathrm{a}}=5.56\times10^{-10}$</p>
+      <p class="f21 step">$[\ce{OH-}]=\sqrt{5.56\times10^{-10}\times1.67\times10^{-2}}=3.04\times10^{-6}\ \text{M}$ → pOH 5.52</p>
+      <div class="answers step"><div class="answer">200 mL</div><div class="answer">pH 8.48</div></div>
+      <p class="small step">교과서 풀이는 $[\ce{CH3COO-}]$를 $1.7\times10^{-2}\ \text{M}$로 반올림해 pH 8.49를 얻었다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 스스로 정리 ════════ -->
+<section class="slide" data-sec="04 완충 용액 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 산과 염기의 평형 — 03 · 04 (2)</h2>
+  <div class="ac423-map">
+    <div class="ac423-node ac423-dim">(1)<br>염의 가수 분해<br>적정 곡선<br>반당량점</div>
+    <div class="ac423-arr">→</div>
+    <div class="ac423-node ac423-main" data-q><b>04 완충 용액</b><br>❶ 완충 용액 = 약산 + <span class="blank"><span class="step">짝염기</span></span> (또는 약염기 + 짝산)<br>❷ 짝염기를 넣으면 약산의 이온화가 줄어듦: <span class="blank"><span class="step">공통 이온 효과</span></span><br>❸ 넣은 $\ce{H3O+}$는 <span class="blank"><span class="step">$\ce{CH3COO-}$</span></span>가, 넣은 $\ce{OH-}$는 <span class="blank"><span class="step">$\ce{CH3COOH}$</span></span>가 중화</div>
+    <div class="ac423-node ac423-main" data-q><b>헨더슨·하셀발흐 식과 완충 용량</b><br>❹ pH $=\mathrm{p}K_\mathrm{a}+$ <span class="blank"><span class="step">$\log\dfrac{[\ce{A-}]}{[\ce{HA}]}$</span></span><br>❺ 완충 범위: pH ≈ <span class="blank"><span class="step">$\mathrm{p}K_\mathrm{a}\pm1$</span></span><br>❻ 농도가 높을수록 완충 용량이 <span class="blank"><span class="step">크다</span></span><br>❼ 혈액: $\ce{H2CO3}$ / <span class="blank"><span class="step">$\ce{HCO3-}$</span></span></div>
+    <div class="ac423-arr">→</div>
+    <div class="ac423-node ac423-dim">3. 화학 반응 속도<br>(다음 중단원)</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="04 완충 용액 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 완충 용액의 구성과 공통 이온 효과로 산·염기를 넣을 때의 반응을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 완충 용액의 조성을 바꾸는 실험을 설계·수행하여 완충 용량과 농도의 관계를 찾았다.</button>
+    <button class="chk">[가치·태도] 혈액과 세포의 완충 작용, 주사용 용액의 역할을 조사하며 완충 용액의 유용성을 느꼈다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 완충 용액에 산을 아무리 넣어도 pH가 변하지 않을까? <span class="step">→ <span class="ans">아니다</span> — 완충 용량을 넘으면 크게 변한다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 아세트산 완충 용액으로 pH 9를 유지할 수 있을까? <span class="step">→ <span class="ans">어렵다</span> — 완충 범위(약 3.7–5.7) 밖이다. $\ce{NH4+}$/$\ce{NH3}$ 계를 쓴다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 중단원</b> 평형에 이르기까지 반응은 얼마나 빠를까? — 3. 화학 반응 속도</div>
+</section>

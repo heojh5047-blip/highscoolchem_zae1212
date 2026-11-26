@@ -1,0 +1,62 @@
+/* 1-4 고체의 종류와 구조 — 덱 전용 (모두 .em14- 접두어) */
+.cover h1.em14-h1{font-size:100px;line-height:1.1}
+.em14-figc{display:flex;justify-content:center;margin:4px 0}
+.em14-cap{font-size:21px;font-weight:700;text-align:center;margin-bottom:4px}
+.em14-sub{font-size:19px;text-align:center;color:var(--plus)}
+.em14-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.em14-pair svg{display:block;margin:0 auto}
+.stage.em14-st{text-align:center}
+.stage.em14-st h3{text-align:center}
+.stage.em14-st svg{width:auto;max-width:100%;margin:0 auto}
+p.em14-res{font-size:21px;font-weight:700;text-align:center}
+.em14-leg{display:flex;justify-content:center;margin-top:4px}
+table.em14-cmp{width:100%}
+table.em14-cmp th{font-size:20px}
+table.em14-cmp td{text-align:center;font-size:21px}
+.answer.em14-left{text-align:left;font-size:21px}
+.tag.em14-tagin{margin-right:10px}
+ol.em14-ox li{font-size:24px;margin-top:26px;line-height:1.7}
+ol.em14-ox li:first-child{margin-top:8px}
+ol.em14-ox li p{font-size:22px;margin-top:8px}
+.blank.em14-w{min-width:150px}
+.blank.em14-s{min-width:80px}
+.em14-pick3{display:flex;gap:40px;justify-content:center;margin:10px 0 0;padding:8px 20px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font-size:22px;width:fit-content}
+.em14-four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.em14-four .stage{text-align:center;padding:10px 10px}
+.em14-four .stage h3{font-size:22px;margin:2px 0}
+.em14-four .stage p{font-size:19px}
+.em14-four .stage svg{width:220px;max-width:100%;margin:2px auto}
+p.em14-k{font-size:19px;color:var(--muted);font-weight:700}
+table.em14-four-t{width:100%}
+table.em14-four-t th{font-size:20px;padding:6px 8px}
+table.em14-four-t td{text-align:center;font-size:20px;padding:6px 8px;line-height:1.35}
+table.em14-four-t td.l{text-align:left}
+table.em14-res-t{width:100%}
+table.em14-res-t th{font-size:20px}
+table.em14-res-t td{text-align:center;font-size:21px;min-width:200px}
+.answers.em14-ans3 .answer{font-size:21px;padding:10px 16px}
+.answers.em14-ans3 .answer .small{font-size:19px}
+ul.em14-ul li{font-size:21px;line-height:1.5;margin-top:10px}
+/* 개념 지도 */
+.em14-map{display:flex;align-items:center;gap:12px}
+.em14-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.5}
+.em14-node.em14-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.em14-node.em14-dim{border-style:dashed;color:var(--muted);font-size:19px;padding:8px 12px}
+.em14-col{flex:0 0 150px;display:flex;flex-direction:column;gap:10px}
+.em14-arr{font-size:28px;color:var(--muted)}
+table.em14-mapt{width:100%}
+table.em14-mapt th{font-size:20px;width:190px;text-align:center}
+table.em14-mapt td{font-size:20px;text-align:left;padding:8px 10px;line-height:1.6}
+/* 실험실 */
+.em14-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.em14-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.em14-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.em14-seg .btn.em14-act{background:#EAF6EF;border-color:var(--field)}
+.em14-big{font-size:28px!important;line-height:1.3}
+.ov.em14-ovn{font-size:21px;font-weight:700;white-space:nowrap;transform:none}
+output.kind.em14-msg{display:block;margin-top:6px;line-height:1.45;font-size:19px}
+table.em14-log{width:100%}
+table.em14-log th,table.em14-log td{font-size:19px;padding:3px 6px;text-align:center}
+.em14-qrow{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.em14-q07 svg{width:320px!important}
+.ov.em14-ovs{font-size:19px;color:var(--muted);white-space:nowrap}

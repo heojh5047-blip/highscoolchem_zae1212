@@ -1,0 +1,253 @@
+/* ── 토큰 ── */
+:root{
+  --ink:#16233D; --muted:#5B6B7F; --plus:#D7263D; --minus:#1F6FD1; --field:#2E9E6A; --bfield:#7B4FC8; --equi:#E08A2C; --ans:#D7263D; --hl:#FFE45C;
+  --grid:#E2E7EC; --paper:#FBFCFD; --line:#C9D3DD; --soft:#F1F5F9;
+  --font:'IBM Plex Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#0E1626;font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* ── 무대 / 슬라이드 ── */
+#viewport{position:fixed;inset:0;overflow:hidden;touch-action:none}
+#deck{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:50% 50%;background:var(--paper);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.slide{position:absolute;inset:0;display:none;padding:78px 84px 64px;overflow:hidden;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px;
+  word-break:keep-all;overflow-wrap:normal;line-break:strict}
+.slide.active{display:block}
+.slide.measure{display:block;opacity:0;pointer-events:none;z-index:-1}
+.band{position:absolute;left:84px;right:84px;top:26px;display:flex;justify-content:space-between;align-items:baseline;font-size:16px;color:var(--muted)}
+.band .pg{font-variant-numeric:tabular-nums;font-weight:500}
+.cover .band .sec{visibility:hidden}
+
+/* ── 조판 ── */
+.w{white-space:nowrap}
+.katex{white-space:nowrap;font-size:1.08em}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+h2{font-size:40px;margin:0 0 22px}
+h2 .no{display:inline-block;width:46px;height:46px;line-height:46px;margin-right:14px;border-radius:12px;background:var(--ink);color:#fff;font-size:26px;text-align:center;vertical-align:4px}
+h2 .tag{display:inline-block;margin-right:14px;padding:5px 14px;border-radius:999px;background:var(--field);color:#fff;font-size:20px;line-height:1.3;vertical-align:7px;letter-spacing:0}
+h2 .tag.alt{background:var(--equi)} h2 .tag.q{background:var(--minus)} h2 .tag.ex{background:var(--plus)} h2 .tag.ink{background:var(--ink)}
+h3{font-size:24px;margin:0 0 10px}
+h3 .small{font-weight:400}
+p,li{font-size:24px;line-height:1.6;margin:0}
+ul,ol{margin:0;padding-left:1.3em}
+li+li{margin-top:6px}
+li::marker{color:var(--muted)}
+.small,.small p,.small li{font-size:19px;line-height:1.55;color:var(--muted)}
+.f22,.f22 p,.f22 li{font-size:22px;line-height:1.6}
+.f21,.f21 p,.f21 li{font-size:21px;line-height:1.55}
+b,strong{font-weight:700}
+mark{background-color:transparent;background-image:linear-gradient(var(--hl),var(--hl));background-repeat:no-repeat;background-size:100% 46%;background-position:0 90%;color:inherit;padding:0 1px}
+.c-plus{color:var(--plus)} .c-minus{color:var(--minus)} .c-field{color:var(--field)} .c-muted{color:var(--muted)} .c-equi{color:var(--equi)} .c-bfield{color:var(--bfield)} .c-ink{color:var(--ink)}
+.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt28{margin-top:28px}
+.center{text-align:center}
+
+/* ── 레이아웃 ── */
+.row{display:flex;gap:28px;align-items:flex-start}
+.row.stretch{align-items:stretch}
+.col{flex:1 1 0;min-width:0}
+.col.stack{display:flex;flex-direction:column}
+.card{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 20px}
+.card.q{border-left:6px solid var(--minus)}
+.card.tip{background:#F4FAF6;border-color:#BFE0CD}
+.note{background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--field);border-radius:10px;padding:10px 16px;font-size:19px;line-height:1.55}
+.note p,.note li{font-size:19px;line-height:1.55}
+.note.puzzle{border-left-color:#E9C93A;background:#FFFBEA}
+.note.q{border-left-color:var(--minus)}
+.note.big,.note.big p{font-size:21px}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stages.c2{grid-template-columns:1fr 1fr}
+.stage{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px}
+.stage h3{font-size:23px;margin-bottom:6px}
+.stage p,.stage li{font-size:19px;line-height:1.55}
+.stage p.key{font-size:21px}
+.stage svg{display:block;width:100%;height:auto;margin:4px 0 8px}
+.pane{border-radius:16px;padding:12px 14px 14px;border:1.5px solid var(--line);background:#fff}
+.pane.plus{background:#FDF1F3;border-color:#F2C6CD}
+.pane.minus{background:#EEF4FC;border-color:#C5D8F2}
+.pane.grav{background:#F4F5F7}
+.pane.elec{background:#F1F8F4;border-color:#C6E3D2}
+.pane svg{display:block;width:100%;height:auto}
+/* 위 .stage/.pane/.cappanel svg 규칙이 KaTeX 근호·화살표 svg(height:inherit)까지 덮어 √가 사라지던 것 — KaTeX 자체 값으로 되돌림 */
+.stage .katex svg,.pane .katex svg,.cappanel .katex svg{display:block;position:absolute;width:100%;height:inherit;margin:0}
+.ph{display:inline-block;font-size:18px;font-weight:700;padding:3px 12px;border-radius:999px;background:#fff;border:1.5px solid currentColor}
+svg{overflow:hidden}
+svg.fig{display:block;margin:0 auto;max-width:100%;height:auto}
+svg.framed{border-radius:12px;background:#FFFFFF;border:1.5px solid #D5EADF}
+
+/* ── 공식 / 정답 / 판서 ── */
+.formula{display:block;width:fit-content;max-width:100%;margin:16px auto 20px;padding:14px 32px;background:#fff;border:2px solid var(--ink);border-radius:14px;text-align:center;font-size:34px;line-height:1.3}
+.formula .katex{font-size:1em}
+.formula .unit{display:block;margin-top:8px;font-size:19px;color:var(--muted);line-height:1.6}
+.formula .unit .katex{font-size:1.08em}
+.formula.sm{font-size:28px;padding:10px 26px}
+.answer{display:block;width:fit-content;max-width:100%;margin:16px auto 0;padding:12px 28px;background:#FFF8D6;border:2px solid #E9C93A;border-radius:12px;text-align:center;font-size:24px;line-height:1.55}
+.answer .small{color:#5A5130}
+.answers{display:flex;justify-content:center;gap:20px;margin-top:16px}
+.answers .answer{margin:0}
+.board{border:2px dashed #CFD8E1;border-radius:14px;background:rgba(255,255,255,.55);position:relative;min-height:120px}
+.board::after{content:'풀이 공간';position:absolute;right:12px;bottom:8px;font-size:14px;color:#AEB9C5}
+.col.stack .board{flex:1 1 auto}
+.blank{display:inline-block;min-width:96px;border-bottom:2.5px solid var(--ink);text-align:center;padding:0 6px;line-height:1.3;color:var(--plus);font-weight:700}
+
+/* ── 단계 공개 ── */
+.step{opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+.step.on{opacity:1;visibility:visible}
+@media (prefers-reduced-motion:reduce){.step{transition:none}}
+/* ── 움직임 (가이드 6.4) — 정지 모드(html.still)·인쇄에서는 모두 꺼짐 ── */
+@keyframes fxRise{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+@keyframes fxLeft{from{opacity:0;translate:-28px 0}to{opacity:1;translate:0 0}}
+@keyframes fxSweep{from{background-size:0% 46%}to{background-size:100% 46%}}
+html:not(.still) .slide.active > :not(.band):not(.step){animation:fxRise .55s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0) * 90ms)}
+html:not(.still) .slide.active > h2:not(.step){animation-name:fxLeft}
+html:not(.still) .slide.active mark{animation:fxSweep .8s .45s cubic-bezier(.4,.1,.2,1) backwards}
+html:not(.still) .slide.active .step.on mark{animation:fxSweep .7s .2s cubic-bezier(.4,.1,.2,1) backwards}
+html:not(.still) .step:not(svg *){translate:0 12px;transition:opacity .4s ease,visibility .4s,translate .45s cubic-bezier(.2,.7,.2,1)}
+html:not(.still) .step.on:not(svg *){translate:0 0}
+
+/* ── 질문 강조 (가이드 6.5) · 다시 움직이는 그림 ── */
+@keyframes askPulse{0%,100%{box-shadow:0 0 0 3px rgba(255,214,0,.45)}50%{box-shadow:0 0 0 9px rgba(255,214,0,.75)}}
+@keyframes askBlank{0%,100%{background-color:rgba(255,228,92,.35)}50%{background-color:rgba(255,214,0,.95)}}
+@keyframes askSvg{0%,100%{stroke-width:2.5px}50%{stroke-width:6px}}
+.ask:not(rect){background-color:rgba(255,240,170,.55);box-shadow:0 0 0 3px rgba(255,214,0,.45);border-radius:8px;animation:askPulse 1s ease-in-out 3}
+.blank.ask{animation:askBlank .8s ease-in-out 3;border-radius:4px}
+rect.ask{stroke:#E0A800;fill:#FFF3B0;animation:askSvg .8s ease-in-out 3}
+svg[data-replay]{cursor:pointer}
+html.still [data-flow]{display:none}   /* 흐름 표시(움직임 때만 보이는 덧그림) */
+@media print{[data-flow]{display:none}}
+html.still .ask{animation:none}
+
+
+/* ── 표 ── */
+table{border-collapse:collapse;width:100%;background:#fff}
+th,td{border:1.5px solid var(--line);padding:9px 14px;text-align:center;font-size:21px;line-height:1.45}
+th{background:var(--soft);font-weight:700}
+td.l,th.l{text-align:left}
+table.tight td{font-size:20px;letter-spacing:-.02em}
+
+/* ── 칩 / 흐름 ── */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chips.col1{flex-direction:column;align-items:flex-start;gap:8px}
+.chk{font:500 21px var(--font);color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:999px;padding:7px 18px 7px 14px;cursor:pointer;text-align:left}
+.chk::before{content:'';display:inline-block;width:18px;height:18px;margin-right:10px;border:2px solid var(--muted);border-radius:5px;vertical-align:-2px;box-sizing:border-box}
+.chk.on{border-color:var(--field);background:#EAF6EF}
+.chk.on::before{background:var(--field);border-color:var(--field);box-shadow:inset 0 0 0 3px #fff}
+.chips.sm .chk{font-size:18px;padding:5px 14px 5px 12px}
+.flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fnode{padding:10px 18px;border-radius:12px;background:#fff;border:1.5px solid var(--line);font-size:21px;font-weight:500}
+.fnode.hl{border-color:var(--field);background:#EAF6EF}
+.farr{font-size:24px;color:var(--muted)}
+.std{background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--ink);border-radius:10px;padding:14px 18px;font-size:22px;line-height:1.6}
+.std .code{display:inline-block;margin-right:10px;padding:1px 10px;border-radius:6px;background:var(--ink);color:#fff;font-size:18px;font-weight:700;vertical-align:2px}
+ol.goals{padding-left:1.4em}
+ol.goals li{margin-top:14px}
+
+/* ── 문제 ── */
+.bogi{position:relative;border:1.5px solid var(--line);border-radius:12px;padding:16px 18px 10px;margin-top:20px;background:#fff}
+.bogi::before{content:'보기';position:absolute;top:-13px;left:14px;padding:0 8px;background:var(--paper);font-size:16px;font-weight:700;color:var(--muted)}
+.bogi p{font-size:21px;line-height:1.6;padding-left:1.4em;text-indent:-1.4em}
+.choices{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:14px;font-size:21px}
+
+/* ── 표지 ── */
+.cover .cover-text{position:absolute;left:84px;top:140px;width:600px}
+.cover .kicker{font-size:22px;color:var(--muted);font-weight:500}
+.cover h1{font-size:120px;line-height:1.08;margin:20px 0 28px;letter-spacing:-.02em}
+.cover h1 .acc{color:var(--field)}
+.cover .sub{font-size:26px}
+.cover .meta{font-size:19px;color:var(--muted);margin-top:14px}
+.cover .cover-fig{position:absolute;right:56px;top:96px;width:540px;height:540px;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 56%,transparent 71%);mask-image:radial-gradient(circle at 50% 50%,#000 56%,transparent 71%)}
+
+/* ── SVG 속 LaTeX 라벨 ── */
+.texlab{display:inline-block;white-space:nowrap;line-height:1.25;font-family:var(--font);color:inherit}
+.texlab .ln{display:block}
+.texlab.c .ln{text-align:center}
+.texlab.r .ln{text-align:right}
+.texlab.halo{background:rgba(251,252,253,.9);border-radius:4px;padding:0 3px}
+.texlab .katex{font-size:1.08em}
+.probe{display:inline-block;width:0;height:0;vertical-align:baseline}
+.texmeasure{position:absolute;left:-20000px;top:0;visibility:hidden;white-space:nowrap}
+foreignObject.texfo{overflow:visible}
+
+/* ── 실험실 ── */
+.lab{display:flex;gap:28px;align-items:flex-start}
+.lab-ctl{flex:0 0 380px}
+.lab-fig{position:relative;flex:0 0 auto;background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
+.lab-fig svg{display:block}
+.ctl{margin-bottom:12px}
+.ctl .lbl{display:flex;justify-content:space-between;align-items:baseline;font-size:21px}
+.ctl output{font-weight:700;font-variant-numeric:tabular-nums;font-size:22px}
+.ctl input[type=range]{width:100%;height:30px;margin:2px 0 0;accent-color:var(--ink);cursor:pointer}
+.res{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:10px 18px 12px;margin-top:4px}
+.res .big{font-size:38px;font-weight:700;line-height:1.3}
+.res .big output{font-variant-numeric:tabular-nums}
+output.kind{display:block;font-size:21px;font-weight:700}
+.kind.rep{color:var(--plus)} .kind.att{color:var(--minus)}
+.btn{font:600 18px var(--font);color:#fff;background:var(--ink);border:0;border-radius:10px;padding:8px 14px;cursor:pointer}
+.refrow output{font-size:21px;font-weight:700;margin-left:10px}
+.ov{position:absolute;white-space:nowrap;font-size:19px;line-height:1.2;pointer-events:none;transform:translate(-50%,0)}
+.ov.mid{transform:translate(-50%,-50%)}
+.ov.white{color:#fff;font-weight:700}
+.ov.halo{background:rgba(255,255,255,.92);padding:0 5px;border-radius:4px}
+table.readout th{font-size:19px;font-weight:500;background:#fff;text-align:left;padding:8px 12px}
+table.readout td{font-size:24px;font-weight:700;width:118px;padding:8px 10px}
+table.readout tr.hl th,table.readout tr.hl td{background:#FFF8D6}
+
+/* ── 하네스 UI ── */
+#ink{position:absolute;left:0;top:0;width:1280px;height:720px;z-index:5;pointer-events:none;touch-action:none}
+body.pen #ink{pointer-events:auto;cursor:crosshair}
+#hud{position:fixed;left:0;bottom:0;height:4px;width:0;background:var(--field);z-index:30;transition:width .3s}
+#nav{position:fixed;right:12px;bottom:12px;display:flex;gap:6px;z-index:31;opacity:0;transition:opacity .3s}
+body.ui #nav,#nav:hover,#nav:focus-within{opacity:1}
+#nav button,#penbar button{font:600 14px var(--font);color:#fff;background:rgba(22,35,61,.9);border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+#penbar{position:fixed;top:12px;left:50%;transform:translateX(-50%);display:none;gap:6px;align-items:center;z-index:32;background:rgba(22,35,61,.92);padding:6px;border-radius:12px}
+body.pen #penbar{display:flex}
+#penbar .sw{width:30px;height:30px;padding:0;border-radius:50%;border:3px solid transparent}
+#penbar .sw.on,#penbar .er.on{border:3px solid #fff}
+.ui-overlay{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;background:rgba(9,15,28,.6)}
+.ui-overlay.open{display:flex}
+.panel{background:#fff;color:var(--ink);border-radius:16px;padding:22px 26px;width:min(720px,92vw);max-height:86vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.panel h3{margin-bottom:12px}
+#toc ol{padding:0;margin:0;list-style:none;columns:2;column-gap:18px}
+#toc li{font-size:16px;line-height:1.35;margin:0;padding:6px 10px;border-radius:8px;cursor:pointer;break-inside:avoid}
+#toc li:hover{background:var(--soft)}
+#toc li.cur{background:#EAF6EF;font-weight:700}
+#toc li .n{display:inline-block;min-width:26px;color:var(--muted);font-variant-numeric:tabular-nums}
+#help td,#help th{font-size:16px;padding:6px 10px;text-align:left}
+kbd{display:inline-block;min-width:24px;padding:1px 7px;border:1.5px solid var(--line);border-bottom-width:3px;border-radius:6px;font:600 14px var(--font);text-align:center;background:#fff}
+#audit .it{font-size:15px;line-height:1.45;padding:7px 10px;border-radius:8px;cursor:pointer;border-bottom:1px solid var(--soft)}
+#audit .it:hover{background:var(--soft)}
+#audit .rule{display:inline-block;min-width:34px;margin-right:8px;padding:0 6px;border-radius:5px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;text-align:center}
+#audit .ok{font-size:16px;color:var(--field);font-weight:700}
+.flash{outline:3px solid var(--plus)!important;outline-offset:2px}
+#black{position:fixed;inset:0;background:#000;z-index:45;display:none}
+body.black #black{display:block}
+
+/* ── 인쇄: 모든 단계 펼침, 한 쪽에 한 슬라이드 ── */
+@media print{
+  @page{size:1280px 720px;margin:0}
+  html,body{overflow:visible;height:auto;background:#fff}
+  #viewport{position:static;overflow:visible}
+  #deck{position:static;transform:none!important;width:1280px;height:auto;box-shadow:none}
+  .slide{position:relative;display:block!important;width:1280px;height:720px;break-after:page;page-break-after:always;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #deck > .slide:last-child{break-after:auto;page-break-after:auto}
+  .step{opacity:1!important;visibility:visible!important;transition:none}
+  #ink,#nav,#hud,.ui-overlay,#penbar,#black{display:none!important}
+}
+
+/* ── 회로도 · 축전기 패널 (엔진 추가분) ── */
+.cappanel{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:6px 8px}
+.cappanel svg{display:block;width:100%;height:auto}
+
+/* ── 간격 유틸리티는 항상 마지막에 (다른 규칙의 margin-top 보다 우선) ── */
+.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt28{margin-top:28px}
+
+/* 실험실 수치 표시의 수식(M1): 본문 수식(1.21em)보다 작게, 줄 높이를 늘리지 않게 */
+.lab output .katex,.lab [data-o] .katex{font-size:1.05em;line-height:1}
+
+/* 정답 강조(S9): "→ …" 정답 단계의 답 부분 */
+.ans{color:var(--ans);font-weight:700}
+.ans .katex{color:inherit}

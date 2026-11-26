@@ -1,0 +1,580 @@
+<!-- 고급화학 4-4-1 충돌 모형과 활성화 에너지 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 4. 충돌 모형과 활성화 에너지</div>
+    <h1 class="ac441-h1">충돌 모형과<br>활성화 에너지</h1>
+    <p class="sub">충돌 모형과 유효 충돌, 활성화 에너지와 반응 에너지 도표, 아레니우스 식과 반응 속도의 온도 의존성, 반응 에너지 도표 작성 실험실, 중단원 Ⅳ-4 연습 문제</p>
+    <p class="meta">고등학교 고급 화학 242–248쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅳ-4. 충돌 모형과 활성화 에너지 · 도입" data-title="중단원 도입">
+  <h2><span class="tag alt">중단원 도입</span>4. 충돌 모형과 활성화 에너지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{HILL}}
+      <p class="small c-muted">사이클 경기에서 언덕을 넘으려면 꼭대기까지 오를 만큼 많은 에너지를 써야 한다.</p>
+    </div>
+    <div class="col stack">
+      <div class="flow">
+        <div class="fnode">01 충돌 모형과 유효 충돌</div><div class="farr">→</div>
+        <div class="fnode">02 활성화 에너지</div><div class="farr">→</div>
+        <div class="fnode">03 반응 속도의 온도 의존성</div>
+      </div>
+      <div class="card"><p class="f21"><b>학습 목표</b> 반응물의 <b>농도</b>가 커지면 단위 부피 속 분자 수가 늘어 충돌 횟수가 늘고, 반응 <b>온도</b>가 높아지면 활성화 에너지 이상의 에너지를 가진 분자의 비율이 늘어난다. 이를 충돌 모형의 유효 충돌과 활성화 에너지로 이해하고, 반응 속도의 온도 의존성을 나타내는 아레니우스 식을 알아보자.</p></div>
+      <p class="f21" data-q><b>Q</b> 화학 반응에도 넘어야 할 '언덕'이 있을까?</p>
+      <p class="f21 step">→ 있다. 반응물이 생성물이 되려면 넘어야 하는 에너지 언덕이 <span class="ans">활성화 에너지</span>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 충돌 모형과 유효 충돌" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-07]</span>화학 반응 속도에 영향을 미치는 요인을 이해하고, 아레니우스 식을 이용하여 반응 속도의 변화를 설명할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화04-09]</span>유효 충돌의 의미를 이해하고, 온도와 농도 변화 시 반응 속도의 변화를 충돌 이론으로 설명할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>충돌 모형의 유효 충돌(방향과 에너지)로 농도와 온도가 반응 속도에 주는 영향을 구별하여 설명할 수 있다.</li>
+    <li>반응 에너지 도표에서 활성화 에너지, 활성화 착물, 반응열을 찾고 흡열·발열 반응을 판단할 수 있다.</li>
+    <li>아레니우스 식과 $\ln k$–$\dfrac{1}{T}$ 그래프로 활성화 에너지를 구하고, 분자 운동 에너지 분포로 온도 효과를 설명할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">충돌 모형 · 유효 충돌</div><div class="farr">→</div>
+    <div class="fnode">활성화 에너지 · 에너지 도표</div><div class="farr">→</div>
+    <div class="fnode">아레니우스 식 · 에너지 분포</div><div class="farr">→</div>
+    <div class="fnode hl">도표 작성 · 실험실</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 충돌 모형과 유효 충돌 · 도입" data-title="생각 열기: 냉장고 속 과일">
+  <h2><span class="tag">생각 열기</span>냉장고에 넣은 과일은 왜 천천히 상할까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 530px">{{THINK}}</div>
+    <div class="col stack">
+      <p class="f21">흠집 난 과일이 상온 $20\ {}^\circ\text{C}$에서는 5일 만에 썩는데, $0\ {}^\circ\text{C}$ 냉장고에서는 같은 정도로 썩기까지 20일이 걸린다.</p>
+      <p class="f21" data-q><b>Q</b> 기체 분자 운동론으로 계산하면 $10\ {}^\circ\text{C}$ 오를 때 분자의 충돌 빈도는 약 2 %만 늘어난다. 그런데 반응 속도는 2–3배나 빨라진다. 무엇이 더 달라졌을까?</p>
+      <p class="f21 step">→ 충돌 수보다 <span class="ans">반응을 일으킬 만큼 에너지가 큰 충돌</span>의 비율이 크게 늘어난다 — 오늘 그 까닭을 알아보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 다시 보기 ════════ -->
+<section class="slide" data-sec="01 충돌 모형과 유효 충돌 · 도입" data-title="다시 보기: 속도 상수와 속력 분포">
+  <h2><span class="tag alt">다시 보기</span>속도 상수 $k$와 분자의 속력 분포</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><p class="f21"><b>Ⅳ-3 반응 속도식</b> 반응 속도 $=k[\ce{A}]^m[\ce{B}]^n$<br>농도는 $[\ce{A}]$, $[\ce{B}]$가, 온도는 <b>속도 상수 $k$</b>가 맡는다.</p></div>
+      <div class="card"><p class="f21"><b>Ⅱ-1 기체 분자 운동</b> 온도가 높을수록 속력 분포 곡선이 낮아지고 넓게 퍼져, 빠른 분자가 많아진다.</p></div>
+      <p class="f21" data-q><b>Q</b> 같은 온도에서 농도를 2배로 하면 $k$는?</p>
+      <p class="f21 step">→ <span class="ans">변하지 않는다</span>. $k$는 온도(와 촉매)에 따라 달라진다.</p>
+    </div>
+    <div class="col stack">{{LINK}}
+      <p class="small c-muted">질소의 맥스웰 속력 분포(계산): $T_1=300\ \text{K}$, $T_2=600\ \text{K}$ — 대단원 Ⅱ와 같은 그림</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ① 충돌 이론과 전이 상태 이론 ════════ -->
+<section class="slide" data-sec="01 · 충돌 모형과 유효 충돌" data-title="충돌 모형과 전이 상태 이론">
+  <h2><span class="no">1</span>반응 속도를 설명하는 두 이론</h2>
+  <p class="f22">반응물의 농도와 반응 온도가 반응 속도에 주는 영향을 설명하는 이론은 두 가지이다.</p>
+  <div class="stages c2 mt12">
+    <div class="stage"><h3>충돌 이론(충돌 모형)</h3>
+      <p class="f21">반응물 분자들의 <b>충돌 빈도</b>와, 최소한의 충돌 에너지를 가진 <b>유효한 충돌</b>을 고려한다.</p>
+      <p class="f21 step" data-g="t1">→ 농도·온도 효과를 '얼마나 자주, 얼마나 세게 부딪치나'로 본다.</p></div>
+    <div class="stage"><h3>전이 상태 이론</h3>
+      <p class="f21">효과적인 충돌로 생긴 에너지가 반응물을 <b>활성화된 전이 상태</b>를 거쳐 생성물로 바꾸는 과정을 부각한다.</p>
+      <p class="f21 step" data-g="t1">→ 반응 경로의 '꼭대기(활성화 착물)'를 본다 — 02에서 다룬다.</p></div>
+  </div>
+  <p class="f21 mt16" data-q><b>Q</b> 두 이론이 공통으로 강조하는 것은?</p>
+  <p class="f21 step">→ 반응하려면 분자가 <span class="ans">충분한 에너지</span>를 가지고 만나야 한다.</p>
+</section>
+
+<!-- ════════ 7. ② k = Zfp ════════ -->
+<section class="slide" data-sec="01 · 충돌 모형과 유효 충돌" data-title="속도 상수 k = Zfp">
+  <h2><span class="no">2</span>충돌 모형으로 본 속도 상수 $k=Zfp$</h2>
+  {{ZFP}}
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 520px">
+      <div class="formula sm">$k=Zfp$<div class="unit">$Z$: 충돌 빈도 · $f$: 필요한 최소 에너지 이상으로 충돌할 확률 · $p$: 알맞은 방향으로 충돌할 확률</div></div>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 온도가 $25\ {}^\circ\text{C}$에서 $10\ {}^\circ\text{C}$ 오를 때 세 요인은 어떻게 변할까?</p>
+      <table class="tight ac441-sm step"><tr><th>$Z$</th><td class="l">약 2 % 증가 — 이것만으로는 속도도 2 %만 커져야 한다</td></tr>
+        <tr><th>$f$</th><td class="l">작은 온도 변화에도 <b>매우 민감</b>하게 커진다</td></tr>
+        <tr><th>$p$</th><td class="l">온도의 영향을 받지 않는다</td></tr></table>
+      <p class="f21 step">→ 실제로는 2–3배 빨라진다 → 온도 효과의 주인공은 <span class="ans">$f$</span>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 유효 충돌과 충돌 방향 ════════ -->
+<section class="slide" data-sec="01 · 충돌 모형과 유효 충돌" data-title="유효 충돌과 충돌 방향">
+  <h2><span class="no">3</span>유효 충돌 — 충돌 방향이 맞아야 한다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{ORIENT}}</div>
+    <div class="col stack">
+      <div class="formula sm">$\ce{NO2(g) + CO(g) -> NO(g) + CO2(g)}$</div>
+      <p class="f21">충돌하는 모든 분자가 반응하는 것은 아니다. 반응을 일으킬 수 있는 분자들의 충돌을 <mark>유효 충돌</mark>이라고 한다.</p>
+      <p class="f21" data-q><b>Q</b> $\ce{NO2}$의 어느 원자가 $\ce{CO}$의 어느 원자와 부딪쳐야 반응할까?</p>
+      <p class="f21 step">→ $\ce{NO2}$의 <span class="ans">O 원자</span>가 $\ce{CO}$의 <span class="ans">C 원자</span>와 부딪쳐야 O 원자가 옮겨 가 $\ce{CO2}$가 된다.</p>
+      <div class="answer step">유효 충돌의 조건<br>① 알맞은 충돌 방향 ② 최소 에너지(활성화 에너지) 이상</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 농도와 충돌 횟수 ════════ -->
+<section class="slide" data-sec="01 · 충돌 모형과 유효 충돌" data-title="농도와 충돌 횟수">
+  <h2><span class="no">4</span>농도가 커지면 충돌 횟수가 늘어난다</h2>
+  {{CONC}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> A의 수만 2배로 하면 A–B 충돌 쌍은 몇 배? A와 B를 모두 2배로 하면?</p>
+      <p class="f21 step" data-g="cc">→ <span class="ans">2배</span>, <span class="ans">4배</span> — 단위 부피 속 분자 수에 비례하여 충돌 횟수가 늘어난다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 520px">
+      <table class="tight ac441-sm step"><tr><th></th><th>농도를 높이면</th><th>온도를 높이면</th></tr>
+        <tr><th class="l">충돌 횟수</th><td>크게 증가</td><td>조금 증가(약 2 %)</td></tr>
+        <tr><th class="l">$E_\mathrm{a}$ 이상 분율</th><td>그대로</td><td class="ac441-hl">크게 증가</td></tr>
+        <tr><th class="l">속도 상수 $k$</th><td>그대로</td><td class="ac441-hl">커짐</td></tr></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>유효 충돌이 되는 방향</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{Q01}}</div>
+    <div class="col stack">
+      <p class="f21">$\ce{NO2}$와 $\ce{CO}$가 ㄱ–ㄷ의 방향으로 충분한 에너지를 가지고 충돌한다. 반응이 일어날 수 있는 것을 고르고, 나머지가 반응하지 못하는 까닭을 써라.</p>
+      <div class="answer step" data-g="q1">ㄴ</div>
+      <p class="f21 step">ㄱ은 N 원자가 C 원자와, ㄷ은 O 원자가 O 원자와 부딪쳐 O 원자가 C 원자로 옮겨 갈 수 없다 — 에너지가 충분해도 <b>방향</b>이 맞지 않으면 유효 충돌이 아니다.</p>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>농도와 온도, 무엇이 달라지나</h2>
+  <p class="f21">기체 반응 $\ce{A(g) + B(g) -> C(g)}$의 반응 속도식은 반응 속도 $=k[\ce{A}][\ce{B}]$이다. 옳은 것만을 &lt;보기&gt;에서 있는 대로 골라라.</p>
+  <div class="bogi mt8"><p class="f21">ㄱ. 온도가 일정할 때 $[\ce{A}]$를 2배로 하면 단위 부피당 충돌 횟수가 늘어 반응 속도가 2배가 된다.</p>
+    <p class="f21">ㄴ. 온도가 일정할 때 $[\ce{A}]$를 2배로 하면 $k$도 2배가 된다.</p>
+    <p class="f21">ㄷ. 온도를 높이면 충돌 빈도 $Z$보다 $E_\mathrm{a}$ 이상의 에너지로 충돌할 확률 $f$가 훨씬 크게 늘어난다.</p></div>
+  <div class="row mt12">
+    <div class="col stack"><div class="answer step">ㄱ, ㄷ</div>
+      <p class="f21 step">ㄴ: $k$는 농도와 관계없고 온도에 따라 달라진다. 농도는 충돌 횟수를, 온도는 주로 $f$(따라서 $k$)를 바꾼다.</p></div>
+    <div class="col"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑤ 활성화 에너지 ════════ -->
+<section class="slide" data-sec="02 · 활성화 에너지" data-title="활성화 에너지">
+  <h2><span class="no">5</span>활성화 에너지 $E_\mathrm{a}$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">{{HILL}}</div>
+    <div class="col stack">
+      <p class="f22">유효 충돌이 되려면 충돌하는 순간 반응에 필요한 최소한의 에너지 이상을 가져야 한다.</p>
+      <p class="f22">반응이 일어날 수 있는 최소한의 충돌 에너지를 <mark>활성화 에너지</mark> $E_\mathrm{a}$라고 한다.</p>
+      <p class="f21" data-q><b>Q</b> $\ce{NO2}$와 $\ce{CO}$의 반응은 $E_\mathrm{a}=132\ \text{kJ/mol}$이다. 반응하려면?</p>
+      <p class="f21 step">→ 충돌하는 두 분자가 최소한 <span class="ans">$132\ \text{kJ/mol}$</span>의 에너지를 가져야 한다(언덕 꼭대기까지 오를 에너지).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑥ 반응 에너지 도표 ════════ -->
+<section class="slide" data-sec="02 · 활성화 에너지" data-title="반응 에너지 도표">
+  <h2><span class="no">6</span>반응 에너지 도표 — $\ce{NO2}$와 $\ce{CO}$의 반응</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{ED30}}</div>
+    <div class="col stack">
+      <p class="f21">가로축은 반응 진행 경로, 세로축은 계의 (위치) 에너지이다.</p>
+      <p class="f21" data-q><b>Q</b> 정반응의 활성화 에너지는 어디서 어디까지의 높이일까?</p>
+      <p class="f21 step" data-g="e1">→ <span class="ans">반응물</span>에서 <span class="ans">활성화 착물</span>까지: $E_{\mathrm{a},f}=132\ \text{kJ/mol}$</p>
+      <p class="f21 step" data-g="e2">역반응은 생성물에서 꼭대기까지: $E_{\mathrm{a},r}=358\ \text{kJ/mol}$</p>
+      <p class="f21 step" data-g="e3">생성물이 반응물보다 $226\ \text{kJ/mol}$ 낮다 → $\Delta H=-226\ \text{kJ/mol}$, <b>발열 반응</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑦ 활성화 착물 ════════ -->
+<section class="slide" data-sec="02 · 활성화 에너지" data-title="활성화 착물(전이 상태)">
+  <h2><span class="no">7</span>활성화 착물(전이 상태)과 $E_{\mathrm{a},r}$</h2>
+  {{TSMOL}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21">반응 경로에서 위치 에너지가 가장 높은 순간에, 반응물도 생성물도 아닌 불완전한 화학 결합을 가진 <mark>활성화 착물</mark>(<mark>전이 상태</mark>) $[\ce{ON}\cdots\ce{O}\cdots\ce{CO}]^\ddagger$가 존재한다.</p>
+      <p class="f21" data-q><b>Q</b> 정반응·역반응의 활성화 에너지와 반응열 사이의 관계는?</p>
+    </div>
+    <div class="col stack" style="flex:0 0 480px">
+      <div class="formula sm step">$E_{\mathrm{a},r}=E_{\mathrm{a},f}-\Delta H$<div class="unit">$358=132-(-226)\ \ (\text{kJ/mol})$</div></div>
+      <p class="f21 step">발열 반응($\Delta H&lt;0$)은 $E_{\mathrm{a},r}&gt;E_{\mathrm{a},f}$, 흡열 반응은 $E_{\mathrm{a},r}&lt;E_{\mathrm{a},f}$이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑧ 활성화 에너지와 반응 속도 ════════ -->
+<section class="slide" data-sec="02 · 활성화 에너지" data-title="활성화 에너지와 반응 속도">
+  <h2><span class="no">8</span>활성화 에너지는 반응 속도의 척도</h2>
+  {{EASCALE}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 같은 온도에서 $E_\mathrm{a}$가 작은 반응과 큰 반응 중 어느 쪽이 빠를까?</p>
+      <p class="f21 step">→ $E_\mathrm{a}$가 <span class="ans">작을수록</span> 속도 상수 $k$가 크고 반응이 빠르다. $E_\mathrm{a}$가 크면 $k$가 작고 느리다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21 step">$E_\mathrm{a}$가 $80\ \text{kJ/mol}$보다 작은 반응은 상온 이하에서도 일어나고, 그보다 크면 상온 이상의 온도에서만 일어난다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>반응 에너지 도표 읽기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{Q03}}</div>
+    <div class="col stack">
+      <p class="f21">어떤 반응의 반응 에너지 도표이다. 정반응의 활성화 에너지, 반응열, 역반응의 활성화 에너지를 구하고, 흡열·발열을 판단하여라.</p>
+      <p class="f21 step" data-g="q3a">$E_{\mathrm{a},f}=230-50=180\ \text{kJ/mol}$</p>
+      <p class="f21 step" data-g="q3b">$\Delta H=130-50=+80\ \text{kJ/mol}$ → <b>흡열</b></p>
+      <p class="f21 step" data-g="q3c">$E_{\mathrm{a},r}=230-130=100\ \text{kJ/mol}$</p>
+      <div class="answer step">$180\ \text{kJ/mol}$, $+80\ \text{kJ/mol}$, $100\ \text{kJ/mol}$, 흡열 반응<br><span class="small">확인: $E_{\mathrm{a},r}=E_{\mathrm{a},f}-\Delta H=180-80=100$</span></div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑨ 온도와 반응 속도 ════════ -->
+<section class="slide" data-sec="03 · 반응 속도의 온도 의존성" data-title="온도와 반응 속도">
+  <h2><span class="no">9</span>온도가 높을수록 반응이 빨라진다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 530px">{{TEMPK}}</div>
+    <div class="col stack">
+      <p class="f21">높은 온도에서 조리하면 음식이 빨리 익고, 냉장고에서는 음식이 상하는 반응이 느려 오래 보관할 수 있다.</p>
+      <p class="f21">상온에서 많은 반응은 온도가 $10\ {}^\circ\text{C}$ 오를 때마다 반응 속도가 <b>2–3배</b> 빨라진다.</p>
+      <p class="f21" data-q><b>Q</b> 반응 속도식에서 온도에 따라 달라지는 것은?</p>
+      <p class="f21 step">→ <span class="ans">반응 속도 상수 $k$</span>. 온도가 높을수록 $k$가 커지고 반응이 빨라진다.</p>
+      <p class="small c-muted">그림: $E_\mathrm{a}=50\ \text{kJ/mol}$인 반응의 $k$를 아레니우스 식으로 계산(0 °C를 1로)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑩ 아레니우스 식 ════════ -->
+<section class="slide" data-sec="03 · 반응 속도의 온도 의존성" data-title="아레니우스 식">
+  <h2><span class="no">10</span>아레니우스 식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">1889년 아레니우스가 속도 상수의 온도 의존성을 처음으로 식으로 나타냈다.</p>
+      <div class="formula">$k=A\exp\left(-\dfrac{E_\mathrm{a}}{RT}\right)=Ae^{-E_\mathrm{a}/RT}$<div class="unit">$k$: 반응 속도 상수 · $e$: 자연로그의 밑 · $E_\mathrm{a}$: 활성화 에너지 · $R=8.314\ \text{J/(mol}\cdot\text{K)}$ · $T$: 절대 온도 · $A$: 아레니우스 상수</div></div>
+      <p class="f21" data-q><b>Q</b> $T$가 커지면 $-\dfrac{E_\mathrm{a}}{RT}$와 $k$는?</p>
+      <p class="f21 step">→ 음의 지수의 크기가 <span class="ans">작아져</span> $k$가 <span class="ans">커진다</span> — 반응 속도 증가.</p>
+      <p class="small step">주의: $E_\mathrm{a}$를 kJ에서 <b>J</b>로 바꾸어 넣는다($R$이 J 단위).</p>
+    </div>
+    <div class="col">{{ARR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. ⑪ ln k – 1/T ════════ -->
+<section class="slide" data-sec="03 · 반응 속도의 온도 의존성" data-title="ln k–1/T 그래프">
+  <h2><span class="no">11</span>$\ln k$–$1/T$ 그래프로 활성화 에너지 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="formula sm">$\ln k=\ln A-\dfrac{E_\mathrm{a}}{R}\left(\dfrac{1}{T}\right)$<div class="unit">$y=\ln k$, $x=\dfrac{1}{T}$ — 기울기 $-\dfrac{E_\mathrm{a}}{R}$, $y$절편 $\ln A$</div></div>
+      {{ARRLN}}
+    </div>
+    <div class="col stack">{{ARRZOOM}}
+      <p class="f21" data-q><b>Q</b> 기울기로 $E_\mathrm{a}$를 구해 보자.</p>
+      <p class="f21 step" data-g="sl">기울기 $=\dfrac{-4.92}{3.97\times10^{-4}\ \text{K}^{-1}}=-1.24\times10^{4}\ \text{K}$</p>
+      <p class="f21 step">$E_\mathrm{a}=1.24\times10^{4}\ \text{K}\times8.314\ \text{J/(mol}\cdot\text{K)}=103\ \text{kJ/mol}$</p>
+      <p class="small c-muted">자료: $\ce{N2O5}$ 분해, 25–65 °C (45 °C 반감기 24분, $E_\mathrm{a}=103\ \text{kJ/mol}$로 계산한 값)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. ⑫ 기울기와 온도 의존성 ════════ -->
+<section class="slide" data-sec="03 · 반응 속도의 온도 의존성" data-title="기울기와 온도 의존성">
+  <h2><span class="no">12</span>기울기가 클수록 온도 의존성이 크다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">{{ARR2}}<p class="small c-muted">점: $308\ \text{K}$(왼쪽)와 $298\ \text{K}$(오른쪽) · 계산값</p></div>
+    <div class="col stack">
+      <p class="f21">직선의 기울기 $-\dfrac{E_\mathrm{a}}{R}$는 활성화 에너지에 비례한다.</p>
+      <p class="f21" data-q><b>Q</b> $298\ \text{K}$에서 $308\ \text{K}$로 올릴 때 $k$는 몇 배가 될까?</p>
+      <table class="tight ac441-sm step"><tr><th>$E_\mathrm{a}$</th><th>기울기</th><th>$k$의 배수</th></tr>
+        <tr><td>$10\ \text{kJ/mol}$ 내외</td><td>작다</td><td>$1.14$배 — 온도 의존성 작음</td></tr>
+        <tr><td>$60\ \text{kJ/mol}$ 이상</td><td>크다</td><td class="ac441-hl">$2.20$배 — 온도 의존성 큼</td></tr></table>
+      <p class="f21 step">→ 활성화 에너지가 <span class="ans">클수록</span> 온도를 올릴 때 $k$가 더 크게 늘어난다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. ⑬ 분자 운동 에너지 분포 ════════ -->
+<section class="slide" data-sec="03 · 반응 속도의 온도 의존성" data-title="분자 운동 에너지 분포">
+  <h2><span class="no">13</span>반응 온도에 따른 분자 운동 에너지 분포</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{MBE}}
+      <p class="small c-muted">맥스웰–볼츠만 에너지 분포 계산 모형: $E_\mathrm{a}=10\ \text{kJ/mol}$, $T_1=300\ \text{K}$, $T_2=600\ \text{K}$</p>
+    </div>
+    <div class="col stack">
+      <p class="f21">$E_\mathrm{a}$ 이상의 에너지를 가진 분자의 분율 = $E_\mathrm{a}$와 $\infty$ 사이 곡선 아래 넓이</p>
+      <p class="f21" data-q><b>Q</b> 온도를 $T_1$에서 $T_2$로 높이면 그 넓이는?</p>
+      <p class="f21 step" data-g="mb">→ <span class="ans">크게 늘어난다</span>. 곡선이 낮아지고 오른쪽으로 퍼져 꼬리 부분이 두꺼워진다.</p>
+      <div class="answer step">온도 ↑ → $E_\mathrm{a}$ 이상 분자의 분율 ↑ → $k$ ↑ → 반응 속도 ↑</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. ⑭ 10 °C에 2배의 근거 ════════ -->
+<section class="slide" data-sec="03 · 반응 속도의 온도 의존성" data-title="10 °C에 약 2배인 까닭">
+  <h2><span class="no">14</span>$10\ {}^\circ\text{C}$에 약 2배 — 계산으로 확인하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{FACTORS}}</div>
+    <div class="col stack">
+      <p class="f21">$E_\mathrm{a}=50\ \text{kJ/mol}$인 반응을 $298\ \text{K}$에서 $308\ \text{K}$로 올린다.</p>
+      <p class="f21 step">충돌 빈도($\sqrt{T}$에 비례): $\sqrt{\dfrac{308}{298}}=1.017$ → 약 2 % 증가</p>
+      <p class="f21 step">에너지 조건($e^{-E_\mathrm{a}/RT}$): $\exp\left[\dfrac{50000}{8.314}\left(\dfrac{1}{298}-\dfrac{1}{308}\right)\right]=1.93$배</p>
+      <p class="f21" data-q><b>Q</b> 온도 효과의 주된 까닭은 무엇일까?</p>
+      <div class="answer step">충돌 횟수가 아니라 $E_\mathrm{a}$ 이상의 에너지를 가진 분자의 비율 증가</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. 예제 Ⅳ-5 (1) ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅳ-5 (1)">
+  <h2><span class="tag ex">예제 Ⅳ-5</span>1. 과일이 썩는 반응의 활성화 에너지</h2>
+  <p class="f21">실온 $20\ {}^\circ\text{C}$에서 흠집이 있는 과일은 5일 후 썩는데, $0\ {}^\circ\text{C}$의 냉장고에서 같은 정도로 썩기까지 20일이 걸린다. 활성화 에너지 $E_\mathrm{a}$를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">두 온도의 아레니우스 식을 빼면 $\ln\dfrac{k_2}{k_1}=\dfrac{E_\mathrm{a}}{R}\left(\dfrac{1}{T_1}-\dfrac{1}{T_2}\right)$</p>
+      <p class="f21 step">같은 정도로 썩는 시간이 $\dfrac14$ → 속도 상수는 4배: $\dfrac{k_2}{k_1}=4$</p>
+      <p class="f21 step">$\ln4=1.386=\dfrac{E_\mathrm{a}}{8.314\ \text{J/(mol}\cdot\text{K)}}\left(\dfrac{1}{273\ \text{K}}-\dfrac{1}{293\ \text{K}}\right)$</p>
+      <div class="answer step">$E_\mathrm{a}=\dfrac{1.386\times8.314}{2.50\times10^{-4}}\ \text{J/mol}=46.1\ \text{kJ/mol}$</div>
+    </div>
+    <div class="col"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 예제 Ⅳ-5 (2) ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅳ-5 (2)">
+  <h2><span class="tag ex">예제 Ⅳ-5</span>2. 10 °C에 2배, 3배인 반응의 활성화 에너지</h2>
+  <p class="f21">실온에서 많은 화학 반응들은 반응 온도가 $10\ {}^\circ\text{C}$ 증가할 때 반응 속도가 2배나 3배 증가한다. 각각의 $E_\mathrm{a}$를 구하여라($20\ {}^\circ\text{C}\to30\ {}^\circ\text{C}$).</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">$\dfrac{1}{293\ \text{K}}-\dfrac{1}{303\ \text{K}}=1.126\times10^{-4}\ \text{K}^{-1}$</p>
+      <p class="f21 step">2배: $\ln2=0.693=\dfrac{E_\mathrm{a}}{8.314}\times1.126\times10^{-4}$</p>
+      <p class="f21 step">3배: $\ln3=1.099=\dfrac{E_\mathrm{a}}{8.314}\times1.126\times10^{-4}$</p>
+      <div class="answer step">2배: $E_\mathrm{a}=51.2\ \text{kJ/mol}$ · 3배: $E_\mathrm{a}=81.1\ \text{kJ/mol}$</div>
+      <p class="small step">'10 °C에 2–3배'는 활성화 에너지가 약 50–80 kJ/mol인 반응에 들어맞는다.</p>
+    </div>
+    <div class="col"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 예제 Ⅳ-5 (3) ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅳ-5 (3)">
+  <h2><span class="tag ex">예제 Ⅳ-5</span>3. 아이오딘화 수소 생성 반응의 활성화 에너지</h2>
+  <p class="f21">$\ce{H2(g) + I2(g) -> 2HI(g)}$의 반응 속도 상수는 $327\ {}^\circ\text{C}$에서 $2.7\times10^{-4}\ \text{L/(mol}\cdot\text{s)}$, $377\ {}^\circ\text{C}$에서 $3.5\times10^{-3}\ \text{L/(mol}\cdot\text{s)}$이다. $E_\mathrm{a}$를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step">$T_1=600\ \text{K}$, $T_2=650\ \text{K}$: $\dfrac{1}{600}-\dfrac{1}{650}=1.28\times10^{-4}\ \text{K}^{-1}$</p>
+      <p class="f21 step">$\ln\dfrac{3.5\times10^{-3}}{2.7\times10^{-4}}=\ln(1.30\times10)=2.56=\dfrac{E_\mathrm{a}}{8.314}\times1.28\times10^{-4}$</p>
+      <div class="answer step">$\begin{aligned}E_\mathrm{a}&=\dfrac{2.56\times8.314}{1.28\times10^{-4}}\ \text{J/mol}=1.66\times10^{5}\ \text{J/mol}\\&=166\ \text{kJ/mol}\end{aligned}$</div>
+      <p class="small step">섭씨온도를 절대 온도로 바꾸는 것을 잊지 말자: $T(\text{K})=t({}^\circ\text{C})+273$</p>
+    </div>
+    <div class="col"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>온도를 10 K 올리면 2배가 되는 반응</h2>
+  <p class="f21">어떤 반응의 속도 상수는 온도를 $300\ \text{K}$에서 $310\ \text{K}$로 높이면 2배가 된다. (1) 활성화 에너지를 구하고, (2) 분자의 평균 운동 에너지는 약 3 %만 늘어나는데 반응 속도가 크게 빨라지는 까닭을 분자 운동 에너지 분포로 설명하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">(1) $\ln2=\dfrac{E_\mathrm{a}}{8.314}\left(\dfrac{1}{300}-\dfrac{1}{310}\right)=\dfrac{E_\mathrm{a}}{8.314}\times1.075\times10^{-4}$</p>
+      <div class="answer step">$E_\mathrm{a}=53.6\ \text{kJ/mol}$</div>
+      <p class="f21 step">(2) 분포의 꼬리에서 $E_\mathrm{a}$ 이상의 에너지를 가진 분자의 비율이 약 2배로 늘어 유효 충돌이 많아진다. (농도를 높일 때는 이 비율은 그대로이고 충돌 횟수가 늘어난다.)</p>
+    </div>
+    <div class="col">{{MBE_S}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 화학사 ════════ -->
+<section class="slide" data-sec="03 · 화학사" data-title="화학사: 아레니우스">
+  <h2><span class="tag">화학사</span>아레니우스와 활성화 에너지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="flow">
+        <div class="fnode">1884<br>전해질 이온화설</div><div class="farr">→</div>
+        <div class="fnode hl">1889<br>아레니우스 식 · 활성화 에너지</div><div class="farr">→</div>
+        <div class="fnode">1903<br>노벨 화학상</div>
+      </div>
+      <p class="f21">스웨덴의 화학자 아레니우스(1859–1927)는 박사 학위 논문에서 전해질 용액의 이온화설을 제안하였고, 이 공로로 1903년 노벨 화학상을 받았다.</p>
+      <p class="f21">1889년 속도 상수의 온도 의존성을 처음으로 식으로 나타냈고, 반응하려면 분자가 충분히 '활성화'되어야 한다고 보아 그 에너지를 <b>활성화 에너지</b>라고 불렀다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card"><p class="f21">오스트발트(1853–1932), 반트호프(1852–1911)와 함께 '물리 화학의 삼총사'로 불리며 이론 화학의 기초를 다졌다.</p></div>
+      <p class="f21" data-q><b>Q</b> 아레니우스의 이름이 붙은 개념을 이 과목에서 두 가지 찾아보자.</p>
+      <p class="f21 step">→ 아레니우스 <span class="ans">산 염기 정의</span>(Ⅳ-2)와 <span class="ans">아레니우스 식</span>(Ⅳ-4)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 탐구 활동 (1) ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 반응 에너지 도표 작성">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 화학 반응에 관한 반응 에너지 도표 작성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">반응 에너지 도표는 반응물이 활성화 착물을 거쳐 생성물에 이르는 반응 진행 경로를 계의 위치 에너지 변화로 나타낸다. 반응 중간체의 존재, 활성화 에너지의 크기, 흡열·발열을 잘 보여 준다.</p>
+      <p class="f22"><b>활동</b> 모둠별로 교과서에 나오는 반응들의 반응 에너지 도표를 그려 발표해 보자.</p>
+      <ol class="f21">
+        <li>반응 고르기: $\ce{NO2 + CO}$(그림 Ⅳ-30), $\ce{O3 + O}$(연습 문제 2), 그 역반응, 중간체가 있는 두 단계 반응</li>
+        <li>반응물을 0으로 두고 활성화 착물·(중간체)·생성물의 에너지 놓기</li>
+        <li>$E_{\mathrm{a},f}$, $E_{\mathrm{a},r}$, $\Delta H$를 화살표로 표시하고 흡열·발열 판정</li>
+        <li>발표: 도표에서 읽을 수 있는 것 세 가지</li>
+      </ol>
+    </div>
+    <div class="col stack">
+      <table class="tight ac441-sm"><tr><th>모둠 역할</th><td class="l">자료 찾기 · 도표 그리기 · 값 계산 · 발표</td></tr>
+        <tr><th>그리는 약속</th><td class="l">세로축 '에너지', 가로축 '반응 진행 경로', 꼭대기에 ‡</td></tr></table>
+      <p class="f21" data-q><b>Q</b> 중간체가 있으면 도표 모양이 어떻게 달라질까?</p>
+      <p class="f21 step">→ 봉우리 사이에 <span class="ans">골짜기</span>가 생긴다(봉우리 수 = 단계 수).</p>
+      <p class="small">다음 장의 실험실에서 도표를 그리고 값을 확인한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 실험실 ════════ -->
+<section class="slide" data-sec="03 · 실험실" data-title="실험실: 반응 에너지 도표 그리기">
+  <h2><span class="tag">실험실</span>반응 에너지 도표 그리기와 온도에 따른 분포</h2>
+  <div class="lab" data-lab="ac441diag">
+    <div class="lab-ctl" style="flex-basis:400px">
+      <div class="ac441-seg"><span class="small">반응</span><button class="btn on" data-rx="a">(가)</button><button class="btn" data-rx="b">(나)</button><button class="btn" data-rx="c">(다) 역반응</button><button class="btn" data-rx="d">(라) 두 단계</button></div>
+      <output class="ac441-given" data-o="given"></output>
+      <div class="ac441-ctl2">
+        <div class="ctl"><div class="lbl"><span>활성화 착물</span><output data-o="ts"></output></div><input type="range" min="0" max="400" step="1" value="60" data-i="ts" aria-label="활성화 착물 에너지"></div>
+        <div class="ctl"><div class="lbl"><span>생성물</span><output data-o="p"></output></div><input type="range" min="-450" max="400" step="1" value="0" data-i="p" aria-label="생성물 에너지"></div>
+      </div>
+      <div data-o="two" class="ac441-ctl2">
+        <div class="ctl"><div class="lbl"><span>중간체</span><output data-o="im"></output></div><input type="range" min="-100" max="150" step="1" value="0" data-i="im" aria-label="중간체 에너지"></div>
+        <div class="ctl"><div class="lbl"><span>둘째 착물</span><output data-o="ts2"></output></div><input type="range" min="-100" max="150" step="1" value="0" data-i="ts2" aria-label="둘째 활성화 착물 에너지"></div>
+      </div>
+      <div class="ac441-seg"><span class="small">판정</span><button class="btn ac441-go" data-j="발열">발열</button><button class="btn ac441-go" data-j="흡열">흡열</button><button class="btn" data-act="reset">초기화</button></div>
+      <table class="tight ac441-rd"><tr><th>$E_{\mathrm{a},f}$</th><th>$E_{\mathrm{a},r}$</th><th>$\Delta H$</th><th>단위</th></tr>
+        <tr><td><output data-o="eaf"></output></td><td><output data-o="ear"></output></td><td><output data-o="dh"></output></td><td>kJ/mol</td></tr></table>
+      <output class="kind ac441-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 670px">
+      <div class="lab-fig" style="width:670px;height:270px">
+        <svg viewBox="0 0 670 270" width="670" height="270" aria-label="왼쪽 반응 에너지 도표, 오른쪽 두 온도의 분자 운동 에너지 분포와 활성화 에너지 이상 부분"></svg>
+        <div class="ov mid halo" data-ov="ea" style="color:#E08A2C">$E_{\mathrm{a},f}$</div><div class="ov mid halo" data-ov="er" style="color:#E08A2C">$E_{\mathrm{a},r}$</div><div class="ov mid halo" data-ov="dh">$\Delta H$</div>
+        <div class="ov mid halo" data-ov="r"></div><div class="ov mid halo" data-ov="q"></div>
+        <div class="ov mid" data-ov="eam" style="color:#E08A2C">$E_{\mathrm{a},f}$</div><div class="ov mid small" data-ov="mag"></div>
+      </div>
+      <div class="ac441-ctl2">
+        <div class="ctl"><div class="lbl"><span>온도 $T$</span><output data-o="T"></output></div><input type="range" min="250" max="600" step="10" value="300" data-i="T" aria-label="온도"></div>
+        <div class="ctl"><div class="lbl"><span>올린 온도</span><output data-o="dT"></output></div><input type="range" min="10" max="100" step="10" value="10" data-i="dT" aria-label="올린 온도"></div>
+      </div>
+      <output class="ac441-fr" data-o="fr"></output>
+      <table class="tight ac441-log"><thead><tr><th>회</th><th>반응</th><th>$E_{\mathrm{a},f}$</th><th>$E_{\mathrm{a},r}$</th><th>$\Delta H$</th><th>판정</th><th>자료</th><th>분율 비</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 활동 (2) 결과 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 결과 예시">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 결과 예시와 발표</h2>
+  {{EXR}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 세 도표를 비교하여 알 수 있는 것은?</p>
+      <p class="f21 step">→ (나)는 $E_\mathrm{a}$가 작아 빠르고, (가)의 역반응은 $E_{\mathrm{a},r}=358$로 흡열·느리며, (다)는 봉우리 두 개 사이 골짜기에 <span class="ans">중간체</span>가 있다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 470px">
+      <table class="tight ac441-sm step"><tr><th>평가 요소</th><td class="l">축 이름 · 활성화 착물(‡) · $E_\mathrm{a}$·$\Delta H$ 화살표 방향 · 흡열/발열 · 중간체 표시</td></tr></table>
+      <p class="small step">(다)의 수치는 덱이 정한 가상의 예이다. 단계와 속도 결정 단계는 Ⅳ-5에서 다룬다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅳ-4 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>활성화 에너지와 아레니우스 상수 구하기</h2>
+  <p class="f21">$\ce{O2}$가 존재할 때 $\ce{NH2OH}$ 분해 반응의 속도식은 분해 속도 $=-\dfrac{d[\ce{NH2OH}]}{dt}=k_\mathrm{obs}[\ce{NH2OH}][\ce{O2}]$이다. 반응 속도 상수는 $0\ {}^\circ\text{C}$에서 $4.7\times10^{-5}\ \text{L/(mol}\cdot\text{s)}$, $25\ {}^\circ\text{C}$에서 $5.3\times10^{-4}\ \text{L/(mol}\cdot\text{s)}$이다. $E_\mathrm{a}$와 $A$를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step">$\ln\dfrac{5.3\times10^{-4}}{4.7\times10^{-5}}=2.423=\dfrac{E_\mathrm{a}}{8.314}\left(\dfrac{1}{273}-\dfrac{1}{298}\right)=\dfrac{E_\mathrm{a}}{8.314}\times3.073\times10^{-4}$</p>
+      <div class="answer step" data-g="p1">$E_\mathrm{a}=65.6\ \text{kJ/mol}$</div>
+      <p class="f21 step">$A=k_2\,e^{E_\mathrm{a}/RT_2}=5.3\times10^{-4}\times\exp\left(\dfrac{65550}{8.314\times298}\right)$</p>
+      <div class="answer step" data-g="p2">$A=1.6\times10^{8}\ \text{L/(mol}\cdot\text{s)}$</div>
+      <p class="small step">교과서 풀이는 $A=1.95\times10^{8}$이다. 두 온도 자료로 다시 계산하면 $1.6\times10^{8}$이 나온다($A$는 $k$와 단위가 같다).</p>
+    </div>
+    <div class="col"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 32. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅳ-4 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>성층권 오존 분해의 반응 에너지 도표</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <p class="f21">성층권에서 오존이 산소로 분해되는 반응이다. $E_\mathrm{a}=19\ \text{kJ/mol}$, $\Delta H=-392\ \text{kJ/mol}$</p>
+      <div class="formula sm">$\ce{O3(g) + O(g) -> 2O2(g)}$<div class="unit">반응 속도 $=k[\ce{O3}][\ce{O}]$</div></div>
+      <p class="f21">1) 반응 에너지 도표를 그리고 활성화 착물을 제시하여라.<br>2) 역반응의 활성화 에너지 $E_{\mathrm{a},r}$는?</p>
+      <span class="step" data-g="p2a"></span>
+      <p class="f21 step" data-g="p2b">2) $E_{\mathrm{a},r}=E_{\mathrm{a},f}-\Delta H=19-(-392)$</p>
+      <div class="answer step" data-g="p2b">$E_{\mathrm{a},r}=411\ \text{kJ/mol}$</div>
+      <div class="board"></div>
+    </div>
+    <div class="col stack"><div class="step" data-g="p2a">{{PR2}}</div>
+      <p class="small step" data-g="p2a">1) 활성화 착물 $[\ce{O=O}\cdots\ce{O}\cdots\ce{O}]^\ddagger$: $\ce{O3}$의 O–O 결합 하나가 끊어지면서 O 원자와 새 결합이 생기는 중</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅳ-4 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>온도가 높을 때 반응이 빨라지는 까닭</h2>
+  <p class="f21">기체 분자들 사이의 반응에서 반응 온도가 높아질 때 반응 속도 상수가 커지고 반응 속도가 빨라지는 주요한 까닭을 설명하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="answer step">온도가 높아지면 분자 운동 에너지 분포 곡선이 넓게 퍼져 <b>활성화 에너지 이상의 에너지를 가진 분자의 분율이 증가</b>한다. 그래서 반응 속도 상수가 커지고 반응 속도가 빨라진다.</div>
+      <table class="tight ac441-sm step"><tr><th>채점 요소</th><td class="l">① 분자 운동 에너지 분포(그래프) 언급 ② $E_\mathrm{a}$ 이상 분자의 분율 증가 ③ $k$ 증가 → 속도 증가</td></tr>
+        <tr><th>흔한 오답</th><td class="l">'충돌 횟수가 늘어서'만 쓰면 부족 — 충돌 횟수 증가는 약 2 %뿐</td></tr></table>
+    </div>
+    <div class="col stack">{{MBE_S}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 34. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01–03 충돌 모형과 활성화 에너지 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 충돌 모형과 활성화 에너지</h2>
+  <div class="ac441-map">
+    <div class="ac441-node ac441-dim">3. 반응 속도식<br>$k$, 반응 차수<br>적분 속도식</div>
+    <div class="ac441-arr">→</div>
+    <div class="ac441-node ac441-main" data-q><b>01 유효 충돌</b><br>❶ $k=Z\,$<span class="blank"><span class="step">$f$</span></span>$\,p$<br>❷ 유효 충돌 = 알맞은 <span class="blank"><span class="step">방향</span></span> + 최소 에너지 이상<br>❸ 농도 ↑ → <span class="blank"><span class="step">충돌 횟수</span></span> ↑</div>
+    <div class="ac441-node ac441-main" data-q><b>02 활성화 에너지</b><br>❹ 꼭대기 = <span class="blank"><span class="step">활성화 착물</span></span><br>❺ $E_{\mathrm{a},r}=E_{\mathrm{a},f}-$<span class="blank"><span class="step">$\Delta H$</span></span><br>❻ $E_\mathrm{a}$ 작을수록 <span class="blank"><span class="step">빠름</span></span></div>
+    <div class="ac441-node ac441-main" data-q><b>03 온도 의존성</b><br>❼ $k=Ae^{-E_\mathrm{a}/RT}$<br>❽ $\ln k$–$\dfrac1T$ 기울기 <span class="blank"><span class="step">$-E_\mathrm{a}/R$</span></span><br>❾ 온도 ↑ → $E_\mathrm{a}$ 이상 <span class="blank"><span class="step">분율</span></span> ↑</div>
+    <div class="ac441-arr">→</div>
+    <div class="ac441-node ac441-dim">5. 반응 메커니즘과 촉매<br>(다음 중단원)</div>
+  </div>
+</section>
+
+<!-- ════════ 35. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01–03 충돌 모형과 활성화 에너지 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 유효 충돌의 두 조건과 활성화 에너지·활성화 착물의 뜻을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 반응 에너지 도표를 그려 $E_{\mathrm{a},f}$, $E_{\mathrm{a},r}$, $\Delta H$를 읽고, 두 온도의 속도 상수로 $E_\mathrm{a}$를 구하였다.</button>
+    <button class="chk">[가치·태도] 냉장 보관·조리처럼 생활 속 온도 조절을 반응 속도로 설명하며 화학의 쓸모를 느꼈다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 농도를 높일 때와 온도를 높일 때, 속도 상수 $k$가 바뀌는 것은? <span class="step">→ <span class="ans">온도</span>를 높일 때이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ln k$–$\dfrac1T$ 직선이 가파를수록 $E_\mathrm{a}$는? <span class="step">→ <span class="ans">크다</span>(온도 의존성이 크다).</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 중단원</b> 촉매는 어떻게 활성화 에너지를 낮출까? 반응은 정말 한 번의 충돌로 끝날까? — 5. 화학 반응 메커니즘과 촉매</div>
+</section>

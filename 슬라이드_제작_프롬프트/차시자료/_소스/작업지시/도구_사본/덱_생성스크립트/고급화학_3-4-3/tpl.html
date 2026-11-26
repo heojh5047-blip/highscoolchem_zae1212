@@ -1,0 +1,506 @@
+<!-- 고급화학 3-4-3 실용 전지 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 4. 화학 전지 › 03</div>
+    <h1 class="ac343-h1">실용 전지</h1>
+    <p class="sub">1차 전지, 2차 전지, 연료 전지 — 전극 반응과 전지 전위, $\Delta G^\circ=-nFE^\circ$</p>
+    <p class="meta">고등학교 고급 화학 175–180쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="03 실용 전지 · 도입" data-title="다시 보기: 화학 전지와 전지 전위">
+  <h2><span class="tag alt">다시 보기</span>01 화학 전지의 개요 · 02 전지 전위</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="stages c2">
+        <div class="stage"><h3>두 전극</h3><p class="f21">산화 전극 (−)극, 환원 전극 (+)극 — 전자는 도선, 이온은 염다리</p></div>
+        <div class="stage"><h3>표준 전지 전위</h3><p class="f21">$E^\circ_\text{전지}=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}$</p></div>
+        <div class="stage"><h3>자유 에너지</h3><p class="f21">$\Delta G^\circ=-nFE^\circ_\text{전지}$ — $E^\circ_\text{전지}&gt;0$이면 자발적</p></div>
+        <div class="stage"><h3>다 쓴 전지</h3><p class="f21">평형($Q=K$)에 이르러 $E_\text{전지}=0$ <span class="small c-muted">[심화]</span></p></div>
+      </div>
+      <p class="f22 mt16"><b>Q</b> 다 쓴 다니엘 전지를 다시 쓰려면 어떻게 해야 할까?</p>
+      <div class="answer step">바깥에서 전기 에너지를 공급해 역반응을 일으키면 반응물이 다시 만들어진다 — 2차 전지의 충전</div>
+    </div>
+    <div class="col">{{REVIEW}}</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="03 실용 전지" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-07]</span>표준 전지 전위차와 깁스 자유 에너지 관계를 이해하고, 다양한 화학 전지에 호기심을 갖는다.</div>
+  <ol class="goals mt12 f22">
+    <li>1차 전지, 2차 전지, 연료 전지를 구분하고, 여러 실용 전지의 전극 반응과 전체 반응을 쓸 수 있다.</li>
+    <li>실용 전지의 전지 전위를 $\Delta G=-nFE_\text{전지}$와 연결하여 전지가 할 수 있는 최대 일을 비교할 수 있다.</li>
+    <li>2차 전지와 수소 연료 전지 기술을 조사하고, 장단점과 산업적·환경적 한계를 토론할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">1차 전지</div><div class="farr">→</div>
+    <div class="fnode">2차 전지</div><div class="farr">→</div>
+    <div class="fnode">연료 전지</div><div class="farr">→</div>
+    <div class="fnode hl">$\Delta G=-nFE$로 비교</div><div class="farr">→</div>
+    <div class="fnode">조사·토론</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="03 실용 전지 · 도입" data-title="생각 열기: 바람직한 실용 전지">
+  <h2><span class="tag">생각 열기</span>어떤 전지가 좋은 전지일까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">실용 전지는 주로 휴대용 전원으로 쓴다. <mark>가장 바람직한 실용 전지는 일정한 전위차를 유지하고, 안전하며, 휴대할 수 있는 환경친화적 전지이다.</mark> 그 원리는 다니엘 전지와 다르지 않다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 리모컨 건전지는 다 쓰면 버리고, 스마트폰 배터리는 충전해 다시 쓴다. 두 전지는 무엇이 다를까?</p>
+        <p class="f21 step">→ 건전지는 역반응을 일으킬 수 없어 한 번 쓰면 수명이 다하고, 스마트폰 배터리는 전기 에너지를 가해 역반응(충전)을 일으킬 수 있다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 오른쪽 기기에는 각각 어떤 전지가 쓰일까?</p>
+        <p class="f21 step" data-g="g1">→ 그림 아래 주황 글씨 — 기기마다 필요한 전압·크기·충전 여부가 달라 다른 전지를 쓴다.</p></div>
+    </div>
+    <div class="col">{{DEVICES}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 분류 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="실용 전지의 분류">
+  <h2><span class="no">1</span>여러 가지 실용 전지 — 1차·2차·연료 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21">실용 전지는 각종 전기 장치에 전력을 공급하는 장치로, 1차 전지·2차 전지·연료 전지 등이 있다.</p>
+      <table class="ac343-sm">
+        <tr><th>종류</th><th>뜻</th><th>예</th></tr>
+        <tr><td><b>1차 전지</b></td><td class="l">전지 반응이 평형에 도달하면 역반응을 일으킬 수 없어 수명이 다하는 일회용 전지</td><td><span class="blank"><span class="step">알칼리 전지, 은 단추 전지</span></span></td></tr>
+        <tr><td><b>2차 전지</b></td><td class="l">평형에 도달한 뒤 전기 에너지를 가해 역반응을 일으켜 충전할 수 있는 전지</td><td><span class="blank"><span class="step">납-산 전지, 리튬-이온 전지</span></span></td></tr>
+        <tr><td><b>연료 전지</b></td><td class="l">연료와 산화제를 바깥에서 공급하는 한 계속 전기를 만드는 전지</td><td><span class="blank"><span class="step">수소 연료 전지</span></span></td></tr>
+      </table>
+      <p class="f21" data-q>Q 각 종류의 대표적인 전지는 무엇일까?</p>
+    </div>
+    <div class="col">{{CLASS}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 알칼리 전지 구조 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="알칼리 전지의 구조">
+  <h2><span class="no">2</span>1차 전지 — 알칼리 전지의 구조</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">알칼리 전지는 많은 소형 가전제품에 쓰는 대표적인 1차 전지로, 전지 전위 $1.55\ \text{V}$를 낸다. (−)극(산화 전극)은 아연, (+)극(환원 전극)은 비활성 탄소 막대(흑연 봉)이고, 전해질은 $\ce{KOH}$ 반죽이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전자는 어느 극에서 나와 어디로 갈까?</p>
+        <p class="f21 step">→ 아연((−)극, 산화 전극)에서 나와 바깥 도선을 거쳐 흑연 봉((+)극, 환원 전극)으로 간다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 흡착제/격리판은 어떤 일을 할까?</p>
+        <p class="f21 step">→ 두 전극 물질이 직접 닿지 않게 떼어 놓으면서 이온은 지나가게 한다 — 다니엘 전지의 염다리 역할(01 탐구 활동).</p></div>
+    </div>
+    <div class="col">{{ALK}}<p class="small">그림 Ⅲ-28 알칼리 전지(단면 모식도)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 알칼리 전지 반응 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="알칼리 전지의 반응">
+  <h2><span class="no">3</span>알칼리 전지의 전극 반응</h2>
+  <table class="ac343-eq">
+    <tr><th class="ac343-cox">산화 전극 (−)</th><td>$\ce{Zn(s) + 2OH-(aq) -> Zn(OH)2(s) + 2e-}$</td></tr>
+    <tr><th class="ac343-crd">환원 전극 (+)</th><td>$\ce{2MnO2(s) + H2O(l) + 2e- -> Mn2O3(s) + 2OH-(aq)}$</td></tr>
+    <tr class="tot"><th>전체 반응</th><td>$\ce{Zn(s) + 2MnO2(s) + H2O(l) -> Zn(OH)2(s) + Mn2O3(s)}$ &nbsp; $E_\text{전지}=1.55\ \text{V}$</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="card q"><p class="f21"><b>Q</b> 전체 반응식에 $\ce{OH-}$이 없는 까닭은?</p>
+        <p class="f21 step">→ 환원 전극이 만든 $\ce{OH-}$ 2개가 격리판을 지나 산화 전극에서 다시 쓰이므로, 전해질의 $\ce{OH-}$은 줄지 않는다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 산화되는 원소와 환원되는 원소는?</p>
+        <p class="f21 step">→ <span class="ans">$\ce{Zn}$</span>: $0\rightarrow+2$ <span class="ac343-cox">산화</span>, <span class="ans">$\ce{Mn}$</span>: $+4\rightarrow+3$ <span class="ac343-crd">환원</span> — 전자 2개를 주고받는다.</p></div>
+      <p class="small">교과서 175쪽 환원 전극식은 $\ce{H2O}$ 계수가 2로 적혀 있으나, 원자 수가 맞고 전체 반응과 이어지도록 1로 고쳐 썼다.</p>
+    </div>
+    <div class="col">{{ALKION}}</div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 은 단추 전지 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="은 단추 전지">
+  <h2><span class="no">4</span>1차 전지 — 은 단추 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">소형 시계를 움직이는 데 많이 쓰는 또 다른 1차 전지이다.</p>
+      <table class="ac343-eq">
+        <tr><th class="ac343-cox">산화 전극 (−)</th><td>$\ce{Zn(s) + 2OH-(aq) -> ZnO(s) + H2O(l) + 2e-}$</td></tr>
+        <tr><th></th><td class="small">$\ce{ZnO}/\ce{Zn}$의 표준 환원 전위 $E^\circ=-1.260\ \text{V}$</td></tr>
+        <tr><th class="ac343-crd">환원 전극 (+)</th><td>$\ce{Ag2O(s) + H2O(l) + 2e- -> 2Ag(s) + 2OH-(aq)}$</td></tr>
+        <tr><th></th><td class="small">$E^\circ=+0.342\ \text{V}$</td></tr>
+        <tr class="tot"><th>전체 반응</th><td>$\ce{Zn(s) + Ag2O(s) -> ZnO(s) + 2Ag(s)}$</td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> 은 단추 전지의 전지 전위는 몇 V일까?</p>
+      <div class="formula sm step">$\begin{aligned}E^\circ_\text{전지}&amp;=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}\\&amp;=0.342-(-1.260)\end{aligned}$ $=$ <span class="ans">$+1.602\ \text{V}$</span></div>
+      <p class="small step">교과서 날개는 산화 전극 반응 옆에 산화 방향 전위 $+1.260\ \text{V}$를 적고 두 값을 더했다 — 같은 결과이다.</p>
+    </div>
+    <div class="col">{{BUTTON}}<p class="small">그림 Ⅲ-29 은 단추 전지(단면 모식도)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 9. ⑤ 2차 전지 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="2차 전지 — 방전과 충전">
+  <h2><span class="no">5</span>2차 전지 — 방전과 충전</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21"><mark>2차 전지는 정반응이 평형에 도달하면 전기 에너지를 가하여 역반응을 일으켜 충전할 수 있는 전지이다.</mark> 역반응이 일어나면 반응물이 다시 만들어지므로 반복해서 충전할 수 있다.</p>
+      <div class="stages c2">
+        <div class="stage"><h3 class="c-field">방전</h3><p class="f21">자발적 정반응($\Delta G&lt;0$) — 화학 에너지 → 전기 에너지(갈바니 전지)</p></div>
+        <div class="stage"><h3 style="color:#7B4FC8">충전</h3><p class="f21">바깥 전원이 전기 에너지를 공급해 비자발적 역반응($\Delta G&gt;0$)을 일으킨다(전해 전지처럼)</p></div>
+      </div>
+      <div class="card q"><p class="f21"><b>Q</b> 1차 전지는 왜 충전해서 다시 쓸 수 없을까?</p>
+        <p class="f21 step">→ 반응이 평형에 이른 뒤 역반응을 일으킬 수 없도록 만들어진 전지이기 때문이다. 2차 전지는 방전 생성물이 전극에 그대로 붙어 있어 역반응으로 되돌릴 수 있다.</p></div>
+    </div>
+    <div class="col">{{RECH}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑥ 납-산 전지 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="납-산 전지">
+  <h2><span class="no">6</span>2차 전지 — 납-산 전지</h2>
+  <p class="f21">자동차 배터리로 쓰는 2차 전지(표 Ⅲ-9 「납축전지」)로, 납·이산화 납 전극을 황산 용액에 담근 $2.1\ \text{V}$ 전지를 직렬로 잇는다.</p>
+  <table class="ac343-eq">
+    <tr><th class="ac343-cox">산화 전극 (−)</th><td>$\ce{Pb(s) + HSO4-(aq) -> PbSO4(s) + H+(aq) + 2e-}$</td></tr>
+    <tr><th class="ac343-crd">환원 전극 (+)</th><td>$\ce{PbO2(s) + 3H+(aq) + HSO4-(aq) + 2e- -> PbSO4(s) + 2H2O(l)}$</td></tr>
+    <tr class="tot"><th>전체 반응</th><td>$\ce{Pb(s) + PbO2(s) + 2H+(aq) + 2HSO4-(aq) -> 2PbSO4(s) + 2H2O(l)}$ &nbsp; $E_\text{전지}=2.1\ \text{V}$</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="card q"><p class="f21"><b>Q</b> 전지 6개를 직렬로 이으면 전압은 약 몇 V일까?</p>
+        <p class="f21 step">→ $6\times2.1=12.6\ \text{V}$, 곧 <span class="ans">약 $12\ \text{V}$</span>이다($24\ \text{V}$는 12개).</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 방전하면 황산 용액과 두 전극은 어떻게 될까?</p>
+        <p class="f21 step">→ $\ce{H+}$과 $\ce{HSO4-}$이 쓰이고 물이 생겨 황산이 <span class="ans">묽어지고</span>, 두 전극 모두 <span class="ans">$\ce{PbSO4}$</span>로 덮인다.</p></div>
+    </div>
+    <div class="col">{{LEAD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 11. 확인 01 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>납-산 전지의 충전</h2>
+  <p class="f21">방전한 납-산 전지를 충전기((−)단자 → 납 전극, (+)단자 → 이산화 납 전극)에 이었다. <b>(1)</b> 충전할 때의 전체 반응식은?</p>
+  <div class="formula sm step">$\ce{2PbSO4(s) + 2H2O(l) -> Pb(s) + PbO2(s) + 2H+(aq) + 2HSO4-(aq)}$<div class="unit">방전 반응의 역반응</div></div>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21"><b>(2)</b> 충전할 때 납 전극과 이산화 납 전극은 각각 어떤 전극일까?</p>
+      <p class="f21 step">→ 납 전극: $\ce{PbSO4 + H+ + 2e- -> Pb + HSO4-}$, 전자를 얻는 <span class="ans">환원 전극</span></p>
+      <p class="f21 step">→ 이산화 납 전극: $\ce{PbSO4 + 2H2O -> PbO2 + 3H+ + HSO4- + 2e-}$, <span class="ans">산화 전극</span></p>
+      <p class="small step">전극 이름은 극의 부호가 아니라 그 전극의 반응으로 정한다 — 충전할 때는 (+)극 쪽이 산화 전극(Ⅲ-5 전해 전지와 같음).</p>
+    </div>
+    <div class="col stack">{{LEADC}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ 리튬-이온 전지 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="리튬-이온 전지">
+  <h2><span class="no">7</span>2차 전지 — 리튬-이온 전지</h2>
+  <table class="ac343-eq">
+    <tr><th class="ac343-cox">산화 전극 (−)</th><td>$\mathrm{Li}_x\mathrm{C}_6\longrightarrow x\ce{Li+} + x\ce{e-} + \ce{C6(s)}$</td></tr>
+    <tr><th class="ac343-crd">환원 전극 (+)</th><td>$\mathrm{Li}_{1-x}\mathrm{Mn_2O_4}(s) + x\ce{Li+} + x\ce{e-}\longrightarrow\ce{LiMn2O4(s)}$</td></tr>
+    <tr class="tot"><th>전체 반응</th><td>$\mathrm{Li}_x\mathrm{C}_6+\mathrm{Li}_{1-x}\mathrm{Mn_2O_4}(s)\longrightarrow\ce{LiMn2O4(s) + C6(s)}$ &nbsp; $E_\text{전지}=3.7\ \text{V}$</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">휴대용 컴퓨터·스마트폰·전기 자동차에 쓴다. <b>중량당 에너지 효율</b>이 높고 <b>자가 방전율</b>이 낮아 <b>메모리 효과</b> 없이 오래 쓸 수 있다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 방전할 때 전자와 $\ce{Li+}$은 각각 어떤 길로 이동할까?</p>
+        <p class="f21 step">→ 전자는 바깥 도선으로, $\ce{Li+}$은 전해질과 분리막을 지나 — 둘 다 흑연 쪽에서 망가니즈 산화물 쪽으로 이동한다.</p></div>
+    </div>
+    <div class="col">{{LI}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. 확인 02 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>리튬-이온 전지의 산화수 변화</h2>
+  <p class="f21">$\ce{Li}$의 산화수는 $+1$, $\ce{O}$의 산화수는 $-2$로 둔다.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21"><b>(1)</b> $\ce{LiMn2O4}$에서 $\ce{Mn}$의 (평균) 산화수는?</p>
+      <p class="f21 step">→ $(+1)+2m+4\times(-2)=0$ → $m=$ <span class="ans">$+3.5$</span></p>
+      <p class="f21"><b>(2)</b> $\mathrm{Li}_{1-x}\mathrm{Mn_2O_4}$에서 $\ce{Mn}$의 산화수는?</p>
+      <p class="f21 step" data-g="g2">→ $(1-x)+2m-8=0$ → $m=$ <span class="ans">$3.5+\dfrac{x}{2}$</span></p>
+      <p class="f21"><b>(3)</b> 방전할 때 환원되는 원소와 산화되는 원소는?</p>
+      <p class="f21 step" data-g="g3">→ $\ce{Mn}$은 산화수가 낮아져 <span class="ans">환원</span>되고, 흑연 층 사이의 리튬(0)은 $\ce{Li+}$(+1)이 되어 <span class="ans">산화</span>된다.</p>
+    </div>
+    <div class="col stack">{{OXN}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 전지 전위와 최대 일 ════════ -->
+<section class="slide" data-sec="03 · 여러 가지 실용 전지" data-title="전지 전위와 최대 일">
+  <h2><span class="no">8</span>전지 전위로 보는 실용 전지 — $\Delta G=-nFE_\text{전지}$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">전지가 할 수 있는 최대 전기적 일은 $-\Delta G=nFE_\text{전지}$이다(02). 쓴 반응식의 계수 그대로 $n$을 정한다.</p>
+      <table class="ac343-c ac343-sm">
+        <tr><th>전지</th><th>$E_\text{전지}$ [V]</th><th>$n$</th><th>$\Delta G$ [kJ]</th><th>전자 1 mol당 $FE$ [kJ]</th></tr>
+        <tr><td class="l">알칼리 전지</td><td>$1.55$</td><td>$2$</td><td><span class="blank"><span class="step" data-g="t1">$-299$</span></span></td><td><span class="blank"><span class="step" data-g="t2">$150$</span></span></td></tr>
+        <tr><td class="l">은 단추 전지</td><td>$1.602$</td><td>$2$</td><td><span class="blank"><span class="step" data-g="t1">$-309$</span></span></td><td><span class="blank"><span class="step" data-g="t2">$155$</span></span></td></tr>
+        <tr><td class="l">납-산 전지</td><td>$2.1$</td><td>$2$</td><td><span class="blank"><span class="step" data-g="t1">$-405$</span></span></td><td><span class="blank"><span class="step" data-g="t2">$203$</span></span></td></tr>
+        <tr><td class="l">리튬-이온 전지</td><td>$3.7$</td><td>$x$</td><td><span class="blank"><span class="step" data-g="t1">$-357x$</span></span></td><td><span class="blank"><span class="step" data-g="t2">$357$</span></span></td></tr>
+        <tr><td class="l">수소 연료 전지</td><td>$1.2$</td><td>$4$</td><td><span class="blank"><span class="step" data-g="t1">$-463$</span></span></td><td><span class="blank"><span class="step" data-g="t2">$116$</span></span></td></tr>
+      </table>
+      <p class="f21" data-q>Q 각 전지의 $\Delta G$와 전자 1 mol당 최대 일은? ($F=96485\ \text{C/mol}$)</p>
+      <div class="card q"><p class="f21"><b>Q</b> 리튬-이온 전지가 가벼우면서도 일을 많이 하는 까닭은?</p>
+        <p class="f21 step">→ 전자 1 mol당 일($FE$)이 가장 크고, 리튬이 가장 가벼운 금속이라 전극이 가볍기 때문이다(중량당 에너지 효율).</p></div>
+    </div>
+    <div class="col">{{ECOMP}}</div>
+  </div>
+</section>
+
+<!-- ════════ 15. 탐구 활동 (고화-탐26) 지시 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 2차 전지 기술 조사">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 전기 자동차와 드론용 2차 전지 기술 종류와 특성 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">2차 전지는 반복해서 방전·충전하므로 일회용 1차 전지보다 친환경적이다. 전기 용량이 큰 음극·양극 소재와 효율적인 전해질·분리막 덕분에 무거운 자동차를 먼 거리까지 빠르게 움직인다. 한편 리튬·니켈 같은 핵심 광물의 채굴이 늘며 환경 문제와 자원의 무기화 문제도 생겼다.</p>
+      <h3>과정</h3>
+      <ol class="f21 ac343-ul">
+        <li>모둠별로 전기 자동차·드론 산업에 쓰이는 진보된 2차 전지 기술의 <b>종류와 특성</b>을 조사한다.</li>
+        <li>각 기술의 <b>장단점</b>과 <b>산업적·환경적 한계</b>를 토론한다.</li>
+        <li>결과를 <b>1000자 이내</b>로 요약한다.</li>
+      </ol>
+      <p class="small">조사 표: 기술 이름 · 쓰이는 곳 · 전극·전해질 소재 · 장점 · 단점과 한계 · 출처</p>
+    </div>
+    <div class="col">{{EVDR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 활동 (고화-탐26) 예시 결과 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 2차 전지 조사 예시 결과">
+  <h2><span class="tag">탐구 활동</span>2차 전지 기술 조사 — 예시 결과</h2>
+  <table class="ac343-tab">
+    <tr><th>기술</th><th>쓰이는 곳</th><th>장점</th><th>단점·한계</th></tr>
+    <tr><td class="l">리튬-이온(니켈·코발트·망가니즈 양극)</td><td class="l">장거리 전기 자동차</td><td class="l">에너지 밀도가 높다</td><td class="l">코발트·니켈이 비싸고 귀하다, 열 관리 필요</td></tr>
+    <tr><td class="l">리튬-이온(인산 철 리튬 양극)</td><td class="l">보급형 전기 자동차, 에너지 저장 장치</td><td class="l">값싸고 안정적, 수명이 길다</td><td class="l">에너지 밀도가 낮아 무겁다</td></tr>
+    <tr><td class="l">리튬 폴리머</td><td class="l">드론, 소형 기기</td><td class="l">가볍고 모양이 자유롭다, 큰 전류를 낸다</td><td class="l">충격·과충전에 약해 부풀 수 있다</td></tr>
+    <tr><td class="l">전고체 전지</td><td class="l">차세대 전기 자동차(개발 중)</td><td class="l">고체 전해질이라 불이 잘 붙지 않는다</td><td class="l">이온 이동이 느리고 대량 생산이 어렵다</td></tr>
+    <tr><td class="l">나트륨 이온 전지</td><td class="l">에너지 저장 장치, 보급형 차</td><td class="l">나트륨이 풍부하고 값싸다</td><td class="l">에너지 밀도가 낮다</td></tr>
+  </table>
+  <p class="f21 mt8 step"><b>토론 정리 예</b> 산업적 한계는 값·충전 시간·안전(열 폭주)이고, 환경적 한계는 리튬·니켈·코발트 채굴에 따른 환경 훼손과 자원 편중이다. 폐배터리 재사용·재활용과 흔한 원소로 만드는 전지가 해결책으로 연구된다.</p>
+  <p class="f21 step"><b>요약 예(일부)</b> 「전기 자동차는 에너지 밀도가 높은 리튬-이온 전지를, 드론은 가벼운 리튬 폴리머 전지를 주로 쓴다. … 모든 2차 전지는 산화 전극과 환원 전극 사이를 이온이 오가는 같은 원리로 충전·방전한다.」</p>
+  <p class="small">예시 결과는 조사 방향을 보여 주는 덱 작성 예이다. 학생 조사는 자료의 출처와 기준 연도를 밝힌다.</p>
+</section>
+
+<!-- ════════ 17. ⑨ 연료 전지 구조 ════════ -->
+<section class="slide" data-sec="03 · 연료 전지의 원리와 특성" data-title="연료 전지의 구조">
+  <h2><span class="no">9</span>연료 전지의 원리 — 수소 연료 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><mark>수소 연료 전지는 연료인 수소와 산화제인 산소를 바깥에서 산화 전극과 환원 전극으로 공급하는 한 계속 전기를 만든다.</mark> 이 점에서 볼타 전지와 다르다.</p>
+      <p class="f21">산화 전극의 수소는 백금 나노 촉매와 반응해 전자와 양성자($\ce{H+}$)를 내놓는다. 환원 전극의 산소는 전자, 그리고 양성자 교환 고분자 전해질 막을 지나온 양성자와 반응해 물이 된다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전자와 양성자는 각각 어떤 길로 환원 전극에 갈까?</p>
+        <p class="f21 step">→ 전자는 바깥 도선(전구)으로, 양성자는 고분자 전해질 막을 지나 간다.</p></div>
+    </div>
+    <div class="col">{{FUEL}}<p class="small">그림 Ⅲ-30 수소 연료 전지의 구조(모식도)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑩ 연료 전지 반응 ════════ -->
+<section class="slide" data-sec="03 · 연료 전지의 원리와 특성" data-title="연료 전지의 반응">
+  <h2><span class="no">10</span>수소 연료 전지의 전극 반응</h2>
+  <table class="ac343-eq">
+    <tr><th class="ac343-cox">산화 전극 (−)</th><td>$\ce{2H2(g) -> 4H+(aq) + 4e-}$</td></tr>
+    <tr><th class="ac343-crd">환원 전극 (+)</th><td>$\ce{O2(g) + 4H+(aq) + 4e- -> 2H2O(l)}$</td></tr>
+    <tr class="tot"><th>전체 반응</th><td>$\ce{2H2(g) + O2(g) -> 2H2O(l)}$ &nbsp; $E_\text{전지}=1.2\ \text{V}$</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card q"><p class="f21"><b>Q</b> 전체 반응은 어떤 반응과 같을까?</p>
+        <p class="f21 step">→ 수소의 연소와 같다. 다만 불꽃과 열 대신 전자를 도선으로 흐르게 해 <span class="ans">전기 에너지</span>로 꺼낸다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 생성물인 물은 어디에 쓰일 수 있을까?</p>
+        <p class="f21 step">→ 인공위성·우주선에서는 연료 전지로 전력과 함께 <span class="ans">물</span>을 얻는다.</p></div>
+    </div>
+    <div class="col">{{FUELP}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. 확인 03 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>수소 연료 전지의 표준 전지 전위와 효율</h2>
+  <p class="f21">$25\ {}^\circ\text{C}$에서 $\ce{H2O}(l)$의 $\Delta G^\circ_\text{f}=-237.1\ \text{kJ/mol}$, $\Delta H^\circ_\text{f}=-285.8\ \text{kJ/mol}$이다.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21"><b>(1)</b> $\ce{2H2(g) + O2(g) -> 2H2O(l)}$의 $E^\circ_\text{전지}$는?</p>
+      <div class="formula sm step">$\Delta G^\circ=2\times(-237.1)=-474.2\ \text{kJ}$, $n=4$<br>$E^\circ_\text{전지}=-\dfrac{\Delta G^\circ}{nF}=\dfrac{474200}{4\times96485}=$ <span class="ans">$1.229\ \text{V}$</span><div class="unit">교과서 그림의 $1.2\ \text{V}$와 같다</div></div>
+      <p class="f21"><b>(2)</b> 반응 엔탈피 가운데 전기적 일로 바꿀 수 있는 최대 비율(이론 효율)은?</p>
+      <div class="formula sm step">$\dfrac{\Delta G^\circ}{\Delta H^\circ}=\dfrac{-474.2}{2\times(-285.8)}=\dfrac{-474.2}{-571.6}=$ <span class="ans">$0.83$ ($83\ \%$)</span></div>
+      <p class="small step">열기관은 열을 거쳐 일을 하므로 효율이 이보다 훨씬 낮다 — 연료 전지가 「고에너지 효율」 전원인 까닭이다.</p>
+    </div>
+    <div class="col stack">{{EFF}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 20. ⑪ 전지와 연료 전지의 차이 ════════ -->
+<section class="slide" data-sec="03 · 연료 전지의 원리와 특성" data-title="전기 화학 전지와 연료 전지의 차이">
+  <h2><span class="no">11</span>전기 화학 전지와 연료 전지의 차이</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <table class="ac343-sm">
+        <tr><th>구분</th><th>전기 화학 전지(1차·2차)</th><th>연료 전지</th></tr>
+        <tr><td><b>반응물</b></td><td class="l">전지 안에 담겨 있다</td><td class="l"><span class="blank"><span class="step">바깥에서 계속 공급한다</span></span></td></tr>
+        <tr><td><b>전기를 내는 시간</b></td><td class="l">반응물이 다 쓰이면(평형) 끝 — 2차 전지는 충전</td><td class="l"><span class="blank"><span class="step">연료를 공급하는 한 계속</span></span></td></tr>
+        <tr><td><b>계(Ⅲ-1)</b></td><td class="l">물질 출입이 없는 닫힌계</td><td class="l"><span class="blank"><span class="step">물질이 드나드는 열린계</span></span></td></tr>
+      </table>
+      <p class="f21" data-q>Q 빈칸에 들어갈 연료 전지의 특징은?</p>
+      <p class="f21 step"><b>활용</b> 오랫동안 인공위성·우주선의 전력과 물을 만들었고, 1990년대부터 전력 공급이 어려운 고립 지역, 상업용 건물·시설에 쓰였다. 수소 연료 전지 자동차처럼 쓰임이 넓어지고 있다.</p>
+    </div>
+    <div class="col">{{OPEN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 활동 (고화-탐27) 지시 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 수소 연료 전지 상용화 조사">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 수소 연료 전지의 상용화 기술 동향 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">수소 연료 전지는 오래전부터 우주 개발에 써 온 전지이며, 2차 전지 기술과 함께 대표적인 청정에너지로 꼽히는 만큼 장점이 많다.</p>
+      <h3>과정</h3>
+      <ol class="f21 ac343-ul">
+        <li>모둠별로 수소 연료 전지의 상용화에 <b>걸림돌</b>이 되는 것과 이를 <b>극복하는 기술 동향</b>을 조사한다.</li>
+        <li>새 기술과 소재 개발에 적용되는 <b>화학의 원리와 활용 범위</b>를 토론한다.</li>
+        <li>모둠별로 <b>발표</b>한 뒤 <b>400자 이내</b>로 적는다.</li>
+      </ol>
+      <p class="small">조사할 때 「생산 → 저장·운송 → 활용」 가운데 어느 단계의 문제인지 나누어 정리한다.</p>
+    </div>
+    <div class="col">{{CHAIN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 (고화-탐27) 예시 결과 ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 수소 연료 전지 조사 예시 결과">
+  <h2><span class="tag">탐구 활동</span>수소 연료 전지 상용화 조사 — 예시 결과</h2>
+  <table class="ac343-tab">
+    <tr><th>걸림돌</th><th>극복 기술 동향</th><th>적용되는 화학 원리</th></tr>
+    <tr><td class="l">비싼 백금 촉매</td><td class="l">백금 나노 입자로 사용량 줄이기, 백금 합금·비백금 촉매</td><td class="l">촉매는 활성화 에너지를 낮춘다, 입자가 작을수록 표면적이 넓다</td></tr>
+    <tr><td class="l">수소 생산(대부분 천연가스 개질 — 수소 1 kg당 $\ce{CO2}$ 약 9–10 kg)</td><td class="l">재생 에너지 전기로 물을 전기 분해(수전해)</td><td class="l">비자발적 반응($\Delta G^\circ&gt;0$)에 전기 에너지 공급 — Ⅲ-5 전기 분해</td></tr>
+    <tr><td class="l">저장·운송(부피가 큰 기체, 폭발 위험)</td><td class="l">고압 탱크, 액화 수소, 암모니아 등 수소 운반체</td><td class="l">기체의 압력·온도와 부피, 화학 결합으로 수소 저장</td></tr>
+    <tr><td class="l">막의 수명·물 관리, 충전소 부족</td><td class="l">새 고분자 막 소재, 충전 기반 시설 확충</td><td class="l">양성자를 전달하는 고분자, 이온의 이동</td></tr>
+  </table>
+  <p class="f21 mt8 step"><b>400자 예(일부)</b> 「수소 연료 전지는 수소의 산화와 산소의 환원을 떼어 놓아 화학 에너지를 전기 에너지로 바로 바꾸므로 효율이 높고 물만 나온다. 그러나 백금 촉매가 비싸고, 지금 쓰는 수소의 대부분이 천연가스에서 만들어져 이산화 탄소가 나온다. … 촉매·막 소재와 수전해 기술이 상용화의 열쇠이다.」</p>
+  <p class="small">예시 결과는 덱 작성 예이다(수소 생산 행은 지도서 예시). 학생 조사는 자료의 출처와 기준 연도를 밝힌다.</p>
+</section>
+
+<!-- ════════ 23. 진로 ════════ -->
+<section class="slide" data-sec="03 · 진로" data-title="진로: 연료 전지와 수소 경제">
+  <h2><span class="tag">진로</span>연료 전지와 수소 경제</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">이산화 탄소 증가와 지구 온난화로 세계 주요국은 탄소 배출을 줄이는 정책을 함께 펴고 있다. 친환경 에너지는 생산량이 일정하지 않아 전기를 저장할 수단이 필요한데, 수소 기술이 그 열쇠로 기대된다.</p>
+      <p class="f21">연료 전지는 소형 기기부터 선박·건물·발전소까지 쓸 수 있고, 대형 발전 설비 없이 건물·가정에서 <b>분산 발전</b>을 하여 수요에 따라 전력을 공급한다. 한국·일본·미국 중심으로 시장이 커지고(연평균 30 % 성장 전망) 전문 인력 수요도 늘고 있다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 수소 산업에는 어떤 분야가 들어갈까?</p>
+        <p class="f21 step">→ 수소 연료 전지뿐 아니라 수소의 <span class="ans">생산·수송·저장·활용</span> 분야가 모두 들어간다.</p></div>
+    </div>
+    <div class="col">
+      <table class="ac343-tab">
+        <tr><th>연료 전지</th><th>특징(교과서)</th></tr>
+        <tr><td>PEMFC</td><td class="l">고분자 전해질 — 현재 가장 많이 쓴다</td></tr>
+        <tr><td>SOFC</td><td class="l">세라믹 고체 전해질(고체 산화물)</td></tr>
+        <tr><td>AFC</td><td class="l">알칼리 전해질, 비교적 저온(약 $100\ {}^\circ\text{C}$)</td></tr>
+        <tr><td>MCFC</td><td class="l">용융 탄산염, 약 $650\ {}^\circ\text{C}$, 탄산 이온이 전해질을 지나 이동</td></tr>
+        <tr><td>PAFC</td><td class="l">인산 전해질</td></tr>
+        <tr><td>DMFC</td><td class="l">수소 대신 메탄올이 연료</td></tr>
+      </table>
+      <p class="small mt8">사용 규모와 용도, 사용하는 전해질에 따라 나눈다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅲ-4 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>다니엘 전지에서 염다리의 작용</h2>
+  <p class="f21">다니엘 전지에서 염다리의 작용을 $\ce{Zn(s)}\,|\,\ce{Zn^2+(aq)}\,\|\,\ce{Cu^2+(aq)}\,|\,\ce{Cu(s)}$ 전지를 예로 들어 설명하여라.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 580px">
+      <div class="answer step">산화 전극에서 $\ce{Zn -> Zn^2+ + 2e-}$로 양이온이 늘고, 환원 전극에서 $\ce{Cu^2+ + 2e- -> Cu}$로 양이온이 줄어 두 용액에 전하가 쌓이려 한다. 염다리의 음이온($\ce{NO3-}$)은 아연 쪽으로, 양이온($\ce{K+}$)은 구리 쪽으로 이동해 두 용액을 전기적으로 중성으로 유지하고 회로를 완성한다.</div>
+      <p class="small step">채점 요소(덱): ① 전하가 쌓이는 까닭 ② 염다리 이온의 이동 방향 ③ 전기적 중성 유지·회로 완성 — 전자는 염다리로 이동하지 않고, 두 용액은 섞이지 않는다.</p>
+    </div>
+    <div class="col stack">{{EX1}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅲ-4 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>농도가 표준이 아닐 때의 전지 전위 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">$25\ {}^\circ\text{C}$에서 $\ce{O2(g) + 4H+(aq) + 4Br-(aq) -> 2H2O(l) + 2Br2(l)}$의 전지 전위 $E_\text{전지}$를 계산하여라. (단, $P_{\ce{O2}}=1\ \text{atm}$, $[\ce{H+}]=[\ce{Br-}]=0.20\ \text{M}$, $E^\circ$: $\ce{O2}/\ce{H2O}$ $+1.229\ \text{V}$, $\ce{Br2}/\ce{Br-}$ $+1.077\ \text{V}$)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>풀이 1</b> 산화 $\ce{4Br- -> 2Br2 + 4e-}$이므로 $n=4$, $E^\circ_\text{전지}=1.229-1.077=0.152\ \text{V}$</p>
+      <p class="f21 step"><b>풀이 2</b> 순수한 액체는 넣지 않는다: $Q=\dfrac{1}{P_{\ce{O2}}[\ce{H+}]^4[\ce{Br-}]^4}=\dfrac{1}{(1)(0.20)^4(0.20)^4}=3.9\times10^5$</p>
+      <div class="formula sm step">$\begin{aligned}E_\text{전지}&amp;=E^\circ_\text{전지}-\dfrac{0.0592}{n}\log Q\\&amp;=0.152-\dfrac{0.0592}{4}\log(3.9\times10^5)\end{aligned}$ $=$ <span class="ans">$0.069\ \text{V}$</span></div>
+    </div>
+    <div class="col stack">{{EX2}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅲ-4 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>은–카드뮴 전지의 표준 전지 전위</h2>
+  <p class="f21">$25\ {}^\circ\text{C}$에서 $\ce{2Ag+(aq) + Cd(s) -> 2Ag(s) + Cd^2+(aq)}$의 $E^\circ_\text{전지}$를 계산하여라. (단, $\ce{Ag+ + e- -> Ag}$ $E^\circ=+0.799\ \text{V}$, $\ce{Cd^2+}/\ce{Cd}$ $E^\circ=-0.402\ \text{V}$)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21 step"><b>풀이 1</b> 환원 전극 $\ce{2Ag+ + 2e- -> 2Ag}$ ($+0.799\ \text{V}$), 산화 전극 $\ce{Cd -> Cd^2+ + 2e-}$ (표준 환원 전위 $-0.402\ \text{V}$)</p>
+      <div class="formula sm step">$\begin{aligned}E^\circ_\text{전지}&amp;=E^\circ_\text{환원 전극}-E^\circ_\text{산화 전극}\\&amp;=0.799-(-0.402)\end{aligned}$ $=$ <span class="ans">$+1.201\ \text{V}$</span></div>
+      <p class="small step">$\ce{Ag+}$ 반쪽 반응에 2를 곱해도 $E^\circ$는 그대로이다(세기 성질). 교과서 문제의 「$\ce{Cd(s) -> Cd^2+(aq) + 2e-}$ ($E^\circ=-0.402$ V)」의 값은 환원 전위이고, 반응식의 $\ce{Cd^2+(s)}$는 $(aq)$로 읽는다.</p>
+    </div>
+    <div class="col stack">{{EX3}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅲ-4 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>균형 반응식 완성과 자발성</h2>
+  <p class="f21">다음 반응의 균형 반응식을 완성하고, $E^\circ$ 값을 계산하여 반응의 자발성을 설명하여라. (표 Ⅲ-10 값)</p>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21"><b>(1)</b> $\ce{Co(s) + H+(aq) -> Co^2+(aq) + H2(g)}$</p>
+      <p class="f21 step">산화 $\ce{Co -> Co^2+ + 2e-}$ ($-0.28\ \text{V}$), 환원 $\ce{2H+ + 2e- -> H2}$ ($0.00\ \text{V}$)</p>
+      <div class="formula sm step">$\ce{Co(s) + 2H+(aq) -> Co^2+(aq) + H2(g)}$<br>$E^\circ=0.00-(-0.28)=$ <span class="ans">$+0.28\ \text{V}$, 자발적</span></div>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>(2)</b> $\ce{Hg2^2+(aq) -> Hg^2+(aq) + Hg(l)}$</p>
+      <p class="f21 step">산화 $\ce{Hg2^2+ -> 2Hg^2+ + 2e-}$ ($0.90\ \text{V}$), 환원 $\ce{Hg2^2+ + 2e- -> 2Hg}$ ($0.79\ \text{V}$)</p>
+      <div class="formula sm step">$\ce{2Hg2^2+(aq) -> 2Hg^2+(aq) + 2Hg(l)}$<br>$E^\circ=0.79-0.90=$ <span class="ans">$-0.11\ \text{V}$, 비자발적</span></div>
+    </div>
+  </div>
+  <p class="small step mt8">(2)는 계수를 2로 나눈 문제의 식($\ce{Hg2^2+ -> Hg^2+ + Hg}$)도 원자 수와 전하가 맞는다. $E^\circ_\text{전지}&gt;0$이면 $\Delta G^\circ&lt;0$이므로 자발적이다.</p>
+  <div class="board" style="min-height:90px"></div>
+</section>
+
+<!-- ════════ 28. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="Ⅲ-4 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>평형 상수로 $\Delta G^\circ$와 $E^\circ_\text{전지}$ 구하기</h2>
+  <p class="f21">$25\ {}^\circ\text{C}$에서 $n=2$이고 $K=1\times10^5$일 때, 산화 환원 반응의 자유 에너지 변화 $\Delta G^\circ$와 전지 전위 $E^\circ_\text{전지}$는 얼마인가?</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <div class="formula sm step">$\begin{aligned}\Delta G^\circ&amp;=-RT\ln K\\&amp;=-(8.314\ \text{J/(mol}\cdot\text{K)})(298\ \text{K})\ln(10^5)\end{aligned}$ $=$ <span class="ans">$-2.85\times10^4\ \text{J/mol}$</span></div>
+      <div class="formula sm step">$E^\circ_\text{전지}=-\dfrac{\Delta G^\circ}{nF}=\dfrac{2.85\times10^4}{2\times96485}=$ <span class="ans">$0.148\ \text{V}$</span></div>
+      <p class="small step">검산: $E^\circ=\dfrac{0.0592}{n}\log K=\dfrac{0.0592}{2}\times5=0.148\ \text{V}$ — $K&gt;1$이면 $\Delta G^\circ&lt;0$, $E^\circ&gt;0$</p>
+    </div>
+    <div class="col stack">{{EX5}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 스스로 정리 ════════ -->
+<section class="slide" data-sec="03 실용 전지 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 화학 전지 — 03 실용 전지</h2>
+  <div class="ac343-map">
+    <div class="ac343-node ac343-dim">02 전지 전위<br>$E^\circ_\text{전지}$<br>$\Delta G^\circ=-nFE^\circ$</div>
+    <div class="ac343-arr">→</div>
+    <div class="ac343-node ac343-main"><b>03 실용 전지</b><br>❶ 1차 전지: 평형에 이르면 <span class="blank"><span class="step">역반응</span></span>을 일으킬 수 없는 일회용 — 알칼리 전지 $1.55\ \text{V}$, 은 단추 전지 $1.602\ \text{V}$<br>❷ 2차 전지: 전기 에너지를 가해 역반응을 일으켜 <span class="blank"><span class="step">충전</span></span> — 납-산 전지 $2.1\ \text{V}$, 리튬-이온 전지 $3.7\ \text{V}$<br>❸ 납-산 전지가 방전하면 두 전극 모두 <span class="blank"><span class="step">$\ce{PbSO4}$</span></span>로 덮이고 황산이 묽어진다<br>❹ 연료 전지: 연료와 산화제를 <span class="blank"><span class="step">바깥에서 공급</span></span>하는 한 계속 작동 — $\ce{2H2 + O2 -> 2H2O}$, $1.2\ \text{V}$<br>❺ 전자 1 mol당 최대 전기적 일 = <span class="blank"><span class="step">$FE_\text{전지}$</span></span> — 전지 전위가 클수록 크다</div>
+    <div class="ac343-arr">→</div>
+    <div class="ac343-node ac343-dim">Ⅲ-5 전기 분해<br>전기 에너지로<br>비자발적 반응</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="03 실용 전지 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 1차 전지, 2차 전지, 연료 전지를 구분하고 알칼리·납-산·리튬-이온·수소 연료 전지의 전극 반응을 쓸 수 있다.</button>
+    <button class="chk">[과정·기능] 실용 전지의 전지 전위로 $\Delta G$와 최대 일을 계산해 비교했고, 2차 전지·연료 전지 기술을 조사해 정리했다.</button>
+    <button class="chk">[가치·태도] 여러 화학 전지에 호기심을 갖고, 전지 기술의 환경적 한계와 해결 방안을 토론했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 납-산 전지 6개를 직렬로 이은 자동차 배터리의 전압은? <span class="step">→ <span class="ans">약 $12\ \text{V}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 연료 전지가 1차 전지와 다른 점은? <span class="step">→ 반응물을 <span class="ans">바깥에서 계속 공급</span>받아 공급하는 한 전기를 만든다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 전지에 전기를 거꾸로 흘려 비자발적 반응을 일으키면 무엇을 얻을까? — Ⅲ-5 전기 분해</div>
+</section>

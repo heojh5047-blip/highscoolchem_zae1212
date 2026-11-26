@@ -1,0 +1,478 @@
+<!-- 고급화학 3-5-1 전기 분해와 전해 전지 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 5. 전기 분해 › 01</div>
+    <h1 class="ac351-h1">전기 분해와<br>전해 전지</h1>
+    <p class="sub">전기 에너지로 비자발적 산화 환원 반응을 일으킨다 — 전극 반응, $\Delta G^\circ$, 전하량과 생성물의 양</p>
+    <p class="meta">고등학교 고급 화학 181–185쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ-5. 전기 분해 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>5. 전기 분해</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 전기 분해와 전해 전지 <span class="small c-plus">← 오늘</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">직류 전기를 이용한 전기 분해의 역사는 화학 전지의 발명보다 훨씬 앞선다. 18세기 후반부터 광물에서 원소를 분리하는 데 쓰였고, 물의 전기 분해로 얻은 순수한 수소 덕분에 하버법 암모니아 합성과 비료 생산이 가능해졌다. 전해 전지에서는 다니엘 전지의 전지 전위보다 큰 외부 전위를 걸어 <b>다니엘 전지의 역반응</b>을 일으킨다.</p>
+        <p class="f21 mt8">이 장에서는 전기 분해의 원리와 자유 에너지, 전해 전지에 가한 전하량과 생성물의 양적 관계를 알아본다.</p>
+      </div>
+      <p class="f21"><b>Q</b> 알루미늄 캔의 알루미늄은 어떻게 얻을까? <span class="step">→ 광석에서 얻은 산화 알루미늄을 녹여 <span class="ans">전기 분해</span>한다(오른쪽 제련 공장 모식도).</span></p>
+    </div>
+    <div class="col">{{SMELT}}<p class="small">알루미늄의 전기 분해 제련(모식도)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 전기 분해와 전해 전지" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-08]</span>전기 분해의 원리를 산화･환원 반응으로 설명하고, 전기량과 생성물의 양적 관계를 활용하여 전기량 또는 생성물의 양을 예측할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>전해 전지를 화학 전지(다니엘 전지)와 $\Delta G$, $E_\text{전지}$, 전극의 부호로 비교할 수 있다.</li>
+    <li>물, 녹은 염, 수용액의 전기 분해에서 전극 반응을 쓰고 생성물을 예측할 수 있다.</li>
+    <li>전하량 $Q=It$와 패러데이 상수로 전자의 몰수를 구해 생성물의 양이나 필요한 전기량을 계산할 수 있다.</li>
+    <li>금속 도금과 광석 제련에 쓰이는 전기 화학 반응을 조사하고 토론할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">전해 전지</div><div class="farr">→</div>
+    <div class="fnode">$\Delta G^\circ$와 외부 전위</div><div class="farr">→</div>
+    <div class="fnode">생성물 예측</div><div class="farr">→</div>
+    <div class="fnode hl">$Q=It$ → 전자의 몰수</div><div class="farr">→</div>
+    <div class="fnode">도금·제련 조사</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 전기 분해와 전해 전지 · 도입" data-title="생각 열기: 다니엘 전지를 거꾸로">
+  <h2><span class="tag">생각 열기</span>다니엘 전지에 더 큰 전압을 거꾸로 걸면?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <div class="stages c2">
+        <div class="stage"><h3>다니엘 전지(Ⅲ-4)</h3><p class="f21">$\ce{Zn + Cu^2+ -> Zn^2+ + Cu}$<br>$E^\circ_\text{전지}=1.1\ \text{V}$, 자발적</p></div>
+        <div class="stage"><h3>2차 전지의 충전(Ⅲ-4 03)</h3><p class="f21">바깥에서 전기 에너지를 가해 <b>역반응</b>을 일으킨다</p></div>
+      </div>
+      <div class="card q"><p class="f21"><b>Q</b> 전압계 대신 $1.1\ \text{V}$보다 큰 전원을 반대 방향으로 연결하면 어떤 일이 일어날까?</p>
+        <p class="f21 step">→ 역반응 $\ce{Zn^2+ + Cu -> Zn + Cu^2+}$이 일어나 아연 전극에는 아연이 석출되고 구리 전극은 녹는다 — <span class="ans">전해 전지</span></p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 물에 전류를 흘리면 무엇이 생길까?</p>
+        <p class="f21 step">→ 물이 수소와 산소로 분해된다 — <span class="ans">전기 분해</span></p></div>
+    </div>
+    <div class="col">{{REVIEW}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 전해 전지와 전기 분해 ════════ -->
+<section class="slide" data-sec="01 · 전해 전지와 전기 분해" data-title="전해 전지와 전기 분해">
+  <h2><span class="no">1</span>전해 전지와 전기 분해</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">산업에서 가장 많이 쓰는 전해 전지의 활용은 <b>전기 분해</b>이다. <mark>전기 분해는 외부에서 전기 에너지를 공급하여 화합물을 구성 원소로 분해한다.</mark></p>
+      <ul class="f21 ac351-ul">
+        <li>다니엘 전지와 달리 <b>두 전극이 같은 전해질 속</b>에 있다.</li>
+        <li>물을 전기 분해해 순수한 수소와 산소를 얻고, 염 혼합물에서 금속이나 비금속을 추출한다.</li>
+      </ul>
+      <div class="card q"><p class="f21"><b>Q</b> 물의 전기 분해에서 각 전극에서 생기는 기체는 무엇일까?</p>
+        <p class="f21 step">→ 산화 전극((+)극)에서 <span class="ans">산소</span>, 환원 전극((−)극)에서 <span class="ans">수소</span>가 발생한다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 두 관에 모인 기체의 부피를 비교하면?</p>
+        <p class="f21 step">→ 수소 : 산소 $=2:1$ — 다음 장의 전극 반응식으로 확인한다.</p></div>
+    </div>
+    <div class="col">{{WATER}}<p class="small">그림 Ⅲ-31 물의 전기 분해(모식도)</p></div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 물의 전기 분해 전극 반응 ════════ -->
+<section class="slide" data-sec="01 · 전해 전지와 전기 분해" data-title="물의 전기 분해 전극 반응">
+  <h2><span class="no">2</span>물의 전기 분해 — 전극 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 630px">
+  <p class="f21" data-q>Q 각 전극에서 물은 어떻게 반응할까?</p>
+  <table class="ac351-eq">
+    <tr><th class="ac351-crd">환원 전극 (−)극</th><td><span class="step">$\ce{4H2O(l) + 4e- -> 2H2(g) + 4OH-(aq)}$</span></td></tr>
+    <tr><th class="ac351-cox">산화 전극 (+)극</th><td><span class="step">$\ce{2H2O(l) -> O2(g) + 4H+(aq) + 4e-}$</span></td></tr>
+    <tr class="tot"><th>전체 반응</th><td><span class="step">$\ce{2H2O(l) -> 2H2(g) + O2(g)}$</span></td></tr>
+  </table>
+      <div class="card q"><p class="f21"><b>Q</b> 두 반쪽 반응을 더하면 왜 전체 반응이 될까?</p>
+        <p class="f21 step">→ 전자 $4$개가 지워지고, 생긴 $\ce{4H+}$와 $\ce{4OH-}$이 섞이면 $\ce{4H2O}$가 되어 $6\ce{H2O}-4\ce{H2O}=2\ce{H2O}$만 남는다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 순수한 물 대신 황산 나트륨 같은 전해질을 조금 녹이는 까닭은?</p>
+        <p class="f21 step">→ 순수한 물에는 이온이 거의 없어 전류가 잘 흐르지 않는다. $\ce{Na+}$·$\ce{SO4^2-}$은 반응하지 않고 전하만 나른다.</p></div>
+    </div>
+    <div class="col">{{WATERION}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ③ 원리와 깁스 자유 에너지 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 원리와 깁스 자유 에너지" data-title="전기 분해의 원리와 깁스 자유 에너지">
+  <h2><span class="no">3</span>전기 분해의 원리와 깁스 자유 에너지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21">모든 화학 전지에서는 자발적 산화 환원 반응이 일어난다: $\Delta G^\circ&lt;0$, $E^\circ_\text{전지}&gt;0$.</p>
+      <p class="f21">그 역반응은 크기가 같고 부호가 반대인 값을 가진다: <span class="blank"><span class="step">$\Delta G^\circ&gt;0$, $E^\circ_\text{전지}&lt;0$</span></span> — 비자발적이다.</p>
+      <p class="f21" data-q>Q 역반응의 $\Delta G^\circ$와 $E^\circ_\text{전지}$의 부호는?</p>
+      <p class="f21"><mark>외부 전원으로 $E^\circ_\text{전지}$보다 큰 전위를 공급하면 이 역반응이 일어난다.</mark></p>
+      <div class="card q"><p class="f21"><b>Q</b> 역반응을 일으키려면 외부에서 최소 얼마의 전기 에너지를 공급해야 할까?</p>
+        <p class="f21 step">→ 양의 $\Delta G^\circ$를 $0$으로 바꾸는 크기 — 자발 반응의 $\Delta G^\circ$와 부호가 반대인 <span class="ans">$-\Delta G^\circ$</span>이다. 다니엘 전지라면 $1\ \text{mol}$당 $212.3\ \text{kJ}$.</p></div>
+    </div>
+    <div class="col">{{ENERGY}}</div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 다니엘 전지의 역반응 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 원리와 깁스 자유 에너지" data-title="다니엘 전지와 전해 전지">
+  <h2><span class="no">4</span>다니엘 전지와 그 역반응</h2>
+  <table class="ac351-eq">
+    <tr><th class="ac351-cox">산화 전극</th><td>$\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</td><td>$E^\circ(\ce{Zn^2+}/\ce{Zn})=-0.76\ \text{V}$</td></tr>
+    <tr><th class="ac351-crd">환원 전극</th><td>$\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</td><td>$E^\circ(\ce{Cu^2+}/\ce{Cu})=0.34\ \text{V}$</td></tr>
+    <tr class="tot"><th>전체 반응</th><td>$\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$</td><td>$E^\circ_\text{전지}=1.1\ \text{V}$, $\Delta G^\circ=-212.3\ \text{kJ/mol}$</td></tr>
+    <tr class="tot"><th class="c-bfield">역반응</th><td>$\ce{Zn^2+(aq) + Cu(s) -> Zn(s) + Cu^2+(aq)}$</td><td><span class="step">$E^\circ_\text{전지}=-1.1\ \text{V}$, $\Delta G^\circ=212.3\ \text{kJ/mol}$</span></td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21 step">검산: $\Delta G^\circ=-nFE^\circ_\text{전지}=-(2)(96485)(1.10)\ \text{J}=-212.3\ \text{kJ}$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 역반응(전해 전지)에서 아연 전극과 구리 전극의 이름은?</p>
+        <p class="f21 step">→ 아연 전극: $\ce{Zn^2+ + 2e- -> Zn}$이 일어나는 <span class="ans">환원 전극</span>, 구리 전극: $\ce{Cu -> Cu^2+ + 2e-}$이 일어나는 <span class="ans">산화 전극</span></p></div>
+      <p class="small">$-0.76\ \text{V}$, $0.34\ \text{V}$는 표준 환원 전위이다(교과서는 $-0.76\ \text{V}$를 산화 반응 옆에 적음).</p>
+    </div>
+    <div class="col">{{REVERSE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. ⑤ 표 Ⅲ-12 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 원리와 깁스 자유 에너지" data-title="다니엘 전지와 전해 전지의 비교">
+  <h2><span class="no">5</span>다니엘 전지와 전해 전지의 비교</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <table class="ac351-sm ac351-c">
+        <tr><th>전지</th><th>$\Delta G$</th><th>$E_\text{전지}$</th><th>전극 이름</th><th>전극 부호</th></tr>
+        <tr><td rowspan="2"><b>다니엘 전지</b></td><td rowspan="2">$\Delta G&lt;0$</td><td rowspan="2">$E_\text{전지}&gt;0$</td><td class="ac351-cox">산화 전극</td><td>(−)극</td></tr>
+        <tr><td class="ac351-crd">환원 전극</td><td>(+)극</td></tr>
+        <tr><td rowspan="2"><b>전해 전지</b></td><td rowspan="2"><span class="blank"><span class="step">$\Delta G&gt;0$</span></span></td><td rowspan="2"><span class="blank"><span class="step">$E_\text{전지}&lt;0$</span></span></td><td class="ac351-cox">산화 전극</td><td><span class="blank"><span class="step">(+)극</span></span></td></tr>
+        <tr><td class="ac351-crd">환원 전극</td><td><span class="blank"><span class="step">(−)극</span></span></td></tr>
+      </table>
+      <p class="f21" data-q>Q 전해 전지의 빈칸에 들어갈 부호는?</p>
+      <p class="f21"><mark>두 전지 모두 산화는 산화 전극에서, 환원은 환원 전극에서 일어나지만, 전극의 부호는 반대이다.</mark></p>
+      <div class="card q"><p class="f21"><b>Q</b> 「전기 분해에서는 (+)극에서 환원이 일어난다」는 말은 맞을까?</p>
+        <p class="f21 step">→ 틀리다. 전원의 (+)극이 연결된 전극에서 전자를 끌어가므로 그 전극의 물질이 전자를 잃는다 — 전해 전지의 (+)극은 <span class="ans">산화 전극</span>이다. 전극 이름은 반응으로 정한다.</p></div>
+    </div>
+    <div class="col">{{COMPARE}}<p class="small">표 Ⅲ-12 다니엘 전지와 전해 전지의 비교</p></div>
+  </div>
+</section>
+
+<!-- ════════ 10. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>물을 전기 분해하는 데 필요한 최소 전압</h2>
+  <p class="f21">$25\ {}^\circ\text{C}$에서 수소 연료 전지 반응 $\ce{2H2(g) + O2(g) -> 2H2O(l)}$의 $\Delta G^\circ=-474.2\ \text{kJ}$이다. ($F=96485\ \text{C/mol}$)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21"><b>(1)</b> 물의 전기 분해 $\ce{2H2O(l) -> 2H2(g) + O2(g)}$의 $\Delta G^\circ$는? <span class="step">→ 역반응이므로 <span class="ans">$+474.2\ \text{kJ}$</span></span></p>
+      <p class="f21"><b>(2)</b> 이 반응의 $E^\circ_\text{전지}$는? <span class="step">→ 전자 $n=4$: $E^\circ_\text{전지}=-\dfrac{\Delta G^\circ}{nF}=-\dfrac{474200}{4\times96485}=$ <span class="ans">$-1.229\ \text{V}$</span></span></p>
+      <p class="f21"><b>(3)</b> 물을 전기 분해하려면 전원의 전압이 어때야 할까? <span class="step">→ <span class="ans">$1.23\ \text{V}$보다 큰 전압</span>을 걸어야 한다. 실제로는 전극 반응을 일으키는 데 이론값보다 더 드는 전압(과전압) 때문에 더 큰 전압이 필요하다.</span></p>
+      <div class="note step"><b>교과서 날개</b> 물의 전기 분해로 수소를 만드는 데 막대한 에너지가 들어, 전기 분해 효율을 높이는 신소재 전극용 나노 촉매 개발이 경쟁적으로 이루어지고 있다.</div>
+    </div>
+    <div class="col stack">{{WFUEL}}<div class="board ac351-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑥ 녹은 염화 나트륨 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 생성물" data-title="녹은 염화 나트륨의 전기 분해">
+  <h2><span class="no">6</span>녹은 염의 전기 분해 — 염화 나트륨</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">염화 나트륨을 녹이면 $\ce{Na+}$과 $\ce{Cl-}$이 자유롭게 움직여 전류가 흐른다.</p>
+      <table class="ac351-eq">
+        <tr><th class="ac351-crd">환원 전극 (−)극</th><td><span class="step">$\ce{Na+(l) + e- -> Na(l)}$</span></td></tr>
+        <tr><th class="ac351-cox">산화 전극 (+)극</th><td><span class="step">$\ce{2Cl-(l) -> Cl2(g) + 2e-}$</span></td></tr>
+        <tr class="tot"><th>전체 반응</th><td><span class="step">$\ce{2NaCl(l) -> 2Na(l) + Cl2(g)}$</span></td></tr>
+      </table>
+      <p class="f21" data-q>Q 각 전극에서 어떤 이온이 반응할까?</p>
+      <div class="card q"><p class="f21"><b>Q</b> 고체 염화 나트륨은 왜 전기 분해되지 않을까?</p>
+        <p class="f21 step">→ 이온 결정 속의 이온은 제자리에 고정되어 움직이지 못하므로 전류가 흐르지 않는다(Ⅱ-3 이온 결정).</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 나트륨을 수용액이 아니라 녹은 염에서 얻는 까닭은?</p>
+        <p class="f21 step">→ 수용액에서는 $\ce{Na+}$보다 물이 먼저 환원되어 수소가 생기기 때문이다(다음 장).</p></div>
+    </div>
+    <div class="col">{{MOLTEN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ 수용액 — 생성물 예측 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 생성물" data-title="수용액의 전기 분해 생성물 예측">
+  <h2><span class="no">7</span>수용액의 전기 분해 — 생성물 예측하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 680px">
+      <p class="f21"><mark>환원 전극에서는 가장 환원되기 쉬운 화학종(표준 환원 전위가 큰 것)이, 산화 전극에서는 가장 산화되기 쉬운 화학종이 반응한다.</mark> 수용액에서는 용질의 이온과 <b>물 분자</b>가 경쟁한다.</p>
+      <p class="small">물의 환원 $\ce{2H2O + 2e- -> H2 + 2OH-}$ $(-0.83\ \text{V})$, 물의 산화 $\ce{2H2O -> O2 + 4H+ + 4e-}$ $(\ce{O2}/\ce{H2O}\ +1.23\ \text{V})$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 염화 나트륨 수용액의 환원 전극에서는 무엇이 생길까?</p>
+        <p class="f21 step" data-g="g1">→ 물($-0.83\ \text{V}$)이 $\ce{Na+}$($-2.70\ \text{V}$)보다 훨씬 환원되기 쉬우므로 <span class="ans">수소</span>가 발생한다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 진한 염화 나트륨 수용액의 산화 전극에서는?</p>
+        <p class="f21 step" data-g="g2">→ 값으로는 물이 $\ce{Cl-}$보다 조금 더 산화되기 쉽지만, 산소가 발생하려면 이론값보다 큰 전압(<b>과전압</b>)이 필요해 실제로는 <span class="ans">염소</span>가 발생한다.</p></div>
+    </div>
+    <div class="col">{{LADDER}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑧ 여러 수용액 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 생성물" data-title="여러 수용액의 전기 분해">
+  <h2><span class="no">8</span>여러 가지 수용액의 전기 분해</h2>
+  <table class="ac351-tab">
+    <tr><th>수용액 (전극)</th><th class="ac351-crd">환원 전극 (−)극</th><th class="ac351-cox">산화 전극 (+)극</th><th>용액의 변화</th></tr>
+    <tr><td>진한 $\ce{NaCl(aq)}$ ($\ce{Pt}$)</td><td><span class="step">$\ce{2H2O + 2e- -> H2 + 2OH-}$</span></td><td><span class="step">$\ce{2Cl- -> Cl2 + 2e-}$</span></td><td class="l"><span class="step">$\ce{NaOH}$가 남아 염기성</span></td></tr>
+    <tr><td>$\ce{Na2SO4(aq)}$ ($\ce{Pt}$)</td><td><span class="step">$\ce{2H2O + 2e- -> H2 + 2OH-}$</span></td><td><span class="step">$\ce{2H2O -> O2 + 4H+ + 4e-}$</span></td><td class="l"><span class="step">물만 분해된다</span></td></tr>
+    <tr><td>$\ce{CuSO4(aq)}$ ($\ce{Pt}$)</td><td><span class="step">$\ce{Cu^2+ + 2e- -> Cu}$</span></td><td><span class="step">$\ce{2H2O -> O2 + 4H+ + 4e-}$</span></td><td class="l"><span class="step">$\ce{H+}$이 늘어 산성, 파란색이 옅어진다</span></td></tr>
+    <tr><td>$\ce{CuSO4(aq)}$ ($\ce{Cu}$)</td><td><span class="step">$\ce{Cu^2+ + 2e- -> Cu}$</span></td><td><span class="step">$\ce{Cu -> Cu^2+ + 2e-}$</span></td><td class="l"><span class="step">$\ce{Cu^2+}$ 농도가 그대로 — 정련·도금</span></td></tr>
+  </table>
+  <p class="f21 mt8" data-q>Q 각 수용액에서 두 전극의 반응과 용액의 변화는?</p>
+  <div class="row mt8">
+    <div class="col"><p class="f21">전체 반응 — 진한 $\ce{NaCl}$: $\ce{2H2O + 2Cl- -> H2 + Cl2 + 2OH-}$ &nbsp;·&nbsp; $\ce{CuSO4}$($\ce{Pt}$): $\ce{2Cu^2+ + 2H2O -> 2Cu + O2 + 4H+}$</p>
+      <p class="small">구리 전극을 쓰면 산화 전극의 구리가 물보다 먼저 산화된다(전극 자체가 반응). $\ce{SO4^2-}$은 어느 경우에도 반응하지 않는다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 14. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>수용액의 전기 분해 생성물 예측</h2>
+  <p class="f21">백금 전극으로 다음 수용액을 전기 분해할 때, 각 전극의 생성물을 예측하여라. (표준 환원 전위: $\ce{Ag+}/\ce{Ag}$ $+0.80\ \text{V}$, $\ce{Cu^2+}/\ce{Cu}$ $+0.34\ \text{V}$, $\ce{K+}/\ce{K}$ $-2.93\ \text{V}$, $\ce{Cl2}/\ce{Cl-}$ $+1.36\ \text{V}$; $\ce{NO3-}$은 산화되지 않는다.)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21"><b>(1)</b> $\ce{CuCl2(aq)}$ <span class="step">→ (−)극 <span class="ans">$\ce{Cu}$</span> ($\ce{Cu^2+ + 2e- -> Cu}$), (+)극 <span class="ans">$\ce{Cl2}$</span> ($\ce{2Cl- -> Cl2 + 2e-}$)</span></p>
+      <p class="f21"><b>(2)</b> $\ce{KNO3(aq)}$ <span class="step">→ (−)극 <span class="ans">$\ce{H2}$</span> ($\ce{K+}$ 대신 물이 환원), (+)극 <span class="ans">$\ce{O2}$</span> ($\ce{NO3-}$ 대신 물이 산화) — 물만 분해</span></p>
+      <p class="f21"><b>(3)</b> $\ce{AgNO3(aq)}$ <span class="step">→ (−)극 <span class="ans">$\ce{Ag}$</span>, (+)극 <span class="ans">$\ce{O2}$</span>: $\ce{4Ag+ + 2H2O -> 4Ag + O2 + 4H+}$, 용액은 산성이 된다</span></p>
+      <p class="small step">판단 순서: ① 환원 전극 — 금속 이온과 물($-0.83\ \text{V}$) 중 표준 환원 전위가 큰 쪽 ② 산화 전극 — $\ce{Cl-}$ 같은 할로젠화 이온이 진하면 할로젠, $\ce{SO4^2-}$·$\ce{NO3-}$이면 물이 산화되어 $\ce{O2}$</p>
+    </div>
+    <div class="col stack"><div class="board ac351-b" style="min-height:360px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑨ 도금과 정련 ════════ -->
+<section class="slide" data-sec="01 · 전기 분해의 활용" data-title="전기 도금과 구리의 정련">
+  <h2><span class="no">9</span>전기 도금과 구리의 정련</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21"><b>전기 도금</b>: <mark>도금할 물체를 환원 전극(전원의 (−)극)에, 도금할 금속을 산화 전극((+)극)에 연결하고, 그 금속 이온이 든 수용액에 담근다.</mark></p>
+      <p class="f21">은 도금 — (−)극 $\ce{Ag+(aq) + e- -> Ag(s)}$, (+)극 $\ce{Ag(s) -> Ag+(aq) + e-}$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 은 도금을 하는 동안 수용액의 $\ce{Ag+}$ 농도는 어떻게 될까?</p>
+        <p class="f21 step">→ 산화 전극에서 녹아 나온 만큼 환원 전극에서 석출되므로 <span class="ans">거의 그대로</span>이다.</p></div>
+      <p class="f21"><b>구리의 정련</b>: 불순한 구리를 (+)극, 순수한 구리를 (−)극으로 하여 $\ce{CuSO4}$ 수용액을 전기 분해한다.</p>
+      <p class="f21 step">(+)극에서는 구리와 구리보다 산화되기 쉬운 $\ce{Zn}$·$\ce{Fe}$ 등이 녹아 나오고, $\ce{Ag}$·$\ce{Au}$는 녹지 않고 전극 밑에 가라앉는다. (−)극에는 환원되기 쉬운 $\ce{Cu}$만 석출된다.</p>
+    </div>
+    <div class="col">{{PLATE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 활동 (고화-탐28) 지시 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 금속 도금의 종류와 특성 조사">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 전해 전지 반응을 이용한 금속 도금의 종류와 특성 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">일상생활에서 많이 접하는 도금은 전해 전지를 응용한 기술이다. 도금은 재료 표면의 산 부식을 막고 마찰 저항성을 높여 제품의 수명과 특성, 미적 가치를 높인다.</p>
+      <h3>과정</h3>
+      <ol class="f21 ac351-ul">
+        <li>모둠별로 일상생활과 산업에서 쓰는 물체에 적용된 <b>도금의 종류</b>를 조사한다.</li>
+        <li>도금이 원래 물체의 성질에 어떤 <b>유익한 변화</b>를 가져오는지 <b>도금 금속의 종류별로</b> 논의한다.</li>
+        <li>결과를 <b>500자 이내</b>로 요약한다.</li>
+      </ol>
+      <table class="ac351-sm ac351-c mt8">
+        <tr><th>물체</th><th>도금 금속</th><th>바탕 재료</th><th>좋아지는 성질</th><th>환원 전극에 연결한 것</th></tr>
+        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+      </table>
+    </div>
+    <div class="col">{{PLICON}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 활동 (고화-탐28) 예시 결과 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 금속 도금 조사 예시 결과">
+  <h2><span class="tag">탐구 활동</span>금속 도금 조사 — 예시 결과</h2>
+  <table class="ac351-tab">
+    <tr><th>도금 금속</th><th>쓰이는 곳(바탕 재료)</th><th>좋아지는 성질</th></tr>
+    <tr><td>크로뮴</td><td class="l">수도꼭지, 자동차 부품(강철·황동, 밑에 니켈 도금)</td><td class="l">단단해 잘 긁히지 않고 광택이 나며 녹슬지 않는다</td></tr>
+    <tr><td>아연</td><td class="l">함석 지붕, 볼트·가드레일(철)</td><td class="l">흠집이 나도 철보다 산화되기 쉬운 아연이 먼저 산화되어 철을 보호한다</td></tr>
+    <tr><td>주석</td><td class="l">통조림 캔(철판)</td><td class="l">독성이 없고 산에 잘 부식되지 않아 음식이 닿는 면을 보호한다</td></tr>
+    <tr><td>금·은</td><td class="l">전자 부품 단자, 장신구·식기(구리·니켈 합금)</td><td class="l">산화되지 않아 접촉 저항이 작게 유지되고 아름다운 광택이 난다</td></tr>
+    <tr><td>구리</td><td class="l">인쇄 회로 기판, 플라스틱 위 밑층</td><td class="l">전기 전도성이 크고 다음 도금이 잘 붙게 한다</td></tr>
+  </table>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 함석(아연 도금)과 주석 도금 철판에 흠집이 나면 어느 쪽 철이 더 빨리 녹슬까?</p>
+    <p class="f21 step">→ <span class="ans">주석 도금 철판</span>: 철이 주석보다 산화되기 쉬워 드러난 철이 먼저 산화된다. 함석은 아연이 대신 산화된다.</p></div>
+  <p class="f21 mt8 step"><b>500자 예(일부)</b> 「도금은 전해 전지의 환원 전극에 물체를 연결해 금속 이온을 표면에 환원시키는 기술이다. 크로뮴은 단단함과 광택을, 아연은 희생적으로 산화되어 철을 보호하는 성질을, 금은 산화되지 않는 성질을 물체에 더한다. …」</p>
+  <p class="small">예시 결과는 덱 작성 예이다. 학생 조사는 자료의 출처를 밝힌다.</p>
+</section>
+
+<!-- ════════ 18. ⑩ 전하량과 생성물의 양적 관계 ════════ -->
+<section class="slide" data-sec="01 · 전해 전지에서 전하량과 생성물의 양적 관계" data-title="전하량과 생성물의 양적 관계">
+  <h2><span class="no">10</span>전해 전지에서 전하량과 생성물의 양적 관계</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">생성물의 양은 공급한 전하량을 전자의 양으로 바꾸어 구한다. <mark>전극에서의 생산량은 공급된 전자의 몰수, 곧 전하량에 정비례한다</mark>(패러데이 법칙).</p>
+      <ul class="f21 ac351-ul">
+        <li>전류 $1\ \text{A}$는 $1$초당 $1\ \text{C}$의 전하 흐름: $I=\dfrac{Q}{t}$ → 전하량 <b>$Q=It$</b></li>
+        <li>전하량 = 전자 $1\ \text{mol}$의 전하량 $F$ × 전자의 몰수: $Q=n_{e^-}F$ → <b>$n_{e^-}=\dfrac{Q}{F}=\dfrac{It}{F}$</b></li>
+        <li>전자의 몰수와 반쪽 반응의 계수비로 생성물의 몰수를 구한다.</li>
+      </ul>
+      <p class="small">교과서는 전하량을 $C$로 써서 $C=It$, $C=nF$로 나타낸다. 덱에서는 단위 쿨롱(C)과 헷갈리지 않게 $Q$로 쓴다. $F=96485\ \text{C/mol}$</p>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 같은 전류를 2배 오래 흘리면 석출되는 구리의 질량은?</p>
+        <p class="f21 step">→ 전하량이 2배 → 전자의 몰수 2배 → 구리도 <span class="ans">2배</span></p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 전자 $1\ \text{mol}$이 흐를 때 석출되는 $\ce{Ag}$, $\ce{Cu}$, $\ce{Al}$의 몰수는?</p>
+        <p class="f21 step">→ $\ce{Ag}$ <span class="ans">$1\ \text{mol}$</span>, $\ce{Cu}$ <span class="ans">$\tfrac12\ \text{mol}$</span>, $\ce{Al}$ <span class="ans">$\tfrac13\ \text{mol}$</span> — 이온 하나가 받는 전자 수가 1, 2, 3이다.</p></div>
+    </div>
+  </div>
+  <div class="mt12">{{CHAIN}}</div>
+</section>
+
+<!-- ════════ 19. 예제 Ⅲ-13 ════════ -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅲ-13">
+  <h2><span class="tag ex">예제 Ⅲ-13</span>금 도금에 필요한 전자의 몰수</h2>
+  <p class="f21">전해 전지 반응 $\ce{Au^3+(aq) + 3e- -> Au(s)}$은 전해 전지의 환원 전극에서 일어나는 금의 전기 도금 반응이다. $3.0\ \text{g}$의 금을 도금하는 데 필요한 전자의 몰수는 얼마인가? (단, $\ce{Au}$의 원자량은 $197.0$이다.)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>풀이 1</b> 금 $3.0\ \text{g}$의 몰수: $\dfrac{3.0\ \text{g}}{197.0\ \text{g/mol}}=0.01523\ \text{mol}$</p>
+      <p class="f21 step"><b>풀이 2</b> 금 $1\ \text{mol}$을 얻는 데 전자 $3\ \text{mol}$이 필요하다.</p>
+      <div class="answer step">$n_{e^-}=0.01523\times3=0.04569\ \text{mol}$</div>
+      <p class="f21 step"><b>더 해 보기</b> 이때 필요한 전하량은? → $Q=n_{e^-}F=0.04569\times96485=4.41\times10^{3}\ \text{C}$</p>
+    </div>
+    <div class="col stack">{{GOLD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 20. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>전하량으로 생성물의 양 예측하기</h2>
+  <p class="f21">백금 전극으로 $\ce{CuSO4}$ 수용액에 $2.00\ \text{A}$의 전류를 $30.0$분 동안 흘렸다. 환원 전극에서 석출되는 구리의 질량과, 산화 전극에서 발생하는 산소의 부피를 구하여라. (단, $\ce{Cu}$ $63.55\ \text{g/mol}$, $25\ {}^\circ\text{C}$·$1\ \text{atm}$에서 기체 $1\ \text{mol}$의 부피 $24.5\ \text{L}$)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step"><b>풀이 1</b> $Q=It=2.00\ \text{A}\times1800\ \text{s}=3600\ \text{C}$ → $n_{e^-}=\dfrac{3600}{96485}=0.03731\ \text{mol}$</p>
+      <p class="f21 step"><b>풀이 2</b> $\ce{Cu^2+ + 2e- -> Cu}$: $\ce{Cu}$ $\dfrac{0.03731}{2}=0.01866\ \text{mol}$ → $0.01866\times63.55=$ <span class="ans">$1.19\ \text{g}$</span></p>
+      <p class="f21 step"><b>풀이 3</b> $\ce{2H2O -> O2 + 4H+ + 4e-}$: $\ce{O2}$ $\dfrac{0.03731}{4}=0.009328\ \text{mol}$ → $\times24.5\ \text{L/mol}=$ <span class="ans">$0.229\ \text{L}$</span></p>
+      <p class="small step">같은 전자 $4\ \text{mol}$으로 $\ce{Cu}$ $2\ \text{mol}$, $\ce{O2}$ $1\ \text{mol}$ — 두 전극의 생성물 몰수비는 계수비 $2:1$이다.</p>
+    </div>
+    <div class="col stack">{{CUSO4}}</div>
+  </div>
+</section>
+
+<!-- ════════ 21. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>생성물의 양으로 전기량 예측하기</h2>
+  <p class="f21">숟가락에 은 $1.08\ \text{g}$을 도금하려고 한다. (단, $\ce{Ag}$ $107.9\ \text{g/mol}$, $F=96485\ \text{C/mol}$)</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21"><b>(1)</b> 필요한 전하량은? <span class="step">→ $\ce{Ag}$ $\dfrac{1.08}{107.9}=0.01001\ \text{mol}$, 전자도 $0.01001\ \text{mol}$ → $Q=0.01001\times96485=$ <span class="ans">$966\ \text{C}$</span></span></p>
+      <p class="f21"><b>(2)</b> $0.500\ \text{A}$로 흘리면 몇 분이 걸릴까? <span class="step">→ $t=\dfrac{Q}{I}=\dfrac{966}{0.500}=1.93\times10^{3}\ \text{s}\approx$ <span class="ans">$32.2$분</span></span></p>
+      <p class="f21"><b>(3)</b> 같은 전하량으로 $\ce{Au^3+}$ 용액에서 금을 도금하면 몇 g일까? <span class="step">→ $\ce{Au}$ $\dfrac{0.01001}{3}\times197.0=$ <span class="ans">$0.657\ \text{g}$</span> — 이온의 전하가 클수록 같은 전하량에 석출되는 몰수가 작다.</span></p>
+    </div>
+    <div class="col stack">{{PLATE2}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 (고화-탐29) 지시 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 광석에서 원료를 얻는 전기 화학 반응 조사">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 광석으로부터 금속이나 비금속 원료를 얻는 전기 화학 반응 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">전해 전지의 산업적 중요성 가운데 하나는 광석에서 금속이나 비금속 원료를 얻는 것이다.</p>
+      <h3>과정</h3>
+      <ol class="f21 ac351-ul">
+        <li>모둠별로 광석에서 금속과 비금속 원료를 얻을 때 <b>어떤 전기 화학 반응</b>을 이용하는지 조사한다.</li>
+        <li>여러 원료 <b>1톤</b>을 생산하는 데 필요한 전해 전지의 <b>전하량</b>을 원료별로 계산해 비교한다.</li>
+        <li>비교 결과를 <b>토론</b>한 뒤 <b>발표</b>한다.</li>
+      </ol>
+      <div class="formula ac351-eq">$Q=\dfrac{1.000\times10^{6}\ \text{g}}{M}\times z\times F$ &nbsp; ($z$: 원료 $1\ \text{mol}$을 얻는 데 드는 전자의 몰수)</div>
+    </div>
+    <div class="col">{{SMELT2}}<p class="small">예: 알루미늄 제련 — 녹은 빙정석에 $\ce{Al2O3}$를 녹여 전기 분해</p></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 탐구 활동 (고화-탐29) 예시 결과 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 광석 원료 조사 예시 결과">
+  <h2><span class="tag">탐구 활동</span>광석에서 원료 얻기 — 예시 결과</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 720px">
+      <table class="ac351-tab">
+        <tr><th>원료(원료 물질)</th><th>환원 전극 반응</th><th>산화 전극 반응</th><th>$z$</th></tr>
+        <tr><td class="l">$\ce{Al}$ ($\ce{Al2O3}$, 녹은 빙정석)</td><td>$\ce{Al^3+ + 3e- -> Al}$</td><td>$\ce{C + 2O^2- -> CO2 + 4e-}$</td><td>3</td></tr>
+        <tr><td class="l">$\ce{Mg}$ (녹은 $\ce{MgCl2}$)</td><td>$\ce{Mg^2+ + 2e- -> Mg}$</td><td>$\ce{2Cl- -> Cl2 + 2e-}$</td><td>2</td></tr>
+        <tr><td class="l">$\ce{Na}$, $\ce{Cl2}$ (녹은 $\ce{NaCl}$)</td><td>$\ce{Na+ + e- -> Na}$</td><td>$\ce{2Cl- -> Cl2 + 2e-}$</td><td>1, 2</td></tr>
+        <tr><td class="l">$\ce{Cu}$ (구리 정련, $\ce{CuSO4}$)</td><td>$\ce{Cu^2+ + 2e- -> Cu}$</td><td>$\ce{Cu -> Cu^2+ + 2e-}$</td><td>2</td></tr>
+        <tr><td class="l">$\ce{Cl2}$, $\ce{NaOH}$ (진한 소금물)</td><td>$\ce{2H2O + 2e- -> H2 + 2OH-}$</td><td>$\ce{2Cl- -> Cl2 + 2e-}$</td><td>2</td></tr>
+      </table>
+      <p class="f21 step"><b>토론 정리</b> 1 t당 전하량은 $\ce{Al}$이 가장 크다($1.07\times10^{10}\ \text{C}$) — 이온의 전하가 크고($z=3$) 몰질량이 작기 때문이다. 그래서 알루미늄 제련은 전기를 매우 많이 쓰고, 다시 녹여 쓰는 <b>재활용</b>이 에너지를 크게 줄인다.</p>
+      <p class="small">계산: $\ce{Al}$ $\dfrac{10^6}{26.98}\times3\times96485$, $\ce{Mg}$ $(24.31,\,2)$, $\ce{Na}$ $(22.99,\,1)$, $\ce{Cu}$ $(63.55,\,2)$, $\ce{Cl2}$ $(70.90,\,2)$. 예시 결과는 덱 작성 예이다.</p>
+    </div>
+    <div class="col">{{QBAR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅲ-5 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>볼타 전지와 전해 전지의 전극 반응</h2>
+  <p class="f21">$\ce{Cu(s) + Sn^2+(aq) -> Cu^2+(aq) + Sn(s)}$와 같은 전지 반응식에서 각 전극의 반응은 어떤 반응인지 볼타 전지와 전해 전지로 구분하여 제시하여라. 또한, 역반응에서 각 전극의 반응도 함께 제시하여라.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21 step"><b>풀이 1</b> $E^\circ_\text{전지}=E^\circ(\ce{Sn^2+}/\ce{Sn})-E^\circ(\ce{Cu^2+}/\ce{Cu})=-0.14-0.34=-0.48\ \text{V}&lt;0$ → 주어진 반응은 비자발적(<b>전해 전지</b>), 역반응은 자발적(<b>볼타 전지</b>)</p>
+      <div class="answer step"><b>전해 전지</b>(주어진 반응): 산화 전극 $\ce{Cu(s) -> Cu^2+(aq) + 2e-}$, 환원 전극 $\ce{Sn^2+(aq) + 2e- -> Sn(s)}$</div>
+      <div class="answer step"><b>볼타 전지</b>(역반응): 산화 전극 $\ce{Sn(s) -> Sn^2+(aq) + 2e-}$, 환원 전극 $\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</div>
+      <p class="small step">$\ce{Sn^2+}/\ce{Sn}$ $-0.14\ \text{V}$는 덱이 보탠 값이다(교과서 표에 없음).</p>
+    </div>
+    <div class="col stack">{{EX1}}<div class="board ac351-b" style="min-height:90px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅲ-5 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>전해 전지의 전극 부호와 $\Delta G$, $E_\text{전지}$</h2>
+  <p class="f21">전해 전지에서 산화 전극과 환원 전극 각각의 전극 부호를 쓰고, $\Delta G$와 $E_\text{전지}$의 크기를 나타내어라.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="answer step" data-g="g1">산화 전극: <b>(+)극</b>, 환원 전극: <b>(−)극</b></div>
+      <div class="answer step">$\Delta G&gt;0$, $E_\text{전지}&lt;0$ — 비자발적 반응을 외부 전기 에너지로 일으킨다.</div>
+      <p class="small step">화학 전지(다니엘 전지)와 이름은 같고 부호는 반대이다(표 Ⅲ-12). 교과서 풀이는 두 전극에 각각 「$\Delta G&gt;0$, $E_\text{전지}&lt;0$」을 적었는데, 이는 전해 전지 전체 반응의 값이다.</p>
+      <div class="board" style="min-height:100px"></div>
+    </div>
+    <div class="col">{{CUCL2}}</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅲ-5 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>묽은 산 수용액의 전기 분해</h2>
+  <p class="f21">묽은 산 수용액의 전기 분해에서 산화 전극, 환원 전극에서의 각 반응과 전체 전극 반응을 제시하여라.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step"><b>산화 전극</b> $\ce{2H2O(l) -> O2(g) + 4H+(aq) + 4e-}$</p>
+      <p class="f21 step"><b>환원 전극</b> $\ce{4H+(aq) + 4e- -> 2H2(g)}$</p>
+      <div class="answer step"><b>전체</b> $\ce{2H2O(l) -> 2H2(g) + O2(g)}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 전기 분해가 끝난 뒤 산($\ce{H+}$)의 양은 어떻게 될까?</p>
+        <p class="f21 step">→ 산화 전극에서 생긴 $\ce{H+}$만큼 환원 전극에서 쓰이므로 <span class="ans">그대로</span>이다. 물만 줄어 산의 농도는 조금 진해진다.</p></div>
+    </div>
+    <div class="col stack">{{ACID}}</div>
+  </div>
+</section>
+
+<!-- ════════ 27. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 전기 분해와 전해 전지 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>5. 전기 분해 — 01 전기 분해와 전해 전지</h2>
+  <div class="ac351-map">
+    <div class="ac351-node ac351-dim">Ⅲ-4 화학 전지<br>자발 반응<br>$\Delta G^\circ=-nFE^\circ$</div>
+    <div class="ac351-arr">→</div>
+    <div class="ac351-node ac351-main"><b>01 전기 분해와 전해 전지</b><br>❶ 전해 전지: 외부 전기 에너지로 비자발 반응 — $\Delta G&gt;0$, <span class="blank"><span class="step">$E_\text{전지}&lt;0$</span></span>, 최소 전기 에너지 $-\Delta G^\circ$(자발 반응)<br>❷ 전해 전지의 산화 전극은 <span class="blank"><span class="step">(+)극</span></span>, 환원 전극은 (−)극 — 화학 전지와 부호가 반대<br>❸ 물의 전기 분해: 환원 전극 $\ce{H2}$, 산화 전극 $\ce{O2}$, 부피비 <span class="blank"><span class="step">$2:1$</span></span><br>❹ 수용액: 가장 환원·산화되기 쉬운 화학종이 반응 — $\ce{Na+}$ 대신 <span class="blank"><span class="step">물</span></span>이 환원, 진한 $\ce{Cl-}$은 $\ce{Cl2}$<br>❺ $Q=It$, $n_{e^-}=$ <span class="blank"><span class="step">$\dfrac{It}{F}$</span></span> → 계수비로 생성물의 양<br>❻ 도금: 도금할 물체를 <span class="blank"><span class="step">환원 전극</span></span>((−)극)에 연결</div>
+    <div class="ac351-arr">→</div>
+    <div class="ac351-node ac351-dim">Ⅲ 마무리<br>종합 문제<br>STEAM</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 전기 분해와 전해 전지 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 전해 전지와 화학 전지를 $\Delta G$, $E_\text{전지}$, 전극 부호로 비교하고, 물·녹은 염·수용액의 전극 반응을 쓸 수 있다.</button>
+    <button class="chk">[과정·기능] 전하량 $Q=It$로 전자의 몰수를 구해 생성물의 양이나 필요한 전기량을 계산했다.</button>
+    <button class="chk">[가치·태도] 도금과 광석 제련에 쓰이는 전기 화학 반응을 조사하고, 에너지 사용과 재활용을 토론했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 진한 염화 나트륨 수용액을 전기 분해하면 (−)극과 (+)극에서 생기는 기체는? <span class="step">→ (−)극 <span class="ans">$\ce{H2}$</span>, (+)극 <span class="ans">$\ce{Cl2}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $1.00\ \text{A}$로 $96485$초 동안 $\ce{CuSO4}$ 수용액을 전기 분해하면 구리는 몇 mol 석출될까? <span class="step">→ 전자 $1\ \text{mol}$ → 구리 <span class="ans">$0.500\ \text{mol}$</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 대단원 Ⅲ 마무리 — 화학 전지와 전기 분해 장치, 지시약의 색 변화로 예술 작품을 만들 수 있을까?(STEAM)</div>
+</section>

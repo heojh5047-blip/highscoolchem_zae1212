@@ -1,0 +1,27 @@
+/* 고급화학 2-3-1 — 덱 전용 (모두 .ac231- 접두어) */
+.cover h1.ac231-h1{font-size:60px;line-height:1.15}
+table.ac231-t td{text-align:center}
+table.ac231-t td.l,table.ac231-t th.l{text-align:left}
+table.ac231-t th,table.ac231-t td{font-size:20px;padding:4px 8px}
+table.ac231-kind td{padding:2px 8px}
+table.ac231-kind svg.ac231-ico{display:block;margin:0 auto}
+table.ac231-pf td,table.ac231-pf th{font-size:21px;padding:6px 10px}
+ol.ac231-ol{padding-left:1.4em}
+ol.ac231-ol li{margin-top:8px}
+ol.ac231-ol li:first-child{margin-top:0}
+/* 개념 지도 */
+.ac231-map{display:flex;align-items:stretch;gap:10px;margin-top:16px}
+.ac231-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 12px;font-size:20px;line-height:1.75;flex:1 1 0}
+.ac231-node.ac231-main{border-color:var(--field);background:#F2FAF5}
+.ac231-arr{font-size:26px;color:var(--muted);align-self:center}
+/* 실험실 */
+.ac231-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.ac231-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.ac231-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac231-seg .btn.ac231-act{background:var(--field);color:#fff;border-color:var(--field)}
+.ac231-seg .btn.ac231-act.on{background:#1E6B47;border-color:#1E6B47}
+.ac231-seg .small{margin:0 2px 0 4px}
+.ac231-cb{font-size:19px;cursor:pointer;display:inline-block;margin:2px 0 6px}
+output.kind.ac231-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.ac231-log th,table.ac231-log td{font-size:19px;padding:2px 6px;text-align:center}
+.lab-ctl .ctl{margin-bottom:6px}

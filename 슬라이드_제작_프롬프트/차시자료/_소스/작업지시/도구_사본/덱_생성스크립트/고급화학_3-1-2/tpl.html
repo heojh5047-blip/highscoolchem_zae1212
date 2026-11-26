@@ -1,0 +1,645 @@
+<!-- 고급화학 3-1-2 엔탈피 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 1. 화학 반응의 반응 엔탈피 › 02</div>
+    <h1 class="ac312-h1">엔탈피</h1>
+    <p class="sub">압력이 일정할 때 출입하는 열 — 열화학 반응식, 표준 생성 엔탈피, 헤스 법칙</p>
+    <p class="meta">고등학교 고급 화학 132–141쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 엔탈피" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-02]</span>엔탈피의 정의를 이해하고 헤스 법칙을 활용하여 다양한 화학 반응의 반응 엔탈피를 예측할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>엔탈피를 $H\equiv U+PV$로 정의하고, 압력이 일정할 때 $\Delta H=q_P$인 까닭을 설명할 수 있다.</li>
+    <li>열화학 반응식과 표준 상태를 이해하고, 표준 생성 엔탈피로 반응 엔탈피를 계산할 수 있다.</li>
+    <li>헤스 법칙으로 직접 측정하기 어려운 반응의 반응 엔탈피를 예측하고, 실험으로 확인할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">엔탈피 $H$</div><div class="farr">→</div>
+    <div class="fnode">열화학 반응식</div><div class="farr">→</div>
+    <div class="fnode">표준 상태</div><div class="farr">→</div>
+    <div class="fnode">표준 생성 엔탈피</div><div class="farr">→</div>
+    <div class="fnode">헤스 법칙</div><div class="farr">→</div>
+    <div class="fnode hl">중화열 실험실</div>
+  </div>
+  <p class="small mt12">지난 시간: 계의 내부 에너지 변화 $\Delta U=q+w$ (01 화학 반응과 에너지)</p>
+</section>
+
+<!-- ════════ 3. 진로 ════════ -->
+<section class="slide" data-sec="02 · 진로" data-title="진로: 에너지공학 기술">
+  <h2><span class="tag">진로</span>에너지공학 기술</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">기후 변화와 기상 이변, 화력 발전·수송 기관이 내는 열과 유해 물질, 끊임없는 이산화 탄소 배출, 원전 사고와 핵폐기물, 화석 연료의 고갈 — 세계는 에너지 자원 확보에 치열하게 경쟁하고 있다.</p>
+      <p class="f21"><b>에너지공학</b>은 기초과학을 바탕으로 여러 공학이 결합한 융합 학문이다. 에너지공학 기술자는 석탄·석유·천연가스 사업의 기술 조건을 분석하고, 광산 시설과 장비를 설계하며, 석유·천연가스의 보유량과 생산 잠재성을 분석한다.</p>
+      <p class="f21">천연가스와 신재생 에너지, 에너지 효율 높이기, 온실가스 배출 저감 진단, 탄소 배출권 거래 분야에서 전문 인력이 더 필요해질 것이다.</p>
+    </div>
+    <div class="col stack">
+      {{CAREER}}
+      <div class="card q"><p class="f21"><b>Q</b> 여러 연료를 비교하려면 무엇을 재야 할까?</p>
+        <p class="f21 step">→ 같은 양의 연료가 탈 때 방출하는 열 — 오늘 배울 <b>엔탈피 변화</b>로 나타낸다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 엔탈피 · 도입" data-title="생각 열기">
+  <h2><span class="tag">생각 열기</span>부피가 일정할 때와 압력이 일정할 때</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <p class="f21">(가) 용기가 단단해서 부피가 변하지 않으면 팽창 일이 없다. 비팽창 일도 없으면 $\Delta U=q+w$에서 $w=0$ → <b>출입한 열만 재면</b> $\Delta U$를 안다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 많은 반응은 대기압(약 $1\ \text{atm}$)의 열린 용기에서 일어난다. 이때 출입한 열 $q$도 $\Delta U$와 같을까?</p></div>
+      <p class="f21 step">→ 같지 않다. 생긴 기체가 자기 공간을 차지하려고 주위의 대기를 밀어내므로, 피스톤이 없어도 <b>일</b>을 한다.</p>
+      <p class="f21 step">압력이 일정할 때 팽창 일까지 고려한 에너지 변화를 알려 주는 <b>새로운 상태 함수</b>가 필요하다.</p>
+    </div>
+    <div class="col">{{OPEN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 엔탈피의 정의 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="엔탈피의 정의">
+  <h2><span class="no">1</span>엔탈피의 정의</h2>
+  <p class="f22">일정한 압력의 화학 반응계에서 에너지 변화를 알려 주는 상태 함수가 <mark>엔탈피</mark> $H$이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="formula">$H\equiv U+PV$<div class="unit">$U$: 계의 내부 에너지, $P$: 계의 압력, $V$: 계의 부피 ($\equiv$: 이렇게 정의한다)</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 엔탈피의 절댓값을 잴 수 있을까?</p>
+        <p class="f21 step">→ 잴 수 없다($U$의 절댓값을 모른다). 실험으로는 반응열로 <b>엔탈피 변화</b> $\Delta H$만 잰다.</p></div>
+    </div>
+    <div class="col">{{HDEF}}</div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② ΔH = qP ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="압력이 일정하면 ΔH = q">
+  <h2><span class="no">2</span>압력이 일정하면 $\Delta H=q_P$</h2>
+  <p class="f21">내부 에너지 변화가 $\Delta U$, 부피 변화가 $\Delta V$인 <b>등압 과정</b>에서 엔탈피 변화를 따라가 보자.</p>
+  <div class="stages c2 mt8">
+    <div class="stage step"><h3>1. 등압에서 $H=U+PV$의 변화</h3><div class="formula sm">$\Delta H=\Delta U+P\Delta V$</div></div>
+    <div class="stage step"><h3>2. 열역학 제1법칙 $\Delta U=q+w$ 대입</h3><div class="formula sm">$\Delta H=q+w+P\Delta V$</div></div>
+    <div class="stage step"><h3>3. 팽창 일 말고 다른 일이 없으면</h3><div class="formula sm">$\Delta H=q-P_\text{외부}\Delta V+P\Delta V$</div></div>
+    <div class="stage step"><h3>4. 대기압에 놓인 계: $P=P_\text{외부}$</h3><div class="formula sm">$\Delta H=q$</div></div>
+  </div>
+  <div class="answer step mt8">$\Delta H=q_P$ (압력 일정)</div>
+  <p class="f21 step">화학 반응은 보통 대기압의 열린 용기에서 일어나므로, 계가 방출하거나 흡수하는 <b>열 = 계의 엔탈피 변화</b>로 볼 수 있다.</p>
+</section>
+
+<!-- ════════ 7. ③ 두 열량계 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="두 열량계가 재는 것">
+  <h2><span class="no">3</span>두 열량계가 재는 것</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 310px">
+      {{BOMB2}}
+      <p class="f21"><b>통열량계</b>: $\Delta V=0$ → $w=0$<br>잰 열 $q_V=\Delta U$</p>
+    </div>
+    <div class="col stack" style="flex:0 0 300px">
+      {{CUP2}}
+      <p class="f21"><b>컵 열량계</b>: 압력 일정<br>잰 열 $q_P=\Delta H$</p>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21" data-q><b>토의</b> 화학 반응의 에너지 변화를 나타낼 때 $\Delta U$보다 $\Delta H$를 더 많이 쓰는 까닭은 무엇일까?</p></div>
+      <p class="f21 step">→ 반응은 대부분 대기압(압력 일정)에서 일어나고, 그때 출입한 열을 재면 바로 $\Delta H$이다.</p>
+      <p class="f21 step">$\Delta U$를 구하려면 팽창 일 $P\Delta V$를 따로 알아야 한다. 기체가 거의 생기거나 없어지지 않는 반응(용액·고체)은 $P\Delta V$가 매우 작아 $\Delta H\approx\Delta U$이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ④ 발열·흡열 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="발열 반응과 흡열 반응의 ΔH">
+  <h2><span class="no">4</span>발열 반응과 흡열 반응의 $\Delta H$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <div class="formula sm">$\ce{Zn(s) + I2(s) -> ZnI2(s)}$<div class="unit">$\Delta H=-208\ \text{kJ}$</div></div>
+      <p class="f21">아연과 아이오딘으로 아이오딘화 아연이 생기는 반응은 일정 압력에서 $\ce{ZnI2}$ 1 mol당 주위로 $208\ \text{kJ}$을 방출한다 → 계의 엔탈피가 $208\ \text{kJ}$ 감소한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 흡열 반응이면 계의 엔탈피는 어떻게 될까?</p>
+        <p class="f21 step">→ 증가한다. 예: $\ce{N2(g) + O2(g) -> 2NO(g)}$ $\Delta H=+180\ \text{kJ}$</p></div>
+      <div class="answer step">발열 반응 $\Delta H&lt;0$, 흡열 반응 $\Delta H&gt;0$</div>
+    </div>
+    <div class="col">{{SIGN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. 예제 Ⅲ-3 ════════ -->
+<section class="slide" data-sec="02 · 엔탈피" data-title="예제 Ⅲ-3">
+  <h2><span class="tag ex">예제 Ⅲ-3</span>$\Delta H$와 $\Delta U$ 구하기</h2>
+  <p class="f22">일정 압력에서 발열 반응으로 $50\ \text{kJ}$의 에너지가 방출되고, 계가 한 팽창 일이 $20\ \text{kJ}$이다. <b>Q</b> 이 과정에서 $\Delta H$와 $\Delta U$의 값은 얼마인가?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step"><b>생각</b> 압력이 일정하므로 출입한 열이 곧 $\Delta H$, 계가 일을 했으므로 $w&lt;0$</p>
+      <div class="answer step">$\Delta H=q=-50\ \text{kJ}$</div>
+      <p class="f21 step">$\Delta U=q+w=-50\ \text{kJ}+(-20\ \text{kJ})$</p>
+      <div class="answer step">$\Delta U=-70\ \text{kJ}$</div>
+      <p class="small step">계가 열로 $50\ \text{kJ}$, 일로 $20\ \text{kJ}$을 잃었다 → $\Delta U$가 $\Delta H$보다 $20\ \text{kJ}$ 더 작다.</p>
+    </div>
+    <div class="col stack">{{EX3}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 10. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>흡열 반응의 $\Delta H$와 $\Delta U$</h2>
+  <p class="f22">일정 압력에서 흡열 반응이 일어나 계가 열 $30\ \text{kJ}$을 흡수하였다. 기체의 양이 줄어 부피가 감소하면서 계는 주위로부터 일 $5\ \text{kJ}$을 받았다. <b>Q</b> $\Delta H$와 $\Delta U$는?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="answer step">$\Delta H=q_P=+30\ \text{kJ}$</div>
+      <p class="f21 step">계가 일을 받았으므로 $w=+5\ \text{kJ}$</p>
+      <div class="answer step">$\Delta U=q+w=+30+(+5)=+35\ \text{kJ}$</div>
+      <p class="small step">부피가 줄어드는 반응은 $\Delta U&gt;\Delta H$, 부피가 늘어나는 반응(예제 Ⅲ-3)은 $\Delta U&lt;\Delta H$이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑤ 열화학 반응식 ════════ -->
+<section class="slide" data-sec="02 · 표준 상태와 반응 엔탈피" data-title="열화학 반응식">
+  <h2><span class="no">5</span>열화학 반응식</h2>
+  <p class="f21">천연가스의 주성분인 메테인 $\ce{CH4(g)}$ 1 mol이 $298\ \text{K}$, $1\ \text{atm}$에서 완전 연소하면 $890\ \text{kJ}$의 열을 방출한다.</p>
+  <div class="formula">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}\qquad\Delta H=-890\ \text{kJ}$</div>
+  <p class="f22"><mark>열화학 반응식</mark>: 화학 반응식과 반응 엔탈피 변화 $\Delta H$를 함께 나타낸 식</p>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 같은 반응의 계수를 2배 하여 쓰면 $\Delta H$는?</p>
+    <p class="f21 step">→ $\ce{2CH4(g) + 4O2(g) -> 2CO2(g) + 4H2O(l)}$ <span class="ans">$\Delta H=-1780\ \text{kJ}$</span> — 계수가 2배이면 $\Delta H$도 2배</p></div>
+  <div class="card q mt8"><p class="f21"><b>Q</b> 역반응의 $\Delta H$는?</p>
+    <p class="f21 step">→ $\ce{CO2(g) + 2H2O(l) -> CH4(g) + 2O2(g)}$ <span class="ans">$\Delta H=+890\ \text{kJ}$</span> — 크기는 같고 부호가 반대</p></div>
+</section>
+
+<!-- ════════ 12. ⑥ 물질의 상태 ════════ -->
+<section class="slide" data-sec="02 · 표준 상태와 반응 엔탈피" data-title="물질의 상태와 반응 엔탈피">
+  <h2><span class="no">6</span>물질의 상태와 반응 엔탈피</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 570px">
+      <p class="f21">방출되거나 흡수되는 열은 반응물과 생성물의 <b>물리적 상태</b>에 따라 다르다.</p>
+      <div class="card"><p class="f21">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}$ $\ \Delta H=-802\ \text{kJ}$</p><p class="f21">$\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$ $\ \Delta H=-890\ \text{kJ}$</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 두 반응의 $\Delta H$ 차이 $88\ \text{kJ}$은 무엇일까?</p>
+        <p class="f21 step">→ $25\ {}^\circ\text{C}$에서 $\ce{H2O(g)}$ 1 mol의 엔탈피가 $\ce{H2O(l)}$ 1 mol보다 <span class="ans">$44\ \text{kJ}$ 높다</span>. 수증기 2 mol이 생기면 $88\ \text{kJ}$이 계에 남는다.</p></div>
+      <p class="f21 step">수증기 2 mol이 이어서 응축하면 $88\ \text{kJ}$을 더 방출한다. 이 열이 $\ce{H2O(l)}$ 2 mol의 <b>증발 엔탈피</b>이다.</p>
+    </div>
+    <div class="col">{{CH4ST}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑦ 표준 상태 ════════ -->
+<section class="slide" data-sec="02 · 표준 상태와 반응 엔탈피" data-title="표준 상태와 표준 반응 엔탈피">
+  <h2><span class="no">7</span>표준 상태와 표준 반응 엔탈피</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">반응 엔탈피는 압력 조건에 따라 달라지므로 기준을 정한다. <mark>표준 상태</mark>는 $1\ \text{bar}$의 상태이고, 보통 $1\ \text{atm}$을 쓴다.</p>
+      <p class="f21">물(액체)의 표준 상태는 $1\ \text{atm}$의 순수한 액체, 얼음의 표준 상태는 $1\ \text{atm}$의 순수한 얼음이다.</p>
+      <p class="f21"><mark>표준 반응 엔탈피 변화</mark> $\Delta H^\circ$: 표준 상태의 반응물이 반응하여 표준 상태의 생성물로 될 때의 엔탈피 변화 (위첨자 $^\circ$ = 표준 상태에서 일어난 변화)</p>
+      <p class="f21">온도는 표준 상태의 정의에 들어가지 않는다 → 어느 온도에서나 정할 수 있고, 보통 $25\ {}^\circ\text{C}$(정확히 $298.15\ \text{K}$) 값을 쓴다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card"><p class="f21">예: $\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$<br>$\Delta H^\circ=-890\ \text{kJ}$ ($25\ {}^\circ\text{C}$)</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 표준 상태는 $0\ {}^\circ\text{C}$, $1\ \text{atm}$(STP)과 같은 뜻일까?</p>
+        <p class="f21 step">→ 아니다. STP는 기체의 부피를 비교하는 조건이고, 표준 상태는 압력($1\ \text{bar}$)과 순수한 물질·$1\ \text{M}$ 용액으로 정한 기준이다. 표준 반응 엔탈피는 보통 $25\ {}^\circ\text{C}$ 값이다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02" data-tpl="check">
+  <h2><span class="tag q">확인 문제 02</span>열화학 반응식 다루기</h2>
+  <p class="f21">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$ $\Delta H=-286\ \text{kJ}$일 때, 다음 반응의 $\Delta H$를 구하여라.</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>$\ce{2H2(g) + O2(g) -> 2H2O(l)}$의 $\Delta H$는? <span class="step">→ <span class="ans">$-572\ \text{kJ}$</span> (계수 2배)</span></li>
+    <li>$\ce{H2O(l) -> H2(g) + 1/2O2(g)}$의 $\Delta H$는? <span class="step">→ <span class="ans">$+286\ \text{kJ}$</span> (역반응)</span></li>
+    <li>⑥의 −802 kJ을 이용하면 $\ce{CO2(g) + 2H2O(g) -> CH4(g) + 2O2(g)}$의 $\Delta H$는? <span class="step">→ <span class="ans">$+802\ \text{kJ}$</span></span></li>
+    <li>○, × : 「표준 상태는 $0\ {}^\circ\text{C}$, $1\ \text{atm}$인 상태이다.」 <span class="step">→ <span class="ans">×</span> $1\ \text{bar}$(보통 $1\ \text{atm}$)이고, 온도는 정의에 없다(보통 $25\ {}^\circ\text{C}$).</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 15. 탐구 활동 (고화-탐19) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 대체 연료와 수소 에너지">
+  <h2><span class="tag">탐구 활동</span>대체 연료와 수소 에너지 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>대체 연료 연구 현황과 수소 에너지의 이용 방안 및 활용 분야 — 모둠별로 대체 연료의 이용 방안과 수소 에너지의 활용 분야를 조사해서 발표하고, 각 대체 연료의 장단점을 900자 이내로 적어 보자.</div>
+  <p class="f21 mt8">촉망받는 대체 연료는 수소, 에탄올, 메테인, 바이오디젤이다. 연료의 자원이 태양 에너지로 해마다 다시 채워지므로 재생 가능하다. <b>Q</b> 각 연료의 장단점은?</p>
+  <table class="tight ac312-fuel mt8">
+    <tr><th>연료</th><th>얻는 방법</th><th>장점 (예시 결과)</th><th>단점 (예시 결과)</th></tr>
+    <tr><td>수소</td><td class="l">물의 전기 분해</td><td class="l step" data-g="f1">연소 생성물이 물뿐, 1 g당 연소열이 크다</td><td class="l step" data-g="f1">생산에 전기 에너지가 들고, 저장·운반이 어렵고 폭발 위험</td></tr>
+    <tr><td>에탄올</td><td class="l">생물 자원의 발효</td><td class="l step" data-g="f2">재생 가능, 휘발유에 섞어 쓴다</td><td class="l step" data-g="f2">원료가 식량 작물과 겹치고, 1 g당 연소열이 휘발유보다 작다</td></tr>
+    <tr><td>메테인</td><td class="l">하수·분뇨·폐기물의 미생물 분해</td><td class="l step" data-g="f3">폐기물 처리와 에너지 생산을 함께</td><td class="l step" data-g="f3">새어 나가면 강한 온실 기체, 연소하면 $\ce{CO2}$</td></tr>
+    <tr><td>바이오디젤</td><td class="l">식용유 같은 생물 원천</td><td class="l step" data-g="f4">재생 가능, 경유 엔진에 쓴다</td><td class="l step" data-g="f4">원료 확보·생산 비용, 낮은 온도에서 굳기 쉽다</td></tr>
+  </table>
+  <p class="f21 step mt8"><b>수소 활용 분야(예시)</b> 수소 연료 전지 자동차·버스, 발전용 연료 전지, 수소 환원 제철, 남는 전기를 수소로 저장 — 생산·저장·안전 기술 개발이 과제</p>
+</section>
+
+<!-- ════════ 16. 예제 Ⅲ-4 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="예제 Ⅲ-4">
+  <h2><span class="tag ex">예제 Ⅲ-4</span>흑연을 다이아몬드로 바꾸는 반응의 $\Delta H$</h2>
+  <p class="f21">열량계로 직접 재기 어렵거나 잴 수 없는 반응이 있다. 흑연 → 다이아몬드는 보통 조건에서 너무 느려 직접 잴 수 없다. <b>Q</b> 흑연과 다이아몬드의 연소열로 $\mathrm{C}_\text{흑연}(s)\ \ce{->}\ \mathrm{C}_\text{다이아몬드}(s)$의 $\Delta H$를 구하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><p class="f21">$\mathrm{C}_\text{흑연}(s)+\ce{O2(g) -> CO2(g)}$ $\ \Delta H=-394\ \text{kJ}$</p><p class="f21">$\mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g) -> CO2(g)}$ $\ \Delta H=-396\ \text{kJ}$</p></div>
+      <p class="f21 step">둘째 식의 역반응: $\ce{CO2(g)}\ \ce{->}\ \mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g)}$ $\Delta H=-(-396\ \text{kJ})$</p>
+      <p class="f21 step">첫째 식과 더하면 양쪽의 $\ce{CO2(g)}$와 $\ce{O2(g)}$가 지워진다.</p>
+      <div class="answer step">$\mathrm{C}_\text{흑연}(s)\ \ce{->}\ \mathrm{C}_\text{다이아몬드}(s)\quad\Delta H=+2\ \text{kJ}$</div>
+      <p class="small step">계산으로 $\Delta H$를 구할 수 있다는 것이 얼마나 유용한지 보여 주는 예이다.</p>
+    </div>
+    <div class="col">{{DIAM}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑧ 표준 생성 엔탈피 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="표준 생성 엔탈피">
+  <h2><span class="no">8</span>표준 생성 엔탈피</h2>
+  <p class="f22">어느 화합물의 <mark>표준 생성 엔탈피</mark> $\Delta H_\mathrm{f}^\circ$: 표준 상태에서 화합물을 이루는 원소로부터 그 화합물 1 mol을 생성할 때의 엔탈피 변화</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">열역학 함숫값은 농도와 압력에 따라 변하므로, 두 물질을 비교하려면 명확한 기준이 필요하다.</p>
+      <table class="tight ac312-c">
+        <tr><th colspan="2">표 Ⅲ-1 몇 가지 표준 상태의 정의</th></tr>
+        <tr><td rowspan="3">화합물</td><td class="l">기체: 압력이 $1\ \text{atm}$인 기체</td></tr>
+        <tr><td class="l">응축 상태: 순수한 액체 또는 고체</td></tr>
+        <tr><td class="l">용액: 농도가 $1\ \text{M}$인 용액</td></tr>
+        <tr><td rowspan="2">원소</td><td class="l">$1\ \text{atm}$, $25\ {}^\circ\text{C}$에서 그 원소가 존재하는 상태</td></tr>
+        <tr><td class="l">예: 산소 $\ce{O2(g)}$, 나트륨 $\ce{Na(s)}$, 수은 $\ce{Hg(l)}$, 탄소는 흑연</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 표준 상태의 원소 $\ce{O2(g)}$가 「생성」될 때의 엔탈피 변화는?</p>
+        <p class="f21 step">→ <span class="ans">0</span> — 이미 표준 상태의 원소이므로 변화가 필요 없다.</p></div>
+      <p class="f21 step">그래서 표준 상태 원소를 기준(0)으로 삼아 화합물마다 $\Delta H_\mathrm{f}^\circ$를 표로 만든다. 엔탈피의 절댓값은 몰라도 된다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑨ 생성 반응식과 표 Ⅲ-2 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="생성 반응식과 표 Ⅲ-2">
+  <h2><span class="no">9</span>생성 반응식 쓰기와 표준 생성 엔탈피 값</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="card"><p class="f21">$\ce{1/2N2(g) + O2(g) -> NO2(g)}$<br>$\Delta H_\mathrm{f}^\circ=+34\ \text{kJ/mol}$</p><p class="f21 mt8">$\mathrm{C}_\text{흑연}(s)+\ce{2H2(g) + 1/2O2(g) -> CH3OH(l)}$<br>$\Delta H_\mathrm{f}^\circ=-239\ \text{kJ/mol}$</p></div>
+      <div class="card"><p class="f21">① 반응물은 모두 <b>표준 상태의 원소</b> (탄소는 흑연, 수소·산소·질소는 이원자 분자 기체)<br>② 생성물은 표준 상태로 <b>1 mol</b> → 분수 계수가 나올 수 있다</p></div>
+    </div>
+    <div class="col stack">
+      <h3>표 Ⅲ-2 $25\ {}^\circ\text{C}$에서의 표준 생성 엔탈피</h3>
+      {{BARS}}
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03" data-tpl="check">
+  <h2><span class="tag q">확인 문제 03</span>표준 생성 반응식 고르기</h2>
+  <p class="f21">반응 엔탈피가 생성물의 표준 생성 엔탈피 $\Delta H_\mathrm{f}^\circ$와 같은 반응식이면 ○, 아니면 ×를 하여라.</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$ 는? <span class="step">→ <span class="ans">○</span> ($-286\ \text{kJ/mol}$)</span></li>
+    <li>$\ce{2H2(g) + O2(g) -> 2H2O(l)}$ 는? <span class="step">→ <span class="ans">×</span> 생성물이 2 mol</span></li>
+    <li>$\mathrm{C}_\text{다이아몬드}(s)+\ce{O2(g) -> CO2(g)}$ 는? <span class="step">→ <span class="ans">×</span> 탄소의 표준 상태는 흑연</span></li>
+    <li>$\ce{CO(g) + 1/2O2(g) -> CO2(g)}$ 는? <span class="step">→ <span class="ans">×</span> 반응물 $\ce{CO}$는 원소가 아니다</span></li>
+    <li>$\ce{1/2N2(g) + 3/2H2(g) -> NH3(g)}$ 는? <span class="step">→ <span class="ans">○</span> ($-46\ \text{kJ/mol}$)</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 20. ⑩ 그림 Ⅲ-13 경로 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="생성 엔탈피로 반응 엔탈피 구하기">
+  <h2><span class="no">10</span>생성 엔탈피로 반응 엔탈피 구하기</h2>
+  <p class="f21">엔탈피는 상태 함수 → 반응물에서 생성물로 가는 <b>경로를 골라</b> 각 단계의 $\Delta H$를 더한다. 1단계에서 반응물을 표준 상태의 원소로 분해하고, 2단계에서 원소로 생성물을 만든다(어느 반응에나 쓸 수 있다).</p>
+  {{PATH}}
+  <p class="f21 step" data-g="p1">(가)는 메테인 생성 반응 $\mathrm{C}_\text{흑연}(s)+\ce{2H2(g) -> CH4(g)}$ ($\Delta H_\mathrm{f}^\circ=-75\ \text{kJ/mol}$)의 역반응 → 부호만 반대</p>
+</section>
+
+<!-- ════════ 21. ⑪ 단계의 합과 일반식 ════════ -->
+<section class="slide" data-sec="02 · 생성 엔탈피" data-title="단계의 합과 일반식">
+  <h2><span class="no">11</span>단계의 합 → 반응 엔탈피의 일반식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="card"><p class="f21">$\begin{aligned}\Delta H^\circ_\text{반응}&amp;=\Delta H^\circ_{(\text{가})}+\Delta H^\circ_{(\text{나})}+\Delta H^\circ_{(\text{다})}+\Delta H^\circ_{(\text{라})}\\&amp;=-\Delta H_\mathrm{f}^\circ(\ce{CH4})+\Delta H_\mathrm{f}^\circ(\ce{CO2})+2\Delta H_\mathrm{f}^\circ(\ce{H2O(l)})\\&amp;=-(-75\ \text{kJ})+0+(-394\ \text{kJ})+(-572\ \text{kJ})\end{aligned}$</p></div>
+      <div class="answer step">$\Delta H^\circ_\text{반응}=-891\ \text{kJ}$</div>
+      <p class="f21 step">생성물의 생성 엔탈피 총합에서 반응물의 생성 엔탈피 총합을 뺀다(계수만큼 곱한다).</p>
+      <div class="card step"><p class="f22">$\Delta H^\circ_\text{반응}=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$</p><div class="small">$\sum$(시그마): 총합, $n_\mathrm{p}$·$n_\mathrm{r}$: 생성물·반응물의 몰수(계수)</div></div>
+      <p class="small">측정값 −890 kJ과의 1 kJ 차이는 표 값의 반올림 때문이다.</p>
+    </div>
+    <div class="col">{{PATHD}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 (고화-탐20) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 열을 발생하는 식물">
+  <h2><span class="tag">탐구 활동</span>열을 발생하는 식물 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>모둠별로 열을 발생하는 식물들을 조사하여 높은 열을 내는 목적이 무엇인지 토론하고 발표해 보자.</div>
+  <p class="f21 mt8">부두백합은 신진대사가 가장 활발할 때 꽃의 온도가 주위보다 약 $15\ {}^\circ\text{C}$ 높다. 이만큼 열을 내려면 신진대사율이 벌새와 맞먹어야 한다. <b>Q</b> 식물이 많은 열을 내는 목적은 무엇일까?</p>
+  <div class="stages mt8">
+    <div class="stage step"><h3>부두백합</h3><p class="f21">열로 악취 물질을 증발시켜 멀리 퍼뜨린다 → 썩은 냄새를 좋아하는 파리·딱정벌레를 불러 꽃가루받이</p></div>
+    <div class="stage step"><h3>앉은부채</h3><p class="f21">이른 봄, 기온이 영하일 때도 꽃 둘레를 따뜻하게 유지 → 주변 눈을 녹이고 꽃이 얼지 않으며 곤충이 모인다</p></div>
+    <div class="stage step"><h3>연꽃</h3><p class="f21">꽃의 온도를 며칠 동안 일정하게 높게 유지 → 밤에 꽃 속에 머무는 곤충에게 따뜻한 쉼터를 주어 꽃가루받이</p></div>
+  </div>
+  <p class="f21 step mt8"><b>화학 연결</b> 이 열은 세포 호흡(저장 녹말·지방의 산화)이라는 <b>발열 반응</b>에서 나온다 — 엔탈피가 큰 반응물이 엔탈피가 작은 $\ce{CO2}$와 $\ce{H2O}$로 바뀌며 열을 방출한다.</p>
+  <p class="small c-muted">예시 결과 — 모둠마다 식물 하나를 맡아 조사하고 발표한다.</p>
+</section>
+
+<!-- ════════ 23. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>표 Ⅲ-2로 테르밋 반응의 $\Delta H^\circ$ 구하기</h2>
+  <p class="f22">레일 용접에 쓰는 테르밋 반응의 표준 반응 엔탈피를 표 Ⅲ-2의 값으로 구하여라. <b>Q</b> $\Delta H^\circ$는?</p>
+  <div class="formula sm">$\ce{2Al(s) + Fe2O3(s) -> Al2O3(s) + 2Fe(s)}$<div class="unit">$\Delta H_\mathrm{f}^\circ$: $\ce{Al2O3(s)}$ $-1676\ \text{kJ/mol}$, $\ce{Fe2O3(s)}$ $-826\ \text{kJ/mol}$</div></div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">표준 상태의 원소 $\ce{Al(s)}$, $\ce{Fe(s)}$는 $\Delta H_\mathrm{f}^\circ=0$</p>
+      <p class="f21 step">$\Delta H^\circ=\left[\Delta H_\mathrm{f}^\circ(\ce{Al2O3})+2\times0\right]-\left[2\times0+\Delta H_\mathrm{f}^\circ(\ce{Fe2O3})\right]$<br>$\qquad=(-1676\ \text{kJ})-(-826\ \text{kJ})$</p>
+      <div class="answer step">$\Delta H^\circ=-850\ \text{kJ}$</div>
+      <p class="small step">많은 열을 방출해 생긴 철이 녹을 정도이다(01의 테르밋 반응).</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑫ 헤스 법칙 ════════ -->
+<section class="slide" data-sec="02 · 헤스 법칙" data-title="헤스 법칙">
+  <h2><span class="no">12</span>헤스 법칙</h2>
+  <p class="f21">엔탈피는 상태 함수 → 처음 상태에서 최종 상태로 가는 경로와 무관하다. 반응이 한 단계로 일어나든 여러 단계에 걸쳐 일어나든 엔탈피 변화량은 같다 = <mark>헤스 법칙</mark></p>
+  <div class="formula sm">$\begin{array}{rrcll}&amp;\ce{N2(g) + O2(g)}&amp;\ce{->}&amp;\ce{2NO(g)}&amp;\Delta H_2=+180\ \text{kJ}\\&amp;\ce{2NO(g) + O2(g)}&amp;\ce{->}&amp;\ce{2NO2(g)}&amp;\Delta H_3=-112\ \text{kJ}\\\hline\text{전체 반응:}&amp;\ce{N2(g) + 2O2(g)}&amp;\ce{->}&amp;\ce{2NO2(g)}&amp;\Delta H_2+\Delta H_3=+68\ \text{kJ}\end{array}$</div>
+  {{HESSAT}}
+  <p class="f21" data-q><b>Q</b> 한 단계로 쓴 $\ce{N2(g) + 2O2(g) -> 2NO2(g)}$의 $\Delta H_1$은?</p>
+  <div class="answer step">$\Delta H_1=\Delta H_2+\Delta H_3=+68\ \text{kJ}$</div>
+</section>
+
+<!-- ════════ 25. ⑬ 헤스 법칙의 원리 ════════ -->
+<section class="slide" data-sec="02 · 헤스 법칙" data-title="헤스 법칙의 원리">
+  <h2><span class="no">13</span>헤스 법칙의 원리</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{HESS2}}</div>
+    <div class="col stack">
+      <p class="f21">2단계 반응: $+180\ \text{kJ}$ 올라갔다가 $112\ \text{kJ}$ 내려온다. 1단계 반응: $+68\ \text{kJ}$</p>
+      <div class="card q"><p class="f21"><b>Q</b> 반응 엔탈피는 반응 경로에 따라 달라질까?</p>
+        <p class="f21 step">→ 아니다. 처음 상태와 나중 상태가 같으면 경로와 관계없이 $\Delta H$가 같다.</p></div>
+      <p class="f21 step"><b>쓰임</b> 직접 재기 어려운 반응의 $\Delta H$를 잴 수 있는 반응들의 합으로 구한다(예제 Ⅲ-4).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. 확인 문제 05 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 05">
+  <h2><span class="tag q">확인 문제 05</span>헤스 법칙으로 에탄올의 표준 생성 엔탈피 구하기</h2>
+  <p class="f21">다음 자료로 에탄올 $\ce{C2H5OH(l)}$의 표준 생성 엔탈피를 구하여라. <b>Q</b> $\Delta H_\mathrm{f}^\circ$는?</p>
+  <div class="formula sm">$\begin{aligned}&amp;(1)\ \mathrm{C}_\text{흑연}(s)+\ce{O2(g) -> CO2(g)}&amp;&amp;\Delta H^\circ=-393.5\ \text{kJ}\\&amp;(2)\ \ce{H2(g) + 1/2O2(g) -> H2O(l)}&amp;&amp;\Delta H^\circ=-285.8\ \text{kJ}\\&amp;(3)\ \ce{C2H5OH(l) + 3O2(g) -> 2CO2(g) + 3H2O(l)}&amp;&amp;\Delta H^\circ=-1366.8\ \text{kJ}\end{aligned}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21 step">목표: $2\mathrm{C}_\text{흑연}(s)+\ce{3H2(g) + 1/2O2(g) -> C2H5OH(l)}$</p>
+      <p class="f21 step">(1) × 2 + (2) × 3 + (3)의 역반응 → $\ce{CO2}$, $\ce{H2O}$, $\ce{O2}$가 지워진다.</p>
+      <p class="f21 step">$\Delta H_\mathrm{f}^\circ=2(-393.5)+3(-285.8)-(-1366.8)$</p>
+      <div class="answer step">$\Delta H_\mathrm{f}^\circ=-277.6\ \text{kJ/mol}$</div>
+    </div>
+    <div class="col stack">
+      <div class="card tip"><p class="f21"><b>헤스 법칙 계산 순서</b> ① 목표 반응식 쓰기 ② 목표 물질이 같은 쪽에 오게 뒤집기(부호 반대) ③ 계수가 맞게 곱하기($\Delta H$도) ④ 더하고 양쪽의 같은 물질 지우기</p></div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. ⑭ 결합 엔탈피 연결 ════════ -->
+<section class="slide" data-sec="02 · 헤스 법칙" data-title="결합 엔탈피로 반응 엔탈피 어림">
+  <h2><span class="tag alt">연결</span>결합 엔탈피로 반응 엔탈피 어림하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">Ⅰ-2의 <b>결합 엔탈피</b> $\Delta H_\mathrm{B}$: 기체 분자 1 mol의 결합을 끊는 엔탈피 변화(늘 양수). 헤스 법칙으로 경로를 「결합 끊기 → 결합 만들기」로 잡는다.</p>
+      <div class="card"><p class="f22">$\Delta H\approx\sum\Delta H_\mathrm{B}(\text{끊는 결합})-\sum\Delta H_\mathrm{B}(\text{생기는 결합})$</p></div>
+      <p class="f21"><b>Q</b> 표 Ⅰ-3 평균 결합 엔탈피($\ce{C-H}$ 413, $\ce{O=O}$ 498, $\ce{CO2}$의 $\ce{C=O}$ 799, $\ce{O-H}$ 467 kJ/mol)로 $\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}$의 $\Delta H$를 어림하면?</p>
+      <p class="f21 step">끊는 결합: $4(413)+2(498)=2648\ \text{kJ}$ · 생기는 결합: $2(799)+4(467)=3466\ \text{kJ}$</p>
+      <div class="answer step">$\Delta H\approx2648-3466=-818\ \text{kJ}$</div>
+      <p class="f21 step">측정값 $-802\ \text{kJ}$과 다른 까닭: 평균 결합 엔탈피는 여러 화합물에서 구한 평균값이고 기체 상태에만 쓸 수 있다 → <b>어림값</b></p>
+    </div>
+    <div class="col">{{BOND}}</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 탐구 활동 (고화-탐21) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 화학 스프레이와 발열 생명체">
+  <h2><span class="tag">탐구 활동</span>화학 스프레이 반응의 엔탈피와 발열 생명체 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">활동</span>모둠별로 제시된 반응의 반응 엔탈피를 구하는 방법을 토론하고, 발열 반응을 일으키는 생명체의 화학 반응을 조사하여 발표해 보자.</div>
+  <p class="f21 mt8">폭탄먼지 벌레는 위협을 받으면 효소로 아래 발열 반응을 일으켜 끓는 증기를 뿜고, 벤조퀴논 $\ce{C6H4O2}$로 적을 쫓는다.</p>
+  <p class="f22 mt4" style="text-align:center">$\ce{C6H4(OH)2(aq) + H2O2(aq) -> C6H4O2(aq) + 2H2O(l)}$</p>
+  <div class="row mt4">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card q"><p class="f21"><b>Q</b> 이 반응의 $\Delta H$는 어떻게 구할 수 있을까?</p>
+        <p class="f21 step">→ ① 헤스 법칙: $\Delta H$를 아는 반응들을 더해 이 반응식을 만든다 ② 표준 생성 엔탈피의 차로 계산한다</p></div>
+      <table class="tight ac312-fuel step">
+        <tr><th>더하는 반응(예시 자료, 상태 생략)</th><th>$\Delta H$ (kJ)</th></tr>
+        <tr><td class="l">$\ce{C6H4(OH)2 -> C6H4O2 + H2}$</td><td>+177.4</td></tr>
+        <tr><td class="l">$\ce{H2O2 -> H2 + O2}$</td><td>+191.2</td></tr>
+        <tr><td class="l">$\ce{2H2 + O2 -> 2H2O(g) -> 2H2O(l)}$</td><td>−483.6, −87.6</td></tr>
+        <tr><td class="l"><b>합 → 위 반응</b></td><td><span class="ans">−202.6</span></td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <div class="card step"><h3>발열 생명체(예시)</h3><p class="f21">· 모든 생물: 세포 호흡(포도당·지방의 산화)<br>· 갈색 지방 조직(갓난 포유류·겨울잠 동물): 지방을 산화해 열만 낸다<br>· 꿀벌: 비행 근육을 떨어 벌집을 데우고, 뭉쳐서 낸 열로 말벌을 물리친다</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 화학사 ════════ -->
+<section class="slide" data-sec="02 · 화학사" data-title="화학사: 헤스와 열화학의 시작">
+  <h2><span class="tag">화학사</span>헤스와 열화학의 시작</h2>
+  {{HIST}}
+  <div class="card mt8">
+    <p class="f21">1783년 라부아지에와 라플라스는 <b>얼음 열량계</b>를 고안해 비열을 측정하고 처음으로 반응열도 측정하였다. 반응열이 녹인 얼음에서 생긴 물의 양으로 열량을 재는 방식이라 오차가 컸다.</p>
+    <p class="f21 mt8">1840년 스위스의 헤스(1802–1850)는 반응열로 <b>물의 온도를 올리는 방법</b>으로 여러 반응의 반응열을 정밀하게 측정하고, 체계적으로 모은 결과에서 일정한 법칙을 발견하였다.</p>
+    <p class="f21 mt8">반응 전과 후 물질의 상태가 정해지면 반응 경로가 달라도 출입하는 열량의 총합은 일정하다 — <b>헤스 법칙</b>. 반응열이 상태 함수인 엔탈피의 변화이기 때문이다.</p>
+  </div>
+</section>
+
+<!-- ════════ 30. 실험실 설계 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 설계">
+  <h2><span class="tag">실험실</span>온도 센서로 중화열을 측정하여 헤스 법칙 확인하기</h2>
+  <div class="std"><span class="code">디지털 탐구</span>고체 $\ce{NaOH}$의 용해열, $\ce{NaOH}$ 수용액과 염산의 중화열, 고체 $\ce{NaOH}$와 염산의 반응열을 온도 센서로 측정하고, 세 값이 헤스 법칙을 만족하는지 확인한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21"><b>탐구 문제</b> 같은 생성물을 얻는 다른 경로의 반응열은 같을까? <b>Q</b> 가설은?</p>
+      <p class="f21 step">→ 엔탈피는 상태 함수이므로 직접 반응의 반응열 = 용해열 + 중화열일 것이다.</p>
+      <table class="tight ac312-var">
+        <tr><th>조작 변인</th><td class="l">반응 경로 (① 용해 ② 중화 ③ 직접 반응)</td></tr>
+        <tr><th>종속 변인</th><td class="l">온도 변화, 반응 엔탈피</td></tr>
+        <tr><th>통제 변인</th><td class="l">$\ce{NaOH}$의 양(0.050 mol), 용액의 부피(100 mL), 처음 온도, 열량계의 종류</td></tr>
+      </table>
+      <div class="card tip"><p class="f21"><b>안전</b> 고체 $\ce{NaOH}$와 염산은 피부·눈을 손상시킨다 → 보안경·장갑. $\ce{NaOH}$는 수분을 흡수하므로 빠르게 재어 바로 넣는다. 쓴 용액은 중화해 폐수통에.</p></div>
+    </div>
+    <div class="col stack">
+      {{LABSET}}
+      <p class="small">준비물: 온도 센서와 데이터 수집 장치, 스타이로폼 컵 2개(뚜껑), 눈금실린더, 전자저울, 고체 $\ce{NaOH}$, $1.0\ \text{M}$ $\ce{HCl}$, $1.0\ \text{M}$ $\ce{NaOH}$, 증류수</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 실험 과정과 보정 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 과정과 최고 온도 보정">
+  <h2><span class="tag">실험실</span>실험 과정과 최고 온도 보정</h2>
+  <div class="stages">
+    <div class="stage"><h3>① 용해 $\Delta H_1$</h3><p class="f19">증류수 100 mL + 고체 $\ce{NaOH}$ 2.00 g</p><p class="f19">$\ce{NaOH(s) -> Na+(aq) + OH-(aq)}$</p></div>
+    <div class="stage"><h3>② 중화 $\Delta H_2$</h3><p class="f19">$1.0\ \text{M}$ $\ce{NaOH}$ 50 mL + $1.0\ \text{M}$ $\ce{HCl}$ 50 mL</p><p class="f19">$\ce{OH-(aq) + H+(aq) -> H2O(l)}$</p></div>
+    <div class="stage"><h3>③ 직접 반응 $\Delta H_3$</h3><p class="f19">$0.50\ \text{M}$ $\ce{HCl}$ 100 mL + 고체 $\ce{NaOH}$ 2.00 g</p><p class="f19">$\ce{NaOH(s) + H+(aq) -> Na+(aq) + H2O(l)}$</p></div>
+  </div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="formula sm">$q=mc\Delta T,\quad\Delta H=-\dfrac{q}{n}$<div class="unit">밀도 $1.00\ \text{g/mL}$, 비열 $4.18\ \text{J/(g}\cdot{}^\circ\text{C)}$, $n=0.0500\ \text{mol}$</div></div>
+      <div class="card q"><p class="f21"><b>Q</b> 그래프의 냉각 구간을 혼합 시점까지 연장하여 최고 온도를 보정하는 까닭은?</p>
+        <p class="f21 step" data-g="c1">→ 혼합 직후에도 열이 주위로 빠져나가 온도가 서서히 내려가므로, 연장한 직선으로 열 손실이 없었을 때의 최고 온도를 추정한다.</p></div>
+    </div>
+    <div class="col">{{CORR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 32. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 중화열과 헤스 법칙">
+  <h2><span class="tag">실험실</span>온도 센서 실험실 — 세 경로의 반응열 비교</h2>
+  <div class="lab" data-lab="ac312hess">
+    <div class="lab-ctl" style="flex-basis:420px">
+      <div class="ac312-seg"><span class="small">실험</span><button class="btn on" data-e="a">① 용해</button><button class="btn" data-e="b">② 중화</button><button class="btn" data-e="c">③ 직접</button></div>
+      <div class="ac312-seg"><span class="small">뚜껑</span><button class="btn on" data-l="on">덮음</button><button class="btn" data-l="off">안 덮음</button></div>
+      <div class="ac312-seg"><span class="small">최고 온도</span><button class="btn on" data-c="on">보정</button><button class="btn" data-c="off">보정 안 함</button></div>
+      <div class="ctl"><div class="lbl"><span>처음 온도</span><output data-o="t0"></output></div>
+        <input type="range" min="18" max="26" step="0.5" value="22" data-i="t0" aria-label="처음 온도"></div>
+      <table class="readout ac312-read">
+        <tr><th>처음 → 최고</th><td><output data-o="tt"></output></td></tr>
+        <tr><th>$\Delta T$</th><td><output data-o="dt"></output></td></tr>
+        <tr><th>열 $q$</th><td><output data-o="q"></output></td></tr>
+        <tr class="hl"><th>$\Delta H$</th><td><output data-o="h"></output></td></tr>
+      </table>
+      <div class="ac312-seg mt8"><button class="btn ac312-act" data-act="run">측정 시작</button><button class="btn" data-act="reset">초기화</button></div>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="ac312-seg"><span class="small">보기</span><button class="btn on" data-v="tt">온도–시간</button><button class="btn" data-v="cmp">ΔH 비교</button></div>
+      <div class="lab-fig" style="width:640px;height:232px">
+        <svg viewBox="0 0 640 232" width="640" height="232" aria-label="스타이로폼 컵 열량계와 온도 센서의 온도–시간 그래프, 또는 경로 1과 경로 2의 반응 엔탈피 비교 막대"></svg>
+        <div class="ov" data-ov="ya" style="transform:none"></div>
+        <div class="ov" data-ov="xa" style="transform:none"></div>
+      </div>
+      <table class="tight ac312-log mt8"><thead><tr><th>회</th><th>실험</th><th>뚜껑</th><th>보정</th><th>처음 °C</th><th>최고 °C</th><th>ΔT °C</th><th>q (J)</th><th>ΔH kJ/mol</th></tr></thead><tbody data-o="log"></tbody></table>
+      <output class="kind ac312-msg" data-o="msg"></output>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 결과 정리 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 결과 정리">
+  <h2><span class="tag">실험실</span>결과 정리와 해석 (예시)</h2>
+  <table class="tight ac312-c">
+    <tr><th>실험</th><th>처음 온도 (°C)</th><th>보정한 최고 온도 (°C)</th><th>보정한 $\Delta T$ (°C)</th><th>$q$ (J)</th><th>$\Delta H$ (kJ/mol)</th></tr>
+    <tr><td class="l">① 용해 (102 g)</td><td>22.00</td><td>27.11</td><td>5.11</td><td>2180</td><td><span class="blank"><span class="step" data-g="r1">−43.6</span></span></td></tr>
+    <tr><td class="l">② 중화 (100 g)</td><td>22.00</td><td>28.54</td><td>6.54</td><td>2734</td><td><span class="blank"><span class="step" data-g="r1">−54.7</span></span></td></tr>
+    <tr><td class="l">③ 직접 반응 (102 g)</td><td>22.00</td><td>33.53</td><td>11.53</td><td>4915</td><td><span class="blank"><span class="step" data-g="r1">−98.3</span></span></td></tr>
+  </table>
+  <p class="small mt4">실험실 기본 조건(뚜껑 덮음·보정)의 예시 값. 수업에서 측정한 값으로 바꾸어 채운다.</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>세 반응의 엔탈피 사이에 어떤 관계가 성립할까? <span class="step">→ <span class="ans">$\Delta H_1+\Delta H_2=-43.6+(-54.7)=-98.3\ \text{kJ/mol}=\Delta H_3$</span> — 반응 엔탈피는 경로와 관계없이 처음과 나중 상태로 정해진다(헤스 법칙).</span></li>
+    <li>측정한 중화 엔탈피가 문헌값($-55.8\ \text{kJ/mol}$)보다 작게 나온 까닭은? <span class="step">→ 열량계 밖으로 열이 빠져나가거나 컵이 열을 흡수해 측정한 온도 변화가 실제보다 작기 때문이다.</span></li>
+    <li>뚜껑을 덮지 않거나 보정하지 않으면? <span class="step">→ 열 손실로 세 값의 크기가 모두 작아지고, 보정하지 않으면 온도가 천천히 오르는 용해에서 손실이 커서 두 경로가 어긋난다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 34. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 1" data-tpl="check">
+  <h2><span class="tag q">연습 문제 1</span>열린계, 닫힌계, 고립계</h2>
+  <p class="f22">다음은 열린계, 닫힌계, 고립계 중 어느 것에 해당하는가?</p>
+  <ol class="ac312-ox f21 mt8">
+    <li>외부와 열 출입이 차단된 보온병 안의 커피는? <span class="step">→ <span class="ans">고립계</span> 물질·에너지 출입 없음</span></li>
+    <li>냉각 코일 안의 냉매는? <span class="step">→ <span class="ans">닫힌계</span> 냉매는 갇혀 있고 열만 출입</span></li>
+    <li>벤젠이 연소되는 통열량계는? <span class="step">→ <span class="ans">고립계</span> 단열된 열량계 전체는 물질·에너지 출입이 없다고 본다</span></li>
+    <li>자동차 엔진 안에서 타고 있는 휘발유는? <span class="step">→ <span class="ans">열린계</span> 연료·공기·배기가스와 열이 드나든다</span></li>
+    <li>온도계 안의 수은은? <span class="step">→ <span class="ans">닫힌계</span> 수은은 갇혀 있고 열만 출입</span></li>
+    <li>살아 있는 식물은? <span class="step">→ <span class="ans">열린계</span> 물·기체·양분과 에너지가 드나든다</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 35. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>수소와 메테인의 1 g당 연소열</h2>
+  <p class="f21">열용량이 $11.3\ \text{kJ/}{}^\circ\text{C}$인 통열량계에서 충분한 산소로 메테인 $1.50\ \text{g}$을 연소시키면 온도가 $10.3\ {}^\circ\text{C}$, 수소 $1.150\ \text{g}$을 연소시키면 $14.3\ {}^\circ\text{C}$ 올라갔다. <b>Q</b> 수소와 메테인의 1 g당 연소열을 구하여 비교하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">메테인: $q=C_\text{열량계}\Delta T=(11.3\ \text{kJ/}{}^\circ\text{C})(10.3\ {}^\circ\text{C})=116.4\ \text{kJ}$</p>
+      <div class="answer step">$\dfrac{116.4\ \text{kJ}}{1.50\ \text{g}}=77.6\approx78\ \text{kJ/g}$</div>
+      <p class="f21 step">수소: $q=(11.3\ \text{kJ/}{}^\circ\text{C})(14.3\ {}^\circ\text{C})=161.6\ \text{kJ}$</p>
+      <div class="answer step">$\dfrac{161.6\ \text{kJ}}{1.150\ \text{g}}=140.5\approx141\ \text{kJ/g}$</div>
+      <p class="f21 step">수소의 1 g당 연소열이 메테인의 약 <b>1.8배</b> → 같은 질량이면 수소가 더 많은 열을 내는 유용한 연료이다.</p>
+    </div>
+    <div class="col stack">{{BOMB3}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 36. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>등온 가역 압축의 $w$, $q$, $\Delta U$ <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">$2.00\ \text{atm}$, $300\ \text{K}$의 이산화 탄소 $2.00\ \text{mol}$을 처음 부피의 반이 되도록 등온 가역 압축하였다. $\ce{CO2}$를 이상 기체라고 가정하여 <b>Q</b> $w$, $q$, $\Delta U$를 계산하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21 step">이상 기체의 등온 과정 → 온도가 일정하므로 $\Delta U=0$</p>
+      <p class="f21 step">$w=-nRT\ln\dfrac{V_\text{나중}}{V_\text{처음}}=-(2.00\ \text{mol})(8.3145\ \text{J/(K}\cdot\text{mol)})(300\ \text{K})\ln\dfrac12$</p>
+      <div class="answer step">$w=+3.46\ \text{kJ}$ (압축 → 계가 일을 받음)</div>
+      <div class="answer step">$q=-w=-3.46\ \text{kJ}$, $\Delta U=0$</div>
+      <p class="small step">$2.00\ \text{atm}$은 처음 부피 $V=\dfrac{nRT}{P}=24.6\ \text{L}$를 정하는 조건이다. 계산에는 부피의 비만 필요하다.</p>
+    </div>
+    <div class="col stack">{{PV3}}<div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 37. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>오염화 인의 표준 생성 엔탈피</h2>
+  <p class="f21">다음 열화학 반응식과 $\ce{PCl3(l)}$의 표준 생성 엔탈피 $\Delta H_\mathrm{f}^\circ=-319.7\ \text{kJ/mol}$을 이용하여 <b>Q</b> $\ce{PCl5(s)}$의 표준 생성 엔탈피를 구하여라.</p>
+  <div class="formula sm">$\ce{PCl3(l) + Cl2(g) -> PCl5(s)}\qquad\Delta H^\circ=-124\ \text{kJ}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21 step">$\Delta H^\circ=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$, $\ce{Cl2(g)}$는 원소 → 0</p>
+      <p class="f21 step">$-124\ \text{kJ}=\Delta H_\mathrm{f}^\circ(\ce{PCl5(s)})-(-319.7\ \text{kJ})$</p>
+      <div class="answer step" data-g="pc">$\Delta H_\mathrm{f}^\circ(\ce{PCl5(s)})=-443.7\ \text{kJ/mol}$</div>
+      <div class="board"></div>
+    </div>
+    <div class="col">{{PCL}}</div>
+  </div>
+</section>
+
+<!-- ════════ 38. 연습 문제 5 ════════ -->
+<section class="slide" data-sec="02 · 연습 문제" data-title="연습 문제 5">
+  <h2><span class="tag q">연습 문제 5</span>다이보레인 합성의 $\Delta H$</h2>
+  <p class="f21">로켓 추진체 연료로 고려되는 다이보레인 $\ce{B2H6}$을 합성할 때의 $\Delta H$를 자료 (가)–(라)로 계산하여라. <b>Q</b> $\ce{2B(s) + 3H2(g) -> B2H6(g)}$의 $\Delta H$는?</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 590px">
+      <table class="tight ac312-c">
+        <tr><th>자료</th><th>화학 반응</th><th>$\Delta H$ (kJ)</th></tr>
+        <tr><td>(가)</td><td class="l">$\ce{2B(s) + 3/2O2(g) -> B2O3(s)}$</td><td>−1273</td></tr>
+        <tr><td>(나)</td><td class="l">$\ce{B2H6(g) + 3O2(g) -> B2O3(s) + 3H2O(g)}$</td><td>−2035</td></tr>
+        <tr><td>(다)</td><td class="l">$\ce{H2(g) + 1/2O2(g) -> H2O(l)}$</td><td>−286</td></tr>
+        <tr><td>(라)</td><td class="l">$\ce{H2O(l) -> H2O(g)}$</td><td>+44</td></tr>
+      </table>
+      <div class="board"></div>
+    </div>
+    <div class="col stack">
+      <p class="f21 step">(가) + (나)의 역반응 + (다) × 3 + (라) × 3</p>
+      <p class="f21 step">지워지는 물질: $\ce{B2O3(s)}$, $\ce{3O2(g)}$, $\ce{3H2O(l)}$, $\ce{3H2O(g)}$ → 목표 반응식</p>
+      <p class="f21 step">$\Delta H=(-1273)+(+2035)+3(-286)+3(+44)$</p>
+      <div class="answer step">$\Delta H=+36\ \text{kJ}$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 엔탈피 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 화학 반응의 반응 엔탈피 — 02 엔탈피</h2>
+  <div class="ac312-map">
+    <div class="ac312-node ac312-dim">01 화학 반응과 에너지<br>$\Delta U=q+w$<br>부피 일정: $\Delta U=q_V$</div>
+    <div class="ac312-arr">→</div>
+    <div class="ac312-node ac312-main" data-q><b>02 엔탈피</b><br>❶ 정의: $H\equiv$ <span class="blank"><span class="step">$U+PV$</span></span>, 압력 일정: $\Delta H=$ <span class="blank"><span class="step">$q_P$</span></span><br>❷ 발열 반응 $\Delta H$ <span class="blank"><span class="step">$&lt;0$</span></span>, 계수 2배 → $\Delta H$ 2배, 역반응 → <span class="blank"><span class="step">부호 반대</span></span><br>❸ 표준 상태: <span class="blank"><span class="step">$1\ \text{bar}$(보통 $1\ \text{atm}$)</span></span>, 표준 반응 엔탈피 $\Delta H^\circ$<br>❹ 표준 상태 원소의 $\Delta H_\mathrm{f}^\circ=$ <span class="blank"><span class="step">0</span></span><br>❺ $\Delta H^\circ=\sum n_\mathrm{p}\Delta H_\mathrm{f}^\circ(\text{생성물})-$ <span class="blank"><span class="step">$\sum n_\mathrm{r}\Delta H_\mathrm{f}^\circ(\text{반응물})$</span></span><br>❻ 경로와 관계없이 $\Delta H$의 합은 같다: <span class="blank"><span class="step">헤스 법칙</span></span></div>
+    <div class="ac312-arr">→</div>
+    <div class="ac312-node ac312-dim">Ⅲ-2 화학 반응의 자발성<br>엔트로피 $S$<br>깁스 자유 에너지<br><span class="small">(다음 중단원)</span></div>
+  </div>
+</section>
+
+<!-- ════════ 40. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 엔탈피 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 엔탈피의 정의와 $\Delta H=q_P$, 표준 상태와 표준 생성 엔탈피, 헤스 법칙을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 표준 생성 엔탈피와 헤스 법칙으로 반응 엔탈피를 계산하고, 온도 센서 자료로 헤스 법칙을 확인했다.</button>
+    <button class="chk">[가치·태도] 대체 연료와 생명체의 발열 반응을 조사하며 에너지 문제에 관심을 가졌다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 표 Ⅲ-2로 $\ce{4NH3(g) + 7O2(g) -> 4NO2(g) + 6H2O(l)}$의 $\Delta H^\circ$는? <span class="step">→ <span class="ans">$4(+34)+6(-286)-4(-46)=-1396\ \text{kJ}$</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 일정 압력에서 열 $100\ \text{kJ}$을 방출한 반응의 $\Delta H$는? <span class="step">→ <span class="ans">$-100\ \text{kJ}$</span> ($\Delta H=q_P$)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 발열 반응은 모두 저절로 일어날까? 얼음은 열을 흡수하면서도 상온에서 저절로 녹는다. 반응의 자발성을 정하는 엔트로피를 알아보자.</div>
+</section>

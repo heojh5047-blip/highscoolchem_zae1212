@@ -1,0 +1,54 @@
+/* 1-1-2 몰과 물질의 양 — 덱 전용 (모두 .cm112- 접두어) */
+.cover h1.cm112-h1{font-size:110px}
+
+/* 목록·문항 */
+ol.cm112-ol{margin:4px 0 0 26px}
+ol.cm112-ol li{font-size:22px;line-height:1.6;margin-top:10px}
+ol.cm112-ox li{margin-top:26px}
+ol.cm112-ox li:first-child{margin-top:0}
+ol.cm112-ox .blank{min-width:140px}
+.choices.cm112-c1{flex-direction:column;gap:8px}
+.choices.cm112-ch{font-size:20px}
+ul.cm112-ul{margin:6px 0 0 20px}
+ul.cm112-ul li{font-size:20px;line-height:1.5;margin-top:4px}
+.answer.cm112-left{text-align:left}
+p.cm112-a{color:var(--ink);margin-top:4px}
+.card.cm112-opt{padding:12px 16px}
+
+/* 표 */
+table.cm112-mm{width:100%}
+table.cm112-mm th,table.cm112-mm td{text-align:center;font-size:21px;padding:4px 10px}
+table.cm112-var{width:100%}
+table.cm112-var th{width:130px}
+table.cm112-res{width:100%}
+table.cm112-res td,table.cm112-res th{text-align:center}
+table.cm112-res td:first-child{text-align:left}
+table.cm112-res .blank{min-width:110px}
+table.cm112-rx{width:100%}
+table.cm112-rx th,table.cm112-rx td{text-align:center;font-size:20px}
+.row.cm112-mrow{align-items:center;margin-top:4px}
+
+/* 실험실 */
+.cm112-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.cm112-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.cm112-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm112-seg .btn.cm112-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.readout.cm112-read td{width:auto;min-width:150px;font-size:22px}
+output.cm112-msg{font-size:19px;font-weight:600;line-height:1.45;margin-top:6px}
+table.cm112-log{width:100%}
+table.cm112-log th,table.cm112-log td{font-size:19px;padding:3px 6px;text-align:center}
+
+/* 개념 지도 */
+.cm112-map{display:flex;align-items:center;gap:12px}
+.cm112-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px;font-size:21px;line-height:1.5}
+.cm112-node.cm112-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm112-node.cm112-done{flex:0 0 170px}
+.cm112-node.cm112-dim{border-style:dashed;color:var(--muted)}
+.cm112-side{flex:0 0 210px;display:flex;flex-direction:column;gap:10px}
+.cm112-arr{font-size:28px;color:var(--muted)}
+.cm112-fig{display:flex;justify-content:center}
+
+/* (추가) 아보가드로수 정의 카드, 몰질량 장 아래 추가 상식 */
+.cm112-avo{padding:10px 16px}
+.cm112-avo h3{font-size:21px;margin-bottom:4px}
+.note.cm112-fw{line-height:1.5}

@@ -1,0 +1,581 @@
+<!-- 고급화학 4-1-2 상평형과 용해도 평형 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 1. 화학 평형 › 02 · 03</div>
+    <h1 class="ac412-h1">상평형과<br>용해도 평형</h1>
+    <p class="sub">상전이와 증기압, 상평형 그림의 삼중점과 임계점, 용해도곱 상수, 침전과 공통 이온, 온도·압력에 따른 용해도와 헨리 법칙</p>
+    <p class="meta">고등학교 고급 화학 200–208쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 다시 보기: 그림 Ⅳ-7 ════════ -->
+<section class="slide" data-sec="01 · 평형 상수의 온도 의존성" data-title="다시 보기: 흡열·발열과 ln K">
+  <h2><span class="tag alt">다시 보기</span>흡열 반응과 발열 반응의 $\ln K$–$\dfrac{1}{T}$ 그래프</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{LNK}}</div>
+    <div class="col stack">
+      <div class="formula sm">$\ln K=-\dfrac{\Delta H^\circ}{R}\cdot\dfrac{1}{T}+\dfrac{\Delta S^\circ}{R}$<div class="unit">기울기 $=-\dfrac{\Delta H^\circ}{R}$</div></div>
+      <p class="f21" data-q><b>Q</b> 발열 반응($\Delta H^\circ&lt;0$)의 직선은 기울기가 양수일까, 음수일까?</p>
+      <p class="f21 step">→ <span class="ans">양수</span> — 온도가 높아지면($\dfrac{1}{T}$ 감소) $\ln K$가 작아진다. 발열 반응은 온도가 높을수록 $K$가 <b>감소</b>한다.</p>
+      <p class="f21 step">흡열 반응($\Delta H^\circ&gt;0$)은 기울기가 음수 → 온도가 높을수록 $K$가 <b>증가</b>한다.</p>
+      <p class="small step">오늘은 이 생각을 <b>물리 변화의 평형</b>(증발·용해)에 적용한다. 증발은 흡열이므로 온도가 높을수록 증기 압력이 커진다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 상평형 · 03 용해도 평형" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-03]</span>상평형과 용해 평형에 영향을 미치는 요인을 탐색하고, 평형 상수를 활용하여 평형 상태를 표현할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>상평형을 동적 평형으로 설명하고, 물과 이산화 탄소의 상평형 그림에서 삼중점·임계점·상 경계를 해석할 수 있다.</li>
+    <li>난용성 염의 용해도 평형을 용해도곱 상수 $K_\mathrm{sp}$로 나타내고, 몰 용해도와 $K_\mathrm{sp}$를 서로 구할 수 있다.</li>
+    <li>온도와 압력에 따른 고체·기체의 용해도 변화를 깁스 자유 에너지와 헨리 법칙으로 설명할 수 있다.</li>
+  </ol>
+  <h3 class="mt16">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">상전이와 증기압</div><div class="farr">→</div>
+    <div class="fnode">상평형 그림</div><div class="farr">→</div>
+    <div class="fnode">용해도곱 상수 $K_\mathrm{sp}$</div><div class="farr">→</div>
+    <div class="fnode">침전·공통 이온</div><div class="farr">→</div>
+    <div class="fnode">온도·압력과 용해도</div><div class="farr">→</div>
+    <div class="fnode hl">잠수병 조사</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 상평형 · 도입" data-title="생각 열기: 미지근한 물이 끓는다">
+  <h2><span class="tag">생각 열기</span>물은 꼭 100 °C에서 끓을까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 500px">{{SYRINGE}}</div>
+    <div class="col stack">
+      <p class="f22">주사기에 40 °C쯤의 미지근한 물을 조금 넣고 끝을 막은 뒤 피스톤을 세게 당겼더니, 물속에서 거품이 생기며 끓었다.</p>
+      <div class="card q"><p class="f22"><b>Q</b> 100 °C보다 훨씬 낮은 온도에서 물이 끓은 까닭은 무엇일까?</p></div>
+      <p class="f21 step">→ 피스톤을 당기면 물 위의 압력이 <b>물의 증기 압력보다 낮아진다</b>. 끓는점은 증기 압력이 외부 압력과 같아지는 온도이므로 외부 압력에 따라 달라진다.</p>
+      <div class="answer step">끓는점은 물질마다 정해진 값이 아니라 압력에 따라 변한다</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 연결 ════════ -->
+<section class="slide" data-sec="02 상평형 · 도입" data-title="연결: 화학 평형에서 물리 변화의 평형으로">
+  <h2><span class="tag alt">연결</span>화학 평형의 생각을 물리 변화에 적용하기</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>Ⅱ 단원에서</h3><p>증기압과 기준 끓는점<br>클라우지우스–클라페이롱 식<br>물의 융해 곡선은 음의 기울기</p></div>
+    <div class="stage"><h3>01 화학 평형에서</h3><p>동적 평형, $\Delta G=0$<br>$K$와 $Q$, 고체는 $K$ 식에 넣지 않음<br>르샤틀리에 원리</p></div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 증발·용해 같은 물리 변화의 평형에서는 무엇을 새로 배울까?</p>
+  <p class="f22 step">→ <span class="ans">상평형 그림</span>(삼중점·임계점), <span class="ans">용해도곱 상수 $K_\mathrm{sp}$</span>, <span class="ans">헨리 법칙 $s=k_\mathrm{H}P$</span></p>
+  <p class="f21 step mt8">→ 평형 상수 하나로 「얼마나 녹는가」를 계산하고, 르샤틀리에 원리로 「무엇이 녹는 양을 바꾸는가」를 설명한다.</p>
+</section>
+
+<!-- ════════ 6. ① 상전이와 상평형 ════════ -->
+<section class="slide" data-sec="02 · 상평형" data-title="상전이와 상평형">
+  <h2><span class="no">1</span>상전이와 상평형</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f22"><mark>상전이</mark>: 한 상태에서 다른 상태로 물질의 상태가 변하는 현상</p>
+      <p class="f22"><mark>상평형</mark>: 두 상태 사이의 전이 속도가 같아 어느 방향으로도 알짜 변화가 없는 동적 평형</p>
+      <p class="f21" data-q><b>Q</b> 상평형에서 두 상태의 깁스 자유 에너지는 어떤 관계일까?</p>
+      <p class="f21 step">→ 두 상태의 깁스 자유 에너지가 <span class="ans">같다</span> → $\Delta G=0$이므로 어느 방향으로나 변화하는 경향이 없다.</p>
+      <p class="f21 step">온도·압력이 정해지면 평형의 증기 압력도 정해진다 — <b>상평형 그림</b>은 온도와 압력에 따라 가장 안정한 상태를 나타낸다.</p>
+    </div>
+    <div class="col">{{STATES}}</div>
+  </div>
+</section>
+
+<!-- ════════ 7. ② 증기압 (그림 Ⅳ-8) ════════ -->
+<section class="slide" data-sec="02 · 증기압" data-title="증발과 응축의 동적 평형">
+  <h2><span class="no">2</span>증기압 — 증발과 응축의 동적 평형</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{EVAP}}</div>
+    <div class="col stack">
+      <p class="f21">닫힌 용기에 넣은 액체는 처음에 줄다가 결국 양이 일정해진다.</p>
+      <p class="f21" data-q><b>Q</b> 증발 속도와 응축 속도는 시간에 따라 어떻게 변할까?</p>
+      <p class="f21 step">→ 증발 속도는 <b class="c-field">일정</b>하고, 응축 속도는 증기 분자가 늘면서 <b class="c-bfield">점점 커져</b> 증발 속도와 같아진다.</p>
+      <div class="formula sm step">$\ce{H2O(l) &lt;=&gt; H2O(g)}$</div>
+      <p class="f21 step"><mark>증기 압력</mark>: 증기와 액체(또는 고체)가 동적 평형일 때 증기가 나타내는 압력 — 일정한 온도에서 액체의 양과 관계없이 일정하다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 클라우지우스–클라페이롱 식 ════════ -->
+<section class="slide" data-sec="02 · 증기압" data-title="클라우지우스–클라페이롱 식">
+  <h2><span class="no">3</span>온도와 증기 압력 — 클라우지우스–클라페이롱 식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <div class="formula">$\ln\dfrac{P_2}{P_1}=\dfrac{\Delta H_\text{증발}^\circ}{R}\left(\dfrac{1}{T_1}-\dfrac{1}{T_2}\right)$<div class="unit">온도 $T_1$, $T_2$에서의 증기 압력 $P_1$, $P_2$</div></div>
+      <p class="f21" data-q><b>Q</b> 01의 반트호프 식과 비교하면 무엇이 같을까?</p>
+      <p class="f21 step">→ 증발 평형 $\ce{H2O(l) &lt;=&gt; H2O(g)}$의 평형 상수가 <span class="ans">$K_\mathrm{P}=P_{\ce{H2O}}$</span>(증기 압력)이므로, 반트호프 식의 $\Delta H^\circ$ 자리에 <span class="ans">$\Delta H_\text{증발}^\circ$</span>이 들어간 꼴이다.</p>
+      <p class="f21 step">온도가 높아지면 분자 사이의 인력을 이길 만큼 에너지가 큰 분자의 비율이 커져 증기 압력이 증가한다(증발은 흡열).</p>
+    </div>
+    <div class="col">{{CC}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>높은 산에서 물이 끓는 온도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">물은 1.00 atm에서 100 °C에 끓는다. 대기압이 0.70 atm인 높은 산(해발 약 3000 m)에서 물은 몇 °C에서 끓을까? (단, $\Delta H_\text{증발}^\circ=40.7\ \text{kJ/mol}$으로 일정하다.)</p>
+      <p class="f21 step">끓는점에서 증기 압력 = 외부 압력: $P_1=1.00\ \text{atm}$, $T_1=373\ \text{K}$, $P_2=0.70\ \text{atm}$</p>
+      <p class="f21 step">$\dfrac{1}{T_2}=\dfrac{1}{373.15}-\dfrac{8.314}{40700}\ln 0.70=2.680\times10^{-3}+7.29\times10^{-5}=2.753\times10^{-3}\ \text{K}^{-1}$</p>
+      <div class="answer step">$T_2=363\ \text{K}$ → 약 $90\ {}^\circ\text{C}$</div>
+      <p class="f21 step">그래서 높은 산에서는 밥이 설익기 쉽다. 반대로 압력솥은 압력을 높여 끓는점을 100 °C보다 높인다.</p>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ④ 압력과 녹는점 ════════ -->
+<section class="slide" data-sec="02 · 상평형 그림" data-title="압력과 녹는점">
+  <h2><span class="no">4</span>압력이 커지면 녹는점은? — 대부분의 물질과 물</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">액체의 <b>기준 어는점</b>은 1 atm에서 어는 온도이고, 고체의 녹는 온도와 같다.</p>
+      <div class="card"><h3>대부분의 물질: 고체의 밀도 &gt; 액체의 밀도</h3><p class="f21">압력을 가하면 분자가 더 밀집 → 고체에서 분자가 떨어져 나가려면 더 높은 온도가 필요 → <b>녹는점 상승</b>. 다만 효과는 작다(철은 1 atm에서 1800 K, 압력을 천 배로 올려도 몇 도 위에서 녹는다).</p></div>
+      <div class="card"><h3>물: 얼음의 밀도 &lt; 물의 밀도</h3><p class="f21" data-q>얼음은 수소 결합으로 열린 구조라 부피가 크다. 압력을 가하면 녹는점은 어떻게 될까?</p>
+        <p class="f21 step">→ 더 밀집된 액체가 유리해져 <span class="ans">녹는점이 내려간다</span>.</p></div>
+    </div>
+    <div class="col">{{SLOPE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑤ 물의 상평형 그림 (그림 Ⅳ-9) ════════ -->
+<section class="slide" data-sec="02 · 상평형 그림" data-title="물의 상평형 그림">
+  <h2><span class="no">5</span>물의 상평형 그림 — 상 경계, 삼중점, 임계점</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 590px">{{WATER}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>상평형 그림</mark>: 온도와 압력에 따라 어느 상태가 가장 안정한지 보여 주는 그림</p>
+      <p class="f21"><b>영역</b>: 그 상태 하나만 가장 안정 · <b>상 경계</b>: 이웃한 두 상이 동적 평형을 이루며 공존</p>
+      <p class="f21" data-q><b>Q</b> 세 상 경계선이 만나는 점에서는 무슨 일이 일어날까?</p>
+      <p class="f21 step">→ <mark>삼중점</mark>: 고체·액체·기체 세 상이 함께 동적 평형 ($T_3$, $P_3$)</p>
+      <p class="f21 step">액체–기체 경계선은 <mark>임계점</mark>에서 끝난다 — 임계 온도 $T_\mathrm{c}$, 임계 압력 $P_\mathrm{c}$. 그 위에서는 액체와 기체를 구별할 수 없다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑥ 이산화 탄소의 상평형 그림 (그림 Ⅳ-10) ════════ -->
+<section class="slide" data-sec="02 · 상평형 그림" data-title="이산화 탄소의 상평형 그림">
+  <h2><span class="no">6</span>이산화 탄소의 상평형 그림 — 드라이아이스는 왜 녹지 않을까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 590px">{{CO2}}</div>
+    <div class="col stack">
+      <table class="ac412-sm">
+        <tr><th></th><th>물</th><th>$\ce{CO2}$</th></tr>
+        <tr><td class="l">삼중점</td><td>0.01 °C, 0.0060 atm</td><td>−56.6 °C, 5.1 atm</td></tr>
+        <tr><td class="l">임계점</td><td>374 °C, 218 atm</td><td>31 °C, 72.8 atm</td></tr>
+        <tr><td class="l">융해 곡선</td><td>음의 기울기</td><td>양의 기울기</td></tr>
+      </table>
+      <p class="f21" data-q><b>Q</b> 1 atm에서 드라이아이스($\ce{CO2(s)}$)를 데우면 액체를 거칠까?</p>
+      <p class="f21 step">→ 삼중점 압력(5.1 atm)이 1 atm보다 커서 1 atm 선은 액체 영역을 지나지 않는다 → <span class="ans">−78 °C에서 바로 승화</span>한다.</p>
+      <div class="formula sm step">$\ce{CO2(s) &lt;=&gt; CO2(g)}$<div class="unit">액체 $\ce{CO2}$를 얻으려면 5.1 atm보다 높은 압력이 필요하다</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑦ 상평형 그림 읽기 ════════ -->
+<section class="slide" data-sec="02 · 상평형 그림" data-title="상평형 그림 읽기: 세 경로">
+  <h2><span class="no">7</span>상평형 그림 읽기 — 선을 건너면 상이 바뀐다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{PATHS}}</div>
+    <div class="col stack">
+      <p class="f21">물의 상평형 그림 위 세 경로에서 어떤 상변화가 일어날까?</p>
+      <p class="f21" data-q><b>Q</b> ⓐ 1 atm에서 −20 °C 얼음을 120 °C까지 가열하면?</p>
+      <p class="f21 step" data-g="p1">→ 0 °C에서 <b>융해</b>, 100 °C에서 <b>기화</b> — 상 경계선 위에서만 두 상이 공존한다.</p>
+      <p class="f21" data-q><b>Q</b> ⓑ 0.001 atm에서 −40 °C 얼음을 가열하면?</p>
+      <p class="f21 step" data-g="p2">→ 삼중점 압력보다 낮으므로 약 −20 °C에서 액체를 거치지 않고 <b>승화</b>한다(동결 건조의 원리).</p>
+      <p class="f21" data-q><b>Q</b> ⓒ −5 °C 얼음에 압력을 계속 가하면?</p>
+      <p class="f21 step" data-g="p3">→ 약 600 atm에서 융해 곡선을 넘어 <b>물로 녹는다</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>상평형 그림에 대한 생각 점검 (○, ×)</h2>
+  <ol class="ac412-ox f22 mt8">
+    <li>얼음에 압력을 가하면 더 단단하게 언다. <span class="step">→ <span class="ans">×</span> 물은 고체의 밀도가 작아 압력을 가하면 녹는점이 낮아진다.</span></li>
+    <li>물의 끓는점은 물질마다 정해진 고유한 값인 100 °C이다. <span class="step">→ <span class="ans">×</span> 끓는점은 증기 압력이 외부 압력과 같아지는 온도로, 외부 압력에 따라 달라진다. 100 °C는 1 atm에서의 <b>기준 끓는점</b>이다.</span></li>
+    <li>상평형 그림의 액체 영역 안 한 점에서는 액체와 기체가 함께 평형을 이룬다. <span class="step">→ <span class="ans">×</span> 두 상은 상 경계선 <b>위</b>에서만 공존한다. 영역 안에서는 한 상만 안정하다.</span></li>
+    <li>임계 온도보다 높은 온도의 $\ce{CO2}$는 압력을 아무리 높여도 액화되지 않는다. <span class="step">→ <span class="ans">○</span> 액체–기체 경계선이 임계점(31 °C)에서 끝나기 때문이다.</span></li>
+  </ol>
+</section>
+
+<!-- ════════ 15. ⑧ 용해도 평형 (그림 Ⅳ-11) ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="용해도 평형">
+  <h2><span class="no">8</span>용해도 평형 — 녹는 속도 = 석출 속도</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{CSCL}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>용해도 평형</mark>: 용질이 용해되는 속도와 결정으로 되돌아가는(석출) 속도가 같아, 더 이상 녹지 않는 것처럼 보이는 동적 평형</p>
+      <div class="formula sm">$\ce{CsCl(s) &lt;=&gt; Cs+(aq) + Cl^-(aq)}$</div>
+      <p class="f21" data-q><b>Q</b> 이온이 물에 녹아 나올 때 물 분자는 어떻게 둘러쌀까?</p>
+      <p class="f21 step">→ 양이온은 물의 <b>산소 쪽</b>($\delta^-$), 음이온은 <b>수소 쪽</b>($\delta^+$)이 향하게 둘러싼다(수화).</p>
+      <p class="f21 step">염화 세슘 같은 가용성 염의 포화 용액은 이온 사이 상호 작용이 커서 간단한 평형식을 쓰기 어렵다 → 포화 농도가 0.1 mol/L 이하인 <b>난용성 염</b>에 평형식을 쓴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑨ 용해도곱 상수 ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="용해도곱 상수 Ksp">
+  <h2><span class="no">9</span>용해도곱 상수 $K_\mathrm{sp}$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="formula sm">$\ce{AgCl(s) &lt;=&gt; Ag+(aq) + Cl^-(aq)}$<br>$K_\mathrm{sp}=[\ce{Ag+}][\ce{Cl-}]=1.6\times10^{-10}$<div class="unit">25 °C</div></div>
+      <p class="f21"><mark>용해도곱 상수</mark>: 물에 조금 녹는 이온성 고체가 용해되는 과정의 평형 상수 $K$ (sp: solubility product, 용해도곱)</p>
+      <p class="f21" data-q><b>Q</b> $K_\mathrm{sp}$ 식에 고체 $\ce{AgCl}$은 왜 없을까?</p>
+      <p class="f21 step">→ 순수한 고체는 <span class="ans">평형 상수 식에 넣지 않는다</span> — 고체가 조금이라도 있기만 하면 양과 관계없이 평형에 영향을 주지 않는다.</p>
+      <p class="f21 step">고체가 <b>전혀 없으면</b> 평형이 아니므로, 두 이온의 농도 곱이 $K_\mathrm{sp}$보다 작을 수 있다(불포화).</p>
+    </div>
+    <div class="col">{{KSPFIG}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑩ 몰 용해도와 Ksp ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="몰 용해도와 Ksp">
+  <h2><span class="no">10</span>몰 용해도 $s$와 $K_\mathrm{sp}$ — 염화 은</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21"><b>몰 용해도</b> $s$: 포화 용액 1 L에 녹는 염의 몰수(mol/L). $K_\mathrm{sp}$와 다르지만 간단한 관계가 있다.</p>
+      <table class="ac412-ice">
+        <tr><th class="l"></th><th>$\ce{AgCl(s)}$</th><th>$\ce{&lt;=&gt;}$</th><th>$\ce{Ag+(aq)}$</th><th>$+$</th><th>$\ce{Cl-(aq)}$</th></tr>
+        <tr><td class="l">평형 농도 (M)</td><td>—</td><td></td><td>$s$</td><td></td><td>$s$</td></tr>
+      </table>
+      <p class="f21" data-q><b>Q</b> 25 °C에서 $\ce{AgCl}$의 몰 용해도는?</p>
+      <p class="f21 step">$K_\mathrm{sp}=[\ce{Ag+}][\ce{Cl-}]=s^2=1.6\times10^{-10}$ → <span class="ans">$s=1.26\times10^{-5}\ \text{mol/L}$</span></p>
+      <p class="f21 step">그램 용해도: $(1.26\times10^{-5}\ \text{mol/L})(143.3\ \text{g/mol})=$ <span class="ans">$1.8\times10^{-3}\ \text{g/L}$</span></p>
+      <p class="f21 step">→ 포화 용액 1 L에 $\ce{AgCl}$ 약 1.8 mg만 녹는다.</p>
+    </div>
+    <div class="col" style="flex:0 0 300px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 예제 Ⅳ-2 ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="예제 Ⅳ-2">
+  <h2><span class="tag ex">예제 Ⅳ-2</span>크로뮴산 은의 용해도곱 상수</h2>
+  <div class="card"><p class="f21">크로뮴산 은 $\ce{Ag2CrO4}$는 25 °C에서 0.029 g/L까지 물에 용해된다. $K_\mathrm{sp}$는 얼마인가? (단, $\ce{Ag2CrO4}$의 몰질량은 331.73 g/mol이다.)</p></div>
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="formula sm">$\ce{Ag2CrO4(s) &lt;=&gt; 2Ag+(aq) + CrO4^2-(aq)}$<div class="unit">평형 농도: $[\ce{Ag+}]=2s$, $[\ce{CrO4^2-}]=s$</div></div>
+      <p class="f21 step"><b>풀이</b> ① 몰 용해도 $s=\dfrac{0.029\ \text{g/L}}{331.73\ \text{g/mol}}=8.74\times10^{-5}\ \text{mol/L}$</p>
+      <p class="f21 step">② $K_\mathrm{sp}=[\ce{Ag+}]^2[\ce{CrO4^2-}]=(2\times8.74\times10^{-5})^2(8.74\times10^{-5})$</p>
+      <div class="answer step">$K_\mathrm{sp}=2.7\times10^{-12}$</div>
+      <p class="small step">$[\ce{Ag+}]$는 계수 2만큼 $2s$이고, 식에서 제곱한다 — 계수가 두 번 쓰인다($4s^3$).</p>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 19. ⑪ Ksp로 용해도 비교 ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="Ksp로 용해도 비교하기">
+  <h2><span class="no">11</span>$K_\mathrm{sp}$가 작으면 늘 덜 녹을까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="ac412-sm">
+        <tr><th>염의 꼴</th><th>예</th><th>$K_\mathrm{sp}$와 $s$</th></tr>
+        <tr><td>$\ce{AB}$</td><td>$\ce{AgCl}$, $\ce{CuBr}$</td><td>$K_\mathrm{sp}=s^2$</td></tr>
+        <tr><td>$\ce{AB2}$·$\ce{A2B}$</td><td>$\ce{PbI2}$, $\ce{Ag2CrO4}$</td><td>$K_\mathrm{sp}=4s^3$</td></tr>
+        <tr><td>$\ce{AB3}$</td><td>$\ce{Fe(OH)3}$</td><td>$K_\mathrm{sp}=27s^4$</td></tr>
+      </table>
+      <p class="f21" data-q><b>Q</b> $K_\mathrm{sp}$가 더 작은 $\ce{Ag2CrO4}$($2.7\times10^{-12}$)가 $\ce{AgCl}$($1.6\times10^{-10}$)보다 덜 녹을까?</p>
+      <p class="f21 step">→ $\ce{Ag2CrO4}$: $s=\sqrt[3]{K_\mathrm{sp}/4}=8.8\times10^{-5}\ \text{M}$, $\ce{AgCl}$: $1.26\times10^{-5}\ \text{M}$ → <span class="ans">$\ce{Ag2CrO4}$가 약 7배 더 잘 녹는다</span></p>
+      <p class="f21 step">이온 수가 같은 염끼리만 $K_\mathrm{sp}$로 용해도를 바로 비교할 수 있다. 이온 수가 다르면 몰 용해도를 계산해 비교한다.</p>
+    </div>
+    <div class="col">{{COMPARE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 20. ⑫ [보충] 이온곱과 침전 예측 ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="이온곱과 침전 예측 (보충)">
+  <h2><span class="no">12</span>이온곱 $Q$와 침전 예측 <span class="small c-muted">[보충]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">두 용액을 섞은 <b>직후</b>의 이온 농도로 $Q=[\ce{Ag+}][\ce{Cl-}]$(이온곱)를 구해 $K_\mathrm{sp}$와 비교한다 — 01의 $Q$와 $K$ 비교와 같다.</p>
+      <p class="f21" data-q><b>Q</b> $1.0\times10^{-4}\ \text{M}$ $\ce{AgNO3}$와 $1.0\times10^{-4}\ \text{M}$ $\ce{NaCl}$을 같은 부피로 섞으면 침전이 생길까?</p>
+      <p class="f21 step" data-g="c1">섞으면 부피가 2배 → 각 $5.0\times10^{-5}\ \text{M}$, $Q=(5.0\times10^{-5})^2=2.5\times10^{-9}&gt;K_\mathrm{sp}$ → <span class="ans">$\ce{AgCl}$ 침전 생성</span></p>
+      <p class="f21 step" data-g="c2">각 $1.0\times10^{-5}\ \text{M}$로 섞으면 $Q=2.5\times10^{-11}&lt;K_\mathrm{sp}$ → 침전이 생기지 않는다.</p>
+      <p class="small">$Q&gt;K_\mathrm{sp}$ 과포화 → 침전 · $Q=K_\mathrm{sp}$ 포화 · $Q&lt;K_\mathrm{sp}$ 불포화 → 더 녹는다. (교과서 본문 밖 보충 — 성취기준 해설 「용해도곱 상수를 이용한 침전 예측」)</p>
+    </div>
+    <div class="col">{{PRECIP}}</div>
+  </div>
+</section>
+
+<!-- ════════ 21. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>아이오딘화 납 침전이 생길까?</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">0.0010 M $\ce{Pb(NO3)2}$ 50.0 mL와 0.020 M $\ce{NaI}$ 50.0 mL를 섞으면 $\ce{PbI2}$ 침전이 생기는지 판단하여라. (단, $\ce{PbI2}$의 $K_\mathrm{sp}=9.8\times10^{-9}$이다.)</p>
+      <div class="formula sm">$\ce{PbI2(s) &lt;=&gt; Pb^2+(aq) + 2I^-(aq)}$ · $K_\mathrm{sp}=[\ce{Pb^2+}][\ce{I-}]^2$</div>
+      <p class="f21 step">섞은 직후(100.0 mL): $[\ce{Pb^2+}]=5.0\times10^{-4}\ \text{M}$, $[\ce{I-}]=1.0\times10^{-2}\ \text{M}$</p>
+      <p class="f21 step">$Q=(5.0\times10^{-4})(1.0\times10^{-2})^2=5.0\times10^{-8}$</p>
+      <div class="answer step">$Q&gt;K_\mathrm{sp}$ → 노란색 $\ce{PbI2}$ 침전이 생긴다</div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 22. ⑬ [보충] 공통 이온 효과 ════════ -->
+<section class="slide" data-sec="03 · 용해도 평형과 용해도곱 상수" data-title="공통 이온 효과 (보충)">
+  <h2><span class="no">13</span>공통 이온 효과 — 같은 이온이 있으면 덜 녹는다 <span class="small c-muted">[보충]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21" data-q><b>Q</b> $\ce{AgCl}$ 포화 용액에 $\ce{NaCl}$을 넣으면 용해 평형은 어느 쪽으로 이동할까?</p>
+      <p class="f21 step">→ $[\ce{Cl-}]$이 커져 $Q&gt;K_\mathrm{sp}$ → <b class="c-bfield">석출(역반응)</b> 쪽으로 이동 → <span class="ans">용해도 감소</span> (르샤틀리에 원리) — <mark>공통 이온 효과</mark></p>
+      <p class="f21 step">0.10 M $\ce{NaCl}$에서: $[\ce{Ag+}]=s$, $[\ce{Cl-}]=0.10+s\approx0.10$ → $s=\dfrac{1.6\times10^{-10}}{0.10}=1.6\times10^{-9}\ \text{M}$</p>
+      <p class="f21 step">순수한 물($1.26\times10^{-5}\ \text{M}$)보다 약 <b>8000배</b> 작다. 이때도 $K_\mathrm{sp}$는 변하지 않는다.</p>
+      <p class="small step">음이온이 $\ce{OH-}$, $\ce{CO3^2-}$처럼 약산의 짝염기인 염은 산성 용액에서 더 잘 녹는다($\ce{H+}$가 음이온을 줄임) — 대리석 조각상이 산성비에 녹는 까닭. (교과서 본문 밖 보충)</p>
+    </div>
+    <div class="col">{{COMMON}}</div>
+  </div>
+</section>
+
+<!-- ════════ 23. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>공통 이온이 있을 때의 몰 용해도</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">0.10 M $\ce{NaI}$ 수용액에서 $\ce{PbI2}$의 몰 용해도를 구하고, 순수한 물에서의 몰 용해도와 비교하여라. ($K_\mathrm{sp}=9.8\times10^{-9}$)</p>
+      <p class="f21 step">$[\ce{Pb^2+}]=s$, $[\ce{I-}]=0.10+2s\approx0.10$ → $K_\mathrm{sp}=s(0.10)^2$</p>
+      <div class="answer step">$s=9.8\times10^{-7}\ \text{M}$</div>
+      <p class="f21 step">순수한 물: $4s^3=9.8\times10^{-9}$ → $s=1.3\times10^{-3}\ \text{M}$ → 공통 이온이 있으면 약 1400배 작다.</p>
+      <p class="f21 step">근사 확인: $2s=2.0\times10^{-6}$은 0.10에 비해 매우 작으므로 $0.10+2s\approx0.10$은 타당하다.</p>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑭ 온도와 기체의 용해도 (그림 Ⅳ-12) ════════ -->
+<section class="slide" data-sec="03 · 온도와 압력에 따른 용해도 변화" data-title="온도와 기체의 용해도">
+  <h2><span class="no">14</span>온도가 높을수록 기체는 덜 녹는다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{GAST}}</div>
+    <div class="col stack">
+      <p class="f21">차가운 물을 따뜻한 방에 두면 작은 기포가 생긴다 — 녹아 있던 기체가 빠져나온다.</p>
+      <p class="f21">용해의 자발성: $\Delta G=\Delta H-T\Delta S$</p>
+      <p class="f21" data-q><b>Q</b> 기체가 물에 녹을 때 $\Delta H$와 $\Delta S$의 부호는?</p>
+      <p class="f21 step">→ 물 분자와의 상호 작용·운동 에너지 감소로 <span class="ans">$\Delta H&lt;0$</span>(발열), 기체가 갇혀 <span class="ans">$\Delta S&lt;0$</span></p>
+      <p class="f21 step">$-T\Delta S&gt;0$이므로 $T$가 낮을수록 $\Delta G$가 더 음수 → <b>온도가 낮을수록 기체의 용해도가 크다</b>.</p>
+      <p class="small step">르샤틀리에 원리로도: 용해가 발열이므로 온도를 높이면 역반응(기체가 빠져나옴) 쪽으로 이동한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. ⑮ 온도와 고체의 용해도 (그림 Ⅳ-13) ════════ -->
+<section class="slide" data-sec="03 · 온도와 압력에 따른 용해도 변화" data-title="온도와 고체의 용해도">
+  <h2><span class="no">15</span>온도와 이온성 고체의 용해도</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{SOLT}}</div>
+    <div class="col stack">
+      <p class="f21">고체가 녹으면 보통 계의 엔트로피가 증가한다($\Delta S&gt;0$).</p>
+      <p class="f21">$\Delta H&lt;0$이면 늘 $\Delta G&lt;0$, $\Delta H&gt;0$이면 $T\Delta S&gt;\Delta H$여야 녹는다.</p>
+      <p class="f21" data-q><b>Q</b> 그래서 대부분의 이온성 고체는 온도가 높을수록 어떻게 될까?</p>
+      <p class="f21 step">→ $T\Delta S$가 커져 <span class="ans">더 잘 녹는다</span> ($\ce{AgNO3}$, $\ce{KNO3}$, $\ce{KI}$)</p>
+      <p class="f21 step">예외: 많이 수화된 이온을 가진 탄산 리튬 $\ce{Li2CO3}$는 온도가 높을수록 덜 녹는다. 황산 나트륨 십수화물 $\ce{Na2SO4.10H2O}$는 32 °C까지 증가하다가 그 위에서는 감소한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. ⑯ 압력과 기체의 용해도: 헨리 법칙 (그림 Ⅳ-14) ════════ -->
+<section class="slide" data-sec="03 · 온도와 압력에 따른 용해도 변화" data-title="헨리 법칙">
+  <h2><span class="no">16</span>압력과 기체의 용해도 — 헨리 법칙</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      {{HENRYBOX}}
+      <p class="f21">고체·액체의 용해도는 압력의 영향을 거의 받지 않지만, 기체는 압력이 커지면 액체 표면에 충돌하는 횟수가 늘어 더 많이 녹는다.</p>
+    </div>
+    <div class="col stack">
+      {{HENRY}}
+      <p class="f21" data-q><b>Q</b> 기체의 몰 용해도 $s$와 부분 압력 $P$는 어떤 관계일까?</p>
+      <div class="formula sm step">$s=k_\mathrm{H}P$<div class="unit"><mark>헨리 법칙</mark> — $k_\mathrm{H}$: 헨리 상수(기체·용매·온도에 따라 다름)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. ⑰ 헨리 상수와 계산 (표 Ⅳ-4) ════════ -->
+<section class="slide" data-sec="03 · 온도와 압력에 따른 용해도 변화" data-title="헨리 상수 (표 Ⅳ-4)">
+  <h2><span class="no">17</span>헨리 상수로 녹은 기체의 양 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <table class="ac412-sm">
+        <caption class="small">표 Ⅳ-4 25 °C에서 물에 녹는 기체의 헨리 상수 $k_\mathrm{H}$ (mol/(L·atm))</caption>
+        <tr><th>기체</th><th>$k_\mathrm{H}$</th><th>기체</th><th>$k_\mathrm{H}$</th></tr>
+        <tr><td>일산화 탄소</td><td>$9.5\times10^{-4}$</td><td>수소</td><td>$7.8\times10^{-4}$</td></tr>
+        <tr><td>아르곤</td><td>$1.4\times10^{-3}$</td><td>네온</td><td>$4.5\times10^{-4}$</td></tr>
+        <tr><td>이산화 탄소</td><td>$3.4\times10^{-2}$</td><td>질소</td><td>$6.1\times10^{-4}$</td></tr>
+        <tr><td>헬륨</td><td>$3.7\times10^{-4}$</td><td>산소</td><td>$1.3\times10^{-3}$</td></tr>
+      </table>
+      <p class="small">혼합 기체에서 각 성분의 용해도는 그 기체의 <b>부분 압력</b>에 비례한다.</p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 공기($P_{\ce{O2}}=0.21\ \text{atm}$)와 평형을 이룬 25 °C 물에 녹아 있는 산소는?</p>
+      <p class="f21 step">$s=k_\mathrm{H}P=(1.3\times10^{-3})(0.21)=$ <span class="ans">$2.7\times10^{-4}\ \text{mol/L}$</span></p>
+      <p class="f21 step">$\times32.00\ \text{g/mol}$ → 약 <b>8.7 mg/L</b> — 물고기는 이만큼의 산소로 숨 쉰다. 수온이 오르면 더 줄어든다.</p>
+      <p class="f21 step">$\ce{CO2}$의 $k_\mathrm{H}$가 유난히 큰 까닭: 물과 반응해 탄산을 만들기 때문이다. 탄산음료는 몇 기압의 $\ce{CO2}$로 녹여 병에 넣고, 마개를 열면 부분 압력이 낮아져 거품이 생긴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. 확인 문제 05 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 05">
+  <h2><span class="tag q">확인 문제 05</span>수심 30 m에서 몸에 녹는 질소</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">수심 30 m에서 잠수부 주위 압력은 약 4 atm이다. 공기 속 질소의 몰분율이 0.78일 때 25 °C 물에 녹는 질소의 몰 용해도를 수면(1 atm)과 비교하여라. ($k_\mathrm{H}=6.1\times10^{-4}\ \text{mol/(L}\cdot\text{atm)}$)</p>
+      <p class="f21 step">수면: $P_{\ce{N2}}=0.78\ \text{atm}$ → $s=4.8\times10^{-4}\ \text{M}$</p>
+      <p class="f21 step">30 m: $P_{\ce{N2}}=0.78\times4=3.1\ \text{atm}$ → $s=1.9\times10^{-3}\ \text{M}$</p>
+      <div class="answer step">4배 더 녹는다 (부분 압력에 비례)</div>
+      <p class="f21 step">갑자기 떠오르면 1 L당 약 $1.4\times10^{-3}\ \text{mol}$이 남는다 → 37 °C, 1 atm에서 약 36 mL의 기체 — 혈액 속에서 기포가 된다.</p>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 탐구 활동 (1) ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 잠수병 조사 (1)">
+  <h2><span class="tag">탐구 활동</span>심해 잠수부의 감압 과정과 잠수병 치료 방법 사례 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="card"><h3>배경</h3>
+        <p class="f21">수심 30 m에서 주위 압력은 약 4기압이다. 매우 빠르게 떠오르면 혈액 속에 녹아 있던 질소가 빠르게 기포를 만들어 고통스럽고 치명적인 <b>잠수병</b>이 생길 수 있다. 그래서 몸을 수압에 천천히 적응시키며 올라오는 <b>감압 과정</b>을 거친다.</p>
+      </div>
+      <div class="card"><h3>과정</h3>
+        <p class="f21">① 모둠별로 역할을 나누어 감압 과정과 치료 방법의 구체적 사례를 찾는다 ② 헨리 법칙과 용해도 평형으로 원리를 설명한다 ③ 발표하고, 500자 이내로 적는다.</p>
+      </div>
+      <p class="f21" data-q><b>예측</b> 잠수병을 막으려면 왜 「천천히」 올라와야 할까?</p>
+    </div>
+    <div class="col">{{DIVE}}</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 활동 (2) ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 잠수병 조사 (2)">
+  <h2><span class="tag">탐구 활동</span>조사 결과 정리 — 예시 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="stages ac412-c3 mt8">
+    <div class="stage step" data-g="d1"><h3>감압 과정</h3><p>천천히 상승(대략 1분에 9–10 m 이하)하고, 수심 5 m 근처에서 몇 분 머무는 <b>안전 정지</b>, 깊고 오래 잠수했으면 정해진 깊이마다 멈추는 <b>감압 정지</b>를 한다.</p></div>
+    <div class="stage step" data-g="d2"><h3>치료 방법</h3><p><b>고압 산소 치료</b>: 고압 챔버(재압 챔버)에서 압력을 다시 높여 기포를 녹이고 작게 만든 뒤, 순수한 산소를 마시며 천천히 압력을 낮춘다. 질소가 폐로 빠져나간다.</p></div>
+    <div class="stage step" data-g="d3"><h3>예방의 화학</h3><p>깊이 잠수할 때는 질소 대신 헬륨을 섞은 기체를 쓰기도 한다 — 헬륨은 $k_\mathrm{H}$가 질소보다 작아(표 Ⅳ-4) 덜 녹는다.</p></div>
+  </div>
+  <div class="card mt12 step" data-g="d4"><h3>원리 정리 (500자 글의 뼈대)</h3>
+    <p class="f21">$\ce{N2(g) &lt;=&gt; N2(aq)}$ — 깊은 곳에서 부분 압력이 커지면 헨리 법칙에 따라 혈액에 질소가 더 녹는다. 압력이 갑자기 낮아지면 $Q&gt;K$가 되어 평형이 기체 쪽으로 크게 이동하고, 녹아 있던 질소가 한꺼번에 기포가 된다. 천천히 올라오면 압력이 조금씩 낮아져 남는 질소가 폐를 통해 조금씩 빠져나간다.</p>
+  </div>
+  <p class="small mt8">발표 평가: 사례의 출처를 밝혔는가, 헨리 법칙과 평형 이동으로 원리를 설명했는가, 500자 안에서 감압·치료·예방을 모두 다루었는가.</p>
+</section>
+
+<!-- ════════ 31. 진로 ════════ -->
+<section class="slide" data-sec="03 · 진로" data-title="진로: 수소 연료 전지 발전소">
+  <h2><span class="tag">진로</span>재생 에너지 생산과 수소 연료 전지 발전소</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>RE<span>100</span></b>: 2050년까지 기업이 쓰는 전력의 100 %를 재생 에너지로 바꾸자는 협약 · <b>CF<span>100</span></b>: 풍력·태양광·수력에 원자력·연료 전지까지 포함해 무탄소 에너지로 전력을 모두 쓰자는 캠페인</p>
+      <p class="f21">경기도의 한 수소 연료 전지 발전소: 발전기 21기, 발전 용량 58.8 MW, 연간 46만 4000 MWh — 약 14만 가구가 쓰는 전력</p>
+      <p class="f21" data-q><b>Q</b> 그레이 수소 1 kg을 만들 때 반응식으로만 계산하면 $\ce{CO2}$는 몇 kg 생길까?</p>
+      <p class="f21 step">$\ce{CH4 + 2H2O -> CO2 + 4H2}$ → $\dfrac{44\ \text{g}}{4\times2.0\ \text{g}}\approx$ <span class="ans">5.5 kg</span> — 실제 약 10 kg인 까닭은 고온을 만들 연료도 태우기 때문이다.</p>
+      <p class="small">관련 직업: 수소 생산·저장 연구원, 연료 전지 설계 기술자, 발전소 운영 전문가</p>
+    </div>
+    <div class="col stack">
+      <div class="ac412-h2c">
+        <div class="ac412-gray"><b>그레이 수소</b><br>메테인 + 고온 수증기 → 수소 + $\ce{CO2}$ 배출</div>
+        <div class="ac412-blue"><b>블루 수소</b><br>그레이와 같은 방식, $\ce{CO2}$를 포집·저장(CCS)</div>
+        <div class="ac412-pink"><b>핑크 수소</b><br>800 °C 이상 4세대 원자로의 열로 생산</div>
+        <div class="ac412-green"><b>그린 수소</b><br>재생 에너지 전기로 물을 전기 분해 — $\ce{CO2}$ 배출 없음</div>
+      </div>
+      <div class="card"><p class="f21">전기 분해: $\ce{2H2O(l) -> 2H2(g) + O2(g)}$</p><p class="f21">연료 전지: $\ce{2H2(g) + O2(g) -> 2H2O(l)}$</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 32. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅳ-1 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>$\Delta G^\circ$로 평형 상수 구하기</h2>
+  <p class="f22">다음 화학 반응의 $\Delta G^\circ$는 $-104180\ \text{J/mol}$이다. 25 °C에서 반응의 평형 상수를 계산하여라.</p>
+  <div class="formula sm">$\ce{3NO(g) &lt;=&gt; N2O(g) + NO2(g)}$</div>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21 step"><b>풀이</b> $\Delta G^\circ=-RT\ln K$ 에서 $\ln K=-\dfrac{\Delta G^\circ}{RT}=-\dfrac{-104180\ \text{J/mol}}{(8.3145\ \text{J/(mol}\cdot\text{K)})(298.15\ \text{K})}=42.03$</p>
+      <div class="answer step">$K=e^{42.03}=1.8\times10^{18}$</div>
+      <p class="f21 step">$\Delta G^\circ$가 큰 음수 → $K\gg1$ → 평형에서 생성물이 압도적으로 많다.</p>
+    </div>
+    <div class="col" style="flex:0 0 360px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 33. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅳ-1 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>$\Delta G$로 반응이 이동하는 방향 예측하기</h2>
+  <p class="f21">25 °C의 암모니아 합성 반응 $\ce{N2(g) + 3H2(g) &lt;=&gt; 2NH3(g)}$에서 소비되는 $\ce{N2}$ 1 mol당 $\Delta G^\circ$는 $-33.3\ \text{kJ}$이다. 이 온도에서 부분 압력이 $P_{\ce{NH3}}=1.00\ \text{atm}$, $P_{\ce{N2}}=1.47\ \text{atm}$, $P_{\ce{H2}}=1.0\times10^{-2}\ \text{atm}$인 혼합물이 평형에 도달하기 위해 반응계가 이동하는 방향을 예측하여라.</p>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21 step"><b>풀이</b> $Q=\dfrac{(1.00)^2}{(1.47)(1.0\times10^{-2})^3}=6.80\times10^{5}$, $\ln Q=13.43$</p>
+      <p class="f21 step">$\Delta G=\Delta G^\circ+RT\ln Q=-3.33\times10^{4}+(8.3145)(298)(13.43)=-23.6\ \text{J/mol}$</p>
+      <div class="answer step">$\Delta G&lt;0$ → 정반응이 자발적 → 정반응 쪽으로 이동해 평형에 도달</div>
+      <p class="small step">$\Delta G$가 0에 매우 가깝다 — $K=e^{33300/RT}=6.87\times10^{5}$이고 $Q/K=0.99$로, 이 혼합물은 평형에 거의 도달해 있다.</p>
+    </div>
+    <div class="col" style="flex:0 0 360px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 34. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅳ-1 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>평형의 이동 방향 예측하기</h2>
+  <p class="f21">다음과 같은 반응의 평형 상태에서 각각의 조건들이 변할 때 평형의 이동 방향을 예측하여라.</p>
+  <div class="formula sm">$\ce{4NH3(g) + 3O2(g) &lt;=&gt; 2N2(g) + 6H2O(g)}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21" data-q>1) $\ce{N2}$의 첨가 <span class="step">→ $Q&gt;K$ → <span class="ans">역반응 쪽</span>으로 이동</span></p>
+      <p class="f21" data-q>2) $\ce{NH3}$의 제거 <span class="step">→ $Q&gt;K$ → <span class="ans">역반응 쪽</span>으로 이동</span></p>
+      <p class="f21" data-q>3) 압축 <span class="step">→ 기체 분자 수가 7 → 8로 늘어나는 반응이므로, 압력을 줄이도록 분자 수가 감소하는 <span class="ans">역반응 쪽</span>으로 이동</span></p>
+      <p class="small step">세 경우 모두 역반응 쪽 — 1)과 2)는 $K$가 그대로이고 $Q$가 커졌기 때문이다.</p>
+    </div>
+    <div class="col">{{EX3}}</div>
+  </div>
+</section>
+
+<!-- ════════ 35. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅳ-1 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>몰 용해도로 $K_\mathrm{sp}$ 구하기</h2>
+  <p class="f22">다음의 반응에서 측정된 브로민화 구리(Ⅰ)의 용해도는 25 °C에서 $2.0\times10^{-4}\ \text{mol/L}$이었다. $K_\mathrm{sp}$ 값을 계산하여라.</p>
+  <div class="formula sm">$\ce{CuBr(s) &lt;=&gt; Cu+(aq) + Br^-(aq)}$</div>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21 step"><b>풀이</b> $[\ce{Cu+}]=[\ce{Br-}]=s=2.0\times10^{-4}\ \text{M}$</p>
+      <p class="f21 step">$K_\mathrm{sp}=[\ce{Cu+}][\ce{Br-}]=(2.0\times10^{-4})(2.0\times10^{-4})$</p>
+      <div class="answer step">$K_\mathrm{sp}=4.0\times10^{-8}$</div>
+    </div>
+    <div class="col" style="flex:0 0 400px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 36. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02·03 상평형과 용해도 평형 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>1. 화학 평형 — 02 상평형 · 03 용해도 평형</h2>
+  <div class="ac412-map">
+    <div class="ac412-node ac412-dim">01 화학 평형<br>$K$, $Q$<br>$\Delta G^\circ=-RT\ln K$<br>르샤틀리에 원리</div>
+    <div class="ac412-arr">→</div>
+    <div class="ac412-node ac412-main" data-q><b>02 상평형</b><br>❶ 상평형: 두 상태의 깁스 자유 에너지가 같아 $\Delta G=$ <span class="blank"><span class="step">0</span></span><br>❷ 세 상이 공존하는 점: <span class="blank"><span class="step">삼중점</span></span> · 액체–기체 경계가 끝나는 점: <span class="blank"><span class="step">임계점</span></span><br>❸ 물의 융해 곡선 기울기는 <span class="blank"><span class="step">음수</span></span> → 압력↑ 녹는점↓</div>
+    <div class="ac412-node ac412-main" data-q><b>03 용해도 평형</b><br>❹ $\ce{AgCl}$의 $K_\mathrm{sp}=$ <span class="blank"><span class="step">$[\ce{Ag+}][\ce{Cl-}]=s^2$</span></span> · $\ce{Ag2CrO4}$는 <span class="blank"><span class="step">$4s^3$</span></span><br>❺ $Q&gt;K_\mathrm{sp}$이면 <span class="blank"><span class="step">침전</span></span> · 공통 이온 → 용해도 <span class="blank"><span class="step">감소</span></span><br>❻ 기체 용해도: 온도↑ <span class="blank"><span class="step">감소</span></span> · $s=$ <span class="blank"><span class="step">$k_\mathrm{H}P$</span></span></div>
+    <div class="ac412-arr">→</div>
+    <div class="ac412-node ac412-dim">2. 산과 염기의 평형<br>$K_\mathrm{a}$, $K_\mathrm{b}$<br>(다음 시간)</div>
+  </div>
+</section>
+
+<!-- ════════ 37. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02·03 상평형과 용해도 평형 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 상평형 그림에서 상 경계·삼중점·임계점의 뜻을 설명하고, 물과 $\ce{CO2}$의 차이를 말할 수 있다.</button>
+    <button class="chk">[과정·기능] 몰 용해도와 $K_\mathrm{sp}$를 서로 구하고, 헨리 법칙으로 녹은 기체의 양을 계산했다.</button>
+    <button class="chk">[가치·태도] 잠수병 사례를 조사해 헨리 법칙으로 설명하고, 모둠 발표에 근거를 들어 참여했다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{AgCl}$ 포화 용액에 고체 $\ce{AgCl}$을 더 넣으면 $[\ce{Ag+}]$는 커질까? <span class="step">→ <span class="ans">아니다</span> — 고체는 평형 상수 식에 들어가지 않으므로 평형이 이동하지 않는다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 탄산음료를 따뜻한 곳에서 열면 거품이 더 많이 나는 까닭은? <span class="step">→ 온도가 높으면 $\ce{CO2}$의 용해도가 <span class="ans">작아</span> 더 많이 빠져나오기 때문이다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 산과 염기의 반응도 평형일까? — 2. 산과 염기의 평형: 루이스 정의와 이온화 상수</div>
+</section>

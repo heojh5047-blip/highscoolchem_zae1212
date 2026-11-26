@@ -1,0 +1,35 @@
+/* 고급화학 3-4-1 (a·b 공통) — 덱 전용 (모두 .ac341- 접두어) */
+.cover h1.ac341-h1{font-size:64px;line-height:1.18}
+.ac341-cox{color:#C2410C}
+.ac341-crd{color:#0E7490}
+th.ac341-cox,th.ac341-crd,b.ac341-cox,b.ac341-crd{font-weight:700}
+table.ac341-c td,table.ac341-c th{text-align:center}
+table.ac341-c td.l{text-align:left}
+table.ac341-sm th,table.ac341-sm td{font-size:20px;padding:5px 10px}
+table.ac341-tab td,table.ac341-tab th{font-size:19px;padding:2px 10px;line-height:1.35}
+ul.ac341-ul{padding-left:1.3em;margin:0}
+ul.ac341-ul li{margin-top:8px}
+.formula.ac341-eq{font-size:22px;padding:8px 14px}
+.board.ac341-b{min-height:150px}
+/* 단계로 그림 바꾸기(염다리 없음 → 있음) */
+.ac341-swap{display:grid}
+.ac341-swap>div{grid-area:1/1;background:#FBFCFD}
+/* 개념 지도 */
+.ac341-map{display:flex;align-items:center;gap:12px;margin-top:14px}
+.ac341-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75}
+.ac341-node.ac341-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac341-node.ac341-dim{flex:0 0 170px;border-style:dashed;color:var(--muted)}
+.ac341-arr{font-size:28px;color:var(--muted)}
+/* 실험실 */
+.ac341-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.ac341-sl{font-size:19px;font-weight:700;width:86px}
+.ac341-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:3px 9px;font-size:19px}
+.ac341-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac341-seg .btn.ac341-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.ac341-read{width:100%}
+table.ac341-read th{font-size:19px;padding:4px 8px;text-align:left}
+table.ac341-read td{font-size:21px;padding:4px 8px;text-align:center}
+output.kind.ac341-msg{margin-top:6px;line-height:1.45;font-size:19px}
+table.ac341-log{width:100%}
+table.ac341-log th,table.ac341-log td{font-size:19px;padding:2px 5px;text-align:center}
+.ac341-bar{display:inline-block;height:14px;background:var(--field);border-radius:3px;vertical-align:middle}

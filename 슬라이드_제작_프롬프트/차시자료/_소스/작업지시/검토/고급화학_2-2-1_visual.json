@@ -1,0 +1,145 @@
+{
+ "findings": [
+  {
+   "slide": "a4,a8",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "막대그래프 세로축 제목이 눈금 숫자와 겹침",
+   "fix": "축 제목을 그래프 위로(반영)"
+  },
+  {
+   "slide": "a8",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "편극 그림 라벨 ①·③ 잘림",
+   "fix": "두 줄 라벨 + viewBox 넓힘(반영)"
+  },
+  {
+   "slide": "a10",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "증발 그림의 「표면」「내부」 라벨 겹침",
+   "fix": "라벨 위치를 양쪽으로 벌림(반영)"
+  },
+  {
+   "slide": "a13,a14,a20,a22,a23,b12,b17,b22",
+   "severity": "medium",
+   "rule": "D4·D8",
+   "problem": "x축 제목이 눈금 숫자와 겹침",
+   "fix": "축 제목을 아래로 내리고 viewBox 높임(반영)"
+  },
+  {
+   "slide": "a1,a14,a23",
+   "severity": "medium",
+   "rule": "D25",
+   "problem": "곡선이 그래프 위 끝에서 평평하게 잘려 그려짐(값이 일정한 것처럼 보임)",
+   "fix": "곡선 그리는 범위를 축 최댓값 안으로 제한(반영)"
+  },
+  {
+   "slide": "a13",
+   "severity": "low",
+   "rule": "D8",
+   "problem": "「760」 라벨이 「800」 눈금과 겹침, 다이에틸 에터 라벨이 눈금과 겹침",
+   "fix": "「760 mmHg」를 선 아래 안쪽으로, 에터 라벨을 곡선 오른쪽으로(반영)"
+  },
+  {
+   "slide": "a17",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "주사기 단계 라벨 잘림",
+   "fix": "두 줄로(반영)"
+  },
+  {
+   "slide": "a19,a29,b16",
+   "severity": "high",
+   "rule": "D8",
+   "problem": "실험실 버튼이 줄바꿈되어 영역 밖으로 넘침",
+   "fix": "그래프 전환 버튼을 그래프 위, 측정 버튼을 표 아래로 옮기고 장치 그림·그래프 높이를 줄임, 표 최근 4행(반영)"
+  },
+  {
+   "slide": "a19,b16",
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "압력계 「kPa」 글자 16px 미만",
+   "fix": "18로(반영)"
+  },
+  {
+   "slide": "a6",
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "Na+ 라벨이 12px",
+   "fix": "이온 반지름 26·34로 키움(plan 0.1에 적음)"
+  },
+  {
+   "slide": "a7",
+   "severity": "low",
+   "rule": "T2",
+   "problem": "정지·회전 쌍극자 식이 한 상자에서 줄바꿈되며 분수와 겹침",
+   "fix": "aligned 두 줄로(반영)"
+  },
+  {
+   "slide": "a22",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "외부 압력 라벨이 곡선·눈금과 겹침",
+   "fix": "라벨을 점의 왼쪽 위로, 「높은 산」으로 줄임(반영)"
+  },
+  {
+   "slide": "a31",
+   "severity": "low",
+   "rule": "T4",
+   "problem": "긴 계산식이 판서 칸 아래로 들어감",
+   "fix": "두 줄로 나눔(반영)"
+  },
+  {
+   "slide": "b4",
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "족 이름 라벨이 서로 겹침",
+   "fix": "범례(선 모양 + 색 + 이름)로(반영)"
+  },
+  {
+   "slide": "b5",
+   "severity": "high",
+   "rule": "D8",
+   "problem": "수소 결합 그림의 둘째 분자가 위로 잘리고 δ 라벨·H 라벨이 겹침",
+   "fix": "분자 좌표를 수소 결합 방향(22.25°)으로 다시 계산, 라벨 재배치(반영)"
+  },
+  {
+   "slide": "b10",
+   "severity": "low",
+   "rule": "D8",
+   "problem": "「해안」 라벨이 곡선과 겹침",
+   "fix": "범례로(반영)"
+  },
+  {
+   "slide": "b11",
+   "severity": "low",
+   "rule": "D8",
+   "problem": "「수증기」 라벨이 삼중점 라벨과 겹침",
+   "fix": "수증기 영역 오른쪽으로(반영)"
+  },
+  {
+   "slide": "b24",
+   "severity": "low",
+   "rule": "D24",
+   "problem": "시스 쌍극자 합 화살표가 C=C 결합 위에 겹침",
+   "fix": "분자 오른쪽 옆으로(반영)"
+  },
+  {
+   "slide": "a·b",
+   "severity": "low",
+   "rule": "D21",
+   "problem": "물 분자 O·H 반지름이 그림마다 다름",
+   "fix": "그림마다 배율이 달라 plan 0.1에 그림별 반지름을 적음(기각 — 한 그림 안에서는 같음)"
+  },
+  {
+   "slide": "a5,b13,b21–25",
+   "severity": "low",
+   "rule": "빈 공간",
+   "problem": "아래쪽 빈 공간",
+   "fix": "문항 장은 판서 공간 역할, a5·b13은 내용이 충분해 그대로 둠(기각)"
+  }
+ ],
+ "summary": "a·b 화면 검토: 첫 전체 캡처에서 자동 점검 38건(대부분 축 제목·라벨 겹침, 실험실 넘침)을 모두 고쳐 0건. 그림 좌표는 gen.py로 다시 생성했다."
+}

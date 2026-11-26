@@ -1,0 +1,395 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="과학 공통 본보기" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">본보기 덱 › 물리 · 화학 · 생명과학 · 지구과학</div>
+    <h1>과학 공통<br><span class="acc">본보기</span></h1>
+    <p class="sub">네 영역의 그림 약속과 조작을 한 덱에서 미리 본다</p>
+    <p class="meta">슬라이드 제작 묶음 본보기 · 13장</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="네 칸에 그린 힘 화살표가 붙은 상자, 물 분자 모형, 세포, 지층 단면">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <line x1="270" y1="60" x2="270" y2="480" stroke="#C9D3DD" stroke-width="3"/>
+    <line x1="60" y1="270" x2="480" y2="270" stroke="#C9D3DD" stroke-width="3"/>
+    <!-- 물리: 상자와 힘 -->
+    <g data-anim="move" data-from="-40,0" data-dur="1.4" data-ease="out">
+      <rect x="130" y="150" width="76" height="62" rx="4" fill="#E8C99A" stroke="#B8925A" stroke-width="3"/>
+      <g data-arw="206,181,256,181,plus,5"></g>
+    </g>
+    <line x1="100" y1="212" x2="262" y2="212" stroke="#5B6B7F" stroke-width="3"/>
+    <!-- 화학: 물 분자 -->
+    <g data-anim="pop" data-o="380,170" data-delay=".4">
+      <g data-atom="380,165,30,O,-"></g>
+      <g data-atom="351,188,21,H,-"></g>
+      <g data-atom="409,188,21,H,-"></g>
+    </g>
+    <!-- 생명: 세포 -->
+    <ellipse cx="170" cy="370" rx="78" ry="58" fill="#FDF0E6" stroke="#B9785A" stroke-width="3"/>
+    <circle cx="160" cy="362" r="22" fill="#D9CBEF" stroke="#7B4FC8" stroke-width="2.5"/>
+    <ellipse cx="208" cy="396" rx="16" ry="7" fill="#F2B37A" stroke="#C2410C" stroke-width="1.5"/>
+    <!-- 지구: 지층 -->
+    <g data-anim="fade" data-delay=".8">
+      <rect x="302" y="320" width="150" height="34" fill="#F1D9A0" stroke="#8E877C" stroke-width="2"/>
+      <rect x="302" y="354" width="150" height="34" fill="#B9C2CC" stroke="#8E877C" stroke-width="2"/>
+      <rect x="302" y="388" width="150" height="34" fill="#E3E0C9" stroke="#8E877C" stroke-width="2"/>
+    </g>
+  </svg>
+</section>
+
+<!-- ════════ 2. 이 덱의 쓰임 ════════ -->
+<section class="slide" data-sec="과학 공통 본보기" data-title="이 덱의 쓰임">
+  <h2>이 덱의 쓰임</h2>
+  <div class="std"><span class="code">[본보기]</span>실제 수업 덱이 아니라, 과목 덱을 만들 때 그림·단계 공개·실험실·문항 장의 꼴을 맞추려고 보는 덱이다. 성취기준 코드는 과목 덱에서 교육과정 원문을 그대로 쓴다.</div>
+  <ol class="goals mt12">
+    <li><b>물리</b> 힘 화살표(길이 비례, 라벨), 운동 그래프를 계산값으로 그리는 실험실, 회로도 부품 <code>data-circuit</code></li>
+    <li><b>화학</b> 원자 모형 부품 <code>data-atom</code>으로 그린 입자 모형과 원자 수 검산, 화학식 <code>\ce{}</code></li>
+    <li><b>생명과학</b> 세포 모식도의 이름표와 지시선, 교배표와 가계도 기호</li>
+    <li><b>지구과학</b> 지층 단면의 무늬·기호와 지사 해석, 반감기 그래프</li>
+  </ol>
+  <h3 class="mt28">이 덱의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">힘 그림</div><div class="farr">→</div>
+    <div class="fnode hl">운동 실험실</div><div class="farr">→</div>
+    <div class="fnode">회로</div><div class="farr">→</div>
+    <div class="fnode">입자 모형</div><div class="farr">→</div>
+    <div class="fnode">세포·유전</div><div class="farr">→</div>
+    <div class="fnode">지층·연령</div><div class="farr">→</div>
+    <div class="fnode">점검</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 물리: 힘 그림 ════════ -->
+<section class="slide" data-sec="물리 · 힘과 운동" data-title="힘 그림: 끌려가는 상자">
+  <h2><span class="no">1</span>끌려가는 상자가 받는 힘</h2>
+  <p class="f22">질량 $2\ \text{kg}$인 상자를 거친 수평면에서 줄로 끌었다. <b>Q</b> 상자가 받는 힘을 모두 그리면 알짜힘은 얼마일까?</p>
+  <div class="row mt12">
+    <div class="col" style="flex:0 0 470px">
+      <svg class="fig" viewBox="0 20 460 240" style="width:460px" aria-label="거친 수평면 위의 상자를 오른쪽으로 줄로 끄는 모습">
+        <line x1="20" y1="200" x2="440" y2="200" stroke="#5B6B7F" stroke-width="3"/>
+        <g stroke="#9FB0C2" stroke-width="2"><line x1="40" y1="200" x2="28" y2="214"/><line x1="80" y1="200" x2="68" y2="214"/><line x1="120" y1="200" x2="108" y2="214"/><line x1="160" y1="200" x2="148" y2="214"/><line x1="200" y1="200" x2="188" y2="214"/><line x1="240" y1="200" x2="228" y2="214"/><line x1="280" y1="200" x2="268" y2="214"/><line x1="320" y1="200" x2="308" y2="214"/><line x1="360" y1="200" x2="348" y2="214"/><line x1="400" y1="200" x2="388" y2="214"/><line x1="440" y1="200" x2="428" y2="214"/></g>
+        <text class="tex" x="30" y="246" data-mix="거친 수평면" data-size="19"></text>
+        <g data-anim="move" data-from="-70,0" data-dur="1.6" data-ease="out">
+          <rect x="140" y="110" width="110" height="90" rx="4" fill="#E8C99A" stroke="#B8925A" stroke-width="3"/>
+          <text class="tex" x="195" y="164" data-tex="2\ \text{kg}" data-size="22" data-anchor="middle"></text>
+          <line x1="250" y1="155" x2="400" y2="155" stroke="#16233D" stroke-width="3"/>
+          <circle cx="400" cy="155" r="6" fill="#16233D"/>
+          <text class="tex" x="325" y="142" data-mix="줄" data-size="19" data-anchor="middle"></text>
+        </g>
+        <text class="tex" x="330" y="56" data-mix="오른쪽으로 끌려간다" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+        <g data-arw="270,72,390,72,muted,2.5"></g>
+      </svg>
+      <p class="small mt8">줄이 당기는 힘 $12\ \text{N}$, 마찰력 $4\ \text{N}$, 중력 가속도 $g=10\ \text{m/s}^2$</p>
+    </div>
+    <div class="col">
+      <svg class="fig" viewBox="0 0 420 260" style="width:420px" aria-label="상자를 점으로 줄여 그린 힘 그림: 아래로 무게, 위로 수직 항력, 오른쪽으로 당기는 힘, 왼쪽으로 마찰력">
+        <line x1="40" y1="130" x2="380" y2="130" stroke="#C9D3DD" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <line x1="210" y1="14" x2="210" y2="246" stroke="#C9D3DD" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <g class="step" data-g="f1"><g data-arw="210,130,210,230,minus,4"></g>
+          <text class="tex" x="222" y="228" data-mix="무게 $W=20\ \text{N}$" data-size="20" fill="#1F6FD1"></text></g>
+        <g class="step" data-g="f2"><g data-arw="210,130,210,30,ink,4"></g>
+          <text class="tex" x="222" y="44" data-mix="수직 항력 $N=20\ \text{N}$" data-size="20"></text></g>
+        <g class="step" data-g="f3"><g data-arw="210,130,270,130,plus,4"></g>
+          <text class="tex" x="278" y="120" data-mix="$F=12\ \text{N}$" data-size="20" fill="#D7263D"></text></g>
+        <g class="step" data-g="f4"><g data-arw="210,130,190,130,equi,4"></g>
+          <text class="tex" x="184" y="120" data-mix="마찰력 $f=4\ \text{N}$" data-size="20" data-anchor="end" fill="#E08A2C"></text></g>
+        <circle cx="210" cy="130" r="7" fill="#16233D"/>
+      </svg>
+    </div>
+  </div>
+  <p class="f21 step" data-g="f2">연직 방향: 무게와 수직 항력이 크기가 같고 방향이 반대 → 연직 방향 알짜힘 0</p>
+  <p class="f21 step" data-g="f4">수평 방향: 오른쪽 $12\ \text{N}$, 왼쪽 $4\ \text{N}$ <span class="small">(화살표 길이는 힘의 크기에 비례)</span></p>
+  <div class="answer step">알짜힘 $8\ \text{N}$ (오른쪽) → $a=\dfrac{F_\text{알짜}}{m}=\dfrac{8\ \text{N}}{2\ \text{kg}}=4\ \text{m/s}^2$</div>
+</section>
+
+<!-- ════════ 4. 물리: 운동 실험실 ════════ -->
+<section class="slide" data-sec="물리 · 힘과 운동" data-title="실험실: 힘·질량과 가속도">
+  <h2><span class="tag">실험실</span>힘과 질량을 바꾸며 가속도 측정하기</h2>
+  <div class="lab" data-lab="sc001run">
+    <div class="lab-ctl">
+      <div class="ctl"><div class="lbl"><span>알짜힘 $F$</span><output data-o="F"></output></div>
+        <input type="range" min="2" max="20" step="2" value="8" data-i="F" aria-label="알짜힘"></div>
+      <div class="ctl"><div class="lbl"><span>질량 $m$</span><output data-o="m"></output></div>
+        <input type="range" min="1" max="5" step="1" value="2" data-i="m" aria-label="질량"></div>
+      <div class="res"><div class="small">이론값 가속도 $a$ [$\text{m/s}^2$]</div><div class="big"><output data-o="a"></output></div><output class="kind" data-o="msg"></output></div>
+      <div class="sc001-btns mt8"><button class="btn" data-act="measure">측정하기</button><button class="btn" data-act="reset">초기화</button></div>
+      <table class="tight sc001-rec mt8">
+        <thead><tr><th>번</th><th>$F$ [N]</th><th>$m$ [kg]</th><th>측정 $a$ [$\text{m/s}^2$]</th></tr></thead>
+        <tbody data-o="rows"></tbody>
+      </table>
+    </div>
+    <div class="lab-fig" style="width:563px;height:403px">
+      <svg viewBox="0 0 560 400" width="560" height="400" aria-label="속도-시간 그래프. 측정할 때마다 직선이 남는다"></svg>
+    </div>
+  </div>
+  <p class="small mt8">그래프는 $v=at$를 계산해 그린다(손으로 그린 곡선이 아님). 측정값에는 실제 실험처럼 작은 오차(고정 시드)가 들어간다. 이전 측정은 회색 점선으로 남는다.</p>
+</section>
+
+<!-- ════════ 5. 물리: 회로 ════════ -->
+<section class="slide" data-sec="물리 · 전기" data-title="회로도: 전류와 저항">
+  <h2><span class="no">2</span>회로에 흐르는 전류</h2>
+  <div class="row stretch">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 480 270" style="width:500px" aria-label="전압 6 V인 전지, 3 옴 저항, 전류계를 하나로 이은 회로" data-circuit='{"parts":[["wire",[[80,132],[80,50],[180,50]]],["R",[180,50],[300,50],"R=3\\ \\Omega",{"size":22}],["wire",[[300,50],[400,50],[400,124]]],["meter",[400,140],"A",{"r":16}],["wire",[[400,156],[400,230],[80,230],[80,148]]],["bat",[80,140],{"dir":"v","pos":"up","label":"6\\ \\text{V}","signs":true}]],"stroke":3,"labelSize":22}'>
+        <g class="step" data-g="c1"><g data-arw="190,84,290,84,plus,3.5"></g>
+          <text class="tex" x="240" y="112" data-mix="전류 $I$" data-size="20" data-anchor="middle" fill="#D7263D"></text></g>
+        <g class="step" data-g="c2"><g data-arw="290,150,190,150,minus,3.5"></g>
+          <g data-anim="dash" data-speed="40" data-flow="1"><line x1="190" y1="196" x2="290" y2="196" stroke="#1F6FD1" stroke-width="2" stroke-dasharray="6 8"/></g>
+          <text class="tex" x="240" y="178" data-mix="전자의 이동" data-size="20" data-anchor="middle" fill="#1F6FD1"></text></g>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> 전압이 $6\ \text{V}$인 전지에 저항 $3\ \Omega$을 이었다. 전류계에 흐르는 전류는 몇 A일까?</p>
+      <p class="f21 step" data-g="c1">전류는 전지의 (+)극에서 나와 저항을 지나 (−)극으로 들어간다.</p>
+      <p class="f21 step" data-g="c2">전자는 전류와 <b>반대 방향</b>으로 도선을 따라 움직인다.</p>
+      <div class="board"></div>
+    </div>
+  </div>
+  <div class="answer step">$I=\dfrac{V}{R}=\dfrac{6\ \text{V}}{3\ \Omega}=2\ \text{A}$</div>
+</section>
+
+<!-- ════════ 6. 화학: 입자 모형 ════════ -->
+<section class="slide" data-sec="화학 · 화학 반응" data-title="입자 모형: 물이 생기는 반응">
+  <h2><span class="no">3</span>수소와 산소가 만나 물이 될 때</h2>
+  <p class="f22">수소 분자 2개와 산소 분자 1개가 반응한다. <b>Q</b> 반응 뒤 원자의 종류와 개수는 어떻게 될까?</p>
+  <svg class="fig mt8" viewBox="0 10 980 280" style="width:980px" aria-label="반응 전 수소 분자 2개와 산소 분자 1개, 반응 후 물 분자 2개의 입자 모형">
+    <rect x="20" y="20" width="360" height="220" rx="14" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/>
+    <rect x="600" y="20" width="360" height="220" rx="14" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/>
+    <g data-atom="88,90,18,H"></g><g data-atom="112,90,18,H"></g>
+    <g data-atom="88,180,18,H"></g><g data-atom="112,180,18,H"></g>
+    <g data-atom="254,135,24,O"></g><g data-atom="286,135,24,O"></g>
+    <g data-arw="410,130,570,130,ink,4"></g>
+    <text class="tex" x="490" y="112" data-mix="반응" data-size="20" data-anchor="middle"></text>
+    <g class="step" data-g="p1">
+      <g data-anim="move" data-from="-120,0" data-dur="1.2" data-ease="out">
+        <g data-atom="696.4,123.5,18,H"></g><g data-atom="743.6,123.5,18,H"></g><g data-atom="720,105,24,O"></g>
+      </g>
+      <g data-anim="move" data-from="-120,0" data-dur="1.2" data-delay=".2" data-ease="out">
+        <g data-atom="836.4,183.5,18,H"></g><g data-atom="883.6,183.5,18,H"></g><g data-atom="860,165,24,O"></g>
+      </g>
+    </g>
+    <text class="tex" x="200" y="276" data-mix="반응 전" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="780" y="276" data-mix="반응 후" data-size="20" data-anchor="middle"></text>
+  </svg>
+  <div class="row mt8" style="align-items:center">
+    <div class="col" style="flex:0 0 360px"><div class="formula step" data-g="p1">$\ce{2H2 + O2 -> 2H2O}$</div></div>
+    <div class="col" style="flex:0 0 330px">
+      <table class="tight sc001-cnt step">
+        <tr><th>원자</th><th>반응 전</th><th>반응 후</th></tr>
+        <tr><td>$\ce{H}$</td><td>4개</td><td>4개</td></tr>
+        <tr><td>$\ce{O}$</td><td>2개</td><td>2개</td></tr>
+      </table>
+    </div>
+    <div class="col"><p class="f21 step">→ 원자는 새로 생기거나 사라지지 않고 <b>배열만 바뀐다</b>. 반응 전후 그림의 원자 수도 같아야 한다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 7. 화학: 확인 문제 ════════ -->
+<section class="slide" data-sec="화학 · 화학 반응" data-title="확인 문제 01: 암모니아">
+  <h2><span class="tag q">확인 문제 01</span>암모니아가 생기는 반응</h2>
+  <div class="row stretch">
+    <div class="col" style="flex:0 0 560px">
+      <p class="f22">질소 분자 1개와 수소 분자 3개가 모두 반응하여 암모니아($\ce{NH3}$)가 된다. <b>Q</b> 생기는 암모니아 분자는 몇 개일까?</p>
+      <svg class="fig mt12" viewBox="0 0 540 220" style="width:540px" aria-label="질소 분자 1개와 수소 분자 3개, 오른쪽 점선 상자는 생기는 분자를 쓰는 자리">
+        <rect x="10" y="10" width="250" height="200" rx="12" fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"/>
+        <g data-atom="62,60,24,N"></g><g data-atom="94,60,24,N"></g>
+        <g data-atom="168,52,18,H"></g><g data-atom="192,52,18,H"></g>
+        <g data-atom="58,152,18,H"></g><g data-atom="82,152,18,H"></g>
+        <g data-atom="168,150,18,H"></g><g data-atom="192,150,18,H"></g>
+        <g data-arw="276,110,336,110,ink,4"></g>
+        <rect x="350" y="10" width="180" height="200" rx="12" fill="none" stroke="#5B6B7F" stroke-width="2" stroke-dasharray="8 6"/>
+        <text class="tex step" data-g="q1" x="440" y="122" data-mix="$\ce{NH3}$ 2개" data-size="26" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text>
+      </svg>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step" data-g="q1"><b>2개</b><br><span class="small">$\ce{N2 + 3H2 -> 2NH3}$ — $\ce{N}$ 2개 = 2개, $\ce{H}$ 6개 = 6개</span></div>
+</section>
+
+<!-- ════════ 8. 생명: 세포 모식도 ════════ -->
+<section class="slide" data-sec="생명과학 · 세포" data-title="세포 모식도: 동물 세포와 식물 세포">
+  <h2><span class="no">4</span>동물 세포와 식물 세포</h2>
+  <svg class="fig" viewBox="0 0 1000 410" style="width:1000px" aria-label="왼쪽 동물 세포와 오른쪽 식물 세포 모식도. 세포막, 핵, 세포질, 미토콘드리아, 세포벽, 엽록체, 액포에 이름표">
+    <!-- 동물 세포 -->
+    <ellipse cx="220" cy="200" rx="170" ry="125" fill="#FDF0E6" stroke="#B9785A" stroke-width="3"/>
+    <circle cx="205" cy="195" r="48" fill="#D9CBEF" stroke="#7B4FC8" stroke-width="2.5"/>
+    <circle cx="214" cy="186" r="12" fill="#A58BD6"/>
+    <ellipse cx="320" cy="252" rx="30" ry="13" fill="#F2B37A" stroke="#C2410C" stroke-width="2" transform="rotate(20 320 252)"/>
+    <ellipse cx="120" cy="150" rx="26" ry="11" fill="#F2B37A" stroke="#C2410C" stroke-width="2" transform="rotate(-25 120 150)"/>
+    <g stroke="#5B6B7F" stroke-width="1.5">
+      <line x1="150" y1="48" x2="182" y2="152"/><line x1="310" y1="48" x2="300" y2="120"/>
+      <line x1="330" y1="370" x2="322" y2="266"/><line x1="90" y1="370" x2="90" y2="280"/>
+    </g>
+    <text class="tex" x="150" y="40" data-mix="핵" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="310" y="40" data-mix="세포질" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="330" y="394" data-mix="미토콘드리아" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="90" y="394" data-mix="세포막" data-size="20" data-anchor="middle"></text>
+    <!-- 식물 세포 -->
+    <rect x="560" y="70" width="360" height="260" rx="18" fill="#F3F8EC" stroke="#2E9E6A" stroke-width="9"/>
+    <rect x="570" y="80" width="340" height="240" rx="12" fill="none" stroke="#B9785A" stroke-width="2"/>
+    <rect x="690" y="110" width="190" height="180" rx="40" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="2.5"/>
+    <circle cx="622" cy="150" r="32" fill="#D9CBEF" stroke="#7B4FC8" stroke-width="2.5"/>
+    <ellipse cx="665" cy="205" rx="20" ry="9" fill="#F2B37A" stroke="#C2410C" stroke-width="2"/>
+    <g fill="#7CC36A" stroke="#3E7D32" stroke-width="2">
+      <ellipse cx="605" cy="235" rx="22" ry="11"/><ellipse cx="612" cy="292" rx="22" ry="11"/>
+      <ellipse cx="760" cy="96" rx="22" ry="10"/><ellipse cx="840" cy="96" rx="22" ry="10"/>
+    </g>
+    <g stroke="#5B6B7F" stroke-width="1.5">
+      <line x1="680" y1="48" x2="640" y2="122"/><line x1="580" y1="370" x2="574" y2="316"/>
+      <line x1="670" y1="370" x2="666" y2="215"/>
+    </g>
+    <text class="tex" x="680" y="40" data-mix="핵" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="575" y="394" data-mix="세포막" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="680" y="394" data-mix="미토콘드리아" data-size="20" data-anchor="middle"></text>
+    <g class="step" data-g="b1">
+      <g stroke="#2E9E6A" stroke-width="2"><line x1="580" y1="48" x2="572" y2="70"/><line x1="840" y1="48" x2="840" y2="86"/><line x1="820" y1="370" x2="820" y2="290"/></g>
+      <text class="tex" x="580" y="40" data-mix="세포벽" data-size="20" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text>
+      <text class="tex" x="840" y="40" data-mix="엽록체" data-size="20" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text>
+      <text class="tex" x="820" y="394" data-mix="액포" data-size="20" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text>
+    </g>
+  </svg>
+  <p class="f21 step" data-g="b1"><b>Q</b> 식물 세포에만 있는 구조는? → 세포벽, 엽록체, (크게 발달한) 액포 <span class="small">— 초록 이름표</span></p>
+  <p class="f21 step"><b>오개념 주의</b> 식물 세포에도 <b>미토콘드리아</b>가 있다. 엽록체가 있어도 세포 호흡은 미토콘드리아에서 일어난다.</p>
+</section>
+
+<!-- ════════ 9. 생명: 교배표와 가계도 ════════ -->
+<section class="slide" data-sec="생명과학 · 유전" data-title="교배표와 가계도">
+  <h2><span class="no">5</span>잡종끼리 교배하면</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">둥근 완두(대립유전자 $A$, 우성)와 주름진 완두($a$, 열성)의 잡종 $Aa$끼리 교배한다. <b>Q</b> 자손의 표현형 비는?</p>
+      <table class="sc001-punnett mt12">
+        <tr><th class="sc001-corner">생식세포</th><th>$A$</th><th>$a$</th></tr>
+        <tr><th>$A$</th><td><span class="step" data-g="g1">$AA$</span></td><td><span class="step" data-g="g1">$Aa$</span></td></tr>
+        <tr><th>$a$</th><td><span class="step" data-g="g1">$Aa$</span></td><td class="sc001-rec2"><span class="step" data-g="g1">$aa$</span></td></tr>
+      </table>
+      <p class="f21 mt12 step" data-g="g2">유전자형 비 $AA : Aa : aa = 1 : 2 : 1$</p>
+      <div class="answer step" data-g="g3">표현형 비 둥근 것 : 주름진 것 $= 3 : 1$</div>
+    </div>
+    <div class="col" style="flex:0 0 440px">
+      <svg class="fig" viewBox="0 0 420 300" style="width:420px" aria-label="가계도: 형질이 나타나지 않은 부모 사이에서 자녀 넷, 그중 셋째 아들만 형질이 나타남">
+        <rect x="108" y="48" width="44" height="44" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/>
+        <circle cx="290" cy="70" r="22" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/>
+        <g stroke="#16233D" stroke-width="2.5" fill="none">
+          <line x1="152" y1="70" x2="268" y2="70"/><line x1="210" y1="70" x2="210" y2="140"/>
+          <line x1="90" y1="140" x2="330" y2="140"/>
+          <line x1="90" y1="140" x2="90" y2="160"/><line x1="170" y1="140" x2="170" y2="160"/>
+          <line x1="250" y1="140" x2="250" y2="160"/><line x1="330" y1="140" x2="330" y2="160"/>
+        </g>
+        <rect x="68" y="160" width="44" height="44" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/>
+        <circle cx="170" cy="182" r="22" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/>
+        <rect x="228" y="160" width="44" height="44" fill="#16233D" stroke="#16233D" stroke-width="3"/>
+        <circle cx="330" cy="182" r="22" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/>
+        <text class="tex" x="130" y="34" data-tex="Aa" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="290" y="34" data-tex="Aa" data-size="20" data-anchor="middle"></text>
+        <text class="tex step" data-g="g3" x="250" y="234" data-tex="aa" data-size="20" data-anchor="middle" data-weight="700"></text>
+        <rect x="20" y="258" width="20" height="20" fill="#16233D"/>
+        <text class="tex" x="48" y="275" data-mix="형질이 나타난 남자 · □ 남자 · ○ 여자" data-size="18"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 지구: 지층 단면 ════════ -->
+<section class="slide" data-sec="지구과학 · 지구의 역사" data-title="지층 단면과 지사 해석">
+  <h2><span class="no">6</span>지층 단면 읽기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px">
+      <svg class="fig" viewBox="0 0 560 340" style="width:560px" aria-label="수평 지층 A, B, C를 화강암 D가 뚫고 들어오고, 그 위를 굽은 부정합면이 자르고 지층 E가 쌓인 단면">
+        <defs>
+          <pattern id="sc001-p10-ss" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F1D9A0"/><circle cx="4" cy="4" r="1.6" fill="#A8874A"/><circle cx="11" cy="10" r="1.6" fill="#A8874A"/></pattern>
+          <pattern id="sc001-p10-sh" width="24" height="10" patternUnits="userSpaceOnUse"><rect width="24" height="10" fill="#B9C2CC"/><line x1="2" y1="5" x2="14" y2="5" stroke="#6E7C8A" stroke-width="1.6"/></pattern>
+          <pattern id="sc001-p10-ls" width="28" height="16" patternUnits="userSpaceOnUse"><rect width="28" height="16" fill="#E3E0C9"/><path d="M0 0.5 H28 M0 8.5 H28 M7 0.5 V8.5 M21 8.5 V16" stroke="#9C987A" stroke-width="1.4" fill="none"/></pattern>
+          <pattern id="sc001-p10-gr" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#F4C7C3"/><path d="M5 5 L9 9 M9 5 L5 9 M13 12 L17 16 M17 12 L13 16" stroke="#B5524A" stroke-width="1.4"/></pattern>
+          <pattern id="sc001-p10-cg" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="22" height="22" fill="#EADCC4"/><circle cx="6" cy="7" r="3.5" fill="none" stroke="#8E7356" stroke-width="1.4"/><circle cx="16" cy="16" r="2.5" fill="none" stroke="#8E7356" stroke-width="1.4"/></pattern>
+        </defs>
+        <rect x="20" y="235" width="520" height="85" fill="url(#sc001-p10-ss)"/>
+        <rect x="20" y="170" width="520" height="65" fill="url(#sc001-p10-sh)"/>
+        <rect x="20" y="92" width="520" height="78" fill="url(#sc001-p10-ls)"/>
+        <g stroke="#5B6B7F" stroke-width="1.5"><line x1="20" y1="235" x2="540" y2="235"/><line x1="20" y1="170" x2="540" y2="170"/></g>
+        <polygon points="290,320 312,262 300,210 322,160 338,92 392,92 404,150 386,212 400,268 384,320" fill="url(#sc001-p10-gr)" stroke="#B5524A" stroke-width="2.5"/>
+        <path d="M20 40 H540 L540 104 C510 96 470 116 440 110 C400 102 360 116 300 106 C250 98 200 116 160 110 C110 102 60 114 20 108 Z" fill="url(#sc001-p10-cg)"/>
+        <path class="step" data-g="e1" d="M540 104 C510 96 470 116 440 110 C400 102 360 116 300 106 C250 98 200 116 160 110 C110 102 60 114 20 108" fill="none" stroke="#C2410C" stroke-width="3.5"/>
+        <rect x="20" y="40" width="520" height="280" fill="none" stroke="#16233D" stroke-width="2.5"/>
+        <text class="tex" x="40" y="80" data-mix="E 역암" data-size="20" data-weight="700" data-halo="1"></text>
+        <text class="tex" x="40" y="140" data-mix="C 석회암" data-size="20" data-weight="700" data-halo="1"></text>
+        <text class="tex" x="40" y="210" data-mix="B 셰일" data-size="20" data-weight="700" data-halo="1"></text>
+        <text class="tex" x="40" y="285" data-mix="A 사암" data-size="20" data-weight="700" data-halo="1"></text>
+        <text class="tex" x="352" y="250" data-mix="D 화강암" data-size="20" data-weight="700" data-anchor="middle" data-halo="1"></text>
+        <text class="tex step" data-g="e1" x="470" y="80" data-mix="부정합면" data-size="19" data-anchor="middle" data-halo="1" fill="#C2410C"></text>
+      </svg>
+    </div>
+    <div class="col">
+      <p class="f22"><b>Q</b> A–E가 만들어진 순서는?</p>
+      <ul class="f21 mt8">
+        <li class="step"><b>지층 누중</b> 아래 지층이 먼저 쌓였다 → A, B, C 순서</li>
+        <li class="step"><b>관입</b> D가 A–C를 뚫었으므로 D는 C보다 나중</li>
+        <li class="step" data-g="e1"><b>부정합</b> 굽은 침식면이 C와 D의 윗부분을 잘랐다 → 융기·침식 뒤 E가 쌓임</li>
+      </ul>
+      <div class="answer step">A → B → C → D → 융기·침식 → E</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 지구: 반감기 그래프 ════════ -->
+<section class="slide" data-sec="지구과학 · 지구의 역사" data-title="확인 문제 02: 반감기">
+  <h2><span class="tag q">확인 문제 02</span>방사성 원소로 나이 알아내기</h2>
+  <div class="row stretch">
+    <div class="col" style="flex:0 0 560px">
+      <p class="f22">반감기가 1억 년인 가상의 방사성 원소 $\mathrm{X}$가 화강암에 들어 있다. 지금 처음 양의 $25\ \%$가 남아 있다면, <b>Q</b> 이 화강암은 몇 억 년 전에 만들어졌을까?</p>
+      <svg class="fig mt8" viewBox="0 0 520 350" style="width:490px" aria-label="시간에 따라 남은 모원소의 비율이 1억 년마다 절반으로 줄어드는 곡선">
+        <g stroke="#E2E7EC" stroke-width="1.5">
+          <line x1="180" y1="50" x2="180" y2="290"/><line x1="280" y1="50" x2="280" y2="290"/><line x1="380" y1="50" x2="380" y2="290"/><line x1="480" y1="50" x2="480" y2="290"/>
+          <line x1="80" y1="50" x2="480" y2="50"/><line x1="80" y1="110" x2="480" y2="110"/><line x1="80" y1="170" x2="480" y2="170"/><line x1="80" y1="230" x2="480" y2="230"/>
+        </g>
+        <g data-arw="80,290,500,290,muted,2.5"></g><g data-arw="80,290,80,26,muted,2.5"></g>
+        <path d="M80.0 50.0 L85.0 58.2 L90.0 66.1 L95.0 73.7 L100.0 81.1 L105.0 88.2 L110.0 95.1 L115.0 101.7 L120.0 108.1 L125.0 114.3 L130.0 120.3 L135.0 126.1 L140.0 131.7 L145.0 137.1 L150.0 142.3 L155.0 147.3 L160.0 152.2 L165.0 156.9 L170.0 161.4 L175.0 165.8 L180.0 170.0 L185.0 174.1 L190.0 178.0 L195.0 181.8 L200.0 185.5 L205.0 189.1 L210.0 192.5 L215.0 195.8 L220.0 199.1 L225.0 202.2 L230.0 205.1 L235.0 208.0 L240.0 210.8 L245.0 213.5 L250.0 216.1 L255.0 218.6 L260.0 221.1 L265.0 223.4 L270.0 225.7 L275.0 227.9 L280.0 230.0 L285.0 232.0 L290.0 234.0 L295.0 235.9 L300.0 237.8 L305.0 239.5 L310.0 241.3 L315.0 242.9 L320.0 244.5 L325.0 246.1 L330.0 247.6 L335.0 249.0 L340.0 250.4 L345.0 251.8 L350.0 253.1 L355.0 254.3 L360.0 255.5 L365.0 256.7 L370.0 257.8 L375.0 258.9 L380.0 260.0 L385.0 261.0 L390.0 262.0 L395.0 263.0 L400.0 263.9 L405.0 264.8 L410.0 265.6 L415.0 266.5 L420.0 267.3 L425.0 268.0 L430.0 268.8 L435.0 269.5 L440.0 270.2 L445.0 270.9 L450.0 271.5 L455.0 272.2 L460.0 272.8 L465.0 273.4 L470.0 273.9 L475.0 274.5 L480.0 275.0" fill="none" stroke="#16233D" stroke-width="3.5" data-anim="draw" data-dur="1.8"/>
+        <g fill="#E08A2C"><circle cx="180" cy="170" r="5"/><circle cx="280" cy="230" r="5"/><circle cx="380" cy="260" r="5"/></g>
+          <text class="tex" x="80" y="316" data-tex="0" data-size="18" data-anchor="middle"></text>
+          <text class="tex" x="180" y="316" data-tex="1" data-size="18" data-anchor="middle"></text>
+          <text class="tex" x="280" y="316" data-tex="2" data-size="18" data-anchor="middle"></text>
+          <text class="tex" x="380" y="316" data-tex="3" data-size="18" data-anchor="middle"></text>
+          <text class="tex" x="480" y="316" data-tex="4" data-size="18" data-anchor="middle"></text>
+          <text class="tex" x="70" y="56" data-tex="100" data-size="18" data-anchor="end"></text>
+          <text class="tex" x="70" y="176" data-tex="50" data-size="18" data-anchor="end"></text>
+          <text class="tex" x="70" y="236" data-tex="25" data-size="18" data-anchor="end"></text>
+          <text class="tex" x="70" y="296" data-tex="0" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="512" y="340" data-mix="$t$ [억 년]" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="92" y="24" data-mix="남은 모원소 [%]" data-size="18"></text>
+        <g class="step" data-g="h1">
+          <line x1="80" y1="230" x2="280" y2="230" stroke="#2E9E6A" stroke-width="2.5" stroke-dasharray="7 5"/>
+          <line x1="280" y1="230" x2="280" y2="290" stroke="#2E9E6A" stroke-width="2.5" stroke-dasharray="7 5"/>
+          <text class="tex" x="292" y="214" data-mix="반감기 2번" data-size="19" fill="#2E9E6A" data-halo="1"></text>
+        </g>
+      </svg>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step" data-g="h1"><b>2억 년 전</b> <span class="small">$100\ \% \rightarrow 50\ \% \rightarrow 25\ \%$ : 반감기 2번</span></div>
+</section>
+
+<!-- ════════ 12. 정리: 영역 팩 ════════ -->
+<section class="slide" data-sec="과학 공통 본보기 · 마무리" data-title="스스로 정리: 영역별 그림 약속">
+  <h2><span class="tag ink">스스로 정리</span>영역별 그림 약속</h2>
+  <table class="sc001-sum">
+    <tr><th>영역</th><th>이 덱에서 쓴 약속</th><th>장</th></tr>
+    <tr><td>물리</td><td class="l">힘 화살표는 크기에 비례하고 힘 이름을 단다. 무게 <span class="c-minus">파랑</span>, 당기는 힘 <span class="c-plus">빨강</span>. 그래프는 식으로 계산한 값</td><td>3–5</td></tr>
+    <tr><td>화학</td><td class="l">원자는 <code>data-atom</code>(원소마다 같은 색·크기), 반응 전후 <span class="blank"><span class="step">원자 수</span></span>가 같다. 화학식은 <code>\ce{}</code></td><td>6–7</td></tr>
+    <tr><td>생명과학</td><td class="l">구조 이름표는 지시선으로, 유전자 기호는 기울임 $A$, $a$. 가계도 □ 남자 ○ 여자, 칠한 기호 = 형질 발현</td><td>8–9</td></tr>
+    <tr><td>지구과학</td><td class="l">암석은 무늬 + 이름, 부정합면은 굵은 굽은 선. 나이는 <span class="blank"><span class="step">지층 누중</span></span>·관입·부정합으로 정한다</td><td>10–11</td></tr>
+  </table>
+  <div class="note mt16">새 과목 덱은 이 표의 약속을 <code>작업지시/&lt;과목&gt;_약속.md</code> 5절(색·그림 약속)에 적고, 덱 plan.md 0절에서 이어받는다.</div>
+</section>
+
+<!-- ════════ 13. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="과학 공통 본보기 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 본 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 힘 그림에서 화살표의 길이와 이름표가 무엇을 뜻하는지 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 실험실에서 변인을 바꾸어 측정하고 표와 그래프로 정리했다.</button>
+    <button class="chk">[가치·태도] 모형과 그림이 실제 현상을 단순하게 나타낸 것임을 알고 비판적으로 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 질량이 같을 때 알짜힘을 2배로 하면 가속도는? <span class="step">→ <span class="ans">2배</span>가 된다($a=F/m$).</span></p>
+    <p class="f21 mt8"><b>Q</b> 반응 전후 입자 그림에서 꼭 같아야 하는 것은? <span class="step">→ 원자의 종류와 개수</span></p>
+    <p class="f21 mt8"><b>Q</b> 관입한 화성암과 그것이 뚫은 지층 가운데 먼저 생긴 것은? <span class="step">→ 뚫린 지층이 먼저, 관입암이 나중</span></p>
+  </div>
+</section>

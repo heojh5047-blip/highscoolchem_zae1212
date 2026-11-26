@@ -1,0 +1,555 @@
+<!-- 고급화학 1-4-2 탄화수소 유도체와 방향족 화합물의 구조 — gen.py가 tpl.html에서 만든다(그림 자리표) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 물질의 구조 › 4. 탄소 화합물의 분자 구조 › 02–03</div>
+    <h1 class="ac142-h1">탄화수소 유도체와<br><span class="acc">방향족 화합물의 구조</span></h1>
+    <p class="sub">수소 자리에 붙은 작용기, 고리 위로 퍼진 π 전자</p>
+    <p class="meta">고등학교 고급 화학 63–69쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 탄화수소의 구조" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화01-05]</span>원자가 결합 이론과 혼성 오비탈의 정의를 이해하고, 혼성 오비탈로 설명할 수 있는 다양한 탄소 화합물 분자 구조를 탐색할 수 있다.</div>
+  <div class="std"><span class="code">[12고화01-06]</span>포화 및 불포화 탄화수소의 이성질체를 이해하고, 이성질체를 구조식으로 그려 비교할 수 있다.</div>
+  <div class="std"><span class="code">[12고화01-07]</span>탄화수소 유도체에서 다양한 작용기의 특징을 알고, 산 염기 반응, 산화·환원 반응과 연관 지을 수 있다.</div>
+  <ol class="goals mt8 f21">
+    <li>탄화수소의 수소 대신 <b>작용기</b>가 치환된 탄화수소 유도체의 극성과 반응성을 설명할 수 있다.</li>
+    <li>할로젠화 알킬의 <b>친핵성 치환 반응</b>과 <b>제거 반응</b>을 구조식으로 나타낼 수 있다.</li>
+    <li>카보닐 화합물, 알코올, 에테르, 아민의 구조와 성질을 <b>산 염기 반응, 산화·환원 반응</b>과 연관 지을 수 있다.</li>
+    <li>벤젠의 <b>공명 구조</b>와 비편재화된 π 결합으로 방향족 화합물의 구조와 안정성을 설명할 수 있다.</li>
+    <li>아스피린 개발의 역사를 조사하여 발표할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">유도체</div><div class="farr">→</div>
+    <div class="fnode">할로젠 화합물</div><div class="farr">→</div>
+    <div class="fnode">카보닐 화합물</div><div class="farr">→</div>
+    <div class="fnode">알코올 등</div><div class="farr">→</div>
+    <div class="fnode">방향족</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 아스피린</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 탄화수소의 구조 · 도입" data-title="생각 열기: C2H6O">
+  <h2><span class="tag">생각 열기</span>분자식이 같은데 끓는점이 100 °C나 다르다?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 570px">{{OPEN}}</div>
+    <div class="col stack">
+      <div class="card"><h3><span class="tag alt">다시 보기</span></h3>
+        <p class="f21"><b>작용기</b>: 탄소 화합물의 구조적 특성을 결정짓는 특정한 원자들의 집단 — 하이드록시기 –OH, 에테르기 –O– (4. 01)</p></div>
+      <p class="f22 mt16"><b>Q</b> 두 분자는 모두 $\ce{C2H6O}$이다. 끓는점이 크게 다른 까닭은 무엇일까?</p>
+      <div class="answer step">작용기가 다르기 때문이다 — 에탄올은 –OH가 있어 분자 사이에 수소 결합을 한다.</div>
+    </div>
+  </div>
+  <p class="f21 step mt8">→ 오늘은 탄화수소에 작용기가 붙은 <b>탄화수소 유도체</b>와, 고리 모양의 <b>방향족 화합물</b>의 구조를 알아본다.</p>
+  <p class="small">끓는점은 덱 보충 자료(1 atm)</p>
+</section>
+
+<!-- ════════ 4. 탄화수소 유도체 ════════ -->
+<section class="slide" data-sec="02 · 탄화수소 유도체" data-title="탄화수소 유도체">
+  <h2><span class="no">1</span>탄화수소 유도체</h2>
+  <p class="f21"><mark>탄화수소 유도체</mark>: 탄화수소의 수소 대신에 작용기가 치환된 화합물</p>
+  {{DERIV}}
+  <p class="f21 step">탄화수소는 C–H, C–C 결합만 있어 <b>무극성</b> 분자이다.</p>
+  <p class="f21 step">탄소보다 <b>전기음성도가 큰 원소</b>(할로젠, O, N)를 가진 작용기가 붙으면 결합이 <b>극성</b>을 띤다 → 탄화수소보다 <b>화학 반응성이 좋아</b> 여러 가지 반응을 일으킨다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 에테인과 클로로에테인 중 극성 분자는 어느 것일까?</p>
+    <div class="answer step" style="flex:1">클로로에테인 — C–Cl 결합에서 전기음성도가 큰 Cl 쪽으로 전자가 치우친다.</div>
+  </div>
+</section>
+
+<!-- ════════ 5. 할로젠화 알킬 ════════ -->
+<section class="slide" data-sec="02 · 할로젠 화합물" data-title="할로젠 화합물과 할로젠화 알킬">
+  <h2><span class="no">2</span>할로젠 화합물과 할로젠화 알킬</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{RX}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>할로젠 화합물</mark>: 탄화수소의 수소 대신에 할로젠기 –X가 치환된 탄화수소 유도체 — 용매, 의약품, 세척제, 냉각제 등으로 쓰인다.</p>
+      <p class="f21 step">알케인의 수소가 할로젠기로 치환된 것이 <b>할로젠화 알킬</b>(일반 분자식 R–X)이다. 할로젠은 $\delta^-$, 알킬기 R–의 탄소는 $\delta^+$를 띤다.</p>
+      <div class="row step ac142-two">
+        <div class="card"><h3 class="c-plus">친전자체</h3><p class="small">전자를 좋아하는 <b>루이스 산</b> — 친핵체로부터 전자쌍을 받아들이는 화학종</p></div>
+        <div class="card"><h3 class="c-minus">친핵체</h3><p class="small">원자핵(양전하)을 좋아하는 <b>루이스 염기</b> — 친전자체에게 전자쌍을 주는 화학종</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 할로젠화 알킬에서 친핵체의 공격을 받는 원자는 어느 것일까?</p>
+    <div class="answer step" style="flex:1">$\delta^+$를 띤 탄소(할로젠기가 붙은 탄소) — 친전자체가 된다.</div>
+  </div>
+</section>
+
+<!-- ════════ 6. 친핵성 치환 반응 ════════ -->
+<section class="slide" data-sec="02 · 할로젠 화합물" data-title="친핵성 치환 반응">
+  <h2><span class="no">3</span>친핵성 치환 반응</h2>
+  <p class="f21"><mark>친핵성 치환 반응</mark>: 할로젠화 알킬에서 할로젠기가 친핵체로 치환되는 반응</p>
+  {{SN}}
+  <div class="formula sm step">$\ce{HO- + CH3Br -> CH3OH + Br-}$</div>
+  <p class="f21 step">친핵체 $\ce{OH-}$가 $\delta^+$ 탄소에 전자쌍을 주어 새 C–O 결합을 만들고, C–Br 결합의 전자쌍은 Br가 가지고 $\ce{Br-}$으로 떨어져 나간다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 이 반응에서 친핵체와 친전자체는 각각 무엇일까?</p>
+    <div class="answer step" style="flex:1">친핵체: $\ce{OH-}$ / 친전자체: 브로모메테인의 $\delta^+$ 탄소</div>
+  </div>
+  <p class="small mt8">굽은 화살표는 전자쌍의 이동이다(출발점 = 전자쌍, 끝 = 받는 원자). 자세한 메커니즘은 [심화] 친핵성 치환·제거 반응과 첨가 반응에서 다룬다.</p>
+</section>
+
+<!-- ════════ 7. 제거 반응 ════════ -->
+<section class="slide" data-sec="02 · 할로젠 화합물" data-title="제거 반응">
+  <h2><span class="no">4</span>제거 반응</h2>
+  <p class="f21"><mark>제거 반응</mark>: 할로젠기와, 할로젠기가 붙어 있는 옆 탄소의 수소가 친핵체에 의해 제거되어 2중 결합 또는 3중 결합이 형성되는 반응</p>
+  {{E2}}
+  <div class="formula sm step">$\ce{HO- + CH3CHBrCH3 -> CH2=CHCH3 + Br- + H2O}$</div>
+  <p class="f21 step">1가지 반응물에서 작은 분자가 떨어져 나가면서 새로운 2가지의 생성물을 만든다 → <b>첨가 반응의 역반응</b>이다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 540px"><b>Q</b> 브로모에테인 $\ce{CH3CH2Br}$에서 제거 반응이 일어나면 무엇이 생길까?</p>
+    <div class="answer step" style="flex:1">에틸렌 $\ce{CH2=CH2}$ — HBr 첨가(4. 02)의 역반응</div>
+  </div>
+</section>
+
+<!-- ════════ 8. 카보닐 화합물 표 Ⅰ-8 ════════ -->
+<section class="slide" data-sec="02 · 카보닐 화합물" data-title="카보닐 화합물">
+  <h2><span class="no">5</span>카보닐 화합물</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 800px">
+      <table class="ac142-carb">
+        <tr><th>종류</th><th>일반 분자식</th><th>대표적 화합물</th><th>구조식</th></tr>
+        <tr><td>알데하이드<br><span class="small">(aldehyde)</span></td><td>{{CG_ald}}</td><td class="step" data-g="c1">아세트알데하이드</td><td><span class="step" data-g="c1">{{CS_ald}}</span></td></tr>
+        <tr><td>케톤<br><span class="small">(ketone)</span></td><td>{{CG_ket}}</td><td class="step" data-g="c2">아세톤</td><td><span class="step" data-g="c2">{{CS_ket}}</span></td></tr>
+        <tr><td>카복실산<br><span class="small">(carboxylic acid)</span></td><td>{{CG_acid}}</td><td class="step" data-g="c3">아세트산</td><td><span class="step" data-g="c3">{{CS_acid}}</span></td></tr>
+        <tr><td>에스터<br><span class="small">(ester)</span></td><td>{{CG_ester}}</td><td class="step" data-g="c4">아세트산 에틸</td><td><span class="step" data-g="c4">{{CS_ester}}</span></td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <p class="f21"><mark>카보닐 화합물</mark>: 작용기 중 가장 중요한 것의 하나인 C=O 2중 결합의 <b>카보닐기</b>를 가진 화합물</p>
+      <p class="f21">카보닐기에 어떤 작용기나 원자가 결합하느냐에 따라 여러 종류가 된다(형광펜: 카보닐기).</p>
+      <p class="f21 mt8" data-q><b>Q</b> 카보닐 탄소에 –H가 붙으면 <span class="blank"><span class="step">알데하이드</span></span>, –OH가 붙으면 <span class="blank"><span class="step">카복실산</span></span>이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 카보닐기의 극성 ════════ -->
+<section class="slide" data-sec="02 · 카보닐 화합물" data-title="카보닐기의 극성">
+  <h2><span class="no">6</span>카보닐기는 극성을 띤다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{COPOL}}</div>
+    <div class="col stack">
+      <p class="f21">카보닐기의 C=O 2중 결합에서 산소의 전기음성도가 탄소보다 크므로, 공유 전자가 산소 쪽으로 치우쳐 <b>극성</b>을 띤다.</p>
+      <div class="row step ac142-two">
+        <div class="card"><h3>탄소 <span class="c-plus">$\delta^+$</span></h3><p class="small">친전자성 → <b class="c-minus">친핵체</b>의 공격을 받는다.</p></div>
+        <div class="card"><h3>산소 <span class="c-minus">$\delta^-$</span></h3><p class="small">친핵성 → <b class="c-plus">친전자체</b>의 공격을 받는다.</p></div>
+      </div>
+      <p class="f21 mt16"><b>Q</b> 카보닐기가 친핵체의 공격을 받으면 친핵체는 어느 원자와 결합할까?</p>
+      <div class="answer step">부분적 양전하를 띤 탄소</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. 벤즈알데하이드 + HCN ════════ -->
+<section class="slide" data-sec="02 · 카보닐 화합물" data-title="카보닐기의 친핵성 첨가 반응">
+  <h2><span class="no">7</span>카보닐기의 친핵성 첨가 반응</h2>
+  <p class="f21">카보닐기의 반응성은 벤즈알데하이드에 HCN이 첨가되는 <b>친핵성 첨가 반응</b>이 잘 보여 준다.</p>
+  {{HCN}}
+  <p class="f21 step" data-g="h1">카보닐 탄소($sp^2$, 평면)에 친핵체 $\ce{CN-}$이 첨가되어 <b>정사면체 중간체</b>를 거친다.</p>
+  <p class="f21 step" data-g="h2">중간체의 $\ce{O-}$가 HCN의 $\ce{H+}$를 받아 → 새로운 단일 결합 2개(C–C, O–H)가 생긴다. &nbsp;$\ce{C6H5CHO + HCN -> C6H5CH(OH)CN}$</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 정사면체 중간체에서 카보닐 탄소의 혼성은 어떻게 바뀌었을까?</p>
+    <div class="answer step" style="flex:1">$sp^2$(평면 삼각형) → $sp^3$(정사면체)</div>
+  </div>
+  <p class="small">$\ce{CN-}$은 마지막에 다시 생긴다. 자세한 메커니즘은 [심화] 방향족 치환과 카보닐 화합물의 반응에서 다룬다.</p>
+</section>
+
+<!-- ════════ 11. 알데하이드·케톤의 끓는점 ════════ -->
+<section class="slide" data-sec="02 · 카보닐 화합물" data-title="알데하이드·케톤의 끓는점">
+  <h2><span class="no">8</span>알데하이드와 케톤의 끓는점</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 550px">{{BP5}}<p class="small">아래 숫자: 몰질량(g/mol). 끓는점은 덱 보충 자료(1 atm)</p></div>
+    <div class="col stack">
+      <p class="f21 step">카보닐기의 극성 때문에 알데하이드·케톤은 분자 사이에 <b>쌍극자-쌍극자 힘</b>이 작용한다 → 비슷한 분자량의 <b>알케인보다 끓는점이 높다</b>.</p>
+      <p class="f21 step">그러나 분자 사이에 <b>수소 결합</b>을 하지 못하므로 비슷한 분자량의 <b>알코올보다는 끓는점이 낮다</b>.</p>
+      <p class="f21 mt16"><b>Q</b> 알데하이드·케톤 분자 사이에 수소 결합이 생기지 않는 까닭은?</p>
+      <div class="answer step">O에 직접 결합한 H가 없기 때문이다.</div>
+      <p class="small mt8">분자 간 힘은 Ⅱ 단원에서 자세히 다룬다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12. 카복실산 ════════ -->
+<section class="slide" data-sec="02 · 카보닐 화합물" data-title="카복실산">
+  <h2><span class="no">9</span>카복실산 — 수소 결합과 산의 세기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{DIMER}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>카복실기</mark> –COOH는 카보닐기 C=O와 하이드록시기 –OH를 함께 가진다.</p>
+      <p class="f21 step">→ 알코올처럼 분자 사이에 강한 수소 결합 → 분자량이 비슷한 알코올보다 끓는점이 <b>훨씬 높다</b>(아세트산 118 °C &gt; 1-프로판올 97 °C).</p>
+    </div>
+  </div>
+  <div class="step">{{ACID}}</div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 카복실산은 염기 $\ce{OH-}$와 어떤 반응을 할까?</p>
+    <div class="answer step" style="flex:1">중화 반응 — $\ce{CH3COOH + OH- -> CH3COO- + H2O}$</div>
+  </div>
+  <p class="small">세기 비교는 교과서 값, 반응식은 덱이 적은 것</p>
+</section>
+
+<!-- ════════ 13. 에스터 ════════ -->
+<section class="slide" data-sec="02 · 카보닐 화합물" data-title="에스터">
+  <h2><span class="no">10</span>에스터와 에스터화 반응</h2>
+  <div class="row">
+    <p class="f21 col"><mark>에스터</mark>는 자연계에 가장 널리 분포된 탄소 화합물이다. 간단한 에스터는 <b>과일과 꽃의 향기</b>를 내는 액체이고, 에스터 결합 구조는 <b>동물성 지방</b>과 생물학에서 중요한 분자들 안에 들어 있다.</p>
+    <div class="col" style="flex:0 0 210px">{{FRUIT}}</div>
+  </div>
+  <p class="f21 step">보통 에스터는 <b>산 촉매</b>가 있을 때 카복실산과 간단한 알코올의 <b>에스터화 반응</b>으로 만든다.</p>
+  <div class="step">{{ESTER}}</div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 에스터화 반응에서 함께 생기는 작은 분자는?</p>
+    <div class="answer step" style="flex:1">물($\ce{H2O}$) — 카복실산의 –OH와 알코올의 –H가 물이 된다.</div>
+  </div>
+  <p class="small">반응식은 덱 보충(교과서는 반응 이름까지). 에스터 결합을 끊는 반응은 [심화]에서 다룬다.</p>
+</section>
+
+<!-- ════════ 14. 알코올 ════════ -->
+<section class="slide" data-sec="02 · 알코올, 에테르, 아민" data-title="알코올">
+  <h2><span class="no">11</span>알코올 — 물의 유도체</h2>
+  {{ALC}}
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><mark>알코올</mark>: 알케인의 수소가 하이드록시기로 치환된 화합물(일반 분자식 R–OH) — 물 H–O–H의 수소 하나가 알킬기 R–로 치환된 <b>물의 유도체</b></p>
+      <p class="f21 step">물처럼 약한 산성과 약한 염기성을 함께 가진 <b>양쪽성</b> 극성 물질이다.</p>
+      <p class="f21 step">물과 거의 같은 기하 구조이고, 물처럼 분자 사이에 <b>수소 결합</b>을 한다 → 비슷한 분자량의 알케인이나 할로젠 화합물보다 끓는점이 <b>훨씬 높다</b>.</p>
+    </div>
+    <div class="col step" style="flex:0 0 330px">{{HBOND}}</div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 알코올이 양쪽성 물질이라는 것은 무슨 뜻일까?</p>
+    <div class="answer step" style="flex:1">물처럼 $\ce{H+}$를 내놓을 수도(약한 산), 받을 수도(약한 염기) 있다.</div>
+  </div>
+</section>
+
+<!-- ════════ 15. 알코올의 산화와 환원 ════════ -->
+<section class="slide" data-sec="02 · 알코올, 에테르, 아민" data-title="알코올의 산화와 환원">
+  <h2><span class="no">12</span>알코올의 산화와 환원</h2>
+  <p class="f21">알코올이 산화하면 <b>알데하이드</b>를 생성하고, 계속 산화하면 <b>카복실산</b>을 생성한다. 거꾸로 알데하이드와 카복실산을 환원하면 알코올이 생성된다.</p>
+  {{OXID}}
+  <p class="f21 step" data-g="o3">탄소 화합물에서 <b>산소를 얻거나 수소를 잃으면 산화</b>, 산소를 잃거나 수소를 얻으면 환원이다 — 작용기 탄소의 산화수가 커진다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 520px"><b>Q</b> 에탄올이 아세트알데하이드로 될 때 잃는 원자는?</p>
+    <div class="answer step" style="flex:1">수소 원자 2개(O–H의 H와 C–H의 H 하나)</div>
+  </div>
+  <p class="small">산화수(덱 보충): 결합한 H 하나당 −1, O 하나당 +1(2중 결합은 +2), C끼리는 0 — Ⅲ 단원 산화 환원과 이어진다.</p>
+</section>
+
+<!-- ════════ 16. 예제 Ⅰ-5 ════════ -->
+<section class="slide" data-sec="02 · 알코올, 에테르, 아민" data-title="예제 Ⅰ-5">
+  <h2><span class="tag ex">예제 Ⅰ-5</span>에탄올을 만드는 두 가지 방법</h2>
+  <p class="f21">일반 분자식이 R–OH인 알코올 중 에탄올 $\ce{C2H5OH}$는 인류가 만들고 정제한 최초의 유기 화합물 중 하나이다. 식용은 곡물과 설탕 등의 탄수화물 당을 <b>발효</b>시켜 생산하지만, 공업용으로는 <b>에틸렌에 물을 첨가</b>하여 합성한다. 이들의 화학 반응식을 써라.</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 210px">{{FERM}}</div>
+    <div class="col stack">
+      <div class="board" style="height:70px"></div>
+      <p class="f21 step"><b>풀이 1</b> 탄수화물 당의 발효: &nbsp;$\ce{(CH2O)6 ->[\text{효소}] 2CH3CH2OH + 2CO2}$</p>
+      <p class="f21 step"><b>풀이 2</b> 에틸렌의 산 촉매 수화: &nbsp;$\ce{H2C=CH2 + H2O ->[H3PO4][250\ ^\circ\text{C}] CH3CH2OH}$</p>
+      <div class="note step"><b>참고</b> $\ce{(CH2O)6}$ = 포도당 $\ce{C6H12O6}$ · 에틸렌의 수화는 π 결합에 물이 더해지는 <b>첨가 반응</b>이다(4. 02).</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 에테르 ════════ -->
+<section class="slide" data-sec="02 · 알코올, 에테르, 아민" data-title="에테르">
+  <h2><span class="no">13</span>에테르</h2>
+  <p class="f21"><mark>에테르</mark>: 물의 수소가 <b>모두</b> 알킬기로 치환된 화합물(일반 분자식 R–O–R) — 물의 유도체</p>
+  {{ETHER}}
+  <p class="f21 step">물과 거의 같은 기하 구조이며, 물이나 알코올보다는 약하지만 <b>극성</b>을 띤다.</p>
+  <p class="f21 step">산소에 수소가 결합되어 있지 않아 에테르 분자끼리는 수소 결합을 할 수 없지만, <b>물이나 알코올과는 수소 결합</b>을 할 수 있다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 에테르의 끓는점은 분자량이 비슷한 알코올보다 높을까, 낮을까?</p>
+    <div class="answer step" style="flex:1">낮다 — 에테르 분자끼리는 수소 결합을 하지 못한다.</div>
+  </div>
+</section>
+
+<!-- ════════ 18. 아민 ════════ -->
+<section class="slide" data-sec="02 · 알코올, 에테르, 아민" data-title="아민">
+  <h2><span class="no">14</span>아민</h2>
+  <p class="f21"><mark>아민</mark>: 암모니아 $\ce{NH3}$의 수소가 알킬기로 치환된 <b>암모니아의 유도체</b> — 치환된 알킬기의 수에 따라 1차 $\ce{RNH2}$, 2차 $\ce{R2NH}$, 3차 $\ce{R3N}$ 아민</p>
+  {{AMINE}}
+  <p class="f21 step">질소에 <b>비공유 전자쌍</b>이 있어 대표적인 <b>루이스 염기</b>이며, 친핵성으로 루이스 산 또는 친전자체와 반응한다. 알코올이나 에테르, 물보다 <b>염기성이 훨씬 강하다</b>.</p>
+  <div class="row">
+    <div class="formula sm step" style="flex:0 0 520px">$\ce{CH3NH2 + H+ -> CH3NH3+}$<span class="unit">N의 비공유 전자쌍이 $\ce{H+}$와 결합한다(덱 보충 반응식).</span></div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 트라이메틸아민 $\ce{(CH3)3N}$은 몇 차 아민일까?</p>
+      <div class="answer step">3차 아민 — N에 알킬기 3개</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 정리 표 ════════ -->
+<section class="slide" data-sec="02 · 탄화수소 유도체" data-title="작용기로 본 탄화수소 유도체 정리">
+  <h2><span class="no">15</span>작용기로 본 탄화수소 유도체</h2>
+  <table class="ac142-sum">
+    <tr><th>계열</th><th>작용기(일반 분자식)</th><th>분자 사이 수소 결합</th><th>산 염기 성질</th><th>산화·환원</th></tr>
+    <tr><td>할로젠화 알킬</td><td>–X (R–X)</td><td>×</td><td class="l">— <span class="small">(친핵성 치환·제거 반응)</span></td><td>—</td></tr>
+    <tr><td>알코올</td><td>–OH (R–OH)</td><td><span class="blank"><span class="step">○</span></span></td><td class="l"><span class="blank"><span class="step">양쪽성</span></span>(약한 산·염기)</td><td class="l">산화 → 알데하이드</td></tr>
+    <tr><td>에테르</td><td>–O– (R–O–R)</td><td><span class="blank"><span class="step">×</span></span> <span class="small">(물과는 ○)</span></td><td>—</td><td>—</td></tr>
+    <tr><td>알데하이드</td><td>–CHO</td><td>×</td><td>—</td><td class="l">산화 → <span class="blank"><span class="step">카복실산</span></span>, 환원 → 알코올</td></tr>
+    <tr><td>케톤</td><td>C=O (R–CO–R′)</td><td>×</td><td>—</td><td>—</td></tr>
+    <tr><td>카복실산</td><td>–COOH</td><td>○</td><td class="l"><span class="blank"><span class="step">약한 산</span></span>(중화 반응)</td><td class="l">환원 → 알코올</td></tr>
+    <tr><td>에스터</td><td>–COO–</td><td>×</td><td>—</td><td>—</td></tr>
+    <tr><td>아민</td><td>$-\ce{NH2}$ 등</td><td>○ <span class="small">(1·2차)</span></td><td class="l"><span class="blank"><span class="step">염기</span></span>(루이스 염기)</td><td>—</td></tr>
+  </table>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 600px"><b>Q</b> 산 염기 반응과 산화·환원 반응에 모두 관계있는 작용기를 하나 고르면?</p>
+    <div class="answer step" style="flex:1">하이드록시기(양쪽성 + 산화) 또는 카복실기(약한 산 + 환원)</div>
+  </div>
+  <p class="small">1·2차 아민의 N–H 수소 결합은 덱 보충(교과서는 알코올·카복실산·에테르의 수소 결합만 적음)</p>
+</section>
+
+<!-- ════════ 20. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac142-ox f21">
+    <li>탄화수소 유도체는 전기음성도가 큰 원소를 가진 작용기가 있어 탄화수소보다 극성이 크다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>할로젠화 알킬에서 할로젠기가 붙은 탄소는 부분적 음전하를 띤다. <span class="step">→ <span class="ans">×</span> 부분적 양전하($\delta^+$)</span></li>
+    <li>제거 반응은 첨가 반응의 역반응이다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>알데하이드는 분자 사이에 수소 결합을 하므로 분자량이 비슷한 알코올보다 끓는점이 높다. <span class="step">→ <span class="ans">×</span> 수소 결합을 하지 못해 알코올보다 낮다.</span></li>
+    <li>아민은 질소의 비공유 전자쌍 때문에 루이스 염기이다. <span class="step">→ <span class="ans">○</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 21. 방향족 화합물 ════════ -->
+<section class="slide" data-sec="03 · 방향족 화합물의 구조" data-title="방향족 화합물">
+  <h2><span class="no">16</span>방향족 화합물</h2>
+  <p class="f21">불포화 탄화수소인 방향족 화합물은 자연계에 많고, 생리학에서 중요한 역할을 한다.</p>
+  {{AROM}}
+  <p class="f21 step"><mark>방향족 화합물</mark>: 처음에는 특유한 향기를 내는 물질을 뜻했으나, 오늘날에는 <b>벤젠 고리</b>를 포함한 화합물과, 벤젠 고리가 없더라도 벤젠 유도체와 비슷한 화학적 반응성과 물리적 성질을 나타내는 고리 모양의 불포화 탄화수소</p>
+  <p class="f21 step">방향족 화합물은 알켄이나 알카인에 비해 <b>매우 안정</b>하므로 화학적 반응성과 물리적 성질이 매우 다르다.</p>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> '방향족'이라는 이름은 처음에 무엇을 뜻했을까?</p>
+    <div class="answer step" style="flex:1">특유한 향기를 내는 물질</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 벤젠의 구조 ════════ -->
+<section class="slide" data-sec="03 · 방향족 화합물의 구조" data-title="벤젠의 구조와 공명 구조">
+  <h2><span class="no">17</span>벤젠의 구조와 공명 구조</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 570px">{{BRES}}</div>
+    <div class="col stack">
+      <p class="f21">벤젠($\ce{C6H6}$)은 탄소 6개가 <b>평면 정육각형</b>의 꼭짓점에 있고, 탄소마다 수소 1개가 결합한 구조이다. 모든 결합각은 <b>120°</b>이다.</p>
+      <p class="f21 step">모든 탄소는 $sp^2$ 혼성화 → $sp^2$ 혼성 오비탈 3개가 이웃 탄소 2개, 수소의 $1s$ 오비탈 1개와 <b>σ 결합</b> → 정육각형 골격</p>
+      <p class="f21 step">혼성하지 않은 p 오비탈 6개로 π 결합 3개를 교대로 — 2중 결합과 단일 결합이 교대로 나타나는 <mark>컨쥬게이션</mark>의 <b>공명 구조</b>로 나타낼 수 있다.</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 벤젠 한 분자에 있는 σ 결합은 몇 개일까?</p>
+    <div class="answer step" style="flex:1">12개 (C–C 6개 + C–H 6개)</div>
+  </div>
+  <p class="small">공명 구조: 원자 배치는 같고 전자(π 결합)의 배치만 다른 구조식(2. 화학 결합과 에너지)</p>
+</section>
+
+<!-- ════════ 23. 벤젠의 실제 구조 ════════ -->
+<section class="slide" data-sec="03 · 방향족 화합물의 구조" data-title="벤젠의 실제 구조">
+  <h2><span class="no">18</span>벤젠의 실제 구조 — 비편재화된 π 전자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 550px">{{B3D}}</div>
+    <div class="col stack">
+      <p class="f21">6개의 탄소와 6개의 p 오비탈은 <b>모두 동등</b>하다 → 특정한 p 오비탈이 이웃 1개와만 겹쳐 편재된 π 결합 3개를 만든다는 것은 불가능하다.</p>
+      <p class="f21 step" data-g="d1">p 오비탈 6개가 이웃한 p 오비탈들과 <b>똑같이 겹쳐</b>, π 결합 전자 6개가 고리 위아래에 <b>도넛 모양으로 비편재화</b>되어 있다.</p>
+      <p class="f21 step">→ 벤젠의 실제 구조는 2개의 공명 구조가 동등한 <b>공명 혼성체</b>이므로, 1개 구조로만 나타낼 수 없다.</p>
+      <p class="f21 mt8"><b>Q</b> 벤젠의 C–C 결합 6개의 길이는 서로 같을까?</p>
+      <div class="answer step">모두 같다 — 단일 결합(0.154 nm)과 2중 결합(0.134 nm)의 중간인 0.139 nm</div>
+      <p class="small">결합 길이 0.139 nm는 덱 보충 값</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 화학사 ════════ -->
+<section class="slide" data-sec="03 · 화학사" data-title="화학사: 케쿨레와 꿈">
+  <h2><span class="tag">화학사</span>케쿨레와 꿈</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{KEK}}</div>
+    <div class="col stack">
+      <table class="ac142-tl">
+        <tr><th>1858년</th><td class="l">탄소 원자는 원자가 4로 <b>사슬 모양</b>을 만든다고 제안</td></tr>
+        <tr><th>1865년</th><td class="l">벤젠의 탄소 6개가 사슬 끝이 구부러져 <b>육각형 고리</b>를 이룬다고 제안</td></tr>
+        <tr><th>오늘날</th><td class="l">평면 정육각형에 2중 결합이 교대로 있는 <b>케쿨레 구조식</b> → 방향족 화학과 유기 화학의 급진적 발전</td></tr>
+      </table>
+      <p class="f21 mt8">건축학을 배웠던 케쿨레(1829–1896)는 집 대신 탄소 원자를 조합해 분자 구조를 만든 화학자가 되었다. 연구에 몰두하다 깜빡 잠든 꿈속에서, 원자들이 뱀처럼 엉켜 돌다가 <b>한 마리 뱀이 자기 꼬리를 물고 도는</b> 모습에서 고리 모양의 영감을 얻었다.</p>
+      <p class="f21 mt8"><b>Q</b> 케쿨레 구조식 하나로는 설명하지 못하는 벤젠의 성질은 무엇일까?</p>
+      <div class="answer step">C–C 결합 길이가 모두 같고 매우 안정하다는 것 — 공명 혼성체(비편재화)로 설명한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 벤젠의 표현과 방향족 화합물 ════════ -->
+<section class="slide" data-sec="03 · 방향족 화합물의 구조" data-title="벤젠의 표현과 방향족 화합물">
+  <h2><span class="no">19</span>벤젠의 표현과 여러 가지 방향족 화합물</h2>
+  {{BREP}}
+  <p class="f21">벤젠의 실제 구조를 이해한 바탕에서, 편의상 탄소의 원자가 4를 잘 나타내 주는 <b>3개의 2중 결합이 교대로</b> 들어 있는 공명 구조 하나로 벤젠을 나타낸다.</p>
+  <div class="step">{{BDERS}}</div>
+  <div class="row">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 벤조산과 아세트산이 모두 산성을 띠는 까닭은?</p>
+    <div class="answer step" style="flex:1">둘 다 카복실기 –COOH를 가지기 때문</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 방향족 화합물의 안정성 ════════ -->
+<section class="slide" data-sec="03 · 방향족 화합물의 안정성" data-title="방향족 화합물의 안정성">
+  <h2><span class="no">20</span>방향족 화합물의 안정성</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 530px">{{STAB}}</div>
+    <div class="col stack">
+      <p class="f21">벤젠은 알켄과 같은 불포화 탄화수소이지만, π 결합 전자 6개가 <b>비편재화</b>되어 있어 π 전자가 편재된 알켄에 비해 <b>매우 안정</b>하다.</p>
+      <p class="f21 step" data-g="s1">벤젠은 π 결합 3개가 고리에 교대로 편재되었다고 가정한 구조보다 <b>150 kJ/mol(36 kcal/mol)</b>만큼 더 안정하다 → 화학적 반응성과 물리적 성질이 알켄과 매우 다르다.</p>
+      <p class="f21 step">예: 알켄은 브로민과 쉽게 첨가 반응을 하지만, 벤젠은 첨가 반응을 잘 하지 않는다(덱 보충 — 고리를 유지하는 치환 반응은 [심화]).</p>
+      <p class="f21 mt8"><b>Q</b> 수소 첨가 엔탈피로 벤젠의 안정화 에너지를 어림하면?</p>
+      <div class="answer step">$360-208=152\ \text{kJ/mol}\approx150\ \text{kJ/mol}$</div>
+      <p class="small">수소 첨가 엔탈피(사이클로헥센 −120, 벤젠 −208 kJ/mol)는 덱 보충 문헌값</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>벤젠의 구조와 안정성</h2>
+  <p class="f21">벤젠($\ce{C6H6}$)에 대한 물음에 답하라.</p>
+  <p class="f21 mt8">(1) 탄소 원자의 혼성과 결합각은? <span class="step">→ <span class="ans">$sp^2$, 120°</span></span></p>
+  <p class="f21 mt8">(2) 비편재화된 π 전자는 모두 몇 개일까? <span class="step">→ <span class="ans">6개</span></span></p>
+  <p class="f21 mt8">(3) 벤젠이 알켄보다 첨가 반응을 하기 어려운 까닭을 설명하라.</p>
+  <div class="board" style="height:120px"></div>
+  <div class="answer step">π 전자 6개가 고리 전체에 비편재화되어 편재된 구조보다 150 kJ/mol 더 안정하므로, 첨가 반응으로 이 안정한 고리 구조가 깨지기 어렵다.</div>
+  <p class="small mt8">채점 요소: 비편재화 · 더 안정함(안정화 에너지) · 고리 구조 유지</p>
+</section>
+
+<!-- ════════ 28. 탐구 활동 (1) ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 아스피린 개발의 역사 (1)">
+  <h2><span class="tag">탐구 활동</span>아스피린 개발의 역사 조사 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐08]</span>아스피린 개발의 역사 조사 (68쪽)</div>
+  <p class="f21 mt8">오늘날 의약품의 대부분은 탄소 화합물이며, 아스피린은 인류가 오랫동안 많이 사용해 온 복용 약이다. 기원전 400년쯤 서양 의학의 아버지 히포크라테스가 <b>버드나무 껍질</b>을 해열 진통제로 썼고, 2천여 년이 지나 버드나무 껍질의 성분이 확인되고 아스피린이 개발되었다.</p>
+  <div class="ac142-s4 mt8">
+    <div class="stage"><h3>① 조사하기</h3><p class="small">버드나무 껍질 → 살리신 → 살리실산 → 아세틸살리실산으로 이어진 사람·연도·까닭을 조사한다.</p></div>
+    <div class="stage"><h3>② 구조 비교</h3><p class="small">살리실산과 아스피린의 구조식을 그려 바뀐 작용기를 찾는다.</p></div>
+    <div class="stage"><h3>③ 발표하기</h3><p class="small">모둠별로 연표와 구조식을 써서 발표한다.</p></div>
+    <div class="stage"><h3>④ 글쓰기</h3><p class="small">아스피린 개발의 역사를 <b>900자 이내</b>로 적는다.</p></div>
+  </div>
+  <p class="small mt8"><b>조사 길잡이</b> 믿을 만한 자료(교과서, 학회·공공 기관 누리집)를 쓰고 출처와 검색 날짜를 적는다. 약을 먹거나 실험을 하지 않는 조사 활동이다.</p>
+</section>
+
+<!-- ════════ 29. 탐구 활동 (2) ════════ -->
+<section class="slide" data-sec="03 · 탐구 활동" data-title="탐구 활동: 아스피린 개발의 역사 (2)">
+  <h2><span class="tag">탐구 활동</span>결과 정리 예시 <span class="small c-muted" style="white-space:nowrap">[필수&nbsp;탐구]</span></h2>
+  {{ASPTL}}
+  <div class="row">
+    <div class="col step" style="flex:0 0 650px">{{ASPST}}</div>
+    <div class="col stack step">
+      <p class="f21">살리실산 + 아세트산 무수물<br>→ 아세틸살리실산 + 아세트산</p>
+      <p class="f21 mt8">–OH(하이드록시기) → $-\ce{OCOCH3}$(에스터)</p>
+    </div>
+  </div>
+  <div class="note step"><b>정리 예시</b> 살리실산은 해열 진통 효과가 있지만 위를 심하게 자극했다. 하이드록시기를 아세틸화해 <b>에스터</b>로 바꾼 아세틸살리실산은 효과는 지키면서 부작용을 줄였다 → 작용기를 바꾸어 성질을 조절한 의약품 개발의 예이다.</div>
+  <p class="small">연표·반응식은 덱이 작성한 예시 · 900자 글: 연표 → 구조 변화 → 오늘날의 쓰임 순서로</p>
+</section>
+
+<!-- ════════ 30. 진로 ════════ -->
+<section class="slide" data-sec="03 · 진로" data-title="진로: 새로운 의약품 개발">
+  <h2><span class="tag">진로</span>첨단 과학인 새로운 의약품 개발</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">{{DRUG}}</div>
+    <div class="col stack">
+      <table class="ac142-job">
+        <tr><th>화학자</th><td class="l">의약품을 설계하고 합성한다.</td></tr>
+        <tr><th>약리학자</th><td class="l">약리 효과·작용을 밝히고 독성·부작용을 조사한다.</td></tr>
+        <tr><th>생화학자</th><td class="l">인체 안에서 의약품의 신진대사를 연구한다.</td></tr>
+        <tr><th>약학자</th><td class="l">투여에 알맞은 형태로 조제할 자료를 모은다.</td></tr>
+        <tr><th>의학자·임상 병리학자</th><td class="l">임상 실험 자료를 분석·검토한다.</td></tr>
+        <tr><th>통계학자</th><td class="l">임상 실험 자료를 통계적으로 분석한다.</td></tr>
+      </table>
+      <p class="f21 step mt8">인체 세포막의 <b>활성 자리에 잘 맞는</b> 의약품이 치료 효과가 높다 → 컴퓨터 그래픽으로 의약품과 활성 자리를 3차원으로 설계하고 상호 작용을 미리 점검한다. 컴퓨터 기술과 <b>인공 지능</b>에 의한 설계가 발달하면서 전문 인력의 수요도 늘어날 것이다.</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <p class="f21" style="flex:0 0 560px"><b>Q</b> 의약품 분자를 설계할 때 3차원 구조가 중요한 까닭은?</p>
+    <div class="answer step" style="flex:1">활성 자리의 3차원 모양에 잘 맞아야 상호 작용하여 효과를 내기 때문</div>
+  </div>
+</section>
+
+<!-- ════════ 31. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅰ-4 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>$\ce{C5H12}$와 $\ce{C6H14}$의 구조 이성질체</h2>
+  <p class="f21">분자식이 $\ce{C5H12}$와 $\ce{C6H14}$인 포화 탄화수소 각각의 구조 이성질체의 구조를 그려라.</p>
+  <div class="board" style="height:40px"></div>
+  {{EX1}}
+  <div class="answer step">$\ce{C5H12}$ 3개, $\ce{C6H14}$ 5개</div>
+</section>
+
+<!-- ════════ 32. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅰ-4 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>$\ce{CH3-CH=CH-C#CH}$의 혼성과 결합</h2>
+  <p class="f21">$\ce{CH3-CH=CH-C#CH}$ 분자의 각 탄소는 어떠한 혼성화를 하고 있으며, 탄소-탄소 원자 사이에 σ 결합이나 π 결합의 수는 각각 몇 개인가?</p>
+  <div class="board" style="height:80px"></div>
+  {{EX2}}
+  <div class="answer step">혼성: $sp^3$, $sp^2$, $sp^2$, $sp$, $sp$ &nbsp;·&nbsp; 탄소-탄소 사이 σ 결합 4개, π 결합 3개</div>
+  <p class="small step mt8">C–H 결합 6개(모두 σ)까지 세면 분자 전체의 σ 결합은 10개이다.</p>
+</section>
+
+<!-- ════════ 33. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅰ-4 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>가장 간단한 컨쥬게이션 분자</h2>
+  <p class="f21">2중 결합이 각각 2개와 3개인 사슬 모양의 가장 간단한 컨쥬게이션 분자의 구조를 그려라.</p>
+  <div class="board" style="height:110px"></div>
+  {{EX3}}
+  <div class="answer step">2중 결합과 단일 결합이 교대로: 2개 → $\ce{CH2=CH-CH=CH2}$, 3개 → $\ce{CH2=CH-CH=CH-CH=CH2}$</div>
+  <p class="small mt8">이름은 덱이 붙인 IUPAC 이름. 아래 선 구조에서 꼭짓점은 탄소(H 생략)</p>
+</section>
+
+<!-- ════════ 34. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅰ-4 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>끓는점이 가장 높은 것은?</h2>
+  <p class="f21">다음의 분자량이 비슷한 탄화수소와 탄화수소 유도체 중 끓는점이 가장 높은 것은 어느 것인가? 그리고 그 이유는 무엇인가?</p>
+  <div class="row ac142-pick mt8">
+    <div class="card">1) $\ce{CH3CH2CH2CH2CH3}$</div>
+    <div class="card">2) $\ce{CH3CH2CH2CH2-OH}$</div>
+    <div class="card">3) $\ce{CH3CH2-O-CH2CH3}$</div>
+  </div>
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="board" style="height:90px"></div>
+      <div class="answer step">2) $\ce{CH3CH2CH2CH2-OH}$ — 액체 상태에서 분자 사이에 수소 결합을 하기 때문이다.</div>
+      <p class="small mt8">끓는점은 덱 보충(1-뷰탄올·펜테인은 자체 지도서 값)</p>
+    </div>
+    <div class="col step" style="flex:0 0 510px">{{EX4}}</div>
+  </div>
+</section>
+
+<!-- ════════ 35. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02–03 탄화수소 유도체와 방향족 화합물 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 탄소 화합물의 분자 구조 — 02 뒷부분·03</h2>
+  <div class="ac142-top">
+    <div class="ac142-node ac142-dim">01–02 앞부분 구조식·탄화수소 <span class="small">(지난 시간)</span></div>
+    <div class="ac142-arr">→</div>
+    <div class="ac142-node ac142-dim" style="border-style:solid;border-color:var(--field);color:var(--ink)"><b>02 뒷부분·03 오늘</b></div>
+    <div class="ac142-arr">→</div>
+    <div class="ac142-node ac142-dim">[심화] 유기 반응 <span class="small">(자율 탐구)</span></div>
+  </div>
+  <div class="ac142-map">
+    <div class="ac142-node ac142-main" data-q><b>02 탄화수소 유도체</b><br>❶ 수소 대신 <span class="blank"><span class="step">작용기</span></span> → 극성, 반응성이 좋다<br>❷ 할로젠화 알킬 R–X: C는 <span class="blank"><span class="step">$\delta^+$</span></span> → 친핵성 치환, <span class="blank"><span class="step">제거</span></span> 반응<br>❸ 카보닐기 C=O: 알데하이드·케톤·<span class="blank"><span class="step">카복실산</span></span>·에스터<br>❹ 알코올 R–OH: <span class="blank"><span class="step">수소 결합</span></span>, 산화 → 알데하이드 → 카복실산<br>❺ 아민: N의 비공유 전자쌍 → <span class="blank"><span class="step">염기</span></span></div>
+    <div class="ac142-node ac142-main" data-q><b>03 방향족 화합물</b><br>❻ 벤젠: 평면 정육각형, <span class="blank"><span class="step">$sp^2$</span></span>, 120°<br>❼ 2중·단일 결합 교대 = <span class="blank"><span class="step">컨쥬게이션</span></span>의 공명 구조<br>❽ π 전자 6개가 <span class="blank"><span class="step">비편재화</span></span> → 공명 혼성체<br>❾ 편재 구조보다 <span class="blank"><span class="step">150 kJ/mol</span></span> 더 안정</div>
+  </div>
+</section>
+
+<!-- ════════ 36. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02–03 탄화수소 유도체와 방향족 화합물 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 탄화수소 유도체의 작용기와 극성, 벤젠의 공명 구조와 비편재화를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 친핵성 치환·제거·첨가 반응과 작용기의 산 염기·산화 환원 반응을 구조식과 반응식으로 나타낼 수 있다.</button>
+    <button class="chk">[가치·태도] 의약품 개발의 역사에서 작용기를 바꾸어 성질을 조절한 화학의 역할을 이해한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 카보닐기에서 친핵체가 공격하는 원자는? <span class="step">→ <span class="ans">$\delta^+$를 띤 탄소</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 알코올을 계속 산화하면 생기는 것은? <span class="step">→ <span class="ans">카복실산</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 벤젠이 알켄보다 안정한 까닭은? <span class="step">→ <span class="ans">π 전자 6개가 고리 전체에 비편재화되어 있다.</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> Ⅰ. 물질의 구조 대단원 마무리 — 원자 오비탈부터 탄소 화합물까지 이어서 정리해 보자.</div>
+</section>

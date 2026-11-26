@@ -1,0 +1,61 @@
+{
+ "findings": [
+  {
+   "slide": 8,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "E°전지 식이 칸을 넘침, 그림 라벨 16px 미만",
+   "fix": "aligned 두 줄, 그림 폭 500 — 반영"
+  },
+  {
+   "slide": 10,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "본문이 아래로 넘침",
+   "fix": "도입 문장 줄임 — 반영"
+  },
+  {
+   "slide": 11,
+   "severity": "medium",
+   "rule": "D8·T4·3.2",
+   "problem": "충전 반응식이 그림과 겹치고 슬라이드가 넘침, 라벨 작음",
+   "fix": "반응식을 줄 전체로, 판서 칸을 빼고 그림 440 — 반영"
+  },
+  {
+   "slide": 12,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "'분리막' 라벨이 전구와 겹침",
+   "fix": "라벨을 분리막 아래로, Li+ 라벨을 위로 — 반영"
+  },
+  {
+   "slide": 14,
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "막대그래프 라벨 16px 미만",
+   "fix": "viewBox 줄이고 글자 20 — 반영"
+  },
+  {
+   "slide": 24,
+   "severity": "low",
+   "rule": "3.2",
+   "problem": "다니엘 전지 그림 라벨 작음",
+   "fix": "그림 폭 510 — 반영"
+  },
+  {
+   "slide": 25,
+   "severity": "medium",
+   "rule": "D8·T4",
+   "problem": "문제 글이 길어 넘침, 식 넘침",
+   "fix": "조건을 한 줄로, 식 두 줄 — 반영"
+  },
+  {
+   "slide": 29,
+   "severity": "low",
+   "rule": "빈 공간",
+   "problem": "개념 지도 가운데 칸이 좁고 오른쪽이 빔",
+   "fix": "extra.css에서 너비를 넓히려 했으나 엔진 배치상 그대로 — 3-4-1b와 같은 꼴이라 둠"
+  }
+ ],
+ "summary": "render 자동 점검 첫 12건 → 0건, 콘솔 0, motion 0(data-anim 68), ask 0(질문 강조 43). 전체 sheet 두 번(완성 직후·최종) 확인, S13·S14 --steps 확인."
+}

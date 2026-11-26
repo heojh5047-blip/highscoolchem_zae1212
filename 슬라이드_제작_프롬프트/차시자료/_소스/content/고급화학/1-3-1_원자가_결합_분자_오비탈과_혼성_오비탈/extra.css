@@ -1,0 +1,42 @@
+/* 고급화학 1-3-1 — 덱 전용 (모두 .ac131- 접두어) */
+.cover h1.ac131-h1{font-size:72px;line-height:1.16}
+table.ac131-c td,table.ac131-c th{text-align:center}
+table.ac131-cmp{width:100%;margin-top:6px}
+table.ac131-cmp td,table.ac131-cmp th{font-size:21px;padding:3px 10px}
+table.ac131-th{width:100%}
+table.ac131-th td,table.ac131-th th{font-size:20px;padding:4px 10px}
+table.ac131-th td.l{text-align:left}
+table.ac131-res td,table.ac131-res th{font-size:20px;padding:3px 8px}
+ol.ac131-ol{padding-left:1.3em}
+ol.ac131-ol li{margin-top:4px}
+ol.ac131-ox{padding-left:1.4em}
+ol.ac131-ox li{margin-top:16px}
+ol.ac131-ox li:first-child{margin-top:0}
+.ac131-s4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ac131-s4 .stage{padding:8px 12px}
+.ac131-s4 .stage h3{font-size:21px;margin-bottom:2px}
+.ac131-q1{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+.ac131-q1 p{font-size:20px}
+/* 개념 지도 */
+.ac131-top{display:flex;align-items:center;gap:12px;margin-top:8px}
+.ac131-map{display:flex;align-items:stretch;gap:14px;margin-top:14px}
+.ac131-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:21px;line-height:1.75}
+.ac131-node.ac131-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac131-node.ac131-deepn{border:2px dashed #5B6B7F;background:#F7F8FA}
+.ac131-node.ac131-dim{border-style:dashed;color:var(--muted);padding:6px 14px}
+.ac131-arr{font-size:26px;color:var(--muted)}
+.ac131-deep{border:2px dashed #5B6B7F;background:#F7F8FA;border-radius:10px;padding:4px 10px}
+/* 실험실 */
+.ac131-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.ac131-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 12px;font-size:19px}
+.ac131-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ac131-seg .btn:disabled{opacity:.35;cursor:not-allowed}
+.ac131-seg .btn.ac131-act{background:var(--field);color:#fff;border-color:var(--field)}
+.ac131-seg .small{margin:0 2px 0 4px}
+.ac131-lp{display:inline-block;margin-left:6px}
+table.ac131-read{width:100%}
+table.ac131-read th{font-size:19px;padding:6px 10px;text-align:left}
+table.ac131-read td{font-size:20px;width:230px;padding:6px 10px;text-align:center}
+output.kind.ac131-msg{margin-top:8px;line-height:1.45;font-size:19px}
+table.ac131-log{width:100%}
+table.ac131-log th,table.ac131-log td{font-size:19px;padding:3px 8px;text-align:center}

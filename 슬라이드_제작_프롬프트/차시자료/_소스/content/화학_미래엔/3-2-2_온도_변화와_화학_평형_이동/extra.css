@@ -1,0 +1,59 @@
+/* 3-2-2 온도 변화와 화학 평형 이동 — 덱 전용 (모두 .cm322- 접두어) */
+.cover h1.cm322-h1{font-size:84px;line-height:1.15}
+p.cm322-a{color:#1B5E3F;margin-top:6px}
+.answer.cm322-left{text-align:left}
+.cm322-bf{color:#7B4FC8}
+.cm322-chip{display:inline-block;padding:0 10px;border-radius:10px;border:1.5px solid #9A9A9A;font-size:19px;background:#fff}
+.cm322-chip.cm322-red{background:#D9608A;color:#fff;border-color:#A8406A}
+.cm322-chip.cm322-blue{background:#3B6FD1;color:#fff;border-color:#2A4F98}
+.cm322-chip.cm322-br{background:#B5562A;color:#fff;border-color:#7E3A1C}
+table.cm322-var th{font-size:20px;padding:5px 12px;width:130px}
+table.cm322-var td{font-size:20px;padding:5px 12px}
+ul.cm322-list{margin:4px 0 0 24px;padding:0}
+ul.cm322-list li{font-size:21px;line-height:1.55}
+.cm322-icons{display:flex;justify-content:space-around}
+.cm322-icons div{text-align:center}
+.cm322-icons p{font-size:20px;margin:2px 0 0;font-weight:700}
+table.cm322-waste td,table.cm322-waste th{font-size:20px;padding:6px 10px}
+.cm322-cards .stage{padding:8px 10px;text-align:center}
+.cm322-cards .stage svg{width:100%}
+.cm322-cards .stage p.key{font-size:19px;margin:2px 0 0;text-align:left}
+.cm322-cards .stage p.key.f21{font-size:21px}
+.cm322-proc .stage p.key{line-height:1.45}
+table.cm322-four{width:100%}
+table.cm322-four td,table.cm322-four th{font-size:22px;padding:8px 12px;text-align:center}
+table.cm322-four td.l{text-align:left}
+table.cm322-four .blank{min-width:110px}
+.choices.cm322-col{display:flex;flex-direction:column;gap:12px}
+.choices.cm322-col span{font-size:23px}
+table.cm322-kt{width:100%}
+table.cm322-kt td,table.cm322-kt th{font-size:20px;padding:4px 8px;text-align:center}
+table.cm322-core{width:100%}
+table.cm322-core td,table.cm322-core th{font-size:22px;padding:8px 12px}
+table.cm322-core .blank{min-width:420px}
+.cm322-person{border-left:6px solid var(--ink)}
+ol.cm322-ox li{margin-top:28px;font-size:23px;line-height:1.6}
+ol.cm322-ox li:first-child{margin-top:4px}
+ol.cm322-ox .blank{min-width:140px}
+table.cm322-res td,table.cm322-res th{font-size:20px;padding:5px 12px;text-align:center}
+table.cm322-res .blank{min-width:110px}
+.cm322-map{display:flex;align-items:stretch;gap:16px}
+.cm322-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 18px;font-size:22px;line-height:1.55}
+.cm322-node.cm322-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm322-side{flex:0 0 200px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.cm322-node.cm322-dim{border-style:dashed;color:var(--muted);font-size:20px}
+.cm322-maprow{display:flex;align-items:center;gap:12px;margin-top:6px}
+.cm322-maprow p{flex:1 1 0;border:2px dashed #8C99A6;border-radius:12px;padding:8px 10px;text-align:center}
+.cm322-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.cm322-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 12px;font-size:19px}
+.cm322-seg .btn.cm322-act{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm322-seg .btn.cm322-add{border-color:var(--field);color:#1B5E3F;font-weight:700}
+.cm322-seg .btn.cm322-rs{margin-left:auto}
+.cm322-lab .lab-ctl p.small{margin:2px 0}
+.cm322-lab .res .big{font-size:32px}
+output.kind.cm322-msg{margin-top:4px;line-height:1.42;font-size:19px;font-weight:500;display:block}
+table.cm322-log{width:100%;table-layout:fixed}
+table.cm322-log th,table.cm322-log td{font-size:19px;padding:2px 5px;text-align:center;white-space:nowrap;overflow:hidden}
+table.cm322-log th:nth-child(1){width:48px}table.cm322-log th:nth-child(2){width:96px}table.cm322-log th:nth-child(3){width:150px}table.cm322-log th:nth-child(4){width:96px}table.cm322-log th:nth-child(5){width:112px}
+table.cm322-var3{width:100%}
+table.cm322-var3 td,table.cm322-var3 th{font-size:20px;padding:5px 12px;text-align:center}

@@ -1,0 +1,49 @@
+/* 3-1-2 화학 평형과 평형 상수 — 덱 전용 (모두 .cm312- 접두어) */
+.cover h1.cm312-h1{font-size:104px}
+p.cm312-a{color:#1B5E3F;margin-top:6px}
+.answer.cm312-left{text-align:left}
+table.cm312-var{width:100%}
+table.cm312-var th{width:120px}
+table.cm312-var td.l{font-size:21px}
+table.cm312-data{width:100%}
+table.cm312-data td,table.cm312-data th{text-align:center;font-size:21px;padding:3px 8px}
+.stages.c1{grid-template-columns:1fr}
+.cm312-steps .stage{padding:10px 14px}
+.cm312-steps .stage p{font-size:20px;line-height:1.5}
+.cm312-steps .stage h3{font-size:21px}
+.cm312-steps code{font-size:19px;background:#F2F5F8;padding:1px 6px;border-radius:4px}
+.cm312-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}
+.cm312-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:4px 10px;font-size:19px}
+.cm312-seg .btn.on{background:#FFF3C4;border-color:#E0C44A}
+.cm312-seg .btn.cm312-act{background:var(--ink);color:#fff;border-color:var(--ink)}
+output.kind.cm312-msg{margin-top:6px;line-height:1.45;font-size:19px;display:block}
+table.cm312-log{width:100%}
+table.cm312-log th,table.cm312-log td{font-size:19px;padding:2px 6px;text-align:center}
+table.cm312-log th.cm312-on{background:#FFF3C4}
+table.cm312-log tr.cm312-new td{background:#F2FAF5}
+table.cm312-res{width:100%}
+table.cm312-res td,table.cm312-res th{text-align:center;font-size:21px}
+table.cm312-res .blank{min-width:80px}
+table.cm312-kx{width:100%}
+table.cm312-kx td{font-size:23px;padding:10px 14px}
+table.cm312-kx .blank{min-width:240px}
+.choices.cm312-pred span{font-size:23px}
+.card.cm312-bub{border-radius:22px}
+table.cm312-ice td,table.cm312-ice th{text-align:center;font-size:21px;padding:3px 12px}
+table.cm312-ice .blank{min-width:64px}
+ol.cm312-ox li{margin-top:22px;font-size:23px}
+ol.cm312-ox li:first-child{margin-top:4px}
+ol.cm312-ox .blank{min-width:160px}
+.choices.cm312-col{display:flex;flex-direction:column;gap:8px}
+.choices.cm312-col span{font-size:21px}
+.cm312-chk .chk{font-size:19px;text-align:left}
+.cm312-map{display:flex;align-items:center;gap:14px}
+.cm312-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 18px;font-size:21px;line-height:1.55}
+.cm312-node.cm312-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm312-node.cm312-dim{flex:0 0 170px;border-style:dashed;color:var(--muted)}
+.cm312-arr{font-size:28px;color:var(--muted)}
+table.cm312-coef{width:100%}
+table.cm312-coef td,table.cm312-coef th{text-align:center;font-size:21px}
+table.cm312-coef .blank{min-width:60px}
+.cm312-lab .ctl{margin:2px 0}
+.cm312-lab .res{margin-top:6px}

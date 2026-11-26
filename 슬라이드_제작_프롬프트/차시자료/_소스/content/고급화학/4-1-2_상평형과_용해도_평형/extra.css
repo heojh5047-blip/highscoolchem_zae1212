@@ -1,0 +1,25 @@
+/* 고급화학 4-1-2 — 덱 전용 (모두 .ac412- 접두어) */
+.cover h1.ac412-h1{font-size:68px;line-height:1.15}
+table.ac412-sm th,table.ac412-sm td{font-size:20px;padding:4px 10px;text-align:center}
+table.ac412-sm td.l{text-align:left}
+table.ac412-sm caption{caption-side:top;text-align:left;padding-bottom:4px}
+table.ac412-ice th,table.ac412-ice td{font-size:21px;padding:4px 10px;text-align:center}
+table.ac412-ice th.l,table.ac412-ice td.l{text-align:left}
+ol.ac412-ox{padding-left:1.4em}
+ol.ac412-ox li{margin-top:16px}
+ol.ac412-ox li:first-child{margin-top:0}
+.stages.ac412-c3{grid-template-columns:repeat(3,1fr)}
+.stages.ac412-c3 .stage p{font-size:20px;line-height:1.45}
+/* 수소 구분 카드 */
+.ac412-h2c{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ac412-h2c>div{border:2px solid var(--line);border-radius:12px;padding:8px 10px;font-size:19px;line-height:1.4;background:#fff}
+.ac412-h2c>.ac412-gray{border-color:#8C99A6;background:#F2F4F6}
+.ac412-h2c>.ac412-blue{border-color:#1F6FD1;background:#EEF4FC}
+.ac412-h2c>.ac412-pink{border-color:#D45D8C;background:#FCEFF4}
+.ac412-h2c>.ac412-green{border-color:#2E9E6A;background:#F2FAF5}
+/* 개념 지도 */
+.ac412-map{display:flex;align-items:center;gap:10px;margin-top:14px}
+.ac412-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-size:20px;line-height:1.7;flex:0 0 150px}
+.ac412-node.ac412-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.ac412-node.ac412-dim{flex:0 0 150px;border-style:dashed;color:var(--muted)}
+.ac412-arr{font-size:28px;color:var(--muted)}

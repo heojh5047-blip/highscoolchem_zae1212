@@ -1,0 +1,465 @@
+<!-- 고급화학 3-4-1a 화학 전지의 개요 — gen.py가 tpl_a.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅲ. 물질의 변화와 에너지" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅲ. 물질의 변화와 에너지 › 4. 화학 전지 › 01</div>
+    <h1 class="ac341-h1">화학 전지의 개요와<br>전지 전위 <span class="acc">(1)</span></h1>
+    <p class="sub">화학 전지의 개요 — 반쪽 전지, 전극 반응, 전지 표기, 염다리</p>
+    <p class="meta">고등학교 고급 화학 164–169쪽</p>
+  </div>
+  <svg class="fig cover-fig" viewBox="0 0 480 480" style="width:500px" aria-label="아연 전극과 구리 전극을 염다리와 전압계로 이은 다니엘 전지에서 전자가 도선을 따라 아연에서 구리로 흐른다"><line x1="150" y1="170" x2="150" y2="110" stroke="#16233D" stroke-width="3"/><line x1="150" y1="110" x2="214" y2="110" stroke="#16233D" stroke-width="3"/><line x1="266" y1="110" x2="330" y2="110" stroke="#16233D" stroke-width="3"/><line x1="330" y1="110" x2="330" y2="170" stroke="#16233D" stroke-width="3"/><circle cx="240" cy="110" r="26" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><text class="tex" x="240" y="119" data-mix="V" data-size="24" data-anchor="middle" data-weight="700"></text><path d="M150 170 V110 H214 M266 110 H330 V170" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 14" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="30"/><g data-arw="160,80,206,80,minus,3"></g><g data-arw="274,80,320,80,minus,3"></g><text class="tex" x="240" y="86" data-tex="e^-" data-size="20" data-anchor="middle" fill="#1F6FD1"></text><path d="M89 190 H95 V340 Q95 350 105 350 H200 Q210 350 210 340 V190 H216" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M264 190 H270 V340 Q270 350 280 350 H375 Q385 350 385 340 V190 H391" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="97" y="220" width="111" height="128" fill="#DDEEF8" fill-opacity="1"/><rect x="272" y="220" width="111" height="128" fill="#3E8ED0" fill-opacity="0.32"/><path d="M185 300 V178 H295 V300" fill="none" stroke="#B9A98A" stroke-width="20"/><path d="M185 300 V178 H295 V300" fill="none" stroke="#F6F0E0" stroke-width="14"/><rect x="138" y="160" width="24" height="150" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="318" y="160" width="24" height="150" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><g data-anim="move" data-from="60,0" data-dur="1.6" data-rep="loop" data-ease="lin"><g data-chg="205,178,8,-"></g></g><g data-anim="move" data-from="-60,0" data-dur="1.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-chg="275,178,8,+"></g></g><text class="tex" x="128" y="214" data-tex="\ce{Zn}" data-size="22" data-anchor="end"></text><text class="tex" x="352" y="214" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="150" y="388" data-mix="(−) 산화" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="330" y="388" data-mix="(+) 환원" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg>
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅲ-4. 화학 전지 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>4. 화학 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 화학 전지의 개요 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>02</b> 전지 전위 <span class="small c-muted">(다음 시간 — 이 덱의 (2))</span></p>
+        <p class="f21"><b>03</b> 실용 전지</p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">휴대 전화·노트북 컴퓨터·손목시계를 움직이는 배터리 속에서는 <b>산화 환원 반응</b>이 일어난다. 화학 에너지를 전기 에너지로 바꾸는 것이 화학 전지의 핵심이다. 이 장에서는 화학 전지의 개요와 전극 반응, 전지 전위와 반응성, 전지 전위와 깁스 자유 에너지의 관계, 농도와 전지 전위(네른스트 식), 실용 전지와 연료 전지를 알아본다.</p>
+      </div>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 480 330" style="width:480px" aria-label="휴대 전화, 손목시계, 연료 전지 자동차는 모두 화학 에너지를 전기 에너지로 바꾸는 화학 전지로 작동한다"><rect x="30" y="40" width="80" height="140" rx="12" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><rect x="42" y="58" width="56" height="96" rx="4" fill="#E3EEFB" stroke="#5B6B7F" stroke-width="1.5"/><circle cx="70" cy="166" r="5" fill="none" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="70" y="212" data-mix="휴대 전화" data-size="19" data-anchor="middle"></text><rect x="178" y="46" width="24" height="34" rx="4" fill="#E6E9ED" stroke="#5B6B7F" stroke-width="2"/><rect x="178" y="140" width="24" height="34" rx="4" fill="#E6E9ED" stroke="#5B6B7F" stroke-width="2"/><circle cx="190" cy="110" r="36" fill="#FFFFFF" stroke="#16233D" stroke-width="3"/><line x1="190" y1="110" x2="190" y2="86" stroke="#16233D" stroke-width="3"/><line x1="190" y1="110" x2="208" y2="118" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="190" y="212" data-mix="손목시계" data-size="19" data-anchor="middle"></text><path d="M270 150 L282 108 L318 92 L380 92 L410 118 L440 124 L440 150 Z" fill="#FFFFFF" stroke="#16233D" stroke-width="3" stroke-linejoin="round"/><circle cx="300" cy="152" r="16" fill="#B7C0C9" stroke="#16233D" stroke-width="3"/><circle cx="410" cy="152" r="16" fill="#B7C0C9" stroke="#16233D" stroke-width="3"/><rect x="326" y="106" width="40" height="24" rx="4" fill="#E8F5EE" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="346" y="124" data-tex="\ce{H2}" data-size="18" data-anchor="middle" fill="#2E9E6A"></text><text class="tex" x="355" y="212" data-mix="연료 전지 자동차" data-size="19" data-anchor="middle"></text><rect x="40" y="246" width="400" height="70" rx="12" fill="#FFF3EC" stroke="#C2410C" stroke-width="2"/><text class="tex" x="240" y="276" data-mix="화학 에너지 → 전기 에너지" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="240" y="303" data-mix="산화 환원 반응이 전자를 한 방향으로 흐르게 한다" data-size="19" data-anchor="middle"></text><g data-anim="pop" data-dur=".5" data-delay="0" data-o="70,60"><circle cx="70" cy="60" r="6" fill="#E08A2C" stroke="#E08A2C" stroke-width="0"/></g><g data-anim="pop" data-dur=".5" data-delay="0.3" data-o="190,66"><circle cx="190" cy="66" r="6" fill="#E08A2C" stroke="#E08A2C" stroke-width="0"/></g><g data-anim="pop" data-dur=".5" data-delay="0.6" data-o="346,78"><circle cx="346" cy="78" r="6" fill="#E08A2C" stroke="#E08A2C" stroke-width="0"/></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화03-06]</span>표준 환원 전위의 정의를 이해하고, 여러 가지 물질의 표준 환원 전위를 활용하여 화학 전지의 표준 전지 전위차를 구할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화03-07]</span>표준 전지 전위차와 깁스 자유 에너지 관계를 이해하고, 다양한 화학 전지에 호기심을 갖는다.</div>
+  <ol class="goals mt12 f22">
+    <li>갈바니 전지와 전해 전지를 구분하고, 화학 전지에서 전류가 생기는 원리를 반쪽 반응으로 설명할 수 있다.</li>
+    <li>다니엘 전지에서 산화 전극·환원 전극의 반응과 전자·이온의 이동 방향을 설명하고, 전지를 표기할 수 있다.</li>
+    <li>염다리의 역할을 설명하고, 염다리 조건을 바꾸는 실험을 설계·수행할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">한 비커 반응</div><div class="farr">→</div>
+    <div class="fnode">두 반쪽 전지</div><div class="farr">→</div>
+    <div class="fnode">다니엘 전지</div><div class="farr">→</div>
+    <div class="fnode">전지 표기</div><div class="farr">→</div>
+    <div class="fnode">염다리</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 염다리 실험</div>
+  </div>
+  <p class="small mt12">Ⅲ-3에서: 반쪽 반응법, 잃은 전자 수 = 얻은 전자 수 · 다음 시간 (2): 전지 전위와 $\Delta G^\circ=-nFE^\circ$</p>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 도입" data-title="생각 열기: 레몬 전지">
+  <h2><span class="tag">생각 열기</span>건전지 속 화학 반응은 어떻게 전기를 만들까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">레몬에 아연판과 구리판을 꽂은 레몬 전지 몇 개를 도선으로 차례로 이어 LED에 연결하면 불이 켜진다. 두 금속판을 같은 금속으로 바꾸면 불이 켜지지 않는다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 전자는 어느 금속판에서 어느 금속판으로 흐를까?</p>
+        <p class="f21 step">→ 더 쉽게 산화되는 아연판에서 도선을 따라 구리판으로 흐른다. 아연이 전자를 내놓는 <b>산화</b> 반응이 일어난다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 레몬즙은 무슨 일을 할까?</p>
+        <p class="f21 step">→ 이온이 들어 있는 전해질이다. 도선으로는 전자가, 레몬즙 속으로는 이온이 움직여 회로가 완성된다.</p></div>
+      <p class="small step">오늘은 산화 반응과 환원 반응을 서로 다른 곳에서 일어나게 하여 전류를 얻는 장치, <b>화학 전지</b>를 알아본다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 460 390" style="width:430px" aria-label="레몬에 아연판과 구리판을 꽂고 도선으로 LED에 이으면 불이 켜진다"><ellipse cx="230" cy="250" rx="150" ry="95" fill="#F7E36B" stroke="#C9A900" stroke-width="3"/><ellipse cx="200" cy="225" rx="60" ry="22" fill="#FFF6B8" opacity=".7"/><rect x="150" y="150" width="20" height="120" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="290" y="150" width="20" height="120" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><g data-circuit='{"parts": [["wire", [[160, 150], [160, 70], [212, 70]]], ["wire", [[248, 70], [300, 70], [300, 150]]]], "stroke": 3}'></g><g data-anim="fade" data-dur=".8" data-rep="alt"><circle cx="230" cy="70" r="30" fill="#FFE45C" stroke="#FFE45C" stroke-width="0" opacity=".55"/></g><circle cx="230" cy="70" r="18" fill="#FFD3D8" stroke="#D7263D" stroke-width="2.5"/><line x1="222" y1="88" x2="222" y2="104" stroke="#16233D" stroke-width="2"/><line x1="238" y1="88" x2="238" y2="104" stroke="#16233D" stroke-width="2"/><text class="tex" x="230" y="30" data-mix="LED" data-size="19" data-anchor="middle" data-weight="700"></text><text class="tex" x="128" y="168" data-tex="\ce{Zn}" data-size="20" data-anchor="end"></text><text class="tex" x="332" y="168" data-tex="\ce{Cu}" data-size="20" data-anchor="start"></text><text class="tex" x="230" y="372" data-mix="레몬즙(전해질) · 여러 개를 이어 씀" data-size="19" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 5. 연결 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 도입" data-title="연결: 한 비커 속 산화 환원">
+  <h2><span class="tag alt">연결</span>한 비커 속 산화 환원 반응에서는 왜 전류가 생기지 않을까?</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">Ⅲ-3에서 배운 반쪽 반응: 아연판을 황산 구리(Ⅱ) 수용액에 넣으면</p>
+      <div class="formula sm">$\ce{Zn(s) -> Zn^2+(aq) + 2e-}$ &nbsp;&nbsp; $\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 전자가 이동했는데 왜 도선에 쓸 수 있는 전류가 생기지 않을까?</p>
+        <p class="f21 step">→ 전자는 아연 표면에 닿은 구리 이온에게 <b>직접</b> 옮겨 간다. 용기 안 여기저기서 고르게 일어나므로 일정한 방향의 전류가 없고, 에너지는 열로 나온다(온도 상승).</p></div>
+      <p class="f21 step"><mark>두 반쪽 반응을 서로 다른 용기로 나누고 도선으로 이으면</mark> 전자가 한 방향으로 흐른다 — 이것이 화학 전지의 출발점이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 420 370" style="width:420px" aria-label="아연판을 황산 구리(II) 수용액에 넣으면 아연에서 구리 이온으로 전자가 직접 옮겨 가 구리가 석출되고 온도가 올라간다"><path d="M54 90 H60 V320 Q60 330 70 330 H320 Q330 330 330 320 V90 H336" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="62" y="130" width="266" height="198" fill="#3E8ED0" fill-opacity="0.32"/><rect x="170" y="60" width="36" height="230" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><g data-anim="fade" data-dur=".4" data-delay="0.6"><circle cx="212.5" cy="150.7" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="0.7"><circle cx="213.7" cy="167.8" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="0.8"><circle cx="213.5" cy="183.4" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="1"><circle cx="210.8" cy="195.2" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="1.1"><circle cx="211.9" cy="216.7" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="1.2"><circle cx="208.7" cy="232.4" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="1.3"><circle cx="209.5" cy="245.8" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="1.4"><circle cx="211.4" cy="262.3" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><g data-anim="fade" data-dur=".4" data-delay="1.6"><circle cx="209.3" cy="275.1" r="6" fill="#C47A44" stroke="#9C5A2B" stroke-width="1"/></g><circle cx="330" cy="200" r="78" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="5 4"/><line x1="218" y1="200" x2="252" y2="200" stroke="#5B6B7F" stroke-width="1.5" stroke-dasharray="4 4"/><g data-atom="298,200,30,Zn,\mathrm{Zn}"></g><g data-atom="368,186,24,Cu,\mathrm{Cu}^{2+}"></g><g data-anim="move" data-from="-26,-4" data-dur="1.2" data-rep="loop"><circle cx="338" cy="234" r="6" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><circle cx="352" cy="240" r="6" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/></g><text class="tex" x="330" y="312" data-mix="전자가 직접 이동" data-size="19" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><rect x="96" y="40" width="16" height="230" rx="8" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2"/><circle cx="104" cy="282" r="13" fill="#FFD3D8" stroke="#D7263D" stroke-width="2"/><g data-anim="scale" data-from="1,.6" data-o="104,280" data-dur="1.6"><rect x="100" y="150" width="8" height="130" rx="3" fill="#D7263D" stroke="#D7263D" stroke-width="0"/></g><text class="tex" x="104" y="28" data-mix="온도 ↑" data-size="19" data-anchor="middle" fill="#D7263D" data-weight="700"></text><text class="tex" x="200" y="354" data-tex="\ce{CuSO4(aq)}" data-size="18" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 6. ① 전기 화학과 두 종류의 전지 ════════ -->
+<section class="slide" data-sec="01 · 전기 화학 전지의 개요" data-title="전기 화학 전지의 두 종류">
+  <h2><span class="no">1</span>전기 화학 전지의 개요</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <p class="f21"><mark>화학 변화와 전기가 하는 일 사이의 관계를 탐구하는 분야가 전기 화학</mark>이다. 전기 화학이 다루는 반응은 전자의 이동이 따르는 반응, 곧 모든 <b>산화 환원 반응</b>이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 두 전지의 차이는 무엇일까?</p>
+        <p class="f21 step">→ <span class="ans">갈바니 전지</span>(볼타 전지처럼)는 <b>자발적</b> 반응으로 전기 에너지를 만든다. <b>전해 전지</b>는 전기 에너지를 써서 <b>비자발적</b> 반응을 일으켜 유용한 물질을 얻는다(Ⅲ-5).</p></div>
+      <div class="card tip"><p class="small"><b>산업에서의 중요성</b> 전기 에너지는 화석 연료를 대신할 청정에너지이다. 휴대용 기기부터 선박용 발전기까지 쓰임이 넓어, 효율 좋은 전지 기술은 경제·산업에서 잠재력이 크다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 540 270" style="width:540px" aria-label="갈바니 전지는 자발적 산화 환원 반응으로 전기 에너지를 만들고, 전해 전지는 전기 에너지를 공급해 비자발적 반응을 일으킨다"><rect x="10" y="10" width="250" height="250" rx="12" fill="#F2FAF5" stroke="#2E9E6A" stroke-width="2"/><text class="tex" x="135" y="44" data-mix="갈바니 전지" data-size="21" data-anchor="middle" data-weight="700"></text><rect x="65" y="110" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="135" y="150" data-mix="자발적" data-size="19" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="176" data-mix="산화 환원 반응" data-size="19" data-anchor="middle"></text><g data-arw="135,106,135,72,field,3"></g><text class="tex" x="135" y="66" data-mix="전기 에너지 발생" data-size="19" data-anchor="middle" fill="#2E9E6A" data-halo="1" data-weight="700"></text><text class="tex" x="135" y="232" data-mix="$\Delta G&lt;0$ · 볼타·다니엘 전지" data-size="19" data-anchor="middle"></text><rect x="280" y="10" width="250" height="250" rx="12" fill="#F5F1FC" stroke="#7B4FC8" stroke-width="2"/><text class="tex" x="405" y="44" data-mix="전해 전지" data-size="21" data-anchor="middle" data-weight="700"></text><rect x="335" y="110" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><text class="tex" x="405" y="150" data-mix="비자발적" data-size="19" data-anchor="middle" data-weight="700"></text><text class="tex" x="405" y="176" data-mix="산화 환원 반응" data-size="19" data-anchor="middle"></text><g data-arw="405,72,405,106,bfield,3"></g><text class="tex" x="405" y="66" data-mix="전기 에너지 공급" data-size="19" data-anchor="middle" fill="#7B4FC8" data-halo="1" data-weight="700"></text><text class="tex" x="405" y="232" data-mix="$\Delta G&gt;0$ · 전기 분해" data-size="19" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 7. ② 두 반쪽 반응을 나누면 ════════ -->
+<section class="slide" data-sec="01 · 전기 화학 전지의 개요" data-title="두 반쪽 반응을 나누면 — 직류 전류">
+  <h2><span class="no">2</span>두 반쪽 반응을 나누면 — 직류 전류</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산화 반쪽 반응에서 나온 전자는 환원 반쪽 반응으로 들어간다. 두 반쪽 반응을 다른 용기에서 일어나게 하고 회로로 이으면, 전자는 <b>산화 전극 → 환원 전극</b>의 한 방향으로 흐른다. 이것이 <b>직류 전류</b>를 만드는 원리이다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 화학 전지에서 전기 에너지는 어디에서 올까?</p>
+        <p class="f21 step">→ 자발적 반응의 <b>자유 에너지 변화</b>가 전자의 운동 에너지, 곧 전기 에너지로 바뀐다. 각 전극의 반쪽 반응은 잃은 전자 수와 얻은 전자 수의 균형으로 이해한다.</p></div>
+      <div class="stages c2">
+        <div class="stage"><p class="small"><b>직류</b> 화학 전지가 만드는 한 방향 전류 — 휴대용 기기·자동차</p></div>
+        <div class="stage"><p class="small"><b>교류</b> 발전기가 만드는, 방향과 크기가 주기적으로 바뀌는 전류 — 가정·공장 전력</p></div>
+      </div>
+      <p class="small">생물계에서도: ATP를 만드는 산화적 인산화와 전자 전달계, 엽록체의 광계 반응은 전자가 이동하는 산화 환원 반응이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 370" style="width:560px" aria-label="산화 반쪽 반응과 환원 반쪽 반응을 두 용기로 나누고 도선으로 이으면 전자가 산화 전극에서 환원 전극으로 한 방향으로 흐른다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "G", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{Zn}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{ZnSO4(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{CuSO4(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 볼타 전지 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="볼타 전지">
+  <h2><span class="no">3</span>볼타 전지와 다니엘 전지 만들기 — 볼타 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">과학사에서 최초의 전지는 <b>볼타 전지</b>이다. 볼타는 소금물에 적신 골판지로 나눈 아연판과 구리판을 쌓아 올리고 회로를 이어 전류와 기전력이 생기는 것을 보였다.</p>
+      <div class="formula sm">산화 전극: $\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</div>
+      <div class="card q"><p class="f21"><b>Q</b> 구리판 표면에서는 무엇이 환원될까?</p>
+        <p class="f21 step">→ 구리가 아니라 물에서 이온화된 <b>양성자</b>($\ce{H+}$)가 환원되어 수소 기체가 생긴다.</p>
+        <div class="formula sm step">환원 전극: $\ce{2H+(aq) + 2e- -> H2(g)}$</div></div>
+      <p class="small step">구리판에 붙는 수소 기포가 전지의 성능을 떨어뜨린다 → 이 문제를 고친 것이 다니엘 전지(화학사, 169쪽).</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 420 350" style="width:400px" aria-label="아연판, 소금물에 적신 골판지, 구리판을 차례로 쌓은 볼타 더미를 도선으로 이으면 전류가 흐른다"><rect x="110" y="310" width="160" height="20" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><rect x="114" y="296" width="152" height="14" rx="3" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="1.5"/><rect x="110" y="276" width="160" height="20" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="110" y="250" width="160" height="20" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><rect x="114" y="236" width="152" height="14" rx="3" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="1.5"/><rect x="110" y="216" width="160" height="20" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="110" y="190" width="160" height="20" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><rect x="114" y="176" width="152" height="14" rx="3" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="1.5"/><rect x="110" y="156" width="160" height="20" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="110" y="130" width="160" height="20" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><rect x="114" y="116" width="152" height="14" rx="3" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="1.5"/><rect x="110" y="96" width="160" height="20" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><g data-circuit='{"parts": [["wire", [[270, 100], [330, 100], [330, 180]]], ["bulb", [330, 200], {"r": 18, "on": true}], ["wire", [[330, 220], [330, 320], [270, 320]]]], "stroke": 3}'></g><path d="M270 100 H330 V180 M330 220 V320 H270" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="30"/><g data-arw="350,120,350,170,minus,3"></g><text class="tex" x="368" y="152" data-tex="e^-" data-size="19" data-anchor="start" fill="#1F6FD1"></text><line x1="110" y1="86" x2="70" y2="70" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="66" y="66" data-mix="아연판" data-size="19" data-anchor="end"></text><line x1="114" y1="114" x2="70" y2="124" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="66" y="128" data-mix="소금물||골판지" data-size="19" data-anchor="end"></text><line x1="110" y1="140" x2="70" y2="180" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="66" y="186" data-mix="구리판" data-size="19" data-anchor="end"></text><text class="tex" x="190" y="32" data-mix="맨 위 아연 · 맨 아래 구리" data-size="19" data-anchor="middle" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 다니엘 전지의 구성 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="다니엘 전지의 구성">
+  <h2><span class="no">4</span>다니엘 전지의 구성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <p class="f21"><b>다니엘 전지</b>는 황산 아연 용액에 담근 아연 전극과 황산 구리(Ⅱ) 용액에 담근 구리 전극을 이은 회로이다. 산화가 일어나는 <b class="ac341-cox">산화 전극</b>과 환원이 일어나는 <b class="ac341-crd">환원 전극</b>이 완전히 나뉘어 있고, 전자의 통로인 <b>회로</b>와 이온의 통로인 <b>염다리</b>로만 이어진다.</p>
+      <table class="ac341-c ac341-sm">
+        <tr><th class="ac341-cox">산화 반쪽 반응 · 산화 전극</th></tr><tr><td>$\ce{Zn(s) -> Zn^2+(aq) + 2e-}$</td></tr>
+        <tr><th class="ac341-crd">환원 반쪽 반응 · 환원 전극</th></tr><tr><td>$\ce{Cu^2+(aq) + 2e- -> Cu(s)}$</td></tr>
+        <tr><th>전체(전지) 반응</th></tr><tr><td class="step">$\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$</td></tr>
+      </table>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 370" style="width:560px" aria-label="황산 아연 용액의 아연 전극과 황산 구리(II) 용액의 구리 전극을 도선과 염다리로 이은 다니엘 전지"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{Zn}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{ZnSO4(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{CuSO4(aq)}" data-size="20" data-anchor="middle"></text><g data-anim="move" data-from="60,0" data-dur="1.6" data-rep="loop" data-ease="lin"><g data-chg="214,112,9,-"></g></g><g data-anim="move" data-from="-60,0" data-dur="1.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-chg="346,112,9,+"></g></g><text class="tex" x="280" y="170" data-mix="← $\ce{SO4^2-}$" data-size="20" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><text class="tex" x="280" y="206" data-mix="$\ce{Na+}$ →" data-size="20" data-anchor="middle" fill="#D7263D" data-halo="1"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 전극 표면에서 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="전극 표면에서 일어나는 일">
+  <h2><span class="no">5</span>전극 표면에서 일어나는 일</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px"><svg class="fig" viewBox="0 0 560 310" style="width:560px" aria-label="산화 전극 표면에서는 아연 원자가 전자 두 개를 남기고 아연 이온으로 녹아 나가고, 환원 전극 표면에서는 구리 이온이 전자 두 개를 받아 구리 원자로 석출된다"><rect x="10" y="10" width="260" height="290" rx="12" fill="#FFFFFF" stroke="#C2410C" stroke-width="2"/><text class="tex" x="140" y="40" data-mix="산화 전극 표면" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><rect x="290" y="10" width="260" height="290" rx="12" fill="#FFFFFF" stroke="#0E7490" stroke-width="2"/><text class="tex" x="420" y="40" data-mix="환원 전극 표면" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text><rect x="22" y="56" width="92" height="190" rx="6" fill="#E9EDF1" stroke="#7E8B98" stroke-width="1.5"/><g data-atom="44,90,22,Zn,-"></g><g data-atom="90,90,22,Zn,-"></g><g data-atom="44,148,22,Zn,-"></g><g data-atom="90,148,22,Zn,-"></g><g data-atom="44,206,22,Zn,-"></g><g data-atom="90,206,22,Zn,-"></g><g data-anim="move" data-from="-106,6" data-dur="1.4" data-ease="out"><g data-atom="196,140,26,Zn,\mathrm{Zn}^{2+}"></g></g><g data-anim="fade" data-dur=".4" data-delay=".8"><circle cx="68" cy="232" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="68" y="238" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="fade" data-dur=".4" data-delay=".9"><circle cx="96" cy="232" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="96" y="238" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><text class="tex" x="196" y="196" data-mix="용액으로" data-size="19" data-anchor="middle" data-halo="1"></text><text class="tex" x="140" y="284" data-mix="전자 $2$개는 전극에 남음" data-size="19" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><rect x="446" y="56" width="92" height="190" rx="6" fill="#F6E7D6" stroke="#B0835A" stroke-width="1.5"/><g data-atom="516,90,22,Cu,-"></g><g data-atom="470,148,22,Cu,-"></g><g data-atom="516,148,22,Cu,-"></g><g data-atom="470,206,22,Cu,-"></g><g data-atom="516,206,22,Cu,-"></g><g data-anim="move" data-from="-120,40" data-dur="1.4" data-ease="out" data-delay=".4"><g data-atom="470,90,22,Cu,-"></g></g><g data-anim="fade" data-dur=".4" data-delay=".0"><circle cx="470" cy="232" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="470" y="238" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="fade" data-dur=".4" data-delay=".1"><circle cx="498" cy="232" r="9" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="1.5"/><text class="tex" x="498" y="238" data-tex="e^-" data-size="18" data-anchor="middle" fill="#1F6FD1"></text></g><text class="tex" x="372" y="120" data-mix="$\ce{Cu^2+}$이||전자 $2$개 받아" data-size="19" data-anchor="middle" data-halo="1"></text><text class="tex" x="372" y="196" data-mix="구리 원자로||석출" data-size="19" data-anchor="middle" data-halo="1"></text></svg>
+      <p class="small">산화되는 $\ce{Zn}$ 원자 하나당 전자 $2$개를 잃고, 환원되는 $\ce{Cu^2+}$ 하나당 전자 $2$개를 얻는다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card q"><p class="f21"><b>Q</b> 전지를 한동안 작동시키면 두 전극의 질량은 어떻게 될까?</p>
+        <p class="f21 step">→ 아연 전극은 녹아 나가 <b>줄어들고</b>, 구리 전극에는 구리가 석출되어 <b>늘어난다</b>.</p></div>
+      <div class="step"><svg class="fig" viewBox="0 0 440 258" style="width:440px" aria-label="전지가 작동한 뒤 산화 전극의 아연은 줄어들고 환원 전극의 구리는 늘어난다"><text class="tex" x="110" y="26" data-mix="작동 전" data-size="19" data-anchor="middle" data-weight="700"></text><text class="tex" x="330" y="26" data-mix="작동 뒤" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="66" y="40" width="28" height="150" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="126" y="40" width="28" height="150" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M286 40 L314 40 L314 110 L306 190 L294 190 L286 110 Z" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2" stroke-linejoin="round"/><g data-anim="fade" data-dur="1.2"><path d="M346 40 L374 40 L374 108 L382 190 L338 190 L346 108 Z" fill="#C47A44" stroke="#9C5A2B" stroke-width="2" stroke-linejoin="round"/></g><text class="tex" x="80" y="218" data-tex="\ce{Zn}" data-size="19" data-anchor="middle"></text><text class="tex" x="140" y="218" data-tex="\ce{Cu}" data-size="19" data-anchor="middle"></text><text class="tex" x="296" y="216" data-mix="$\ce{Zn}$ 줄어듦" data-size="19" data-anchor="middle" fill="#C2410C"></text><text class="tex" x="372" y="244" data-mix="$\ce{Cu}$ 늘어남" data-size="19" data-anchor="middle" fill="#0E7490"></text><g data-arw="196,110,250,110,muted,3"></g></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. ⑥ 전자와 이온의 이동 ════════ -->
+<section class="slide" data-sec="01 · 볼타 전지와 다니엘 전지 만들기" data-title="전자와 이온의 이동">
+  <h2><span class="no">6</span>전자는 도선으로, 이온은 염다리로</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산화 전극((−)극)에서 $\ce{Zn}$이 이온이 될 때 생긴 전자는 회로를 따라 환원 전극((+)극)으로 가서 용액 속 $\ce{Cu^2+}$을 환원시킨다.</p>
+      <p class="f21">염다리 속 반응하지 않는 <b class="c-minus">음이온은 산화 전극 쪽</b>으로, <b class="c-plus">양이온은 환원 전극 쪽</b>으로 이동하여 전하 균형을 유지한다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 「전자가 염다리를 통해 다시 아연 쪽으로 돌아온다」는 맞는 말일까?</p>
+        <p class="f21 step" data-g="m1">→ 아니다. 전자는 <b>도선으로만</b> 이동하고, 염다리와 용액 속에서는 <b>이온</b>이 이동한다. 염다리를 빼면 전류가 멈춘다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 400" style="width:560px" aria-label="전자는 도선을 따라 아연에서 구리로, 염다리의 음이온은 산화 전극 쪽으로, 양이온은 환원 전극 쪽으로 이동한다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{Zn}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Cu}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{ZnSO4(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{CuSO4(aq)}" data-size="20" data-anchor="middle"></text><g data-anim="move" data-from="60,0" data-dur="1.6" data-rep="loop" data-ease="lin"><g data-chg="214,112,9,-"></g></g><g data-anim="move" data-from="-60,0" data-dur="1.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-chg="346,112,9,+"></g></g><text class="tex" x="280" y="170" data-mix="← $\ce{SO4^2-}$" data-size="20" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><text class="tex" x="280" y="206" data-mix="$\ce{Na+}$ →" data-size="20" data-anchor="middle" fill="#D7263D" data-halo="1"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text><g class="step" data-g="m1"><rect x="166" y="96" width="228" height="32" rx="10" fill="none" stroke="#D7263D" stroke-width="2.5" stroke-dasharray="6 5"/><line x1="280" y1="128" x2="280" y2="150" stroke="#D7263D" stroke-width="1.5" stroke-dasharray="4 3"/><text class="tex" x="280" y="390" data-mix="염다리 속에서는 이온만 이동 — 전자는 지나가지 않는다" data-size="20" data-anchor="middle" fill="#D7263D" data-weight="700"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑦ 전극에서 일어나는 산화 환원 반응 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="반쪽 전지와 전극">
+  <h2><span class="no">7</span>전극에서 일어나는 산화 환원 반응</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">화학 전지의 두 반쪽 반응은 서로 떨어진 두 <b>반쪽 전지</b>에서 일어난다. 반쪽 전지에는 <b>전해질</b> 용액과 <b>전극</b>이 있고, 두 전극은 회로로 이어진다.</p>
+      <table class="ac341-c ac341-sm">
+        <tr><th></th><th class="ac341-cox">산화 전극 (anode)</th><th class="ac341-crd">환원 전극 (cathode)</th></tr>
+        <tr><td class="l">일어나는 반응</td><td>산화 — 전자 방출</td><td>환원 — 전자를 용액 속 이온에 줌</td></tr>
+        <tr><td class="l">전자의 흐름</td><td>회로로 내보냄</td><td>회로에서 들어옴</td></tr>
+        <tr><td class="l">전극의 전하</td><td><span class="blank"><span class="step">(−)극</span></span></td><td><span class="blank"><span class="step">(+)극</span></span></td></tr>
+      </table>
+      <p class="f21 mt8">전극의 전하는 전자의 흐름 방향으로 정해진다. 산화 전극은 남는 전자를 가져 음의 전하를 띤다.</p>
+      <p class="small">전극의 <b>이름</b>은 반응(산화·환원)으로 정한다. 부호는 전지의 종류에 따라 달라져, 전해 전지(Ⅲ-5)에서는 (+)극이 산화 전극이다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 540 330" style="width:540px" aria-label="반쪽 전지는 전해질 용액과 전극으로 이루어지며, 산화 전극은 전자가 남아 음의 전하를, 환원 전극은 양의 전하를 띤다"><path d="M34 90 H40 V270 Q40 280 50 280 H240 Q250 280 250 270 V90 H256" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="130" width="206" height="148" fill="#DDEEF8" fill-opacity="1"/><rect x="130" y="60" width="30" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="145" y="40" data-mix="산화 전극(anode)" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="190" y="92" data-tex="\ce{Zn}" data-size="20" data-anchor="start"></text><text class="tex" x="145" y="264" data-tex="\ce{Zn^2+(aq)}" data-size="19" data-anchor="middle" data-halo="1"></text><text class="tex" x="145" y="316" data-mix="(−)극 · 전자 방출" data-size="19" data-anchor="middle" data-weight="700"></text><path d="M304 90 H310 V270 Q310 280 320 280 H510 Q520 280 520 270 V90 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="312" y="130" width="206" height="148" fill="#3E8ED0" fill-opacity="0.32"/><rect x="400" y="60" width="30" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><text class="tex" x="415" y="40" data-mix="환원 전극(cathode)" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text><text class="tex" x="460" y="92" data-tex="\ce{Cu}" data-size="20" data-anchor="start"></text><text class="tex" x="415" y="264" data-tex="\ce{Cu^2+(aq)}" data-size="19" data-anchor="middle" data-halo="1"></text><text class="tex" x="415" y="316" data-mix="(+)극 · 전자 받음" data-size="19" data-anchor="middle" data-weight="700"></text><g data-anim="pop" data-dur=".6" data-o="145,160"><circle cx="145" cy="160" r="22" fill="#DCE9FA" stroke="#1F6FD1" stroke-width="2"/><text class="tex" x="145" y="167" data-tex="-" data-size="22" data-anchor="middle" fill="#1F6FD1"></text></g><g data-anim="pop" data-dur=".6" data-delay=".3" data-o="415,160"><circle cx="415" cy="160" r="22" fill="#FFE4E7" stroke="#D7263D" stroke-width="2"/><text class="tex" x="415" y="167" data-tex="+" data-size="22" data-anchor="middle" fill="#D7263D"></text></g></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 13. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>다니엘 전지를 작동시키면</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">다니엘 전지 $\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$를 작동시켰다. 염다리는 $\ce{KNO3}$ 수용액이다. 물음에 답하여라.</p>
+      <p class="f21">(1) $\ce{K+}$은 어느 전극 쪽으로 이동할까? <span class="step">→ <span class="ans">구리 전극(환원 전극) 쪽</span></span></p>
+      <p class="f21">(2) 황산 아연 용액의 $[\ce{Zn^2+}]$는 어떻게 변할까? <span class="step">→ <span class="ans">커진다</span></span></p>
+      <p class="f21">(3) 전자 $1\ \text{mol}$이 도선으로 흐를 때 석출되는 구리는 몇 mol일까? <span class="step">→ <span class="ans">$0.5\ \text{mol}$</span> ($\ce{Cu^2+}$ 하나가 전자 $2$개를 얻으므로)</span></p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 전지 표기법 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="전지 표기법">
+  <h2><span class="no">8</span>전지를 표기하는 방법</h2>
+  <p class="f21">반쪽 전지의 구성 성분을 차례로 쓰되 <b class="ac341-cox">산화 반쪽 전지는 왼쪽</b>, <b class="ac341-crd">환원 반쪽 전지는 오른쪽</b>에 놓고, 상 경계는 세로선 $|$, 염다리는 이중 선 $\|$로 나타낸다.</p>
+  <div class="row mt8">
+    <div class="col"><svg class="fig" viewBox="0 0 580 284" style="width:580px" aria-label="전지 표기: 산화 반쪽 전지를 왼쪽, 환원 반쪽 전지를 오른쪽에 쓰고 상 경계는 세로선, 염다리는 이중 선으로 나타낸다"><text class="tex" x="62" y="90" data-tex="\ce{Zn(s)}" data-size="28" data-anchor="middle"></text><text class="tex" x="120" y="90" data-tex="|" data-size="28" data-anchor="middle"></text><text class="tex" x="200" y="90" data-tex="\ce{Zn^2+(aq)}" data-size="28" data-anchor="middle"></text><text class="tex" x="290" y="90" data-tex="\|" data-size="28" data-anchor="middle"></text><text class="tex" x="380" y="90" data-tex="\ce{Cu^2+(aq)}" data-size="28" data-anchor="middle"></text><text class="tex" x="460" y="90" data-tex="|" data-size="28" data-anchor="middle"></text><text class="tex" x="518" y="90" data-tex="\ce{Cu(s)}" data-size="28" data-anchor="middle"></text><path d="M40 110 L40 122 L260 122 L260 110" fill="none" stroke="#C2410C" stroke-width="2.5" stroke-linejoin="round"/><text class="tex" x="150" y="148" data-mix="산화 반쪽 전지 (왼쪽)" data-size="19" data-anchor="middle" fill="#C2410C" data-weight="700"></text><path d="M320 110 L320 122 L540 122 L540 110" fill="none" stroke="#0E7490" stroke-width="2.5" stroke-linejoin="round"/><text class="tex" x="430" y="148" data-mix="환원 반쪽 전지 (오른쪽)" data-size="19" data-anchor="middle" fill="#0E7490" data-weight="700"></text><line x1="120" y1="40" x2="120" y2="58" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="120" y="30" data-mix="상 경계" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><line x1="460" y1="40" x2="460" y2="58" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="460" y="30" data-mix="상 경계" data-size="18" data-anchor="middle" fill="#5B6B7F"></text><g class="step" data-g="n1"><line x1="290" y1="170" x2="290" y2="190" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="290" y="212" data-mix="이중 선 = 염다리" data-size="19" data-anchor="middle" data-weight="700"></text></g><g class="step" data-g="n2"><g data-arw="80,240,500,240,minus,3.5"></g><text class="tex" x="290" y="270" data-mix="전자의 흐름: 왼쪽 → 오른쪽" data-size="19" data-anchor="middle" fill="#1F6FD1" data-weight="700"></text></g></svg></div>
+    <div class="col stack" style="flex:0 0 470px">
+      <div class="card q"><p class="f21"><b>Q</b> 이 표기에서 전자는 어느 쪽으로 흐를까?</p>
+        <p class="f21 step" data-g="n2">→ 왼쪽(산화 전극) → 오른쪽(환원 전극)</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 왼쪽과 오른쪽을 바꾸어 쓰면 무엇을 뜻하게 될까?</p>
+        <p class="f21 step">→ 구리가 산화되고 아연 이온이 환원되는 반대 반응을 나타낸다. 표기만 보고도 어느 쪽이 산화 전극인지 알 수 있다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. ⑨ 염다리가 없으면 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="염다리가 없으면">
+  <h2><span class="no">9</span>염다리가 없으면 — 전하 불균형</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21">산화 전극 쪽: $\ce{Zn}$이 산화되어 $\ce{Zn^2+}$이 계속 늘어난다 → 용액에 <b class="c-plus">양전하</b>가 쌓인다.</p>
+      <p class="f21">환원 전극 쪽: $\ce{Cu^2+}$이 줄어들어 $\ce{SO4^2-}$의 비율이 커진다 → 용액에 <b class="c-minus">음전하</b>가 쌓인다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 이렇게 전하가 쌓이면 전지는 어떻게 될까?</p>
+        <p class="f21 step" data-g="i1">→ 쌓인 전하가 두 전극의 전위차를 상쇄하여 전지 전위가 0이 되면 전자의 이동과 전지의 작동이 <b>멈춘다</b>. 이 전하 불균형을 막는 것이 <b>염다리</b>이다.</p></div>
+    </div>
+    <div class="col stack">
+      <div class="ac341-swap"><div class="ac341-s0"><svg class="fig" viewBox="0 0 560 356" style="width:540px" aria-label="염다리가 없으면 산화 전극 쪽 용액에 양전하, 환원 전극 쪽 용액에 음전하가 쌓여 전지가 멈추고, 염다리가 있으면 이온이 이동해 전하 균형이 유지된다"><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><g data-anim="pop" data-dur=".5" data-delay="0" data-o="70,200"><g data-chg="70,200,11,+"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.1" data-o="170,230"><g data-chg="170,230,11,+"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.3" data-o="90,260"><g data-chg="90,260,11,+"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.4" data-o="190,190"><g data-chg="190,190,11,+"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.6" data-o="160,268"><g data-chg="160,268,11,+"></g></g><g data-anim="pop" data-dur=".5" data-delay="0" data-o="370,200"><g data-chg="370,200,11,-"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.1" data-o="470,230"><g data-chg="470,230,11,-"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.3" data-o="390,262"><g data-chg="390,262,11,-"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.4" data-o="490,190"><g data-chg="490,190,11,-"></g></g><g data-anim="pop" data-dur=".5" data-delay="0.6" data-o="460,268"><g data-chg="460,268,11,-"></g></g><text class="tex" data-overlap="ok" x="135" y="176" data-mix="양전하 쌓임" data-size="19" data-anchor="middle" fill="#D7263D" data-halo="1" data-weight="700"></text><text class="tex" data-overlap="ok" x="425" y="176" data-mix="음전하 쌓임" data-size="19" data-anchor="middle" fill="#1F6FD1" data-halo="1" data-weight="700"></text><text class="tex" data-overlap="ok" x="280" y="92" data-mix="? V" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" data-overlap="ok" x="280" y="340" data-mix="염다리 없음 — 두 용액에 전하가 쌓인다" data-size="20" data-anchor="middle" data-weight="700"></text></svg></div><div class="ac341-s1 step" data-g="i1"><svg class="fig" viewBox="0 0 560 356" style="width:540px" aria-label="염다리의 음이온은 산화 전극 쪽, 양이온은 환원 전극 쪽으로 이동해 전하 균형을 유지한다"><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#3E8ED0" fill-opacity="0.32"/><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><g data-anim="move" data-from="70,0" data-dur="1.5" data-rep="loop" data-ease="lin"><g data-chg="214,112,10,-"></g></g><g data-anim="move" data-from="-70,0" data-dur="1.5" data-rep="loop" data-ease="lin" data-delay=".75"><g data-chg="346,112,10,+"></g></g><text class="tex" data-overlap="ok" x="280" y="170" data-mix="← 음이온" data-size="19" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><text class="tex" data-overlap="ok" x="280" y="206" data-mix="양이온 →" data-size="19" data-anchor="middle" fill="#D7263D" data-halo="1"></text><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><text class="tex" data-overlap="ok" x="280" y="92" data-mix="1.10 V" data-size="20" data-anchor="middle" data-halo="1" data-weight="700"></text><text class="tex" data-overlap="ok" x="280" y="340" data-mix="염다리가 전하 균형 유지 → 작동이 계속된다" data-size="20" data-anchor="middle" data-weight="700"></text></svg></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. ⑩ 염다리의 역할과 구성 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="염다리의 역할과 구성">
+  <h2><span class="no">10</span>염다리의 역할과 구성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><mark>염다리는 두 반쪽 전지를 잇는 고농도 이온의 통로로, 전하 불균형을 막아 전지 반응이 계속되게 한다.</mark></p>
+      <ul class="ac341-ul f21">
+        <li>산화 전극 쪽에 <b class="c-minus">음이온</b>을 공급 — 양전하가 쌓이지 않게</li>
+        <li>환원 전극 쪽에 <b class="c-plus">양이온</b>을 공급 — 음전하가 쌓이지 않게</li>
+        <li>두 전해질의 이온과 <b>반응하지 않는</b> 이온으로 만든다($\ce{KNO3}$, $\ce{KCl}$, $\ce{Na2SO4}$ 등)</li>
+      </ul>
+      <div class="card q"><p class="f21"><b>Q</b> 다니엘 전지 염다리에 $\ce{AgNO3}$ 용액을 쓰면 안 되는 까닭은?</p>
+        <p class="f21 step">→ 염다리에서 아연 쪽으로 들어간 $\ce{Ag+}$이 아연판과 직접 반응하여 은이 석출된다. <span class="ans">염다리 이온은 전극 반응에 끼어들지 않아야</span> 한다.</p></div>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 250" style="width:560px" aria-label="염다리의 여러 형태: 이온 젤을 채운 U자형 유리관, 다공성 원반, 질산 칼륨 용액에 적신 거름종이 띠"><text class="tex" x="90" y="28" data-mix="U자형 유리관" data-size="19" data-anchor="middle" data-weight="700"></text><path d="M50 170 V70 H130 V170" fill="none" stroke="#7E8B98" stroke-width="26"/><path d="M50 170 V70 H130 V170" fill="none" stroke="#F6F0E0" stroke-width="20"/><circle cx="50" cy="176" r="10" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><circle cx="130" cy="176" r="10" fill="#FFFFFF" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="90" y="214" data-mix="고농도 이온 젤||(한천 + $\ce{KNO3}$)" data-size="18" data-anchor="middle"></text><text class="tex" x="280" y="28" data-mix="다공성 원반" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="220" y="60" width="50" height="120" rx="4" fill="#DDEEF8" stroke="#7E8B98" stroke-width="2.5"/><rect x="290" y="60" width="50" height="120" rx="4" fill="#3E8ED0" stroke="#7E8B98" stroke-width="2.5" fill-opacity=".3"/><rect x="268" y="90" width="24" height="60" rx="3" fill="#D9CBA8" stroke="#8C7A5B" stroke-width="2"/><circle cx="276" cy="98" r="2.2" fill="#8C7A5B" stroke="#8C7A5B" stroke-width="0"/><circle cx="284" cy="107" r="2.2" fill="#8C7A5B" stroke="#8C7A5B" stroke-width="0"/><circle cx="276" cy="116" r="2.2" fill="#8C7A5B" stroke="#8C7A5B" stroke-width="0"/><circle cx="284" cy="125" r="2.2" fill="#8C7A5B" stroke="#8C7A5B" stroke-width="0"/><circle cx="276" cy="134" r="2.2" fill="#8C7A5B" stroke="#8C7A5B" stroke-width="0"/><circle cx="284" cy="143" r="2.2" fill="#8C7A5B" stroke="#8C7A5B" stroke-width="0"/><text class="tex" x="280" y="214" data-mix="작은 구멍으로||이온만 통과" data-size="18" data-anchor="middle"></text><text class="tex" x="462" y="28" data-mix="거름종이 띠" data-size="19" data-anchor="middle" data-weight="700"></text><path d="M410 170 L410 80 L514 80 L514 170" fill="none" stroke="#C8B98F" stroke-width="7" stroke-linejoin="round"/><path d="M410 170 L410 80 L514 80 L514 170" fill="none" stroke="#F3EBD3" stroke-width="3" stroke-linejoin="round"/><text class="tex" x="462" y="214" data-mix="$\ce{KNO3}$ 용액에||적셔 씀(수업 실험)" data-size="18" data-anchor="middle"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 17. ⑪ 비활성 전극 ════════ -->
+<section class="slide" data-sec="01 · 전극에서 일어나는 산화 환원 반응" data-title="비활성 전극">
+  <h2><span class="no">11</span>비활성 전극을 쓰는 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">반쪽 반응의 반응물이나 생성물을 고체 전극으로 쓸 수 없을 때는 반응하지 않는 <b>비활성 전극</b>(흑연, 백금 등)을 쓴다.</p>
+      <div class="formula sm ac341-eq">$\ce{C(s)}\,|\,\ce{I-(aq)}\,|\,\ce{I2(s)}\,\|\,\ce{H+(aq)}, \ce{MnO4-(aq)}, \ce{Mn^2+(aq)}\,|\,\ce{C(s)}$</div>
+      <p class="f21"><b class="ac341-cox">산화</b> $\ce{2I-(aq) -> I2(s) + 2e-}$</p>
+      <p class="f21"><b class="ac341-crd">환원</b> $\ce{MnO4-(aq) + 8H+(aq) + 5e- -> Mn^2+(aq) + 4H2O(l)}$</p>
+      <p class="small">한 반쪽 전지 안의 여러 화학종은 쉼표로 나누어 쓴다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 560 370" style="width:560px" aria-label="흑연 전극 두 개를 쓴 전지: 왼쪽에서는 아이오딘화 이온이 산화되어 아이오딘이 되고, 오른쪽에서는 과망가니즈산 이온이 환원된다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#C9A46A" fill-opacity="0.35"/><rect x="332" y="160" width="186" height="138" fill="#A24FB5" fill-opacity="0.35"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="113" y="90" width="22" height="180" rx="3" fill="#4A4F57" stroke="#2B2F35" stroke-width="2"/><rect x="413" y="90" width="22" height="180" rx="3" fill="#4A4F57" stroke="#2B2F35" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{C}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{C}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{I-}, \ce{I2}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{MnO4-}, \ce{H+}, \ce{Mn^2+}" data-size="20" data-anchor="middle"></text><g data-anim="move" data-from="60,0" data-dur="1.6" data-rep="loop" data-ease="lin"><g data-chg="214,112,9,-"></g></g><g data-anim="move" data-from="-60,0" data-dur="1.6" data-rep="loop" data-ease="lin" data-delay=".8"><g data-chg="346,112,9,+"></g></g><text class="tex" x="280" y="170" data-mix="← $\ce{NO3-}$" data-size="20" data-anchor="middle" fill="#1F6FD1" data-halo="1"></text><text class="tex" x="280" y="206" data-mix="$\ce{K+}$ →" data-size="20" data-anchor="middle" fill="#D7263D" data-halo="1"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg></div>
+  </div>
+  <p class="f21 mt8" data-q>전자 수를 $10$개로 맞추어 더하면 전체 반응은</p>
+  <div class="formula sm ac341-eq step">$\ce{2MnO4-(aq) + 16H+(aq) + 10I-(aq) -> 2Mn^2+(aq) + 5I2(s) + 8H2O(l)}$</div>
+</section>
+
+<!-- ════════ 18. 예제 Ⅲ-10 (1) ════════ -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅲ-10 (1)">
+  <h2><span class="tag ex">예제 Ⅲ-10</span>전지 표기에서 전체 반응 쓰기 (1)</h2>
+  <p class="f21">다음 화학 전지의 전체 반응을 나타내어라. &nbsp; 1. $\ce{Zn(s)}\,|\,\ce{Zn^2+(aq)}\,\|\,\ce{Co^3+(aq)}, \ce{Co^2+(aq)}\,|\,\ce{Pt(s)}$</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21 step"><b>풀이 1</b> 왼쪽이 산화, 오른쪽이 환원이다. 예제 Ⅲ-9처럼 반쪽 반응으로 나누고 원자와 전하를 맞춘다.<br>&nbsp; 산화: $\ce{Zn(s) -> Zn^2+(aq) + 2e-}$ &nbsp; 환원: $\ce{Co^3+(aq) + e- -> Co^2+(aq)}$</p>
+      <p class="f21 step"><b>풀이 2</b> 전자 수를 맞추려고 환원 반쪽 반응에 $2$를 곱해 더한다.</p>
+      <div class="answer step">$\ce{Zn(s) + 2Co^3+(aq) -> Zn^2+(aq) + 2Co^2+(aq)}$</div>
+      <p class="small step">백금은 반응하지 않는 전극이다. (교과서 풀이에는 생성물이 $\ce{Co(s)}$로 적혀 있으나, 전지 표기의 환원 반쪽 전지가 $\ce{Co^3+}$, $\ce{Co^2+}$ | $\ce{Pt}$이므로 생성물은 $\ce{Co^2+}$이다.)</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 560 370" style="width:500px" aria-label="아연 전극과 백금 전극을 쓴 전지: 아연이 산화되고 코발트(III) 이온이 코발트(II) 이온으로 환원된다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#D98C9B" fill-opacity="0.3"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="415" y="90" width="18" height="180" rx="3" fill="#B8BEC6" stroke="#7E8B98" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{Zn}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Pt}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{Zn^2+(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{Co^3+}, \ce{Co^2+}" data-size="20" data-anchor="middle"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg><div class="board ac341-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 19. 예제 Ⅲ-10 (2) ════════ -->
+<section class="slide" data-sec="01 · 예제" data-title="예제 Ⅲ-10 (2)">
+  <h2><span class="tag ex">예제 Ⅲ-10</span>전지 표기에서 전체 반응 쓰기 (2)</h2>
+  <p class="f21">다음 화학 전지의 전체 반응을 나타내어라. &nbsp; 2. $\ce{Ni(s)}\,|\,\ce{Ni^2+(aq)}\,\|\,\ce{Ag+(aq)}\,|\,\ce{Ag(s)}$</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21 step"><b>풀이 1</b> 산화: $\ce{Ni(s) -> Ni^2+(aq) + 2e-}$ &nbsp; 환원: $\ce{Ag+(aq) + e- -> Ag(s)}$</p>
+      <p class="f21 step"><b>풀이 2</b> Q 전자 수를 맞추려면 어느 반쪽 반응에 몇을 곱해야 할까? → 환원 반쪽 반응에 $2$</p>
+      <div class="answer step">$\ce{Ni(s) + 2Ag+(aq) -> Ni^2+(aq) + 2Ag(s)}$</div>
+      <p class="small step">확인: 원자 $\ce{Ni}$ $1=1$, $\ce{Ag}$ $2=2$ · 전하 $+2=+2$</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 560 370" style="width:500px" aria-label="니켈 전극과 은 전극을 쓴 전지: 니켈이 산화되고 은 이온이 환원된다"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#B9BDB4" stroke="#7A7F74" stroke-width="2"/><rect x="410" y="90" width="28" height="180" rx="3" fill="#DDE1E6" stroke="#8C99A6" stroke-width="2"/><path d="M124 90 V50 H262 M298 50 H424 V90" fill="none" stroke="#1F6FD1" stroke-width="4" stroke-dasharray="3 15" stroke-linecap="round" data-anim="dash" data-flow="1" data-speed="36"/><g data-arw="160,26,232,26,minus,3"></g><g data-arw="328,26,400,26,minus,3"></g><text class="tex" x="152" y="34" data-tex="e^-" data-size="21" data-anchor="end" fill="#1F6FD1"></text><text class="tex" x="408" y="34" data-tex="e^-" data-size="21" data-anchor="start" fill="#1F6FD1"></text><text class="tex" x="104" y="112" data-tex="\ce{Ni}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="\ce{Ag}" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{Ni^2+(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{Ag+(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="135" y="326" data-mix="(−)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="135" y="353" data-mix="산화 전극" data-size="20" data-anchor="middle" fill="#C2410C" data-weight="700"></text><text class="tex" x="425" y="326" data-mix="(+)극" data-size="21" data-anchor="middle" data-weight="700"></text><text class="tex" x="425" y="353" data-mix="환원 전극" data-size="20" data-anchor="middle" fill="#0E7490" data-weight="700"></text></svg><div class="board ac341-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 20. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>반응식에서 전지 표기 쓰기</h2>
+  <p class="f21">반응 $\ce{Mg(s) + 2H+(aq) -> Mg^2+(aq) + H2(g)}$를 이용하는 전지를 표기하여라. 수소 기체 쪽에는 백금 전극을 쓴다.</p>
+  <div class="row stretch mt8">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">Q 산화되는 것과 환원되는 것은? <span class="step">→ <span class="ans">$\ce{Mg}$ 산화(왼쪽) · $\ce{H+}$ 환원(오른쪽)</span></span></p>
+      <div class="answer step">$\ce{Mg(s)}\,|\,\ce{Mg^2+(aq)}\,\|\,\ce{H+(aq)}\,|\,\ce{H2(g)}\,|\,\ce{Pt(s)}$</div>
+      <p class="small step">고체·용액·기체가 맞닿는 곳마다 세로선(상 경계)을 긋는다. 이렇게 수소 기체를 쓰는 전극은 다음 시간 「표준 수소 전극」으로 다시 만난다.</p>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 560 370" style="width:500px" aria-label="마그네슘 전극과 수소 기체를 넣는 백금 전극으로 만든 전지"><g data-circuit='{"parts": [["wire", [[124, 90], [124, 50], [262, 50]]], ["wire", [[298, 50], [424, 50], [424, 90]]], ["meter", [280, 50], "V", {"r": 18}]], "stroke": 3}'></g><path d="M34 120 H40 V290 Q40 300 50 300 H220 Q230 300 230 290 V120 H236" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><path d="M324 120 H330 V290 Q330 300 340 300 H510 Q520 300 520 290 V120 H526" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><rect x="332" y="160" width="186" height="138" fill="#DDEEF8" fill-opacity="1"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#B9A98A" stroke-width="24"/><path d="M190 250 V112 H370 V250" fill="none" stroke="#F6F0E0" stroke-width="18"/><text class="tex" x="280" y="142" data-mix="염다리" data-size="20" data-anchor="middle" fill="#5B6B7F"></text><rect x="110" y="90" width="28" height="180" rx="3" fill="#EEF1F4" stroke="#9AA5B1" stroke-width="2"/><rect x="415" y="90" width="18" height="180" rx="3" fill="#B8BEC6" stroke="#7E8B98" stroke-width="2"/><text class="tex" x="104" y="112" data-tex="\ce{Mg}" data-size="22" data-anchor="end"></text><text class="tex" x="446" y="112" data-tex="" data-size="22" data-anchor="start"></text><text class="tex" x="135" y="288" data-tex="\ce{Mg^2+(aq)}" data-size="20" data-anchor="middle"></text><text class="tex" x="425" y="288" data-tex="\ce{H+(aq)}" data-size="20" data-anchor="middle"></text><rect x="404" y="76" width="40" height="200" rx="18" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" fill-opacity=".35" stroke="#7E8B98"/><g data-arw="470,96,438,108,ink,2.5"></g><text class="tex" x="474" y="92" data-tex="\ce{H2}(g)" data-size="21" data-anchor="start"></text><g data-anim="move" data-from="0,30" data-dur="1.8" data-rep="loop"><circle cx="416" cy="240" r="5" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/><circle cx="432" cy="218" r="4" fill="#FFFFFF" stroke="#7FA8C9" stroke-width="2"/></g></svg><div class="board ac341-b"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 활동 1 — 예측과 설계 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 예측과 실험 설계">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 다니엘 전지에서 염다리의 작용 실험 설계와 실험</h2>
+  <div class="std"><span class="code">탐구 목표</span>화학 전지의 성능과 염다리의 관계를 예측하고, 염다리 내 이온의 농도·재질 등 성능에 영향을 미치는 요인을 확인하는 실험을 설계하여 수행한다.</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">
+      <h3>1 예측</h3>
+      <div class="card q"><p class="f21"><b>Q</b> 염다리 속 이온 농도가 커지면 전지의 성능(전류)은 어떻게 될까?</p>
+        <p class="f21 step">→ 이온이 많을수록 전하가 잘 옮겨져 내부 저항이 작아지고 전류가 커질 것이다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 염다리가 없거나 증류수만 적신 거름종이이면?</p>
+        <p class="f21 step">→ 이온 통로가 없거나 거의 없어 전류가 흐르지 않을 것이다.</p></div>
+    </div>
+    <div class="col stack">
+      <h3>2 실험 설계 (모둠)</h3>
+      <table class="ac341-sm">
+        <tr><th>변인</th><th>예</th></tr>
+        <tr><td>조작 변인</td><td>염다리 유무, 염다리 속 $\ce{KNO3}$ 농도(증류수·0.1 M·1.0 M·포화), 재질(거름종이·면실·한천 젤 U자관)</td></tr>
+        <tr><td>종속 변인</td><td>전압계 값, 부하(100 Ω)에 흐르는 전류</td></tr>
+        <tr><td>통제 변인</td><td>금속판 크기·닦은 정도, $[\ce{Zn^2+}]$·$[\ce{Cu^2+}]$, 용액 부피, 전극 사이 거리, 측정 시간</td></tr>
+      </table>
+      <p class="small">한 번에 한 변인만 바꾼다. 농도를 바꾸는 실험은 염다리를 같게 둔다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 2 — 준비물·과정·안전 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 과정과 안전">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 실험 과정과 안전</h2>
+  <p class="f21"><b>준비물</b> 아연판, 구리판, 사포, 비커 2개, 1.0 M $\ce{ZnSO4}$, 1.0 M $\ce{CuSO4}$, $\ce{KNO3}$ 용액(0.1 M·1.0 M·포화), 거름종이, 면실, 한천 젤 U자관, 집게 도선, 디지털 전압계, 100 Ω 저항, 보안경, 실험용 장갑</p>
+  <div class="mt8"><svg class="fig" viewBox="0 0 1080 210" style="width:1080px" aria-label="탐구 과정: 금속판을 사포로 닦고, 두 반쪽 전지를 만들고, 염다리를 걸친 뒤 전압계로 전압을 잰다"><rect x="4" y="4" width="262" height="200" rx="12" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="135" y="32" data-mix="① 전극 닦기" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="274" y="4" width="262" height="200" rx="12" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="405" y="32" data-mix="② 반쪽 전지" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="544" y="4" width="262" height="200" rx="12" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="675" y="32" data-mix="③ 염다리 걸치기" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="814" y="4" width="262" height="200" rx="12" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="945" y="32" data-mix="④ 전압 재기" data-size="19" data-anchor="middle" data-weight="700"></text><rect x="60" y="60" width="30" height="120" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><rect x="160" y="60" width="30" height="120" rx="3" fill="#E6C29C" stroke="#B0835A" stroke-width="2"/><g data-anim="move" data-from="0,-30" data-dur=".6" data-rep="alt" data-ease="io"><rect x="52" y="100" width="46" height="26" rx="4" fill="#D9CBA8" stroke="#8C7A5B" stroke-width="1.5"/></g><text class="tex" x="136" y="196" data-mix="산화막 제거" data-size="18" data-anchor="middle"></text><path d="M294 70 H300 V170 Q300 180 310 180 H370 Q380 180 380 170 V70 H386" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="302" y="110" width="76" height="68" fill="#DDEEF8" fill-opacity="1"/><path d="M414 70 H420 V170 Q420 180 430 180 H490 Q500 180 500 170 V70 H506" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="422" y="110" width="76" height="68" fill="#3E8ED0" fill-opacity="0.32"/><text class="tex" x="340" y="160" data-tex="\ce{ZnSO4}" data-size="18" data-anchor="middle"></text><text class="tex" x="460" y="160" data-tex="\ce{CuSO4}" data-size="18" data-anchor="middle"></text><text class="tex" x="402" y="196" data-mix="1.0 M씩" data-size="18" data-anchor="middle"></text><path d="M564 90 H570 V170 Q570 180 580 180 H640 Q650 180 650 170 V90 H656" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="572" y="120" width="76" height="58" fill="#DDEEF8" fill-opacity="1"/><path d="M684 90 H690 V170 Q690 180 700 180 H760 Q770 180 770 170 V90 H776" fill="none" stroke="#7E8B98" stroke-width="3" stroke-linejoin="round"/><rect x="692" y="120" width="76" height="58" fill="#3E8ED0" fill-opacity="0.32"/><g data-anim="move" data-from="0,-24" data-dur=".9" data-ease="out"><path d="M630 170 L630 74 L710 74 L710 170" fill="none" stroke="#C8B98F" stroke-width="7" stroke-linejoin="round"/><path d="M630 170 L630 74 L710 74 L710 170" fill="none" stroke="#F3EBD3" stroke-width="3" stroke-linejoin="round"/></g><text class="tex" x="672" y="196" data-mix="조건을 바꾸며" data-size="18" data-anchor="middle"></text><rect x="870" y="56" width="150" height="92" rx="10" fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"/><rect x="886" y="70" width="118" height="40" rx="4" fill="#E8F5EE" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="945" y="99" data-mix="1.08 V" data-size="21" data-anchor="middle" fill="#2E9E6A" data-weight="700"></text><text class="tex" x="905" y="138" data-mix="(−)" data-size="18" data-anchor="middle" data-weight="700"></text><text class="tex" x="986" y="138" data-mix="(+)" data-size="18" data-anchor="middle" data-weight="700"></text><text class="tex" x="945" y="196" data-mix="30초 뒤 기록" data-size="18" data-anchor="middle"></text></svg></div>
+  <div class="stages c2 mt8">
+    <div class="stage"><p class="small"><b>과정 팁</b> 염다리는 측정마다 새것으로 바꾸어 두 용액이 섞이지 않게 한다. 전압이 안정될 때까지 30초–1분 기다린 뒤 기록한다. 전압계 단자를 바꾸면 부호가 바뀐다.</p></div>
+    <div class="stage"><p class="small"><b class="c-plus">안전</b> 보안경·장갑을 쓰고, 황산 구리(Ⅱ) 수용액이 피부에 닿지 않게 한다. 금속판의 날카로운 모서리에 주의한다. 실험이 끝난 용액은 지정된 폐액통에 버린다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 23. 실험실 ════════ -->
+<section class="slide" data-sec="01 · 실험실" data-title="실험실: 다니엘 전지와 염다리">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 실험실: 다니엘 전지 조립하기</h2>
+  <div class="lab" data-lab="ac341bridge">
+    <div class="lab-ctl" style="flex-basis:500px">
+      <div class="ac341-seg"><span class="ac341-sl">염다리</span><button class="btn on" data-s="1">있음</button><button class="btn" data-s="0">없음</button></div>
+      <div class="ac341-seg"><span class="ac341-sl">재질</span><button class="btn on" data-m="paper">거름종이</button><button class="btn" data-m="thread">면실</button><button class="btn" data-m="gel">한천 젤 U자관</button></div>
+      <div class="ac341-seg"><span class="ac341-sl">$\ce{KNO3}$</span><button class="btn" data-c="0">증류수</button><button class="btn" data-c="1">0.1 M</button><button class="btn on" data-c="2">1.0 M</button><button class="btn" data-c="3">포화</button></div>
+      <div class="ctl"><div class="lbl"><span>$[\ce{Zn^2+}]$</span><output data-o="zn"></output></div>
+        <input type="range" min="0" max="3" step="1" value="3" data-i="zn" aria-label="아연 이온 농도"></div>
+      <div class="ctl"><div class="lbl"><span>$[\ce{Cu^2+}]$</span><output data-o="cu"></output></div>
+        <input type="range" min="0" max="3" step="1" value="3" data-i="cu" aria-label="구리 이온 농도"></div>
+      <table class="readout ac341-read">
+        <tr class="hl"><th>전압계</th><td><output data-o="v"></output></td><th>전류(100 Ω)</th><td><output data-o="i"></output></td></tr>
+        <tr><th>내부 저항</th><td><output data-o="r"></output></td><th>부하 전압</th><td><output data-o="vl"></output></td></tr>
+      </table>
+      <div class="ac341-seg mt8"><button class="btn ac341-act" data-act="rec">측정·기록</button><button class="btn" data-act="reset">초기화</button></div>
+      <output class="kind ac341-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 540px">
+      <div class="lab-fig" style="width:540px;height:290px">
+        <svg viewBox="0 0 540 290" width="540" height="290" aria-label="아연 전극과 구리 전극, 고른 염다리, 전압계로 만든 다니엘 전지와 전자·이온의 흐름"></svg>
+        <div class="ov" data-ov="mL" style="font-size:19px">$\ce{Zn}$</div>
+        <div class="ov" data-ov="mR" style="font-size:19px">$\ce{Cu}$</div>
+        <div class="ov halo" data-ov="sL" style="font-size:18px"></div>
+        <div class="ov halo" data-ov="sR" style="font-size:18px"></div>
+        <div class="ov" data-ov="pL" style="font-size:18px;font-weight:700">(−)극 · <span style="color:#C2410C">산화 전극</span></div>
+        <div class="ov" data-ov="pR" style="font-size:18px;font-weight:700">(+)극 · <span style="color:#0E7490">환원 전극</span></div>
+        <div class="ov" data-ov="e1" style="font-size:20px;color:#1F6FD1">$e^-$</div>
+        <div class="ov halo" data-ov="vm" style="font-size:19px;font-weight:700"></div>
+        <div class="ov halo" data-ov="ia" style="font-size:18px;color:#1F6FD1">← $\ce{NO3-}$</div>
+        <div class="ov halo" data-ov="ic" style="font-size:18px;color:#D7263D">$\ce{K+}$ →</div>
+      </div>
+      <table class="tight ac341-log mt8"><thead><tr><th>#</th><th>염다리</th><th>농도</th><th>$[\ce{Zn^2+}]$</th><th>$[\ce{Cu^2+}]$</th><th>전압(V)</th><th>전류(mA)</th><th>전류 막대</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 탐구 활동 3 — 결과와 토론 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 결과와 토론">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 결과 정리와 토론·발표</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <p class="f21"><b>결과 예시</b> ($[\ce{Zn^2+}]=[\ce{Cu^2+}]=1.0\ \text{M}$, 실험실 측정값) — 이온이 든 염다리이면 전압계 값은 모두 $1.10\ \text{V}$였지만(증류수 염다리 $0.68\ \text{V}$, 염다리 없음 $0$) 전류는 크게 달랐다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 염다리 조건이 바뀔 때 전압보다 전류가 크게 달라지는 까닭은?</p>
+        <p class="f21 step">→ 전압계는 전류를 거의 흘리지 않고 재므로 기전력에 가깝게 나온다. 전류를 흘리면 염다리의 저항(내부 저항)에서 전압이 깎이므로, 이온이 많고 통로가 넓을수록 전류가 크다.</p></div>
+      <div class="card q"><p class="f21"><b>Q</b> 성능이 좋은 염다리의 조건을 정리하면?</p>
+        <p class="f21 step">→ ① 이온 농도가 높다 ② 이온이 지나는 단면이 넓고 짧다 ③ 전극 반응을 하지 않는 이온이다 ④ 두 용액이 섞이지 않는다(젤·다공성 재질).</p></div>
+    </div>
+    <div class="col stack"><svg class="fig" viewBox="0 0 540 310" style="width:540px" aria-label="염다리 조건별 전류 예시: 염다리가 없거나 증류수이면 전류가 거의 없고, 이온 농도가 클수록 전류가 크다"><line x1="70" y1="250" x2="520" y2="250" stroke="#5B6B7F" stroke-width="2"/><line x1="70" y1="250" x2="70" y2="40" stroke="#5B6B7F" stroke-width="2"/><line x1="64" y1="250" x2="70" y2="250" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="60" y="256" data-mix="0" data-size="18" data-anchor="end"></text><line x1="64" y1="170.8" x2="70" y2="170.8" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="60" y="176.8" data-mix="5" data-size="18" data-anchor="end"></text><line x1="64" y1="91.7" x2="70" y2="91.7" stroke="#5B6B7F" stroke-width="2"/><text class="tex" x="60" y="97.7" data-mix="10" data-size="18" data-anchor="end"></text><text class="tex" x="76" y="30" data-mix="전류 (부하 100 Ω) [mA]" data-size="18" data-anchor="start" fill="#5B6B7F"></text><text class="tex" x="113" y="242" data-mix="0.0" data-size="18" data-anchor="middle"></text><text class="tex" x="113" y="274" data-mix="없음" data-size="18" data-anchor="middle"></text><text class="tex" x="113" y="296" data-mix="—" data-size="18" data-anchor="middle"></text><text class="tex" x="187" y="242" data-mix="0.0" data-size="18" data-anchor="middle"></text><text class="tex" x="187" y="274" data-mix="거름종이" data-size="18" data-anchor="middle"></text><text class="tex" x="187" y="296" data-mix="증류수" data-size="18" data-anchor="middle"></text><g data-anim="scale" data-from="1,0" data-o="261,250" data-dur=".8" data-delay="0.2"><rect x="238" y="224.7" width="46" height="25.3" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="261" y="216.7" data-mix="1.6" data-size="18" data-anchor="middle"></text><text class="tex" x="261" y="274" data-mix="거름종이" data-size="18" data-anchor="middle"></text><text class="tex" x="261" y="296" data-mix="0.1 M" data-size="18" data-anchor="middle"></text><g data-anim="scale" data-from="1,0" data-o="335,250" data-dur=".8" data-delay="0.3"><rect x="312" y="142.3" width="46" height="107.7" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="335" y="134.3" data-mix="6.8" data-size="18" data-anchor="middle"></text><text class="tex" x="335" y="274" data-mix="거름종이" data-size="18" data-anchor="middle"></text><text class="tex" x="335" y="296" data-mix="1.0 M" data-size="18" data-anchor="middle"></text><g data-anim="scale" data-from="1,0" data-o="409,250" data-dur=".8" data-delay="0.4"><rect x="386" y="216.8" width="46" height="33.2" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="409" y="208.8" data-mix="2.1" data-size="18" data-anchor="middle"></text><text class="tex" x="409" y="274" data-mix="면실" data-size="18" data-anchor="middle"></text><text class="tex" x="409" y="296" data-mix="1.0 M" data-size="18" data-anchor="middle"></text><g data-anim="scale" data-from="1,0" data-o="483,250" data-dur=".8" data-delay="0.5"><rect x="460" y="90.1" width="46" height="159.9" rx="3" fill="#2E9E6A" stroke="#2E9E6A" stroke-width="1.5" fill-opacity=".55"/></g><text class="tex" x="483" y="82.1" data-mix="10.1" data-size="18" data-anchor="middle"></text><text class="tex" x="483" y="274" data-mix="한천 젤" data-size="18" data-anchor="middle"></text><text class="tex" x="483" y="296" data-mix="포화" data-size="18" data-anchor="middle"></text></svg><p class="small">토론 뒤 모둠별로 설계·결과·결론을 발표한다. 측정값이 계산값보다 조금 작은 까닭(산화막, 접촉 전위 등)도 함께 이야기해 보자.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 25. 탐구 활동 4 — 건전지 속 염다리 ════════ -->
+<section class="slide" data-sec="01 · 탐구 활동" data-title="탐구 활동: 건전지 속 염다리 역할">
+  <h2><span class="tag">탐구 활동</span><span class="small c-muted">[필수 탐구]</span> 건전지에서 염다리 역할을 하는 구조 조사</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21"><b>활동</b> 건전지와 같은 배터리에서 염다리의 역할을 하는 구조가 무엇인지 조사한 뒤 발표해 보자.</p>
+      <div class="card q"><p class="f21"><b>Q</b> 알칼리 전지에서 염다리 역할을 하는 것은?</p>
+        <p class="f21 step">→ 아연 가루(산화 전극 쪽)와 이산화 망가니즈(환원 전극 쪽) 사이의 <b>분리막</b>이다. 두 전극 물질이 직접 닿지 않게 막으면서, $\ce{KOH}$ 전해질의 $\ce{OH-}$ 같은 이온은 지나가게 하여 전하 균형을 유지한다.</p></div>
+      <p class="f21 step">예시 결과: 망간 건전지 — 전해질 반죽을 적신 종이 분리막 · 리튬 이온 전지 — 다공성 고분자 분리막 + 리튬 이온 전해질</p>
+      <p class="small step">공통점: 전자는 바깥 회로로, 이온은 분리막을 통해 이동한다. 분리막이 찢어져 두 전극이 닿으면 안에서 단락이 일어나 위험하다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 540 330" style="width:520px" aria-label="알칼리 전지 단면: 아연 가루와 이산화 망가니즈 사이의 분리막이 전극은 떼어 놓고 수산화 이온만 지나가게 하여 염다리 역할을 한다"><rect x="150" y="40" width="170" height="270" rx="14" fill="#E6E9ED" stroke="#16233D" stroke-width="3"/><rect x="221" y="24" width="28" height="16" rx="3" fill="#B7C0C9" stroke="#16233D" stroke-width="2"/><rect x="160" y="50" width="150" height="250" rx="10" fill="#2B2F35" stroke="#0E7490" stroke-width="0" fill-opacity=".8"/><rect x="188" y="70" width="94" height="210" rx="8" fill="#FFF4E8" stroke="#E08A2C" stroke-width="3" stroke-dasharray="7 5"/><rect x="198" y="80" width="74" height="190" rx="6" fill="#C9D3DD" stroke="#C2410C" stroke-width="0"/><line x1="235" y1="46" x2="235" y2="260" stroke="#16233D" stroke-width="3"/><g data-anim="move" data-from="-22,0" data-dur="1.4" data-rep="loop" data-delay="0" data-ease="lin"><g data-chg="196,110,7,-"></g></g><g data-anim="move" data-from="-22,0" data-dur="1.4" data-rep="loop" data-delay="0.2" data-ease="lin"><g data-chg="196,146,7,-"></g></g><g data-anim="move" data-from="-22,0" data-dur="1.4" data-rep="loop" data-delay="0.4" data-ease="lin"><g data-chg="196,182,7,-"></g></g><g data-anim="move" data-from="-22,0" data-dur="1.4" data-rep="loop" data-delay="0.6" data-ease="lin"><g data-chg="196,218,7,-"></g></g><g data-anim="move" data-from="-22,0" data-dur="1.4" data-rep="loop" data-delay="0.8" data-ease="lin"><g data-chg="196,254,7,-"></g></g><line x1="330" y1="110" x2="306" y2="110" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="334" y="117" data-mix="$\ce{MnO2}$ (환원 전극 쪽)" data-size="19" data-anchor="start" fill="#0E7490"></text><line x1="330" y1="190" x2="280" y2="190" stroke="#E08A2C" stroke-width="2"/><text class="tex" x="334" y="197" data-mix="분리막 — 염다리 역할" data-size="19" data-anchor="start" fill="#E08A2C" data-weight="700"></text><line x1="330" y1="270" x2="255" y2="270" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="334" y="277" data-mix="$\ce{Zn}$ 가루 (산화 전극 쪽)" data-size="19" data-anchor="start" fill="#C2410C"></text><line x1="140" y1="160" x2="170" y2="160" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="136" y="167" data-mix="$\ce{KOH}$ 전해질" data-size="19" data-anchor="end"></text><text class="tex" x="136" y="220" data-mix="$\ce{OH-}$ 이동" data-size="19" data-anchor="end" fill="#1F6FD1"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 화학사 ════════ -->
+<section class="slide" data-sec="01 · 화학사" data-title="화학사: 볼타 전지와 다니엘 전지">
+  <h2><span class="tag">화학사</span>볼타 전지와 다니엘 전지</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <div class="stages c2">
+        <div class="stage"><h3>1780 갈바니</h3><p class="small">구리와 아연을 이은 두 금속판을 죽은 개구리 근육에 대면 근육이 수축함을 관찰 → 「생체 전기」라고 생각</p></div>
+        <div class="stage"><h3>1799–1800 볼타</h3><p class="small">전류는 생체가 아니라 두 금속과 전해액의 작용이라 보고, 묽은 황산(또는 소금물)에 적신 종이를 아연판·구리판 사이에 끼워 쌓음 → 최초의 화학 전지</p></div>
+        <div class="stage"><h3>1836 다니엘</h3><p class="small">구리판에서 수소가 생겨 성능이 떨어지는 문제를 풀려고, 구리 쪽은 황산 구리 용액, 아연 쪽은 황산 용액으로 나누고 소의 식도 주머니를 이온 통로로 씀</p></div>
+        <div class="stage"><h3>오늘날</h3><p class="small">다니엘의 장치가 현대 화학 전지의 원형 → 갈바니 전지·볼타 전지·다니엘 전지라는 이름을 함께 쓴다</p></div>
+      </div>
+      <p class="small">그 앞에는 게리케의 정전기 발생 장치, 쿨롱·프리스틀리의 정전기 연구가 있었다.</p>
+    </div>
+    <div class="col"><svg class="fig" viewBox="0 0 500 370" style="width:460px" aria-label="다공성 단지 안에 아연 막대를 넣고 황산 구리(II) 용액이 든 구리 용기에 담근 개량된 다니엘 전지"><rect x="60" y="60" width="250" height="250" rx="16" fill="#3E8ED0" stroke="#B0835A" stroke-width="5" fill-opacity=".28"/><rect x="130" y="90" width="110" height="200" rx="12" fill="#F3EDE0" stroke="#8C7A5B" stroke-width="3" stroke-dasharray="5 4"/><rect x="170" y="40" width="30" height="230" rx="3" fill="#C9D3DD" stroke="#7E8B98" stroke-width="2"/><g data-circuit='{"parts": [["wire", [[185, 40], [185, 20], [360, 20], [360, 90]]], ["bulb", [360, 110], {"r": 18, "on": true}], ["wire", [[360, 130], [360, 180], [310, 180]]]], "stroke": 3}'></g><line x1="240" y1="250" x2="340" y2="270" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="344" y="276" data-mix="다공성 단지||(이온 통로)" data-size="19" data-anchor="start"></text><line x1="96" y1="280" x2="40" y2="330" stroke="#5B6B7F" stroke-width="1.5"/><text class="tex" x="36" y="350" data-mix="구리 용기 + 황산 구리(Ⅱ)" data-size="19" data-anchor="start"></text><text class="tex" x="214" y="170" data-tex="\ce{Zn}" data-size="20" data-anchor="start" data-halo="1"></text></svg></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>4. 화학 전지 — 01 화학 전지의 개요</h2>
+  <div class="ac341-map">
+    <div class="ac341-node ac341-dim">Ⅲ-3<br>반쪽 반응법<br>잃은 $e^-$ = 얻은 $e^-$</div>
+    <div class="ac341-arr">→</div>
+    <div class="ac341-node ac341-main"><b>01 화학 전지의 개요</b><br>❶ 자발적 반응으로 전기 에너지를 만드는 전지 = <span class="blank"><span class="step">갈바니 전지</span></span> · 전기 에너지로 비자발적 반응 = 전해 전지<br>❷ 산화 전극 = <span class="blank"><span class="step">(−)극</span></span>, 환원 전극 = (+)극, 전자는 <span class="blank"><span class="step">도선</span></span>을 따라 산화 전극 → 환원 전극<br>❸ 다니엘 전지: $\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$ — 작동하면 $\ce{Zn}$ 전극 <span class="blank"><span class="step">감소</span></span>, $\ce{Cu}$ 전극 증가<br>❹ 전지 표기: 산화 반쪽 전지 <span class="blank"><span class="step">왼쪽</span></span>, 상 경계 $|$, 염다리 $\|$<br>❺ 염다리: 음이온 → <span class="blank"><span class="step">산화 전극</span></span> 쪽, 양이온 → 환원 전극 쪽 — 전하 균형 유지</div>
+    <div class="ac341-arr">→</div>
+    <div class="ac341-node ac341-dim">02 전지 전위<br>$E^\circ_\text{전지}$<br>$\Delta G^\circ=-nFE^\circ$</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01 화학 전지의 개요 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 갈바니 전지와 전해 전지를 구분하고, 다니엘 전지의 두 전극 반응과 전자·이온의 이동을 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 염다리 조건을 바꾸는 실험을 설계하고, 측정값으로 성능 좋은 염다리의 조건을 정리했다.</button>
+    <button class="chk">[가치·태도] 모둠 토론과 조사 발표에서 건전지 속 구조를 화학 전지 원리와 연결해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{Ni(s)}\,|\,\ce{Ni^2+(aq)}\,\|\,\ce{Ag+(aq)}\,|\,\ce{Ag(s)}$에서 (−)극은? <span class="step">→ <span class="ans">니켈 전극</span> (왼쪽 = 산화 전극)</span></p>
+    <p class="f21 mt8"><b>Q</b> 염다리에서 이동하는 것은 전자일까, 이온일까? <span class="step">→ <span class="ans">이온</span> (전자는 도선으로만)</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 다니엘 전지의 전압은 왜 약 $1.10\ \text{V}$일까? 반쪽 전지 하나의 전위는 무엇을 기준으로 잴까? — 02 전지 전위</div>
+</section>

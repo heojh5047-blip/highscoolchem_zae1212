@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "public": "차시자료",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "_소스/**",
+      "vendor/**",
+      "app/**",
+      "완성본/**",
+      "목록.html"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(html|json|js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}

@@ -1,0 +1,568 @@
+<!-- 고급화학 4-2-1 산 염기의 정의와 산과 염기의 세기 — gen.py가 tpl.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 2. 산과 염기의 평형 › 01 · 02</div>
+    <h1 class="ac421-h1">산 염기의 정의와<br>산과 염기의 세기</h1>
+    <p class="sub">아레니우스·브뢴스테드·라우리·루이스의 산 염기 정의, 짝산과 짝염기, 이온화 상수 $K_\mathrm{a}$·$K_\mathrm{b}$, 물의 자동 이온화와 pH, $K_\mathrm{a}\times K_\mathrm{b}=K_\mathrm{w}$, 헨더슨·하셀발흐 식</p>
+    <p class="meta">고등학교 고급 화학 209–217쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅳ-2. 산과 염기의 평형 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>2. 산과 염기의 평형</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 산 염기의 정의 · <b class="c-plus">02</b> 산과 염기의 세기 <span class="small c-plus">← 오늘</span></p>
+        <p class="f21"><b>03</b> 염 용액의 산과 염기의 성질 · <b>04</b> 중화 반응 <span class="small">(다음 시간)</span></p>
+      </div>
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">우리 몸은 혈액의 산성도를 좁은 범위로 조절하고, 산업에서는 막대한 양의 황산으로 비료·고분자·강철을 만든다. 이런 산과 염기의 반응에도 <b>화학 평형의 원리</b>가 똑같이 적용된다. 여러 산 염기 정의, 이온화 평형과 평형 상수, 짝산과 짝염기, 물의 자동 이온화와 pH, 산과 염기의 세기, 염 용액의 성질, 중화 반응과 적정, 완충 용액을 알아본다.</p>
+      </div>
+    </div>
+    <div class="col stack">
+      {{MID}}
+      <p class="small">토양의 pH를 재는 연구자처럼, 산과 염기의 세기를 수로 나타내 비교해 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 산 염기의 정의 · 02 산과 염기의 세기" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-04]</span>루이스 산 염기 정의를 이해하고, 산 염기 평형을 이온화 상수로 표현할 수 있다.</div>
+  <div class="std mt8"><span class="code">[12고화04-05]</span>약산과 약염기의 중화 반응 시 특징을 이해하고, pH를 $\mathrm{p}K_\mathrm{a}$ 값으로부터 구할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>아레니우스, 브뢴스테드·라우리, 루이스의 산 염기 정의를 비교하고, 반응에서 산·염기와 짝산과 짝염기 쌍을 찾을 수 있다.</li>
+    <li>산과 염기의 이온화 평형을 $K_\mathrm{a}$, $K_\mathrm{b}$로 나타내고, 물의 자동 이온화와 $K_\mathrm{w}$, pH를 설명할 수 있다.</li>
+    <li>$K_\mathrm{a}$와 $\mathrm{p}K_\mathrm{a}$로 산과 염기의 세기를 비교하고, $K_\mathrm{a}\times K_\mathrm{b}=K_\mathrm{w}$와 헨더슨·하셀발흐 식의 뜻을 해석할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">산 염기 정의의 발전</div><div class="farr">→</div>
+    <div class="fnode">짝산과 짝염기</div><div class="farr">→</div>
+    <div class="fnode">$K_\mathrm{a}$ · $K_\mathrm{b}$</div><div class="farr">→</div>
+    <div class="fnode">$K_\mathrm{w}$와 pH</div><div class="farr">→</div>
+    <div class="fnode">세기와 $\mathrm{p}K_\mathrm{a}$</div><div class="farr">→</div>
+    <div class="fnode">헨더슨·하셀발흐 식</div><div class="farr">→</div>
+    <div class="fnode hl">해양 pH 조사</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 산 염기의 정의 · 도입" data-title="생각 열기: 물 없이 생기는 흰 연기">
+  <h2><span class="tag">생각 열기</span>물도 $\ce{OH-}$도 없는데 산 염기 반응일까?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 520px">{{TUBE}}</div>
+    <div class="col stack">
+      <p class="f21">유리관 양 끝에 진한 염산과 진한 암모니아수를 묻힌 솜을 넣으면, 물이 없는 관 속에 흰 연기 고리가 생긴다.</p>
+      <div class="card q"><p class="f21"><b>Q</b> $\ce{NH3}$에는 $\ce{OH-}$가 없고 관 속에는 물도 없다. 그래도 산과 염기의 반응이라고 할 수 있을까?</p></div>
+      <p class="f21 step">→ $\ce{HCl(g) + NH3(g) -> NH4Cl(s)}$ — $\ce{HCl}$의 <span class="ans">양성자($\ce{H+}$)</span>가 $\ce{NH3}$로 옮겨 갔다.</p>
+      <div class="answer step">산 염기의 정의를 수용액 밖으로 넓혀야 한다</div>
+      <p class="small">교사 시범: 자극성 기체 — 후드 안에서 보안경·장갑, 쓴 솜은 밀폐 용기에 모아 처리</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. 연결 ════════ -->
+<section class="slide" data-sec="01 산 염기의 정의 · 도입" data-title="연결: 산 염기와 화학 평형">
+  <h2><span class="tag alt">연결</span>산과 염기의 반응도 화학 평형이다</h2>
+  <div class="stages c2 mt8">
+    <div class="stage"><h3>「화학」에서</h3><p>산: 수용액에서 $\ce{H+}$를 내놓음<br>염기: 수용액에서 $\ce{OH-}$를 내놓음<br>중화 반응 $\ce{H+ + OH- -> H2O}$</p></div>
+    <div class="stage"><h3>1. 화학 평형에서</h3><p>동적 평형, 평형 상수 $K$<br>순수한 액체·고체는 $K$ 식에 넣지 않음<br>$K$가 클수록 정반응 쪽으로 치우침</p></div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 산과 염기의 이온화도 평형이라면, 산과 염기의 세기를 무엇으로 나타낼 수 있을까?</p>
+  <p class="f22 step">→ 이온화 평형의 평형 상수: <span class="ans">$K_\mathrm{a}$, $K_\mathrm{b}$, $K_\mathrm{w}$</span></p>
+  <p class="f21 step mt8">→ 정의를 넓히고(01), 평형 상수와 pH로 세기를 수로 비교한다(02).</p>
+</section>
+
+<!-- ════════ 6. ① 정의의 발전 ════════ -->
+<section class="slide" data-sec="01 · 화학사에서 나타나는 산 염기의 다양한 정의" data-title="산 염기 정의의 발전">
+  <h2><span class="no">1</span>화학사에서 나타나는 산 염기의 다양한 정의</h2>
+  <p class="f21">산은 신맛(레몬의 시트르산), 염기(알칼리)는 쓴맛과 미끈미끈한 촉감 — 이런 성질을 설명하려고 정의가 점점 체계를 갖추고 적용 범위가 넓어졌다.</p>
+  {{HIST}}
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 라부아지에의 정의로 염산($\ce{HCl}$)이 산인 것을 설명할 수 있을까?</p>
+      <p class="f21 step">→ <span class="ans">없다</span> — $\ce{HCl}$에는 산소가 없다. 새로 알게 된 사실을 설명하지 못하면 정의를 고친다.</p>
+    </div>
+    <div class="col stack" style="flex:0 0 440px">
+      <p class="small">라부아지에: 질산·황산처럼 자신이 이름 붙인 산소를 포함하는 물질(오늘날의 산소산)의 일부를 산이라고 함 · 리비히: 금속과 치환할 수 있는 수소를 포함하는 물질</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. ② 아레니우스 ════════ -->
+<section class="slide" data-sec="01 · 화학사에서 나타나는 산 염기의 다양한 정의" data-title="아레니우스 산 염기">
+  <h2><span class="no">2</span>아레니우스의 산 염기 정의</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">전해질 실험으로 산과 염기의 성질을 처음 알아낸 아레니우스의 현대적 정의:</p>
+      <p class="f21"><mark>산: 수용액에서 해리되어 양성자 $\ce{H+}$를 방출하는 물질</mark></p>
+      <p class="f21"><mark>염기: 수용액에서 해리되어 수산화 이온 $\ce{OH-}$를 방출하는 물질</mark></p>
+      <div class="formula sm">$\ce{HCl(aq) -> H+(aq) + Cl-(aq)}$<br>$\ce{NaOH(aq) -> Na+(aq) + OH-(aq)}$</div>
+      <p class="f21" data-q><b>Q</b> 아레니우스 정의로 설명하기 어려운 경우는?</p>
+      <p class="f21 step">→ <span class="ans">물이 없는 반응</span>(생각 열기의 기체 반응), $\ce{OH-}$를 갖지 않는 염기($\ce{NH3}$)</p>
+    </div>
+    <div class="col">{{ARR}}<p class="small">이런 정의에 맞는 산·염기를 아레니우스 산·아레니우스 염기라고 한다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 브뢴스테드·라우리 ════════ -->
+<section class="slide" data-sec="01 · 화학사에서 나타나는 산 염기의 다양한 정의" data-title="브뢴스테드·라우리 산 염기">
+  <h2><span class="no">3</span>브뢴스테드·라우리의 산 염기 정의</h2>
+  <p class="f21"><mark>산: 양성자를 내어주는 화학종(양성자 주개)</mark> · <mark>염기: 산에서 나온 양성자를 받는 화학종(양성자 받개)</mark></p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 640px">{{BL}}</div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 이 정의가 아레니우스 정의보다 넓은 까닭은?</p>
+      <p class="f21 step">→ 비수용액·기체 반응에도 적용되고, $\ce{NH3}$처럼 $\ce{OH-}$가 없는 염기도 설명한다. 그러면서 아레니우스 정의와 <span class="ans">모순되지 않는다</span>.</p>
+      <p class="small step">양성자는 불안정해 혼자 있지 못하고 곧바로 받개로 옮겨 간다 → 산이 내놓는 만큼 염기가 동시에 받는다(화학량론적 관계).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 루이스 ════════ -->
+<section class="slide" data-sec="01 · 화학사에서 나타나는 산 염기의 다양한 정의" data-title="루이스 산 염기">
+  <h2><span class="no">4</span>루이스의 산 염기 정의 — 그림 Ⅳ-15</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{LEWIS}}</div>
+    <div class="col stack">
+      <p class="f21"><mark>루이스 산: 전자쌍을 받는 화학종(전자쌍 받개)</mark><br><mark>루이스 염기: 전자쌍을 주는 화학종(전자쌍 주개)</mark></p>
+      <p class="f21" data-q><b>Q</b> $\ce{BF3}$에는 $\ce{H+}$가 없는데 왜 산일까?</p>
+      <p class="f21 step">→ $\ce{B}$ 둘레의 전자가 6개(옥텟 부족)라 $\ce{N}$의 <span class="ans">비공유 전자쌍을 받기</span> 때문이다. 생성물은 루이스 첨가 생성물.</p>
+      <p class="small step">양성자 전달과 무관하게, 반응에서 전자쌍을 주고받아 만들어지는 결합을 기준으로 분류한다(1923년). 착이온의 금속 이온·리간드(Ⅰ단원)도 루이스 산·염기이다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 세 정의 비교 ════════ -->
+<section class="slide" data-sec="01 · 화학사에서 나타나는 산 염기의 다양한 정의" data-title="세 정의 비교">
+  <h2><span class="no">5</span>세 가지 정의 비교</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <table class="ac421-sm">
+        <tr><th>정의</th><th>산</th><th>염기</th><th>기준</th></tr>
+        <tr><td>아레니우스</td><td>$\ce{H+}$ 방출</td><td>$\ce{OH-}$ 방출</td><td>수용액</td></tr>
+        <tr><td>브뢴스테드·라우리</td><td>양성자 주개</td><td>양성자 받개</td><td>$\ce{H+}$의 이동</td></tr>
+        <tr><td>루이스</td><td>전자쌍 받개</td><td>전자쌍 주개</td><td>전자쌍의 이동</td></tr>
+      </table>
+      <p class="f21" data-q><b>Q</b> 가장 넓은 정의는 무엇이고, 그 까닭은?</p>
+      <p class="f21 step">→ <span class="ans">루이스 정의</span> — 양성자를 주고받는 반응도 결국 $\ce{H+}$가 염기의 전자쌍을 받는 반응이다.</p>
+      <p class="small step">세 정의는 대부분의 반응에서 산과 염기를 분류하는 데 유용하다. 다만 이 정의들로 분류할 수 없는 특수한 반응에 쓰는 또 다른 산 염기 개념도 있다.</p>
+    </div>
+    <div class="col">{{VENN}}</div>
+  </div>
+</section>
+
+<!-- ════════ 11. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>루이스 산과 루이스 염기 찾기</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">다음 반응에서 루이스 산과 루이스 염기를 찾고, 브뢴스테드·라우리 정의로도 설명되는 반응을 골라라.</p>
+      <p class="f21">ⓐ $\ce{Fe^3+ + 6H2O -> [Fe(H2O)6]^3+}$<br>ⓑ $\ce{BF3 + F- -> BF4-}$<br>ⓒ $\ce{NH3 + H2O &lt;=&gt; NH4+ + OH-}$</p>
+      <p class="f21 step">ⓐ 산 $\ce{Fe^3+}$, 염기 $\ce{H2O}$(산소의 비공유 전자쌍을 줌)</p>
+      <p class="f21 step">ⓑ 산 $\ce{BF3}$, 염기 $\ce{F-}$</p>
+      <p class="f21 step">ⓒ 산 $\ce{H2O}$($\ce{H+}$가 $\ce{N}$의 전자쌍을 받음), 염기 $\ce{NH3}$</p>
+      <div class="answer step">브뢴스테드·라우리 정의로도 설명되는 반응: ⓒ ($\ce{H+}$ 이동)</div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑥ 이온화 반응식 ════════ -->
+<section class="slide" data-sec="01 · 산과 염기의 이온화 반응식" data-title="산과 염기의 이온화 반응식">
+  <h2><span class="no">6</span>산과 염기의 이온화 반응식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <div class="formula sm">$\ce{HA(aq) + H2O(l) &lt;=&gt; A-(aq) + H3O+(aq)}$<br>$\ce{BOH(aq) &lt;=&gt;[H2O] B+(aq) + OH-(aq)}$</div>
+      <p class="f21">약산·약염기는 일정 비율만 해리된다 — 해리 속도와 다시 결합하는 속도가 같아지므로 <b>양쪽 화살표</b>로 쓴다.</p>
+      <p class="f21" data-q><b>Q</b> 염산과 수산화 나트륨의 이온화 반응식은 화살표가 어떻게 다를까?</p>
+      <div class="formula sm step">$\ce{HCl + H2O -> Cl- + H3O+}$ &nbsp;&nbsp; $\ce{NaOH -> Na+ + OH-}$<div class="unit">강산·강염기는 완전히 해리되어 반응이 끝나므로 정반응 화살표만 쓴다.</div></div>
+    </div>
+    <div class="col stack">{{H3O}}
+      <p class="small">$\ce{HA &lt;=&gt; H+ + A-}$는 간단히 쓴 식이다. $\ce{H+}$는 불안정해 생기자마자 물과 결합해 하이드로늄 이온 $\ce{H3O+}$가 된다. 염기는 단순히 해리되므로 식에서 $\ce{H2O}$를 소거한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑦ 이온화 평형과 평형 상수 ════════ -->
+<section class="slide" data-sec="01 · 산과 염기의 이온화 평형, 평형 상수" data-title="이온화 평형과 Ka, Kb">
+  <h2><span class="no">7</span>산과 염기의 이온화 평형, 평형 상수</h2>
+  <p class="f21"><mark>이온화 평형</mark>: 산과 염기가 일정 비율만큼 해리되고 더 이상 농도비가 변하지 않는 상태 — 산과 염기의 고유한 특성이다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 540px">
+      <div class="formula sm">$K_\mathrm{c}=\dfrac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}][\ce{H2O}]}$</div>
+      <p class="f21" data-q><b>Q</b> $[\ce{H2O}]$를 상수로 볼 수 있는 까닭은?</p>
+      <p class="f21 step">→ 물 1 L는 약 $55.5\ \text{mol}$ — 산이 이온화해도 $[\ce{H2O}]$는 <span class="ans">거의 변하지 않는다</span>(0.01 %도 안 변함).</p>
+      <div class="formula sm step">$K_\mathrm{a}=K_\mathrm{c}[\ce{H2O}]=\dfrac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}$, &nbsp; $K_\mathrm{b}=\dfrac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]}$</div>
+      <p class="small step">$K_\mathrm{a}$: 산의 이온화 상수(산 해리 상수) · $K_\mathrm{b}$: 염기의 이온화 상수(Ⅱ단원의 끓는점 오름 상수와 다른 뜻)</p>
+    </div>
+    <div class="col stack">{{LOGBAR}}
+      <p class="small">강산은 높은 $[\ce{H3O+}]$를 만들며 $K_\mathrm{a}$가 크고, 약산은 낮은 $[\ce{H3O+}]$를 만들며 $K_\mathrm{a}$가 작다. 염기와 $K_\mathrm{b}$도 같다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 짝산과 짝염기 ════════ -->
+<section class="slide" data-sec="01 · 짝산과 짝염기의 관계" data-title="짝산과 짝염기">
+  <h2><span class="no">8</span>짝산과 짝염기의 관계 — 그림 Ⅳ-16</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{CONJ}}</div>
+    <div class="col stack">
+      <p class="f21">정반응: $\ce{H2S}$ 산, $\ce{NH3}$ 염기 · 역반응: $\ce{NH4+}$ 산, $\ce{HS-}$ 염기 — 평형에서는 두 반응이 같은 속도로 일어난다.</p>
+      <p class="f21"><mark>산에서 양성자가 제거되어 생성된 염기를 그 산의 짝염기</mark>라고 한다. 염기가 양성자를 얻은 것은 그 염기의 짝산이다.</p>
+      <p class="f21" data-q><b>Q</b> 이 반응에서 짝산과 짝염기 쌍은 몇 개일까?</p>
+      <p class="f21 step">→ <span class="ans">2개</span>: $\ce{H2S}$와 $\ce{HS-}$, $\ce{NH4+}$와 $\ce{NH3}$ — 쌍마다 $\ce{H+}$ 하나 차이</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="01 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>짝산과 짝염기 쌍 찾기</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">각 반응에서 짝산과 짝염기 쌍을 모두 찾고, 물이 하는 역할을 말하여라.</p>
+      <p class="f21">ⓐ $\ce{CH3COOH + H2O &lt;=&gt; CH3COO- + H3O+}$<br>ⓑ $\ce{NH3 + H2O &lt;=&gt; NH4+ + OH-}$<br>ⓒ $\ce{HCO3- + OH- &lt;=&gt; CO3^2- + H2O}$</p>
+      <p class="f21 step">ⓐ $\ce{CH3COOH}$/$\ce{CH3COO-}$, $\ce{H3O+}$/$\ce{H2O}$ — 물은 염기</p>
+      <p class="f21 step">ⓑ $\ce{NH4+}$/$\ce{NH3}$, $\ce{H2O}$/$\ce{OH-}$ — 물은 산</p>
+      <p class="f21 step">ⓒ $\ce{HCO3-}$/$\ce{CO3^2-}$, $\ce{H2O}$/$\ce{OH-}$ — 물은 역반응의 산</p>
+      <div class="answer step">물은 상대에 따라 산으로도, 염기로도 작용한다</div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 화학사 ════════ -->
+<section class="slide" data-sec="01 · 화학사" data-title="화학사: 루이스와 산 염기 정의">
+  <h2><span class="tag">화학사</span>루이스와 산 염기 정의</h2>
+  <div class="stages ac421-c3 mt8">
+    <div class="stage"><h3>1916년</h3><p>미국의 화학자 루이스(1875–1946)가 두 원자가 전자쌍을 공유해 결합한다는 <b>공유 결합 이론</b>을 처음 제안했다.</p></div>
+    <div class="stage"><h3>1923년</h3><p>화학 반응의 <b>전자쌍 이론</b>으로 산 = 전자쌍 받개, 염기 = 전자쌍 주개라고 발표 — 양성자 전달과 무관해 모든 반응에 적용되도록 일반화했다.</p></div>
+    <div class="stage"><h3>그 밖의 업적</h3><p>옥텟 규칙, 루이스 구조, 1926년 「광자」라는 이름, 순수한 중수소 최초 생산, 화학 문제에 열역학 원리 적용</p></div>
+  </div>
+  <p class="f21 mt16" data-q><b>Q</b> 루이스 구조를 보고 루이스 산과 염기를 어떻게 알아낼 수 있을까?</p>
+  <p class="f21 step">→ <span class="ans">비공유 전자쌍을 가진 쪽</span>은 줄 수 있으니 염기, 옥텟이 부족해 전자쌍을 받을 자리가 있는 쪽($\ce{BF3}$의 $\ce{B}$, 금속 양이온)은 산이다.</p>
+  <p class="small step">루이스 구조는 오늘날에도 분자의 모양과 극성을 이해하는 기본 도구이다.</p>
+</section>
+
+<!-- ════════ 17. ⑨ 세기와 농도 ════════ -->
+<section class="slide" data-sec="02 · 산과 염기의 상대적 세기와 반응의 방향" data-title="세기와 농도는 다르다">
+  <h2><span class="no">9</span>산과 염기의 세기는 농도와 다르다</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <p class="f21">강산·약산, 강염기·약염기는 <b>상대적</b> 강함과 약함이다. 세기는 물질의 고유한 성질로 <mark>농도와는 상관이 없고</mark>, 이온화 반응이 얼마나 일어나는지(이온화 평형)로 정해진다.</p>
+      <p class="f21" data-q><b>Q</b> 진한 약산과 묽은 강산 중 「강한」 산은 어느 것일까?</p>
+      <p class="f21 step">→ <span class="ans">묽은 강산</span> — 농도는 낮아도 녹은 산이 거의 모두 이온화한다. 진한 약산은 분자 대부분이 $\ce{HA}$로 남는다.</p>
+      <p class="small step">「강산 = 진한 산」, 「약산 = 묽은 산」으로 혼동하지 않는다. 묽은 약산은 진한 약산보다 이온화하는 비율이 오히려 크다(⑲에서 확인).</p>
+    </div>
+    <div class="col">{{GRID4}}</div>
+  </div>
+</section>
+
+<!-- ════════ 18. ⑩ 그림 Ⅳ-17 ════════ -->
+<section class="slide" data-sec="02 · 산과 염기의 상대적 세기와 반응의 방향" data-title="강산과 약산의 이온화">
+  <h2><span class="no">10</span>강산과 약산의 이온화 — 그림 Ⅳ-17</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{IONBARS}}</div>
+    <div class="col stack">
+      <p class="f21"><b class="c-plus">강산</b>: 대부분 이온화 → $[\ce{H3O+}]$, $[\ce{A-}]$ 크고 $[\ce{HA}]$ 작음 → <b>$K_\mathrm{a}$ 큼</b>, 정반응 우세(오른쪽으로 치우침)</p>
+      <p class="f21"><b>약산</b>: 일부만 이온화 → $[\ce{HA}]$에 비해 $[\ce{H3O+}]$, $[\ce{A-}]$ 매우 작음 → <b>$K_\mathrm{a}$ 작음</b>, 역반응 우세(왼쪽으로 치우침)</p>
+      <p class="f21" data-q><b>Q</b> 0.10 M 아세트산 수용액에서 물 다음으로 가장 많은 화학종은?</p>
+      <p class="f21 step">→ 이온화하지 않은 <span class="ans">$\ce{CH3COOH}$ 분자</span> (98.7 %)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. ⑪ 물의 자동 이온화 ════════ -->
+<section class="slide" data-sec="02 · 물의 자동 이온화 평형과 pH 척도" data-title="물의 자동 이온화">
+  <h2><span class="no">11</span>물의 자동 이온화 — 그림 Ⅳ-18</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 450px">{{AUTOION}}</div>
+    <div class="col stack">
+      <p class="f21">물은 산과 반응하면 염기, 염기와 반응하면 산으로 작용한다. 순수한 물에서도 아주 조금 $\ce{H+}$를 주고받는다 — <mark>물의 자동 이온화(자체 이온화)</mark></p>
+      <div class="formula sm">$\ce{2H2O(l) &lt;=&gt; H3O+(aq) + OH-(aq)}$<br>$K_\mathrm{eq}=\dfrac{[\ce{H3O+}][\ce{OH-}]}{[\ce{H2O}]^2}$</div>
+      <div class="formula sm step">$\begin{aligned}K_\mathrm{w}&amp;=K_\mathrm{eq}\times[\ce{H2O}]^2=[\ce{H3O+}][\ce{OH-}]\\&amp;=1.0\times10^{-14}\ (25\ {}^\circ\text{C})\end{aligned}$<div class="unit">$K_\mathrm{w}$: 물의 이온곱 상수 — 일정한 온도에서 항상 일정</div></div>
+      <p class="f21" data-q><b>Q</b> 25 °C 순수한 물의 $[\ce{H3O+}]$는?</p>
+      <p class="f21 step">→ $[\ce{H3O+}]=[\ce{OH-}]$이므로 $[\ce{H3O+}]^2=1.0\times10^{-14}$ → <span class="ans">$1.0\times10^{-7}\ \text{M}$</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. ⑫ 표 Ⅳ-5 ════════ -->
+<section class="slide" data-sec="02 · 물의 자동 이온화 평형과 pH 척도" data-title="Kw의 온도 의존성">
+  <h2><span class="no">12</span>$K_\mathrm{w}$ 값과 pH의 온도 의존성 — 표 Ⅳ-5</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 300px">
+      <table class="ac421-sm">
+        <tr><th>$t$ (°C)</th><th>$K_\mathrm{w}$ ($\times10^{-14}$)</th><th>물의 pH</th></tr>
+        <tr><td>0</td><td>0.114</td><td>7.47</td></tr><tr><td>10</td><td>0.292</td><td>7.27</td></tr>
+        <tr><td>20</td><td>0.681</td><td>7.08</td></tr><tr><td>25</td><td>1.01</td><td>7.00</td></tr>
+        <tr><td>30</td><td>1.47</td><td>6.92</td></tr><tr><td>40</td><td>2.92</td><td>6.77</td></tr>
+        <tr><td>50</td><td>5.47</td><td>6.63</td></tr><tr><td>60</td><td>9.61</td><td>6.51</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:0 0 430px">{{KWT}}</div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 60 °C 순수한 물은 pH가 6.51이다. 이 물은 산성일까?</p>
+      <p class="f21 step">→ <span class="ans">중성</span> — $[\ce{H3O+}]=[\ce{OH-}]$ 그대로이다. pH와 pOH가 함께 변해 중성을 유지하고, <b>중성 pH의 기준</b>이 달라진다.</p>
+      <p class="f21 step">온도가 높을수록 $K_\mathrm{w}$가 커진다 → 자동 이온화는 <b>흡열</b> 반응 (반트호프 식으로 어림하면 $\Delta H^\circ\approx+56\ \text{kJ/mol}$)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. ⑬ pH 척도 ════════ -->
+<section class="slide" data-sec="02 · 물의 자동 이온화 평형과 pH 척도" data-title="pH와 pOH">
+  <h2><span class="no">13</span>pH 척도</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21">$[\ce{H3O+}]$가 커지면 $[\ce{OH-}]$가 작아져 $K_\mathrm{w}$는 일정하다. 산성 $[\ce{H3O+}]&gt;[\ce{OH-}]$ · 중성 $[\ce{H3O+}]=[\ce{OH-}]$ · 염기성 $[\ce{H3O+}]&lt;[\ce{OH-}]$</p>
+      <p class="f21"><mark>$\text{pH}=-\log[\ce{H3O+}]$</mark>, &nbsp; $\text{pOH}=-\log[\ce{OH-}]$</p>
+    </div>
+    <div class="col stack">
+      <div class="formula sm">$\begin{aligned}\mathrm{p}K_\mathrm{w}=-\log K_\mathrm{w}&amp;=-\log[\ce{H3O+}]-\log[\ce{OH-}]\\&amp;=\text{pH}+\text{pOH}=14.00\ (25\ {}^\circ\text{C})\end{aligned}$</div>
+      <p class="f21" data-q><b>Q</b> pH가 1 작아지면 $[\ce{H3O+}]$는? <span class="step">→ <span class="ans">10배</span> 커진다.</span></p>
+    </div>
+  </div>
+  {{PHSCALE}}
+  <p class="small">생활 속 물질의 pH는 대략적인 값이다.</p>
+</section>
+
+<!-- ════════ 22. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>강산과 강염기 수용액의 pH</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">25 °C에서 (가) $0.010\ \text{M}$ $\ce{HCl}$ 수용액과 (나) $0.020\ \text{M}$ $\ce{NaOH}$ 수용액의 pH를 구하여라.</p>
+      <p class="f21 step">(가) 완전히 이온화: $[\ce{H3O+}]=1.0\times10^{-2}\ \text{M}$ → pH $=2.00$, $[\ce{OH-}]=\dfrac{1.0\times10^{-14}}{1.0\times10^{-2}}=1.0\times10^{-12}\ \text{M}$</p>
+      <p class="f21 step">(나) $[\ce{OH-}]=2.0\times10^{-2}\ \text{M}$ → pOH $=-\log(2.0\times10^{-2})=1.70$</p>
+      <p class="f21 step">pH $=14.00-1.70$</p>
+      <div class="answers step"><div class="answer">(가) pH 2.00</div><div class="answer">(나) pH 12.30</div></div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 23. ⑭ 수용액에서 산의 세기 ════════ -->
+<section class="slide" data-sec="02 · 수용액에서 산과 염기의 세기" data-title="같은 농도, 다른 pH">
+  <h2><span class="no">14</span>수용액에서 산과 염기의 세기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">
+      <p class="f21">산과 염기의 세기는 넣은 농도가 아니라 <b>평형 상태의 $[\ce{H3O+}]$ 또는 $[\ce{OH-}]$</b>로 결정된다. 각 0.5 M 수용액의 pH: 염산 <b>0.30</b>, 바이타민 C(아스코르브산) <b>2.65</b></p>
+      <p class="f21" data-q><b>Q</b> 두 용액의 $[\ce{H3O+}]$는 몇 배 차이 날까?</p>
+      <p class="f21 step">→ $10^{-0.30}=0.50\ \text{M}$, $10^{-2.65}=2.2\times10^{-3}\ \text{M}$ → 약 <span class="ans">220배</span> (아스코르브산은 약 0.45 %만 이온화)</p>
+      <p class="f21 step">왜 다를까? 강산은 처음의 산 분자보다 <b>물에 더 안정하게 수화되는 이온</b>을 만든다 → 이온화 평형이 오른쪽으로 치우쳐 $K_\mathrm{a}$가 크다. 약산의 이온은 다시 산 분자로 되돌아가기 쉽다.</p>
+    </div>
+    <div class="col">{{HCLVC}}</div>
+  </div>
+</section>
+
+<!-- ════════ 24. ⑮ 그림 Ⅳ-19 ════════ -->
+<section class="slide" data-sec="02 · 수용액에서 산과 염기의 세기" data-title="pKa와 산·염기의 세기">
+  <h2><span class="no">15</span>산과 염기의 세기와 $\mathrm{p}K_\mathrm{a}$ — 그림 Ⅳ-19</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{PKA}}</div>
+    <div class="col stack">
+      <p class="f21">$\mathrm{p}K_\mathrm{a}=-\log K_\mathrm{a}$ — $K_\mathrm{a}$가 클수록($\mathrm{p}K_\mathrm{a}$가 작을수록) 강한 산</p>
+      <p class="f21" data-q><b>Q</b> 강한 산의 짝염기도 강한 염기일까?</p>
+      <p class="f21 step">→ <span class="ans">아니다</span> — 산이 강할수록 그 짝염기는 약하다. $\ce{HCl}$의 짝염기 $\ce{Cl-}$는 염기 기능이 거의 없다.</p>
+      <p class="f21 step" data-q><b>Q</b> $\ce{HF + NH3 &lt;=&gt; F- + NH4+}$의 평형은 어느 쪽으로 치우칠까?</p>
+      <p class="f21 step">→ $\ce{HF}$($\mathrm{p}K_\mathrm{a}$ 3.2)가 $\ce{NH4+}$(9.3)보다 강한 산이므로 <span class="ans">오른쪽</span> — 산 염기 반응은 더 약한 산과 더 약한 염기 쪽으로 치우친다.</p>
+      <p class="small">$\mathrm{p}K_\mathrm{a}$는 25 °C 문헌값. $\ce{H3O+}$ 0, $\ce{H2O}$ 14는 그림 Ⅳ-19의 눈금을 따름</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. ⑯ 염기의 이온화 상수 ════════ -->
+<section class="slide" data-sec="02 · 수용액에서 산과 염기의 세기" data-title="약염기와 Kb">
+  <h2><span class="no">16</span>염기의 세기와 $K_\mathrm{b}$</h2>
+  {{KB}}
+  <div class="row mt8">
+    <div class="col stack">
+      <div class="formula sm">$\ce{B(aq) + H2O(l) &lt;=&gt; BH+(aq) + OH-(aq)}$, &nbsp; $K_\mathrm{b}=\dfrac{[\ce{BH+}][\ce{OH-}]}{[\ce{B}]}$<div class="unit">수산화기가 없는 약염기는 물에서 $\ce{H+}$를 빼앗아 $\ce{OH-}$를 만든다. $\ce{NH3}$: $K_\mathrm{b}=1.8\times10^{-5}$ (25 °C)</div></div>
+    </div>
+    <div class="col stack" style="flex:0 0 470px">
+      <p class="f21">$K_\mathrm{b}$가 큰 염기 = 강한 염기 → pH가 7보다 <b>매우 크다</b><br>$K_\mathrm{b}$가 작은 염기 = 약한 염기 → pH가 7보다 <b>조금 크다</b></p>
+      <p class="f21" data-q><b>Q</b> 이 반응에서 물은 산일까, 염기일까? <span class="step">→ <span class="ans">산</span>(양성자 주개)</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 26. ⑰ Ka × Kb = Kw ════════ -->
+<section class="slide" data-sec="02 · 수용액에서 산과 염기의 세기" data-title="Ka × Kb = Kw">
+  <h2><span class="no">17</span>$K_\mathrm{a}$와 $K_\mathrm{b}$ 및 $K_\mathrm{w}$의 관련성</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">짝산 $\ce{BH+}$의 이온화: $\ce{BH+ + H2O &lt;=&gt; H3O+ + B}$, &nbsp; $K_\mathrm{a}=\dfrac{[\ce{H3O+}][\ce{B}]}{[\ce{BH+}]}$</p>
+      <p class="f21" data-q><b>Q</b> 짝산의 $K_\mathrm{a}$와 짝염기의 $K_\mathrm{b}$를 곱하면?</p>
+      <div class="formula sm step">$\begin{aligned}K_\mathrm{a}\times K_\mathrm{b}&amp;=\dfrac{[\ce{H3O+}][\ce{B}]}{[\ce{BH+}]}\times\dfrac{[\ce{BH+}][\ce{OH-}]}{[\ce{B}]}\\&amp;=[\ce{H3O+}][\ce{OH-}]=K_\mathrm{w}\end{aligned}$</div>
+      <div class="answer step">$K_\mathrm{w}=K_\mathrm{a}\times K_\mathrm{b}$, &nbsp; $\mathrm{p}K_\mathrm{a}+\mathrm{p}K_\mathrm{b}=\mathrm{p}K_\mathrm{w}=14.00\ (25\ {}^\circ\text{C})$</div>
+      <p class="f21 step">예: $\ce{NH4+}$의 $K_\mathrm{a}=\dfrac{1.0\times10^{-14}}{1.8\times10^{-5}}=5.6\times10^{-10}$, $\mathrm{p}K_\mathrm{a}=14.00-4.74=9.26$ — 그림 Ⅳ-19의 자리와 같다.</p>
+    </div>
+    <div class="col stack">{{PKSUM}}
+      <p class="f21" data-q><b>Q</b> $K_\mathrm{a}$가 클수록 짝염기의 $K_\mathrm{b}$는? <span class="step">→ <span class="ans">작다</span> (곱이 $K_\mathrm{w}$로 일정)</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. 확인 문제 04 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 04">
+  <h2><span class="tag q">확인 문제 04</span>짝염기의 세기 비교</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">25 °C에서 아세트산의 $K_\mathrm{a}=1.8\times10^{-5}$, 플루오린화 수소의 $K_\mathrm{a}=6.8\times10^{-4}$이다. 두 산의 짝염기 $\ce{CH3COO-}$와 $\ce{F-}$의 $K_\mathrm{b}$를 구하고, 더 강한 염기를 골라라.</p>
+      <p class="f21 step">$\ce{CH3COO-}$: $K_\mathrm{b}=\dfrac{1.0\times10^{-14}}{1.8\times10^{-5}}=5.6\times10^{-10}$</p>
+      <p class="f21 step">$\ce{F-}$: $K_\mathrm{b}=\dfrac{1.0\times10^{-14}}{6.8\times10^{-4}}=1.5\times10^{-11}$</p>
+      <div class="answer step">더 강한 염기: $\ce{CH3COO-}$ — 더 약한 산의 짝염기</div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 28. ⑱ [보충] 약산 수용액의 pH ════════ -->
+<section class="slide" data-sec="02 · 수용액에서 산과 염기의 세기" data-title="약산 수용액의 pH (보충)">
+  <h2><span class="no">18</span>약산 수용액의 pH 구하기 <span class="small c-muted">[보충]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21" data-q><b>Q</b> 25 °C에서 0.10 M 아세트산($K_\mathrm{a}=1.8\times10^{-5}$) 수용액의 pH는?</p>
+      <table class="ac421-ice">
+        <tr><th class="l"></th><th>$\ce{CH3COOH}$</th><th>$\ce{CH3COO-}$</th><th>$\ce{H3O+}$</th></tr>
+        <tr><td class="l">처음 (M)</td><td>0.10</td><td>0</td><td>0</td></tr>
+        <tr><td class="l">변화 (M)</td><td>$-x$</td><td>$+x$</td><td>$+x$</td></tr>
+        <tr><td class="l">평형 (M)</td><td>$0.10-x$</td><td>$x$</td><td>$x$</td></tr>
+      </table>
+      <p class="small">처음·변화·평형 표는 1. 화학 평형과 같은 꼴. 물의 자동 이온화로 생긴 $\ce{H3O+}$는 무시한다.</p>
+    </div>
+    <div class="col stack">
+      <p class="f21 step">$K_\mathrm{a}=\dfrac{x^2}{0.10-x}=1.8\times10^{-5}$</p>
+      <p class="f21 step">$x\ll0.10$으로 근사: $x=\sqrt{1.8\times10^{-6}}=1.3\times10^{-3}\ \text{M}$</p>
+      <div class="answer step">pH $=-\log(1.3\times10^{-3})=2.87$</div>
+      <p class="f21 step">근사 확인: $\dfrac{1.3\times10^{-3}}{0.10}=1.3\ \%$ — 5 % 이하이므로 근사해도 된다(정확히 풀어도 2.88).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. ⑲ [보충] 이온화도 ════════ -->
+<section class="slide" data-sec="02 · 수용액에서 산과 염기의 세기" data-title="이온화도 (보충)">
+  <h2><span class="no">19</span>이온화도 — 묽힐수록 커진다 <span class="small c-muted">[보충]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 590px">
+      <div class="formula sm">이온화도 $\alpha=\dfrac{\text{이온화한 산의 농도}}{\text{처음 산의 농도}}=\dfrac{[\ce{H3O+}]}{C}\approx\sqrt{\dfrac{K_\mathrm{a}}{C}}$</div>
+      <p class="f21" data-q><b>Q</b> 아세트산을 묽히면 이온화도와 pH는 어떻게 될까?</p>
+      <p class="f21 step">→ 이온화도는 <span class="ans">커진다</span> — 묽히면 입자 수가 많은 이온 쪽으로 평형이 이동한다(르샤틀리에 원리). $K_\mathrm{a}$는 그대로이다.</p>
+      <p class="f21 step">그래도 $[\ce{H3O+}]$는 작아져 pH는 커진다: 1.0 M 2.37 → 0.10 M 2.88 → 0.010 M 3.38</p>
+      <p class="small step">0.0010 M에서는 $\alpha=12.5\ \%$로 5 %를 넘는다 → $x\ll C$ 근사를 쓰면 안 되고 이차 방정식으로 푼다.</p>
+    </div>
+    <div class="col">{{ALPHA}}</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 확인 문제 05 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 05">
+  <h2><span class="tag q">확인 문제 05</span>약염기 수용액의 pH</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">25 °C에서 0.10 M 암모니아수의 pH를 구하여라. (단, $\ce{NH3}$의 $K_\mathrm{b}=1.8\times10^{-5}$이다.)</p>
+      <div class="formula sm">$\ce{NH3(aq) + H2O(l) &lt;=&gt; NH4+(aq) + OH-(aq)}$</div>
+      <p class="f21 step">$K_\mathrm{b}=\dfrac{x^2}{0.10-x}\approx\dfrac{x^2}{0.10}$ → $x=[\ce{OH-}]=1.3\times10^{-3}\ \text{M}$ (이온화도 1.3 %, 근사 타당)</p>
+      <p class="f21 step">pOH $=2.87$ → pH $=14.00-2.87$</p>
+      <div class="answer step">pH 11.13 — 7보다 조금 큰 약염기</div>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 31. ⑳ 헨더슨·하셀발흐 식 ════════ -->
+<section class="slide" data-sec="02 · 헨더슨·하셀발흐 식" data-title="헨더슨·하셀발흐 식">
+  <h2><span class="no">20</span>헨더슨·하셀발흐 식으로 본 산 수용액의 pH</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">$K_\mathrm{a}$ 식을 $[\ce{H3O+}]=K_\mathrm{a}\times\dfrac{[\ce{HA}]}{[\ce{A-}]}$로 정리하고 양변에 $-\log$를 취하면</p>
+      <div class="formula sm step">$\begin{aligned}\text{pH}&amp;=\mathrm{p}K_\mathrm{a}+\log\left(\dfrac{[\ce{A-}]}{[\ce{HA}]}\right)\\&amp;=\mathrm{p}K_\mathrm{a}+\log\left(\dfrac{[\text{염기}]}{[\text{산}]}\right)\end{aligned}$<div class="unit">헨더슨·하셀발흐 식 — 짝산과 짝염기의 농도비로 pH를 나타낸다</div></div>
+      <p class="f21" data-q><b>Q</b> $[\ce{A-}]=[\ce{HA}]$이면 pH는?</p>
+      <p class="f21 step">→ $\log1=0$이므로 <span class="ans">pH $=\mathrm{p}K_\mathrm{a}$</span> — 그래프에서 두 곡선이 만나는 점의 pH가 $\mathrm{p}K_\mathrm{a}$이다.</p>
+    </div>
+    <div class="col stack">{{HH}}
+      <p class="small">pH &gt; $\mathrm{p}K_\mathrm{a}$이면 짝염기가, pH &lt; $\mathrm{p}K_\mathrm{a}$이면 산이 더 많다. 완충 용액·적정 곡선에서 자료로 해석한다(다음 시간).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 32. 확인 문제 06 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 06">
+  <h2><span class="tag q">확인 문제 06</span>혈액 속 인산 이온은 어느 꼴이 많을까?</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">혈액의 pH는 약 7.40이다. $\ce{H2PO4- + H2O &lt;=&gt; HPO4^2- + H3O+}$ ($\mathrm{p}K_\mathrm{a}=7.21$)에서 혈액 속에 더 많은 것은 $\ce{H2PO4-}$와 $\ce{HPO4^2-}$ 중 어느 것일까?</p>
+      <p class="f21 step">pH 7.40 &gt; $\mathrm{p}K_\mathrm{a}$ 7.21 → $\log\left(\dfrac{[\ce{HPO4^2-}]}{[\ce{H2PO4-}]}\right)=0.19&gt;0$</p>
+      <div class="answer step">$\ce{HPO4^2-}$가 더 많다 (약 1.5배)</div>
+      <p class="f21 step">pH가 $\mathrm{p}K_\mathrm{a}$보다 클수록 짝염기 꼴이 많아진다 — 계산보다 $\mathrm{p}K_\mathrm{a}$와 pH의 크기 비교가 핵심이다.</p>
+    </div>
+    <div class="col" style="flex:0 0 330px"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 33. 탐구 활동 (1) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 해양 pH 조사 (1)">
+  <h2><span class="tag">탐구 활동</span>$\ce{CO2}$ 배출 증가에 따른 해수의 pH와 해양 환경 변화 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 540px">
+      <div class="card"><h3>배경</h3>
+        <p class="f21">1850년 이후 에너지 소비가 급증해 대기 $\ce{CO2}$가 280 ppm(1800년대) → 300 ppm(1900년대 초) → 413 ppm(2020년)으로 늘었다. 바다가 $\ce{CO2}$를 더 흡수해 약 200년간 해수의 pH가 평균 <b>0.1</b> 낮아졌다.</p>
+      </div>
+      <div class="card"><h3>과정</h3>
+        <p class="f21">① 모둠별로 지금 배출 추세가 이어질 때 2100년 해수의 pH와 해양 환경 변화를 조사한다 ② 오른쪽 평형으로 원리를 설명한다 ③ 발표하고, 500자 이내로 적는다.</p>
+      </div>
+      <p class="f21" data-q><b>Q</b> pH가 0.1 낮아지면 왜 수소 이온 농도가 26 % 늘어난 것일까?</p>
+      <p class="f21 step">→ $10^{0.1}=1.26$ — $[\ce{H3O+}]$가 <span class="ans">1.26배</span>가 된다.</p>
+    </div>
+    <div class="col">{{SEA}}</div>
+  </div>
+</section>
+
+<!-- ════════ 34. 탐구 활동 (2) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 해양 pH 조사 (2)">
+  <h2><span class="tag">탐구 활동</span>조사 결과 정리 — 예시 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">{{OCEAN}}
+      <p class="small">탄산 평형 모형으로 계산(15 °C, 염분 35, 총 알칼리도 일정). 실제 바다는 지역·깊이마다 다르다.</p>
+    </div>
+    <div class="col stack">
+      <div class="card step" data-g="o1"><h3>2100년 해수의 pH</h3><p class="f21">배출이 높게 이어지면 표층 해수 pH가 약 7.7로, 지금보다 0.3–0.4 낮아진다 → $[\ce{H3O+}]$ 약 2–2.5배</p></div>
+      <div class="card step" data-g="o2"><h3>해양 환경 변화</h3><p class="f21">④에서 탄산 이온이 줄어 ⑤의 탄산 칼슘이 녹는 쪽으로 이동 → 조개·산호·플랑크톤이 껍데기와 골격을 만들기 어렵다 → 산호초 생태계와 수산업에 영향</p></div>
+      <p class="small step" data-g="o3">500자 글의 뼈대: 배출 증가 → ①–③ 평형 이동으로 $[\ce{H3O+}]$ 증가 → 탄산 이온 감소 → 생물 영향 → 줄이는 방법(배출 감축). 평가: 출처를 밝혔는가, 평형 이동으로 설명했는가, 500자 안에서 pH 전망과 환경 변화를 모두 다루었는가.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 35. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01·02 산 염기의 정의와 세기 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>2. 산과 염기의 평형 — 01 · 02</h2>
+  <div class="ac421-map">
+    <div class="ac421-node ac421-dim">1. 화학 평형<br>$K$, $Q$<br>르샤틀리에 원리<br>$K_\mathrm{sp}$</div>
+    <div class="ac421-arr">→</div>
+    <div class="ac421-node ac421-main" data-q><b>01 산 염기의 정의</b><br>❶ 브뢴스테드·라우리: 산 = 양성자 <span class="blank"><span class="step">주개</span></span>, 염기 = 양성자 <span class="blank"><span class="step">받개</span></span><br>❷ 루이스 산 = 전자쌍 <span class="blank"><span class="step">받개</span></span> · 가장 넓은 정의<br>❸ $\ce{HA}$와 $\ce{A-}$처럼 $\ce{H+}$ 하나 차이: <span class="blank"><span class="step">짝산과 짝염기</span></span> 쌍</div>
+    <div class="ac421-node ac421-main" data-q><b>02 산과 염기의 세기</b><br>❹ $K_\mathrm{w}=[\ce{H3O+}][\ce{OH-}]=$ <span class="blank"><span class="step">$1.0\times10^{-14}$</span></span> (25 °C)<br>❺ pH $=$ <span class="blank"><span class="step">$-\log[\ce{H3O+}]$</span></span> · pH + pOH = 14.00<br>❻ $K_\mathrm{a}\times K_\mathrm{b}=$ <span class="blank"><span class="step">$K_\mathrm{w}$</span></span> · 강한 산의 짝염기는 <span class="blank"><span class="step">약하다</span></span></div>
+    <div class="ac421-arr">→</div>
+    <div class="ac421-node ac421-dim">03 염 용액<br>04 중화 반응<br>완충 용액<br>(다음 시간)</div>
+  </div>
+</section>
+
+<!-- ════════ 36. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01·02 산 염기의 정의와 세기 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 세 가지 산 염기 정의를 비교하고, 반응에서 짝산과 짝염기 쌍을 찾을 수 있다.</button>
+    <button class="chk">[과정·기능] $K_\mathrm{w}$와 $K_\mathrm{a}\times K_\mathrm{b}=K_\mathrm{w}$로 pH와 이온화 상수를 구하고, $\mathrm{p}K_\mathrm{a}$로 세기를 비교했다.</button>
+    <button class="chk">[가치·태도] 해양 pH 변화를 조사해 평형으로 설명하고, 탄소 배출을 줄이는 일의 중요성을 생각해 보았다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 같은 0.10 M인 염산과 아세트산 중 pH가 더 큰 것은? <span class="step">→ <span class="ans">아세트산</span> — 일부만 이온화해 $[\ce{H3O+}]$가 작다.</span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{BF3}$는 브뢴스테드·라우리 산일까? <span class="step">→ <span class="ans">아니다</span> — 내놓을 $\ce{H+}$가 없다. 전자쌍을 받는 루이스 산이다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 약산을 강염기로 중화하면 중화점의 pH는 7일까? — 03 염 용액의 산과 염기의 성질 · 04 중화 반응</div>
+</section>

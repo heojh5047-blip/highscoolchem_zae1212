@@ -1,0 +1,12 @@
+{"findings":[
+{"slide":5,"severity":"medium","rule":"D8","problem":"물의 전기 분해 그림: 극 라벨이 아래 전자 화살표·도선과 겹침, 「부피비 2:1」이 관 가장자리와 겹침","fix":"극 라벨을 비커 아래 양옆으로, 「부피비」를 두 관 사이로, 2·1을 관 옆으로 옮김 — 반영"},
+{"slide":6,"severity":"medium","rule":"D8","problem":"영역 넘침(표 + 질문 카드 + 그림 세로로 쌓임), 고친 뒤 그림 라벨 16px 미만","fix":"표·카드를 왼쪽 단(630px)에 묶고 그림을 오른쪽에 — 반영"},
+{"slide":7,"severity":"medium","rule":"D8","problem":"ΔG 도표의 두 화살표 라벨이 서로 겹침","fix":"자발 라벨은 화살표 왼쪽(끝 맞춤), 비자발 라벨은 오른쪽으로 — 반영"},
+{"slide":9,"severity":"low","rule":"D8","problem":"작은 비교 그림 제목 「화학 전지」「전해 전지」 위쪽 잘림","fix":"도선·제목을 아래로 내림 — 반영"},
+{"slide":11,"severity":"medium","rule":"D8","problem":"Na(l)과 Cl2(g) 라벨 겹침","fix":"각 전극 바깥쪽으로 옮김 — 반영"},
+{"slide":12,"severity":"medium","rule":"D8","problem":"눈금 그림 아래 두 안내 문구가 Na+ 라벨·서로와 겹침","fix":"viewBox 높이를 늘리고 두 줄로 — 반영"},
+{"slide":19,"severity":"medium","rule":"D8","problem":"판서 칸 때문에 영역 넘침","fix":"판서 칸 뺌 — 반영"},
+{"slide":20,"severity":"medium","rule":"3.2","problem":"그림이 줄어 라벨 15.8px","fix":"글 단을 620px로 줄임 — 반영(21도 같음)"},
+{"slide":2,"severity":"low","rule":"D8","problem":"CO2 라벨이 통 벽과 겹침","fix":"오른쪽 위로 옮기고 지시선 — 반영"},
+{"slide":23,"severity":"low","rule":"빽빽함","problem":"원료 표 첫 열이 두 줄로 접힘","fix":"내용이 많아 그대로 둠(19px 유지) — 기각"}
+],"summary":"첫 render 자동 점검 13건 → 0건. 전해 전지 그림은 한 비커 ebox(전원 (−)극 = 환원 전극 왼쪽) 하나로 통일하고 색(산화 ox·환원 rd·전자 minus·양이온 plus·음이온 minus)을 3-4-1·3-4-3과 맞췄다. data-anim 107곳(전자 흐름 dash, 이온 이동, 기포 상승, 석출 fade)."}

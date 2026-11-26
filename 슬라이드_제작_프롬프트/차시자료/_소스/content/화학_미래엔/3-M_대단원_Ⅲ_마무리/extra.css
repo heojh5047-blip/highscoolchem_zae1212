@@ -1,0 +1,56 @@
+/* 3-M 대단원 Ⅲ 마무리 — 덱 전용 (모두 .cm39- 접두어) */
+.cover h1.cm39-h1{font-size:104px}
+.cm39-tc{text-align:center}
+/* 개념 정리 가지 그림 (2-M .cm29-tree 꼴) */
+.cm39-tree{display:grid;grid-template-columns:120px 26px 190px 26px 260px 26px 1fr;grid-auto-rows:minmax(74px,auto);row-gap:10px;align-items:center;margin-top:4px}
+.cm39-tree.cm39-t2{grid-auto-rows:minmax(48px,auto);row-gap:6px}
+.cm39-n{background:#fff;border:2px dashed #C9D3DD;border-radius:14px;padding:6px 12px;font-size:21px;line-height:1.35;text-align:center;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0}
+.cm39-t2 .cm39-n{font-size:20px;padding:3px 10px}
+p.cm39-n{display:block;align-self:center}
+.cm39-root{grid-column:1;background:#E8457F;color:#fff;border:0;border-radius:50%;font-weight:700;aspect-ratio:1;align-self:center;font-size:24px}
+.cm39-mid{background:#D7F0DD;border:0;font-weight:700}
+.cm39-leaf{text-align:left;justify-content:flex-start}
+.cm39-a{text-align:center;font-size:24px;color:var(--muted)}
+.cm39-n .blank{min-width:110px}
+/* 표 */
+table.cm39-map{width:100%}
+table.cm39-map th,table.cm39-map td{font-size:19px;padding:3px 7px}
+table.cm39-map td:nth-child(3){white-space:nowrap;color:var(--muted)}
+table.cm39-map td:last-child{white-space:nowrap;font-weight:700}
+table.cm39-ice{width:100%}
+table.cm39-ice th,table.cm39-ice td{font-size:21px;text-align:center;padding:4px 10px}
+.cm39-dash{display:none}
+table.cm39-lc{width:100%}
+table.cm39-lc th,table.cm39-lc td{font-size:20px;padding:3px 8px}
+table.cm39-q9{width:100%}
+table.cm39-q9 th,table.cm39-q9 td{font-size:21px;text-align:center;padding:4px 10px}
+table.cm39-var th{width:130px;font-size:20px}
+table.cm39-var td{font-size:20px}
+table.cm39-cond{width:100%}
+table.cm39-cond th,table.cm39-cond td{font-size:20px;padding:4px 8px}
+table.cm39-plan{width:100%}
+table.cm39-plan th,table.cm39-plan td{font-size:20px;padding:4px 10px}
+table.cm39-plan td:first-child{width:130px;font-weight:700;text-align:center}
+table.cm39-eval{width:100%}
+table.cm39-eval td,table.cm39-eval th{font-size:20px;padding:4px 10px}
+table.cm39-eval td:not(.l){text-align:center;width:56px}
+.choices.cm39-c1{flex-direction:column;gap:6px;align-items:flex-start}
+.cm39-qk{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cm39-qk .card{text-align:center;padding:6px 8px}
+.cm39-qk .card p{font-size:21px;margin:2px 0}
+.cm39-boxes{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:8px}
+.cm39-vb{border:3px solid #7E8B98;border-radius:12px;background:#F4F6F8;padding:10px 22px;text-align:center}
+.cm39-vb p{font-size:21px;line-height:1.45;margin:0}
+.cm39-vb p.cm39-cap{font-weight:700;margin-top:4px}
+.cm39-vb-arr{font-size:34px;color:var(--muted)}
+.cm39-box{border:2px solid #C9D3DD;border-radius:12px;padding:8px 14px;background:#fff}
+.cm39-box p{font-size:20px;line-height:1.5;margin:4px 0}
+.stages.cm39-st3 p{font-size:20px;line-height:1.45}
+.stages.cm39-st3 h3{font-size:21px;margin:0 0 4px}
+.stages.cm39-st4{grid-template-columns:repeat(4,1fr);gap:14px}
+.cm39-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cm39-cards .card h3{font-size:21px;margin:0 0 4px}
+.cm39-cards .card p{font-size:20px;line-height:1.45;margin:4px 0}
+.cm39-say{color:#2E5A8A}
+table.cm39-plan.cm39-big th,table.cm39-plan.cm39-big td{font-size:21px;padding:8px 12px}
+table.cm39-eval.cm39-big td,table.cm39-eval.cm39-big th{font-size:21px;padding:9px 12px}

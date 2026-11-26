@@ -1,0 +1,672 @@
+<!-- 고급화학 1-3-1 원자가 결합·분자 오비탈과 혼성 오비탈 — gen.py가 tpl.html에서 만든다(그림 자리표) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 물질의 구조" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ. 물질의 구조 › 3. 원자가 결합과 혼성 오비탈 › 01–03</div>
+    <h1 class="ac131-h1">원자가 결합·<br>분자 오비탈과<br><span class="acc">혼성 오비탈</span></h1>
+    <p class="sub">원자 오비탈이 겹치고 섞여서 분자의 모양이 정해진다</p>
+    <p class="meta">고등학교 고급 화학 46–54쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 중단원 도입 ════════ -->
+<section class="slide" data-sec="Ⅰ-3. 원자가 결합과 혼성 오비탈 · 도입" data-title="중단원 도입">
+  <h2><span class="tag">중단원 도입</span>3. 원자가 결합과 혼성 오비탈</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 280px">
+      <div class="card"><h3>소단원</h3>
+        <p class="f21"><b class="c-plus">01</b> 원자가 결합</p>
+        <p class="f21"><b class="c-plus">02</b> 분자 오비탈 <span class="small c-muted">[심화]</span></p>
+        <p class="f21"><b class="c-plus">03</b> 혼성 오비탈</p>
+        <p class="small c-plus mt8">← 오늘 세 소단원을 모두 다룬다</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>학습 목표</h3>
+        <p class="f21">꽃과 미술품의 아름다운 색은 특정한 분자 구조를 가진 물질에서 나온다는 것을 화학자들은 20세기에 들어와서야 알았다. 화학 결합 이론은 분자의 구조와 전자가 차지하는 오비탈로 분자의 성질을 설명하고, 고분자와 반도체의 전자 구조까지 이해하게 하였다. 이 장에서는 <b>원자가 결합 이론</b>, <b>분자 오비탈 이론</b>, <b>혼성 오비탈 이론</b>으로 원자들이 분자를 만드는 원리를 알아본다.</p>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 300px">{{PORPH}}
+      <p class="small">엽록소 A 분자의 중심 고리 — 고리 전체에 퍼진 전자가 빛을 흡수해 초록색을 띤다.</p></div>
+  </div>
+  <div class="note puzzle mt8"><b>생각해 보기</b> 분자의 모양과 색은 전자가 <b>어떤 오비탈</b>에 있는지에 따라 정해진다.</div>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="01 원자가 결합" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화01-05]</span>원자가 결합 이론과 혼성 오비탈의 정의를 이해하고, 혼성 오비탈로 설명할 수 있는 다양한 탄소 화합물 분자 구조를 탐색할 수 있다.</div>
+  <ol class="goals mt8 f21">
+    <li>원자가 결합 이론으로 오비탈의 겹침과 <b>σ 결합, π 결합</b>을 설명할 수 있다.</li>
+    <li><span class="c-muted">[심화]</span> <b>분자 오비탈 이론</b>으로 2주기 동핵 2원자 분자의 결합 차수와 자기적 성질을 설명할 수 있다.</li>
+    <li><b>$sp^3$, $sp^2$, $sp$ 혼성 오비탈</b>로 탄소 화합물의 분자 구조와 결합각을 설명할 수 있다.</li>
+    <li>루이스 구조, 원자가 결합 이론, 혼성 오비탈 이론의 <b>장점과 한계</b>를 비교할 수 있다.</li>
+    <li>$\ce{C10F18}$이 산소를 녹이는 원리와 용도를 조사하여 발표할 수 있다.</li>
+  </ol>
+  <div class="flow mt8">
+    <div class="fnode">σ·π 결합</div><div class="farr">→</div>
+    <div class="fnode">분자 오비탈(심화)</div><div class="farr">→</div>
+    <div class="fnode">혼성 오비탈</div><div class="farr">→</div>
+    <div class="fnode">이론 비교</div><div class="farr">→</div>
+    <div class="fnode hl">탐구·결합각 측정</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="01 원자가 결합 · 도입" data-title="생각 열기: 메테인의 모양">
+  <h2><span class="tag">생각 열기</span>메테인은 왜 정사면체 모양일까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{OPEN}}</div>
+    <div class="col stack">
+      <div class="card"><h3><span class="tag alt">다시 보기</span></h3>
+        <p class="f21">루이스 구조는 공유 전자쌍과 비공유 전자쌍의 <b>수</b>를 알려 준다. (2. 화학 결합과 에너지)</p></div>
+      <p class="f22 mt16"><b>Q</b> 루이스 구조에는 공유 전자쌍 4개가 평면에 그려져 있지만, 실제 H–C–H 결합각은 109.5°이다. 이 각은 어디에서 생길까?</p>
+    </div>
+  </div>
+  <div class="answer step mt8">루이스 구조는 전자쌍의 수만 알려 줄 뿐, 전자가 <b>어느 오비탈</b>에 있고 <b>어느 방향</b>으로 결합하는지는 알려 주지 않는다.</div>
+  <p class="f21 step mt8">→ 오비탈로 결합을 설명하는 이론이 필요하다: 원자가 결합 이론(01) → 혼성 오비탈(03)</p>
+</section>
+
+<!-- ════════ 5. 편재 전자 모형 → 오비탈 ════════ -->
+<section class="slide" data-sec="01 · 원자가 결합" data-title="편재 전자 모형에서 오비탈로">
+  <h2><span class="no">1</span>전자쌍의 자리에서 오비탈의 겹침으로</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{LOC}}</div>
+    <div class="col stack">
+      <p class="f21">루이스 구조는 결합 전자쌍이 결합한 두 원자 사이에 놓여 있는 <mark>편재 전자 모형</mark>이다.</p>
+      <p class="f21 step mt8">그러나 전자의 위치는 입자와 파동의 이중성과 불확정성 원리 때문에 정확히 알 수 없으므로, <b>오비탈에서 발견할 확률</b>로 나타내야 한다. (1. 원자 오비탈)</p>
+    </div>
+  </div>
+  <div class="note big step mt16">→ 분자 속 전자도 2개 이상의 원자에 퍼져 있다. 원자가 결합 이론은 결합하는 두 원자의 오비탈로 결합을 설명하고, 오비탈의 <b>혼성화와 겹침</b>으로 분자의 입체 구조, 결합각, 결합 길이를 알려 준다.</div>
+</section>
+
+<!-- ════════ 6. 원자가 결합 이론 ════════ -->
+<section class="slide" data-sec="01 · 원자가 결합 이론" data-title="원자가 결합 이론">
+  <h2><span class="no">2</span>원자가 결합 이론</h2>
+  <p class="f21">1927년 하이틀러와 런던, 폴링과 슬레이터 등이 원자 오비탈로 분자의 형성을 처음 설명하였다.</p>
+  <p class="f21 mt8"><mark>원자가 결합 이론</mark>: 결합하는 각 원자의 오비탈에 홀전자가 1개 이상 있다고 보고, 두 원자 오비탈로 만든 파동 함수로 두 원자핵 사이에서 전자 2개를 발견할 확률이 커져 공유 결합이 생긴다는 이론</p>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 560px">{{VB}}</div>
+    <div class="col stack">
+      <div class="formula sm step">$\Psi=\psi_\mathrm{A}(1)\psi_\mathrm{B}(2)+\psi_\mathrm{A}(2)\psi_\mathrm{B}(1)$<span class="unit">전자 반발을 고려하지 않은 수소 분자의 파동 함수 — 전자 1과 2가 두 원자 사이를 자유롭게 오가므로 두 경우를 더한다.</span></div>
+      <p class="small step">$\psi_\mathrm{A}$, $\psi_\mathrm{B}$: 수소 원자 A, B의 $1s$ 파동 함수, (1)·(2): 전자 번호. 식을 유도하지 않고 뜻만 읽는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. σ 결합 H2 ════════ -->
+<section class="slide" data-sec="01 · 원자가 결합 이론" data-title="σ 결합: 수소 분자">
+  <h2><span class="no">3</span>σ 결합 — 수소 분자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{H2SIG}}</div>
+    <div class="col stack">
+      <p class="f21">수소 원자 A와 B의 $1s$ 오비탈에서 <b>반대 스핀</b>을 가진 두 전자가 짝을 이루고, 두 $1s$ 오비탈이 겹쳐 핵 사이의 전자 밀도가 커진다.</p>
+      <p class="f21 step mt8"><mark>σ(시그마) 결합</mark>: 두 오비탈이 핵 사이 축을 따라 마주 보며 겹쳐 생기는 결합</p>
+      <p class="f22 mt16"><b>Q</b> 두 오비탈이 더 많이 겹치면 결합은 어떻게 될까?</p>
+      <div class="answer step">겹침이 클수록 결합이 강하다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. σ 결합 HF ════════ -->
+<section class="slide" data-sec="01 · 원자가 결합 이론" data-title="σ 결합의 특징: HF">
+  <h2><span class="no">4</span>σ 결합의 특징 — 플루오린화 수소</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{HFSIG}}</div>
+    <div class="col stack">
+      <p class="f21">H의 $1s$와 F의 $2p_z$가 핵 사이 축을 따라 겹쳐 $\ce{HF}$의 σ 결합을 만든다.</p>
+      <ol class="f21 mt8 ac131-ol">
+        <li class="step">핵 사이 축을 따라 <b>원통 대칭</b>이다.</li>
+        <li class="step">핵 사이 축을 포함하는 <b>마디면이 없다</b>.</li>
+        <li class="step">전자 밀도가 양쪽 핵에 걸쳐 퍼져 있다.</li>
+      </ol>
+      <div class="note big step mt8"><b>모든 단일 공유 결합은 σ 결합이다.</b></div>
+      <p class="f21 mt12"><b>Q</b> $\ce{Cl2}$의 σ 결합은 어떤 오비탈끼리 겹쳐 생길까?</p>
+      <div class="answer step">두 Cl의 $3p$ 오비탈(홀전자가 있는 $3p$)끼리 마주 보며 겹친다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. π 결합 N2 ════════ -->
+<section class="slide" data-sec="01 · 원자가 결합 이론" data-title="π 결합: 질소 분자">
+  <h2><span class="no">5</span>π 결합 — 질소 분자</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{N2PI}}</div>
+    <div class="col stack">
+      <p class="f21">$\ce{N2}$는 $2p_z$끼리의 σ 결합 1개와, 핵 축에 수직인 $2p_x$, $2p_y$가 각각 나란히 옆으로 겹친 <b>π 결합 2개</b>로 3중 결합을 이룬다.</p>
+    </div>
+  </div>
+  <p class="f21 step mt8"><mark>π(파이) 결합</mark>: 핵 축에 수직인 p 오비탈이 나란히 옆으로 겹쳐, 핵 축의 위쪽과 아래쪽에 전자쌍 1개가 있는 결합 — 핵 축을 포함하는 마디면이 1개 있다.</p>
+  <div class="note big step mt8">위·아래 두 덩어리가 합쳐서 <b>π 결합 하나</b>이다. 두 개의 결합이 아니다.</div>
+</section>
+
+<!-- ════════ 10. σ와 π 비교 ════════ -->
+<section class="slide" data-sec="01 · 원자가 결합 이론" data-title="σ 결합과 π 결합 비교">
+  <h2><span class="no">6</span>σ 결합과 π 결합 비교</h2>
+  <div class="row">
+    <div class="col">
+      <table class="ac131-c">
+        <tr><th></th><th>σ 결합</th><th>π 결합</th></tr>
+        <tr><td>겹치는 방식</td><td>핵 사이 축을 따라 마주 보며</td><td>나란히 옆으로</td></tr>
+        <tr><td>핵 축을 포함하는 마디면</td><td>없음</td><td>1개</td></tr>
+        <tr><td>겹침·세기</td><td>크다·강하다</td><td>작다·약하다</td></tr>
+      </table>
+      <p class="f21 mt12">단일 결합 = σ 1 · 2중 결합 = σ 1 + π 1 · 3중 결합 = σ 1 + π 2</p>
+      <p class="f22 mt16"><b>Q</b> C=C 2중 결합의 결합 에너지는 C–C 단일 결합의 2배일까?</p>
+      <div class="row mt8"><div class="card col f21">(가) 2배이다.</div><div class="card col f21">(나) 2배보다 작다.</div></div>
+    </div>
+    <div class="col stack" style="flex:0 0 480px">{{BEBAR}}
+      <div class="answer step">(나) — $612&lt;2\times348=696$<br><span class="f21">π 결합은 겹침이 작아 σ 결합보다 약하다.</span></div>
+      <p class="small">C≡C 837 kJ/mol은 덱이 보충한 값</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. [심화] 분자 오비탈 이론이 필요한 까닭 ════════ -->
+<section class="slide" data-sec="02 · 분자 오비탈 이론" data-title="[심화] 분자 오비탈 이론">
+  <h2><span class="tag alt">심화</span>편재 전자 모형으로 설명할 수 없는 것 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 560px">{{O2MAG}}</div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> 루이스 구조로 액체 산소가 자석에 끌리는 까닭을 설명할 수 있을까?</p>
+      <div class="answer step">설명할 수 없다 — 홀전자가 있어야 자석에 끌린다(<b>상자성</b>).</div>
+      <p class="f21 step mt8">편재 전자 모형은 비편재화된 전자를 설명하려면 공명을 도입해야 하고, 상자성 분자와 결합 에너지에 관한 직접적 정보를 주지 못한다.</p>
+    </div>
+  </div>
+  <p class="f21 step mt8"><mark>분자 오비탈 이론</mark>: 원자가 전자가 분자 전체에 비편재화된 <b>분자 오비탈</b>에 들어 있다고 보는 이론 — 전자 부족 화합물, $\ce{O2}$의 상자성 등을 잘 설명한다.</p>
+  <p class="small step">두 핵은 평형 거리에 있고, 전자는 스핀을 반대로 하여 분자 오비탈에 채워진다. 분자 오비탈 함수의 제곱은 전자를 발견할 확률이다.</p>
+</section>
+
+<!-- ════════ 12. [심화] H2 MO ════════ -->
+<section class="slide" data-sec="02 · 분자 오비탈 이론" data-title="[심화] 수소 분자의 분자 오비탈">
+  <h2><span class="tag alt">심화</span>수소 분자의 분자 오비탈과 결합 차수 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">{{H2MO}}</div>
+    <div class="col stack">
+      <p class="f21 step">더하기(위상 같음) → 보강 간섭 → 핵 사이 전자 밀도 증가 → 원자 오비탈보다 <b>안정</b>: <mark>결합성 분자 오비탈</mark> $\sigma$</p>
+      <p class="f21 step mt8">빼기(위상 반대) → 상쇄 간섭 → 핵 사이에 마디 → <b>불안정</b>: <mark>반결합성 분자 오비탈</mark> $\sigma^*$</p>
+      <p class="f21 step mt8">$\ce{H2}$: $\sigma_{1s}^{\,2}$, 결합 차수 $\tfrac12(2-0)=1$ → 단일 결합</p>
+    </div>
+  </div>
+  <div class="formula sm step" style="margin:8px auto 10px">결합 차수 $=\dfrac12\times(\text{결합성 MO의 전자 수}-\text{반결합성 MO의 전자 수})$</div>
+  <div class="row">
+    <p class="f21 col"><b>Q</b> $\ce{He2}$는 존재할 수 있을까?</p>
+    <div class="col"><div class="answer step f21" style="margin-top:0">$\sigma_{1s}^{\,2}\sigma^{*\,2}_{1s}$, 결합 차수 $\tfrac12(2-2)=0$ → 결합하지 않는다.</div></div>
+  </div>
+</section>
+
+<!-- ════════ 13. [심화] 2주기 동핵 2원자 분자 ════════ -->
+<section class="slide" data-sec="02 · 동핵 2원자 분자의 화학 결합" data-title="[심화] 2주기 동핵 2원자 분자">
+  <h2><span class="tag alt">심화</span>2주기 동핵 2원자 분자의 분자 오비탈 <span class="small c-muted">[심화]</span></h2>
+  <div class="row">
+    <div class="col">
+      <ol class="f21 ac131-ol">
+        <li><b>원자가 전자</b>만 고려한다($2s$, $2p$).</li>
+        <li>만들어지는 분자 오비탈 수 = 참여한 원자 오비탈 수</li>
+        <li>원자 오비탈의 에너지 차가 작을수록 많이 겹치고, 많이 겹칠수록 결합성·반결합성 MO의 에너지 차가 커진다.</li>
+        <li>결합성·반결합성 MO의 평균 에너지 ≈ 참여한 원자 오비탈의 에너지</li>
+      </ol>
+      <p class="f22 mt16"><b>Q</b> $2p$ 오비탈 6개(원자마다 3개)로 분자 오비탈은 몇 개 생길까?</p>
+      <div class="answer step">6개 — $\sigma_{2p}$, $\sigma^*_{2p}$, $\pi_{2p}$ 2개, $\pi^*_{2p}$ 2개($x$, $y$ 방향)</div>
+    </div>
+    <div class="col" style="flex:0 0 560px">{{P2MO}}</div>
+  </div>
+</section>
+
+<!-- ════════ 14. [심화] O2·B2 ════════ -->
+<section class="slide" data-sec="02 · 동핵 2원자 분자의 화학 결합" data-title="[심화] 산소 분자와 붕소 분자">
+  <h2><span class="tag alt">심화</span>산소 분자와 붕소 분자의 전자 배치 <span class="small c-muted">[심화]</span></h2>
+  <div style="text-align:center">{{B2O2}}</div>
+  <div class="row">
+    <div class="col">
+      <p class="f21 step" data-g="e1">$\ce{B2}$: $\pi_{2p}$가 $\sigma_{2p}$보다 낮아 $\pi_{2p_x}$, $\pi_{2p_y}$에 1개씩 → 홀전자 2개, 상자성 <span class="small">(순서대로 채우면 반자성으로 잘못 예측)</span></p>
+    </div>
+    <div class="col">
+      <p class="f21 step" data-g="e2">$\ce{O2}$: $(\sigma_{2s})^2(\sigma^*_{2s})^2(\sigma_{2p})^2(\pi_{2p})^4(\pi^*_{2p_x})^1(\pi^*_{2p_y})^1$<br>결합 차수 $\tfrac12(8-4)=2$, 홀전자 2개 → <b>상자성</b></p>
+    </div>
+  </div>
+  <div class="answer step f21" style="margin-top:6px">액체 산소의 상자성은 루이스 구조로는 예측할 수 없지만, 분자 오비탈 이론은 정확히 예측한다.</div>
+</section>
+
+<!-- ════════ 15. 탄소의 전자 재배치 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="탄소의 전자 재배치">
+  <h2><span class="no">7</span>탄소는 왜 결합을 4개 만들까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{REARR}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 바닥상태 탄소의 홀전자는 2개이다. 원자가 결합 이론대로라면 탄소와 수소는 어떤 분자를 만들까?</p>
+      <div class="answer step">$\ce{CH2}$ — 그러나 실제 안정한 분자는 $\ce{CH4}$이다.</div>
+      <p class="f21 step mt8">전자 1개를 빈 $2p$ 오비탈로 옮기면(<b>재배치</b>) 홀전자가 4개가 되어 결합 4개를 설명할 수 있다.</p>
+    </div>
+  </div>
+  <div class="row mt8">
+    <div class="col">
+      <p class="f21"><b>Q</b> 재배치만으로 $\ce{CH4}$의 네 결합이 모두 같고 109.5°를 이루는 것을 설명할 수 있을까?</p>
+      <div class="answer step">없다 — $2s$ 1개와 $2p$ 3개는 에너지와 모양이 달라 결합 하나가 나머지 셋과 달라야 하고, $2p$ 오비탈끼리는 90°를 이룬다.</div>
+    </div>
+    <div class="col" style="flex:0 0 220px">{{P90}}</div>
+    <div class="col stack" style="flex:0 0 150px"><div class="board" style="min-height:200px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 혼성화와 sp3 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="혼성화와 sp³ 혼성 오비탈">
+  <h2><span class="no">8</span>혼성화와 $sp^3$ 혼성 오비탈</h2>
+  <p class="f21">1928년 폴링은 $\ce{CH4}$의 같은 결합각을 설명하려고, $2s$ 오비탈 1개와 $2p$ 오비탈 3개가 섞여 똑같은 새 오비탈 4개를 만든다는 <mark>혼성화</mark> 개념을 도입하였다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">{{SP3E}}
+      <div class="step">{{ONEHYB}}</div>
+    </div>
+    <div class="col" style="flex:0 0 300px">{{SP3ORB}}</div>
+    <div class="col stack">
+      <p class="f21 step">$sp^3$ 혼성 오비탈은 한쪽은 더 멀리 넓게, 다른 쪽은 더 가까이 좁게 뻗은 <b>비대칭 모양</b>이다.</p>
+      <p class="f21 step mt8">→ 넓게 뻗은 쪽이 다른 원자의 오비탈과 겹쳐 혼성 전 오비탈보다 <b>더 강한 결합</b>을 만든다.</p>
+    </div>
+  </div>
+  <p class="small">교과서 52쪽 본문의 '1개의 1s 원자 오비탈'은 그림 Ⅰ-35 제목대로 $2s$로 읽는다.</p>
+</section>
+
+<!-- ════════ 17. 메테인의 σ 결합 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="메테인의 σ 결합">
+  <h2><span class="no">9</span>메테인의 σ 결합</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 460px">{{CH4SIG}}</div>
+    <div class="col stack">
+      <p class="f21">C의 $sp^3$ 혼성 오비탈 4개가 H 원자 4개의 $1s$ 오비탈과 각각 겹쳐, <b>정사면체의 꼭짓점</b>을 향하는 σ 결합 4개를 만든다.</p>
+      <div class="answer step">네 결합이 모두 같고, 결합각은 109.5°이다.</div>
+      <div class="note big step mt16">전자 재배치와 혼성화를 더한 원자가 결합 이론은 많은 분자의 구조에 관한 실험 결과와 잘 맞는다.</div>
+      <p class="f22 mt16"><b>Q</b> $\ce{CH4}$의 σ 결합은 어떤 오비탈끼리의 겹침일까?</p>
+      <div class="answer step">C의 $sp^3$ – H의 $1s$</div>
+      <p class="small">보라: 위상 (+). 혼성 오비탈의 작은 뒤쪽 엽은 생략</p>
+      <div class="board mt8" style="min-height:80px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 18. 편재화된 결합 전자와 비공유 전자쌍 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="편재화된 결합 전자와 비공유 전자쌍">
+  <h2><span class="no">10</span>결합마다 편재화된 전자와 비공유 전자쌍</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\begin{aligned}\Psi_1(1,2)&amp;=\alpha(1)\psi_\mathrm{A}(2)+\alpha(2)\psi_\mathrm{A}(1)\\ \Psi_2(3,4)&amp;=\beta(3)\psi_\mathrm{B}(4)+\beta(4)\psi_\mathrm{B}(3)\\ \Psi_3(5,6)&amp;=\gamma(5)\psi_\mathrm{C}(6)+\gamma(6)\psi_\mathrm{C}(5)\\ \Psi_4(7,8)&amp;=\delta(7)\psi_\mathrm{D}(8)+\delta(8)\psi_\mathrm{D}(7)\end{aligned}$<span class="unit">$\alpha$, $\beta$, $\gamma$, $\delta$: C의 $sp^3$ 혼성 오비탈 4개(부분 전하 $\delta$와 다른 뜻) · $\psi_\mathrm{A}$–$\psi_\mathrm{D}$: H 4개의 $1s$</span></div>
+      <p class="f21 step">전자 1·2는 결합 1에, 3·4는 결합 2에 … — 결합 전자들이 <b>결합마다 편재화</b>되어 있다.</p>
+      <p class="f21 step mt8">$\ce{NH3}$의 비공유 전자쌍: $\Psi_4(7,8)=\delta(7)\delta(8)$ — 한 $sp^3$ 혼성 오비탈에 전자 2개가 함께 있다.</p>
+    </div>
+    <div class="col stack">{{THREE}}
+      <p class="small">흰 공: H, 주황 풍선: 비공유 전자쌍</p>
+      <p class="f21 mt8"><b>Q</b> 세 분자는 모두 $sp^3$인데 결합각이 왜 다를까?</p>
+      <div class="answer step f21">비공유 전자쌍이 많을수록 결합각이 작아진다.</div>
+      <p class="f21 step">비공유 전자쌍은 한 원자핵에만 붙잡혀 공간을 더 넓게 차지하고 결합 전자쌍을 밀어낸다(「화학」 전자쌍 반발 이론).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. sp2 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="sp² 혼성 오비탈">
+  <h2><span class="no">11</span>$sp^2$ 혼성 오비탈</h2>
+  <p class="f21">탄소 원자의 $2s$ 1개와 $2p$ 2개가 섞여 똑같은 <mark>$sp^2$ 혼성 오비탈</mark> 3개를 만든다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">{{SP2E}}
+      <p class="f21 step mt8">3개의 $sp^2$ 혼성 오비탈은 <b>삼각 평면</b>의 꼭짓점을 향해 120°를 이루고, 혼성에 참여하지 않은 p 오비탈 1개는 그 평면에 <b>수직</b>으로 놓인다.</p>
+    </div>
+    <div class="col" style="flex:0 0 300px">{{SP2ORB}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> $\ce{BF3}$의 B도 $sp^2$ 혼성이다. F–B–F 결합각은?</p>
+      <div class="answer step">120° (평면 삼각형)</div>
+      <p class="small mt16">혼성하지 않은 p 오비탈은 옅게 그렸다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 에틸렌 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="에틸렌의 σ 결합과 π 결합">
+  <h2><span class="no">12</span>에틸렌의 σ 결합과 π 결합</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 540px">{{ETHENE}}</div>
+    <div class="col stack">
+      <p class="f21">에틸렌($\ce{C2H4}$, 에텐)의 두 C는 $sp^2$ 혼성이다.</p>
+      <p class="f21 step mt8">C=C 2중 결합 = σ 결합 1개($sp^2$–$sp^2$) + π 결합 1개(p–p)</p>
+      <p class="f21 step mt8">σ 결합 5개, π 결합 1개 — 모든 원자가 한 평면에 있다.</p>
+      <p class="f22 mt16"><b>Q</b> C=C 결합을 축으로 돌릴 수 있을까?</p>
+      <div class="answer step">돌리기 어렵다 — 돌리면 두 p 오비탈이 나란하지 않게 되어 π 결합이 끊어진다.</div>
+      <p class="small step">시스-트랜스 이성질체가 생기는 까닭(4. 탄소 화합물의 분자 구조)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. sp와 아세틸렌 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="sp 혼성 오비탈과 아세틸렌">
+  <h2><span class="no">13</span>$sp$ 혼성 오비탈과 아세틸렌</h2>
+  <p class="f21">탄소 원자의 $2s$ 1개와 $2p$ 1개가 섞여 똑같은 <mark>$sp$ 혼성 오비탈</mark> 2개를 만든다. 혼성에 참여하지 않은 p 오비탈 2개는 $sp$ 혼성 오비탈과 서로 수직으로 놓인다.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">{{SPE}}
+      <div class="row">{{SPORB}}</div>
+    </div>
+    <div class="col stack">{{ETHYNE}}
+      <p class="f21 step">아세틸렌($\ce{C2H2}$, 에타인): C≡C 3중 결합 = σ 1개 + π 2개, 분자 전체가 선형(180°)</p>
+      <p class="f21 mt8"><b>Q</b> $\ce{BeH2}$의 Be, $\ce{CO2}$의 C도 $sp$ 혼성이다. 두 분자의 모양은?</p>
+      <div class="answer step">모두 선형(180°)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 에테인·에틸렌·아세틸렌 비교 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="에테인·에틸렌·아세틸렌 비교">
+  <h2><span class="no">14</span>에테인·에틸렌·아세틸렌의 결합 비교</h2>
+  {{C2THREE}}
+  <table class="ac131-c ac131-cmp">
+    <tr><th></th><th>에테인 $\ce{C2H6}$</th><th>에틸렌 $\ce{C2H4}$</th><th>아세틸렌 $\ce{C2H2}$</th></tr>
+    <tr><td>C의 혼성</td><td><span class="blank"><span class="step">$sp^3$</span></span></td><td><span class="blank"><span class="step">$sp^2$</span></span></td><td><span class="blank"><span class="step">$sp$</span></span></td></tr>
+    <tr><td>결합각</td><td>109.5°</td><td>120°</td><td>180°</td></tr>
+    <tr><td>σ·π 결합 수</td><td><span class="blank"><span class="step">σ 7</span></span></td><td><span class="blank"><span class="step">σ 5 · π 1</span></span></td><td><span class="blank"><span class="step">σ 3 · π 2</span></span></td></tr>
+    <tr><td>s 성격</td><td>25 %</td><td>33 %</td><td>50 %</td></tr>
+    <tr><td>C–C 결합 길이</td><td>154 pm</td><td>134 pm</td><td>120 pm</td></tr>
+  </table>
+  <div class="note big step mt12">혼성 오비탈의 s 성격이 클수록 전자가 핵 가까이 있어 결합이 짧아진다. (4. 탄소 화합물에서 다시)</div>
+  <p class="small">검은 공: C, 흰 공: H · C–C 결합 길이는 덱이 보충한 값</p>
+</section>
+
+<!-- ════════ 23. 혼성 오비탈 정하기 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="혼성 오비탈 정하기">
+  <h2><span class="no">15</span>혼성 오비탈 한눈에 보기</h2>
+  <table class="ac131-c">
+    <tr><th>혼성</th><th>참여 오비탈</th><th>혼성 오비탈 수</th><th>배열 · 결합각</th><th>혼성하지 않은 p</th><th>예</th></tr>
+    <tr><td>$sp^3$</td><td>s 1 + p 3</td><td>4</td><td>정사면체 · 109.5°</td><td>0</td><td>$\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$</td></tr>
+    <tr><td>$sp^2$</td><td>s 1 + p 2</td><td>3</td><td>삼각 평면 · 120°</td><td>1</td><td>$\ce{C2H4}$, $\ce{BF3}$</td></tr>
+    <tr><td>$sp$</td><td>s 1 + p 1</td><td>2</td><td>선형 · 180°</td><td>2</td><td>$\ce{C2H2}$, $\ce{BeH2}$, $\ce{CO2}$</td></tr>
+  </table>
+  <div class="card tip mt12"><p class="f21"><b>정하는 방법</b> 중심 원자에 결합한 원자 수 + 비공유 전자쌍 수 = 혼성 오비탈 수 (4 → $sp^3$, 3 → $sp^2$, 2 → $sp$). 다중 결합도 한 방향(묶음 하나)으로 센다.</p></div>
+  <div class="row mt12">
+    <div class="col"><p class="f21"><b>Q</b> $\ce{H2O}$의 O는? (결합 원자 2 + 비공유 전자쌍 2)</p><div class="answer step">4 → $sp^3$</div></div>
+    <div class="col"><p class="f21"><b>Q</b> $\ce{HCHO}$의 C는? (결합 원자 3 + 비공유 0)</p><div class="answer step">3 → $sp^2$</div></div>
+    <div class="col stack" style="flex:0 0 300px"><div class="board" style="min-height:110px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 예제 Ⅰ-3 ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅰ-3 NMR">
+  <h2><span class="tag ex">예제 Ⅰ-3</span>¹H NMR 스펙트럼과 분자 구조</h2>
+  <p class="f21">핵자기 공명 분광법(NMR)은 탄소 화합물 분자 속 탄소–수소 골격의 정보를 주어 분자 구조를 알아내는 데 결정적인 역할을 한다. ¹H NMR 스펙트럼에서 흡수 피크 2개의 면적비가 1 : 3이었다. 다음 중 어느 것인가?</p>
+  <p class="f22 mt8" style="text-align:center">$\ce{CH3CH3}$ &nbsp;&nbsp;&nbsp; $\ce{CH3CH2CH3}$ &nbsp;&nbsp;&nbsp; $\ce{CH3CH2CH2CH3}$</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 520px">{{NMR}}<div class="board" style="min-height:70px"></div></div>
+    <div class="col stack">
+      <p class="f21 step">① $\ce{CH3CH3}$: 화학적 환경이 같은 H 6개 → 피크 1개</p>
+      <p class="f21 step">② $\ce{CH3CH2CH3}$, $\ce{CH3CH2CH2CH3}$: 환경이 다른 H 두 종류 → 피크 2개</p>
+      <p class="f21 step">③ 환경이 같은 H 수의 비: $\ce{CH3CH2CH3}$는 2 : 6 = 1 : 3, $\ce{CH3CH2CH2CH3}$는 4 : 6 = 2 : 3</p>
+      <div class="answer step">$\ce{CH3CH2CH3}$ (프로페인)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 예제 Ⅰ-4 ════════ -->
+<section class="slide" data-sec="03 · 예제" data-title="예제 Ⅰ-4 메테인">
+  <h2><span class="tag ex">예제 Ⅰ-4</span>탄소와 수소로 이루어진 가장 간단한 분자</h2>
+  <p class="f21">탄소 원자의 원자가 전자는 몇 개이며, 몇 개의 수소와 결합하겠는가? 이 분자에서 탄소의 혼성 오비탈과 결합각, 분자의 모양은?</p>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21 step">① 원자가 전자 4개 → 옥텟을 이루려고 H 4개와 결합 → $\ce{CH4}$</p>
+      <p class="f21 step mt8">② C는 $sp^3$ 혼성 오비탈로 H 4개와 σ 결합</p>
+      <div class="answer step">결합각 109.5°(정사면체 각), 정사면체 모양</div>
+      <div class="board mt16"></div>
+    </div>
+    <div class="col step" style="flex:0 0 300px">{{EX4}}</div>
+  </div>
+</section>
+
+<!-- ════════ 26. 혼성은 모형 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="혼성 오비탈은 모형이다">
+  <h2><span class="no">16</span>혼성 오비탈은 모형이다</h2>
+  <p class="f22"><b>Q</b> 탄소 원자는 결합하기 전에 먼저 전자를 옮겨 $sp^3$ 혼성 오비탈을 만들어 두고 있을까?</p>
+  <div class="row mt12">
+    <div class="card col f21">(가) 그렇다 — 원자 속에 $sp^3$ 오비탈이 실제로 있다.</div>
+    <div class="card col f21">(나) 아니다 — 결합한 분자의 구조를 설명하는 모형이다.</div>
+  </div>
+  <div class="answer step">(나)</div>
+  <p class="f21 step mt12">혼성은 오비탈을 <b>수학적으로 섞은 모형</b>이다. 원자가 실제로 전자를 옮겨 혼성 상태를 만든 뒤 결합하는 과정이 아니다.</p>
+  <p class="f21 step mt8">전자 재배치와 혼성화는 실험으로 알아낸 분자 구조(같은 결합 4개, 109.5°)를 설명하려고 도입한 생각이다. 모형이 실험 결과와 맞지 않으면 다른 모형(분자 오비탈 이론 등)이 필요하다.</p>
+</section>
+
+<!-- ════════ 27. 결합 이론의 발전 ════════ -->
+<section class="slide" data-sec="03 · 혼성 오비탈" data-title="결합 이론의 발전과 한계">
+  <h2><span class="no">17</span>결합 이론의 발전과 장점·한계</h2>
+  <div class="flow">
+    <div class="fnode">루이스 구조(1916)</div><div class="farr">→</div>
+    <div class="fnode">원자가 결합 이론(1927)</div><div class="farr">→</div>
+    <div class="fnode">혼성 오비탈(1928)</div><div class="farr">→</div>
+    <div class="fnode">분자 오비탈 이론(심화)</div>
+  </div>
+  <table class="ac131-th mt12">
+    <tr><th>이론</th><th>설명할 수 있는 것</th><th>한계</th></tr>
+    <tr class="step"><td>루이스 구조</td><td class="l">공유·비공유 전자쌍의 수, 형식 전하, 공명</td><td class="l">분자 모양과 결합각을 알려 주지 않는다.</td></tr>
+    <tr class="step"><td>원자가 결합 이론</td><td class="l">오비탈의 겹침으로 결합 형성, σ·π 결합, 겹침과 결합 세기</td><td class="l">혼성 없이는 $\ce{CH4}$의 같은 결합 4개와 109.5°를 설명하지 못한다.</td></tr>
+    <tr class="step"><td>혼성 오비탈</td><td class="l">같은 결합과 109.5°·120°·180°, 탄소 화합물의 구조</td><td class="l">전자를 결합마다 편재화 → $\ce{O2}$의 상자성, 비편재 전자 설명에 한계</td></tr>
+    <tr class="step"><td>분자 오비탈 이론 <span class="small c-muted">[심화]</span></td><td class="l">분자 전체에 퍼진 전자, 결합 차수, 상자성</td><td class="l">큰 분자에서는 다루기 복잡하다.</td></tr>
+  </table>
+  <p class="small mt8">「화학」의 전자쌍 반발 이론은 분자 모양과 결합각의 순서를 예측하고, 혼성 오비탈은 그 모양을 오비탈로 설명한다 — 두 모형은 서로 보완한다.</p>
+</section>
+
+<!-- ════════ 28. 화학사 ════════ -->
+<section class="slide" data-sec="03 · 화학사" data-title="화학사: 폴링과 혼성 오비탈">
+  <h2><span class="tag">화학사</span>폴링과 혼성 오비탈</h2>
+  {{PAULING}}
+  <div class="row mt12">
+    <div class="col">
+      <p class="f21">미국의 화학자 폴링(1901–1994)은 1928년 혼성 오비탈 이론으로 탄소 화합물의 분자 구조를 설명하였고, 1932년 공유 결합에서 전자 분포의 정량적 척도인 전기음성도를, 1933년 벤젠의 안정성을 설명하는 공명 이론을 내놓았다.</p>
+      <p class="f21 mt8">파동 역학을 복잡한 분자 구조 설명에 이용하여 화학 결합에 관한 현대적 이론을 세웠고, 노벨상을 혼자서 두 번 받은 사람은 폴링뿐이다.</p>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <p class="f22"><b>Q</b> 폴링의 업적 가운데 Ⅰ-2, Ⅰ-3에서 배운 것은?</p>
+      <div class="answer step">혼성 오비탈(3. 03), 전기음성도와 공명(2. 01)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 탐구 활동 1 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: C₁₀F₁₈ 조사">
+  <h2><span class="tag">탐구 활동</span>숨 쉴 수 있는 액체 분자인 $\ce{C10F18}$ 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">[고화-탐05]</span>숨 쉴 수 있는 액체 분자인 $\ce{C10F18}$ 조사 (51쪽)</div>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 460px">{{C10F18}}</div>
+    <div class="col stack">
+      <p class="f21">퍼플루오로데칼린($\ce{C10F18}$)은 C 10개와 F 18개가 공유 결합한 분자이다. 산소를 잘 녹이는 플루오린화 탄소보다 산소를 훨씬 더 잘 녹여, 공기 중 산소 농도와 비슷한 21 % 이상의 산소를 녹인다. 그래서 폐에 들어가도 산소를 받아들여 숨을 쉴 수 있다.</p>
+      <div class="card mt8"><h3>모둠 활동</h3>
+        <ol class="f21 ac131-ol">
+          <li>$\ce{C10F18}$에서 C의 혼성과 분자 구조를 확인한다.</li>
+          <li>이 액체가 산소를 녹이는 원리를 조사한다.</li>
+          <li>의료·산업에서의 쓰임을 조사한다.</li>
+          <li>모둠별로 발표한다.</li>
+        </ol></div>
+      <p class="small mt8">자료: 물질 안전 자료, 의학·과학 기사 — 출처를 적는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 30. 탐구 활동 2 ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 예시 결과">
+  <h2><span class="tag">탐구 활동</span>$\ce{C10F18}$ 조사 — 예시 결과 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="stages c2">
+    <div class="stage step"><h3>1 구조</h3><p>모든 C가 $sp^3$ 혼성(정사면체 결합)이다. 고리 두 개가 붙은 데칼린 골격을 F가 빈틈없이 둘러싼다. C–F 결합은 극성이지만 고르게 배치되어 분자 전체는 거의 무극성이다.</p></div>
+    <div class="stage step"><h3>2 산소를 녹이는 원리</h3><p>F로 덮인 분자 표면은 분자 사이 힘(분산력)이 매우 약해 분자 사이에 빈 공간이 많다. 무극성인 $\ce{O2}$, $\ce{CO2}$ 분자가 이 공간에 쉽게 들어가 녹는다(반응하지 않고 물리적으로 녹는다).</p></div>
+    <div class="stage step"><h3>3 안정성</h3><p>C–F 결합이 매우 강하고 F가 탄소 골격을 감싸 화학적으로 매우 안정하다. 몸속에서 거의 반응하지 않는다.</p></div>
+    <div class="stage step"><h3>4 용도</h3><p>액체 호흡(미숙아의 폐 치료 연구), 산소를 나르는 인공 혈액 연구, 이식할 장기의 보존, 눈 망막 수술, 화장품과 상처 치료제</p></div>
+  </div>
+  <div class="note big step mt12"><b>정리 예시</b> 분자의 혼성과 결합의 종류가 분자 사이 힘을 정하고, 분자 사이 힘이 기체를 녹이는 성질과 쓰임을 정한다.</div>
+  <p class="small">예시 결과는 덱이 작성한 것이다.</p>
+</section>
+
+<!-- ════════ 31. 디지털 탐구 1 ════════ -->
+<section class="slide" data-sec="03 · 디지털 탐구" data-title="디지털 탐구: 설계">
+  <h2><span class="tag">디지털 탐구</span>분자 모형 프로그램으로 결합각 측정하고 이론과 비교하기</h2>
+  <p class="f21"><b>탐구 문제</b> 중심 원자의 비공유 전자쌍 수와 혼성의 종류가 달라지면 결합각은 어떻게 달라질까?</p>
+  <p class="f21 mt8"><b>가설 예시</b> 비공유 전자쌍은 결합 전자쌍보다 강하게 반발하므로, 전자 영역이 4개인 분자에서 비공유 전자쌍이 많을수록 결합각이 109.5°보다 작아질 것이다.</p>
+  <table class="ac131-th mt8">
+    <tr><th>조작 변인</th><td class="l">분자의 종류($\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$ / $\ce{C2H6}$, $\ce{C2H4}$, $\ce{C2H2}$ / $\ce{BF3}$, $\ce{CO2}$)</td></tr>
+    <tr><th>종속 변인</th><td class="l">프로그램에서 측정한 결합각</td></tr>
+    <tr><th>통제 변인</th><td class="l">구조 최적화 방법, 측정 도구, 측정할 세 원자를 고르는 기준</td></tr>
+  </table>
+  <div class="ac131-s4 mt12">
+    <div class="stage"><h3>①</h3><p>분자를 그리고 <b>구조 최적화</b>(에너지 최소화)를 실행한다.</p></div>
+    <div class="stage"><h3>②</h3><p>각도 도구로 세 원자를 차례로 골라 3번 이상 측정하고 평균을 낸다.</p></div>
+    <div class="stage"><h3>③</h3><p>전자 영역 수, 비공유 전자쌍 수, 혼성을 예측해 표에 적는다.</p></div>
+    <div class="stage"><h3>④</h3><p>측정값·예측값·실험값을 막대그래프로 비교한다.</p></div>
+  </div>
+  <p class="small mt8">안전과 윤리: 실험 기구를 쓰지 않는다. 프로그램 이름·계산 방법·화면 캡처의 출처를 기록하고, 계산값과 실험값을 구별한다.</p>
+</section>
+
+<!-- ════════ 32. 디지털 탐구 2 — 실험실 ════════ -->
+<section class="slide" data-sec="03 · 디지털 탐구" data-title="실험실: 결합각 측정">
+  <h2><span class="tag">디지털 탐구</span>결합각 측정 실험실</h2>
+  <div class="lab" data-lab="ac131bond">
+    <div class="lab-ctl" style="flex-basis:470px">
+      <div class="ac131-seg"><button class="btn on" data-m="hyb">혼성 오비탈</button><button class="btn" data-m="mol">분자 모형</button></div>
+      <div data-set="hyb">
+        <div class="ac131-seg"><span class="small">혼성</span><button class="btn on" data-h="sp3">$sp^3$</button><button class="btn" data-h="sp2">$sp^2$</button><button class="btn" data-h="sp">$sp$</button></div>
+      </div>
+      <div data-set="mol" style="display:none">
+        <div class="ac131-seg"><button class="btn on" data-p="CH4">$\ce{CH4}$</button><button class="btn" data-p="NH3">$\ce{NH3}$</button><button class="btn" data-p="H2O">$\ce{H2O}$</button><button class="btn" data-p="C2H6">$\ce{C2H6}$</button></div>
+        <div class="ac131-seg"><button class="btn" data-p="BF3">$\ce{BF3}$</button><button class="btn" data-p="C2H4">$\ce{C2H4}$</button><button class="btn" data-p="CO2">$\ce{CO2}$</button><button class="btn" data-p="C2H2">$\ce{C2H2}$</button></div>
+      </div>
+      <table class="readout ac131-read">
+        <tr><th><output data-o="k1"></output></th><td><span data-o="v1"></span></td></tr>
+        <tr><th><output data-o="k2"></output></th><td><span data-o="v2"></span></td></tr>
+        <tr class="hl"><th><output data-o="k3"></output></th><td><span data-o="v3"></span></td></tr>
+      </table>
+      <div class="ac131-seg mt8"><button class="btn ac131-act" data-act="rec">측정(3회)</button><button class="btn" data-act="graph">그래프</button><button class="btn" data-act="reset">초기화</button><label class="small ac131-lp"><input type="checkbox" data-i="lp" checked> 비공유 전자쌍</label></div>
+      <output class="kind ac131-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="lab-fig" style="width:560px;height:300px">
+        <svg viewBox="0 0 560 300" width="560" height="300" aria-label="끌어서 돌릴 수 있는 혼성 오비탈과 공-막대 분자 모형, 결합각"></svg>
+        <div class="ov" data-ov="f" style="font-size:26px;font-weight:700;transform:none"></div>
+        <div class="ov halo" data-ov="ang" style="font-size:21px"></div>
+        <div class="ov" data-ov="hint" style="font-size:17px;color:#5B6B7F">끌어서 돌려 보자</div>
+      </div>
+      <table class="tight ac131-log mt8"><thead><tr><th>분자</th><th>혼성</th><th>비공유</th><th>측정 평균</th><th>실험값</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 디지털 탐구 3 — 결과 ════════ -->
+<section class="slide" data-sec="03 · 디지털 탐구" data-title="디지털 탐구: 결과 정리">
+  <h2><span class="tag">디지털 탐구</span>결과 정리와 결론</h2>
+  <div class="row">
+    <div class="col">
+      <table class="ac131-c ac131-res">
+        <tr><th>분자</th><th>전자 영역</th><th>비공유</th><th>혼성</th><th>측정 결합각</th><th>실험값</th></tr>
+        <tr><td>$\ce{CH4}$</td><td>4</td><td>0</td><td>$sp^3$</td><td><span class="blank"><span class="step">109.5°</span></span></td><td>109.5°</td></tr>
+        <tr><td>$\ce{NH3}$</td><td>4</td><td>1</td><td>$sp^3$</td><td><span class="blank"><span class="step">약 107°</span></span></td><td>107°</td></tr>
+        <tr><td>$\ce{H2O}$</td><td>4</td><td>2</td><td>$sp^3$</td><td><span class="blank"><span class="step">약 104.5°</span></span></td><td>104.5°</td></tr>
+        <tr><td>$\ce{C2H4}$</td><td>3</td><td>0</td><td>$sp^2$</td><td><span class="blank"><span class="step">약 117°</span></span></td><td>117°</td></tr>
+        <tr><td>$\ce{C2H2}$</td><td>2</td><td>0</td><td>$sp$</td><td><span class="blank"><span class="step">180°</span></span></td><td>180°</td></tr>
+      </table>
+      <p class="small">에틸렌은 H–C–H 각</p>
+      <p class="f21 mt8"><b>Q</b> $\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$의 결합각이 줄어드는 순서는 비공유 전자쌍 수와 어떤 관계가 있을까?</p>
+      <div class="answer step f21">비공유 전자쌍이 많을수록 결합각이 작아진다.</div>
+      <div class="board mt8" style="min-height:60px"></div>
+    </div>
+    <div class="col stack" style="flex:0 0 520px">{{RESBAR}}
+      <p class="f21"><b>Q</b> 에틸렌의 H–C–H 각이 120°보다 조금 작은 까닭은?</p>
+      <div class="answer step f21">2중 결합 쪽 전자 밀도가 커서 C–H 결합 전자쌍을 밀어내기 때문이다.</div>
+      <p class="small step">프로그램 계산값과 실험값의 차이는 계산 방법의 근사와 분자 사이 상호 작용의 유무에서 생긴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 34. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>중심 원자의 혼성과 분자의 극성</h2>
+  <p class="f21">다음 분자들에서 중심 원자의 혼성 오비탈을 쓰고, 분자의 극성을 예측하여라.</p>
+  <p class="f22 mt8" style="text-align:center">1) $\ce{NF3}$ &nbsp;&nbsp;&nbsp; 2) $\ce{BH4-}$ &nbsp;&nbsp;&nbsp; 3) $\ce{BeH2}$ &nbsp;&nbsp;&nbsp; 4) $\ce{CH4}$</p>
+  {{Q1FIGS}}
+  <div class="ac131-q1">
+    <p class="f21 step" data-g="q1">3 + 1 → $sp^3$, 삼각뿔형 → 극성</p>
+    <p class="f21 step" data-g="q2">4 + 0 → $sp^3$, 정사면체 → 무극성</p>
+    <p class="f21 step" data-g="q3">2 + 0 → $sp$, 선형 → 무극성</p>
+    <p class="f21 step" data-g="q4">4 + 0 → $sp^3$, 정사면체 → 무극성</p>
+  </div>
+  <div class="row mt8"><div class="col"><div class="answer step">1) $sp^3$, 극성 &nbsp; 2) $sp^3$, 무극성 &nbsp; 3) $sp$, 무극성 &nbsp; 4) $sp^3$, 무극성</div></div>
+    <div class="col stack" style="flex:0 0 260px"><div class="board" style="min-height:70px"></div></div></div>
+  <p class="small">(결합 원자 수 + 비공유 전자쌍 수)</p>
+</section>
+
+<!-- ════════ 35. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="03 · 연습 문제" data-title="연습 문제 2 [심화]">
+  <h2><span class="tag q">연습 문제 2</span>액체 질소와 액체 산소 <span class="small c-muted">[심화]</span></h2>
+  <p class="f21">액체 질소와 산소에 관한 다음 물음에 답하여라. 1) 각 액체 분자의 전자 배치를 나타내어라. 2) 각 액체 분자의 결합 차수는 얼마인가? 3) 각 액체는 어떤 자기적 성질을 띠는가?</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 740px"><div class="step" data-g="n1">{{N2O2}}</div></div>
+    <div class="col stack">
+      <p class="f21 step">1) $\ce{N2}$: $(\sigma_{2s})^2(\sigma^*_{2s})^2(\pi_{2p})^4(\sigma_{2p})^2$<br>$\ce{O2}$: $(\sigma_{2s})^2(\sigma^*_{2s})^2(\sigma_{2p})^2(\pi_{2p})^4$<br>$\quad(\pi^*_{2p_x})^1(\pi^*_{2p_y})^1$</p>
+      <p class="f21 step mt8">2) $\ce{N2}$: $\tfrac12(8-2)=3$, $\ce{O2}$: $\tfrac12(8-4)=2$</p>
+      <div class="answer step f21">3) 액체 질소는 반자성(홀전자 0), 액체 산소는 상자성(홀전자 2)</div>
+      <p class="small">$\ce{N2}$도 $\ce{B2}$처럼 $\pi_{2p}$가 $\sigma_{2p}$보다 아래</p>
+      <div class="board mt8" style="min-height:60px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 36. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 01" data-tpl="check">
+  <h2><span class="tag q">확인 문제 01</span>옳은 것은 ○, 틀린 것은 ×</h2>
+  <ol class="ac131-ox f21">
+    <li>모든 단일 공유 결합은 σ 결합이다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li>π 결합은 핵 사이 축을 따라 원통 대칭이고 마디면이 없다. <span class="step">→ <span class="ans">×</span> 핵 축을 포함하는 마디면이 1개 있다.</span></li>
+    <li>$\ce{N2}$의 3중 결합은 σ 결합 1개와 π 결합 2개로 이루어진다. <span class="step">→ <span class="ans">○</span></span></li>
+    <li><span class="c-muted">[심화]</span> 반결합성 분자 오비탈에 전자가 들어가면 결합 차수가 커진다. <span class="step">→ <span class="ans">×</span> 작아진다.</span></li>
+    <li>$sp^2$ 혼성 오비탈 3개는 한 평면에서 120°를 이루고, 혼성하지 않은 p 오비탈은 그 평면에 수직이다. <span class="step">→ <span class="ans">○</span></span></li>
+  </ol>
+</section>
+
+<!-- ════════ 37. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="03 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>에틸렌과 아세틸렌 비교하기</h2>
+  <p class="f21">에틸렌($\ce{C2H4}$)과 아세틸렌($\ce{C2H2}$)에서 탄소의 혼성, σ 결합과 π 결합의 수, H–C–C 결합각을 비교하여라.</p>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 640px">
+      <table class="ac131-c">
+        <tr><th></th><th>혼성</th><th>σ 결합</th><th>π 결합</th><th>H–C–C 결합각</th></tr>
+        <tr><td>에틸렌</td><td><span class="blank"><span class="step">$sp^2$</span></span></td><td><span class="blank"><span class="step">5</span></span></td><td><span class="blank"><span class="step">1</span></span></td><td><span class="blank"><span class="step">약 120°</span></span></td></tr>
+        <tr><td>아세틸렌</td><td><span class="blank"><span class="step">$sp$</span></span></td><td><span class="blank"><span class="step">3</span></span></td><td><span class="blank"><span class="step">2</span></span></td><td><span class="blank"><span class="step">180°</span></span></td></tr>
+      </table>
+      <div class="answer step">아세틸렌의 C는 $sp$ 혼성이라 혼성하지 않은 p가 2개 → π 결합이 하나 더 있고 선형이다.</div>
+      <p class="small mt8">채점 요소: 혼성 · σ/π 결합 수 · 결합각 — 모두 맞으면 상</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 38. 스스로 정리 ════════ -->
+<section class="slide" data-sec="01–03 원자가 결합·분자 오비탈과 혼성 오비탈 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>3. 원자가 결합과 혼성 오비탈 — 01–03</h2>
+  <div class="ac131-top">
+    <div class="ac131-node ac131-dim">2. 화학 결합과 에너지 <span class="small">(지난 중단원)</span></div>
+    <div class="ac131-arr">→</div>
+    <div class="ac131-node ac131-dim" style="border-style:solid;border-color:var(--field);color:var(--ink)"><b>01–03 오늘</b></div>
+    <div class="ac131-arr">→</div>
+    <div class="ac131-node ac131-dim">4. 탄소 화합물의 분자 구조 <span class="small">(다음 시간)</span></div>
+  </div>
+  <div class="ac131-map">
+    <div class="ac131-node ac131-main" data-q><b>01 원자가 결합</b><br>❶ 두 원자 오비탈의 <span class="blank"><span class="step">겹침</span></span>으로 공유 결합<br>❷ 핵 축을 따라 겹침 <span class="blank"><span class="step">σ 결합</span></span>, 나란히 옆으로 <span class="blank"><span class="step">π 결합</span></span><br>❸ 3중 결합 = σ 1 + π <span class="blank"><span class="step">2</span></span></div>
+    <div class="ac131-node ac131-main ac131-deepn" data-q><b>02 분자 오비탈</b> <span class="small c-muted">심화</span><br>❹ 더하기 → <span class="blank"><span class="step">결합성</span></span>, 빼기 → 반결합성<br>❺ 결합 차수 = ½(결합성 − <span class="blank"><span class="step">반결합성</span></span>)<br>❻ $\ce{O2}$: 홀전자 2 → <span class="blank"><span class="step">상자성</span></span></div>
+    <div class="ac131-node ac131-main" data-q><b>03 혼성 오비탈</b><br>❼ s 1 + p 3 → <span class="blank"><span class="step">$sp^3$</span></span> 109.5°<br>❽ s 1 + p 2 → $sp^2$ <span class="blank"><span class="step">120°</span></span><br>❾ s 1 + p 1 → $sp$ <span class="blank"><span class="step">180°</span></span><br>❿ 혼성은 구조를 설명하는 <span class="blank"><span class="step">모형</span></span></div>
+  </div>
+</section>
+
+<!-- ════════ 39. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="01–03 원자가 결합·분자 오비탈과 혼성 오비탈 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] σ 결합과 π 결합, $sp^3$·$sp^2$·$sp$ 혼성 오비탈의 정의를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 혼성 오비탈로 탄소 화합물의 분자 구조와 결합각을 예측하고, 분자 모형으로 측정해 비교할 수 있다.</button>
+    <button class="chk">[가치·태도] 결합 이론이 실험 결과에 맞추어 발전해 온 과정을 알고, 모형의 한계를 인정하는 태도를 가진다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> $\ce{C2H2}$의 σ 결합과 π 결합 수는? <span class="step">→ <span class="ans">σ 3개, π 2개</span></span></p>
+    <p class="f21 mt8"><b>Q</b> <span class="c-muted">[심화]</span> $\ce{O2}$가 상자성인 까닭은? <span class="step">→ <span class="ans">$\pi^*_{2p}$ 오비탈 2개에 홀전자가 1개씩 있다.</span></span></p>
+    <p class="f21 mt8"><b>Q</b> $\ce{NH3}$의 N은 어떤 혼성일까? <span class="step">→ <span class="ans">$sp^3$</span></span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 시간</b> 탄소 원자의 혼성으로 알케인·알켄·알카인과 이성질체의 구조를 설명할 수 있을까? (4. 탄소 화합물의 분자 구조)</div>
+</section>

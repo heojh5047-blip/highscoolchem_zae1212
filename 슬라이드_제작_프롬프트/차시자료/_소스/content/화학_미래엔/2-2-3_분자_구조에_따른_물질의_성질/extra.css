@@ -1,0 +1,60 @@
+/* 2-2-3 분자 구조에 따른 물질의 성질 — 덱 전용 (모두 .cm223- 접두어) */
+.cover h1.cm223-h1{font-size:100px}
+
+/* 선택지 카드 */
+.cm223-opts{display:grid;grid-template-columns:1fr;gap:10px}
+.cm223-opts .card{font-size:22px;padding:10px 16px}
+.cm223-opts.cm223-opts4{grid-template-columns:repeat(4,1fr)}
+.cm223-opts.cm223-opts4 .card{text-align:center}
+.card.cm223-kind{min-height:220px}
+
+/* 표 */
+table.cm223-tab{width:100%}
+table.cm223-tab th,table.cm223-tab td{text-align:center}
+table.cm223-tab tr.cm223-why td{font-size:19px;text-align:left}
+table.cm223-sum th{text-align:left}
+table.cm223-sum td{font-size:21px}
+
+/* 오개념 비교 격자 */
+table.cm223-grid{width:100%;border-collapse:collapse}
+table.cm223-grid th{font-size:21px;padding:2px 6px}
+table.cm223-grid td{padding:0;text-align:center;border-top:1px solid var(--line)}
+table.cm223-grid td svg{display:block;margin:0 auto}
+
+/* 문항 */
+.cm223-box{display:inline-block;border:2px solid var(--line);border-radius:10px;padding:8px 22px;font-size:23px;background:#fff}
+ol.cm223-ch{list-style:none;padding:0;margin:0}
+ol.cm223-ch li{font-size:22px;margin-top:8px}
+ol.cm223-ch li:first-child{margin-top:0}
+ul.cm223-ul{margin:0;padding-left:24px}
+ul.cm223-ul li{margin-top:6px}
+
+/* 분류도 */
+.cm223-tree{display:flex;flex-direction:column;align-items:center;gap:8px}
+.cm223-tbox{border:2px solid var(--line);border-radius:10px;padding:6px 18px;font-size:22px;background:#fff}
+.cm223-tq{border:2px solid var(--ink);border-radius:50%;padding:4px 20px;font-size:22px;font-weight:700;background:#FFF8D6}
+.cm223-tbr{display:flex;gap:80px;text-align:center}
+
+/* 정리 답 */
+p.cm223-a{color:#1B5E3F;margin-top:4px}
+.answer.cm223-left{text-align:left}
+.tag.cm223-mini{font-size:19px}
+
+/* 개념 지도 */
+.cm223-map{display:flex;align-items:center;gap:12px}
+.cm223-node{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:21px;line-height:1.5}
+.cm223-node.cm223-main{flex:1 1 0;border-color:var(--field);background:#F2FAF5}
+.cm223-node.cm223-dim{flex:0 0 190px;border-style:dashed;color:var(--muted)}
+.cm223-arr{font-size:28px;color:var(--muted)}
+
+/* 실험실 */
+.cm223-seg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.cm223-seg .btn{background:#fff;color:var(--ink);border:2px solid var(--line);padding:5px 10px;font-size:19px}
+.cm223-seg .btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cm223-seg .btn.cm223-act{background:var(--field);color:#fff;border-color:var(--field)}
+table.cm223-read{width:100%}
+table.cm223-read th{font-size:19px;padding:6px 10px;text-align:left}
+table.cm223-read td{font-size:21px;width:210px;padding:6px 10px;text-align:center}
+output.kind.cm223-msg{margin-top:8px;line-height:1.45;font-size:19px}
+table.cm223-log{width:100%}
+table.cm223-log th,table.cm223-log td{font-size:19px;padding:4px 8px;text-align:center}

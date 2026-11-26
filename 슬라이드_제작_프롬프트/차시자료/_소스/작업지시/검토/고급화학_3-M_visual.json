@@ -1,0 +1,103 @@
+{
+ "findings": [
+  {
+   "slide": 10,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "연습 문제 대응표 ②가 화면 아래로 넘침",
+   "fix": "내용 칸을 한 줄로 줄이고 반응식 답을 두 줄로"
+  },
+  {
+   "slide": 12,
+   "severity": "high",
+   "rule": "D8/T4/3.2",
+   "problem": "식 상자 넘침, 펌프 그림 라벨 16px 미만",
+   "fix": "식을 f21 두 줄로, 펌프 viewBox 570으로 줄이고 라벨 20–21"
+  },
+  {
+   "slide": 15,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "n·ΔS 식 상자와 표가 넘침",
+   "fix": "식을 f21 줄로, 그림 열 360"
+  },
+  {
+   "slide": 16,
+   "severity": "high",
+   "rule": "D8/3.2",
+   "problem": "표·풀이가 넘침, 그래프 눈금 16px 미만, 409 K 라벨과 식 라벨 겹침",
+   "fix": "표를 그래프 위(오른쪽 열)로, 눈금 23, 식 라벨을 오른쪽 아래로"
+  },
+  {
+   "slide": 17,
+   "severity": "high",
+   "rule": "D8/T4",
+   "problem": "두 열 반응식이 칸 밖으로 넘침",
+   "fix": "한 열 세로 배치로 바꿈"
+  },
+  {
+   "slide": 20,
+   "severity": "high",
+   "rule": "D8/3.2",
+   "problem": "식 넘침, 전위 사다리 라벨 작고 H+/Pb 라벨 겹침",
+   "fix": "사다리 높이 450·라벨 20, 두 반응 화살표를 양쪽으로 나눔"
+  },
+  {
+   "slide": 21,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "심화 상자 넘침",
+   "fix": "식 상자를 f21 줄로"
+  },
+  {
+   "slide": 23,
+   "severity": "medium",
+   "rule": "3.2/D8",
+   "problem": "추·드라이어 그림 라벨 16px 미만, 왼쪽 열 넘침",
+   "fix": "viewBox 400으로 줄임, 문장 줄임"
+  },
+  {
+   "slide": 25,
+   "severity": "medium",
+   "rule": "3.2/D8",
+   "problem": "다니엘 전지 그림 라벨 작음, 열 넘침",
+   "fix": "그림 480, 답 한 줄로"
+  },
+  {
+   "slide": 26,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "금속 사다리 라벨 작고 Zn–Cu 라벨이 Mg–Ag 화살표와 겹침",
+   "fix": "높이 440·라벨 20–21, Zn–Cu 라벨을 Cu 위로"
+  },
+  {
+   "slide": 27,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "펜 위치가 선 끝과 맞지 않고 라벨 겹침",
+   "fix": "펜 끝을 붉은 선 끝에 두고 라벨 위치 다시 잡음"
+  },
+  {
+   "slide": 6,
+   "severity": "low",
+   "rule": "T2",
+   "problem": "❼ 분수 빈칸이 줄을 깨뜨림",
+   "fix": "(0.0592/n) log Q 꼴로"
+  },
+  {
+   "slide": 13,
+   "severity": "low",
+   "rule": "D8/M1",
+   "problem": "「엔탈피 H」 라벨과 C60 준위 라벨 겹침, \\ce 안 한글(흑연) 경고, 화살표가 0 준위 라벨 관통",
+   "fix": "도표를 아래로 옮기고 흑연을 \\ce 밖으로, 화살표를 오른쪽 끝으로"
+  },
+  {
+   "slide": 13,
+   "severity": "low",
+   "rule": "S2",
+   "problem": "정답 2개 이상인 장 11곳에 판서 공간 없음",
+   "fix": "board(min-height 30px) 추가, 예시 글은 .card로"
+  }
+ ],
+ "summary": "첫 render 자동 점검 39건 → 0. 식 상자를 본문 줄로 바꾸고 그림 viewBox를 표시 크기에 맞춤. 전체 sheet 두 번, 6·12·18 --steps 확인."
+}

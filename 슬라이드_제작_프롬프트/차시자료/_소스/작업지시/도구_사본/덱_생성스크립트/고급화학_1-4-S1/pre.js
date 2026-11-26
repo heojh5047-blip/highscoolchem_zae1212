@@ -1,0 +1,16 @@
+(()=>{const R=document.querySelector('[data-lab="ac14s1path"]'); const q=s=>R.querySelector(s);
+const ck=el=>el.dispatchEvent(new MouseEvent('click',{bubbles:true}));
+const set=(s,r,v,t,p)=>{ck(q(`[data-s="${s}"]`)); ck(q(`[data-r="${r}"]`)); if(v) ck(q(`[data-v="${v}"]`)); ck(q(`[data-t="${t}"]`)); if(p) ck(q(`[data-p="${p}"]`)); ck(q('[data-act="run"]'));};
+const out=t=>console.warn('LAB '+t+' | cond='+q('[data-o="cond"]').textContent+' | path='+q('[data-o="path"]').textContent+' | prod='+q('[data-ov="prod"]').textContent.slice(0,30)+' / '+q('[data-ov="pname"]').textContent+' | rows='+q('[data-o="log"]').children.length+' | score='+q('[data-o="score"]').textContent+' | msg='+q('[data-o="msg"]').textContent.slice(0,70));
+out('init');
+set('p3','EtO','pro','hot','E2'); out('3차+EtO');
+set('p1','CN','apr','rt','SN2'); out('1차+CN DMSO');
+set('p3','H2O',null,'rt','SN1'); out('3차+H2O 25');
+set('me','tBuO','apr','rt','E2'); out('메틸+tBuO');
+set('p2','I','apr','rt','SN2'); out('2차+I');
+set('p1','tBuO','apr','rt','E2'); out('1차+tBuO');
+set('p2','H2O',null,'hot','none'); out('2차+H2O 가열');
+set('p3','I','apr','rt','none'); out('3차+I DMSO');
+console.warn('LAB svg children='+R.querySelector('.lab-fig svg g').children.length+' v='+q('[data-v="pro"]').classList.contains('on'));
+ck(q('[data-act="reset"]')); out('reset');
+})();

@@ -1,0 +1,295 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅱ. 물질의 구조와 성질" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅱ. 물질의 구조와 성질 › 2. 분자의 구조와 성질 › 02</div>
+    <h1 class="cm222-h1">전자쌍 반발<br>이론과<br><span class="acc">분자 구조</span></h1>
+    <p class="sub">분자는 왜 저마다 다른 모양을 할까?</p>
+    <p class="meta">고등학교 화학 72–77쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="중심의 탄소 원자에 수소 원자 네 개가 정사면체의 꼭짓점 방향으로 결합한 메테인 공-막대 모형">
+    @@cover@@
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 전자쌍 반발 이론과 분자 구조" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12화학02-03]</span>원자와 분자를 루이스 전자점식으로 표현하고, 전자쌍 반발 이론을 근거로 분자의 구조를 추론하여 모형으로 나타낼 수 있다.</div>
+  <ol class="goals mt12">
+    <li><b>전자쌍 반발 이론</b>으로 중심 원자 주위의 전자쌍 배치를 설명할 수 있다.</li>
+    <li>중심 원자의 <b>공유 전자쌍</b>과 <b>비공유 전자쌍</b> 수로 분자 구조와 결합각을 추론할 수 있다.</li>
+    <li>소프트웨어로 분자 구조를 모델링하여 <b>3차원 모형</b>으로 나타낼 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">루이스 전자점식</div><div class="farr">→</div>
+    <div class="fnode hl">전자쌍 반발 이론</div><div class="farr">→</div>
+    <div class="fnode">분자 구조 추론</div><div class="farr">→</div>
+    <div class="fnode">다중 결합</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 모델링</div>
+  </div>
+  <div class="note mt28"><b>지난 시간과 연결</b> 01에서 원자와 분자를 루이스 전자점식으로 나타냈다. 오늘은 그 전자쌍들이 공간에서 어떻게 놓이는지 알아보고, 분자의 <b>입체 모양</b>을 추론한다.</div>
+</section>
+
+<!-- ════════ 3. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 전자쌍 반발 이론과 분자 구조 · 도입" data-title="생각 열기: 물 분자의 모양">
+  <h2><span class="tag">생각 열기</span>물 분자의 모양은 어떨까?</h2>
+  <p class="f22">물 분자 $\ce{H2O}$는 산소 원자 1개에 수소 원자 2개가 결합해 있다. 세 원자는 어떤 모양으로 놓여 있을까?</p>
+  <div class="row mt12">
+    <div class="col">
+      <div class="card"><h3>(가) 일직선 모양</h3>
+        <svg class="fig" viewBox="0 0 300 150" style="width:300px" aria-label="수소, 산소, 수소 원자가 일직선으로 놓인 모형">@@w_lin@@</svg>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>(나) 굽은 모양</h3>
+        <svg class="fig" viewBox="0 0 300 150" style="width:300px" aria-label="산소 원자 아래쪽 양옆으로 수소 원자가 꺾여 놓인 모형">@@w_bent@@</svg>
+      </div>
+    </div>
+    <div class="col" style="flex:0 0 330px">
+      <h3>알고 있는 낱말에 ✓</h3>
+      <div class="chips"><button class="chk">공유 전자쌍</button><button class="chk">비공유 전자쌍</button><button class="chk">루이스 전자점식</button><button class="chk">결합각</button></div>
+    </div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 내 예측은 (가)와 (나) 가운데 어느 것인가? 그렇게 생각한 까닭은?</p>
+  <div class="answer step"><b>(나) 굽은 모양</b> — 결합각이 약 $104.5^\circ$이다.<br><span class="small">왜 일직선이 아닐까? 오늘 그 까닭을 전자쌍의 반발로 찾는다.</span></div>
+</section>
+
+<!-- ════════ 4. 연결 ════════ -->
+<section class="slide" data-sec="02 전자쌍 반발 이론과 분자 구조 · 도입" data-title="루이스 전자점식으로 모양을 알까?">
+  <h2><span class="tag alt">연결</span>루이스 전자점식으로 모양을 알 수 있을까?</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">두 학생이 물의 루이스 전자점식을 다르게 그렸다.</p>
+      <svg class="fig mt12" viewBox="0 0 520 190" style="width:520px" aria-label="물의 루이스 전자점식을 일직선으로 그린 것과 꺾어서 그린 것">@@l_h2o2@@
+        <text class="tex" x="130" y="180" data-mix="학생 A" data-size="20" data-anchor="middle" fill="#5B6B7F"></text>
+        <text class="tex" x="400" y="180" data-mix="학생 B" data-size="20" data-anchor="middle" fill="#5B6B7F"></text>
+      </svg>
+      <p class="f22 mt12" data-q><b>Q</b> 두 그림에서 산소 원자의 공유 전자쌍과 비공유 전자쌍 수는 같은가? 어느 그림이 실제 모양일까?</p>
+    </div>
+  </div>
+  <div class="card tip step mt12"><p class="f22">두 그림 모두 공유 전자쌍 2개, 비공유 전자쌍 2개로 <b>같은 전자점식</b>이다. 루이스 전자점식은 전자쌍의 <b>수</b>만 알려 주고, 원자들이 <b>공간에 어떻게 놓이는지</b>는 알려 주지 않는다.</p></div>
+  <div class="answer step">→ 전자쌍의 배치로 분자 모양을 설명하는 이론이 필요하다: <b>전자쌍 반발 이론</b></div>
+</section>
+
+<!-- ════════ 5. 전자쌍 반발 이론 ════════ -->
+<section class="slide" data-sec="02 · 전자쌍 반발 이론" data-title="전자쌍 반발 이론">
+  <h2><span class="no">1</span>전자쌍 반발 이론</h2>
+  <p class="f22">중심 원자 주위의 전자쌍들은 모두 (−)전하를 띠므로 서로 밀어낸다. 그래서 <mark>전자쌍들은 가능한 한 멀리 떨어져 있으려 한다.</mark> 이 생각으로 분자 구조를 설명하는 것을 <b>전자쌍 반발 이론</b>이라고 한다.</p>
+  <div class="row mt12">
+    <div class="col">
+      <svg class="fig" viewBox="0 0 580 280" style="width:580px" aria-label="중심 원자 A 둘레의 전자쌍 네 개가 한쪽에 몰려 있다가 서로 밀어내며 고르게 퍼지는 모습">@@pairs@@</svg>
+      <p class="small">평면 그림이라 90°씩 떨어져 보이지만, 실제 분자에서 전자쌍은 3차원 공간에서 퍼진다.</p>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <div class="card"><h3>용어</h3>
+        <p class="f21"><b>중심 원자</b> 다른 원자 여러 개와 결합한 가운데 원자 (그림의 $\mathrm{A}$)</p>
+        <p class="f21 mt8"><b>결합각</b> 중심 원자의 원자핵과 결합한 두 원자의 원자핵을 이은 두 선분 사이의 각</p>
+        <p class="f21 mt8"><b>전자쌍</b> 공유 전자쌍과 비공유 전자쌍 모두</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. 해 보기: 풍선 ════════ -->
+<section class="slide" data-sec="02 · 해 보기" data-title="해 보기: 풍선으로 전자쌍 배치">
+  <h2><span class="tag">해 보기</span>풍선으로 전자쌍 배치 알아보기</h2>
+  <p class="f22">같은 크기로 분 풍선 2개, 3개, 4개를 각각 매듭끼리 묶고, 풍선이 저절로 놓이는 모습을 관찰하자. <span class="small">(풍선 하나 = 전자쌍 하나, 매듭 = 중심 원자)</span></p>
+  <div class="stages mt12">
+    <div class="stage"><h3>풍선 2개</h3><svg viewBox="0 0 300 200" aria-label="매듭에서 반대 방향으로 놓인 풍선 두 개">@@bal2@@</svg><p class="key step" data-g="b1">반대 방향 일직선, $180^\circ$</p></div>
+    <div class="stage"><h3>풍선 3개</h3><svg viewBox="0 0 300 200" aria-label="한 평면에서 세 방향으로 놓인 풍선 세 개">@@bal3@@</svg><p class="key step" data-g="b2">한 평면에서 세 방향, $120^\circ$</p></div>
+    <div class="stage"><h3>풍선 4개</h3><svg viewBox="0 0 300 200" aria-label="정사면체의 꼭짓점 방향으로 놓인 풍선 네 개">@@bal4@@</svg><p class="key step" data-g="b3">정사면체의 꼭짓점 방향, $109.5^\circ$</p></div>
+  </div>
+  <div class="answer step">풍선이 서로 밀어 가장 멀리 떨어진 배치를 찾듯, 전자쌍도 <b>반발이 가장 작은 배치</b>를 이룬다.</div>
+</section>
+
+<!-- ════════ 7. 전자쌍 수와 배치 ════════ -->
+<section class="slide" data-sec="02 · 전자쌍 반발 이론" data-title="전자쌍 수와 전자쌍 배치">
+  <h2><span class="no">1</span>전자쌍 수와 전자쌍 배치</h2>
+  <table class="cm222-geo">
+    <tr><th style="width:190px">전자쌍 수</th><td>2</td><td>3</td><td>4</td></tr>
+    <tr class="cm222-figrow"><th>전자쌍의<br>배치</th>
+      <td><svg class="fig" viewBox="0 0 300 220" style="width:270px" aria-label="중심 원자 양쪽 반대 방향의 전자쌍 두 개">@@g2@@</svg></td>
+      <td><svg class="fig" viewBox="0 0 300 220" style="width:270px" aria-label="한 평면에서 세 방향의 전자쌍 세 개">@@g3@@</svg></td>
+      <td><svg class="fig" viewBox="0 0 300 220" style="width:270px" aria-label="정사면체 꼭짓점 방향의 전자쌍 네 개">@@g4@@</svg></td></tr>
+    <tr><th>배치 이름</th><td class="step" data-g="t1"><b>선형</b></td><td class="step" data-g="t1"><b>평면 삼각형</b></td><td class="step" data-g="t1"><b>정사면체형</b></td></tr>
+    <tr><th>전자쌍 사이 각</th><td class="step" data-g="t2">$180^\circ$</td><td class="step" data-g="t2">$120^\circ$</td><td class="step" data-g="t2">$109.5^\circ$</td></tr>
+  </table>
+  <p class="small mt12">중심 원자가 $\mathrm{Be}$이면 전자쌍 2개, $\mathrm{B}$이면 전자쌍 3개로 옥텟 규칙의 예외이다. 이 단원은 이 두 경우와 옥텟 규칙을 따르는 중심 원자만 다룬다.</p>
+</section>
+
+<!-- ════════ 8. 확인하기: 평면 90° ? ════════ -->
+<section class="slide" data-sec="02 · 전자쌍 반발 이론" data-title="CH₄의 결합각은 90°일까?">
+  <h2><span class="tag q">확인하기</span>메테인의 결합각은 $90^\circ$일까?</h2>
+  <div class="row">
+    <div class="col">
+      <p class="f22">메테인 $\ce{CH4}$의 루이스 전자점식을 종이에 그리면 수소 원자 4개가 십자 모양으로 놓여 결합각이 $90^\circ$로 보인다.</p>
+      <p class="f22 mt8" data-q><b>Q</b> 실제 메테인의 결합각도 $90^\circ$일까?</p>
+      <div class="card tip step mt12" data-g="p1"><p class="f21">평면에서는 네 전자쌍이 $90^\circ$까지만 벌어질 수 있다. 3차원 공간에서는 정사면체의 꼭짓점 방향으로 놓여 <b>$109.5^\circ$</b>까지 벌어진다 — 반발이 더 작다.</p></div>
+      <div class="note q step mt12" data-g="p1"><b>주의</b> 분자는 입체이다. 결합각을 평면 그림에서 재지 않는다.</div>
+    </div>
+    <div class="col" style="flex:0 0 560px">
+      <div class="row">
+        <div class="col"><h3 class="center">종이에 그린 그림</h3><svg class="fig" viewBox="0 0 300 240" style="width:260px" aria-label="탄소 원자를 가운데 두고 수소 네 개를 십자로 그린 평면 그림, 90도">@@flat_ch4@@</svg></div>
+        <div class="col step" data-g="p1"><h3 class="center">실제 입체 구조</h3><svg class="fig" viewBox="0 0 300 240" style="width:260px" aria-label="쐐기 결합으로 그린 메테인, 결합각 109.5도">@@wedge_ch4@@</svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. BeF2 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="BeF₂: 선형">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ① $\ce{BeF2}$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <h3>루이스 전자점식</h3>
+      <svg class="fig" viewBox="0 0 460 170" style="width:460px" aria-label="플루오린화 베릴륨의 루이스 전자점식: 베릴륨 양쪽에 공유 전자쌍, 플루오린마다 비공유 전자쌍 세 개">@@lw_bef2@@</svg>
+      <p class="f22 step" data-g="h9" data-ask>중심 원자 $\mathrm{Be}$: 공유 전자쌍 <b class="c-field">2</b>개, 비공유 전자쌍 <b>0</b>개 → 전자쌍 <b>2</b>개</p>
+      <p class="small mt8">$\mathrm{Be}$는 원자가 전자가 2개라 전자쌍이 2개뿐이다(옥텟 규칙의 예외).</p>
+      <div class="note mt12 step" data-g="m9">염화 베릴륨 $\ce{BeCl2}$도 같은 까닭으로 선형이다.</div>
+    </div>
+    <div class="col">
+      <h3>분자 구조</h3>
+      <div class="step" data-g="m9">
+        <svg class="fig" viewBox="0 0 480 200" style="width:480px" aria-label="플루오린, 베릴륨, 플루오린이 일직선으로 놓인 공-막대 모형, 결합각 180도">@@m_bef2@@</svg>
+      </div>
+    </div>
+  </div>
+  <div class="answer step" data-g="m9">두 전자쌍이 반대 방향 → <b>선형</b>, 결합각 $180^\circ$</div>
+</section>
+
+<!-- ════════ 10. BF3 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="BF₃: 평면 삼각형">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ② $\ce{BF3}$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 470px">
+      <h3>루이스 전자점식</h3>
+      <svg class="fig" viewBox="100 0 260 190" style="width:236px" aria-label="플루오린화 붕소의 루이스 전자점식: 붕소 둘레에 공유 전자쌍 세 개">@@lw_bf3@@</svg>
+      <p class="f22 step" data-g="h10">중심 원자 $\mathrm{B}$: 공유 전자쌍 <b class="c-field">3</b>개, 비공유 전자쌍 <b>0</b>개 → 전자쌍 <b>3</b>개</p>
+      <p class="small mt8">$\mathrm{B}$는 원자가 전자가 3개라 전자쌍이 3개뿐이다(옥텟 규칙의 예외).</p>
+      <div class="note mt12 step" data-g="m10">염화 붕소 $\ce{BCl3}$도 평면 삼각형이다. 네 원자가 모두 한 평면에 있다.</div>
+    </div>
+    <div class="col">
+      <h3>분자 구조</h3>
+      <div class="step" data-g="m10">
+        <svg class="fig" viewBox="0 0 480 260" style="width:440px" aria-label="붕소를 가운데 두고 플루오린 세 개가 한 평면에서 120도씩 벌어진 공-막대 모형">@@m_bf3@@</svg>
+      </div>
+    </div>
+  </div>
+  <div class="answer step" data-g="m10">세 전자쌍이 한 평면에서 세 방향 → <b>평면 삼각형</b>, 결합각 $120^\circ$</div>
+</section>
+
+<!-- ════════ 11. CH4 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 공유 전자쌍만 있을 때" data-title="CH₄: 정사면체형">
+  <h2><span class="no">2</span>공유 전자쌍만 있을 때 ③ $\ce{CH4}$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 330px">
+      <h3>루이스 전자점식</h3>
+      <svg class="fig" viewBox="100 0 260 220" style="width:250px" aria-label="메테인의 루이스 전자점식: 탄소 둘레에 공유 전자쌍 네 개">@@lw_ch4@@</svg>
+      <p class="f22 step" data-g="h11">중심 원자 $\mathrm{C}$: 공유 전자쌍 <b class="c-field">4</b>개, 비공유 <b>0</b>개 → 전자쌍 <b>4</b>개</p>
+      <div class="note mt12 step" data-g="m11">사염화 탄소 $\ce{CCl4}$, 실레인 $\ce{SiH4}$도 정사면체형이다.</div>
+    </div>
+    <div class="col step" data-g="m11">
+      <h3>분자 구조</h3>
+      <div class="row">
+        <div class="col"><svg class="fig" viewBox="0 0 320 250" style="width:320px" aria-label="정사면체형 메테인 공-막대 모형, 결합각 109.5도">@@m_ch4@@</svg></div>
+        <div class="col" style="flex:0 0 250px">
+          <svg class="fig" viewBox="0 0 240 230" style="width:220px" aria-label="쐐기 결합으로 그린 메테인 구조식">@@w_ch4b@@</svg>
+          <p class="small">실선: 종이 면 · 채운 쐐기: 종이 앞 · 점선 쐐기: 종이 뒤</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="answer step" data-g="m11">네 전자쌍이 정사면체의 꼭짓점 방향 → <b>정사면체형</b>, 결합각 $109.5^\circ$</div>
+</section>
+
+<!-- ════════ 12. 확인하기 O× ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인하기: 공유 전자쌍만" data-tpl="check">
+  <h2><span class="tag q">확인하기</span>○, ×로 점검하기</h2>
+  <div class="card">
+    <ol class="cm222-ox">
+      <li>$\ce{BeF2}$의 중심 원자 주위에는 전자쌍이 2개 있다. <span class="step">→ <b class="c-field">○</b></span></li>
+      <li>$\ce{BF3}$의 분자 구조는 삼각뿔형이다. <span class="step">→ <b class="c-plus">×</b> <span class="small">중심 원자에 비공유 전자쌍이 없어 평면 삼각형이다.</span></span></li>
+      <li>$\ce{CH4}$의 결합각은 $90^\circ$이다. <span class="step">→ <b class="c-plus">×</b> <span class="small">정사면체형으로 $109.5^\circ$이다.</span></span></li>
+      <li>중심 원자에 공유 전자쌍만 있으면 분자 구조는 전자쌍의 배치와 같다. <span class="step">→ <b class="c-field">○</b></span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════════ 13. 연결: 비공유 전자쌍 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="비공유 전자쌍이 있으면?">
+  <h2><span class="tag alt">연결</span>중심 원자에 비공유 전자쌍이 있으면?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 330px">
+      <svg class="fig" viewBox="0 0 300 180" style="width:300px" aria-label="암모니아의 루이스 전자점식: 질소에 공유 전자쌍 세 개와 비공유 전자쌍 한 개">@@lw_nh3_13@@</svg>
+      <p class="f21 step" data-g="h13">$\mathrm{N}$: 공유 전자쌍 <b class="c-field">3</b>개 + 비공유 전자쌍 <b style="color:#B5661B">1</b>개 = 전자쌍 4개 → 전자쌍 배치는 정사면체형</p>
+    </div>
+    <div class="col">
+      <p class="f22">암모니아 $\ce{NH3}$도 메테인처럼 중심 원자 주위에 전자쌍이 4개 있다.</p>
+      <p class="f22 mt8"><b>Q</b> 암모니아의 결합각은 메테인의 $109.5^\circ$와 비교하면 어떨까?</p>
+      <div class="chips mt12"><button class="chk">① 같다</button><button class="chk">② 크다</button><button class="chk">③ 작다</button></div>
+      <div class="answer step"><b>③ 작다</b> ($107^\circ$)<br><span class="small">비공유 전자쌍이 공유 전자쌍을 더 세게 밀어내기 때문 — 다음 장에서 알아보자.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 반발력 크기 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="전자쌍 사이의 반발력">
+  <h2><span class="no">3</span>전자쌍 사이의 반발력 크기</h2>
+  <div class="row">
+    <div class="col">
+      <svg class="fig" viewBox="0 0 480 170" style="width:480px" aria-label="두 원자핵 사이에 가늘게 놓인 공유 전자쌍과 한 원자핵 가까이 넓게 퍼진 비공유 전자쌍">@@lobe_cmp@@</svg>
+      <p class="f22 mt8">비공유 전자쌍은 한 원자핵에만 끌려 중심 원자 가까이에서 <b>더 넓은 공간</b>을 차지한다. 그래서 다른 전자쌍을 더 세게 밀어낸다.</p>
+      <div class="formula sm">비공유–비공유 &gt; 비공유–공유 &gt; 공유–공유<span class="unit">전자쌍 사이의 반발력 크기</span></div>
+    </div>
+    <div class="col" style="flex:0 0 330px">
+      <svg class="fig" viewBox="0 0 300 200" style="width:300px" aria-label="질소 위의 비공유 전자쌍이 아래쪽 세 결합(수소 3개)을 안쪽으로 밀어 점선(109.5도 자리)보다 좁아진 모습">@@squeeze@@</svg>
+      <p class="small center">점선: 비공유 전자쌍이 없을 때의 자리<br>(차이를 크게 그림 — 크기 비례 아님)</p>
+      <div class="answer step">비공유 전자쌍이 공유 전자쌍들을 밀어<br><b>결합각이 작아진다</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 15. NH3 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="NH₃: 삼각뿔형">
+  <h2><span class="no">3</span>비공유 전자쌍이 있을 때 ① $\ce{NH3}$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 300 180" style="width:300px" aria-label="암모니아의 루이스 전자점식">@@lw_nh3@@</svg>
+      <p class="f21 step" data-g="h15">공유 전자쌍 <b class="c-field">3</b>개, 비공유 전자쌍 <b style="color:#B5661B">1</b>개 → 전자쌍 4개 → 전자쌍 배치: 정사면체형</p>
+      <div class="note step mt12" data-g="m15"><b>분자 구조의 이름</b>은 비공유 전자쌍을 빼고 <b>원자들의 배치</b>만 보고 붙인다. 질소가 꼭짓점, 수소 3개가 밑면인 삼각뿔이다.</div>
+    </div>
+    <div class="col step" data-g="m15">
+      <svg class="fig" viewBox="0 0 420 280" style="width:420px" aria-label="질소 위에 비공유 전자쌍, 아래로 수소 세 개가 삼각뿔을 이루는 공-막대 모형, 결합각 107도">@@m_nh3a@@</svg>
+    </div>
+  </div>
+  <div class="answer step" data-g="m15"><b>삼각뿔형</b>, 결합각 $107^\circ$ <span class="small">($109.5^\circ$보다 작다)</span></div>
+</section>
+
+<!-- ════════ 16. H2O ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="H₂O: 굽은 형">
+  <h2><span class="no">3</span>비공유 전자쌍이 있을 때 ② $\ce{H2O}$</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 300 180" style="width:300px" aria-label="물의 루이스 전자점식">@@lw_h2o@@</svg>
+      <p class="f21 step" data-g="h16">공유 전자쌍 <b class="c-field">2</b>개, 비공유 전자쌍 <b style="color:#B5661B">2</b>개 → 전자쌍 4개 → 전자쌍 배치: 정사면체형</p>
+      <div class="note step mt12" data-g="m16">비공유 전자쌍이 2개라 공유 전자쌍을 더 많이 밀어낸다. 원자만 보면 꺾인 모양이다.</div>
+    </div>
+    <div class="col step" data-g="m16">
+      <svg class="fig" viewBox="0 0 420 260" style="width:420px" aria-label="산소 위쪽에 비공유 전자쌍 두 개, 아래로 수소 두 개가 꺾여 결합한 공-막대 모형, 결합각 104.5도">@@m_h2oa@@</svg>
+    </div>
+  </div>
+  <div class="answer step" data-g="m16"><b>굽은 형</b>, 결합각 $104.5^\circ$ <span class="small">— 생각 열기 (나)의 답</span></div>
+</section>
+
+<!-- ════════ 17. 비교 ════════ -->
+<section class="slide" data-sec="02 · 중심 원자에 비공유 전자쌍이 있을 때" data-title="CH₄·NH₃·H₂O 비교">
+  <h2><span class="no">3</span>전자쌍 4개인 분자 비교</h2>
+  <div class="stages">
+    <div class="stage"><h3>$\ce{CH4}$</h3><svg viewBox="0 0 320 200" aria-label="메테인 모형 109.5도">@@c_ch4@@</svg><p>공유 4 · 비공유 0</p><p class="key"><b>정사면체형</b></p></div>
+    <div class="stage"><h3>$\ce{NH3}$</h3><svg viewBox="0 0 320 200" aria-label="암모니아 모형 107도">@@c_nh3@@</svg><p>공유 3 · 비공유 1</p><p class="key"><b>삼각뿔형</b></p></div>
+    <div class="stage"><h3>$\ce{H2O}$</h3><svg viewBox="0 0 320 200" aria-label="물 모형 104.5도">@@c_h2o@@</svg><p>공유 2 · 비공유 2</p><p class="key"><b>굽은 형</b></p></div>
+  </div>
+  <p class="f22 mt12" data-q><b>Q</b> 세 분자는 전자쌍 배치가 모두 정사면체형인데, 결합각은 왜 다를까?</p>
+  <div class="answer step">비공유 전자쌍 수가 많을수록 결합각이 작아진다: $109.5^\circ&gt;107^\circ&gt;104.5^\circ$</div>
+</section>

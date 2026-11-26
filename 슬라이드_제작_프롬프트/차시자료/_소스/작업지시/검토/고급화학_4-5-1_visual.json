@@ -1,0 +1,89 @@
+{
+ "findings": [
+  {
+   "slide": 13,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "단위 라벨 잘림, ‡와 Ea2 라벨 겹침, 생성물 라벨이 곡선과 겹침",
+   "fix": "단위 라벨 왼쪽 아래로, Ea2를 화살표 아래쪽으로, 생성물 라벨을 선 아래로"
+  },
+  {
+   "slide": 17,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "18O 에스터화 반응식이 칸을 넘침",
+   "fix": "aligned 두 줄"
+  },
+  {
+   "slide": 22,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "촉매 순환 그림 위·아래 라벨 잘림",
+   "fix": "순환 반지름 80, 중심을 내려 라벨이 그림 안에"
+  },
+  {
+   "slide": 23,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "Ea 라벨·역반응 라벨·ΔH가 몰리고 단위 라벨이 '촉매 없음'과 겹침",
+   "fix": "정반응 76/57, 역반응 171/152 숫자만 화살표 옆에, ΔH 화살표를 오른쪽 끝 밖으로, 단위 라벨 왼쪽 아래"
+  },
+  {
+   "slide": 24,
+   "severity": "low",
+   "rule": "D2",
+   "problem": "NO 순환 1단계에 라벨 없는 빈 화살표",
+   "fix": "생성물 없는 화살표 제거"
+  },
+  {
+   "slide": 29,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "작은 H 원자 라벨 24개가 16px 미만, 범례가 그림과 겹치고 줄이 넘침",
+   "fix": "H·C 라벨 없이 범례 한 줄(아래), 패널 높이·본문 줄임"
+  },
+  {
+   "slide": 30,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "촉매 전환기 반응식이 칸을 넘침",
+   "fix": "반응식을 그림 아래 전체 폭으로"
+  },
+  {
+   "slide": 18,
+   "severity": "low",
+   "rule": "C1",
+   "problem": "'1-4-S1'이 화학식으로 잡힘(S1)",
+   "fix": "'[심화] 덱'·'[심화] 유기 반응 덱'으로"
+  },
+  {
+   "slide": 33,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "실험실 회차 라벨이 끝값 54 mL에서 겹치고 'ΔH 같음'·t 축 라벨이 겹치거나 잘림",
+   "fix": "마지막 회만 라벨(표의 회 번호 색으로 구분), ΔH 라벨 왼쪽 아래, t 라벨 위로"
+  },
+  {
+   "slide": 2,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "세공 라벨이 제올라이트 골격 위에 겹침",
+   "fix": "라벨을 그림 아래로"
+  },
+  {
+   "slide": 12,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "NO2 두 분자가 '+'·단계 라벨과 겹침",
+   "fix": "분자 방향·간격 조정"
+  },
+  {
+   "slide": 38,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "C2H6 라벨·'경로와 무관'이 곡선과 겹침",
+   "fix": "라벨을 선 아래·화살표 오른쪽으로"
+  }
+ ],
+ "summary": "render 자동 점검 14건 → 0건, 콘솔 0, motion 0(data-anim 100), ask 0(질문 강조 44회). 전체 sheet 2회(완성 직후·최종)와 S13·S23 단계 캡처, 실험실 PRE 캡처로 확인."
+}

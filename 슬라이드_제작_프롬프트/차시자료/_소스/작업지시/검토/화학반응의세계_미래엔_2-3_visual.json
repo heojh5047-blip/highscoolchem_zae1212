@@ -1,0 +1,89 @@
+{
+ "findings": [
+  {
+   "slide": 6,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "이온화 경향 계열의 두 줄 이름(마그네슘, 알루미늄)이 그림 아래로 잘림",
+   "fix": "viewBox 높이 170 → 196"
+  },
+  {
+   "slide": 7,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "금속과 산 카드가 아래로 넘침",
+   "fix": "반응식 상자 글자 23px·여백 축소"
+  },
+  {
+   "slide": 14,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "아래 보조 문장이 무대 밖으로 넘침",
+   "fix": "카드 설명을 한 줄로 줄임"
+  },
+  {
+   "slide": 19,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "백금판 라벨이 유리관·1 atm 라벨과 겹침",
+   "fix": "백금판 라벨을 용액 안 왼쪽으로, 1 atm을 아래로"
+  },
+  {
+   "slide": 27,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "거름종이 염다리 라벨이 구리판과 겹치고 전압계가 위로 잘림",
+   "fix": "라벨을 위로 빼고 지시선, 도선·전압계를 아래로"
+  },
+  {
+   "slide": 34,
+   "severity": "medium",
+   "rule": "3.2",
+   "problem": "문항 그림 축소로 라벨이 화면에서 14px",
+   "fix": "라벨 1.3배, e⁻ 라벨 위치 보정"
+  },
+  {
+   "slide": 36,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "정답 상자 넘침, 그림 라벨 13px",
+   "fix": "자료 상자를 오른쪽 열로, 라벨 1.45배"
+  },
+  {
+   "slide": 13,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "Zn²⁺ 라벨이 염다리 다리와 겹침",
+   "fix": "이온을 왼쪽으로 옮김"
+  },
+  {
+   "slide": 29,
+   "severity": "medium",
+   "rule": "C1",
+   "problem": "실험실 첫 그리기 때 KaTeX가 아직 없어 화학식이 글자로 남음",
+   "fix": "API.ready에서 다시 그림"
+  },
+  {
+   "slide": 12,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "'수소 기체가 구리판을 덮음' 라벨이 비커 벽에 걸침",
+   "fix": "흰 바탕(halo)으로 읽혀 그대로 둠"
+  },
+  {
+   "slide": 33,
+   "severity": "low",
+   "rule": "T4",
+   "problem": "알칼리 건전지 반쪽 반응식 추가 후 카드 넘침",
+   "fix": "창의력 열 flex 1.5, 반응식 small 줄로, E° 값은 따로 한 줄"
+  },
+  {
+   "slide": 27,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "설계 예시 문장 추가로 열 넘침",
+   "fix": "문장 줄임"
+  }
+ ],
+ "summary": "전지 그림을 한 틀(cell)로 통일해 극 라벨·전자 화살표 위치가 덱 전체에서 같다. 자동 점검 26건을 0건으로 고쳤고 남은 것은 low 1건. / (11/13 지도서 대조) 고친 장 S9·S10·S12·S27·S28·S30–S33·S35·S37 sheet 확인, 자동 점검 0."
+}

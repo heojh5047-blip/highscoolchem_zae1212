@@ -1,0 +1,490 @@
+<!-- 고급화학 4-3-1b 반응 속도의 표현과 반응 속도식 (2) 적분 속도식과 반감기 — gen.py가 tpl_b.html에서 만든다(그림 자리표 (이중 중괄호 KEY)) -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 3. 화학 반응 속도식 › 02</div>
+    <h1 class="ac431-h1">반응 속도의 표현과<br>반응 속도식 (2)</h1>
+    <p class="sub">1차·2차·0차 반응의 적분 속도식, 그래프로 반응 차수 판별하기, 반감기, 크리스털 바이올렛 반응 차수 실험실, 방사성 동위원소의 반감기, 중단원 Ⅳ-3 연습 문제</p>
+    <p class="meta">고등학교 고급 화학 236–241쪽</p>
+  </div>
+  {{COVER_B}}
+</section>
+
+<!-- ════════ 2. 다시 보기 ════════ -->
+<section class="slide" data-sec="02 반응 속도식과 반응 차수 · 도입" data-title="다시 보기: 반응 속도식">
+  <h2><span class="tag alt">다시 보기</span>(1) 반응 속도와 반응 속도식</h2>
+  <div class="stages c2 ac431-c4">
+    <div class="stage"><h3>반응 속도</h3><p>$-\dfrac{1}{a}\dfrac{d[\ce{A}]}{dt}=\dfrac{1}{c}\dfrac{d[\ce{C}]}{dt}$ — 접선의 기울기가 순간 반응 속도</p></div>
+    <div class="stage"><h3>반응 속도식</h3><p>반응 속도 $=k[\ce{A}]^m[\ce{B}]^n$, 차수는 실험으로 정한다</p></div>
+    <div class="stage"><h3>초기 속도법</h3><p>한 반응물의 농도만 2배 → 속도 $2^m$배 → 차수 $m$</p></div>
+    <div class="stage"><h3>$k$의 단위</h3><p>0차 $\text{mol/(L}\cdot\text{s)}$, 1차 $\text{s}^{-1}$, 2차 $\text{L/(mol}\cdot\text{s)}$</p></div>
+  </div>
+  <p class="f22 mt16" data-q><b>Q</b> 반응 속도식은 '지금 이 순간의 속도'를 알려 준다. 10분 뒤 남은 농도를 알려면 무엇이 더 필요할까?</p>
+  <p class="f22 step">→ 농도를 <span class="ans">시간의 함수</span>로 나타낸 식 — 오늘 배울 <b>적분 속도식</b>이다.</p>
+</section>
+
+<!-- ════════ 3. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 반응 속도식과 반응 차수" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[12고화04-08]</span>0, 1, 2차 반응의 적분 속도식을 이해하고, 이를 반응 속도 예측에 활용할 수 있다.</div>
+  <ol class="goals mt12 f22">
+    <li>1차·2차·0차 반응의 적분 속도식을 직선 방정식 꼴로 나타내고, 기울기와 $y$절편의 뜻을 설명할 수 있다.</li>
+    <li>농도–시간 자료를 $[\ce{A}]$, $\ln[\ce{A}]$, $\dfrac{1}{[\ce{A}]}$ 그래프로 바꾸어 반응 차수와 반응 속도 상수를 구할 수 있다.</li>
+    <li>반감기 식을 유도하고, 적분 속도식과 반감기로 반응물의 농도와 시간을 예측할 수 있다.</li>
+  </ol>
+  <div class="flow mt12">
+    <div class="fnode">1차 적분 속도식</div><div class="farr">→</div>
+    <div class="fnode">2차 · 0차</div><div class="farr">→</div>
+    <div class="fnode">그래프로 차수 판별</div><div class="farr">→</div>
+    <div class="fnode">반감기</div><div class="farr">→</div>
+    <div class="fnode hl">개요표 · 실험실 · 반감기 조사</div><div class="farr">→</div>
+    <div class="fnode">연습 문제</div>
+  </div>
+</section>
+
+<!-- ════════ 4. 생각 열기 ════════ -->
+<section class="slide" data-sec="02 반응 속도식과 반응 차수 · 도입" data-title="생각 열기: 언제 반으로 줄까">
+  <h2><span class="tag">생각 열기</span>반응물이 반으로 줄어드는 데 걸리는 시간은?</h2>
+  <div class="row mt8">
+    <div class="col" style="flex:0 0 580px">{{THINK_B}}</div>
+    <div class="col stack">
+      <p class="f21">$45\ {}^\circ\text{C}$에서 $\ce{N2O5}$가 분해될 때 처음 농도 $0.0600\ \text{M}$가 $0.0300\ \text{M}$이 되는 데 24분 걸렸다.</p>
+      <p class="f21" data-q><b>Q</b> $0.0300\ \text{M}$에서 $0.0150\ \text{M}$이 되는 데는 몇 분 걸릴까? 12분? 24분? 48분?</p>
+      <p class="f21 step">→ 이 반응에서는 다시 <span class="ans">24분</span>이 걸린다.</p>
+      <p class="f21 step">반응 차수에 따라 이 시간이 달라진다 — 그 까닭을 적분 속도식으로 알아보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 5. ① 1차 반응의 적분 속도식 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 적분 속도식" data-title="1차 반응의 적분 속도식">
+  <h2><span class="no">1</span>1차 반응의 적분 속도식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">반응 속도식은 미분 방정식 꼴이다. 이를 적분하면 반응물의 농도를 반응 시간의 함수로 나타낸 <mark>적분 속도식</mark>을 얻는다.</p>
+      <div class="formula sm">$\ce{A -> B}$가 1차 반응: $\text{반응 속도}=-\dfrac{d[\ce{A}]}{dt}=k[\ce{A}]$</div>
+      <p class="f21 step">변수를 분리하여 $t=0$($[\ce{A}]_0$)부터 $t$($[\ce{A}]_t$)까지 적분: $\displaystyle\int_{[\ce{A}]_0}^{[\ce{A}]_t}\frac{1}{[\ce{A}]}\,d[\ce{A}]=-\int_0^t k\,dt$</p>
+      <div class="formula step">$\ln[\ce{A}]_t-\ln[\ce{A}]_0=-kt$ &nbsp;즉, &nbsp;$\ln[\ce{A}]_t=-kt+\ln[\ce{A}]_0$<div class="unit">$\ln$은 자연로그. 같은 뜻: $[\ce{A}]_t=[\ce{A}]_0\,e^{-kt}$</div></div>
+    </div>
+    <div class="col stack">{{FIRST}}
+      <p class="small step">미적분 없이 보기: 1차 반응은 <b>같은 시간마다 같은 비율</b>로 줄어든다 → 지수 함수</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 6. ② 1차 반응의 그래프 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 적분 속도식" data-title="1차 반응: ln[A]–t 직선">
+  <h2><span class="no">2</span>1차 반응은 $\ln[\ce{A}]$–$t$ 그래프가 직선이다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{FIG25}}</div>
+    <div class="col stack">
+      <div class="formula sm">$\underbrace{\ln[\ce{A}]_t}_{y}=\underbrace{-k}_{a}\,\underbrace{t}_{x}+\underbrace{\ln[\ce{A}]_0}_{b}$</div>
+      <p class="f21" data-q><b>Q</b> 직선의 기울기와 $y$절편은 무엇인가?</p>
+      <p class="f21 step">→ 기울기 $=$ <span class="ans">$-k$</span>, $y$절편 $=$ <span class="ans">$\ln[\ce{A}]_0$</span> → $k=-\text{기울기}$ (그림 Ⅳ-25)</p>
+      <p class="f21 step">예: $\ce{2N2O5(g) -> 4NO2(g) + O2(g)}$, 반응 속도 $=-\dfrac{d[\ce{N2O5}]}{dt}=k[\ce{N2O5}]$ — 왼쪽 기울기 $-0.0289\ \text{min}^{-1}$ → $k=0.0289\ \text{min}^{-1}$</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>1차 반응에서 남은 농도 예측하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 660px">
+      <p class="f21">1차 반응 $\ce{A -> B}$의 반응 속도 상수가 $2.0\times10^{-3}\ \text{s}^{-1}$이다. $[\ce{A}]_0=0.50\ \text{M}$일 때 10분 뒤 $[\ce{A}]$는?</p>
+      <p class="f21 step">$t=10\times60=600\ \text{s}$, &nbsp;$kt=(2.0\times10^{-3}\ \text{s}^{-1})(600\ \text{s})=1.2$</p>
+      <p class="f21 step">$\ln[\ce{A}]_t=-1.2+\ln0.50$ → $[\ce{A}]_t=0.50\times e^{-1.2}=0.50\times0.301$</p>
+      <div class="answer step">$[\ce{A}]_t=0.15\ \text{M}$</div>
+      <p class="f21 mt8" data-q><b>Q</b> 같은 반응에서 $[\ce{A}]_0=1.00\ \text{M}$이면 10분 뒤 남은 비율은?</p>
+      <p class="f21 step">→ 같다(<span class="ans">약 30 %</span>) — 1차 반응에서 남은 비율 $e^{-kt}$는 처음 농도와 관계없다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 8. ③ 2차 반응 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 적분 속도식" data-title="2차 반응의 적분 속도식">
+  <h2><span class="no">3</span>2차 반응의 적분 속도식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 600px">
+      <div class="formula sm">$\ce{A -> B}$가 2차 반응: $-\dfrac{d[\ce{A}]}{dt}=k[\ce{A}]^2$</div>
+      <div class="formula step">$\dfrac{1}{[\ce{A}]_t}=kt+\dfrac{1}{[\ce{A}]_0}$<div class="unit">변수를 분리하여 $[\ce{A}]_0$부터 $[\ce{A}]_t$까지 적분한 결과</div></div>
+      <p class="f21" data-q><b>Q</b> 어떤 그래프가 직선이 되고, $k$는 어떻게 구할까?</p>
+      <p class="f21 step">→ <span class="ans">$\dfrac{1}{[\ce{A}]}$–$t$</span> 그래프가 기울기 $k$, $y$절편 $\dfrac{1}{[\ce{A}]_0}$인 직선 → $k=\text{기울기}$ (그림 Ⅳ-26)</p>
+      <p class="small step">예: 고온에서 $\ce{2NO2(g) -> 2NO(g) + O2(g)}$, 반응 속도 $=k[\ce{NO2}]^2$</p>
+    </div>
+    <div class="col">{{FIG26}}</div>
+  </div>
+</section>
+
+<!-- ════════ 9. ④ 0차 반응 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 적분 속도식" data-title="0차 반응의 적분 속도식">
+  <h2><span class="no">4</span>0차 반응의 적분 속도식</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <div class="formula sm">$\ce{A -> B}$가 0차 반응: $-\dfrac{d[\ce{A}]}{dt}=k[\ce{A}]^0=k$</div>
+      <div class="formula step">$[\ce{A}]_t=-kt+[\ce{A}]_0$<div class="unit">$[\ce{A}]$–$t$ 그래프가 기울기 $-k$, $y$절편 $[\ce{A}]_0$인 직선 → $k=-\text{기울기}$ (그림 Ⅳ-27)</div></div>
+      <p class="f21 step">예: 텅스텐($\ce{W}$)이나 몰리브데넘($\ce{Mo}$) 고체 촉매가 있을 때 고온에서 $\ce{2NH3(g) ->[W] N2(g) + 3H2(g)}$ — 촉매 표면에 흡착되어 일어나는 <b>불균일 촉매 반응</b></p>
+      <p class="f21" data-q><b>Q</b> 왜 $[\ce{NH3}]$가 커져도 속도가 그대로일까?</p>
+      <p class="f21 step">→ 촉매 표면의 자리가 이미 <span class="ans">모두 차 있어서</span> — 더 많은 $\ce{NH3}$가 있어도 한 번에 반응하는 양은 같다.</p>
+    </div>
+    <div class="col">{{FIG27}}</div>
+  </div>
+</section>
+
+<!-- ════════ 10. ⑤ 그래프로 차수 판별 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 적분 속도식" data-title="그래프로 반응 차수 판별하기">
+  <h2><span class="no">5</span>어느 그래프가 직선인지로 반응 차수를 판별한다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 680px">{{JUDGE}}</div>
+    <div class="col stack">
+      <p class="f21">농도–시간 자료를 세 가지 그래프로 바꾸어 그린다.</p>
+      <p class="f21" data-q><b>Q</b> $\ln[\ce{A}]$–$t$만 직선이면 몇 차 반응인가?</p>
+      <p class="f21 step">→ <span class="ans">1차</span> ($[\ce{A}]$–$t$ 직선 → 0차, $\dfrac{1}{[\ce{A}]}$–$t$ 직선 → 2차)</p>
+      <p class="f21 step">직선을 찾으면 그 기울기로 $k$를 바로 구한다 — 0차·1차는 $-\text{기울기}$, 2차는 $\text{기울기}$</p>
+      <p class="small step">그래프는 0차·1차·2차 적분 속도식으로 계산한 자료이다(처음 농도의 약 5–10 %가 남을 때까지).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11. 확인 문제 02 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 02">
+  <h2><span class="tag q">확인 문제 02</span>자료로 반응 차수와 $k$ 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21">$\ce{A -> B}$에서 시간에 따른 $[\ce{A}]$를 측정하였다.</p>
+      <table class="tight ac431-sm"><tr><th>$t$ (s)</th><td>0</td><td>100</td><td>200</td><td>300</td><td>400</td></tr>
+        <tr><th>$[\ce{A}]$ (M)</th><td>0.100</td><td>0.0500</td><td>0.0333</td><td>0.0250</td><td>0.0200</td></tr>
+        <tr><th>$\dfrac{1}{[\ce{A}]}$ ($\text{M}^{-1}$)</th><td><span class="blank"><span class="step">10.0</span></span></td><td><span class="blank"><span class="step">20.0</span></span></td><td><span class="blank"><span class="step">30.0</span></span></td><td><span class="blank"><span class="step">40.0</span></span></td><td><span class="blank"><span class="step">50.0</span></span></td></tr></table>
+      <p class="f21" data-q><b>Q</b> 반응 차수와 반응 속도 상수는?</p>
+      <p class="f21 step">$\dfrac{1}{[\ce{A}]}$가 100 s마다 10.0씩 일정하게 증가 → $\dfrac{1}{[\ce{A}]}$–$t$ 직선</p>
+      <div class="answer step">2차 반응, $k=\dfrac{10.0}{100}=0.100\ \text{L/(mol}\cdot\text{s)}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div><p class="small step">반감기도 보자: 0.100 → 0.0500 M에 100 s, 0.0500 → 0.0250 M에 200 s — 점점 길어진다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 12. ⑥ 1차 반응의 반감기 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 반감기" data-title="1차 반응의 반감기">
+  <h2><span class="no">6</span>반감기와 1차 반응의 반감기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 610px">
+      <p class="f21">반응물의 초기 농도가 반으로 줄어드는 데 걸리는 시간을 <mark>반감기($t_{1/2}$)</mark>라고 한다.</p>
+      <p class="f21" data-q><b>Q</b> 1차 적분 속도식 $\ln\dfrac{[\ce{A}]_t}{[\ce{A}]_0}=-kt$에 $t=t_{1/2}$, $\dfrac{[\ce{A}]_t}{[\ce{A}]_0}=\dfrac12$를 넣으면?</p>
+      <p class="f21 step">$-kt_{1/2}=\ln\dfrac12=-\ln2$</p>
+      <div class="formula step">$t_{1/2}=\dfrac{\ln2}{k}=\dfrac{0.6931}{k}$<div class="unit">1차 반응의 반감기는 반응물의 <b>초기 농도와 관계없다</b></div></div>
+      <p class="f21 step">반감기는 주어진 온도에서 반응의 고유한 값 → 반감기를 재면 $k$를 알 수 있다.</p>
+    </div>
+    <div class="col stack">{{HL1BAR}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. ⑦ 그림 Ⅳ-28 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 반감기" data-title="오산화 이질소 분해의 반감기">
+  <h2><span class="no">7</span>$45\ {}^\circ\text{C}$에서 $\ce{N2O5}$ 분해 반응의 반감기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 640px">{{FIG28}}</div>
+    <div class="col stack">
+      <p class="f21">반감기 24분: $0.0600\ \text{M}$ → 24분 뒤 $0.0300\ \text{M}$ → 48분 뒤 $0.0150\ \text{M}$ → 72분 뒤 <span class="blank"><span class="step">$0.0075\ \text{M}$</span></span></p>
+      <p class="f21" data-q><b>Q</b> 이 반응의 반응 속도 상수는?</p>
+      <p class="f21 step">$k=\dfrac{0.6931}{24\ \text{min}}=$ <span class="ans">$0.0289\ \text{min}^{-1}$</span> $=4.81\times10^{-4}\ \text{s}^{-1}$</p>
+      <p class="f21" data-q><b>Q</b> 처음 농도의 $\tfrac{1}{16}$이 남는 때는?</p>
+      <p class="f21 step">→ $\left(\tfrac12\right)^4$ → 반감기 4번 = <span class="ans">96분</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. ⑧ 2차·0차 반응의 반감기 ════════ -->
+<section class="slide" data-sec="02 · 1차, 2차, 0차 반응의 반감기" data-title="2차·0차 반응의 반감기">
+  <h2><span class="no">8</span>2차 반응과 0차 반응의 반감기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">
+      <div class="card"><h3>2차 반응</h3><p class="f21">$\dfrac{2}{[\ce{A}]_0}=kt_{1/2}+\dfrac{1}{[\ce{A}]_0}$ → <span class="blank"><span class="step">$t_{1/2}=\dfrac{1}{k[\ce{A}]_0}$</span></span></p><p class="f21 step">초기 농도에 <b>반비례</b> → 반응이 진행될수록 점점 <b>길어진다</b></p></div>
+      <div class="card"><h3>0차 반응</h3><p class="f21">$\dfrac{[\ce{A}]_0}{2}=-kt_{1/2}+[\ce{A}]_0$ → <span class="blank"><span class="step">$t_{1/2}=\dfrac{[\ce{A}]_0}{2k}$</span></span></p><p class="f21 step">초기 농도에 <b>비례</b> → 반응이 진행될수록 점점 <b>짧아진다</b></p></div>
+    </div>
+    <div class="col">{{HL20}}</div>
+  </div>
+</section>
+
+<!-- ════════ 15. 확인 문제 03 ════════ -->
+<section class="slide" data-sec="02 · 확인 문제" data-title="확인 문제 03">
+  <h2><span class="tag q">확인 문제 03</span>반감기로 반응 차수 판단하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">세 반응 (가)–(다)에서 반응물의 초기 농도를 2배로 하였더니 반감기가 다음과 같이 바뀌었다.</p>
+      <table class="tight ac431-sm"><tr><th>반응</th><th>초기 농도 2배일 때 반감기</th><th>반응 차수</th></tr>
+        <tr><td>(가)</td><td>그대로</td><td><span class="blank"><span class="step">1차</span></span></td></tr>
+        <tr><td>(나)</td><td>$\tfrac12$배</td><td><span class="blank"><span class="step">2차</span></span></td></tr>
+        <tr><td>(다)</td><td>2배</td><td><span class="blank"><span class="step">0차</span></span></td></tr></table>
+      <p class="f21 mt8" data-q><b>Q</b> (가)의 반감기가 10 s일 때, 처음의 12.5 %가 남는 데 걸리는 시간은?</p>
+      <div class="answer step">$12.5\ \%=\left(\tfrac12\right)^3$ → $3\times10\ \text{s}=30\ \text{s}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 활동 개요표 (1) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 개요표 작성 (1)">
+  <h2><span class="tag">탐구 활동</span>0차·1차·2차 반응의 개요표 작성 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">238쪽</span>모둠별로 $\ce{A -> B}$인 반응에서 0차, 1차, 2차 반응의 반응 속도식, 반응 속도 상수 $k$의 단위, $y=ax+b$ 꼴의 적분 속도식과 기울기 및 $y$절편, 반감기를 표로 작성해서 발표해 보자.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">적분 속도식은 반응물이 특정 농도에 이르는 데 필요한 시간이나 주어진 시간 뒤의 농도를 찾는 데 쓰이고, 반감기는 이용 분야가 넓다.</p>
+      <div class="stages c2 ac431-c4">
+        <div class="stage"><h3>① 모둠 나누기</h3><p>0차·1차·2차를 한 명씩 맡고 한 명은 비교</p></div>
+        <div class="stage"><h3>② 식 정리</h3><p>반응 속도식 → 적분 속도식 → 반감기</p></div>
+        <div class="stage"><h3>③ 직선 찾기</h3><p>$y$, $x$, 기울기 $a$, 절편 $b$를 칸에</p></div>
+        <div class="stage"><h3>④ 발표</h3><p>세 차수의 같은 점·다른 점</p></div>
+      </div>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 표의 세로 칸에는 무엇을 둘까?</p>
+      <p class="f21 step">→ 반응 속도식 · <span class="ans">$k$의 단위</span> · 적분 속도식 · 직선 그래프($y$축) · 기울기 · $y$절편 · <span class="ans">반감기</span></p>
+      <p class="f21 step">완성한 표는 실험실에서 반응 차수를 판정하는 기준표로 쓴다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 활동 개요표 (2) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 개요표 작성 (2)">
+  <h2><span class="tag">탐구 활동</span>개요표 — 예시 결과 <span class="small c-muted">[필수 탐구]</span></h2>
+  <table class="tight ac431-ov">
+    <tr><th class="l">항목</th><th>0차 반응</th><th>1차 반응</th><th>2차 반응</th></tr>
+    <tr><th class="l">반응 속도식</th><td>$-\dfrac{d[\ce{A}]}{dt}=k$</td><td>$-\dfrac{d[\ce{A}]}{dt}=k[\ce{A}]$</td><td>$-\dfrac{d[\ce{A}]}{dt}=k[\ce{A}]^2$</td></tr>
+    <tr><th class="l">$k$의 단위</th><td class="step" data-g="u">$\text{mol/(L}\cdot\text{s)}$</td><td class="step" data-g="u">$\text{s}^{-1}$</td><td class="step" data-g="u">$\text{L/(mol}\cdot\text{s)}$</td></tr>
+    <tr><th class="l">적분 속도식</th><td class="step" data-g="i">$[\ce{A}]_t=-kt+[\ce{A}]_0$</td><td class="step" data-g="i">$\ln[\ce{A}]_t=-kt+\ln[\ce{A}]_0$</td><td class="step" data-g="i">$\dfrac{1}{[\ce{A}]_t}=kt+\dfrac{1}{[\ce{A}]_0}$</td></tr>
+    <tr><th class="l">직선 그래프</th><td class="step" data-g="l">$[\ce{A}]$–$t$</td><td class="step" data-g="l">$\ln[\ce{A}]$–$t$</td><td class="step" data-g="l">$\dfrac{1}{[\ce{A}]}$–$t$</td></tr>
+    <tr><th class="l">기울기 / $y$절편</th><td class="step" data-g="s">$-k$ / $[\ce{A}]_0$</td><td class="step" data-g="s">$-k$ / $\ln[\ce{A}]_0$</td><td class="step" data-g="s">$k$ / $\dfrac{1}{[\ce{A}]_0}$</td></tr>
+    <tr><th class="l">반감기</th><td class="step" data-g="h">$\dfrac{[\ce{A}]_0}{2k}$ (점점 짧아짐)</td><td class="step" data-g="h">$\dfrac{\ln2}{k}$ (일정)</td><td class="step" data-g="h">$\dfrac{1}{k[\ce{A}]_0}$ (점점 길어짐)</td></tr>
+    <tr><th class="l">예</th><td>$\ce{NH3}$ 분해($\ce{W}$ 표면)</td><td>$\ce{N2O5}$ 분해, 방사성 붕괴</td><td>$\ce{NO2}$ 분해(고온)</td></tr>
+  </table>
+  <p class="f21 mt8" data-q><b>Q</b> 발표: 세 차수의 공통점은?</p>
+  <p class="f21 step">→ 모두 <span class="ans">직선 방정식</span> 꼴로 바꿀 수 있고, 직선의 기울기로 $k$를 구한다. 반감기가 초기 농도와 관계없는 것은 1차뿐이다.</p>
+</section>
+
+<!-- ════════ 18. 실험실 설계 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="디지털 탐구: 크리스털 바이올렛 설계">
+  <h2><span class="tag">디지털 탐구</span>색 센서로 크리스털 바이올렛의 탈색 반응 차수 구하기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f21"><b>탐구 문제</b> 보라색 크리스털 바이올렛($\ce{CV+}$)이 $\ce{OH-}$와 반응하여 무색이 되는 반응은 $\ce{CV+}$에 대해 몇 차 반응일까?</p>
+      <div class="formula sm">$\ce{CV+(aq) + OH-(aq) -> CVOH(aq)}$<div class="unit">보라색 → 무색. 흡광도 $A$는 $[\ce{CV+}]$에 비례한다(비어–람베르트 법칙)</div></div>
+      <table class="tight ac431-sm"><tr><th class="l">조작 변인</th><td class="l">시간, $[\ce{OH-}]$ (0.025 · 0.050 · 0.10 M, 섞은 뒤)</td></tr>
+        <tr><th class="l">종속 변인</th><td class="l">흡광도 $A$ (590 nm 부근)</td></tr>
+        <tr><th class="l">통제 변인</th><td class="l">$\ce{CV+}$ 처음 농도, 온도 25 °C, 측정 파장</td></tr></table>
+      <p class="f21" data-q><b>Q</b> $\ce{NaOH}$를 $\ce{CV+}$보다 수백 배 넣는 까닭은?</p>
+      <p class="f21 step">→ 반응하는 동안 <span class="ans">$[\ce{OH-}]$가 거의 일정</span> → 반응 속도 $=k[\ce{CV+}][\ce{OH-}]^n=k'[\ce{CV+}]$로 볼 수 있다(유사 1차 반응).</p>
+    </div>
+    <div class="col stack">{{CVSET}}
+      <p class="small"><b>안전</b> 크리스털 바이올렛은 피부·옷을 물들이고 독성이 있으며, $\ce{NaOH}$는 피부를 상하게 한다 — 장갑·보안경, 폐액은 지정된 통에.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 19. 실험실 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실: 반응 차수 판정">
+  <h2><span class="tag">실험실</span>농도–시간 자료로 반응 차수 판정하기</h2>
+  <div class="lab" data-lab="ac431ord">
+    <div class="lab-ctl" style="flex-basis:430px">
+      <div class="ac431-seg"><span class="small">자료</span><button class="btn on" data-rx="cv">(가) $\ce{CV+}$ 탈색</button><button class="btn" data-rx="no2">(나) $\ce{NO2}$ 분해</button><button class="btn" data-rx="nh3">(다) $\ce{NH3}$ 분해</button></div>
+      <div class="ac431-seg" data-o="ohrow"><span class="small">$[\ce{OH-}]$ M</span><button class="btn" data-oh="0.025">0.025</button><button class="btn on" data-oh="0.05">0.050</button><button class="btn" data-oh="0.1">0.10</button></div>
+      <div class="ac431-seg"><button class="btn ac431-go" data-act="measure">측정하기</button><button class="btn" data-act="reset">초기화</button></div>
+      <div class="ac431-seg"><span class="small">그래프</span><button class="btn on" data-gr="0">$[\ce{A}]$–$t$</button><button class="btn" data-gr="1">$\ln[\ce{A}]$–$t$</button><button class="btn" data-gr="2">$1/[\ce{A}]$–$t$</button></div>
+      <div class="ac431-seg"><span class="small">판정</span><button class="btn" data-ord="0">0차</button><button class="btn" data-ord="1">1차</button><button class="btn" data-ord="2">2차</button></div>
+      <table class="readout ac431-read">
+        <tr><th>자료</th><td><output data-o="rx"></output></td></tr>
+        <tr><th>측정점</th><td><output data-o="np"></output></td></tr>
+        <tr><th>기울기</th><td><output data-o="slope"></output></td></tr>
+        <tr class="hl"><th>$R^2$</th><td><output data-o="r2"></output></td></tr>
+      </table>
+      <output class="kind ac431-msg" data-o="msg"></output>
+    </div>
+    <div class="col" style="flex:0 0 640px">
+      <div class="lab-fig" style="width:640px;height:300px">
+        <svg viewBox="0 0 640 300" width="640" height="300" aria-label="선택한 그래프에 측정점과 최소 제곱 직선, 결정 계수"></svg>
+        <div class="ov" data-ov="ylab"></div><div class="ov" data-ov="xlab">$t$ [s]</div>
+      </div>
+      <table class="tight ac431-log"><thead><tr><th>회</th><th>자료</th><th>직선 그래프</th><th>$R^2$</th><th>판정</th><th>$k$</th><th>$t_{1/2}$</th></tr></thead><tbody data-o="log"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 실험실 결과 ════════ -->
+<section class="slide" data-sec="02 · 실험실" data-title="실험실 결과와 해석">
+  <h2><span class="tag">디지털 탐구</span>결과 예시와 해석</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 620px">{{CVRES}}
+      <p class="small">예시($[\ce{OH-}]=0.050\ \text{M}$, 25 °C, 15 s 간격, 계산값): $R^2$ — $A$–$t$ 0.825, $\ln A$–$t$ 1.000, $\dfrac1A$–$t$ 0.825</p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 세 그래프 중 직선은? $\ce{CV+}$에 대한 반응 차수는?</p>
+      <p class="f21 step">→ $\ln A$–$t$만 직선 → $\ce{CV+}$에 <span class="ans">1차</span>. 기울기 $-0.010\ \text{s}^{-1}$ → $k'=1.0\times10^{-2}\ \text{s}^{-1}$, $t_{1/2}=69\ \text{s}$</p>
+      <p class="f21" data-q><b>Q</b> $[\ce{OH-}]$를 2배로 하면 $k'$도 2배였다. 무엇을 알 수 있나?</p>
+      <p class="f21 step">→ $k'=k[\ce{OH-}]^n$에서 $2^n=2$ → $\ce{OH-}$에도 <span class="ans">1차</span>, $k=\dfrac{k'}{[\ce{OH-}]}=0.20\ \text{L/(mol}\cdot\text{s)}$</p>
+      <div class="answer step">반응 속도 $=k[\ce{CV+}][\ce{OH-}]$ — 전체 2차 반응</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 21. 탐구 활동 방사성 (1) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 방사성 동위원소 (1)">
+  <h2><span class="tag">탐구 활동</span>방사성 동위원소의 붕괴 반감기 이용 분야 조사 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="std"><span class="code">240쪽</span>모둠별로 방사성 동위원소의 붕괴 반감기가 어떤 분야에 어떻게 이용되고 있는지 조사해서 발표하고, 900자 이내로 적어 보자.</div>
+  <div class="row mt12">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">방사성 동위원소의 붕괴는 <b>1차 반응</b>이다(우라늄-235의 붕괴 반감기 7억 1000만 년). 의료계와 산업계에서 널리 쓰인다.</p>
+      <div class="card"><h3>조사할 것</h3>
+        <p class="f21">① 동위원소와 반감기 · ② 쓰이는 분야 · ③ 반감기가 왜 그 쓰임에 알맞은지 · ④ 안전·폐기물 문제</p></div>
+      <p class="f21" data-q><b>Q</b> 붕괴가 1차 반응이면 남은 양은 어떻게 줄까?</p>
+      <p class="f21 step">→ 반감기마다 <span class="ans">절반</span>씩 — $\dfrac{N}{N_0}=\left(\dfrac12\right)^{t/t_{1/2}}$, 양(초기 농도)과 관계없이 반감기는 일정하다.</p>
+    </div>
+    <div class="col">{{RADIO}}</div>
+  </div>
+</section>
+
+<!-- ════════ 22. 탐구 활동 방사성 (2) ════════ -->
+<section class="slide" data-sec="02 · 탐구 활동" data-title="탐구 활동: 방사성 동위원소 (2)">
+  <h2><span class="tag">탐구 활동</span>조사 결과 예시 <span class="small c-muted">[필수 탐구]</span></h2>
+  <table class="tight ac431-sm">
+    <tr><th class="l">동위원소</th><th>반감기</th><th class="l">분야</th><th class="l">반감기를 이용하는 방식</th></tr>
+    <tr><td class="l">탄소-14</td><td>5730년</td><td class="l">고고학 연대 측정</td><td class="l">생물이 죽은 뒤 남은 $\ce{^{14}C}$ 비율로 지난 시간 계산</td></tr>
+    <tr><td class="l">우라늄-238</td><td>약 45억 년</td><td class="l">암석·지구의 나이</td><td class="l">긴 반감기 → 수십억 년 규모의 시간 측정</td></tr>
+    <tr><td class="l">테크네튬-99m</td><td>6.0시간</td><td class="l">의료 영상 진단</td><td class="l">촬영할 동안만 방사선을 내고 몸에서 빨리 사라짐</td></tr>
+    <tr><td class="l">아이오딘-131</td><td>8.0일</td><td class="l">갑상샘 질환 치료</td><td class="l">며칠 동안 갑상샘에 모여 치료한 뒤 줄어듦</td></tr>
+    <tr><td class="l">코발트-60</td><td>5.3년</td><td class="l">암 치료, 멸균, 비파괴 검사</td><td class="l">몇 년 동안 일정한 세기의 감마선원으로 사용</td></tr>
+  </table>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 계산해 보기: 테크네튬-99m을 주사하고 24시간 뒤 남은 비율은?</p>
+      <p class="f21 step">→ $\dfrac{24}{6.0}=4$번 → $\left(\tfrac12\right)^4=$ <span class="ans">6.25 %</span></p>
+    </div>
+    <div class="col stack">
+      <p class="f21" data-q><b>Q</b> 유물 속 $\ce{^{14}C}$ 비율이 살아 있는 생물의 25 %라면?</p>
+      <p class="f21 step">→ 반감기 2번 → $2\times5730=$ <span class="ans">약 11460년</span> 전</p>
+    </div>
+  </div>
+  <p class="small step">평가 요소: 반감기와 쓰임의 관계를 설명했는가 · 1차 반응(일정한 반감기)으로 계산했는가 · 출처를 밝혔는가 · 900자 이내</p>
+</section>
+
+<!-- ════════ 23. 연습 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅳ-3 · 연습 문제" data-title="연습 문제 1">
+  <h2><span class="tag q">연습 문제 1</span>각 물질의 반응 속도 사이의 관계</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f22">다음 화학 반응식에서 각 물질의 반응 속도 사이의 관계를 등식으로 표현하여라.</p>
+      <div class="formula sm">$a\ce{A} + b\ce{B} \ce{->} c\ce{C} + d\ce{D}$</div>
+      <p class="f21 step">반응물은 감소하므로 (−), 각 속도를 계수로 나눈다.</p>
+      <div class="answer step">$\text{반응 속도}=-\dfrac{1}{a}\dfrac{d[\ce{A}]}{dt}=-\dfrac{1}{b}\dfrac{d[\ce{B}]}{dt}=+\dfrac{1}{c}\dfrac{d[\ce{C}]}{dt}=+\dfrac{1}{d}\dfrac{d[\ce{D}]}{dt}$</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 24. 연습 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅳ-3 · 연습 문제" data-title="연습 문제 2">
+  <h2><span class="tag q">연습 문제 2</span>초기 반응 속도로 반응 속도식 구하기</h2>
+  <p class="f21">55 °C에서 측정한 초기 반응 속도이다. 반응 속도식과 반응 속도 상수를 구하여라.</p>
+  <div class="formula sm">$\ce{(CH3)3CBr(aq) + OH-(aq) -> (CH3)3COH(aq) + Br-(aq)}$</div>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 600px">
+      <table class="tight ac431-sm"><tr><th>실험</th><th>$[\ce{(CH3)3CBr}]$ (M)</th><th>$[\ce{OH-}]$ (M)</th><th>초기 반응 속도 $\text{mol/(L}\cdot\text{s)}$</th></tr>
+        <tr><td>1</td><td>0.5</td><td>0.050</td><td>$0.5\times10^{-2}$</td></tr><tr><td>2</td><td>1.0</td><td>0.050</td><td>$1.0\times10^{-2}$</td></tr><tr><td>3</td><td>1.5</td><td>0.050</td><td>$1.5\times10^{-2}$</td></tr><tr><td>4</td><td>1.0</td><td>0.10</td><td>$1.0\times10^{-2}$</td></tr><tr><td>5</td><td>1.0</td><td>0.20</td><td>$1.0\times10^{-2}$</td></tr></table>
+    </div>
+    <div class="col stack">
+      <p class="f21 step">실험 1–3: $[\ce{(CH3)3CBr}]$에 비례 → 1차</p>
+      <p class="f21 step">실험 2·4·5: $[\ce{OH-}]$가 4배여도 그대로 → 0차</p>
+      <div class="answer step">반응 속도 $=k[\ce{(CH3)3CBr}]$<br>$k=1.0\times10^{-2}\ \text{s}^{-1}$</div>
+      <div class="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 25. 연습 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅳ-3 · 연습 문제" data-title="연습 문제 3">
+  <h2><span class="tag q">연습 문제 3</span>$\ce{N2O5}$ 분해 반응의 반감기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 700px">
+      <p class="f21">$\ce{N2O5}$ 기체 분해 반응의 반감기는 25 °C에서 $4.03\times10^{4}\ \text{s}$이다. 1) 반응 속도 상수는? 2) 24시간 뒤 남아 있는 $\ce{N2O5}$는 초기 농도의 몇 %인가?</p>
+      <p class="f21 step">1) 1차 반응: $k=\dfrac{\ln2}{t_{1/2}}=\dfrac{0.6931}{4.03\times10^{4}\ \text{s}}$</p>
+      <div class="answer step">$k=1.72\times10^{-5}\ \text{s}^{-1}$</div>
+      <p class="f21 step">2) $t=24\times3600=8.64\times10^{4}\ \text{s}$, $\dfrac{[\ce{A}]_t}{[\ce{A}]_0}=e^{-kt}=e^{-(1.72\times10^{-5})(8.64\times10^{4})}=e^{-1.49}$</p>
+      <div class="answer step">$0.226$ → 초기 농도의 22.6 %</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 26. 연습 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅳ-3 · 연습 문제" data-title="연습 문제 4">
+  <h2><span class="tag q">연습 문제 4</span>과산화 수소의 분해</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21">과산화 수소(초기 농도 0.3 M)의 분해는 1차 반응이고 $k=1.8\times10^{-5}\ \text{s}^{-1}$이다. 1) 반응식과 반감기 2) 4시간 뒤 농도 3) 90 %가 분해되는 데 걸리는 시간은?</p>
+      <p class="f21 step">1) $\ce{2H2O2(aq) -> 2H2O(l) + O2(g)}$, &nbsp;$t_{1/2}=\dfrac{0.6931}{1.8\times10^{-5}\ \text{s}^{-1}}=3.85\times10^{4}\ \text{s}$</p>
+      <p class="f21 step">2) $t=1.44\times10^{4}\ \text{s}$: $[\ce{H2O2}]=0.3\ \text{M}\times e^{-(1.8\times10^{-5})(1.44\times10^{4})}=0.3\times0.772=0.23\ \text{M}$</p>
+      <p class="f21 step">3) 남은 것 10 %: $t=\dfrac{1}{k}\ln\dfrac{[\ce{A}]_0}{[\ce{A}]_t}=\dfrac{\ln\dfrac{0.3}{0.03}}{1.8\times10^{-5}\ \text{s}^{-1}}$</p>
+      <div class="answer step">1) $3.85\times10^{4}\ \text{s}$ &nbsp;2) $0.23\ \text{M}$ &nbsp;3) $1.28\times10^{5}\ \text{s}$ (약 35.5시간)</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 27. 연습 문제 5 (1) ════════ -->
+<section class="slide" data-sec="Ⅳ-3 · 연습 문제" data-title="연습 문제 5 (1)">
+  <h2><span class="tag q">연습 문제 5</span>이산화 질소의 분해 (1) 반응 차수와 $k$</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">300 °C에서 $\ce{NO2}$가 $\ce{NO}$와 $\ce{O2}$로 분해될 때 $[\ce{NO2}]$의 변화이다. 1) 반응식을 쓰고 반응 속도 상수를 구하여라.</p>
+      <table class="tight ac431-sm"><tr><th>$t$ (s)</th><td>0</td><td>50</td><td>100</td><td>150</td><td>200</td><td>300</td><td>400</td><td>500</td></tr>
+        <tr><th>$[\ce{NO2}]$ ($10^{-3}$ M)</th><td>8.00</td><td>6.58</td><td>5.59</td><td>4.85</td><td>4.29</td><td>3.48</td><td>2.93</td><td>2.53</td></tr>
+        <tr><th>$1/[\ce{NO2}]$ ($\text{M}^{-1}$)</th><td>125</td><td>152</td><td>179</td><td>206</td><td>233</td><td>287</td><td>341</td><td>395</td></tr></table>
+      <p class="f21 step">$\ce{2NO2(g) -> 2NO(g) + O2(g)}$. $\ln[\ce{NO2}]$–$t$는 휘고($R^2=0.974$), $\dfrac{1}{[\ce{NO2}]}$–$t$가 직선($R^2=1.000$) → 2차</p>
+      <div class="answer step">$k=\text{기울기}=5.41\times10^{-1}\ \text{L/(mol}\cdot\text{s)}$</div>
+    </div>
+    <div class="col stack">{{EX5}}</div>
+  </div>
+</section>
+
+<!-- ════════ 28. 연습 문제 5 (2) ════════ -->
+<section class="slide" data-sec="Ⅳ-3 · 연습 문제" data-title="연습 문제 5 (2)">
+  <h2><span class="tag q">연습 문제 5</span>이산화 질소의 분해 (2) 농도와 반감기 예측</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 720px">
+      <p class="f21">2) 20분이 지난 뒤 $\ce{NO2}$의 농도는? 3) 초기 농도가 $3.0\times10^{-3}\ \text{M}$일 때 반감기는?</p>
+      <p class="f21 step">2) $\begin{aligned}\dfrac{1}{[\ce{NO2}]}&=kt+\dfrac{1}{[\ce{NO2}]_0}=(0.541)(1200)+\dfrac{1}{8.00\times10^{-3}}\\&=649+125=774\ \text{M}^{-1}\end{aligned}$</p>
+      <div class="answer step">$[\ce{NO2}]=1.29\times10^{-3}\ \text{M}$</div>
+      <p class="f21 step">3) $t_{1/2}=\dfrac{1}{k[\ce{NO2}]_0}=\dfrac{1}{(0.541)(3.0\times10^{-3})}$</p>
+      <div class="answer step">$t_{1/2}=6.16\times10^{2}\ \text{s}$</div>
+      <p class="small step">교과서 풀이는 2)에서 $\dfrac{1}{[\ce{NO2}]_0}$ 자리에 $\dfrac{1}{0.003}$을 넣어 $1.02\times10^{-3}\ \text{M}$으로 적었다 — 이 자료의 처음 농도 $8.00\times10^{-3}\ \text{M}$를 넣으면 $1.29\times10^{-3}\ \text{M}$이다.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 29. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 적분 속도식과 반감기 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>3. 화학 반응 속도식 — 02 (2)</h2>
+  <div class="ac431-map">
+    <div class="ac431-node ac431-dim">(1)<br>반응 속도<br>반응 속도식<br>초기 속도법</div>
+    <div class="ac431-arr">→</div>
+    <div class="ac431-node ac431-main" data-q><b>적분 속도식 — 직선 그래프</b><br>❶ 1차: <span class="blank"><span class="step">$\ln[\ce{A}]$</span></span>–$t$, 기울기 $-k$<br>❷ 2차: <span class="blank"><span class="step">$1/[\ce{A}]$</span></span>–$t$, 기울기 $k$<br>❸ 0차: $[\ce{A}]$–$t$, 기울기 $-k$<br>❹ 직선인 그래프로 <span class="blank"><span class="step">반응 차수</span></span> 판별</div>
+    <div class="ac431-node ac431-main" data-q><b>반감기</b><br>❺ 1차 $t_{1/2}=$ <span class="blank"><span class="step">$0.6931/k$</span></span> (초기 농도와 무관)<br>❻ 2차 $1/(k[\ce{A}]_0)$ — 점점 <span class="blank"><span class="step">길어짐</span></span><br>❼ 0차 $[\ce{A}]_0/(2k)$ — 점점 <span class="blank"><span class="step">짧아짐</span></span></div>
+    <div class="ac431-arr">→</div>
+    <div class="ac431-node ac431-dim">4. 충돌 모형과<br>활성화 에너지<br>(다음 중단원)</div>
+  </div>
+</section>
+
+<!-- ════════ 30. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 적분 속도식과 반감기 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 0차·1차·2차 반응의 적분 속도식과 반감기 식을 직선 방정식 꼴로 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 농도–시간 자료를 세 그래프로 바꾸어 반응 차수와 $k$를 구하고, 시간 뒤 농도를 예측하였다.</button>
+    <button class="chk">[가치·태도] 방사성 동위원소의 반감기가 의료·연대 측정에 쓰이는 사례를 조사하며 화학의 쓸모를 느꼈다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 반감기가 일정하면 몇 차 반응일까? <span class="step">→ <span class="ans">1차</span> 반응이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 온도를 높이면 1차 반응의 반감기는? <span class="step">→ $k$가 커지므로 <span class="ans">짧아진다</span> — 다음 중단원에서 까닭을 알아본다.</span></p>
+  </div>
+  <div class="note puzzle mt16"><b>다음 중단원</b> 온도가 10 °C 오르면 왜 반응이 훨씬 빨라질까? — 4. 충돌 모형과 활성화 에너지</div>
+</section>

@@ -1,0 +1,11 @@
+.firebase/
+firebase-debug.log
+database-debug.log
+node_modules/
+__pycache__/
+# 저작권 자료·중간 산출물은 저장소에 올리지 않는다
+차시자료/_소스/_render/
+차시자료/_소스/_자료/*
+!차시자료/_소스/_자료/넣는곳.md
+차시자료/_소스/_추출/*
+!차시자료/_소스/_추출/넣는곳.md

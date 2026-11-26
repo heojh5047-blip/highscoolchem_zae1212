@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":1,"severity":"medium","rule":"D8","problem":"표지 그림 가장자리(빛 방출 라벨, 스펙트럼 띠)가 cover-fig 바깥 흐림에 묻혀 흐리게 보임","fix":"궤도·띠·광자를 안쪽으로 줄여 배치 — 반영"},
+{"slide":7,"severity":"low","rule":"D8","problem":"눈금 10^11과 '파장(nm)' 겹침","fix":"10^11 눈금 라벨 삭제 — 반영"},
+{"slide":8,"severity":"low","rule":"D8","problem":"'수소 기체 방전관' 라벨이 그림 왼쪽에서 잘림","fix":"왼쪽 정렬로 옮김 — 반영"},
+{"slide":10,"severity":"low","rule":"D8","problem":"'회절격자' 라벨 위 잘림, '보강 간섭' 라벨이 광선과 겹침, 경로 차 라벨이 광선 위","fix":"격자 막대를 내리고 라벨 위치 조정 — 반영"},
+{"slide":16,"severity":"low","rule":"D8","problem":"n=4 라벨이 n=3과 겹침","fix":"n=4–6은 선만 두고 라벨 삭제 — 반영"},
+{"slide":17,"severity":"medium","rule":"3.2","problem":"전이 도표 라벨 18개가 화면 16px 미만, 공식 상자가 칸에 꽉 참, 파장 축 라벨 겹침","fix":"라벨 21–22, 공식 23px, n=4 라벨 삭제, 축 라벨 위로 — 반영"},
+{"slide":20,"severity":"low","rule":"D8","problem":"'쿨롱 힘' 라벨이 원자핵·화살표와 겹침","fix":"화살표 오른쪽 아래로 — 반영"},
+{"slide":30,"severity":"low","rule":"D8","problem":"a0 라벨과 (다) 캡션 겹침","fix":"캡션을 아래로, viewBox 늘림 — 반영"},
+{"slide":31,"severity":"medium","rule":"D8","problem":"오른쪽 열 넘침, 3s 경계면 원이 그림 밖으로 잘림, 0.6 눈금과 축 이름 겹침","fix":"경계면 그림 배치를 다시 계산, 그래프 550px, 0.6 눈금 삭제 — 반영"},
+{"slide":33,"severity":"low","rule":"D8","problem":"실험실 축 이름 r(a0)과 눈금 20 겹침","fix":"축 이름을 축 위로 — 반영"},
+{"slide":17,"severity":"low","rule":"레이아웃","problem":"왼쪽 아래 빈 공간","fix":"그림 비율상 남김 — 기각(판서 공간으로 씀)"}
+],"summary":"전체 39장 sheet 모음 2회(완성 직후·최종) 확인. 자동 점검 18건 → 0건, 콘솔 0, motion 0(data-anim 33 → 24로 줄임), ask 0."}

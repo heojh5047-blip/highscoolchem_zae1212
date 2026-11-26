@@ -1,0 +1,117 @@
+{
+"findings": [
+{
+"slide": 1,
+"severity": "high",
+"rule": "D8",
+"problem": "표지 그림이 제목 글자와 겹치고 이름 라벨이 다음 모형에 가림",
+"fix": "cover-fig(원형 마스크 안)로 옮기고 세 모형을 위 1·아래 2로 배치, 이름 대신 'C5H12 구조 이성질체 3가지'"
+},
+{
+"slide": 5,
+"severity": "medium",
+"rule": "D8",
+"problem": "H 라벨과 물질 이름이 겹침(사이클로프로페인)",
+"fix": "이름을 아래로 내리고 viewBox를 늘림"
+},
+{
+"slide": 7,
+"severity": "medium",
+"rule": "D8",
+"problem": "'0.109 nm' 치수선이 109.5° 라벨과 겹침",
+"fix": "치수선을 결합 오른쪽으로"
+},
+{
+"slide": 9,
+"severity": "high",
+"rule": "D23",
+"problem": "117.4°(H–C–H) 호가 C=C 쪽(왼쪽)에 그려짐",
+"fix": "오른쪽 두 H 사이로(−θ…θ)"
+},
+{
+"slide": 10,
+"severity": "medium",
+"rule": "D8",
+"problem": "180° 라벨과 0.120 nm 치수선 겹침, 두 치수 라벨 겹침",
+"fix": "두 치수선을 아래로, 0.120 nm는 더 멀리"
+},
+{
+"slide": 14,
+"severity": "medium",
+"rule": "M1",
+"problem": "분류 상자에 <b>가 글자로 보이고 라벨이 16px 미만",
+"fix": "<b> 빼고 22px, 상자 키움, 아래 줄 넘침 정리"
+},
+{
+"slide": 17,
+"severity": "medium",
+"rule": "D8",
+"problem": "공-막대 모형 위쪽 H가 잘리고 가지 CH3 라벨이 모형과 겹침, 이름 라벨 16px 미만",
+"fix": "모형을 내리고 축약 구조식 간격·크기 키움"
+},
+{
+"slide": 18,
+"severity": "medium",
+"rule": "D8",
+"problem": "모형 위쪽 잘림·가지 라벨 겹침",
+"fix": "같은 방법(isorow 간격)"
+},
+{
+"slide": 20,
+"severity": "low",
+"rule": "T1",
+"problem": "긴 h2에서 '[필수 탐구]'가 두 줄로 끊김",
+"fix": "nowrap + &nbsp;"
+},
+{
+"slide": 22,
+"severity": "medium",
+"rule": "T4",
+"problem": "연소 반응식 상자 넘침, 그림 라벨 16px 미만",
+"fix": "kcal 값·열화학 반응식을 unit 줄로, 그림 라벨 21px"
+},
+{
+"slide": 23,
+"severity": "medium",
+"rule": "D8",
+"problem": "아래 small 줄이 안전 영역 밖",
+"fix": "종결 단계 카드 안으로 옮김"
+},
+{
+"slide": 26,
+"severity": "medium",
+"rule": "D8",
+"problem": "쌍극자 화살표·라벨이 원자와 겹침",
+"fix": "화살표를 모형 왼쪽에, 극성 라벨을 이름 아래로"
+},
+{
+"slide": 27,
+"severity": "low",
+"rule": "D8",
+"problem": "'(σ 결합 위아래로 노출)' 라벨 잘림",
+"fix": "그림 아래 가운데로"
+},
+{
+"slide": 32,
+"severity": "high",
+"rule": "D8",
+"problem": "실험실이 아래로 넘치고 기록 표 칸이 줄바꿈되며, 그래프 막대 이름이 겹치고, 조립판 아래 줄이 잘리고, 2-뷰텐 p 오비탈이 정면을 향해 안 보임",
+"fix": "그래프·초기화를 모드 줄로, 조립판 148px, 표 4행·nowrap·짧은 극성 칸, 막대 너비 자동·시스/트랜스 라벨 엇갈림, 2-뷰텐 시점 pitch 62°"
+},
+{
+"slide": 33,
+"severity": "medium",
+"rule": "D8",
+"problem": "결론 답 상자 3개로 장이 넘침",
+"fix": "→ 단계 문장으로"
+},
+{
+"slide": 13,
+"severity": "low",
+"rule": "3.2",
+"problem": "계열 칩 글자가 작음",
+"fix": "카드 안 21px 문장으로"
+}
+],
+"summary": "전체 sheet 모음을 완성 직후와 최종에 보았다. 표지·실험실·결합각 호의 큰 문제를 고쳤고, 최종 render 자동 점검 0·콘솔 0, motion 0, ask 0."
+}

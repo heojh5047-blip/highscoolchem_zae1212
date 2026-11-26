@@ -1,0 +1,13 @@
+{"findings":[
+{"slide":2,"severity":"medium","rule":"M1","problem":"그림 라벨에 <b> 태그가 글자로 그대로 보임(열역학·반응 속도, S7 가역·비가역).","fix":"data-weight로 굵게 — 반영"},
+{"slide":3,"severity":"medium","rule":"T4","problem":"석회 동굴 평형식이 칸을 넘침.","fix":"식을 슬라이드 폭 전체의 formula로 옮기고 설명을 unit 줄로 — 반영"},
+{"slide":16,"severity":"low","rule":"T4","problem":"Q 식 상자 넘침, 그림의 주황 점 두 개가 뜻 없이 떠 있음.","fix":"반응식을 unit 줄로, 점 두 개를 수직선 위에서 K로 모이는 움직임으로 — 반영"},
+{"slide":21,"severity":"medium","rule":"M1","problem":"실험실 표 머리·축 라벨에 유니코드 첨자(²⁺, ⁻⁵).","fix":"μM 단위로 바꾸고 화학식은 HTML KaTeX 머리로 — 반영"},
+{"slide":23,"severity":"low","rule":"D8","problem":"「G 최소」와 눈금 0.75 겹침.","fix":"라벨을 점 왼쪽 위로 — 반영"},
+{"slide":28,"severity":"medium","rule":"D8","problem":"입자 그림이 커서 아래 글이 넘침.","fix":"그림 높이 396 → 378, 비활성 기체 문장 줄임 — 반영"},
+{"slide":29,"severity":"low","rule":"D8","problem":"로그 막대그래프 축 이름·화살표 라벨·90 라벨 겹침, 반응식 상자 넘침.","fix":"그래프를 아래로 내리고 화살표를 위쪽 오른편에, ΔH°를 unit 줄로 — 반영"},
+{"slide":30,"severity":"low","rule":"D8","problem":"200·300·400 atm 라벨 겹침, 원점 눈금 겹침.","fix":"라벨 최소 간격 21, 세로 0 눈금 생략 — 반영"},
+{"slide":34,"severity":"low","rule":"D8","problem":"기울기 라벨 잘림, 절편 라벨과 계산값 설명 겹침.","fix":"기울기 라벨을 삼각형 아래 가운데로, 설명을 왼쪽 위 빈 곳으로 — 반영"},
+{"slide":35,"severity":"low","rule":"T4","problem":"ln K1·ln K2 한 줄 넘침, 슬라이드 아래 넘침.","fix":"aligned 두 줄, 쓰임 문장을 오른쪽 열로 — 반영"},
+{"slide":37,"severity":"low","rule":"T2","problem":"개념 지도 ❸ 줄이 어색하게 줄바꿈.","fix":"K_P와 Q를 ❸·❹로 나눠 ❶–❼ — 반영"}
+],"summary":"첫 render 자동 점검 21건 → 0건, 콘솔 0. 전체 sheet 모음 두 번(완성 직후·최종), 원본 s01·s03·s09·s21(PRE 상태)·s28·s34 확인. 지적 11건 모두 반영."}

@@ -1,0 +1,1 @@
+(()=>{const r=document.querySelector('[data-lab="ac113fill"]');const i=r.querySelector('[data-i="z"]');i.value=26;i.dispatchEvent(new Event('input'));for(let k=0;k<26;k++)r.querySelector('[data-act="add"]').click();r.querySelector('[data-act="check"]').click();r.querySelector('[data-act="rec"]').click();})()
