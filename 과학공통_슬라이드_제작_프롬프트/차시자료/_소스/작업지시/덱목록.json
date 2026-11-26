@@ -35,7 +35,274 @@
   "requiredInquiry[].textbookActivity": "교과서 활동 이름(교과서 그대로)",
   "requiredInquiry[].form": "실험실 + 탐구 슬라이드 | 탐구 슬라이드(조사·토의)"
  },
- "통합과학1_출판사": {
+ "통합과학1_미래엔": {
+  "course": "통합과학1",
+  "publisher": "미래엔",
+  "level": "고등",
+  "units": {
+   "Ⅰ": {
+    "name": "〔과학의 기초 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학1_미래엔_교과서_1.pdf",
+    "textbookTxt": "_추출/통합과학1_미래엔_교과서_1.txt",
+    "pdfOffset": null,
+    "guide": "_자료/통합과학1_미래엔_지도서_1.pdf",
+    "guideTxt": "_추출/통합과학1_미래엔_지도서_1.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅱ": {
+    "name": "〔물질과 규칙성 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학1_미래엔_교과서_2.pdf",
+    "textbookTxt": "_추출/통합과학1_미래엔_교과서_2.txt",
+    "pdfOffset": null,
+    "guide": "_자료/통합과학1_미래엔_지도서_2.pdf",
+    "guideTxt": "_추출/통합과학1_미래엔_지도서_2.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅲ": {
+    "name": "〔시스템과 상호작용 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학1_미래엔_교과서_3.pdf",
+    "textbookTxt": "_추출/통합과학1_미래엔_교과서_3.txt",
+    "pdfOffset": null,
+    "guide": "_자료/통합과학1_미래엔_지도서_3.pdf",
+    "guideTxt": "_추출/통합과학1_미래엔_지도서_3.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   }
+  },
+  "decks": [],
+  "requiredInquiry": []
+ },
+ "통합과학2_미래엔": {
+  "course": "통합과학2",
+  "publisher": "미래엔",
+  "level": "고등",
+  "units": {
+   "Ⅰ": {
+    "name": "〔변화와 다양성 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학2_미래엔_교과서_1.pdf",
+    "textbookTxt": "_추출/통합과학2_미래엔_교과서_1.txt",
+    "pdfOffset": null,
+    "guide": "_자료/통합과학2_미래엔_지도서_1.pdf",
+    "guideTxt": "_추출/통합과학2_미래엔_지도서_1.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅱ": {
+    "name": "〔환경과 에너지 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학2_미래엔_교과서_2.pdf",
+    "textbookTxt": "_추출/통합과학2_미래엔_교과서_2.txt",
+    "pdfOffset": null,
+    "guide": "_자료/통합과학2_미래엔_지도서_2.pdf",
+    "guideTxt": "_추출/통합과학2_미래엔_지도서_2.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅲ": {
+    "name": "〔과학과 미래 사회 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학2_미래엔_교과서_3.pdf",
+    "textbookTxt": "_추출/통합과학2_미래엔_교과서_3.txt",
+    "pdfOffset": null,
+    "guide": "_자료/통합과학2_미래엔_지도서_3.pdf",
+    "guideTxt": "_추출/통합과학2_미래엔_지도서_3.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   }
+  },
+  "decks": [],
+  "requiredInquiry": []
+ },
+ "과학1_미래엔": {
+  "course": "과학1",
+  "publisher": "미래엔",
+  "level": "중학",
+  "units": {
+   "Ⅰ": {
+    "name": "〔과학과 인류의 지속가능한 삶 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_1.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_1.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_1.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_1.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅱ": {
+    "name": "〔생물의 구성과 다양성 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_2.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_2.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_2.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_2.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅲ": {
+    "name": "〔열 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_3.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_3.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_3.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_3.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅳ": {
+    "name": "〔물질의 상태 변화 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_4.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_4.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_4.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_4.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅴ": {
+    "name": "〔힘의 작용 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_5.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_5.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_5.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_5.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅵ": {
+    "name": "〔기체의 성질 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_6.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_6.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_6.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_6.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅶ": {
+    "name": "〔태양계 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학1_미래엔_교과서_7.pdf",
+    "textbookTxt": "_추출/과학1_미래엔_교과서_7.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학1_미래엔_지도서_7.pdf",
+    "guideTxt": "_추출/과학1_미래엔_지도서_7.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   }
+  },
+  "decks": [],
+  "requiredInquiry": []
+ },
+ "과학2_미래엔": {
+  "course": "과학2",
+  "publisher": "미래엔",
+  "level": "중학",
+  "units": {
+   "Ⅰ": {
+    "name": "〔물질의 특성 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_1.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_1.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_1.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_1.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅱ": {
+    "name": "〔지권의 변화 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_2.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_2.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_2.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_2.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅲ": {
+    "name": "〔빛과 파동 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_3.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_3.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_3.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_3.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅳ": {
+    "name": "〔물질의 구성 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_4.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_4.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_4.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_4.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅴ": {
+    "name": "〔식물과 에너지 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_5.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_5.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_5.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_5.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅵ": {
+    "name": "〔동물과 에너지 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_6.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_6.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_6.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_6.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅶ": {
+    "name": "〔전기와 자기 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_7.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_7.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_7.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_7.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   },
+   "Ⅷ": {
+    "name": "〔별과 우주 — 파일 이름에서 가져온 임시 이름, 교과서 차례로 확인〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/과학2_미래엔_교과서_8.pdf",
+    "textbookTxt": "_추출/과학2_미래엔_교과서_8.txt",
+    "pdfOffset": null,
+    "guide": "_자료/과학2_미래엔_지도서_8.pdf",
+    "guideTxt": "_추출/과학2_미래엔_지도서_8.txt",
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕"
+   }
+  },
+  "decks": [],
+  "requiredInquiry": []
+ },
+ "_예시_통합과학1_출판사": {
   "course": "통합과학1",
   "publisher": "〔출판사〕",
   "level": "고등",
@@ -60,11 +327,15 @@
     "title": "〔소단원 이름〕",
     "header": "Ⅰ-1-1 〔소단원 이름〕 (고등 통합과학1 〔NN–MM〕쪽)",
     "bookPages": "〔NN–MM〕",
-    "standard": ["〔성취기준 코드 — 교육과정 문서에서〕"],
+    "standard": [
+     "〔성취기준 코드 — 교육과정 문서에서〕"
+    ],
     "area": "물리",
     "idPrefix": "is1111-",
     "withUnitIntro": "대단원 도입 〔쪽〕, 중단원 도입 〔쪽〕",
-    "requiredInquiry": ["통1-탐01"],
+    "requiredInquiry": [
+     "통1-탐01"
+    ],
     "labCandidate": "〔(선택) 실험실과 까닭〕",
     "slides": "30–36",
     "note": "〔예시 — 측정·단위처럼 모든 영역의 표기를 처음 정하는 덱이면 그 사실을 적는다〕"
@@ -76,8 +347,13 @@
     "title": "〔소단원 이름〕",
     "header": "Ⅰ-1-2 〔소단원 이름〕 (고등 통합과학1 〔NN–MM〕쪽)",
     "bookPages": "〔NN–MM〕",
-    "standard": ["〔성취기준 코드〕"],
-    "area": ["화학", "지구"],
+    "standard": [
+     "〔성취기준 코드〕"
+    ],
+    "area": [
+     "화학",
+     "지구"
+    ],
     "idPrefix": "is1112-",
     "requiredInquiry": [],
     "review": "〔소단원 끝 문항 번호(쪽)〕",
