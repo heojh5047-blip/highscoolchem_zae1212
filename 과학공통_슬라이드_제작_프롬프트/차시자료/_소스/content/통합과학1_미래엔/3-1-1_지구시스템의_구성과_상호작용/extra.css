@@ -1,0 +1,7 @@
+/* 3-1-1 지구시스템의 구성과 상호작용 — 덱 전용 (.is1311-) */
+.slide.cover h1.is1311-h1{font-size:88px}
+.is1311-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1311-btns .btn{font-size:19px;padding:5px 12px}
+.is1311-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1311-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}
+.is1311-card{display:block;font-size:22px;font-weight:700;padding:10px 14px;border:2px solid #E08A2C;border-radius:12px;background:#FFF7DB;min-height:56px}
