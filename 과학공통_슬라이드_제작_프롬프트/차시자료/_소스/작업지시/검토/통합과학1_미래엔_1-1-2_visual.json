@@ -1,0 +1,8 @@
+{"findings":[
+{"slide":6,"severity":"medium","rule":"T4","problem":"환산 식 공식 상자가 칸보다 넓음","fix":"두 상자로 나눔 — 반영"},
+{"slide":12,"severity":"medium","rule":"D8","problem":"노트북 라벨 잘림, 단위 동그라미가 숫자를 가림","fix":"그림을 오른쪽으로 옮기고 수·단위를 따로 써 동그라미를 단위에만 — 반영"},
+{"slide":14,"severity":"low","rule":"D8","problem":"'가로' 라벨 잘림","fix":"viewBox 높이 늘림 — 반영"},
+{"slide":25,"severity":"low","rule":"T4","problem":"답 칸이 좁아 줄바뀜","fix":"칸 넓힘 — 반영"},
+{"slide":34,"severity":"low","rule":"D8","problem":"다음 덱 화살표가 글자를 가로지름","fix":"오른쪽 상자 아래로 옮김 — 반영"},
+{"slide":0,"severity":"low","rule":"6.4","problem":"data-anim 8곳(권장 15–25)","fix":"아이콘·충전·밑창 등 9곳 추가 → 17곳 — 반영"}
+],"summary":"전체 캡처 2회 확인. 자동 점검 0·콘솔 0, motion 0, ask 0."}
