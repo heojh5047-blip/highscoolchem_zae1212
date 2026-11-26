@@ -1,0 +1,1 @@
+{"findings":[{"slide":12,"severity":"low","rule":"D8","problem":"라벨 잘림","fix":"위치 조정 — 반영"},{"slide":4,"severity":"low","rule":"lab","problem":"전자 점이 부품과 겹침","fix":"부품 구간 숨김 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0, 실험실 PRE 통과."}

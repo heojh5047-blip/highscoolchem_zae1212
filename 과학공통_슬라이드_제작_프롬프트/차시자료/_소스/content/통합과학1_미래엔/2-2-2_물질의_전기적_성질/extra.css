@@ -1,0 +1,5 @@
+/* 2-2-2 물질의 전기적 성질 — 덱 전용 (.is1222-) */
+.is1222-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1222-btns .btn{font-size:19px;padding:5px 10px}
+.is1222-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1222-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}
