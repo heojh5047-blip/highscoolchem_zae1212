@@ -1,0 +1,1 @@
+{"findings":[{"slide":8,"severity":"low","rule":"D8","problem":"라벨 잘림(8·16·21·23)","fix":"위치·viewBox — 반영"},{"slide":0,"severity":"low","rule":"6.4","problem":"data-anim 11곳","fix":"4곳 보탬 → 15"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0, 실험실 캡처 확인."}

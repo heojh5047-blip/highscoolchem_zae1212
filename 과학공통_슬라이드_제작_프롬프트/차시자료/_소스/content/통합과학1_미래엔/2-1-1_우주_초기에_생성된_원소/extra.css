@@ -1,0 +1,4 @@
+/* 2-1-1 우주 초기에 생성된 원소 — 덱 전용 (.is1211-) */
+.is1211-btns{display:flex;flex-wrap:wrap;gap:8px}
+.is1211-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1211-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}
