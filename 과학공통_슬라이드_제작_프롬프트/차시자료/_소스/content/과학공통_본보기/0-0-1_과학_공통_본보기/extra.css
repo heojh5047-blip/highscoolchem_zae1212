@@ -1,0 +1,16 @@
+/* 과학 공통 본보기 — 덱 전용 (모두 .sc001- 접두어) */
+.sc001-btns{display:flex;gap:10px}
+table.sc001-rec{width:100%}
+table.sc001-rec th{font-size:19px;padding:4px 6px}
+table.sc001-rec td{font-size:19px;text-align:center;padding:3px 6px}
+table.sc001-cnt{width:420px}
+table.sc001-cnt td,table.sc001-cnt th{text-align:center}
+table.sc001-punnett{border-collapse:collapse}
+table.sc001-punnett th,table.sc001-punnett td{width:120px;height:62px;text-align:center;font-size:26px;border:2px solid #9FB0C2}
+table.sc001-punnett th{background:#EEF3F8}
+table.sc001-punnett th.sc001-corner{font-size:19px;color:var(--muted)}
+table.sc001-punnett td.sc001-rec2{background:#FFF8D6}
+table.sc001-sum{width:100%}
+table.sc001-sum th:first-child,table.sc001-sum td:first-child{width:130px;text-align:center}
+table.sc001-sum th:last-child,table.sc001-sum td:last-child{width:90px;text-align:center}
+table.sc001-cnt{width:330px}
