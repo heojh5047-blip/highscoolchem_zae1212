@@ -1,0 +1,7 @@
+{
+  "_설명": "진행 관리 도구(prog.py, deploy_done.sh, gdone.sh) 설정. 과목순서 = 사이트 탭 순서(비우면 덱목록.json 순서). 늘_넣을_폴더 = 완료 여부와 상관없이 배포에 넣는 차시자료 아래 폴더. git_commit = gdone.sh가 끝에 git commit 할지(true/false), git_push_branch = 비우면 push 안 함.",
+  "과목순서": ["통합과학1_출판사", "통합과학2_출판사", "과학1_출판사", "과학2_출판사", "과학3_출판사"],
+  "늘_넣을_폴더": ["js", "css"],
+  "git_commit": false,
+  "git_push_branch": ""
+}

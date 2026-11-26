@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>슬라이드 수정</title>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/config.js"></script>
+</head>
+<body>
+<div class="top">
+  <a id="home" href="index.html">← 목록</a>
+  <h1 id="title" style="font-size:17px">슬라이드 수정</h1>
+  <span class="sp"></span>
+  <span class="state" id="state"></span>
+  <span class="who" id="who"></span>
+  <button id="login">관리자 로그인</button>
+</div>
+<div class="ed">
+  <div class="stage">
+    <iframe id="f" title="편집할 슬라이드"></iframe>
+    <div class="nav">
+      <button id="prev">◀ 이전</button><span id="pos">–</span><button id="next">다음 ▶</button>
+      <span class="sp" style="flex:1"></span>
+      <button id="audit">자동 점검</button>
+      <a id="viewlink" target="_blank" style="font-size:14px">학생 화면으로 보기 ↗</a>
+    </div>
+  </div>
+  <div class="side">
+    <div id="msg"></div>
+    <h3>고칠 곳 고르기</h3>
+    <div class="help">왼쪽 슬라이드에서 고칠 <b>문장·제목·표 칸·정답·그림 속 글자</b>를 누르세요. 노란 테가 생긴 곳이 골라진 곳입니다.</div>
+    <div id="pickinfo" class="help"></div>
+    <div id="editor" hidden>
+      <textarea id="src" spellcheck="false"></textarea>
+      <div class="row" style="margin-top:8px"><button class="pri" id="apply">적용해서 보기</button><button id="undo">되돌리기</button></div>
+    </div>
+    <h3>저장</h3>
+    <div class="row"><button class="pri" id="save">저장(학생 화면에 반영)</button></div>
+    <div class="row"><button id="dl">수정본 내려받기(slides.html)</button><button class="warn" id="revert">원본으로 되돌리기</button></div>
+    <div class="help">
+      <b>쓰는 법</b><br>
+      · 수식은 <code>$…$</code>, 화학식은 <code>$\ce{H2O}$</code>, <code>$\ce{N2(g) + 3H2(g) &lt;=&gt; 2NH3(g)}$</code><br>
+      · 형광펜 <code>&lt;mark&gt;…&lt;/mark&gt;</code>, 줄바꿈 <code>&lt;br&gt;</code>, 굵게 <code>&lt;b&gt;…&lt;/b&gt;</code><br>
+      · <code>class="step"</code> 같은 표시는 지우지 마세요(단계 공개가 바뀝니다).<br>
+      · 그림 모양·실험실·슬라이드 추가는 여기서 못 고칩니다 → Claude Code에게 맡기세요.<br>
+      · 「적용해서 보기」는 이 화면에만, 「저장」을 눌러야 학생 화면에 반영됩니다.
+    </div>
+  </div>
+</div>
+<script type="module">
+import { getFB, isAdmin, IS_LOCAL } from './js/fb.js';
+import { deckParam, loadDeck, getSlides, setSlides, dbKey, hash, editMode, parseSlides, download } from './js/deckio.js';
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const d = deckParam(), key = d ? dbKey(d) : '';
+const q = IS_LOCAL ? '&local' : '';
+if (IS_LOCAL) $('#home').href = 'index.html?local';
+let fb, user = null, admin = false;
+let orig = '', origSlides = '', savedSlides = '', work = null, undo = [], cur = 0, N = 0, picked = null, target = null;
+
+const dirty = () => work && work.html() !== savedSlides;
+function setState() { const s = $('#state'); s.textContent = dirty() ? '저장 안 한 수정 있음' : '저장됨'; s.className = 'state' + (dirty() ? ' dirty' : ''); $('#undo').disabled = !undo.length; $('#save').disabled = !admin || !dirty(); $('#revert').disabled = !admin; }
+function note(html, err) { $('#msg').innerHTML = html ? `<div class="note${err ? ' err' : ''}">${html}</div>` : ''; }
+
+function renderFrame() { $('#f').srcdoc = editMode(setSlides(orig, work.html())); }
+addEventListener('message', e => {
+  if (e.source !== $('#f').contentWindow) return;
+  const m = e.data || {};
+  if (m.type === 'ready') { N = m.N; post({ type: 'show', slide: Math.min(cur, N - 1), mode: 'all' }); if (picked) post({ type: 'select', eid: picked }); }
+  else if (m.type === 'show') { cur = m.slide; $('#pos').textContent = (cur + 1) + ' / ' + N; }
+  else if (m.type === 'pick') pick(m.eid);
+  else if (m.type === 'audit') { const iss = (m.issues || []).filter(x => x.slide === cur + 1 || x.slide === -1); alert(iss.length ? iss.map(x => `[${x.rule}] ${x.msg}`).join('\n') : '이 슬라이드 자동 점검: 문제 없음'); }
+});
+const post = m => { try { $('#f').contentWindow.postMessage(m, '*'); } catch (e) { } };
+$('#prev').onclick = () => post({ type: 'show', slide: Math.max(0, cur - 1), mode: 'all' });
+$('#next').onclick = () => post({ type: 'show', slide: Math.min(N - 1, cur + 1), mode: 'all' });
+$('#audit').onclick = () => post({ type: 'audit' });
+
+function pick(eid) {
+  picked = eid; target = null;
+  let el = work.map.get(eid);
+  // 형광펜·굵게 같은 글 속 꾸밈을 눌렀으면 그 문장(바깥 요소) 전체를 고친다
+  const INL = /^(mark|b|strong|i|em|span|sub|sup|a|u|small|br|code)$/i;
+  while (el && INL.test(el.tagName) && !el.closest('svg') && el.parentElement && !el.parentElement.matches('#r, section.slide')) el = el.parentElement;
+  if (el) { for (const [k, v] of work.map) if (v === el) { picked = k; break; } if (picked !== eid) post({ type: 'select', eid: picked }); }
+  const info = $('#pickinfo'), ed = $('#editor');
+  ed.hidden = true;
+  if (!el) { info.textContent = '이 요소를 원본에서 찾지 못했습니다. 다른 곳을 눌러 보세요.'; return; }
+  const tag = el.tagName.toLowerCase();
+  if (/-0$/.test(eid)) { target = { el, kind: 'attr', attr: 'data-title' }; info.innerHTML = '슬라이드 전체가 골라졌습니다. 목차에 뜨는 제목(data-title)만 고칠 수 있어요. 문장을 고치려면 그 문장을 누르세요.'; }
+  else if (tag === 'text' && el.classList.contains('tex')) { const a = el.hasAttribute('data-mix') ? 'data-mix' : 'data-tex'; target = { el, kind: 'attr', attr: a }; info.innerHTML = '그림 속 글자입니다. ' + (a === 'data-mix' ? '글과 <code>$…$</code>가 섞인 라벨, <code>||</code>는 줄바꿈.' : 'LaTeX 라벨(예: <code>\\ce{H2O}</code>).'); }
+  else if (el.closest('svg')) { info.innerHTML = '그림(도형·화살표·원자 모형)은 여기서 고칠 수 없습니다. 그림 속 <b>글자</b>를 눌러 보거나, 그림 수정은 Claude Code에게 맡기세요.'; return; }
+  else if (el.closest('.lab')) { info.innerHTML = '실험실은 여기서 고칠 수 없습니다(Claude Code로).'; return; }
+  else if (el.querySelector('svg,.lab,section') || el.innerHTML.length > 4000) { info.innerHTML = '너무 큰 묶음이 골라졌습니다. 고칠 문장이나 칸을 더 정확히 눌러 주세요.'; return; }
+  else { target = { el, kind: 'html' }; info.innerHTML = `골라진 곳: <code>&lt;${tag}${el.className ? ' class="' + esc(el.className) + '"' : ''}&gt;</code>`; }
+  $('#src').value = target.kind === 'html' ? target.el.innerHTML.trim() : (target.el.getAttribute(target.attr) || '');
+  ed.hidden = false; $('#src').focus();
+}
+$('#apply').onclick = () => {
+  if (!target) return;
+  const v = $('#src').value, before = work.html();
+  if (target.kind === 'html') target.el.innerHTML = v; else target.el.setAttribute(target.attr, v);
+  const after = work.html(); if (after === before) return;
+  undo.push(before); work = parseSlides(after); target = null; renderFrame(); setState();
+};
+$('#src').addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); $('#apply').click(); } });
+$('#undo').onclick = () => { if (!undo.length) return; work = parseSlides(undo.pop()); renderFrame(); $('#editor').hidden = true; setState(); };
+
+$('#save').onclick = async () => {
+  if (!admin || !dirty()) return;
+  $('#save').disabled = true;
+  try {
+    const prev = await fb.get('decks/' + key);
+    if (prev && prev.slides) await fb.push('backups/' + key, { slides: prev.slides, savedAt: prev.updatedAt || null, by: prev.by || '' });
+    const slides = work.html();
+    await fb.set('decks/' + key, { slides, baseHash: hash(origSlides), updatedAt: fb.now(), by: user.email });
+    await fb.set('meta/' + key, { updatedAt: fb.now(), by: user.email, deck: d });
+    savedSlides = slides; note('저장했습니다. 학생 화면에 반영됩니다.');
+  } catch (e) { note('저장 실패: ' + esc(e.message) + '<br>관리자 이메일이 js/config.js와 database.rules.json에 같게 들어 있는지 확인하세요.', true); }
+  setState();
+};
+$('#revert').onclick = async () => {
+  if (!admin || !confirm('웹에서 고친 내용을 지우고 원본(빌드한 덱)으로 되돌릴까요? 지운 수정본은 백업에 남습니다.')) return;
+  try {
+    const prev = await fb.get('decks/' + key);
+    if (prev && prev.slides) await fb.push('backups/' + key, { slides: prev.slides, savedAt: prev.updatedAt || null, by: prev.by || '' });
+    await fb.remove('decks/' + key); await fb.remove('meta/' + key);
+    savedSlides = origSlides; undo = []; work = parseSlides(origSlides); renderFrame(); note('원본으로 되돌렸습니다.');
+  } catch (e) { note('되돌리기 실패: ' + esc(e.message), true); }
+  setState();
+};
+$('#dl').onclick = () => download((d.split('/')[1] || 'deck') + '_웹수정_slides.html', work.html());
+addEventListener('beforeunload', e => { if (dirty()) { e.preventDefault(); e.returnValue = ''; } });
+
+(async () => {
+  if (!d) { note('덱 주소가 올바르지 않습니다.', true); return; }
+  $('#viewlink').href = 'view.html?deck=' + encodeURIComponent(d) + q;
+  fb = await getFB();
+  try { orig = await loadDeck(d); origSlides = getSlides(orig); } catch (e) { note(esc(e.message), true); return; }
+  $('#title').textContent = (orig.match(/<title>([^<]*)<\/title>/) || [, d])[1] + ' — 수정';
+  savedSlides = origSlides;
+  try {
+    const ov = await fb.get('decks/' + key);
+    if (ov && ov.slides) {
+      savedSlides = ov.slides;
+      if (ov.baseHash && ov.baseHash !== hash(origSlides)) note('이 덱은 웹에서 고친 뒤 <b>Claude Code로 다시 빌드</b>되었습니다. 지금 화면은 예전 원본 위의 웹 수정본이라 새 원본 내용이 가려져 있습니다. 「수정본 내려받기」로 받은 파일을 Claude Code에게 주어 원본에 합친 뒤 「원본으로 되돌리기」를 하세요.', true);
+    }
+  } catch (e) { note('저장된 수정본을 읽지 못했습니다: ' + esc(e.message), true); }
+  if (fb.mode === 'local') note('<span class="badge local">시험 모드</span> 수정은 이 브라우저에만 저장됩니다.');
+  if (fb.mode === 'unset') note('js/config.js에 Firebase 설정이 없습니다. 주소 끝에 <code>&amp;local</code>을 붙이면 시험 모드로 써 볼 수 있습니다.', true);
+  work = parseSlides(savedSlides); renderFrame();
+  fb.onUser(u => {
+    user = u; admin = isAdmin(u) && fb.mode !== 'unset';
+    $('#who').innerHTML = u ? esc(u.email) + (admin ? ' <span class="badge">관리자</span>' : ' (관리자 아님)') : '';
+    $('#login').textContent = u ? '로그아웃' : '관리자 로그인';
+    $('#login').onclick = () => (u ? fb.signOut() : fb.signIn().catch(err => alert('로그인 실패: ' + err.message)));
+    if (!admin && fb.mode !== 'unset' && !$('#msg').innerHTML) note('관리자로 로그인해야 저장할 수 있습니다. (고쳐 보기는 저장 없이 가능)');
+    else if (admin && /관리자로 로그인해야/.test($('#msg').innerHTML)) note('');
+    setState();
+  });
+  setState();
+})();
+</script>
+</body>
+</html>
