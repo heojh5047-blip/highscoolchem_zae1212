@@ -1,0 +1,114 @@
+{
+ "_설명": "덱 목록 틀. 과목 키(<과목>_<출판사>, 예: 통합과학1_출판사 → 실제로는 출판사 이름을 넣음)마다 하나씩. units[대단원]은 교과서·지도서 파일과 쪽 대응, decks[]는 덱 하나 = 소단원 하나(+ 대단원 마무리 덱 …-M), requiredInquiry[]는 성취기준 <탐구 활동>(필수 이행). 파일 경로는 SRC(차시자료/_소스) 기준. '〔 〕'는 자리 표시 — 교과서·지도서·교육과정 문서로 확인한 값으로 바꾼다. 성취기준 코드·쪽은 지어내지 않는다. 키가 '_'로 시작하면 설명용(사이트 목록·배포 도구가 건너뜀). 예시 과목 키 '통합과학1_출판사'는 실제 과목 키를 만든 뒤 지운다.",
+ "_필드": {
+  "course": "화면에 쓰는 과목 이름(출판사 이름 넣지 않음). 사이트 탭 이름이 된다 — 예: 통합과학1",
+  "publisher": "출판사(화면에 쓰지 않음, 기록용)",
+  "level": "고등 | 중학",
+  "units.<대단원>.name": "대단원 이름(교과서 그대로)",
+  "units.<대단원>.bookPages": "교과서 인쇄 쪽 범위",
+  "units.<대단원>.textbook": "교과서 PDF 경로 — _자료/<과목 키>_교과서_<권>.pdf",
+  "units.<대단원>.textbookTxt": "쪽별 텍스트 — _추출/<같은 이름>.txt (tools/extract_pages.py로 만듦)",
+  "units.<대단원>.pdfOffset": "책 쪽 = PDF 쪽 + offset. PDF 두세 쪽을 이미지로 보고 확인한 값",
+  "units.<대단원>.guide / guideTxt / guideOffset": "지도서 PDF·텍스트·offset (없으면 null)",
+  "units.<대단원>.note": "중단원 구성과 쪽, 주의 사항",
+  "decks[].id": "대단원-중단원-소단원 (중학은 단원-소단원), 마무리 덱은 <대단원>-M",
+  "decks[].unit": "units의 키",
+  "decks[].folder": "<id>_<제목_밑줄> — 내용 폴더·결과 파일 이름",
+  "decks[].title": "덱 제목(교과서 소단원 이름)",
+  "decks[].header": "meta.json header — 'Ⅰ-1-1 <제목> (고등 통합과학1 NN–MM쪽)' (출판사 이름 넣지 않음)",
+  "decks[].bookPages": "교과서 쪽 범위",
+  "decks[].standard": "성취기준 코드 목록(교육과정 문서 원문 그대로)",
+  "decks[].area": "영역 팩: 물리 | 화학 | 생명 | 지구 | 융합 (둘 이상이면 배열)",
+  "decks[].idPrefix": "id 접두어 — 통합과학1 is1, 통합과학2 is2, 과학1 ms1, 과학2 ms2, 과학3 ms3 + id 숫자 + '-' (예: is1111-)",
+  "decks[].withUnitIntro": "(대단원·중단원 첫 덱만) 앞머리에 넣을 도입 쪽",
+  "decks[].review": "이 덱 끝에 넣을 교과서 문항(번호·쪽)",
+  "decks[].requiredInquiry": "이 덱이 맡은 필수 탐구 id 목록(아래 requiredInquiry[].id)",
+  "decks[].labCandidate": "(선택) 필수 탐구 밖에 만들 실험실과 까닭",
+  "decks[].split": "(선택) 40장(중학 30장)을 넘으면 a/b로 나눌 경계",
+  "decks[].slides": "예상 장수",
+  "decks[].note": "주의 사항(묶은 소단원, 융합 관점, 읽기 자료 등)",
+  "requiredInquiry[].id": "과목 머리글자-탐NN (예: 통1-탐01)",
+  "requiredInquiry[].standards": "성취기준 코드",
+  "requiredInquiry[].activity": "성취기준 <탐구 활동> 문장 원문",
+  "requiredInquiry[].decks": "담당 덱 id",
+  "requiredInquiry[].bookPages": "교과서에서 해당 활동 쪽",
+  "requiredInquiry[].textbookActivity": "교과서 활동 이름(교과서 그대로)",
+  "requiredInquiry[].form": "실험실 + 탐구 슬라이드 | 탐구 슬라이드(조사·토의)"
+ },
+ "통합과학1_출판사": {
+  "course": "통합과학1",
+  "publisher": "〔출판사〕",
+  "level": "고등",
+  "units": {
+   "Ⅰ": {
+    "name": "〔대단원 이름 — 교과서 차례 그대로〕",
+    "bookPages": "〔NN–MM〕",
+    "textbook": "_자료/통합과학1_출판사_교과서_1.pdf",
+    "textbookTxt": "_추출/통합과학1_출판사_교과서_1.txt",
+    "pdfOffset": null,
+    "guide": null,
+    "guideTxt": null,
+    "guideOffset": null,
+    "note": "〔중단원 구성과 쪽〕 — 예시 항목: 실제 값으로 바꾼다"
+   }
+  },
+  "decks": [
+   {
+    "id": "1-1-1",
+    "unit": "Ⅰ",
+    "folder": "1-1-1_〔소단원_이름〕",
+    "title": "〔소단원 이름〕",
+    "header": "Ⅰ-1-1 〔소단원 이름〕 (고등 통합과학1 〔NN–MM〕쪽)",
+    "bookPages": "〔NN–MM〕",
+    "standard": ["〔성취기준 코드 — 교육과정 문서에서〕"],
+    "area": "물리",
+    "idPrefix": "is1111-",
+    "withUnitIntro": "대단원 도입 〔쪽〕, 중단원 도입 〔쪽〕",
+    "requiredInquiry": ["통1-탐01"],
+    "labCandidate": "〔(선택) 실험실과 까닭〕",
+    "slides": "30–36",
+    "note": "〔예시 — 측정·단위처럼 모든 영역의 표기를 처음 정하는 덱이면 그 사실을 적는다〕"
+   },
+   {
+    "id": "1-1-2",
+    "unit": "Ⅰ",
+    "folder": "1-1-2_〔소단원_이름〕",
+    "title": "〔소단원 이름〕",
+    "header": "Ⅰ-1-2 〔소단원 이름〕 (고등 통합과학1 〔NN–MM〕쪽)",
+    "bookPages": "〔NN–MM〕",
+    "standard": ["〔성취기준 코드〕"],
+    "area": ["화학", "지구"],
+    "idPrefix": "is1112-",
+    "requiredInquiry": [],
+    "review": "〔소단원 끝 문항 번호(쪽)〕",
+    "slides": "28–34",
+    "note": "〔예시 — 두 영역이 함께 나오는 융합 덱: 과학공통 약속 2절 '· <영역> 관점' 장으로 나눔〕"
+   },
+   {
+    "id": "1-M",
+    "unit": "Ⅰ",
+    "folder": "1-M_대단원_Ⅰ_마무리",
+    "title": "대단원 Ⅰ 마무리",
+    "header": "Ⅰ 대단원 마무리 (고등 통합과학1 〔NN–MM〕쪽)",
+    "bookPages": "〔NN–MM〕",
+    "standard": [],
+    "area": "융합",
+    "idPrefix": "is119-",
+    "review": "〔대단원 마무리 문항 01–NN, 프로젝트〕",
+    "slides": "20–28",
+    "note": "과학공통 약속 9절 — 개념 정리 → 문항(대응표) → 단원 활동"
+   }
+  ],
+  "requiredInquiry": [
+   {
+    "id": "통1-탐01",
+    "standards": "〔성취기준 코드〕",
+    "activity": "〔성취기준 <탐구 활동> 문장 원문 — 교육과정 문서에서 그대로〕",
+    "decks": "1-1-1",
+    "bookPages": "〔쪽〕",
+    "textbookActivity": "〔교과서 활동 이름〕",
+    "form": "실험실 + 탐구 슬라이드"
+   }
+  ]
+ }
+}

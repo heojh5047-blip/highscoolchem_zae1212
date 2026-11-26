@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """교과서·지도서 PDF → 쪽별 텍스트 (_추출/ 폴더용, 저작권 때문에 묶음에는 넣지 않으므로 각자 만든다)
 사용: python extract_pages.py <PDF> <출력.txt> [--offset=N] [--layout]
-  --offset=N : 교과서 쪽 = PDF 쪽 + N  (예: 미래엔 화학 Ⅱ단원 PDF는 1쪽이 교과서 50쪽 → --offset=49)
+  --offset=N : 교과서 쪽 = PDF 쪽 + N  (예: PDF 1쪽이 교과서 50쪽 → --offset=49)
                덱목록.json의 units[단원].pdfOffset 값을 쓴다. 쪽을 모르면 0
   --layout   : 2단 편집을 줄 맞춤으로 (pdftotext -layout). 지도서처럼 칸이 많은 쪽은 오히려 섞일 수 있음
 결과: 쪽마다 "=== p.<PDF쪽> (책 <교과서쪽>쪽) ===" 머리줄 + 본문. 에이전트는 이 머리줄을 Grep으로 찾아 offset/limit로 읽는다.
