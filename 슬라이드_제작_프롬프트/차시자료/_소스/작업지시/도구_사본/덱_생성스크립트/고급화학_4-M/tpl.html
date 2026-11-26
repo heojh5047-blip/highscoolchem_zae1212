@@ -1,0 +1,567 @@
+<!-- 고급화학 4-M 대단원 Ⅳ 마무리 — gen.py가 tpl.html에서 만든다(그림 자리표). 이 파일을 직접 고치지 말고 SCRATCH/고급화학_4-M/tpl.html을 고친다 -->
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅳ. 물질의 변화와 화학 평형" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅳ. 물질의 변화와 화학 평형 › 대단원 마무리</div>
+    <h1 class="ac49-h1">대단원 Ⅳ<br><span class="acc">마무리</span></h1>
+    <p class="sub">평형과 속도 — 반응은 어디까지, 얼마나 빨리</p>
+    <p class="meta">고등학교 고급 화학 229, 259–261쪽</p>
+  </div>
+  {{COVER}}
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <table class="tight ac49-std">
+    <tr><td>[12고화04-01]</td><td class="l">질량 작용 법칙으로 평형 상수 구하기, 반응 지수로 진행 방향 예측</td></tr>
+    <tr><td>[12고화04-02]</td><td class="l">온도와 평형 상수의 관계를 표준 깁스 자유 에너지 변화로, 평형 이동 요인</td></tr>
+    <tr><td>[12고화04-03]</td><td class="l">상평형과 용해 평형의 요인 탐색, 평형 상수로 평형 상태 표현</td></tr>
+    <tr><td>[12고화04-04]</td><td class="l">루이스 산 염기 정의, 산 염기 평형을 이온화 상수로 표현</td></tr>
+    <tr><td>[12고화04-05]</td><td class="l">약산·약염기 중화 반응의 특징, p$K_\mathrm{a}$로 pH 구하기</td></tr>
+    <tr><td>[12고화04-06]</td><td class="l">중화 적정 곡선, 완충 용액의 pH 변화와 유용성</td></tr>
+    <tr><td>[12고화04-07]</td><td class="l">반응 속도에 영향을 주는 요인, 아레니우스 식으로 속도 변화 설명</td></tr>
+    <tr><td>[12고화04-08]</td><td class="l">0, 1, 2차 반응의 적분 속도식으로 반응 속도 예측</td></tr>
+    <tr><td>[12고화04-09]</td><td class="l">유효 충돌의 의미, 온도·농도에 따른 속도 변화를 충돌 이론으로</td></tr>
+    <tr><td>[12고화04-10]</td><td class="l">반응 메커니즘, 속도 결정 단계가 전체 반응 속도에 주는 영향</td></tr>
+    <tr><td>[12고화04-11]</td><td class="l">여러 촉매의 정의, 촉매에 따른 활성화 에너지 변화의 원인</td></tr>
+  </table>
+  <ol class="goals mt8 f21">
+    <li>대단원 Ⅳ의 핵심 개념을 <b>개념 지도</b>로 정리할 수 있다.</li>
+    <li><b>종합 문제</b>를 풀며 평형 상수·pH·반감기·속도식을 구하고 메커니즘과 촉매를 설명할 수 있다.</li>
+    <li><b>바이타민 C</b>와 <b>충돌 이론</b> STEAM 활동을 설계하고 결과를 발표할 수 있다.</li>
+  </ol>
+</section>
+
+<!-- ════════ 3. 개념 정리 ① ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="개념 정리 ① 화학 평형">
+  <h2><span class="tag ink">개념 정리</span>1. 화학 평형</h2>
+  {{TOP1}}
+  <div class="ac49-map">
+    <div class="ac49-node" data-q><h3>01 화학 평형 <span class="small c-muted">(4-1-1)</span></h3>
+      ❶ 동적 평형: 정반응과 역반응의 <span class="blank"><span class="step">속도</span></span>가 같다<br>
+      ❷ $K=$ <span class="blank"><span class="step">$\dfrac{[\ce{C}]^c[\ce{D}]^d}{[\ce{A}]^a[\ce{B}]^b}$</span></span>, $K_\mathrm{P}=$ <span class="blank"><span class="step">$K(RT)^{\Delta n}$</span></span><br>
+      ❸ $Q&lt;K$: <span class="blank"><span class="step">정반응 쪽</span></span>, $Q&gt;K$: <span class="blank"><span class="step">역반응 쪽</span></span><br>
+      ❹ $\Delta G^\circ=$ <span class="blank"><span class="step">$-RT\ln K$</span></span><br>
+      ❺ 르샤틀리에: 자극을 <span class="blank"><span class="step">감소</span></span>시키는 방향, $K$를 바꾸는 것은 <span class="blank"><span class="step">온도</span></span>뿐<br>
+      ❻ $\ln\dfrac{K_2}{K_1}=$ <span class="blank"><span class="step">$\dfrac{\Delta H^\circ}{R}\left(\dfrac1{T_1}-\dfrac1{T_2}\right)$</span></span></div>
+    <div class="ac49-node" data-q><h3>02 상평형 · 03 용해도 평형 <span class="small c-muted">(4-1-2)</span></h3>
+      ❼ 상평형: $\Delta G=$ <span class="blank"><span class="step">0</span></span>, 세 상이 공존하는 점: <span class="blank"><span class="step">삼중점</span></span><br>
+      ❽ $\ce{AgCl}$의 $K_\mathrm{sp}=$ <span class="blank"><span class="step">$[\ce{Ag+}][\ce{Cl-}]=s^2$</span></span><br>
+      ❾ $Q&gt;K_\mathrm{sp}$이면 <span class="blank"><span class="step">침전</span></span>, 공통 이온 → 용해도 <span class="blank"><span class="step">감소</span></span><br>
+      ❿ 기체의 용해도: 온도↑ <span class="blank"><span class="step">감소</span></span>, $s=$ <span class="blank"><span class="step">$k_\mathrm{H}P$</span></span></div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(4-1-1 #37, 4-1-2 #36)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 4. 개념 정리 ② ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="개념 정리 ② 산과 염기의 평형">
+  <h2><span class="tag ink">개념 정리</span>2. 산과 염기의 평형</h2>
+  {{TOP2}}
+  <div class="ac49-map">
+    <div class="ac49-node" data-q><h3>01 정의 · 02 세기 <span class="small c-muted">(4-2-1)</span></h3>
+      ❶ 브뢴스테드·라우리 산 = 양성자 <span class="blank"><span class="step">주개</span></span>, 루이스 산 = 전자쌍 <span class="blank"><span class="step">받개</span></span><br>
+      ❷ $\ce{H+}$ 하나 차이인 $\ce{HA}$와 $\ce{A-}$: <span class="blank"><span class="step">짝산과 짝염기</span></span><br>
+      ❸ $K_\mathrm{w}=$ <span class="blank"><span class="step">$1.0\times10^{-14}$</span></span> (25 °C), pH $=$ <span class="blank"><span class="step">$-\log[\ce{H3O+}]$</span></span><br>
+      ❹ $K_\mathrm{a}\times K_\mathrm{b}=$ <span class="blank"><span class="step">$K_\mathrm{w}$</span></span>, 강한 산의 짝염기는 <span class="blank"><span class="step">약하다</span></span></div>
+    <div class="ac49-node" data-q><h3>03 염 용액 · 04 중화 반응과 완충 <span class="small c-muted">(4-2-3a·b)</span></h3>
+      ❺ $\ce{CH3COONa}$ 수용액 <span class="blank"><span class="step">염기성</span></span>, $\ce{NH4Cl}$ 수용액 <span class="blank"><span class="step">산성</span></span><br>
+      ❻ 당량점: $nMV=$ <span class="blank"><span class="step">$n'M'V'$</span></span><br>
+      ❼ 약산–강염기 당량점 pH <span class="blank"><span class="step">$&gt;7$</span></span>, 반당량점 pH $=$ <span class="blank"><span class="step">p$K_\mathrm{a}$</span></span><br>
+      ❽ 완충 용액 = 약산 + <span class="blank"><span class="step">짝염기</span></span><br>
+      ❾ 넣은 $\ce{H3O+}$는 <span class="blank"><span class="step">$\ce{CH3COO-}$</span></span>가, $\ce{OH-}$는 <span class="blank"><span class="step">$\ce{CH3COOH}$</span></span>가 없앤다<br>
+      ❿ 완충 범위 pH ≈ <span class="blank"><span class="step">p$K_\mathrm{a}\pm1$</span></span>, 진할수록 완충 용량이 <span class="blank"><span class="step">크다</span></span></div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(4-2-1 #35, 4-2-3a #32, 4-2-3b #25)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 5. 개념 정리 ③ ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="개념 정리 ③ 반응 속도식">
+  <h2><span class="tag ink">개념 정리</span>3. 화학 반응 속도식</h2>
+  {{TOP3}}
+  <div class="ac49-map">
+    <div class="ac49-node" data-q><h3>01 반응 속도 · 02 반응 속도식 <span class="small c-muted">(4-3-1a)</span></h3>
+      ❶ 물질별 속도를 <span class="blank"><span class="step">계수</span></span>로 나누면 반응 속도가 하나로<br>
+      ❷ 접선 기울기 = <span class="blank"><span class="step">순간 반응 속도</span></span>, $t=0$이면 <span class="blank"><span class="step">초기 반응 속도</span></span><br>
+      ❸ 반응 속도 $=k[\ce{A}]^m[\ce{B}]^n$, 차수는 <span class="blank"><span class="step">실험</span></span>으로 정한다<br>
+      ❹ 전체 반응 차수 = <span class="blank"><span class="step">$m+n$</span></span><br>
+      ❺ 1차 반응 $k$의 단위: <span class="blank"><span class="step">$\text{s}^{-1}$</span></span></div>
+    <div class="ac49-node" data-q><h3>적분 속도식과 반감기 <span class="small c-muted">(4-3-1b)</span></h3>
+      ❻ 1차: <span class="blank"><span class="step">$\ln[\ce{A}]$</span></span>–$t$ 직선, 기울기 $-k$<br>
+      ❼ 2차: <span class="blank"><span class="step">$1/[\ce{A}]$</span></span>–$t$ 직선, 기울기 $k$<br>
+      ❽ 직선이 되는 그래프로 <span class="blank"><span class="step">반응 차수</span></span>를 판별<br>
+      ❾ 1차 $t_{1/2}=$ <span class="blank"><span class="step">$0.6931/k$</span></span> (초기 농도와 무관)<br>
+      ❿ 2차 $t_{1/2}=\dfrac{1}{k[\ce{A}]_0}$ 점점 <span class="blank"><span class="step">길어짐</span></span>, 0차는 점점 <span class="blank"><span class="step">짧아짐</span></span></div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(4-3-1a #25, 4-3-1b #29)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 6. 개념 정리 ④ ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="개념 정리 ④ 충돌 모형과 활성화 에너지">
+  <h2><span class="tag ink">개념 정리</span>4. 충돌 모형과 활성화 에너지</h2>
+  {{TOP4}}
+  <div class="ac49-map">
+    <div class="ac49-node" data-q><h3>01 유효 충돌 · 02 활성화 에너지 <span class="small c-muted">(4-4-1)</span></h3>
+      ❶ $k=Z$ <span class="blank"><span class="step">$f$</span></span> $p$<br>
+      ❷ 유효 충돌 = 알맞은 <span class="blank"><span class="step">방향</span></span> + 최소 에너지 이상<br>
+      ❸ 농도↑ → <span class="blank"><span class="step">충돌 횟수</span></span>↑<br>
+      ❹ 반응 경로의 꼭대기 = <span class="blank"><span class="step">활성화 착물</span></span><br>
+      ❺ $E_{\mathrm{a},r}=E_{\mathrm{a},f}-$ <span class="blank"><span class="step">$\Delta H$</span></span><br>
+      ❻ $E_\mathrm{a}$가 작을수록 반응이 <span class="blank"><span class="step">빠르다</span></span></div>
+    <div class="ac49-node" data-q><h3>03 온도 의존성 <span class="small c-muted">(4-4-1)</span></h3>
+      ❼ 아레니우스 식 $k=$ <span class="blank"><span class="step">$Ae^{-E_\mathrm{a}/RT}$</span></span><br>
+      ❽ $\ln k$–$\dfrac1T$ 직선의 기울기 = <span class="blank"><span class="step">$-E_\mathrm{a}/R$</span></span><br>
+      ❾ 온도↑ → $E_\mathrm{a}$ 이상인 분자의 <span class="blank"><span class="step">분율</span></span>↑
+      {{DIST}}</div>
+  </div>
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(4-4-1 #34)에서 골랐다. 그림은 4-4-1 #21의 계산 모형.</p>
+</section>
+
+<!-- ════════ 7. 개념 정리 ⑤ ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="개념 정리 ⑤ 반응 메커니즘과 촉매">
+  <h2><span class="tag ink">개념 정리</span>5. 화학 반응 메커니즘과 촉매</h2>
+  {{TOP5}}
+  <div class="ac49-map">
+    <div class="ac49-node" data-q><h3>01 반응 메커니즘 <span class="small c-muted">(4-5-1)</span></h3>
+      ❶ 단일 단계 반응: 분자도 = <span class="blank"><span class="step">반응 차수</span></span><br>
+      ❷ 단일 단계 반응의 합 = <span class="blank"><span class="step">전체 반응식</span></span><br>
+      ❸ 가장 느린 단계 = <span class="blank"><span class="step">속도 결정 단계</span></span><br>
+      ❹ 생겼다가 사라지는 화학종 = <span class="blank"><span class="step">반응 중간체</span></span></div>
+    <div class="ac49-node" data-q><h3>02 촉매 <span class="small c-muted">(4-5-1)</span></h3>
+      ❺ 새 반응 경로로 <span class="blank"><span class="step">$E_\mathrm{a}$</span></span>↓, $k$↑<br>
+      ❻ $\Delta H$·$K$·수득률은 <span class="blank"><span class="step">그대로</span></span><br>
+      ❼ 반응물과 같은 상태: <span class="blank"><span class="step">균일 촉매</span></span><br>
+      ❽ 효소: <span class="blank"><span class="step">활성 자리</span></span> → 효소–기질(ES) 복합체</div>
+  </div>
+  {{CYCLE5}}
+  <p class="small c-muted mt8">빈칸은 소단원 덱 「스스로 정리」(4-5-1 #39)에서 골랐다.</p>
+</section>
+
+<!-- ════════ 8. 연결 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="연결: 평형과 속도로 잇는 대단원 Ⅳ">
+  <h2><span class="tag alt">연결</span>평형과 속도로 잇는 대단원 Ⅳ</h2>
+  {{FLOW}}
+  <p class="f21 mt8"><b>Q</b> 대단원 Ⅳ를 한 줄로 이으면 어떻게 될까?</p>
+  <div class="answer step ac49-left">반응이 <b>어디까지</b> 진행하는지는 $K$($\Delta G^\circ=-RT\ln K$)가, <b>얼마나 빨리</b> 가는지는 $k$($E_\mathrm{a}$·온도·메커니즘)가 정한다. 평형은 정반응과 역반응의 속도가 같아진 동적 상태이고, 촉매는 속도만 바꾸고 $K$는 바꾸지 않는다.</div>
+  <p class="small step mt8">종합 문제 1·2 → Ⅳ-1 · 3·4·5 → Ⅳ-2 · 6·7 → Ⅳ-3 · 8 → Ⅳ-5 메커니즘 · 9·10 → Ⅳ-5 촉매 · STEAM ① 바이타민 C → Ⅳ-2(+ Ⅲ-3 산화 환원) · STEAM ② 충돌 이론 → Ⅳ-4</p>
+</section>
+
+<!-- ════════ 9. 연습 문제 대응표 ① ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="연습 문제 대응표 ① Ⅳ-1·Ⅳ-2">
+  <h2><span class="tag alt">연습 문제 대응표</span>Ⅳ-1 화학 평형 · Ⅳ-2 산과 염기의 평형</h2>
+  <table class="tight ac49-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac49-sec" rowspan="4">Ⅳ-1 (208쪽)</td><td>1</td><td class="l">$\Delta G^\circ$로 평형 상수 구하기</td><td class="ac49-deck">4-1-2 #32</td><td class="l ac49-key"><span class="step" data-g="k1">$K=1.8\times10^{18}$</span></td></tr>
+    <tr><td>2</td><td class="l">암모니아 혼합물이 이동하는 방향</td><td class="ac49-deck">#33</td><td class="l ac49-key"><span class="step" data-g="k1">$\Delta G=-23.6$ J/mol → 정반응 쪽 (거의 평형)</span></td></tr>
+    <tr><td>3</td><td class="l">$\ce{N2}$ 첨가, $\ce{NH3}$ 제거, 압축</td><td class="ac49-deck">#34</td><td class="l ac49-key"><span class="step" data-g="k1">셋 모두 역반응 쪽</span></td></tr>
+    <tr><td>4</td><td class="l">$\ce{CuBr}$의 용해도로 $K_\mathrm{sp}$</td><td class="ac49-deck">#35</td><td class="l ac49-key"><span class="step" data-g="k1">$K_\mathrm{sp}=4.0\times10^{-8}$</span></td></tr>
+    <tr><td class="ac49-sec" rowspan="4">Ⅳ-2 (229쪽)</td><td>1</td><td class="l">해리 백분율과 pH로 $K_\mathrm{a}$</td><td class="ac49-deck">4-2-3b #21</td><td class="l ac49-key"><span class="step" data-g="k1">$K_\mathrm{a}\approx2.5\times10^{-6}$</span></td></tr>
+    <tr><td>2</td><td class="l">염산과 같은 pH의 아세트산 농도</td><td class="ac49-deck">#22</td><td class="l ac49-key"><span class="step" data-g="k1">0.5 M</span></td></tr>
+    <tr><td>3</td><td class="l">암모니아 완충 용액의 pH</td><td class="ac49-deck">#23</td><td class="l ac49-key"><span class="step" data-g="k1">pH 9.55</span></td></tr>
+    <tr><td>4</td><td class="l">아세트산 적정의 당량점</td><td class="ac49-deck">#24</td><td class="l ac49-key"><span class="step" data-g="k1">200 mL, pH 8.48</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">풀이·그림은 각 덱의 그 장에 있다. 정답은 한 번에 열린다. Ⅳ-2의 3·4는 부록 값(9.95 오타, 8.49 반올림)과 다르다 — 까닭은 4-2-3b 각 장에.</p>
+</section>
+
+<!-- ════════ 10. 연습 문제 대응표 ② ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="연습 문제 대응표 ② Ⅳ-3·Ⅳ-4·Ⅳ-5">
+  <h2><span class="tag alt">연습 문제 대응표</span>Ⅳ-3 반응 속도식 · Ⅳ-4 충돌 모형 · Ⅳ-5 메커니즘과 촉매</h2>
+  <table class="tight ac49-map">
+    <tr><th>중단원</th><th>번호</th><th>내용</th><th>덱 #장</th><th>정답</th></tr>
+    <tr><td class="ac49-sec" rowspan="5">Ⅳ-3 (241쪽)</td><td>1</td><td class="l">물질별 반응 속도의 관계</td><td class="ac49-deck">4-3-1b #23</td><td class="l ac49-key"><span class="step" data-g="k2">$-\frac1a\frac{d[\ce{A}]}{dt}=-\frac1b\frac{d[\ce{B}]}{dt}=\frac1c\frac{d[\ce{C}]}{dt}=\frac1d\frac{d[\ce{D}]}{dt}$</span></td></tr>
+    <tr><td>2</td><td class="l">초기 반응 속도로 속도식</td><td class="ac49-deck">#24</td><td class="l ac49-key"><span class="step" data-g="k2">$k[\ce{(CH3)3CBr}]$, $k=1.0\times10^{-2}\ \text{s}^{-1}$</span></td></tr>
+    <tr><td>3</td><td class="l">$\ce{N2O5}$의 반감기</td><td class="ac49-deck">#25</td><td class="l ac49-key"><span class="step" data-g="k2">$1.72\times10^{-5}\ \text{s}^{-1}$, 22.6 %</span></td></tr>
+    <tr><td>4</td><td class="l">과산화 수소의 분해</td><td class="ac49-deck">#26</td><td class="l ac49-key"><span class="step" data-g="k2">$3.85\times10^{4}$ s, 0.23 M, $1.28\times10^{5}$ s</span></td></tr>
+    <tr><td>5</td><td class="l">$\ce{NO2}$ 분해의 차수와 반감기</td><td class="ac49-deck">#27–28</td><td class="l ac49-key"><span class="step" data-g="k2">2차, $k=0.541$ L/(mol·s), $1.29\times10^{-3}$ M, $6.16\times10^{2}$ s</span></td></tr>
+    <tr><td class="ac49-sec" rowspan="3">Ⅳ-4 (248쪽)</td><td>1</td><td class="l">$E_\mathrm{a}$와 아레니우스 상수</td><td class="ac49-deck">4-4-1 #31</td><td class="l ac49-key"><span class="step" data-g="k2">$E_\mathrm{a}=65.6$ kJ/mol, $A=1.6\times10^{8}$ L/(mol·s)</span></td></tr>
+    <tr><td>2</td><td class="l">오존 분해의 반응 에너지 도표</td><td class="ac49-deck">#32</td><td class="l ac49-key"><span class="step" data-g="k2">$E_{\mathrm{a},r}=411$ kJ/mol</span></td></tr>
+    <tr><td>3</td><td class="l">온도가 높을 때 빨라지는 까닭</td><td class="ac49-deck">#33</td><td class="l ac49-key"><span class="step" data-g="k2">$E_\mathrm{a}$ 이상인 분자의 분율 증가</span></td></tr>
+    <tr><td class="ac49-sec" rowspan="3">Ⅳ-5 (258쪽)</td><td>1</td><td class="l">메테인 염소화 메커니즘</td><td class="ac49-deck">4-5-1 #36</td><td class="l ac49-key"><span class="step" data-g="k2">2단계가 속도 결정, $\ce{CH4 + Cl2 -> CH3Cl + HCl}$</span></td></tr>
+    <tr><td>2</td><td class="l">네 단계 메커니즘</td><td class="ac49-deck">#37</td><td class="l ac49-key"><span class="step" data-g="k2">$\ce{H2O2 + O3 -> H2O + 2O2}$</span></td></tr>
+    <tr><td>3</td><td class="l">자발적인데 느린 까닭</td><td class="ac49-deck">#38</td><td class="l ac49-key"><span class="step" data-g="k2">$\Delta G$는 속도와 무관, $E_\mathrm{a}$가 큼</span></td></tr>
+  </table>
+  <p class="small c-muted mt8">Ⅳ-3 5의 $1.29\times10^{-3}$ M, Ⅳ-4 1의 $A$는 부록 값($1.02\times10^{-3}$ M, $1.95\times10^{8}$)과 다르다 — 까닭은 각 덱의 그 장에.</p>
+</section>
+
+<!-- ════════ 11. 종합 문제 대응표 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 대단원 마무리" data-title="종합 문제 대응표">
+  <h2><span class="tag alt">종합 문제 대응표</span>종합 문제는 어느 소단원 덱과 이어질까?</h2>
+  <table class="tight ac49-ov">
+    <tr><th>종합</th><th>내용</th><th>같은·비슷한 내용을 다룬 소단원 덱 (#장)</th><th>이 덱</th></tr>
+    <tr><td>1</td><td class="l">온도에 따른 암모니아 합성의 $K$</td><td class="l">4-1-1 $\ln K$–$1/T$ 직선(#34) · 반트호프 식(#35) · 확인 06(#36)</td><td>#12</td></tr>
+    <tr><td>2</td><td class="l">$K_\mathrm{sp}$로 몰 용해도 구하기</td><td class="l">4-1-2 몰 용해도와 $K_\mathrm{sp}$(#17) · 예제 Ⅳ-2(#18) · 연습 문제 4(#35)</td><td>#13</td></tr>
+    <tr><td>3</td><td class="l">산, 염기, 짝산, 짝염기 쌍</td><td class="l">4-2-1 브뢴스테드·라우리(#8) · 짝산과 짝염기(#14) · 확인 02(#15)</td><td>#14</td></tr>
+    <tr><td>4</td><td class="l">완충 용액의 pH가 거의 일정한 까닭</td><td class="l">4-2-3b 산을 넣으면(#7) · 염기를 넣으면(#8)</td><td>#15</td></tr>
+    <tr><td>5</td><td class="l">프로피온산 적정 중의 pH</td><td class="l">4-2-3a 약산 적정의 pH 계산(#24–25) · 반당량점(#26) · 실험실(#30)</td><td>#16</td></tr>
+    <tr><td>6</td><td class="l">1차 반응의 반감기</td><td class="l">4-3-1b 1차 반응의 반감기(#12) · $\ce{N2O5}$의 반감기(#13) · 연습 문제 3(#25)</td><td>#17</td></tr>
+    <tr><td>7</td><td class="l">2차 반응의 반감기로 $k$</td><td class="l">4-3-1b 2차·0차 반응의 반감기(#14) · 연습 문제 5(#27–28)</td><td>#18</td></tr>
+    <tr><td>8</td><td class="l">메커니즘으로 전체 반응식·속도식</td><td class="l">4-5-1 메커니즘 판단(#14) · 빠른 평형 뒤의 속도 결정 단계(#15)</td><td>#19</td></tr>
+    <tr><td>9</td><td class="l">브로민화 이온 촉매</td><td class="l">4-5-1 아이오딘화 이온 촉매(#22) · 실험실(#33) · 연습 문제 2(#37)</td><td>#20</td></tr>
+    <tr><td>10</td><td class="l">촉매의 역할과 종류</td><td class="l">4-5-1 촉매의 정의(#21) · 균일·불균일 촉매(#28) · 효소(#31)</td><td>#21</td></tr>
+  </table>
+  <div class="note mt8">Ⅳ-4 충돌 모형은 종합 문제에 없다 — <b>STEAM ②</b>(#26–28)에서 기체 분자 운동론과 함께 쓴다.</div>
+</section>
+
+<!-- ════════ 12. 종합 문제 1 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 1">
+  <h2><span class="tag q">종합 문제 1</span>온도를 높인 암모니아 합성의 평형 상수</h2>
+  <p class="f21">암모니아 합성 반응 $\ce{N2(g) + 3H2(g) &lt;=&gt; 2NH3(g)}$ ($\Delta H^\circ=-92.22\ \text{kJ/mol}$)의 평형 상수 $K$는 298 K에서 $6.8\times10^{5}$이다. 400 K에서의 평형 상수를 구하여라.</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 두 온도의 $K$를 잇는 식은 무엇일까?</p>
+      <p class="f21 step">$\ln\dfrac{K_2}{K_1}=\dfrac{\Delta H^\circ}{R}\left(\dfrac1{T_1}-\dfrac1{T_2}\right)$ <span class="small">(4-1-1 #35)</span></p>
+      <p class="f21 step">$\phantom{\ln\dfrac{K_2}{K_1}}=\dfrac{-92220\ \text{J/mol}}{8.3145\ \text{J/(mol}\cdot\text{K)}}\left(\dfrac{1}{298\ \text{K}}-\dfrac{1}{400\ \text{K}}\right)=-9.49$</p>
+      <div class="answer step">$K_2=(6.8\times10^{5})\,e^{-9.49}\approx51$</div>
+      <p class="small step">발열 반응이라 온도를 높이면 $K$가 작아진다 — 르샤틀리에 원리와 같다. 부록의 「$-9.222\times10^{4}$ J/mol」은 $-92.22$ kJ/mol과 같은 값이다.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 480px">{{Z1}}</div>
+  </div>
+</section>
+
+<!-- ════════ 13. 종합 문제 2 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 2">
+  <h2><span class="tag q">종합 문제 2</span>아이오딘산 구리(Ⅱ)의 몰 용해도</h2>
+  <p class="f21">$\ce{Cu(IO3)2(s) &lt;=&gt; Cu^2+(aq) + 2IO3-(aq)}$에서 아이오딘산구리(Ⅱ)의 $K_\mathrm{sp}$는 25 °C에서 $1.4\times10^{-7}$이다. 25 °C에서 용해도 $s$를 구하여라.</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 440px">{{Z2}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> $s$ mol/L가 녹으면 이온의 농도는?</p>
+      <p class="f21 step">$[\ce{Cu^2+}]=s$, $\ [\ce{IO3-}]=2s$</p>
+      <p class="f21 step">$K_\mathrm{sp}=[\ce{Cu^2+}][\ce{IO3-}]^2=s(2s)^2=4s^3$</p>
+      <p class="f21 step">$s=\sqrt[3]{\dfrac{1.4\times10^{-7}}{4}}=\sqrt[3]{3.5\times10^{-8}}$</p>
+      <div class="answer step">$s=3.3\times10^{-3}\ \text{mol/L}$</div>
+      <p class="small step">주의: $\ce{IO3-}$은 $s$의 2배가 생기고, $K_\mathrm{sp}$ 식에서 제곱한다($2s^2$가 아니라 $(2s)^2$).</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 14. 종합 문제 3 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 3">
+  <h2><span class="tag q">종합 문제 3</span>산, 염기, 짝산, 짝염기 쌍 찾기</h2>
+  <p class="f21">다음 반응식에서 산, 염기, 짝산, 짝염기 쌍을 표시하여라.</p>
+  <table class="tight ac49-t">
+        <tr><th>반응</th><th>산</th><th>짝염기</th><th>염기</th><th>짝산</th></tr>
+        <tr><td class="l">1) $\ce{NH3 + H3PO4 &lt;=&gt; NH4+ + H2PO4-}$</td><td><span class="step" data-g="a1">$\ce{H3PO4}$</span></td><td><span class="step" data-g="a1">$\ce{H2PO4-}$</span></td><td><span class="step" data-g="a1">$\ce{NH3}$</span></td><td><span class="step" data-g="a1">$\ce{NH4+}$</span></td></tr>
+        <tr><td class="l">2) $\ce{HPO4^2- + HSO4- &lt;=&gt; H2PO4- + SO4^2-}$</td><td><span class="step" data-g="a2">$\ce{HSO4-}$</span></td><td><span class="step" data-g="a2">$\ce{SO4^2-}$</span></td><td><span class="step" data-g="a2">$\ce{HPO4^2-}$</span></td><td><span class="step" data-g="a2">$\ce{H2PO4-}$</span></td></tr>
+        <tr><td class="l">3) $\ce{H2SO4 + NH3 &lt;=&gt; HSO4- + NH4+}$</td><td><span class="step" data-g="a3">$\ce{H2SO4}$</span></td><td><span class="step" data-g="a3">$\ce{HSO4-}$</span></td><td><span class="step" data-g="a3">$\ce{NH3}$</span></td><td><span class="step" data-g="a3">$\ce{NH4+}$</span></td></tr>
+      </table>
+  <div class="row mt8">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 각 반응에서 양성자($\ce{H+}$)를 주는 쪽은?</p>
+      <p class="f21 step">왼쪽의 산이 $\ce{H+}$를 주면 짝염기가 되고, 받은 염기는 짝산이 된다 — 짝은 $\ce{H+}$ 하나 차이.</p>
+      <p class="f21"><b>Q</b> $\ce{H2PO4-}$은 1)과 2)에서 각각 무엇일까?</p>
+      <div class="answer step ac49-left">1)에서는 짝염기, 2)에서는 짝산 — $\ce{H+}$를 주기도 받기도 하는 양쪽성 물질이다.</div>
+    </div>
+    <div class="col" style="flex:0 0 400px">{{Z3}}</div>
+  </div>
+</section>
+
+<!-- ════════ 15. 종합 문제 4 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 4">
+  <h2><span class="tag q">종합 문제 4</span>완충 용액의 pH가 거의 변하지 않는 까닭</h2>
+  <p class="f21">$\ce{CH3COOH}/\ce{CH3COO-}$ 완충 용액에 소량의 산이나 염기를 넣어도 pH가 거의 변하지 않는다. 그 이유를 설명하여라.</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 520px">{{Z4}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 넣은 산과 염기는 각각 누구와 반응할까?</p>
+      <p class="f21 step">산: $\ce{CH3COO- + H3O+ -> CH3COOH + H2O}$</p>
+      <p class="f21 step">염기: $\ce{CH3COOH + OH- -> CH3COO- + H2O}$</p>
+      <div class="answer step ac49-left">(예시 답안) 완충 용액에는 약산 $\ce{CH3COOH}$와 짝염기 $\ce{CH3COO-}$가 함께 많이 들어 있다. 넣은 $\ce{H3O+}$는 $\ce{CH3COO-}$와, 넣은 $\ce{OH-}$는 $\ce{CH3COOH}$와 반응해 없어지고, 두 성분의 양은 조금만 변하므로 $[\ce{H3O+}]$가 거의 일정하다.</div>
+      <p class="small step">채점 요소(덱 작성): ① 약산과 짝염기가 함께 많이 있음 ② $\ce{H3O+}$를 짝염기가, $\ce{OH-}$를 약산이 없앰 ③ 두 성분의 비가 거의 그대로 → pH 거의 일정. 부록은 르샤틀리에 원리로 설명한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 16. 종합 문제 5 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 5">
+  <h2><span class="tag q">종합 문제 5</span>프로피온산을 적정할 때의 pH 변화</h2>
+  <p class="f21">0.1000 M 프로피온산 $\ce{CH3CH2COOH}$ ($K_\mathrm{a}=1.3\times10^{-5}$) 50 mL에 0.1 M $\ce{NaOH}$를 0 mL, 10 mL, 20 mL 넣을 때 pH를 계산하여라. <span class="small c-muted">(프로피온산 = $\ce{HPr}$)</span></p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 0 mL: 약산만 있을 때 $[\ce{H+}]$는?</p>
+      <p class="f21 step">$x=\sqrt{K_\mathrm{a}\times0.1}=\sqrt{1.3\times10^{-6}}=1.14\times10^{-3}\ \text{M}$ → <b>pH 2.94</b></p>
+      <p class="f21"><b>Q</b> 10 mL: $\ce{OH-}$ 1.0 mmol이 $\ce{HPr}$ 5.0 mmol과 반응하면?</p>
+      <p class="f21 step">$\ce{HPr}$ 4.0 mmol, $\ce{Pr-}$ 1.0 mmol → $[\ce{H+}]=K_\mathrm{a}\dfrac{[\ce{HPr}]}{[\ce{Pr-}]}=1.3\times10^{-5}\times4$ → <b>pH 4.28</b></p>
+      <p class="f21 step">20 mL: $\ce{HPr}$ 3.0 mmol, $\ce{Pr-}$ 2.0 mmol → $1.3\times10^{-5}\times1.5$ → <b>pH 4.71</b></p>
+      <div class="answer step">pH 2.94 → 4.28 → 4.71</div>
+      <p class="small step">곡선 위에서 보면 10·20 mL는 완충 구간이다. [보충] 25 mL(반당량점) pH $=\mathrm{p}K_\mathrm{a}=4.89$, 50 mL(당량점) pH 8.79는 덱 계산.</p>
+    </div>
+    <div class="col" style="flex:0 0 500px">{{Z5}}</div>
+  </div>
+</section>
+
+<!-- ════════ 17. 종합 문제 6 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 6">
+  <h2><span class="tag q">종합 문제 6</span>오산화 이질소 분해의 반감기</h2>
+  <p class="f21">$\ce{2N2O5 -> 4NO2 + O2}$, 반응 속도 $=k[\ce{N2O5}]$이다. $\ce{N2O5}$의 50 %가 분해되는 데 20분이 걸렸다면, 초기 농도의 12.5 %가 남을 때까지 걸리는 시간은 얼마인가?</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 속도식이 1차이면 반감기는 어떤 성질이 있을까?</p>
+      <p class="f21 step">초기 농도와 관계없이 일정: $t_{1/2}=\dfrac{\ln2}{k}$ → $k=\dfrac{0.6931}{1200\ \text{s}}=5.78\times10^{-4}\ \text{s}^{-1}$</p>
+      <p class="f21 step">12.5 % $=\left(\dfrac12\right)^3$ → 반감기 3번</p>
+      <p class="f21 step">확인: $t=\dfrac{1}{k}\ln\dfrac{100}{12.5}=\dfrac{2.079}{5.78\times10^{-4}\ \text{s}^{-1}}=3600\ \text{s}$</p>
+      <div class="answer step">60분</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 500px">{{Z6}}</div>
+  </div>
+</section>
+
+<!-- ════════ 18. 종합 문제 7 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 7">
+  <h2><span class="tag q">종합 문제 7</span>2차 반응의 반감기로 속도 상수 구하기</h2>
+  <p class="f21">$\ce{A + B -> C + D}$에서 A와 B의 초기 농도가 각각 $1.00\times10^{-2}$ mol/L이고, 반응 속도는 $k[\ce{A}][\ce{B}]$이다. A의 농도가 100초 뒤에 반으로 줄었다면 반응 속도 상수는 얼마인가?</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> $[\ce{A}]_0=[\ce{B}]_0$이고 1 : 1로 반응하면 속도식은?</p>
+      <p class="f21 step">언제나 $[\ce{A}]=[\ce{B}]$ → 반응 속도 $=k[\ce{A}]^2$ (2차 반응)</p>
+      <p class="f21 step">2차 반응의 반감기: $t_{1/2}=\dfrac{1}{k[\ce{A}]_0}$ → $k=\dfrac{1}{t_{1/2}[\ce{A}]_0}$</p>
+      <div class="answer step">$k=\dfrac{1}{(100)(1.00\times10^{-2})}=1.00\ \text{L/(mol}\cdot\text{s)}$</div>
+      <p class="small step">2차 반응은 다음 반감기가 200 s로 길어진다(초기 농도가 반이 되었으므로) — 1차 반응(종합 6)과 다른 점.</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 500px">{{Z7}}</div>
+  </div>
+</section>
+
+<!-- ════════ 19. 종합 문제 8 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 8">
+  <h2><span class="tag q">종합 문제 8</span>메커니즘으로 전체 반응식과 속도식 쓰기</h2>
+  <p class="f21">반응 메커니즘이 다음과 같은 화학 반응의 전체 화학 반응식과 반응 속도식을 써라.</p>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 560px">
+      <table class="tight ac49-t">
+        <tr><th>단계</th><th>단일 단계 반응</th><th>빠르기</th></tr>
+        <tr><td>1</td><td class="l">$\ce{A}\ \underset{k_{-1}}{\overset{k_1}{\rightleftharpoons}}\ \ce{B + C}$</td><td>빠른 평형</td></tr>
+        <tr><td>2</td><td class="l">$\ce{C + D}\ \underset{k_{-2}}{\overset{k_2}{\rightleftharpoons}}\ \ce{E}$</td><td>빠른 평형</td></tr>
+        <tr><td>3</td><td class="l">$\ce{E}\ \xrightarrow{k_3}\ \ce{F}$</td><td><b>느림</b></td></tr>
+      </table>
+      <p class="f21 step mt8">세 식을 더하고 양쪽에 있는 $\ce{C}$, $\ce{E}$(반응 중간체)를 지운다.</p>
+      <div class="answer step">전체: $\ce{A + D -> B + F}$</div>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 속도 결정 단계의 속도식은? 그대로 쓸 수 있을까?</p>
+      <p class="f21 step">반응 속도 $=k_3[\ce{E}]$ — 그런데 중간체 $\ce{E}$, $\ce{C}$의 농도는 잴 수 없다.</p>
+      <p class="f21 step">속도 결정 단계까지 들어간 반응물: $\ce{A}$ 1, $\ce{D}$ 1 · 앞의 빠른 평형에서 함께 생긴 $\ce{B}$는 분모로(4-5-1 #15)</p>
+      <div class="answer step">반응 속도 $=k\dfrac{[\ce{A}][\ce{D}]}{[\ce{B}]}$</div>
+      <div class="ac49-deep step"><div class="ac49-dh">교과서 풀이 (빠른 평형 — 참고)</div>
+        $[\ce{E}]=\dfrac{k_2}{k_{-2}}[\ce{C}][\ce{D}]$, $[\ce{C}]=\dfrac{k_1[\ce{A}]}{k_{-1}[\ce{B}]}$ → 반응 속도 $=\dfrac{k_1k_2k_3}{k_{-1}k_{-2}}\dfrac{[\ce{A}][\ce{D}]}{[\ce{B}]}$
+        <p class="small c-muted">빠른 평형(사전 평형) 처리는 성취기준 해설이 넓혀 다루지 않는 부분이다.</p></div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 20. 종합 문제 9 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 9">
+  <h2><span class="tag q">종합 문제 9</span>브로민화 이온이 촉매인 과산화 수소의 분해</h2>
+  <p class="f21">1단계 $\ce{H2O2(aq) + Br-(aq) -> BrO-(aq) + H2O(l)}$ [느림] · 2단계 $\ce{H2O2(aq) + BrO-(aq) -> Br-(aq) + H2O(l) + O2(g)}$ [빠름] &nbsp;1) 전체 화학 반응식을 써라. 2) 반응 중간체와 촉매 작용을 하는 화학종을 써라.</p>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 두 단계를 더하면 양쪽에 함께 있는 것은?</p>
+      <p class="f21 step">$\ce{BrO-}$와 $\ce{Br-}$이 양쪽에 있어 지워진다.</p>
+      <div class="answer step">1) $\ce{2H2O2(aq) -> 2H2O(l) + O2(g)}$ <span class="small">(검산: H 4, O 4)</span></div>
+      <p class="f21"><b>Q</b> 2) 먼저 생겼다가 쓰이는 것과, 먼저 쓰였다가 다시 생기는 것은?</p>
+      <div class="answer step">2) 반응 중간체 $\ce{BrO-}$, 촉매 $\ce{Br-}$</div>
+      <p class="small step">[보충] 느린 1단계가 속도 결정 단계 → 반응 속도 $=k[\ce{H2O2}][\ce{Br-}]$ — 촉매의 농도도 속도식에 들어간다(4-5-1 #22의 $\ce{I-}$와 같은 꼴).</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col" style="flex:0 0 440px">{{Z9}}</div>
+  </div>
+</section>
+
+<!-- ════════ 21. 종합 문제 10 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 종합 문제" data-title="종합 문제 10">
+  <h2><span class="tag q">종합 문제 10</span>촉매의 역할과 종류</h2>
+  <p class="f21">화학 반응에서 촉매의 역할과 종류를 설명하여라.</p>
+  <div class="row">
+    <div class="col" style="flex:0 0 500px">{{Z10}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 촉매는 반응 에너지 도표에서 무엇을 바꿀까?</p>
+      <div class="answer step ac49-left"><b>역할</b>: 활성화 에너지가 낮은 새 반응 경로를 만들어 정반응과 역반응의 속도 상수를 함께 크게 한다 → 평형에 빨리 도달하지만 $\Delta H$와 평형 상수는 그대로이고, 촉매 자신은 반응 뒤에 그대로 남는다.</div>
+      <p class="f21"><b>Q</b> 촉매는 어떻게 나눌까?</p>
+      <div class="answer step ac49-left"><b>종류</b>: 균일 촉매(반응물과 같은 상태 — 예 $\ce{Br-}$, $\ce{I-}$) · 불균일 촉매(다른 상태 — 예 백금, 촉매 전환기) · 생체 촉매(효소 — 균일 촉매처럼도, 불균일 촉매처럼도 작용)</div>
+      <p class="small step">채점 요소(덱 작성): ① 새 경로·$E_\mathrm{a}$ 감소 ② 정·역반응 모두 빨라짐, $K$·$\Delta H$ 불변 ③ 균일·불균일(·효소)과 예</p>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. STEAM ① 상황 제시 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 바이타민 C — 상황 제시">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 상황 제시 1–3</span></span>음식물 속의 바이타민(vitamin) C 함량</h2>
+  <table class="tight ac49-act">
+        <tr><td>상황 제시</td><td class="l">① 적정량을 섭취하는지 토의 ② 함량 측정 방법 알아보기 ③ 하루 섭취량을 산출할 수 있는지</td></tr>
+        <tr><td>창의적 설계</td><td class="l">① 내 식단으로 섭취량 산출 ② 직접 적정법으로 식품 속 함량 ③ WHO 권장량에 비추어 판단</td></tr>
+        <tr><td>감성적 체험</td><td class="l">① 결핍과 과잉의 문제 ② 다른 바이타민과 식생활 ③ 올바른 식습관 토론 · 500자 이내 글</td></tr>
+      </table>
+  <div class="row mt8">
+    <div class="col stack" style="flex:0 0 560px">
+      <p class="f21">아스코브산 $\ce{C6H8O6}$: 약산, $\mathrm{p}K_\mathrm{a1}=4.10$, $\mathrm{p}K_\mathrm{a2}=11.6$<br><span class="small c-muted">몸에서 합성 못 함 · 하루 2 g 이상은 부작용 보고</span></p>
+      {{VC1}}
+      <div class="board" style="min-height:30px"></div>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 우리는 적정량을 먹고 있을까?</p>
+      <div class="answer step ac49-left">과일·채소를 날마다 먹으면 45 mg은 대체로 넘는다. 보충제를 여러 알 먹으면 2 g에 가까워질 수 있다.</div>
+      <p class="f21"><b>Q</b> 2) 함량을 재는 방법은?</p>
+      <div class="answer step ac49-left">산화 환원 적정(아이오딘 용액 + 녹말 지시약), 중화 적정($\ce{NaOH}$ + 페놀프탈레인), 식품 성분표</div>
+      <p class="f21"><b>Q</b> 3) 하루 섭취량을 산출할 수 있을까?</p>
+      <div class="answer step ac49-left">먹은 양 × 100 g당 함량을 식품마다 더하면 된다 — 조리하면 줄어드는 어림값.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 23. STEAM ① 창의적 설계 2 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 바이타민 C — 직접 적정법">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 창의적 설계 2</span></span>직접 적정법으로 함량 구하기</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 270px">{{VC2}}</div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 아이오딘 용액으로 적정하면 어떤 반응이 일어날까?</p>
+      <p class="f21 step">$\ce{C6H8O6 + I2 -> C6H6O6 + 2H+ + 2I-}$<br>아스코브산 산화($2e^-$ 잃음), $\ce{I}$ $0\rightarrow-1$ 환원 <span class="small">(3-3-1 #15)</span></p>
+      <p class="f21 step">종말점: 남는 $\ce{I2}$가 녹말과 만나 <b>청흑색</b></p>
+      <p class="f21 step">(예시) 주스 25.0 mL에 0.00500 M $\ce{I2}$ 12.50 mL<br>$n=0.00500\times0.01250=6.25\times10^{-5}$ mol</p>
+      <p class="f21 step">$6.25\times10^{-5}\ \text{mol}\times176.12\ \text{g/mol}=11.0\ \text{mg}$ (25.0 mL)</p>
+      <div class="answer step">100 mL당 44 mg</div>
+      <p class="small c-muted">예시 자료는 덱이 만듦. p$K_\mathrm{a1}$ 4.10이면 0.5 M 수용액 pH 약 2.20(215쪽 2.65와 다름).</p>
+    </div>
+    <div class="col stack" style="flex:0 0 330px">
+      <div class="card ac49-side"><h3>중화 적정으로 하면?</h3>
+        <p class="step">$\ce{C6H8O6 + OH- -> }$<br>$\ce{C6H7O6- + H2O}$ — 1단계만(p$K_\mathrm{a2}$ 11.6)</p>
+        {{VC2B}}
+        <p class="step">반당량점 4.10 = p$K_\mathrm{a1}$, 당량점 약 7.8 → 페놀프탈레인 <span class="small">(4-2-3a #30)</span></p>
+        <p class="step small">주스는 다른 산(시트르산) 때문에 값이 커진다 → 산화 환원 적정</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. STEAM ① 창의적 설계 1·3 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 바이타민 C — 섭취량과 권장량">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 창의적 설계 1·3</span></span>나의 하루 섭취량은 권장량에 알맞을까?</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 하루 식단으로 섭취량을 산출하면?</p>
+      <table class="tight ac49-sg">
+        <tr><th>식품 (식단 예)</th><th>먹은 양</th><th>100 g(mL)당</th><th>섭취량</th></tr>
+        <tr><td class="l">오렌지 주스 (아침)</td><td>200 mL</td><td>44 mg <span class="small">(#23 측정)</span></td><td><span class="step" data-g="d1">88 mg</span></td></tr>
+        <tr><td class="l">브로콜리 (점심)</td><td>50 g</td><td>89 mg</td><td><span class="step" data-g="d1">45 mg</span></td></tr>
+        <tr><td class="l">빨간 파프리카 (점심)</td><td>30 g</td><td>128 mg</td><td><span class="step" data-g="d1">38 mg</span></td></tr>
+        <tr><td class="l">딸기 (저녁 후식)</td><td>100 g</td><td>59 mg</td><td><span class="step" data-g="d1">59 mg</span></td></tr>
+        <tr><td class="l"><b>합계</b></td><td></td><td></td><td><span class="step" data-g="d1"><b>230 mg</b></span></td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> 3) WHO 권장량에 비추어 적절할까?</p>
+      <div class="answer step ac49-left">45 mg의 약 5배로 충분하고, 2 g보다 훨씬 적어 과잉 걱정은 없다. 다만 보충제(한 알 500–1000 mg)를 여러 번 먹으면 2 g에 가까워진다.</div>
+      <p class="small c-muted step">100 g당 함량은 일반 식품 성분 자료의 어림값이다. 바이타민 C는 열·공기에 약해 조리·보관하면 줄어든다.</p>
+    </div>
+    <div class="col" style="flex:0 0 420px">{{VC3}}</div>
+  </div>
+</section>
+
+<!-- ════════ 25. STEAM ① 감성적 체험 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 바이타민 C — 감성적 체험">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 감성적 체험 1–3</span></span>결핍과 과잉, 다른 바이타민, 식습관</h2>
+  <div class="ac49-cards">
+    <div class="card"><h3>① 결핍과 과잉의 문제는?</h3><p class="step"><b>결핍</b>: 괴혈병 — 콜라겐을 잘 만들지 못해 잇몸에서 피가 나고 상처가 잘 낫지 않는다.<br><b>과잉</b>: 설사·복통, 신장 결석 위험이 커진다.</p></div>
+    <div class="card"><h3>② 다른 바이타민은?</h3><p class="step"><b>수용성</b>(B군, C): 남으면 몸 밖으로 나가 날마다 먹어야 한다.<br><b>지용성</b>(A, D, E, K): 몸에 쌓여 과잉에 주의 — 예 A 부족 → 야맹증, D → 뼈 건강(햇빛).</p></div>
+  </div>
+  <p class="f21 mt8"><b>Q</b> ③ 올바른 식습관을 주제로 토론한 뒤 500자 이내로 쓰면?</p>
+  <div class="card step ac49-essay mt8">(예시 글, 덱이 씀) 우리 모둠은 하루 식단을 적어 바이타민 C 섭취량을 계산해 보았다. 오렌지 주스의 바이타민 C는 아이오딘 용액으로 적정해 100 mL당 44 mg으로 구했고, 다른 식품은 성분표를 이용했다. 과일과 채소를 골고루 먹은 날은 230 mg 정도로 WHO 권장량 45 mg을 충분히 넘었다. 반대로 라면과 빵만 먹은 날은 거의 0에 가까웠다. 보충제는 한 알에 500 mg이 넘는 것도 있어서 여러 알을 먹으면 2 g에 가까워질 수 있다는 것도 알게 되었다. 수용성인 바이타민 C는 몸에 쌓이지 않으므로 한꺼번에 많이 먹기보다 날마다 과일과 채소를 조금씩 먹는 것이 좋다. 조리하면 줄어드는 것도 생각해 날것으로 먹을 수 있는 채소를 곁들이기로 했다.</div>
+</section>
+
+<!-- ════════ 26. STEAM ② 상황 제시 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 충돌 이론 — 상황 제시">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 상황 제시 1–3</span></span>기체 분자 반응 속도와 충돌 이론</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 500px">
+      <div class="formula sm">$k=Zfp$<span class="unit">$Z$ 충돌 빈도 · $f$ 충분한 에너지로 충돌할 확률 · $p$ 알맞은 방향일 확률</span></div>
+      {{CL1}}
+      <table class="tight ac49-act">
+        <tr><td>창의적 설계</td><td class="l">① 충돌 속도와 충돌 빈도 ② 유효 충돌 비율의 식 ③ 충돌 이론의 $k$와 아레니우스 $k$ 비교</td></tr>
+        <tr><td>감성적 체험</td><td class="l">① 전이 상태 이론과 비교 ② 액체 속 반응 토론 ③ $E_\mathrm{a}$·$A$·$k$·온도 조사 · 700자 이내 글</td></tr>
+      </table>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 1) 충돌 이론의 특성은?</p>
+      <div class="answer step ac49-left">분자를 단단한 공으로 본다. $Z$는 농도의 곱에 비례, $f=e^{-E_\mathrm{a}/RT}$는 온도에 매우 민감, $p$는 온도와 무관(4-4-1 #7).</div>
+      <p class="f21"><b>Q</b> 2) 아레니우스 식 $k=Ae^{-E_\mathrm{a}/RT}$의 값들은 무엇을 뜻할까?</p>
+      <div class="answer step ac49-left">$A$ ↔ $Zp$(충돌 빈도 × 방향), $e^{-E_\mathrm{a}/RT}$ ↔ $f$($E_\mathrm{a}$ 이상인 충돌의 분율), $E_\mathrm{a}$ = 넘어야 할 에너지 장벽</div>
+      <p class="f21"><b>Q</b> 3) 반응 속도식과 아레니우스 식은 어떻게 다르고 이어질까?</p>
+      <div class="answer step ac49-left">속도식은 <b>농도</b>, 아레니우스 식은 $k$의 <b>온도</b> 의존(둘 다 실험식) → 반응 속도 $=Ae^{-E_\mathrm{a}/RT}[\ce{A}][\ce{B}]$. 충돌 이론이 둘을 분자 수준에서 설명한다.</div>
+      <div class="board" style="min-height:30px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 27. STEAM ② 창의적 설계 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 충돌 이론 — 창의적 설계">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 창의적 설계 1–3</span></span>충돌 이론으로 속도 상수 구해 보기</h2>
+  <div class="row">
+    <div class="col stack" style="flex:0 0 520px">{{CL2}}
+      <p class="f21"><b>Q</b> 1) 충돌 속도와 충돌 빈도는? <span class="small">[보충]</span></p>
+      <p class="f21 step">평균 상대 속력 $\bar u=\sqrt{\dfrac{8RT}{\pi\mu}}$ ($\mu=\dfrac{M_\mathrm{A}M_\mathrm{B}}{M_\mathrm{A}+M_\mathrm{B}}$) · 단면적 $\sigma=\pi d^2$</p>
+      <p class="f21 step">충돌 빈도 $Z_\mathrm{AB}=\sigma\bar u\,\dfrac{N_\mathrm{A}}{V}\dfrac{N_\mathrm{B}}{V}$ → $[\ce{A}][\ce{B}]$에 비례</p>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>Q</b> 2) 유효 충돌의 비율을 식으로 쓰면?</p>
+      <p class="f21 step">에너지: $f=e^{-E_\mathrm{a}/RT}$ · 방향: $p=\dfrac{A_\text{실험}}{A_\text{이론}}$ ($A_\text{이론}=\sigma\bar uN_\mathrm{A}$)</p>
+      <p class="f21"><b>Q</b> 3) $\ce{NO + O3 -> NO2 + O2}$ (300 K)로 비교하면?</p>
+      <table class="tight ac49-sg step">
+        <tr><th>양</th><th>값</th></tr>
+        <tr><td class="l">$d\approx0.36$ nm(가정) → $\sigma$</td><td>$0.41\ \text{nm}^2$</td></tr>
+        <tr><td class="l">$\bar u$ ($\mu=18.5$ g/mol)</td><td>587 m/s</td></tr>
+        <tr><td class="l">분자 하나의 충돌 (1 atm)</td><td>$5.8\times10^{9}$ 번/s</td></tr>
+        <tr><td class="l">$A_\text{이론}=\sigma\bar uN_\mathrm{A}$</td><td>$1.4\times10^{11}$ L/(mol·s)</td></tr>
+        <tr><td class="l">$A_\text{실험}$, $E_\mathrm{a}$ (문헌)</td><td>$1.8\times10^{9}$ L/(mol·s), 12.5 kJ/mol</td></tr>
+        <tr><td class="l">$p$ · $f$(300 K)</td><td>0.013 · $6.7\times10^{-3}$</td></tr>
+      </table>
+      <div class="answer step ac49-left">이론값이 실험값의 약 80배 → 알맞은 방향인 충돌은 1 % 남짓. 부딪쳐도 대부분 튕겨 나간다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 28. STEAM ② 감성적 체험 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · STEAM" data-title="STEAM: 충돌 이론 — 감성적 체험">
+  <h2><span class="tag">STEAM<span class="ac49-st"> · 감성적 체험 1–3</span></span>전이 상태 이론, 액체 속 반응, 여러 반응의 비교</h2>
+  <div class="row">
+    <div class="col stack">
+      <table class="tight ac49-sg">
+        <tr><th></th><th>충돌 이론</th><th>전이 상태 이론</th></tr>
+        <tr><td class="l">① 보는 곳</td><td class="l"><span class="step" data-g="t1">충돌 횟수와 충돌 에너지</span></td><td class="l"><span class="step" data-g="t1">반응 경로의 꼭대기(활성화 착물)</span></td></tr>
+        <tr><td class="l">방향 효과</td><td class="l"><span class="step" data-g="t1">$p$로 따로 곱함</span></td><td class="l"><span class="step" data-g="t1">착물의 구조로 설명</span></td></tr>
+        <tr><td class="l">비슷한 점</td><td class="l" colspan="2"><span class="step" data-g="t1">$E_\mathrm{a}$ 이상이어야 반응 · 아레니우스 꼴 $k=Ae^{-E_\mathrm{a}/RT}$</span></td></tr>
+      </table>
+      <p class="f21 mt8"><b>Q</b> ② 액체 속 반응에도 적용될까?</p>
+      <div class="answer step ac49-left">용매 분자가 둘러싼 「용매 우리」 안에서 한 번 만나면 여러 번 부딪친다. 만나는 횟수는 확산이 정하므로, $E_\mathrm{a}$가 아주 작으면 확산 빠르기가 속도를 정한다.</div>
+      <p class="f21"><b>Q</b> ③ 여러 반응을 비교하면?</p>
+      <table class="tight ac49-sg step">
+        <tr><th>반응</th><th>$E_\mathrm{a}$ (kJ/mol)</th><th>$A$ (L/(mol·s))</th><th>$k$ (25 °C)</th><th>10 °C↑</th></tr>
+        <tr><td class="l">$\ce{NO + O3}$</td><td>12.5</td><td>$1.8\times10^{9}$</td><td>$1.2\times10^{7}$</td><td>1.2배</td></tr>
+        <tr><td class="l">$\ce{NH2OH}$ 분해 <span class="small">(4-4-1 #31)</span></td><td>65.6</td><td>$1.6\times10^{8}$</td><td>$5.3\times10^{-4}$</td><td>2.3배</td></tr>
+      </table>
+    </div>
+    <div class="col stack" style="flex:0 0 440px">{{CL3}}
+      <div class="card step ac49-essay">(예시 글 일부, 덱이 씀) 두 반응의 $A$는 열 배 차이인데 $k$는 $10^{10}$배 넘게 차이 난다. $k$를 정하는 것은 주로 $E_\mathrm{a}$였고, $E_\mathrm{a}$가 클수록 직선이 가팔라 온도를 올리면 더 크게 빨라졌다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 29. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="Ⅳ. 물질의 변화와 화학 평형 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>대단원 Ⅳ. 물질의 변화와 화학 평형 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 평형 상수·반응 지수·용해도곱·이온화 상수·완충 용액과 반응 속도식·반감기·활성화 에너지·메커니즘·촉매를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 종합 문제에서 $K$, $s$, pH, $k$, $t_{1/2}$를 구하고 메커니즘으로 전체 반응식과 속도식을 판단할 수 있다.</button>
+    <button class="chk">[가치·태도] 바이타민 C 섭취와 충돌 이론 STEAM 활동을 모둠원과 협력해 설계하고 결과를 발표한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 촉매를 넣으면 평형 상수는? <span class="step">→ <span class="ans">그대로 — 정반응·역반응의 속도 상수가 함께 커진다</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 1차 반응에서 87.5 %가 분해되는 데 걸리는 시간은? <span class="step">→ <span class="ans">반감기의 3배</span></span></p>
+    <p class="f21 mt8"><b>Q</b> 완충 용액의 pH가 거의 변하지 않는 까닭은? <span class="step">→ <span class="ans">넣은 산은 짝염기가, 넣은 염기는 약산이 없앤다</span></span></p>
+  </div>
+  <p class="small c-muted mt8">점검 결과가 아쉬우면 대응표(#9–11)의 소단원 덱 장을 다시 보자.</p>
+  <div class="note puzzle mt8"><b>고급 화학을 마치며</b> Ⅰ 물질의 구조 → Ⅱ 물질의 성질 → Ⅲ 에너지와 자발성($\Delta G$) → Ⅳ 평형($K$)과 속도($k$). 구조가 성질을, 에너지가 반응의 방향을, 활성화 에너지가 빠르기를 정한다.</div>
+</section>
