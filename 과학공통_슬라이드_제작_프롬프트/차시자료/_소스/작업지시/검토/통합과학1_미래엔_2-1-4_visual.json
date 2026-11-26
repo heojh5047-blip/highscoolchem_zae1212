@@ -1,0 +1,1 @@
+{"findings":[{"slide":11,"severity":"med","rule":"D8","problem":"H 원자핵과 공유 전자쌍 겹침","fix":"H 껍질·원자핵 크기 조정 — 반영"},{"slide":5,"severity":"low","rule":"D8","problem":"전하 기호 잘림","fix":"위치 조정 — 반영"},{"slide":18,"severity":"low","rule":"lab","problem":"입자가 설명 글자와 겹침","fix":"범위 조정 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0(S2 제안 1)·콘솔 0, motion 0, ask 0, 실험실 PRE 통과."}

@@ -1,0 +1,7 @@
+/* 2-1-4 이온 결합과 공유 결합 — 덱 전용 (.is1214-) */
+.slide.cover h1.is1214-h1{font-size:104px}
+.is1214-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is1214-btns .btn{font-size:19px;padding:5px 10px}
+.is1214-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is1214-btns .btn:disabled{opacity:.35}
+.is1214-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}
