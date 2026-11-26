@@ -1,0 +1,1 @@
+{"findings":[{"slide":1,"severity":"med","rule":"D8","problem":"표지 제목 넘침","fix":"96px — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0."}
