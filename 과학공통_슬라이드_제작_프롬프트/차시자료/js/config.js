@@ -20,7 +20,7 @@ window.SITE_CONFIG = {
 };
 
 // 첫 화면(덱 목록) 아래쪽 출처 표시 — 수업 화면(view.html)·수정 화면(edit.html)에는 넣지 않는다.
-window.SITE_CONFIG.CREDIT = ["제작: 여수고등학교 허재형"];
+window.SITE_CONFIG.CREDIT = ["제작: 여수고등학교 허재형", "전남온라인학교 김우주 선생님으로부터 제공받아 제작하였습니다."];
 document.addEventListener('DOMContentLoaded', () => {
   const wrap = document.querySelector('.wrap');
   if (!wrap || !document.getElementById('tabs')) return;
