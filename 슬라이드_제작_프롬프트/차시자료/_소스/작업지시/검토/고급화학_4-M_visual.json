@@ -1,0 +1,103 @@
+{
+ "findings": [
+  {
+   "slide": 1,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "표지 그림이 제목·kicker와 겹침.",
+   "fix": "extra.css에서 표지 svg를 오른쪽 절대 위치로, 폭 470."
+  },
+  {
+   "slide": 2,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "11행 표 + 목표 + 흐름 띠가 영역 밖으로 넘침.",
+   "fix": "흐름 띠 삭제."
+  },
+  {
+   "slide": 6,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "에너지 분포 그림 아래 라벨 잘림.",
+   "fix": "viewBox 높이 228."
+  },
+  {
+   "slide": 7,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "두 단계 도표의 「반응 진행 경로」 잘림.",
+   "fix": "viewBox 700×218."
+  },
+  {
+   "slide": 12,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "298 K 라벨과 기울기 라벨 겹침.",
+   "fix": "298 K 라벨을 점 아래로, 기울기 라벨을 왼쪽 위로."
+  },
+  {
+   "slide": 14,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "표의 반응식 칸이 줄바꿈되며 그림과 겹침.",
+   "fix": "표를 전체 폭으로 올리고 Q·그림을 아래 두 열로."
+  },
+  {
+   "slide": 15,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "막대 아래 설명 글이 x 라벨과 겹침.",
+   "fix": "설명 글을 아래로, viewBox 390."
+  },
+  {
+   "slide": 18,
+   "severity": "medium",
+   "rule": "T4",
+   "problem": "k 계산 답 상자 넘침.",
+   "fix": "단위를 뺀 대입식으로 줄임."
+  },
+  {
+   "slide": 19,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "표 + 답 + 에너지 모양 그림으로 넘침.",
+   "fix": "에너지 모양 그림 삭제."
+  },
+  {
+   "slide": 22,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "오른쪽 열 넘침, 막대그래프 아래 라벨 잘림.",
+   "fix": "활동 표를 위 전체 폭으로, 머리 상자를 한 줄 글로, 막대 간격 31, 라벨 위치 옮김."
+  },
+  {
+   "slide": 23,
+   "severity": "high",
+   "rule": "D8",
+   "problem": "세 열이 넘치고 카드 안 반응식이 카드 밖으로.",
+   "fix": "반응식 두 줄, 카드 글자 19px, 곡선 그림 1:1, 아래 주석을 가운데 열로."
+  },
+  {
+   "slide": 24,
+   "severity": "medium",
+   "rule": "D8",
+   "problem": "「상한 2 g」 화살표·글이 쌓은 막대와 겹침.",
+   "fix": "오른쪽으로 옮김."
+  },
+  {
+   "slide": 21,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "「ΔH 같음」과 「생성물」 겹침.",
+   "fix": "생성물 라벨을 선 아래로."
+  },
+  {
+   "slide": 20,
+   "severity": "low",
+   "rule": "D8",
+   "problem": "순환 공이 「촉매」 라벨, 충돌 원기둥 그림의 B 공이 σ 라벨과 겹침(S27).",
+   "fix": "공 위치 옮김."
+  }
+ ],
+ "summary": "자동 점검 27건·콘솔 3건 → 0. 판서 공간 5곳 추가. 모든 그림 라벨 화면 16px 이상."
+}
