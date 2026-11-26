@@ -1,0 +1,6 @@
+/* 1-2-2 신호와 정보 — 덱 전용 (.is1122-) */
+.is1122-btns{display:flex;flex-wrap:wrap;gap:8px}
+.is1122-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+table.is1122-rec{width:100%}
+table.is1122-rec th,table.is1122-rec td{font-size:19px;padding:3px 5px;text-align:center}
+.is1122-msg{display:block;font-size:19px;line-height:1.45;margin-top:6px}

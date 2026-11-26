@@ -1,0 +1,671 @@
+<!-- ════════ 1. 표지 ════════ -->
+<section class="slide cover" data-sec="Ⅰ. 과학의 기초" data-title="표지">
+  <div class="cover-text">
+    <div class="kicker">Ⅰ-2 측정 표준과 정보 › 02</div>
+    <h1>신호와<br><span class="acc">정보</span></h1>
+    <p class="sub">자연의 변화를 재고, 디지털 정보로 바꾸기</p>
+    <p class="meta">고등학교 통합과학1 32–39쪽</p>
+  </div>
+  <svg class="cover-fig" viewBox="0 0 540 540" data-audit="skip" aria-label="연속으로 변하는 곡선이 센서를 지나 0과 1의 계단 신호로 바뀌는 그림">
+    <circle cx="270" cy="270" r="250" fill="#EEF3F8"/>
+    <path d="M60 280 q40 -90 80 0 t80 0" fill="none" stroke="#16233D" stroke-width="5" data-anim="draw" data-dur="1.4"/>
+    <rect x="230" y="230" width="80" height="100" rx="14" fill="#2E9E6A"/>
+    <circle cx="270" cy="270" r="18" fill="#FFFFFF"/><circle cx="270" cy="270" r="8" fill="#16233D"/>
+    <path d="M320 300 L350 300 L350 250 L380 250 L380 300 L410 300 L410 250 L440 250 L440 300 L470 300" fill="none" stroke="#7B4FC8" stroke-width="5" data-anim="draw" data-dur="1.4" data-delay=".8"/>
+    <text x="370" y="220" font-size="28" font-weight="700" fill="#7B4FC8">0 1 0 1</text>
+  </svg>
+</section>
+
+<!-- ════════ 2. 학습 목표 ════════ -->
+<section class="slide" data-sec="02 신호와 정보" data-title="학습 목표">
+  <h2>학습 목표</h2>
+  <div class="std"><span class="code">[10통과1-01-04]</span>자연에서 일어나는 다양한 변화를 측정⋅분석하여 정보를 산출함을 알고, 이러한 정보를 디지털로 변환하는 기술을 정보 통신에 활용하여 현대 문명에 미친 영향을 인식한다.</div>
+  <ol class="goals mt12">
+    <li>자연에서 일어나는 다양한 변화를 측정·분석해 정보를 산출함을 설명할 수 있다.</li>
+    <li>정보를 디지털로 변환하는 기술을 정보 통신에 활용해 현대 문명에 미친 영향을 설명할 수 있다.</li>
+    <li>(탐구) 스마트 기기를 활용해 여러 가지 기본량을 측정하고 분석할 수 있다.</li>
+  </ol>
+  <h3 class="mt28">오늘의 흐름</h3>
+  <div class="flow">
+    <div class="fnode">스마트워치</div><div class="farr">→</div>
+    <div class="fnode">신호와 정보</div><div class="farr">→</div>
+    <div class="fnode">센서</div><div class="farr">→</div>
+    <div class="fnode">디지털 정보와 현대 문명</div><div class="farr">→</div>
+    <div class="fnode hl">탐구: 스마트 기기 측정</div><div class="farr">→</div>
+    <div class="fnode">중단원 마무리</div>
+  </div>
+</section>
+
+<!-- ════════ 3. 도입 ════════ -->
+<section class="slide" data-sec="02 신호와 정보 · 도입" data-title="도입: 스마트워치와 심박수">
+  <h2>스마트워치는 어떻게 심박수를 잴까?</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 480px">
+      <svg class="fig" viewBox="0 0 480 340" style="width:480px" aria-label="손목에 찬 스마트워치 화면에 심박수 72와 심장 박동 파형이 나타난 모습">
+        <rect x="170" y="10" width="140" height="60" rx="10" fill="#5B6B7F"/><rect x="170" y="270" width="140" height="60" rx="10" fill="#5B6B7F"/>
+        <rect x="140" y="60" width="200" height="220" rx="40" fill="#16233D"/>
+        <rect x="160" y="80" width="160" height="180" rx="28" fill="#0E2A47"/>
+        <path d="M172 200 L200 200 L212 170 L226 232 L240 150 L254 214 L266 200 L308 200" fill="none" stroke="#D7263D" stroke-width="4" data-anim="draw" data-dur="1.2" data-rep="loop"/>
+        <text class="tex" x="240" y="140" data-mix="72" data-size="44" data-anchor="middle" data-weight="700" fill="#FFFFFF"></text>
+        <text class="tex" x="240" y="248" data-mix="회/분" data-size="19" data-anchor="middle" fill="#9FC3DD"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22">스마트워치를 이용하면 심박수, 체온, 혈압 등을 측정해 건강 관리에 필요한 정보를 얻을 수 있다.</p>
+      <p class="f22 mt16"><b>Q</b> 스마트워치에서 심박수를 측정할 수 있게 해 주는 것은 무엇일까?</p>
+      <div class="answer step">스마트워치에 들어 있는 <b>센서</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4. 신호 ════════ -->
+<section class="slide" data-sec="02 · 신호와 정보" data-title="자연계의 변화와 신호">
+  <h2><span class="no">1</span>자연계의 변화는 신호가 된다</h2>
+  <div class="stages c2">
+    <div class="stage">
+      <h3>햇빛의 세기가 약해진다</h3>
+      <svg viewBox="0 0 440 150" aria-label="해가 지평선 아래로 내려가며 하늘이 어두워지는 모습">
+        <rect x="0" y="0" width="440" height="150" rx="10" fill="#FCE7C8"/>
+        <rect x="220" y="0" width="220" height="150" rx="10" fill="#1B2B4A"/>
+        <g data-anim="move" data-from="-160,-60" data-dur="2" data-ease="io"><circle cx="300" cy="110" r="26" fill="#F7C548" stroke="#E08A2C" stroke-width="2.5"/></g>
+        <rect x="0" y="118" width="440" height="32" fill="#5E8C31"/>
+        <circle cx="390" cy="34" r="4" fill="#FFFFFF"/><circle cx="350" cy="56" r="3" fill="#FFFFFF"/>
+      </svg>
+      <p class="key">→ 밤이 오는 <b>신호</b></p>
+    </div>
+    <div class="stage">
+      <h3>온도가 낮아진다</h3>
+      <svg viewBox="0 0 440 150" aria-label="온도계 눈금이 내려가고 눈이 내리는 모습">
+        <rect x="0" y="0" width="440" height="150" rx="10" fill="#EEF3F8"/>
+        <rect x="80" y="14" width="22" height="110" rx="11" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2.5"/>
+        <rect x="86" y="80" width="10" height="44" fill="#1F6FD1" data-anim="scale" data-from="1,2.2" data-o="91,124" data-dur="1.6"/>
+        <circle cx="91" cy="130" r="14" fill="#1F6FD1"/>
+        <g fill="#FFFFFF" stroke="#9FC3DD" stroke-width="2"><circle cx="220" cy="40" r="8"/><circle cx="290" cy="80" r="8"/><circle cx="360" cy="30" r="8"/><circle cx="250" cy="110" r="8"/><circle cx="380" cy="100" r="8"/></g>
+      </svg>
+      <p class="key">→ 겨울이 오는 <b>신호</b></p>
+    </div>
+  </div>
+  <p class="f22 mt16">지구에서 우주에 이르기까지 자연계에서는 시간이 흐름에 따라 빛의 세기, 온도 등이 끊임없이 변하며, 이러한 자연계의 변화는 우리에게 전달되어 <mark>신호</mark>가 된다.</p>
+</section>
+
+<!-- ════════ 5. 신호 → 정보 ════════ -->
+<section class="slide" data-sec="02 · 신호와 정보" data-title="신호를 측정·분석하면 정보">
+  <h2><span class="no">1</span>신호를 측정·분석하면 정보가 된다</h2>
+  <svg class="fig" viewBox="0 0 1110 280" style="width:1110px" aria-label="체온이라는 신호를 측정 분석해 건강 상태라는 정보를, 우주에서 온 빛을 측정 분석해 우주의 생성 과정이라는 정보를 얻는 흐름">
+    <g fill="#FFFFFF" stroke="#C9D3DD" stroke-width="2"><rect x="20" y="20" width="250" height="100" rx="14"/><rect x="20" y="160" width="250" height="100" rx="14"/></g>
+    <g fill="#E8F5EE" stroke="#2E9E6A" stroke-width="2.5"><rect x="840" y="20" width="250" height="100" rx="14"/><rect x="840" y="160" width="250" height="100" rx="14"/></g>
+    <rect x="410" y="80" width="290" height="120" rx="16" fill="#F6F9FC" stroke="#16233D" stroke-width="2.5"/>
+    <text class="tex" x="555" y="134" data-mix="측정 · 분석" data-size="26" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="555" y="170" data-mix="(센서, 기기)" data-size="20" data-anchor="middle" fill="#5B6B7F"></text>
+    <g data-arw="270,70,408,120,ink,3"></g><g data-arw="270,210,408,160,ink,3"></g>
+    <g class="step" data-g="i1"><g data-arw="700,120,838,70,field,3.5"></g></g>
+    <g class="step" data-g="i2"><g data-arw="700,160,838,210,field,3.5"></g></g>
+    <text class="tex" x="145" y="62" data-mix="신호: 체온" data-size="22" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="145" y="96" data-mix="$37.8\ {}^\circ\text{C}$" data-size="22" data-anchor="middle" fill="#C2410C"></text>
+    <text class="tex" x="145" y="202" data-mix="신호: 우주에서 온 빛" data-size="22" data-anchor="middle" data-weight="700"></text>
+    <text class="tex" x="145" y="236" data-mix="빛의 세기·색" data-size="20" data-anchor="middle" fill="#5B6B7F"></text>
+    <text class="tex step" data-g="i1" x="965" y="62" data-mix="정보: 건강 상태" data-size="22" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text>
+    <text class="tex step" data-g="i1" x="965" y="96" data-mix="열이 난다" data-size="20" data-anchor="middle"></text>
+    <text class="tex step" data-g="i2" x="965" y="202" data-mix="정보: 우주의 생성 과정" data-size="22" data-anchor="middle" data-weight="700" fill="#2E9E6A"></text>
+    <text class="tex step" data-g="i2" x="965" y="236" data-mix="대폭발과 팽창" data-size="20" data-anchor="middle"></text>
+  </svg>
+  <p class="f22 mt8">신호를 측정해 분석하면 유용한 <mark>정보</mark>를 얻을 수 있다.</p>
+  <p class="f21 mt8"><b>Q</b> 신호와 정보는 무엇이 다를까? <span class="step">→ 신호는 <b>전달되는 변화</b> 자체, 정보는 신호를 재고 분석해 얻은 <span class="ans">쓸모 있는 지식</span>이다.</span></p>
+</section>
+
+<!-- ════════ 6. 아날로그 신호 ════════ -->
+<section class="slide" data-sec="02 · 신호와 정보" data-title="자연계의 신호는 아날로그 형태">
+  <h2><span class="no">1</span>자연계의 신호는 연속적으로 변한다</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 600px">
+      <svg class="fig" viewBox="0 0 600 310" style="width:600px" aria-label="하루 동안 햇빛의 세기 그래프. 6시부터 점점 강해져 12시에 가장 세고 18시에 0이 되는 매끄러운 곡선">
+        <g stroke="#E2E7EC" stroke-width="1.5"><line x1="180" y1="50" x2="180" y2="250"/><line x1="300" y1="50" x2="300" y2="250"/><line x1="420" y1="50" x2="420" y2="250"/><line x1="60" y1="155" x2="540" y2="155"/><line x1="60" y1="60" x2="540" y2="60"/></g>
+        <g data-arw="60,250,566,250,muted,2.5"></g><g data-arw="60,250,60,28,muted,2.5"></g>
+        <path d="M60.0 250.0 L180.0 250.0 L185.0 237.6 L190.0 225.2 L195.0 212.9 L200.0 200.8 L205.0 188.9 L210.0 177.3 L215.0 166.0 L220.0 155.0 L225.0 144.4 L230.0 134.3 L235.0 124.7 L240.0 115.6 L245.0 107.2 L250.0 99.3 L255.0 92.0 L260.0 85.5 L265.0 79.6 L270.0 74.5 L275.0 70.1 L280.0 66.5 L285.0 63.7 L290.0 61.6 L295.0 60.4 L300.0 60.0 L305.0 60.4 L310.0 61.6 L315.0 63.7 L320.0 66.5 L325.0 70.1 L330.0 74.5 L335.0 79.6 L340.0 85.5 L345.0 92.0 L350.0 99.3 L355.0 107.2 L360.0 115.6 L365.0 124.7 L370.0 134.3 L375.0 144.4 L380.0 155.0 L385.0 166.0 L390.0 177.3 L395.0 188.9 L400.0 200.8 L405.0 212.9 L410.0 225.2 L415.0 237.6 L420.0 250.0 L540.0 250.0" fill="none" stroke="#16233D" stroke-width="3.5" data-anim="draw" data-dur="1.8"/>
+        <text class="tex" x="60" y="276" data-tex="0" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="180" y="276" data-tex="6" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="300" y="276" data-tex="12" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="420" y="276" data-tex="18" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="540" y="276" data-tex="24" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="566" y="302" data-mix="시각 [시]" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="72" y="26" data-mix="햇빛의 세기" data-size="18"></text>
+      </svg>
+      <p class="small">모양만 나타낸 그래프(세기 값은 정오를 100으로 둔 상대값)</p>
+    </div>
+    <div class="col stack">
+      <p class="f22">햇빛의 세기가 점점 강해졌다가 약해지는 것처럼 자연계의 신호는 <b>연속적으로 변하는 아날로그 형태</b>이다.</p>
+      <p class="f22 mt16"><b>Q</b> 연속적으로 변하는 신호를 사람이 직접 재기 어려운 까닭은?</p>
+      <p class="f21 step">값이 끊임없이 바뀌어 <b>특정한 값</b>으로 정해 재기 어렵다 → <b>센서</b>를 이용하면 더 효율적으로 측정할 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 센서 ════════ -->
+<section class="slide" data-sec="02 · 센서" data-title="센서: 신호를 전기 신호로">
+  <h2><span class="no">2</span>센서</h2>
+  <p class="f22"><mark>센서</mark>는 자연계의 신호를 받아들여 전기 신호로 바꾸어 주는 장치이다. 센서를 이용하면 연속적인 값을 갖는 아날로그 신호를 특정한 값을 갖는 <b>디지털 형태</b>로 측정할 수 있다.</p>
+  <div class="stages c2 mt12">
+    <div class="stage">
+      <h3>아날로그 속력계</h3>
+      <svg viewBox="0 0 400 170" aria-label="바늘이 연속적으로 움직이는 아날로그 속력계">
+        <path d="M80 150 A120 120 0 0 1 320 150" fill="#16233D" stroke="#5B6B7F" stroke-width="3"/>
+        <g stroke="#FFFFFF" stroke-width="3"><line x1="100" y1="150" x2="114" y2="150"/><line x1="200" y1="40" x2="200" y2="54"/><line x1="300" y1="150" x2="286" y2="150"/><line x1="129" y1="79" x2="139" y2="89"/><line x1="271" y1="79" x2="261" y2="89"/></g>
+        <g data-anim="rot" data-from="-60" data-o="200,150" data-rep="damp" data-dur="1.2"><line x1="200" y1="150" x2="250" y2="70" stroke="#D7263D" stroke-width="5"/></g>
+        <circle cx="200" cy="150" r="10" fill="#D7263D"/>
+      </svg>
+      <p class="key">바늘이 연속적으로 움직인다 — 값을 정확히 읽기 어렵다.</p>
+    </div>
+    <div class="stage">
+      <h3>디지털 속력계(센서)</h3>
+      <svg viewBox="0 0 400 170" aria-label="숫자 60 km/h가 표시된 디지털 속력계">
+        <rect x="80" y="30" width="240" height="120" rx="16" fill="#16233D"/>
+        <text class="tex" x="190" y="112" data-tex="60" data-size="56" data-anchor="middle" fill="#7EE0A8"></text>
+        <text class="tex" x="270" y="110" data-tex="\text{km/h}" data-size="20" data-anchor="middle" fill="#7EE0A8"></text>
+      </svg>
+      <p class="key">속력을 특정한 값(예 $60\ \text{km/h}$)으로 나타낸다.</p>
+    </div>
+  </div>
+  <div class="row mt12">
+    <div class="col"><div class="note f21"><b>디지털</b> 연속적으로 변하는 양을 최소 단위를 갖는 불연속적인 값으로 나타내는 것</div></div>
+    <div class="col"><p class="f21">신호의 종류에 따라 <b>빛 센서, 온도 센서, 습도 센서</b> 등 다양한 센서가 쓰인다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 8. 연결: 아날로그와 디지털 ════════ -->
+<section class="slide" data-sec="02 · 센서" data-title="연결: 아날로그와 디지털">
+  <h2><span class="tag alt">연결</span>같은 신호, 아날로그와 디지털</h2>
+  <div class="row">
+    <div class="col" style="flex:0 0 580px">
+      <svg class="fig" viewBox="0 0 580 312" style="width:580px" aria-label="연속으로 변하는 곡선과, 1초마다 10 단위의 값으로 나타낸 계단 모양 디지털 값">
+        <g stroke="#E2E7EC" stroke-width="1.5"><line x1="60" y1="70" x2="520" y2="70"/><line x1="60" y1="110" x2="520" y2="110"/><line x1="60" y1="150" x2="520" y2="150"/><line x1="60" y1="190" x2="520" y2="190"/><line x1="60" y1="230" x2="520" y2="230"/></g>
+        <g data-arw="60,250,540,250,muted,2.5"></g><g data-arw="60,250,60,40,muted,2.5"></g>
+        <path d="M60.0 150.0 L62.8 146.9 L65.5 143.7 L68.2 140.6 L71.0 137.5 L73.8 134.4 L76.5 131.3 L79.2 128.3 L82.0 125.3 L84.8 122.3 L87.5 119.4 L90.2 116.5 L93.0 113.7 L95.8 110.9 L98.5 108.2 L101.2 105.6 L104.0 103.0 L106.8 100.5 L109.5 98.0 L112.2 95.7 L115.0 93.4 L117.8 91.3 L120.5 89.2 L123.2 87.2 L126.0 85.3 L128.8 83.5 L131.5 81.8 L134.2 80.2 L137.0 78.7 L139.8 77.3 L142.5 76.1 L145.2 74.9 L148.0 73.9 L150.8 73.0 L153.5 72.2 L156.2 71.5 L159.0 71.0 L161.8 70.6 L164.5 70.2 L167.2 70.1 L170.0 70.0 L172.8 70.1 L175.5 70.2 L178.2 70.6 L181.0 71.0 L183.8 71.5 L186.5 72.2 L189.2 73.0 L192.0 73.9 L194.8 74.9 L197.5 76.1 L200.2 77.3 L203.0 78.7 L205.8 80.2 L208.5 81.8 L211.2 83.5 L214.0 85.3 L216.8 87.2 L219.5 89.2 L222.2 91.3 L225.0 93.4 L227.8 95.7 L230.5 98.0 L233.2 100.5 L236.0 103.0 L238.8 105.6 L241.5 108.2 L244.2 110.9 L247.0 113.7 L249.8 116.5 L252.5 119.4 L255.2 122.3 L258.0 125.3 L260.8 128.3 L263.5 131.3 L266.2 134.4 L269.0 137.5 L271.8 140.6 L274.5 143.7 L277.2 146.9 L280.0 150.0 L282.8 153.1 L285.5 156.3 L288.2 159.4 L291.0 162.5 L293.8 165.6 L296.5 168.7 L299.2 171.7 L302.0 174.7 L304.8 177.7 L307.5 180.6 L310.2 183.5 L313.0 186.3 L315.8 189.1 L318.5 191.8 L321.2 194.4 L324.0 197.0 L326.8 199.5 L329.5 202.0 L332.2 204.3 L335.0 206.6 L337.8 208.7 L340.5 210.8 L343.2 212.8 L346.0 214.7 L348.8 216.5 L351.5 218.2 L354.2 219.8 L357.0 221.3 L359.8 222.7 L362.5 223.9 L365.2 225.1 L368.0 226.1 L370.8 227.0 L373.5 227.8 L376.2 228.5 L379.0 229.0 L381.8 229.4 L384.5 229.8 L387.2 229.9 L390.0 230.0 L392.8 229.9 L395.5 229.8 L398.2 229.4 L401.0 229.0 L403.8 228.5 L406.5 227.8 L409.2 227.0 L412.0 226.1 L414.8 225.1 L417.5 223.9 L420.2 222.7 L423.0 221.3 L425.8 219.8 L428.5 218.2 L431.2 216.5 L434.0 214.7 L436.8 212.8 L439.5 210.8 L442.2 208.7 L445.0 206.6 L447.8 204.3 L450.5 202.0 L453.2 199.5 L456.0 197.0 L458.8 194.4 L461.5 191.8 L464.2 189.1 L467.0 186.3 L469.8 183.5 L472.5 180.6 L475.2 177.7 L478.0 174.7 L480.8 171.7 L483.5 168.7 L486.2 165.6 L489.0 162.5 L491.8 159.4 L494.5 156.3 L497.2 153.1 L500.0 150.0" fill="none" stroke="#16233D" stroke-width="3.5"/>
+        <path class="step" data-g="d1" d="M60.0 150.0 L115.0 150.0 M115.0 90.0 L170.0 90.0 M170.0 70.0 L225.0 70.0 M225.0 90.0 L280.0 90.0 M280.0 150.0 L335.0 150.0 M335.0 210.0 L390.0 210.0 M390.0 230.0 L445.0 230.0 M445.0 210.0 L500.0 210.0" fill="none" stroke="#7B4FC8" stroke-width="5"/>
+        <text class="tex" x="60" y="276" data-tex="0" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="280" y="276" data-tex="4" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="500" y="276" data-tex="8" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="540" y="298" data-mix="$t$ [s]" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="72" y="34" data-mix="신호의 크기" data-size="18"></text>
+        <text class="tex" x="200" y="56" data-mix="아날로그(연속)" data-size="19" fill="#16233D"></text>
+        <text class="tex step" data-g="d1" x="372" y="252" data-mix="디지털(불연속)" data-size="19" data-anchor="middle" fill="#7B4FC8" data-halo="1"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f22"><b>Q</b> 같은 신호를 디지털로 나타내면 어떻게 달라질까?</p>
+      <p class="f21 step" data-g="d1">일정한 시점마다, 정해진 최소 단위의 <b>특정한 값</b>으로만 나타난다(계단 모양). 숫자로 저장·분석·전송하기 쉽다.</p>
+      <div class="card mt16"><p class="f21"><b>주의</b> 센서가 모두 디지털인 것은 아니다. 바늘 속력계에는 <b>아날로그 센서</b>, 전자 속력계에는 <b>디지털 센서</b>가 쓰인다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 9. 센서로 얻는 정보 ════════ -->
+<section class="slide" data-sec="02 · 센서" data-title="센서로 측정한 신호에서 얻는 정보">
+  <h2><span class="no">2</span>센서로 측정한 신호에서 얻는 정보</h2>
+  <div class="stages">
+    <div class="stage"><h3>열화상 카메라</h3><svg viewBox="0 0 300 120" aria-hidden="true"><rect x="40" y="10" width="220" height="100" rx="10" fill="#1B2B4A"/><circle cx="150" cy="50" r="22" fill="#E08A2C"/><circle cx="150" cy="50" r="12" fill="#D7263D"/><rect x="122" y="72" width="56" height="38" rx="10" fill="#C2410C"/></svg><p>피부 온도를 측정·분석해 <b>체온이 높은 사람</b>을 확인한다.</p></div>
+    <div class="stage"><h3>우주 망원경</h3><svg viewBox="0 0 300 120" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="10" fill="#0E1A30"/><g data-anim="spin" data-o="210,60" data-speed="10"><ellipse cx="210" cy="60" rx="50" ry="16" fill="none" stroke="#A58BD6" stroke-width="3"/></g><rect x="40" y="46" width="70" height="30" rx="6" fill="#C9CDD2"/><rect x="20" y="52" width="20" height="18" fill="#1F6FD1"/></svg><p>우주에서 온 빛을 측정·분석해 <b>우주의 생성 과정</b>을 안다.</p></div>
+    <div class="stage"><h3>지진 관측</h3><svg viewBox="0 0 300 120" aria-hidden="true"><path d="M10 60 L60 60 L70 30 L82 92 L94 20 L106 100 L118 40 L130 74 L142 60 L290 60" fill="none" stroke="#D7263D" stroke-width="3" data-anim="draw" data-dur="1.4"/></svg><p>파동으로 전달되는 지진파를 측정·분석해 <b>지진이 발생한 위치</b>를 안다.</p></div>
+  </div>
+  <p class="f21 mt16">그 밖에도 작물을 심을 시기, 강수 확률, 태풍의 이동 경로처럼 생활에 중요한 정보를 얻는다. 센서는 사람의 감각보다 <b>정밀하게</b> 측정하므로, 과거보다 훨씬 많은 정보를 얻고 있다.</p>
+</section>
+
+<!-- ════════ 10. 디지털 정보와 현대 문명 ════════ -->
+<section class="slide" data-sec="02 · 디지털 정보와 현대 문명" data-title="디지털 정보와 정보 통신">
+  <h2><span class="no">3</span>디지털 정보와 현대 문명</h2>
+  <svg class="fig" viewBox="0 0 1110 200" style="width:1110px" aria-label="자연의 신호가 센서를 거쳐 전기 신호가 되고, 디지털로 변환되어 저장, 분석, 전송되는 흐름">
+    <g fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"><rect x="10" y="60" width="180" height="80" rx="14"/><rect x="250" y="60" width="180" height="80" rx="14"/><rect x="490" y="60" width="200" height="80" rx="14"/></g>
+    <g fill="#E8F5EE" stroke="#2E9E6A" stroke-width="2.5"><rect x="760" y="10" width="160" height="56" rx="12"/><rect x="760" y="76" width="160" height="56" rx="12"/><rect x="760" y="142" width="160" height="56" rx="12"/></g>
+    <text class="tex" x="100" y="108" data-mix="자연의 신호" data-size="22" data-anchor="middle"></text>
+    <text class="tex" x="340" y="108" data-mix="센서 → 전기 신호" data-size="21" data-anchor="middle"></text>
+    <text class="tex" x="590" y="108" data-mix="디지털 정보" data-size="22" data-anchor="middle" data-weight="700" fill="#7B4FC8"></text>
+    <g data-arw="190,100,248,100,ink,3"></g><g data-arw="430,100,488,100,ink,3"></g>
+    <g data-arw="690,90,758,40,field,3"></g><g data-arw="690,100,758,104,field,3"></g><g data-arw="690,110,758,168,field,3"></g>
+    <text class="tex" x="840" y="46" data-mix="저장이 쉽다" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="840" y="112" data-mix="분석이 쉽다" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="840" y="178" data-mix="전송이 쉽다" data-size="20" data-anchor="middle" data-weight="700"></text>
+    <text class="tex step" data-g="n1" x="1000" y="178" data-mix="→ 정보 통신" data-size="20" data-anchor="middle" fill="#2E9E6A"></text>
+  </svg>
+  <ul class="f21 mt8">
+    <li>디지털 정보는 저장과 분석이 쉬워 컴퓨터 같은 다양한 전자 기기에서 쓰인다 → 과학, 산업, 일상생활에 활용</li>
+    <li>전송하기 쉬워 정보를 주고받는 <b>정보 통신</b>에 쓰인다. 인터넷이 널리 퍼지며 <mark>시간과 공간의 제약 없이</mark> 빠르게 정보를 공유한다.</li>
+  </ul>
+  <div class="note mt8 f21"><b>일상생활 속 디지털 정보</b> 스마트 기기로 찍은 사진과 영상, 컴퓨터로 작성한 문서는 모두 디지털 정보이다.</div>
+</section>
+
+<!-- ════════ 11. 디지털 정보의 활용 ════════ -->
+<section class="slide" data-sec="02 · 디지털 정보와 현대 문명" data-title="디지털 정보의 활용">
+  <h2><span class="no">3</span>디지털 정보를 활용한 정보 통신</h2>
+  <div class="stages" style="grid-template-columns:repeat(4,1fr);gap:14px">
+    <div class="stage"><h3>사회 관계망 서비스</h3><svg viewBox="0 0 200 100" aria-hidden="true"><rect x="70" y="6" width="60" height="90" rx="10" fill="#16233D"/><rect x="78" y="16" width="44" height="36" fill="#6FA8DC"/><path d="M84 46 L96 32 L106 42 L116 30 L122 46 Z" fill="#2E9E6A"/></svg><p>사진·영상을 여러 사람과 공유</p></div>
+    <div class="stage"><h3>온라인 거래</h3><svg viewBox="0 0 200 100" aria-hidden="true"><rect x="40" y="14" width="120" height="76" rx="8" fill="#FFFFFF" stroke="#5B6B7F" stroke-width="2.5"/><path d="M80 36 L92 30 L108 30 L120 36 L114 48 L110 46 L110 74 L90 74 L90 46 L86 48 Z" fill="#1F6FD1"/></svg><p>상점에 가지 않고 물건 구매, 은행 거래</p></div>
+    <div class="stage"><h3>로봇 조종</h3><svg viewBox="0 0 200 100" aria-hidden="true"><rect x="70" y="20" width="60" height="50" rx="8" fill="#C9CDD2" stroke="#5B6B7F" stroke-width="2.5"/><circle cx="88" cy="42" r="6" fill="#16233D"/><circle cx="112" cy="42" r="6" fill="#16233D"/><g data-anim="rot" data-from="30" data-o="130,40" data-rep="swing" data-dur=".8"><line x1="130" y1="40" x2="160" y2="20" stroke="#5B6B7F" stroke-width="6"/></g><rect x="80" y="70" width="40" height="20" fill="#5B6B7F"/></svg><p>사람이 하기 힘든 일을 원격으로</p></div>
+    <div class="stage"><h3>원격 교육</h3><svg viewBox="0 0 200 100" aria-hidden="true"><rect x="40" y="10" width="120" height="74" rx="6" fill="#16233D"/><rect x="48" y="18" width="104" height="58" fill="#DDEEF8"/><circle cx="100" cy="40" r="10" fill="#8E6B48"/><rect x="88" y="52" width="24" height="20" rx="6" fill="#8E6B48"/></svg><p>실시간 영상·소리로 수업</p></div>
+  </div>
+  <p class="f22 mt16">디지털 정보를 활용한 정보 통신의 발전은 <mark>현대 문명에 많은 영향</mark>을 미쳤다.</p>
+  <p class="f21 mt8"><b>Q</b> 디지털 정보가 없다면 지금 생활에서 무엇이 달라질까? <span class="step">→ 사진·문서를 바로 나눌 수 없고, 은행·쇼핑·수업을 직접 가서 해야 한다.</span></p>
+</section>
+
+<!-- ════════ 12. 읽기 자료: 디지털 격차 ════════ -->
+<section class="slide" data-sec="02 · 디지털 정보와 현대 문명" data-title="읽기 자료: 디지털 격차">
+  <h2><span class="tag alt">읽기 자료</span>디지털 격차</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f22">디지털 정보가 보편화되면서 이를 잘 활용하는 사람과 그렇지 못한 사람 사이에 지식의 양이나 소득 수준의 차이가 커지는 현상을 <b>디지털 격차</b>(정보 격차)라고 한다.</p>
+      <p class="f22 mt16">이 차이는 사회적 불평등을 낳을 수 있으므로 관련 법 제정, 체계적인 교육, 재정 지원 등으로 줄이려는 노력이 필요하다.</p>
+      <p class="f22 mt16"><b>Q</b> 우리 주변에서 디지털 격차를 줄이기 위해 할 수 있는 일은?</p>
+      <p class="f21 step">키오스크 사용이 어려운 사람을 돕기, 가족에게 스마트 기기 사용법 알려 드리기 등</p>
+    </div>
+    <div class="col" style="flex:0 0 420px">
+      <svg class="fig" viewBox="0 0 420 300" style="width:420px" aria-label="키오스크 앞에서 젊은 사람이 나이 든 사람에게 화면 누르는 법을 알려 주는 모습">
+        <rect x="160" y="30" width="110" height="240" rx="14" fill="#E7ECF2" stroke="#5B6B7F" stroke-width="3"/>
+        <rect x="174" y="50" width="82" height="110" rx="6" fill="#6FA8DC"/>
+        <g fill="#8C99A6"><circle cx="90" cy="120" r="22"/><rect x="66" y="146" width="48" height="110" rx="14"/></g>
+        <g fill="#8E6B48"><circle cx="330" cy="110" r="22"/><rect x="306" y="136" width="48" height="120" rx="14"/></g>
+        <line x1="306" y1="160" x2="252" y2="120" stroke="#8E6B48" stroke-width="10" stroke-linecap="round" data-anim="rot" data-from="25" data-o="306,160" data-rep="swing" data-dur="1"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 13. 스스로 확인하기 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="스스로 확인하기 (34쪽)">
+  <h2><span class="tag q">스스로 확인하기</span>신호와 정보</h2>
+  <div class="card mt8"><p class="f22">➊ 자연계의 신호를 측정해 분석하면 유용한 (&nbsp;<span class="blank"><span class="step">정보</span></span>&nbsp;)을/를 얻을 수 있다.</p></div>
+  <div class="card mt16">
+    <p class="f22">➋ 현대의 정보 통신에는 정보를 디지털로 변환하는 기술이 활용된다. ( ◯, × )</p>
+    <div class="answer step">◯</div>
+  </div>
+  <div class="board mt16" style="min-height:120px"></div>
+</section>
+
+<!-- ════════ 14. 확인 문제 01 ════════ -->
+<section class="slide" data-sec="02 · 확인하기" data-title="확인 문제 01">
+  <h2><span class="tag q">확인 문제 01</span>신호, 센서, 디지털 정보</h2>
+  <div class="card"><p class="f22">➊ 자연계에서 일어나는 빛의 세기, 온도 등의 변화는 우리에게 전달되어 (&nbsp;<span class="blank"><span class="step">신호</span></span>&nbsp;)이/가 된다.</p></div>
+  <div class="card mt12"><p class="f22">➋ 센서를 이용하면 자연계의 신호를 특정한 값의 ( 아날로그, 디지털 ) 형태로 측정할 수 있다. <span class="step">→ <span class="ans">디지털</span></span></p></div>
+  <div class="card mt12">
+    <p class="f22">➌ 다음 중 디지털 정보와 가장 거리가 먼 것은?</p>
+    <div class="choices f21"><span>① 종이에 인쇄된 책</span><span>② 온라인 거래용 인증서</span><span>③ 컴퓨터로 작성한 문서</span><span>④ CD에 저장된 음악 파일</span><span>⑤ 스마트 기기로 촬영한 사진</span></div>
+    <div class="answer step">① <span class="small">종이 책은 전기 신호로 이루어져 있지 않고 전자 기기에서 쓸 수 없다.</span></div>
+  </div>
+</section>
+
+<!-- ════════ 15. 펼치기 ════════ -->
+<section class="slide" data-sec="02 · 펼치기" data-title="펼치기: 생활 속 디지털 정보">
+  <h2><span class="tag alt">펼치기</span>일상생활에서 디지털 정보를 활용하는 예</h2>
+  <p class="small">창의성</p>
+  <p class="f22"><b>Q</b> 일상생활에서 디지털 정보를 활용하는 예를 찾아 공유 플랫폼에 올리고, 친구들과 이야기해 보자.</p>
+  <div class="board mt8" style="min-height:120px"></div>
+  <div class="stages mt16">
+    <div class="stage step"><h3>길 찾기</h3><p class="key">디지털 지도 정보와 내 위치 정보로 목적지까지 가는 길을 찾는다.</p></div>
+    <div class="stage step"><h3>버스 도착 시간</h3><p class="key">버스 위치에 대한 디지털 정보로 도착 시간을 확인한다.</p></div>
+    <div class="stage step"><h3>키오스크 주문</h3><p class="key">키오스크로 음식을 주문할 때 디지털 정보가 활용된다.</p></div>
+  </div>
+</section>
+
+<!-- ════════ 16. 탐구 ① ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 목표와 준비물">
+  <h2><span class="tag">탐구</span>스마트 기기를 활용해 기본량을 측정하고 분석하기 <span class="small c-muted">[필수 탐구]</span></h2>
+  <p class="small">자료 수집·분석·해석 | 탐구 설계 및 수행 | 결론 도출 및 일반화</p>
+  <div class="std mt8"><span class="code">[10통과1-01-04]</span>&lt;탐구 활동&gt; 스마트 기기를 활용하여 여러 가지 기본량을 측정하고 분석하기</div>
+  <div class="row mt16">
+    <div class="col">
+      <h3>목표</h3>
+      <p class="f22">스마트 기기를 활용해 길이(거리), 시간, 온도 등의 기본량을 측정하고 분석할 수 있다.</p>
+      <h3 class="mt16">준비물</h3>
+      <p class="f22">스마트 기기 <span class="small">(스마트폰, 블루투스 온도계·습도계 등)</span></p>
+    </div>
+    <div class="col">
+      <div class="card tip"><h3>유의할 점</h3>
+        <ul class="f21"><li>스마트 기기에 측정에 필요한 <b>센서가 내장</b>되어 있는지 확인한다.</li><li>교실 밖에서 측정할 때는 주변 사람·자동차·계단을 살피고 뛰지 않을 곳에서는 뛰지 않는다.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 17. 탐구 ② 과정 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 자료와 과정">
+  <h2><span class="tag">탐구</span>과정 및 결과</h2>
+  <div class="card">
+    <h3>자료: 스마트 기기로 기본량을 재고 분석하는 예</h3>
+    <div class="stages mt8">
+      <div class="stage"><h3>1</h3><p>스마트 기기에 길이와 시간 측정 애플리케이션을 설치한다.</p></div>
+      <div class="stage"><h3>2</h3><p>나와 목표물 사이의 <b>거리</b>, 목표물까지 이동하는 데 걸린 <b>시간</b>을 잰다.</p></div>
+      <div class="stage"><h3>3</h3><p>잰 거리와 시간으로 <b>속력</b>을 분석한다.</p></div>
+    </div>
+    <p class="small mt8">도움말: ‘길이’, ‘거리’, ‘시간’으로 검색하면 앱을 찾을 수 있다. 두 사람이 짝을 지어 한 사람이 이동하는 동안 다른 사람이 시간을 잰다.</p>
+  </div>
+  <div class="row mt12">
+    <div class="col"><p class="f22">1. 모둠별로 측정할 <b>기본량</b>, <b>측정 대상</b>, <b>측정 방법</b>을 정하자.</p><p class="f22 mt8">2. 정한 대로 기본량을 측정하자.</p><p class="small">도움말: 스프레드시트 프로그램으로 결과를 정리할 수 있다.</p></div>
+    <div class="col"><div class="card"><p class="f21">예시: 교실의 가로, 세로, 높이를 재면 <b>부피</b>를 알 수 있다.</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ 18. 탐구 ③ 실험실 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="실험실: 거리와 시간 재고 속력 분석">
+  <h2><span class="tag">탐구</span>거리·시간 측정 실험실 <span class="small c-muted">[필수 탐구]</span></h2>
+  <div class="lab" data-lab="is1122run">
+    <div class="lab-ctl">
+      <div class="is1122-btns"><button class="btn" data-act="w0">걷기</button><button class="btn" data-act="w1">뛰기</button><button class="btn" data-act="w2">자전거</button></div>
+      <div class="ctl mt8"><div class="lbl"><span>목표물까지 거리 $d$</span><output data-o="d"></output></div>
+        <input type="range" min="10" max="60" step="1" value="45" data-i="d" aria-label="목표물까지 거리"></div>
+      <div class="is1122-btns mt8"><button class="btn" data-act="measure">측정하기</button><button class="btn" data-act="reset">초기화</button></div>
+      <table class="tight is1122-rec mt8">
+        <thead><tr><th>번</th><th>방법</th><th>거리 [m]</th><th>시간 [s]</th><th>속력 [m/s]</th></tr></thead>
+        <tbody data-o="rows"></tbody>
+      </table>
+      <output class="kind is1122-msg" data-o="msg"></output>
+    </div>
+    <div class="lab-fig" style="width:563px;height:403px">
+      <svg viewBox="0 0 560 400" width="560" height="400" aria-label="가로 시간, 세로 거리 그래프. 측정마다 원점에서 측정 점까지 선이 그려지고 기울기가 속력"></svg>
+    </div>
+  </div>
+  <p class="small mt8">거리는 길이 측정 앱, 시간은 초시계 앱으로 잰 것처럼 작은 오차가 들어간다. 그래프의 기울기 = 거리 ÷ 시간 = 속력.</p>
+</section>
+
+<!-- ════════ 19. 탐구 ④ 결과 예시 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 결과 예시">
+  <h2><span class="tag">탐구</span>결과 예시</h2>
+  <div class="row">
+    <div class="col">
+      <ul class="f21">
+        <li><b>측정할 기본량</b>: 길이(거리), 시간</li>
+        <li><b>측정 대상</b>: 친구와 나무 사이의 거리, 친구가 나무까지 이동하는 데 걸린 시간(뛸 때, 자전거를 탈 때)</li>
+        <li><b>측정 방법</b>: 거리는 스마트폰 앱, 시간은 스마트폰 시계로 잰다.</li>
+      </ul>
+    </div>
+  </div>
+  <table class="tight mt12">
+    <thead><tr><th></th><th>친구와 나무 사이의 거리</th><th>이동하는 데 걸린 시간</th><th>친구의 속력</th></tr></thead>
+    <tbody>
+      <tr><td>뛸 때</td><td>$45.4\ \text{m}$</td><td>$8.4\ \text{s}$</td><td><span class="step" data-g="v1">$5.4\ \text{m/s}$</span></td></tr>
+      <tr><td>자전거를 탈 때</td><td>$45.4\ \text{m}$</td><td>$6.2\ \text{s}$</td><td><span class="step" data-g="v2">$7.3\ \text{m/s}$</span></td></tr>
+    </tbody>
+  </table>
+  <p class="f21 mt12 step" data-g="v1">$\dfrac{45.4\ \text{m}}{8.4\ \text{s}}\approx5.4\ \text{m/s}$, $\dfrac{45.4\ \text{m}}{6.2\ \text{s}}\approx7.3\ \text{m/s}$</p>
+  <p class="f22 mt8"><b>Q</b> 이 결과로 알 수 있는 정보는? <span class="step">→ 자전거를 탈 때가 뛸 때보다 <span class="ans">더 빠르다</span>.</span></p>
+</section>
+
+<!-- ════════ 20. 탐구 ⑤ 정리 ════════ -->
+<section class="slide" data-sec="02 · 탐구" data-title="탐구: 정리">
+  <h2><span class="tag">탐구</span>정리 — 측정 결과에서 정보 얻기</h2>
+  <p class="f22"><b>Q</b> 측정 결과를 표, 그래프 등으로 정리한 뒤 분석해 얻은 정보를 설명해 보자.</p>
+  <div class="stages c2 mt12">
+    <div class="stage"><h3>길이 → 부피</h3><p class="key">교실의 가로·세로·높이를 앱으로 재고 곱하면 교실의 부피를 안다.</p></div>
+    <div class="stage"><h3>시간 + 온도 → 변화</h3><p class="key">블루투스 온도계를 교실에 두고 시간에 따른 온도를 기록하면, 언제 가장 더운지 같은 정보를 얻는다.</p></div>
+  </div>
+  <div class="row mt16">
+    <div class="col"><div class="chips"><button class="chk">지식·이해 분석해 얻은 정보 설명</button><button class="chk">과정·기능 여러 기본량 측정</button><button class="chk">가치·태도 협동·역할 수행</button></div></div>
+    <div class="col"><p class="small">탐구돌아보기: 부족한 점이나 개선할 점을 써 보자.</p><div class="board mt8" style="min-height:80px"></div></div>
+  </div>
+</section>
+
+<!-- ════════ 21. 과학 이야기 ════════ -->
+<section class="slide" data-sec="02 · 과학 이야기" data-title="과학 이야기: 한국표준과학연구원">
+  <h2><span class="tag">과학 이야기</span>과학의 한계에 도전하는 한국표준과학연구원</h2>
+  <div class="row">
+    <div class="col stack">
+      <ul class="f21">
+        <li><b>1975년</b> 설립된 국가 측정 표준 대표 기관 — 시간, 길이, 질량 등 기본량과 단위의 국가 측정 표준을 세우고 유지하며 측정 능력을 높인다.</li>
+        <li>설립 초기 연구는 국가 과학기술 발전의 밑거름이 되어 반도체, 조선, 자동차 등 주력 산업 제품의 품질을 크게 높였다.</li>
+        <li>우리나라의 국가 측정 표준 품질을 세계 최고 수준으로 높이는 데 기여했다.</li>
+        <li>최근에는 우주 연구에 필요한 <b>반사경</b>을 가공·측정하는 기술 등 첨단 측정 기술을 연구한다.</li>
+      </ul>
+    </div>
+    <div class="col" style="flex:0 0 400px">
+      <svg class="fig" viewBox="0 0 400 300" style="width:400px" aria-label="레이저가 대형 반사경 표면을 비추어 평평한 정도를 재는 모습">
+        <ellipse cx="220" cy="190" rx="150" ry="40" fill="#DDEEF8" stroke="#5B6B7F" stroke-width="3"/>
+        <ellipse cx="220" cy="184" rx="140" ry="34" fill="#EEF3F8"/>
+        <rect x="30" y="40" width="60" height="40" rx="6" fill="#E08A2C" data-anim="pop" data-o="60,60"/>
+        <g data-arw="90,60,200,180,plus,3"></g><g data-arw="200,180,330,60,plus,3,d"></g>
+        <text class="tex" x="220" y="280" data-mix="크고 얇은 초정밀 반사경" data-size="20" data-anchor="middle"></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 22. 과학 소양 기르기 ════════ -->
+<section class="slide" data-sec="02 · 과학 이야기" data-title="과학 소양 기르기: 탐방 계획">
+  <h2><span class="tag alt">과학 소양 기르기</span>한국표준과학연구원 탐방 계획 세우기</h2>
+  <p class="f22"><b>Q</b> 누리집에서 홍보 자료를 찾아보고, 관심 있는 분야를 중심으로 탐방 계획을 세워 보자.</p>
+  <div class="board mt8" style="min-height:120px"></div>
+  <div class="answer step">예: 식품·환경·진단 검사·바이오산업 분야의 측정 기술을 개발하는 부서를 찾아가, <b>DNA와 단백질</b> 같은 생명체 구성 물질의 측정 표준을 어떻게 연구하는지 알아보고 싶다.</div>
+  <p class="small mt8">누리집의 연구 활동 항목에서 여러 연구 분야를 살펴보고 고른다.</p>
+</section>
+
+<!-- ════════ 23. 중단원 마무리: 기본 개념 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리: 기본 개념 확인하기">
+  <h2><span class="tag q">중단원 마무리</span>기본 개념 확인하기</h2>
+  <div class="row">
+    <div class="col">
+      <h3>01 측정과 측정 표준</h3>
+      <ul class="f21">
+        <li>도구 없이 키, 체온 등을 짐작으로 (<span class="blank"><span class="step">어림</span></span>)할 수 있다.</li>
+        <li>도구를 이용하면 양을 (<span class="blank"><span class="step">측정</span></span>)할 수 있다.</li>
+        <li>(<span class="blank"><span class="step">측정 표준</span></span>): 측정의 기준이 되는 기본 단위의 정의(그 값을 확인하는 장치도 포함, 예 미터원기)</li>
+        <li>측정 표준의 활용: 원활한 의사소통·공정한 거래, 의료·산업·과학 협업</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>02 신호와 정보</h3>
+      <ul class="f21">
+        <li>자연계의 변화는 우리에게 전달되어 (<span class="blank"><span class="step">신호</span></span>)이/가 된다(아날로그 형태).</li>
+        <li>신호를 측정해 분석하면 유용한 (<span class="blank"><span class="step">정보</span></span>)을/를 얻는다.</li>
+        <li>(<span class="blank"><span class="step">센서</span></span>): 자연계의 신호를 전기 신호로 바꾸는 장치</li>
+        <li>정보 통신에 (<span class="blank"><span class="step">디지털</span></span>) 정보가 활용된다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 24. 중단원 마무리: O, × ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리: 옳은 것 ○, 옳지 않은 것 ×">
+  <h2><span class="tag q">중단원 마무리</span>옳은 것은 ○, 옳지 않은 것은 ×</h2>
+  <table class="tight">
+    <tbody>
+      <tr><td class="l">(1) 측정에 있어서 기준이 되는 기본 단위에 대한 정의를 측정 표준이라고 한다.</td><td style="width:200px"><span class="step">○</span></td></tr>
+      <tr><td class="l">(2) 측정 표준은 의료, 안전 등의 분야와 관련이 없다.</td><td><span class="step">× <span class="small">널리 활용</span></span></td></tr>
+      <tr><td class="l">(3) 자연계의 신호는 모두 디지털 형태이다.</td><td><span class="step">× <span class="small">아날로그</span></span></td></tr>
+      <tr><td class="l">(4) 센서를 이용하면 아날로그 형태의 신호를 디지털 형태로 측정할 수 있다.</td><td><span class="step">○</span></td></tr>
+      <tr><td class="l">(5) 스마트 기기로 촬영한 사진과 영상은 모두 디지털 정보로 이루어져 있다.</td><td><span class="step">○</span></td></tr>
+    </tbody>
+  </table>
+  <div class="board mt16" style="min-height:90px"></div>
+</section>
+
+<!-- ════════ 25. 중단원 마무리 1 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리 1">
+  <h2><span class="tag q">중단원 마무리 1</span>측정과 측정 표준</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22"><b>Q</b> 측정과 측정 표준에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <div class="bogi f21 mt8">ㄱ. 어림과 측정은 과학 탐구에서만 활용된다.<br>ㄴ. 측정 표준을 활용하면 원활한 의사소통과 공정한 거래를 할 수 있다.<br>ㄷ. 측정 표준에는 기본 단위에 대한 정의를 확인할 수 있도록 만든 장치도 포함된다.</div>
+      <div class="choices f22 mt8"><span>① ㄴ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">④ <span class="small">ㄱ. 어림과 측정은 일상생활에서도 활용된다.</span></div>
+</section>
+
+<!-- ════════ 26. 중단원 마무리 2 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리 2">
+  <h2><span class="tag q">중단원 마무리 2</span>측정 표준이 활용되는 사례</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22"><b>Q</b> 측정 표준이 활용되는 사례와 거리가 가장 <b>먼</b> 것은?</p>
+      <div class="f22 mt8">① 그림 그리기<br>② 혈당량 측정하기<br>③ 실내 미세먼지 농도 확인하기<br>④ 이동 거리에 따라 버스 요금 내기<br>⑤ 인터넷에서 시간에 맞춰 콘서트 입장권 예매하기</div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">① <span class="small">혈당량, 미세먼지 농도, 거리, 시간을 잴 때 측정 표준이 활용된다.</span></div>
+</section>
+
+<!-- ════════ 27. 중단원 마무리 3 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리 3">
+  <h2><span class="tag q">중단원 마무리 3</span>측정 표준의 활용에 대한 대화</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <div class="stages">
+        <div class="stage"><h3>(가)</h3><p class="key">신뢰할 수 있는 측정 결과를 얻기 위해 측정 표준을 활용해.</p></div>
+        <div class="stage"><h3>(나)</h3><p class="key">측정 표준은 시간, 길이 등 기본량에 대해서만 활용돼.</p></div>
+        <div class="stage"><h3>(다)</h3><p class="key">측정 표준은 과학자들의 협업에도 유용하게 활용돼.</p></div>
+      </div>
+      <p class="f22 mt12"><b>Q</b> 제시한 의견이 옳은 학생만을 있는 대로 골라 보자.</p>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">(가), (다) <span class="small">측정 표준은 기본량뿐 아니라 의료, 안전, 산업, 협업 등 다양한 분야에 활용된다.</span></div>
+</section>
+
+<!-- ════════ 28. 중단원 마무리 4 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리 4">
+  <h2><span class="tag q">중단원 마무리 4</span>자동차의 속력과 디지털 속력계</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <svg class="fig" viewBox="0 0 640 150" style="width:640px" aria-label="(가) 달리는 자동차, (나) 숫자가 표시된 디지털 속력계">
+        <g data-anim="move" data-from="-120,0" data-dur="1.4" data-ease="out"><rect x="140" y="50" width="150" height="50" rx="14" fill="#9FB0C2"/><circle cx="170" cy="104" r="14" fill="#16233D"/><circle cx="260" cy="104" r="14" fill="#16233D"/></g>
+        <line x1="20" y1="118" x2="320" y2="118" stroke="#5B6B7F" stroke-width="3"/>
+        <rect x="430" y="30" width="160" height="80" rx="14" fill="#16233D"/>
+        <text class="tex" x="495" y="84" data-tex="60" data-size="36" data-anchor="middle" fill="#7EE0A8"></text>
+        <text class="tex" x="556" y="82" data-tex="\text{km/h}" data-size="18" data-anchor="middle" fill="#7EE0A8"></text>
+        <text class="tex" x="170" y="146" data-mix="(가)" data-size="20" data-anchor="middle"></text>
+        <text class="tex" x="510" y="146" data-mix="(나)" data-size="20" data-anchor="middle"></text>
+      </svg>
+      <p class="f22"><b>Q</b> 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <div class="bogi f21 mt8">ㄱ. (가)는 아날로그 형태의 신호이다. &nbsp; ㄴ. (나)에는 센서가 있다. &nbsp; ㄷ. (나)는 속력을 디지털 형태로 측정한다.</div>
+      <div class="choices f22 mt8"><span>① ㄱ</span><span>② ㄷ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">⑤</div>
+</section>
+
+<!-- ════════ 29. 중단원 마무리 5 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="중단원 마무리 5">
+  <h2><span class="tag q">중단원 마무리 5</span>디지털 정보와 현대 문명</h2>
+  <div class="row stretch">
+    <div class="col stack" style="flex:0 0 640px">
+      <p class="f22"><b>Q</b> 디지털 정보와 현대 문명에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은?</p>
+      <div class="bogi f21 mt8">ㄱ. 디지털 정보는 아날로그 신호보다 저장과 분석이 어렵다.<br>ㄴ. 현대의 정보 통신에 디지털 정보가 활용된다.<br>ㄷ. 디지털 정보를 활용한 정보 통신의 발전은 현대 문명에 많은 영향을 미쳤다.</div>
+      <div class="choices f22 mt8"><span>① ㄱ</span><span>② ㄴ</span><span>③ ㄱ, ㄴ</span><span>④ ㄴ, ㄷ</span><span>⑤ ㄱ, ㄴ, ㄷ</span></div>
+    </div>
+    <div class="col stack"><div class="board"></div></div>
+  </div>
+  <div class="answer step">④ <span class="small">ㄱ. 디지털 정보는 아날로그 신호보다 저장과 분석이 쉽다.</span></div>
+</section>
+
+<!-- ════════ 30. 디지털 상호 평가 · 점검 ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 중단원 마무리" data-title="디지털 상호 평가와 중단원 스스로 점검하기">
+  <h2><span class="tag q">중단원 마무리</span>○, × 문제 만들기 · 스스로 점검하기</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21"><b>디지털 상호 평가</b> ‘측정 표준과 정보’에서 배운 핵심 내용을 한 문장씩 정리해 ○, × 문제를 만들고, 친구들과 공유해 서로 풀어 보자.</p>
+      <div class="card mt12"><p class="f21">예: “센서는 모두 디지털 형태로 신호를 측정한다.” <span class="step">→ × (아날로그 센서도 있다)</span></p></div>
+      <div class="board mt12" style="min-height:90px"></div>
+    </div>
+    <div class="col stack">
+      <h3>중단원 스스로 점검하기</h3>
+      <div class="chips col1">
+        <button class="chk">[지식·이해] 측정 표준과 센서가 유용하게 활용되는 것을 설명할 수 있다.</button>
+        <button class="chk">[과정·기능] 자연계의 변화를 측정하고 분석해 정보를 산출했다.</button>
+        <button class="chk">[가치·태도] 정밀한 측정·분석을 위한 인간의 노력과 과학의 유용성을 인식했다.</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 31. 창의력 키움 활동 ① ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 창의력 키움 활동" data-title="창의력 키움 활동: 액체 타이머 만들기">
+  <h2><span class="tag">창의력 키움 활동</span>질량으로 시간을 측정하는 액체 타이머 만들기</h2>
+  <div class="row">
+    <div class="col stack">
+      <p class="f21">시간은 연속적으로 변하는 아날로그 신호이지만 전자시계로 디지털 값을 잴 수 있다. 물시계의 원리와 <b>액체의 질량</b>을 이용해 시간을 재는 타이머를 만들어 보자.</p>
+      <div class="card mt8"><h3>액체 타이머의 조건</h3><ul class="f21"><li>1분이 지났을 때 액체가 모두 떨어져야 한다.</li><li>전자저울의 질량값으로 10초 간격으로 1분까지 지난 시간을 알 수 있어야 한다.</li></ul></div>
+      <div class="card mt8"><h3>떨어지는 빠르기를 바꾸는 방법</h3><p class="f21">액체의 종류, 용기 밑면 구멍의 크기나 개수를 바꾼다.</p></div>
+    </div>
+    <div class="col" style="flex:0 0 380px">
+      <svg class="fig" viewBox="0 0 380 400" style="width:380px" aria-label="스탠드에 매단 구멍 뚫린 컵에서 빨간 액체가 떨어져 전자저울 위 통에 모인다">
+        <rect x="40" y="30" width="12" height="340" fill="#8C99A6"/><rect x="20" y="370" width="200" height="14" fill="#8C99A6"/>
+        <rect x="52" y="70" width="100" height="10" fill="#8C99A6"/>
+        <path d="M150 50 L250 50 L240 150 L160 150 Z" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="3"/>
+        <path d="M156 90 L244 90 L240 150 L160 150 Z" fill="#E5735E" opacity=".85"/>
+        <g data-anim="move" data-from="0,-90" data-dur=".8" data-ease="in" data-rep="loop"><path d="M200 250 q-8 12 0 18 q8 -6 0 -18z" fill="#D7263D"/></g>
+        <path d="M150 260 L150 330 L250 330 L250 260" fill="#DDEEF8" stroke="#9FC3DD" stroke-width="3"/>
+        <rect x="152" y="300" width="96" height="28" fill="#E5735E" opacity=".85"/>
+        <rect x="130" y="330" width="140" height="30" rx="6" fill="#E7ECF2" stroke="#5B6B7F" stroke-width="2.5"/>
+        <rect x="170" y="338" width="60" height="16" rx="3" fill="#16233D"/>
+        <text class="tex" x="320" y="350" data-mix="전자저울" data-size="19" data-anchor="middle"></text>
+      </svg>
+    </div>
+  </div>
+  <p class="small mt8">준비물 예: 전자저울, 투명 플라스틱 컵·통, 송곳, 스탠드, 물, 빨간색 잉크, 스마트 기기(처음에는 기존 시계로 시간을 재며 맞춘다). <b>송곳에 찔리지 않게 주의한다.</b></p>
+</section>
+
+<!-- ════════ 32. 창의력 키움 활동 ② ════════ -->
+<section class="slide" data-sec="Ⅰ-2. 측정 표준과 정보 · 창의력 키움 활동" data-title="창의력 키움 활동: 결과 예시">
+  <h2><span class="tag">창의력 키움 활동</span>측정 결과와 액체 타이머의 특징</h2>
+  <table class="tight">
+    <thead><tr><th>지난 시간 [s]</th><th>0</th><th>10</th><th>20</th><th>30</th><th>40</th><th>50</th><th>60</th></tr></thead>
+    <tbody><tr><td>떨어진 액체의 질량 [g]</td><td>0</td><td>20</td><td>40</td><td>60</td><td>75</td><td>90</td><td>100</td></tr></tbody>
+  </table>
+  <div class="row mt12">
+    <div class="col" style="flex:0 0 520px">
+      <svg class="fig" viewBox="0 0 520 298" style="width:520px" aria-label="지난 시간에 따른 떨어진 액체의 질량 그래프. 30초까지는 10초에 20 g씩, 그 뒤로는 덜 늘어난다">
+        <g stroke="#E2E7EC" stroke-width="1.5"><line x1="60" y1="40" x2="480" y2="40"/><line x1="60" y1="95" x2="480" y2="95"/><line x1="60" y1="150" x2="480" y2="150"/><line x1="60" y1="205" x2="480" y2="205"/></g>
+        <g data-arw="60,260,500,260,muted,2.5"></g><g data-arw="60,260,60,20,muted,2.5"></g>
+        <path d="M60 260 L130 216 L200 172 L270 128 L340 95 L410 62 L480 40" fill="none" stroke="#16233D" stroke-width="3" data-anim="draw" data-dur="1.6"/>
+        <g fill="#D7263D"><circle cx="60" cy="260" r="6"/><circle cx="130" cy="216" r="6"/><circle cx="200" cy="172" r="6"/><circle cx="270" cy="128" r="6"/><circle cx="340" cy="95" r="6"/><circle cx="410" cy="62" r="6"/><circle cx="480" cy="40" r="6"/></g>
+        <text class="tex" x="60" y="282" data-tex="0" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="270" y="282" data-tex="30" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="480" y="282" data-tex="60" data-size="18" data-anchor="middle"></text>
+        <text class="tex" x="50" y="266" data-tex="0" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="50" y="156" data-tex="50" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="50" y="46" data-tex="100" data-size="18" data-anchor="end"></text>
+        <text class="tex" x="72" y="20" data-mix="질량 [g]" data-size="18"></text>
+        <text class="tex" x="500" y="246" data-mix="$t$ [s]" data-size="18" data-anchor="end"></text>
+      </svg>
+    </div>
+    <div class="col stack">
+      <p class="f21"><b>특징(예)</b> 떨어지는 양을 눈으로 쉽게 보려고 물에 빨간색 잉크를 섞었고, 1분이 지났을 때 떨어진 액체가 100 g이 되도록 만들었다. 저울이 75 g을 가리키면 40초가 지난 것이다.</p>
+      <p class="f21 mt12"><b>Q</b> 30초 뒤로는 10초 동안 떨어지는 양이 왜 줄어들까? <span class="step">→ 컵에 남은 액체가 적어지면 액체가 <b>덜 빨리</b> 떨어지기 때문이다. 그래서 눈금(질량 ↔ 시간 대응표)이 꼭 필요하다.</span></p>
+      <p class="small mt8">활동돌아보기: 다른 모둠의 액체 타이머 동영상을 보고 잘한 점·개선할 점을 댓글로 달아 보자.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 33. 스스로 정리 ════════ -->
+<section class="slide" data-sec="02 신호와 정보 · 마무리" data-title="스스로 정리">
+  <h2><span class="tag ink">스스로 정리</span>신호와 정보</h2>
+  <svg class="fig" viewBox="0 0 1110 420" style="width:1110px" aria-label="개념 지도: 자연계의 변화, 신호(아날로그), 센서, 디지털 정보, 정보 통신, 현대 문명">
+    <g fill="#FFFFFF" stroke="#16233D" stroke-width="2.5"><rect x="10" y="150" width="190" height="80" rx="14"/><rect x="250" y="150" width="190" height="80" rx="14"/><rect x="490" y="150" width="190" height="80" rx="14"/><rect x="730" y="150" width="170" height="80" rx="14"/></g>
+    <rect x="930" y="150" width="170" height="80" rx="14" fill="#E8F5EE" stroke="#2E9E6A" stroke-width="2.5"/>
+    <g data-arw="200,190,248,190,ink,2.5"></g><g data-arw="440,190,488,190,ink,2.5"></g><g data-arw="680,190,728,190,ink,2.5"></g><g data-arw="900,190,928,190,ink,2.5"></g>
+    <text class="tex" x="105" y="196" data-mix="자연계의 변화" data-size="21" data-anchor="middle"></text>
+    <text class="tex step" data-g="k1" x="345" y="186" data-mix="신호" data-size="24" data-anchor="middle" data-weight="700" fill="#D7263D"></text>
+    <text class="tex" x="345" y="216" data-mix="(아날로그)" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+    <text class="tex step" data-g="k2" x="585" y="186" data-mix="센서" data-size="24" data-anchor="middle" data-weight="700" fill="#D7263D"></text>
+    <text class="tex" x="585" y="216" data-mix="→ 전기 신호" data-size="19" data-anchor="middle" fill="#5B6B7F"></text>
+    <text class="tex step" data-g="k3" x="815" y="196" data-mix="디지털 정보" data-size="21" data-anchor="middle" data-weight="700" fill="#D7263D"></text>
+    <text class="tex" x="1015" y="186" data-mix="정보 통신" data-size="21" data-anchor="middle"></text>
+    <text class="tex" x="1015" y="216" data-mix="→ 현대 문명" data-size="19" data-anchor="middle"></text>
+    <text class="tex" x="465" y="90" data-mix="측정·분석 → 유용한 정보(체온 → 건강, 우주의 빛 → 우주의 생성)" data-size="20" data-anchor="middle"></text>
+    <text class="tex" x="815" y="290" data-mix="저장·분석·전송이 쉽다" data-size="19" data-anchor="middle"></text>
+    <rect x="20" y="330" width="380" height="56" rx="12" fill="none" stroke="#8C99A6" stroke-width="2" stroke-dasharray="7 6"/>
+    <text class="tex" x="210" y="364" data-mix="다음: Ⅰ 과학의 기초 대단원 마무리" data-size="20" data-anchor="middle" fill="#8C99A6"></text>
+  </svg>
+</section>
+
+<!-- ════════ 34. 스스로 점검하기 ════════ -->
+<section class="slide" data-sec="02 신호와 정보 · 마무리" data-title="스스로 점검하기">
+  <h2><span class="tag q">스스로 점검하기</span>오늘 배운 것 점검하기</h2>
+  <div class="chips col1">
+    <button class="chk">[지식·이해] 신호와 정보, 센서의 뜻을 설명할 수 있다.</button>
+    <button class="chk">[지식·이해] 아날로그와 디지털의 차이를 설명할 수 있다.</button>
+    <button class="chk">[과정·기능] 스마트 기기로 기본량을 측정하고, 결과를 분석해 정보를 얻을 수 있다.</button>
+    <button class="chk">[가치·태도] 디지털 정보와 정보 통신이 현대 문명에 준 영향을 인식한다.</button>
+  </div>
+  <div class="card mt16">
+    <p class="f21"><b>Q</b> 디지털 정보가 정보 통신에 널리 쓰이는 까닭은? <span class="step">→ <span class="ans">저장·분석·전송이 쉽기</span> 때문이다.</span></p>
+    <p class="f21 mt8"><b>Q</b> 다음 시간: ‘과학의 기초’ 단원 전체를 대단원 마무리로 정리해 보자.</p>
+  </div>
+</section>
