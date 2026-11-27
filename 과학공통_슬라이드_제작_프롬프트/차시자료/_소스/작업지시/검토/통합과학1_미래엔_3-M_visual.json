@@ -1,0 +1,1 @@
+{"findings":[{"slide":5,"severity":"med","rule":"D8","problem":"01·02 그림이 커서 답 상자 넘침, 라벨 16px 미만","fix":"그림 축소·라벨 확대 — 반영"},{"slide":7,"severity":"low","rule":"3.2","problem":"03·06·18 라벨 16px 미만","fix":"크기 조정 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0."}
