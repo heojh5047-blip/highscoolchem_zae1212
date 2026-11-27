@@ -1,0 +1,1 @@
+{"findings":[{"slide":14,"severity":"low","rule":"D8","problem":"수륙 분포 라벨 잘림","fix":"viewBox 조정 — 반영"},{"slide":19,"severity":"med","rule":"겹침","problem":"실험실 대멸종 라벨이 곡선과 겹침","fix":"축 위로 이동 — 반영"}],"summary":"전체 캡처 확인, 자동 점검 0·콘솔 0, motion 0, ask 0."}

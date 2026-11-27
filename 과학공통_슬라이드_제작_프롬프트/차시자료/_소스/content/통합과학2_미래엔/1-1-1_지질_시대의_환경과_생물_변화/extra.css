@@ -1,0 +1,6 @@
+/* 1-1-1 지질 시대의 환경과 생물 변화 — 덱 전용 (.is2111-) */
+.slide.cover h1.is2111-h1{font-size:84px}
+.is2111-btns{display:flex;flex-wrap:wrap;gap:6px}
+.is2111-btns .btn{font-size:19px;padding:5px 12px}
+.is2111-btns .btn.on{background:#2E9E6A;color:#fff;border-color:#2E9E6A}
+.is2111-msg{display:block;font-size:19px;line-height:1.45;margin-top:8px}
